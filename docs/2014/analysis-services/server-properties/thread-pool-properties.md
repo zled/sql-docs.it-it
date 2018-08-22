@@ -21,12 +21,12 @@ caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f19468e128b6009a19acd2ace84c99dc2e0140d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92c1e8d4a1014e7af89e056fe43244a51fb9d9a9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303031"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392755"
 ---
 # <a name="thread-pool-properties"></a>Proprietà dei pool di thread
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il multithreading viene usato per molte operazioni, con il conseguente miglioramento delle prestazioni complessive del server dovuto all'esecuzione di più processi in parallelo. Per gestire i thread in modo più efficiente, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono usati i pool di thread per preallocare i thread e semplificarne la disponibilità per il processo successivo.  
@@ -279,9 +279,9 @@ ms.locfileid: "37303031"
 >  Per istruzioni su come impostare le proprietà, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni su processi e thread](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [Più processori](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [Gruppi di processori](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [Informazioni su processi e thread](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [Più processori](/windows/desktop/ProcThread/multiple-processors)   
+ [Gruppi di processori](/windows/desktop/ProcThread/processor-groups)   
  [Modifiche al Pool di Thread di Analysis Services in SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Impostazioni di analisi configurazione Services 2012 (Blog di Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [Sistemi di supporto che dispongono di più di 64 processori](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

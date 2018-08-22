@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cc5f2caba4f82a34c64fdaafdfef137739bc19e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd81f459f09b06e0be06d53658b98b929eff5d6e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313801"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392338"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
   L'agente di raccolta delle prestazioni delle transazioni in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] consente di valutare se OLTP in memoria può ottimizzare le prestazioni dell'applicazione di database. Nel report dell'analisi delle prestazioni delle transazioni viene inoltre indicata la quantità di operazioni che è necessario eseguire per abilitare OLTP in memoria nell'applicazione. Una volta identificata la tabella basata su disco da trasferire in OLTP in memoria, è possibile usare [Ottimizzazione guidata per la memoria](memory-optimization-advisor.md)per semplificarne la migrazione. Analogamente, l' [Native Compilation Advisor](native-compilation-advisor.md) semplifica il trasferimento di una stored procedure a una stored procedure compilata in modo nativo.  

@@ -18,17 +18,17 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c14e4422f0033df05dc259ad180f4f2baa380e7b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 62c56e876a3579d136eb2bff7a594d651b4e084e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982343"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392661"
 ---
-# <a name="command-line-options-in-ssma-console-sybasetosql"></a>Opzioni della riga di comando nella Console SSMA (SybaseToSQL)
+# <a name="command-line-options-in-ssma-console-sybasetosql"></a>Opzioni della riga di comando nella console SSMA (SybaseToSQL)
 Microsoft offre un solido set di opzioni della riga di comando per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso.  
   
-## <a name="command-line-options-in-ssma-console"></a>Opzioni della riga di comando nella Console SSMA  
+## <a name="command-line-options-in-ssma-console"></a>Opzioni della riga di comando nella console SSMA  
 È qui descritti la console di opzioni del comando.  
   
 Ai fini di questa sezione, il termine 'option' è detta anche 'switch'.  
@@ -128,7 +128,7 @@ Ciò indica la cartella Impostazioni ambiente di progetto SSMA corrente. Questa 
 ### <a name="secure-password-option-psecurepassword"></a>Opzione Password sicura: – p/securepassword  
 Questa opzione indica la password crittografata per le connessioni al server. Differisce da tutte le altre opzioni: l'opzione non viene eseguito qualsiasi script né consente in qualsiasi attività relative alla migrazione, ma consente di gestire la crittografia della password per le connessioni del server usato nel progetto di migrazione.  
   
-È possibile immettere qualsiasi altra opzione o la password come parametro della riga di comando. In caso contrario, viene generato un errore. Per altre informazioni, vedere la [la gestione delle password](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) sezione.  
+È possibile immettere qualsiasi altra opzione o la password come parametro della riga di comando. In caso contrario, viene generato un errore. Per altre informazioni, vedere la [la gestione delle password](managing-passwords-sybasetosql.md) sezione.  
   
 Le seguenti opzioni secondarie sono supportate per `–p/securepassword`:  
   

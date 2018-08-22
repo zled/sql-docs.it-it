@@ -4,7 +4,7 @@ description: Questo articolo contiene le note sulla versione e funzionalità sup
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/18/2018
+ms.date: 08/14/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 29fa948938444471fcaaefc6869e4114c604686b
-ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
+ms.openlocfilehash: 55fc722a3205984fbb48f2a2c0945ebf4ff117b8
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39146761"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392528"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Le note sulla versione seguenti si applicano a SQL Server 2017 in esecuzione su Linux. Questo articolo viene suddiviso in sezioni per ogni versione. La versione GA è supportability dettagliate ed elencati problemi noti. Ogni versione di aggiornamento cumulativo (CU) ha un collegamento a un articolo di supporto che descrive il modifiche CU nonché collegamenti a Linux download del pacchetto.
+Le note sulla versione seguenti si applicano a SQL Server 2017 in esecuzione su Linux. Questo articolo viene suddiviso in sezioni per ogni versione. La versione GA è supportability dettagliate ed elencati problemi noti. Ogni aggiornamento cumulativo (CU) o release generali di distribuzione (GDR) è disponibile un collegamento a un articolo di supporto che descrive il modifiche CU nonché collegamenti a Linux download del pacchetto.
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
 
@@ -45,29 +45,60 @@ La maggior parte degli strumenti client esistenti destinati a SQL Server possono
 
 La tabella seguente elenca la cronologia delle versioni di SQL Server 2017.
 
-| Versione     | Versione       | Data di rilascio |
-|-------------|---------------|--------------|
-| [CU9](#CU9) | 14.0.3030.27  | 2018-07-18   |
-| [CU8](#CU8) | 14.0.3029.16  | 2018-06-21 che generava   |
-| [CU7](#CU7) | 14.0.3026.27  | 2018-05-24   |
-| [CU6](#CU6) | 14.0.3025.34  | 2018-04-19   |
-| [CU5](#CU5) | 14.0.3023.8   | 2018-03-20   |
-| [CU4](#CU4) | 14.0.3022.28  | 2018-02-20   |
-| [CU3](#CU3) | 14.0.3015.40  | 2017-01-03   |
-| [CU2](#CU2) | 14.0.3008.27  | 2017-11-28   |
-| [CU1](#CU1) | 14.0.3006.16  | 2017-10-24   |
-| [GA](#GA)   | 14.0.1000.169 | 2017-10-02   |
+| Versione               | Versione       | Data di rilascio |
+|-----------------------|---------------|--------------|
+| [CU9 GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
+| [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
+| [CU9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
+| [CU8](#CU8)           | 14.0.3029.16  | 2018-06-21 che generava   |
+| [CU7](#CU7)           | 14.0.3026.27  | 2018-05-24   |
+| [CU6](#CU6)           | 14.0.3025.34  | 2018-04-19   |
+| [CU5](#CU5)           | 14.0.3023.8   | 2018-03-20   |
+| [CU4](#CU4)           | 14.0.3022.28  | 2018-02-20   |
+| [CU3](#CU3)           | 14.0.3015.40  | 2018-01-03   |
+| [GDR1](#GDR1)         | 14.0.2000.63  | 2018-01-03   |
+| [CU2](#CU2)           | 14.0.3008.27  | 2017-11-28   |
+| [CU1](#CU1)           | 14.0.3006.16  | 2017-10-24   |
+| [GA](#GA)             | 14.0.1000.169 | 2017-10-02   |
 
-## <a id="cuinstall"></a> Come installare gli aggiornamenti cumulativi
+## <a id="cuinstall"></a> Come installare gli aggiornamenti
 
-Se è stato configurato il repository dell'aggiornamento cumulativo, quindi si otterrà l'aggiornamento cumulativo più recente dei pacchetti di SQL Server quando si eseguono le nuove installazioni. Il repository di aggiornamento cumulativo è l'impostazione predefinita per tutti gli articoli di installazione di pacchetti per SQL Server in Linux. Per altre informazioni sulla configurazione del repository, vedere [configurare i repository per SQL Server in Linux](sql-server-linux-change-repo.md).
+Se è stato configurato il repository CU (**mssql-server-2017**), quindi si otterranno i pacchetti di aggiornamento Cumulativo di SQL Server più recenti quando si eseguono le nuove installazioni. Il repository CU è l'impostazione predefinita per tutti gli articoli di installazione di pacchetti per SQL Server in Linux. Se è stato configurato il repository GDR (**mssql-server-2017-gdr**), si otterrà solo gli aggiornamenti critici della sicurezza rilasciati dal livello generale. Se è necessario il contenitore Docker CU o gli aggiornamenti GDR, vedere le immagini ufficiali per [Microsoft SQL Server in Linux per il motore Docker](http://hub.docker.com/r/microsoft/mssql-server-linux/). Per altre informazioni sulla configurazione del repository, vedere [configurare i repository per SQL Server in Linux](sql-server-linux-change-repo.md).
 
-Se si aggiornano i pacchetti esistenti di SQL Server, eseguiti il comando di aggiornamento appropriato per ogni pacchetto ottenere l'aggiornamento cumulativo più recente. Per istruzioni di aggiornamento specifico per ogni pacchetto, vedere le guide di installazione seguenti:
+Se si aggiornano i pacchetti esistenti di SQL Server, eseguiti il comando di aggiornamento appropriato per ogni pacchetto ottenere l'aggiornamento Cumulativo più recente. Per istruzioni di aggiornamento specifico per ogni pacchetto, vedere le guide di installazione seguenti:
 
 - [Installare il pacchetto di SQL Server](sql-server-linux-setup.md#upgrade)
 - [Installare il pacchetto di ricerca Full-text](sql-server-linux-setup-full-text-search.md)
 - [Installare SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Abilitare SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU9-GDR2"></a> CU9-GDR2 (agosto 2018)
+
+Si tratta di un aggiornamento della sicurezza che include anche l'aggiornamento Cumulativo rilasciato in precedenza (CU9) per SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3035.2. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4293805 ](https://support.microsoft.com/en-us/help/4293805).
+
+### <a name="package-details"></a>Dettagli del pacchetto
+
+Per le installazioni manuali o offline del pacchetto, è possibile scaricare i pacchetti Debian e RPM con le informazioni nella tabella seguente:
+
+| Pacchetto | Versione del pacchetto | Download |
+|-----|-----|-----|
+| Pacchetto di Red Hat RPM | 14.0.3035.2-1 | [Pacchetto RPM motore](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[Pacchetto RPM ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm)| 
+| Pacchetto RPM SLES | 14.0.3035.2-1 | [pacchetto RPM motore MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[Pacchetto RPM ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm) | 
+| Pacchetto Debian Ubuntu 16.04 | 14.0.3035.2-1 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3035.2-1_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3035.2-1_amd64.deb)</br>[Pacchetto Debian ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3035.2-1_amd64.deb)<br/> |
+
+## <a id="GDR2"></a> GDR2 (agosto 2018)
+
+Si tratta di un aggiornamento della sicurezza che include solo le correzioni di sicurezza GDR2 (e GDR1) per SQL Server 2017.  La versione del motore di SQL Server per questa versione è 14.0.2002.14. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4293803 ](https://support.microsoft.com/en-us/help/4293803).
+
+### <a name="package-details"></a>Dettagli del pacchetto
+
+Per le installazioni manuali o offline del pacchetto, è possibile scaricare i pacchetti Debian e RPM con le informazioni nella tabella seguente:
+
+| Pacchetto | Versione del pacchetto | Download |
+|-----|-----|-----|
+| Pacchetto di Red Hat RPM | 14.0.2002.14-1 | [Pacchetto RPM motore](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[Pacchetto RPM ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
+| Pacchetto RPM SLES | 14.0.2002.14-1 | [pacchetto RPM motore MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[Pacchetto RPM ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
+| Pacchetto Debian Ubuntu 16.04 | 14.0.2002.14-1 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2002.14-1_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2002.14-1_amd64.deb)</br>[Pacchetto Debian ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2002.14-1_amd64.deb) |
 
 ## <a id="CU9"></a> CU9 (luglio 2018)
 
@@ -173,6 +204,20 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 | Pacchetto di Red Hat RPM | 14.0.3022.28-2 | [Pacchetto RPM motore](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[Pacchetto RPM ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm)</br>[Pacchetto SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | Pacchetto RPM SLES | 14.0.3022.28-2 | [pacchetto RPM motore MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[Pacchetto RPM ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm) | 
 | Pacchetto Debian Ubuntu 16.04 | 14.0.3022.28-2 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3022.28-2_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3022.28-2_amd64.deb)</br>[Pacchetto Debian ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3022.28-2_amd64.deb)<br/>[Pacchetto SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <a id="GDR1"></a> GDR1 (gennaio 2018)
+
+Si tratta di un aggiornamento della sicurezza che include solo il GDR1 correzioni per la sicurezza per SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.2000.63. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4057122 ](https://support.microsoft.com/en-us/help/4057122).
+
+### <a name="package-details"></a>Dettagli del pacchetto
+
+Per le installazioni manuali o offline del pacchetto, è possibile scaricare i pacchetti Debian e RPM con le informazioni nella tabella seguente:
+
+| Pacchetto | Versione del pacchetto | Download |
+|-----|-----|-----|
+| Pacchetto di Red Hat RPM | 14.0.2000.63-3 | [Pacchetto RPM motore](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[Pacchetto RPM ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
+| Pacchetto RPM SLES | 14.0.2000.63-3 | [pacchetto RPM motore MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[Pacchetto RPM ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
+| Pacchetto Debian Ubuntu 16.04 | 14.0.2000.63-3 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2000.63-3_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2000.63-3_amd64.deb)</br>[Pacchetto Debian ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2000.63-3_amd64.deb) |
 
 ## <a id="CU3"></a> CU3 (gennaio 2018)
 

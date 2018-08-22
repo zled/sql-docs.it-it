@@ -22,12 +22,12 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a614a40001e21fadf708cb2079dbe45171cafe62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e610198b2a7c26ad11811157b52a066639592a8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261770"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392635"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  ID del processo per il quale si desidera ottenere le informazioni. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name =**] **'***job_name***'**  
- Nome del processo. *job_name* viene **sysname**, con valore predefinito è NULL.  
+ Nome del processo. *nome_processo* viene **sysname**, predefinito è NULL.  
   
 > [!NOTE]  
->  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+>  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [ **@step_id =**] *step_id*  
  Numero di identificazione del passaggio del processo. Se viene omesso, vengono inclusi tutti i passaggi del processo. *step_id* viene **int**, con un valore predefinito è NULL.  
@@ -63,10 +63,10 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  Nome del passaggio del processo. *step_name* viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@suffix =**] *suffix*  
- Un flag che indica se aggiungere una descrizione per il **flag** colonna nell'output. *suffisso*viene **bit**, con il valore predefinito è **0**. Se *suffisso* è **1**, aggiungere una descrizione.  
+ Un flag che indica se aggiungere una descrizione di testo per il **flag** colonna nell'output. *suffisso*viene **bit**, il valore predefinito **0**. Se *suffisso* viene **1**, aggiungere una descrizione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -78,7 +78,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**comando**|**nvarchar(max)**|Comando eseguito nel passaggio.|  
 |**flags**|**int**|Maschera di bit dei valori che controllano il funzionamento del passaggio.|  
 |**cmdexec_success_code**|**int**|Per un **CmdExec** passaggio, questo è il codice di uscita del processo di un comando eseguito correttamente.|  
-|**on_success_action**|**tinyint**|Azione da eseguire se il passaggio viene eseguito correttamente:<br /><br /> **1** = Quit il processo completato correttamente.<br /><br /> **2** = uscita in caso di esito negativo.<br /><br /> **3** = andare al passaggio successivo.<br /><br /> **4** = esecuzione di un passaggio.|  
+|**on_success_action**|**tinyint**|Azione da eseguire se il passaggio viene eseguito correttamente:<br /><br /> **1** = Quit il processo completato correttamente.<br /><br /> **2** = Quit di esito negativo.<br /><br /> **3** = andare al passaggio successivo.<br /><br /> **4** = esecuzione di un passaggio.|  
 |**on_success_step_id**|**int**|Se **on_success_action** è 4, indica il passaggio da eseguire.|  
 |**on_fail_action**|**tinyint**|Azione da eseguire se il passaggio non viene eseguito correttamente. I valori sono uguali a quelli **on_success_action**.|  
 |**on_fail_step_id**|**int**|Se **on_fail_action** è 4, indica il passaggio da eseguire.|  
@@ -88,7 +88,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|Numero massimo di tentativi di esecuzione del comando (nel caso in cui non sia stato eseguito correttamente).|  
 |**retry_interval**|**int**|Intervallo in minuti che intercorre tra un tentativo e il successivo.|  
 |**os_run_priority**|**int**|Riservato.|  
-|**output_file_name**|**nvarchar(200)**|File per il comando che deve essere scritto l'output ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, e **PowerShell** solo per i passaggi).|  
+|**output_file_name**|**nvarchar(200)**|In quale comando deve essere scritto l'output di file ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, e **PowerShell** solo per i passaggi).|  
 |**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del passaggio:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **2** = nuovo tentativo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
 |**last_run_duration**|**int**|Durata in secondi dell'ultima esecuzione del passaggio.|  
 |**last_run_retries**|**int**|Numero di tentativi di esecuzione del comando durante l'ultima esecuzione del passaggio.|  
@@ -96,10 +96,10 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**last_run_time**|**int**|Ora di inizio dell'ultima esecuzione del passaggio.|  
 |**proxy_id**|**int**|Proxy per il passaggio del processo.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_help_jobstep** è il **msdb** database.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -108,9 +108,9 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- I membri di **SQLAgentUserRole** possono visualizzare solo i passaggi del processo per i processi di cui sono proprietari.  
+ I membri del **SQLAgentUserRole** possono visualizzare solo i passaggi di processo per cui sono proprietari.  
   
 ## <a name="examples"></a>Esempi  
   

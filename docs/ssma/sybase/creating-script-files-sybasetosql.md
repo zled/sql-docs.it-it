@@ -21,14 +21,14 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1d9e2c090c6470cb23849ae35ad5b950b1e246b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 99ab3ab7debd5542f57d9008ae83baf1deb0e2c6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979893"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392435"
 ---
-# <a name="creating-script-files-sybasetosql"></a>Creazione di file di Script (SybaseToSQL)
+# <a name="creating-script-files-sybasetosql"></a>Creazione di file di script (SybaseToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se è necessario creare il file di valore della variabile e il file di connessione del server.  
   
 Il file di script può essere suddivisi in tre sezioni, una visualizzazione dei..,:  
@@ -357,7 +357,7 @@ Il file script contiene una sequenza di comandi del flusso di lavoro migrazione 
   
 Ad esempio, una migrazione tipica dei dati di una tabella specifica in un database di Sybase segue la gerarchia dei: Database -&gt;Schema -&gt;tabella.  
   
-Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file script è più o meno statico con informazioni sulle variabili contenute in un [file con valori di variabile](http://msdn.microsoft.com/395be464-4b19-44f7-91e5-b8876d6743dc) o, in una sezione separata all'interno del file di script per i valori delle variabili.  
+Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file script è più o meno statico con informazioni sulle variabili contenute in un [file con valori di variabile](creating-variable-value-files-sybasetosql.md) o, in una sezione separata all'interno del file di script per i valori delle variabili.  
   
 **Esempio:**  
   

@@ -18,12 +18,12 @@ caps.latest.revision: 86
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eda7d98c6c90cf53f8b788a52717db01bcc8fae9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5556c3e3392dd52fdd27acacd6c3320b7d9fbff0
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307591"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392065"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurazione di IIS per la sincronizzazione Web
   Le procedure descritte in questo argomento rappresentano il secondo passaggio nella configurazione della sincronizzazione Web per la replica di tipo merge. Questo passaggio è successivo all'abilitazione di una pubblicazione per la sincronizzazione Web. Per una panoramica del processo di configurazione, vedere [Configura sincronizzazione Web](configure-web-synchronization.md). Al termine delle procedure indicate in questo argomento, procedere al terzo passaggio, che consiste nella configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web. Questo terzo passaggio è descritto negli argomenti seguenti:  
@@ -34,7 +34,7 @@ ms.locfileid: "37307591"
   
 -   RMO: [Procedura: Configurazione di una sottoscrizione per l'utilizzo di una sottoscrizione Web (Programmazione RMO)](http://msdn.microsoft.com/library/ms345207.aspx)  
   
- Nella sincronizzazione Web viene utilizzato un computer che esegue [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) per sincronizzare le sottoscrizioni pull con le pubblicazioni di tipo merge. Sono supportati IIS versione 5.0, IIS versione 6.0 e [!INCLUDE[iisver](../../includes/iisver-md.md)] . In [!INCLUDE[iisver](../../includes/iisver-md.md)]non è invece supportata la Configurazione guidata sincronizzazione Web.  
+ Nella sincronizzazione Web viene utilizzato un computer che esegue [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) per sincronizzare le sottoscrizioni pull con le pubblicazioni di tipo merge. Sono supportati IIS versione 5.0, IIS versione 6.0 e IIS versione 7.0. La Configurazione guidata sincronizzazione Web non è supportata in IIS versione 7.0.  
   
 > [!IMPORTANT]  
 >  Verificare che nell'applicazione venga utilizzato solo [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versione successiva e che le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] non siano installate sul server IIS. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] possono causare errori come, ad esempio, "Formato di messaggio non valido durante la sincronizzazione Web. Verificare che i componenti di replica siano configurati correttamente nel server Web".  

@@ -16,15 +16,15 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a7ea23403e1c020a717b3a6fa1e1b5bad06146a
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: e38b7be06836dbbce868356fa9a4f9784c1f5219
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509220"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393176"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Impostazioni progetto (Mapping di tipo) (DB2ToSQL)
-La pagina del mapping dei tipi dei **impostazioni del progetto** finestra di dialogo contiene impostazioni che Personalizza modalità di conversione di tipi di dati DB2 in SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] i tipi di dati.  
+La pagina del mapping dei tipi dei **impostazioni del progetto** finestra di dialogo contiene impostazioni che Personalizza modalità di conversione di tipi di dati DB2 in SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati.  
   
 La pagina del mapping dei tipi è disponibile nel **impostazioni del progetto** e **impostazioni di progetto predefinite** finestre di dialogo.  
   
@@ -41,7 +41,7 @@ La tabella seguente illustra il **Mapping dei tipi** opzioni della scheda:
 Il tipo di dati DB2 mappato.  
   
 **Tipo di destinazione**  
-La destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati per il tipo di dati DB2 specificato.  
+La destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati per il tipo di dati DB2 specificato.  
   
 Vedere le tabelle nella sezione successiva per il valore predefinito SSMA per i mapping dei tipi di DB2.  
   
@@ -63,7 +63,7 @@ In SSMA per DB2, è possibile impostare i mapping di tipi personalizzato per gli
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>Tipo di argomento predefinito e restituisce i Mapping dei tipi di valore  
 Nella tabella seguente contiene il mapping dei tipi di dati predefinito per gli argomenti e valori restituiti.  
   
-|DB2 Tipo di dati|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati|  
+|DB2 Tipo di dati|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
@@ -119,7 +119,7 @@ Nella tabella seguente contiene il mapping dei tipi di dati predefinito per gli 
 ### <a name="default-column-type-mapping"></a>Mapping dei tipi di colonna predefinito  
 Nella tabella seguente contiene il mapping dei tipi predefiniti per le colonne.  
   
-|DB2 Tipo di dati|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati|  
+|DB2 Tipo di dati|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
@@ -187,7 +187,7 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le colonne.
 ### <a name="default-local-variable-type-mapping"></a>Mapping dei tipi di variabile locale predefinito  
 Nella tabella seguente contiene il mapping dei tipi predefiniti per le variabili locali.  
   
-|DB2 Tipo di dati|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati|  
+|DB2 Tipo di dati|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  

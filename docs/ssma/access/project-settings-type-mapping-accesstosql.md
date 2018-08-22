@@ -23,15 +23,15 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0403c7074df0f81081cda167fe9bbf04626f2522
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4f1d6ce53d09c120784505245ac903a6f3833920
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985743"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392998"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Impostazioni progetto (Mapping di tipo) (AccessToSQL)
-Le impostazioni di progetto del mapping dei tipi consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA. È anche possibile specificare i mapping dei tipi per singoli oggetti di database. Per altre informazioni, vedere [Mapping tipi di origine e destinazione dati](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9).  
+Le impostazioni di progetto del mapping dei tipi consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA. È anche possibile specificare i mapping dei tipi per singoli oggetti di database. Per altre informazioni, vedere [Mapping tipi di origine e destinazione dati](mapping-source-and-target-data-types-accesstosql.md).  
   
 Mapping dei tipi è disponibile nel **impostazioni del progetto** e **impostazioni di progetto predefinite** finestre di dialogo:  
   
@@ -44,7 +44,7 @@ Mapping dei tipi è disponibile nel **impostazioni del progetto** e **impostazio
 Il tipo di dati di accesso per eseguire il mapping.  
   
 **Tipo di destinazione**  
-La destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tipo di dati di SQL Azure per il tipo di dati di accesso specificato.  
+La destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tipo di dati di SQL Azure per il tipo di dati di accesso specificato.  
   
 La tabella seguente illustra il mapping predefinito tra i tipi di dati di origine e di destinazione.  
   
@@ -80,6 +80,6 @@ Fare clic per rimuovere il mapping dei tipi di dati selezionato dall'elenco di m
 Fare clic per reimpostare tutti i mapping dei tipi di dati per le impostazioni predefinite SSMA.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Mapping dei tipi di dati origine e destinazione](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+[Mapping dei tipi di dati origine e destinazione](mapping-source-and-target-data-types-accesstosql.md)  
 [Reference(Access) dell'interfaccia utente](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

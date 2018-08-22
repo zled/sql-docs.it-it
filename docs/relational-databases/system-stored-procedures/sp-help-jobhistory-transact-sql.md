@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e001e9e0ea0dd7dfdbe64a788db465125b04e414
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b903b6e0494e94da555750cb94a3c4cd0c0c41c9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261820"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394169"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
  Numero di identificazione del processo. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name=** ] **'***job_name***'**  
- Nome del processo. *job_name* viene **sysname**, con un valore predefinito è NULL.  
+ Nome del processo. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@step_id=** ] *step_id*  
  Numero di identificazione del passaggio. *step_id* viene **int**, con un valore predefinito è NULL.  
@@ -74,24 +74,24 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
  Livello di gravità del messaggio di errore restituito da SQL Server durante l'esecuzione del processo. *sql_severity* viene **int**, con un valore predefinito è NULL.  
   
  [ **@start_run_date=** ] *start_run_date*  
- Data di avvio del processo. *start_run_date*viene **int**, con un valore predefinito è NULL. *start_run_date* deve essere immesso nel formato YYYYMMDD, dove YYYY è un anno di quattro caratteri, MM è un nome del mese di due caratteri, e DD è un nome di giorno di due caratteri.  
+ Data di avvio del processo. *start_run_date*viene **int**, con un valore predefinito è NULL. *start_run_date* deve essere immesso nel formato aaaammgg, dove YYYY è un anno di quattro caratteri, MM è un nome di un mese espressi con due cifre e GG è un nome di giorno di due caratteri.  
   
  [ **@end_run_date=** ] *end_run_date*  
- Data di completamento del processo. *espresso* viene **int**, con un valore predefinito è NULL. *espresso*deve essere immesso nel formato aaaammgg, dove AAAA è l'anno a quattro cifre, MM è il un nome del mese di due caratteri e GG è un nome di giorno di due caratteri.  
+ Data di completamento del processo. *espresso* viene **int**, con un valore predefinito è NULL. *espresso*deve essere immesso nel formato aaaammgg, dove YYYY è l'anno a quattro cifre, MM è un nome di un mese espressi con due cifre e GG è un nome di giorno di due caratteri.  
   
  [  **@start_run_time=** ] *start_run_time*  
- Ora di avvio del processo. *start_run_time* viene **int**, con un valore predefinito è NULL. *start_run_time*deve essere un valore nel formato HHMMSS, dove HH è l'ora, MM è il minuto espressi con due cifre del giorno, e SS è il secondo dei due caratteri del giorno.  
+ Ora di avvio del processo. *start_run_time* viene **int**, con un valore predefinito è NULL. *start_run_time*deve essere immesso nel formato HHMMSS, dove HH è l'ora, MM è un minuto espressi con due cifre del giorno e SS è il secondo espressi con due cifre del giorno.  
   
  [ **@end_run_time=** ] *end_run_time*  
- Ora di completamento del processo. *end_run_time* viene **int**, con un valore predefinito è NULL. *end_run_time*deve essere un valore nel formato HHMMSS, dove HH è l'ora, MM è il minuto espressi con due cifre del giorno, e SS è il secondo dei due caratteri del giorno.  
+ Ora di completamento del processo. *end_run_time* viene **int**, con un valore predefinito è NULL. *end_run_time*deve essere immesso nel formato HHMMSS, dove HH è l'ora, MM è un minuto espressi con due cifre del giorno e SS è il secondo espressi con due cifre del giorno.  
   
  [  **@minimum_run_duration=** ] *minimum_run_duration*  
- Durata minima per il completamento del processo. *minimum_run_duration* viene **int**, con un valore predefinito è NULL. *minimum_run_duration*deve essere un valore nel formato HHMMSS, dove HH è l'ora, MM è il minuto espressi con due cifre del giorno, e SS è il secondo dei due caratteri del giorno.  
+ Durata minima per il completamento del processo. *minimum_run_duration* viene **int**, con un valore predefinito è NULL. *minimum_run_duration*deve essere immesso nel formato HHMMSS, dove HH è l'ora, MM è un minuto espressi con due cifre del giorno e SS è il secondo espressi con due cifre del giorno.  
   
  [  **@run_status=** ] *run_status*  
- Stato di esecuzione del processo. *run_status* viene **int**, con un valore predefinito è NULL, e può essere uno dei valori seguenti.  
+ Stato di esecuzione del processo. *run_status* viene **int**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**0**|Non riuscito|  
 |**1**|Operazione completata|  
@@ -104,7 +104,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
  Numero minimo di tentativi per l'esecuzione di un processo. *minimum_retries* viene **int**, con un valore predefinito è NULL.  
   
  [  **@oldest_first=** ] *oldest_first*  
- Indica se i processi meno recenti devono essere visualizzati per primi nell'output. *oldest_first* viene **int**, il valore predefinito è **0**, che presenta i processi più recenti prima di tutto. **1** consente innanzitutto i processi meno recenti.  
+ Indica se i processi meno recenti devono essere visualizzati per primi nell'output. *oldest_first* viene **int**, il valore predefinito è **0**, che presenta i processi più recenti prima di tutto. **1** presenta prima di tutto i processi meno recenti.  
   
  [ **@server=** ] **'***server***'**  
  Nome del server in cui è stato eseguito il processo. *server* viene **nvarchar(30)**, con un valore predefinito è NULL.  
@@ -113,17 +113,17 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
  Indica se stampare tutte le colonne nel set di risultati (**completo**) o un riepilogo delle colonne. *modalità* viene **varchar(7)**, il valore predefinito è **riepilogo**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- L'elenco delle colonne dipende dal valore di *modalità*. Il set di colonne più completo è illustrato di seguito e viene restituito quando *modalità* è FULL.  
+ L'elenco delle colonne dipende dal valore della *modalità*. Il set di colonne più completo è illustrato di seguito e viene restituito quando *modalità* è FULL.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Numero di identificazione della voce di cronologia.|  
 |**job_id**|**uniqueidentifier**|Numero di identificazione del processo.|  
 |**job_name**|**sysname**|Nome del processo.|  
-|**step_id**|**int**|Numero di identificazione del passaggio (sarà **0** per la cronologia dei processi).|  
+|**step_id**|**int**|Numero di identificazione del passaggio (saranno **0** per la cronologia processo).|  
 |**step_name**|**sysname**|Nome del passaggio (è NULL per la cronologia dei processi).|  
 |**sql_message_id**|**int**|Per un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)], numero di errore [!INCLUDE[tsql](../../includes/tsql-md.md)] più recente restituito durante l'esecuzione del comando.|  
 |**sql_severity**|**int**|Per un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)], gravità di errore [!INCLUDE[tsql](../../includes/tsql-md.md)] più elevata restituita durante l'esecuzione del comando.|  
@@ -138,10 +138,10 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|Numero di tentativi di esecuzione del passaggio (è sempre 0 per la cronologia dei processi).|  
 |**server**|**nvarchar(30)**|Server in cui viene eseguito il processo o il passaggio. È sempre (**locale**).|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_help_jobhistory** restituisce un report con la cronologia dei processi pianificati specificati. Se non viene specificato alcun parametro, il report include la cronologia di tutti i processi pianificati.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -150,9 +150,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- I membri del **SQLAgentUserRole** ruolo del database può visualizzare solo la cronologia dei processi di cui sono proprietari.  
+ I membri del **SQLAgentUserRole** ruolo del database può solo visualizzare la cronologia dei processi di cui sono proprietari.  
   
 ## <a name="examples"></a>Esempi  
   

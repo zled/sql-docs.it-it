@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7beabaaf63194cc699c3711a87dd1e59d244c068
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0a83ac3429a3012269a35c64ba5fdcbec18b2d4c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981333"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392636"
 ---
 # <a name="datasources-object-tmsl"></a>Oggetto DataSources (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "38981333"
  Tipo di origine dati. Al momento, l'unico valore valido è Provider (1) - stringa di connessione normale.  
   
  connectionString  
- La stringa di connessione che specifica il database e server minima, ma può anche includere altre proprietà supportate dal sistema RDBMS esterno, ad esempio un account utente o del provider di dati. Questo valore è obbligatorio. Visualizzare [classe SqlConnectionStringBuilder](https://msdn.microsoft.com/library/ms254500\(v=vs.110\).aspx) per informazioni dettagliate su SQL Server database di proprietà della stringa di connessione.  
+ La stringa di connessione che specifica il database e server minima, ma può anche includere altre proprietà supportate dal sistema RDBMS esterno, ad esempio un account utente o del provider di dati. Questo valore è obbligatorio. Visualizzare [classe SqlConnectionStringBuilder](/dotnet/framework/data/adonet/connection-string-syntax) per informazioni dettagliate su SQL Server database di proprietà della stringa di connessione.  
   
  valore di impersonationMode  
  Specifica se Analysis Services deve rappresentare l'identità dell'utente che richiede la query. Questa proprietà è un valore numerico che specifica le credenziali da utilizzare per la rappresentazione. I valori di enumerazione sono i seguenti:  

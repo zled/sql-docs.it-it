@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee9bf066e246dec2432b4a0874a3f3d99c7d2779
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d99796f219623e72fd42e0a9780ea0d2d9458250
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264877"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392317"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
   In questo argomento vengono introdotti i concetti, i requisiti e i componenti necessari per utilizzare il servizio di archiviazione BLOB di Windows Azure come destinazione di backup. La funzionalità di backup e ripristino è uguale o simile a quella delle opzioni DISK e TAPE, con alcune differenze. Nell'argomento sono descritte le differenze e le eccezioni rilevanti e sono inclusi alcuni esempi di codice.  
@@ -86,9 +86,9 @@ ms.locfileid: "37264877"
   
  Per istruzioni dettagliate su come creare un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credenziale, vedere [creare una credenziale](#credential) riportato più avanti in questo argomento.  
   
- Per informazioni generali sulle credenziali, vedere la pagina [Credenziali](http://msdn.microsoft.com/en-us/library/ms161950.aspx)  
+ Per informazioni generali sulle credenziali, vedere [Credenziali](../security/authentication-access/credentials-database-engine.md)  
   
- Per informazioni o altri esempi in cui vengono utilizzate le credenziali, vedere [Creazione di un proxy di SQL Server Agent](http://msdn.microsoft.com/library/ms175834.aspx).  
+ Per informazioni su altri esempi in cui vengono utilizzate le credenziali, vedere [creare un Proxy di SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 ###  <a name="limitations"></a> Limitazioni  
   
@@ -282,7 +282,7 @@ ms.locfileid: "37264877"
 ###  <a name="credential"></a> Creare credenziali  
  Nell'esempio seguente vengono create le credenziali in cui sono contenute le informazioni di autenticazione per l'archiviazione di Windows Azure.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     IF NOT EXISTS  
@@ -327,7 +327,7 @@ ms.locfileid: "37264877"
 ###  <a name="complete"></a> Backup di un database completo  
  Nell'esempio riportato di seguito viene eseguito il backup del database AdventureWorks2012 nel servizio di archiviazione BLOB di Windows Azure.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     BACKUP DATABASE AdventureWorks2012   
@@ -385,7 +385,7 @@ ms.locfileid: "37264877"
 ###  <a name="databaselog"></a> Backup del database e log  
  Nell'esempio riportato di seguito viene eseguito il backup del database di esempio AdventureWorks2012 per il quale viene utilizzato, per impostazione predefinita, il modello di recupero con registrazione minima. Per consentire il backup del log, il database AdventureWorks2012 viene modificato per l'utilizzo del modello di recupero con registrazione completa. Nell'esempio viene quindi creato un backup completo del database nel BLOB di Windows Azure e, dopo un periodo dedicato alle attività di aggiornamento, viene eseguito il backup del log. In questo esempio viene creato il nome di un file di backup con un indicatore datetime.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     -- To permit log backups, before the full database backup, modify the database   
@@ -496,7 +496,7 @@ ms.locfileid: "37264877"
 ###  <a name="filebackup"></a> Creazione di un backup completo del file del filegroup primario  
  Nell'esempio seguente viene creato un backup di file completo del filegroup primario.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -563,7 +563,7 @@ ms.locfileid: "37264877"
 ###  <a name="differential"></a> Creazione di un backup differenziale del file del filegroup primario  
  Nell'esempio seguente viene creato un backup di file differenziale del filegroup primario.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -635,7 +635,7 @@ ms.locfileid: "37264877"
 ###  <a name="restoredbwithmove"></a> Ripristinare un database e spostare i file  
  Per ripristinare un backup completo del database e spostare il database ripristinato nella directory C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data, attenersi ai passaggi riportati di seguito.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     -- Backup the tail of the log first  
@@ -752,7 +752,7 @@ ms.locfileid: "37264877"
 ###  <a name="PITR"></a> Ripristino temporizzato tramite STOPAT  
  Nell'esempio seguente viene ripristinato lo stato di un database in un momento preciso e viene illustrata un'operazione di ripristino.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     RESTORE DATABASE AdventureWorks FROM URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   

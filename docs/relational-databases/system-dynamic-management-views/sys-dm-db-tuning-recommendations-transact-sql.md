@@ -26,12 +26,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f90bdf2966092f003e45b3bb6c8d80710875b59a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 3f8e2957802d527a4e4845e95eedb2ea7cdcd375
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39554251"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392960"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_tuning\_recommendations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "39554251"
 | **valido\_poiché** | **datetime2** | La prima volta che è stata generata da questa raccomandazione. |
 | **ultimo\_Aggiorna** | **datetime2** | L'ora dell'ultima è stata generata questa raccomandazione. |
 | **state** | **nvarchar(4000)** | Documento JSON che descrive lo stato della raccomandazione. Sono disponibili i seguenti campi:<br />-   `currentValue` -stato corrente della raccomandazione.<br />-   `reason` – Costante che descrive il motivo per cui la raccomandazione è nello stato corrente.|
-| **viene\_eseguibile\_azione** | **bit** | 1 = la raccomandazione possa essere eseguita sul database tramite [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.<br />0 = la raccomandazione non possa essere eseguita sul database (ad esempio: raccomandazione ripristinato o solo informazioni) |
+| **viene\_eseguibile\_azione** | **bit** | 1 = la raccomandazione possa essere eseguita sul database tramite [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script.<br />0 = la raccomandazione non possa essere eseguita sul database (ad esempio: raccomandazione ripristinato o solo informazioni) |
 | **viene\_revertable\_azione** | **bit** | 1 = la raccomandazione può essere monitorata e ripristinata dal motore di Database automaticamente.<br />0 = la raccomandazione non può essere monitorata e ripristinata automaticamente. La maggior parte degli &quot;eseguibile&quot; azioni saranno &quot;revertable&quot;. |
 | **eseguire\_azione\_avviare\_ora** | **datetime2** | Data che la raccomandazione viene applicata. |
 | **eseguire\_azione\_durata** | **time** | Durata dell'azione di esecuzione. |
@@ -59,7 +59,7 @@ ms.locfileid: "39554251"
 | **REVERT\_azione\_avviato\_da** | **nvarchar(4000)** | `User` = Piano consigliato manualmente forzatura utente. <br /> `System` = Sistema annullato automaticamente raccomandazione. |
 | **REVERT\_azione\_avviato\_ora** | **datetime2** | Data che la raccomandazione è stata ripristinata. |
 | **punteggio** | **int** | Previsto valore/o l'impatto di questa raccomandazione su 0-100 la scala (più grande è preferibile) |
-| **Dettagli** | **nvarchar(max)** | Documento JSON che contiene altri dettagli sulla raccomandazione. Sono disponibili i seguenti campi:<br /><br />`planForceDetails`<br />-    `queryId` -query\_id della query regredite.<br />-    `regressedPlanId` -plan_id del piano regredito.<br />-   `regressedPlanExecutionCount` -Numero di esecuzioni della query con piano con regressione prima la regressione viene rilevato.<br />-    `regressedPlanAbortedCount` -Numero di errori rilevati durante l'esecuzione del piano regredito.<br />-    `regressedPlanCpuTimeAverage` -Tempo CPU medio utilizzato dalla query regredite prima che la regressione viene rilevata.<br />-    `regressedPlanCpuTimeStddev` -Deviazione Standard di tempo della CPU utilizzato dalla query regredite prima la regressione è stata rilevata.<br />-    `recommendedPlanId` -plan_id del piano che deve essere forzato.<br />-   `recommendedPlanExecutionCount`: Numero di esecuzioni della query con il piano che deve essere forzato prima che la regressione viene rilevata.<br />-    `recommendedPlanAbortedCount` : Numero di errori rilevati durante l'esecuzione del piano che deve essere forzato.<br />-    `recommendedPlanCpuTimeAverage` -Tempo CPU medio utilizzato dalla query eseguita con il piano che deve essere forzato (calcolato prima che la regressione viene rilevata).<br />-    `recommendedPlanCpuTimeStddev` Deviazione standard di tempo della CPU utilizzato dalla query regredite prima la regressione è stata rilevata.<br /><br />`implementationDetails`<br />-  `method` -Il metodo che deve essere usato per risolvere la regressione. Valore è sempre `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script da eseguire per forzare il piano consigliato. |
+| **Dettagli** | **nvarchar(max)** | Documento JSON che contiene altri dettagli sulla raccomandazione. Sono disponibili i seguenti campi:<br /><br />`planForceDetails`<br />-    `queryId` -query\_id della query regredite.<br />-    `regressedPlanId` -plan_id del piano regredito.<br />-   `regressedPlanExecutionCount` -Numero di esecuzioni della query con piano con regressione prima la regressione viene rilevato.<br />-    `regressedPlanAbortedCount` -Numero di errori rilevati durante l'esecuzione del piano regredito.<br />-    `regressedPlanCpuTimeAverage` -Tempo CPU medio utilizzato dalla query regredite prima che la regressione viene rilevata.<br />-    `regressedPlanCpuTimeStddev` -Deviazione Standard di tempo della CPU utilizzato dalla query regredite prima la regressione è stata rilevata.<br />-    `recommendedPlanId` -plan_id del piano che deve essere forzato.<br />-   `recommendedPlanExecutionCount`: Numero di esecuzioni della query con il piano che deve essere forzato prima che la regressione viene rilevata.<br />-    `recommendedPlanAbortedCount` : Numero di errori rilevati durante l'esecuzione del piano che deve essere forzato.<br />-    `recommendedPlanCpuTimeAverage` -Tempo CPU medio utilizzato dalla query eseguita con il piano che deve essere forzato (calcolato prima che la regressione viene rilevata).<br />-    `recommendedPlanCpuTimeStddev` Deviazione standard di tempo della CPU utilizzato dalla query regredite prima la regressione è stata rilevata.<br /><br />`implementationDetails`<br />-  `method` -Il metodo che deve essere usato per risolvere la regressione. Valore è sempre `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script da eseguire per forzare il piano consigliato. |
   
 ## <a name="remarks"></a>Note  
  Le informazioni restituite da `sys.dm_db_tuning_recommendations` viene aggiornato quando identifica potenziali regressione delle prestazioni di query motore di database e non è persistente. Le raccomandazioni vengono mantenute solo fino al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato. Gli amministratori di database devono eseguire periodicamente copie di backup di indicazione di ottimizzazione se desiderano mantenere dopo il riciclo del server. 

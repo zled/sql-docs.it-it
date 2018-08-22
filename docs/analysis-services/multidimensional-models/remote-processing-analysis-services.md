@@ -1,5 +1,5 @@
 ---
-title: Remoto elaborazione (Analysis Services) | Documenti Microsoft
+title: Remote elaborazione (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e7afa72ef5a2f3ad9c27f0d8586b622c033be73
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4860a890ba0443b66f9568edd05257eff7ad70b2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022308"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396635"
 ---
 # <a name="remote-processing-analysis-services"></a>Elaborazione remota (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "34022308"
   
 -   Nel server remoto, **Consenti connessioni remote al computer** deve essere abilitato e l'account che esegue la richiesta di elaborazione deve essere elencato come utente consentito.  
   
--   Le regole di Windows Firewall devono essere configurate per consentire connessioni in ingresso ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Verificare che sia possibile connettersi all'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   Le regole di Windows Firewall devono essere configurate per consentire connessioni in ingresso ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Verificare che sia possibile connettersi all'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vedere [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 -   Risolvere tutti gli errori di elaborazione locale esistenti prima di tentare l'elaborazione remota. Verificare che quando la richiesta di elaborazione è locale, i dati possono essere recuperati correttamente dall'origine dati relazionale esterna. Vedere [Impostare opzioni di rappresentazione &#40;SSAS - multidimensionale&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md) per istruzioni su come specificare le credenziali usate per recuperare i dati.  
   
 ## <a name="on-demand-remote-processing"></a>Elaborazione remota su richiesta  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]accetta richieste di elaborazione da account utente o applicazione che hanno [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le autorizzazioni di amministratore. Se si è un amministratore, verificare che sia possibile connettersi all'istanza remota ed elaborare il database manualmente tramite la connessione remota.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono accettate richieste di elaborazione da account utente o applicazione che dispongono di autorizzazioni di amministratore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se si è un amministratore, verificare che sia possibile connettersi all'istanza remota ed elaborare il database manualmente tramite la connessione remota.  
   
 1.  Nel computer che sarà usato per pianificare l'elaborazione, avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e connettersi all'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
@@ -48,9 +48,9 @@ ms.locfileid: "34022308"
   
  Usare i collegamenti seguenti per impostare le autorizzazioni:  
   
--   [Configurazione di SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+-   [Configurazione di SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
--   Tramite i[SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec) vengono suggeriti i ruoli predefiniti del server qualora non sia possibile la concessione di autorizzazioni **sysadmin** .  
+-   Tramite i[SQL Server Agent Components](../../ssms/agent/sql-server-agent.md) vengono suggeriti i ruoli predefiniti del server qualora non sia possibile la concessione di autorizzazioni **sysadmin** .  
   
  Dopo aver configurato le autorizzazioni dell'account, continuare con i passaggi riportati di seguito.  
   
@@ -91,10 +91,10 @@ ms.locfileid: "34022308"
 2.  Come passaggio finale, modificare il processo da eseguire in base a una pianificazione definita, aggiungendo le notifiche o gli avvisi necessari per amministrare il processo. Potrebbe inoltre essere necessario ridefinire lo script di elaborazione oppure creare più passaggi del processo per elaborare in modo indipendente gli oggetti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Componenti di SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
+ [Componenti di SQL Server Agent](../../ssms/agent/sql-server-agent.md)   
  [Pianificare attività amministrative SSAS con SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [L'elaborazione batch & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [Elaborazione batch &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Elaborazione degli oggetti & #40; XMLA & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [L'elaborazione di oggetti &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

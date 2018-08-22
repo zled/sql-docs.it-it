@@ -22,15 +22,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4868bbe408b96c95a44c82516ce9bb6c9035397e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 604fe25d0b08ddc997baf381adb4a967ed8e9462
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979603"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392793"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Mapping di origine e i tipi di dati di destinazione (AccessToSQL)
-Tipi di database di Access sono diversi dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di database. Quando si convertono oggetti di database di Access da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti, è necessario specificare come eseguire il mapping di tipi di dati da Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. È possibile accettare i mapping dei tipi di dati predefinito, oppure è possibile personalizzare i mapping come illustrato nelle procedure seguenti.  
+Tipi di database di Access sono diversi dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di database. Quando si convertono oggetti di database di Access da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti, è necessario specificare come eseguire il mapping di tipi di dati da Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile accettare i mapping dei tipi di dati predefinito, oppure è possibile personalizzare i mapping come illustrato nelle procedure seguenti.  
   
 ## <a name="default-mappings"></a>Mapping predefiniti  
 SSMA è un set predefinito di mapping dei tipi di dati. Per l'elenco di mapping predefiniti, vedere [impostazioni progetto (Mapping dei tipi)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
@@ -70,7 +70,7 @@ La procedura seguente illustra come eseguire il mapping di tipi di dati nel prog
   
         Ciò consente di personalizzare il mapping dei dati per i valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  Sotto **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati.  
+    4.  Sotto **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati.  
   
         Alcuni tipi richiedono una lunghezza del tipo dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **Sostituisci con** e quindi scegliere **OK**.  
   
@@ -84,7 +84,7 @@ La procedura seguente illustra come eseguire il mapping di tipi di dati nel prog
   
         Ciò consente di personalizzare il mapping dei dati per i valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  Sotto **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati.  
+    4.  Sotto **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati.  
   
         Alcuni tipi richiedono una lunghezza del tipo dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **Sostituisci con** e quindi scegliere **OK**.  
   
@@ -95,8 +95,8 @@ La procedura seguente illustra come eseguire il mapping di tipi di dati nel prog
     2.  Scegliere **Rimuovi**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
-Il passaggio successivo del processo di migrazione consiste [convertire gli oggetti di database di access in oggetti di SQL Server](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+Il passaggio successivo del processo di migrazione consiste [convertire gli oggetti di database di access in oggetti di SQL Server](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione dei database di Access a SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

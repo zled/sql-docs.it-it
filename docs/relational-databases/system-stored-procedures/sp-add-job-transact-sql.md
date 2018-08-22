@@ -22,12 +22,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4851db832cd587d486d3094eb23e8d64ba4b4cc2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b195a9ffc18fc01d8498d981bcaaaf835446888f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240221"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393889"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ sp_add_job [ @job_name = ] 'job_name'
   
 ## <a name="arguments"></a>Argomenti  
  [ **@job_name =** ] **'***job_name***'**  
- Nome del processo. Il nome deve essere univoco e non può contenere la percentuale (**%**) caratteri. *job_name*viene **nvarchar (128)**, non prevede alcun valore predefinito.  
+ Nome del processo. Il nome deve essere univoco e non può contenere la percentuale (**%**) caratteri. *nome_processo*viene **nvarchar (128)**, non prevede alcun valore predefinito.  
   
- [  **@enabled =** ] *abilitato*  
- Indica lo stato del processo aggiunto. *abilitata*viene **tinyint**, con un valore predefinito è 1 (abilitato). Se **0**, il processo non è abilitato e non viene eseguito in base alla pianificazione; tuttavia, è possibile eseguirlo manualmente.  
+ [  **@enabled =** ] *abilitata*  
+ Indica lo stato del processo aggiunto. *abilitata*viene **tinyint**, con un valore predefinito è 1 (abilitato). Se **0**, il processo non è abilitato e non viene eseguito in base alla relativa pianificazione; tuttavia, può essere eseguito manualmente.  
   
  [  **@description =** ] **'***descrizione***'**  
  Descrizione del processo. *Descrizione* viene **nvarchar(512)**, con un valore predefinito è NULL. Se *descrizione* viene non omesso, viene utilizzata "Nessuna descrizione disponibile".  
@@ -78,12 +78,12 @@ sp_add_job [ @job_name = ] 'job_name'
  Meccanismo indipendente dal linguaggio per specificare una categoria di processi. *category_id*viene **int**, con un valore predefinito è NULL.  
   
  [ **@owner_login_name =** ] **'***login***'**  
- Nome dell'account di accesso proprietario del processo. *account di accesso*viene **sysname**, con un valore predefinito è NULL, che viene interpretato come nome dell'account di accesso corrente. Solo i membri del **sysadmin** ruolo predefinito del server può impostare o modificare il valore per **@owner_login_name**. Se gli utenti che non sono membri del **sysadmin** ruolo impostare o modificare il valore di **@owner_login_name**, l'esecuzione della stored procedure ha esito negativo e viene restituito un errore.  
+ Nome dell'account di accesso proprietario del processo. *account di accesso*viene **sysname**, con un valore predefinito è NULL, che viene interpretato come nome account di accesso corrente. Solo i membri del **sysadmin** ruolo predefinito del server può impostare o modificare il valore per **@owner_login_name**. Se gli utenti che non sono membri del **sysadmin** ruolo impostare o modificare il valore di **@owner_login_name**, esecuzione di questa stored procedure ha esito negativo e viene restituito un errore.  
   
  [  **@notify_level_eventlog =** ] *eventlog_level*  
- Valore che indica quando inserire una voce per il processo nel registro applicazioni di Microsoft Windows. *eventlog_level*viene **int**, e può essere uno dei valori seguenti.  
+ Valore che indica quando inserire una voce per il processo nel registro applicazioni di Microsoft Windows. *eventlog_level*viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**0**|Never|  
 |**1**|In caso di esito positivo|  
@@ -91,16 +91,16 @@ sp_add_job [ @job_name = ] 'job_name'
 |**3**|Always|  
   
  [  **@notify_level_email =** ] *email_level*  
- Valore che indica quando inviare un messaggio di posta elettronica al termine del processo. *email_level*viene **int**, il valore predefinito è **0**, non ovvero mai. *email_level*utilizza gli stessi valori *eventlog_level*.  
+ Valore che indica quando inviare un messaggio di posta elettronica al termine del processo. *email_level*viene **int**, il valore predefinito è **0**, non ovvero mai. *email_level*Usa gli stessi valori *eventlog_level*.  
   
  [ **@notify_level_netsend =** ] *netsend_level*  
- Valore che indica quando inviare un messaggio di rete al termine del processo. *netsend_level*viene **int**, il valore predefinito è **0**, non ovvero mai. *netsend_level* utilizza gli stessi valori *eventlog_level*.  
+ Valore che indica quando inviare un messaggio di rete al termine del processo. *netsend_level*viene **int**, il valore predefinito è **0**, non ovvero mai. *netsend_level* Usa gli stessi valori *eventlog_level*.  
   
  [  **@notify_level_page =** ] *page_level*  
- Valore che indica quando inviare una pagina al termine del processo. *page_level*viene **int**, il valore predefinito è **0**, non ovvero mai. *page_level*utilizza gli stessi valori *eventlog_level*.  
+ Valore che indica quando inviare una pagina al termine del processo. *page_level*viene **int**, il valore predefinito è **0**, non ovvero mai. *page_level*Usa gli stessi valori *eventlog_level*.  
   
- [  **@notify_email_operator_name =** ] **'***indirizzo_posta_elettronica***'**  
- Il nome di posta elettronica della persona a cui inviare il messaggio di posta elettronica quando *email_level* viene raggiunto. *indirizzo_posta_elettronica* viene **sysname**, con un valore predefinito è NULL.  
+ [  **@notify_email_operator_name =** ] **'***nome_posta_elettronica***'**  
+ Il nome di posta elettronica della persona a cui inviare il messaggio di posta elettronica quando *email_level* viene raggiunto. *nome_posta_elettronica* viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
  Nome dell'operatore a cui viene inviato il messaggio di rete al termine del processo. *netsend_name*viene **sysname**, con un valore predefinito è NULL.  
@@ -109,31 +109,31 @@ sp_add_job [ @job_name = ] 'job_name'
  Nome dell'operatore a cui inviare il messaggio sul cercapersone al termine del processo. *page_name*viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@delete_level =** ] *i possibili*  
- Valore che indica quando eliminare il processo. *delete_value*viene **int**, con un valore predefinito è 0, non ovvero mai. *i possibili*utilizza gli stessi valori *eventlog_level*.  
+ Valore che indica quando eliminare il processo. *delete_value*viene **int**, valore predefinito è 0, non ovvero mai. *i possibili*Usa gli stessi valori *eventlog_level*.  
   
 > [!NOTE]  
->  Quando *i possibili* è **3**, il processo viene eseguito una sola volta, indipendentemente dalle pianificazioni definite per il processo. Inoltre, se un processo si autoelimina, viene eliminato anche il contenuto della cronologia corrispondente.  
+>  Quando *i possibili* viene **3**, il processo viene eseguito una sola volta, indipendentemente dalle pianificazioni definite per il processo. Inoltre, se un processo si autoelimina, viene eliminato anche il contenuto della cronologia corrispondente.  
   
  [ **@job_id =** ] *job_id***OUTPUT**  
  Numero di identificazione del processo assegnato al processo se creato correttamente. *job_id*è una variabile di output di tipo **uniqueidentifier**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **@originating_server** esiste **sp_add_job** ma non è elencato nella sezione argomenti. **@originating_server** è riservato per uso interno.  
   
- Dopo aver **sp_add_job** è stata eseguita per aggiungere un processo, **sp_add_jobstep** può essere utilizzato per aggiungere i passaggi che eseguono le attività per il processo. **sp_add_jobschedule** può essere utilizzato per creare la pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio Agent utilizzerà per eseguire il processo. Utilizzare **sp_add_jobserver** per impostare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza in cui viene eseguito, il processo e **sp_delete_jobserver** per rimuovere il processo dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza.  
+ Dopo aver **sp_add_job** è stata eseguita per aggiungere un processo **sp_add_jobstep** può essere utilizzato per aggiungere i passaggi che eseguono le attività per il processo. **sp_add_jobschedule** può essere usato per creare la pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio agente utilizza per eseguire il processo. Uso **sp_add_jobserver** per impostare le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza in cui viene eseguito il processo, e **sp_delete_jobserver** per rimuovere il processo dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza.  
   
- Se il processo verrà eseguito in uno o più server di destinazione in un ambiente multiserver, utilizzare **sp_apply_job_to_targets** per impostare i server di destinazione o gruppi di server per il processo di destinazione. Per rimuovere i processi dal server di destinazione o gruppi di server di destinazione, utilizzare **sp_remove_job_from_targets**.  
+ Se il processo verrà eseguito in uno o più server di destinazione in un ambiente multiserver, utilizzare **sp_apply_job_to_targets** per impostare i server di destinazione o i gruppi di server per il processo di destinazione. Per rimuovere i processi dal server di destinazione o gruppi di server di destinazione, usare **sp_remove_job_from_targets**.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Per eseguire questa stored procedure, gli utenti devono essere un membro del **sysadmin** ruolo predefinito del server o appartenere a uno dei seguenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente ruoli predefiniti del database, che si trovano nel **msdb** database:  
+## <a name="permissions"></a>Permissions  
+ Per eseguire questa stored procedure, gli utenti devono essere un membro del **sysadmin** ruolo predefinito del server, oppure disporre di uno dei seguenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente ruoli predefiniti del database, che si trovano nel **msdb** database:  
   
 -   **SQLAgentUserRole**  
   
@@ -141,9 +141,9 @@ sp_add_job [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni sulle autorizzazioni specifiche associate a ognuno di questi ruoli del database, vedere [ruoli di SQL Server Agent fissa Database](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni sulle autorizzazioni specifiche che sono associati a ognuno di questi ruoli del database, vedere [ruoli predefiniti del Database SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo i membri del **sysadmin** ruolo predefinito del server può impostare o modificare il valore per **@owner_login_name**. Se gli utenti che non sono membri del **sysadmin** ruolo impostare o modificare il valore di **@owner_login_name**, l'esecuzione della stored procedure ha esito negativo e viene restituito un errore.  
+ Solo i membri del **sysadmin** ruolo predefinito del server può impostare o modificare il valore per **@owner_login_name**. Se gli utenti che non sono membri del **sysadmin** ruolo impostare o modificare il valore di **@owner_login_name**, esecuzione di questa stored procedure ha esito negativo e viene restituito un errore.  
   
 ## <a name="examples"></a>Esempi  
   

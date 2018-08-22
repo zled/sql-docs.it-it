@@ -1,11 +1,11 @@
 ---
-title: Le transazioni in ODBC | Microsoft Docs
+title: Le transazioni in ODBC | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,17 +17,17 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc91460599df7fff2bed9c7a7a20991b8bae3b57
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7b63f0690a0126a091879ee934f377a7c62e5036
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425670"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392639"
 ---
 # <a name="transactions-in-odbc"></a>Transazioni in ODBC
-  Le transazioni in ODBC vengono gestite a livello di connessione. Quando un'applicazione completa una transazione, esegue il commit o il rollback di tutte le operazioni effettuate tramite tutti gli handle di istruzione nella connessione. Per eseguire il commit o rollback della transazione, le applicazioni devono chiamare [SQLEndTran](../../native-client-odbc-api/sqlendtran.md) anziché inviare un'istruzione COMMIT o ROLLBACK.  
+  Le transazioni in ODBC vengono gestite a livello di connessione. Quando un'applicazione completa una transazione, esegue il commit o il rollback di tutte le operazioni effettuate tramite tutti gli handle di istruzione nella connessione. Per eseguire il commit o il rollback di una transazione, le applicazioni devono chiamare [SQLEndTran](../../native-client-odbc-api/sqlendtran.md) anziché inviare un'istruzione COMMIT o ROLLBACK.  
   
- Un'applicazione chiama [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) per passare tra le due modalità ODBC di gestione delle transazioni:  
+ Un'applicazione chiama [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) per passare da una modalità di gestione delle transazioni ODBC:  
   
 -   Modalità autocommit  
   
@@ -35,13 +35,13 @@ ms.locfileid: "37425670"
   
 -   Modalità di commit manuale  
   
-     Tutte le istruzioni eseguite sono inclusi nella stessa transazione fino a quando non viene arrestata in modo chiamando **SQLEndTran**.  
+     Tutte le istruzioni eseguite sono inclusi nella stessa transazione finché non viene interrotto in modo specifico chiamando **SQLEndTran**.  
   
- La modalità autocommit è la modalità di esecuzione delle transazioni predefinita per ODBC. Quando viene stabilita una connessione, è in modalità autocommit finché **SQLSetConnectAttr** viene chiamato per passare alla modalità di commit manuale modalità autocommit off. Quando un'applicazione disattiva l'autocommit, l'istruzione successiva inviata al database avvia una transazione. La transazione rimane attiva finché l'applicazione chiama **SQLEndTran** con l'opzione SQL_COMMIT o SQL_ROLLBACK. Il comando inviato al database dopo aver **SQLEndTran** avvia la transazione successiva.  
+ La modalità autocommit è la modalità di esecuzione delle transazioni predefinita per ODBC. Quando viene stabilita una connessione, è in modalità autocommit fino **SQLSetConnectAttr** viene chiamato per disattivare la modalità di commit manuale impostandone la modalità autocommit. Quando un'applicazione disattiva l'autocommit, l'istruzione successiva inviata al database avvia una transazione. La transazione rimane attiva finché l'applicazione chiama **SQLEndTran** con l'opzione SQL_COMMIT o SQL_ROLLBACK. Il comando inviato al database dopo **SQLEndTran** avvia la transazione successiva.  
   
  Se un'applicazione passa dalla modalità di commit manuale alla modalità autocommit, il driver esegue il commit di tutte le transazioni attualmente aperte nella connessione.  
   
- Le applicazioni ODBC non devono utilizzare istruzioni per transazioni Transact-SQL quali BEGIN TRANSACTION, COMMIT TRANSACTION o ROLLBACK TRANSACTION, in quanto tali istruzioni possono provocare un comportamento imprevedibile nel driver. Un'applicazione ODBC deve eseguita in modalità autocommit e non utilizzare eventuali funzioni di gestione della transazione o più istruzioni, oppure eseguire in modalità di commit manuale e utilizzare ODBC **SQLEndTran** funzione per eseguire il commit o il rollback delle transazioni.  
+ Le applicazioni ODBC non devono utilizzare istruzioni per transazioni Transact-SQL quali BEGIN TRANSACTION, COMMIT TRANSACTION o ROLLBACK TRANSACTION, in quanto tali istruzioni possono provocare un comportamento imprevedibile nel driver. Un'applicazione ODBC deve essere eseguita in modalità autocommit e non può utilizzare le funzioni di gestione delle transazioni o istruzioni, o eseguito in modalità di commit manuale e utilizzare ODBC **SQLEndTran** funzione per eseguire il commit o il rollback delle transazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di transazioni di &#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  

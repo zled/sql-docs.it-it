@@ -22,17 +22,17 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f6d0dfc8c9a9925f7bf2fa84c4b9330b99c60c3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a1524f9e3f20a774d32c491bc264f2c6c63e7b18
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261037"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395317"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Inserisce operazioni (righe) di **sysdownloadlist** tabella di sistema per i server di destinazione di scaricare ed eseguire.  
+  Inserisce operazioni (righe) nella **sysdownloadlist** tabella di sistema per i server di destinazione scaricare ed eseguire.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,42 +55,42 @@ sp_post_msx_operation
   
 |Tipo oggetto|Operazione|  
 |-----------------|---------------|  
-|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
+|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> Elimina<br /><br /> START<br /><br /> STOP|  
 |**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
-|**PIANIFICAZIONE**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
+|**PIANIFICAZIONE**|INSERT<br /><br /> UPDATE<br /><br /> Elimina|  
   
  [  **@object_type =**] **'***oggetto***'**  
  Tipo di oggetto per cui richiedere un'operazione. I tipi validi sono **processo**, **SERVER**, e **pianificazione**. *oggetto* viene **varchar(64)**, il valore predefinito è **processo**.  
   
  [ **@job_id =**] *job_id*  
- Il numero di identificazione del processo a cui viene applicata l'operazione. *job_id* viene **uniqueidentifier**, non prevede alcun valore predefinito. **0x00** indica tutti i processi. Se *oggetto* è **SERVER**, quindi *job_id*non è obbligatorio.  
+ Il numero di identificazione del processo a cui viene applicata l'operazione. *job_id* viene **uniqueidentifier**, non prevede alcun valore predefinito. **0x00** indica tutti i processi. Se *oggetti* viene **SERVER**, quindi *job_id*non è obbligatorio.  
   
  [ **@specific_target_server =**] **'***target_server***'**  
- Nome del server di destinazione in cui l'operazione specificata viene applicata. Se *job_id* è specificato, ma *target_server* viene omesso, le operazioni vengono registrate per tutti i server di processo del processo. *target_server* viene **nvarchar(30)**, con un valore predefinito è NULL.  
+ Nome del server di destinazione in cui l'operazione specificata viene applicata. Se *job_id* è specificato, ma *target_server* viene omesso, le operazioni vengono richieste per tutti i server del processo del processo. *target_server* viene **nvarchar(30)**, con un valore predefinito è NULL.  
   
  [  **@value =**] *valore*  
- L'intervallo di polling in secondi. *value* è **int**e il valore predefinito è NULL. Specificare questo parametro solo se *operazione* è **SET-POLL**.  
+ L'intervallo di polling in secondi. *value* è **int**e il valore predefinito è NULL. Specificare questo parametro solo se *operazione* viene **SET-POLL**.  
   
  [  **@schedule_uid=** ] *valore schedule_uid*  
  Identificatore univoco per la pianificazione a cui si riferisce l'operazione. *valore schedule_uid* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **SP_POST_MSX_OPERATION** deve essere eseguita la **msdb** database.  
   
- **SP_POST_MSX_OPERATION** può sempre essere chiamato in modo sicuro perché determina innanzitutto se il server corrente è un agente multiserver di Microsoft SQL Server e, in tal caso, se *oggetto*è un processo multiserver.  
+ **SP_POST_MSX_OPERATION** può sempre essere chiamato in modo sicuro perché determina innanzitutto se il server corrente è un agente multiserver di Microsoft SQL Server e, in questo caso, se *oggetto*è un processo multiserver.  
   
- Dopo un'operazione è stata registrata, viene visualizzato nel **sysdownloadlist** tabella. Dopo la creazione e l'inserimento di un processo, è necessario comunicare ai server di destinazione (TSX) tutte le successive modifiche apportate al processo. A tale scopo è possibile utilizzare l'elenco di download.  
+ Dopo un'operazione è stata registrata, viene visualizzato nei **sysdownloadlist** tabella. Dopo la creazione e l'inserimento di un processo, è necessario comunicare ai server di destinazione (TSX) tutte le successive modifiche apportate al processo. A tale scopo è possibile utilizzare l'elenco di download.  
   
- È consigliabile gestire l'elenco di download in SQL Server Management Studio. Per ulteriori informazioni, vedere [visualizzare o modificare i processi](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7).  
+ È consigliabile gestire l'elenco di download in SQL Server Management Studio. Per altre informazioni, vedere [visualizzare o modificare processi](../../ssms/agent/view-or-modify-jobs.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
- Per eseguire questa stored procedure, è necessario consentire agli utenti di **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Per eseguire questa stored procedure, gli utenti devono disporre i **sysadmin** ruolo predefinito del server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   

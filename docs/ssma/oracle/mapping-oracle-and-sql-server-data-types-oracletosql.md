@@ -15,15 +15,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 54b67cbb38c9884afc19f6da6283bfda99f93e88
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6948b81ca2460d4de74393aa880f95fe3f11dfb1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979324"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396137"
 ---
-# <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mapping di Oracle e tipi di dati SQL Server (OracleToSQL)
-Tipi di database Oracle sono diversi da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di database. Quando si convertono oggetti di database Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti, è necessario specificare come eseguire il mapping di tipi di dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. È possibile accettare i mapping dei tipi di dati predefinito, oppure è possibile personalizzare i mapping come illustrato nelle sezioni seguenti.  
+# <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mapping di tipi di dati Oracle e SQL Server (OracleToSQL)
+Tipi di database Oracle sono diversi da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di database. Quando si convertono oggetti di database Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti, è necessario specificare come eseguire il mapping di tipi di dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile accettare i mapping dei tipi di dati predefinito, oppure è possibile personalizzare i mapping come illustrato nelle sezioni seguenti.  
   
 ## <a name="default-mappings"></a>Mapping predefiniti  
 SSMA è un set predefinito di mapping dei tipi di dati. Per l'elenco di mapping predefiniti, vedere [impostazioni del progetto &#40;Mapping dei tipi&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
@@ -62,11 +62,11 @@ La procedura seguente illustra come eseguire il mapping di tipi di dati nel prog
   
         Ciò consente di personalizzare il mapping dei dati per i valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  Sotto **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati.  
+    4.  Sotto **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati.  
   
         Alcuni tipi richiedono una lunghezza del tipo dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituire con** casella.  
   
-    5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+    5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Per modificare un mapping dei tipi di dati, eseguire le operazioni seguenti:  
   
@@ -78,9 +78,9 @@ La procedura seguente illustra come eseguire il mapping di tipi di dati nel prog
   
         Ciò consente di personalizzare il mapping dei dati per i valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  Sotto **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati.  
+    4.  Sotto **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati.  
   
-        Alcuni tipi richiedono una lunghezza del tipo dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituire con** casella e quindi [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Alcuni tipi richiedono una lunghezza del tipo dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituire con** casella e quindi [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  Per rimuovere un mapping dei tipi di dati personalizzate, eseguire le operazioni seguenti:  
   
@@ -91,7 +91,7 @@ La procedura seguente illustra come eseguire il mapping di tipi di dati nel prog
         Non è possibile rimuovere i mapping ereditati. Tuttavia, i mapping ereditati vengono sottoposte a override dai mapping personalizzati di un oggetto specifico o per categoria dell'oggetto.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
-Il passaggio successivo del processo di migrazione consiste nel [creare un report di valutazione](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357) oppure [convertire gli oggetti di database Oracle in sintassi SQL Server](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272). Se si crea un report di valutazione, gli oggetti Oracle vengono convertiti automaticamente durante la valutazione.  
+Il passaggio successivo del processo di migrazione consiste nel [creare un report di valutazione](assessing-oracle-schemas-for-conversion-oracletosql.md) oppure [convertire gli oggetti di database Oracle in sintassi SQL Server](converting-oracle-schemas-oracletosql.md). Se si crea un report di valutazione, gli oggetti Oracle vengono convertiti automaticamente durante la valutazione.  
   
 ## <a name="see-also"></a>Vedere anche  
 [La migrazione da Oracle database in SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

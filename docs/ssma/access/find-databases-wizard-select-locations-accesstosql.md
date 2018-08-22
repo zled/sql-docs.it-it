@@ -18,17 +18,17 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 075c46589600ea31dc03bd4e4f5503ddb6fd1987
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 43efa0e2ed9f58f59fa8b77d74824e094f90edc9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979483"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392634"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Procedura guidata trova database (Seleziona percorsi) (AccessToSQL)
 Nella pagina Selezione percorsi della procedura guidata trova database immesso i parametri di ricerca per trovare i database di Access.  
   
-Per aprire Creazione guidata database di ricerca, scegliere il **File** menu, fare clic su **trovare database**. Per altre informazioni su come usare questa finestra di dialogo, vedere [aggiunta e rimozione di file di Database di Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+Per aprire Creazione guidata database di ricerca, scegliere il **File** menu, fare clic su **trovare database**. Per altre informazioni su come usare questa finestra di dialogo, vedere [aggiunta e rimozione di file di Database di Access](adding-and-removing-access-database-files-accesstosql.md)  
   
 ## <a name="options"></a>Opzioni  
 **Sfoglia**  
@@ -65,6 +65,6 @@ Per trovare i database che corrispondono ai criteri di una dimensione, seleziona
 Immettere il nome utente Windows completo del proprietario. Ciò potrebbe essere formattato come *domain*\\*utente*.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Aggiunta e rimozione di file di Database di Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[Aggiunta e rimozione di file di Database di Access](adding-and-removing-access-database-files-accesstosql.md)  
 [Reference(Access) dell'interfaccia utente](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

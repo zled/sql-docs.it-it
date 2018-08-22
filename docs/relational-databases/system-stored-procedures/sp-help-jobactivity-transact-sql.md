@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 648fb94f5a14365356a293f6fb0652336ca0625b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: de55ccede25cbfffd1930cfbb9088b9de1394ff0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259401"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393189"
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  Numero di identificazione del processo. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name =**] **'***job_name***'**  
- Nome del processo. *job_name*viene **sysname**, con un valore predefinito è NULL.  
+ Nome del processo. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+>  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [ **@session_id** = ] *session_id*  
  ID della sessione su cui segnalare informazioni. *session_id* viene **int**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce il set di risultati seguente:  
@@ -69,7 +69,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**job_id**|**uniqueidentifier**|Identificatore del processo.|  
 |**job_name**|**sysname**|Nome del processo|  
 |**run_requested_date**|**datetime**|Data e ora previste per l'esecuzione del processo.|  
-|**run_requested_source**|**sysname**|Origine dalla richiesta di esecuzione del processo. I possibili valori sono i seguenti:<br /><br /> **1** = esecuzione in base a una pianificazione<br /><br /> **2** = esecuzione in risposta a un avviso<br /><br /> **3** = esecuzione all'avvio<br /><br /> **4** = esecuzione dall'utente<br /><br /> **6** = esecuzione in pianificazione di inattività della CPU|  
+|**run_requested_source**|**sysname**|Origine dalla richiesta di esecuzione del processo. I possibili valori sono i seguenti:<br /><br /> **1** = esecuzione in base a una pianificazione<br /><br /> **2** = esecuzione in risposta a un avviso<br /><br /> **3** = esecuzione all'avvio<br /><br /> **4** = esecuzione da parte dell'utente<br /><br /> **6** = esecuzione in una pianificazione di inattività CPU|  
 |**queued_date**|**datetime**|Data e ora di inserimento della richiesta nella coda. NULL se il processo è stato eseguito direttamente.|  
 |**start_execution_date**|**datetime**|Data e ora di assegnazione del processo a un thread eseguibile.|  
 |**last_executed_step_id**|**int**|ID dell'ultimo passaggio del processo eseguito.|  
@@ -78,21 +78,21 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**next_scheduled_run_date**|**datetime**|Data e ora pianificate per la successiva esecuzione del processo.|  
 |**job_history_id**|**int**|Identificatore della cronologia processo nella tabella delle cronologie processi.|  
 |**message**|**nvarchar(1024)**|Messaggio generato durante l'ultima esecuzione del processo.|  
-|**run_status**|**int**|Stato restituito dall'ultima esecuzione del processo:<br /><br /> **0** = errore non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **3** = annullato<br /><br /> **5** = stato sconosciuto|  
+|**run_status**|**int**|Stato restituito dall'ultima esecuzione del processo:<br /><br /> **0** = operazione non riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **3** = annullato<br /><br /> **5** = stato sconosciuto|  
 |**operator_id_emailed**|**int**|ID dell'operatore comunicato tramite posta elettronica al completamento del processo.|  
-|**operator_id_netsent**|**int**|Numero di ID dell'operatore comunicato tramite **net send** al completamento del processo.|  
+|**operator_id_netsent**|**int**|Numero ID dell'operatore comunicato tramite **net send** al completamento del processo.|  
 |**operator_id_paged**|**int**|ID dell'operatore comunicato tramite cercapersone al completamento del processo.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Tramite questa procedura viene generato uno snapshot dello stato corrente dei processi. I risultati restituiti rappresentano le informazioni disponibili al momento dell'elaborazione della richiesta.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent crea un ID di sessione ogni volta che viene avviato. L'id di sessione viene archiviato nella tabella **msdb.dbo**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent crea un ID di sessione ogni volta che viene avviato. L'id di sessione viene archiviato nella tabella **syssessions**.  
   
- Se non si *session_id* è specificato, elenca le informazioni relative alla sessione più recente.  
+ Se non si specifica *session_id* è specificato, elenca le informazioni relative alla sessione più recente.  
   
- Se non si *job_name* o *job_id* è specificato, elenca le informazioni per tutti i processi.  
+ Se non si specifica *nome_processo* oppure *job_id* è specificato, elenca le informazioni per tutti i processi.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, i membri del **sysadmin** ruolo predefinito del server può eseguire questa stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -101,9 +101,9 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo i membri di **sysadmin** può visualizzare l'attività dei processi di proprietà di altri utenti.  
+ Solo i membri del **sysadmin** può visualizzare l'attività dei processi di proprietà di altri utenti.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni sull'attività di tutti i processi per i quali l'utente corrente dispone dell'autorizzazione di visualizzazione.  

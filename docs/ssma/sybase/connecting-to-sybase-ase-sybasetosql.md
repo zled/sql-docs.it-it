@@ -18,22 +18,22 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0fe501e639b5896eb0f83391e6be40b8f8961ba9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a8411cdb507b27e69f86f0d853e1c98b4d24d29a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980093"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392220"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Connessione a Sybase ASE (SybaseToSQL)
-La migrazione dei database di Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, è necessario connettersi al Server adattivo che contiene i database che si desidera eseguire la migrazione. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti i database nel Server adattivo e visualizza i metadati del database nel riquadro di esplorazione di metadati di Sybase. SSMA archivia le informazioni sui server di database, ma non archivia le password.  
+La migrazione dei database di Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario connettersi al Server adattivo che contiene i database che si desidera eseguire la migrazione. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti i database nel Server adattivo e visualizza i metadati del database nel riquadro di esplorazione di metadati di Sybase. SSMA archivia le informazioni sui server di database, ma non archivia le password.  
   
 La connessione ad ambiente del servizio App rimane attiva fino a quando non si chiude il progetto. Quando si riapre il progetto, è necessario riconnettersi all'ambiente del servizio App se si desidera che una connessione attiva al server.  
   
 Metadati relativi al Server adattivo non viene aggiornato automaticamente. In alternativa, se si desidera aggiornare i metadati nel Visualizzatore metadati Sybase, è necessario aggiornare manualmente i metadati, come descritto nella sezione "Aggiornamento dei metadati di ASE Sybase" più avanti in questo argomento.  
   
 ## <a name="required-ase-permissions"></a>Autorizzazioni di ambiente del servizio App necessaria  
-L'account utilizzato per connettersi all'ambiente del servizio app deve avere almeno **pubbliche** accesso al database master e a qualsiasi database di origine per eseguire la migrazione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Inoltre, per selezionare le autorizzazioni sulle tabelle cui vengono eseguita la migrazione, l'utente deve disporre delle autorizzazioni SELECT su tabelle di sistema seguenti:  
+L'account utilizzato per connettersi all'ambiente del servizio app deve avere almeno **pubbliche** accesso al database master e a qualsiasi database di origine per eseguire la migrazione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Inoltre, per selezionare le autorizzazioni sulle tabelle cui vengono eseguita la migrazione, l'utente deve disporre delle autorizzazioni SELECT su tabelle di sistema seguenti:  
   
 -   [source_db].dbo.sysobjects  
   
@@ -54,7 +54,7 @@ L'account utilizzato per connettersi all'ambiente del servizio app deve avere al
 -   master.dbo.sysdatabases  
   
 ## <a name="establishing-a-connection-to-ase"></a>Tentativo di stabilire una connessione all'ambiente del servizio App  
-Quando ci si connette a un Server adattivo, SSMA legge i metadati del database nel server di database e quindi aggiunge i metadati del file di progetto. Questi metadati vengono utilizzati da SSMA durante la conversione di oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o la sintassi SQL Azure, e quando esegue la migrazione di dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. È possibile esplorare i metadati nel riquadro di esplorazione di metadati Sybase e le proprietà di singoli oggetti di database.  
+Quando ci si connette a un Server adattivo, SSMA legge i metadati del database nel server di database e quindi aggiunge i metadati del file di progetto. Questi metadati vengono utilizzati da SSMA durante la conversione di oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o la sintassi SQL Azure, e quando esegue la migrazione di dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile esplorare i metadati nel riquadro di esplorazione di metadati Sybase e le proprietà di singoli oggetti di database.  
   
 > [!IMPORTANT]  
 > Prima di provare a connettersi al server di database, assicurarsi che il server di database è in esecuzione e può accettare connessioni.  
@@ -106,7 +106,7 @@ Quando ci si connette a un Server adattivo, SSMA legge i metadati del database n
     Per altre informazioni, vedere [connettersi a Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md).  
   
 ## <a name="reconnecting-to-sybase-ase"></a>La riconnessione a Sybase ASE  
-La connessione al server di database rimane attiva fino a quando non si chiude il progetto. Quando si riapre il progetto, è necessario riconnettere se si desidera che una connessione attiva al Server adattivo. È possibile lavorare offline fino a quando non si desidera aggiornare i metadati, caricare gli oggetti di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, ed eseguire la migrazione dei dati.  
+La connessione al server di database rimane attiva fino a quando non si chiude il progetto. Quando si riapre il progetto, è necessario riconnettere se si desidera che una connessione attiva al Server adattivo. È possibile lavorare offline fino a quando non si desidera aggiornare i metadati, caricare gli oggetti di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, ed eseguire la migrazione dei dati.  
   
 ## <a name="refreshing-sybase-ase-metadata"></a>Aggiornamento dei metadati di ASE Sybase  
 I metadati sui database ambiente del servizio App non vengono aggiornati automaticamente. I metadati nel Visualizzatore metadati Sybase sono uno snapshot dei metadati quando si è connessi prima di tutto per il Server adattivo o l'ultima volta aggiornate manualmente i metadati. È possibile aggiornare manualmente i metadati per un singolo database, un unico schema di database o tutti i database.  
@@ -123,7 +123,7 @@ I metadati sui database ambiente del servizio App non vengono aggiornati automat
   
 ## <a name="next-step"></a>Passaggio successivo  
   
--   Il passaggio successivo del processo di migrazione consiste [connettersi a un'istanza di SQL Server](http://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) / [ci si connette a un'istanza di SQL Azure](http://msdn.microsoft.com/9e77e4b0-40c0-455c-8431-ca5d43849aa7)  
+-   Il passaggio successivo del processo di migrazione consiste [connettersi a un'istanza di SQL Server](connecting-to-sql-server-sybasetosql.md) / [ci si connette a un'istanza di SQL Azure](connecting-to-azure-sql-db-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Migrazione dei database di Sybase ASE a SQL Server - Azure SQL database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

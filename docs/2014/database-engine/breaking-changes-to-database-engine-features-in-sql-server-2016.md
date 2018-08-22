@@ -17,12 +17,12 @@ caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64ca4f9c72739d9b5875e7adeec38e5a59f590fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254753"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393200"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Modifiche che possono causare problemi di funzionamento apportate alle funzionalità del Motore di database in SQL Server 2014.
   Questo argomento descrive le modifiche di rilievo nel [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] e versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile che questi problemi si verifichino quando viene effettuato un aggiornamento. Per altre informazioni, vedere [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -57,13 +57,13 @@ ms.locfileid: "37254753"
 |Vista|Description|  
 |----------|-----------------|  
 |sys.dm_exec_requests|La colonna del comando viene modificata da `nvarchar(16)` a `nvarchar(32)`.|  
-|Sys.dm_os_memory_cache_counters|Sono state rinominate le colonne seguenti:<br /><br /> single_pages_kb è ora: <br />                          pages_kb<br /><br /> multi_pages_kb<br />                           è ora: pages_in_use_kb|  
-|Sys.dm_os_memory_cache_entries|La colonna pages_allocated_count colonna è stata rinominata pages_kb.|  
-|DM os_memory_clerks|Multi_pages_kb la colonna è stata rimossa.<br /><br /> Single_pages_kb colonna colonne è stato rinominato pages_kb.|  
+|sys.dm_os_memory_cache_counters|Sono state rinominate le colonne seguenti:<br /><br /> single_pages_kb è ora: <br />                          pages_kb<br /><br /> multi_pages_kb<br />                           è ora: pages_in_use_kb|  
+|sys.dm_os_memory_cache_entries|La colonna pages_allocated_count colonna è stata rinominata pages_kb.|  
+|sys.dm_os_memory_clerks|Multi_pages_kb la colonna è stata rimossa.<br /><br /> Single_pages_kb colonna colonne è stato rinominato pages_kb.|  
 |sys.dm_os_memory_nodes|Sono state rinominate le colonne seguenti:<br /><br /> single_pages_kb è ora: <br />                            pages_kb<br /><br /> è ora multi_pages_kb: <br />                            foreign_committed_kb|  
-|DM os_memory_objects|Le colonne seguenti sono state rinominate.<br /><br /> è ora pages_allocated_count:<br />                            pages_in_bytes<br /><br /> è ora max_pages_allocated_count: max_pages_in_bytes|  
+|sys.dm_os_memory_objects|Le colonne seguenti sono state rinominate.<br /><br /> è ora pages_allocated_count:<br />                            pages_in_bytes<br /><br /> è ora max_pages_allocated_count: max_pages_in_bytes|  
 |sys.dm_os_sys_info|Sono state rinominate le colonne seguenti:<br /><br /> è ora physical_memory_in_bytes: <br />                            physical_memory_kb<br /><br /> valore di bpool_commit_target è ora: <br />                            committed_target_kb<br /><br /> bpool_visible è ora: <br />                            visible_target_kb<br /><br /> è ora virtual_memory_in_bytes from sys: <br />                            virtual_memory_kb<br /><br /> è ora bpool_commited:<br />                            committed_kb|  
-|DM os_workers|La colonna delle impostazioni locali è stata rimossa.|  
+|sys.dm_os_workers|La colonna delle impostazioni locali è stata rimossa.|  
   
 ### <a name="catalog-views"></a>Viste del catalogo  
   
@@ -266,7 +266,7 @@ ms.locfileid: "37254753"
 ||Ottenere un certificato emesso per shortname.<br /><br /> -Questa opzione funziona per tutte le applicazioni.|  
   
 ##  <a name="Yukon"></a> Modifiche di rilievo in SQL Server 2005  
- Per un elenco di modifiche sostanziali introdotte in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], vedere [modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2005](http://msdn.microsoft.com/library/ms143179\(SQL.90\).aspx).  
+ Per un elenco di modifiche sostanziali introdotte in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], vedere [modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2005](breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità del motore di Database deprecate in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   

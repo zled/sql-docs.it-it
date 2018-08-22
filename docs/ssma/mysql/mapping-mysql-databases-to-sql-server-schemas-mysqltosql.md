@@ -19,25 +19,25 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 87720daab47ce4d21e7232b08b81e97b8171f43d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d28d1ddd205d56ad57a0566485c91bc83ac26593
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980533"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392437"
 ---
-# <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mapping tra i database MySQL a schemi SQL Server (MySQLToSQL)
-Per impostazione predefinita, SSMA per MySQL consente di migrare tutti gli oggetti in uno schema di MySQL a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database di SQL Azure denominato per lo schema. Tuttavia, è possibile personalizzare il mapping tra gli schemi di MySQL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o i database di SQL Azure.  
+# <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mapping tra database MySQL e schemi di SQL Server (MySQLToSQL)
+Per impostazione predefinita, SSMA per MySQL consente di migrare tutti gli oggetti in uno schema di MySQL a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database di SQL Azure denominato per lo schema. Tuttavia, è possibile personalizzare il mapping tra gli schemi di MySQL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o i database di SQL Azure.  
   
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL e SQL Server o SQL Azure schemi  
 Il concetto di MySQL di uno schema viene eseguito il mapping al concetto di un database e uno dei relativi schemi di SQL Server. SSMA si intende la combinazione di SQL Server di database e nello schema come schema.  
   
-Il concetto di MySQL di uno schema viene eseguito il mapping al concetto di un database e uno dei relativi schemi di SQL Server. Ad esempio, MySQL potrebbe avere uno schema denominato **HR**. Un'istanza di SQL Server potrebbe essere un database denominato **HR**, e all'interno del database sono gli schemi. Uno schema è il **dbo** (o proprietario del database) dello schema. Per impostazione predefinita, gli schemi di MySQL **HR** verrà mappato il [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] schema e il database **HR.dbo**. SSMA si intende il [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] combinazione di database e nello schema come schema.  
+Il concetto di MySQL di uno schema viene eseguito il mapping al concetto di un database e uno dei relativi schemi di SQL Server. Ad esempio, MySQL potrebbe avere uno schema denominato **HR**. Un'istanza di SQL Server potrebbe essere un database denominato **HR**, e all'interno del database sono gli schemi. Uno schema è il **dbo** (o proprietario del database) dello schema. Per impostazione predefinita, gli schemi di MySQL **HR** verrà mappato il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema e il database **HR.dbo**. SSMA si intende il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e nello schema come schema.  
   
-È possibile modificare il mapping tra MySQL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o schemi di Azure.  
+È possibile modificare il mapping tra MySQL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o schemi di Azure.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Modifica il Database di destinazione e lo Schema  
-In SSMA, è possibile mappare uno schema di MySQL per eventuale [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o lo schema di SQL Azure.  
+In SSMA, è possibile mappare uno schema di MySQL per eventuale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o lo schema di SQL Azure.  
   
 **Per modificare il database e dello schema**  
   
@@ -47,7 +47,7 @@ In SSMA, è possibile mappare uno schema di MySQL per eventuale [!INCLUDE[ssNoVe
   
 2.  Nel riquadro di destra, scegliere il **Schema di Mapping** scheda.  
   
-    Verrà visualizzato un elenco di tutti gli schemi di MySQL, seguito da un valore di destinazione. Questa destinazione è identificata in una notazione di due parti (*database.schema*) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure in cui verranno migrati i dati e oggetti.  
+    Verrà visualizzato un elenco di tutti gli schemi di MySQL, seguito da un valore di destinazione. Questa destinazione è identificata in una notazione di due parti (*database.schema*) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure in cui verranno migrati i dati e oggetti.  
   
 3.  Selezionare la riga che contiene il mapping che si desidera modificare e quindi fare clic su **Modify**.  
   
@@ -59,11 +59,11 @@ In SSMA, è possibile mappare uno schema di MySQL per eventuale [!INCLUDE[ssNoVe
   
 -   Mapping a SQL Server  
   
-È possibile eseguire il mapping del database di origine a qualsiasi database di destinazione. Per impostazione predefinita viene eseguito il mapping di database di origine alla destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database con cui si è connessi con SSMA. Se il database di destinazione in corso il mapping è inesistente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], quindi verrà richiesto con un messaggio **"il Database e/o schema non esiste nella destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] dei metadati. Ne verrà creato uno durante la sincronizzazione. Si desidera continuare?"** Fare clic su Sì. Analogamente, è possibile mappare lo schema allo schema non esistente nella destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database che verrà creato durante la sincronizzazione.  
+È possibile eseguire il mapping del database di origine a qualsiasi database di destinazione. Per impostazione predefinita viene eseguito il mapping di database di origine alla destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database con cui si è connessi con SSMA. Se il database di destinazione in corso il mapping è inesistente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quindi verrà richiesto con un messaggio **"il Database e/o schema non esiste nella destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei metadati. Ne verrà creato uno durante la sincronizzazione. Si desidera continuare?"** Fare clic su Sì. Analogamente, è possibile mappare lo schema allo schema non esistente nella destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database che verrà creato durante la sincronizzazione.  
   
 -   Il mapping a SQL Azure  
   
-È possibile eseguire il mapping del database di origine alla destinazione connessa [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database o per qualsiasi schema nel database di destinazione connessi [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. Se si esegue il mapping dello Schema di origine ad alcuno schema non esistente nel database di destinazione connesso, quindi verrà richiesto con un messaggio **"dello Schema non esiste nei metadati di destinazione. Ne verrà creato uno durante la sincronizzazione. Si desidera continuare? "** Fare clic su Sì.  
+È possibile eseguire il mapping del database di origine alla destinazione connessa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database o per qualsiasi schema nel database di destinazione connessi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Se si esegue il mapping dello Schema di origine ad alcuno schema non esistente nel database di destinazione connesso, quindi verrà richiesto con un messaggio **"dello Schema non esiste nei metadati di destinazione. Ne verrà creato uno durante la sincronizzazione. Si desidera continuare? "** Fare clic su Sì.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Viene ripristinato il Database predefinito e lo Schema  
 Se si personalizza il mapping tra uno schema di MySQL e uno schema di SQL Server, è possibile ripristinare il mapping ai valori predefiniti.  
@@ -73,7 +73,7 @@ Se si personalizza il mapping tra uno schema di MySQL e uno schema di SQL Server
 1.  Nella scheda mapping dello schema, selezionare una riga qualsiasi e fare clic su **Ripristina predefinito** per ripristinare il database predefinito e lo schema.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
-Se si desidera analizzare la conversione di oggetti di MySQL in oggetti di SQL Server o SQL Azure, puoi [creare un report di conversione](http://msdn.microsoft.com/2a56a003-3b0f-453a-963c-00c9e40933ec) in caso contrario, è possibile [convertire le definizioni degli oggetti di database MySQL](http://msdn.microsoft.com/ac21850b-fb32-4704-9985-5759b7c688c7) in SQL Schemi di server o SQL Azure  
+Se si desidera analizzare la conversione di oggetti di MySQL in oggetti di SQL Server o SQL Azure, puoi [creare un report di conversione](assessing-mysql-databases-for-conversion-mysqltosql.md) in caso contrario, è possibile [convertire le definizioni degli oggetti di database MySQL](converting-mysql-databases-mysqltosql.md) in SQL Schemi di server o SQL Azure  
   
 ## <a name="see-also"></a>Vedere anche  
 [Le impostazioni di progetto &#40;conversione&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  

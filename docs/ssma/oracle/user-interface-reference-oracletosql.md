@@ -13,15 +13,15 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: d2d0a031832572eec6a4a21915f0202c94641dac
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 30c11cec1e3c448d2da88b2d76252df6fdaf30d2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984015"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396139"
 ---
-# <a name="user-interface-reference-oracletosql"></a>Riferimento all'interfaccia utente (OracleToSQL)
-In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) per Oracle.  
+# <a name="user-interface-reference-oracletosql"></a>Informazioni di riferimento sull'interfaccia utente (OracleToSQL)
+In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per Oracle.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
 Nella tabella seguente sono elencate le finestre di dialogo SSMA:  
@@ -30,11 +30,11 @@ Nella tabella seguente sono elencate le finestre di dialogo SSMA:
 |-|-|  
 |Argomento|Description|  
 |[Selezione avanzata di oggetti &#40;OracleToSQL&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|Usare la **avanzate Seleziona oggetto** finestra di dialogo per trovare gli oggetti di database usando i criteri di filtro, quindi selezionare o deselezionare gli oggetti.|  
-|[Report di valutazione &#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|Consente di visualizzare i risultati della conversione degli oggetti Oracle per il Report di valutazione [!INCLUDE[tsql](../../includes/tsql_md.md)] informazioni sulla sintassi e per stimare il tempo e la complessità di una migrazione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Report di valutazione &#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|Consente di visualizzare i risultati della conversione degli oggetti Oracle per il Report di valutazione [!INCLUDE[tsql](../../includes/tsql-md.md)] informazioni sulla sintassi e per stimare il tempo e la complessità di una migrazione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Connettersi a Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)|Usare la **Connetti a Oracle** finestra di dialogo per la connessione al database Oracle che vuoi eseguire la migrazione.|  
-|[Connettersi a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-sql-server-oracletosql.md)|Usare la **Connetti al Server SQL** finestra di dialogo per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a cui si desidera eseguire la migrazione.|  
-|[Report di migrazione dati &#40;OracleToSQL&#41;](../../ssma/oracle/data-migration-report-oracletosql.md)|Visualizza i risultati della migrazione dei dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|[Impostazioni di migrazione dei dati](http://msdn.microsoft.com/91f7f558-025d-4f4d-ac2c-aa095e7d1ace)|Usare la **esteso le impostazioni di migrazione dati** pressione di tab per scrivere query personalizzate per la migrazione dei dati.|  
+|[Connettersi a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-sql-server-oracletosql.md)|Usare la **Connetti al Server SQL** finestra di dialogo per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si desidera eseguire la migrazione.|  
+|[Report di migrazione dati &#40;OracleToSQL&#41;](../../ssma/oracle/data-migration-report-oracletosql.md)|Visualizza i risultati della migrazione dei dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Impostazioni di migrazione dei dati](data-migration-settings-oracletosql.md)|Usare la **esteso le impostazioni di migrazione dati** pressione di tab per scrivere query personalizzate per la migrazione dei dati.|  
 |[Modificare il Mapping di tipo &#40;OracleToSQL&#41;](../../ssma/oracle/edit-type-mapping-oracletosql.md)|Usare la **nuovi Mapping dei tipi** o **Mapping dei tipi di modifica** finestre di dialogo per creare o modificare il mapping dei tipi di dati tra gli oggetti di database e il database di origine e destinazione.|  
 |[Impostazioni globali &#40;Editor&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/global-settings-editor-oracletosql.md)|Utilizzare la pagina Editor del **Global Settings** finestra di dialogo per configurare le opzioni dell'editor di codice.|  
 |[Impostazioni globali &#40;finestre di dialogo&#41;&#40;OracleToSQL  &#41;](../../ssma/oracle/global-settings-dialogs-oracletosql.md)|Utilizzare la pagina di finestre di dialogo del **Global Settings** finestra di dialogo per configurare le impostazioni di avviso e nella finestra di dialogo impostazione predefinita.|  
@@ -44,9 +44,9 @@ Nella tabella seguente sono elencate le finestre di dialogo SSMA:
 |[Nuovo progetto di &#40;OracleToSQL&#41;](../../ssma/oracle/new-project-oracletosql.md)|Usare la **nuovo progetto** finestra di dialogo per creare un nuovo SSMA per il progetto di Oracle.|  
 |[Le impostazioni di progetto &#40;conversione&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)|Utilizzare la pagina di conversione del **impostazioni del progetto** finestra di dialogo per specificare la modalità di conversione di funzioni e variabili globali in SSMA per Oracle.|  
 |[Le impostazioni di progetto &#40;interfaccia utente grafica&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)|Utilizzare la pagina dell'interfaccia utente grafica del **impostazioni del progetto** per specificare la quantità di dati viene visualizzato nella finestra di dialogo il **dati** scheda.|  
-|[Le impostazioni di progetto &#40;migrazione&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-migration-oracletosql.md)|Utilizzare la pagina di migrazione del **impostazioni del progetto** finestra di dialogo per personalizzare la modalità SSMA per Oracle viene eseguita la migrazione dei dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|[Le impostazioni di progetto&#40;sincronizzazione&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)|Utilizzare la pagina sincronizzazione delle **impostazioni del progetto** finestra di dialogo personalizzare come SSMA per Oracle crea o modifica la migrazione dei database di oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|[Le impostazioni di progetto&#40;caricamento oggetti di sistema&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-loading-system-objects-oracletosql.md)|Utilizzare la pagina di caricamento di oggetti di sistema dei **impostazioni del progetto** finestra di dialogo per specificare quale sistema Oracle oggetti SSMA converte e carica in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Le impostazioni di progetto &#40;migrazione&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-migration-oracletosql.md)|Utilizzare la pagina di migrazione del **impostazioni del progetto** finestra di dialogo per personalizzare la modalità SSMA per Oracle viene eseguita la migrazione dei dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Le impostazioni di progetto&#40;sincronizzazione&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)|Utilizzare la pagina sincronizzazione delle **impostazioni del progetto** finestra di dialogo personalizzare come SSMA per Oracle crea o modifica la migrazione dei database di oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Le impostazioni di progetto&#40;caricamento oggetti di sistema&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-loading-system-objects-oracletosql.md)|Utilizzare la pagina di caricamento di oggetti di sistema dei **impostazioni del progetto** finestra di dialogo per specificare quale sistema Oracle oggetti SSMA converte e carica in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Le impostazioni di progetto &#40;Mapping dei tipi&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)|Utilizzare la pagina del mapping dei tipi dei **impostazioni del progetto** finestra di dialogo per specificare il mapping dei tipi predefiniti per tutti i database e oggetti di database in SSMA per il progetto di Oracle.|  
 |[Aggiornare dal Database &#40;OracleToSQL&#41;](../../ssma/oracle/refresh-from-database-oracletosql.md)|Usare la **aggiornare dal Database** finestra di dialogo per selezionare oggetti da aggiornare dal database Oracle.|  
 |[Salvare i metadati &#40;OracleToSQL&#41;](../../ssma/oracle/save-metadata-oracletosql.md)|Il **salvare i metadati** nella finestra di dialogo visualizzata quando si salva un progetto in cui mancanza i metadati.|  

@@ -56,12 +56,12 @@ caps.latest.revision: 182
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4029c7a9b0296b3320342b90f064d0e8f3b3feb3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd8ff6568129137f4e2167e514732a3b9af7ea8d
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239884"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392064"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurare account di servizio e autorizzazioni di Windows
   Ogni servizio in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rappresenta un processo o un set di processi destinato a gestire l'autenticazione delle operazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Windows. Nel presente argomento viene fornita la descrizione della configurazione predefinita dei servizi disponibili in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e delle opzioni di configurazione per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile impostare durante e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -184,7 +184,7 @@ ms.locfileid: "37239884"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc) <sup>*</sup>|  
 |Utilità di avvio FD (ricerca full-text)|[LOCAL SERVICE](#Local_Service)|[Account virtuale](#VA_Desc)|  
@@ -201,7 +201,7 @@ ms.locfileid: "37239884"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|Nessuna. Fornire un account [utente di dominio](#Domain_User) .|Fornire un account [utente di dominio](#Domain_User) .|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|Nessuna. Fornire un account [utente di dominio](#Domain_User) .|Fornire un account [utente di dominio](#Domain_User) .|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc)|  
-|[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc)|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc)|  
 |Utilità di avvio FD (ricerca full-text)|[LOCAL SERVICE](#Local_Service)|[Account virtuale](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[LOCAL SERVICE](#Local_Service)|[LOCAL SERVICE](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[LOCAL SYSTEM](#Local_System)|[LOCAL SYSTEM](#Local_System)|  
@@ -330,7 +330,7 @@ ms.locfileid: "37239884"
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> Tutti i diritti vengono concessi al SID per servizio. Istanza predefinita: **NT SERVICE\MSSQLSERVER**. Istanza denominata: **NT SERVICE\MSSQL$** NomeIstanza.|**Accesso come servizio** (SeServiceLogonRight)<br /><br /> **Sostituzione di token a livello di processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorare controllo incrociato** (SeChangeNotifyPrivilege)<br /><br /> **Regolazione quote di memoria per un processo** (SeIncreaseQuotaPrivilege)<br /><br /> Autorizzazione all'avvio del writer SQL<br /><br /> Autorizzazione di lettura del servizio Registro eventi<br /><br /> Autorizzazione di lettura del servizio RPC (Remote Procedure Call)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:** <sup>1</sup><br /><br /> Tutti i diritti vengono concessi al SID per servizio. Istanza predefinita: **NT Service\SQLSERVERAGENT**. Istanza denominata: **NT Service\SQLAGENT$***NomeIstanza*.|**Accesso come servizio** (SeServiceLogonRight)<br /><br /> **Sostituzione di token a livello di processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorare controllo incrociato** (SeChangeNotifyPrivilege)<br /><br /> **Regolazione quote di memoria per un processo** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> Tutti i diritti vengono concessi a un gruppo locale di Windows. Istanza predefinita: **SQLServerMSASUser$***NomeComputer***$MSSQLSERVER**. Istanza denominata: **SQLServerMSASUser$***NomeComputer***$***NomeIstanza*. Istanza [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]: **SQLServerMSASUser$***NomeComputer***$***PowerPivot*.|**Accesso come servizio** (SeServiceLogonRight)<br /><br /> Solo per tabulare:<br /><br /> **Aumento di un working set di processo** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Regolazione limite risorse memoria per un processo** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Blocco di pagine in memoria** (SeLockMemoryPrivilege) – Necessario solo se il paging è disattivato completamente.<br /><br /> Solo per installazioni di cluster di failover:<br /><br /> **Aumento della priorità di pianificazione** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> Tutti i diritti vengono concessi al SID per servizio. Istanza predefinita: **NT SERVICE\ReportServer**. Istanza denominata: **NT SERVICE\\$ * * * NomeIstanza*.)|**Accesso come servizio** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> Tutti i diritti vengono concessi al SID per servizio. Istanza predefinita: **NT SERVICE\ReportServer**. Istanza denominata: **NT SERVICE\\$ * * * NomeIstanza*.)|**Accesso come servizio** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> Tutti i diritti vengono concessi al SID per servizio. Istanza predefinita e istanza denominata: **NT SERVICE\MsDtsServer120**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non ha un processo separato per un'istanza denominata).|**Accesso come servizio** (SeServiceLogonRight)<br /><br /> Autorizzazione di scrittura sul registro eventi applicazioni<br /><br /> **Ignorare controllo incrociato** (SeChangeNotifyPrivilege)<br /><br /> **Rappresenta un client dopo l'autenticazione** (SeImpersonatePrivilege)|  
 |**Ricerca full-text:**<br /><br /> Tutti i diritti vengono concessi al SID per servizio. Istanza predefinita: **NT Service\MSSQLFDLauncher**. Istanza denominata: **NT Service\ MSSQLFDLauncher$***NomeIstanza*.|**Accesso come servizio** (SeServiceLogonRight)<br /><br /> **Regolazione quote di memoria per un processo** (SeIncreaseQuotaPrivilege)<br /><br /> **Ignorare controllo incrociato** (SeChangeNotifyPrivilege)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser:**<br /><br /> Tutti i diritti vengono concessi a un gruppo locale di Windows. Istanza predefinita o denominata: **SQLServer2005SQLBrowserUser***$NomeComputer*. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser non dispone di un processo separato per un'istanza denominata.|**Accesso come servizio** (SeServiceLogonRight)|  
@@ -430,7 +430,7 @@ ms.locfileid: "37239884"
 ###  <a name="File_System_Other"></a> Autorizzazioni del file system concesse ad altri account utente o gruppi di Windows  
  Potrebbe essere necessario concedere alcune autorizzazioni relative al controllo dell'accesso ad account predefiniti o ad altri account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nella tabella seguente sono inclusi gli elenchi di controllo di accesso aggiuntivi impostati dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Componente richiedente|Account|Risorsa|Autorizzazioni|  
+|Componente richiedente|Account|Risorsa|Permissions|  
 |--------------------------|-------------|--------------|-----------------|  
 |MSSQLServer|Performance Log Users|Instid\MSSQL\binn|Visualizzazione contenuto cartella|  
 ||Performance Monitor Users|Instid\MSSQL\binn|Visualizzazione contenuto cartella|  

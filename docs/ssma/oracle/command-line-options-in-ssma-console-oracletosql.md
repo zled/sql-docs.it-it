@@ -18,17 +18,17 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5606acac52bae2a97d0be1f6844970e81c051376
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2323c7c53571285d0e34365783b8b8d501de10c5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982244"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392334"
 ---
-# <a name="command-line-options-in-ssma-console-oracletosql"></a>Opzioni della riga di comando nella Console SSMA (OracleToSQL)
+# <a name="command-line-options-in-ssma-console-oracletosql"></a>Opzioni della riga di comando nella console SSMA (OracleToSQL)
 Microsoft offre un solido set opzioni riga di comando per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso.  
   
-## <a name="command-line-options-in-ssma-console"></a>Opzioni della riga di comando nella Console SSMA  
+## <a name="command-line-options-in-ssma-console"></a>Opzioni della riga di comando nella console SSMA  
 È qui descritti la console di opzioni del comando.  
   
 Ai fini di questa sezione, il termine 'option' è detta anche 'switch'.  
@@ -128,7 +128,7 @@ Ciò indica la cartella Impostazioni ambiente di progetto SSMA corrente. Questa 
 ### <a name="secure-password-option-psecurepassword"></a>Opzione Password sicura: – p/securepassword  
 Questa opzione indica la password crittografata per le connessioni al server. Differisce da tutte le altre opzioni: l'opzione non viene eseguito qualsiasi script né consente in qualsiasi attività relative alla migrazione, ma consente di gestire la crittografia della password per le connessioni del server usato nel progetto di migrazione.  
   
-È possibile immettere qualsiasi altra opzione o la password come parametro della riga di comando. In caso contrario, viene generato un errore. Per altre informazioni, vedere la [la gestione delle password](http://msdn.microsoft.com/8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c) sezione.  
+È possibile immettere qualsiasi altra opzione o la password come parametro della riga di comando. In caso contrario, viene generato un errore. Per altre informazioni, vedere la [la gestione delle password](managing-passwords-oracletosql.md) sezione.  
   
 Le seguenti opzioni secondarie sono supportate per `–p/securepassword`:  
   

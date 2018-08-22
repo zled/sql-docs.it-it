@@ -18,12 +18,12 @@ caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f148f625a690a680709ac9466bc67e0909a5a3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7813bd9d7e5bb0fec74bbf9249755355765c3fd9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151382"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393202"
 ---
 # <a name="logical-architecture-analysis-services---multidimensional-data"></a>Architettura logica (Analysis Services - Dati multidimensionali)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Usa componenti server e client per fornire l'elaborazione analitica online (OLAP) e funzionalità di data mining per applicazioni di business intelligence:  
@@ -53,7 +53,7 @@ ms.locfileid: "37151382"
  [Oggetti cubo &#40;Analysis Services - dati multidimensionali&#41;](../../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
  **Sicurezza dall'accesso utente**  
- [Architettura di sicurezza di accesso utente](https://msdn.microsoft.com/library/bb522595(SQL.120).aspx)  
+ [Architettura di sicurezza di accesso utente](understanding-microsoft-olap-logical-architecture.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sull'architettura Microsoft OLAP](../olap-physical/understanding-microsoft-olap-architecture.md)   

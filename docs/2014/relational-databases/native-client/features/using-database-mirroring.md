@@ -5,7 +5,7 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +21,12 @@ caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df1bd5838df40add7438ef8a9020ce2a753f983f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8d3e206f913d13fe4ff030bec1a6024f8d4b339b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425710"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392320"
 ---
 # <a name="using-database-mirroring"></a>Utilizzo del mirroring del database
     
@@ -35,11 +35,11 @@ ms.locfileid: "37425710"
   
  Il mirroring del database, introdotto in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], è una soluzione per aumentare la disponibilità del database e la ridondanza dei dati. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fornisce supporto implicito per il mirroring del database, in modo che lo sviluppatore non dovrà scrivere alcun codice o eseguire qualsiasi altra azione dopo che è stato configurato per il database.  
   
- Mirroring del database, implementato in una base per ogni database, mantiene una copia di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database di produzione in un server di standby. Tale server può essere warm standby o hot standby, a seconda della configurazione e dello stato della sessione di mirroring del database. Un server hot standby supporta il failover rapido senza perdita di transazioni di cui è stato eseguito il commit, mentre un server warm standby supporta la forzatura del servizio (con possibile perdita di dati).  
+ Il mirroring del database, implementato per ogni database, consente di conservare una copia di un database di produzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un server di standby. Tale server può essere warm standby o hot standby, a seconda della configurazione e dello stato della sessione di mirroring del database. Un server hot standby supporta il failover rapido senza perdita di transazioni di cui è stato eseguito il commit, mentre un server warm standby supporta la forzatura del servizio (con possibile perdita di dati).  
   
- Il database di produzione viene denominato il *database principale*, e la copia di standby copy viene chiamata la *database mirror*. Il database principale e il database mirror devono risiedere in istanze separate di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (istanze del server), e devono risiedere in computer separati se possibile.  
+ Il database di produzione è chiamato *database principale*, mentre la copia di standby è chiamata *database mirror*. Il database principale e il database mirror devono trovarsi in istanze separate di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (istanze server) e, se possibile, risiedere in computer separati.  
   
- Istanza del server di produzione, denominato il *server principale*, comunica con l'istanza del server di standby, denominato il *server mirror*. Il server principale e mirror fungere da partner all'interno di un mirroring del database *sessione*. Se il server principale non riesce, il server mirror può rendere il database nel database principale tramite un processo denominato *failover*. Partner_A e Partner_B, ad esempio, sono due server partner, con il database principale inizialmente su Partner_A come server principale e il database mirror che risiede in Partner_B come server mirror. Se Partner_A passa alla modalità offline, il database su Partner_B può eseguire il failover per diventare il database principale corrente. Quando Partner_A si unisce alla sessione di mirroring, diventa il server mirror e il database diventa il database mirror.  
+ L'istanza del server di produzione, chiamata *server principale*, comunica con l'istanza del server di standby, chiamata *server mirror*. Il server principale e il server mirror si comportano come partner all'interno di una *sessione* di mirroring del database. Se si verifica un errore nel server principale, il server mirror è in grado di creare un database nel database principale tramite un processo chiamato *failover*. Partner_A e Partner_B, ad esempio, sono due server partner, con il database principale inizialmente su Partner_A come server principale e il database mirror che risiede in Partner_B come server mirror. Se Partner_A passa alla modalità offline, il database su Partner_B può eseguire il failover per diventare il database principale corrente. Quando Partner_A si unisce alla sessione di mirroring, diventa il server mirror e il database diventa il database mirror.  
   
  Le configurazioni del mirroring del database alternative offrono livelli diversi di prestazioni e sicurezza dei dati e supportano forme diverse di failover. Per altre informazioni, vedere [Mirroring del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   

@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: a710c1bd6731feaae662133ff8f18bbf9ac12976
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556471"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393171"
 ---
 # <a name="automatic-tuning"></a>Ottimizzazione automatica
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ L'ottimizzazione automatica nel [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-m
 
 ## <a name="why-automatic-tuning"></a>Il motivo per cui l'ottimizzazione automatica?
 
-Una delle principali attività di amministrazione classica dei database esegue il monitoraggio del carico di lavoro, che identifica critici [!INCLUDE[tsql_md](../../includes/tsql_md.md)] esegue una query, gli indici che devono essere aggiunti per migliorare le prestazioni e usata raramente gli indici. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fornisce informazioni dettagliate per le query e gli indici che è necessario monitorare. Tuttavia, monitoraggio costante dei database è un'attività complessa e tediosa, in particolare quando si lavora con molti database. Potrebbe essere impossibile in modo efficiente gestire un numero enorme di database. Invece di monitoraggio e ottimizzazione del database manualmente, è possibile delegare alcune del monitoraggio e le azioni di ottimizzazione [!INCLUDE[ssde_md](../../includes/ssde_md.md)] usando funzionalità di ottimizzazione automatica.
+Una delle principali attività di amministrazione classica dei database esegue il monitoraggio del carico di lavoro, che identifica critici [!INCLUDE[tsql_md](../../includes/tsql-md.md)] esegue una query, gli indici che devono essere aggiunti per migliorare le prestazioni e usata raramente gli indici. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fornisce informazioni dettagliate per le query e gli indici che è necessario monitorare. Tuttavia, monitoraggio costante dei database è un'attività complessa e tediosa, in particolare quando si lavora con molti database. Potrebbe essere impossibile in modo efficiente gestire un numero enorme di database. Invece di monitoraggio e ottimizzazione del database manualmente, è possibile delegare alcune del monitoraggio e le azioni di ottimizzazione [!INCLUDE[ssde_md](../../includes/ssde_md.md)] usando funzionalità di ottimizzazione automatica.
 
 ### <a name="how-does-automatic-tuning-works"></a>Come vengono funzionamento dell'ottimizzazione automatica?
 
@@ -58,7 +58,7 @@ Correzione automatica del piano è una funzionalità di ottimizzazione automatic
 
 ### <a name="what-is-sql-plan-choice-regression"></a>Che cos'è regressioni della scelta del piano SQL?
 
-[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] può utilizzare i diversi piani SQL per eseguire il [!INCLUDE[tsql_md](../../includes/tsql_md.md)] le query. I piani di query variano in base ad altri fattori, indici e le statistiche. Il piano ottimale da usare per eseguire alcune [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query potrebbero essere modificate nel corso del tempo. In alcuni casi, il nuovo piano non sia migliore rispetto a quello precedente e il nuovo piano potrebbe causare una regressione delle prestazioni.
+[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] può utilizzare i diversi piani SQL per eseguire il [!INCLUDE[tsql_md](../../includes/tsql-md.md)] le query. I piani di query variano in base ad altri fattori, indici e le statistiche. Il piano ottimale da usare per eseguire alcune [!INCLUDE[tsql_md](../../includes/tsql-md.md)] query potrebbero essere modificate nel corso del tempo. In alcuni casi, il nuovo piano non sia migliore rispetto a quello precedente e il nuovo piano potrebbe causare una regressione delle prestazioni.
 
  ![Regressioni della scelta del piano SQL](media/plan-choice-regression.png "regressioni della scelta del piano SQL") 
 
@@ -94,7 +94,7 @@ Piani forzati manualmente dovrebbero non essere forzati all'infinito, perché il
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce tutte le viste necessarie e procedure necessarie per monitorare le prestazioni e risolvere i problemi in Query Store.
 
-In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], è possibile trovare le regressioni della scelta piano utilizzo delle viste di sistema di Query Store. Nella [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] rileva e visualizza le regressioni della scelta piano potenziali e le azioni consigliate che devono essere applicate nella [DM db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) visualizzazione. La visualizzazione Mostra informazioni sul problema, l'importanza del problema e i dettagli, ad esempio la query identificato, l'ID del piano regredito, l'ID del piano che è stato usato come base per il confronto e il [!INCLUDE[tsql_md](../../includes/tsql_md.md)] istruzione che può essere eseguito per correggere il c'è problema.
+In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], è possibile trovare le regressioni della scelta piano utilizzo delle viste di sistema di Query Store. Nella [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] rileva e visualizza le regressioni della scelta piano potenziali e le azioni consigliate che devono essere applicate nella [DM db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) visualizzazione. La visualizzazione Mostra informazioni sul problema, l'importanza del problema e i dettagli, ad esempio la query identificato, l'ID del piano regredito, l'ID del piano che è stato usato come base per il confronto e il [!INCLUDE[tsql_md](../../includes/tsql-md.md)] istruzione che può essere eseguito per correggere il c'è problema.
 
 | Tipo | description | DATETIME | score | dettagli | … |
 | --- | --- | --- | --- | --- | --- |
@@ -106,7 +106,7 @@ Alcune colonne da questa visualizzazione sono descritti nell'elenco seguente:
  - Descrizione che contiene il motivo per cui le informazioni [!INCLUDE[ssde_md](../../includes/ssde_md.md)] ritiene che la modifica del piano è una regressione delle prestazioni potenziali.
  - Data e ora quando viene rilevata una regressione il potenziale.
  - Assegnare un punteggio della raccomandazione. 
- - Dettagli sui problemi, ad esempio ID del piano rilevato, ID del piano regredito, ID del piano che per risolvere il problema, è necessario forzare [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script che potrebbe essere applicato per risolvere il problema e così via. I dettagli vengono archiviati in [formato JSON](../../relational-databases/json/index.md).
+ - Dettagli sui problemi, ad esempio ID del piano rilevato, ID del piano regredito, ID del piano che per risolvere il problema, è necessario forzare [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script che potrebbe essere applicato per risolvere il problema e così via. I dettagli vengono archiviati in [formato JSON](../../relational-databases/json/index.md).
 
 Usare la query seguente per ottenere uno script che corregge il problema e informazioni aggiuntive sulle stimati ottenere:
 

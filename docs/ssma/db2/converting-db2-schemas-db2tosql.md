@@ -16,18 +16,18 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d6c63b66a52f0fbc6a676a2143299b7ee5b13208
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3eb32a285ceca0ab080216f0d7e9dd387d0949da
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980703"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392153"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Conversione di schemi DB2 (DB2ToSQL)
-Dopo aver connesso a DB2, connesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], e impostare il progetto e le opzioni di mapping dei dati, è possibile convertire gli oggetti di database DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] gli oggetti di database.  
+Dopo aver connesso a DB2, connesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e impostare il progetto e le opzioni di mapping dei dati, è possibile convertire gli oggetti di database DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli oggetti di database.  
   
 ## <a name="the-conversion-process"></a>Il processo di conversione  
-Conversione di oggetti di database richiede le definizioni degli oggetti da DB2, li converte in simile [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti e quindi carica tali informazioni nei metadati di SSMA. Non lo carica le informazioni nell'istanza della [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. È quindi possibile visualizzare gli oggetti e le relative proprietà utilizzando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Visualizzatore metadati.  
+Conversione di oggetti di database richiede le definizioni degli oggetti da DB2, li converte in simile [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti e quindi carica tali informazioni nei metadati di SSMA. Non lo carica le informazioni nell'istanza della [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È quindi possibile visualizzare gli oggetti e le relative proprietà utilizzando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati.  
   
 Durante la conversione SSMA consente di stampare i messaggi di output nel riquadro di Output e messaggi di errore nel riquadro elenco errori. Usare le informazioni di errore e di output per determinare se è necessario modificare i database di DB2 o il processo di conversione per ottenere i risultati di conversione desiderato.  
   
@@ -35,7 +35,7 @@ Durante la conversione SSMA consente di stampare i messaggi di output nel riquad
 Prima di convertire gli oggetti, esaminare le opzioni di conversione progetto nel **impostazioni del progetto** nella finestra di dialogo. Tramite questa finestra di dialogo, è possibile impostare la modalità di conversione di funzioni e variabili globali in SSMA. Per altre informazioni, vedere [impostazioni del progetto &#40;conversione&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md).  
   
 ## <a name="conversion-results"></a>Risultati conversione  
-La tabella seguente mostra quali vengono convertiti in oggetti di DB2 e risultante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti:  
+La tabella seguente mostra quali vengono convertiti in oggetti di DB2 e risultante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti:  
   
 |Oggetti di DB2|Oggetti SQL Server risultanti|  
 |-----------|----------------------------|  
@@ -150,7 +150,7 @@ Per ogni elemento che non può essere convertito, è necessario determinare ciò
   
 -   È possibile modificare l'oggetto nel database di DB2 per rimuovere o modificare il codice problematico. Per caricare il codice aggiornato in SSMA, è necessario aggiornare i metadati. Per altre informazioni, vedere [ci si connette al Database DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
   
--   È possibile escludere l'oggetto dalla migrazione. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Visualizzatore metadati ed Esplora i metadati di DB2, deselezionare la casella di controllo accanto all'elemento prima di caricare gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e la migrazione dei dati da DB2.  
+-   È possibile escludere l'oggetto dalla migrazione. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati ed Esplora i metadati di DB2, deselezionare la casella di controllo accanto all'elemento prima di caricare gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e la migrazione dei dati da DB2.  
   
 ## <a name="next-step"></a>Passaggio successivo  
 Il passaggio successivo del processo di migrazione consiste [caricare gli oggetti convertiti in SQL Server](http://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  

@@ -1,5 +1,5 @@
 ---
-title: database_mirroring_witnesses (Transact-SQL) | Documenti Microsoft
+title: Sys. database_mirroring_witnesses (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,19 +26,19 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8af11f0dd540cfa9b796dd94ab34f595b76dc71c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4b421af3d513e68ff715581b5eed7e27d5e8dc52
+ms.sourcegitcommit: 489e29bce510fae6d826d5b6548eb9612fc2bd62
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180907"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396141"
 ---
-# <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>Viste del catalogo controllo del mirroring, Mirroring del database database_mirroring_witnesses
+# <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>Database Mirroring Witness viste del catalogo - sys. database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni ruolo del server di controllo del mirroring che un server riveste in una relazione di mirroring del database. 
   
-  In una sessione di mirroring del database, il failover automatico richiede un server di controllo del mirroring. In una situazione ideale, il server di controllo del mirroring risiede su un computer distinto dal server principale e dal server mirror. Il server di controllo non esegue verifiche nel database, ma monitora lo stato del server principale e del server mirror. In caso di errore del server principale, il server di controllo del mirroring può iniziare il failover automatico sul server mirror. 
+  In una sessione di mirroring del database, il failover automatico richiede un server di controllo del mirroring. In una situazione ideale, il server di controllo del mirroring risiede su un computer distinto dal server principale e dal server mirror. Il server di controllo non esegue verifiche nel database, ma monitora lo stato del server principale e del server mirror. Se il server principale non riesce, il controllo del mirroring può avviare il failover automatico al server mirror. 
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,20 +47,20 @@ ms.locfileid: "33180907"
 |**mirror_server_name**|**sysname**|Nome del server partner la cui copia del database è attualmente il database mirror.|  
 |**safety_level**|**tinyint**|Impostazione relativa alla protezione delle transazioni per gli aggiornamenti nel database mirror:<br /><br /> 0 = Stato sconosciuto<br /><br /> 1 = protezione disattivata (asincrona)<br /><br /> 2 = protezione completa (sincrona)<br /><br /> L'utilizzo di un server di controllo del mirroring per il failover automatico richiede la protezione completa delle transazioni, ovvero l'impostazione predefinita.|  
 |**safety_level_desc**|**nvarchar(60)**|Descrizione della garanzia di protezione degli aggiornamenti nel database mirror:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
-|**safety_sequence_number**|**int**|Aggiornare il numero di sequenza per modifiche **safety_level**.|  
+|**safety_sequence_number**|**int**|Aggiornare il numero di sequenza per le modifiche **safety_level**.|  
 |**role_sequence_number**|**int**|Numero di sequenza di aggiornamento per le modifiche dei ruoli principale/mirror rivestiti dai partner per il mirroring.|  
 |**mirroring_guid**|**uniqueidentifier**|Identificatore della relazione di mirroring.|  
 |**family_guid**|**uniqueidentifier**|Identificatore del gruppo di backup del database. Utilizzato per rilevare gli stati di ripristino corrispondenti.|  
 |**is_suspended**|**bit**|Il mirroring del database è sospeso.|  
-|**is_suspended_sequence_number**|**int**|Numero di sequenza dell'impostazione **is_suspended**.|  
+|**is_suspended_sequence_number**|**int**|Numero di sequenza per l'impostazione **is_suspended**.|  
 |**partner_sync_state**|**tinyint**|Stato della sincronizzazione della sessione di mirroring:<br /><br /> 5 = i partner sono sincronizzati. Il failover è possibile. Per informazioni sui requisiti per il failover, vedere [cambio di ruolo durante una Database Mirroring sessione &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = i partner non sono sincronizzati. Il failover ora non è possibile.|  
 |**partner_sync_state_desc**|**nvarchar(60)**|Descrizione dello stato di sincronizzazione della sessione di mirroring:<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Controllo del mirroring del database](../../database-engine/database-mirroring/database-mirroring-witness.md)   
+ [Server di controllo del mirroring del database](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query nel catalogo di sistema di SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

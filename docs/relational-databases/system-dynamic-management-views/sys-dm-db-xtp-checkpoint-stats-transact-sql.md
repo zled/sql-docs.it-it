@@ -6,8 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -25,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a8389ac173eb72c152eed3a7a8a40d8453dbed22
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 00a859096b0a816b24f858529365dd2d7568b2ee
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541451"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392786"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |time_since_last_close_in_ms|**bigint**|Tempo trascorso dall'ultima chiusura del checkpoint.|  
 |current_checkpoint_id|**bigint**|Attualmente, i nuovi segmenti vengono assegnati a questo checkpoint. Il sistema di checkpoint è una pipeline. Il checkpoint corrente è quello che vengono assegnati a segmenti dal log. Dopo che è stato raggiunto un limite, il checkpoint viene rilasciato il controller e una nuova istanza creata come corrente.|  
 |current_checkpoint_segment_count|**bigint**|Numero di segmenti nel checkpoint corrente.|  
-|recovery_lsn_candidate|**bigint**|**Internamente solo**. Candidati da prelevare come recoverylsn chiusura current_checkpoint_id.|  
+|recovery_lsn_candidate|**bigint**|**Internamente solo**. Candidato per essere selezionato come recoverylsn quando current_checkpoint_id viene chiusa.|  
 |outstanding_checkpoint_count|**bigint**|Numero di checkpoint nella pipeline in attesa di essere chiuso.|  
 |closing_checkpoint_id|**bigint**|ID del punto di arresto di chiusura.<br /><br /> I serializzatori lavorano in parallelo, in modo che una volta effettuato terminati il checkpoint è un candidato per essere chiuso dal thread di chiusura. Ma il thread di chiusura solo possibile chiudere una alla volta e deve essere in ordine, in modo che il checkpoint di chiusura è quella che sta lavorando per il thread di chiusura.|  
 |recovery_checkpoint_id|**bigint**|ID del checkpoint da utilizzare per il ripristino.|  

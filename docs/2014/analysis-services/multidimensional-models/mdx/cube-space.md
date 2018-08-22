@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07011d823f4bede671c3ee4a465d27c413d04e9f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0bcd66844f5eaacca291cd67e84e34b6222788c
+ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282187"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40392060"
 ---
 # <a name="cube-space"></a>Spazio del cubo
   Lo spazio del cubo è il prodotto dei membri delle gerarchie dell'attributo di un cubo per le misure del cubo. Quindi lo spazio del cubo è determinato dal prodotto combinatorio di tutti i membri della gerarchia dell'attributo nel cubo e delle misure del cubo e definisce la dimensione massima del cubo. È importante sottolineare che questo spazio comprende tutte le possibili combinazioni di membri della gerarchia dell'attributo, anche combinazioni che si possono considerare impossibili nel mondo reale, ad esempio combinazioni in cui la città è Parigi e i paesi sono Inghilterra o Spagna o Giappone o India o altro.  
@@ -59,7 +59,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Si noti che per designare l'asse delle colonne viene utilizzato 0, la forma abbreviata per Axis(0), indicante l'asse delle colonne.  
   
- La query precedente restituisce solo le celle dei membri di ogni gerarchia dell'attributo della query che esistono in ogni livello superiore. La query precedente può anche essere scritta con la nuova variante * della funzione [* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) .  
+ La query precedente restituisce solo le celle dei membri di ogni gerarchia dell'attributo della query che esistono in ogni livello superiore. La query precedente può anche essere scritta usando la nuova * valore variant di tipo i [ \* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) (funzione).  
   
 ```  
 SELECT   

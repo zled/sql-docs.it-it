@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 375a0f62bbf482a7c033d235836ea64b78cb2da2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 19da91838703adc4ae224a645e1f0a6e65fe032c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983873"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392995"
 ---
 # <a name="roles-object-tmsl"></a>Oggetto Roles (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38983873"
                   e amministratore. Visualizzare [ruoli e autorizzazioni &#40;Analysis Services&#41; ](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) per informazioni sulle autorizzazioni di database.  
   
  membri  
- I membri sono costituiti da un nome di membro e ID, in cui nome del membro è l'alias o il nome descrittivo di un principio di sicurezza di Windows e l'ID è l'ID di sicurezza. Entrambi sono specificati nella definizione di ruolo. Visualizzare [componenti SID](https://msdn.microsoft.com/library/windows/desktop/aa379597\(v=vs.85\).aspx) per ulteriori informazioni sugli identificatori.  
+ I membri sono costituiti da un nome di membro e ID, in cui nome del membro è l'alias o il nome descrittivo di un principio di sicurezza di Windows e l'ID è l'ID di sicurezza. Entrambi sono specificati nella definizione di ruolo. Visualizzare [componenti SID](/windows/desktop/SecAuthZ/sid-components) per ulteriori informazioni sugli identificatori.  
   
  oggetti Tablepermission  
  Un'autorizzazione di tabella è un oggetto denominato con le autorizzazioni definite tramite un'espressione DAX. Questa proprietà è facoltativa, usata per applicare un filtro di sicurezza.  

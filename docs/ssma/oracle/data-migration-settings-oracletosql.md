@@ -13,16 +13,16 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 15a0727397346451e07f85556bd183df35d13796
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9dd11d93fe40e65836f778191c025daba5a76d0d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983333"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395609"
 ---
-# <a name="data-migration-settings-oracletosql"></a>Impostazioni di migrazione dati (OracleToSQL)
+# <a name="data-migration-settings-oracletosql"></a>Impostazioni di migrazione dei dati (OracleToSQL)
   
-## <a name="data-migration-settings"></a>Impostazioni di migrazione dati  
+## <a name="data-migration-settings"></a>Impostazioni di migrazione dei dati  
 **Le impostazioni di migrazione dati** consente all'utente di scrivere query personalizzate per la migrazione dei dati.  
   
 -   Questa scheda è disponibile quando **opzioni di migrazione dati estese** è impostata su **mostrano** e viene nascosto quando l'impostazione è impostata su **nascondere** nelle impostazioni del progetto. Per altre informazioni sulle impostazioni di progetto di migrazione, vedere [impostazioni progetto (migrazione)](http://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) .  
@@ -56,5 +56,5 @@ Esistono due pulsanti presenti una visualizzazione dei.:
 -   **Annulla:** fare clic su **annullare** per ripristinare le impostazioni presente prima che le modifiche sono state apportate.  
   
 ## <a name="see-also"></a>Vedere anche  
-[La migrazione dei dati di Oracle a SQL Server](http://msdn.microsoft.com/e23c5268-41ed-4e55-9fe7-a11376202a13)  
+[La migrazione dei dati di Oracle a SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  
   

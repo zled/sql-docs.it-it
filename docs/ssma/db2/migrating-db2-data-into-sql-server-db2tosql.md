@@ -16,21 +16,21 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5689c75f577a5259dd97bf2278f39f7279c47785
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 5b8762e202c2338742f91d01cd2a56b990aab3f3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980613"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393179"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>Migrazione di dati DB2 a SQL Server (DB2ToSQL)
-Dopo aver sincronizzato gli oggetti convertiti con correttamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile migrare i dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Dopo aver sincronizzato gli oggetti convertiti con correttamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile migrare i dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 > Se il motore in uso è modulo di migrazione dei dati lato Server, quindi, prima di migrare i dati, è necessario installare SSMA per DB2 Extension Pack e i provider DB2 nel computer che esegue SSMA. Il servizio SQL Server Agent deve inoltre essere in esecuzione. Per altre informazioni su come installare il pacchetto di estensione, vedere [installazione dei componenti SSMA in SQL Server](http://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
   
 ## <a name="setting-migration-options"></a>Impostazione delle opzioni di migrazione  
-Prima della migrazione dei dati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], esaminare le opzioni di migrazione del progetto nella **impostazioni di progetto** nella finestra di dialogo.  
+Prima della migrazione dei dati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esaminare le opzioni di migrazione del progetto nella **impostazioni di progetto** nella finestra di dialogo.  
   
 -   Tramite questa finestra di dialogo è possibile impostare opzioni quali dimensioni di batch di migrazione, il blocco di tabella, verifica dei vincoli, la gestione dei valori null e la gestione dei valori identity. Per altre informazioni sulle impostazioni di migrazione del progetto, vedere [impostazioni progetto (migrazione)](http://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae).  
   
@@ -56,7 +56,7 @@ Prima della migrazione dei dati per [!INCLUDE[ssNoVersion](../../includes/ssnove
 -   Per avviare la migrazione sul lato server, selezionare la **modulo di migrazione dei dati lato Server** opzione il **le impostazioni del progetto** nella finestra di dialogo.  
   
 ## <a name="migrating-data-to-sql-server"></a>La migrazione dei dati a SQL Server  
-Eseguire la migrazione dei dati sono un'operazione di caricamento bulk che sposta le righe di dati da tabelle DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tabelle nelle transazioni. Numero di righe caricate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] in ogni transazione viene configurata nelle impostazioni del progetto.  
+Eseguire la migrazione dei dati sono un'operazione di caricamento bulk che sposta le righe di dati da tabelle DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelle nelle transazioni. Numero di righe caricate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in ogni transazione viene configurata nelle impostazioni del progetto.  
   
 Per visualizzare i messaggi di migrazione, verificare che sia visibile il riquadro di Output. In caso contrario, dal **View** dal menu **Output**.  
   
@@ -66,7 +66,7 @@ Per visualizzare i messaggi di migrazione, verificare che sia visibile il riquad
   
     -   I provider DB2 vengono installati nel computer che esegue SSMA.  
   
-    -   Aver sincronizzato gli oggetti convertiti con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  
+    -   Aver sincronizzato gli oggetti convertiti con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
 2.  Nel Visualizzatore metadati DB2, selezionare gli oggetti che contengono i dati che si desidera eseguire la migrazione:  
   
@@ -84,7 +84,7 @@ Per visualizzare i messaggi di migrazione, verificare che sia visibile il riquad
   
     -   Prima di eseguire la migrazione dei dati sul lato server, assicurarsi che:  
   
-        1.  SSMA per DB2 Extension Pack viene installato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+        1.  SSMA per DB2 Extension Pack viene installato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
         2.  Il servizio SQL Server Agent è in esecuzione nell'istanza di SQL Server.  
   
@@ -93,11 +93,11 @@ Per visualizzare i messaggi di migrazione, verificare che sia visibile il riquad
 4.  Fare doppio clic su **schemi** nel Visualizzatore metadati DB2 e quindi fare clic su **Migrate Data**. È anche possibile eseguire la migrazione dei dati per oggetti singoli o categorie di oggetti: pulsante destro del mouse dell'oggetto o la cartella padre. Selezionare il **Migrate Data** opzione.  
   
     > [!NOTE]  
-    > Se SSMA per DB2 Extension Pack non è installato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]e se **modulo di migrazione dei dati lato Server** è selezionata, durante la migrazione dei dati al database di destinazione, viene rilevato il seguente errore: ' Impossibile trovare componenti di migrazione dei dati di SSMA in SQL Server, la migrazione dei dati lato server non sarà possibile. Verificare se il pacchetto di estensione sia installato correttamente '. Fare clic su **annullare** per terminare la migrazione dei dati.  
+    > Se SSMA per DB2 Extension Pack non è installato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e se **modulo di migrazione dei dati lato Server** è selezionata, durante la migrazione dei dati al database di destinazione, viene rilevato il seguente errore: ' Impossibile trovare componenti di migrazione dei dati di SSMA in SQL Server, la migrazione dei dati lato server non sarà possibile. Verificare se il pacchetto di estensione sia installato correttamente '. Fare clic su **annullare** per terminare la migrazione dei dati.  
   
 5.  Nel **connettersi a DB2** della finestra di dialogo immettere le credenziali di connessione e quindi fare clic su **Connect**. Per altre informazioni sulla connessione a DB2, vedere [ci si connette al Database DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
-    Per la connessione al database di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], immettere le credenziali di connessione nel **Connetti al Server SQL** nella finestra di dialogo e fare clic su **Connect**. Per altre informazioni sulla connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vedere [ci si connette a SQL Server](http://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
+    Per la connessione al database di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], immettere le credenziali di connessione nel **Connetti al Server SQL** nella finestra di dialogo e fare clic su **Connect**. Per altre informazioni sulla connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [ci si connette a SQL Server](http://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
     Messaggio verrà visualizzato il **Output** riquadro. Quando la migrazione è completata, il **Report di migrazione dati** viene visualizzata. Se tutti i dati non è stata eseguita la migrazione, fare clic sulla riga che contiene gli errori e quindi fare clic su **dettagli**. Quando si è terminato con il report, fare clic su **Chiudi**. Per altre informazioni sul Report di migrazione dei dati, vedere [Report di migrazione dati (SSMA comuni)](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   

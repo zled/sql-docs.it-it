@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 67986dbdbace492fc2fb82bcb94e6cc32a05616a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 43dfe2a04a6c4f12fad0df12c3cf520d7d08d7a7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263479"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392344"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +67,10 @@ sp_update_jobstep
   
 ## <a name="arguments"></a>Argomenti  
  [ **@job_id =**] *job_id*  
- Numero di identificazione del processo a cui appartiene il passaggio. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL. Entrambi *job_id* o *job_name* deve essere specificato ma non è possibile specificarli entrambi.  
+ Numero di identificazione del processo a cui appartiene il passaggio. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL. Entrambi *job_id* oppure *job_name* deve essere specificato ma non è possibile specificarli entrambi.  
   
  [ **@job_name =**] **'***job_name***'**  
- Nome del processo a cui appartiene il passaggio. *job_name*viene **sysname**, con un valore predefinito è NULL. Entrambi *job_id* o *job_name* deve essere specificato ma non è possibile specificarli entrambi.  
+ Nome del processo a cui appartiene il passaggio. *nome_processo*viene **sysname**, con un valore predefinito è NULL. Entrambi *job_id* oppure *job_name* deve essere specificato ma non è possibile specificarli entrambi.  
   
  [ **@step_id =**] *step_id*  
  Numero di identificazione del passaggio del processo da modificare. Questo numero non è modificabile. *step_id*viene **int**, non prevede alcun valore predefinito.  
@@ -88,12 +88,12 @@ sp_update_jobstep
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@cmdexec_success_code =**] *success_code*  
- Il valore restituito da un **CmdExec** comando del sottosistema per indicare che *comando* è stata eseguita correttamente. *success_code* viene **int**, con un valore predefinito è NULL.  
+ Il valore restituito da una **CmdExec** comando del sottosistema per indicare che *comando* eseguito correttamente. *success_code* viene **int**, con un valore predefinito è NULL.  
   
  [ **@on_success_action =**] *success_action*  
- L'azione da eseguire se il passaggio ha esito positivo. *success_action* è **tinyint**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
+ L'azione da eseguire se il passaggio ha esito positivo. *success_action* viene **tinyint**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
-|Value|Descrizione (azione)|  
+|valore|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**1**|Uscita in caso di esito positivo|  
 |**2**|Uscita in caso di esito negativo|  
@@ -101,12 +101,12 @@ sp_update_jobstep
 |**4**|Andare al passaggio *success_step_id.*|  
   
  [ **@on_success_step_id =**] *success_step_id*  
- Il numero di identificazione del passaggio del processo da eseguire se il passaggio ha esito positivo e *success_action* è **4**. *success_step_id* viene **int**, con un valore predefinito è NULL.  
+ Il numero di identificazione del passaggio del processo da eseguire se il passaggio ha esito positivo e *success_action* viene **4**. *success_step_id* viene **int**, con un valore predefinito è NULL.  
   
  [  **@on_fail_action =**] *fail_action*  
  Azione da eseguire se il passaggio non viene completato correttamente. *fail_action* viene **tinyint**, con un valore predefinito è NULL e può avere uno dei valori seguenti.  
   
-|Value|Descrizione (azione)|  
+|valore|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**1**|Uscita in caso di esito positivo|  
 |**2**|Uscita in caso di esito negativo|  
@@ -114,7 +114,7 @@ sp_update_jobstep
 |**4**|Andare al passaggio *fail_step_id * *.*|  
   
  [ **@on_fail_step_id =**] *fail_step_id*  
- Il numero di identificazione del passaggio del processo da eseguire se il passaggio ha esito negativo e *fail_action* è **4**. *fail_step_id* viene **int**, con un valore predefinito è NULL.  
+ Il numero di identificazione del passaggio del processo da eseguire se il passaggio ha esito negativo e *fail_action* viene **4**. *fail_step_id* viene **int**, con un valore predefinito è NULL.  
   
  [ **@server =**] **'***server***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server* viene **nvarchar (128)**, con un valore predefinito è NULL.  
@@ -135,16 +135,16 @@ sp_update_jobstep
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@output_file_name =**] **'***file_name***'**  
- Nome del file in cui salvare l'output del passaggio. *file_name* viene **nvarchar(200**, con un valore predefinito è NULL. Questo parametro è valido solo con comandi eseguiti nei sottosistemi [!INCLUDE[tsql](../../includes/tsql-md.md)] o CmdExec.  
+ Nome del file in cui salvare l'output del passaggio. *file_name* viene **nvarchar (200)**, con un valore predefinito è NULL. Questo parametro è valido solo con comandi eseguiti nei sottosistemi [!INCLUDE[tsql](../../includes/tsql-md.md)] o CmdExec.  
   
- Per impostare nuovamente output_file_name su NULL, è necessario impostare *output_file_name* su una stringa vuota (' ') o in una stringa di caratteri vuoti, ma è possibile utilizzare il **CHAR(32)** (funzione). Ad esempio, impostare questo argomento su una stringa vuota nel modo descritto di seguito:  
+ Per impostare nuovamente output_file_name nuovamente su NULL, è necessario impostare *nuovamente output_file_name* su una stringa vuota (' ') o in una stringa di caratteri vuoti, ma è possibile utilizzare il **CHAR(32)** (funzione). Ad esempio, impostare questo argomento su una stringa vuota nel modo descritto di seguito:  
   
  **@output_file_name = ' '**  
   
  [  **@flags =**] *flag*  
- Opzione che consente di controllare il comportamento. *i flag* viene **int**, e può essere uno dei valori seguenti.  
+ Opzione che consente di controllare il comportamento. *i flag* viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**0** (predefinito)|L'output sovrascrive il contenuto del file di output.|  
 |**2**|L'output viene aggiunto alla fine del file di output.|  
@@ -153,20 +153,20 @@ sp_update_jobstep
 |**16**|Il log viene scritto nella tabella in aggiunta alla cronologia esistente|  
   
  [ **@proxy_id**= ] *proxy_id*  
- ID del proxy in base al quale viene eseguito il passaggio del processo. *proxy_id* è di tipo **int**, con un valore predefinito è NULL. Se non *proxy_id* è specificato, non *proxy_name* è specificato e nessun *nome_utente* viene specificata, il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
+ ID del proxy in base al quale viene eseguito il passaggio del processo. *proxy_id* è di tipo **int**, con un valore predefinito è NULL. Se nessun *proxy_id* è specificato, nessun *proxy_name* viene specificato e non *user_name* viene specificato, il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
  [ **@proxy_name**=] **'***proxy_name***'**  
- Nome del proxy in base al quale viene eseguito il passaggio del processo. *proxy_name* è di tipo **sysname**, con un valore predefinito è NULL. Se non *proxy_id* è specificato, non *proxy_name* è specificato e nessun *nome_utente* viene specificata, il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
+ Nome del proxy in base al quale viene eseguito il passaggio del processo. *proxy_name* è di tipo **sysname**, con un valore predefinito è NULL. Se nessun *proxy_id* è specificato, nessun *proxy_name* viene specificato e non *user_name* viene specificato, il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_update_jobstep** deve essere eseguita la **msdb** database.  
   
  L'aggiornamento di un passaggio di processo comporta un incremento del numero di versione del processo.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -175,11 +175,11 @@ sp_update_jobstep
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo i membri di **sysadmin** possibile aggiornare un passaggio del processo di proprietà di un altro utente.  
+ Solo i membri del **sysadmin** può aggiornare un passaggio di processo appartenente a un altro utente.  
   
- Se il passaggio di processo richiede l'accesso a un proxy, l'autore del passaggio deve disporre dell'accesso al proxy per tale passaggio. Tutti i sottosistemi, a esclusione di Transact-SQL, richiedono un account proxy. I membri di **sysadmin** hanno accesso a tutti i proxy e utilizzare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio agente per il proxy.  
+ Se il passaggio di processo richiede l'accesso a un proxy, l'autore del passaggio deve disporre dell'accesso al proxy per tale passaggio. Tutti i sottosistemi, a esclusione di Transact-SQL, richiedono un account proxy. I membri del **sysadmin** hanno accesso a tutti i proxy e utilizzare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio agente per il proxy.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene modificato il numero di tentativi per il primo passaggio del processo `Weekly Sales Data Backup`. Dopo aver eseguito questo esempio, il numero di tentativi sarà `10`.  
@@ -196,7 +196,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Consente di visualizzare o modificare i processi](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
+ [Visualizzare o modificare processi](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

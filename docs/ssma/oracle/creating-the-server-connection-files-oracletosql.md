@@ -1,5 +1,5 @@
 ---
-title: Creazione dei file di connessione del Server (OracleToSQL) | Documenti Microsoft
+title: Creazione di file di connessione del Server (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,15 +16,15 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 9657dc521ea0130f0f322c423dad906d0759197a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7a892b34da2b631371f70f6f6beee0c8c6c321fb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776957"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395007"
 ---
-# <a name="creating-the-server-connection-files-oracletosql"></a>Creazione dei file di connessione del Server (OracleToSQL)
-Nella sezione del file di script server o in un file di connessione server separato, è possibile specificare le informazioni sul server. Il parametro della riga di comando per il file di connessione del server è, `-c <serverconnectionfile>`. Se lo stesso id di server è presente nel file di connessione del server sia file di script, è considerata la definizione del server nel file di script.  
+# <a name="creating-the-server-connection-files-oracletosql"></a>Creazione dei file di connessione del server (OracleToSQL)
+Nella sezione dei server del file di script o in un file di connessione server separato, è possibile specificare le informazioni sul server. Il parametro della riga di comando per il file di connessione del server è, `-c <serverconnectionfile>`. Se lo stesso id di server è presente nel file di connessione server sia file di script, viene considerata la definizione del server nel file di script.  
   
 **Esempio: 1**  
   
@@ -106,8 +106,8 @@ Nella sezione del file di script server o in un file di connessione server separ
 ```  
   
 ## <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo nella console di gestione viene [in esecuzione la Console di SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+Il passaggio successivo in costi operativi console consiste [esecuzione della Console SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione della console SSMA](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Esecuzione della console SSMA](executing-the-ssma-console-oracletosql.md)  
   
