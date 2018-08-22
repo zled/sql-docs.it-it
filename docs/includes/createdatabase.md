@@ -4,4 +4,4 @@
  [Creare un database SQL in pochi minuti usando il portale di Azure](https://azure.microsoft.com/documentation/articles/sql-database-get-started/)
  
  ## <a name="microsoft-sql-server"></a>Microsoft SQL Server 
- [Microsoft SQL Server database product samples, on CodePlex](http://msftdbprodsamples.codeplex.com/) (Esempi del prodotto database di Microsoft SQL Server in CodePlex)
+ [Esempi di Microsoft SQL Server su GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
