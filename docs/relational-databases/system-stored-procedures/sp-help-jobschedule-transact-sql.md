@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: edaebbc89b6422bd529963dc851371747f7d22be
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ac24c12f2ec6f7228857b013c8478db070a52e64
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261560"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396134"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  Numero di identificazione del processo. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name=** ] **'***job_name***'**  
- Nome del processo. *job_name*viene **sysname**, con un valore predefinito è NULL.  
+ Nome del processo. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
   
-> **Nota:** entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+> **Nota:** entrambe *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [  **@schedule_name=** ] **'***schedule_name***'**  
  Nome dell'elemento di pianificazione per il processo. *schedule_name*viene **sysname**, con un valore predefinito è NULL.  
@@ -63,7 +63,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  Numero di identificazione dell'elemento di pianificazione per il processo. *schedule_id*viene **int**, con un valore predefinito è NULL.  
   
  [  **@include_description=** ] *include_description*  
- Specifica se includere la descrizione della pianificazione nel set dei risultati. *include_description* viene **bit**, il valore predefinito è **0**. Quando *include_description* è **0**, la descrizione della pianificazione non è incluso nel set di risultati. Quando *include_description* è **1**, la descrizione della pianificazione è incluso nel set di risultati.  
+ Specifica se includere la descrizione della pianificazione nel set dei risultati. *include_description* viene **bit**, il valore predefinito è **0**. Quando *include_description* viene **0**, la descrizione della pianificazione non è incluso nel set di risultati. Quando *include_description* viene **1**, la descrizione della pianificazione è incluso nel set di risultati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -74,30 +74,30 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Numero di identificazione della pianificazione.|  
 |**schedule_name**|**sysname**|Nome della pianificazione.|  
-|**enabled**|**int**|Se la pianificazione è abilitata (**1**) o non è abilitata (**0**).|  
-|**freq_type**|**int**|Valore che indica la frequenza di esecuzione del processo:<br /><br /> **1** = una volta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile, relativo al **freq_interval**<br /><br /> **64** = esecuzione **SQLServerAgent** all'avvio del servizio.|  
-|**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Il valore dipende dal valore di **freq_type**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**int**|Unità per **freq_subday_interval**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**int**|Numero di **freq_subday_type** periodi devono intercorrere tra ogni esecuzione del processo. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**int**|Istanza del processo pianificata del **freq_interval** in ogni mese. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**enabled**|**int**|Se la pianificazione è abilitato (**1**) o non abilitato (**0**).|  
+|**freq_type**|**int**|Valore che indica la frequenza di esecuzione del processo:<br /><br /> **1** = una sola volta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa al **freq_interval**<br /><br /> **64** = vengono eseguite quando **SQLServerAgent** all'avvio del servizio.|  
+|**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Il valore dipende dal valore della **freq_type**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_type**|**int**|Unità di misura per **freq_subday_interval**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**int**|Numerosi **freq_subday_type** periodi intercorrere tra ogni esecuzione del processo. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_relative_interval**|**int**|Pianificata del processo dei **freq_interval** ogni mese. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_recurrence_factor**|**int**|Numero di mesi tra l'esecuzione pianificata del processo.|  
 |**active_start_date**|**int**|Data di attivazione della pianificazione.|  
 |**active_end_date**|**int**|Data di fine della pianificazione.|  
 |**active_start_time**|**int**|Ora di inizio della pianificazione.|  
 |**active_end_time**|**int**|Ora di fine della pianificazione.|  
 |**date_created**|**datetime**|Data di creazione della pianificazione.|  
-|**schedule_description**|**nvarchar(4000)**|Descrizione in inglese della pianificazione derivata dai valori **msdb.dbo**. Quando *include_description* è **0**, questa colonna contiene testo indicante che la descrizione non è stato richiesto.|  
+|**schedule_description**|**nvarchar(4000)**|Descrizione in inglese della pianificazione derivata dai valori **sysschedules**. Quando *include_description* viene **0**, questa colonna contiene testo indicante che la descrizione non è stato richiesto.|  
 |**next_run_date**|**int**|Data della successiva esecuzione del processo in base alla pianificazione.|  
 |**next_run_time**|**int**|Ora della successiva esecuzione del processo in base alla pianificazione.|  
 |**schedule_uid**|**uniqueidentifier**|Identificatore della pianificazione.|  
 |**job_count**|**int**|Numero di processi restituiti.|  
   
-> **Nota:****sp_help_jobschedule** restituisce i valori di **dbo. sysjobschedules** e **dbo. sysschedules** tabelle di sistema **msdb** . **sysjobschedules** ogni 20 minuti. Ciò potrebbe influire sui valori restituiti dalla stored procedure.  
+> **Nota:****sp_help_jobschedule** restituisce i valori di **dbo. sysjobschedules** e **dbo. sysschedules** tabelle di sistema **msdb** .   **sysjobschedules** ogni 20 minuti. Ciò potrebbe influire sui valori restituiti dalla stored procedure.  
   
-## <a name="remarks"></a>Osservazioni  
- I parametri di **sp_help_jobschedule** può essere utilizzato solo in determinate combinazioni. Se *schedule_id* è specificato, né *job_id* né *job_name* può essere specificato. In caso contrario, il *job_id* o *job_name* parametri possono essere utilizzati con *schedule_name*.  
+## <a name="remarks"></a>Note  
+ I parametri del **sp_help_jobschedule** può essere usato solo in determinate combinazioni. Se *schedule_id* è specificato, né *job_id* né *job_name* può essere specificato. In caso contrario, il *job_id* oppure *job_name* parametri possono essere utilizzati con *schedule_name*.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -106,9 +106,9 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- I membri di **SQLAgentUserRole** può visualizzare solo le proprietà delle pianificazioni dei processi che sono proprietari.  
+ I membri del **SQLAgentUserRole** può visualizzare solo le proprietà delle pianificazioni dei processi che sono proprietari.  
   
 ## <a name="examples"></a>Esempi  
   

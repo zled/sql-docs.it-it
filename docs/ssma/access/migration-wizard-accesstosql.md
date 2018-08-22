@@ -25,15 +25,15 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 52e29fb03a3bcc0436f69447caa4e96fc146c3a7
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 297526a299cc1b24c0426254a2cc5759e0b5dfa9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985493"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393437"
 ---
 # <a name="migration-wizard-accesstosql"></a>Migrazione guidata (AccessToSQL)
-La migrazione guidata consente la migrazione di uno o più database da Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Usando la procedura guidata, verranno creare un progetto, aggiungere database al progetto, selezionare gli oggetti per eseguire la migrazione e connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. È anche convertire, caricare e migrare i dati e schemi di accesso. Facoltativamente, è possibile collegare le tabelle di Access per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tabelle o di SQL Azure.  
+La migrazione guidata consente la migrazione di uno o più database da Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Usando la procedura guidata, verranno creare un progetto, aggiungere database al progetto, selezionare gli oggetti per eseguire la migrazione e connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È anche convertire, caricare e migrare i dati e schemi di accesso. Facoltativamente, è possibile collegare le tabelle di Access per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelle o di SQL Azure.  
   
 La maggior parte delle pagine della procedura guidata di migrazione contengono le stesse opzioni di finestre di dialogo SSMA esistenti. Pertanto, le pagine della procedura guidata sono descritte di seguito, e quindi vengono forniti i collegamenti in modo che altre informazioni sulle singole opzioni. Se una pagina contiene le opzioni univoche, sono documentate qui.  
   
@@ -52,7 +52,7 @@ La pagina Crea nuovo progetto è dove inserire il progetto file nome, posizione 
 ## <a name="add-access-databases-page"></a>Aggiungi pagina di accesso ai database  
 La pagina di aggiungere i database di Access è aggiungere una o più database di Access al progetto. È possibile aggiungere i singoli database facendo **aggiungere i database**e quindi selezionando i database dal **Open** finestra. In alternativa, è possibile trovare i database tramite il **trovare database** pulsante. Per altre informazioni, vedere gli argomenti seguenti:  
   
--   [Aggiunta e rimozione di file di Database di Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+-   [Aggiunta e rimozione di file di Database di Access](adding-and-removing-access-database-files-accesstosql.md)  
   
 -   [Procedura guidata trova database (Seleziona percorsi)](http://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)  
   
@@ -82,30 +82,30 @@ Se si dispone di molti oggetti, si potrebbe voler usare il **Selezione oggetto a
 Per altre informazioni sui filtri, vedere la sezione Opzioni della [selezione di oggetti avanzati, SSMA comuni,](http://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c).  
   
 ## <a name="connect-to-sql-server-page"></a>Connettersi alla pagina SQL Server  
-Nella finestra Connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] pagina, specificare le proprietà di connessione e quindi connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Per altre informazioni, vedere [Connetti a SQL Server](http://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
+Nella finestra Connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pagina, specificare le proprietà di connessione e quindi connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Connetti a SQL Server](http://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
   
 > [!IMPORTANT]  
 > Non appena la connessione ha esito positivo, si verificheranno **tabelle di collegamento** pagina in cui disponibile un'opzione di collegamento tra le tabelle. Fare clic su **successivo** e inizia la migrazione.  
   
 ## <a name="connect-to-sql-azure-page"></a>Connettersi a SQL Azure pagina  
-Nella pagina Connetti a SQL Azure, specificare le proprietà di connessione e quindi connettersi a SQL Azure. Per creare un nuovo database di azure, è possibile farlo usando **Create Database di Azure** opzione che viene visualizzato in un semplice clic su **Sfoglia** pulsante. Per altre informazioni, vedere [Connetti a SQL Azure](http://msdn.microsoft.com/bf44b236-d9be-41ae-a5fd-bd73038e505f)  
+Nella pagina Connetti a SQL Azure, specificare le proprietà di connessione e quindi connettersi a SQL Azure. Per creare un nuovo database di azure, è possibile farlo usando **Create Database di Azure** opzione che viene visualizzato in un semplice clic su **Sfoglia** pulsante. Per altre informazioni, vedere [Connetti a SQL Azure](connect-to-azure-sql-db-accesstosql.md)  
   
 > [!IMPORTANT]  
 > Non appena la connessione ha esito positivo, si verificheranno **tabelle di collegamento** pagina in cui disponibile un'opzione di collegamento tra le tabelle. Fare clic su **successivo** pulsante nella pagina di collegamenti per avviare la migrazione.  
   
 ## <a name="link-tables-page"></a>Pagina di tabelle di collegamento  
-La pagina di tabelle di collegamento consente di collegare le tabelle di Access originale dopo la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tabelle di SQL Azure. Collegamento delle tabelle di modifica nel database di Access in modo che le pagine di accesso di query, form, i report e dati usano i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database di SQL Azure anziché i dati presenti nel database di Access.  
+La pagina di tabelle di collegamento consente di collegare le tabelle di Access originale dopo la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tabelle di SQL Azure. Collegamento delle tabelle di modifica nel database di Access in modo che le pagine di accesso di query, form, i report e dati usano i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database di SQL Azure anziché i dati presenti nel database di Access.  
   
 **Tabelle di collegamento**  
-Selezionare il **collegare le tabelle** casella di controllo a cui collegarsi accedere alle tabelle dopo la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tabelle di SQL Azure. Per avviare la migrazione è necessario fare clic su **successivo** pulsante.  
+Selezionare il **collegare le tabelle** casella di controllo a cui collegarsi accedere alle tabelle dopo la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tabelle di SQL Azure. Per avviare la migrazione è necessario fare clic su **successivo** pulsante.  
   
 ## <a name="migration-status-page"></a>Pagina di migrazione stato  
-Pagina relativa allo stato di migrazione viene visualizzato lo stato di conversione gli schemi di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] schemi di SQL Azure, il caricamento degli schemi convertiti in o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, e quindi migrare i dati.  
+Pagina relativa allo stato di migrazione viene visualizzato lo stato di conversione gli schemi di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi di SQL Azure, il caricamento degli schemi convertiti in o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, e quindi migrare i dati.  
   
 Per altre informazioni su questa pagina, vedere [convertire, caricare ed eseguire la migrazione](http://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Introduzione a SQL Server Migration Assistant per Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
-[Migrazione dei database di Access a SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Reference(Access) dell'interfaccia utente](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

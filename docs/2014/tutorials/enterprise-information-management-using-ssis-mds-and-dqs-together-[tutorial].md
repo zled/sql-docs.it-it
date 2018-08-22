@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf4106c531dbb1f386f8c1b6745f773bbe3c0f4b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2a31abaefd1fe55e3df24fab24a35ed4af336ac
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189658"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395492"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Gestione di informazioni aziendali tramite l'utilizzo combinato di SSIS, MDS e DQS [Esercitazione]
   La gestione di informazioni in un'organizzazione comporta in genere l'integrazione dei dati nell'organizzazione e oltre, la pulizia dei dati, la corrispondenza dei dati per rimuovere tutti i duplicati, la standardizzazione e l'arricchimento dei dati, la conformità dei dati anche in termini legali e infine l'archiviazione dei dati in una posizione centralizzata con tutte le impostazioni di sicurezza necessarie.  
@@ -38,7 +38,7 @@ ms.locfileid: "37189658"
   
  SQL Server Data Quality Services (DQS) consente la pulizia, la corrispondenza, la standardizzare e l'arricchimento dei dati, pertanto è possibile garantire informazioni attendibili per le funzionalità di Business Intelligence, un data warehouse e carichi di lavoro di elaborazione delle transazioni. Visualizzare [Introduzione a Data Quality Services](http://msdn.microsoft.com/library/ff877917.aspx) argomento per le esigenze aziendali relative a DQS e come DQS risponde alle necessità.  
   
- SQL Server Master Data Services (MDS) fornisce un hub centrale di dati mediante il quale viene garantita l'integrità costante delle informazioni e la coerenza costante dei dati nelle diverse applicazioni. Visualizzare [Panoramica di Master Data Services](http://msdn.microsoft.com/library/ff487003.aspx) argomento per una breve descrizione delle funzionalità importanti di MDS.  
+ SQL Server Master Data Services (MDS) fornisce un hub centrale di dati mediante il quale viene garantita l'integrità costante delle informazioni e la coerenza costante dei dati nelle diverse applicazioni. Visualizzare [Panoramica di Master Data Services](../master-data-services/master-data-services-overview-mds.md) argomento per una breve descrizione delle funzionalità importanti di MDS.  
   
  Visualizzare [attività di pulizia e corrispondenza di dati Master tramite tecnologie EIM](http://msdn.microsoft.com/library/hh403491.aspx) white paper per una guida completa sull'implementazione di una soluzione EIM tramite queste tecnologie Microsoft EIM insieme e guarda [Enterprise Gestione delle informazioni (aziendali EIM): Innovativo, riunisce SSIS, DQS e MDS](http://go.microsoft.com/fwlink/?LinkId=258672) video per una dimostrazione interessante di uno scenario EIM.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "37189658"
   
     4.  SQL Server Data Tools  
   
-         Visualizzare [Guida all'installazione di SQL Server 2012](http://msdn.microsoft.com/library/bb500469.aspx) per informazioni dettagliate sull'installazione del prodotto.  
+         Visualizzare [Guida all'installazione di SQL Server 2012](../database-engine/install-windows/installation-for-sql-server.md) per informazioni dettagliate sull'installazione del prodotto.  
   
 2.  [Configurare MDS tramite Gestione configurazione Master Data Services](http://msdn.microsoft.com/library/ee633884.aspx)  
   

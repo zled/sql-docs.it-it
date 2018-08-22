@@ -21,14 +21,14 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f685c51851962c720093ef3c387332ce8de87766
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: daf26b975bbcf150b481e3d2dedfea75cafaa4f5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982513"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393869"
 ---
-# <a name="creating-script-files-mysqltosql"></a>Creazione di file di Script (MySQLToSQL)
+# <a name="creating-script-files-mysqltosql"></a>Creazione di file di script (MySQLToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se è necessario creare il file di valore della variabile e il file di connessione del server.  
   
 Il file di script può essere suddivisi in tre sezioni, una visualizzazione dei..,:  
@@ -357,7 +357,7 @@ Il file script contiene una sequenza di comandi del flusso di lavoro migrazione 
   
 Ad esempio, una migrazione tipica dei dati di una tabella specifica in un database MySQL segue la gerarchia dei: Database -&gt; tabella.  
   
-Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file script è più o meno statico con informazioni sulle variabili contenute in un [file con valori di variabile](http://msdn.microsoft.com/1dc56a7b-8e3a-4576-ad4f-47050bf7e28a) o, in una sezione separata all'interno del file di script per i valori delle variabili.  
+Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file script è più o meno statico con informazioni sulle variabili contenute in un [file con valori di variabile](creating-variable-value-files-mysqltosql.md) o, in una sezione separata all'interno del file di script per i valori delle variabili.  
   
 **Esempio:**  
   

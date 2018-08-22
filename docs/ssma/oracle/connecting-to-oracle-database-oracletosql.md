@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4779f29c90256809c6dfc364365571e28aea7af6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c127ef44f10723a74b2f03fed46ea42b9bbdfff5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980473"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396099"
 ---
-# <a name="connecting-to-oracle-database-oracletosql"></a>La connessione al Database Oracle (OracleToSQL)
-Eseguire la migrazione di database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è necessario connettersi al database Oracle che vuoi eseguire la migrazione. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti gli schemi di Oracle e quindi visualizzato nel riquadro di esplorazione di metadati di Oracle. SSMA archivia le informazioni sui server di database, ma non archivia le password.  
+# <a name="connecting-to-oracle-database-oracletosql"></a>Connessione a un database Oracle (OracleToSQL)
+Eseguire la migrazione di database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario connettersi al database Oracle che vuoi eseguire la migrazione. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti gli schemi di Oracle e quindi visualizzato nel riquadro di esplorazione di metadati di Oracle. SSMA archivia le informazioni sui server di database, ma non archivia le password.  
   
 La connessione al database rimane attiva fino a quando non si chiude il progetto. Quando si riapre il progetto, è necessario riconnettere se si desidera che una connessione attiva al database.  
   
@@ -47,7 +47,7 @@ L'account utilizzato per connettersi al database Oracle deve disporre di almeno 
 -   SELEZIONARE QUALSIASI DIZIONARIO  
   
 ## <a name="establishing-a-connection-to-oracle"></a>Stabilire una connessione a Oracle  
-Quando ci si connette a un database, SSMA legge i metadati del database e quindi aggiunge i metadati del file di progetto. Questi metadati vengono utilizzati da SSMA durante la conversione di oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] informazioni sulla sintassi, e quando esegue la migrazione di dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. È possibile esplorare i metadati nel riquadro di esplorazione di metadati Oracle e le proprietà di singoli oggetti di database.  
+Quando ci si connette a un database, SSMA legge i metadati del database e quindi aggiunge i metadati del file di progetto. Questi metadati vengono utilizzati da SSMA durante la conversione di oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni sulla sintassi, e quando esegue la migrazione di dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile esplorare i metadati nel riquadro di esplorazione di metadati Oracle e le proprietà di singoli oggetti di database.  
   
 > [!IMPORTANT]  
 > Prima di provare a connettersi, verificare che il server di database è in esecuzione e può accettare connessioni.  
@@ -97,7 +97,7 @@ Quando ci si connette a un database, SSMA legge i metadati del database e quindi
     Per altre informazioni, vedere [connettersi a Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
 ## <a name="reconnecting-to-oracle"></a>Connettersi a Oracle  
-La connessione al server di database rimane attiva fino a quando non si chiude il progetto. Quando si riapre il progetto, è necessario riconnettere se si desidera che una connessione attiva al database. È possibile lavorare offline fino a quando non si desidera aggiornare i metadati, caricare gli oggetti di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], ed eseguire la migrazione dei dati.  
+La connessione al server di database rimane attiva fino a quando non si chiude il progetto. Quando si riapre il progetto, è necessario riconnettere se si desidera che una connessione attiva al database. È possibile lavorare offline fino a quando non si desidera aggiornare i metadati, caricare gli oggetti di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ed eseguire la migrazione dei dati.  
   
 ## <a name="refreshing-oracle-metadata"></a>Aggiornamento dei metadati di Oracle  
 I metadati relativi al database Oracle non viene aggiornato automaticamente. I metadati nel Visualizzatore metadati Oracle sono uno snapshot dei metadati quando si è connessi prima di tutto, oppure dall'ultima volta aggiornate manualmente i metadati. È possibile aggiornare manualmente i metadati per tutti gli schemi, un singolo schema o singoli oggetti di database.  
@@ -122,11 +122,11 @@ I metadati relativi al database Oracle non viene aggiornato automaticamente. I m
   
     Per visualizzare le definizioni della codifica a colori, scegliere il **legenda** pulsante.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="next-step"></a>Passaggio successivo  
   
--   Il passaggio successivo del processo di migrazione consiste [connettersi a un'istanza di SQL Server](http://msdn.microsoft.com/1b2a8059-1829-4904-a82f-9c06de1e245f).  
+-   Il passaggio successivo del processo di migrazione consiste [connettersi a un'istanza di SQL Server](connecting-to-sql-server-oracletosql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [La migrazione da Oracle database in SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

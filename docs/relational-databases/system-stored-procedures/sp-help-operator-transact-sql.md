@@ -1,5 +1,5 @@
 ---
-title: sp_help_operator (Transact-SQL) | Documenti Microsoft
+title: sp_help_operator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fc94dd72bdb96516c6cd65f1e405951cbf8ff45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2e95006d991f9a3c8380c2144c5744e2e798c34c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258795"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394764"
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +47,17 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@operator_name=** ] **'***operator_name***'**  
- Nome dell'operatore. *operator_name* viene **sysname**. Se *operator_name* viene omesso, vengono restituite informazioni su tutti gli operatori.  
+ [  **@operator_name=** ] **'***nome_operatore***'**  
+ Nome dell'operatore. *nome_operatore* viene **sysname**. Se *nome_operatore* viene omesso, vengono restituite informazioni su tutti gli operatori.  
   
  [  **@operator_id=** ] *operator_id*  
  Numero di identificazione dell'operatore su cui vengono richieste informazioni. *operator_id*viene **int**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  Entrambi *operator_id* o *operator_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+>  Entrambi *operator_id* oppure *nome_operatore* devono essere specificati, ma non è possibile specificarli entrambi.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -66,10 +66,10 @@ sp_help_operator
 |**id**|**int**|Numero di identificazione dell'operatore.|  
 |**name**|**sysname**|Nome dell'operatore.|  
 |**enabled**|**tinyint**|Specifica se l'operatore è disponibile per la ricezione di notifiche:<br /><br /> **1** = Sì<br /><br /> **0** = No|  
-|**email_address**|**Nvarchar (100)**|Indirizzo di posta elettronica dell'operatore.|  
+|**email_address**|**Nvarchar(100)**|Indirizzo di posta elettronica dell'operatore.|  
 |**last_email_date**|**int**|Data dell'ultima notifica dell'operatore tramite posta elettronica.|  
 |**last_email_time**|**int**|Ora dell'ultima notifica dell'operatore tramite posta elettronica.|  
-|**pager_address**|**Nvarchar (100)**|Indirizzo cercapersone dell'operatore.|  
+|**pager_address**|**Nvarchar(100)**|Indirizzo cercapersone dell'operatore.|  
 |**last_pager_date**|**int**|Data dell'ultima notifica dell'operatore tramite cercapersone.|  
 |**last_pager_time**|**int**|Ora dell'ultima notifica dell'operatore tramite cercapersone.|  
 |**weekday_pager_start_time**|**int**|Inizio del periodo di tempo durante il quale l'operatore è disponibile per ricevere notifiche tramite cercapersone in un giorno feriale.|  
@@ -78,16 +78,16 @@ sp_help_operator
 |**saturday_pager_end_time**|**int**|Termine del periodo di tempo durante il quale l'operatore è disponibile per ricevere notifiche tramite cercapersone il sabato.|  
 |**sunday_pager_start_time**|**int**|Inizio del periodo di tempo durante il quale l'operatore è disponibile per ricevere notifiche tramite cercapersone la domenica.|  
 |**sunday_pager_end_time**|**int**|Termine del periodo di tempo durante il quale l'operatore è disponibile per ricevere notifiche tramite cercapersone la domenica.|  
-|**pager_days**|**tinyint**|Maschera di bit (**1** = domenica, **64** = sabato) di giorni-della settimana che indica quando l'operatore è disponibile per ricevere notifiche tramite cercapersone.|  
-|**netsend_address**|**Nvarchar (100)**|Indirizzo dell'operatore per le notifiche dei messaggi popup di rete.|  
+|**pager_days**|**tinyint**|Maschera di bit (**1** = domenica **64** = sabato) dei giorni della-settimana che indica quando l'operatore è disponibile per ricevere le notifiche tramite cercapersone.|  
+|**netsend_address**|**Nvarchar(100)**|Indirizzo dell'operatore per le notifiche dei messaggi popup di rete.|  
 |**last_netsend_date**|**int**|Data dell'ultima notifica inviata all'operatore tramite un messaggio popup di rete.|  
 |**last_netsend_time**|**int**|Ora dell'ultima notifica inviata all'operatore tramite un messaggio popup di rete.|  
 |**category_name**|**sysname**|Nome della categoria a cui appartiene l'operatore.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_help_operator** deve essere eseguita la **msdb** database.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -96,7 +96,7 @@ sp_help_operator
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni sull'operatore `François Ajenstat`.  

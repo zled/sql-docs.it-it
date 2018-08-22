@@ -29,12 +29,12 @@ caps.latest.revision: 26
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 631bdc9fe69f16e3cb5b98e85a62fe30eccbdc46
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8bf37ee58a365fdd2135e91d4d71e1818c407d1
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152682"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395872"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   Nelle sezioni seguenti vengono fornite informazioni sulla compatibilità dei componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In particolare vengono fornite informazioni su funzionalità deprecate, funzionalità non più supportate, modifiche di rilievo e modifiche al funzionamento.  
@@ -47,7 +47,7 @@ ms.locfileid: "37152682"
 |[Compatibilità con le versioni precedenti del motore di database di SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md)|Contiene argomenti in cui vengono descritte le modifiche di [!INCLUDE[ssDE](../includes/ssde-md.md)] apportate in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che possono richiedere modifiche alle applicazioni.|  
 |[Compatibilità con le versioni precedenti di Analysis Services](../../2014/analysis-services/analysis-services-backward-compatibility.md)|Contiene argomenti in cui vengono descritte le modifiche di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] apportate in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che possono richiedere modifiche alle applicazioni.|  
 |[Compatibilità con le versioni precedenti di Integration Services](../integration-services/integration-services-backward-compatibility.md)|Vengono descritte le modifiche di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] apportate in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che possono richiedere modifiche alle applicazioni Data Transformation Services esistenti.|  
-|[Compatibilità con le versioni precedenti di Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)|Contiene argomenti in cui vengono descritte le modifiche di [!INCLUDE[ssRS](../includes/ssrs-md.md)] apportate in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che possono richiedere modifiche alle soluzioni [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] esistenti.|  
+|[Compatibilità con le versioni precedenti di Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)|Contiene argomenti in cui vengono descritte le modifiche di [!INCLUDE[ssRS](../includes/ssrs.md)] apportate in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che possono richiedere modifiche alle soluzioni [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] esistenti.|  
 |[Compatibilità con le versioni precedenti &#40;Master Data Services&#41;](../master-data-services/backward-compatibility-master-data-services.md)|Contiene argomenti in cui vengono descritte le modifiche di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] apportate in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che possono richiedere modifiche alle soluzioni [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] esistenti.|  
 |[Compatibilità con le versioni precedenti della replica](../../2014/relational-databases/replication/replication-backward-compatibility.md)|Contiene argomenti in cui vengono descritte le modifiche del [!INCLUDE[ssDE](../includes/ssde-md.md)] apportate in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che possono richiedere modifiche alle soluzioni di replica esistenti.|  
   

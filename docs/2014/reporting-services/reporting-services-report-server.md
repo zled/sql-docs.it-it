@@ -30,12 +30,12 @@ caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f9aff1bba090ec29cad3eef94453858e1f2b0029
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63cd3c39d5c58d31eef427f309fe9d941903ad01
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189838"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394852"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   In questo argomento viene fornita una panoramica del server di report di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , il componente centrale di un'installazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È costituito da una coppia di componenti di elaborazione oltre a una raccolta di estensioni speciali che gestiscono le operazioni di autenticazione, elaborazione dati, rendering e recapito. Un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene eseguito in una delle due modalità di distribuzione: nativa o SharePoint. Vedere la sezione [Confronto tra le funzionalità delle modalità SharePoint e nativa](#bkmk_featuresupport) per un confronto delle funzionalità.  
@@ -119,7 +119,7 @@ ms.locfileid: "37189838"
  Sviluppatori di terze parti possono creare estensioni aggiuntive per sostituire o estendere la capacità di elaborazione del server di report. Per altre informazioni sulle interfacce programmatiche disponibili per gli sviluppatori di applicazioni, vedere il [Riferimento tecnico](../../2014/reporting-services/technical-reference-ssrs.md).  
   
 ###  <a name="bkmk_nativewithwebparts"></a> Modalità nativa con Web part di SharePoint  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili due Web part che è possibile installare e registrare in un'istanza di [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 o versione successiva, o [!INCLUDE[spPortalServ](../includes/spportalserv-md.md)] 2003 o versione successiva. e che è possibile usare per trovare e visualizzare da un sito di SharePoint report archiviati ed elaborati in un server di report eseguito in modalità nativa. Tali web part sono state introdotte nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili due Web part che è possibile installare e registrare in un'istanza di [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 o versione successiva, o SharePoint Portal Server 2003 o versione successiva. e che è possibile usare per trovare e visualizzare da un sito di SharePoint report archiviati ed elaborati in un server di report eseguito in modalità nativa. Tali web part sono state introdotte nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_sharepointmode"></a> Modalità SharePoint  
  In modalità SharePoint è necessario che un server di report venga eseguito all'interno di una server farm di SharePoint. Le funzionalità di elaborazione, rendering e gestione di server report sono rappresentate da un server applicazioni SharePoint in esecuzione la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint shared di servizio e uno o più [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applicazioni del servizio. Un sito di SharePoint fornisce l'accesso front-end al contenuto e alle operazioni del server di report.  

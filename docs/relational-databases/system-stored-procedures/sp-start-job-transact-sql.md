@@ -22,12 +22,12 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58fb415b74bf26880c1000e1f3122b5f6b86f2e4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9f640f88382653b5de1c70d1d9a22a8dbacbc283
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260797"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396323"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_start_job
   
 ## <a name="arguments"></a>Argomenti  
  [ **@job_name=** ] **'***job_name***'**  
- Nome del processo da avviare. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *job_name* viene **sysname**, con un valore predefinito è NULL.  
+ Nome del processo da avviare. Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@job_id=** ] *job_id*  
- Numero di identificazione del processo da avviare. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
+ Numero di identificazione del processo da avviare. Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [  **@error_flag=** ] *error_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -69,15 +69,15 @@ sp_start_job
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Questa stored procedure è nel **msdb** database.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -86,9 +86,9 @@ sp_start_job
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- I membri di **SQLAgentUserRole** e **SQLAgentReaderRole** possibile avviare solo i processi di cui sono proprietari. I membri di **SQLAgentOperatorRole** possono avviare tutti i processi locali, inclusi quelli che sono proprietà di altri utenti. I membri di **sysadmin** possono avviare tutti i processi locali e multiserver.  
+ I membri del **SQLAgentUserRole** e **SQLAgentReaderRole** possono avviare solo i processi che sono proprietari. I membri del **SQLAgentOperatorRole** possono avviare tutti i processi locali, inclusi quelli che sono proprietà di altri utenti. I membri del **sysadmin** possono avviare tutti i processi locali e multiserver.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene avviato un processo denominato `Weekly Sales Data Backup`.  

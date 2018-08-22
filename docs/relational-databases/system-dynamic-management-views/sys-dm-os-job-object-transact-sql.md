@@ -26,19 +26,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
-ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
+ms.openlocfilehash: 673f1bffeea908da211cd5ff76bad9d96dabcded
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39164212"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393661"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>Sys.dm_os_job_object (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Restituisce una riga singola che descrive la configurazione dell'oggetto processo che gestisce il processo di SQL Server, nonché determinate statistiche di utilizzo delle risorse a livello di oggetto processo. Restituisce un set vuoto se SQL Server non è in esecuzione in un oggetto processo. 
 
-Un oggetto processo è un costrutto di Windows che implementa la governance delle risorse di CPU, memoria e i/o a livello di sistema operativo. Per altre informazioni sugli oggetti di processo, vedere [gli oggetti processo](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). 
+Un oggetto processo è un costrutto di Windows che implementa la governance delle risorse di CPU, memoria e i/o a livello di sistema operativo. Per altre informazioni sugli oggetti di processo, vedere [gli oggetti processo](/windows/desktop/ProcThread/job-objects). 
   
 |Colonne|Tipo di dati|Description|  
 |-------------|---------------|-----------------|  

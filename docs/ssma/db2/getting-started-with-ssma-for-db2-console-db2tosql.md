@@ -16,12 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d9cc2c818136b808225ba62efbd2a321c33014c4
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c74c3f21508ce08e6e540dd5c4cc84531b7c744d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980463"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396290"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Introduzione a SSMA per DB2 Console (DB2ToSQL)
 In questa sezione viene descritta la procedura per avviare e iniziare a usare l'applicazione console di DB2. Anche nell'elenco, nel presente documento, vengono utilizzate le convenzioni di in una finestra di output della Console SSMA tipica.  
@@ -31,7 +31,7 @@ Per avviare l'applicazione console SSMA, procedere come segue:
   
 1.  Passare a **avviare** e scegliere **tutti i programmi**.  
   
-2.  Scegliere il  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant per DB2 Prompt dei comandi** scelta rapida.  
+2.  Scegliere il  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per DB2 Prompt dei comandi** scelta rapida.  
   
     Viene visualizzato il menu di utilizzo della Console SSMA e `(/? Help)`, che consentono di iniziare a usare l'applicazione console.  
   

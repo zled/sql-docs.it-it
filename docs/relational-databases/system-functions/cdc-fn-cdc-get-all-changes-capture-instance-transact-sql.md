@@ -23,19 +23,19 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a379027a084f4245c23c55262f09daaecbbaf8f1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2b5814bd16fc3c5c7b6fc67a99c5787d42e50b85
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236764"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396628"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una riga per ciascuna modifica applicata alla tabella di origine all'interno dell'intervallo del numero di sequenza del file di log (LSN) specificato. Se a una riga di origine vengono applicate più modifiche durante l'intervallo, ogni modifica è riportata nel set di risultati restituito. Oltre alla restituzione dei dati delle modifiche, quattro colonne di metadati forniscono le informazioni necessarie per applicare le modifiche a un'altra origine dati. Al contenuto delle colonne dei metadati e alle righe restituite nel set di risultati vengono applicate le opzioni di filtro di riga. Quando è specificata l'opzione di filtro di riga 'all', per l'identificazione di ogni modifica è disponibile esattamente una riga. Quando è specificata l'opzione 'all update old', le operazioni di aggiornamento sono rappresentate su due righe: una contiene i valori delle colonne acquisite prima dell'aggiornamento e l'altra contiene i valori delle colonne acquisite dopo l'aggiornamento.  
   
- Questa funzione di enumerazione viene creata nel momento in cui una tabella di origine è abilitata per Change Data Capture. Il nome della funzione è derivato e utilizza il formato **cdc.fn_cdc_get_all_changes_***capture_instance* in *capture_instance* è il valore specificato per l'istanza di acquisizione quando la tabella di origine abilitato per change data capture.  
+ Questa funzione di enumerazione viene creata nel momento in cui una tabella di origine è abilitata per Change Data Capture. Il nome della funzione è derivato e utilizza il formato **cdc.fn_cdc_get_all_changes_***capture_instance* in cui *capture_instance* è il valore specificato per l'istanza di acquisizione quando la tabella di origine è abilitato per change data capture.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,12 +55,12 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *from_lsn*  
  Valore LSN che rappresenta l'endpoint inferiore dell'intervallo LSN da includere nel set di risultati. *from_lsn* viene **binary(10)**.  
   
- Solo le righe della [cdc.&#91; capture_instance&#93;CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) con un valore nella tabella delle modifiche **_ $start_lsn** maggiore o uguale a *from_lsn* sono inclusi nel set di risultati.  
+ Solo le righe di [cdc.&#91; capture_instance&#93;CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) con un valore nella tabella delle modifiche **_ $start_lsn** maggiore o uguale a *from_lsn* sono inclusi nel set di risultati.  
   
  *to_lsn*  
  Valore LSN che rappresenta l'endpoint superiore dell'intervallo LSN da includere nel set di risultati. *to_lsn* viene **binary(10)**.  
   
- Solo le righe della [cdc.&#91; capture_instance&#93;CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) con un valore nella tabella delle modifiche **_ $start_lsn** minore o uguale a *from_lsn* o uguale a *to_lsn* sono inclusi nel set di risultati.  
+ Solo le righe di [cdc.&#91; capture_instance&#93;CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) con un valore nella tabella delle modifiche **_ $start_lsn** minore o uguale a *from_lsn* o uguale a *to_lsn* sono inclusi nel set di risultati.  
   
  <row_filter_option> ::= { all | all update old }  
  Opzione applicata al contenuto delle colonne dei metadati e alle righe restituite nel set di risultati.  
@@ -80,19 +80,19 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |**__$start_lsn**|**binary(10)**|Numero LSN di commit associato alla modifica. Mantiene l'ordine del commit della modifica. Le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit.|  
 |**__$seqval**|**binary(10)**|Valore di sequenza utilizzato per ordinare le modifiche a una riga all'interno di una transazione.|  
 |**__$operation**|**int**|Identifica l'operazione DML (Data Manipulation Language) necessaria per applicare la riga di dati di modifica all'origine dati di destinazione. I possibili valori sono i seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (i valori di colonna acquisiti sono quelli precedenti l'aggiornamento). Questo valore si applica solo quando è specificata l'opzione di filtro di riga 'all update old'.<br /><br /> 4 = aggiornamento (i valori di colonna acquisiti sono quelli successivi all'aggiornamento).|  
-|**__$update_mask**|**varbinary(128)**|Maschera di bit in cui a ogni colonna acquisita identificata per l'istanza di acquisizione corrisponde un bit. Questo valore ha tutti i bit definiti impostata su 1 quando **_ $operation** = 1 o 2. Quando **_ $operation** = 3 o 4, solo i bit corrispondenti per le colonne modificate sono impostati su 1.|  
+|**__$update_mask**|**varbinary(128)**|Maschera di bit in cui a ogni colonna acquisita identificata per l'istanza di acquisizione corrisponde un bit. Questo valore ha tutti i bit definiti impostata su 1 quando **_ $operation** = 1 o 2. Quando **_ $operation** = 3 o 4, solo i bit corrispondenti a colonne modificate sono impostati su 1.|  
 |**\<colonne della tabella di origine acquisite>**|variabile|Le colonne rimanenti restituite dalla funzione sono le colonne acquisite identificate quando l'istanza di acquisizione è stata creata. Se nessuna colonna è stata specificata nell'elenco delle colonne acquisite, vengono restituite tutte le colonne nella tabella di origine.|  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database. Quando il chiamante non dispone dell'autorizzazione per visualizzare i dati di origine, la funzione restituisce l'errore 229 ("autorizzazione SELECT negata per l'oggetto 'fn_cdc_get_all_changes _...', database '\<DatabaseName >', schema 'cdc'.").  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database. Quando il chiamante non dispone dell'autorizzazione per visualizzare i dati di origine, la funzione restituisce l'errore 229 ("autorizzazione SELECT negata per l'oggetto 'fn_cdc_get_all_changes _...', database '\<DatabaseName >', schema 'cdc'.").  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se l'intervallo LSN specificato è esterno alla cronologia di rilevamento delle modifiche per l'istanza di acquisizione, la funzione restituisce l'errore 208 ("Numero di argomenti insufficienti per la procedura o la funzione cdc.fn_cdc_get_all_changes").  
   
- Le colonne di tipo di dati **immagine**, **testo**, e **ntext** viene sempre assegnato un valore NULL quando **_ $operation** = 1 o **_ $ operazione** = 3. Le colonne di tipo di dati **varbinary (max)**, **varchar (max)**, o **nvarchar (max)** vengono assegnati un NULL valore quando **_ $operation** = 3 a meno che la colonna modificata durante l'aggiornamento. Quando **_ $operation** = 1, queste colonne vengono assegnate i rispettivi valori al momento dell'eliminazione. Le colonne calcolate incluse in un'istanza di acquisizione hanno sempre un valore NULL.  
+ Colonne di tipo di dati **immagine**, **testo**, e **ntext** viene sempre assegnato un valore NULL valore quando **_ $operation** = 1 o **_ $ operazione** = 3. Colonne di tipo di dati **varbinary (max)**, **varchar (max)**, o **nvarchar (max)** vengono assegnati un NULL valore quando **_ $operation** = 3 a meno che la colonna modificata durante l'aggiornamento. Quando **_ $operation** = 1, queste colonne vengono assegnate i rispettivi valori al momento dell'eliminazione. Le colonne calcolate incluse in un'istanza di acquisizione hanno sempre un valore NULL.  
   
 ## <a name="examples"></a>Esempi  
- Diversi [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono disponibili modelli che mostrano come utilizzare le funzioni di query di change data capture. Questi modelli sono disponibili nel **vista** menu [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per ulteriori informazioni, vedere [Esplora modelli](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
+ Diversi [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono disponibili modelli che illustrano come usare le funzioni di query di change data capture. Questi modelli sono disponibili nel **View** dal menu [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Esplora modelli](../../ssms/template/template-explorer.md).  
   
  In questo esempio viene illustrato il `Enumerate All Changes for Valid Range Template`. Viene utilizzata la funzione `cdc.fn_cdc_get_all_changes_HR_Department` per riportare tutte le modifiche attualmente disponibili per l'istanza di acquisizione `HR_Department`, definita per tabella di origine HumanResources.Department nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   

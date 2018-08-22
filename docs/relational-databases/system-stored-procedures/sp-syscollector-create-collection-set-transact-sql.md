@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_create_collection_set (Transact-SQL) | Documenti Microsoft
+title: sp_syscollector_create_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6cefec5de4c7bba8d2b184a202f5a21c4a25901c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e709e05834ed30701d2944547945ba439b8d418d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261610"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394055"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_syscollector_create_collection_set
  *nome* devono essere univoci. Per un elenco dei nomi dei set di raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_sets.  
   
  [  **@target =** ] '*destinazione*'  
- Riservato per utilizzi futuri. *nome* viene **nvarchar (128)** con valore predefinito è NULL.  
+ Riservato per utilizzi futuri. *nome* viene **nvarchar (128)** con un valore predefinito NULL.  
   
  [  **@collection_mode =** ] *collection_mode*  
  Specifica il modo in cui i dati vengono raccolti e archiviati. *collection_mode* viene **smallint** e può avere uno dei valori seguenti:  
@@ -75,24 +75,24 @@ sp_syscollector_create_collection_set
   
  1 - Modalità non in cache. La raccolta e il caricamento dei dati seguono la stessa pianificazione. Specificare la modalità non in cache per la raccolta ad hoc o snapshot.  
   
- Il valore predefinito per *collection_mode* è 0. Quando *collection_mode* è 0, *valore schedule_uid* o *schedule_name* deve essere specificato.  
+ Il valore predefinito per *collection_mode* è 0. Quando *collection_mode* è 0, *valore schedule_uid* oppure *schedule_name* deve essere specificato.  
   
  [  **@days_until_expiration =** ] *days_until_expiration*  
  Numero di giorni per cui i dati raccolti vengono salvati nel data warehouse di gestione. *days_until_expiration* viene **smallint** con valore predefinito è 730 (due anni). *days_until_expiration* deve essere 0 o un numero intero positivo.  
   
  [ **@proxy_id =** ] *proxy_id*  
- Identificatore univoco per un account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. *proxy_id* viene **int** con valore predefinito è NULL. Se specificato, *proxy_name* deve essere NULL. Per ottenere *proxy_id*, eseguire query sulla tabella di sistema sysproxies. Per accedere al proxy, il ruolo predefinito del database dc_admin deve disporre dell'autorizzazione appropriata. Per ulteriori informazioni, vedere [creare un Proxy di SQL Server Agent](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
+ Identificatore univoco per un account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. *proxy_id* viene **int** con un valore predefinito NULL. Se specificato, *proxy_name* deve essere NULL. Per ottenere *proxy_id*, eseguire query sulla tabella di sistema sysproxies. Per accedere al proxy, il ruolo predefinito del database dc_admin deve disporre dell'autorizzazione appropriata. Per altre informazioni, vedere [creare un Proxy di SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
  [  **@proxy_name =** ] '*proxy_name*'  
- Nome dell'account proxy. *proxy_name* viene **sysname** con valore predefinito è NULL. Se specificato, *proxy_id* deve essere NULL. Per ottenere *proxy_name*, eseguire query sulla tabella di sistema sysproxies.  
+ Nome dell'account proxy. *proxy_name* viene **sysname** con un valore predefinito NULL. Se specificato, *proxy_id* deve essere NULL. Per ottenere *proxy_name*, eseguire query sulla tabella di sistema sysproxies.  
   
  [  **@schedule_uid =** ] '*valore schedule_uid*'  
- GUID che punta a una pianificazione. *valore schedule_uid* viene **uniqueidentifier** con valore predefinito è NULL. Se specificato, *schedule_name* deve essere NULL. Per ottenere *valore schedule_uid*, eseguire query sulla tabella di sistema sysschedules.  
+ GUID che punta a una pianificazione. *valore schedule_uid* viene **uniqueidentifier** con un valore predefinito NULL. Se specificato, *schedule_name* deve essere NULL. Per ottenere *valore schedule_uid*, eseguire query sulla tabella di sistema sysschedules.  
   
- Quando *collection_mode* è impostato su 0, *valore schedule_uid* o *schedule_name* deve essere specificato. Quando *collection_mode* è impostato su 1, *valore schedule_uid* o *schedule_name* viene ignorato se specificato.  
+ Quando *collection_mode* è impostata su 0, *valore schedule_uid* oppure *schedule_name* deve essere specificato. Quando *collection_mode* è impostato su 1, *valore schedule_uid* oppure *schedule_name* viene ignorato se specificato.  
   
  [  **@schedule_name =** ] '*schedule_name*'  
- Nome della pianificazione. *schedule_name* viene **sysname** con valore predefinito è NULL. Se specificato, *valore schedule_uid* deve essere NULL. Per ottenere *schedule_name*, eseguire query sulla tabella di sistema sysschedules.  
+ Nome della pianificazione. *schedule_name* viene **sysname** con un valore predefinito NULL. Se specificato, *valore schedule_uid* deve essere NULL. Per ottenere *schedule_name*, eseguire query sulla tabella di sistema sysschedules.  
   
  [  **@logging_level =** ] *logging_level*  
  Livello di registrazione. *logging_level* viene **smallint** con uno dei valori seguenti:  
@@ -118,21 +118,21 @@ sp_syscollector_create_collection_set
  Il valore predefinito per *logging_level* è 1.  
   
  [  **@description =** ] '*descrizione*'  
- Descrizione del set di raccolta. *Descrizione* viene **nvarchar(4000** con valore predefinito è NULL.  
+ Descrizione del set di raccolta. *Descrizione* viene **nvarchar (4000)** con un valore predefinito NULL.  
   
  [ **@collection_set_id =** ] *collection_set_id*  
  Identificatore univoco locale del set di raccolta. *collection_set_id* viene **int** con OUTPUT ed è obbligatorio.  
   
  [  **@collection_set_uid =** ] '*collection_set_uid*'  
- GUID per il set di raccolta. *collection_set_uid* viene **uniqueidentifier** con OUTPUT e il valore predefinito è NULL.  
+ GUID per il set di raccolta. *collection_set_uid* viene **uniqueidentifier** con OUTPUT e il valore predefinito NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syscollector_create_collection_set nel contesto del database di sistema msdb.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
 ## <a name="examples"></a>Esempi  

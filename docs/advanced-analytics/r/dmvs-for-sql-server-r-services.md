@@ -1,5 +1,5 @@
 ---
-title: Viste a gestione dati (DMV) per SQL Server di Machine Learning servizi | Documenti Microsoft
+title: Viste a gestione dati (DMV) per SQL Server servizi di Machine Learning | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,26 +7,26 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e2180794ca96fc6387105745e346802725afe1dd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8d7d20d396ca5b853d959c84a371fe808415c5fb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203143"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394462"
 ---
-# <a name="dmvs-for-sql-server-machine-learning-services"></a>Viste a gestione dinamica per servizi SQL Server Machine Learning
+# <a name="dmvs-for-sql-server-machine-learning-services"></a>Viste a gestione dinamica per SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-L'articolo elenca le viste del catalogo di sistema e viste a gestione dinamica correlate a apprendimento in SQL Server.
+L'articolo elenca le viste del catalogo di sistema e viste a gestione dinamica correlate a machine learning in SQL Server.
 
-Per informazioni sugli eventi estesi, vedere [eventi per machine learning estesi](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md).
+Per informazioni sugli eventi estesi, vedere [eventi estesi per apprendimento](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md).
 
 > [!TIP]
-> Utilizzare i report predefiniti per le sessioni di apprendimento di monitoraggio e l'utilizzo di pacchetto. Per ulteriori informazioni, vedere [monitorare machine learning che usano report personalizzati in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
+> Usare i report predefiniti per le sessioni di apprendimento automatico di monitoraggio e utilizzo del pacchetto. Per altre informazioni, vedere [monitorare machine learning usando i report personalizzati in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
-## <a name="system-configuration-and-system-resources"></a>Configurazione di sistema e le risorse di sistema
+## <a name="system-configuration-and-system-resources"></a>Configurazione del sistema e le risorse di sistema
 
-È possibile monitorare e analizzare le risorse usate da script esterno utilizzando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] DMV e viste del catalogo di sistema.
+È possibile monitorare e analizzare le risorse usate dagli script esterno usando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] DMV e viste del catalogo di sistema.
 
 + [ sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 
@@ -44,10 +44,10 @@ Per informazioni sugli eventi estesi, vedere [eventi per machine learning estesi
 
   I contatori seguenti vengono segnalati da questa vista DMV per gli script esterni per ogni istanza:
 
-  + **Totale di esecuzioni**: numero di processi esterni avviate dalle chiamate locali o remote
-  + **Le esecuzioni parallele**: numero di volte in cui è incluso uno script la _@parallel_ specifica e che [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] è stato in grado di generare e utilizzare un piano di query parallele
-  + **Streaming esecuzioni**: numero di volte in cui è stata richiamata la funzionalità di flusso
-  + **SQL CC esecuzioni**: numero di external script fase in cui la chiamata è stata creata un'istanza in modalità remota e SQL Server è stato usato come contesto di calcolo
+  + **Esecuzioni totali**: numero di processi esterni avviate da chiamate locali o remote
+  + **Esecuzioni parallele**: numero di volte in cui uno script ha incluso la _@parallel_ specifica e che [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] è stato in grado di generare e usare un piano di query parallele
+  + **Esecuzioni di flusso**: numero di volte in cui è stata richiamata la funzionalità di flusso
+  + **Esecuzioni CC SQL**: numero di external script run in cui la chiamata è stata creata un'istanza remota e SQL Server è stato usato come contesto di calcolo
   + **Accessi tramite autenticazione implicita**: numero di volte in cui è stata effettuata una chiamata di loopback ODBC usando l'autenticazione implicita, vale a dire che [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ha eseguito la chiamata per conto dell'utente inviando la richiesta di script.
   + **Tempo totale di esecuzione (ms)**: tempo trascorso tra la chiamata e il completamento della chiamata
   + **Errori di esecuzione**: numero di volte in cui gli script hanno segnalato errori. Questo conteggio non include gli errori R.
@@ -59,14 +59,14 @@ Per informazioni sugli eventi estesi, vedere [eventi per machine learning estesi
 
   Questa vista DMV non restituisce risultati se nessuno script è attualmente in esecuzione, quindi è molto utile per monitorare gli script con esecuzione prolungata. Restituisce questi valori:
 
-  + **external_script_request_id**: un GUID, che viene usato anche come il nome temporaneo della directory di lavoro utilizzato per archiviare gli script e i risultati intermedi
-  + **linguaggio**: un valore, ad esempio `R` che denota la lingua dello script esterno
-  + **degree_of_parallelism**: un numero intero che indica il numero di parallelo processi che sono stati utilizzati
-  + **external_user_name**: finestra di avvio di un ruolo di lavoro dell'account, ad esempio **SQLRUser01**
+  + **external_script_request_id**: un GUID, che viene usato anche come nome temporaneo della directory di lavoro utilizzata per archiviare gli script e i risultati intermedi
+  + **linguaggio**: un valore, ad esempio `R` che indica il linguaggio di script esterni
+  + **degree_of_parallelism**: un numero intero che indica il numero di processi paralleli che sono stati usati
+  + **external_user_name**: account di lavoro A Launchpad, ad esempio **SQLRUser01**
 
 + [sys.dm_external_script_execution_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 
-  Questa DMV viene fornita per il monitoraggio interno (telemetria) tenere traccia delle chiamate di script esterni quanti vengono eseguite su un'istanza. Il servizio telemetria ha inizio quando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e incrementa un contatore basate su disco ogni volta che viene chiamato una specifica funzione di machine learning.
+  Questa DMV viene fornita per monitoraggio interno (telemetria) tenere traccia di quante chiamate di script esterni vengono eseguite su un'istanza. Il servizio dati di telemetria viene avviato quando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e viene incrementato un contatore basato su disco ogni volta che viene chiamato una specifica funzione di machine learning.
 
   Il contatore viene incrementato per ogni chiamata a una funzione di rilevamento specifica. Ad esempio, se `rxLinMod` viene chiamato ed eseguito in parallelo, il contatore viene incrementato di 1.
   
@@ -78,7 +78,7 @@ Per informazioni sugli eventi estesi, vedere [eventi per machine learning estesi
 
 ## <a name="resource-governor-views"></a>Viste di Resource Governor
 
-Nelle edizioni che supportano Resource Governor, creazione di pool di risorse esterne per carichi di lavoro R o Python può essere efficace en per tenere traccia e gestire le risorse.
+Nelle edizioni che supportano Resource Governor, creazione di pool di risorse esterne per i carichi di lavoro R o Python può essere efficace en per tenere traccia e gestire le risorse.
 
 + [sys.resource_governor_resource_pools](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)
 
@@ -95,7 +95,7 @@ Nelle edizioni che supportano Resource Governor, creazione di pool di risorse es
 
   > [!NOTE]
   > 
-  > Nell'edizione Standard, tutti i processi di script esterni eseguire nel pool di risorse esterno predefinito stesso.
+  > Nell'edizione Standard, tutti i processi di script esterni eseguire entro lo stesso pool di risorse esterno predefinito.
 
 + [sys.resource_governor_workload_groups](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)
 
@@ -110,24 +110,24 @@ Nelle edizioni che supportano Resource Governor, creazione di pool di risorse es
 
   Con la configurazione predefinita, i pool di carichi di lavoro vengono automaticamente assegnati ai processori e quindi non sono presenti valori di affinità da restituire.
 
-  La pianificazione dell'affinità esegue il mapping del pool di risorse alle pianificazioni di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] identificate dagli ID specificati. Questi ID eseguire il mapping ai valori di `scheduler_id` colonna `sys.dm_os_schedulers`.
+  La pianificazione dell'affinità esegue il mapping del pool di risorse alle pianificazioni di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] identificate dagli ID specificati. Questi ID mapping ai valori di `scheduler_id` colonna in `sys.dm_os_schedulers`.
 
 
 > [!NOTE] 
 > 
-> Anche se è possibile configurare e personalizzare pool di risorse solo nelle edizioni Enterprise e Developer, i pool predefiniti e le viste DMV sono disponibili in tutte le edizioni. Pertanto, è possibile utilizzare queste DMV in Standard Edition per determinare l'estremità di risorse per i processi di script esterni.
+> Anche se è possibile configurare e personalizzare pool di risorse solo nelle edizioni Enterprise e Developer, i pool predefiniti e le viste DMV sono disponibili in tutte le edizioni. Pertanto, è possibile usare queste DMV in Standard Edition per determinare i limiti delle risorse per i processi di script esterni.
 
 Per informazioni generali sul monitoraggio delle istanze di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], vedere [Viste del catalogo di sistema](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) e [Resource Governor Related Dynamic Management Views](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md) (Viste a gestione dinamica (DMV) correlate a Resource Governor).
 
-## <a name="monitoring-script-execution"></a>L'esecuzione dello script di monitoraggio
+## <a name="monitoring-script-execution"></a>L'esecuzione di script di monitoraggio
 
-Script R e Python da eseguire nel [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] vengono avviati mediante il [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] interfaccia. Launchpad non viene tuttavia gestito a livello di risorse né monitorato separatamente, perché si presuppone che sia un servizio sicuro fornito da Microsoft che gestisce le risorse correttamente.
+Gli script R e Python in esecuzione in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] vengono avviati mediante il [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] interfaccia. Launchpad non viene tuttavia gestito a livello di risorse né monitorato separatamente, perché si presuppone che sia un servizio sicuro fornito da Microsoft che gestisce le risorse correttamente.
 
-Singoli script eseguiti con il servizio Launchpad vengono gestiti mediante il [oggetto processo di Windows](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). Un oggetto processo consente di gestire gruppi di processi come unità. Ogni oggetto processo è gerarchico e controlla gli attributi di tutti i processi associati a esso. Le operazioni eseguite su un oggetto processo interessano tutti i processi associati all'oggetto processo.
+Singoli script eseguiti con il servizio Launchpad vengono gestiti mediante il [oggetto processo Windows](/windows/desktop/ProcThread/job-objects). Un oggetto processo consente di gestire gruppi di processi come unità. Ogni oggetto processo è gerarchico e controlla gli attributi di tutti i processi associati a esso. Le operazioni eseguite su un oggetto processo interessano tutti i processi associati all'oggetto processo.
 
 Se quindi è necessario terminare un processo associato a un oggetto, tenere presente che verranno terminati anche tutti i processi correlati. Se si esegue uno script R assegnato a un oggetto processo di Windows e tale script esegue un processo ODBC correlato che deve essere terminato, verrà terminato anche il processo di script R padre.
 
-Se si avvia uno script esterno che utilizza l'elaborazione parallela, un singolo oggetto processo Windows gestisce tutti i processi figlio parallelo.
+Se si avvia uno script esterno che utilizza l'elaborazione parallela, un singolo oggetto processo Windows gestisce tutti i processi figlio paralleli.
 
 Per determinare se un processo è in esecuzione in un processo, usare la funzione `IsProcessInJob`.
 

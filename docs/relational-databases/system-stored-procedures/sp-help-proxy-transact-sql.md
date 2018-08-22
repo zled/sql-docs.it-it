@@ -1,5 +1,5 @@
 ---
-title: sp_help_proxy (Transact-SQL) | Documenti Microsoft
+title: sp_help_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a64cf35c51d4857b666798debb633828b6c66b8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0cfde22d702fa71b46ae4795beca42b8e7bd37d7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259801"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394271"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +49,17 @@ sp_help_proxy
   
 ## <a name="arguments"></a>Argomenti  
  [ **@proxy_id** =] *id*  
- Numero di identificazione del proxy per cui visualizzare un elenco di informazioni. Il *proxy_id* è **int**, con un valore predefinito è NULL. Entrambi i *id* o *proxy_name* può essere specificato.  
+ Numero di identificazione del proxy per cui visualizzare un elenco di informazioni. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
   
  [ **@proxy_name** =] **'***proxy_name***'**  
- Nome del proxy per cui visualizzare un elenco di informazioni. Il *proxy_name* è **sysname**, con un valore predefinito è NULL. Entrambi i *id* o *proxy_name* può essere specificato.  
+ Nome del proxy per cui visualizzare un elenco di informazioni. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
   
  [ **@subsystem_name** =] '*subsystem_name*'  
- Il nome del sottosistema per cui visualizzare un elenco dei proxy. Il *subsystem_name* è **sysname**, con un valore predefinito è NULL. Quando *subsystem_name* è specificato, *nome* deve anche essere specificato.  
+ Il nome del sottosistema per cui visualizzare un elenco dei proxy. Il *subsystem_name* viene **sysname**, con un valore predefinito è NULL. Quando *subsystem_name* omette *nome* deve essere specificato anche.  
   
  Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Sistema operativo (CmdExec)|  
@@ -74,10 +74,10 @@ sp_help_proxy
 |PowerShell|Script di PowerShell|  
   
  [ **@name** =] '*nome*'  
- Il nome di un accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui visualizzare un elenco dei proxy. Il nome è **nvarchar (256)**, con un valore predefinito è NULL. Quando *nome* è specificato, *subsystem_name* deve anche essere specificato.  
+ Il nome di un accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui visualizzare un elenco dei proxy. Il nome è **nvarchar(256)**, con un valore predefinito è NULL. Quando *nome* omette *subsystem_name* deve essere specificato anche.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -92,18 +92,18 @@ sp_help_proxy
 |**credential_id**|**int**|Identificatore per le credenziali associate a questo proxy.|  
 |**credential_identity_exists**|**int**|Indica se credential_identity esiste. { 0 = non esiste, 1 = esiste }|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Quando viene specificato alcun parametro, **sp_help_proxy** Elenca le informazioni per tutti i proxy nell'istanza.  
   
- Per determinare quali proxy un account di accesso è possibile utilizzare per un determinato sottosistema, specificare *nome* e *subsystem_name*. Se vengono specificati questi argomenti, **sp_help_proxy** elenco di proxy che l'account di accesso specificato può accesso e che possono essere utilizzati per il sottosistema specificato.  
+ Per determinare quali proxy un account di accesso è possibile usare per un determinato sottosistema, specificare *name* e *subsystem_name*. Quando vengono specificati questi argomenti, **sp_help_proxy** proxy che l'account di accesso specificata possono accedere e che possono essere utilizzati per il sottosistema specificato.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono appartenere al ruolo predefinito del database **SQLAgentOperatorRole** nel database **msdb** .  
   
- Per informazioni dettagliate su **SQLAgentOperatorRole**, vedere [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sui **SQLAgentOperatorRole**, vedere [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 > [!NOTE]  
->  Il **credential_identity** e **user_sid** colonne vengono restituite solo nel set di risultati quando i membri del **sysadmin** eseguire questa stored procedure.  
+>  Il **credential_identity** e **user_sid** le colonne vengono restituite solo nel set di risultati quando i membri del **sysadmin** eseguire questa stored procedure.  
   
 ## <a name="examples"></a>Esempi  
   

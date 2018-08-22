@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78bffc1432bb650d5c1a7f37c0a712c34236dca1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5160cd777567d671a170d31d3638e7ef9dc74a34
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260061"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393426"
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ sp_help_jobs_in_schedule
   
 ## <a name="arguments"></a>Argomenti  
  [  **@schedule_id =** ] *schedule_id*  
- Identificatore della pianificazione per cui restituire un elenco di informazioni. *schedule_id* viene **int**, non prevede alcun valore predefinito. Entrambi *schedule_id* o *schedule_name* può essere specificato.  
+ Identificatore della pianificazione per cui restituire un elenco di informazioni. *schedule_id* viene **int**, non prevede alcun valore predefinito. Entrambi *schedule_id* oppure *schedule_name* può essere specificato.  
   
  [  **@schedule_name =** ] **'***schedule_name***'**  
- Nome della pianificazione per cui restituire un elenco di informazioni. *schedule_name* viene **sysname**, non prevede alcun valore predefinito. Entrambi *schedule_id* o *schedule_name* può essere specificato.  
+ Nome della pianificazione per cui restituire un elenco di informazioni. *schedule_name* viene **sysname**, non prevede alcun valore predefinito. Entrambi *schedule_id* oppure *schedule_name* può essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce il set di risultati seguente:  
@@ -67,15 +67,15 @@ sp_help_jobs_in_schedule
 |**description**|**nvarchar(512)**|Descrizione del processo.|  
 |**start_step_id**|**int**|ID del passaggio del processo da cui deve iniziare l'esecuzione.|  
 |**category**|**sysname**|Categoria del processo.|  
-|**proprietario**|**sysname**|Proprietario del processo.|  
-|**notify_level_eventlog**|**int**|Maschera di bit che indica le condizioni per la registrazione dell'evento di notifica nel registro applicazioni di Microsoft Windows. I possibili valori sono i seguenti:<br /><br /> **0** non = mai<br /><br /> **1** = in caso di esito positivo del processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato del processo)|  
-|**notify_level_email**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio di posta elettronica di notifica al termine di un processo. I valori possibili sono le stesse di **notify_level_eventlog**.|  
-|**notify_level_netsend**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio in rete al termine di un processo. I valori possibili sono le stesse di **notify_level_eventlog**.|  
-|**notify_level_page**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio su cercapersone al termine di un processo. I valori possibili sono le stesse di **notify_level_eventlog**.|  
+|**Proprietario**|**sysname**|Proprietario del processo.|  
+|**notify_level_eventlog**|**int**|Maschera di bit che indica le condizioni per la registrazione dell'evento di notifica nel registro applicazioni di Microsoft Windows. I possibili valori sono i seguenti:<br /><br /> **0** non = mai<br /><br /> **1** = in caso di esito positivo del processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
+|**notify_level_email**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio di posta elettronica di notifica al termine di un processo. I valori possibili sono uguali a quelle per **notify_level_eventlog**.|  
+|**notify_level_netsend**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio in rete al termine di un processo. I valori possibili sono uguali a quelle per **notify_level_eventlog**.|  
+|**notify_level_page**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio su cercapersone al termine di un processo. I valori possibili sono uguali a quelle per **notify_level_eventlog**.|  
 |**notify_email_operator**|**sysname**|Nome di posta elettronica dell'operatore a cui inviare la notifica.|  
 |**notify_netsend_operator**|**sysname**|Nome di computer o di utente specificato quando si invia un messaggio in rete.|  
 |**notify_page_operator**|**sysname**|Nome di computer o di utente specificato quando si invia un messaggio su cercapersone.|  
-|**delete_level**|**int**|Maschera di bit che indica le condizioni per l'eliminazione di un processo al termine del processo. I valori possibili sono le stesse di **notify_level_eventlog**.|  
+|**delete_level**|**int**|Maschera di bit che indica le condizioni per l'eliminazione di un processo al termine del processo. I valori possibili sono uguali a quelle per **notify_level_eventlog**.|  
 |**date_created**|**datetime**|Data di creazione del processo.|  
 |**date_modified**|**datetime**|Data dell'ultima modifica del processo.|  
 |**version_number**|**int**|Versione del processo aggiornata automaticamente in corrispondenza di ogni modifica del processo.|  
@@ -93,10 +93,10 @@ sp_help_jobs_in_schedule
 |**has_target**|**int**|Numero di server di destinazione del processo.|  
 |**type**|**int**|Tipo del processo:<br /><br /> **1** = processo locale.<br /><br /> **2** = processo multiserver.<br /><br /> **0** = processo non dispone di alcun server di destinazione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Questa stored procedure visualizza le informazioni sui processi associati alla pianificazione specificata.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -105,9 +105,9 @@ sp_help_jobs_in_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- I membri di **SQLAgentUserRole** solo possibile visualizzare lo stato dei processi di cui sono proprietari.  
+ I membri del **SQLAgentUserRole** possono solo visualizzare lo stato dei processi di cui sono proprietari.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono visualizzati i processi associati alla pianificazione `NightlyJobs`.  

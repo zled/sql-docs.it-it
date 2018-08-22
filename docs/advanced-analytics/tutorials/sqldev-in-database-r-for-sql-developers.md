@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8c7296c46bb6312d66c07c0bb63c9e97c37ec1db
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 16b3a19e8252e35fcefc817be2c8de11471b4eb3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082433"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394458"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>: Esercitazione analitica nel database con R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,17 +32,15 @@ Il processo di compilazione in genere una soluzione end-to-end è costituito da 
 
 Dopo la creazione della soluzione, tuttavia è possibile distribuirla facilmente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando le stored procedure di [!INCLUDE[tsql](../../includes/tsql-md.md)] nell'ambiente familiare di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-- [Lezione 1: Scaricare i dati di esempio e gli script](../tutorials/sqldev-download-the-sample-data.md)
+- [Lezione 1: Configurare i dati demo dei Taxi di NYC](../tutorials/sqldev-download-the-sample-data.md)
 
-- [Lezione 2: Configurare l'ambiente dell'esercitazione](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [Lezione 2: Esplorare e visualizzare la forma dei dati e la distribuzione tramite la chiamata di funzioni R nelle stored procedure](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [Lezione 3: Esplorare e visualizzare la forma dei dati e la distribuzione tramite la chiamata di funzioni R nelle stored procedure](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-- [Lezione 4: Creare funzionalità di dati con R in T-SQL, funzioni](../tutorials/sqldev-create-data-features-using-t-sql.md)
+- [Lezione 3: Creare funzionalità di dati con R in T-SQL, funzioni](../tutorials/sqldev-create-data-features-using-t-sql.md)
   
-- [Lezione 5: Training e salvataggio di un modello R tramite stored procedure e funzioni](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+- [Lezione 4: Training e salvataggio di un modello R tramite stored procedure e funzioni](../r/sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [Lezione 6: Codice R a capo automatico in una stored procedure per l'operazionalizzazione](../tutorials/sqldev-operationalize-the-model.md). 
+- [Lezione 5: Codice R a capo automatico in una stored procedure per l'operazionalizzazione](../tutorials/sqldev-operationalize-the-model.md). 
   Dopo aver salvato il modello per il database, chiamare il modello per la stima da [!INCLUDE[tsql](../../includes/tsql-md.md)] usando le stored procedure.
 
 ## <a name="prerequisites"></a>Prerequisiti

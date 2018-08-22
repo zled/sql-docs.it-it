@@ -16,28 +16,28 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ea3cf916d256e070ee7e0bdd20de81f3f4464e12
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7f10a1fa9faf04e8f819acd7966f6ca6d03c57b5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980553"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396098"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Uso dei progetti SSMA (DB2ToSQL)
-Per eseguire la migrazione di database DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], creare innanzitutto un progetto SSMA. Il progetto è un file che contiene le informazioni seguenti:  
+Per eseguire la migrazione di database DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], creare innanzitutto un progetto SSMA. Il progetto è un file che contiene le informazioni seguenti:  
   
--   I metadati relativi a database DB2 si vuole eseguire la migrazione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   I metadati relativi a database DB2 si vuole eseguire la migrazione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   I metadati sull'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] che riceverà i dati e oggetti migrati.  
+-   I metadati sull'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che riceverà i dati e oggetti migrati.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] informazioni di connessione.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni di connessione.  
   
 -   Impostazioni del progetto.  
   
-Quando si apre un progetto, questo viene disconnesso da DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Che consente di lavorare offline. Per informazioni su riconnessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vedere [ci si connette a SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
+Quando si apre un progetto, questo viene disconnesso da DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Che consente di lavorare offline. Per informazioni su riconnessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [ci si connette a SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
   
 ## <a name="reviewing-default-project-settings"></a>Esame impostazioni predefinite del progetto  
-SSMA contiene diverse impostazioni per la conversione e il caricamento di oggetti di database, la migrazione dei dati e sincronizzazione SSMA con DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Le impostazioni predefinite sono appropriate per molti utenti. Tuttavia, prima di creare un nuovo progetto SSMA, è consigliabile verificare le impostazioni. Se si desidera, è possibile modificare le impostazioni predefinite che verranno usate per tutti i nuovi progetti.  
+SSMA contiene diverse impostazioni per la conversione e il caricamento di oggetti di database, la migrazione dei dati e sincronizzazione SSMA con DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le impostazioni predefinite sono appropriate per molti utenti. Tuttavia, prima di creare un nuovo progetto SSMA, è consigliabile verificare le impostazioni. Se si desidera, è possibile modificare le impostazioni predefinite che verranno usate per tutti i nuovi progetti.  
   
 **Per controllare le impostazioni di progetto predefinito**  
   
@@ -55,14 +55,14 @@ SSMA contiene diverse impostazioni per la conversione e il caricamento di oggett
   
     -   Per informazioni sulle impostazioni di oggetto di sistema, vedere [impostazioni del progetto&#40;caricamento oggetti di sistema&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md).  
   
-    -   Per informazioni sulle impostazioni per la sincronizzazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vedere [impostazioni di progetto&#40;sincronizzazione&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
+    -   Per informazioni sulle impostazioni per la sincronizzazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [impostazioni di progetto&#40;sincronizzazione&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
   
     -   Per informazioni sulle impostazioni di interfaccia utente grafica, vedere [impostazioni del progetto &#40;interfaccia utente grafica&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md).  
   
     -   Per informazioni sulle impostazioni di mapping dei tipi di dati, vedere [impostazioni del progetto &#40;Mapping dei tipi&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
   
 ## <a name="creating-new-projects"></a>Creazione di nuovi progetti  
-Eseguire la migrazione dei dati da database DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è innanzitutto necessario creare un progetto.  
+Eseguire la migrazione dei dati da database DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è innanzitutto necessario creare un progetto.  
   
 **Per creare un progetto**  
   
@@ -74,13 +74,13 @@ Eseguire la migrazione dei dati da database DB2 a [!INCLUDE[ssNoVersion](../../i
   
 3.  Nel **ubicazione** casella, immettere o selezionare una cartella per il progetto e quindi fare clic su **OK**.  
   
-4.  Nel **migrazione a** elenco a discesa, selezionare la versione del server di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usato per la migrazione. Le opzioni disponibili sono:  
+4.  Nel **migrazione a** elenco a discesa, selezionare la versione del server di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usato per la migrazione. Le opzioni disponibili sono:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure SQL database  
   
@@ -107,7 +107,7 @@ Quando si salva un progetto, SSMA consente di mantenere le impostazioni del prog
         Analizza gli schemi DB2 e salvare i metadati del file di progetto SSMA.  
   
 ## <a name="opening-projects"></a>Apertura di progetti  
-Quando si apre un progetto, questo viene disconnesso da DB2 e da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Che consente di lavorare offline. Per aggiornare i metadati, caricare gli oggetti di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Per eseguire la migrazione dei dati, è necessario ristabilire la connessione a DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Quando si apre un progetto, questo viene disconnesso da DB2 e da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Che consente di lavorare offline. Per aggiornare i metadati, caricare gli oggetti di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per eseguire la migrazione dei dati, è necessario ristabilire la connessione a DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **Per aprire un progetto**  
   
@@ -119,7 +119,7 @@ Quando si apre un progetto, questo viene disconnesso da DB2 e da [!INCLUDE[ssNoV
   
 2.  Per ristabilire la connessione a DB2, nelle **File** menu, fare clic su **Riconnetti a DB2**.  
   
-3.  Per riconnettersi [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]via il **File** dal menu fare clic su **Riconnetti a SQL Server**.  
+3.  Per riconnettersi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]via il **File** dal menu fare clic su **Riconnetti a SQL Server**.  
   
 ## <a name="next-step"></a>Passaggio successivo  
 Il passaggio successivo del processo di migrazione consiste [ci si connette al Database DB2](http://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844).  

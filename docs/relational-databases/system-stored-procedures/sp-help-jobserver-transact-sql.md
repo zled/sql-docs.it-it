@@ -22,12 +22,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e1efcd128c2c77bcac729c7a529f9dc909457cc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fdaa9481c51188767834679031b6cdc9084f969d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256086"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396579"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +51,13 @@ sp_help_jobserver
  ID del processo per il quale devono essere restituite informazioni. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name=** ] **'***job_name***'**  
- Nome del processo su cui si desidera ottenere informazioni. *job_name* viene **sysname**, con un valore predefinito è NULL.  
+ Nome del processo su cui si desidera ottenere informazioni. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+>  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [  **@show_last_run_details=** ] *show_last_run_details*  
- Indica se le informazioni relative all'ultima esecuzione vengono incluse nel set di risultati. *show_last_run_details* viene **tinyint**, il valore predefinito è **0**. **0** non include informazioni di ultima esecuzione, e **1** does.  
+ Indica se le informazioni relative all'ultima esecuzione vengono incluse nel set di risultati. *show_last_run_details* viene **tinyint**, il valore predefinito è **0**. **0** non include informazioni di ultima esecuzione, e **1** viene.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -71,7 +71,7 @@ sp_help_jobserver
 |**enlist_date**|**datetime**|Data di integrazione del server di destinazione nel server master.|  
 |**last_poll_date**|**datetime**|Data dell'ultimo polling del server master eseguito dal server di destinazione.|  
   
- Se **sp_help_jobserver** viene eseguita con *show_last_run_details* impostato su **1**, il set di risultati include le colonne aggiuntive.  
+ Se **sp_help_jobserver** viene eseguito con *show_last_run_details* impostata su **1**, il set di risultati include le colonne aggiuntive.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -81,7 +81,7 @@ sp_help_jobserver
 |**last_outcome_message**|**nvarchar(1024)**|Descrive l'ultimo risultato del processo.|  
 |**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del processo nel server specificato:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -90,9 +90,9 @@ sp_help_jobserver
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- I membri di **SQLAgentUserRole** possono solo visualizzare le informazioni per i processi di cui sono proprietari.  
+ I membri del **SQLAgentUserRole** possono solo visualizzare informazioni per i processi di cui sono proprietari.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni sul processo `NightlyBackups`, comprese le informazioni relative all'ultima esecuzione.  

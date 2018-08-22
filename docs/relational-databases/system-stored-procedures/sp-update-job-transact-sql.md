@@ -22,12 +22,12 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e36396f911c7506660fd82c5540307e95023950
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7412bc6defa6d25520570e23556e77e8824c8a88
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262216"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396105"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,15 +65,15 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Numero di identificazione del processo da aggiornare. *job_id*viene **uniqueidentifier**.  
   
  [ **@job_name =**] **'***job_name***'**  
- Nome del processo. *job_name*viene **nvarchar (128)**.  
+ Nome del processo. *nome_processo*viene **nvarchar (128)**.  
   
-> **Nota:** entrambi *job_id* o *job_name* deve essere specificato ma non è possibile specificarli entrambi.  
+> **Nota:** entrambe *job_id* oppure *job_name* deve essere specificato ma non è possibile specificarli entrambi.  
   
  [ **@new_name =**] **'***new_name***'**  
- Nuovo nome del processo. *nuovo_nome*viene **nvarchar (128)**.  
+ Nuovo nome del processo. *new_name*viene **nvarchar (128)**.  
   
- [  **@enabled =**] *abilitato*  
- Specifica se il processo è abilitato (**1**) o non è abilitata (**0**). *abilitata*viene **tinyint**.  
+ [  **@enabled =**] *abilitata*  
+ Specifica se il processo è abilitato (**1**) o non abilitato (**0**). *abilitata*viene **tinyint**.  
   
  [  **@description =**] **'***descrizione***'**  
  Descrizione del processo. *Descrizione* viene **nvarchar(512)**.  
@@ -85,12 +85,12 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Categoria del processo. *categoria*viene **nvarchar (128)**.  
   
  [  **@owner_login_name =**] **'***account di accesso***'**  
- Nome dell'account di accesso proprietario del processo. *account di accesso*viene **nvarchar (128)** solo i membri della **sysadmin** ruolo predefinito del server è possibile modificare la proprietà dei processi.  
+ Nome dell'account di accesso proprietario del processo. *account di accesso*viene **nvarchar (128)** solo i membri del **sysadmin** ruolo predefinito del server è possibile modificare la proprietà dei processi.  
   
  [  **@notify_level_eventlog =**] *eventlog_level*  
- Viene specificato quando inserire una voce per il processo nel registro applicazioni di Microsoft Windows. *eventlog_level*viene **int**, e può essere uno dei valori seguenti.  
+ Viene specificato quando inserire una voce per il processo nel registro applicazioni di Microsoft Windows. *eventlog_level*viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Descrizione (azione)|  
+|valore|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**0**|Never|  
 |**1**|In caso di esito positivo|  
@@ -98,16 +98,16 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**3**|Always|  
   
  [  **@notify_level_email =**] *email_level*  
- Viene specificato quando inviare un messaggio di posta elettronica al termine del processo. *email_level*viene **int**. *email_level*utilizza gli stessi valori *eventlog_level*.  
+ Viene specificato quando inviare un messaggio di posta elettronica al termine del processo. *email_level*viene **int**. *email_level*Usa gli stessi valori *eventlog_level*.  
   
  [ **@notify_level_netsend =**] *netsend_level*  
- Viene specificato quando inviare un messaggio di rete al termine del processo. *netsend_level*viene **int**. *netsend_level*utilizza gli stessi valori *eventlog_level*.  
+ Viene specificato quando inviare un messaggio di rete al termine del processo. *netsend_level*viene **int**. *netsend_level*Usa gli stessi valori *eventlog_level*.  
   
  [  **@notify_level_page =**] *page_level*  
- Viene specificato quando inviare una pagina al termine del processo. *page_level*viene **int**. *page_level*utilizza gli stessi valori *eventlog_level*.  
+ Viene specificato quando inviare una pagina al termine del processo. *page_level*viene **int**. *page_level*Usa gli stessi valori *eventlog_level*.  
   
- [  **@notify_email_operator_name =**] **'***operator_name***'**  
- Il nome dell'operatore a cui viene inviato il messaggio di posta elettronica quando *email_level* viene raggiunto. *indirizzo_posta_elettronica* viene **nvarchar (128)**.  
+ [  **@notify_email_operator_name =**] **'***nome_operatore***'**  
+ Il nome dell'operatore a cui viene inviato il messaggio di posta elettronica quando *email_level* viene raggiunto. *nome_posta_elettronica* viene **nvarchar (128)**.  
   
  [  **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
  Nome dell'operatore a cui viene inviato il messaggio di rete. *netsend_operator* viene **nvarchar (128)**.  
@@ -116,20 +116,20 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Nome dell'operatore a cui viene inviata una pagina. *page_operator* viene **nvarchar (128)**.  
   
  [  **@delete_level =**] *i possibili*  
- Specifica quando eliminare il processo. *delete_value*viene **int**. *i possibili*utilizza gli stessi valori *eventlog_level*.  
+ Specifica quando eliminare il processo. *delete_value*viene **int**. *i possibili*Usa gli stessi valori *eventlog_level*.  
   
  [  **@automatic_post =**] *automatic_post*  
  Riservato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_update_job** deve essere eseguita la **msdb** database.  
   
- **sp_update_job** cambia solo le impostazioni per il parametro che vengono forniti i valori. Se si omette un parametro, viene mantenuta l'impostazione corrente.  
+ **sp_update_job** modificare solo le impostazioni per il parametro che vengono specificati i valori. Se si omette un parametro, viene mantenuta l'impostazione corrente.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -138,9 +138,9 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo i membri di **sysadmin** può utilizzare questa stored procedure per modificare gli attributi dei processi di proprietà di altri utenti.  
+ Solo i membri del **sysadmin** può utilizzare questa stored procedure per modificare gli attributi dei processi di proprietà di altri utenti.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono modificati il nome, la descrizione e lo stato di attivazione del processo `NightlyBackups`.  

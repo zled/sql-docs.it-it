@@ -16,14 +16,14 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e29e979597563511f91977cf9815aa0e06290ae1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f5acb0977326b148667a62ae0c86bb47f443174
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983313"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394668"
 ---
-# <a name="user-interface-reference-mysqltosql"></a>Riferimento all'interfaccia utente (MySQLToSQL)
+# <a name="user-interface-reference-mysqltosql"></a>Informazioni di riferimento sull'interfaccia utente (MySQLToSQL)
 In questa sezione include argomenti della Guida per SQL Server Migration Assistant (SSMA) per MySQL.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
@@ -39,7 +39,7 @@ Nella tabella seguente sono elencate le finestre di dialogo SSMA:
 |[Connettersi al database SQL di Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|Usare la **Connetti a SQL Azure** finestra di dialogo per connettersi all'istanza di SQL Azure a cui si desidera eseguire la migrazione.|  
 |[Impostazioni di conversione (MySQL)](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|Usare la **impostazioni** pressione di tab per configurare le impostazioni a livello di nodo.|  
 |[Report di migrazione dati &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|Visualizza i risultati della migrazione dei dati da MySQL a SQL Server o SQL Azure.|  
-|[Impostazioni di migrazione dei dati](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)|Usare la **esteso le impostazioni di migrazione dati** pressione di tab per scrivere query personalizzate per la migrazione dei dati.|  
+|[Impostazioni di migrazione dei dati](data-migration-settings-mysqltosql.md)|Usare la **esteso le impostazioni di migrazione dati** pressione di tab per scrivere query personalizzate per la migrazione dei dati.|  
 |[Modificare il Mapping di tipo &#40;MySQLToSQL&#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|Usare la **Mapping dei tipi di modifica** finestra di dialogo per creare o modificare il mapping dei tipi di dati tra gli oggetti di database e il database di origine e destinazione.|  
 |[Impostazioni globali &#40;Editor&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|Utilizzare la pagina Editor del **Global Settings** finestra di dialogo per configurare le opzioni dell'editor di codice.|  
 |[Global Settings &#40;Dialogs&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|Utilizzare la pagina di finestre di dialogo del **Global Settings** finestra di dialogo per configurare le impostazioni di avviso e nella finestra di dialogo impostazione predefinita.|  

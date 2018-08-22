@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d1bb94b040aee5ba1db6870edc71e3153a3c7a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5af0cf91842df82fbe4ef5d6147779619aaf717
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165712"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396007"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Attività 12: Aggiunta della trasformazione Colonna derivata ad Aggiungi colonne richieste da MDS
-  In questa attività viene aggiunta la trasformazione Colonna derivata al flusso di dati. Si aggiungono due colonne derivate, **ImportType** e **BatchTag**a record passati a questa trasformazione. È consigliabile aggiungere queste colonne prima di caricare i dati nelle tabelle di staging in MDS. Queste due colonne sono necessarie per le tabelle di staging in MDS. Visualizzare [tabelle di gestione temporanea di membri foglia](http://msdn.microsoft.com/library/ee633854.aspx) per altri dettagli.  
+  In questa attività viene aggiunta la trasformazione Colonna derivata al flusso di dati. Si aggiungono due colonne derivate, **ImportType** e **BatchTag**a record passati a questa trasformazione. È consigliabile aggiungere queste colonne prima di caricare i dati nelle tabelle di staging in MDS. Queste due colonne sono necessarie per le tabelle di staging in MDS. Visualizzare [tabelle di gestione temporanea di membri foglia](../master-data-services/leaf-member-staging-table-master-data-services.md) per altri dettagli.  
   
 1.  Trascinare **trasformazione colonna derivata** dalla **comuni** sezione la **casella degli strumenti SSIS** per il **del flusso di dati** scheda.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "37165712"
   
      ![Finestra variabili SSIS](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "finestra variabili SSIS")  
   
-7.  Tipo di **ImportType** per il **Name** e **2** per il **valore**. Specificare il valore 2 dal momento che si desidera aggiungere nuovi membri a un'entità in MDS. Per informazioni dettagliate su questo parametro, vedere [tabella di Staging dei membri foglia](http://msdn.microsoft.com/library/ee633854.aspx).  
+7.  Tipo di **ImportType** per il **Name** e **2** per il **valore**. Specificare il valore 2 dal momento che si desidera aggiungere nuovi membri a un'entità in MDS. Per informazioni dettagliate su questo parametro, vedere [tabella di Staging dei membri foglia](../master-data-services/leaf-member-staging-table-master-data-services.md).  
   
 8.  Fare clic su **Aggiungi variabile** nuovo clic sul pulsante della barra degli strumenti.  
   

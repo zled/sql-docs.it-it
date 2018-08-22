@@ -1,5 +1,5 @@
 ---
-title: sp_notify_operator (Transact-SQL) | Documenti Microsoft
+title: sp_notify_operator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b07c05c67f0b4e199ad096d8f2a5f12951e46178
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c99d4ca8eb182f8e4873acf97aec4ca5c101ce84
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261588"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395506"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,15 +56,15 @@ sp_notify_operator
  Nome del profilo di Posta elettronica database da utilizzare per inviare il messaggio. *ProfileName* viene **nvarchar (128)**. Se *profilename* viene omesso, viene utilizzato il profilo di posta elettronica Database predefinito.  
   
  [  **@id=** ] *id*  
- Identificatore dell'operatore a cui inviare il messaggio. *ID* viene **int**, con un valore predefinito è NULL. Uno dei *id* o *nome* deve essere specificato.  
+ Identificatore dell'operatore a cui inviare il messaggio. *ID* viene **int**, con un valore predefinito è NULL. Uno dei *id* oppure *nome* deve essere specificato.  
   
  [ **@name=** ] **'***name***'**  
- Nome dell'operatore a cui inviare il messaggio. *nome* viene **nvarchar (128)**, con un valore predefinito è NULL. Uno dei *id* o *nome* deve essere specificato.  
+ Nome dell'operatore a cui inviare il messaggio. *nome* viene **nvarchar (128)**, con un valore predefinito è NULL. Uno dei *id* oppure *nome* deve essere specificato.  
   
-> **Nota:** un indirizzo di posta elettronica deve essere definito per l'operatore prima che possano ricevere messaggi.  
+> **Nota:** un indirizzo di posta elettronica deve essere definito per l'operatore possa ricevere messaggi.  
   
  [  **@subject=** ] **'***soggetto***'**  
- Oggetto del messaggio di posta elettronica. *soggetto* viene **nvarchar(256)** non prevede alcun valore predefinito.  
+ Oggetto del messaggio di posta elettronica. *Subject* viene **nvarchar(256)** non prevede alcun valore predefinito.  
   
  [  **@body=** ] **'***messaggio***'**  
  Corpo del messaggio di posta elettronica. *messaggio* viene **nvarchar (max)** non prevede alcun valore predefinito.  
@@ -73,17 +73,17 @@ sp_notify_operator
  Nome del file da allegare al messaggio di posta elettronica. *allegato* viene **nvarchar(512)**, non prevede alcun valore predefinito.  
   
  [  **@mail_database=** ] **'***mail_host_database***'**  
- Specifica il nome del computer host. *mail_host_database* viene **nvarchar (128)**. Se non *mail_host_database* è specificato, il **msdb** database viene utilizzato per impostazione predefinita.  
+ Specifica il nome del computer host. *mail_host_database* viene **nvarchar (128)**. Se nessun *mail_host_database* è specificato, il **msdb** database viene utilizzato per impostazione predefinita.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Invia il messaggio specificato all'indirizzo di posta elettronica dell'operatore. Se non è stato configurato un indirizzo di posta elettronica per l'operatore, viene restituito un errore.  
   
  Per poter inviare una notifica a un operatore, è necessario innanzitutto configurare Posta elettronica database e un database host della posta elettronica.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -92,7 +92,7 @@ sp_notify_operator
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene inviato un messaggio di notifica all'operatore `François Ajenstat` tramite il profilo `AdventureWorks Administrator` di Posta elettronica database. L'oggetto del messaggio di posta elettronica è `Test Notification`. The e-mail message contains the sentence, "This is a test of notification via e-mail."  

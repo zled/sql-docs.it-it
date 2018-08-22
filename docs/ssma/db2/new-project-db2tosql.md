@@ -1,5 +1,5 @@
 ---
-title: Nuovo progetto (DB2ToSQL) | Documenti Microsoft
+title: Nuovo progetto (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,31 +16,31 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e52b852722d21abc8ab2acca3c6cfa375154627c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 4149818ab672ff82e7299837a016834113cf0ac3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775157"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395887"
 ---
 # <a name="new-project-db2tosql"></a>Nuovo progetto (DB2ToSQL)
-Utilizzare il **nuovo progetto** la finestra di dialogo per creare un nuovo progetto SSMA. Per accedere al **nuovo progetto** della finestra di dialogo di **File** menu, fare clic su **nuovo progetto**.  
+Usare la **nuovo progetto** finestra di dialogo per creare un nuovo progetto SSMA. Per l'accesso di **nuovo progetto** finestra di dialogo il **File** dal menu fare clic su **nuovo progetto**.  
   
 ## <a name="options"></a>Opzioni  
 **Nome**  
-Immettere il nome del progetto. SSMA aggiungerà l'estensione di file.  
+Immettere il nome del progetto. SSMA viene aggiunta l'estensione di file.  
   
 **Percorso**  
 Immettere o selezionare la cartella o il percorso di rete per salvare il progetto.  
   
 **Eseguire la migrazione a**  
-Selezionare una della versione del database di destinazione dal seguente elenco:  
+Selezionare una delle versione del database di destinazione dalla parte inferiore di elenco:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
--   Database SQL di Azure  
+-   Azure SQL database  
   

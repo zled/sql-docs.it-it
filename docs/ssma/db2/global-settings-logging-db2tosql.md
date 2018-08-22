@@ -1,5 +1,5 @@
 ---
-title: Impostazioni globali (registrazione) (DB2ToSQL) | Documenti Microsoft
+title: Impostazioni globali (registrazione) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,53 +16,53 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 73382b71388879133ac88a4f0544c63e247b644a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b1c008f862bb67cd5d9d5cd6a929e85651bafa78
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774997"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393644"
 ---
 # <a name="global-settings-logging-db2tosql"></a>Impostazioni globali (registrazione) (DB2ToSQL)
-Utilizzare il **impostazioni globali** la finestra di dialogo per specificare le impostazioni di registrazione per SSMA. In genere, è necessario modificare queste impostazioni solo quando si lavora con il supporto tecnico.  
+Usare la **Global Settings** finestra di dialogo per specificare le impostazioni di registrazione per SSMA. In genere, è necessario modificare queste impostazioni solo quando si lavora con il supporto tecnico.  
   
-Per accedere a questa finestra di dialogo, scegliere il **strumenti** dal menu **impostazioni globali** e quindi fare clic su di **registrazione** nella parte inferiore del riquadro a sinistra.  
+Per accedere a questa finestra di dialogo, scegliere il **degli strumenti** dal menu **impostazioni globali** e quindi fare clic sul **registrazione** nella parte inferiore del riquadro di sinistra.  
   
 ## <a name="options"></a>Opzioni  
-**Livello di messaggi**  
-Le opzioni seguenti sono disponibili in **livello messaggi**:  
+**A livello di messaggi**  
+Le opzioni seguenti sono disponibili nella **a livello di messaggi**:  
   
 |Opzione|Description|  
 |----------|---------------|  
 |**[tutte le categorie]**|Utilizzato per impostare il livello di registrazione per tutte le opzioni seguenti.|  
-|**Agente di raccolta**|Raccoglie i metadati relativi a schema di origine e lo salva nel progetto.|  
-|**Convertitore di tipi**|Converte le strutture di oggetti di database di origine, ad esempio tabelle e stored procedure, nella corrispondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] strutture.|  
-|**Migrazione di dati**|Esegue la migrazione di dati dal database di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|**Formattatore**|Sottocomponente del convertitore che genera script per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] dello schema.|  
-|**Interfaccia utente grafica**|Messaggi che vengono visualizzati quando si utilizza lo strumento SSMA.|  
-|**Linker**|Risolve gli identificatori SQL e vengono fornite informazioni per altri componenti.|  
-|**Altro**|Tutti i messaggi che non sono presenti in qualsiasi altra categoria.|  
+|**Agente di raccolta dati**|Raccoglie i metadati relativi a schema di origine e lo salva il progetto.|  
+|**Convertitore di tipi**|Converte le strutture degli oggetti di database di origine, ad esempio tabelle e stored procedure, nella corrispondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strutture.|  
+|**Migrazione dei dati**|Esegue la migrazione di dati dal database di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Formattatore**|Componente secondario del convertitore che consente di generare script per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dello schema.|  
+|**Interfaccia utente grafica**|Messaggi che vengono visualizzati quando si usa lo strumento SSMA.|  
+|**Linker**|Risolve gli identificatori SQL e vengono fornite informazioni ad altri componenti.|  
+|**Altro**|Tutti i messaggi che non sono in nessun'altra categoria.|  
 |**Parser**|Analizza lo schema di origine.|  
-|**Synchronizer**|Carica gli oggetti di database in di origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|**TreeConverter**|Converte gli oggetti di metadati di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] metadati.|  
-|**Tester**|Messaggi che vengono visualizzati quando si utilizza il Tester di SSMA.|  
+|**Synchronizer**|Oggetti di database in origine carichi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**TreeConverter**|Converte gli oggetti nei metadati di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei metadati.|  
+|**Tester**|Messaggi che vengono visualizzati quando si usa il Tester di SSMA.|  
   
-Per ogni opzione in **livello messaggi**, configurare uno dei seguenti livelli di registrazione per SSMA:  
+Per ogni opzione sotto **a livello di messaggi**, configurare uno dei seguenti livelli di registrazione per SSMA:  
   
 |||  
 |-|-|  
-|**Errore irreversibile**|Scrivere il log solo i messaggi di errore irreversibile.|  
+|**Errore irreversibile**|Scrivere solo i messaggi di errore irreversibile nel log.|  
 |**Errore**|Scrivere nel registro errori e messaggi di errore irreversibile.|  
-|**Avviso**|Scrivere i messaggi di errore irreversibile, errore e avviso per il log.|  
-|**informazioni**|Scrivere il log informativi, avvisi, errori e i messaggi di errore irreversibile.|  
-|**Debug**|Scrivere tutti i messaggi, compresi i messaggi, nel Registro di debug.|  
+|**Avviso**|Scrittura avviso, errore e messaggi di errore irreversibile per il log.|  
+|**Informazioni**|Scrivere nel log informativo, avviso, errore e messaggi di errore irreversibile.|  
+|**Debug**|Scrivere tutti i messaggi, compresi i messaggi, nel log di debug.|  
   
 **Percorso file di log**  
-Il percorso del file e il nome dei file di log SSMA. Per specificare un nome diverso, fare clic sul percorso corrente e quindi fare clic su Sfoglia (**...** ) pulsante.  
+Il percorso del file e il nome dei file di log SSMA. Per specificare un nome diverso, scegliere il percorso corrente e quindi fare clic su Sfoglia (**...** ) pulsante.  
   
 **Dimensioni file di log**  
-La dimensione massima del file di log in KB. La dimensione minima è di 10 KB. La dimensione predefinita è 10240 KB.  
+Le dimensioni massime del file di log in KB. La dimensione minima è 10 KB. La dimensione predefinito è 10240 KB.  
   
 **Numero totale di file di log**  
-Quando un log si riempie, SSMA verrà rinominare il file di log e avvia uno nuovo. Con questa impostazione, specificare il numero massimo di file di log da conservare. Il valore minimo è 2.  
+Quando un log si riempie, SSMA verrà rinominare il file di log e avviarne uno nuovo. Con questa impostazione, specificare il numero massimo di file di log da mantenere. Il valore minimo è 2.  
   

@@ -19,21 +19,21 @@ caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9be8bc7507cad3a44b4330cc3c49a00abc1953e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aeb429ce455856c9438b0a45053edce7e0c1bdcf
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309341"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40396481"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementazione di una classe Connection per un'estensione per l'elaborazione dati
   L'oggetto **Connection** rappresenta una connessione al database o una risorsa simile ed è il punto di partenza per gli utenti di un'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Questo oggetto rappresenta le connessioni ai server di database, sebbene qualsiasi entità con un comportamento simile possa essere esposta come oggetto **Connection**.  
   
  Per implementare un oggetto **Connection**, creare una classe che implementa <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> e, facoltativamente, <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>.  
   
- Nell'implementazione è necessario assicurarsi che prima dell'esecuzione dei comandi venga creata e aperta una connessione. Assicurarsi che l'implementazione richieda ai client di aprire e chiudere le connessioni in modo esplicito, anziché lasciare che l'implementazione apra e chiuda le connessioni in modo implicito per il client. Dopo aver stabilito la connessione, eseguire i controlli di sicurezza. Richiedendo una connessione esistente per le altre classi nell'estensione per l'elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs-md.md)], è possibile garantire che vengano sempre eseguiti i controlli di sicurezza quando si utilizza l'origine dati.  
+ Nell'implementazione è necessario assicurarsi che prima dell'esecuzione dei comandi venga creata e aperta una connessione. Assicurarsi che l'implementazione richieda ai client di aprire e chiudere le connessioni in modo esplicito, anziché lasciare che l'implementazione apra e chiuda le connessioni in modo implicito per il client. Dopo aver stabilito la connessione, eseguire i controlli di sicurezza. Richiedendo una connessione esistente per le altre classi nell'estensione per l'elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs.md)], è possibile garantire che vengano sempre eseguiti i controlli di sicurezza quando si utilizza l'origine dati.  
   
- Le proprietà della connessione desiderata vengono rappresentate come stringa di connessione. È consigliabile che l'estensione per l'elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] supporti la proprietà <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> utilizzando il sistema familiare di coppia nome/valore definito da OLE DB.  
+ Le proprietà della connessione desiderata vengono rappresentate come stringa di connessione. È consigliabile che l'estensione per l'elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs.md)] supporti la proprietà <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> utilizzando il sistema familiare di coppia nome/valore definito da OLE DB.  
   
 > [!NOTE]  
 >  Per ottenere gli oggetti **Connection** è spesso necessario un impiego elevato delle risorse, pertanto è consigliabile considerare la creazione di pool di connessioni o l'applicazione di altre tecniche che prevedano un minor sovraccarico delle risorse.  

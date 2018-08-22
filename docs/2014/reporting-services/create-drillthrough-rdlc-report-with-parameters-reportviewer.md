@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bb5bb2c0a02de9d4be433203996072bb218b8c0f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0147922c6b52d83cde9dc9a3724e82a5e4f30a3a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157822"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396609"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Creare un report drill-through (RDLC) con parametri utilizzando ReportViewer (esercitazione su SSRS)
-  Un report [drill-through](http://technet.microsoft.com/library/ff519554.aspx) è un report aperto da un utente facendo clic su un collegamento in un altro report. Nei report drill-through sono solitamente disponibili dettagli relativi a un elemento contenuto in un report di riepilogo originale. In questa esercitazione verranno illustrati le seguenti lezioni sulla creazione di un report drill-through con parametri e una query, in [report in modalità locale](http://msdn.microsoft.com/library/ff487969.aspx).  
+  Un report [drill-through](http://technet.microsoft.com/library/ff519554.aspx) è un report aperto da un utente facendo clic su un collegamento in un altro report. Nei report drill-through sono solitamente disponibili dettagli relativi a un elemento contenuto in un report di riepilogo originale. Questa esercitazione illustrerà le seguenti lezioni sulla creazione di un report drill-through con parametri e una query, in [report in modalità locale](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  
   
 ## <a name="requirements"></a>Requisiti  
  Per utilizzare questa procedura dettagliata, è necessario poter accedere al database di esempio **AdventureWorks2008** . La query utilizzata in questa procedura dettagliata verrà utilizzata anche per il database **AdventureWorks2012** . Per altre informazioni su come ottenere il database di esempio **AdventureWorks2008** , vedere [Procedura dettagliata: installazione del database AdventureWorks](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) per Microsoft Visual Studio 2010.  

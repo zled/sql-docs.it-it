@@ -1,5 +1,5 @@
 ---
-title: Python librerie e tipi di dati in SQL Server Machine Learning | Documenti Microsoft
+title: Tipi di dati e le librerie di Python in SQL Server Machine Learning | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,33 +7,33 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f8dfa7f343a3a179b05b624a083238e08011c4a5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7b977d079589dbb4c54d5c31fec644d9f984dd61
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31201693"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40434851"
 ---
-# <a name="python-libraries-and-data-types"></a>Tipi di dati e le librerie di Python
+# <a name="python-libraries-and-data-types"></a>Librerie e tipi di dati Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Questo articolo descrive le librerie di Python sono incluse in SQL Server Machine Learning Services (In-Database) e le installazioni (autonomo).
+Questo articolo descrive le librerie di Python inclusi in SQL Server Machine Learning Services (In-Database) e le installazioni (autonomo).
 
-Questo articolo vengono elencati anche i tipi di dati non supportato e tipo di dati di elenchi di conversioni che possono essere eseguite in modo implicito quando i dati passati tra Python e SQL Server.
+Questo articolo elenca anche i tipi di dati non supportati e tipo di dati di elenchi di conversioni che possono essere eseguite in modo implicito quando i dati vengono passati tra codice Python e SQL Server.
 
 ## <a name="python-version"></a>Versione di Python
 
-SQL Server 2017 CTP 2.0 include una parte della distribuzione Anaconda e Python 3.6.
+Distribuzione di SQL Server 2017 Anaconda 4.2 e in Python 3.6.
 
-Un subset delle funzionalità RevoScaleR (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, forse alcuni altri) è fornita mediante le API di Python, utilizzando un nuovo pacchetto di Python **revoscalepy**. È possibile utilizzare questo pacchetto per operare sui dati utilizzando frame di dati Pandas, i file con estensione XDF o le query di dati SQL.
+Un sottoinsieme delle funzionalità RevoScaleR (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, forse alcuni altri) viene fornito tramite le API Python, usando un nuovo pacchetto di Python **revoscalepy**. È possibile usare questo pacchetto per lavorare con i dati usando query di dati SQL, file XDF o frame di dati Pandas.
 
-Per ulteriori informazioni, vedere [revoscalepy che cos'è?](what-is-revoscalepy.md).
+Per altre informazioni, vedere [What ' s revoscalepy?](what-is-revoscalepy.md).
 
-## <a name="python-and-sql-data-types"></a>Python e tipi di dati SQL
+## <a name="python-and-sql-data-types"></a>Tipi di dati SQL e Python
 
 Python supporta un numero limitato di tipi di dati rispetto a SQL Server.
 
-Di conseguenza, ogni volta che si utilizzano dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] negli script Python, i dati potrebbero essere convertiti in modo implicito in un tipo di dati compatibile. Tuttavia, spesso non è possibile eseguire automaticamente un tipo specifico di conversione e viene restituito un errore.
+Di conseguenza, ogni volta che si utilizzano i dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] negli script di Python, i dati potrebbero essere convertiti in modo implicito in un tipo di dati compatibile. Tuttavia, spesso una conversione esatta non può essere eseguita automaticamente e viene restituito un errore.
 
 Questa tabella elenca le conversioni implicite che vengono fornite. Non sono supportati altri tipi di dati.
 

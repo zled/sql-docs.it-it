@@ -19,14 +19,14 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8f33769bee5c8d6d9e134eb9dd5dcf8549d651cb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 5ec1b7d62e3e765ee43624f0e97aef60c91309ee
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983083"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395889"
 ---
-# <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Introduzione a SSMA per la Console MySQL (MySQLToSQL)
+# <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Introduzione alla console di SSMA per MySQL (MySQLToSQL)
 In questa sezione viene descritta la procedura per avviare e iniziare a usare l'applicazione console MySQL. Anche nell'elenco, nel presente documento, vengono utilizzate le convenzioni di in una finestra di output della Console SSMA tipica.  
   
 ## <a name="launching-ssma-console"></a>Avviare Console SSMA  
@@ -51,9 +51,9 @@ Dopo che la console viene avviata correttamente nel sistema Windows, è possibil
   
 Altre funzionalità:  
   
-1.  [Protezione di Password](http://msdn.microsoft.com/4ffbc587-ea3f-49ad-bc42-a654f672325e) ed esportare / importare in un altro computer della finestra  
+1.  [Protezione di Password](managing-passwords-mysqltosql.md) ed esportare / importare in un altro computer della finestra  
   
-2.  [Generare report](http://msdn.microsoft.com/1c0202e8-546d-4cb3-a37f-1d2e35d53839) per visualizzare il codice xml dettagliate dell'output di report per la migrazione di dati e /conversion assessment. I report di errore dettagliati possono anche essere generati per i comandi di aggiornamento e la sincronizzazione.  
+2.  [Generare report](generating-reports-mysqltosql.md) per visualizzare il codice xml dettagliate dell'output di report per la migrazione di dati e /conversion assessment. I report di errore dettagliati possono anche essere generati per i comandi di aggiornamento e la sincronizzazione.  
   
 ## <a name="ssma-console-output-conventions"></a>Convenzioni di Output di Console SSMA  
 Dopo l'esecuzione di comandi di script SSMA e le opzioni, il programma di console vengono visualizzati i risultati e messaggi (le informazioni, errore, e così via) per l'utente nella console o se necessario, reindirizza a un file di output xml. Ogni tipo di messaggio nell'output è identificato da un colore univoco. Ad esempio, il messaggio di testo di colore bianco indica i comandi di file di script; quello di colore verde rappresenta un prompt dei comandi per l'input utente e così via.  
@@ -72,5 +72,5 @@ Colore dall'interpretazione dell'output della console nella tabella seguente:
 |azzurro|Inizio, fine e il risultato di un'operazione|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Installazione di SSMA per MySQL](http://msdn.microsoft.com/e89b45bd-59c1-4d23-8bd7-3dafc1947448)  
+[Installazione di SSMA per MySQL](installing-ssma-for-mysql-mysqltosql.md)  
   

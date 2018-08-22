@@ -1,0 +1,171 @@
+---
+title: Identificare lo SKU del Database SQL di Azure corretto per il database locale (Data Migration Assistant) | Microsoft Docs
+description: Informazioni su come usare Data Migration Assistant per identificare destra dello SKU del Database SQL di Azure per il database in locale
+ms.custom: ''
+ms.date: 08/18/2018
+ms.prod: sql
+ms.prod_service: dma
+ms.reviewer: ''
+ms.suite: sql
+ms.technology: dma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+keywords: ''
+helpviewer_keywords:
+- Data Migration Assistant, Assess
+ms.assetid: ''
+caps.latest.revision: ''
+author: HJToland3
+ms.author: jtoland
+manager: craigg
+ms.openlocfilehash: 0bd7c1f96bb4ff55a35eda24aa70984e9a359f83
+ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40394294"
+---
+# <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identificare lo SKU del Database SQL di Azure corretto per il database in locale
+
+L'attività di migrazione dei database nel cloud è un complicato e che richiedono molto tempo, che includono una serie di variabili. Selezione dello SKU e destinazione di database di Azure corretta per il database può risultare complessa. Il nostro obiettivo con il Database Migration Assistant (DMA) consiste nel risolvere questi dubbi e rendere la migrazione dei database esperienza semplice ed efficace.
+
+Questo articolo è incentrato principalmente sulla funzionalità consigli di DMA SKU del Database SQL di Azure, che consente di identificare il valore minimo consigliato di SKU di Database SQL di Azure basati sui contatori delle prestazioni raccolti dai computer che ospita i database. Questa funzionalità offre consigli relativi ai prezzi di livello, a livello di calcolo e le dimensioni massime dei dati, nonché il costo stimato al mese. Offre inoltre la possibilità di eseguire il provisioning in blocco tutti i database in Azure.
+
+> [!NOTE] 
+> Questa funzionalità è attualmente disponibile solo tramite l'interfaccia della riga di comando (CLI). Supporto per questa funzionalità tramite l'interfaccia utente DMA verrà aggiunto in una versione futura.
+
+Le istruzioni seguenti consentono di determinare le raccomandazioni dello SKU del Database SQL di Azure ed effettuare il provisioning dei database associati in Azure usando Data Migration Assistant.
+
+## <a name="prerequisites"></a>Prerequisiti
+
+Scaricare Database Migration Assistant v4.0 o versione successiva e quindi installarlo. Se hai già lo strumento di installazione, chiudere e riaprirlo e verrà richiesto di aggiornare lo strumento.
+
+## <a name="collect-performance-counters"></a>Raccogliere i contatori delle prestazioni
+
+Il primo passaggio del processo è per raccogliere i contatori delle prestazioni per i database. È possibile raccogliere i contatori delle prestazioni eseguendo un comando di PowerShell nel computer che ospita i database. DMA fornisce una copia di questo file di PowerShell, ma è anche possibile usare il proprio metodo per acquisire i contatori delle prestazioni dal computer.
+
+Non devi eseguire questa attività per ogni database singolarmente. I contatori delle prestazioni raccolti da un computer sono utilizzabile per consigliare lo SKU per tutti i database ospitati nel computer.
+
+> [!IMPORTANT]
+> Il computer da cui si esegue questo comando richiede le autorizzazioni di amministratore nel computer che ospita i database.
+
+1. Verificare che il file di PowerShell necessario per raccogliere i contatori delle prestazioni sia installato nella cartella DMA.
+
+    ![File di PowerShell riportato nella cartella DMA](../dma/media/dma-sku-recommend-data-collection-file.png)
+
+2. Eseguire lo script di PowerShell con gli argomenti seguenti:
+    - **ComputerName**: il nome del computer che ospita i database.
+    - **OutputFilePath**: il percorso del file di output per salvare i contatori raccolti.
+    - **CollectionTimeInSeconds**: la quantità di tempo durante il quale si vuole raccogliere i dati dei contatori delle prestazioni.
+      Acquisire i contatori delle prestazioni per almeno 40 minuti ottenere una raccomandazione significativo. Maggiore è la durata dell'acquisizione, più accurato l'indicazione sarà.
+    - **DbConnectionString**: stringa di connessione che punta al database master ospitato nel computer da cui si raccolgono i dati dei contatori delle prestazioni.
+     
+    Di seguito è una chiamata di esempio:
+
+    ```
+    .\SkuRecommendationDataCollectionScript.ps1
+     -ComputerName Foobar1
+     -OutputFilePath D:\counters2.csv
+     -CollectionTimeInSeconds 10
+     -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
+    ```
+    
+    Dopo l'esecuzione del comando, il processo genererà un file con contatori delle prestazioni nel percorso specificato. Questo file può essere usato come input per il comando di raccomandazione di SKU nella sezione successiva.
+
+## <a name="use-the-dma-cli-to-get-sku-recommendations"></a>Usare la CLI di DMA per ottenere le raccomandazioni dello SKU
+
+Utilizzare il file di output dei contatori delle prestazioni nel passaggio precedente come input per questo passaggio. DMA fornirà indicazioni per il Database SQL di Azure piano tariffario, il livello di calcolo e la dimensione massima dei dati per ogni database nel computer. DMA anche fornirà all'utente il costo mensile stimato per ogni database.
+
+Eseguire il dmacmd.exe con gli argomenti seguenti:
+
+- **/ Action = SkuRecommendation**: immettere in questo argomento per eseguire valutazioni dello SKU.
+- **/ SkuRecommendationInputDataFilePath**: il percorso del file dei contatori raccolti nella sezione precedente.
+- **/ SkuRecommendationTsvOutputResultsFilePath**: il percorso in cui scrivere i risultati di output in formato TSV.
+- **/ SkuRecommendationJsonOutputResultsFilePath**: il percorso in cui scrivere i risultati di output in formato JSON.
+- **/ SkuRecommendationHtmlResultsFilePath**: percorso in cui scrivere i risultati di output in formato HTML.
+
+Inoltre, è necessario scegliere uno degli argomenti seguenti:
+- Impedire l'aggiornamento di prezzo
+    - **/ SkuRecommendationPreventPriceRefresh**: impedisce l'aggiornamento di prezzo. Utilizzare se è in esecuzione in modalità offline.
+- Ottieni i prezzi più recenti 
+    - **/ SkuRecommendationCurrencyCode**: la valuta in cui visualizzare i prezzi (ad esempio, "USD").
+    - **/ SkuRecommendationOfferName**: l'offerta assegnare un nome (ad esempio, "MS-AZR - 0003P"). Per altre informazioni, vedere la [dettagli dell'offerta Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) pagina.
+    - **/ SkuRecommendationRegionName**: area di assegnare un nome (ad esempio, "Stati Uniti occidentali").
+    - **/ SkuRecommendationSubscriptionId**: l'ID sottoscrizione.
+    - **/ AzureAuthenticationTenantId**: il tenant di autenticazione.
+    - **/ AzureAuthenticationClientId**: l'ID client dell'app AAD usato per l'autenticazione.
+    - Una delle opzioni di autenticazione seguenti:
+        - Interattiva
+            - **AzureAuthenticationInteractiveAuthentication**: impostato su true per una finestra popup dell'autenticazione.
+        - Basata su
+            - **AzureAuthenticationCertificateStoreLocation**: impostare il percorso dell'archivio certificati (ad esempio, "CurrentUser").
+            - **AzureAuthenticationCertificateThumbprint**: impostare su identificazione personale del certificato.
+        - Basato su token
+            - **AzureAuthenticationToken**: impostato sul token di certificato.
+
+Ecco alcune chiamate di esempio:
+
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationCurrencyCode=USD
+/SkuRecommendationOfferName=MS-AZR-0044p
+/SkuRecommendationRegionName=UKWest
+/SkuRecommendationSubscriptionId=<Your Subscription Id>
+/AzureAuthenticationInteractiveAuthentication=true
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+```
+
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationPreventPriceRefresh=true
+```
+
+Il file di output TSV conterrà le colonne visualizzate nel grafico seguente:
+
+   ![File di PowerShell riportato nella cartella DMA](../dma/media/dma-tsv-file-column.png)
+
+Segue una descrizione di ogni colonna.
+
+- **DatabaseName** : il nome del database.
+- **MetricName** : Specifica se è stata eseguita una metrica.
+- **MetricType** -livello di Database SQL di Azure consigliata.
+- **MetricValue** -consigliato di Database SQL di Azure lo SKU.
+- **SQLMiEquivalentCores** -se si sceglie a chi rivolgersi per istanza gestita di Azure SQL Database, è possibile usare questo valore per il numero di core.
+- **IsTierRecommended** -rendiamo un minimo consigliato di SKU per ogni livello. È quindi possibile applicare l'euristica per determinare il livello più adatto per il database. 
+- **ExclusionReasons** -questo valore è vuoto se un livello è consigliato. Per ogni livello che non è consigliato, offriamo i motivi per cui è non stata rilevata.
+- **AppliedRules** -una notazione breve delle regole che sono state applicate.
+
+Si noti che il valore consigliato è lo SKU minimo richiesto per le query da eseguire in Azure con una percentuale di successo simile ai database in locale. Ad esempio, se lo SKU minima consigliato è S4 per il livello standard, quindi scegliere S3 o di sotto verrà impedire il timeout delle query o un errore di esecuzione.
+
+Il file HTML contiene queste informazioni in formato grafico. È possibile utilizzare il file HTML per le informazioni di sottoscrizione di Azure di input, selezionare il piano tariffario, dimensioni massime dei dati e a livello di calcolo per i database e generare uno script per eseguire il provisioning dei database. Questo script può essere eseguito tramite PowerShell.
+
+## <a name="provision-your-databases-to-azure"></a>Effettuare il provisioning dei database in Azure
+Con pochi clic, è possibile usare le raccomandazioni nel passaggio precedente per il provisioning dei database di destinazione in Azure a cui è possibile eseguire la migrazione dei database. È anche possibile apportare modifiche ai consigli aggiornando il file HTML, come indicato di seguito.
+
+1. Aprire il file HTML e immettere le informazioni seguenti:
+    - **ID sottoscrizione** : l'ID sottoscrizione della sottoscrizione di Azure a cui si desidera eseguire il provisioning dei database.
+    - **Area** : l'area in cui eseguire il provisioning di database. Assicurarsi che la propria sottoscrizione supporti il selezionare region.
+    - **Gruppo di risorse** : il gruppo di risorse a cui si desidera distribuire i database. Immettere un gruppo di risorse esistente.
+    - **Nome del server** : server di Database SQL di Azure a cui si desidera che i database distribuiti. Se si immette un nome di server che non esiste, verrà creato.
+    - **Admin Username\Password** : il nome utente amministratore server e la password.
+
+2. Esaminare le raccomandazioni per ogni database e modificare il piano tariffario, livello e le dimensioni di dati max in base alle esigenze di calcolo. Assicurarsi di deselezionare tutti i database desiderati non attualmente effettuare il provisioning.
+
+3. Selezionare **genera Script di Provisioning**, salvare lo script e quindi di eseguirlo in PowerShell.
+
+    Questo processo deve creare tutti i database selezionati nella pagina HTML.
+
+È possibile eseguire tutti i passaggi in questo processo in un singolo computer oppure è possibile eseguirle in più computer per determinare le raccomandazioni dello SKU su larga scala. DMA rende un'esperienza semplice e scalabile grazie al supporto di tutti questi passaggi tramite l'interfaccia della riga di comando. Anche in questo caso, il supporto per questa funzionalità tramite l'interfaccia utente DMA saranno disponibile più avanti quest'anno.
+
+## <a name="next-steps"></a>Passaggi successivi
+- Scaricare la versione più recente di [Data Migration Assistant](https://aka.ms/get-dma).
+- Vedere l'articolo [eseguito Data Migration Assistant da riga di comando](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017) per un elenco completo dei comandi per l'esecuzione DMA dal comando.

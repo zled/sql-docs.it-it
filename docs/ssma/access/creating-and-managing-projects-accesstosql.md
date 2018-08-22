@@ -24,15 +24,15 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b8b8be30f9a8619ef3e2887c37387e1f4ef68e6d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 860f8e569cd87aaf034718456c8157cf91f57941
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985643"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394659"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Creazione e gestione di progetti (AccessToSQL)
-Eseguire la migrazione di database di Access in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, è necessario creare innanzitutto un progetto SSMA. Il progetto è un file che contiene metadati sui database di Access che si desidera eseguire la migrazione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, i metadati relativi all'istanza di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure in cui verranno inseriti gli oggetti migrati e dati, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] informazioni di connessione e le impostazioni del progetto.  
+Eseguire la migrazione di database di Access in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario creare innanzitutto un progetto SSMA. Il progetto è un file che contiene metadati sui database di Access che si desidera eseguire la migrazione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, i metadati relativi all'istanza di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure in cui verranno inseriti gli oggetti migrati e dati, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni di connessione e le impostazioni del progetto.  
   
 ## <a name="reviewing-default-project-settings"></a>Esame impostazioni predefinite del progetto  
 SSMA contiene diverse opzioni per la conversione e la sincronizzazione degli oggetti di database e per la conversione dei dati. L'impostazione predefinita per queste opzioni è appropriata per molti utenti. Tuttavia, prima di creare un nuovo progetto SSMA, si deve esaminare le opzioni e, se si desidera, modificare le impostazioni predefinite che verranno usate per tutti i nuovi progetti.  
@@ -62,7 +62,7 @@ SSMA contiene diverse opzioni per la conversione e la sincronizzazione degli ogg
 **Nota** le impostazioni di SQL Azure saranno disponibili solo quando si seleziona la migrazione a SQL Azure durante la creazione di un progetto.  
   
 ## <a name="creating-new-projects"></a>Creazione di nuovi progetti  
-SSMA viene avviato senza il caricamento di un progetto predefinito. Per eseguire la migrazione dei dati dal database di Access in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, è necessario creare un progetto.  
+SSMA viene avviato senza il caricamento di un progetto predefinito. Per eseguire la migrazione dei dati dal database di Access in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario creare un progetto.  
   
 **Per creare un nuovo progetto**  
   
@@ -76,12 +76,12 @@ SSMA viene avviato senza il caricamento di un progetto predefinito. Per eseguire
   
 4.  Nell'elenco per la migrazione verso il basso, selezionare uno di SQL Server 2005 / SQL Server 2008 o SQL Server 2012 o SQL Server 2014 / SQL Server 2016 / Azure SQL DB, quindi fare clic su **OK**.  
   
-SSMA consente di creare il file di progetto. È ora possibile eseguire il passaggio successivo della [aggiunta di uno o più database di Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced).  
+SSMA consente di creare il file di progetto. È ora possibile eseguire il passaggio successivo della [aggiunta di uno o più database di Access](adding-and-removing-access-database-files-accesstosql.md).  
   
 ## <a name="customizing-project-settings"></a>Personalizzazione delle impostazioni di progetto  
-Oltre a definire impostazioni di progetto predefinite, che si applicano a tutti i nuovi progetti SSMA, è anche possibile personalizzare le impostazioni per ogni progetto. Per altre informazioni, vedere [impostazione di conversione e le opzioni di migrazione](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167).  
+Oltre a definire impostazioni di progetto predefinite, che si applicano a tutti i nuovi progetti SSMA, è anche possibile personalizzare le impostazioni per ogni progetto. Per altre informazioni, vedere [impostazione di conversione e le opzioni di migrazione](setting-conversion-and-migration-options-accesstosql.md).  
   
-Quando si personalizzano i mapping tra i database di origine e di destinazione, è possibile definire i mapping per il progetto, database o a livello di oggetto. Per altre informazioni sul mapping dei tipi, vedere [tipi di dati di destinazione e origine del Mapping](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9).  
+Quando si personalizzano i mapping tra i database di origine e di destinazione, è possibile definire i mapping per il progetto, database o a livello di oggetto. Per altre informazioni sul mapping dei tipi, vedere [tipi di dati di destinazione e origine del Mapping](mapping-source-and-target-data-types-accesstosql.md).  
   
 ## <a name="saving-projects"></a>Il salvataggio dei progetti  
 Quando si salva un progetto, SSMA rende persistenti le impostazioni del progetto e, facoltativamente, i metadati del database, al file di progetto.  
@@ -101,7 +101,7 @@ Quando si salva un progetto, SSMA rende persistenti le impostazioni del progetto
         Analizza gli schemi di accesso e salvare i metadati del file di progetto SSMA.  
   
 ## <a name="opening-projects"></a>Apertura di progetti  
-Quando si apre un progetto, questo viene disconnesso dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Ciò consente di lavorare offline. Per aggiornare gli oggetti di database carica i metadati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Per eseguire la migrazione dei dati, è necessario riconnettersi alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.  
+Quando si apre un progetto, questo viene disconnesso dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Ciò consente di lavorare offline. Per aggiornare gli oggetti di database carica i metadati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Per eseguire la migrazione dei dati, è necessario riconnettersi alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
 **Per aprire un progetto**  
   
@@ -111,14 +111,14 @@ Quando si apre un progetto, questo viene disconnesso dal [!INCLUDE[ssNoVersion](
   
     -   Nel **File** dal menu **aprire il progetto**, individuare il file di progetto .a2ssproj, selezionare il file e quindi fare clic su **Open**.  
   
-2.  Per riconnettersi [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]via il **File** dal menu **Riconnetti a SQL Server**.  
+2.  Per riconnettersi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]via il **File** dal menu **Riconnetti a SQL Server**.  
   
 3.  Per riconnettersi a SQL Azure, nelle **File** dal menu **ristabilire la connessione a SQL Azure.**  
   
 ## <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo del processo di migrazione consiste [aggiungere uno o più database di Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced).  
+Il passaggio successivo del processo di migrazione consiste [aggiungere uno o più database di Access](adding-and-removing-access-database-files-accesstosql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione dei database di Access a SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Aggiunta e rimozione di file di Database di Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Aggiunta e rimozione di file di Database di Access](adding-and-removing-access-database-files-accesstosql.md)  
   

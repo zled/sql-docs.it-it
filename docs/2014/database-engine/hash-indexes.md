@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
@@ -14,19 +13,19 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2c2b4c055eea6aef2e7825ee6589c6611ceaf7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04cc9e0bea00d1eb2bc542a996ff4bc39e1009f2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295231"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393874"
 ---
 # <a name="hash-indexes"></a>Indici hash
   Gli indici vengono utilizzati come punti di ingresso per le tabelle ottimizzate per la memoria. Per la lettura delle righe da una tabella è necessario un indice di individuare i dati in memoria.  
   
  Un indice hash è costituito da una raccolta di bucket organizzati in una matrice. Una funzione hash esegue il mapping delle chiavi di indice ai bucket dell'indice hash. Nella figura seguente sono illustrate tre chiavi di indice di cui viene eseguito il mapping a tre bucket diversi nell'indice hash. A scopo illustrativo il nome della funzione hash è f(x).  
   
- ![Chiavi di indice eseguito il mapping a bucket diversi. ] (../../2014/database-engine/media/hekaton-tables-2.gif "Eseguito il mapping a bucket diversi di chiavi di indice.")  
+ ![Chiavi di indice eseguito il mapping a bucket diversi. ](../../2014/database-engine/media/hekaton-tables-2.gif "Eseguito il mapping a bucket diversi di chiavi di indice.")  
   
  La funzione di hashing utilizzata per gli indici hash presenta le caratteristiche seguenti:  
   
@@ -44,7 +43,7 @@ ms.locfileid: "37295231"
   
  La struttura dell'indice hash in memoria è costituita da una matrice di puntatori alla memoria. Per ogni bucket viene eseguito il mapping a un offset nella matrice. Ogni bucket nella matrice punta alla prima riga in tale bucket di hash. Ogni riga del bucket punta alla riga successiva, generando in tal modo una catena di righe per ogni bucket di hash, come illustrato nella figura seguente.  
   
- ![La struttura dell'indice hash in memoria. ] (../../2014/database-engine/media/hekaton-tables-3.gif "La struttura dell'indice hash in memoria.")  
+ ![La struttura dell'indice hash in memoria. ](../../2014/database-engine/media/hekaton-tables-3.gif "La struttura dell'indice hash in memoria.")  
   
  Nella figura sono illustrati tre bucket con righe. Il secondo bucket dall'alto contiene le tre righe rosse. Il quarto bucket contiene una singola riga blu. Il bucket inferiore contiene due linee verdi. Queste possono essere diverse versioni della stessa riga.  
   

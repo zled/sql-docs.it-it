@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,23 +24,23 @@ caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: caf89d0013d95a4fc27937e854eb7a5af28017ef
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7789a1f591b95ec5442697c5bfa6c7d730ba4faf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424790"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395729"
 ---
 # <a name="using-user-defined-types"></a>Utilizzo dei tipi definiti dall'utente (UDT)
-  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] sono stati introdotti i tipi definiti dall'utente (UDT). Tipi definiti dall'utente estendono il sistema di tipi SQL consentendo di archiviare oggetti e strutture di dati personalizzate in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. I tipi definiti dall'utente possono contenere più tipi di dati e possono assumere comportamenti, differenziandoli dai tipi di dati alias tradizionali costituiti da un singolo tipo di dati di sistema [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I tipi definiti dall'utente vengono definiti utilizzando uno dei linguaggi supportati da .NET Common Language Runtime (CLR) che generano codice verificabile, Sono inclusi Microsoft Visual c#<sup>®</sup> e Visual Basic<sup>®</sup> .NET. I dati vengono esposti come campi e proprietà di una classe o struttura .NET mentre i comportamenti vengono definiti dai metodi della classe o della struttura.  
+  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] sono stati introdotti i tipi definiti dall'utente (UDT). I tipi definiti dall'utente estendono il sistema di tipi SQL consentendo di archiviare oggetti e strutture di dati personalizzate in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I tipi definiti dall'utente possono contenere più tipi di dati e possono assumere comportamenti, differenziandoli dai tipi di dati alias tradizionali costituiti da un singolo tipo di dati di sistema [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I tipi definiti dall'utente vengono definiti utilizzando uno dei linguaggi supportati da .NET Common Language Runtime (CLR) che generano codice verificabile, ovvero Microsoft Visual C#<sup>®</sup> e Visual Basic<sup>®</sup> .NET. I dati vengono esposti come campi e proprietà di una classe o struttura .NET mentre i comportamenti vengono definiti dai metodi della classe o della struttura.  
   
- Un tipo definito dall'utente può essere utilizzato come definizione di colonna di una tabella, come una variabile in un [!INCLUDE[tsql](../../../includes/tsql-md.md)] batch, o come argomento di un [!INCLUDE[tsql](../../../includes/tsql-md.md)] stored procedure o funzione.  
+ Un tipo definito dall'utente (UDT) può essere usato come definizione di colonna di una tabella, come variabile in un batch [!INCLUDE[tsql](../../../includes/tsql-md.md)] o come argomento di una funzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] o di una stored procedure.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provider OLE DB di SQL Server Native Client  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta i tipi definiti dall'utente come tipi binari con informazioni sui metadati, che consente di gestire i tipi definiti dall'utente come oggetti. Le colonne di tipo definito dall'utente vengono esposte come DBTYPE_UDT e i relativi metadati vengono esposti tramite l'interfaccia OLE DB principale **IColumnRowset**e il nuovo [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) interfaccia.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta i tipi definiti dall'utente come tipi binari con informazioni sui metadati, che consente di gestire i tipi definiti dall'utente come oggetti. Le colonne con tipo definito dall'utente vengono esposte come DBTYPE_UDT e i relativi metadati vengono esposti tramite l'interfaccia OLE DB principale **IColumnRowset** e la nuova interfaccia [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md).  
   
 > [!NOTE]  
->  Il **irowsetfind:: FindNextRow** (metodo) non funziona con il tipo di dati definito dall'utente. Se il tipo definito dall'utente viene utilizzato come tipo di colonna di ricerca, viene restituito DB_E_BADCOMPAREOP.  
+>  Il metodo **IRowsetFind::FindNextRow** non funziona con il tipo di dati UDT. Se il tipo definito dall'utente viene utilizzato come tipo di colonna di ricerca, viene restituito DB_E_BADCOMPAREOP.  
   
 ### <a name="data-bindings-and-coercions"></a>Associazione dati e coercizioni  
  Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si utilizzano i tipi di dati elencati con un tipo definito dall'utente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le colonne di tipo definito dall'utente vengono esposte tramite il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client come DBTYPE_UDT. È possibile ottenere i metadati tramite i set di righe dello schema appropriati in modo da potere gestire i tipi definiti personalizzati come oggetti.  
@@ -53,31 +53,31 @@ ms.locfileid: "37424790"
 |DBTYPE_BSTR|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|Supportato<sup>4</sup>|N/D<sup>2</sup>|  
 |DBTYPE_STR|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|Supportato<sup>4,6</sup>|N/D<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|Non supportato|N/D<sup>2</sup>|Non supportato|N/D<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_ARRAY|VT_UI1 &AMP;#124; VT_ARRAY)|Supportato<sup>6</sup>|N/D<sup>2</sup>|Supportato<sup>4</sup>|N/D<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Supportato<sup>6</sup>|N/D<sup>2</sup>|Supportato<sup>4</sup>|N/D<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Supportato<sup>3,6</sup>|N/D<sup>2</sup>|N/D|N/D<sup>2</sup>|  
   
- <sup>1</sup>se un server di tipo diverso da DBTYPE_UDT è specificato con **ICommandWithParameters:: SetParameterInfo** e il tipo di funzione di accesso è DBTYPE_UDT, si verifica un errore durante l'esecuzione dell'istruzione (DB_E_ERRORSOCCURRED; il stato del parametro è DBSTATUS_E_BADACCESSOR). In caso contrario, i dati vengono inviati al server, ma il server restituisce un errore indicando che non è possibile eseguire una conversione implicita dal tipo definito dall'utente al tipo di dati del parametro.  
+ <sup>1</sup>Se viene specificato un tipo di server diverso da DBTYPE_UDT con **ICommandWithParameters::SetParameterInfo** e il tipo di funzione di accesso è DBTYPE_UDT, si verifica un errore quando viene eseguita l'istruzione (DB_E_ERRORSOCCURRED; lo stato del parametro è DBSTATUS_E_BADACCESSOR). In caso contrario, i dati vengono inviati al server, ma il server restituisce un errore indicando che non è possibile eseguire una conversione implicita dal tipo definito dall'utente al tipo di dati del parametro.  
   
  <sup>2</sup>esula dall'ambito di questo argomento.  
   
- <sup>3</sup> si verifica la conversione dei dati da stringa esadecimale a dati binari.  
+ <sup>3</sup>Si verifica la conversione dei dati da stringa esadecimale a dati binari.  
   
- <sup>4</sup> si verifica la conversione dei dati da dati binari a stringa esadecimale.  
+ <sup>4</sup>Si verifica la conversione dei dati da dati binari a stringa esadecimale.  
   
- <sup>5</sup>convalida può verificarsi nella creazione della funzione di accesso o in fase di recupero, l'errore è DB_E_ERRORSOCCURRED, lo stato impostato su DBBINDSTATUS_UNSUPPORTEDCONVERSION dell'associazione.  
+ <sup>5</sup>La convalida può verificarsi durante la creazione della funzione di accesso o durante il recupero, l'errore è DB_E_ERRORSOCCURRED, lo stato dell'associazione impostato su DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
   
- <sup>6</sup>può essere utilizzato BY_REF.  
+ <sup>6</sup>Può essere usato BY_REF.  
   
  DBTYPE_NULL e DBTYPE_EMPTY possono essere associati per i parametri di input ma non per i parametri di output o per i risultati. Se vengono associati per i parametri di input, lo stato deve essere impostato su DBSTATUS_S_ISNULL o DBSTATUS_S_DEFAULT.  
   
  DBTYPE_UDT può essere convertito anche in DBTYPE_EMPTY e DBTYPE_NULL, ma DBTYPE_NULL e DBTYPE_EMPTY non possono essere convertiti in DBTYPE_UDT. È coerente con DBTYPE_BYTES.  
   
 > [!NOTE]  
->  Per la gestione di tipi definiti dall'utente come parametri, viene utilizzata una nuova interfaccia **ISSCommandWithParameters**, che eredita dalla classe **ICommandWithParameters**. Le applicazioni devono utilizzare questa interfaccia per impostare almeno SSPROP_PARAM_UDT_NAME del set di proprietà DBPROPSET_SQLSERVERPARAMETER per i parametri UDT. Se in caso contrario, **ICommand:: Execute** restituirà DB_E_ERRORSOCCURRED. Questo set di proprietà e questa interfaccia vengono descritti più avanti in questo argomento.  
+>  Viene usata una nuova interfaccia per la gestione dei tipi definiti dall'utente come parametri, **ISSCommandWithParameters**, che eredita da **ICommandWithParameters**. Le applicazioni devono utilizzare questa interfaccia per impostare almeno SSPROP_PARAM_UDT_NAME del set di proprietà DBPROPSET_SQLSERVERPARAMETER per i parametri UDT. In caso contrario, **ICommand::Execute** restituirà DB_E_ERRORSOCCURRED. Questo set di proprietà e questa interfaccia vengono descritti più avanti in questo argomento.  
   
- Se un tipo definito dall'utente viene inserito in una colonna che non è sufficientemente grande da contenere tutti i relativi dati, **ICommand:: Execute** restituirà S_OK con lo stato DB_E_ERRORSOCCURRED.  
+ Se un tipo definito dall'utente viene inserito in una colonna che non consente di contenere tutti i relativi dati, **ICommand::Execute** restituirà S_OK con lo stato DB_E_ERRORSOCCURRED.  
   
- Le conversioni di dati fornite dai servizi principali OLE DB (**IDataConvert**) non sono applicabili a DBTYPE_UDT. Non sono supportate altre associazioni.  
+ Le conversioni dei dati fornite dai servizi principali OLE DB (**IDataConvert**) non sono applicabili a DBTYPE_UDT. Non sono supportate altre associazioni.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Aggiunte e modifiche ai set di righe OLE DB  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client aggiunge i nuovi valori o modifiche a molti dei set di righe dello schema OLE DB principali.  
@@ -177,7 +177,7 @@ ms.locfileid: "37424790"
  Per supportare i tipi definiti dall'utente tramite OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa una serie di modifiche, incluse l'aggiunta del **ISSCommandWithParameters** interfaccia. Questa nuova interfaccia eredita dall'interfaccia OLE DB principale **ICommandWithParameters**. Oltre ai tre metodi ereditati da **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, e **SetParameterInfo**; **ISSCommandWithParameters** fornisce le **GetParameterProperties** e **SetParameterProperties** metodi che vengono usati per gestire specifiche del server tipi di dati.  
   
 > [!NOTE]  
->  Il **ISSCommandWithParameters** interfaccia consente anche di usare la nuova struttura SSPARAMPROPS struttura.  
+>  L'interfaccia **ISSCommandWithParameters** usa anche la nuova struttura SSPARAMPROPS.  
   
 #### <a name="the-icolumnsrowset-interface"></a>Interfaccia IColumnsRowset  
  Oltre al **ISSCommandWithParameters** interfaccia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client aggiunti nuovi valori al set di righe restituito dalla chiamata il **IColumnsRowset:: Getcolumnrowset** (metodo) inclusi i seguenti.  

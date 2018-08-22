@@ -1,5 +1,5 @@
 ---
-title: Report di migrazione di dati (SybaseToSQL) | Documenti Microsoft
+title: Report di migrazione dati (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0e4f2e50603b970a2b1ec5c1eec4e258e80cfb3b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9e1f04f6a5df77be0bfc13227e1033842b5dd291
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778508"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395268"
 ---
-# <a name="data-migration-report-sybasetosql"></a>Report di migrazione di dati (SybaseToSQL)
-Il **Report di migrazione di dati** la finestra di dialogo viene visualizzata dopo la migrazione di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+# <a name="data-migration-report-sybasetosql"></a>Report di migrazione dati (SybaseToSQL)
+Il **Report di migrazione dati** verrà visualizzata la finestra di dialogo dopo la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Opzioni  
 **Stato**  
@@ -39,15 +39,15 @@ La tabella di destinazione.
 **Numero totale di righe**  
 Il numero di righe di dati nella tabella di origine.  
   
-**Numero di righe correttamente migrate**  
-Il numero di righe di dati eseguito la migrazione alla tabella di destinazione.  
+**Numero di righe è state migrate**  
+Il numero di righe di dati è stata eseguita la migrazione alla tabella di destinazione.  
   
 **Rapporto**  
 Migrazione completata la percentuale di righe.  
   
 **Dettagli**  
-Se non è riuscita alcuna migrazione di dati, fare clic per visualizzare i dettagli di migrazione per la riga selezionata nel report. SSMA verrà visualizzato il motivo dell'errore.  
+Se ha esito negativo qualsiasi migrazione dei dati, fare clic per visualizzare informazioni dettagliate sulla migrazione per la riga selezionata nel report. SSMA viene visualizzato il motivo dell'errore.  
   
 **Salva Report**  
-Salva il report a una. CSV, file (valori delimitati da virgole), che può essere esaminato tramite Microsoft Excel.  
+Salva il report a una. CSV, file (valori delimitati da virgole), che può essere esaminati tramite Microsoft Excel.  
   

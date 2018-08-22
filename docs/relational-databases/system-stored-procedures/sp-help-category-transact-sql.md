@@ -1,5 +1,5 @@
 ---
-title: sp_help_category (Transact-SQL) | Documenti Microsoft
+title: sp_help_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e131d1152c3deb2debf78a59686365b85953530
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a84cde301cf3c3db39f8df1999b9e4c39416c324
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254883"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395513"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_help_category [ [ @class = ] 'class' ]
  [  **@class=**] **'***classe***'**  
  Classe su cui si desidera ottenere informazioni. *classe* viene **varchar (8)**, con valore predefinito è **processo**. *classe* può essere uno dei valori seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**JOB**|Restituisce informazioni su una categoria di processi.|  
 |**AVVISO**|Restituisce informazioni su una categoria di avvisi.|  
-|**(OPERATORE)**|Restituisce informazioni su una categoria di operatori.|  
+|**OPERATORE**|Restituisce informazioni su una categoria di operatori.|  
   
  [  **@type=** ] **'***tipo***'**  
- Tipo di categoria su cui vengono richieste informazioni. *tipo di* viene **varchar(12)**, con un valore predefinito è NULL, e può essere uno dei valori seguenti.  
+ Tipo di categoria su cui vengono richieste informazioni. *tipo di* viene **varchar(12)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**LOCAL**|Categoria di processi locali.|  
 |**MULTI-SERVER**|Categoria di processi multiserver.|  
@@ -69,13 +69,13 @@ sp_help_category [ [ @class = ] 'class' ]
  Nome della categoria su cui vengono richieste informazioni. *nome* viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@suffix=** ] *suffix*  
- Specifica se il **category_type** colonna nel set di risultati è un ID o un nome. *suffisso* viene **bit**, il valore predefinito è **0**. **1** Mostra il **category_type** come nome, e **0** Mostra come ID.  
+ Specifica se il **category_type** colonna nel set di risultati è un ID o un nome. *suffisso* viene **bit**, il valore predefinito è **0**. **1** Mostra il **category_type** come nome, e **0** lo visualizza come ID.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Quando **@suffix** è **0**, **sp_help_category** restituisce il set di risultati seguente:  
+ Quando **@suffix** viene **0**, **sp_help_category** restituisce il set di risultati seguente:  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -83,7 +83,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Tipo di categoria:<br /><br /> **1** = locale<br /><br /> **2** = multiserver<br /><br /> **3** = nessuno|  
 |**name**|**sysname**|Nome della categoria|  
   
- Quando **@suffix** è **1**, **sp_help_category** restituisce il set di risultati seguente:  
+ Quando **@suffix** viene **1**, **sp_help_category** restituisce il set di risultati seguente:  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -91,12 +91,12 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**sysname**|Tipo di categoria: Uno dei **locale**, **MULTISERVER**, o **NONE**|  
 |**name**|**sysname**|Nome della categoria|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_help_category** deve essere eseguita la **msdb** database.  
   
  Se non viene specificato alcun parametro, il set di risultati include informazioni su tutte le categorie dei processi.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -105,7 +105,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Esempi  
   

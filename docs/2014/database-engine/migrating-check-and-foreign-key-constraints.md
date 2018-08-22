@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
@@ -14,14 +13,14 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe1353a72ac4780356835fec88ff0d05f3d74e66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 599ee919bdd158b76790c113a83c5aa94f0c9c99
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263363"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396312"
 ---
-# <a name="migrating-check-and-foreign-key-constraints"></a>Verificare la migrazione e vincoli di chiave esterna
+# <a name="migrating-check-and-foreign-key-constraints"></a>Migrazione di vincoli CHECK e di chiave esterna
   Controllo e vincoli di chiave esterna non sono supportati [!INCLUDE[hek_2](../includes/hek-2-md.md)] in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Questi costrutti in genere utilizzati per applicare l'integrità dei dati logico nello schema e possono essere importanti per il mantenimento della correttezza funzionale delle applicazioni.  
   
  Controlli di integrità delle logiche in una tabella, ad esempio controllo e vincoli di chiave esterna necessaria elaborazione aggiuntiva sulle transazioni e in genere sconsigliati per le applicazioni sensibili alle prestazioni. Tuttavia, se tali controlli sono fondamentali per l'applicazione, sono disponibili due soluzioni alternative.  

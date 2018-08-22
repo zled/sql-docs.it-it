@@ -1,5 +1,5 @@
 ---
-title: Nuovo progetto (SSMA) (AccessToSQL) | Documenti Microsoft
+title: Nuovo progetto (SSMA) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,20 +18,20 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d819ecae91a1c5438e678ab3c62206c3fe76c785
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 81a1936393d725167eef04f9145b6be4ba75f0c7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774717"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394646"
 ---
 # <a name="new-project-ssma-accesstosql"></a>Nuovo progetto (SSMA) (AccessToSQL)
-Utilizzare il **nuovo progetto** la finestra di dialogo per creare un nuovo progetto SSMA. Per accedere al **nuovo progetto** della finestra di dialogo di **File** menu, fare clic su **nuovo progetto**.  
+Usare la **nuovo progetto** finestra di dialogo per creare un nuovo progetto SSMA. Per l'accesso di **nuovo progetto** finestra di dialogo il **File** dal menu fare clic su **nuovo progetto**.  
   
 ## <a name="options"></a>Opzioni  
 **Nome**  
   
-Immettere il nome del progetto. SSMA aggiungerà l'estensione di file.  
+Immettere il nome del progetto. SSMA viene aggiunta l'estensione di file.  
   
 **Percorso**  
   
@@ -39,21 +39,21 @@ Immettere o selezionare la cartella o il percorso di rete per salvare il progett
   
 **MigrateTo**  
   
-Selezionare una della versione del database di destinazione dal seguente elenco  
+Selezionare una delle versione del database di destinazione dalla parte inferiore di elenco  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
 -   SQL Azure  
   
 > [!IMPORTANT]  
-> Richiede un nuovo progetto di tipo "SQL Azure", SQL Server Native Client (SNAC) versione 10.5 o sopra il collegamento di accesso tabelle al database di SQL Azure.   
-> È possibile ottenere la versione più recente di SNAC da [Microsoft® SQL Server® 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=196940).  
+> Richiede un nuovo progetto di tipo 'SQL Azure ', SQL Server Native Client (SNAC) versione 10.5 o sopra per collegare l'accesso alle tabelle di database di SQL Azure.   
+> È possibile ottenere la versione più recente di SNAC dal [Microsoft® SQL Server® 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=196940).  
   

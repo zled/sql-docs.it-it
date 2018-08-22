@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f079e76c4f3d7b659d3b48cf94a9e7fe54d27a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7ba5192de960d24bb918e9ec751e8c27c1e9d78
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308031"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395470"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Connetti al server (pagina Proprietà connessione) Reporting Services
-  Usare questa scheda per visualizzare o specificare le opzioni relative alla connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] o alla registrazione di [!INCLUDE[ssRS](../includes/ssrs-md.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solamente durante la connessione. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solamente durante la registrazione del [!INCLUDE[ssRS](../includes/ssrs-md.md)].  
+  Usare questa scheda per visualizzare o specificare le opzioni relative alla connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] o alla registrazione di [!INCLUDE[ssRS](../includes/ssrs.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solamente durante la connessione. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solamente durante la registrazione del [!INCLUDE[ssRS](../includes/ssrs.md)].  
   
 ## <a name="options"></a>Opzioni  
  **Timeout connessione (in ms)**  
@@ -40,7 +40,7 @@ ms.locfileid: "37308031"
  Fare clic su questo pulsante per modificare la finestra di dialogo e nascondere le opzioni aggiuntive per la connessione al server, ad esempio le opzioni per la memorizzazione della password.  
   
  **Test**  
- Durante la registrazione del [!INCLUDE[ssRS](../includes/ssrs-md.md)] in **Server registrati**, scegliere questa opzione per verificare la connessione.  
+ Durante la registrazione del [!INCLUDE[ssRS](../includes/ssrs.md)] in **Server registrati**, scegliere questa opzione per verificare la connessione.  
   
  **Salva**  
  Salva le impostazioni in **Server registrati**.  

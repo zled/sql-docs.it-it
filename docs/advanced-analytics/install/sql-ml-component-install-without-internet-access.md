@@ -1,6 +1,6 @@
 ---
-title: Installare i componenti di SQL Server machine Learning Services senza accesso a internet | Documenti di Microsoft
-description: Offline o disconnesso R di Machine Learning e Pytyon il programma di installazione nell'istanza di SQL Server isolata.
+title: Installare SQL Server machine learning i componenti Python e R senza accesso a internet | Microsoft Docs
+description: Offline o disconnesso R di Machine Learning e Python il programma di installazione nell'istanza di SQL Server isolata.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/02/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56624d2a5fcc97035f434cb1ee1d4fdee4dedeba
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546261"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437651"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-features-on-computers-with-no-internet-access"></a>Installare SQL Server machine learning le funzionalità di R e Python in computer senza accesso a internet
+# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installare SQL Server machine learning R e Python in computer senza accesso a internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Per impostazione predefinita, i programmi di installazione connettersi a siti di download di Microsoft per ottenere necessarie e i componenti aggiornati per machine learning in SQL Server. Se i vincoli del firewall impediscono il programma di installazione di raggiungere questi siti, è possibile usare un dispositivo connesso a internet per scaricare i file di trasferimento dei file in un server offline e quindi eseguire il programma di installazione.

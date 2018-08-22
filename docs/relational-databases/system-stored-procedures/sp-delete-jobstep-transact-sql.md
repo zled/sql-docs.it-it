@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f877431a45f475bee0adb303724b63b544c943bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e47c28276cd555138c4360060186515cf6f5ecf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248136"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393854"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,29 +50,29 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  Numero di identificazione del processo da cui si desidera rimuovere il passaggio. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name=** ] **'***job_name***'**  
- Nome del processo da cui si desidera rimuovere il passaggio. *job_name*viene **sysname**, con un valore predefinito è NULL.  
+ Nome del processo da cui si desidera rimuovere il passaggio. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
   
-> **Nota:** entrambi *job_id* o *job_name* deve essere specificato; non è possibile specificarli entrambi.  
+> **Nota:** entrambe *job_id* oppure *job_name* deve essere specificato; non è possibile specificarli entrambi.  
   
  [ **@step_id=** ] *step_id*  
  Numero di identificazione del passaggio da rimuovere. *step_id*viene **int**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se si rimuove un passaggio di un processo, gli altri passaggi del processo che fanno riferimento al passaggio eliminato vengono aggiornati automaticamente.  
   
- Per ulteriori informazioni sui passaggi associati a un determinato processo, eseguire **sp_help_jobstep**.  
+ Per altre informazioni sui passaggi associati a un particolare processo, eseguire **sp_help_jobstep**.  
   
 > **Nota:** chiamata **sp_delete_jobstep** con un *step_id* valore pari a zero consente di eliminare tutti i passaggi di processo per il processo.  
   
  Microsoft SQL Server Management Studio include uno strumento grafico di facile utilizzo per la gestione dei processi, ed è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -81,9 +81,9 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo i membri di **sysadmin** possibile eliminare un passaggio di processo che appartiene a un altro utente.  
+ Solo i membri del **sysadmin** può eliminare un passaggio di processo che appartiene a un altro utente.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente il passaggio di processo `1` viene rimosso dal processo `Weekly Sales Data Backup`.  
@@ -99,7 +99,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Consente di visualizzare o modificare i processi](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
+ [Visualizzare o modificare processi](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   

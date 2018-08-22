@@ -1,5 +1,5 @@
 ---
-title: sp_attach_schedule (Transact-SQL) | Documenti Microsoft
+title: sp_attach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 788afc8121948fa628cd9e0d2e1162464357dbc6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c1ec7f73e6fefadb9e73ca8295afb858f6d1d6a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238358"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393423"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_attach_schedule
  Numero di identificazione del processo a cui viene aggiunta la pianificazione. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name =** ] **'***job_name***'**  
- Nome del processo a cui viene aggiunta la pianificazione. *job_name*viene **sysname**, con un valore predefinito è NULL.  
+ Nome del processo a cui viene aggiunta la pianificazione. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+>  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [  **@schedule_id =** ] *schedule_id*  
  Numero di identificazione della pianificazione da impostare per il processo. *schedule_id*viene **int**, con un valore predefinito è NULL.  
@@ -63,16 +63,16 @@ sp_attach_schedule
  Nome della pianificazione da impostare per il processo. *schedule_name*viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  Entrambi *schedule_id* o *schedule_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+>  Entrambi *schedule_id* oppure *schedule_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  La pianificazione e il processo devono avere lo stesso proprietario.  
   
  È possibile impostare una pianificazione per più di un processo. È possibile eseguire un processo su più di una pianificazione.  
   
- È necessario eseguire questa stored procedure dal **msdb** database.  
+ Questa stored procedure deve essere eseguita dal **msdb** database.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -83,7 +83,7 @@ sp_attach_schedule
   
  Notare che il proprietario del processo può collegare un processo a una pianificazione e può scollegare un processo da una pianificazione senza dovere essere anche il proprietario della pianificazione. Tuttavia, non è possibile eliminare una pianificazione se lo scollegamento la lascia senza processi, a meno che il chiamante sia il proprietario della pianificazione.  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica se l'utente è proprietario sia del processo che della pianificazione.  
   

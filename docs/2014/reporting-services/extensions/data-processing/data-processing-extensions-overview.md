@@ -17,12 +17,12 @@ caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 14ec583360509be356aa12751c0a090b2a7dc676
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70b692948215315a4cafaec1389a4c1996e84a97
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191691"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394850"
 ---
 # <a name="data-processing-extensions-overview"></a>Cenni preliminari sulle estensioni per l'elaborazione dati
   Le estensioni per l'elaborazione dati in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consentono di eseguire la connessione a un'origine dati e di recuperare i dati. Fungono inoltre da ponte tra un'origine dati e un set di dati. Le estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono modellate in base a un subset delle interfacce dei provider di dati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "37191691"
 |Estensione per l'elaborazione dati per Oracle|Usa il provider di dati .NET Framework per Oracle. Con questa estensione, il server di report può accedere alle origini dati Oracle tramite software di connettività client Oracle.|  
 |Estensione per l'elaborazione dati per ODBC|Usa il provider di dati .NET Framework per ODBC. Con questa estensione, il server di report può accedere ai dati in qualsiasi database per il quale è disponibile un driver ODBC.|  
   
- È possibile utilizzare le API di elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] per aggiungere funzionalità personalizzate di elaborazione dati al server di report.  
+ È possibile utilizzare le API di elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs.md)] per aggiungere funzionalità personalizzate di elaborazione dati al server di report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] offre supporto predefinito per i provider di dati in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Se è già stato implementato un provider di dati completo, non è necessario implementare un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. È tuttavia consigliabile considerare di estendere il provider di dati per includere le funzionalità specifiche di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, tra cui credenziali di connessione protette e aggregazioni sul lato server.  

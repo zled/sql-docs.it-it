@@ -1,5 +1,5 @@
 ---
-title: Accedere a schemi di inventario (AccessToSQL) | Documenti Microsoft
+title: Accedere a schemi di inventario (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -42,38 +42,38 @@ ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c9614227b73058459fee7c902823bdb032ef2bc3
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b0344fcfa5a5b174ef080a5eac431cebf6372842
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773307"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394663"
 ---
-# <a name="access-inventory-schemas-accesstosql"></a>Schemi di inventario di accesso (AccessToSQL)
-Nelle sezioni seguenti vengono descritte le tabelle che vengono create SSMA durante l'esportazione degli schemi di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+# <a name="access-inventory-schemas-accesstosql"></a>Schemi di inventario di Access (AccessToSQL)
+Le sezioni seguenti descrivono le tabelle che vengono create da SSMA durante l'esportazione degli schemi di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="databases"></a>Database  
-I metadati del database viene esportato nel **SSMA_Access_InventoryDatabases** tabella. Questa tabella contiene le colonne seguenti:  
+I metadati del database viene esportato per la **SSMA_Access_InventoryDatabases** tabella. Questa tabella contiene le colonne seguenti:  
   
 |Nome colonna|Tipo di dati|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|GUID che identifica in modo univoco ogni database. Questa colonna è anche la chiave primaria per la tabella.|  
 |**DatabaseName**|**nvarchar(4000)**|Il nome del database di Access.|  
-|**ExportTime**|**datetime**|Data e ora di che creazione da SSMA questi metadati.|  
-|**filePath**|**nvarchar(4000)**|Il nome di file e percorso completo del database di Access.|  
+|**ExportTime**|**datetime**|Data e ora di che creazione di questi metadati da SSMA.|  
+|**Percorso file**|**nvarchar(4000)**|Il nome di file e percorso completo del database di Access.|  
 |**FileSize**|**bigint**|Le dimensioni del database di Access in KB.|  
 |**FileOwner**|**nvarchar(4000)**|L'account Windows specificato come proprietario del database di Access.|  
-|**DateCreated**|**datetime**|Data e ora di che creazione del database di Access.|  
-|**DateModified**|**datetime**|Data e ora che dell'ultima modifica del database di Access.|  
+|**Proprietà DateCreated**|**datetime**|Data e ora di che creazione del database di Access.|  
+|**DateModified**|**datetime**|Data e ora che dell'ultima modifica apportata al database di Access.|  
 |**TablesCount**|**int**|Il numero di tabelle nel database di Access.|  
-|**QueriesCount**|**int**|Il numero di query nel database di Access.|  
-|**FormsCount**|**int**|Numero di moduli nel database di Access.|  
+|**QueriesCount**|**int**|Il numero di query del database di Access.|  
+|**FormsCount**|**int**|Il numero di moduli nel database di Access.|  
 |**ModulesCount**|**int**|Il numero di moduli nel database di Access.|  
 |**ReportsCount**|**int**|Il numero di report nel database di Access.|  
 |**MacrosCount**|**int**|Il numero di macro nel database di Access.|  
 |**AccessVersion**|**nvarchar(4000)**|La versione di accesso del database.|  
-|**Regole di confronto**|**nvarchar(4000)**|Le regole di confronto del database di Access. Regole di confronto determinano le modalità di Ordina e confronta le stringhe in un database.|  
-|**JetVersion**|**nvarchar(4000)**|La versione del motore di database Jet. I database di Access utilizzano il motore di database Jet sottostante.|  
+|**Regole di confronto**|**nvarchar(4000)**|Le regole di confronto del database di Access. Regole di confronto determinano come un database Ordina e confronta le stringhe.|  
+|**JetVersion**|**nvarchar(4000)**|La versione del motore di database Jet. Accedere ai database utilizzano il motore di database Jet sottostante.|  
 |**IsUpdatable**|**bit**|Indica se il database può essere aggiornato. Se il valore è 1, il database è aggiornabile. Se il valore è 0, il database è di sola lettura.|  
 |**QueryTimeout**|**int**|Configurato ODBC query valore di timeout per il database, in secondi. Il valore predefinito è 60 secondi.|  
   
@@ -87,104 +87,104 @@ Metadati della tabella vengono esportati per il **SSMA_Access_InventoryTables** 
 |**TableName**|**nvarchar(4000)**|Nome della tabella.|  
 |**RowsCount**|**int**|Numero di righe della tabella.|  
 |**ValidationRule**|**nvarchar(4000)**|La regola che definisce un input valido per la tabella. Se è presente alcuna regola di convalida, il campo conterrà una stringa vuota.|  
-|**LinkedTable**|**nvarchar(4000)**|Un'altra tabella, se presente, che è collegata con la tabella. Collegamento delle tabelle consente aggiunte, eliminazioni e aggiornamenti a altra tabella tramite questa tabella.|  
-|**ExternalSource**|**nvarchar(4000)**|L'origine dati, se presente, che è associata alla tabella. Se una tabella collegata, dispone di un'origine dati esterna specificata in questo campo.|  
+|**LinkedTable**|**nvarchar(4000)**|Un'altra tabella, se presente, che è collegata con la tabella. Collegamento delle tabelle consente aggiunte, eliminazioni e gli aggiornamenti a altra tabella mediante questa tabella.|  
+|**ExternalSource**|**nvarchar(4000)**|L'origine dati, se presente, che è associata alla tabella. Se una tabella collegata, ha un'origine dati esterna specificata in questo campo.|  
   
 ## <a name="columns"></a>Colonne  
-I metadati della colonna viene esportato nel **SSMA_Access_InventoryColumns** tabella. Questa tabella contiene le colonne seguenti:  
+I metadati della colonna viene esportato per la **SSMA_Access_InventoryColumns** tabella. Questa tabella contiene le colonne seguenti:  
   
 |Nome colonna|Tipo di dati|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene questa colonna.|  
 |**TableId**|**uniqueidentifier**|Identifica la tabella che contiene questa colonna.|  
-|**ColumnId**|**int**|Incremento numero intero che identifica la colonna. **ColumnId** è la chiave primaria per la tabella.|  
+|**ColumnId**|**int**|Incremento valore intero che identifica la colonna. **ColumnId** è la chiave primaria per la tabella.|  
 |**ColumnName**|**nvarchar(4000)**|Nome della colonna.|  
-|**IsNullable**|**bit**|Specifica se la colonna può contenere valori null. Se il valore è 1, la colonna può contenere valori null. Se il valore è 0, la colonna non può contenere valori null. Si noti la regola di convalida può essere utilizzata anche per evitare che i valori null.|  
-|**DataType**|**nvarchar(4000)**|L'accesso del tipo di dati della colonna, ad esempio **testo** o **lungo**.|  
+|**IsNullable**|**bit**|Specifica se la colonna può contenere valori null. Se il valore è 1, la colonna può contenere valori null. Se il valore è 0, la colonna non può contenere valori null. Si noti che la regola di convalida può anche essere usata per impedire valori null.|  
+|**DataType**|**nvarchar(4000)**|Digitare l'accesso ai dati della colonna, ad esempio **testo** oppure **lungo**.|  
 |**IsAutoIncrement**|**bit**|Specifica se la colonna viene incrementato automaticamente i valori interi. Se il valore è 1, i numeri interi sono a incremento automatico.|  
 |**Ordinal**|**smallint**|L'ordine della colonna nella tabella, a partire da zero.|  
-|**defaultValue**|**nvarchar(4000)**|Il valore predefinito per la colonna.|  
-|**ValidationRule**|**nvarchar(4000)**|La regola viene utilizzata per convalidare i dati aggiunti o aggiornati nella colonna.|  
+|**DefaultValue**|**nvarchar(4000)**|Il valore predefinito per la colonna.|  
+|**ValidationRule**|**nvarchar(4000)**|La regola che consente di convalidare i dati aggiunti o aggiornati nella colonna.|  
   
 ## <a name="indexes"></a>Indici  
-I metadati di indice vengono esportati per il **SSMA_Access_InventoryIndexes** tabella. Questa tabella contiene le colonne seguenti:  
+I metadati dell'indice viene esportato per la **SSMA_Access_InventoryIndexes** tabella. Questa tabella contiene le colonne seguenti:  
   
 |Nome colonna|Tipo di dati|Description|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene l'indice.|  
-|**TableId**|**uniqueidentifier**|Identifica la tabella che contiene l'indice.|  
-|**IndexId**|**int**|Incremento numero intero che identifica l'indice. Questa colonna è la chiave primaria per la tabella.|  
+|**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene questo indice.|  
+|**TableId**|**uniqueidentifier**|Identifica la tabella che contiene questo indice.|  
+|**IndexId**|**int**|Incremento valore intero che identifica l'indice. Questa colonna è la chiave primaria per la tabella.|  
 |**IndexName**|**nvarchar(4000)**|Nome dell'indice.|  
 |**ColumnsIncluded**|**nvarchar(4000)**|Elenca le colonne incluse nell'indice. I nomi delle colonne sono separati da un punto e virgola.|  
-|**IsUnique**|**bit**|Specifica se ogni elemento in corrispondenza dell'indice deve essere univoco. In un indice a più colonne, la combinazione di valori deve essere univoca. Se il valore è 1, l'indice applica valori univoci.|  
-|**IsPK**|**bit**|Specifica se l'indice è stato creato automaticamente come parte della definizione della chiave primaria.|  
+|**IsUnique**|**bit**|Specifica se ogni elemento in corrispondenza dell'indice deve essere univoco. In un indice multicolonna, la combinazione di valori deve essere univoca. Se il valore è 1, l'indice applica valori univoci.|  
+|**IsPK**|**bit**|Specifica se l'indice è stato creato automaticamente come parte della definizione di chiave primaria.|  
 |**IsClustered**|**bit**|Specifica se l'indice è cluster. Un indice cluster Riordina l'archiviazione fisica dei dati. Una tabella può avere un solo indice cluster.|  
   
 ## <a name="foreign-keys"></a>Chiavi esterne  
-I metadati della chiave esterno viene esportato nel **SSMA_Access_InventoryForeignKeys** tabella. Questa tabella contiene le colonne seguenti:  
+I metadati della chiave esterno viene esportato per la **SSMA_Access_InventoryForeignKeys** tabella. Questa tabella contiene le colonne seguenti:  
   
 |Nome colonna|Tipo di dati|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene il vincolo foreign key.|  
 |**TableId**|**uniqueidentifier**|Identifica la tabella che contiene il vincolo foreign key.|  
-|**ForeignKeyId**|**int**|Valore intero incrementale che identifica la chiave esterna. Questa colonna è la chiave primaria per la tabella.|  
+|**ForeignKeyId**|**int**|Incremento valore intero che identifica la chiave esterna. Questa colonna è la chiave primaria per la tabella.|  
 |**ForeignKeyName**|**nvarchar(4000)**|Nome dell'indice.|  
 |**ReferencedTableId**|**uniqueidentifier**|Identifica la tabella che contiene le colonne di origine.|  
-|**SourceColumns**|**nvarchar(4000)**|Elenca la colonna chiave esterna o le colonne.|  
-|**ReferencedColumns**|**nvarchar(4000)**|Elenca la colonna chiave primaria o le colonne a cui fa riferimento la chiave esterna.|  
-|**IsCascadeForUpdate**|**bit**|Specifica che, se il valore della chiave primario viene aggiornato, vengono aggiornate anche tutte le righe che fanno riferimento a tale valore della chiave.|  
-|**IsCascadeForDelete**|**bit**|Specifica che, se il valore della chiave primario viene eliminato, vengono eliminate anche tutte le righe che fanno riferimento a tale valore della chiave.|  
-|**IsEnforced**|**bit**|Specifica che il vincolo di chiave esterno viene applicato.|  
+|**SourceColumns**|**nvarchar(4000)**|Elenca le colonne di chiave esterna o di colonne.|  
+|**ReferencedColumns**|**nvarchar(4000)**|Elenca la colonna chiave primaria o le colonne che fanno riferimento alla chiave esterna.|  
+|**IsCascadeForUpdate**|**bit**|Specifica che, se il valore della chiave primaria viene aggiornato, vengono aggiornate anche tutte le righe che fanno riferimento a tale valore della chiave.|  
+|**IsCascadeForDelete**|**bit**|Specifica che, se il valore della chiave primaria viene eliminato, vengono eliminate anche tutte le righe che fanno riferimento a tale valore della chiave.|  
+|**IsEnforced**|**bit**|Specifica che il vincolo foreign key verrà applicato.|  
   
 ## <a name="queries"></a>Query  
-I metadati delle query vengono esportati per il **SSMA_Access_InventoryQueries** tabella. Questa tabella contiene le colonne seguenti:  
+Query metadati vengono esportati nel **SSMA_Access_InventoryQueries** tabella. Questa tabella contiene le colonne seguenti:  
   
 |Nome colonna|Tipo di dati|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database contenente la query.|  
-|**QueryId**|**int**|Incremento numero intero che identifica la query. Questa colonna è la chiave primaria per la tabella.|  
+|**QueryId**|**int**|Incremento valore intero che identifica la query. Questa colonna è la chiave primaria per la tabella.|  
 |**QueryName**|**nvarchar(4000)**|Nome della query.|  
 |**QueryText**|**nvarchar(4000)**|Il codice query SQL, ad esempio un'istruzione SELECT.|  
 |**IsUpdateable**|**bit**|Specifica se la query è di sola lettura o aggiornabili.|  
-|**QueryType**|**nvarchar(4000)**|Specifica il tipo di query, ad esempio **selezionare** o **SetOperation**.|  
-|**ExternalSource**|**nvarchar(4000)**|Se la query fa riferimento a un'origine dati esterna, questa è la stringa di connessione utilizzata dalla query.|  
+|**QueryType**|**nvarchar(4000)**|Specifica il tipo di query, ad esempio **selezionate** oppure **SetOperation**.|  
+|**ExternalSource**|**nvarchar(4000)**|Se la query fa riferimento a un'origine dati esterna, questa è la stringa di connessione usata dalla query.|  
   
 ## <a name="forms"></a>Form  
-Modulo metadati vengono esportati nel **SSMA_Access_InventoryForms** tabella. Questa tabella contiene le colonne seguenti:  
+I metadati di modulo vengono esportati per il **SSMA_Access_InventoryForms** tabella. Questa tabella contiene le colonne seguenti:  
   
 |Nome colonna|Tipo di dati|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene questo modulo.|  
-|**FormId**|**int**|Valore intero incrementale che identifica il modulo. Questa colonna è la chiave primaria per la tabella.|  
+|**FormId**|**int**|Incremento valore intero che identifica il modulo. Questa colonna è la chiave primaria per la tabella.|  
 |**NomeModulo**|**nvarchar(4000)**|Nome del form.|  
   
 ## <a name="macros"></a>Macro  
-Macro metadati vengono esportati nel **SSMA_Access_InventoryMacros** tabella. Questa tabella contiene le colonne seguenti:  
+Metadati della macro vengono esportati per il **SSMA_Access_InventoryMacros** tabella. Questa tabella contiene le colonne seguenti:  
   
 |Nome colonna|Tipo di dati|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene la macro.|  
-|**MacroId**|**int**|Incremento numero intero che identifica la macro. Questa colonna è la chiave primaria per la tabella.|  
+|**MacroId**|**int**|Incremento valore intero che identifica la macro. Questa colonna è la chiave primaria per la tabella.|  
 |**Nomemacro**|**nvarchar(4000)**|Il nome della macro.|  
   
 ## <a name="reports"></a>Report  
-I metadati del report viene esportato nel **SSMA_Access_InventoryReports** tabella. Questa tabella contiene le colonne seguenti:  
+I metadati del report viene esportato per la **SSMA_Access_InventoryReports** tabella. Questa tabella contiene le colonne seguenti:  
   
 |Nome colonna|Tipo di dati|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene il report.|  
-|**Valore ReportId**|**int**|Incremento numero intero che identifica il report. Questa colonna è la chiave primaria per la tabella.|  
+|**ID report**|**int**|Incremento valore intero che identifica il report. Questa colonna è la chiave primaria per la tabella.|  
 |**NomeReport**|**nvarchar(4000)**|Nome del report.|  
   
 ## <a name="modules"></a>Moduli  
-Metadati del modulo vengono esportati nel **SSMA_Access_InventoryModules** tabella. Questa tabella contiene le colonne seguenti:  
+I metadati di modulo vengono esportati per il **SSMA_Access_InventoryModules** tabella. Questa tabella contiene le colonne seguenti:  
   
 |Nome colonna|Tipo di dati|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene il modulo.|  
-|**ModuleId**|**int**|Incremento numero intero che identifica il modulo. Questa colonna è la chiave primaria per la tabella.|  
-|**moduleName**|**nvarchar(4000)**|Il nome del modulo.|  
+|**ModuleId**|**int**|Incremento valore intero che identifica il modulo. Questa colonna è la chiave primaria per la tabella.|  
+|**ModuleName**|**nvarchar(4000)**|Il nome del modulo.|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esportazione di un inventario di Access](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
+[Esportazione di un inventario di Access](exporting-an-access-inventory-accesstosql.md)  
   

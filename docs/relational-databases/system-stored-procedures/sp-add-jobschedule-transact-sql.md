@@ -22,12 +22,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e71329e07595e2deb448bfd2635845c52c4f3a67
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0ddbc13c682ae6748144402dc244e59ff57922bf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240251"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395128"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  Numero di identificazione del processo a cui viene aggiunta la pianificazione. *job_id* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
   
  [ **@job_name=** ] **'***job_name***'**  
- Nome del processo a cui viene aggiunta la pianificazione. *job_name* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
+ Nome del processo a cui viene aggiunta la pianificazione. *nome_processo* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
   
 > [!NOTE]  
->  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+>  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [ **@name=** ] **'***name***'**  
  Nome della pianificazione. *nome* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
@@ -74,7 +74,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@freq_type=** ] *frequency_type*  
  Valore che indica la frequenza di esecuzione del processo. *frequency_type* viene **int**, il valore predefinito è **0**, e può essere uno dei valori seguenti:  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**4**|Ogni giorno|  
@@ -87,34 +87,34 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_interval=** ] *frequency_interval*  
  Giorno di esecuzione del processo. *frequency_interval* viene **int**, con un valore predefinito è 0 e dipende dal valore di *frequency_type* come indicato nella tabella seguente:  
   
-|Value|Effetto|  
+|valore|Effetto|  
 |-----------|------------|  
-|**1** (una volta)|*frequency_interval* è inutilizzato.|  
+|**1** (una volta)|*frequency_interval* risulta inutilizzato.|  
 |**4** (giornaliera)|Ogni *frequency_interval* giorni.|  
 |**8** (settimanale)|*frequency_interval* corrisponde a uno o più dei valori seguenti (in combinazione con un operatore logico OR):<br /><br /> 1 = domenica<br /><br /> 2 = lunedì<br /><br /> 4 = martedì<br /><br /> 8 = mercoledì<br /><br /> 16 = giovedì<br /><br /> 32 = venerdì<br /><br /> 64 = sabato|  
 |**16** (mensile)|Nel *frequency_interval* giorno del mese.|  
-|**32** (frequenza mensile relativa)|*frequency_interval* è uno dei seguenti:<br /><br /> 1 = domenica<br /><br /> 2 = lunedì<br /><br /> 3 = martedì<br /><br /> 4 = mercoledì<br /><br /> 5 = giovedì<br /><br /> 6 = venerdì<br /><br /> 7 = sabato<br /><br /> 8 = giorno<br /><br /> 9 = giorno feriale<br /><br /> 10 = giorno festivo|  
-|**64** (quando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nuovo avvio del servizio dell'agente)|*frequency_interval* è inutilizzato.|  
-|**128**|*frequency_interval* è inutilizzato.|  
+|**32** (mensile relativo)|*frequency_interval* è uno dei seguenti:<br /><br /> 1 = domenica<br /><br /> 2 = lunedì<br /><br /> 3 = martedì<br /><br /> 4 = mercoledì<br /><br /> 5 = giovedì<br /><br /> 6 = venerdì<br /><br /> 7 = sabato<br /><br /> 8 = giorno<br /><br /> 9 = giorno feriale<br /><br /> 10 = giorno festivo|  
+|**64** (quando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nuovo avvio del servizio dell'agente)|*frequency_interval* risulta inutilizzato.|  
+|**128**|*frequency_interval* risulta inutilizzato.|  
   
  [ **@freq_subday_type=** ] *frequency_subday_type*  
- Specifica le unità per *frequency_subday_interval*. *frequency_subday_type* viene **int**e non prevede alcun valore predefinito può essere uno dei valori seguenti:  
+ Specifica l'unità di misura *frequency_subday_interval*. *frequency_subday_type* viene **int**e non prevede alcun valore predefinito e può essere uno dei valori seguenti:  
   
-|Value|Descrizione (unità)|  
+|valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**0x1**|All'ora specificata|  
 |**0x4**|Minutes|  
 |**0x8**|Ore|  
   
  [ **@freq_subday_interval=** ] *frequency_subday_interval*  
- Numero di *frequency_subday_type* periodi devono intercorrere tra ogni esecuzione del processo. *frequency_subday_interval* viene **int**, con un valore predefinito è 0.  
+ Numerosi *frequency_subday_type* periodi intercorrere tra ogni esecuzione del processo. *frequency_subday_interval* viene **int**, con un valore predefinito è 0.  
   
  [  **@freq_relative_interval=** ] *frequency_relative_interval*  
- Definisce ulteriormente il *frequency_interval* quando *frequency_type* è impostato su **32** (frequenza mensile relativa).  
+ Definisce ulteriormente la *frequency_interval* quando *frequency_type* è impostata su **32** (frequenza mensile relativa).  
   
- *frequency_relative_interval* viene **int**e non prevede alcun valore predefinito può essere uno dei valori seguenti:  
+ *frequency_relative_interval* viene **int**e non prevede alcun valore predefinito e può essere uno dei valori seguenti:  
   
-|Value|Descrizione (unità)|  
+|valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**1**|Primo|  
 |**2**|Secondo|  
@@ -122,21 +122,21 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**8**|Quarto|  
 |**16**|Ultimo|  
   
- *frequency_relative_interval* indica l'occorrenza dell'intervallo. Ad esempio, se *frequency_relative_interval* è impostato su **2**, *frequency_type* è impostato su **32**, e *frequency_ intervallo* è impostato su **3**, il processo pianificato verrà eseguito il secondo martedì di ogni mese.  
+ *frequency_relative_interval* indica l'occorrenza dell'intervallo. Ad esempio, se *frequency_relative_interval* è impostata su **2**, *frequency_type* è impostata su **32**, e *frequency_ intervallo* è impostata su **3**, il processo pianificato verrà eseguito il secondo martedì di ogni mese.  
   
  [  **@freq_recurrence_factor=** ] *frequency_recurrence_factor*  
- Numero di settimane o mesi tra le esecuzioni pianificate del processo. *frequency_recurrence_factor* viene utilizzata solo se *frequency_type* è impostata su **8**, **16**, o **32**. *frequency_recurrence_factor* viene **int**, con un valore predefinito è 0.  
+ Numero di settimane o mesi tra le esecuzioni pianificate del processo. *frequency_recurrence_factor* viene usato solo se *frequency_type* è impostata su **8**, **16**, o **32**. *frequency_recurrence_factor* viene **int**, con un valore predefinito è 0.  
   
  [ **@active_start_date=** ] *active_start_date*  
- Data in cui l'esecuzione del processo può avere inizio. *active_start_date* viene **int**, non prevede alcun valore predefinito. La data è nel formato AAAAMMGG. Se *active_start_date* è impostata, la data deve essere maggiore o uguale a 19900101.  
+ Data in cui l'esecuzione del processo può avere inizio. *active_start_date* viene **int**, non prevede alcun valore predefinito. La data è nel formato AAAAMMGG. Se *active_start_date* è impostato, la data deve essere maggiore o uguale a 19900101.  
   
- Al termine della creazione della pianificazione, esaminare la data di inizio per verificare che corrisponda alla data corretta. Per ulteriori informazioni, vedere la sezione "Pianificazione data di inizio" in [creare e collegare le pianificazioni ai processi](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
+ Al termine della creazione della pianificazione, esaminare la data di inizio per verificare che corrisponda alla data corretta. Per altre informazioni, vedere la sezione "Pianificazione Start Date" nella [creare e collegare pianificazioni ai processi](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
  [ **@active_end_date=** ] *active_end_date*  
  Data in cui l'esecuzione del processo può essere arrestata. *active_end_date* viene **int**, non prevede alcun valore predefinito. La data è nel formato AAAAMMGG.  
   
  [  **@active_start_time=** ] *active_start_time*  
- Data compresa tra *active_start_date* e *active_end_date* per iniziare l'esecuzione del processo. *active_start_time* viene **int**, non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
+ Data compresa tra *active_start_date* e *active_end_date* per avviare l'esecuzione del processo. *active_start_time* viene **int**, non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
   
  [ **@active_end_time=***active_end_time*  
  Data compresa tra *active_start_date* e *active_end_date* per l'esecuzione del processo finale. *active_end_time* viene **int**, non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
@@ -151,12 +151,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
- È possibile gestire le pianificazioni dei processi in modo indipendente dai processi. Per aggiungere una pianificazione a un processo, utilizzare **sp_add_schedule** per creare la pianificazione e **sp_attach_schedule** per associare la pianificazione a un processo.  
+## <a name="remarks"></a>Note  
+ È possibile gestire le pianificazioni dei processi in modo indipendente dai processi. Per aggiungere una pianificazione a un processo, usare **sp_add_schedule** per creare la pianificazione e **sp_attach_schedule** per associare la pianificazione a un processo.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -165,10 +165,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 -   **SQLAgentOperatorRole**  
   
- Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
  
  ## <a name="example"></a>Esempio
- Nell'esempio seguente viene assegnato a una pianificazione del processo `SaturdayReports` cui verrà eseguita ogni sabato alle 2:00 AM.
+ L'esempio seguente assegna una pianificazione del processo `SaturdayReports` cui verrà eseguita ogni sabato alle 2:00 AM.
 ```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
         @job_name = N'SaturdayReports', -- Job name
@@ -180,9 +180,9 @@ EXEC msdb.dbo.sp_add_jobschedule
 ```
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare e collegare le pianificazioni ai processi](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
- [Pianificare un processo](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
- [Creare una pianificazione](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
+ [Creare e collegare pianificazioni ai processi](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
+ [Pianificare un processo](../../ssms/agent/schedule-a-job.md)   
+ [Creare una pianificazione](../../ssms/agent/create-a-schedule.md)   
  [Stored procedure SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
