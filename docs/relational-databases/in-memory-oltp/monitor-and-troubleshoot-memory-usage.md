@@ -43,8 +43,7 @@ ms.locfileid: "39537431"
   
 -   [Risoluzione dei problemi relativi alla memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
-##  <a name="bkmk_CreateDB">
-            </a> Creare un database di esempio con tabelle ottimizzate per la memoria  
+##  <a name="bkmk_CreateDB"></a> Creare un database di esempio con tabelle ottimizzate per la memoria  
  Se si dispone già di un database con tabelle ottimizzate per la memoria è possibile saltare questa sezione.  
   
  Con i passaggi seguenti si crea un database con tre tabelle ottimizzate per la memoria che è possibile utilizzare nelle sezioni rimanenti di questo argomento. Nell'esempio è stato eseguito il mapping del database a un pool di risorse, in modo da poter controllare la quantità di memoria utilizzata dalle tabelle ottimizzate per la memoria.  
@@ -278,8 +277,7 @@ MEMORYCLERK_XTP      Default    64             0
   
  Per altre informazioni, vedere [sys.dm_os_memory_clerks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).  
   
-##  <a name="bkmk_MemOptObjects">
-            </a> Gestione della memoria utilizzata dagli oggetti ottimizzati per la memoria  
+##  <a name="bkmk_MemOptObjects"></a> Gestione della memoria utilizzata dagli oggetti ottimizzati per la memoria  
  È possibile controllare la memoria totale utilizzata dalle tabelle ottimizzate per la memoria mediante l'associazione a un pool di risorse denominato, come descritto nell'argomento [Associare un database con tabelle ottimizzate per la memoria a un pool di risorse](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).  
   
 ##  <a name="bkmk_Troubleshooting"></a> Risoluzione dei problemi relativi alla memoria  
