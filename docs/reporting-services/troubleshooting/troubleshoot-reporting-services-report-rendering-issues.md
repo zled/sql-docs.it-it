@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1e067f6a03b839f9de233bc71eccbf6631bb599f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e98809ab3981cc1af2482ef518be3ddfc639a574
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047123"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "40406190"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Risolvere i problemi di rendering del report di Reporting Services
 Dopo che le informazioni sul layout e i dati del report sono stati combinati, il report compilato viene inviato a un renderer di report. Ad esempio, quando si visualizza in anteprima un report in locale, si utilizza il renderer HTML per visualizzare il report compilato. Utilizzare le informazioni riportate in questo argomento per risolvere i problemi specifici del rendering del report.   
@@ -78,5 +78,5 @@ Quando l'origine dati è configurata per un tipo di connessione Elenco Microsoft
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
