@@ -1,7 +1,6 @@
+items:
 - name: Panoramica degli strumenti e delle utilità di SQL Server
   href: ../tools/overview-sql-tools.md
-- name: Articoli nuovi e aggiornati
-  href: new-updated-tools.md
 - name: SQL Operations Studio (anteprima)
   href: ../sql-operations-studio/what-is.md
 - name: SQL Server Management Studio (SSMS)
@@ -25,35 +24,41 @@
 - name: Utilità del prompt dei comandi
   href: command-prompt-utility-reference-database-engine.md
   items:
-    - name: Utilità di copia bulk (bcp)
-      href: bcp-utility.md
-    - name: Utilità SqlLocalDB
-      href: sqllocaldb-utility.md
-    - name: Utilità osql
-      href: osql-utility.md
-    - name: Utilità profiler
-      href: profiler-utility.md
-    - name: sqlagent90 - applicazione
-      href: sqlagent90-application.md
-    - name: sqlcmd
-      href: sqlcmd-utility.md
-    - name: SQLdiag - utilità
-      href: sqldiag-utility.md
-    - name: utilità sqlmaint
-      href: sqlmaint-utility.md
-    - name: Applicazione sqllogship
-      href: sqllogship-application.md
-    - name: sqlps - utilità
-      href: sqlps-utility.md
-    - name: Applicazione sqlservr
-      href: sqlservr-application.md
-    - name: utilità tablediff
-      href: tablediff-utility.md
+  - name: Utilità di copia bulk (bcp)
+    href: bcp-utility.md
+  - name: Utilità SqlLocalDB
+    href: sqllocaldb-utility.md
+  - name: Utilità osql
+    href: osql-utility.md
+  - name: Utilità profiler
+    href: profiler-utility.md
+  - name: sqlagent90 - applicazione
+    href: sqlagent90-application.md
+  - name: sqlcmd
+    href: sqlcmd-utility.md
+  - name: SQLdiag - utilità
+    href: sqldiag-utility.md
+  - name: utilità sqlmaint
+    href: sqlmaint-utility.md
+  - name: Applicazione sqllogship
+    href: sqllogship-application.md
+  - name: sqlps - utilità
+    href: sqlps-utility.md
+  - name: Applicazione sqlservr
+    href: sqlservr-application.md
+  - name: utilità tablediff
+    href: tablediff-utility.md
 - name: sqlpackage
   items:
-    - name: Installare sqlpackage
-      href: sqlpackage-download.md
-    - name: Note sulla versione
-      href: sqlpackage-release-notes.md
-    - name: Informazioni di riferimento su sqlpackage
-      href: sqlpackage.md
+  - name: Installare sqlpackage
+    href: sqlpackage-download.md
+  - name: Note sulla versione
+    href: sqlpackage-release-notes.md
+  - name: Informazioni di riferimento su sqlpackage
+    href: sqlpackage.md
+ms.openlocfilehash: 9d141d9c690b017185f7cfd790fbf9b009ecf1e5
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899551"
