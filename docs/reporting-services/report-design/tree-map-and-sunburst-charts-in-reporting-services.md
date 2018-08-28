@@ -15,12 +15,12 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 152507403574ae4c699a3aa30a2376c0ed6b2af2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 106d85def85002e9cb917cf3cc9be7ac55c57ee4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002939"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40411807"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Grafici mappa ad albero e radiali in Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -115,7 +115,7 @@ In un grafico radiale la gerarchia è rappresentata da una serie di cerchi. Il l
   
   
 ##  <a name="bkmk_sample_data"></a> Dati AdventureWorks di esempio  
- Questa sezione include una query di esempio e la procedura di base per la creazione di un'origine e di un set di dati in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Se il report contiene già un'origine e un set di dati, ignorare questa sezione.  
+ Questa sezione include una query di esempio e la procedura di base per la creazione di un'origine e di un set di dati in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Se il report contiene già un'origine e un set di dati, ignorare questa sezione.  
   
  La query restituisce dati dettagliati sugli ordini di vendita AdventureWorks con il territorio di vendita, la categoria e la sottocategoria del prodotto e dati sul motivo della vendita.  
   

@@ -14,18 +14,18 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 7d4be381230a4f78a0f0ca4849f2251b3d575ded
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: fb379c9d4200bc116d5db76c531856d7f9faf935
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020655"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412783"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Caricare i dati in Azure SQL Data Warehouse con SQL Server Integration Services (SSIS)
 
 Creare un pacchetto di SQL Server Integration Services (SSIS) per caricare dati in [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index). È anche possibile ristrutturare, trasformare e pulire i dati durante il passaggio attraverso il flusso di dati SSIS.
 
-Questo articolo illustra come eseguire le operazioni seguenti.
+Questo articolo illustra come eseguire le operazioni seguenti:
 
 * Creare un nuovo progetto di Integration Services in Visual Studio.
 * Progettare un pacchetto SSIS che carica i dati dall'origine nella destinazione.
@@ -33,7 +33,7 @@ Questo articolo illustra come eseguire le operazioni seguenti.
 
 ## <a name="basic-concepts"></a>Concetti fondamentali
 
-Il pacchetto è l'unità di lavoro di base in SSIS. I pacchetti correlati vengono raggruppati in progetti. I progetti e pacchetti di progettazione in Visual Studio vengono creati con SQL Server Data Tools. Il processo di progettazione è un processo visivo in cui l'utente trascina e rilascia i componenti dalla casella degli strumenti all'area di progettazione, li connette e ne imposta le proprietà. Dopo aver completato il pacchetto, è possibile eseguirlo e distribuirlo facoltativamente a SQL Server per la gestione completa, il monitoraggio e la sicurezza.
+Il pacchetto è l'unità di lavoro di base in SSIS. I pacchetti correlati vengono raggruppati in progetti. I progetti e pacchetti di progettazione in Visual Studio vengono creati con SQL Server Data Tools. Il processo di progettazione è un processo visivo in cui l'utente trascina e rilascia i componenti dalla casella degli strumenti all'area di progettazione, li connette e ne imposta le proprietà. Dopo aver completato il pacchetto, è possibile eseguirlo e distribuirlo facoltativamente in SQL Server o nel database SQL per usufruire di strumenti completi per gestione, monitoraggio e sicurezza.
 
 Un'introduzione dettagliata a SSIS esula dagli scopi di questo articolo. Per altre informazioni, vedere gli articoli seguenti:
 
@@ -196,7 +196,7 @@ Per continuare l'esercitazione con questa opzione, è necessario quanto segue:
 8. Nell'**Editor destinazione ADO.NET** selezionare la scheda **Mapping** per visualizzare come le colonne nell'origine vengono mappate alle colonne nella destinazione.
    
     ![][13]
-9. Fare clic su **OK** per completare la configurazione dell'origine dati.
+9. Fare clic su **OK** per completare la configurazione della destinazione.
 
 ## <a name="run-the-package-to-load-the-data"></a>Eseguire il pacchetto per caricare i dati
 Eseguire il pacchetto facendo clic sul pulsante **Avvia** della barra degli strumenti o selezionando una delle opzioni **Esegui** nel menu **Debug**.

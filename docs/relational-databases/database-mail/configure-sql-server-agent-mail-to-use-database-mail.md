@@ -19,12 +19,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a49117cfe2bb24b4a5f47f22c9bff9e1afb9910
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbfb5af92127ab9d08d3bfabcb589250d748f1d7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32924836"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40415826"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurare Posta elettronica di SQL Server Agent per l'utilizzo di Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,11 +77,11 @@ ms.locfileid: "32924836"
 ##  <a name="Follow_Up"></a> Attività di completamento  
  Le attività seguenti sono necessarie per completare la configurazione dell'agent per inviare avvisi e notifiche.  
   
--   [Avvisi](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)  
+-   [Avvisi](../../ssms/agent/alerts.md)  
   
      Gli avvisi possono essere configurati per segnalare a un operatore un evento di database o una condizione del sistema operativo.  
   
--   [Operatori](http://msdn.microsoft.com/library/38e8488f-2669-4cea-b9c3-5f394a663678)  
+-   [Operatori](../../ssms/agent/operators.md)  
   
      Gli operatori solo alias di persone o gruppi che possono ricevere notifiche elettroniche  
   

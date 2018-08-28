@@ -19,12 +19,12 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 777204c7192a9b74f8730f47898a3fb175b5c322
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2405449dad69e386aa267f683c672533b3c02276
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145562"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412621"
 ---
 # <a name="manage-data-collection"></a>Gestire raccolta dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,14 +68,14 @@ ms.locfileid: "33145562"
   
 >**IMPORTANTE!!** A differenza delle normali stored procedure, le stored procedure dell'agente di raccolta dati utilizzano parametri fortemente tipizzati e non supportano la conversione automatica del tipo di dati. Se tali parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituisce un errore.  
   
- Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare ed eseguire gli esempi di codice forniti. Per altre informazioni, vedere [Esplora oggetti](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2). In alternativa, è possibile creare la query con un editor qualsiasi e salvarla in un file di testo con estensione sql. È possibile eseguire la query dal prompt dei comandi di Windows mediante l'utilità **sqlcmd** . Per altre informazioni, vedere [Usare l'utilità sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
+ Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare ed eseguire gli esempi di codice forniti. Per altre informazioni, vedere [Esplora oggetti](../../ssms/object/object-explorer.md). In alternativa, è possibile creare la query con un editor qualsiasi e salvarla in un file di testo con estensione sql. È possibile eseguire la query dal prompt dei comandi di Windows mediante l'utilità **sqlcmd** . Per altre informazioni, vedere [Usare l'utilità sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
 ### <a name="stored-procedures-and-views"></a>Stored procedure e viste  
  **Utilizzo dell'agente di raccolta dati**  
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare l'agente di raccolta dati.  
   
-|Nome della stored procedure|Description|  
+|Nome della stored procedure|Descrizione|  
 |--------------------|-----------------|  
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|Abilitare l'agente di raccolta dati|  
 |[sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)|Disabilitare l'agente di raccolta dati.|  
@@ -84,7 +84,7 @@ ms.locfileid: "33145562"
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare i set di raccolta.  
   
-|Nome della stored procedure|Description|  
+|Nome della stored procedure|Descrizione|  
 |--------------------|-----------------|  
 |[sp_syscollector_run_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)|Eseguire un set di raccolta su richiesta.|  
 |[sp_syscollector_start_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md)|Avviare un set di raccolta.|  
@@ -98,7 +98,7 @@ ms.locfileid: "33145562"
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare gli elementi della raccolta.  
   
-|Nome della stored procedure|Description|  
+|Nome della stored procedure|Descrizione|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)|Creare un elemento della raccolta.|  
 |[sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)|Eliminare un elemento della raccolta.|  
@@ -108,7 +108,7 @@ ms.locfileid: "33145562"
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare i tipi di agente di raccolta.  
   
-|Nome della stored procedure|Description|  
+|Nome della stored procedure|Descrizione|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql.md)|Creare un tipo di agente di raccolta.|  
 |[sp_syscollector_update_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|Aggiornare un tipo di agente di raccolta.|  
@@ -118,7 +118,7 @@ ms.locfileid: "33145562"
   
  Nella tabella seguente vengono descritte le viste che è possibile utilizzare per ottenere informazioni di configurazione e dati del log di esecuzione.  
   
-|Nome della vista|Description|  
+|Nome della vista|Descrizione|  
 |---------------|-----------------|  
 |[syscollector_config_store &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)|Ottenere la configurazione dell'agente di raccolta dati.|  
 |[syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)|Ottenere informazioni su un elemento della raccolta.|  
@@ -132,7 +132,7 @@ ms.locfileid: "33145562"
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per configurare l'accesso al data warehouse di gestione.  
   
-|Nome della stored procedure|Description|  
+|Nome della stored procedure|Descrizione|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_warehouse_database_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)|Specificare il nome del database definito nella stringa di connessione per il data warehouse di gestione.|  
 |[sp_syscollector_set_warehouse_instance_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)|Specificare l'istanza definita nella stringa di connessione per il data warehouse di gestione.|  
@@ -141,7 +141,7 @@ ms.locfileid: "33145562"
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare la configurazione del data warehouse di gestione.  
   
-|Nome della stored procedure|Description|  
+|Nome della stored procedure|Descrizione|  
 |--------------------|-----------------|  
 |[core.sp_create_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|Creare uno snapshot di raccolta nel data warehouse di gestione.|  
 |[core.sp_update_data_source &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|Aggiornare l'origine dati per la raccolta dati.|  
@@ -153,7 +153,7 @@ ms.locfileid: "33145562"
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare i pacchetti di caricamento.  
   
-|Nome della stored procedure|Description|  
+|Nome della stored procedure|Descrizione|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)|Configurare il numero di tentativi di caricamento dei dati.|  
 |[sp_syscollector_set_cache_directory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|Specificare l'archiviazione temporanea dei dati tra i tentativi di caricamento.|  
@@ -162,14 +162,14 @@ ms.locfileid: "33145562"
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare il log di esecuzione della raccolta dati.  
   
-|Nome della stored procedure|Description|  
+|Nome della stored procedure|Descrizione|  
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|Eliminare voci relative al set di raccolta dal log di esecuzione.|  
   
 ### <a name="functions"></a>Funzioni  
  Nella tabella seguente vengono descritte le funzioni che è possibile utilizzare per ottenere informazioni di esecuzione e di traccia.  
   
-|Nome funzione|Description|  
+|Nome funzione|Descrizione|  
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|Ottenere dati del log di esecuzione [!INCLUDE[ssIS](../../includes/ssis-md.md)] relativi a un pacchetto specifico.|  
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|Ottenere statistiche di esecuzione relative a un set di raccolta o un pacchetto. Tali informazioni comprendono gli errori registrati.|  

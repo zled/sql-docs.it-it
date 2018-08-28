@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cb93c59cec663a99ebc0460d948f4c2bd0a78f94
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7566afc5761a094dfad1c27717cd6810415c9511
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38055859"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40412754"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Risoluzione dei problemi dei servizi Report di Reporting
 Questo argomento contiene informazioni utili per risolvere i problemi relativi alla progettazione di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , alla visualizzazione in anteprima di un report, alla pubblicazione di un report in un server di report in modalità nativa o in modalità SharePoint, alla visualizzazione di un report nel server di report o all'esportazione di un report in un formato di file diverso.  
@@ -65,6 +65,6 @@ Se il valore è impostato su 1, vengono utilizzati solo i dati dei report memori
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 

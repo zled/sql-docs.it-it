@@ -1,7 +1,7 @@
 ---
 title: Riferimenti alle raccolte predefinite Globals e Users (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 55074e9c10cbe8b5afb3e94533c37befb892416a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f5e0a3a9876af054da4e868ec809609effc117c
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022068"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410407"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Raccolte predefinite - Riferimenti alle raccolte predefinite Globals e Users (Generatore report)
   La raccolta di campi predefinita, in cui sono incluse le raccolte **Globals** e **User** , rappresenta i valori globali forniti da Reporting Services durante l'elaborazione di un report. La raccolta **Globals** fornisce valori come il nome del report, l'ora di inizio dell'elaborazione e i numeri di pagina correnti per l'intestazione o il piè di pagina. La raccolta **User** fornisce le impostazioni relative a ID utente e lingua. Questi valori possono essere usati nelle espressioni per filtrare i risultati in un report.  
@@ -49,7 +49,7 @@ ms.locfileid: "33022068"
 ### <a name="renderformat"></a>RenderFormat  
  Nella tabella seguente vengono descritti i membri per **RenderFormat**.  
   
-|Membro|Tipo|Description|  
+|Membro|Tipo|Descrizione|  
 |------------|----------|-----------------|  
 |nome|**String**|Nome del renderer come registrato nel file di configurazione RSReportServer.<br /><br /> Disponibile durante determinate parti del ciclo di elaborazione/rendering del report.|  
 |IsInteractive|**Boolean**|Specifica se nella richiesta di rendering corrente è usato un formato di rendering interattivo.|  
@@ -81,9 +81,7 @@ ms.locfileid: "33022068"
 |----------------|--------------|---------------------|  
 |**Lingua**|**String**|Lingua dell'utente che esegue il report. Ad esempio, `en-US`.|  
 |**UserID**|**String**|ID dell'utente che esegue il report. Se si usa l'autenticazione di Windows, questo valore corrisponde all'account di dominio dell'utente corrente. Il valore è determinato dall'estensione di sicurezza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , che può usare l'autenticazione di Windows o quella personalizzata.|  
-  
- Per altre informazioni sul supporto di più lingue in un report, vedere "Considerazioni sulla progettazione di soluzioni per distribuzioni multilingue o globali" nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?LinkId=120955).  
-  
+ 
 ### <a name="using-locale-settings"></a>Utilizzo delle impostazioni locali  
  È possibile usare espressioni per fare riferimento alle impostazioni locali in un computer client tramite il valore **User.Language** , in modo da determinare la modalità di visualizzazione di un report all'utente. È possibile, ad esempio, creare un report in cui venga usata un'espressione di query diversa basata sul valore delle impostazioni locali. La query può essere modificata per recuperare informazioni localizzate da una colonna diversa, a seconda della lingua restituita. È inoltre possibile usare un'espressione per modificare le impostazioni relative alla lingua del report o degli elementi del report in base a questa variabile.  
   
