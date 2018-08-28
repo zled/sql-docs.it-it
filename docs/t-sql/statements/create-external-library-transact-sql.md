@@ -20,13 +20,13 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23f57dcabfa354d68aef8aafa7a27a1ae1960bd6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a277172819f3ff1dd7be1128e12b7274fbf59265
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452165"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43102880"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -34,7 +34,7 @@ ms.locfileid: "39452165"
 
 Carica pacchetti R in un database dal flusso di byte o dal percorso di file specificato.
 
-Questa istruzione funge da meccanismo generico per l'amministratore del database per il caricamento degli elementi necessari per i runtime dei nuovi linguaggi esterni (R, Python, Java e così via) e per le piattaforme del sistema operativo supportate da [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]. 
+Questa istruzione funge da meccanismo generico per l'amministratore del database per il caricamento degli elementi necessari per i runtime dei nuovi linguaggi esterni (R, Python, Java e così via) e per le piattaforme del sistema operativo supportate da [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
 Attualmente sono supportati solo il linguaggio R e la piattaforma Windows. Il supporto di Python e Linux è previsto per una versione successiva.
 

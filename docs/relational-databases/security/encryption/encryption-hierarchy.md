@@ -20,13 +20,13 @@ caps.latest.revision: 41
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6240c705d09d819b7aa661cf2f1405b2c2906efd
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 228806dc8a9748771d11966aade4a4eb5067e5e4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39545211"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43086222"
 ---
 # <a name="encryption-hierarchy"></a>Gerarchia di crittografia
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "39545211"
   
  Nella figura seguente viene indicato come nella gerarchia di crittografia ogni livello crittografi il livello sottostante e vengono visualizzate le configurazioni di crittografia più comuni. L'accesso all'inizio della gerarchia è in genere protetto da una password.  
   
- ![Visualizza alcune combinazioni di crittografia in un diagramma in pila. ] (../../../relational-databases/security/encryption/media/encryption-hierarchy-stack.gif "Visualizza alcune combinazioni di crittografia in un diagramma in pila.")  
+ ![Visualizza alcune combinazioni di crittografia in un diagramma in pila. ](../../../relational-databases/security/encryption/media/encryption-hierarchy-stack.gif "Visualizza alcune combinazioni di crittografia in un diagramma in pila.")  
   
  Tenere presenti i concetti seguenti:  
   
@@ -52,7 +52,7 @@ ms.locfileid: "39545211"
   
  Le stesse informazioni vengono illustrate in modo diverso nella figura seguente.  
   
- ![Visualizza alcune combinazioni di crittografia in una ruota. ] (../../../relational-databases/security/encryption/media/encryption-hierarchy-wheel.gif "Visualizza alcune combinazioni di crittografia in una ruota.")  
+ ![Visualizza alcune combinazioni di crittografia in una ruota. ](../../../relational-databases/security/encryption/media/encryption-hierarchy-wheel.gif "Visualizza alcune combinazioni di crittografia in una ruota.")  
   
  In questo diagramma vengono illustrati i concetti aggiuntivi seguenti:  
   

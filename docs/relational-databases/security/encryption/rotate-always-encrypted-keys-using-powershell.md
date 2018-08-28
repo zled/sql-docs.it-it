@@ -14,13 +14,13 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bf032b05c962c1dc9788e890c59491ef81ea16da
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 330ba9c9f8703a31b2686327e6ed1b36d80be331
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538301"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43100084"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Ruotare le chiavi di Always Encrypted con PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Il metodo di rotazione di una chiave master della colonna descritta in questa se
 
 | Attività | Articolo | Accede alle chiavi di testo non crittografato o all'archivio chiavi| Accede al database
 |:---|:---|:---|:---
-|Passaggio 1. Creare una nuova chiave master della colonna in un archivio chiavi.<br><br>**Nota:** il modulo PowerShell SqlServer non supporta questo passaggio. Per eseguire questa operazione dalla riga di comando, è necessario usare gli strumenti specifici per l'archivio chiavi. | Creare e archiviare chiavi master della colonna (Always Encrypted)| Sì | no
+|Passaggio 1. Creare una nuova chiave master della colonna in un archivio chiavi.<br><br>**Nota:** il modulo PowerShell SqlServer non supporta questo passaggio. Per eseguire questa operazione dalla riga di comando, è necessario usare gli strumenti specifici per l'archivio chiavi. | [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Sì | no
 |Passaggio 2. Avviare un ambiente PowerShell e importare il modulo SqlServer | [Importare il modulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | no | no
 |Passaggio 3. Connettersi al server e al database. | [Connessione a un database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | no | Sì
 |Passaggio 4. Creare un oggetto SqlColumnMasterKeySettings che includa informazioni sul percorso della nuova chiave master della colonna. In PowerShell SqlColumnMasterKeySettings è un oggetto presente in memoria Per crearlo, è necessario usare il cmdlet specifico dell'archivio chiavi. |[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)<br> | no | no
