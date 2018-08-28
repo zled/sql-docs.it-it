@@ -18,16 +18,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74dc369cb88d644f02a6db142fbf3e320fe15e8a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fac8561bcc2fb119918937b00e91c48afc3749fa
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979853"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776618"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Guida sensibile al contesto delle finestre di dialogo Opzioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-In questa sezione è inclusa la Guida sensibile al contesto per le finestre di dialogo che vengono visualizzate quando si sceglie **Opzioni** dal menu **Strumenti** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+In questa sezione è inclusa la Guida sensibile al contesto per le finestre di dialogo che vengono visualizzate quando si sceglie **Opzioni** dal menu **Strumenti** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 [Opzioni &#40;finestre di progettazione - finestre di progettazione di Analysis Services - Generale&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

@@ -20,16 +20,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 106c73db70f12616f85920067863a25c529810a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d851d79c7fcfd79779395259ddb60c3154420273
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040508"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775490"
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>Nascondi oggetti di sistema in Esplora oggetti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-In questo argomento viene descritto come nascondere gli oggetti di sistema in Esplora oggetti in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Il nodo **Database** di Esplora oggetti contiene oggetti di sistema, ad esempio i database di sistema. Per nascondere gli oggetti di sistema, usare le pagine **Strumenti**/**Opzioni** . Questa impostazione non ha effetto su alcuni oggetti di sistema, quali funzioni di sistema e tipi di dati di sistema.  
+In questo argomento viene descritto come nascondere gli oggetti di sistema in Esplora oggetti in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Il nodo **Database** di Esplora oggetti contiene oggetti di sistema, ad esempio i database di sistema. Per nascondere gli oggetti di sistema, usare le pagine **Strumenti**/**Opzioni** . Questa impostazione non ha effetto su alcuni oggetti di sistema, quali funzioni di sistema e tipi di dati di sistema.  
   
 ## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
   

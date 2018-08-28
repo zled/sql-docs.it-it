@@ -13,12 +13,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 521fac21807393cfce0bffd7f2c6219c3a07359b
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ce07cf1898291221f0c33111468d3f8e7187ce6c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322452"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775098"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Esecuzione di passaggi di Windows PowerShell in SQL Server Agent
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ Sono disponibili molti tipi di passaggi del processo di [!INCLUDE[ssNoVersion](.
 ##  <a name="PShellJob"></a> Creare un passaggio del processo di PowerShell  
  **Per creare un passaggio del processo di PowerShell**  
   
-1.  Espandere **SQL Server Agent**, creare un nuovo processo oppure fare clic con il pulsante destro del mouse su un processo esistente e quindi scegliere **Proprietà**. Per ulteriori informazioni sulla creazione di un processo, vedere [Creazione di processi](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
+1.  Espandere **SQL Server Agent**, creare un nuovo processo oppure fare clic con il pulsante destro del mouse su un processo esistente e quindi scegliere **Proprietà**. Per ulteriori informazioni sulla creazione di un processo, vedere [Creazione di processi](../ssms/agent/create-jobs.md).  
   
 2.  Nella finestra di dialogo **Proprietà processo** fare clic sulla pagina **Passaggi** e quindi su **Nuovo**.  
   
@@ -64,7 +64,7 @@ Sono disponibili molti tipi di passaggi del processo di [!INCLUDE[ssNoVersion](.
 ##  <a name="CmdExecJob"></a> Creare un passaggio del processo del prompt dei comandi  
  **Per creare un passaggio del processo di CmdExec**  
   
-1.  Espandere **SQL Server Agent**, creare un nuovo processo oppure fare clic con il pulsante destro del mouse su un processo esistente e quindi scegliere **Proprietà**. Per ulteriori informazioni sulla creazione di un processo, vedere [Creazione di processi](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
+1.  Espandere **SQL Server Agent**, creare un nuovo processo oppure fare clic con il pulsante destro del mouse su un processo esistente e quindi scegliere **Proprietà**. Per ulteriori informazioni sulla creazione di un processo, vedere [Creazione di processi](../ssms/agent/create-jobs.md).  
   
 2.  Nella finestra di dialogo **Proprietà processo** fare clic sulla pagina **Passaggi** e quindi su **Nuovo**.  
   

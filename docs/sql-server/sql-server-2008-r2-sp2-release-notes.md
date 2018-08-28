@@ -16,12 +16,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: a6918f65a2330062165b8b39b4dd930187122867
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: d57f8ffc3d6fb9d1bd85bfa96f4ba431dd7fb114
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926252"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776506"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Nel presente documento sono descritti i problemi noti di cui è necessario esser
 ## <a name="20-before-you-install"></a>2.0 Prima di installare  
 Per informazioni sull'installazione degli aggiornamenti di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , vedere [SQL Server 2008 R2 Servicing Documentation](http://msdn.microsoft.com/library/dd638062(SQL.105).aspx)(Documentazione sui servizi SQL Server 2008 R2).  
   
-Per informazioni generali su come avviare e installare SQL Server 2008 R2, vedere il File Leggimi di SQL Server 2008 R2. Il file Leggimi è incluso nei supporti di installazione. Ulteriori informazioni sono disponibili nella [documentazione online di SQL Server](http://msdn.microsoft.com/library/ms130214.aspx) e nel [forum su SQL Server](http://social.msdn.microsoft.com/Forums/category/sqlserver/).  
+Per informazioni generali su come avviare e installare SQL Server 2008 R2, vedere il File Leggimi di SQL Server 2008 R2. Il file Leggimi è incluso nei supporti di installazione. Ulteriori informazioni sono disponibili nella [documentazione online di SQL Server](sql-server-technical-documentation.md) e nel [forum su SQL Server](http://social.msdn.microsoft.com/Forums/category/sqlserver/).  
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 Scegliere il file corretto da scaricare e installare  
 Fare riferimento alla tabella seguente per determinare il file da scaricare e installare. Verificare di disporre dei requisiti di sistema corretti prima di installare il Service Pack. I requisiti di sistema sono indicati nelle pagine di download di cui viene fornito il collegamento all'interno della tabella.  

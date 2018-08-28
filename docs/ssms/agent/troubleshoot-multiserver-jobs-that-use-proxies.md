@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 107b6f5fb2605a8c8091006abad976cceea24392
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5a08b1c5d3685a4d4193cc7f7b40b59af27ef878
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38029359"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774047"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>Risolvere i problemi relativi a processi multiserver che utilizzano proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ I processi distribuiti con passaggi associati a un proxy vengono eseguiti nel co
     Per risolvere il problema, verificare che nel server di destinazione sia disponibile un account proxy con lo stesso nome dell'account proxy del server master utilizzato per l'esecuzione del passaggio del processo.  
   
 > [!CAUTION]  
-> [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry_md.md)]  
+> [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [Creazione di un ambiente multiserver](../../ssms/agent/create-a-multiserver-environment.md)  

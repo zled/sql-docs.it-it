@@ -19,16 +19,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 96e5484ed59b0852f0099602b5a4e3ff359d1b6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95fd70beb5892cdffae5f2223deb1eace2ca8705
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042388"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776628"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>Rimozione o eliminazione di un elemento o di un progetto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Gli elementi nei progetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] sono query, connessioni e file esterni. È possibile rimuovere dalla soluzione query di progetto e file esterni senza cancellare i file dall'archivio. Rimuovere un progetto o un elemento quando non è utile nella soluzione corrente, ma si desidera includerlo in un'altra soluzione.  
+Gli elementi nei progetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono query, connessioni e file esterni. È possibile rimuovere dalla soluzione query di progetto e file esterni senza cancellare i file dall'archivio. Rimuovere un progetto o un elemento quando non è utile nella soluzione corrente, ma si desidera includerlo in un'altra soluzione.  
   
 ### <a name="to-remove-a-project-item"></a>Per rimuovere un elemento di progetto  
   
@@ -48,7 +48,7 @@ Un elemento rimosso rimane comunque nel file system. È pertanto possibile aggiu
   
 3.  Nella finestra di conferma fare clic su **OK**per rimuovere il progetto dalla soluzione.  
   
-È possibile eliminare un progetto in modo definitivo. In questo caso è necessario prima rimuovere dalle soluzioni di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] tutti i riferimenti al progetto e quindi utilizzare Esplora risorse di [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows per eliminare definitivamente i file associati dall'archivio.  
+È possibile eliminare un progetto in modo definitivo. In questo caso è necessario prima rimuovere dalle soluzioni di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tutti i riferimenti al progetto e quindi utilizzare Esplora risorse di [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows per eliminare definitivamente i file associati dall'archivio.  
   
 #### <a name="to-delete-a-project"></a>Per eliminare un progetto  
   

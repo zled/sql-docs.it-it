@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2ddf3e46378c8db62de8c2e04ba5674bf28c6ce2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 1d4233dae5b3ac669c50132a1589efe024009956
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980433"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42773997"
 ---
 # <a name="operators"></a>Operatori
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "38980433"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Gli operatori sono alias per persone o gruppi che possono ricevere notifiche elettroniche a completamento dei processi o quando vengono generati avvisi. Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent supporta il servizio di notifica degli amministratori tramite gli operatori. Gli operatori consentono di abilitare la notifica e le funzionalità di monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+Gli operatori sono alias per persone o gruppi che possono ricevere notifiche elettroniche a completamento dei processi o quando vengono generati avvisi. Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent supporta il servizio di notifica degli amministratori tramite gli operatori. Gli operatori consentono di abilitare la notifica e le funzionalità di monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="operator-attributes-and-concepts"></a>Attributi e concetti relativi agli operatori  
 Gli attributi principali di un operatore sono i seguenti:  
@@ -52,13 +52,13 @@ Gli attributi principali di un operatore sono i seguenti:
 -   Informazioni sul contatto  
   
 ### <a name="naming-an-operator"></a>Denominazione di un operatore  
-A ogni operatore deve essere assegnato un nome. I nomi degli operatori devono essere univoci nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e non possono essere formati da più di **128** caratteri.  
+A ogni operatore deve essere assegnato un nome. I nomi degli operatori devono essere univoci nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non possono essere formati da più di **128** caratteri.  
   
 ### <a name="contact-information"></a>Informazioni sul contatto  
 Le informazioni sul contatto di un operatore definiscono la modalità di trasmissione delle notifiche all'operatore. Gli operatori possono ricevere notifiche tramite posta elettronica o cercapersone oppure tramite il comando **Net Send** :  
   
 > [!IMPORTANT]  
-> Le opzioni Cercapersone e **net send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
+> Le opzioni Cercapersone e **net send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
   
 -   **Notifica tramite posta elettronica**  
   
@@ -80,7 +80,7 @@ Le informazioni sul contatto di un operatore definiscono la modalità di trasmis
   
         Il prodotto software è di proprietà del provider del servizio cercapersone. Il software funziona come client di posta elettronica che elabora periodicamente la posta in arrivo, interpretando una parte dell'indirizzo del messaggio di posta o l'intero indirizzo come numero di cercapersone oppure trovando la corrispondenza tra l'indirizzo di posta elettronica e un numero di cercapersone in una tabella di conversione.  
   
-        Se tutti gli operatori utilizzano lo stesso provider di cercapersone, è possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] per specificare l'eventuale formattazione speciale richiesta dal sistema di comunicazione tra il cercapersone e la posta elettronica. La formattazione speciale può essere costituita da un prefisso o da un suffisso e inserita nelle righe seguenti del messaggio di posta elettronica:  
+        Se tutti gli operatori utilizzano lo stesso provider di cercapersone, è possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per specificare l'eventuale formattazione speciale richiesta dal sistema di comunicazione tra il cercapersone e la posta elettronica. La formattazione speciale può essere costituita da un prefisso o da un suffisso e inserita nelle righe seguenti del messaggio di posta elettronica:  
   
         **Subject:**  
   
@@ -96,7 +96,7 @@ Le informazioni sul contatto di un operatore definiscono la modalità di trasmis
     Questa modalità prevede l'invio all'operatore di un messaggio tramite il comando **Net Send** . Per la notifica tramite comando **Net Send**, è necessario specificare il destinatario, costituito da un computer o un utente, di un messaggio di rete.  
   
     > [!NOTE]  
-    > Il comando **Net Send** prevede l'uso di Microsoft Windows Messenger. Per consentire il corretto invio degli avvisi, il servizio deve essere in esecuzione sia nel computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] che in quello utilizzato dall'operatore.  
+    > Il comando **Net Send** prevede l'uso di Microsoft Windows Messenger. Per consentire il corretto invio degli avvisi, il servizio deve essere in esecuzione sia nel computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che in quello utilizzato dall'operatore.  
   
 ## <a name="alerting-and-fail-safe-operators"></a>Invio di notifiche degli avvisi agli operatori e operatori alternativi  
 È possibile selezionare gli operatori che dovranno ricevere le notifiche in risposta a un avviso. Si possono ad esempio assegnare a rotazione le responsabilità degli operatori tramite la pianificazione degli avvisi. Ad esempio, la persona A riceverà notifiche degli avvisi generati lunedì, mercoledì o venerdì, mentre la persona B riceverà notifiche degli avvisi generati martedì, giovedì e sabato.  
@@ -109,7 +109,7 @@ L'operatore alternativo riceve una notifica nei casi seguenti:
   
     L'impossibilità di raggiungere tali operatori potrebbe essere dovuta a un errore negli indirizzi dei cercapersone o al fatto che gli operatori non sono in servizio.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent non è in grado di accedere alle tabelle di sistema nel database **msdb** .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non è in grado di accedere alle tabelle di sistema nel database **msdb** .  
   
     La tabella di sistema **sysnotifications** specifica le responsabilità degli operatori per i vari tipi di avvisi.  
   
@@ -133,5 +133,5 @@ Per inviare una notifica a un operatore, è necessario configurare una o più im
 |Attività correlate all'assegnazione di avvisi|[Assegnazione di avvisi a un operatore](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Definizione della risposta a un avviso &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Assegnazione di avvisi a un operatore](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Posta elettronica database](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[Posta elettronica database](../../relational-databases/database-mail/database-mail.md)  
   

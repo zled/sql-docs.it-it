@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ac0e1dee00d57400f24a17932bddb8e6183e11b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71f2c1bce85c86a19a12fa1c00f2643d7aa2f6f4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046208"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776622"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Utilizzo di report personalizzati con proprietà dei nodi di Esplora oggetti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ Per eseguire l'esempio, attenersi alla procedura seguente:
   
 2.  Copiare il file di report in una cartella creata nel server di database per i report personalizzati.  
   
-3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]fare clic con il pulsante destro del mouse su un nodo Esplora oggetti, scegliere **Report**e quindi fare clic su Report personalizzati. Nella finestra di dialogo **Apri file** individuare la cartella dei report personalizzati, selezionare il file di report e quindi fare clic su **Apri**.  
+3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un nodo Esplora oggetti, scegliere **Report**e quindi fare clic su Report personalizzati. Nella finestra di dialogo **Apri file** individuare la cartella dei report personalizzati, selezionare il file di report e quindi fare clic su **Apri**.  
   
     Alla prima apertura di un nuovo report personalizzato da un nodo Esplora oggetti, tale report verrà aggiunto all'elenco degli ultimi elementi usati in **Report personalizzati** nel menu di scelta rapida del nodo. Analogamente, alla prima apertura, anche un report standard verrà aggiunto all'elenco degli ultimi elementi usati in **Report personalizzati**. Se viene eliminato un file di un report personalizzato, alla successiva selezione dell'elemento verrà visualizzato un messaggio che chiederà di eliminare la relativa voce dall'elenco degli ultimi elementi utilizzati.  
   

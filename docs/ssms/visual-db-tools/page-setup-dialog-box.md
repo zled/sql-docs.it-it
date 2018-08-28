@@ -17,12 +17,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0099048b3de1461971e115ea3cfff0d1ff9d95e6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7cc4329825ce9374cb7dae6bdd8b8823a913b2f4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999663"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775054"
 ---
 # <a name="page-setup-dialog-box"></a>Finestra di dialogo Imposta pagina
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "37999663"
 Selezionare una dimensione dall'elenco.  
   
 **Origine**  
-Specifica la carta da utilizzare. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] elenca le origini disponibili per la stampante selezionata.  
+Specifica la carta da utilizzare. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] elenca le origini disponibili per la stampante selezionata.  
   
 ## <a name="orientation"></a>Orientamento  
 **Verticale**  

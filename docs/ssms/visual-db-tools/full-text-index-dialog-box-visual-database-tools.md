@@ -17,22 +17,22 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ddafa3150bff469209eff2f8166da0b831787506
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 52ba9962b6192ce6ba6a403d35e3ff9559786c1f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984263"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42773949"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Finestra di dialogo Indice full-text (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Questa finestra di dialogo consente di creare un indice full-text per eseguire ricerche full-text nelle colonne basate su testo delle tabelle di database. Poiché un indice di questo tipo si basa su un indice normale, è necessario innanzitutto creare tale indice. L'indice normale deve essere creato utilizzando una sola colonna non Null, preferibilmente con valori non particolarmente elevati.  
   
 > [!NOTE]  
-> Per creare un indice full-text, è innanzitutto necessario creare un catalogo full-text per il database utilizzando uno strumento esterno quale [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o Enterprise Manager.  
+> Per creare un indice full-text, è innanzitutto necessario creare un catalogo full-text per il database utilizzando uno strumento esterno quale [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Enterprise Manager.  
   
 > [!NOTE]  
-> La funzionalità degli indici full-text non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4).  
+> La funzionalità degli indici full-text non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4).  
   
 ## <a name="options"></a>Opzioni  
 **Indice full-text selezionato**  
@@ -54,7 +54,7 @@ Visualizza un elenco separato da virgole con i nomi delle colonne in cui è poss
 Visualizza il nome del catalogo full-text in cui è archiviato l'indice full-text. Per archiviare l'indice in un catalogo diverso, fare clic sul nome del catalogo e selezionarne un altro dall'elenco a discesa.  
   
 > [!NOTE]  
-> Il catalogo deve essere già stato creato con uno strumento esterno, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o Enterprise Manager.  
+> Il catalogo deve essere già stato creato con uno strumento esterno, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Enterprise Manager.  
   
 **Categoria Identità**  
 Se viene espansa, visualizza il campo del nome dell'indice.  

@@ -18,26 +18,26 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68f0894a8b02d730d71684dcfb5e5a3e2861c7ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 761d807f6b2490cdd456d03f935d2293a5a7cbb3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040358"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774285"
 ---
 # <a name="general-user-interface-elements"></a>Elementi generali dell'interfaccia utente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-L' **Editor**, la finestra **Proprietà** e la **Casella degli strumenti** sono alcuni degli elementi base di [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
+L' **Editor**, la finestra **Proprietà** e la **Casella degli strumenti** sono alcuni degli elementi base di [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 [Finestra di dialogo Informazioni su](../ssms/about-dialog-box.md)  
-Viene descritta la finestra di dialogo in cui sono riportate informazioni su [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] e sul computer in cui il prodotto è in esecuzione.  
+Viene descritta la finestra di dialogo in cui sono riportate informazioni su [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e sul computer in cui il prodotto è in esecuzione.  
   
 [Browser di SQL Server Management Studio](../ssms/sql-server-management-studio-web-browser.md)  
-Viene descritto come in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] sia possibile eseguire un browser in una finestra del documento.  
+Viene descritto come in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sia possibile eseguire un browser in una finestra del documento.  
   
 [Finestra di dialogo Strumenti esterni](../ssms/external-tools-dialog-box.md)  
-Consente di aggiungere al menu **Strumenti** voci relative a strumenti che non fanno parte di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
+Consente di aggiungere al menu **Strumenti** voci relative a strumenti che non fanno parte di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 [Finestra Proprietà &#40;Management Studio&#41;](../ssms/properties-window-management-studio.md)  
 Consente di visualizzare le proprietà e gli eventi degli oggetti selezionati che si trovano negli editor e nelle finestre di progettazione. Consente inoltre di modificare e visualizzare le proprietà di file, progetti e soluzioni. Alcune proprietà possono essere modificate nella finestra Proprietà.  

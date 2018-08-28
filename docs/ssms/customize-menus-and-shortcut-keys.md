@@ -25,12 +25,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4152bca5efcafb59de4f08c299b4ff3c9a66b9d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6bcca6b82d28f350571105826131c0fd99152a12
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045868"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775591"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizzare i menu e i tasti di scelta rapida
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,7 +164,7 @@ Un tasto di scelta rapida consente di scegliere un comando di menu o un pulsante
 6.  Nella finestra di dialogo **Personalizza** fare clic su **Chiudi**.  
   
 > [!NOTE]  
-> Alcuni comandi sono disponibili solo quando in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] viene visualizzato contenuto rilevante. Se nel menu non è disponibile alcun comando, la voce di menu non sarà disponibile.  
+> Alcuni comandi sono disponibili solo quando in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] viene visualizzato contenuto rilevante. Se nel menu non è disponibile alcun comando, la voce di menu non sarà disponibile.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Caratteristiche in SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  

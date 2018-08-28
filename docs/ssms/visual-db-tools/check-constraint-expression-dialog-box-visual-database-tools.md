@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26112fd5fa3052e6aa5f873a436aafce7430d498
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76ca616057ba53fa60fb9d53bd7ff79ff2598864
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047308"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775401"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Finestra di dialogo Espressione vincolo CHECK (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ Nella scheda Vincoli CHECK delle pagine delle proprietà, digitare un'espression
   
 La sintassi SQL è costituita dai parametri seguenti:  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |-------------|---------------|  
 |constant|Valore letterale, ad esempio dati numerici o caratteri. I caratteri devono essere racchiusi tra virgolette semplici (')|  
 |column_name|Specifica una colonna.|  
@@ -71,6 +71,6 @@ La sintassi SQL è costituita dai parametri seguenti:
 |NOT|Nega qualsiasi espressione booleana (che può includere parole chiave come LIKE, NULL, BETWEEN, IN ed EXISTS).<br /><br />Quando in un'istruzione sono utilizzati più operatori logici, NOT viene elaborato per primo. È tuttavia possibile modificare l'ordine di esecuzione tramite l'utilizzo delle parentesi.|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Vincoli UNIQUE e CHECK](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
-[Creare vincoli univoci](http://msdn.microsoft.com/en-us/a86f9d6f-f242-43be-b65d-b3435b71b62a)  
+[Vincoli UNIQUE e CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
+[Creare vincoli UNIQUE](../../relational-databases/tables/create-unique-constraints.md)  
   

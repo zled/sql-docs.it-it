@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00757208c128ef00ea58c5139b6edc8461621307
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 977188f99e56c67afca657fd881555c896c6ae03
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988643"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42773951"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici XML (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,5 +94,5 @@ Consente di calcolare nuove statistiche quando viene creato l'indice. Il ricalco
 Specifica se per l'indice è consentito il blocco a livello delle righe. L'attivazione o la disattivazione di tale blocco incide sulle prestazioni del database.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creazione di indici XML](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
+[Creazione di indici XML](../../relational-databases/xml/create-xml-indexes.md)  
   

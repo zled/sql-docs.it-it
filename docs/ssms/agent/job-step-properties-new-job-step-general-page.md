@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d284bd4cd7dc81ebf1e5915854613b41680033b6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3a9b661c2f4529ed3e6731dc5c38d05953ec43f6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031001"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776279"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Proprietà passaggio processo - Nuovo passaggio di processo (pagina Generale)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "38031001"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Usare questa pagina per visualizzare e modificare le proprietà di un passaggio di processo di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o per definirne uno nuovo.  
+Usare questa pagina per visualizzare e modificare le proprietà di un passaggio di processo di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o per definirne uno nuovo.  
   
-Per passare a questa pagina, in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] espandere [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, fare clic con il pulsante destro del mouse su **Processi**, scegliere **Nuovo processo**, selezionare la pagina **Passaggi** e scegliere **Nuovo**. È anche possibile passare a questa pagina facendo clic con il pulsante destro del mouse su un processo in Esplora oggetti, scegliendo **Proprietà**, selezionando la pagina **Passaggi** e scegliendo **Nuovo**, **Inserisci**o **Modifica**.  
+Per passare a questa pagina, in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] espandere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, fare clic con il pulsante destro del mouse su **Processi**, scegliere **Nuovo processo**, selezionare la pagina **Passaggi** e scegliere **Nuovo**. È anche possibile passare a questa pagina facendo clic con il pulsante destro del mouse su un processo in Esplora oggetti, scegliendo **Proprietà**, selezionando la pagina **Passaggi** e scegliendo **Nuovo**, **Inserisci**o **Modifica**.  
   
 ## <a name="options"></a>Opzioni  
 **Nome passaggio**  
@@ -70,7 +70,7 @@ Consente di verificare la sintassi del comando.
 ## <a name="options-for-activex-script-job-steps"></a>Opzioni per i passaggi del processo Script ActiveX  
   
 > [!IMPORTANT]  
-> Il sottosistema di scripting ActiveX verrà rimosso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.  
+> Il sottosistema di scripting ActiveX verrà rimosso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.  
   
 **VBScript**  
 Consente di specificare [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Basic Scripting Edition come linguaggio per i passaggi del processo.  
@@ -213,7 +213,7 @@ Consente di incollare il contenuto degli Appunti.
 ## <a name="options-for-integration-services-package-execution-job-steps"></a>Opzioni per i passaggi del processo di esecuzione del pacchetto Integration Services  
   
 ### <a name="general-tab"></a>Scheda Generale  
-Consente di specificare la posizione del pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) e il metodo di autenticazione da utilizzare. In questa scheda sono disponibili le opzioni seguenti.  
+Consente di specificare la posizione del pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) e il metodo di autenticazione da utilizzare. In questa scheda sono disponibili le opzioni seguenti.  
   
 **Origine pacchetto**  
 Consente di specificare la posizione in cui è archiviato il pacchetto [!INCLUDE[ssIS](../../includes/ssis_md.md)] . Selezionare una delle opzioni seguenti:  
@@ -228,19 +228,19 @@ Consente di specificare la posizione in cui è archiviato il pacchetto [!INCLUDE
 Consente di digitare il nome del server in cui è archiviato il pacchetto [!INCLUDE[ssIS](../../includes/ssis_md.md)] . Questa opzione è disponibile solo se è impostato **SQL Server** o **Archivio pacchetti SSIS** come **Origine pacchetto**.  
   
 **Usa autenticazione di Windows**  
-Consente di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilizzando l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows.  
+Consente di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows.  
   
 **Usa autenticazione di SQL Server**  
-Consente di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Se si seleziona questo metodo di autenticazione, immettere il **Nome utente** e la **Password corretti**.  
+Consente di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si seleziona questo metodo di autenticazione, immettere il **Nome utente** e la **Password corretti**.  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] L'autenticazione è disponibile per garantire la compatibilità con le versioni precedenti. Per un livello di sicurezza migliore, utilizzare l'autenticazione di Windows, se possibile.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L'autenticazione è disponibile per garantire la compatibilità con le versioni precedenti. Per un livello di sicurezza migliore, utilizzare l'autenticazione di Windows, se possibile.  
   
 **Pacchetto**  
 Consente di digitare la posizione del pacchetto.  
   
 > [!IMPORTANT]  
-> Per pacchetti [!INCLUDE[ssIS](../../includes/ssis_md.md)] protetti da password, fare clic sulla scheda **Configurazioni** e immettere la password nella finestra di dialogo **Password pacchetto** . In caso contrario, il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in cui viene eseguito il pacchetto protetto da password avrà esito negativo.  
+> Per pacchetti [!INCLUDE[ssIS](../../includes/ssis_md.md)] protetti da password, fare clic sulla scheda **Configurazioni** e immettere la password nella finestra di dialogo **Password pacchetto** . In caso contrario, il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in cui viene eseguito il pacchetto protetto da password avrà esito negativo.  
   
 ### <a name="configurations-tab"></a>Scheda Configurazioni  
 Consente di specificare le opzioni di configurazione per il pacchetto [!INCLUDE[ssIS](../../includes/ssis_md.md)] . In questa scheda sono disponibili le opzioni seguenti.  
@@ -379,6 +379,6 @@ Consente di digitare le opzioni della riga di comando da utilizzare per il pacch
   
 ## <a name="see-also"></a>Vedere anche  
 [Gestire passaggi di processo](../../ssms/agent/manage-job-steps.md)  
-[Processi di SQL Server Agent per i pacchetti](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
-[Amministrazione degli agenti di replica](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  
+[Processi di SQL Server Agent per i pacchetti](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
+[Amministrazione degli agenti di replica](../../relational-databases/replication/agents/replication-agent-administration.md)  
   

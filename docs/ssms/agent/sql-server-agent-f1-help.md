@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 112e8ab2626fdabba3ce3b5fdc6ed913b61b8cab
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 817f3675676f4f3c7ba7993840239dc061b5831b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975131"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774785"
 ---
 # <a name="sql-server-agent-f1-help"></a>Guida sensibile al contesto di SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,5 +29,5 @@ ms.locfileid: "37975131"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In questa sezione è inclusa la Guida sensibile al contesto relativa a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Per accedere a questi argomenti dall'interfaccia utente, premere F1 o fare clic su ? nelle finestre di dialogo.  
+In questa sezione è inclusa la Guida sensibile al contesto relativa a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per accedere a questi argomenti dall'interfaccia utente, premere F1 o fare clic su ? nelle finestre di dialogo.  
   

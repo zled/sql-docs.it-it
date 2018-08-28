@@ -20,12 +20,12 @@ caps.latest.revision: 77
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0890c77c50af48ce34cdcb21cf7784ae69616a52
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 89eb39275b25147ca062c7b4e05ac3f4fae78967
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772037"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774001"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Creare un nuovo cluster di failover di SQL Server (programma di installazione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ ms.locfileid: "34772037"
   
 10. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il programma di installazione esegue uno o più set di regole basati sulle funzionalità selezionate per convalidare la configurazione.  
   
-11. Nella pagina Configurazione dell'istanza specificare se installare un'istanza predefinita o denominata. Per ulteriori informazioni, vedere [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).  
+11. Nella pagina Configurazione dell'istanza specificare se installare un'istanza predefinita o denominata. Per ulteriori informazioni, vedere [Instance Configuration](../../install/instance-configuration.md).  
   
      **Nome di rete di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**: specificare un nome di rete per il nuovo cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si tratta del nome utilizzato per identificare il cluster di failover nella rete.  
   

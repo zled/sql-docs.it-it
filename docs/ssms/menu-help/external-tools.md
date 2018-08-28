@@ -19,16 +19,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abb8d0838d7945324d9fcd7cc6b03069cef5a5c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cef05798c4df7415da957b0307c4d9e7b1c8086
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043458"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776615"
 ---
 # <a name="external-tools"></a>Strumenti esterni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Usare questa finestra di dialogo per aggiungere strumenti esterni, ad esempio Gestione configurazione SQL Server o Blocco note, al menu **Strumenti** . Aggiungendo strumenti esterni, sarà più semplice avviare altre applicazioni quando si utilizza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Durante l'avvio dello strumento, è possibile specificare argomenti e una directory di lavoro. Gli output generati da alcuni strumenti verranno inoltre visualizzati nella finestra di output. La finestra di dialogo **Strumenti esterni** è accessibile dal menu **Strumenti** .  
+Usare questa finestra di dialogo per aggiungere strumenti esterni, ad esempio Gestione configurazione SQL Server o Blocco note, al menu **Strumenti** . Aggiungendo strumenti esterni, sarà più semplice avviare altre applicazioni quando si utilizza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Durante l'avvio dello strumento, è possibile specificare argomenti e una directory di lavoro. Gli output generati da alcuni strumenti verranno inoltre visualizzati nella finestra di output. La finestra di dialogo **Strumenti esterni** è accessibile dal menu **Strumenti** .  
   
 ## <a name="options"></a>Opzioni  
 **Contenuto menu**  
@@ -83,5 +83,5 @@ Chiude la finestra aperta dallo strumento quando viene chiuso lo strumento stess
 4.  Nella casella **Argomenti** digitare il percorso del file con estensione msc, ad esempio **"C:\WINNT\system32\SQLServerManager.msc"**  
   
 > [!NOTE]  
-> Visualizzare le proprietà del collegamento [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] nel menu **Avvio** per verificare il percorso dei file nel computer.  
+> Visualizzare le proprietà del collegamento [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nel menu **Avvio** per verificare il percorso dei file nel computer.  
   

@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e972f506f9b805d0cca28e0dfe3340e2ee28cd57
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2c8c8340bf5501b1bdf33137be16a03044775d6e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979713"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776278"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Creazione e collegamento di pianificazioni ai processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "38979713"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-La pianificazione dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent comporta la definizione della condizione o delle condizioni che provocano l'inizio dell'esecuzione del processo senza interazione dell'utente. È possibile pianificare l'esecuzione automatica di un processo creando una nuova pianificazione per il processo o collegando una pianificazione esistente al processo.  
+La pianificazione dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent comporta la definizione della condizione o delle condizioni che provocano l'inizio dell'esecuzione del processo senza interazione dell'utente. È possibile pianificare l'esecuzione automatica di un processo creando una nuova pianificazione per il processo o collegando una pianificazione esistente al processo.  
   
 È possibile creare una pianificazione in due modi:  
   
@@ -49,7 +49,7 @@ Dopo la creazione, la pianificazione può essere collegata a più processi anche
   
 Una pianificazione può essere basata sul tempo o su un evento. Ad esempio, è possibile pianificare l'esecuzione di un processo nei momenti seguenti:  
   
--   All'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+-   All'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Quando l'utilizzo della CPU del computer corrisponde al livello di inattività.  
   
@@ -60,7 +60,7 @@ Una pianificazione può essere basata sul tempo o su un evento. Ad esempio, è p
 In alternativa alle pianificazioni di processi, è possibile creare un avviso che risponda a un evento tramite l'esecuzione di un processo.  
   
 > [!NOTE]  
-> È possibile eseguire una sola istanza del processo alla volta. Se si tenta di eseguire manualmente un processo mentre questo viene eseguito in base alla pianificazione, la richiesta di esecuzione verrà rifiutata da Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+> È possibile eseguire una sola istanza del processo alla volta. Se si tenta di eseguire manualmente un processo mentre questo viene eseguito in base alla pianificazione, la richiesta di esecuzione verrà rifiutata da Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Per impedire l'esecuzione di un processo pianificato, è necessario eseguire una delle operazioni seguenti:  
   
@@ -70,7 +70,7 @@ Per impedire l'esecuzione di un processo pianificato, è necessario eseguire una
   
 -   Scollegare la pianificazione dal processo.  
   
--   Arrestare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+-   Arrestare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Eliminare la pianificazione.  
   
@@ -86,22 +86,22 @@ Quando si collega una pianificazione a un processo, è necessario controllare la
 È possibile modificare la data di inizio della pianificazione dopo avere collegato la pianificazione a un processo.  
   
 ## <a name="cpu-idle-schedules"></a>Pianificazioni con CPU inattiva  
-Per ottimizzare l'utilizzo della CPU, è possibile definire una condizione di inattività della CPU per Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Tale impostazione consente all'agente di eseguire i processi nei momenti di minor carico di lavoro della CPU. Ad esempio è possibile pianificare un processo di ricompilazione degli indici quando la CPU è in stato inattivo o durante i periodi di produzione ridotta.  
+Per ottimizzare l'utilizzo della CPU, è possibile definire una condizione di inattività della CPU per Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tale impostazione consente all'agente di eseguire i processi nei momenti di minor carico di lavoro della CPU. Ad esempio è possibile pianificare un processo di ricompilazione degli indici quando la CPU è in stato inattivo o durante i periodi di produzione ridotta.  
   
-Prima di definire i processi da eseguire durante l'inattività della CPU, è necessario determinare il carico di lavoro della CPU durante l'elaborazione normale. A tale scopo, utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] o Performance Monitor per monitorare il traffico nel server e raccogliere statistiche. Le informazioni raccolte saranno utili per la definizione di una percentuale di utilizzo corrispondente allo stato di inattività della CPU e della durata di tale stato.  
+Prima di definire i processi da eseguire durante l'inattività della CPU, è necessario determinare il carico di lavoro della CPU durante l'elaborazione normale. A tale scopo, utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o Performance Monitor per monitorare il traffico nel server e raccogliere statistiche. Le informazioni raccolte saranno utili per la definizione di una percentuale di utilizzo corrispondente allo stato di inattività della CPU e della durata di tale stato.  
   
-Definire la condizione di inattività come valore percentuale. L'utilizzo della CPU dovrà rimanere inferiore a tale valore per un periodo di tempo specificato. Definire quindi il periodo di tempo. Quando l'utilizzo della CPU è inferiore alla percentuale specificata per il periodo di tempo specificato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent avvia tutti i processi pianificati per l'esecuzione con CPU inattiva. Per ulteriori informazioni sull'uso di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] o di Performance Monitor per monitorare l'utilizzo della CPU, vedere [Monitoraggio dell'utilizzo della CPU](http://msdn.microsoft.com/2a02a3b6-07b2-4ad0-8a24-670414d19812).  
+Definire la condizione di inattività come valore percentuale. L'utilizzo della CPU dovrà rimanere inferiore a tale valore per un periodo di tempo specificato. Definire quindi il periodo di tempo. Quando l'utilizzo della CPU è inferiore alla percentuale specificata per il periodo di tempo specificato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent avvia tutti i processi pianificati per l'esecuzione con CPU inattiva. Per ulteriori informazioni sull'uso di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o di Performance Monitor per monitorare l'utilizzo della CPU, vedere [Monitoraggio dell'utilizzo della CPU](../../relational-databases/performance-monitor/monitor-cpu-usage.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
 |||  
 |-|-|  
 |**Descrizione**|**Argomento**|  
-|Viene descritto come creare una pianificazione per un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
-|Viene descritto come pianificare un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Pianificare un processo](../../ssms/agent/schedule-a-job.md)|  
+|Viene descritto come creare una pianificazione per un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
+|Viene descritto come pianificare un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Pianificare un processo](../../ssms/agent/schedule-a-job.md)|  
 |Viene illustrato come definire la condizione di inattività della CPU per il server.|[Impostare tempo e durata di inattività della CPU &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
-[sp_help_jobschedule](http://msdn.microsoft.com/2cded902-9272-4667-ac4b-a4f95a9f008e)  
-[sysjobschedules](http://msdn.microsoft.com/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
+[sp_help_jobschedule](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)  
+[sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   

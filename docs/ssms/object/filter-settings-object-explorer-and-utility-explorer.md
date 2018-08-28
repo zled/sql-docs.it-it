@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb8e11f7d9b63e321b547595b10381f693f08cd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5609fc2e347665246bb42b66d446d7e83868a399
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043138"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776277"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Impostazioni filtro (Esplora oggetti ed Esplora utilità)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,5 +80,5 @@ Consente di eliminare tutte le impostazioni correnti del filtro.
   
 ## <a name="see-also"></a>Vedere anche  
 [Utilizzo di SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
-[Panoramica dell'Utilità SQL Server](http://msdn.microsoft.com/en-us/6e6cbd25-6b1c-4e21-9ade-4584e243fd8f)  
+[Panoramica dell'Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   

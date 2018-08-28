@@ -17,18 +17,18 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef9e1bc117338fe66816b32634c188730caf4244
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fd0d50155ff76ef5860913e071fc35350fb71f88
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981873"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774953"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici spaziali (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 La finestra di dialogo **Indici spaziali** consente di creare indici per le colonne con tipo di dati **geometria** o **geografia** (*colonne spaziali*), che non possono essere indicizzate con la finestra di dialogo **Indici/chiavi** . Ogni colonna spaziale può avere più indici spaziali, ma gli indici devono essere creati uno alla volta.  
   
-Per informazioni sulle restrizioni alla creazione di indici spaziali, vedere [Panoramica degli indici spaziali](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293).  
+Per informazioni sulle restrizioni alla creazione di indici spaziali, vedere [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
 ## <a name="options"></a>Opzioni  
 **Indice spaziale selezionato**  
@@ -122,5 +122,5 @@ Consente di specificare se calcolare nuove statistiche quando viene creato l'ind
 Consente di specificare se per l'indice è consentito il blocco a livello di riga. L'attivazione o la disattivazione di tale blocco incide sulle prestazioni del database.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Panoramica degli indici spaziali](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293)  
+[Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md)  
   

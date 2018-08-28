@@ -20,22 +20,22 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a62181c9305c353205fbc165e9e6109a7116af5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3788627dbb101ff113f24df1c78493762df25f58
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984863"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775516"
 ---
 # <a name="miscellaneous-files"></a>file esterni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-I file al di fuori di un progetto vengono identificati come *file esterni*. Quando una soluzione è aperta è possibile aprire e modificare i file esterni correlati al progetto. Un file viene classificato come esterno se la sua estensione non è associata all'editor del codice del progetto. In un progetto script [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , ad esempio, i file con estensione txt o mdx verranno trattati come file esterni. In un progetto MDX i file con estensione txt o sql verranno trattati come file esterni. Per associare un'estensione di file con un editor di codice, vedere [Procedura: Associazione di estensioni di file a un editor di codice](http://msdn.microsoft.com/193630f4-93de-4950-8f36-68702531f925).  
+I file al di fuori di un progetto vengono identificati come *file esterni*. Quando una soluzione è aperta è possibile aprire e modificare i file esterni correlati al progetto. Un file viene classificato come esterno se la sua estensione non è associata all'editor del codice del progetto. In un progetto script [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio, i file con estensione txt o mdx verranno trattati come file esterni. In un progetto MDX i file con estensione txt o sql verranno trattati come file esterni. Per associare un'estensione di file con un editor di codice, vedere [Procedura: Associazione di estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
   
 La possibilità di aggiungere file esterni al progetto è utile per diverse ragioni. Un file potrebbe non essere necessariamente uno script riconosciuto e tuttavia essere parte integrante dello sviluppo della soluzione. Note o istruzioni di sviluppo, file di dati e segmenti di codice sono esempi comuni di tali file.  
   
-I file esterni assicurano flessibilità. Si supponga, ad esempio, di avere un progetto script [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] che dispone di numerosi script per la creazione di tabelle e stored procedure nel database e di avere inoltre diversi file di dati per le tabelle con estensione BCP e le istruzioni di esecuzione in un file LEGGIMI.TXT. È possibile associare i file di dati e LEGGIMI come file esterni al progetto per sfruttare il controllo del codice sorgente e altre caratteristiche del sistema del progetto.  
+I file esterni assicurano flessibilità. Si supponga, ad esempio, di avere un progetto script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che dispone di numerosi script per la creazione di tabelle e stored procedure nel database e di avere inoltre diversi file di dati per le tabelle con estensione BCP e le istruzioni di esecuzione in un file LEGGIMI.TXT. È possibile associare i file di dati e LEGGIMI come file esterni al progetto per sfruttare il controllo del codice sorgente e altre caratteristiche del sistema del progetto.  
   
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] I menu e le barre degli strumenti cambiano in base al formato del file aperto. Quando si apre un file di testo, ad esempio, viene visualizzata la barra degli strumenti Editor di testo. Se si apre un file di XML Schema, viene visualizzata la barra degli strumenti XML Schema. Durante la modifica di XML Schema la barra degli strumenti Editor di testo non è disponibile. Quando si passa da un file di progetto a un file esterno e viceversa, tutte le barre degli strumenti e i comandi correlati al progetto vengono sostituiti con quelli appropriati per il file esterno.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] I menu e le barre degli strumenti cambiano in base al formato del file aperto. Quando si apre un file di testo, ad esempio, viene visualizzata la barra degli strumenti Editor di testo. Se si apre un file di XML Schema, viene visualizzata la barra degli strumenti XML Schema. Durante la modifica di XML Schema la barra degli strumenti Editor di testo non è disponibile. Quando si passa da un file di progetto a un file esterno e viceversa, tutte le barre degli strumenti e i comandi correlati al progetto vengono sostituiti con quelli appropriati per il file esterno.  
   
 ## <a name="see-also"></a>Vedere anche  
 [File per la gestione di soluzioni e progetti](../../ssms/solution/files-that-manage-solutions-and-projects.md)  

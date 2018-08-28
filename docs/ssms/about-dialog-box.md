@@ -18,20 +18,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba51c2cba1f2032fe6c55fc27dac7c3f5416cb8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef2fe44791cc401c5f71ee3c3bd6ff09d33d45b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33038778"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774459"
 ---
 # <a name="about-dialog-box"></a>Finestra di dialogo Informazioni su
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
-La finestra di dialogo **Informazioni su** visualizza informazioni sul prodotto e consente di visualizzare informazioni sul computer in cui il prodotto è in esecuzione. Per le copie di valutazione, in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] è riportato il numero di giorni che rimangono fino alla scadenza dell'installazione. Questa finestra di dialogo è accessibile dal menu **?** .  
+La finestra di dialogo **Informazioni su** visualizza informazioni sul prodotto e consente di visualizzare informazioni sul computer in cui il prodotto è in esecuzione. Per le copie di valutazione, in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è riportato il numero di giorni che rimangono fino alla scadenza dell'installazione. Questa finestra di dialogo è accessibile dal menu **?** .  
   
 ## <a name="options"></a>Opzioni  
 **Nome componente**  
-Elenca il nome di ogni elemento [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] installato.  
+Elenca il nome di ogni elemento [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installato.  
   
 **Version**  
 Elenca la versione di ogni componente installato.  

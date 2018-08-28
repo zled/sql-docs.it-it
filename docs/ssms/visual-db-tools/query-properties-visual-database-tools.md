@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecdcf360a7aad1b9468367cc706849d4da2f90c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3d3c8c92a78dd0548c115b9bdfa3baed3a396df
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053598"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775396"
 ---
 # <a name="query-properties-visual-database-tools"></a>Proprietà delle query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ Queste proprietà vengono visualizzate nella finestra Proprietà quando in Proge
 Viene espansa per visualizzare la proprietà **Nome** .  
   
 **Nome**  
-Visualizza il nome della query corrente. Non è possibile modificarlo in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Visualizza il nome della query corrente. Non è possibile modificarlo in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 **Database Name**  
 Visualizza il nome dell'origine dati della tabella selezionata  
@@ -60,7 +60,7 @@ Per una query di creazione tabella (MAKE TABLE), specificare il nome della nuova
 Consente di specificare che nella query verranno esclusi i duplicati dal set di risultati. Questa opzione risulta utile quando si utilizzano solo alcune colonne della tabella o delle tabelle e tali colonne potrebbero contenere valori duplicati. L'opzione è utile inoltre quando dal processo di unione di due o più tabelle vengono generate righe duplicate nel set di risultati. Selezionare questa opzione equivale a inserire la parola DISTINCT nell'istruzione del riquadro SQL.  
   
 **Estensione GROUP BY**  
-Specifica che sono disponibili opzioni aggiuntive per le query basate su query di aggregazione (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]).  
+Specifica che sono disponibili opzioni aggiuntive per le query basate su query di aggregazione (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
 **Tutte le colonne**  
 Specifica che tutte le colonne di tutte le tabelle nella query corrente saranno presenti nel set di risultati. Selezionare questa opzione equivale a specificare un asterisco (*) al posto dei singoli nomi di colonne dopo la parola chiave SELECT nell'istruzione SQL.  
@@ -69,7 +69,7 @@ Specifica che tutte le colonne di tutte le tabelle nella query corrente saranno 
 Visualizza i parametri della query. Per modificarli, fare clic sulla proprietà e quindi sui puntini di sospensione **(…)** a destra della proprietà. (si applica solo a OLE DB generico).  
   
 **Commento SQL**  
-Visualizza una descrizione delle istruzioni SQL. Per visualizzare la descrizione completa o modificarla, fare clic su di essa, quindi sui puntini di sospensione **(…)** a destra della proprietà. Nei commenti è possibile specificare ad esempio chi utilizza la query e quando (si applica solo a database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 o versione successiva).  
+Visualizza una descrizione delle istruzioni SQL. Per visualizzare la descrizione completa o modificarla, fare clic su di essa, quindi sui puntini di sospensione **(…)** a destra della proprietà. Nei commenti è possibile specificare ad esempio chi utilizza la query e quando (si applica solo a database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versione successiva).  
   
 **Categoria Specifica Top**  
 Viene espansa per visualizzare le proprietà relative alle proprietà **In alto**, **Percentuale**, **Espressione**e **Con valori equivalenti** .  
@@ -77,16 +77,16 @@ Viene espansa per visualizzare le proprietà relative alle proprietà **In alto*
 **(In alto)**  
 Specifica che la query includerà una clausola TOP che restituisce soltanto le prime *n* righe o solo il primo *n* percento delle righe del set di risultati. Per impostazione predefinita, la query restituisce le prime 10 righe del set di risultati.  
   
-Utilizzare questa casella per cambiare il numero di righe restituite o specificare una percentuale diversa (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o versione successiva).  
+Utilizzare questa casella per cambiare il numero di righe restituite o specificare una percentuale diversa (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o versione successiva).  
   
 **Espressione**  
-Specifica il numero o la percentuale delle righe che verranno restituite dalla query. Se si imposta **Percentuale** su Sì, il numero indicherà la percentuale delle righe che verranno restituite dalla query, mentre se si imposta **Percentuale** su No, il valore rappresenterà il numero di righe da restituire (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 o versione successiva).  
+Specifica il numero o la percentuale delle righe che verranno restituite dalla query. Se si imposta **Percentuale** su Sì, il numero indicherà la percentuale delle righe che verranno restituite dalla query, mentre se si imposta **Percentuale** su No, il valore rappresenterà il numero di righe da restituire (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versione successiva).  
   
 **Percentualeuale**  
-Specifica che la query restituirà soltanto il primo *n* percento delle righe del set di risultati (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 o versione successiva).  
+Specifica che la query restituirà soltanto il primo *n* percento delle righe del set di risultati (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versione successiva).  
   
 **Con valori equivalenti**  
-Specifica che la vista includerà una clausola WITH TIES. WITH TIES è utile se nella vista sono incluse anche una clausola ORDER BY e una clausola TOP basata sulla percentuale. Se questa opzione è impostata e la percentuale limite specificata cade all'interno di un set di righe con valori identici nella clausola ORDER BY, la vista verrà estesa oltre tale percentuale fino a includere tutte queste righe (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 o versione successiva).  
+Specifica che la vista includerà una clausola WITH TIES. WITH TIES è utile se nella vista sono incluse anche una clausola ORDER BY e una clausola TOP basata sulla percentuale. Se questa opzione è impostata e la percentuale limite specificata cade all'interno di un set di righe con valori identici nella clausola ORDER BY, la vista verrà estesa oltre tale percentuale fino a includere tutte queste righe (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versione successiva).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esecuzione di query con parametri &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  

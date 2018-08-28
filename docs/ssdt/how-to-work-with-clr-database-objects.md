@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4a2823e644e002dbb326ea98531d449377accac
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 29d06a93a797ca312ce4a6e60fabb9a221be4dc7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083813"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774481"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Procedura: Utilizzo di oggetti di database CLR
-In aggiunta al linguaggio di programmazione Transact\-SQL, è possibile usare i linguaggi .NET Framework per creare oggetti di database che recuperano e aggiornano i dati. Gli oggetti di database scritti in codice gestito vengono denominati oggetti di database CLR (Common Language Runtime) di SQL Server. Per una spiegazione dei vantaggi derivanti dall'uso di oggetti di database CLR ospitati in SQL Server, nonché per informazioni su come scegliere tra Transact\-SQL e CLR, vedere [Vantaggi dell'integrazione con CLR](http://msdn.microsoft.com/en-us/library/ms131045.aspx) e [Vantaggi dell'uso di codice gestito per creare oggetti di database](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx).  
+In aggiunta al linguaggio di programmazione Transact\-SQL, è possibile usare i linguaggi .NET Framework per creare oggetti di database che recuperano e aggiornano i dati. Gli oggetti di database scritti in codice gestito vengono denominati oggetti di database CLR (Common Language Runtime) di SQL Server. Per una spiegazione dei vantaggi derivanti dall'uso di oggetti di database CLR ospitati in SQL Server, nonché per informazioni su come scegliere tra Transact\-SQL e CLR, vedere [Vantaggi dell'integrazione con CLR](../relational-databases/clr-integration/clr-integration-overview.md) e [Vantaggi dell'uso di codice gestito per creare oggetti di database](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx).  
   
 Per creare un oggetto di database CLR mediante SQL Server Data Tools, è necessario creare un progetto di database a cui aggiungere un oggetto di database CLR. A differenza delle versioni precedenti di Visual Studio, non è necessario creare un progetto CLR separato a cui aggiungere un riferimento dal progetto di database. Quando si compila e si pubblica il progetto di database, gli oggetti CLR vengono pubblicati automaticamente nel progetto allo stesso momento. In seguito alla pubblicazione, gli oggetti CLR possono essere chiamati ed eseguiti come qualsiasi altro oggetto di database.  
   
@@ -86,7 +86,7 @@ Per altre informazioni sui requisiti di compilazione di oggetti di database CLR,
   
 1.  In **Esplora oggetti di SQL Server** passare al database locale in cui viene distribuito il progetto.  
   
-2.  Per impostazione predefinita, l'integrazione con CLR è disattivata in SQL Server. Per utilizzare oggetti di database CLR, è necessario abilitare l'integrazione CLR. A tale scopo, utilizzare l'opzione "clr enabled" della stored procedure sp_configure. Per altre informazioni, vedere l'argomento relativo all'[opzione clr enabled](http://msdn.microsoft.com/en-us/library/ms131048.aspx).  
+2.  Per impostazione predefinita, l'integrazione con CLR è disattivata in SQL Server. Per utilizzare oggetti di database CLR, è necessario abilitare l'integrazione CLR. A tale scopo, utilizzare l'opzione "clr enabled" della stored procedure sp_configure. Per altre informazioni, vedere l'argomento relativo all'[opzione clr enabled](../relational-databases/clr-integration/clr-integration-enabling.md).  
   
     Fare clic con il pulsante destro del mouse sul database e selezionare **Nuova query**. Nel riquadro della query incollare il codice seguente e premere il pulsante **Esegui query**.  
   
@@ -105,7 +105,7 @@ Per altre informazioni sui requisiti di compilazione di oggetti di database CLR,
 5.  Impostare l'input su **425 312 1222** e uscire. Si noti che, questa volta, l'input viene accettato.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Vantaggi dell'integrazione con CLR](http://msdn.microsoft.com/en-us/library/ms131045.aspx)  
+[Vantaggi dell'integrazione con CLR](../relational-databases/clr-integration/clr-integration-overview.md)  
 [Vantaggi dell'uso di codice gestito per creare oggetti di database](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)  
 [Compilazione di oggetti di database con l'integrazione con CLR (Common Language Runtime)](http://msdn.microsoft.com/en-us/library/ms131046.aspx)  
   

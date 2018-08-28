@@ -18,12 +18,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 037dce27c8c237b28a5575de76d0f9adb36a4054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0227077885117994437fc6f2d9bb4aa712706d70
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046428"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776272"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Opzioni (Esplora oggetti di SQL Server - pagina Generazione script)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ Specificare le opzioni di scripting selezionando le impostazioni desiderate tra 
   
 ### <a name="general-scripting-options"></a>Opzioni generali di scripting  
 **Delimita singole istruzioni**  
-Consente di separare istruzioni [!INCLUDE[tsql](../../includes/tsql_md.md)] singole utilizzando un separatore batch. Per modificare il separatore batch predefinito per l' **editor di query**, scegliere **Strumenti**/**Opzioni**/**Esecuzione query**/**SQL Server**/**Generale**/**Separatore batch**. Il valore predefinito è False. Per altre informazioni, vedere [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
+Consente di separare istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] singole utilizzando un separatore batch. Per modificare il separatore batch predefinito per l' **editor di query**, scegliere **Strumenti**/**Opzioni**/**Esecuzione query**/**SQL Server**/**Generale**/**Separatore batch**. Il valore predefinito è False. Per altre informazioni, vedere [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
   
 **Includi intestazioni descrittive**  
 Consente di aggiungere commenti descrittivi allo script dividendolo in sezioni per ogni oggetto. Il valore predefinito è True. Per altre informazioni, vedere [/*...*/ (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
@@ -70,7 +70,7 @@ Aggiunge l'istruzione USE DATABASE allo script per creare oggetti di database ne
 Consente di generare uno script per oggetti aggiuntivi, richiesti quando viene eseguito lo script per l'oggetto selezionato. Il valore predefinito è False.  
   
 **Schema per qualifica dei nomi degli oggetti**  
-Consente di qualificare il nome degli oggetti con lo schema dell'oggetto. Il valore predefinito è False. Per altre informazioni, vedere [Creazione di uno schema di database](https://msdn.microsoft.com/ed2a5522-f4d2-4111-95a4-d3e1e5081739).  
+Consente di qualificare il nome degli oggetti con lo schema dell'oggetto. Il valore predefinito è False. Per altre informazioni, vedere [Creazione di uno schema di database](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
 
 **Genera script per le opzioni di compressione dati**: include opzioni di compressione dati nello script. Il valore predefinito è False.
 
@@ -81,7 +81,7 @@ Consente di includere le proprietà estese nello script qualora l'oggetto dispon
 Consente di includere il proprietario nello script generato. Il valore predefinito è False.  
   
 **Script per autorizzazioni**  
-Consente di includere autorizzazioni sugli oggetti di database nello script. Il valore predefinito è True. Per altre informazioni, vedere [Autorizzazioni](https://msdn.microsoft.com/f28e3dea-24e6-4a81-877b-02ec4c7e36b9).  
+Consente di includere autorizzazioni sugli oggetti di database nello script. Il valore predefinito è True. Per altre informazioni, vedere [Autorizzazioni](../../relational-databases/security/permissions-database-engine.md).  
   
 ### <a name="tableview-options"></a>Opzioni tabella/vista  
 Le opzioni seguenti si applicano solo agli script per tabelle o viste.  
@@ -93,7 +93,7 @@ Consente di convertire i tipi di dati definiti dall'utente nei tipi di base da c
 Consente di aggiungere l'istruzione SET ANSI_PADDING prima e dopo ogni istruzione CREATE TABLE. Il valore predefinito è True. Per altre informazioni, vedere [SET ANSI_PADDING (Transact-SQL)](https://msdn.microsoft.com/92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0).  
   
 **Includi regole di confronto**  
-Consente di includere le regole di confronto nella definizione della colonna. Il valore predefinito è True. Per altre informazioni, vedere [Collation and Unicode Support](https://msdn.microsoft.com/92d34f48-fa2b-47c5-89d3-a4c39b0f39eb).  
+Consente di includere le regole di confronto nella definizione della colonna. Il valore predefinito è True. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 **Includi proprietà IDENTITY**  
 Consente di includere definizioni per il valore di inizializzazione di IDENTITY e l'incremento di IDENTITY. Il valore predefinito è True. Per altre informazioni, vedere [IDENTITY (Property) (Transact-SQL)](https://msdn.microsoft.com/8429134f-c821-4033-a07c-f782a48d501c).  
@@ -105,7 +105,7 @@ Consente di aggiungere il nome dello schema ai riferimenti alle tabelle per i vi
 Includere le chiamate alle stored procedure di associazione **sp_bindefault** e **sp_bindrule** . Il valore predefinito è True. Per altre informazioni, vedere [sp_bindefault (Transact-SQL)](https://msdn.microsoft.com/3da70c10-68d0-4c16-94a5-9e84c4a520f6) e [sp_bindrule (Transact-SQL)](https://msdn.microsoft.com/2606073e-c52f-498d-a923-5026b9d97e67).  
   
 **Script per vincoli CHECK**  
-Aggiunge [vincoli CHECK](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) allo script. Il valore predefinito è True.  
+Aggiunge [vincoli CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md) allo script. Il valore predefinito è True.  
   
 **Script per valori predefiniti**  
 Consente di includere i valori predefiniti delle colonne nello script. Il valore predefinito è False. Per altre informazioni, vedere [CREATE DEFAULT (Transact-SQL)](https://msdn.microsoft.com/08475db4-7d90-486a-814c-01a99d783d41).  
@@ -114,7 +114,7 @@ Consente di includere i valori predefiniti delle colonne nello script. Il valore
 Consente di specificare il filegroup nella clausola ON per le definizioni di tabella. Il valore predefinito è False. Per altre informazioni, vedere [CREATE TABLE (Transact-SQL)](https://msdn.microsoft.com/1e068443-b9ea-486a-804f-ce7b6e048e8b).  
   
 **Script per chiavi esterne**  
-Include [vincoli FOREIGN KEY](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) nello script. Il valore predefinito è False.  
+Include [vincoli FOREIGN KEY](../../relational-databases/tables/primary-and-foreign-key-constraints.md) nello script. Il valore predefinito è False.  
   
 **Script per indici full-text**  
 Consente di includere indici full-text nello script. Il valore predefinito è False. Per altre informazioni, vedere [CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd).  
@@ -126,7 +126,7 @@ Consente di includere indici cluster, non cluster e XML nello script. Il valore 
 Consente di includere schemi di partizione di tabelle nello script. Il valore predefinito è False. Per altre informazioni, vedere [CREATE PARTITION SCHEME (Transact-SQL)](https://msdn.microsoft.com/5b21c53a-b4f4-4988-89a2-801f512126e4).  
   
 **Script per chiavi primarie**  
-Include [vincoli primari e FOREIGN KEY](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) nello script. Il valore predefinito è True.  
+Include [vincoli primari e FOREIGN KEY](../../relational-databases/tables/primary-and-foreign-key-constraints.md) nello script. Il valore predefinito è True.  
   
 **Script per statistiche**  
 Consente di includere statistiche definite dall'utente nello script. Il valore predefinito è False. Per altre informazioni, vedere [CREATE STATISTICS (Transact-SQL)](https://msdn.microsoft.com/b23e2f6b-076c-4e6d-9281-764bdb616ad2).  
@@ -135,7 +135,7 @@ Consente di includere statistiche definite dall'utente nello script. Il valore p
 Consente di includere trigger nello script. Il valore predefinito è False. Per altre informazioni, vedere [CREATE TRIGGER (Transact-SQL)](https://msdn.microsoft.com/edeced03-decd-44c3-8c74-2c02f801d3e7).  
   
 **Script per chiavi univoche**  
-Include [vincoli UNIQUE e CHECK](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) nello script. Il valore predefinito è False.  
+Include [vincoli UNIQUE e CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md) nello script. Il valore predefinito è False.  
   
 **Script per colonne vista**  
 Consente di dichiarare colonne di viste in intestazioni di viste. Il valore predefinito è False. Per altre informazioni, vedere [CREATE VIEW (Transact-SQL)](https://msdn.microsoft.com/aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9).  
@@ -152,7 +152,7 @@ Consente di includere nomi di vincoli generati dal sistema per applicare l'integ
 **Script per il tipo di motore di database**: gli script generati saranno destinati al [tipo di motore di database](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.databaseenginetype.aspx) specificato.
 
 **Script per versione server**  
-Gli script saranno destinati alla versione specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Non è possibile creare script per versioni precedenti per le nuove funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] . Alcuni script creati per [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] non possono essere eseguiti in server con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]o in un database con un' [impostazione del livello di compatibilità del database](https://msdn.microsoft.com/ca5fd220-d5ea-4182-8950-55d4101a86f6)precedente.  
+Gli script saranno destinati alla versione specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è possibile creare script per versioni precedenti per le nuove funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Alcuni script creati per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non possono essere eseguiti in server con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o in un database con un' [impostazione del livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)precedente.  
 
 ## <a name="see-also"></a>Vedere anche  
 [Generare script (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  

@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0c9677ba386ceda02136eb3eb67052e4eff0362d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9ddbf1591320678c75f74d6953229343bb457ced
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984133"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775898"
 ---
 # <a name="view-or-modify-jobs"></a>Visualizzare o modificare processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,12 +71,12 @@ I membri del ruolo predefinito del server **sysadmin** possono visualizzare la d
 |||  
 |-|-|  
 |**Descrizione**|**Argomento**|  
-|Descrive la procedura per la visualizzazione dei processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[View a Job](../../ssms/agent/view-a-job.md)|  
-|Illustra come visualizzare il log cronologia processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[View the Job History](../../ssms/agent/view-the-job-history.md)|  
-|Descrive come eliminare i contenuti del log cronologia processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Clear the Job History Log](../../ssms/agent/clear-the-job-history-log.md)|  
-|Descrive come impostare le dimensioni massime per i log cronologia processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Resize the Job History Log](../../ssms/agent/resize-the-job-history-log.md)|  
-|Illustra la procedura per la modifica delle proprietà dei processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Modify a Job](../../ssms/agent/modify-a-job.md)|  
+|Descrive la procedura per la visualizzazione dei processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[View a Job](../../ssms/agent/view-a-job.md)|  
+|Illustra come visualizzare il log cronologia processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[View the Job History](../../ssms/agent/view-the-job-history.md)|  
+|Descrive come eliminare i contenuti del log cronologia processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Clear the Job History Log](../../ssms/agent/clear-the-job-history-log.md)|  
+|Descrive come impostare le dimensioni massime per i log cronologia processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Resize the Job History Log](../../ssms/agent/resize-the-job-history-log.md)|  
+|Illustra la procedura per la modifica delle proprietà dei processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Modify a Job](../../ssms/agent/modify-a-job.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
-[sysjobhistory](http://msdn.microsoft.com/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
+[sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   

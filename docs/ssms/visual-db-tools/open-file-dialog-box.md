@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20f698a0f85f54a31b18f74ad364de1fc1dfb187
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 839d26440ad4f6d00c4992feb76211daba49617f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997923"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776616"
 ---
 # <a name="open-file-dialog-box"></a>Finestra di dialogo Apri file
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ Usare la finestra di dialogo **Apri file** per aprire un file esistente sul disc
 Per accedere a questa finestra di dialogo, selezionare **Apri** dal menu **File** e scegliere **File**. Questa finestra di dialogo viene visualizzata anche quando si aprono file da altri elementi, ad esempio dalla finestra di dialogo **Strumenti esterni** . Per aprire la finestra di dialogo simile **Apri progetto** , scegliere **Apri**dal menu **File** e selezionare **Progetto/Soluzione** .  
   
 > [!NOTE]  
-> Prima di aprire un progetto o un componente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], determinare l'affidabilità del relativo codice. L'apertura del progetto o del componente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] potrebbe infatti causare l'esecuzione del codice in un processo trusted sul computer locale.  
+> Prima di aprire un progetto o un componente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], determinare l'affidabilità del relativo codice. L'apertura del progetto o del componente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] potrebbe infatti causare l'esecuzione del codice in un processo trusted sul computer locale.  
   
 ## <a name="option"></a>Opzione  
 **Look in**  

@@ -17,20 +17,20 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 350043c219ea1a35d681da8bd4718a54376430f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d18cc0c4c6ef5e13f5a26100d139af14954cfe7a
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042798"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774661"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Pagine delle proprietà in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Tutte le finestre di dialogo Proprietà in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] usano un formato comune per visualizzare le informazioni con categorie che è possibile espandere e comprimere. I campi visualizzati dipendono dalla proprietà. Le proprietà visualizzate in grigio sono di sola lettura. Nella parte superiore di ogni pagina delle proprietà si trovano i pulsanti Per categoria e Per nome.  
+Tutte le finestre di dialogo Proprietà in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] usano un formato comune per visualizzare le informazioni con categorie che è possibile espandere e comprimere. I campi visualizzati dipendono dalla proprietà. Le proprietà visualizzate in grigio sono di sola lettura. Nella parte superiore di ogni pagina delle proprietà si trovano i pulsanti Per categoria e Per nome.  
   
-Nella tabella seguente vengono descritti gli elementi comuni delle finestre di dialogo Proprietà di [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] .  
+Nella tabella seguente vengono descritti gli elementi comuni delle finestre di dialogo Proprietà di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
-|Elemento|Description|  
+|Elemento|Descrizione|  
 |-----------|---------------|  
 |**Per categoria**|Elenca, per categoria, tutte le proprietà e i relativi valori per l'oggetto selezionato. È possibile comprimere una categoria per ridurre il numero delle proprietà visualizzate. Quando una categoria viene espansa o compressa, a sinistra del nome verrà visualizzato rispettivamente un segno più (+) o un segno meno (-). Le categorie sono elencate in ordine alfabetico.|  
 |**Per nome**|Elenca, per nome, tutte le proprietà e i relativi valori per l'oggetto selezionato.|  

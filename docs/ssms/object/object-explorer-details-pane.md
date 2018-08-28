@@ -23,24 +23,24 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb6cb14124589796e0e1a8e31f437b4eb7d6c383
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f75fac8ec104d32b84383b4303c3a9d3de1d53b8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984023"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774961"
 ---
 # <a name="object-explorer-details-pane"></a>Riquadro Dettagli di Esplora oggetti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Dettagli Esplora oggetti è un componente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] che fornisce una vista tabulare di tutti gli oggetti nel server e offre un'interfaccia utente che consente di gestire tali oggetti. Le funzionalità di Esplora oggetti variano leggermente in base al tipo di server, ma in genere comprendono le funzionalità di sviluppo per i database e di gestione per tutti i tipi di server.  
+Dettagli Esplora oggetti è un componente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] che fornisce una vista tabulare di tutti gli oggetti nel server e offre un'interfaccia utente che consente di gestire tali oggetti. Le funzionalità di Esplora oggetti variano leggermente in base al tipo di server, ma in genere comprendono le funzionalità di sviluppo per i database e di gestione per tutti i tipi di server.  
   
-Il riquadro Dettagli Esplora oggetti è visibile in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] per impostazione predefinita. Se Esplora oggetti non è visualizzato, scegliere **Dettagli Esplora oggetti** dal menu **Visualizza** oppure premere **F7**.  
+Il riquadro Dettagli Esplora oggetti è visibile in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per impostazione predefinita. Se Esplora oggetti non è visualizzato, scegliere **Dettagli Esplora oggetti** dal menu **Visualizza** oppure premere **F7**.  
   
 > [!NOTE]  
-> [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] le date vengono formattate in base alle Opzioni internazionali e della lingua di Microsoft Windows attive al momento dell'avvio di [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] . Per applicare altre impostazioni di data, riavviare [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] .  
+> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] le date vengono formattate in base alle Opzioni internazionali e della lingua di Microsoft Windows attive al momento dell'avvio di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Per applicare altre impostazioni di data, riavviare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
 ## <a name="object-explorer-details"></a>Visualizza  
-Dettagli Esplora oggetti può essere usato per spostarsi tra cartelle e oggetti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Nei sistemi operativi a 32 bit, Esplora oggetti può visualizzare solo 64.000 oggetti. Per accedere a oggetti aggiuntivi, è necessario selezionare un'icona.  
+Dettagli Esplora oggetti può essere usato per spostarsi tra cartelle e oggetti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nei sistemi operativi a 32 bit, Esplora oggetti può visualizzare solo 64.000 oggetti. Per accedere a oggetti aggiuntivi, è necessario selezionare un'icona.  
   
 In Dettagli Esplora oggetti è inclusa una barra degli strumenti che contiene le icone descritte nella tabella seguente. Alcune icone sono disponibili solo quando è possibile utilizzarle.  
   
@@ -55,13 +55,13 @@ In Dettagli Esplora oggetti è inclusa una barra degli strumenti che contiene le
 |**Cerca**|Fornisce un'area nella quale immettere un termine di ricerca per determinati oggetti di database.|  
   
 ### <a name="column-header-selections"></a>Selezioni di intestazioni di colonna  
-Dettagli Esplora oggetti dispone di colonne selezionabili. È possibile fare clic con il pulsante destro del mouse su qualsiasi intestazione di colonna e controllare gli elementi che si desidera visualizzare. Le selezioni risulteranno persistenti per tutti i diversi oggetti sui quali ci si sposta. Le selezioni per ogni utente vengono mantenute quando si esce da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]e lo si riavvia.  
+Dettagli Esplora oggetti dispone di colonne selezionabili. È possibile fare clic con il pulsante destro del mouse su qualsiasi intestazione di colonna e controllare gli elementi che si desidera visualizzare. Le selezioni risulteranno persistenti per tutti i diversi oggetti sui quali ci si sposta. Le selezioni per ogni utente vengono mantenute quando si esce da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e lo si riavvia.  
   
 > [!CAUTION]  
 > La visualizzazione di tutte le colonne di alcuni tipi di oggetto (ad esempio, Databases) può rallentare leggermente il rendering nel caso di grandi set di oggetti.  
   
 ### <a name="sorting"></a>Ordinamento  
-Fare clic su un'intestazione di colonna per ordinare la griglia in base a tale colonna. Fare clic di nuovo sulla stessa intestazione di colonna per invertire l'ordinamento della griglia in base a tale colonna. Le selezioni dell'ordinamento vengono mantenute per ogni utente attraverso oggetti e cartelle e al riavvio di [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] .  
+Fare clic su un'intestazione di colonna per ordinare la griglia in base a tale colonna. Fare clic di nuovo sulla stessa intestazione di colonna per invertire l'ordinamento della griglia in base a tale colonna. Le selezioni dell'ordinamento vengono mantenute per ogni utente attraverso oggetti e cartelle e al riavvio di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
 ### <a name="filtering"></a>Filtri  
 Certi elenchi di oggetti visualizzati in Dettagli Esplora oggetti possono essere filtrati usando l'icona **Filtro** nella barra degli strumenti Dettagli Esplora oggetti. L'icona diventa disponibile quando è possibile applicare un filtro.  
@@ -93,7 +93,7 @@ Dettagli Esplora oggetti supporta la selezione di più oggetti. Ad esempio, se i
 ## <a name="sql-server-object-search"></a>Ricerca di oggetti SQL Server  
 Caratteri jolly  
   
--   Sono supportati i caratteri jolly standard. Ad esempio, la ricerca di **dm_os%counters** restituisce sia dm_os_memory_cache_counters che dm_os_performance_counters. Per altre informazioni, vedere [Procedura: Ricerca con caratteri jolly](http://msdn.microsoft.com/449600f8-cc87-4b3f-878a-59c158a88a40).  
+-   Sono supportati i caratteri jolly standard. Ad esempio, la ricerca di **dm_os%counters** restituisce sia dm_os_memory_cache_counters che dm_os_performance_counters. Per altre informazioni, vedere [Procedura: Ricerca con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Ambito di ricerca  
   
