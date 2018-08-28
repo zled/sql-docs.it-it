@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 02cd230fa1ec5201d58daffeb3adcfb1c776258c
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: b30f2aab84336108d7bbeb11d870cc2c999ddaf5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559291"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406223"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,9 +82,9 @@ ms.locfileid: "39559291"
   
  Collegamenti aggiuntivi per i programmatori di applicazioni:  
   
--   [Scenari di sicurezza delle applicazioni in SQL Server](https://msdn.microsoft.com/library/bb669057.aspx)  
+-   [Scenari di sicurezza delle applicazioni in SQL Server](/dotnet/framework/data/adonet/sql/application-security-scenarios-in-sql-server)  
   
--   [Scrittura di istruzioni SQL dinamiche protette in SQL Server](https://msdn.microsoft.com/library/bb669091.aspx)  
+-   [Scrittura di istruzioni SQL dinamiche protette in SQL Server](/dotnet/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server)  
   
 -   [Pagina relativa alla procedura per la protezione da attacchi SQL injection in ASP.NET](https://msdn.microsoft.com/library/ff648339.aspx)  
   

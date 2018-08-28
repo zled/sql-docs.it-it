@@ -35,12 +35,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1a8bd2df095f771866ca8cb96e25dfb1e4612b6a
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: ce60853b06cf09c9bb2807c8351c26255369c9a9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39455405"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018961"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -108,19 +108,20 @@ La colonna deve essere presente nella clausola FROM dell'istruzione SELECT, ma n
   
 Le istruzioni seguenti sono consentite:  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
+```  
   
 Le istruzioni seguenti non sono consentite:  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+```  
+
 L'espressione della colonna non può contenere:
 
 - L'alias di una colonna definita nell'elenco SELECT. Può usare l'alias di una colonna per una tabella derivata definita nella clausola FROM.
@@ -135,7 +136,7 @@ Raggruppa i risultati dell'istruzione SELECT in base ai valori in un elenco di u
 
 Ad esempio, questa query crea una tabella Sales con colonne per Country, Region e Sales. Inserisce quattro righe, due delle quali con valori corrispondenti per Country e Region.  
 
-```
+```sql
 CREATE TABLE Sales ( Country varchar(50), Region varchar(50), Sales int );
 
 INSERT INTO sales VALUES (N'Canada', N'Alberta', 100);
@@ -154,7 +155,7 @@ La tabella Sales contiene le righe seguenti:
 
 La query successiva raggruppa Country e Region e restituisce la somma aggregata per ogni combinazione di valori.  
  
-``` 
+```sql 
 SELECT Country, Region, SUM(sales) AS TotalSales
 FROM Sales
 GROUP BY Country, Region;
@@ -183,7 +184,7 @@ Ad esempio, `GROUP BY ROLLUP (col1, col2, col3, col4)` crea gruppi per ogni comb
 
 Usando la tabella dell'esempio precedente, questo codice esegue un'operazione GROUP BY ROLLUP anziché una semplice operazione GROUP BY.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region);
@@ -206,7 +207,7 @@ GROUP BY CUBE crea gruppi per tutte le possibili combinazioni di colonne. Per GR
 
 Usando la tabella degli esempi precedenti, questo codice esegue un'operazione GROUP BY CUBE in Country e Region. 
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY CUBE (Country, Region);
@@ -234,7 +235,7 @@ Ad esempio, `GROUP BY ROLLUP (Country, Region)` e `GROUP BY GROUPING SETS ( ROLL
 
 Quando GROUPING SETS ha due o più elementi, i risultati sono un'unione degli elementi. Questo esempio restituisce l'unione dei risultati di ROLLUP e CUBE per Country e Region.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
@@ -242,15 +243,14 @@ GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
 
 I risultati sono gli stessi di questa query che restituisce un'unione delle due istruzioni GROUP BY.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region)
 UNION ALL
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
-GROUP BY CUBE (Country, Region)
-;
+GROUP BY CUBE (Country, Region);
 ```
 
 SQL non consolida i gruppi duplicati generati per un elenco GROUPING SETS. Ad esempio, in `GROUP BY ( (), CUBE (Country, Region) )` entrambi gli elementi restituiscono una riga per il totale complessivo ed entrambe le righe saranno elencate nei risultati. 
@@ -258,7 +258,7 @@ SQL non consolida i gruppi duplicati generati per un elenco GROUPING SETS. Ad es
  ### <a name="group-by-"></a>GROUP BY ()  
 Specifica il gruppo vuoto che genera il totale complessivo. Ha la stessa funzione di uno degli elementi di GROUPING SET. Ad esempio, questa istruzione restituisce le vendite totali per ogni paese e quindi restituisce il totale complessivo per tutti i paesi.
 
-```
+```sql
 SELECT Country, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( Country, () );
@@ -363,7 +363,7 @@ La clausola GROPU BY supporta tutte le funzionalità GROUP BY incluse nello stan
 ### <a name="a-use-a-simple-group-by-clause"></a>A. Uso di una clausola GROUP BY semplice  
  Nell'esempio seguente viene recuperato il totale per ogni `SalesOrderID` dalla tabella `SalesOrderDetail`. Questo esempio usa AdventureWorks.  
   
-```  
+```sql  
 SELECT SalesOrderID, SUM(LineTotal) AS SubTotal  
 FROM Sales.SalesOrderDetail AS sod  
 GROUP BY SalesOrderID  
@@ -373,7 +373,7 @@ ORDER BY SalesOrderID;
 ### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>B. Uso di una clausola GROUP BY con più tabelle  
  Nell'esempio seguente viene recuperato il numero di dipendenti per ogni `City` dalla tabella `Address` unita in join alla tabella `EmployeeAddress`. Questo esempio usa AdventureWorks. 
   
-```  
+```sql  
 SELECT a.City, COUNT(bea.AddressID) EmployeeCount  
 FROM Person.BusinessEntityAddress AS bea   
     INNER JOIN Person.Address AS a  
@@ -385,7 +385,7 @@ ORDER BY a.City;
 ### <a name="c-use-a-group-by-clause-with-an-expression"></a>C. Uso di una clausola GROUP BY con un'espressione  
  Nell'esempio seguente vengono recuperate le vendite totali per ogni anno tramite la funzione `DATEPART`. La stessa espressione deve essere presente sia nell'elenco `SELECT` che nella clausola `GROUP BY`.  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -396,7 +396,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### <a name="d-use-a-group-by-clause-with-a-having-clause"></a>D. Uso di una clausola GROUP BY con una clausola HAVING  
  Nell'esempio seguente viene utilizzata la clausola `HAVING` per specificare quale gruppo generato nella clausola `GROUP BY` deve essere incluso nel set di risultati.  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -410,7 +410,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### <a name="e-basic-use-of-the-group-by-clause"></a>E. Uso di base della clausola GROUP BY  
  L'esempio seguente trova l'importo totale di tutte le vendite in ogni giornata. Viene restituita una sola riga contenente il totale di tutte le vendite per ogni giornata.  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales  
@@ -420,7 +420,7 @@ GROUP BY OrderDateKey ORDER BY OrderDateKey;
 ### <a name="f-basic-use-of-the-distributedagg-hint"></a>F. Uso di base dell'hint DISTRIBUTED_AGG  
  Questo esempio usa l'hint per la query DISTRIBUTED_AGG per forzare nell'appliance la distribuzione casuale della tabella nella colonna `CustomerKey` prima di eseguire l'aggregazione.  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT CustomerKey, SUM(SalesAmount) AS sas  
@@ -432,7 +432,7 @@ ORDER BY CustomerKey DESC;
 ### <a name="g-syntax-variations-for-group-by"></a>G. Variazioni della sintassi per GROUP BY  
  Quando l'elenco SELECT non include aggregazioni, ogni colonna dell'elenco SELECT deve essere inclusa nell'elenco GROUP BY. Le colonne calcolate dell'elenco SELECT possono essere incluse, ma non sono richieste, nell'elenco GROUP BY. Di seguito sono riportati esempi di istruzioni SELECT sintatticamente valide:  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName FROM DimCustomer GROUP BY LastName, FirstName;  
@@ -445,7 +445,7 @@ SELECT SalesAmount FROM FactInternetSales GROUP BY SalesAmount, SalesAmount*1.10
 ### <a name="h-using-a-group-by-with-multiple-group-by-expressions"></a>H. Uso di GROUP BY con più espressioni GROUP BY  
  L'esempio seguente raggruppa i risultati usando più criteri `GROUP BY`. Se, all'interno di ogni gruppo `OrderDateKey`, sono presenti sottogruppi che possono essere differenziati da `DueDateKey`, verrà definito un nuovo raggruppamento per il set di risultati.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, DueDateKey, SUM(SalesAmount) AS TotalSales   
@@ -457,7 +457,7 @@ ORDER BY OrderDateKey;
 ### <a name="i-using-a-group-by-clause-with-a-having-clause"></a>I. Utilizzo di una clausola GROUP BY con una clausola HAVING  
  L'esempio seguente usa la clausola `HAVING` per specificare i gruppi generati nella clausola `GROUP BY` che devono essere inclusi nel set di risultati. Nei risultati verranno inclusi solo i gruppi con date dell'ordine del 2004 o successive.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales   

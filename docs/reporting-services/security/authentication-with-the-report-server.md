@@ -21,12 +21,12 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b417d30db2ed5ecd85ba154ab304be7181c2dc71
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: dc4e04eb492331e66bdae460af96ad2fd69c57be
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550532"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409552"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticazione con il server di report
 
@@ -65,7 +65,7 @@ ms.locfileid: "34550532"
   
  L'elaborazione in background non accetta richieste degli utenti finali, ma autentica tutte le richieste ai fini dell'esecuzione automatica. Durante questo tipo di elaborazione viene sempre utilizzata l'autenticazione di Windows e le richieste vengono autenticate utilizzando il servizio del server di report o l'account di esecuzione automatica, se è configurato.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Configurare l'autenticazione di Windows nel server di report.](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
   
@@ -73,14 +73,14 @@ ms.locfileid: "34550532"
   
 -   [Configurare l'autenticazione personalizzata o basata su form nel server di report](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizioni delle attività|Collegamenti|  
 |-----------------------|-----------|  
 |Configurare il tipo di autenticazione integrata di Windows.|[Configurare l'autenticazione di Windows nel server di report](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
 |Configurare il tipo di autenticazione di base.|[Configurare l'autenticazione di base nel server di report](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
 |Configurare l'autenticazione basata su form o un tipo di autenticazione personalizzata.|[Configurare l'autenticazione personalizzata o basata su form nel server di report](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
-|Consentire a [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] di gestire lo scenario basato su autenticazione personalizzata.|[Configurare il portale Web per il passaggio di cookie di autenticazione personalizzati](http://msdn.microsoft.com/en-us/91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
+|Consentire a [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] di gestire lo scenario basato su autenticazione personalizzata.|[Configurare il portale Web per il passaggio di cookie di autenticazione personalizzati](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

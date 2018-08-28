@@ -23,12 +23,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a2c7f7713bf003837b5808d10e52a9a6c251f2e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 04725560e4a39903a9f0a9e1ca580443cdb7504e
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782592"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409366"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ Per l'argomento *id*, l'argomento *property* specifica il tipo di informazioni c
 |**IsCursorType**|Il parametro di procedura è di tipo CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**IsDeterministic**|La colonna è tipo deterministico. Questa proprietà viene applicata solo alle colonne calcolate e alle colonne di una vista.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido. Non si tratta di una colonna calcolata o di una colonna di vista.|  
 |**IsFulltextIndexed**|La colonna è stata registrata per l'indicizzazione full-text.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
-|**IsHidden**|Valore di colonna generato dal sistema. Corrisponde a **sys.columns.is_hidden**|**Si applica a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: non nascosto<br /><br /> 1: nascosto|  
+|**IsHidden**|Valore di colonna generato dal sistema. Corrisponde a **sys.columns.is_hidden**|**Si applica a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: non nascosto<br /><br /> 1: nascosto|  
 |**IsIdentity**|La colonna utilizza la proprietà IDENTITY.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**IsIdNotForRepl**|La colonna controlla l'impostazione IDENTITY_INSERT.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**IsIndexable**|La colonna può essere indicizzata.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
