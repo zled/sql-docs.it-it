@@ -28,12 +28,12 @@ caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b3275cf1deed00bb838144825b8cef243a6aa8e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37dd984acf7af31ba65772d038c30ac84dfed47c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867836"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410083"
 ---
 # <a name="manage-the-database-engine-services"></a>Gestire il servizio Motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "32867836"
 |[Impostare un'istanza di SQL Server per l'avvio automatico &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)|[Configurare le autorizzazioni del file system per l'accesso al motore di database](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Configurazione di SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+ [Configurazione di SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
  [Accesso a SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   

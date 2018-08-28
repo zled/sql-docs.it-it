@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: c3ab951e8364e8d6ca7c920493c6dee026f2d011
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: ec52d2e2c0b6c88e26472d21bbe8d9eff42397bb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39544781"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405453"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Restituire dati da una stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Restituire dati da una stored procedure](https://msdn.microsoft.com/library/ms188655(SQL.120).aspx).
+ > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Restituire dati da una stored procedure](return-data-from-a-stored-procedure.md).
 
   Sono disponibili tre modalità per la restituzione di dati da una procedura a un programma chiamante: i set di risultati, i parametri di output e i codici restituiti. Questo argomento offre informazioni sui tre approcci.  
   

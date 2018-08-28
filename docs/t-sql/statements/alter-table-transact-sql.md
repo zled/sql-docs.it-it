@@ -63,12 +63,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f6855a5f92cd6f8b25d3a7ea9ecf4f4d05e7a015
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: b3d3f48fedf04980a8dff9acad2f381e5cbfcd0f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452745"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405802"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -630,13 +630,13 @@ Specifica l'aggiunta di una o più definizioni di colonna, definizioni di colonn
 > Se non si usa l'istruzione ALTER TABLE, le istruzioni CREATE INDEX, DROP INDEX e ALTER INDEX non sono supportate per gli indici nelle tabelle ottimizzate per la memoria. 
   
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
-**Si applica a** : da [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Si applica a** : da [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifica i nomi delle colonne che il sistema userà per registrare il periodo di validità di un record. È possibile specificare le colonne esistenti o creare nuove colonne come parte dell'argomento ADD PERIOD FOR SYSTEM_TIME. Le colonne devono avere il tipo di dati datetime2 e devono essere definite come NOT NULL. Se una colonna periodo viene definita come NULL, verrà generato un errore. È possibile definire un oggetto [column_constraint & #40; Transact-SQL & #41; ](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) e/o [specificare i valori predefiniti per le colonne](../../relational-databases/tables/specify-default-values-for-columns.md) per le colonne system_start_time e system_end_time. Vedere l'esempio A in [Controllo delle versioni di sistema](#system_versioning). In questi esempi viene illustrato l'uso di un valore predefinito per la colonna system_end_time.  
   
  Usare questo argomento in combinazione con l'argomento SET SYSTEM_VERSIONING per abilitare il controllo delle versioni di sistema su una tabella esistente. Per altre informazioni, vedere [Tabelle temporali](../../relational-databases/tables/temporal-tables.md) e [Introduzione alle tabelle temporali nel database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
   
- A partire da [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)], gli utenti possono contrassegnare una o entrambe le colonne periodo con il flag **HIDDEN** per nascondere in modo implicito tali colonne. In questo modo **SELECT \* FROM***\<table>* non restituirà un valore per tali colonne. Per impostazione predefinita, le colonne periodo non vengono nascoste. Per poter essere usate, le colonne nascoste devono essere incluse in modo esplicito in tutte le query che fanno direttamente riferimento alla tabella temporale.  
+ A partire da [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)], gli utenti possono contrassegnare una o entrambe le colonne periodo con il flag **HIDDEN** per nascondere in modo implicito tali colonne. In questo modo **SELECT \* FROM***\<table>* non restituirà un valore per tali colonne. Per impostazione predefinita, le colonne periodo non vengono nascoste. Per poter essere usate, le colonne nascoste devono essere incluse in modo esplicito in tutte le query che fanno direttamente riferimento alla tabella temporale.  
   
 DROP  
 Specifica la rimozione di una o più definizioni di colonna, definizioni di colonna calcolata o vincoli di tabella o l'eliminazione della specifica per le colonne che il sistema userà per il controllo delle versioni di sistema.  

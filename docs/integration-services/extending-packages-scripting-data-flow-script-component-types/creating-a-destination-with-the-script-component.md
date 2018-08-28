@@ -23,12 +23,12 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fe44ad4d9c80e97f6bc94e08c66af9d7f312fa5
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a6fadd30e1db32354c52fcef92b249765948c667
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401554"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405414"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Creazione di una destinazione con il componente script
   Utilizzare un componente di destinazione nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per salvare in un'origine dati i dati ricevuti dalle origini e dalle trasformazioni upstream. Normalmente, il componente di destinazione si connette all'origine dati tramite una gestione connessione esistente.  
@@ -48,7 +48,7 @@ ms.locfileid: "35401554"
  Per selezionare il linguaggio di scripting che verrà usato dal componente script di destinazione, impostare la proprietà **ScriptLanguage** nella pagina **Script** della finestra di dialogo **Editor trasformazione Script**.  
   
 > [!NOTE]  
->  Per impostare il linguaggio di scripting predefinito per il componente script, usare l'opzione **Linguaggio di scripting** nella pagina **Generale** della finestra di dialogo **Opzioni**. Per ulteriori informazioni, vedere [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+>  Per impostare il linguaggio di scripting predefinito per il componente script, usare l'opzione **Linguaggio di scripting** nella pagina **Generale** della finestra di dialogo **Opzioni**. Per ulteriori informazioni, vedere [General Page](../general-page-of-integration-services-designers-options.md).  
   
  Un componente di destinazione del flusso di dati include un input e nessun output. La configurazione dell'input per il componente è uno dei passaggi che vanno completati in modalità di progettazione metadati tramite **Editor trasformazione Script** prima di scrivere lo script personalizzato.  
   

@@ -21,12 +21,12 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bc4b141721417b3097dc9142e2f47404021f159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ae2466902ae6cd60a69687b33aab38fc6a72fd5
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932944"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405293"
 ---
 # <a name="rebuild-system-databases"></a>Ricompilare database di sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "32932944"
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=NomeIstanza /SQLSYSADMINACCOUNTS=account [ /SAPWD=PasswordComplessa ] [ /SQLCOLLATION=NomeRegoleConfronto]**  
   
-    |Nome parametro|Description|  
+    |Nome parametro|Descrizione|  
     |--------------------|-----------------|  
     |/QUIET o /Q|Specifica che il programma di installazione verrà eseguito senza alcuna interfaccia utente.|  
     |/ACTION=REBUILDDATABASE|Specifica che il programma di installazione dovrà ricreare i database di sistema.|  
@@ -168,7 +168,7 @@ ms.locfileid: "32932944"
 > [!WARNING]  
 >  La ricompilazione del database **msdb** tramite lo script **instmsdb** comporterà l'eliminazione di tutte le informazioni archiviate in **msdb** quali processi, avvisi, operatori, piani di manutenzione, cronologia di backup, impostazioni della gestione basata su criteri, Posta elettronica database, data warehouse contenente dati relativi alle prestazioni e così via.  
   
-1.  Arrestare tutti i servizi che si connettono al [!INCLUDE[ssDE](../../includes/ssde-md.md)], tra cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)]e tutte le applicazioni in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzato come archivio dati.  
+1.  Arrestare tutti i servizi che si connettono al [!INCLUDE[ssDE](../../includes/ssde-md.md)], tra cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)]e tutte le applicazioni in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzato come archivio dati.  
   
 2.  Avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla riga di comando utilizzando il comando `NET START MSSQLSERVER /T3608`  
   

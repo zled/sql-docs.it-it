@@ -17,12 +17,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e3a7c929dd3335c5200efc3d4009ba05053f84a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3be991897702d63aa505c3c18b4a86fed5f9840c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403123"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405578"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Esecuzione di pacchetti e altre operazioni di monitoraggio
   È possibile monitorare esecuzioni di pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , convalide di progetto e altre operazioni di usando uno o più strumenti tra quelli indicati di seguito. Alcuni strumenti, tra cui le scelte dei dati, sono disponibili solo per i progetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -184,7 +184,7 @@ ms.locfileid: "35403123"
 > [!NOTE]  
 >  Quando si aggiungono report personalizzati al nodo **SSISDB** nel nodo **Database** , il prefisso SSISDB non è necessario.  
   
- Per istruzioni su come creare e aggiungere un report personalizzato, vedere [Aggiunta di un report personalizzato a Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f).  
+ Per istruzioni su come creare e aggiungere un report personalizzato, vedere [Aggiunta di un report personalizzato a Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md).  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>Visualizzare i report per il server Integration Services
   Nella versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]sono disponibili report standard in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per semplificare il monitoraggio di progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che sono stati distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  Per altre informazioni sui report, vedere [Report per il server Integration Services](#reports).  

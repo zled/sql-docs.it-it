@@ -18,12 +18,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 574677284e2614f665fb1cf663d78b898dcdafe2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60ceeadd0f4608d241b9609bf050bc97de264e98
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932988"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405712"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Log shipping - Impostazioni backup log delle transazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "32932988"
 |**Non comprimere il backup**|Fare clic su questa opzione per creare un backup non compresso, indipendentemente dall'impostazione predefinita a livello di server.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare un utente per la creazione e la gestione di processi di SQL Server Agent](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)   
+ [Configurare un utente per la creazione e la gestione di processi di SQL Server Agent](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

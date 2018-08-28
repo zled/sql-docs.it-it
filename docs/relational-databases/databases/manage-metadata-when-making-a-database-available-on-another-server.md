@@ -40,12 +40,12 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993953"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405303"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gestire i metadati quando si rende disponibile un database in un altro server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ms.locfileid: "37993953"
   
  **Per creare un avviso di WMI utilizzando SQL Server Management Studio**  
   
--   [Creare un avviso per evento WMI](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [Creare un avviso per evento WMI](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>Funzionamento delle notifiche degli eventi per un database con mirroring  
  Il recapito tra database delle notifiche degli eventi che richiede un database con mirroring è remoto, per definizione, in quanto per il database con mirroring è possibile eseguire il failover. [!INCLUDE[ssSB](../../includes/sssb-md.md)] offre uno speciale supporto per i database con mirroring, sotto forma di *route con mirroring*. Un route con mirroring dispone di due indirizzi, uno per l'istanza del server principale e uno per l'istanza del server mirror.  
@@ -214,11 +214,11 @@ ms.locfileid: "37993953"
   
 -   Account di accesso utilizzato dal processo  
   
-     Per creare o eseguire i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, è innanzitutto necessario aggiungere tutti gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiesti dal processo all'istanza del server di destinazione. Per altre informazioni, vedere [Configurare un utente per la creazione e la gestione di processi di SQL Server Agent](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef).  
+     Per creare o eseguire i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, è innanzitutto necessario aggiungere tutti gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiesti dal processo all'istanza del server di destinazione. Per altre informazioni, vedere [Configurare un utente per la creazione e la gestione di processi di SQL Server Agent](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-     L'account di avvio del servizio definisce l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, nonché le relative autorizzazioni di rete. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene eseguito con un account utente specificato. Il contesto del servizio SQL Server Agent influisce sulle impostazioni per il processo e per il relativo ambiente di esecuzione. È necessario che l'account abbia accesso alle risorse, ad esempio alle condivisioni di rete, richieste dal processo. Per informazioni su come selezionare e modificare l'account di avvio del servizio, vedere [Selezionare un account per il servizio SQL Server Agent](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7).  
+     L'account di avvio del servizio definisce l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, nonché le relative autorizzazioni di rete. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene eseguito con un account utente specificato. Il contesto del servizio SQL Server Agent influisce sulle impostazioni per il processo e per il relativo ambiente di esecuzione. È necessario che l'account abbia accesso alle risorse, ad esempio alle condivisioni di rete, richieste dal processo. Per informazioni su come selezionare e modificare l'account di avvio del servizio, vedere [Selezionare un account per il servizio SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md).  
   
      Per un corretto funzionamento, è necessario che l'account di avvio del servizio sia configurato con dominio, file system e autorizzazioni per il Registro di sistema appropriati. Inoltre, un processo potrebbe richiedere una risorsa di rete condivisa che deve essere configurata per l'account del servizio. Per informazioni, vedere [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -229,35 +229,35 @@ ms.locfileid: "37993953"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-     Un proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent definisce il contesto di sicurezza per il passaggio di processo specificato. Affinché un processo venga eseguito nell'istanza del server di destinazione, è necessario ricreare in tale istanza tutti i proxy di cui necessita il processo. Per altre informazioni, vedere [Creare un proxy di SQL Server Agent](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988) e [Risolvere i problemi relativi a processi multiserver che usano proxy](http://msdn.microsoft.com/library/fc579bd3-010c-4f72-8b5c-d0cc18a1f280).  
+     Un proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent definisce il contesto di sicurezza per il passaggio di processo specificato. Affinché un processo venga eseguito nell'istanza del server di destinazione, è necessario ricreare in tale istanza tutti i proxy di cui necessita il processo. Per altre informazioni, vedere [Creare un proxy di SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md) e [Risolvere i problemi relativi a processi multiserver che usano proxy](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md).  
   
  Per ulteriori informazioni, vedere anche:  
   
--   [Implementazione di processi](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
+-   [Implementazione di processi](../../ssms/agent/implement-jobs.md)  
   
 -   [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (per il mirroring del database)  
   
 -   [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (quando si installa un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Configurare SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) (quando si installa un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [Configurare SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md) (quando si installa un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Implementazione della sicurezza di SQL Server Agent](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+-   [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)  
   
  **Per visualizzare processi esistenti e relative proprietà**  
   
--   [Monitoraggio delle attività del processo](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+-   [Monitoraggio delle attività del processo](../../ssms/agent/monitor-job-activity.md)  
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [Visualizzare informazioni sui passaggi di processo](http://msdn.microsoft.com/library/e3f06492-dc86-4e06-b186-ea58aff6d591)  
+-   [Visualizzare informazioni sui passaggi di processo](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **Per creare un processo**  
   
--   [Creazione di un processo](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Creazione di un processo](../../ssms/agent/create-a-job.md)  
   
--   [Creazione di un processo](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Creazione di un processo](../../ssms/agent/create-a-job.md)  
   
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>Procedure consigliate per l'utilizzo di uno script per ricreare un processo  
  Per iniziare, è consigliabile creare lo script di un processo semplice, ricreare il processo nell'altro servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ed eseguire il processo per verificare se funziona come previsto. In questo modo, è possibile identificare eventuali incompatibilità e tentare di risolverle. Se un processo per cui è stato creato uno script non funziona come previsto nel nuovo ambiente, è consigliabile creare un processo equivalente che funzioni correttamente in tale ambiente.  

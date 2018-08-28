@@ -17,12 +17,12 @@ caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e6d704c10a90bf079b436c4923c6b21fff92319c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3f4468a43837e1f140a8fef0b7a7144eb087ec67
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770247"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405235"
 ---
 # <a name="logins-and-jobs-for-availability-group-databases"></a>Account di accesso e processi per i database di gruppi di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ ms.locfileid: "34770247"
   
 -   [Creare un utente del database](../../../relational-databases/security/authentication-access/create-a-database-user.md).  
   
--   [Creazione di un processo](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Creazione di un processo](../../../ssms/agent/create-a-job.md)  
   
 -   [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Database indipendenti](../../../relational-databases/databases/contained-databases.md)   
- [Crea processi](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)  
+ [Crea processi](../../../ssms/agent/create-jobs.md)  
   
   

@@ -17,19 +17,19 @@ caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7983692ff403f5d6330e3c4fc2169ee35d813125
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 34298ca95d57673ff8dd60af5a133f7106fa3834
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145472"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405832"
 ---
 # <a name="data-collector-security"></a>Sicurezza agente di raccolta dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L'agente di raccolta dati usano il modello di sicurezza basato sui ruoli implementato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questo modello consente all'amministratore del database di eseguire le varie attività dell'agente di raccolta dati in un contesto di sicurezza che ha solo le autorizzazioni necessarie per eseguire quell'attività. Questo approccio è usato anche per operazioni con tabelle interne, a cui è possibile accedere solo mediante una stored procedure o una vista. Per le tabelle interne non vengono concesse autorizzazioni. Le autorizzazioni vengono invece controllate sull'utente della stored procedure o della vista usata per accedere a una tabella.  
   
 > [!IMPORTANT]  
->  Un altro aspetto chiave di questo modello di sicurezza è costituito dalle autorizzazioni concentriche. Nelle autorizzazioni concentriche i ruoli con privilegi di livello più alto ereditano le autorizzazioni dei ruoli con privilegi di livello più basso su oggetti (compresi avvisi, operatori, processi, pianificazioni e proxy). Per altre informazioni, vedere [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+>  Un altro aspetto chiave di questo modello di sicurezza è costituito dalle autorizzazioni concentriche. Nelle autorizzazioni concentriche i ruoli con privilegi di livello più alto ereditano le autorizzazioni dei ruoli con privilegi di livello più basso su oggetti (compresi avvisi, operatori, processi, pianificazioni e proxy). Per altre informazioni, vedere [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Nelle sezioni seguenti vengono descritte la sicurezza della raccolta di dati in generale, nonché i ruoli che è necessario concedere agli utenti affinché possano configurare e usare l'agente di raccolta dati ed eseguire attività associate al data warehouse di gestione.  
   
@@ -149,6 +149,6 @@ ms.locfileid: "33145472"
  I membri del ruolo **mdw_reader** hanno accesso in lettura al data warehouse di gestione. Poiché lo scopo di questo ruolo è supportare la risoluzione dei problemi fornendo accesso ai dati della cronologia, i membri di questo ruolo non possono visualizzare gli altri elementi dello schema del data warehouse di gestione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Implementazione della sicurezza di SQL Server Agent](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+ [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

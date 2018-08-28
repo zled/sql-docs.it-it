@@ -18,12 +18,12 @@ caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d74d77229e88e04c2d661da827b4d6183ab2d2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 070b34a724914147f87f48df00a1e5778695e3a5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952533"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405232"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>Configurare avvisi per notificare agli amministratori eventuali errori dei criteri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "32952533"
   
  Per configurare un avviso per rispondere ai messaggi di errore relativi alla gestione basata su criteri, vedere gli argomenti seguenti:  
   
--   [Creazione di un operatore](http://msdn.microsoft.com/library/1359d790-5905-4927-a208-e7155e7768a2)  
+-   [Creazione di un operatore](../../ssms/agent/create-an-operator.md)  
   
--   [Creazione di un avviso utilizzando un numero di errore](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
+-   [Creazione di un avviso utilizzando un numero di errore](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [Assegnazione di avvisi a un operatore](http://msdn.microsoft.com/library/aa818155-6fa2-4565-a09f-5c7e31c89754)  
+-   [Assegnazione di avvisi a un operatore](../../ssms/agent/assign-alerts-to-an-operator.md)  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Quando i criteri vengono valutati su richiesta, vengono eseguiti nel contesto di sicurezza dell'utente. Per poter scrivere nel log degli errori, l'utente deve disporre di autorizzazioni ALTER TRACE o deve essere un membro del ruolo predefinito del server sysadmin. I criteri valutati da un utente che dispone di privilegi di livello inferiore non verranno scritti nel registro eventi e non genereranno un avviso.  
   
  Le modalità di esecuzione automatiche possono essere eseguite solo da membri del ruolo sysadmin. Tale ruolo consente la scrittura dei criteri nel log degli errori e la generazione di un avviso.  

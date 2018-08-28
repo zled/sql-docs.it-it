@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c05923ff7be5c1264f5801c1190c7297ea793b55
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d67c538bb27eddd84ee7b254fd1beec8f22ed
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948396"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405591"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Creare un piano di manutenzione (area di progettazione del piano di manutenzione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "32948396"
      Consente di visualizzare la finestra di dialogo **Report e registrazione** . Per ulteriori informazioni su questa finestra di dialogo, vedere di seguito.  
   
      **Server**  
-     Visualizza la finestra di dialogo **Server** usata per selezionare i server in cui verranno eseguite le attività del sottopiano. Questa opzione è abilitata solo nei server master in ambienti multiserver. Per altre informazioni, vedere [Creazione di un ambiente multiserver](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6) e [Piano di manutenzione & #40;Server& #41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
+     Visualizza la finestra di dialogo **Server** usata per selezionare i server in cui verranno eseguite le attività del sottopiano. Questa opzione è abilitata solo nei server master in ambienti multiserver. Per altre informazioni, vedere [Creazione di un ambiente multiserver](../../ssms/agent/create-a-multiserver-environment.md) e [Piano di manutenzione & #40;Server& #41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
   
      **Nome**  
      Consente di visualizzare il nome del piano di manutenzione. Il nome dei nuovi piani di manutenzione viene indicato in una finestra di dialogo visualizzata prima dell'apertura della finestra di progettazione dei piani di manutenzione. Per rinominare un piano di manutenzione, fare clic con il pulsante destro del mouse sul piano in Esplora oggetti e quindi scegliere **Rinomina**.  

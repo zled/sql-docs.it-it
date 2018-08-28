@@ -16,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 042d7aa32742f0cddf18963a7a50ac1cc2dc9ec6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 6dbc4b3fe31419f89dba28b1f8c067ef74e70edd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558271"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405415"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Supporto di SQL Server Management Studio per OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "39558271"
   
 2.  Per sostituire i parametri del modello, scegliere **Imposta valori per parametri modello** dal menu **Query** .  
   
-     Per altre informazioni sulla modalità d'uso dei modelli, vedere [Esplora modelli](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
+     Per altre informazioni sulla modalità d'uso dei modelli, vedere [Esplora modelli](../../ssms/template/template-explorer.md).  
   
 3.  In **Esplora oggetti** le tabelle vengono ordinate prima in base alle tabelle basate su disco e quindi in base alle tabelle ottimizzate per la memoria. Usare **Dettagli Esplora oggetti** per visualizzare tutte le tabelle ordinate in base al nome.  
   

@@ -9,7 +9,7 @@ ms.reviewer: ''
 ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - development [SQL Server replication]
 - replication [SQL Server], development
@@ -19,18 +19,18 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 97a42dd9ee74082cfc1f898802fe7c0aa11ac255
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: eb19cd7e2e7fb92680512747cf3990f189b71e71
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350921"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018384"
 ---
 # <a name="replication-features-and-tasks"></a>Caratteristiche e attività di replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento sono incluse le informazioni che consentono a qualsiasi tipologia di utente (designer, sviluppatore, analista o amministratore) di progettare e implementare soluzioni di replica.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Tipi di replica](../../relational-databases/replication/types-of-replication.md)  
   

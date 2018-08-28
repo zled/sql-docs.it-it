@@ -15,15 +15,15 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 343372d210fa960ca85ca672e96b0e1aaedf6277
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ea2db3668b6be4f71aa5e7d8f325f3032e203e50
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550072"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405405"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Ambiente di creazione di Generatore report (SSRS)
-  Generatore report [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] è un ambiente di creazione e modifica autonomo per la creazione di report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] all'esterno di Visual Studio. Quando si progetta un report, si specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, Elaborazione report utilizza tutte le informazioni specificate, recupera i dati e li combina con il layout per generare il report. È possibile installarlo dal portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o dall'Area download Microsoft.  
+  Generatore report [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è un ambiente di creazione e modifica autonomo per la creazione di report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] all'esterno di Visual Studio. Quando si progetta un report, si specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, Elaborazione report utilizza tutte le informazioni specificate, recupera i dati e li combina con il layout per generare il report. È possibile installarlo dal portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o dall'Area download Microsoft.  
   
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) dall'Area download Microsoft.  
   

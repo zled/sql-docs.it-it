@@ -18,12 +18,12 @@ caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 76e11f1afb39cb8ddd82f99d74e2d2a21c776664
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 278ac96f3c4517e998ae21516c5c7584cc17993d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942546"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405586"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitoraggio attività processi (Impostazioni filtro)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,6 +72,6 @@ ms.locfileid: "32942546"
  Consente di ripristinare le impostazioni di filtro predefinite.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitoraggio delle attività del processo](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+ [Monitoraggio delle attività del processo](../../ssms/agent/monitor-job-activity.md)  
   
   

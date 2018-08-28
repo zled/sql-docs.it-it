@@ -14,13 +14,14 @@ ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7846c9f5cfbc15f88a1cc10f38eaa9542f6c0648
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5ef475eecf39d57e0ae27fae5e80c18d85a67ff8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050229"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405951"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Aggiornare gli strumenti di gestione di SQL Server
 
@@ -36,7 +37,7 @@ Prima di eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurren
   
 ### <a name="for-all-upgrade-scenarios"></a>Per tutti gli scenari di aggiornamento:  
   
-- Tutti i server TSX devono essere aggiornati prima dell'aggiornamento del server MSX. Per altre informazioni su MSX/TSX in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Amministrazione automatizzata in un'organizzazione](http://msdn.microsoft.com/library/44d8365b-42bd-4955-b5b2-74a8a9f4a75f).  
+- Tutti i server TSX devono essere aggiornati prima dell'aggiornamento del server MSX. Per altre informazioni su MSX/TSX in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Amministrazione automatizzata in un'organizzazione](../../ssms/agent/automated-administration-across-an-enterprise.md).  
   
 -   Tutti i componenti inclusi in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono essere aggiornati simultaneamente. I numeri di versione dei componenti del [!INCLUDE[ssDE](../../includes/ssde-md.md)], di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devono essere identici in un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

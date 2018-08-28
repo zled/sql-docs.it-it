@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 13deb284a73027321bd0bd051dce91f642078c96
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: 96a8a4e87167adc8243f8f313b9801966c1c32f0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509110"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405839"
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Creare DTC cluster per un gruppo di disponibilità Always On
 
@@ -29,7 +29,7 @@ Questo argomento illustra la configurazione completa di una risorsa DTC cluster 
 
 La procedura dettagliata crea una risorsa DTC cluster e gruppi di disponibilità di SQL Server per l'allineamento con i requisiti in [Inserire DTC nel cluster per i gruppi di disponibilità di SQL Server](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md).
 
-La procedura dettagliata usa PowerShell e gli script Transact-SQL (T-SQL),  molti dei quali richiedono l'abilitazione della **modalità SQLCMD** .  Per altre informazioni sulla **modalità SQLCMD**, vedere [Attivazione di scripting SQLCMD nell'editor di query](https://msdn.microsoft.com/library/ms174187.aspx#Anchor_1).  Il modulo PowerShell **FailoverClusters** deve essere importato.  Per altre informazioni sull'importazione di un modulo di PowerShell, vedere [Importing a PowerShell Module (Importazione di un modulo di PowerShell)](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx).  Questa procedura dettagliata si basa sui seguenti criteri:
+La procedura dettagliata usa PowerShell e gli script Transact-SQL (T-SQL),  molti dei quali richiedono l'abilitazione della **modalità SQLCMD** .  Per altre informazioni sulla **modalità SQLCMD**, vedere [Attivazione di scripting SQLCMD nell'editor di query](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  Il modulo PowerShell **FailoverClusters** deve essere importato.  Per altre informazioni sull'importazione di un modulo di PowerShell, vedere [Importing a PowerShell Module (Importazione di un modulo di PowerShell)](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx).  Questa procedura dettagliata si basa sui seguenti criteri:
 - Sono stati soddisfatti tutti i requisiti elencati in [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
 - Il dominio è `contoso.lab`.
 - L'utente ha l'autorizzazione per la creazione di oggetti computer nell'unità organizzativa in cui verrà creata la risorsa nome di rete DTC.

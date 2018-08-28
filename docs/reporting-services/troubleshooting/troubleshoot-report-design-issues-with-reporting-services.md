@@ -15,12 +15,12 @@ caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3e81a3b98bbfe6507c768e541ac0fc613d28d52e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8269b227a144f8e600ca885adaf5b80f2a521e19
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38055836"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409519"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Risolvere i problemi di progettazione dei report con Reporting Services
 I problemi di progettazione del report si possono verificare quando si crea il layout del report nella visualizzazione Progettazione in un'applicazione per la progettazione di report. Usare le informazioni presenti in questo argomento per risolvere questi problemi.   
@@ -66,5 +66,5 @@ Per raggruppare più aree dati o elementi di report, posizionarli nello stesso c
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

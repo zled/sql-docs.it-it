@@ -17,12 +17,12 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fda5188298c2cae3b56bdb4119ae1bbc96679a2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 634672a3f769029549727c571c011ae5e4b03aef
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870806"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406515"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Risolvere i problemi di connessione al motore di database di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ Per connettersi a SQL Server tramite TCP/IP è necessario che Windows sia in gra
 ## <a name="testing-a-local-connection"></a>Test di una connessione locale
 
 Prima di risolvere un problema di connessione da un altro computer, verificare innanzitutto la possibilità di connettersi da un'applicazione client installata nel computer che esegue SQL Server. In questo modo sarà possibile evitare i problemi del firewall. In questa procedura viene usato SQL Server Management Studio. Se Management Studio non è installato, vedere [Scaricare SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md). Se non si è in grado di installare Management Studio, è possibile testare la connessione usando l'utilità `sqlcmd.exe` che viene installata con il motore di database. Per altre informazioni su `sqlcmd.exe`, vedere [Utilità sqlcmd](../../tools/sqlcmd-utility.md).
-1.  Accedere al computer in cui è installato SQL Server usando un account che dispone dell'autorizzazione per accedere a SQL Server. Durante l'installazione, SQL Server richiede almeno un accesso come amministratore di SQL Server. Se non si conosce un amministratore, vedere [Connettersi a SQL Server se gli amministratori di sistema sono bloccati](http://msdn.microsoft.com/library/dd207004.aspx).
+1.  Accedere al computer in cui è installato SQL Server usando un account che dispone dell'autorizzazione per accedere a SQL Server. Durante l'installazione, SQL Server richiede almeno un accesso come amministratore di SQL Server. Se non si conosce un amministratore, vedere [Connettersi a SQL Server se gli amministratori di sistema sono bloccati](connect-to-sql-server-when-system-administrators-are-locked-out.md).
 2.   Nella pagina iniziale digitare **SQL Server Management Studio**oppure nelle versioni precedenti di Windows nel menu Start scegliere **Tutti i programmi**, quindi scegliere **Microsoft SQL Server**e fare clic su **SQL Server Management Studio**.
 3.  Nella finestra di dialogo **Connetti al server** selezionare **Motore di database** nella casella **Tipo di server**. Nella casella **Autenticazione** selezionare **Autenticazione di Windows**. Nella casella **Nome server** digitare una delle opzioni seguenti:
 
@@ -107,7 +107,7 @@ Prima di risolvere un problema di connessione da un altro computer, verificare i
 Se si verifica un errore in questa fase, è necessario risolverlo prima di procedere. Possono verificarsi diversi tipi di problemi. È possibile che l'account di accesso non sia autorizzato a connettersi. Il database predefinito potrebbe non essere disponibile.
 
 >    [!NOTE] 
->    Alcuni messaggi di errore passati al client non forniscano intenzionalmente informazioni sufficienti per risolvere il problema. Si tratta di una misura di sicurezza per evitare di fornire informazioni su SQL Server a un utente malintenzionato. Per visualizzare informazioni complete sull'errore, esaminare il log degli errori di SQL Server. Il log contiene informazioni dettagliate. Se si verifica l'errore **18456 L'accesso non è riuscito per l'utente**, vedere l'argomento [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) della documentazione online che include informazioni aggiuntive sui codici di errore. Un blog di Aaron Bertrand include un elenco completo dei codici di errore in [Troubleshooting Error 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)(Risoluzione dell'errore 18456). Se si è in grado di stabilire la connessione, è possibile visualizzare il log degli errori con SSMS nella sezione Gestione di Esplora oggetti. In caso contrario, è possibile visualizzare il log degli errori con il Blocco note di Windows. Il percorso predefinito varia in base alla versione e può essere modificato durante l'installazione. Il percorso predefinito per [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] è `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
+>    Alcuni messaggi di errore passati al client non forniscano intenzionalmente informazioni sufficienti per risolvere il problema. Si tratta di una misura di sicurezza per evitare di fornire informazioni su SQL Server a un utente malintenzionato. Per visualizzare informazioni complete sull'errore, esaminare il log degli errori di SQL Server. Il log contiene informazioni dettagliate. Se si verifica l'errore **18456 L'accesso non è riuscito per l'utente**, vedere l'argomento [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) della documentazione online che include informazioni aggiuntive sui codici di errore. Un blog di Aaron Bertrand include un elenco completo dei codici di errore in [Troubleshooting Error 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)(Risoluzione dell'errore 18456). Se si è in grado di stabilire la connessione, è possibile visualizzare il log degli errori con SSMS nella sezione Gestione di Esplora oggetti. In caso contrario, è possibile visualizzare il log degli errori con il Blocco note di Windows. Il percorso predefinito varia in base alla versione e può essere modificato durante l'installazione. Il percorso predefinito per [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] è `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   Se è possibile connettersi tramite Shared Memory, testare la connessione usando TCP. È possibile forzare una connessione TCP specificando **tcp:** prima del nome. Ad esempio
 
@@ -123,7 +123,7 @@ Se è possibile connettersi con Shared Memory e non con TCP, è necessario corre
 ## <a name="opening-a-port-in-the-firewall"></a>Apertura di una porta nel firewall
 
 Da diversi anni, a partire da Windows XP Service Pack 2, è abilitato Windows Firewall che blocca le connessioni da altri computer. Per connettersi tramite TCP/IP da un altro computer, è necessario configurare il firewall nel computer SQL Server per consentire le connessioni alla porta TCP usata dal motore di database. Come accennato in precedenza, l'istanza predefinita è in genere in ascolto sulla porta TCP 1433. Se ci sono istanze denominate o se l'istanza predefinita è stata modificata, la porta TCP di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] potrebbe essere in ascolto su un'altra porta. Vedere la sezione iniziale relativa alla raccolta di informazioni per determinare la porta.  
-Se si stabilisce la connessione a un'istanza denominata o a una porta diversa dalla porta TCP 1433, è necessario aprire anche la porta UDP 1434 per il servizio SQL Server Browser. Per istruzioni dettagliate sull'apertura di una porta in Windows Firewall, vedere [Configurazione di Windows Firewall per l'accesso al Motore di database](https://msdn.microsoft.com/library/ms175043).
+Se si stabilisce la connessione a un'istanza denominata o a una porta diversa dalla porta TCP 1433, è necessario aprire anche la porta UDP 1434 per il servizio SQL Server Browser. Per istruzioni dettagliate sull'apertura di una porta in Windows Firewall, vedere [Configurazione di Windows Firewall per l'accesso al Motore di database](configure-a-windows-firewall-for-database-engine-access.md).
 
 ## <a name="testing-the-connection"></a>Test della connessione
 

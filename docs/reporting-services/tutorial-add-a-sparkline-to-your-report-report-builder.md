@@ -17,16 +17,16 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f8818331ee958d1a8458d057015c1f79e787af8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a141439653310878c9650a980dff2fc5ec189ead
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036398"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405806"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)
 
-In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]viene creata una tabella semplice con un grafico sparkline in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
+In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]viene creata una tabella semplice con un grafico sparkline in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
   
 I grafici sparkline e le barre dei dati sono grafici semplici e di piccole dimensioni contenenti numerose informazioni in uno spazio ridotto, spesso in tabelle e matrici in report di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . L'immagine seguente illustra un report simile a quello che verrà creato.  
   

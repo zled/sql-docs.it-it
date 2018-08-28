@@ -20,12 +20,12 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08498dcec9823006babd265e79945d1273953a57
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03aada845eaf77e83833f3cc3252bca4a2d49e42
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931506"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405985"
 ---
 # <a name="model-database"></a>Database model
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "32931506"
 |Dati primari|modeldev|model.mdf|Aumento automatico di 64 MB fino a quando il disco risulta pieno.|  
 |File di log|modellog|modellog.ldf|Aumento automatico di 64 MB fino a un massimo di 2 terabyte.|  
   
- Per le versioni precedenti a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vedere [Database modello](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx)per i valori di aumento predefinito dei file.  
+ Per le versioni precedenti a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vedere [Database modello](model-database.md)per i valori di aumento predefinito dei file.  
   
  Per spostare il database **modello** o i file di log, vedere [Spostare i database di sistema](../../relational-databases/databases/move-system-databases.md).  
   

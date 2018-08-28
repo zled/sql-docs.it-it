@@ -19,12 +19,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bac74e291dbaddb45662610abfb0681d1b144ae9
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 454daed366316554c181249414dd899d5d02c836
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405153"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410023"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Processi di SQL Server Agent per i pacchetti
   È possibile automatizzare e pianificare l'esecuzione dei pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile pianificare i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e nel file system.  
@@ -121,7 +121,7 @@ ms.locfileid: "35405153"
   
 6.  Selezionare **Pacchetto di Integration Services** per il tipo di passaggio di processo.  
   
-7.  Nell'elenco **Esegui come** selezionare **Account del servizio SQL Server Agent** oppure selezionare un account proxy che dispone delle credenziali che verranno utilizzate dal passaggio di processo. Per informazioni sulla creazione di un account proxy, vedere [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
+7.  Nell'elenco **Esegui come** selezionare **Account del servizio SQL Server Agent** oppure selezionare un account proxy che dispone delle credenziali che verranno utilizzate dal passaggio di processo. Per informazioni sulla creazione di un account proxy, vedere [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
      L'utilizzo di un account proxy anziché dell' **Account del servizio SQL Server Agent** può risolvere i problemi comuni che possono verificarsi quando si esegue un pacchetto tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per ulteriori informazioni su questi problemi, vedere l'articolo della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base relativo a [un pacchetto SSIS che non viene eseguito quando viene chiamato da un passaggio di processo di SQL Server Agent](http://support.microsoft.com/kb/918760).  
   
@@ -188,7 +188,7 @@ ms.locfileid: "35405153"
     >   
     >  L'ambiente server che contiene la variabile non è selezionato nella casella di riepilogo della scheda **Configurazione** .  
   
-10. Per creare una pianificazione per un passaggio di processo, fare clic su **Pianificazioni** nel riquadro **Selezione pagina** . Per informazioni su come configurare una pianificazione, vedere [Schedule a Job](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c).  
+10. Per creare una pianificazione per un passaggio di processo, fare clic su **Pianificazioni** nel riquadro **Selezione pagina** . Per informazioni su come configurare una pianificazione, vedere [Schedule a Job](../../ssms/agent/schedule-a-job.md).  
   
     > [!TIP]  
     >  Quando si assegna un nome alla pianificazione, utilizzare un nome univoco e descrittivo in modo da distinguere più facilmente la pianificazione da altre pianificazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  

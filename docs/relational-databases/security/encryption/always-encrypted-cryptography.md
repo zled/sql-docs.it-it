@@ -15,12 +15,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8919be74352e38cd1065cf8834fea930fcaef90a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 243a098b6da484f3a78b4a2f743b1095a89f6991
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546641"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405851"
 ---
 # <a name="always-encrypted-cryptography"></a>Crittografia sempre attiva
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39546641"
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Chiavi, archivi di chiavi e algoritmi di crittografia delle chiavi  
  La funzionalità Crittografia sempre attiva usa chiavi di due tipi: chiavi master della colonna e chiavi di crittografia della colonna.  
   
- La chiave CMK (Column Master Key, chiave master della colonna) è una chiave usata per crittografare altre chiavi che resta sempre sotto il controllo del client ed è memorizzata in un archivio di chiavi esterno. Il driver client abilitato per Always Encrypted interagisce con l'archivio delle chiavi tramite un provider di archiviazione CMK, che può far parte sia della libreria dei driver (provider [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/di sistema) che dell'applicazione client (provider personalizzato). Al momento, le librerie di driver client includono provider di archiviazione chiavi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per l'[archivio certificati Windows](https://msdn.microsoft.com/library/windows/desktop/aa388160) e moduli di protezione hardware.  Per l'elenco aggiornato dei provider, vedere [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Uno sviluppatore di applicazioni può realizzare un provider personalizzato per un archivio arbitrario.  
+ La chiave CMK (Column Master Key, chiave master della colonna) è una chiave usata per crittografare altre chiavi che resta sempre sotto il controllo del client ed è memorizzata in un archivio di chiavi esterno. Il driver client abilitato per Always Encrypted interagisce con l'archivio delle chiavi tramite un provider di archiviazione CMK, che può far parte sia della libreria dei driver (provider [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/di sistema) che dell'applicazione client (provider personalizzato). Al momento, le librerie di driver client includono provider di archiviazione chiavi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per l'[archivio certificati Windows](/windows/desktop/SecCrypto/using-certificate-stores) e moduli di protezione hardware.  Per l'elenco aggiornato dei provider, vedere [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Uno sviluppatore di applicazioni può realizzare un provider personalizzato per un archivio arbitrario.  
   
  La chiave CEK (Column Encryption Key, chiave di crittografia della colonna) è una chiave di crittografia del contenuto, cioè una chiave usata per proteggere i dati, protetta da una chiave CMK.  
   

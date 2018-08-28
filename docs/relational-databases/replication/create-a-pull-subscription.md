@@ -21,12 +21,12 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc3dde38b3052627ab201b77a8dfef9573469a20
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: fbecd5e6f94269b5e10efea681ae81993bf56ce4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352213"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405307"
 ---
 # <a name="create-a-pull-subscription"></a>Creazione di una sottoscrizione pull
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "37352213"
   
     -   Se il valore di **allow_pull** è **0**, eseguire [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) specificando **allow_pull** per **@property** e **true** per **@value**.  
   
-2.  Nel Sottoscrittore eseguire [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Specificare **@publisher** e **@publication**. Per informazioni sull'aggiornamento delle sottoscrizioni, vedere [Creazione di una sottoscrizione aggiornabile di una pubblicazione transazionale](https://msdn.microsoft.com/library/ms152769.aspx).   
+2.  Nel Sottoscrittore eseguire [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Specificare **@publisher** e **@publication**. Per informazioni sull'aggiornamento delle sottoscrizioni, vedere [Creazione di una sottoscrizione aggiornabile di una pubblicazione transazionale](publish/create-an-updatable-subscription-to-a-transactional-publication.md).   
   
 3.  Nel Sottoscrittore eseguire [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specificare le opzioni seguenti:  
   

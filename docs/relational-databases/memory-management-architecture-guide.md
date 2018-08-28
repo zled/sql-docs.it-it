@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: d214a7cbc835bb9fa3401ea3268027547cd752f3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008893"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405302"
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "40008893"
 ## <a name="windows-virtual-memory-manager"></a>Virtual Memory Manager di Windows  
 Viene eseguito il mapping delle aree di cui è stato eseguito il commit dello spazio degli indirizzi alla memoria fisica disponibile tramite Virtual Memory Manager (VMM) di Windows.  
   
-Per altre informazioni sulla quantità di memoria fisica supportata dai diversi sistemi operativi, vedere la documentazione di Windows relativa ai [limiti di memoria per le versioni di Windows](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx).  
+Per altre informazioni sulla quantità di memoria fisica supportata dai diversi sistemi operativi, vedere la documentazione di Windows relativa ai [limiti di memoria per le versioni di Windows](/windows/desktop/Memory/memory-limits-for-windows-releases).  
   
 I sistemi con memoria virtuale consentono il commit in eccesso della memoria fisica, per cui il rapporto tra memoria virtuale e memoria fisica può essere maggiore di 1:1. Di conseguenza, i computer con diverse configurazioni di memoria fisica consentono l'esecuzione di programmi di dimensioni elevate. Tuttavia l'utilizzo di una quantità di memoria virtuale di molto superiore alla combinazione dei set di lavoro medi per tutti i processi determina un peggioramento delle prestazioni. 
 

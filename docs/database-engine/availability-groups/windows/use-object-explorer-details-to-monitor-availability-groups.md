@@ -19,19 +19,19 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f955e14d91bd62208d9e03e7c8b0aa6705a879b1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9cbcb449c2e8d1705093ca40c21244e3cb7eb056
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770187"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405974"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usare Dettagli Esplora oggetti per monitorare i gruppi di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Questo argomento illustrato come usare il riquadro **Dettagli Esplora oggetti** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per monitorare e gestire i database di disponibilità Always On, le repliche di disponibilità e i gruppi di disponibilità esistenti.  
   
 > [!NOTE]  
->  Per informazioni sull'uso del riquadro Dettagli Esplora oggetti, vedere [Riquadro Dettagli di Esplora oggetti](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47).  
+>  Per informazioni sull'uso del riquadro Dettagli Esplora oggetti, vedere [Riquadro Dettagli di Esplora oggetti](../../../ssms/object/object-explorer-details-pane.md).  
   
 -   **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
   

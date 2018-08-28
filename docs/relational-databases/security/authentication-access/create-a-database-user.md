@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7d1df8ab9434915e891cdb98c86bc26bdf9b4b38
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 61c92e767ae38797eb75cd9d72342507323e1e8c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39535192"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405961"
 ---
 # <a name="create-a-database-user"></a>Creazione di un utente di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -139,7 +139,7 @@ ms.locfileid: "39535192"
      Consente di visualizzare o specificare le proprietà estese relative all'oggetto. Ogni proprietà estesa è composta da una coppia nome/valore di metadati associati all'oggetto.  
   
      **Puntini di sospensione (...)**  
-     Fare clic sui puntini di sospensione **(…)** dopo **Valore** per visualizzare la finestra di dialogo **Valore per proprietà estesa** . Digitare o visualizzare il valore della proprietà estesa in questa finestra di dimensioni maggiori. Per ulteriori informazioni, vedere [Finestra di dialogo Valore per proprietà estesa](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Fare clic sui puntini di sospensione **(…)** dopo **Valore** per visualizzare la finestra di dialogo **Valore per proprietà estesa** . Digitare o visualizzare il valore della proprietà estesa in questa finestra di dimensioni maggiori. Per ulteriori informazioni, vedere [Finestra di dialogo Valore per proprietà estesa](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Elimina**  
      Consente di eliminare la proprietà estesa selezionata.  

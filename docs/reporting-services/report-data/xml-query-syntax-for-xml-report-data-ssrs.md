@@ -20,12 +20,12 @@ caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 24dd0f5497d89f49234dc53e0ad71a7cf2e9ab47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d206256152536c562128072ceaf47b88fb78b0de
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021488"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405360"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintassi di query XML per i dati del report XML (SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è possibile creare set di dati per origini dati XML. Dopo aver definito un'origine dati, è possibile creare una query per il set di dati. In base al tipo di dati XML a cui punta l'origine dati, è possibile creare la query del set di dati includendo un elemento **Query** XML o un percorso di elemento. Un elemento **Query** XML inizia con un tag **\<Query>** e include spazi dei nomi ed elementi XML che variano in base all'origine dati. Un percorso di elemento è indipendente dallo spazio dei nomi e specifica i nodi e gli attributi dei nodi dei dati XML sottostanti da utilizzare tramite una sintassi di tipo XPath. Per altre informazioni sui percorsi di elementi, vedere [Sintassi del percorso di elemento per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "33021488"
   
 -   Per le richieste di URL, i parametri di query vengono inclusi come parametri URL standard.  
   
--   Per le richieste del servizio Web, i parametri di query vengono passati al metodo del servizio Web. Per definire un parametro di query, usare la pagina **Parametri** della finestra di dialogo **Proprietà set di dati** . Per altre informazioni, vedere [Finestra di dialogo Proprietà set di dati, Parametri](../../reporting-services/report-data/dataset-properties-dialog-box-parameters.md).  
+-   Per le richieste del servizio Web, i parametri di query vengono passati al metodo del servizio Web. Per definire un parametro di query, usare la pagina **Parametri** della finestra di dialogo **Proprietà set di dati** . 
   
 ### <a name="example"></a>Esempio  
  Negli esempi della tabella seguente viene illustrato come recuperare i dati dal servizio Web ReportServer, da un documento XML e dai dati XML incorporati.  

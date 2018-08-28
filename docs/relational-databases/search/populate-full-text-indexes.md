@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5d1c1d149f89cbbd34365531b56885a84a5d89ae
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: d13eab13d49cfa9de13f398df75febb87368f5b7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39533421"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410082"
 ---
 # <a name="populate-full-text-indexes"></a>Popolamento degli indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -208,7 +208,7 @@ In alcuni casi una richiesta di popolamento incrementale comporta un popolamento
          Verrà visualizzata la finestra di dialogo **Nuova pianificazione tabella indicizzazione full-text** , in cui è possibile modificare la pianificazione.  
   
         > [!NOTE]  
-        >  Per informazioni sulla modifica di un processo di SQL Server Agent, vedere [Modificare un processo](http://msdn.microsoft.com/library/dd5e5f20-20c4-4ab9-a19a-db87577dcd43).  
+        >  Per informazioni sulla modifica di un processo di SQL Server Agent, vedere [Modificare un processo](../../ssms/agent/modify-a-job.md).  
   
     -   Per **rimuovere** una pianificazione esistente, selezionare la pianificazione esistente e quindi fare clic su **Elimina**.  
   

@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 19844b1f626177e2a49144963f2f185565a86213
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ce4f1a241959fcac09f6d8a41dad5a561e981ba3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769917"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406499"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services con i gruppi di disponibilità AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "34769917"
   
 -   **Modalità SharePoint:** utilizzare le pagine di configurazione SharePoint all'interno delle librerie del documento per i report già pubblicati in un server SharePoint.  
   
--   **Progettazione report:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] al momento della creazione di nuovi report. Per altre informazioni, vedere la sezione 'Progettazione report' in questo argomento.  
+-   **Progettazione report:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] al momento della creazione di nuovi report. Per altre informazioni, vedere la sezione 'Progettazione report' in questo argomento.  
   
  **Risorse aggiuntive:**  
   
@@ -112,11 +112,11 @@ ms.locfileid: "34769917"
  Quando si usano una replica secondaria di sola lettura come origine dati [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , è importante assicurare che la latenza di aggiornamento soddisfi le esigenze degli utenti del report.  
   
 ##  <a name="bkmk_reportdesign"></a> Progettazione report e gruppi di disponibilità  
- Durante la progettazione di report in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] o di un progetto report in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], un utente può configurare una stringa di connessione dell'origine dati del report in modo che contenga nuove proprietà di connessione fornite dai [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Il supporto per le nuove proprietà di connessione dipende da dove l'utente visualizza l'anteprima del report.  
+ Durante la progettazione di report in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] o di un progetto report in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], un utente può configurare una stringa di connessione dell'origine dati del report in modo che contenga nuove proprietà di connessione fornite dai [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Il supporto per le nuove proprietà di connessione dipende da dove l'utente visualizza l'anteprima del report.  
   
--   **Anteprima locale:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] usano .Net Framework 4.0 e supportano le proprietà della stringa di connessione di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
+-   **Anteprima locale:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] e [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] usano .Net Framework 4.0 e supportano le proprietà della stringa di connessione di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
--   **Anteprima modalità server o remota:** se viene visualizzato un messaggio di errore simile a quello riportato di seguito dopo la pubblicazione dei report nel server di report o dopo l'uso dell'anteprima in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)], questo significa che si sta visualizzando l'anteprima dei report nel server di report e che l'hotfix di .Net Framework 3.5 SP1 per i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non è stato installato nel server di report.  
+-   **Anteprima modalità server o remota:** se viene visualizzato un messaggio di errore simile a quello riportato di seguito dopo la pubblicazione dei report nel server di report o dopo l'uso dell'anteprima in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], questo significa che si sta visualizzando l'anteprima dei report nel server di report e che l'hotfix di .Net Framework 3.5 SP1 per i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non è stato installato nel server di report.  
   
 > **Messaggio di errore:** "Parola chiave non supportata ‘applicationintent’"  
   

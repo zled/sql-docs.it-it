@@ -12,13 +12,14 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 48ae5549290ab4c8701da6bd75641dfabfc02872
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a8b7e7fdc732376e58d9b7923f2889a0ebc055e1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771077"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405457"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Installare SQL Server tramite un file di configurazione
 
@@ -26,7 +27,7 @@ ms.locfileid: "34771077"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione consente di generare un file di configurazione in base all'impostazione predefinita del sistema e ai dati di input inseriti in fase di esecuzione. È possibile utilizzare il file di configurazione per distribuire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in tutta l'organizzazione con la stessa configurazione, nonché standardizzare le installazioni manuali nell'organizzazione creando un file batch che consente di avviare Setup.exe. 
  
-Questo articolo è stato aggiornato in modo specifico per SQL Server 2016 e SQL Server 2017. Per le versioni precedenti di SQL Server, vedere [Installare SQL Server 2014 tramite un file di configurazione](http://msdn.microsoft.com/library/dd239405(v=sql.120).aspx).
+Questo articolo è stato aggiornato in modo specifico per SQL Server 2016 e SQL Server 2017. Per le versioni precedenti di SQL Server, vedere [Installare SQL Server 2014 tramite un file di configurazione](install-sql-server-2016-using-a-configuration-file.md).
  
 Il programma di installazione supporta l'utilizzo del file di configurazione solo tramite il prompt dei comandi. L'ordine di elaborazione dei parametri durante l'utilizzo del file di configurazione viene indicato di seguito:  
   

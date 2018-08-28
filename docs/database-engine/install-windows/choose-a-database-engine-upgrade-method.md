@@ -11,13 +11,14 @@ ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e5970629622e5f1e219bcdb80ec31341c12d585e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46b231d5402bef7b9a092278dfd5b0f809411c1e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206011"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405945"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Scegliere un metodo di aggiornamento del motore di database
 
@@ -79,7 +80,7 @@ ms.locfileid: "37206011"
  Dopo la migrazione dei database utente, puntare i nuovi utenti verso la nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando uno dei diversi metodi, ad esempio rinominando il server, usando una voce DNS, modificando le stringhe di connessione.  Il nuovo approccio di installazione riduce rischi e tempi di inattività rispetto all'aggiornamento sul posto e agevola gli aggiornamenti hardware e del sistema operativo in combinazione con l'aggiornamento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Se si ha già una soluzione a disponibilità elevata o altri numerosi ambienti dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Aggiornamenti in sequenza](#RollingUpgrade). Se non si ha una soluzione a disponibilità elevata, è possibile configurare temporaneamente il [mirroring del database](http://msdn.microsoft.com/library/ms190941.aspx) per ridurre maggiormente i tempi di inattività e semplificare l'aggiornamento oppure configurare un [gruppo di disponibilità Always On](http://msdn.microsoft.com/library/hh510260.aspx) come soluzione a disponibilità elevata permanente.  
+>  Se si ha già una soluzione a disponibilità elevata o altri numerosi ambienti dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Aggiornamenti in sequenza](#RollingUpgrade). Se non si ha una soluzione a disponibilità elevata, è possibile configurare temporaneamente il [mirroring del database](../database-mirroring/setting-up-database-mirroring-sql-server.md) per ridurre maggiormente i tempi di inattività e semplificare l'aggiornamento oppure configurare un [gruppo di disponibilità Always On](http://msdn.microsoft.com/library/hh510260.aspx) come soluzione a disponibilità elevata permanente.  
   
  Ad esempio, è possibile usare questo approccio per aggiornare gli elementi seguenti:  
   

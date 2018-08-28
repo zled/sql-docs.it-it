@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c14fc0032b2b7bf6c36ce6f8cd592e82603265d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: e7c60cdc292523207809404f5721d643cf6c7e89
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549831"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405852"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Creare e archiviare chiavi master della colonna (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -168,7 +168,7 @@ Una chiave master della colonna per Always Encrypted può essere archiviata in u
 
 Per rendere disponibile un modulo di protezione hardware alle applicazioni di un determinato computer, è necessario installare e configurare un provider di archiviazione chiavi (KSP) che implementa CNG nel computer. Un driver del client Always Encrypted, ovvero un provider di archivio della chiave master della colonna interno al driver, usa il provider di archiviazione chiavi per crittografare e decrittografare le chiavi di crittografia della colonna, protette con la chiave master della colonna archiviata nell'archivio chiavi.
 
-Windows include il provider di archiviazione chiavi del software Microsoft, un provider di archiviazione chiavi basato su software che è possibile usare per i test. Vedere [CNG Key Storage Providers (Provider di archiviazione chiavi CNG)](https://msdn.microsoft.com/library/windows/desktop/bb931355.aspx).
+Windows include il provider di archiviazione chiavi del software Microsoft, un provider di archiviazione chiavi basato su software che è possibile usare per i test. Vedere [CNG Key Storage Providers (Provider di archiviazione chiavi CNG)](/windows/desktop/SecCertEnroll/cng-key-storage-providers).
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>Creazione di chiavi master della colonna in un archivio chiavi con CNG/KSP
 

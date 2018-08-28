@@ -26,15 +26,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 84ba7cea614adc50ad3f3d94aa978fa3fa0deb2a
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: da398f31b54b2881d25d966ebb0536e719a8f597
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453675"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409367"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Aggiunge o rimuove i membri a o da un ruolo del database, oppure modifica il nome di un ruolo del database definito dall'utente.  
   
@@ -124,7 +124,7 @@ Per modificare l'appartenenza a un ruolo predefinito del database è anche neces
 ### <a name="a-change-the-name-of-a-database-role"></a>A. Modificare il nome di un ruolo del database  
  **SI APPLICA A:**   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- Nell'esempio seguente viene modificato il nome del ruolo `buyers` in `purchasing`. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ Nell'esempio seguente viene modificato il nome del ruolo `buyers` in `purchasing`.   Questo esempio può essere eseguito nel database di esempio [AdventureWorks](http://msftdbprodsamples.codeplex.com/).
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
@@ -133,7 +133,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ### <a name="b-add-or-remove-role-members"></a>B. Aggiungere o rimuovere i membri del ruolo  
  **SI APPLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- In questo esempio viene creato un nuovo ruolo del database denominato `Sales`. Viene aggiunto un utente del database denominato Barry all'appartenenza e viene illustrato come rimuovere il membro Barry. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ In questo esempio viene creato un nuovo ruolo del database denominato `Sales`. Viene aggiunto un utente del database denominato Barry all'appartenenza e viene illustrato come rimuovere il membro Barry.   Questo esempio può essere eseguito nel database di esempio [AdventureWorks](http://msftdbprodsamples.codeplex.com/).
   
 ```sql  
 CREATE ROLE Sales;  
