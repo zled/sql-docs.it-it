@@ -17,13 +17,13 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 10f643dd1803cfd41ab132e3fdf1dabadcc87afb
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f298b1739dcdfe97811efa74e817cabd5fb7ac5b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542621"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43072266"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "39542621"
 
   **SQLProcedureColumns** restituisce una riga reporting gli attributi di valore restituito di tutti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure.  
   
- **SQLProcedureColumns** restituisce SQL_SUCCESS se esistono valori per *NomeCatalogo*, *SchemaName*, *ProcName*, o * Nomecolonna* parametri. **SQLFetch** restituisce SQL_NO_DATA quando questi parametri sono utilizzati valori non validi.  
+ **SQLProcedureColumns** restituisce SQL_SUCCESS se esistono o meno valori per *CatalogName*, *SchemaName*, *ProcName*, o  *ColumnName* parametri. **SQLFetch** restituisce SQL_NO_DATA quando in questi parametri vengono utilizzati valori non validi.  
   
- **SQLProcedureColumns** può essere eseguito su un cursore del server statici. Un tentativo di eseguire **SQLProcedureColumns** su un cursore aggiornabile (dinamica o keyset) restituirà SQL_SUCCESS_WITH_INFO che indica che il tipo di cursore è stato modificato.  
+ **SQLProcedureColumns** può essere eseguito su un cursore del server statici. Un tentativo di eseguire **SQLProcedureColumns** su un cursore aggiornabile (dinamico o keyset) restituirà SQL_SUCCESS_WITH_INFO che indica che il tipo di cursore è stato modificato.  
   
  Nella tabella seguente sono elencate le colonne restituite dal set di risultati e come sono state estese per gestire il **udt** e **xml** i tipi di dati tramite il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client:  
   

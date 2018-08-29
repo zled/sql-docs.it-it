@@ -1,5 +1,5 @@
 ---
-title: sp_tables (Transact-SQL) | Documenti di Microsoft
+title: sp_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 80a0c9c99ab21096fe1d0fa6fd3eac77c7b82e48
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1c070be83daf534bc3084689aaa9aa8c1149f374
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559711"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43061894"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ sp_tables [ [ @table_name = ] 'name' ]
  [  **@table_qualifier=** ] **'***qualificatore***'**  
  Nome del qualificatore di tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (*qualificatore ***.*** proprietario ***.*** nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
- [ **,** [  **@table_type=** ] **""***tipo***'**, **'** tipo di **' "** ]  
+ [ **,** [  **@table_type=** ] **"'***tipo***'**, **'** tipo **'"** ]  
  Elenco di valori separati da virgola che fornisce informazioni su tutte le tabelle dei tipi specificati. Questi includono **tabella**, **SYSTEMTABLE**, e **visualizzazione**. *tipo di* viene **varchar(100)**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
@@ -89,9 +89,9 @@ sp_tables [ [ @table_name = ] 'name' ]
 ## <a name="remarks"></a>Note  
  Per ottenere la massima interoperabilità, è consigliabile che nel client del gateway siano utilizzati solo i caratteri jolly standard SQL-92, ovvero i caratteri % e _.  
   
- Le informazioni sui privilegi relativi all'accesso in lettura o scrittura dell'utente corrente per una tabella specifica non vengono necessariamente verificate e di conseguenza l'accesso non è garantito. Questo set di risultati include non solo tabelle e viste, ma anche sinonimi e alias di gateway dei prodotti DBMS che supportano questi tipi. Se l'attributo server **ACCESSIBLE_TABLES è uguale** è Y nel set di risultati di **sp_server_info**, vengono restituite solo le tabelle accessibili dall'utente corrente.  
+ Le informazioni sui privilegi relativi all'accesso in lettura o scrittura dell'utente corrente per una tabella specifica non vengono necessariamente verificate e di conseguenza l'accesso non è garantito. Questo set di risultati include non solo tabelle e viste, ma anche sinonimi e alias di gateway dei prodotti DBMS che supportano questi tipi. Se l'attributo del server **sp_server_info** è Y nel set di risultati **sp_server_info**, vengono restituite solo le tabelle che sono accessibili dall'utente corrente.  
   
- **sp_tables** è equivalente a **SQLTables** in ODBC. I risultati restituiti vengono ordinati in **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**, e **TABLE_NAME**.  
+ **sp_tables** equivale a **SQLTables** in ODBC. I risultati restituiti vengono ordinati **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**, e **TABLE_NAME**.  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione SELECT per lo schema.  

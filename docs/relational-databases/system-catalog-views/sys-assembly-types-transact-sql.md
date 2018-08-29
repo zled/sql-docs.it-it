@@ -1,5 +1,5 @@
 ---
-title: Sys.assembly_types (Transact-SQL) | Documenti di Microsoft
+title: Sys.assembly_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0ac45516d08452652d76be3f56fa1220e713490e
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 083a78fdcf58ff7b2e84262f1e8b8f3210451b22
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540901"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43076364"
 ---
 # <a name="sysassemblytypes-transact-sql"></a>sys.assembly_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Contiene una riga per ogni tipo definito dall'utente che viene definito da un assembly CLR. Nell'esempio **sys.assembly_types** verranno visualizzati nell'elenco di colonne ereditate (vedere [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) dopo **rule_object_id**.  
+  Contiene una riga per ogni tipo definito dall'utente che viene definito da un assembly CLR. Quanto segue **sys.assembly_types** vengono visualizzati nell'elenco delle colonne ereditate (vedere [Sys. Types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) dopo **rule_object_id**.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  

@@ -22,17 +22,16 @@ helpviewer_keywords:
 - database_firewall_rules
 - sys.database_firewall_rules
 ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
-caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ea5b9d5cb50740e349aa6d3cf58bd20f620a8ab6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 068f01bc17a9f907aafaac6d39370be2a0480f57
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038329"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038132"
 ---
 # <a name="sysdatabasefirewallrules-azure-sql-database"></a>sys.database_firewall_rules (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "38038329"
 ## <a name="remarks"></a>Note  
  Per rimuovere una regola del firewall del database, usare [sp_delete_database_firewall_rule &#40;Database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md). Per impostare una regola del firewall per tutti [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere [sp_set_firewall_rule &#40;Database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md). Per restituire informazioni sui database esistente di regole del firewall, eseguire una query [Sys. database_firewall_rules (Database SQL di Azure)](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Questa vista è disponibile nel **master** database e in ogni database utente. L'accesso di sola lettura a questa vista è disponibile per tutti gli utenti che dispongono dell'autorizzazione per connettersi al database.  
   
 ## <a name="see-also"></a>Vedere anche  

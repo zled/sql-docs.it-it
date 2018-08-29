@@ -1,5 +1,5 @@
 ---
-title: sp_validname (Transact-SQL) | Documenti di Microsoft
+title: sp_validname (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_validname
 ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bf047124042380187412b16ccf302ea2757df535
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d280eed384619f0afafc39176553fd0ea1960ec6
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540711"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43061294"
 ---
 # <a name="spvalidname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_validname [@name =] 'name'
  È il nome della [identificatori](../../relational-databases/databases/database-identifiers.md) per il quale controllare la validità. *nome* viene **sysname**, non prevede alcun valore predefinito. *nome* non può essere NULL, non può essere una stringa vuota e non può contenere un carattere zero binario.  
   
  [  **@raise_error=** ] *raise_error*  
- Viene specificato se generare un errore. *raise_error* è **bit**, con valore predefinito è 1. Ciò indica che i messaggi di errore vengono visualizzati. Se il valore è 0, i messaggi di errore non vengono visualizzati.  
+ Viene specificato se generare un errore. *raise_error* viene **bit**, con un valore predefinito è 1. Ciò indica che i messaggi di errore vengono visualizzati. Se il valore è 0, i messaggi di errore non vengono visualizzati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

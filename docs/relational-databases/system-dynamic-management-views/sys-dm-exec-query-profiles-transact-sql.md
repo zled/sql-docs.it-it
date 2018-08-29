@@ -23,13 +23,13 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f515f52c624eb0fdb0570f9346c2e5a043efa6d2
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 77e8bd3a2372753eb53a7bd42e7344e0117dc44b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540522"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067793"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "39540522"
   
 -   In caso di analisi parallela, questa DMV restituisce i contatori per ogni thread parallelo usato nell'analisi.
  
- A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, le statistiche di esecuzione di query standard dell'infrastruttura di profilatura è presente side-by-side con un'infrastruttura di analisi le statistiche di esecuzione query lightweight. Nuova query esecuzione infrastruttura delle statistiche profilatura riduce l'overhead delle prestazioni di raccolta delle statistiche di esecuzione query per ogni operatore, ad esempio il numero effettivo di righe. Questa funzione può essere attivata tramite globale avvio [flag di traccia 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), o viene attivata automaticamente quando viene utilizzato l'evento esteso query_thread_profile.
+ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, le statistiche di esecuzione di query standard dell'infrastruttura di profilatura è presente side-by-side con un'infrastruttura di analisi le statistiche di esecuzione query lightweight. Nuova query esecuzione infrastruttura delle statistiche profilatura riduce l'overhead delle prestazioni di raccolta delle statistiche di esecuzione query per ogni operatore, ad esempio il numero effettivo di righe. Questa funzionalità può essere abilitata tramite globale avvio [flag di traccia 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), o viene attivata automaticamente quando l'evento esteso query_thread_profile viene utilizzato.
 
 >[!NOTE]
 > CPU e il tempo trascorso non sono supportati in infrastruttura profilatura delle statistiche esecuzione query lightweight per ridurre l'impatto sulle prestazioni.
@@ -100,7 +100,7 @@ Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario 
 Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
    
 ## <a name="examples"></a>Esempi  
- Passaggio 1: Accesso a una sessione in cui si prevede di eseguire la query analizzerà con sys.dm_exec_query_profiles. Per configurare la query per la profilatura utilizzare SET STATISTICS PROFILE in. Eseguire la query in questa stessa sessione.  
+ Passaggio 1: Accedere a una sessione in cui si prevede di eseguire la query da che analizzare con DM exec_query_profiles. Per configurare la query per la profilatura utilizzare SET STATISTICS PROFILE in. Eseguire la query in questa stessa sessione.  
   
 ```  
 --Configure query for profiling with sys.dm_exec_query_profiles  

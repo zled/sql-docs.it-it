@@ -1,5 +1,5 @@
 ---
-title: sp_setapprole (Transact-SQL) | Documenti Microsoft
+title: sp_setapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_setapprole
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ac733afa3f8afef74a9d6affb16e0f9dbcd5b4a9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 44588ed7365e7f38ec514e1d272e342572f8c967
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259058"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038714"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,43 +52,43 @@ sp_setapprole [ @rolename = ] 'role',
  Nome del ruolo applicazione definito nel database corrente. *ruolo* viene **sysname**, non prevede alcun valore predefinito. *ruolo* deve esistere nel database corrente.  
   
  [  **@password =** ] **{crittografare N'***password***'}**  
- Password richiesta per attivare il ruolo applicazione. *password* viene **sysname**, non prevede alcun valore predefinito. *password* è possibile offuscare utilizzando ODBC **crittografare** (funzione). Quando si utilizza il **crittografare** funzione, la password deve essere convertita in una stringa Unicode inserendo **N** prima della virgoletta iniziale.  
+ Password richiesta per attivare il ruolo applicazione. *la password* viene **sysname**, non prevede alcun valore predefinito. *la password* è possibile offuscare usando ODBC **crittografare** (funzione). Quando si usa la **crittografare** funzione, la password deve essere convertita in una stringa Unicode inserendo **N** prima della virgoletta.  
   
- L'opzione crittografia non è supportata per le connessioni che utilizzano **SqlClient**.  
+ L'opzione crittografia non è supportato per le connessioni che usano **SqlClient**.  
   
 > [!IMPORTANT]  
->  ODBC **crittografare** funzione non fornisce la crittografia. È consigliabile evitare l'utilizzo di questa funzione per proteggere le password trasmesse in rete. Per informazioni da trasmettere in rete, utilizzare i protocolli SSL o IPSec.  
+>  ODBC **crittografare** funzione non supporta la crittografia. È consigliabile evitare l'utilizzo di questa funzione per proteggere le password trasmesse in rete. Per informazioni da trasmettere in rete, utilizzare i protocolli SSL o IPSec.  
   
  **@encrypt = 'none'**  
  Indica che non è richiesto l'utilizzo di tecniche di offuscamento. La password viene passata a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come testo normale. Impostazione predefinita.  
   
  **@encrypt= 'odbc'**  
- Specifica che ODBC eseguirà l'offuscamento della password tramite ODBC **crittografare** funzione prima di inviare la password per il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile specificare questa opzione solo se si utilizza un client ODBC o il provider OLE DB per SQL Server.  
+ Specifica che ODBC eseguirà l'offuscamento della password usando ODBC **crittografare** funzione prima di inviare la password per il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile specificare questa opzione solo se si utilizza un client ODBC o il provider OLE DB per SQL Server.  
   
  [  **@fCreateCookie =** ] **true** | **false**  
  Specifica se è necessario creare un cookie. **true** viene implicitamente convertito in 1. **false** viene implicitamente convertito in 0.  
   
  [  **@cookie =** ]  **@cookie OUTPUT**  
- Specifica un parametro di output per il cookie. Il cookie viene generato solo se il valore di **@fCreateCookie** è **true**. **varbinary(8000)**  
+ Specifica un parametro di output per il cookie. Il cookie viene generato solo se il valore di **@fCreateCookie** viene **true**. **varbinary(8000)**  
   
 > [!NOTE]  
->  Il parametro **OUTPUT** del cookie per **sp_setapprole** è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(50)**. Le applicazioni devono continuare a riservare **varbinary (8000)** in modo che l'applicazione continua a funzionare correttamente se il cookie restituito dimensioni aumentano in una versione futura.  
+>  Il parametro **OUTPUT** del cookie per **sp_setapprole** è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(50)**. Le applicazioni devono continuare a riservare **varbinary(8000** in modo che l'applicazione continua a funzionare correttamente se il cookie di restituisce le dimensioni aumentano in una versione futura.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
- Dopo un'applicazione attivato utilizzando ruolo **sp_setapprole**, tale ruolo rimane attivo fino a quando l'utente si disconnette dal server o esegue **sp_unsetapprole**. **sp_setapprole** può essere eseguita solo da direct [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. **sp_setapprole** non può essere eseguita all'interno di un'altra stored procedure o una transazione definita dall'utente.  
+## <a name="remarks"></a>Note  
+ Dopo un'applicazione l'attivazione di ruolo usando **sp_setapprole**, tale ruolo rimane attivo fino a quando l'utente si disconnette dal server o all'esecuzione **sp_unsetapprole**. **sp_setapprole** può essere eseguita solo da direct [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. **sp_setapprole** non può essere eseguita all'interno di un'altra stored procedure o una transazione definita dall'utente.  
   
- Per una panoramica dei ruoli applicazione, vedere [ruoli applicazione](../../relational-databases/security/authentication-access/application-roles.md).  
+ Per una panoramica dei ruoli applicazione, vedere [i ruoli applicazione](../../relational-databases/security/authentication-access/application-roles.md).  
   
 > [!IMPORTANT]  
 >  È consigliabile utilizzare sempre una connessione crittografata quando si abilita un ruolo applicazione ed è necessario proteggere la password del ruolo applicazione per la trasmissione in rete.  
 >   
->  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **crittografare** opzione non è supportata da **SqlClient**. Se è necessario archiviare credenziali, crittografarle con le funzioni CryptoAPI. Il parametro *password* viene archiviato come hash unidirezionale. Per mantenere la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], criteri di complessità delle password non viene applicato da **sp_addapprole**. Per applicare i criteri di complessità delle password, utilizzare [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md).  
+>  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **crittografare** opzione non è supportato da **SqlClient**. Se è necessario archiviare credenziali, crittografarle con le funzioni CryptoAPI. Il parametro *password* viene archiviato come hash unidirezionale. Per mantenere la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i criteri di complessità delle password non viene applicato dal **sp_addapprole**. Per applicare criteri di complessità delle password, usare [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza **pubblica** e di conoscere la password per il ruolo.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **pubblica** e conoscere la password per il ruolo.  
   
 ## <a name="examples"></a>Esempi  
   

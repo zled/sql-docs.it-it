@@ -1,5 +1,5 @@
 ---
-title: Sys.fulltext_index_fragments (Transact-SQL) | Documenti di Microsoft
+title: fulltext_index_fragments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,13 +27,13 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2d6d073d2ed93208b0fc6c5fbe032b768392ee35
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0691f165a90b6bb8daa6e666b66dee9100ddfa9d
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543013"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43078472"
 ---
 # <a name="sysfulltextindexfragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ SELECT table_id, status FROM sys.fulltext_index_fragments
    WHERE status=4 OR status=6;  
 ```  
   
- Se esistono molti frammenti di tipo queryable, Microsoft consiglia di riorganizzare il catalogo full-text che contiene l'indice full-text per unire i frammenti. Per riorganizzare un impiego catalogo full-text [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* RIORGANIZZARE. Per riorganizzare, ad esempio, un catalogo full-text denominato `ftCatalog` nel database `AdventureWorks2012`, immettere:  
+ Se esistono molti frammenti di tipo queryable, Microsoft consiglia di riorganizzare il catalogo full-text che contiene l'indice full-text per unire i frammenti. Per riorganizzare un utilizzo di catalogo full-text [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* REORGANIZE. Per riorganizzare, ad esempio, un catalogo full-text denominato `ftCatalog` nel database `AdventureWorks2012`, immettere:  
   
 ```  
 USE AdventureWorks2012;  

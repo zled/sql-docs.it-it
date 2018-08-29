@@ -1,5 +1,5 @@
 ---
-title: sp_helpserver (Transact-SQL) | Documenti Microsoft
+title: sp_helpserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpserver
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa1a9a5841f5b43a6dea6f0650a7686f499b4965
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5252f299a0d542fe2f91f75d658ff63aec980712
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258593"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038634"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +47,15 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="arguments"></a>Argomenti  
  [ **@server =** ] **'***server***'**  
- Server su cui vengono restituite informazioni. Quando *server* non viene specificato, i report su tutti i server in **master.sys**. *server* viene **sysname**, con un valore predefinito è NULL.  
+ Server su cui vengono restituite informazioni. Quando *server* non viene specificato, i report su tutti i server nella **Servers**. *server* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@optname =** ] **'***opzione***'**  
  Opzione che descrive il server. *opzione* viene **varchar (** 35 **)**, con un valore predefinito è NULL e deve essere uno dei valori seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**regole di confronto compatibili**|L'utilizzo di questa opzione influisce sull'esecuzione delle query distribuite in server collegati. Se questa opzione è impostata su true,|  
-|**Accesso ai dati**|Consente di attivare e disabilitare un server collegato per l'accesso a query distribuite.|  
+|**accesso ai dati**|Consente di attivare e disabilitare un server collegato per l'accesso a query distribuite.|  
 |**dist**|Server di distribuzione.|  
 |**dpub**|Server di pubblicazione remoto associato al server di distribuzione corrente.|  
 |**convalida differita dello schema**|Ignora il controllo dello schema delle tabelle remote all'inizio della query.|  
@@ -64,10 +64,10 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**chiamate RPC in uscita**|Viene abilitata l'esecuzione di chiamate RPC al server specificato.|  
 |**sub**|Sottoscrittore.|  
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Utilizzare regole di confronto remote**|Consente di utilizzare le regole di confronto di una colonna remota anziché quelle del server locale.|  
+|**usare regole di confronto remote**|Consente di utilizzare le regole di confronto di una colonna remota anziché quelle del server locale.|  
   
  [  **@show_topology =** ] **'***show_topology***'**  
- Relazione tra il server specificato e gli altri server. *show_topology* viene **varchar (** 1 **)**, con un valore predefinito è NULL. Se *show_topology* non è uguale a **t** oppure è NULL, **sp_helpserver** restituisce le colonne elencate nella sezione set di risultati. Se *show_topology* è uguale a **t**, oltre alle colonne elencate nei set di risultati, **sp_helpserver** restituisce inoltre **topx** e **topy** informazioni.  
+ Relazione tra il server specificato e gli altri server. *show_topology* viene **varchar (** 1 **)**, con un valore predefinito è NULL. Se *show_topology* non è uguale a **t** oppure è NULL, **sp_helpserver** restituisce le colonne elencate nella sezione set di risultati. Se *show_topology* è uguale a **t**, oltre alle colonne elencate nel set di risultati **sp_helpserver** restituisce inoltre **topx** e **topy** informazioni.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -84,10 +84,10 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|Valore di timeout per la connessione al server collegato.|  
 |**query_timeout**|**int**|Valore di timeout per le query eseguite sul server collegato.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  A un server possono essere associati più stati.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Le autorizzazioni non vengono controllate.  
   
 ## <a name="examples"></a>Esempi  
@@ -111,7 +111,7 @@ EXEC sp_helpserver 'SEATTLE2';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   

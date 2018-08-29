@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services tutorial-lezione 2: ottenere i dati | Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9adeebfbd3c49761adb816a7d28472a61ffca5cc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007202"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062212"
 ---
 # <a name="get-data"></a>Recuperare i dati
 
@@ -22,7 +22,7 @@ ms.locfileid: "38007202"
 
 In questa lezione, Usa **recupera dati** per connettersi al database di esempio AdventureWorksDW, selezionare i dati, anteprima e filtro e quindi importarli nell'area di lavoro modello.  
   
-Usando recupera dati, è possibile importare dati da un'ampia gamma di origini. I dati possono essere recuperati anche tramite un'espressione di formula Power Query M o un [espressione di query SQL nativa](../tabular-models/ssas-import-query.md).
+Dietro le quinte, recupera dati è Power Query, che fornisce una vasta gamma di strumenti per la connessione a e modificare la forma dei dati per la modellazione e l'analisi. Per altre informazioni, vedere [documentazione di Power Query](https://docs.microsoft.com/power-query/). 
 
 > [!NOTE]
 > Attività e le immagini in questa esercitazione mostrano la connessione a un database AdventureWorksDW2014 in un server locale. In alcuni casi, un database AdventureWorksDW in Azure SQL Data Warehouse potrebbe mostrare oggetti diversi. Tuttavia, sono sostanzialmente uguali.

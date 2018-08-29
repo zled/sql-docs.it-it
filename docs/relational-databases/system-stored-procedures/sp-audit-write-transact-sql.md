@@ -1,5 +1,5 @@
 ---
-title: sp_audit_write (Transact-SQL) | Documenti Microsoft
+title: sp_audit_write (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_audit_write
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84b7ea14b205b2642c8c67c24793310ca8245832
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9e52313f827d49200e58910d4fa577d39d91567f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239301"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037893"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Aggiunge un evento di controllo definito dall'utente per il **USER_DEFINED_AUDIT_GROUP**. Se **USER_DEFINED_AUDIT_GROUP** non è abilitato, **sp_audit_write** viene ignorato.  
+  Aggiunge un evento di controllo definiti dall'utente per il **USER_DEFINED_AUDIT_GROUP**. Se **USER_DEFINED_AUDIT_GROUP** non è abilitato, **sp_audit_write** viene ignorato.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,11 +60,11 @@ sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,
   
  Gli errori sono causati da parametri di input errati o da problemi di scrittura nel log di controllo di destinazione.  
   
-## <a name="remarks"></a>Osservazioni  
- Quando il **USER_DEFINED_AUDIT_GROUP** viene aggiunto a una specifica del controllo server o una specifica del controllo del database, l'evento attivato da **sp_audit_write** verranno inclusi nel Registro di controllo.  
+## <a name="remarks"></a>Note  
+ Quando la **USER_DEFINED_AUDIT_GROUP** viene aggiunto a una specifica del controllo server o una specifica del controllo del database, l'evento attivato da **sp_audit_write** verranno inclusi nel log di controllo.  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **pubblica** ruolo del database.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **pubblica** ruolo predefinito del database.  
   
 ## <a name="examples"></a>Esempi  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_replrestart (Transact-SQL) | Documenti Microsoft
+title: sp_replrestart (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replrestart
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 905726825618d1412528a0c3f543bd7886213e95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 482bd5a501544ca5bdc36250db0c30b8c18abb81
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996238"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038774"
 ---
 # <a name="spreplrestart-transact-sql"></a>sp_replrestart (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_replrestart
 ```  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_replrestart** viene utilizzato quando il valore di numero (LSN) di sequenza log più elevato nel server di distribuzione corrisponde al valore LSN più alto nel server di pubblicazione.  
+## <a name="remarks"></a>Note  
+ **sp_replrestart** viene usato quando il valore di numero (LSN) di log sequenza più alto nel server di distribuzione corrisponde al valore LSN più alto nel server di pubblicazione.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_replrestart**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_replrestart**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sql_referenced_entities (Transact-SQL) | Documenti di Microsoft
+title: DM sql_referenced_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9dff46e117f5c75162e7fd8e0f717a0e72829714
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: de28f90a9863ebc1ee24f571da03ac460e9ad411
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541681"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067247"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,15 +69,15 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ *nome_schema*. ] *referencing_entity_name*  
- Nome dell'entità di riferimento. *schema_name* è obbligatorio quando la classe di riferimento è l'oggetto.  
+ [ *schema_name*. ] *referencing_entity_name*  
+ Nome dell'entità di riferimento. *schema_name* è obbligatorio quando la classe di riferimento è OBJECT.  
   
- *schema_name.referencing_entity_name* è **nvarchar(517)**.  
+ *schema_name.referencing_entity_name* viene **nvarchar(517)**.  
   
- *< Referencing_class >* :: = {oggetto | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
+ *< Classe_riferimenti >* :: = {oggetto | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
  Classe dell'entità di riferimento specificata. È possibile specificare solo una classe per istruzione.  
   
- *< referencing_class >* è **nvarchar(60)**.  
+ *< classe_riferimenti >* viene **nvarchar(60)**.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -89,7 +89,7 @@ sys.dm_sql_referenced_entities (
 |referenced_schema_name|**sysname**|Schema a cui appartiene l'entità a cui viene fatto riferimento.<br /><br /> Valore NULL per i riferimenti non associati a schemi in cui è stato fatto riferimento all'entità senza specificare il nome dello schema.<br /><br /> Il valore non è mai NULL per riferimenti associati a schemi.|  
 |referenced_entity_name|**sysname**|Nome dell'entità a cui viene fatto riferimento. Non ammette i valori Null.|  
 |referenced_minor_name|**sysname**|Nome della colonna quando l'entità a cui viene fatto riferimento è una colonna; in caso contrario, NULL. referenced_minor_name è NULL, ad esempio, nella riga che elenca l'entità stessa cui viene fatto riferimento.<br /><br /> Un'entità a cui viene fatto riferimento è una colonna, se il nome nell'entità di riferimento identifica una colonna o se l'entità padre viene utilizzata in un'istruzione SELECT *.|  
-|referenced_id|**int**|ID dell'entità a cui viene fatto riferimento. Quando referenced_minor_id è diverso da 0, referenced_id è l'entità in cui viene definita la colonna.<br /><br /> Il valore è sempre NULL per i riferimenti tra server.<br /><br /> NULL per riferimenti tra database quando non è possibile determinare l'ID perché il database è offline o l'entità non può essere associata.<br /><br /> Valore NULL per i riferimenti all'interno del database se non è possibile determinare l'ID. Per i riferimenti non associati a schema, l'ID non può essere risolto quando l'entità di riferimento non esiste nel database o quando la risoluzione del nome chiamante dipendenti.  In questo caso, is_caller_dependent è impostato su 1.<br /><br /> Il valore non è mai NULL per riferimenti associati a schemi.|  
+|referenced_id|**int**|ID dell'entità a cui viene fatto riferimento. Quando referenced_minor_id è diverso da 0, referenced_id è l'entità in cui viene definita la colonna.<br /><br /> Il valore è sempre NULL per i riferimenti tra server.<br /><br /> NULL per riferimenti tra database quando non è possibile determinare l'ID perché il database è offline o l'entità non può essere associata.<br /><br /> Valore NULL per i riferimenti all'interno del database se non è possibile determinare l'ID. Per i riferimenti non associati a schema, l'ID non può essere risolto quando l'entità di riferimento non esiste nel database o quando la risoluzione del nome chiamante dipendenti.  Nel secondo caso, is_caller_dependent viene impostato su 1.<br /><br /> Il valore non è mai NULL per riferimenti associati a schemi.|  
 |referenced_minor_id|**int**|ID della colonna quando l'entità a cui viene fatto riferimento è una colonna; in caso contrario, 0. referenced_minor_is è 0, ad esempio, nella riga che elenca l'entità stessa cui viene fatto riferimento.<br /><br /> Per i riferimenti non associati a schemi, le dipendenze della colonna vengono indicate solo quando è possibile associare tutte le entità cui viene fatto riferimento. Se non è possibile associare una di tali entità, non viene segnalata alcuna dipendenza a livello di colonna e il valore di referenced_minor_id è 0. Vedere l'esempio D.|  
 |referenced_class|**tinyint**|Classe dell'entità con riferimenti.<br /><br /> 1 = Oggetto o colonna<br /><br /> 6 = Tipo<br /><br /> 10 = Raccolta di XML Schema<br /><br /> 21 = Funzione di partizione|  
 |referenced_class_desc|**nvarchar(60)**|Descrizione della classe dell'entità a cui viene fatto riferimento.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  

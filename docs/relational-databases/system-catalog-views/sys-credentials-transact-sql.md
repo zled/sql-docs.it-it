@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.credentials catalog view
 ms.assetid: ea48cf80-904a-4273-a950-6d35b1b0a1b6
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d94a60edd7dac48b8510a112fe7cbfe1e5ad40ec
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1931d0cb4a11f0fd1a7ddfb1a83a2bcebb0b94d9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560601"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43070194"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "39560601"
 |target_id|**int**|ID dell'oggetto a cui è stato eseguito il mapping della credenziale. Restituisce 0 per credenziali tradizionali e un valore diverso da 0 per credenziali di cui è stato eseguito il mapping a un provider di servizi di crittografia. Per altre informazioni sui provider di gestione delle chiavi esterne, vedere [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
 
 ## <a name="remarks"></a>Note  
-Le credenziali a livello di database, vedere [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).
+Per le credenziali a livello di database, vedere [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).
   
 ## <a name="permissions"></a>Permissions  
  Richiede `VIEW ANY DEFINITION` autorizzazione o `ALTER ANY CREDENTIAL` autorizzazione. Inoltre, l'entità non deve essere negata `VIEW ANY DEFINITION` l'autorizzazione.  

@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplicationdboption (Transact-SQL) | Documenti Microsoft
+title: sp_helpreplicationdboption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpreplicationdboption
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1066644508c586fe2542d2e86bd3f67059d22663
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c67c6c6f6f74d3cedf2aa8acc4232886b6d52a9f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999858"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038753"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +48,19 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@dbname=**] **'***dbname***'**  
- Nome del database. *dbname* viene **sysname**, il valore predefinito è **%**. Se **%**, il set di risultati contiene tutti i database nel server di pubblicazione, in caso contrario solo le informazioni nel database specificato viene quindi restituite. Non vengono restituite informazioni per gli eventuali database per cui l'utente non dispone delle autorizzazioni appropriate, come indicato di seguito.  
+ Nome del database. *dbname* viene **sysname**, il valore predefinito è **%**. Se **%**, quindi il set di risultati contiene tutti i database nel server di pubblicazione, in caso contrario, sole nel database specificato vengono restituite informazioni. Non vengono restituite informazioni per gli eventuali database per cui l'utente non dispone delle autorizzazioni appropriate, come indicato di seguito.  
   
  [  **@type=**] **'***tipo***'**  
  Limita il set di risultati al database in cui l'opzione di replica specificato *tipo* valore è stato abilitato. *tipo di* viene **sysname**, e può essere uno dei valori seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
-|**Pubblicazione**|È consentita la replica transazionale.|  
+|**pubblicare**|È consentita la replica transazionale.|  
 |**pubblicazione di tipo merge**|È consentita la replica di tipo merge.|  
 |**è consentita la replica** (impostazione predefinita)|È consentita la replica transazionale o la replica di tipo merge.|  
   
  [  **@reserved=** ] *riservato*  
- Specifica se vengono restituite informazioni sulle pubblicazioni e sulle sottoscrizioni esistenti. *riservata* viene **bit**, con valore predefinito è 0. Se **1**, il set di risultati include informazioni su se il database specificato dispone di eventuali pubblicazioni o sottoscrizioni esistenti.  
+ Specifica se vengono restituite informazioni sulle pubblicazioni e sulle sottoscrizioni esistenti. *riservato* viene **bit**, valore predefinito pari a 0. Se **1**, il set di risultati include informazioni sul fatto che il database specificato ha eventuali pubblicazioni o sottoscrizioni esistenti.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -68,20 +68,20 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome del database.|  
 |**id**|**int**|Identificatore del database.|  
-|**transpublish**|**bit**|Se il database è stato abilitato per una pubblicazione snapshot o transazionale; valore **1** indica che è abilitata la pubblicazione transazionale o snapshot.|  
-|**mergepublish**|**bit**|Se il database è stato abilitato per l'unione di pubblicazione; valore **1** significa che la pubblicazione di tipo merge è abilitata.|  
-|**dbowner**|**bit**|Se l'utente è membro il **db_owner** ruolo predefinito del database; valore **1** indica che l'utente è un membro di questo ruolo.|  
-|**dbReadOnly**|**bit**|È se il database viene contrassegnato come di sola lettura. valore **1** significa che il database è di sola lettura.|  
-|**haspublications**|**bit**|Se il database dispone di pubblicazioni esistenti valore **1** vi sono pubblicazioni esistenti.|  
-|**haspullsubscriptions**|**bit**|È il database con le sottoscrizioni pull esistenti; valore **1** significa che sono presenti sottoscrizioni pull.|  
+|**transpublish**|**bit**|Se il database è stato abilitato per la pubblicazione snapshot o transazionale; dove il valore **1** significa che è abilitata la pubblicazione transazionale o snapshot.|  
+|**mergepublish**|**bit**|Se il database è stato abilitato per l'unione di pubblicazione; dove il valore **1** significa che la pubblicazione di tipo merge è abilitata.|  
+|**dbowner**|**bit**|Se l'utente è membro del **db_owner** dove il valore del ruolo predefinito del database; **1** indica che l'utente è un membro di questo ruolo.|  
+|**dbReadOnly**|**bit**|È se il database è contrassegnato come sola lettura. dove il valore **1** significa che il database è di sola lettura.|  
+|**haspublications**|**bit**|È se il database presenta pubblicazioni esistenti dove il valore **1** significa che non esistono pubblicazioni esistenti.|  
+|**haspullsubscriptions**|**bit**|Se il database dispone di tutte le sottoscrizioni pull esistenti; dove il valore **1** significa che sono presenti sottoscrizioni pull.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_helpreplicationdboption** viene utilizzata in repliche snapshot, transazionali e di tipo merge.  
+## <a name="remarks"></a>Note  
+ **sp_helpreplicationdboption** viene utilizzata nella replica di tipo merge e snapshot, transazionale.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  I membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_helpreplicationdboption** per qualsiasi database. I membri del **db_owner** ruolo predefinito del database possono eseguire **sp_helpreplicationdboption** per quel database.  
   
 ## <a name="see-also"></a>Vedere anche  

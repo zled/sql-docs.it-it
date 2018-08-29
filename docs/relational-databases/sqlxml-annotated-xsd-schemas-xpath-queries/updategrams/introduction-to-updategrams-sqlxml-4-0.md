@@ -27,13 +27,13 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3eb0914609f2ba20f0bdf8373c439c489fb8a517
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 77fb8dde53daeb779181a75ccc6b698c568e7a40
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39561985"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43058789"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Introduzione sugli updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -167,9 +167,9 @@ ms.locfileid: "39561985"
 ## <a name="working-with-characters-valid-in-sql-server-but-not-valid-in-xml"></a>Utilizzo di caratteri validi in SQL Server ma non validi in XML  
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i nomi di tabella possono includere uno spazio. Questo tipo di nome di tabella, tuttavia, non è valido in XML.  
   
- Per codificare i caratteri validi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificatori ma non sono identificatori validi di XML, utilizzare ' __xHHHH\_\_' come valore di codifica, dove HHHH rappresenta il codice UCS-2 esadecimale a quattro cifre per il carattere più del primo bit più significativo. Con questo schema di codifica, un carattere di spazio viene sostituito con x0020 (il formato a quattro cifre codice esadecimale per un carattere di spazio); di conseguenza, il nome della tabella [Dettagli ordini] in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] _x005B_Order_x0020_Details_x005D diventa\_ in XML.  
+ Per codificare i caratteri validi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificatori ma non sono identificatori XML validi, usare ' __xHHHH\_\_' come valore di codifica, dove HHHH rappresenta il codice UCS-2 esadecimale a quattro cifre per il carattere in più ordine del primo bit significativo. Utilizzando questa schema di codifica, un carattere di spazio viene sostituito da x0020 (il a quattro cifre esadecimale codice per il carattere spazio); di conseguenza, il nome della tabella [Dettagli ordine] in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diventa _x005B_Order_x0020_Details_x005D\_ in XML.  
   
- Analogamente, è possibile specificare i nomi degli elementi di tre parti, ad esempio \<[database]. [ proprietario]. [tabella] >. Poiché le parentesi quadre ([e]) non sono validi in XML, è necessario specificare come \<_x005B_database_x005D\_._x005B_owner_x005D\_._x005B_table_x005D\_>, dove _x005B\_ è il codifica per la parentesi quadra aperta ([) e _x005D\_ la codifica per la parentesi quadra chiusa (]).  
+ Analogamente, potrebbe essere necessario specificare i nomi di elemento in tre parti, ad esempio \<[database]. [ proprietario]. [tabella] >. Poiché i caratteri parentesi quadra ([e]) non sono validi in XML, è necessario specificare questo elemento come \<_x005B_database_x005D\_._x005B_owner_x005D\_._x005B_table_x005D\_>, dove _x005B\_ è la codifica per la parentesi quadra aperta ([) e _x005D\_ la codifica per la parentesi quadra chiusa (]).  
   
 ## <a name="executing-updategrams"></a>Esecuzione di updategram  
  Poiché un updategram è un modello, utilizza tutti i meccanismi di elaborazione di un modello. Per SQLXML 4.0, è possibile eseguire un updategram in una delle modalità seguenti:  

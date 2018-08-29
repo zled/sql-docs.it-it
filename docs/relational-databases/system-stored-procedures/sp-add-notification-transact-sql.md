@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_notification
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
-caps.latest.revision: 33
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a79b98fb3f44f3c69e7b4108502a3e6ea14e5c09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d17936912a9adca46ddf64724401432c7ef9d43f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238408"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038291"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,21 +51,21 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  Operatore a cui inviare una notifica quando viene generato l'avviso. *operatore* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@notification_method=** ] *notification_method*  
- Metodo adottato per l'invio della notifica all'operatore. *notification_method* viene **tinyint**, non prevede alcun valore predefinito. *notification_method* può essere uno o più dei valori seguenti combinati con un **OR** operatore logico.  
+ Metodo adottato per l'invio della notifica all'operatore. *notification_method* viene **tinyint**, non prevede alcun valore predefinito. *notification_method* può essere uno o più dei valori seguenti combinati con un' **OR** operatore logico.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
 |**4**|**net send**|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_add_notification** deve essere eseguita la **msdb** database.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include un semplice strumento grafico per la gestione del sistema di avvisi. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] è lo strumento consigliato per la configurazione di un'infrastruttura di avvisi.  
@@ -75,7 +74,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
  Gli eventuali errori che si verificano durante l'invio di un messaggio di posta elettronica o di una notifica su cercapersone vengono registrati nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_add_notification**.  
   
 ## <a name="examples"></a>Esempi  

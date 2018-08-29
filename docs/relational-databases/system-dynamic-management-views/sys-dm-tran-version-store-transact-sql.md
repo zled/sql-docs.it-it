@@ -23,22 +23,22 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bfb296c8224eb066c8e5f03f94436e05ce6cd4b4
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4d4a8511c17fe2fb09f46c38e2a8ed4ca0c8108b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39561921"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43070154"
 ---
 # <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce una tabella virtuale in cui vengono visualizzati tutti i record di versione nell'archivio delle versioni. **Sys.dm_tran_version_store** a eseguire poiché l'archivio versione può essere molto elevato e interroga l'archivio versione intera risulta poco efficiente.  
+  Restituisce una tabella virtuale in cui vengono visualizzati tutti i record di versione nell'archivio delle versioni. **DM tran_version_store** è poco efficiente per l'esecuzione perché viene eseguita una query all'intero archivio versioni e l'archivio delle versioni può essere molto grande.  
   
  Ogni record con versione viene archiviato come dato binario con alcune informazioni di rilevamento o stato. Analogamente ai record nelle tabelle di database, i record inclusi nell'archivio delle versioni vengono archiviati in pagine da 8192 byte. In caso di dimensioni superiori a 8192 byte, il record verrà suddiviso in due record distinti.  
   
- Poiché il record con versione viene archiviato come dato binario, non si verificheranno problemi in presenza di diverse regole di confronto di database diversi. Usa **sys.dm_tran_version_store** per trovare le versioni precedenti delle righe in una rappresentazione binaria in cui si trovano nell'archivio versione.  
+ Poiché il record con versione viene archiviato come dato binario, non si verificheranno problemi in presenza di diverse regole di confronto di database diversi. Uso **DM tran_version_store** per trovare le versioni precedenti delle righe in rappresentazione binaria in cui si trovano nell'archivio delle versioni.  
   
   
 ## <a name="syntax"></a>Sintassi  

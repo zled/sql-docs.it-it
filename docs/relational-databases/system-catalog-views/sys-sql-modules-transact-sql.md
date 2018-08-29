@@ -1,5 +1,5 @@
 ---
-title: Sys.sql_modules (Transact-SQL) | Documenti di Microsoft
+title: Sys. sql_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2018
 ms.prod: sql
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sys.sql_modules catalog view
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7277009805307ed5f9208227cc98c72df3fc3e2a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9ee2a17d124cbf05ff9124f952104820317d25aa
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542351"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43079341"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "39542351"
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto contenitore. Valore univoco all'interno di un database.|  
-|**Definizione**|**nvarchar(max)**|Testo SQL che definisce il modulo. Questo valore può essere ottenuto anche utilizzando il [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) funzione incorporata.<br /><br /> NULL = Crittografato.|  
+|**Definizione**|**nvarchar(max)**|Testo SQL che definisce il modulo. Questo valore può anche essere ottenuto usando il [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) funzione predefinita.<br /><br /> NULL = Crittografato.|  
 |**uses_ansi_nulls**|**bit**|Modulo creato con SET ANSI_NULLS ON.<br /><br /> È sempre = 0 per regole e impostazioni predefinite.|  
 |**uses_quoted_identifier**|**bit**|Modulo creato con SET QUOTED_IDENTIFIER ON.|  
 |**is_schema_bound**|**bit**|Modulo creato con l'opzione SCHEMABINDING.<br /><br /> Contiene sempre il valore 1 per le stored procedure compilate in modo nativo.|  
@@ -53,9 +53,9 @@ ms.locfileid: "39542351"
 |**uses_native_compilation**|**bit**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = non compilata in modo nativo<br /><br /> 1 = compilata in modo nativo<br /><br /> Il valore predefinito è 0.|  
   
 ## <a name="remarks"></a>Note  
- L'espressione SQL per un vincolo predefinito, l'oggetto di tipo D, si trova nella [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) visualizzazione catalogo. L'espressione SQL per un vincolo CHECK, oggetto di tipo C, si trova nella [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) visualizzazione catalogo.  
+ L'espressione SQL per un vincolo DEFAULT, oggetto di tipo D, è presente nella [Sys. default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) vista del catalogo. L'espressione SQL per un vincolo CHECK, oggetti di tipo C, è presente nella [Sys. check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) vista del catalogo.  
   
- Questa informazione è descritta anche in [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
+ Queste informazioni sono descritta anche in [db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

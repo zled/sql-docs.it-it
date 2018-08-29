@@ -1,5 +1,5 @@
 ---
-title: la procedura sp_helplanguage (Transact-SQL) | Documenti di Microsoft
+title: sp_helplanguage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - default languages
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 29f366517986620444e018a5348e623aa541b00a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6567deb529d4a40f89fe34e8c56d57e8ce7a680a
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560631"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43063014"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@language=** ] **'***lingua***'**  
+ [  **@language=** ] **'***linguaggio***'**  
  Nome della lingua alternativa per la quale visualizzare le informazioni. *linguaggio* viene **sysname**, con un valore predefinito è NULL. Se *lingua* è specificato, vengono restituite informazioni sulla lingua specifica. Se non viene specificato alcun linguaggio, informazioni su tutti i linguaggi nel **sys.syslanguages** visualizzazione compatibilità viene restituito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  

@@ -23,26 +23,26 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 133cf417c6fa69f1cbb9ea1801b35e98e915f657
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ed76d84540b3c1c851e87c7e7fab0eb3120f7982
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560591"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43081772"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce dati statistici aggregati sulle prestazioni delle stored procedure memorizzate nella cache. La vista restituisce una riga per ogni piano di stored procedure memorizzato nella cache e la durata della riga è uguale al periodo in cui la stored procedure rimane memorizzata nella cache. Quando una stored procedure viene rimossa dalla cache, la riga corrispondente viene elimina dalla vista. In quel momento, viene generato un evento di traccia di SQL statistiche prestazioni simile a **DMV DM exec_query_stats**.  
+  Restituisce dati statistici aggregati sulle prestazioni delle stored procedure memorizzate nella cache. La vista restituisce una riga per ogni piano di stored procedure memorizzato nella cache e la durata della riga è uguale al periodo in cui la stored procedure rimane memorizzata nella cache. Quando una stored procedure viene rimossa dalla cache, la riga corrispondente viene elimina dalla vista. A quel punto, viene generato un evento di traccia SQL di perfomance Statistics simile a **DM exec_query_stats**.  
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene esclusa tramite filtro.  
   
 > [!NOTE]
-> La query iniziale di **sys.dm_exec_procedure_stats** potrebbe produrre risultati imprecisi se è presente un carico di lavoro attualmente in esecuzione sul server. La riesecuzione della query può garantire risultati più accurati.  
+> Una query iniziale di **DM exec_procedure_stats** potrebbe produrre risultati non accurati se è presente un carico di lavoro attualmente in esecuzione nel server. La riesecuzione della query può garantire risultati più accurati.  
   
 > [!NOTE]
-> Per chiamare questo metodo da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys.dm_pdw_nodes_exec_procedure_stats**.  
+> Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_exec_procedure_stats**.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -50,8 +50,8 @@ ms.locfileid: "39560591"
 |**object_id**|**int**|Numero di identificazione dell'oggetto della stored procedure.|  
 |**type**|**char(2)**|Tipo dell'oggetto:<br /><br /> P = stored procedure SQL<br /><br /> PC = stored procedure assembly (CLR)<br /><br /> X = stored procedure estesa|  
 |**type_desc**|**nvarchar(60)**|Descrizione del tipo di oggetto:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**varbinary(64)**|Può essere utilizzato per correlare le query in **DMV DM exec_query_stats** che sono stati eseguiti dall'interno di questa stored procedure.|  
-|**plan_handle**|**varbinary(64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. Questo valore può essere utilizzato con il **sys.dm_exec_cached_plans** vista a gestione dinamica.<br /><br /> È sempre 0x000 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
+|**sql_handle**|**varbinary(64)**|Può essere utilizzato per correlare le query nelle **DM exec_query_stats** eseguite dall'interno della stored procedure.|  
+|**plan_handle**|**varbinary(64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. Questo valore può essere utilizzato con il **DM exec_cached_plans** vista a gestione dinamica.<br /><br /> È sempre 0x000 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
 |**cached_time**|**datetime**|Ora in cui la stored procedure è stata aggiunta alla cache.|  
 |**last_execution_time**|**datetime**|Ora dell'ultima esecuzione della stored procedure.|  
 |**execution_count**|**bigint**|Il numero di volte che la stored procedure è stata eseguita perché ultima compilazione.|  

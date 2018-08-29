@@ -17,13 +17,13 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f6af4153b94a5c7733b0c91dc31d5a5323642879
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 604eb2ec51be8cd5e8ee8c1573ff994be19b02ca
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542061"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43080178"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversioni eseguite da server a client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "39542061"
 |Simbolo|Significato|  
 |------------|-------------|  
 |OK|Nessuna conversione necessaria.|  
-|-|Non viene supportata alcuna conversione. Se l'associazione viene convalidato quando viene chiamato IAccessor:: CreateAccessor, DBBINDSTATUS_UPSUPPORTEDCONVERSION viene restituito in *rgStatus*. Quando la convalida della funzione di accesso viene rinviata, viene impostato DBSTATUS_E_BADACCESSOR.|  
+|-|Non viene supportata alcuna conversione. Se l'associazione viene convalidato quando viene chiamato IAccessor:: CreateAccessor, viene restituito DBBINDSTATUS_UPSUPPORTEDCONVERSION in *rgStatus*. Quando la convalida della funzione di accesso viene rinviata, viene impostato DBSTATUS_E_BADACCESSOR.|  
 |1|I campi relativi all'ora vengono impostati su zero.|  
 |2|Viene impostato DBSTATUS_E_CANTCONVERTVALUE.|  
 |3|Il fuso orario viene impostato su zero.|  

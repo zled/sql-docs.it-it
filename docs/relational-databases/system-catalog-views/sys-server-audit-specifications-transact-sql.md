@@ -1,5 +1,5 @@
 ---
-title: server_audit_specifications (Transact-SQL) | Documenti Microsoft
+title: Sys. server_audit_specifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.server_audit_specifications catalog view
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8f6eba2b4cd9d41c00fa48434f72bee8d093559
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e00fc4993b4afcc559b11ec8e057349aa8bee310
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219632"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038332"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +39,14 @@ ms.locfileid: "33219632"
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome della specifica del server.|  
-|**server_specification_id**|**Int**|ID di **server_specification**.|  
+|**server_specification_id**|**Int**|ID del **server_specification**.|  
 |**create_date**|**DateTime**|Data di creazione della specifica del controllo del server.|  
 |**modified_date**|**DateTime**|Data dell'ultima modifica della specifica del controllo del server.|  
 |**is_state_enabled**|**tinyint**|Stato della specifica del controllo:<br /><br /> 0 - DISABILITATO<br /><br /> 1 - ABILITATO|  
 |**audit_GUID**|**uniqueidentifier**|GUID del controllo che contiene questa specifica. Viene utilizzato durante l'enumerazione delle specifiche del controllo del server membro durante l'avvio del server.|  
   
-## <a name="permissions"></a>Autorizzazioni  
- Entità che dispongono di **ALTER ANY SERVER AUDIT** o **VIEW ANY DEFINITION** autorizzazione hanno accesso a questa vista del catalogo. Inoltre, l'entità non deve essere negato **VIEW ANY DEFINITION** autorizzazione.  
+## <a name="permissions"></a>Permissions  
+ Le entità con la **ALTER ANY SERVER AUDIT** oppure **VIEW ANY DEFINITION** autorizzazione ha accesso a questa vista del catalogo. Inoltre, l'entità non deve essere negata **VIEW ANY DEFINITION** l'autorizzazione.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
