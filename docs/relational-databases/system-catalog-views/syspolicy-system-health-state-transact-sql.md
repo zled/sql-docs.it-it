@@ -1,5 +1,5 @@
 ---
-title: syspolicy_system_health_state (Transact-SQL) | Documenti Microsoft
+title: syspolicy_system_health_state (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_system_health_state view
 ms.assetid: 00815106-9fe4-481d-a9e1-a256101887f4
-caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2978c1f2e79e0f519b46fb47d67778187c4ef1db
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dbdc22b03d58bb3aac10b684d4fdc2e0c074123b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220292"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027870"
 ---
 # <a name="syspolicysystemhealthstate-transact-sql"></a>syspolicy_system_health_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "33220292"
 |target_query_expression|**nvarchar(max)**|Espressione tramite cui viene definita la destinazione rispetto alla quale vengono valutati i criteri.|  
 |result|**bit**|Stato di integrità di questa destinazione in relazione ai criteri:<br /><br /> 0 = esito negativo<br /><br /> 1 = esito positivo|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Nella vista syspolicy_system_health_state viene visualizzato lo stato di integrità più recente dell'espressione della query di destinazione per i criteri attivi (abilitati). Nella pagina Esplora oggetti e Dettagli Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vengono aggregati gli stati di integrità criteri di questa vista per mostrare lo stato di integrità critica.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
 ## <a name="see-also"></a>Vedere anche  

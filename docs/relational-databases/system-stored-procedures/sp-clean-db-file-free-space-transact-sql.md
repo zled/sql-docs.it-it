@@ -1,5 +1,5 @@
 ---
-title: sp_clean_db_file_free_space (Transact-SQL) | Documenti Microsoft
+title: sp_clean_db_file_free_space (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_clean_db_file_free_space
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 52f5fb5b32a49ef6bcb4922069dc7f5250c771c9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: bcd6c21404593244104bc58cc9beab4164c4283a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689129"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036663"
 ---
 # <a name="spcleandbfilefreespace-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +48,28 @@ sp_clean_db_file_free_space
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @dbname=] '*database_name*'  
+ [ @dbname=] '*nome_database*'  
  Nome del database da pulire. *dbname* viene **sysname** e non può essere NULL.  
   
  [ @fileid=] '*file_number*'  
  ID del file di dati su cui eseguire la pulizia. *file_number* viene **int** e non può essere NULL.  
   
  [ @cleaning_delay=] '*delay_in_seconds*'  
- Specifica un intervallo di ritardo tra le pulizie delle pagine per ridurre l'impatto sul sistema di I/O. *delay_in_seconds* viene **int** con un valore predefinito è 0.  
+ Specifica un intervallo di ritardo tra le pulizie delle pagine per ridurre l'impatto sul sistema di I/O. *delay_in_seconds* viene **int** con valore predefinito è 0.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Le operazioni di aggiornamento o le operazioni di eliminazione da una tabella che provocano lo spostamento di una riga consentono di liberare immediatamente spazio in una pagina poiché rimuovono i riferimenti alla riga specifica. In alcune circostanze, tuttavia, la riga può rimanere fisicamente nella pagina di dati come record fantasma. I record fantasma vengono rimossi periodicamente da un processo in background. Tali dati residui non viene restituiti dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] in risposta alle query. In ambienti in cui la sicurezza fisica dei file di dati o di backup non sia sufficiente, è tuttavia possibile utilizzare sp_clean_db_file_free_space per eliminare tali record fantasma.  
   
  La quantità di tempo necessaria per eseguire sp_clean_db_file_free_space dipende dalle dimensioni del file, dallo spazio libero disponibile e dalla capacità del disco. Poiché l'esecuzione di sp_clean_db_file_free_space può influire in modo significativo sulle attività di I/O, è consigliabile eseguire questa procedura in orario diverso da quello lavorativo.  
   
  Prima di eseguire sp_clean_db_file_free_space, è opportuno creare un backup completo del database.  
   
- Correlata [sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) stored procedure elimina il contenuto tutti i file nel database.  
+ I relativi [sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) stored procedure elimina il contenuto tutti i file nel database.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo del database db_owner.  
   
 ## <a name="examples"></a>Esempi  
@@ -83,7 +83,7 @@ EXEC sp_clean_db_file_free_space
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
  <br>[Guida di processo di pulizia fantasma](../ghost-record-cleanup-process-guide.md) 
   
   

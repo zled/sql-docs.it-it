@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergearticlecolumn (Transact-SQL) | Documenti Microsoft
+title: sp_helpmergearticlecolumn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergearticlecolumn
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eea23a02bca21cdb714c3437bdcbb3c5ea10042f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82240c6d24f6387e8d1a9e6e105e8fdc9e0ee9e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994638"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025240"
 ---
 # <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publication=**] **'***pubblicazione***'**  
- È il nome della pubblicazione. *pubblicazione* è **sysname**, non prevede alcun valore predefinito.  
+ È il nome della pubblicazione. *publication* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@article=**] **'***articolo***'**  
- È il nome di una tabella o vista che rappresenta l'articolo per recuperare le informazioni su. *articolo* è **sysname**, non prevede alcun valore predefinito.  
+ È il nome di una tabella o vista che rappresenta l'articolo per recuperare le informazioni su. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -61,13 +61,13 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |**Pubblicato**|**bit**|Specifica se pubblicare il nome della colonna.<br /><br /> **1** specifica che la colonna viene pubblicata.<br /><br /> **0** specifica che non è pubblicata.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helpmergearticlecolumn** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **replmonitor** ruolo predefinito del database nel database di distribuzione o l'elenco di accesso per la pubblicazione possono eseguire **sp_helpmergearticlecolumn**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **replmonitor** ruolo predefinito del database nel database di distribuzione o elenco di accesso alla pubblicazione per la pubblicazione possono eseguire **sp_helpmergearticlecolumn**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

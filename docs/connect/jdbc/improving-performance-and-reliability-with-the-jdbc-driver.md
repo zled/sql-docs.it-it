@@ -14,14 +14,14 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9780fc2942f74df6eb26c5cccfad60821b9bfc0
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: e9108ab6ac330086acab16a73550d5fcab5d3970
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459715"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784746"
 ---
-# <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Uso del driver JDBC per il miglioramento di prestazioni e affidabilità
+# <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Utilizzo del driver JDBC per il miglioramento di prestazioni e affidabilità
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -37,7 +37,7 @@ Negli argomenti di questa sezione vengono descritte le varie tecniche per il mig
 |[Gestione delle dimensioni delle transazioni](../../connect/jdbc/managing-transaction-size.md)|Descrive le tecniche per migliorare le prestazioni delle transazioni.|  
 |[Uso di istruzioni e set di risultati](../../connect/jdbc/working-with-statements-and-result-sets.md)|Descrive le tecniche per migliorare le prestazioni quando si usano gli oggetti di istruzione o un set di risultati.|  
 |[Uso del buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md)|Viene descritta una caratteristica di buffer adattivo, progettata per recuperare qualsiasi tipo di dati con valori di grandi dimensioni senza l'overhead dei cursori server.|  
-|[Colonne di tipo sparse](../../connect/jdbc/sparse-columns.md)|Viene illustrato il supporto delle colonne di tipo sparse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] da parte del driver JDBC.|  
+|[Colonne di tipo sparse](../../connect/jdbc/sparse-columns.md)|Viene illustrato il supporto delle colonne di tipo sparse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da parte del driver JDBC.|  
 |[Memorizzazione nella cache dei metadati delle istruzioni preparate per JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Vengono descritte le tecniche per migliorare le prestazioni con query di un'istruzione preparata.|
 |[Uso dell'API di copia bulk per un'operazione di inserimento batch](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|Viene descritto come abilitare l'API della copia Bulk per le operazioni di inserimento batch e i relativi vantaggi.|
 

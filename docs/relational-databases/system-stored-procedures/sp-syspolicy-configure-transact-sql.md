@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_configure (Transact-SQL) | Documenti Microsoft
+title: sp_syspolicy_configure (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_configure
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c51d30c8453cd5a9c2a92a3eb2ad22016c461b8f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b6214cd4658ac5ad9b6bd0b959a3040223dc1c3c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255935"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020977"
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 -   'LogOnSuccess' - Specifica se vengono registrate le valutazioni di criteri riuscite nella gestione basata su criteri.  
   
  [  **@value =** ] *valore*  
- È il valore è associato il valore specificato per *nome*. *valore* viene **sql_variant**ed è obbligatorio.  
+ È il valore associato con il valore specificato per *nome*. *valore* viene **sql_variant**ed è obbligatorio.  
   
 -   Se si specifica 'Enabled' per *nome*, è possibile utilizzare uno dei valori seguenti:  
   
@@ -67,21 +66,21 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   Se viene specificato 'HistoryRententionInDays' per *nome*, specificare il numero di giorni come valore intero.  
   
--   Se si specifica 'LogOnSuccess' per *nome*, è possibile utilizzare uno dei valori seguenti:  
+-   Se viene specificato 'LogOnSuccess' per *nome*, è possibile utilizzare uno dei valori seguenti:  
   
     -   0 = Registra solo le valutazioni di criteri non riuscite.  
   
     -   1 = Registra sia le valutazioni di criteri riuscite che quelle fallite.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syspolicy_configure nel contesto del database di sistema msdb.  
   
  Per visualizzare i valori impostati attualmente, eseguire una query sulla vista di sistema msdb.dbo.syspolicy_configuration.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

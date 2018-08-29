@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 458ed965485663183124143a49160ef496e21378
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 51993f2d607eadda48b97e92b377bd763ee0e9f4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107148"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026830"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -149,7 +149,7 @@ ms.locfileid: "39107148"
   
  DBTYPE_UDT può anche essere convertito in DBTYPE_EMPTY e DBTYPE_NULL. DBTYPE_NULL e DBTYPE_EMPTY non possono invece essere convertiti in DBTYPE_UDT. È coerente con DBTYPE_BYTES. **ISSCommandWithParameters** viene usato per elaborare i tipi definiti dall'utente come parametri.  
   
- Le conversioni dei dati specificate dai servizi principali OLE DB (**IDataConvert**) non sono applicabili a DBTYPE_UDT.  
+ Le conversioni dei dati fornite dai servizi principali OLE DB (**IDataConvert**) non sono applicabili a DBTYPE_UDT.  
   
  Non sono supportate altre associazioni.  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_helplogreader_agent (Transact-SQL) | Documenti Microsoft
+title: sp_helplogreader_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_helplogreader_agent
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bafe93763e2814b67f7455d2a4918193c5a1c40b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef9fd50728a4bc9ebf661b2dbb22ad8ca4e9f4ad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995358"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031822"
 ---
 # <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,22 +51,22 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'agente.|  
-|**name**|**Nvarchar (100)**|Nome dell'agente.|  
+|**name**|**Nvarchar(100)**|Nome dell'agente.|  
 |**publisher_security_mode**|**smallint**|Modalità di sicurezza utilizzata dall'agente durante la connessione al server di pubblicazione. Le possibili modalità sono le seguenti:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows.|  
 |**publisher_login**|**sysname**|Account di accesso utilizzato per la connessione al server di pubblicazione.|  
-|**publisher_password**|**nvarchar(524**|Per motivi di sicurezza, un valore di **\* \* \* \* \* \* \* \* \* \*** è sempre restituito.|  
+|**publisher_password**|**nvarchar(524**|Per motivi di sicurezza, un valore pari **\* \* \* \* \* \* \* \* \* \*** è sempre restituito.|  
 |**job_id**|**uniqueidentifier**|ID univoco del processo dell'agente.|  
-|**job_login**|**nvarchar(512)**|È l'account di Windows con cui viene eseguito l'agente di lettura Log, che viene restituito nel formato *dominio*\\*username*.|  
-|**job_password**|**sysname**|Per motivi di sicurezza, un valore di **\* \* \* \* \* \* \* \* \* \*** è sempre restituito.|  
+|**job_login**|**nvarchar(512)**|L'account di Windows con cui viene eseguito l'agente di lettura Log, viene restituito nel formato *domain*\\*username*.|  
+|**job_password**|**sysname**|Per motivi di sicurezza, un valore pari **\* \* \* \* \* \* \* \* \* \*** è sempre restituito.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helplogreader_agent** viene utilizzata nella replica transazionale.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** al server di pubblicazione o i membri del ruolo predefinito del server di **db_owner** ruolo predefinito del database nel database di pubblicazione possono eseguire **sp_helplogreader_agent**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** nel server di pubblicazione o i membri del ruolo predefinito del server di **db_owner** ruolo predefinito del database nel database di pubblicazione possono eseguire **sp_helplogreader_agent**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le impostazioni di sicurezza della replica](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

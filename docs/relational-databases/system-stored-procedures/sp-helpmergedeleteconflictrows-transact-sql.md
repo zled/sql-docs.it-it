@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergedeleteconflictrows (Transact-SQL) | Documenti Microsoft
+title: sp_helpmergedeleteconflictrows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergedeleteconflictrows
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a624b6ef69048375b671112f138d3f2ed7477604
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8bb0cf7dfa6b5eb44a7d30320f1beb0f90fbca7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997098"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025659"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
  Nome dell'oggetto di origine. *source_object* viene **nvarchar(386)**, con un valore predefinito è NULL.  
   
  [  **@publisher=**] **'***publisher***'**  
- È il nome del server di pubblicazione. *publisher* è **sysname**, con un valore predefinito è NULL.  
+ È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- È il nome del database di pubblicazione. *publisher_db* è **sysname**, con un valore predefinito è NULL.  
+ È il nome del server di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -66,7 +66,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|Oggetto di origine per il conflitto di eliminazione.|  
 |**rowguid**|**uniqueidentifier**|Identificatore di riga per il conflitto di eliminazione.|  
-|**conflict_type**|**int**|Codice che indica il tipo di conflitto:<br /><br /> **1** = UpdateConflict: conflitto viene rilevato a livello di riga.<br /><br /> **2** = ColumnUpdateConflict: conflitto viene rilevato a livello di colonna.<br /><br /> **3** = UpdateDeleteWinsConflict: eliminazione prevale nel conflitto.<br /><br /> **4** = UpdateWinsDeleteConflict: rowguid eliminato che perde nel conflitto viene registrato in questa tabella.<br /><br /> **5** = UploadInsertFailed: Impossibile applicare l'inserimento dal sottoscrittore nel server di pubblicazione.<br /><br /> **6** = DownloadInsertFailed: inserimento dal server di pubblicazione non può essere applicato nel Sottoscrittore.<br /><br /> **7** = UploadDeleteFailed: Delete nel Sottoscrittore non è stato possibile caricare nel server di pubblicazione.<br /><br /> **8** = DownloadDeleteFailed: Impossibile scaricare l'eliminazione nel server di pubblicazione al sottoscrittore.<br /><br /> **9** = UploadUpdateFailed: non è stato possibile applicare l'aggiornamento nel Sottoscrittore nel server di pubblicazione.<br /><br /> **10** = DownloadUpdateFailed: non è stato possibile applicare l'aggiornamento nel server di pubblicazione al sottoscrittore.|  
+|**conflict_type**|**int**|Codice che indica il tipo di conflitto:<br /><br /> **1** = UpdateConflict: conflitto viene rilevato a livello di riga.<br /><br /> **2** = ColumnUpdateConflict: conflitto viene rilevato a livello di colonna.<br /><br /> **3** = UpdateDeleteWinsConflict: eliminazione prevale nel conflitto.<br /><br /> **4** = UpdateWinsDeleteConflict: rowguid eliminato che perde nel conflitto viene registrato in questa tabella.<br /><br /> **5** = UploadInsertFailed: Impossibile applicare l'inserimento dal sottoscrittore nel server di pubblicazione.<br /><br /> **6** = DownloadInsertFailed: inserimento dal server di pubblicazione non può essere applicato nel Sottoscrittore.<br /><br /> **7** = UploadDeleteFailed: Impossibile caricare l'eliminazione dal Sottoscrittore al server di pubblicazione.<br /><br /> **8** = DownloadDeleteFailed: Impossibile scaricare Delete nel server di pubblicazione al sottoscrittore.<br /><br /> **9** = UploadUpdateFailed: non è stato possibile applicare l'aggiornamento nel Sottoscrittore nel server di pubblicazione.<br /><br /> **10** = DownloadUpdateFailed: non è stato possibile applicare l'aggiornamento nel server di pubblicazione al sottoscrittore.|  
 |**reason_code**|**Int**|Codice di errore che può essere sensibile al contesto.|  
 |**reason_text**|**varchar(720)**|Descrizione dell'errore che può essere sensibile al contesto.|  
 |**origin_datasource**|**varchar(255)**|Origine del conflitto.|  
@@ -74,13 +74,13 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |**MSrepl_create_time**|**datetime**|Ora in cui sono state aggiunte le informazioni sui conflitti.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helpmergedeleteconflictrows** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server e **db_owner** ruolo predefinito del database possono eseguire **sp_helpmergedeleteconflictrows**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server e il **db_owner** ruolo predefinito del database possono eseguire **sp_helpmergedeleteconflictrows**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

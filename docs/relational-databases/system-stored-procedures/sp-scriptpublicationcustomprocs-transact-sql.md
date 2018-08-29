@@ -1,5 +1,5 @@
 ---
-title: sp_scriptpublicationcustomprocs (Transact-SQL) | Documenti Microsoft
+title: sp_scriptpublicationcustomprocs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_scriptpublicationcustomprocs
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e3cad96acad0e5e08d92a70cd795a6022be26f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15c841becf856af68e37273349cdb7b3fe578fdf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997398"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026860"
 ---
 # <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,12 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  Nome della pubblicazione. *publication_name* viene **sysname** non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Restituisce un set di risultati è costituito da un singolo **nvarchar (4000)** colonna. Il set di risultati forma l'istruzione CREATE PROCEDURE completa utilizzata per creare la stored procedure personalizzata.  
+ Restituisce un set di risultati è costituito da un unico **nvarchar (4000)** colonna. Il set di risultati forma l'istruzione CREATE PROCEDURE completa utilizzata per creare la stored procedure personalizzata.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Lo script delle procedure personalizzate non viene creato per gli articoli senza l'opzione per la generazione automatica dello schema delle procedure personalizzate (0x2).  
   
  Le procedure seguenti vengono utilizzate da **sp_scriptpublicationcustomprocs** per creare procedure nel sottoscrittore e non deve essere eseguito direttamente:  
@@ -83,8 +83,8 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
   
  **sp_scriptxupdproc**  
   
-## <a name="permissions"></a>Autorizzazioni  
- Eseguire l'autorizzazione viene concessa per **pubblica**; un controllo della sicurezza procedurale viene eseguito all'interno di questa stored procedure per limitare l'accesso ai membri del **sysadmin** ruolo predefinito del server e **DB _ proprietario** ruolo predefinito del database nel database corrente.  
+## <a name="permissions"></a>Permissions  
+ Eseguire l'autorizzazione viene concessa per **pubbliche**; un controllo della sicurezza procedurale viene eseguito all'interno di questa stored procedure per limitare l'accesso ai membri del **sysadmin** ruolo predefinito del server e **DB _ proprietario** ruolo predefinito del database nel database corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

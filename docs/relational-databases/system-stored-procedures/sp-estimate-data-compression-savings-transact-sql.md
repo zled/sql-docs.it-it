@@ -1,5 +1,5 @@
 ---
-title: sp_estimate_data_compression_savings (Transact-SQL) | Documenti Microsoft
+title: sp_estimate_data_compression_savings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25798372f2b949446b746164665dbfe6752443d7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1271953cc69e8302c2a36088fcea1bca3588a01e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260584"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027540"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "33260584"
   Restituisce le dimensioni correnti degli oggetti richiesti e stima le dimensioni dell'oggetto per lo stato di compressione richiesto. La compressione può essere valutata per intere tabelle o parti di esse, inclusi heap, indici cluster, indici non cluster, viste indicizzate e partizioni di tabella e di indice. Gli oggetti possono essere compressi utilizzando la compressione di riga o di pagina. Se la tabella, la partizione o l'indice è già compresso, è possibile utilizzare questa procedura per stimare le dimensioni della tabella, della partizione o dell'indice se venisse ricompresso.  
   
 > [!NOTE]  
->  La compressione e **sp_estimate_data_compression_savings** non sono disponibili in ogni edizione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  La compressione e **sp_estimate_data_compression_savings** non sono disponibili in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Per stimare le dimensioni dell'oggetto in caso di applicazione dell'impostazione di compressione richiesta, questa stored procedure esegue il campionamento dell'oggetto di origine e carica i relativi dati in una tabella e in un indice equivalenti creati in tempdb. La tabella o l'indice creato in tempdb viene quindi compresso in base all'impostazione richiesta e viene calcolato il risparmio stimato in caso di utilizzo della compressione.  
   
- Per modificare lo stato di compressione di una tabella, indice o partizione, utilizzare il [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) istruzioni. Per informazioni generali sulla compressione, vedere [la compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
+ Per modificare lo stato della compressione di una tabella, indice o partizione, usare il [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oppure [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) istruzioni. Per informazioni generali sulla compressione, vedere [compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
   
 > [!NOTE]  
 >  Se i dati esistenti sono frammentati, potrebbe essere possibile ridurne le dimensioni senza utilizzare la compressione ricompilando l'indice. Per gli indici, il fattore di riempimento viene applicato durante la ricompilazione. Questo potrebbe comportare un aumento delle dimensioni dell'indice.  
@@ -68,12 +68,12 @@ sp_estimate_data_compression_savings
  Nome della tabella o della vista indicizzata su cui è basato l'indice. *object_name* è di tipo **sysname**.  
   
  [ @index_id=] '*index_id*'  
- ID dell'indice. *index_id* viene **int**, e può essere uno dei seguenti valori: il numero di ID di un indice, NULL o 0 se *object_id* è un heap. Per restituire informazioni per tutti gli indici per una tabella di base o una vista, specificare NULL. Se si specifica NULL, è necessario specificare NULL anche per *numero_partizione*.  
+ ID dell'indice. *index_id* viene **int**, e può essere uno dei seguenti valori: il numero di ID di un indice, NULL o 0 se *object_id* è un heap. Per restituire informazioni per tutti gli indici per una tabella di base o una vista, specificare NULL. Se si specifica NULL, è necessario specificare NULL anche per *partition_number*.  
   
- [ @partition_number=] '*numero_partizione*'  
+ [ @partition_number=] '*partition_number*'  
  Numero di partizione nell'oggetto. *partition_number* viene **int**, e può essere uno dei seguenti valori: il numero di partizione di un indice o heap, NULL o 1 per un heap o un indice non partizionato.  
   
- Per specificare la partizione, è inoltre possibile specificare il [$partition](../../t-sql/functions/partition-transact-sql.md) (funzione). Per restituire le informazioni per tutte le partizioni dell'oggetto, specificare NULL.  
+ Per specificare la partizione, è anche possibile specificare il [$partition](../../t-sql/functions/partition-transact-sql.md) (funzione). Per restituire le informazioni per tutte le partizioni dell'oggetto, specificare NULL.  
   
  [ @data_compression=] '*data_compression*'  
  Tipo di compressione da valutare. *DATA_COMPRESSION* può essere uno dei seguenti valori: NONE, ROW o PAGE.  
@@ -95,7 +95,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (KB)|**bigint**|Dimensioni del campione con l'impostazione di compressione corrente. È inclusa qualsiasi frammentazione.|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|Dimensioni del campione creato utilizzando l'impostazione di compressione richiesta e, se applicabile, il fattore di riempimento esistente e senza frammentazione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Utilizzare sp_estimate_data_compression_savings per stimare il risparmio che è possibile ottenere abilitando la compressione di riga o di pagina per una tabella o una partizione. Se, ad esempio, le dimensioni medie della riga possono essere ridotte del 40%, è possibile ridurre del 40% le dimensioni dell'oggetto. Si potrebbe non ottenere un risparmio in termini di spazio a seconda del fattore di riempimento e delle dimensioni della riga. Se si riducono del 40% le dimensioni di una riga lunga 8000 byte, ad esempio, una pagina di dati può comunque contenere una sola riga e non si ottiene alcun risparmio.  
   
  Se i risultati dell'esecuzione di sp_estimate_data_compression_savings indicano un aumento delle dimensioni della tabella, significa che in molte righe della tabella viene utilizzata quasi la precisione completa dei tipi di dati e l'aggiunta del limitato overhead necessario per il formato compresso supera il risparmio che è possibile ottenere dalla compressione. In questi rari casi, non abilitare la compressione.  
@@ -108,7 +108,7 @@ sp_estimate_data_compression_savings
   
  Se l'ID della partizione o dell'indice non esiste, non viene restituito alcun risultato.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione SELECT per la tabella.  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
@@ -128,7 +128,7 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Implementazione della compressione Unicode](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

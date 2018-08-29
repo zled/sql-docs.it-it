@@ -1,5 +1,5 @@
 ---
-title: sp_prepexecrpc (Transact-SQL) | Documenti Microsoft
+title: sp_prepexecrpc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_prepexecrpc
 ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 caps.latest.revision: 5
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 536932ef57cc8bb042979dd2332552f34713743d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ab11cbca7177408ed94e79967ab55bad9fbc50b1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250271"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027955"
 ---
 # <a name="spprepexecrpc-transact-sql"></a>sp_prepexecrpc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Prepara ed esegue una chiamata della stored procedure con parametri specificata utilizzando un identificatore RPC. viene richiamata sp_prepexecrpc specificando ID = 14 in un pacchetto del flusso TDS.  
+  Prepara ed esegue una chiamata della stored procedure con parametri specificata utilizzando un identificatore RPC. sp_prepexecrpc viene richiamata specificando ID = 14 in un pacchetto del flusso TDS.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,11 +45,11 @@ sp_prepexecrpc handle OUTPUT, RPCCall
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *Handle*  
+ *handle*  
  Identificatore dell'handle preparato generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *gestire* è un parametro obbligatorio con un **int** valore restituito.  
   
  *RPCCall*  
- Definisce la chiamata della stored procedure mediante la sintassi canonica ODBC. *RPCCall* è un parametro obbligatorio che richiede un' **ntext** valore di input della stringa.  
+ Definisce la chiamata della stored procedure mediante la sintassi canonica ODBC. *RPCCall* è un parametro obbligatorio che richiede un **ntext** valore di stringa di input.  
   
  *bound_param*  
  Indica l'utilizzo facoltativo di parametri aggiuntivi. *bound_param* richiede un valore di input di qualsiasi tipo di dati per definire i parametri aggiuntivi in uso.  

@@ -1,5 +1,5 @@
 ---
-title: sp_dropanonymousagent (Transact-SQL) | Documenti Microsoft
+title: sp_dropanonymousagent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropanonymousagent
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 10b75c7c2e083a09dbebfc720487511397a1af90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6440ede3f3fe645946cfc1bfc01fe65fb20c6e55
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988506"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025954"
 ---
 # <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +47,17 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
  Identificatore globale di una sottoscrizione anonima. *sub_id* viene **uniqueidentifier**, non prevede alcun valore predefinito. Questo identificatore può essere recuperato nel Sottoscrittore utilizzando **sp_helppullsubscription**. Il valore di **subid** campo del set di risultati restituito è l'identificatore globale.  
   
  [  **@type=**] *tipo*  
- Tipo di sottoscrizione. *tipo di* viene **int**, non prevede alcun valore predefinito. I valori validi sono **1** o **2**. Specificare **1**, se la replica snapshot o la replica transazionale con l'agente di distribuzione. Specificare **2**, se tramite l'agente di Merge di replica di tipo merge.  
+ Tipo di sottoscrizione. *tipo di* viene **int**, non prevede alcun valore predefinito. I valori validi sono **1** oppure **2**. Specificare **1**, se la replica snapshot o la replica transazionale con l'agente di distribuzione. Specificare **2**, se tramite l'agente di Merge di replica di tipo merge.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_dropanonymousagent** viene utilizzata in tutti i tipi di replica.  
   
  Questa stored procedure consente di eliminare solo agenti di sottoscrizioni anonime, non di sottoscrizione note.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **db_owner** ruolo predefinito del database nel database di distribuzione possono eseguire **sp_dropanonymousagent**.  
   
 ## <a name="see-also"></a>Vedere anche  

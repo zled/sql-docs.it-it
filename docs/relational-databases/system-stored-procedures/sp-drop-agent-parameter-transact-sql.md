@@ -1,5 +1,5 @@
 ---
-title: sp_drop_agent_parameter (Transact-SQL) | Documenti Microsoft
+title: sp_drop_agent_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_drop_agent_parameter
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21c04d3e2661608e6dd2f6d1f64826fd0d0f2d8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e97721099ee3abe6d6afc9e9dabaa363e9842d9a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988486"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032048"
 ---
 # <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Elimina uno o tutti i parametri da un profilo di **MSagent_parameters** tabella. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione in cui l'agente è in esecuzione.  
+  Elimina uno o tutti i parametri da un profilo nel **MSagent_parameters** tabella. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione in cui l'agente è in esecuzione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,12 +53,12 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
  Nome del parametro che si desidera eliminare. *parameter_name* viene **sysname**, il valore predefinito è **%**. Se **%**, vengono eliminati tutti i parametri per il profilo specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_drop_agent_parameter** viene utilizzata in tutti i tipi di replica.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_drop_agent_parameter**.  
   
 ## <a name="see-also"></a>Vedere anche  

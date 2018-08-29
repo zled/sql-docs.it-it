@@ -1,5 +1,5 @@
 ---
-title: sp_delete_log_shipping_secondary_primary (Transact-SQL) | Documenti Microsoft
+title: sp_delete_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_secondary_primary
 ms.assetid: 507fc744-73d9-4cb7-8d2a-bcff88841c6a
-caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ceff759315f5536bfd86589c6a12400583d37423
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 53bc06a2a2ccb7b4f4a05c6e24521fd851114995
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242403"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031775"
 ---
 # <a name="spdeletelogshippingsecondaryprimary-transact-sql"></a>sp_delete_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,22 +55,22 @@ sp_delete_log_shipping_secondary_primary
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ Nessuna.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_delete_log_shipping_secondary_primary** deve essere eseguita la **master** database nel server secondario. Questa stored procedure esegue le operazioni seguenti:  
   
 1.  Elimina i processi di copia e di ripristino per l'ID secondario.  
   
 2.  Elimina la voce in **log_shipping_secondary**.  
   
-3.  Chiamate **sp_delete_log_shipping_alert_job** sul server di monitoraggio.  
+3.  Le chiamate **sp_delete_log_shipping_alert_job** nel server di monitoraggio.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

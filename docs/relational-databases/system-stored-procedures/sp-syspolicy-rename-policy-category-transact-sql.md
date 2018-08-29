@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_rename_policy_category (Transact-SQL) | Documenti Microsoft
+title: sp_syspolicy_rename_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_rename_policy_category
 ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c65326dd66c2c1efdcb8c4aaa989522b33acda21
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a005fcbdc93035578b395fb82da57acbab4ee3e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259310"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022780"
 ---
 # <a name="spsyspolicyrenamepolicycategory-transact-sql"></a>sp_syspolicy_rename_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,18 +50,18 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
  [ **@policy_category_id=** ] *policy_category_id*  
  Identificatore della categoria di criteri da rinominare. *policy_category_id* viene **int**e deve essere specificato se *nome* è NULL.  
   
- [  **@new_name=** ] **'***nuovo_nome***'**  
- È il nuovo nome della categoria di criteri. *nuovo_nome* viene **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
+ [  **@new_name=** ] **'***new_name***'**  
+ È il nuovo nome per la categoria di criteri. *new_name* viene **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syspolicy_rename_policy_category nel contesto del database di sistema msdb.  
   
- È necessario specificare un valore per *nome* o *policy_category_id*. Non possono essere entrambi NULL. Per ottenere questi valori, eseguire una query sulla vista di sistema msdb.dbo.syspolicy_policy_categories.  
+ È necessario specificare un valore per *name* oppure *policy_category_id*. Non possono essere entrambi NULL. Per ottenere questi valori, eseguire una query sulla vista di sistema msdb.dbo.syspolicy_policy_categories.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

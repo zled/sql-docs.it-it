@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_change_job (Transact-SQL) | Documenti Microsoft
+title: Sys. sp_cdc_change_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,21 +20,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_change_job
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ca1b4bf87be7b0b102bb139aad650dfa16e5c3a1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7603f20095fa09bfcd574aeea1bcad5ca357cd40
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260817"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018067"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifica la configurazione di un processo di pulizia dell'acquisizione dei dati delle modifiche o di un processo di acquisizione nel database corrente. Per visualizzare la configurazione corrente di un processo, eseguire una query di [cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) tabella oppure utilizzare [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
+  Modifica la configurazione di un processo di pulizia dell'acquisizione dei dati delle modifiche o di un processo di acquisizione nel database corrente. Per visualizzare la configurazione corrente di un processo, eseguire una query di [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) tabella oppure utilizzare [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +52,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@job_type=** ] **'***job_type***'**  
- Tipo di processo da modificare. *job_type* viene **nvarchar(20)** con un valore predefinito è 'capture'. Gli input validi sono 'capture' e 'cleanup'.  
+ Tipo di processo da modificare. *job_type* viene **nvarchar(20)** con valore predefinito è 'capture'. Gli input validi sono 'capture' e 'cleanup'.  
   
  [ **@maxtrans** ] **= * * * max_trans*  
  Numero massimo di transazioni da elaborare in ogni ciclo di analisi. *max_trans* viene **int** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro. Se specificato, il valore deve essere un numero intero positivo.  
@@ -65,16 +64,16 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *max_scan* è valida solo per i processi di acquisizione.  
   
- [ **@continuous** ] **= * * * continua*  
+ [ **@continuous** ] **= * * * continue*  
  Viene indicato se il processo di acquisizione deve essere eseguito continuamente (1) o solo una volta (0). *Continuous* viene **bit** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro.  
   
- Quando *continua* = 1, il [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) processo analizza il log ed elabora fino a (*max_trans* \* *max_scans*) transazioni. Attende quindi il numero di secondi specificato in *polling_interval* prima di iniziare l'analisi del log successivo.  
+ Quando *continui* = 1, il [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) processo analizza il log ed elabora fino a (*max_trans* \* *max_scans*) transazioni. Attende quindi il numero di secondi specificato nel *polling_interval* prima di iniziare l'analisi del log successivo.  
   
- Quando *continua* = 0, il **sp_cdc_scan** processo viene eseguito fino a *max_scans* analisi del log, elaborando fino a *max_trans* transazioni durante ogni analisi e quindi viene chiusa.  
+ Quando *continui* = 0, il **sp_cdc_scan** processo esegue fino a *max_scans* analisi del log, elaborando fino a *max_trans* transazioni durante ogni analisi e quindi viene chiusa.  
   
- Se **@continuous** viene modificato da 1 a 0, **@pollinginterval** viene impostato automaticamente su 0. Un valore specificato per **@pollinginterval** diverso da 0 viene ignorato.  
+ Se **@continuous** viene modificato da 1 a 0, **@pollinginterval** viene impostata automaticamente su 0. Un valore specificato per **@pollinginterval** diverso da 0 viene ignorato.  
   
- Se **@continuous** viene omesso o impostato esplicitamente su NULL e **@pollinginterval** è impostata esplicitamente su un valore maggiore di 0, **@continuous** automaticamente Impostare su 1.  
+ Se **@continuous** viene omesso o impostato esplicitamente su NULL e **@pollinginterval** è impostata esplicitamente su un valore maggiore di 0 **@continuous** viene automaticamente Impostare su 1.  
   
  *Continua* è valida solo per i processi di acquisizione.  
   
@@ -88,29 +87,29 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *conservazione* è valida solo per i processi di pulizia.  
   
- [  **@threshold=** ] **'***eliminare soglia***'**  
- Numero massimo di voci che possono essere eliminate utilizzando un'unica istruzione nel processo di pulizia. *eliminare soglia* viene **bigint** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro. *eliminare soglia* è valida solo per i processi di pulizia.  
+ [  **@threshold=** ] **'***Elimina soglia***'**  
+ Numero massimo di voci che possono essere eliminate utilizzando un'unica istruzione nel processo di pulizia. *soglia di eliminazione* viene **bigint** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro. *soglia di eliminazione* è valida solo per i processi di pulizia.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
- Se un parametro viene omesso, il valore associato nella [cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) tabella non viene aggiornata. Un parametro impostato esplicitamente su NULL viene considerato come se fosse stato omesso.  
+## <a name="remarks"></a>Note  
+ Se si omette un parametro, il valore associato nella [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) tabella non viene aggiornata. Un parametro impostato esplicitamente su NULL viene considerato come se fosse stato omesso.  
   
  Se si specifica un parametro non valido per il tipo di processo, l'istruzione avrà esito negativo.  
   
- Le modifiche apportate a un processo non diventano effettive fino a quando non viene arrestato il processo utilizzando [sp_cdc_stop_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md) e riavviato tramite [sp_cdc_start_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md).  
+ Le modifiche apportate a un processo non diventano effettive fino a quando il processo viene arrestato utilizzando [sp_cdc_stop_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md) e riavviato tramite [sp_cdc_start_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **db_owner** ruolo predefinito del database.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **db_owner** ruolo predefinito del database.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-changing-a-capture-job"></a>A. Modifica di un processo di acquisizione  
- Nell'esempio seguente viene aggiornato il `@job_type`, `@maxscans`, e `@maxtrans` parametri di un processo di acquisizione nel `AdventureWorks2012` database. Gli altri parametri validi per un processo di acquisizione, `@continuous` e `@pollinginterval`, sono omessi e i relativi valori non vengono modificati.  
+ L'esempio seguente aggiorna il `@job_type`, `@maxscans`, e `@maxtrans` i parametri di un processo di acquisizione nel `AdventureWorks2012` database. Gli altri parametri validi per un processo di acquisizione, `@continuous` e `@pollinginterval`, sono omessi e i relativi valori non vengono modificati.  
   
 ```  
 USE AdventureWorks2012;  
@@ -123,7 +122,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. Modifica di un processo di pulizia  
- Nell'esempio seguente viene aggiornato un processo di pulizia nel database `AdventureWorks2012`. Tutti i parametri validi per questo tipo di processo, ad eccezione di **@threshold**, vengono specificati. Il valore di **@threshold** non viene modificato.  
+ Nell'esempio seguente viene aggiornato un processo di pulizia nel database `AdventureWorks2012`. Tutti i parametri validi per questo tipo di processo, tranne **@threshold**, vengono specificati. Il valore di **@threshold** non viene modificato.  
   
 ```  
 USE AdventureWorks2012;  
@@ -137,6 +136,6 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [Sys. sp_cdc_add_job & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
+ [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

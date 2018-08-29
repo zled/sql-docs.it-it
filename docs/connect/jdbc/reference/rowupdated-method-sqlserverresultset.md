@@ -1,5 +1,5 @@
 ---
-title: rowUpdated (metodo) (SQLServerResultSet) | Documenti Microsoft
+title: Metodo rowUpdated (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37b981097aa6140e892997ce11ccd5ca98567e87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8a532c7feecc9fd595098460a04dda830438f5d8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842416"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785514"
 ---
-# <a name="rowupdated-method-sqlserverresultset"></a>rowUpdated (metodo) (SQLServerResultSet)
+# <a name="rowupdated-method-sqlserverresultset"></a>Metodo rowUpdated (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Recupera informazioni sull'eventuale aggiornamento della riga corrente.  
@@ -39,18 +39,18 @@ public boolean rowUpdated()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se la riga è stata aggiornata visibilmente dal proprietario o un altro utente e vengono rilevati gli aggiornamenti. In caso contrario, **false**.  
+ **true** se la riga è stata aggiornata in modo visibile dal proprietario o un altro utente e gli aggiornamenti vengono rilevati. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo rowUpdated viene specificato dal metodo rowUpdated nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo rowUpdated viene specificato dal metodo rowUpdated nell'interfaccia ResultSet.  
   
  Il valore restituito dipende dall'eventuale rilevamento degli aggiornamenti da parte del set di risultati.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] non rileva le righe aggiornate per qualsiasi tipo di cursore.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non rileva righe aggiornate per qualsiasi tipo di cursore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

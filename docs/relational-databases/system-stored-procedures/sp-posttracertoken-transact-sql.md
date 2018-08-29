@@ -1,5 +1,5 @@
 ---
-title: sp_posttracertoken (Transact-SQL) | Documenti Microsoft
+title: sp_posttracertoken (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sp_posttracertoken
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b0c0d8b5adfa8d38e48d145bfd5be9dc49af2be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0076b5d48f329aaa5986c08a8a4396598607017
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997158"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030369"
 ---
 # <a name="spposttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,22 +53,22 @@ sp_posttracertoken [ @publication = ] 'publication'
  Nome della pubblicazione di cui viene misurata la latenza. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@tracer_token_id=** ] *tracer_token_id * * * OUTPUT**  
- ID del token di traccia inserito. *tracer_token_id* viene **int** con valore NULL predefinito è un parametro di OUTPUT. Questo valore può essere utilizzato per eseguire [sp_helptracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) o [sp_deletetracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) senza prima eseguire [sp_helptracertokens &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
+ ID del token di traccia inserito. *tracer_token_id* viene **int** con valore predefinito NULL che è un parametro di OUTPUT. Questo valore può essere utilizzato per eseguire [sp_helptracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) oppure [sp_deletetracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) senza prima eseguire [sp_helptracertokens &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
   
  [  **@publisher=** ] **'***publisher***'**  
  Specifica un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL e non deve essere specificato per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_posttracertoken** viene utilizzata nella replica transazionale.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-posttracertoken-trans_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_posttracertoken**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_posttracertoken**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Misurazione della latenza e convalida delle connessioni per la replica transazionale](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  

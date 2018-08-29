@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_execution_history (Transact-SQL) | Documenti Microsoft
+title: syspolicy_policy_execution_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_execution_history view
 ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
-caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c5d21894663f8ad36a44e825a1b0e8ced4966ee8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7db5a20395ec6e0e41d70d6b2dbb04dee991a0c1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220322"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021395"
 ---
 # <a name="syspolicypolicyexecutionhistory-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +43,10 @@ ms.locfileid: "33220322"
 |exception_message|**nvarchar(max)**|Messaggio generato da un'eventuale eccezione.|  
 |exception|**nvarchar(max)**|Descrizione dell'eventuale eccezione.|  
   
-## <a name="remarks"></a>Osservazioni  
- Il [syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md) vista contiene informazioni correlate sulle destinazioni dei criteri e le espressioni di condizione testate.  
+## <a name="remarks"></a>Note  
+ Il [syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md) vista contiene informazioni dettagliate correlate sulle destinazioni dei criteri e le espressioni di condizione testate.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
 ## <a name="see-also"></a>Vedere anche  

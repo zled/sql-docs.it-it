@@ -14,20 +14,20 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 594e5770335779e0555d0ba9911923e487d5db53
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 98fc3495571a434b21d2e58c55c125f049469663
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661663"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784606"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Informazioni sui tipi di dati del driver JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'uso di tipi di dati JDBC di base e avanzati in un'applicazione Java che usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] come database.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'uso di tipi di dati JDBC di base e avanzati in un'applicazione Java che usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come database.  
   
-Il sistema dei tipi di JDBC consente di eseguire la conversione tra i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e i tipi e gli oggetti del linguaggio Java. I tipi JDBC sono basati sui tipi SQL-92 e SQL-99. Il driver JDBC è conforme alla specifica JDBC ed è progettato per fornire il giusto equilibrio tra prevedibilità e flessibilità.  
+Il sistema dei tipi di JDBC consente di eseguire la conversione tra i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i tipi e gli oggetti del linguaggio Java. I tipi JDBC sono basati sui tipi SQL-92 e SQL-99. Il driver JDBC è conforme alla specifica JDBC ed è progettato per fornire il giusto equilibrio tra prevedibilità e flessibilità.  
   
 Negli argomenti di questa sezione viene descritto come utilizzare i tipi di dati di base e avanzati e viene illustrato in che modo i tipi di dati possono essere convertiti in altri tipi di dati.  
   

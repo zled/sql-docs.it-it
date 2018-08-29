@@ -14,26 +14,26 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 819a1a2a3a5203d8f706cba5a2daad2d83e835cf
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: d0a4d3409d9d87bfaca810405e542130a90a471b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661773"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785793"
 ---
 # <a name="using-adaptive-buffering"></a>Utilizzo del buffer adattivo
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-La memorizzazione nel buffer adattiva è progettata per recuperare qualsiasi tipo di dati con valori di grandi dimensioni senza l'overhead dei cursori server. Le applicazioni possono usare il buffering adattivo con tutte le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] supportate dal driver.
+La memorizzazione nel buffer adattiva è progettata per recuperare qualsiasi tipo di dati con valori di grandi dimensioni senza l'overhead dei cursori server. Le applicazioni possono usare il buffering adattivo con tutte le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportate dal driver.
 
-In genere, quando [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] esegue una query, il driver recupera tutti i risultati dal server e li carica nella memoria dell'applicazione. Sebbene questo approccio consenta di ridurre al minimo il consumo delle risorse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile che per le query che producono risultati di dimensioni molto grandi venga generato un errore di tipo OutOfMemoryError nell'applicazione JDBC.
+In genere, quando [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] esegue una query, il driver recupera tutti i risultati dal server e li carica nella memoria dell'applicazione. Sebbene questo approccio consenta di ridurre al minimo il consumo delle risorse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile che per le query che producono risultati di dimensioni molto grandi venga generato un errore di tipo OutOfMemoryError nell'applicazione JDBC.
 
-Per consentire alle applicazioni di gestire risultati di dimensioni molto grandi, in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è disponibile il buffering adattivo. Grazie al buffering adattivo, il driver può recuperare i risultati dell'esecuzione di istruzioni da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] quando questi sono necessari per l'applicazione e non tutti contemporaneamente. Quando l'applicazione non necessita più di accedere ai dati, questi vengono inoltre eliminati dal driver. Di seguito sono illustrati alcuni esempi di casi in cui il buffer adattivo può rivelarsi utile:
+Per consentire alle applicazioni di gestire risultati di dimensioni molto grandi, in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è disponibile il buffering adattivo. Grazie al buffering adattivo, il driver può recuperare i risultati dell'esecuzione di istruzioni da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando questi sono necessari per l'applicazione e non tutti contemporaneamente. Quando l'applicazione non necessita più di accedere ai dati, questi vengono inoltre eliminati dal driver. Di seguito sono illustrati alcuni esempi di casi in cui il buffer adattivo può rivelarsi utile:
 
 - **La query produce un set di risultati molto grandi:** l'applicazione può eseguire un'istruzione SELECT che produce più righe di quante l'applicazione può archiviare in memoria. Nelle versioni precedenti era necessario che l'applicazione usasse un cursore server per evitare un errore di tipo OutOfMemoryError. Il buffer adattivo consente di passare in modalità forward-only di sola lettura un set di risultati anche molto grande senza che sia necessario un cursore server.
 
-- **La query produce valori delle colonne** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **colonne oppure** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **i valori di parametro:** L'applicazione può recuperare un singolo valore (colonna o parametro OUT) troppo grande per essere caricato interamente nella memoria dell'applicazione. Il buffer adattivo consente all'applicazione client di recuperare tale valore come un flusso, usando il getAsciiStream, il getBinaryStream o i metodi getCharacterStream. L'applicazione recupera il valore da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] leggendolo dal flusso.
+- **La query produce valori delle colonne** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **colonne oppure** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **i valori di parametro:** L'applicazione può recuperare un singolo valore (colonna o parametro OUT) troppo grande per essere caricato interamente nella memoria dell'applicazione. Il buffer adattivo consente all'applicazione client di recuperare tale valore come un flusso, usando il getAsciiStream, il getBinaryStream o i metodi getCharacterStream. L'applicazione recupera il valore da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] leggendolo dal flusso.
 
 > [!NOTE]  
 > Con il buffer adattivo il driver JDBC memorizza nel buffer solo la quantità di dati necessaria e non fornisce alcun metodo pubblico per controllare o limitare le dimensioni del buffer.
@@ -56,7 +56,7 @@ Con la versione 2.0 del driver JDBC, tuttavia, le applicazioni possono usare i m
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>Recupero di dati di grandi dimensioni con il buffer adattivo
 
-Quando si usano i metodi get[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Type>Stream per leggere valori di grandi dimensioni una volta e si esegue l'accesso alle colonne ResultSet e ai parametri OUT CallableStatement nell'ordine restituito da \<, il buffer adattivo consente di ridurre al minimo l'utilizzo della memoria dell'applicazione durante l'elaborazione dei risultati. Quando si utilizza il buffer adattivo, si verifica quanto indicato di seguito:
+Quando si usano i metodi get[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Type>Stream per leggere valori di grandi dimensioni una volta e si esegue l'accesso alle colonne ResultSet e ai parametri OUT CallableStatement nell'ordine restituito da \<, il buffer adattivo consente di ridurre al minimo l'utilizzo della memoria dell'applicazione durante l'elaborazione dei risultati. Quando si utilizza il buffer adattivo, si verifica quanto indicato di seguito:
 
 - I metodi get\<Type>Stream definiti nelle classi [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) restituiscono per impostazione predefinita flussi che possono essere letti una sola volta, sebbene possano essere reimpostati, se contrassegnati dall'applicazione. Per applicare il metodo `reset` al flusso, l'applicazione deve prima chiamare il metodo `mark` su tale flusso.
 
@@ -83,7 +83,7 @@ Per ridurre al minimo l'utilizzo della memoria da parte dell'applicazione, gli s
 
 - Vi sono casi in cui l'utilizzo **selectMethod = cursor** invece di **responseBuffering = adaptive** sarebbe più utile, ad esempio:
 
-  - Se l'applicazione elabora forward-only, ad esempio la lettura di ogni riga dopo alcuni input dell'utente, utilizzando lentamente, set di risultati di sola lettura **selectMethod = cursor** invece di **responseBuffering = adaptive** potrebbe contribuire a ridurre l'utilizzo delle risorse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].
+  - Se l'applicazione elabora forward-only, ad esempio la lettura di ogni riga dopo alcuni input dell'utente, utilizzando lentamente, set di risultati di sola lettura **selectMethod = cursor** invece di **responseBuffering = adaptive** potrebbe contribuire a ridurre l'utilizzo delle risorse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
   - Se l'applicazione elabora due o più set di risultati forward-only di sola lettura contemporaneamente nella stessa connessione, l'uso di **selectMethod=cursor** anziché **responseBuffering=adaptive** può contribuire a ridurre la memoria richiesta dal driver durante l'elaborazione dei set di risultati.
 

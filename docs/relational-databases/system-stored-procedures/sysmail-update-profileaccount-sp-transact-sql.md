@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_profileaccount_sp
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
-caps.latest.revision: 41
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ee2f44070644e305163e6a7ae38eea9a81ba9fa1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b81459e3c11c2ce17b133359074a921ddc1e1b66
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260907"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037421"
 ---
 # <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,27 +47,27 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
   
 ## <a name="arguments"></a>Argomenti  
  [ **@profile_id** = ] *profile_id*  
- ID del profilo da aggiornare. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi i *profile_id* o *profile_name* deve essere specificato.  
+ ID del profilo da aggiornare. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi i *profile_id* o nella *profile_name* deve essere specificato.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- Nome del profilo da aggiornare. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *profile_id* o *profile_name* deve essere specificato.  
+ Nome del profilo da aggiornare. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *profile_id* o nella *profile_name* deve essere specificato.  
   
  [ **@account_id** = ] *account_id*  
- ID dell'account da aggiornare. *account_id* viene **int**, con un valore predefinito è NULL. Entrambi i *account_id* o *account_name* deve essere specificato.  
+ ID dell'account da aggiornare. *account_id* viene **int**, con un valore predefinito è NULL. Entrambi i *account_id* o nella *account_name* deve essere specificato.  
   
  [ **@account_name** =] **'***account_name***'**  
- Nome dell'account da aggiornare. *account_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *account_id* o *account_name* deve essere specificato.  
+ Nome dell'account da aggiornare. *account_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *account_id* o nella *account_name* deve essere specificato.  
   
  [ **@sequence_number** =] *sequence_number*  
  Nuovo numero di sequenza dell'account. *sequence_number* viene **int**, non prevede alcun valore predefinito. Il numero di sequenza determina l'ordine in cui gli account sono utilizzati nel profilo.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Restituisce un errore se l'account specificato non è associato al profilo.  
   
  Il numero di sequenza determina l'ordine in cui Posta elettronica database utilizza gli account nel profilo. Per un nuovo messaggio di posta elettronica, Posta elettronica database inizia con l'account che ha il numero di sequenza più basso. Se l'invio del messaggio con tale account ha esito negativo, Posta elettronica database prova con l'account con il numero di sequenza successivo e così via, finché il messaggio non viene inviato o finché anche l'invio con l'account con il numero di sequenza più alto non ha esito negativo. Se l'account con il numero di sequenza più alto restituisce un errore, l'invio del messaggio non viene completato.  
@@ -77,8 +76,8 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
   
  La stored procedure **sysmail_update_profileaccount_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
  L'esempio seguente modifica il numero di sequenza dell'account `Admin-BackupServer` all'interno del profilo `AdventureWorks Administrator` nel **msdb** database. Dopo l'esecuzione del codice, il numero di sequenza dell'account è `3`, ad indicare che sarà utilizzato se i primi due account restituiscono un messaggio di errore.  

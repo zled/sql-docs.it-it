@@ -1,5 +1,5 @@
 ---
-title: sp_helplinkedsrvlogin (Transact-SQL) | Documenti Microsoft
+title: sp_helplinkedsrvlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9615c833939c18b3653fa4035258b91bb5bdfc8
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 74f2885b8b1226afbcd7f4aceb4d6f5835e20a0b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33253264"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036573"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
  Nome del server collegato a cui viene applicato il mapping dell'account di accesso. *rmtsrvname* viene **sysname**, con un valore predefinito è NULL. NULL indica che vengono restituiti i mapping degli account di accesso definiti per tutti i server collegati nel computer locale in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione.  
   
  [  **@locallogin=**] **'***locallogin***'**  
- È il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso nel server locale che dispone di un mapping per il server collegato *rmtsrvname*. *locallogin* viene **sysname**, con un valore predefinito è NULL. NULL specifica che tutti i mapping di account di accesso definiti in *rmtsrvname* vengono restituiti. Se non è NULL, un mapping per *locallogin* a *rmtsrvname* deve essere già esistente. *locallogin* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un utente di Windows. È necessario che l'utente di Windows disponga dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottenuto tramite concessione diretta o in base all'appartenenza a un gruppo di Windows che dispone dell'accesso.  
+ È il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso nel server locale che dispone di un mapping per il server collegato *rmtsrvname*. *locallogin* viene **sysname**, con un valore predefinito è NULL. NULL indica che tutti i mapping definiti nella *rmtsrvname* vengono restituiti. Se non è NULL, un mapping per *locallogin* al *rmtsrvname* deve esistere già. *locallogin* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un utente di Windows. È necessario che l'utente di Windows disponga dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottenuto tramite concessione diretta o in base all'appartenenza a un gruppo di Windows che dispone dell'accesso.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -60,13 +60,13 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |-----------------|---------------|-----------------|  
 |**Server collegato**|**sysname**|Nome del server collegato.|  
 |**Account di accesso locale**|**sysname**|Account di accesso locale a cui fa riferimento il mapping.|  
-|**Mapping automatico**|**smallint**|0 = **account di accesso locale** viene eseguito il mapping a **account di accesso remoto** durante la connessione a **Server collegato**.<br /><br /> 1 = **account di accesso locale** viene eseguito il mapping allo stesso account di accesso e password quando ci si connette a **Server collegato**.|  
-|**Account di accesso remoto**|**sysname**|Nome di account di accesso su **LinkedServer** che viene eseguito il mapping a **LocalLogin** quando **IsSelfMapping** è 0. Se **IsSelfMapping** è 1, **RemoteLogin** è NULL.|  
+|**Il mapping automatico**|**smallint**|0 = **account di accesso locale** viene eseguito il mapping al **Login remoto** durante la connessione al **Server collegato**.<br /><br /> 1 = **account di accesso locale** viene eseguito il mapping allo stesso account di accesso e password quando ci si connette a **Server collegato**.|  
+|**Account di accesso remoto**|**sysname**|Nome account di accesso nel **LinkedServer** a cui viene eseguito il mapping **LocalLogin** quando **IsSelfMapping** è 0. Se **IsSelfMapping** è 1, **RemoteLogin** è NULL.|  
   
-## <a name="remarks"></a>Remarks  
- Prima di eliminare i mapping di account di accesso, utilizzare **sp_helplinkedsrvlogin** per determinare i server collegati coinvolti.  
+## <a name="remarks"></a>Note  
+ Prima di eliminare i mapping di account di accesso, usare **sp_helplinkedsrvlogin** per determinare i server collegati coinvolti.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Le autorizzazioni non vengono controllate.  
   
 ## <a name="examples"></a>Esempi  

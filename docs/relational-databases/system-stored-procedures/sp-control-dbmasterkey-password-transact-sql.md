@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_dbmasterkey_password
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a9894a10965affbd65406276445f6c84f05ce76e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a468fc35805dc51bd76a51021fab82f66c8fc25
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239231"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037534"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +48,15 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  Specifica il nome del database associato alla credenziale. Non è possibile specificare un database di sistema. *database_name* viene **nvarchar**.  
   
  @password=N'*password*'  
- Specifica la password della chiave master. *password* viene **nvarchar**.  
+ Specifica la password della chiave master. *la password* viene **nvarchar**.  
   
  @action= N'add'  
- Specifica che una credenziale per il database specificato verrà aggiunta all'archivio delle credenziali. La credenziale conterrà la password della chiave master del database. Il valore passato a @action è **nvarchar**.  
+ Specifica che una credenziale per il database specificato verrà aggiunta all'archivio delle credenziali. La credenziale conterrà la password della chiave master del database. Il valore passato a @action viene **nvarchar**.  
   
  @action=N'drop'  
- Specifica che una credenziale per il database specificato verrà rimossa dall'archivio delle credenziali. Il valore passato a @action è **nvarchar**.  
+ Specifica che una credenziale per il database specificato verrà rimossa dall'archivio delle credenziali. Il valore passato a @action viene **nvarchar**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve utilizzare una chiave master del database per decrittografare o crittografare una chiave, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue un tentativo di decrittografia della chiave master del database con la chiave master del servizio dell'istanza. Se il tentativo non riesce, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue una ricerca nell'archivio delle credenziali per individuare le credenziali di chiave master con lo stesso GUID del database per cui è necessaria la chiave master. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta quindi di decrittografare la chiave master del database con ogni credenziale corrispondente fino a quando non si riesce a completare l'operazione o non sono disponibili altre credenziali da provare.  
   
 > [!CAUTION]  
@@ -79,15 +78,15 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!NOTE]  
 >  Quando si utilizza la credenziale aggiunta tramite sp_control_dbmasterkey_password per aprire la chiave del database master, quest'ultima viene nuovamente crittografata dalla chiave master del servizio. Se il database si trova in modalità sola lettura, non sarà possibile eseguire nuovamente la crittografia e la chiave master del database rimarrà non crittografata. Per accedere successivamente alla chiave master del database, è necessario utilizzare l'istruzione OPEN MASTER KEY e una password. Per evitare di utilizzare una password, creare le credenziali prima di applicare al database la modalità sola lettura.  
   
- **Potenziale problema di compatibilità con le versioni precedenti:** attualmente, la stored procedure non controlla se una chiave master esistente. Questo è consentito solo per la compatibilità con le versioni precedenti, ma viene visualizzato un avviso. Questo comportamento è deprecato. In una versione futura la chiave master deve esistere e la password utilizzata nella stored procedure **sp_control_dbmasterkey_password** deve essere la stessa password di un tipo di password usate per crittografare la chiave master del database.  
+ **Potenziale problema di compatibilità con le versioni precedenti:** attualmente, la stored procedure non verifica se è presente una chiave master. Questo è consentito solo per la compatibilità con le versioni precedenti, ma viene visualizzato un avviso. Questo comportamento è deprecato. In una versione futura la chiave master deve esistere e la password utilizzata nella stored procedure **sp_control_dbmasterkey_password** deve essere la stessa password di un tipo di password usate per crittografare la chiave master del database.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione CONTROL per il database.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. Creazione di una credenziale per la chiave master di AdventureWorks2012  
- Nell'esempio seguente viene creata una credenziale per la chiave master del database `AdventureWorks2012` e la password della chiave master viene salvata come segreto nella credenziale. Poiché tutti i parametri passati a `sp_control_dbmasterkey_password` deve essere di tipo di dati **nvarchar**, le stringhe di testo vengono convertite con l'operatore di cast `N`.  
+ Nell'esempio seguente viene creata una credenziale per la chiave master del database `AdventureWorks2012` e la password della chiave master viene salvata come segreto nella credenziale. Poiché tutti i parametri passati a `sp_control_dbmasterkey_password` deve essere del tipo di dati **nvarchar**, le stringhe di testo vengono convertite con l'operatore di cast `N`.  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   

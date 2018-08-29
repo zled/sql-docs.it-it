@@ -1,5 +1,5 @@
 ---
-title: sp_droprole (Transact-SQL) | Documenti Microsoft
+title: sp_droprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_droprole
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39ef6031494b8e5bd4718c26d7635be4f916517e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cdc97dbb75487300d228a53b7550f4687abf8a0f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263406"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024711"
 ---
 # <a name="spdroprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33263406"
   Rimuove un ruolo del database dal database corrente.  
   
 > [!IMPORTANT]  
->  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], **sp_droprole** è stata sostituita dall'istruzione DROP ROLE. **sp_droprole** è disponibile solo per compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e potrebbe non essere supportato nelle versioni future.  
+>  Nelle [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], **sp_droprole** è stata sostituita dall'istruzione DROP ROLE. **sp_droprole** viene incluso solo per compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e potrebbero non essere supportate nelle versioni future.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,23 +48,23 @@ sp_droprole [ @rolename= ] 'role'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@rolename =** ] **'***ruolo***'**  
- Nome del ruolo del database da rimuovere dal database corrente. *ruolo* è un **sysname**, non prevede alcun valore predefinito. *ruolo* deve esistere nel database corrente.  
+ Nome del ruolo del database da rimuovere dal database corrente. *ruolo* è un **sysname**, non prevede alcun valore predefinito. *ruolo* deve già esistere nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
- Solo i ruoli di database possono essere rimossi tramite **sp_droprole**.  
+## <a name="remarks"></a>Note  
+ Solo i ruoli di database possono essere rimossi usando **sp_droprole**.  
   
- Non è possibile rimuovere un ruolo del database a cui sono associati membri esistenti. È necessario rimuovere tutti i membri di un ruolo del database prima di poter rimuovere il ruolo del database stesso. Per rimuovere utenti da un ruolo, utilizzare **sp_droprolemember**. Se tutti gli utenti sono ancora i membri del ruolo, **sp_droprole** consente di visualizzare tali membri.  
+ Non è possibile rimuovere un ruolo del database a cui sono associati membri esistenti. È necessario rimuovere tutti i membri di un ruolo del database prima di poter rimuovere il ruolo del database stesso. Per rimuovere utenti da un ruolo, usare **sp_droprolemember**. Se tutti gli utenti sono ancora membri del ruolo **sp_droprole** vengono visualizzati tali membri.  
   
- Ruoli predefiniti e **pubblica** ruolo non può essere rimosso.  
+ Ruoli predefiniti e il **pubblica** ruolo non può essere rimosso.  
   
  Non è possibile rimuovere un ruolo proprietario di un'entità a sicurezza diretta. Prima di rimuovere un ruolo applicazione proprietario di entità a protezione diretta, è necessario innanzitutto trasferire la proprietà delle entità a protezione diretta oppure rimuoverle. Utilizzare ALTER AUTHORIZATION per modificare il proprietario degli oggetti che non devono essere rimossi.  
   
  **sp_droprole** non può essere eseguita all'interno di una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione CONTROL per il ruolo.  
   
 ## <a name="examples"></a>Esempi  

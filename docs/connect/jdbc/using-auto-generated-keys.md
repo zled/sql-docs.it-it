@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a253f000a31b939308b17e408f177ce721ef76c0
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: f39566af4b5fce341e37f991cfb1a67507dd0c7a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661633"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785101"
 ---
 # <a name="using-auto-generated-keys"></a>Utilizzo delle chiavi generate automaticamente
 
@@ -27,7 +27,7 @@ ms.locfileid: "39661633"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta le API di JDBC 3.0 facoltative per il recupero degli identificatori di riga generati automaticamente. Il valore principale di questa funzionalità è di consentire la disponibilità dei valori IDENTITY all'applicazione con la quale si sta aggiornando una tabella di database senza richiedere una query e un secondo round trip al server.
 
-Poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] non supporta pseudocolonne per gli identificatori, gli aggiornamenti per i quali si usa la funzionalità di generazione automatica delle chiavi funzionano solo in una tabella che contiene una colonna IDENTITY. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] consente una singola colonna IDENTITY per tabella. Il set di risultati restituito dal metodo [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) della classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) conterrà una sola colonna, con GENERATED_KEYS come nome di colonna restituito. Se le chiavi generate vengono richieste in una tabella che non contiene la colonna IDENTITY, il driver JDBC restituirà un set di risultati con valore Null.
+Poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta pseudocolonne per gli identificatori, gli aggiornamenti per i quali si usa la funzionalità di generazione automatica delle chiavi funzionano solo in una tabella che contiene una colonna IDENTITY. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente una singola colonna IDENTITY per tabella. Il set di risultati restituito dal metodo [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) della classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) conterrà una sola colonna, con GENERATED_KEYS come nome di colonna restituito. Se le chiavi generate vengono richieste in una tabella che non contiene la colonna IDENTITY, il driver JDBC restituirà un set di risultati con valore Null.
 
 Come esempio viene creata la tabella seguente nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
 

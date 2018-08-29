@@ -1,5 +1,5 @@
 ---
-title: sp_helprolemember (Transact-SQL) | Documenti Microsoft
+title: sp_helprolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helprolemember
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbe422aff07694ee7358f3be9906890d795f46b7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c7e59f3c4b97beaa700fab07a66d60ddb447dcd6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254355"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022221"
 ---
 # <a name="sphelprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@rolename =** ] **'** *ruolo* **'**  
- Nome di un ruolo del database corrente. *ruolo* viene **sysname**, con un valore predefinito è NULL. *ruolo* deve esistere nel database corrente. Se *ruolo* non viene specificato, vengono restituiti tutti i ruoli che contengono almeno un membro dal database corrente.  
+ Nome di un ruolo del database corrente. *ruolo* viene **sysname**, con un valore predefinito è NULL. *ruolo* deve esistere nel database corrente. Se *ruolo* viene omesso, vengono restituiti tutti i ruoli che contengono almeno un membro dal database corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -56,16 +56,16 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|Nome del ruolo nel database corrente.|  
 |**Nome membro**|**sysname**|Nome di un membro di **DbRole.**|  
-|**MemberSID**|**varbinary(85)**|ID di sicurezza del **MemberName.**|  
+|**MemberSID**|**varbinary(85)**|Identificatore di sicurezza di **MemberName.**|  
   
-## <a name="remarks"></a>Osservazioni  
- Se il database contiene i ruoli nidificati, **MemberName** potrebbe essere il nome di un ruolo. **sp_helprolemember** non mostra l'appartenenza ottenuta attraverso i ruoli nidificati. Se, ad esempio, User1 è un membro di Role1 e Role1 è un membro di Role2, `EXEC sp_helprolemember 'Role2'`, verrà restituito Role1, ma non i membri di Role1 (User1 in questo esempio). Per restituire le appartenenze annidate, è necessario eseguire **sp_helprolemember** più volte per ogni ruolo annidato.  
+## <a name="remarks"></a>Note  
+ Se il database sono contenuti ruoli annidati, **nomemembro** potrebbe essere il nome di un ruolo. **sp_helprolemember** non mostra l'appartenenza ottenuta attraverso i ruoli nidificati. Se, ad esempio, User1 è un membro di Role1 e Role1 è un membro di Role2, `EXEC sp_helprolemember 'Role2'`, verrà restituito Role1, ma non i membri di Role1 (User1 in questo esempio). Per restituire le appartenenze annidate, è necessario eseguire **sp_helprolemember** più volte per ogni ruolo annidato.  
   
- Utilizzare **sp_helpsrvrolemember** per visualizzare i membri di un ruolo predefinito del server.  
+ Uso **sp_helpsrvrolemember** per visualizzare i membri di un ruolo predefinito del server.  
   
  Uso [IS_ROLEMEMBER &#40;Transact-SQL&#41; ](../../t-sql/functions/is-rolemember-transact-sql.md) per controllare l'appartenenza al ruolo per un utente specificato.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -78,7 +78,7 @@ EXEC sp_helprolemember 'Sales';
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

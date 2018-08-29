@@ -1,5 +1,5 @@
 ---
-title: sp_cursorunprepare (Transact-SQL) | Documenti Microsoft
+title: sp_cursorunprepare (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_cursorunprepare
 ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e20d5669a7879584cd0c7dc1c26726a6ba12643
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5ebf585b201613210089bbfd395a7aea9421cb73
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235232"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030490"
 ---
 # <a name="spcursorunprepare-transact-sql"></a>sp_cursorunprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_cursorunprepare handle
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *Handle*  
+ *handle*  
  È il *gestire* valore restituito da sp_cursorprepare quando viene preparata l'istruzione.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergefilter (Transact-SQL) | Documenti Microsoft
+title: sp_helpmergefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e35fe61b91fb503b87ba0a0195e77ad7ea0de50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 327e47c5dbb48b7944a8389c2fd56ccec96b8668
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996038"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030817"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,20 +66,20 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |**join_filterclause**|**nvarchar(2000)**|Clausola di filtro che qualifica il join.|  
 |**join_unique_key**|**int**|Indica se il join è basato su una chiave univoca.|  
 |**proprietario della tabella di base**|**sysname**|Nome del proprietario della tabella di base.|  
-|**Nome tabella di base**|**sysname**|Nome della tabella di base.|  
+|**nome della tabella di base**|**sysname**|Nome della tabella di base.|  
 |**proprietario della tabella join**|**sysname**|Nome del proprietario della tabella che si desidera unire in join alla tabella di base.|  
 |**nome della tabella join**|**sysname**|Nome della tabella che si desidera unire in join alla tabella di base.|  
 |**nome dell'articolo**|**sysname**|Nome dell'articolo di tabella che si desidera unire in join alla tabella di base.|  
-|**filter_type**|**tinyint**|Tipo di filtro di merge. I possibili valori sono i seguenti:<br /><br /> **1** = solo filtro join<br /><br /> **2** = relazione tra record logici<br /><br /> **3** impostato su both|  
+|**filter_type**|**tinyint**|Tipo di filtro di merge. I possibili valori sono i seguenti:<br /><br /> **1** = solo filtro join<br /><br /> **2** = relazione tra record logici<br /><br /> **3** = entrambi|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helpmergefilter** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server e **db_owner** ruolo predefinito del database possono eseguire **sp_helpmergefilter**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server e il **db_owner** ruolo predefinito del database possono eseguire **sp_helpmergefilter**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   

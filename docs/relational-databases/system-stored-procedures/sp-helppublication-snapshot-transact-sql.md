@@ -1,5 +1,5 @@
 ---
-title: sp_helppublication_snapshot (Transact-SQL) | Documenti Microsoft
+title: sp_helppublication_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helppublication_snapshot
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 166ddc44f6543a5c95ee2650504dcd3f71d45236
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 628b07fee13a2d0dc62d3dc5be3dfa131f995a8d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002718"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021224"
 ---
 # <a name="sphelppublicationsnapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,26 +53,26 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
  Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere utilizzato quando si aggiunge un articolo a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  *server di pubblicazione* non deve essere utilizzata quando si aggiunge un articolo a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'agente snapshot.|  
-|**name**|**Nvarchar (100)**|Nome dell'agente snapshot.|  
+|**name**|**Nvarchar(100)**|Nome dell'agente snapshot.|  
 |**publisher_security_mode**|**smallint**|Modalità di sicurezza utilizzata dall'agente durante la connessione al server di pubblicazione. Le possibili modalità sono le seguenti:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows.|  
 |**publisher_login**|**sysname**|Account di accesso utilizzato per la connessione al server di pubblicazione.|  
-|**publisher_password**|**nvarchar(524**|Per motivi di sicurezza, un valore di **\* \* \* \* \* \* \* \* \* \*** è sempre restituito.|  
+|**publisher_password**|**nvarchar(524**|Per motivi di sicurezza, un valore pari **\* \* \* \* \* \* \* \* \* \*** è sempre restituito.|  
 |**job_id**|**uniqueidentifier**|ID univoco del processo dell'agente.|  
-|**job_login**|**nvarchar(512)**|È l'account di Windows con cui viene eseguito l'agente Snapshot, viene restituito nel formato *dominio*\\*username*.|  
-|**job_password**|**sysname**|Per motivi di sicurezza, un valore di **\* \* \* \* \* \* \* \* \* \*** è sempre restituito.|  
+|**job_login**|**nvarchar(512)**|L'account di Windows con cui viene eseguito l'agente Snapshot, viene restituito nel formato *DOMAIN*\\*username*.|  
+|**job_password**|**sysname**|Per motivi di sicurezza, un valore pari **\* \* \* \* \* \* \* \* \* \*** è sempre restituito.|  
 |**schedule_name**|**sysname**|Nome della pianificazione utilizzata per il processo dell'agente corrente.|  
 |**frequency_type**|**int**|Frequenza pianificata per l'esecuzione dell'agente. I possibile valori sono i seguenti.<br /><br /> **1** = una sola volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa<br /><br /> **64** = avvio automatico<br /><br /> **128** = periodica|  
 |**frequency_interval**|**int**|Giorni in cui l'agente viene eseguito. I possibili valori sono i seguenti.<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = mercoledì<br /><br /> **5** = giovedì<br /><br /> **6** = venerdì<br /><br /> **7** = sabato<br /><br /> **8** = giorno<br /><br /> **9** = giorni feriali<br /><br /> **10** = giorni festivi|  
-|**frequency_subday_type**|**int**|È il tipo che definisce la frequenza con cui viene eseguita quando l'agente *frequency_type* è **4** (giornaliero), i possibili valori sono i seguenti.<br /><br /> **1** = all'ora specificata<br /><br /> **2** = secondi<br /><br /> **4** = minuti<br /><br /> **8** = ore|  
-|**frequency_subday_interval**|**int**|Numero di intervalli di *frequency_subday_type* che si verificano tra esecuzioni pianificate dell'agente.|  
-|**frequency_relative_interval**|**int**|Settimana in cui viene eseguito l'agente in un determinato mese quando *frequency_type* è **32** (mensile relativo), i possibili valori sono i seguenti.<br /><br /> **1** = primo<br /><br /> **2** = secondi<br /><br /> **4** = terzo<br /><br /> **8** = quarto<br /><br /> **16** = ultimo|  
+|**frequency_subday_type**|**int**|È il tipo che definisce la frequenza con cui l'agente viene eseguito quando *frequency_type* viene **4** (giornaliera), i possibili valori sono i seguenti.<br /><br /> **1** = all'ora specificata<br /><br /> **2** = secondi<br /><br /> **4** = minuti<br /><br /> **8** = ore|  
+|**frequency_subday_interval**|**int**|Numero di intervalli di *frequency_subday_type* tra le esecuzioni pianificate dell'agente.|  
+|**frequency_relative_interval**|**int**|Settimana in cui viene eseguito l'agente in un determinato mese quando *frequency_type* viene **32** (mensile relativo), i possibili valori sono i seguenti.<br /><br /> **1** = prima<br /><br /> **2** = secondi<br /><br /> **4** = terza<br /><br /> **8** = quarta<br /><br /> **16** = ultima|  
 |**frequency_recurrence_factor**|**int**|Numero di settimane o mesi tra le esecuzioni pianificate dell'agente.|  
 |**active_start_date**|**int**|Data della prima esecuzione pianificata dell'agente nel formato YYYYMMDD.|  
 |**active_end_date**|**int**|Data dell'ultima esecuzione pianificata dell'agente nel formato YYYYMMDD.|  
@@ -80,13 +80,13 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |**active_end_time**|**int**|Ora dell'ultima esecuzione pianificata dell'agente nel formato HHMMSS.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **ssp_help_publication_snapshot** viene utilizzata in tutti i tipi di replica.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** al server di pubblicazione o i membri del ruolo predefinito del server di **db_owner** ruolo predefinito del database nel database di pubblicazione possono eseguire **ssp_help_publication_snapshot** .  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** nel server di pubblicazione o i membri del ruolo predefinito del server di **db_owner** ruolo predefinito del database nel database di pubblicazione possono eseguire **ssp_help_publication_snapshot** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà della pubblicazione](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sys.server_event_session_events (Transact-SQL) | Documenti Microsoft
+title: Sys.server_event_session_events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - xe
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1e1422d0b32df504e42c2a94742533bff5fdbc0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 62909fb21035f6cd9415dab60e4ef6b6d0fa99f9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220812"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030059"
 ---
 # <a name="sysservereventsessionevents-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ ms.locfileid: "33220812"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|ID della sessione dell'evento. Non ammette i valori Null.|  
 |event_id|**int**|ID dell'evento. L'ID è univoco all'interno dell'oggetto della sessione dell'evento. Non ammette i valori Null.|  
-|name|**sysname**|Nome dell'evento. Non ammette i valori Null.|  
+|NAME|**sysname**|Nome dell'evento. Non ammette i valori Null.|  
 |pacchetto|**sysname**|Nome del pacchetto eventi che contiene l'evento. Non ammette i valori Null.|  
 |modulo|**sysname**|Nome del modulo contenente l'evento. Non ammette i valori Null.|  
 |predicate|**nvarchar(3000)**|Espressione del predicato applicata all'evento. Ammette i valori Null.|  
 |predicate_xml|**nvarchar(3000)**|Espressione del predicato XML applicata all'evento. Ammette i valori Null.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Questa vista ha le cardinalità della relazione seguenti.  
   
 ||||  

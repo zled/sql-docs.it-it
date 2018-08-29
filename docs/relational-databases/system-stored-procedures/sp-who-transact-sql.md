@@ -1,5 +1,5 @@
 ---
-title: sp_who (Transact-SQL) | Documenti Microsoft
+title: sp_who (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_who
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
-caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f21ac270ac0f448291b5e6eb8874182598e933ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 17d178f1fdf5784ca1e9d9f7dc9042a70611137c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261920"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036941"
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Fornisce informazioni su utenti correnti, le sessioni e i processi in un'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile filtrare tali informazioni in modo da ottenere solo i processi che non sono inattivi, che appartengono a un utente specifico o che sono associati a una determinata sessione.  
+  Fornisce informazioni su utenti correnti, sessioni e i processi in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile filtrare tali informazioni in modo da ottenere solo i processi che non sono inattivi, che appartengono a un utente specifico o che sono associati a una determinata sessione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +46,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
  [  **@loginame =** ] **'***account di accesso***'** | *ID sessione* | **'ACTIVE'**  
  Viene utilizzato per filtrare il set di risultati.  
   
- *account di accesso* viene **sysname** che identifica i processi che appartengono a un determinato account di accesso.  
+ *account di accesso* viene **sysname** che identifica i processi che appartengono a un account di accesso.  
   
  *ID di sessione* è un numero identificativo di sessione appartenente al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza. *ID di sessione* viene **smallint**.  
   
@@ -61,28 +60,28 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ## <a name="result-sets"></a>Set di risultati  
  **sp_who** restituisce un set di risultati con le informazioni seguenti.  
   
-|Colonna|Tipo di dati|Description|  
+|colonna|Tipo di dati|Description|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|ID di sessione.|  
-|**ECID**|**smallint**|ID del contesto di esecuzione di un determinato thread associato a un ID di sessione specifico.<br /><br /> ECID = {0, 1, 2, ELENCHI 3,... *n*}, dove 0 rappresenta sempre principale o thread, padre e {1, 2, 3,... *n*} rappresenta i thread secondari.|  
-|**status**|**nchar(30)**|Stato del processo. I valori possibili sono:<br /><br /> **Dormant**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta reimpostando la sessione.<br /><br /> **Esecuzione**. Nella sessione vengono eseguiti uno o più batch. Se si abilita la funzionalità MARS (Multiple Active Result Sets), una sessione può eseguire più batch. Per ulteriori informazioni, vedere [utilizzando Multiple Active Result Set & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **sfondo**. Nella sessione viene eseguita un'attività in background, ad esempio il rilevamento dei deadlock.<br /><br /> **Rollback**. Nella sessione è in corso il rollback di una transazione.<br /><br /> **in sospeso**. La sessione è in attesa che un thread di lavoro diventi disponibile.<br /><br /> **eseguibile**. L'attività della sessione si trova nella coda eseguibile di un'utilità di pianificazione in attesa di un quantum temporale.<br /><br /> **spinloop**. L'attività della sessione è in attesa che venga liberato uno spinlock.<br /><br /> **sospeso**. La sessione è in attesa del completamento di un evento, ad esempio di I/O.|  
+|**ECID**|**smallint**|ID del contesto di esecuzione di un determinato thread associato a un ID di sessione specifico.<br /><br /> ECID = {0 1, 2, 3,... *n*}, dove 0 rappresenta sempre principale o thread, padre e {1, 2, 3,... *n*} rappresenta i thread secondari.|  
+|**status**|**nchar(30)**|Stato del processo. I valori possibili sono:<br /><br /> **inattive**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta reimpostando la sessione.<br /><br /> **esecuzione**. Nella sessione vengono eseguiti uno o più batch. Se si abilita la funzionalità MARS (Multiple Active Result Sets), una sessione può eseguire più batch. Per altre informazioni vedere [Uso di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **sfondo**. Nella sessione viene eseguita un'attività in background, ad esempio il rilevamento dei deadlock.<br /><br /> **eseguire il rollback**. Nella sessione è in corso il rollback di una transazione.<br /><br /> **in sospeso**. La sessione è in attesa che un thread di lavoro diventi disponibile.<br /><br /> **Runnable**. L'attività della sessione si trova nella coda eseguibile di un'utilità di pianificazione in attesa di un quantum temporale.<br /><br /> **spinloop**. L'attività della sessione è in attesa che venga liberato uno spinlock.<br /><br /> **sospeso**. La sessione è in attesa del completamento di un evento, ad esempio di I/O.|  
 |**loginame**|**nchar(128)**|Nome dell'account di accesso associato a un particolare processo.|  
 |**Nome host**|**nchar(128)**|Nome host o di computer per ogni processo.|  
 |**BLK**|**Char(5)**|ID di sessione del processo di blocco, se esistente. In caso contrario, il valore di questa colonna è zero.<br /><br /> Quando una transazione associata a un ID di sessione specificato viene bloccata da una transazione distribuita orfana, questa colonna restituirà il valore -2 per tale transazione.|  
 |**dbname**|**nchar(128)**|Database utilizzato dal processo.|  
-|**Cmd**|**nchar(16)**|Comando [!INCLUDE[ssDE](../../includes/ssde-md.md)] (istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)], processo interno [!INCLUDE[ssDE](../../includes/ssde-md.md)] e così via) in esecuzione per il processo.|  
+|**cmd**|**nchar(16)**|Comando [!INCLUDE[ssDE](../../includes/ssde-md.md)] (istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)], processo interno [!INCLUDE[ssDE](../../includes/ssde-md.md)] e così via) in esecuzione per il processo.|  
 |**request_id**|**int**|ID per le richieste in esecuzione in una sessione specifica.|  
   
- In caso di elaborazione parallela, vengono creati thread secondari per l'ID di sessione specifico. Il thread principale è indicato da `spid = <xxx>` e `ecid =0`. Agli altri thread secondari hanno lo stesso `spid = <xxx>`, ma con **ecid** > 0.  
+ In caso di elaborazione parallela, vengono creati thread secondari per l'ID di sessione specifico. Il thread principale è indicato da `spid = <xxx>` e `ecid =0`. I thread secondari altri hanno gli stessi `spid = <xxx>`, ma con **ecid** > 0.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Con il termine processo di blocco si indica un processo che mantiene bloccate, potenzialmente con un blocco esclusivo, risorse necessarie per un altro processo.  
   
  A tutte le transazioni distribuite orfane viene assegnato il valore di ID di sessione -2. Le transazioni distribuite orfane sono transazioni distribuite non associate a un ID di sessione. Per altre informazioni, vedere [Usare transazioni contrassegnate per recuperare coerentemente i database correlati &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
- Query di **is_user_process** colonna di Sys.dm exec_sessions per separare i processi di sistema dai processi utente.  
+ Query di **is_user_process** colonne di Sys. dm _ per separare i processi di sistema dai processi utente.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server per visualizzare tutte le sessioni in esecuzione nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In caso contrario, sarà possibile visualizzare solo la sessione corrente.  
   
 ## <a name="examples"></a>Esempi  

@@ -27,16 +27,15 @@ helpviewer_keywords:
 - users [SQL Server], principals
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
-caps.latest.revision: 54
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 55f86aa023d1c5ddfb03c24d9c97797b22a93973
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 178753d52a6a88d8f8d94c6b788d8dd306b48f1b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318041"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023564"
 ---
 # <a name="principals-database-engine"></a>Entità (Motore di database)
   Le*entità* possono richiedere risorse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Analogamente ad altri componenti del modello di autorizzazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le entità possono essere organizzate in una gerarchia. Il campo di influenza di un'entità dipende dall'ambito della definizione dell'entità (Windows, server o database) e dal tipo di entità (indivisibile o raccolta). Un account di accesso di Windows è un esempio di entità indivisibile mentre un gruppo di Windows è un esempio di entità costituita da una raccolta. Ogni entità dispone di un ID di sicurezza (SID).  
@@ -93,7 +92,7 @@ ms.locfileid: "37318041"
 ## <a name="client-and-database-server"></a>Client e server di database  
  Per definizione, un client e un server di database sono entità di sicurezza e possono essere protetti. È possibile autenticare queste entità mutuamente prima che sia stabilita una connessione di rete sicura. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758) protocollo di autenticazione, che definisce quali client interagiscono con un servizio di autenticazione di rete.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  In questa sezione della documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sono inclusi i seguenti argomenti:  
   
 -   [Procedure per la gestione di account di accesso, utenti e schemi](managing-logins-users-and-schemas-how-to-topics.md)  

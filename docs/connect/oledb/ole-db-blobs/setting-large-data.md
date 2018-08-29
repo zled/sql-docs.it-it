@@ -18,14 +18,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, BLOBs
 - large data, OLE objects
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a528171a6f58f9fc463cd161c7e5b2213794474a
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: bfb0b9f17f533678d8ac2f1cd8713fa385682689
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107197"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035031"
 ---
 # <a name="setting-large-data"></a>Impostazione di dati di grandi dimensioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -726,7 +726,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [BLOB e oggetti OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
+ [Oggetti BLOB e OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [Uso di tipi valore di grandi dimensioni](../../oledb/features/using-large-value-types.md)  
   
   

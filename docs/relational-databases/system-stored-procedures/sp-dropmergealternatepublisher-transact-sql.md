@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergealternatepublisher (Transact-SQL) | Documenti Microsoft
+title: sp_dropmergealternatepublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergealternatepublisher
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46c3e124cee4c4d8ff9190c063433ca97f19aa72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c259f83b37577425764d2d0ea2325c5cc275dec2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991798"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036854"
 ---
 # <a name="spdropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
  Nome della pubblicazione da eliminare come pubblicazione del partner alternativo per la sincronizzazione. *alternate_publication*viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_dropmergealternatepublisher** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_dropmergealternatepublisher**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_dropmergealternatepublisher**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_addmergealternatepublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergealternatepublisher-transact-sql.md)  

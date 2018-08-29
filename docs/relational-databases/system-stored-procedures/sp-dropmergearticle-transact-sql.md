@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergearticle (Transact-SQL) | Documenti Microsoft
+title: sp_dropmergearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2016
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_dropmergearticle
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adcb52b18b12c61f8ea0154d668e000c9ca47020
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87a999b49b7239531b7aa374c1695226af3df1a0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991281"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028970"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,41 +53,41 @@ sp_dropmergearticle [ @publication= ] 'publication'
  Nome della pubblicazione dalla quale eliminare un articolo. *pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@article=**] **'***articolo***'**  
- Nome dell'articolo da eliminare dalla pubblicazione specificata. *articolo*viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, tutti gli articoli esistenti nella pubblicazione di tipo merge specificata vengono rimossi. Anche se *articolo* è **tutti**, la pubblicazione ancora deve essere rimossa separatamente dall'articolo.  
+ Nome dell'articolo da eliminare dalla pubblicazione specificata. *articolo*viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, tutti gli articoli esistenti nella pubblicazione di tipo merge specificata vengono rimossi. Anche se *articolo* viene **tutte**, la pubblicazione ancora deve essere eliminata separatamente dall'articolo.  
   
  [  **@ignore_distributor=**] *ignore_distributor*  
  Indica se questa stored procedure viene eseguita senza stabilire la connessione al server di distribuzione. *ignore_distributor* viene **bit**, il valore predefinito è **0**.  
   
  [  **@reserved=**] *riservato*  
- Riservato per utilizzi futuri. *riservata* viene **nvarchar(20)**, con un valore predefinito è NULL.  
+ Riservato per utilizzi futuri. *riservato* viene **nvarchar(20)**, con un valore predefinito è NULL.  
   
  [  **@force_invalidate_snapshot=**] *force_invalidate_snapshot*  
  Abilita o disabilita la funzionalità che consente di invalidare uno snapshot. *force_invalidate_snapshot* è un **bit**, con un valore predefinito **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non invalidano lo snapshot non è valido.  
   
- **1** specifica che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot non è valido, ovvero se il caso, il valore **1** concede l'autorizzazione per l'esecuzione del nuovo snapshot.  
+ **1** significa che le modifiche apportate all'articolo di merge potrebbe invalidare lo snapshot non è valido, e se è il caso, il valore **1** concede l'autorizzazione per il nuovo snapshot.  
   
  [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
  Riconosce che l'eliminazione dell'articolo potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit**, il valore predefinito è **0**.  
   
- **0** specifica che l'eliminazione dell'articolo non causa la reinizializzazione della sottoscrizione.  
+ **0** indica che se si elimina l'articolo non causano la reinizializzazione della sottoscrizione.  
   
- **1** significa che l'eliminazione dell'articolo comporta reinizializzazione delle sottoscrizioni esistenti e consente la reinizializzazione della sottoscrizione si verifichi.  
+ **1** significa che l'eliminazione dell'articolo comporta la reinizializzazione delle sottoscrizioni esistenti e consente la reinizializzazione della sottoscrizione.  
   
  [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
  Solo per uso interno.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_dropmergearticle** viene utilizzata nella replica di tipo merge. Per ulteriori informazioni sull'eliminazione di articoli, vedere [aggiungere ed eliminare articoli da pubblicazioni esistenti](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+## <a name="remarks"></a>Note  
+ **sp_dropmergearticle** viene utilizzata nella replica di tipo merge. Per altre informazioni sull'eliminazione di articoli, vedere [aggiungere ed eliminare articoli in pubblicazioni esistenti](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
- L'esecuzione di **sp_dropmergearticle** per eliminare un articolo da una pubblicazione non rimuove l'oggetto dal database di pubblicazione o dell'oggetto corrispondente dal database di sottoscrizione. Utilizzare `DROP <object>` per rimuovere questi oggetti manualmente, se necessario.  
+ L'esecuzione **sp_dropmergearticle** per eliminare un articolo da una pubblicazione non rimuove l'oggetto dal database di pubblicazione o dell'oggetto corrispondente dal database di sottoscrizione. Utilizzare `DROP <object>` per rimuovere questi oggetti manualmente, se necessario.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_dropmergearticle**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_dropmergearticle**.  
   
 ## <a name="example"></a>Esempio  
   

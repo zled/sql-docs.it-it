@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_help_jobs (Transact-SQL) | Documenti Microsoft
+title: Sys. sp_cdc_help_jobs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_help_jobs
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1f193f632ca8095e42bb73eb76f8b283382a5069
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 100dc01e91f0864043e1dd37ba33275ea7d2e1dd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257605"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037623"
 ---
 # <a name="sysspcdchelpjobs-transact-sql"></a>sys.sp_cdc_help_jobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sys.sp_cdc_help_jobs
 ```  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -56,13 +55,13 @@ sys.sp_cdc_help_jobs
 |**job_type**|**nvarchar(20)**|Tipo di processo.|  
 |**maxtrans**|**int**|Numero massimo di transazioni da elaborare in ogni ciclo di analisi.<br /><br /> **maxtrans** è valida solo per i processi di acquisizione.|  
 |**maxscans**|**int**|Numero massimo di cicli di analisi da eseguire per estrarre tutte le righe dal log.<br /><br /> **maxscans** è valida solo per i processi di acquisizione.|  
-|**Continua**|**bit**|Flag che indica se l'esecuzione del processo di acquisizione deve essere continua (1) o come singola occorrenza (0). Per altre informazioni, vedere [Sys. sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).<br /><br /> **Continua** è valida solo per i processi di acquisizione.|  
+|**continua**|**bit**|Flag che indica se l'esecuzione del processo di acquisizione deve essere continua (1) o come singola occorrenza (0). Per altre informazioni, vedere [Sys. sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).<br /><br /> **Continua** è valida solo per i processi di acquisizione.|  
 |**pollingInterval**|**bigint**|Numero di secondi tra cicli di analisi del log.<br /><br /> **pollingInterval** è valida solo per i processi di acquisizione.|  
-|**Conservazione**|**bigint**|Numero di minuti per i quali vengono conservate le righe delle modifiche nelle tabelle delle modifiche.<br /><br /> **conservazione** è valida solo per i processi di pulizia.|  
-|**Soglia**|**bigint**|Numero massimo di voci che possono essere eliminate utilizzando un'unica istruzione nel processo di pulizia.|  
+|**conservazione**|**bigint**|Numero di minuti per i quali vengono conservate le righe delle modifiche nelle tabelle delle modifiche.<br /><br /> **conservazione** è valida solo per i processi di pulizia.|  
+|**soglia**|**bigint**|Numero massimo di voci che possono essere eliminate utilizzando un'unica istruzione nel processo di pulizia.|  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **db_owner** ruolo predefinito del database.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **db_owner** ruolo predefinito del database.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni sui processi di acquisizione e di pulizia definiti per il database `AdventureWorks2012`.  
@@ -76,6 +75,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [Sys. sp_cdc_add_job & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
+ [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

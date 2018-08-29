@@ -1,5 +1,5 @@
 ---
-title: sp_dsninfo (Transact-SQL) | Documenti Microsoft
+title: sp_dsninfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a9c04611a342f81b6aa0a0b403eb6ff4ce8a643
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63e4783420f9298e2e820341993774b81bbab7e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992578"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017494"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,9 +53,9 @@ sp_dsninfo [ @dsn =] 'dsn'
  Nome del server collegato DSN ODBC o OLE DB. *DSN* viene **varchar(128)**, non prevede alcun valore predefinito.  
   
  [  **@infotype =**] **'***Info***'**  
- Tipo di informazioni che si desidera ottenere. Se *Info* viene omesso o se si specifica NULL, vengono restituiti tutti i tipi di informazioni. *Info* viene **varchar(128)**, con un valore predefinito è NULL, e può essere uno dei valori seguenti.  
+ Tipo di informazioni che si desidera ottenere. Se *Info* viene omesso o se viene specificato NULL, vengono restituiti tutti i tipi di informazioni. *Info* viene **varchar(128)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Specifica il nome del produttore dell'origine dati.|  
 |**DBMS_VERSION**|Specifica la versione dell'origine dati.|  
@@ -66,18 +66,18 @@ sp_dsninfo [ @dsn =] 'dsn'
  Account di accesso per l'origine dati. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *account di accesso*viene **varchar(128)**, con un valore predefinito è NULL.  
   
  [  **@password =**] **'***password***'**  
- Password per l'account di accesso. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *password*viene **varchar(128)**, con un valore predefinito è NULL.  
+ Password per l'account di accesso. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *la password*viene **varchar(128)**, con un valore predefinito è NULL.  
   
  [  **@dso_type=**] *dso_type*  
- Tipo dell'origine dati. *dso_type* viene **int**, e può essere uno dei valori seguenti.  
+ Tipo dell'origine dati. *dso_type* viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1** (impostazione predefinita)|Origine dati ODBC|  
 |**3**|Origine dati OLE DB|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -86,12 +86,12 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**Tipo di informazioni**|**nvarchar(64)**|Tipi di informazioni quali DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER|  
 |**Valore**|**nvarchar(512)**|Valore del tipo di informazioni associato.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_dsninfo** viene utilizzata in tutti i tipi di replica.  
   
- **sp_dsninfo** recupera informazioni origine dati ODBC o OLE DB che indica se il database può essere utilizzato per la replica o l'esecuzione di query.  
+ **sp_dsninfo** recupera informazioni origine dati ODBC o OLE DB che mostra se il database può essere utilizzato per la replica o l'esecuzione di query.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_dsninfo**.  
   
 ## <a name="see-also"></a>Vedere anche  

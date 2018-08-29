@@ -1,5 +1,5 @@
 ---
-title: sp_cursorexecute (Transact-SQL) | Documenti Microsoft
+title: sp_cursorexecute (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursor_execute
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cae17034cdcc2d048e539961bf07971acb3b3410
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 47c6f3a1c0356f00843ba086d1d7994071c24ba6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238791"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029872"
 ---
 # <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crea e popola un cursore in base al piano di esecuzione creato da sp_cursorprepare. Questa procedura, insieme a sp_cursorprepare, svolge la stessa funzione di sp_cursoropen, ma viene suddivisa in due fasi. è possibile richiamare sp_cursorexecute specificando ID = 4 in un pacchetto del flusso TDS.  
+  Crea e popola un cursore in base al piano di esecuzione creato da sp_cursorprepare. Questa routine, insieme a sp_cursorprepare, svolge la stessa funzione di sp_cursoropen, ma viene suddivisa in due fasi. è possibile richiamare sp_cursorexecute specificando ID = 4 in un pacchetto del flusso TDS.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,32 +48,32 @@ sp_cursorexecute prepared_handle, cursor
   
 ## <a name="arguments"></a>Argomenti  
  *prepared_handle*  
- L'istruzione preparata *gestire* valore restituito da sp_cursorprepare. *prepared_handle* è un parametro obbligatorio che richiede un' **int** valore di input.  
+ L'istruzione preparata *gestire* valore restituito da sp_cursorprepare. *prepared_handle* è un parametro obbligatorio che richiede un **int** valore di input.  
   
  *cursor*  
  Identificatore del cursore generato da SQL Server. *cursore* è un parametro obbligatorio che deve essere fornito su tutte le routine successive che agiscono sul cursore, ad esempio sp_cursorfetch  
   
  *scrollopt*  
- Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede un' **int** valore di input. Il sp_cursorexecute*scrollopt* parametro presenta le stesse opzioni di valore come quelle per sp_cursoropen.  
+ Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede un **int** valore di input. Il sp_cursorexecute*scrollopt* parametro ha le stesse opzioni dei valori di quelle per sp_cursoropen.  
   
 > [!NOTE]  
 >  Il valore PARAMETERIZED_STMT non è supportato.  
   
 > [!IMPORTANT]  
->  Se un *scrollopt* valore non è specificato, il valore predefinito è KEYSET indipendentemente dal valore *scrollopt* valore specificato in sp_cursorprepare.  
+>  Se un *scrollopt* valore viene omesso, il valore predefinito è KEYSET indipendentemente *scrollopt* valore specificato in sp_cursorprepare.  
   
  *ccopt*  
- Opzione del controllo della valuta. *ccopt* è un parametro facoltativo che richiede un' **int** valore di input. Il sp_cursorexecute*ccopt* parametro presenta le stesse opzioni di valore come quelle per sp_cursoropen.  
+ Opzione del controllo della valuta. *ccopt* è un parametro facoltativo che richiede un **int** valore di input. Il sp_cursorexecute*ccopt* parametro ha le stesse opzioni dei valori di quelle per sp_cursoropen.  
   
 > [!IMPORTANT]  
->  Se un *ccopt* valore non è specificato, il valore predefinito è OPTIMISTIC indipendentemente dal valore *ccopt* valore specificato in sp_cursorprepare.  
+>  Se un *ccopt* valore viene omesso, il valore predefinito è OPTIMISTIC indipendentemente *ccopt* valore specificato in sp_cursorprepare.  
   
  *conteggio delle righe*  
  Parametro facoltativo che indica il numero di righe del buffer di recupero da utilizzare con AUTO_FETCH. Il valore predefinito è 20 righe. *conteggio delle righe* si comporta in modo diverso quando assegnato come valore di input rispetto a un valore restituito.  
   
 |Come valore di input|Come valore restituito|  
 |--------------------|---------------------|  
-|Quando in cui viene specificato AUTO_FETCH con i cursori FAST_FORWARD *rowcount* rappresenta il numero di righe da inserire nel buffer di recupero.|Rappresenta il numero di righe nel set di risultati. Quando il *scrollopt* viene specificato il valore AUTO_FETCH, *rowcount* restituisce il numero di righe recuperate nel buffer di recupero.|  
+|Quando viene specificato AUTO_FETCH con i cursori FAST_FORWARD *rowcount* rappresenta il numero di righe da inserire nel buffer di recupero.|Rappresenta il numero di righe nel set di risultati. Quando la *scrollopt* viene specificato il valore AUTO_FETCH, *rowcount* restituisce il numero di righe recuperate nel buffer di recupero.|  
   
  *bound_param*  
  Indica l'utilizzo facoltativo di parametri aggiuntivi.  
@@ -84,15 +84,15 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>Valore restituito del codice  
  *conteggio delle righe* potrebbe restituire i valori seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |-1|Numero di righe non note.|  
 |-n|Un popolamento asincrono è attivo.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Parametri scrollopt e ccopt  
- *scrollopt* e *ccopt* sono utili quando i piani memorizzati nella cache vengono sostituiti dalla cache del server, vale a dire che l'handle preparato che identifica l'istruzione deve essere ricompilato. Il *scrollopt* e *ccopt* i valori dei parametri devono corrispondere ai valori inviati nella richiesta originale a sp_cursorprepare.  
+ *scrollopt* e *ccopt* risultano utili per i piani memorizzati nella cache vengono interrotti per la cache del server, vale a dire che è necessario ricompilare l'handle preparato che identifica l'istruzione. Il *scrollopt* e *ccopt* valori di parametro devono corrispondere i valori inviati nella richiesta originale a sp_cursorprepare.  
   
 > [!NOTE]  
 >  PARAMETERIZED_STMT non deve essere assegnato a *scrollopt*.  

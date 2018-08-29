@@ -14,18 +14,18 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50e80b34becde8987a06f9293a39ba24e3639cd2
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 406c1c25c346680caba70c467e20e99df9977f13
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454195"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786115"
 ---
 # <a name="sqlxml-interface"></a>Interfaccia SQLXML
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Con il driver JDBC viene fornito supporto per l'API di JDBC 4.0, in cui viene presentata l'interfaccia java.sql.SQLXML. Tale interfaccia definisce i metodi per interagire e modificare i dati XML. Il **SQLXML** esegue il mapping al tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** tipo di dati.  
+Con il driver JDBC viene fornito supporto per l'API di JDBC 4.0, in cui viene presentata l'interfaccia java.sql.SQLXML. Tale interfaccia definisce i metodi per interagire e modificare i dati XML. Il **SQLXML** esegue il mapping al tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml** tipo di dati.  
   
 L'interfaccia SQLXML fornisce i metodi per l'accesso al valore XML come un **stringa**, un **lettore** oppure **Writer**, oppure come un **Stream**. È inoltre possibile accedere al valore XML tramite **Origine** oppure impostarlo come **Risultato**, utilizzati con le API dei parser XML, tra cui Document Object Model (DOM), Simple API for XML (SAX) e Streaming API for XML (StAX), nonché con trasformazioni XSLT e XPath.  
   

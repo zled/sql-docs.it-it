@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergesubscription (Transact-SQL) | Documenti Microsoft
+title: sp_dropmergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergesubscription
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0fb4d9bcd2f72db252380fe3ee0d914645255b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d639b189f1b271f6563c32090992c376113ccfa2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990226"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027214"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,33 +60,33 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
  Nome del database di sottoscrizione. *subscription_database*viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@subscription_type=** ] **'***subscription_type***'**  
- Tipo di sottoscrizione. *subscription_type*viene **nvarchar(15)**, e può essere uno dei valori seguenti.  
+ Tipo di sottoscrizione. *subscription_type*viene **nvarchar(15)**, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Tutti i**|Sottoscrizioni push, pull e anonime.|  
-|**Anonimo**|Sottoscrizione anonima.|  
-|**Push**|Sottoscrizione push.|  
-|**Pull**|Sottoscrizione pull.|  
+|**Anonima**|Sottoscrizione anonima.|  
+|**push**|Sottoscrizione push.|  
+|**Eseguire il pull**|Sottoscrizione pull.|  
 |**entrambi** (impostazione predefinita)|Sottoscrizione sia push che pull.|  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
  Indica se questa stored procedure viene eseguita senza stabilire la connessione al server di distribuzione. *ignore_distributor* viene **bit**, il valore predefinito è **0**. È possibile utilizzare questo parametro per eliminare una sottoscrizione senza eseguire attività di pulizia dei dati nel server di distribuzione. Risulta inoltre utile se è stato necessario reinstallare il server di distribuzione.  
   
  [  **@reserved=** ] *riservato*  
- Riservato per utilizzi futuri. *riservata* viene **bit**, il valore predefinito è **0**.  
+ Riservato per utilizzi futuri. *riservato* viene **bit**, il valore predefinito è **0**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_dropmergesubscription** viene utilizzata nella replica di tipo merge.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergesubscription_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_dropmergesubscription**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_dropmergesubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare una sottoscrizione Push](../../relational-databases/replication/delete-a-push-subscription.md)   

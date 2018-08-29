@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_get_captured_columns (Transact-SQL) | Documenti Microsoft
+title: Sys. sp_cdc_get_captured_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+ms.openlocfilehash: a53411c8be883f65f511473415dfc0226b21dcf2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024146"
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sys.sp_cdc_get_captured_columns
  [ @capture_instance =] '*capture_instance*'  
  Nome dell'istanza di acquisizione associata a una tabella di origine. *capture_instance* viene **sysname** e non può essere NULL.  
   
- Per segnalare le istanze di acquisizione per la tabella, eseguire il [sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) stored procedure.  
+ Per indicare le istanze di acquisizione per la tabella, eseguire la [Sys. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) stored procedure.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -73,12 +73,12 @@ sys.sp_cdc_get_captured_columns
 |numeric_scale|**int**|Scala della colonna se questa è basata su valori numerici. In caso contrario il valore è NULL.|  
 |datetime_precision|**smallint**|Precisione della colonna se questa è basata su valori datetime. In caso contrario il valore è NULL.|  
   
-## <a name="remarks"></a>Osservazioni  
- Utilizzare Sys. sp_cdc_get_captured_columns per ottenere informazioni sulle colonne acquisite restituite da funzioni di query di istanza di acquisizione query [CDC. fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) o [CDC. fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md). I nomi di colonna, gli ID e la posizione rimangono costanti per tutta la durata dell'istanza di acquisizione. Solo il tipo di dati delle colonne cambia quando cambia il tipo di dati delle colonne di origine sottostanti nella tabella registrata. Le colonne che vengono aggiunti o eliminate da una tabella di origine avere alcun impatto sulle colonne acquisite di istanze di acquisizione esistente.  
+## <a name="remarks"></a>Note  
+ Utilizzare Sys. sp_cdc_get_captured_columns per ottenere informazioni sulle colonne acquisite restituite dall'esecuzione di query le funzioni di query di istanza di acquisizione [CDC. fn_cdc_get_all_changes < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) o[CDC. fn_cdc_get_net_changes < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md). I nomi di colonna, gli ID e la posizione rimangono costanti per tutta la durata dell'istanza di acquisizione. Solo il tipo di dati delle colonne cambia quando cambia il tipo di dati delle colonne di origine sottostanti nella tabella registrata. Le colonne che vengono aggiunti o eliminate da una tabella di origine avere alcun impatto sulle colonne acquisite di istanze di acquisizione esistente.  
   
- Utilizzare [sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) per ottenere informazioni sulla definizione dei dati (istruzioni DDL language) applicate a una tabella di origine. Le modifiche DDL che influiscono sulla struttura di una colonna di origine registrata vengono restituite nel set di risultati.  
+ Uso [sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) per ottenere informazioni sulla definizione dei dati (istruzioni DDL language) applicate a una tabella di origine. Le modifiche DDL che influiscono sulla struttura di una colonna di origine registrata vengono restituite nel set di risultati.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede l'appartenenza al ruolo predefinito del database db_owner. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database. Se il chiamante non dispone delle autorizzazioni per visualizzare i dati di origine, la funzione restituisce l'errore 22981 (Oggetto inesistente o accesso negato).  
   
 ## <a name="examples"></a>Esempi  

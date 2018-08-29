@@ -26,15 +26,15 @@ helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17a7d69869e9879d485f1a8cac107836a5984a44
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 00ed352027fb4779142b56e3f5c87a3f13df80c1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001248"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036344"
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,9 +78,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |**dynamic_snapshot_location**|**nvarchar(255)**|Percorso della cartella da cui i file di snapshot vengono letti se viene utilizzato un filtro di riga con parametri.|  
 |**frequency_type**|**int**|Frequenza pianificata per l'esecuzione dell'agente. I possibile valori sono i seguenti.<br /><br /> **1** = una sola volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa<br /><br /> **64** = avvio automatico<br /><br /> **128** = periodica|  
 |**frequency_interval**|**int**|Giorni in cui l'agente viene eseguito. I possibili valori sono i seguenti.<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = mercoledì<br /><br /> **5** = giovedì<br /><br /> **6** = venerdì<br /><br /> **7** = sabato<br /><br /> **8** = giorno<br /><br /> **9** = giorni feriali<br /><br /> **10** = giorni festivi|  
-|**frequency_subday_type**|**int**|È il tipo che definisce la frequenza con cui viene eseguita quando l'agente *frequency_type* è **4** (giornaliero), i possibili valori sono i seguenti.<br /><br /> **1** = all'ora specificata<br /><br /> **2** = secondi<br /><br /> **4** = minuti<br /><br /> **8** = ore|  
-|**frequency_subday_interval**|**int**|Numero di intervalli di *frequency_subday_type* che si verificano tra esecuzioni pianificate dell'agente.|  
-|**frequency_relative_interval**|**int**|Settimana in cui viene eseguito l'agente in un determinato mese quando *frequency_type* è **32** (mensile relativo), i possibili valori sono i seguenti.<br /><br /> **1** = primo<br /><br /> **2** = secondi<br /><br /> **4** = terzo<br /><br /> **8** = quarto<br /><br /> **16** = ultimo|  
+|**frequency_subday_type**|**int**|È il tipo che definisce la frequenza con cui l'agente viene eseguito quando *frequency_type* viene **4** (giornaliera), i possibili valori sono i seguenti.<br /><br /> **1** = all'ora specificata<br /><br /> **2** = secondi<br /><br /> **4** = minuti<br /><br /> **8** = ore|  
+|**frequency_subday_interval**|**int**|Numero di intervalli di *frequency_subday_type* tra le esecuzioni pianificate dell'agente.|  
+|**frequency_relative_interval**|**int**|Settimana in cui viene eseguito l'agente in un determinato mese quando *frequency_type* viene **32** (mensile relativo), i possibili valori sono i seguenti.<br /><br /> **1** = prima<br /><br /> **2** = secondi<br /><br /> **4** = terza<br /><br /> **8** = quarta<br /><br /> **16** = ultima|  
 |**frequency_recurrence_factor**|**int**|Numero di settimane o mesi tra le esecuzioni pianificate dell'agente.|  
 |**active_start_date**|**int**|Data della prima esecuzione pianificata dell'agente nel formato YYYYMMDD.|  
 |**active_end_date**|**int**|Data dell'ultima esecuzione pianificata dell'agente nel formato YYYYMMDD.|  
@@ -88,15 +88,15 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |**active_end_time**|**int**|Ora dell'ultima esecuzione pianificata dell'agente nel formato HHMMSS.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helpdynamicsnapshot_job** viene utilizzata nella replica di tipo merge.  
   
  Se vengono utilizzati tutti i valori predefiniti dei parametri, verranno restituite informazioni su tutti i processi di snapshot dei dati partizionati per l'intero database di pubblicazione.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** predefinito del database e l'elenco di accesso per la pubblicazione può eseguire **sp_helpdynamicsnapshot_job**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** corrette del database e l'elenco di accesso per la pubblicazione possono eseguire **sp_helpdynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_refreshsubscriptions (Transact-SQL) | Documenti Microsoft
+title: sp_refreshsubscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_refreshsubscriptions
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb85456e42a3dfbef482e4260095f5496885328d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7029d3013ce3a9dd0bfe173261f7dbd4eef3fad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995388"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027965"
 ---
 # <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,18 +49,18 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
  Pubblicazione per la quale aggiornare le sottoscrizioni. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_refreshsubscriptions** viene utilizzata in repliche snapshot, transazionali e di tipo merge.  
+## <a name="remarks"></a>Note  
+ **sp_refreshsubscriptions** viene utilizzata nella replica di tipo merge e snapshot, transazionale.  
   
- **sp_refreshsubscriptions** viene chiamato da **sp_addarticle** per le pubblicazioni ad aggiornamento immediato.  
+ **sp_refreshsubscriptions** viene chiamato dal **sp_addarticle** per le pubblicazioni ad aggiornamento immediato.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_refreshsubscriptions**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_refreshsubscriptions**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

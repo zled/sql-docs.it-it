@@ -1,5 +1,5 @@
 ---
-title: sp_requestpeerresponse (Transact-SQL) | Documenti Microsoft
+title: sp_requestpeerresponse (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_requestpeerresponse
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83f5cfcac2f109b88fc63ab96942d7682bdb2a90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b722bac6727e6d64bb0c2c475ca900ea78c8fc1d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024373"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,23 +51,23 @@ sp_requestpeerresponse [ @publication = ] 'publication'
  Nome della pubblicazione in una topologia peer-to-peer per cui si desidera verificare lo stato. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@description**=] **'***descrizione***'**  
- Informazioni specificate dall'utente che è possibile utilizzare per identificare le singole richieste di stato. *Descrizione* viene **nvarchar(4000**, con un valore predefinito è NULL.  
+ Informazioni specificate dall'utente che è possibile utilizzare per identificare le singole richieste di stato. *Descrizione* viene **nvarchar (4000)**, con un valore predefinito è NULL.  
   
  [ **@request_id** =] *request_id*  
  Restituisce l'ID della nuova richiesta. *request_id* viene **int** ed è un parametro OUTPUT. Questo valore può essere utilizzato quando si esegue [sp_helppeerresponses &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) per visualizzare tutte le risposte a una richiesta di stato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_requestpeerresponse** viene utilizzata nella replica transazionale peer-to-peer.  
   
- **sp_requestpeerresponse** permette di assicurare che tutti i comandi sono stati ricevuti da tutti gli altri nodi prima di ripristinare un database pubblicato in una topologia peer-to-peer. Inoltre, viene utilizzata durante la replica di modifiche DDL (Data Definition Language) apportate mentre un nodo era offline per stimare quando tali modifiche verranno recapitate agli altri nodi.  
+ **sp_requestpeerresponse** viene usato per garantire che tutti i comandi sono stati ricevuti da tutti gli altri nodi prima di ripristinare un database pubblicato in una topologia peer-to-peer. Inoltre, viene utilizzata durante la replica di modifiche DDL (Data Definition Language) apportate mentre un nodo era offline per stimare quando tali modifiche verranno recapitate agli altri nodi.  
   
  **sp_requestpeerresponse** non può essere eseguita all'interno di una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_requestpeerresponse**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_requestpeerresponse**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   

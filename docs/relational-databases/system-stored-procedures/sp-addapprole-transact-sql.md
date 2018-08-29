@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_addapprole
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3de15b3d1f02f3acf8dd5809dce7ec01ad74e65f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5f06edfbafa98c3156d8a718e0b18836950fb2b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035269"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028755"
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 > [!IMPORTANT]  
 >  Microsoft ODBC **crittografare** opzione non è supportato da **SqlClient**. Se possibile, richiedere all'utente di immettere le credenziali del ruolo applicazione in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario disporre di credenziali persistenti, crittografarle tramite le funzioni CryptoAPI.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione ALTER ANY APPLICATION ROLE nel database. Se uno schema con lo stesso nome e lo stesso proprietario del nuovo ruolo non esiste, è richiesta anche l'autorizzazione CREATE SCHEMA nel database.  
   
 ## <a name="examples"></a>Esempi  

@@ -1,0 +1,1 @@
+<Token>**Si applica a:** ![yes](media/yes.png)SQL Server (a partire da 2008) ![yes](media/yes.png)Database SQL di Azure (istanza gestita di solo) ![alcun](media/no.png)Azure SQL Data Warehouse ![ Sì](media/yes.png)Parallel Data Warehouse </Token>

@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_enable_db (Transact-SQL) | Documenti Microsoft
+title: Sys. sp_cdc_enable_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], enabling databases
 - sp_cdc_enable_db
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03a2ffce46b6789e32cccc361760f2aea842adb7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0f8c68e5366d8cd55475621ff4985c48a47ed4ae
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255771"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030285"
 ---
 # <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +53,14 @@ sys.sp_cdc_enable_db
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
- Change data capture non può essere abilitato in [database di sistema](../../relational-databases/databases/system-databases.md) o i database di distribuzione.  
+## <a name="remarks"></a>Note  
+ Non è possibile abilitare Change data capture [database di sistema](../../relational-databases/databases/system-databases.md) o i database di distribuzione.  
   
- sys.sp_cdc_enable_db crea gli oggetti Change Data Capture con ambito esteso all'intero database, includendo tabelle dei metadati e trigger DDL. Oltre a creare lo schema cdc e l'utente del database cdc e imposta la colonna is_cdc_enabled per la voce del database nel [Sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vista su 1 del catalogo.  
+ sys.sp_cdc_enable_db crea gli oggetti Change Data Capture con ambito esteso all'intero database, includendo tabelle dei metadati e trigger DDL. Oltre a creare lo schema cdc e l'utente del database cdc e imposta la colonna is_cdc_enabled per la voce del database nel [Sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalogo visualizzazione su 1.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin.  
   
 ## <a name="examples"></a>Esempi  

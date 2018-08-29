@@ -1,5 +1,5 @@
 ---
-title: column_type_usages (Transact-SQL) | Documenti Microsoft
+title: Sys. column_type_usages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_type_usages catalog view
 ms.assetid: 1ead375e-f662-4837-903f-8947496c51e4
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ef7e360d755d02b37a8146c4ba4fa881b009c469
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e9ed8dcdb1296d958b213706c0ea011bb4c3e24
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177767"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023640"
 ---
 # <a name="syscolumntypeusages-transact-sql"></a>sys.column_type_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +39,9 @@ ms.locfileid: "33177767"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene la colonna.|  
 |**column_id**|**int**|ID della colonna. Valore univoco all'interno dell'oggetto.|  
-|**user_type_id**|**int**|ID del tipo definito dall'utente.<br /><br /> Per restituire il nome del tipo, creare un join al [Sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) vista per la colonna del catalogo.|  
+|**user_type_id**|**int**|ID del tipo definito dall'utente.<br /><br /> Per restituire il nome del tipo, aggiungere il [Sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) su questa colonna vista del catalogo.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

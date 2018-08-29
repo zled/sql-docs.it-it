@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d533e2cf1aad3d7ee0b9610e010b42baabf054ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fb4fe8ff1dadebe5f2bb2a7af5209c2e761e0af
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995168"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037304"
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publication=**] **'***pubblicazione***'**  
- È il nome della pubblicazione di tipo merge. *pubblicazione* è **sysname**, il valore predefinito è **%**, che restituisce tutti gli articoli nel database che presentano conflitti.  
+ È il nome della pubblicazione di tipo merge. *publication* viene **sysname**, il valore predefinito è **%**, che restituisce tutti gli articoli nel database che presentano conflitti.  
   
  [  **@publisher=**] **'***publisher***'**  
- È il nome del server di pubblicazione. *publisher* è **sysname**, con un valore predefinito è NULL.  
+ È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- È il nome del database di pubblicazione. *publisher_db* è **sysname**, con un valore predefinito è NULL.  
+ È il nome del server di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -67,16 +67,16 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 |**guidcolname**|**sysname**|Nome del valore RowGuidCol per l'oggetto di origine.|  
 |**centralized_conflicts**|**int**|Indica se i record dei conflitti vengono archiviati nel server di pubblicazione specificato.|  
   
- Se l'articolo include solo conflitti di eliminazione e nessuna **conflict_table** righe, il nome del **conflict_table** nel risultato è NULL.  
+ Se l'articolo include solo conflitti di eliminazione e nessun **conflict_table** righe, il nome del **conflict_table** nel risultato del set è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helpmergearticleconflicts** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server e **db_owner** ruolo predefinito del database possono eseguire **sp_helpmergearticleconflicts**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server e il **db_owner** ruolo predefinito del database possono eseguire **sp_helpmergearticleconflicts**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

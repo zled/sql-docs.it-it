@@ -18,17 +18,17 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878a88fac188f23f48c25fdc54fec7540a9b6771
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: abd4df2a4f08cd8f47bacc4a209375b65a541e1a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982313"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784945"
 ---
 # <a name="connecting-to-sql-server"></a>Connessione a SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Questo argomento descrive come creare una connessione a un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Questo argomento descrive come creare una connessione a un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="connection-properties"></a>Proprietà delle connessioni  
 
@@ -67,7 +67,7 @@ In alternativa, è possibile aggiungere le informazioni del DSN in un file di mo
  - **master.INFORMATION_SCHEMA.TABLES BCP out -S OUTFILE <server> - U <name> - P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>Uso di Secure Sockets Layer (SSL)  
-Secure Sockets Layer (SSL) consente di crittografare le connessioni a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. SSL protegge i nomi utente e le password di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in rete. SSL verifica inoltre l'identità del server per la protezione dagli attacchi man-in-the-middle (MITM).  
+Secure Sockets Layer (SSL) consente di crittografare le connessioni a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. SSL protegge i nomi utente e le password di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in rete. SSL verifica inoltre l'identità del server per la protezione dagli attacchi man-in-the-middle (MITM).  
 
 L'abilitazione della crittografia aumenta la sicurezza a scapito delle prestazioni.
 
@@ -78,7 +78,7 @@ Indipendentemente dalle impostazioni di **Encrypt** e **TrustServerCertificate**
 ||**TrustServerCertificate = no**|**TrustServerCertificate = yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa non vengono crittografati.|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa non vengono crittografati.|  
-|**Encrypt=yes**|Il certificato del server viene verificato.<br /><br />I dati inviati dal client al server e viceversa vengono crittografati.<br /><br />Il nome (o l'indirizzo IP) in un nome comune del soggetto (CN, Common Name) o in un nome alternativo del soggetto (SAN, Subject Alternative Name) di un certificato SSL di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] deve corrispondere esattamente al nome del server (o all'indirizzo IP) specificato nella stringa di connessione.|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa vengono crittografati.|  
+|**Encrypt=yes**|Il certificato del server viene verificato.<br /><br />I dati inviati dal client al server e viceversa vengono crittografati.<br /><br />Il nome (o l'indirizzo IP) in un nome comune del soggetto (CN, Common Name) o in un nome alternativo del soggetto (SAN, Subject Alternative Name) di un certificato SSL di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve corrispondere esattamente al nome del server (o all'indirizzo IP) specificato nella stringa di connessione.|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa vengono crittografati.|  
 
 Per impostazione predefinita, le connessioni crittografate verificano sempre il certificato del server. Tuttavia, se ci si connette a un server che dispone di un certificato autofirmato, aggiungere anche il `TrustServerCertificate` opzione per ignorare il controllo del certificato nell'elenco delle autorità di certificazione attendibili:  
 

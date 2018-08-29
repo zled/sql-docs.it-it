@@ -1,5 +1,5 @@
 ---
-title: sp_setdefaultdatatypemapping (Transact-SQL) | Documenti Microsoft
+title: sp_setdefaultdatatypemapping (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_setdefaultdatatypemapping
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b8d3751448d553666f7b7301c42329f32a7713a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c980adc28cfa99348cd771652d23df424c92d8b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003748"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019324"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contrassegna un mapping di tipo di dati esistente tra [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il sistema di gestione (DBMS) come valore predefinito del database. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
+  Contrassegna un mapping esistente di tipo dati fra [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestione sistema di database (DBMS come impostazione predefinita). Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,45 +68,45 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [ **@source_dbms**=] **'***source_dbms***'**  
  Nome del DBMS da cui viene eseguito il mapping dei tipi di dati. *source_dbms* viene **sysname**, e può essere uno dei valori seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|L'origine è un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|L'origine è un database Oracle.|  
 |NULL (predefinito)||  
   
- Se è necessario specificare questo parametro *mapping_id* è NULL.  
+ È necessario specificare questo parametro se *mapping_id* è NULL.  
   
  [  **@source_version=** ] **'***source_version***'**  
- Numero di versione del DBMS di origine. *source_version* viene **varchar(10**, con valore predefinito è NULL.  
+ Numero di versione del DBMS di origine. *source_version* viene **varchar (10)**, con un valore predefinito NULL.  
   
  [ **@source_type**=] **'***source_type***'**  
- Tipo di dati nel sistema DBMS di origine. *source_type* viene **sysname**. Se è necessario specificare questo parametro *mapping_id* è NULL.  
+ Tipo di dati nel sistema DBMS di origine. *source_type* viene **sysname**. È necessario specificare questo parametro se *mapping_id* è NULL.  
   
  [  **@source_length_min=** ] *source_length_min*  
- Lunghezza minima del tipo di dati nel DBMS di origine. *source_length_min* viene **bigint**, con valore predefinito è NULL.  
+ Lunghezza minima del tipo di dati nel DBMS di origine. *source_length_min* viene **bigint**, con un valore predefinito NULL.  
   
  [  **@source_length_max=** ] *source_length_max*  
- Lunghezza massima del tipo di dati nel DBMS di origine. *source_length_max* viene **bigint**, con valore predefinito è NULL.  
+ Lunghezza massima del tipo di dati nel DBMS di origine. *source_length_max* viene **bigint**, con un valore predefinito NULL.  
   
  [  **@source_precision_min=** ] *source_precision_min*  
- Precisione minima del tipo di dati nel DBMS di origine. *source_precision_min* viene **bigint**, con valore predefinito è NULL.  
+ Precisione minima del tipo di dati nel DBMS di origine. *source_precision_min* viene **bigint**, con un valore predefinito NULL.  
   
  [  **@source_precision_max=** ] *source_precision_max*  
- Precisione massima del tipo di dati nel DBMS di origine. *source_precision_max* viene **bigint**, con valore predefinito è NULL.  
+ Precisione massima del tipo di dati nel DBMS di origine. *source_precision_max* viene **bigint**, con un valore predefinito NULL.  
   
  [  **@source_scale_min=** ] *source_scale_min*  
- Scala minima del tipo di dati nel DBMS di origine. *source_scale_min* viene **int**, con valore predefinito è NULL.  
+ Scala minima del tipo di dati nel DBMS di origine. *source_scale_min* viene **int**, con un valore predefinito NULL.  
   
  [  **@source_scale_max=** ] *source_scale_max*  
- Scala massima del tipo di dati nel DBMS di origine. *source_scale_max* viene **int**, con valore predefinito è NULL.  
+ Scala massima del tipo di dati nel DBMS di origine. *source_scale_max* viene **int**, con un valore predefinito NULL.  
   
  [  **@source_nullable=** ] *source_nullable*  
- Specifica se il tipo dati nel DBMS di origine ammette valori NULL. *source_nullable* viene **bit**, con valore predefinito è NULL. **1** indica che i valori NULL sono supportati.  
+ Specifica se il tipo dati nel DBMS di origine ammette valori NULL. *source_nullable* viene **bit**, con un valore predefinito NULL. **1** indica che i valori NULL sono supportati.  
   
  [ **@destination_dbms** =] **'***destination_dbms***'**  
  Nome del sistema DBMS di destinazione. *destination_dbms* viene **sysname**, e può essere uno dei valori seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|La destinazione è un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|La destinazione è un database Oracle.|  
@@ -115,32 +115,32 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |NULL (predefinito)||  
   
  [ **@destination_version**=] **'***destination_version***'**  
- Numero di versione del DBMS di destinazione. *destination_version* viene **varchar(10**, con valore predefinito è NULL.  
+ Numero di versione del DBMS di destinazione. *destination_version* viene **varchar (10)**, con un valore predefinito NULL.  
   
  [ **@destination_type**=] **'***destination_type***'**  
- Tipo di dati nel DBMS di destinazione. *destination_type* viene **sysname**, con valore predefinito è NULL.  
+ Tipo di dati nel DBMS di destinazione. *destination_type* viene **sysname**, con un valore predefinito NULL.  
   
  [  **@destination_length=** ] *destination_length*  
- Lunghezza del tipo di dati nel DBMS di destinazione. *destination_length* viene **bigint**, con valore predefinito è NULL.  
+ Lunghezza del tipo di dati nel DBMS di destinazione. *destination_length* viene **bigint**, con un valore predefinito NULL.  
   
  [  **@destination_precision=** ] *destination_precision*  
- Precisione del tipo di dati nel DBMS di destinazione. *destination_precision* viene **bigint**, con valore predefinito è NULL.  
+ Precisione del tipo di dati nel DBMS di destinazione. *destination_precision* viene **bigint**, con un valore predefinito NULL.  
   
  [  **@destination_scale=** ] *destination_scale*  
- Scala del tipo di dati nel DBMS di destinazione. *destination_scale* viene **int**, con valore predefinito è NULL.  
+ Scala del tipo di dati nel DBMS di destinazione. *destination_scale* viene **int**, con un valore predefinito NULL.  
   
  [  **@destination_nullable=** ] *destination_nullable*  
- Specifica se il tipo di dati nel DBMS di destinazione ammette valori NULL. *destination_nullable* viene **bit**, con valore predefinito è NULL. **1** indica che i valori NULL sono supportati.  
+ Specifica se il tipo di dati nel DBMS di destinazione ammette valori NULL. *destination_nullable* viene **bit**, con un valore predefinito NULL. **1** indica che i valori NULL sono supportati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_setdefaultdatatypemapping** viene utilizzata in tutti i tipi di replica tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
   
  I mapping dei tipi di dati predefiniti vengono applicati a tutte le topologie di replica che includono il sistema DBMS specificato.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_setdefaultdatatypemapping**.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_update_policy_category
 ms.assetid: 6b6413c2-7a3b-4eff-91d9-5db2011869d6
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1c90839aff5de8d9f1a93efc10321fe162394f51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 73e7eee22127c7b2e928004f997eac6b80dbddfd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256146"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035334"
 ---
 # <a name="spsyspolicyupdatepolicycategory-transact-sql"></a>sp_syspolicy_update_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,21 +51,21 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
  Identificatore della categoria di criteri. *policy_category_id* viene **int**e deve essere specificato se *nome* è NULL.  
   
  [  **@mandate_database_subscriptions=** ] *mandate_database_subscriptions*  
- Determina se la sottoscrizione di database per la categoria di criteri è obbligatoria. *mandate_database_subscriptions* è un **bit** e il valore predefinito è NULL. È possibile utilizzare uno dei valori seguenti:  
+ Determina se la sottoscrizione di database per la categoria di criteri è obbligatoria. *mandate_database_subscriptions* è un **bit** , valore predefinito è null. È possibile utilizzare uno dei valori seguenti:  
   
 -   0 = Non obbligatoria  
   
 -   1 = Obbligatoria  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syspolicy_update_policy_category nel contesto del database di sistema msdb.  
   
- È necessario specificare un valore per *nome* o per *policy_category_id*. Non possono essere entrambi NULL. Per ottenere questi valori, eseguire una query sulla vista di sistema msdb.dbo.syspolicy_policy_categories.  
+ È necessario specificare un valore per *name* o per *policy_category_id*. Non possono essere entrambi NULL. Per ottenere questi valori, eseguire una query sulla vista di sistema msdb.dbo.syspolicy_policy_categories.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

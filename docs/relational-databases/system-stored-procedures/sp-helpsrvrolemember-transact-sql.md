@@ -1,5 +1,5 @@
 ---
-title: sp_helpsrvrolemember (Transact-SQL) | Documenti Microsoft
+title: sp_helpsrvrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4c800464cf0da918e748ba6b6c9d1ffc4c093a0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4bbc6ed2343b9a659b30b737135c9f28cb2b401b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250728"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035235"
 ---
 # <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@srvrolename =** ] **'***ruolo***'**  
- Nome del ruolo predefinito del server. *ruolo* viene **sysname**, con un valore predefinito è NULL. Se *ruolo*non viene specificato, il set di risultati include informazioni su tutti i ruoli predefiniti del server.  
+ Nome del ruolo predefinito del server. *ruolo* viene **sysname**, con un valore predefinito è NULL. Se *ruolo*non è specificato, il set di risultati include informazioni su tutti i ruoli predefiniti del server.  
   
  *ruolo* può essere uno dei valori seguenti.  
   
@@ -71,16 +71,16 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |MemberName|**sysname**|Nome di un membro del ruolo server|  
 |MemberSID|**varbinary(85)**|ID di sicurezza del nome di membro|  
   
-## <a name="remarks"></a>Osservazioni  
- Per visualizzare i membri di un ruolo del database, utilizzare sp_helprolemember.  
+## <a name="remarks"></a>Note  
+ Usare sp_helprolemember per visualizzare i membri di un ruolo del database.  
   
- Tutti gli account di accesso sono membri del ruolo public. sp_helpsrvrolemember non riconosce il ruolo public perché, internamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non implementa pubblica come ruolo.  
+ Tutti gli accessi sono un membro del pubblico. sp_helpsrvrolemember non riconosce il ruolo public perché, internamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neimplementuje metodu pubblico come ruolo.  
   
  Per aggiungere o rimuovere membri dai ruoli del server, vedere [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- sp_helpsrvrolemember non ha un ruolo del server definito dall'utente come argomento. Per determinare i membri di un ruolo del server definito dall'utente, vedere gli esempi in [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ sp_helpsrvrolemember non accetta un ruolo server definito dall'utente come argomento. Per determinare i membri di un ruolo del server definito dall'utente, vedere gli esempi inclusi in [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo public.  
   
 ## <a name="examples"></a>Esempi  

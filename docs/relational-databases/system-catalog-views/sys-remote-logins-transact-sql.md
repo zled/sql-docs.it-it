@@ -1,5 +1,5 @@
 ---
-title: remote_logins (Transact-SQL) | Documenti Microsoft
+title: remote_logins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.remote_logins catalog view
 ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: df40db329851fbe931cb96f5b1aac99905d705c4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7f4c403c86373043cd98ebec8121c696c384be4d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179507"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023979"
 ---
 # <a name="sysremotelogins-transact-sql"></a>sys.remote_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,16 +37,16 @@ ms.locfileid: "33179507"
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**int**|ID del server in **Sys. Servers**. Questo nome viene fornito dalla connessione proveniente dal server "remoto".|  
+|**server_id**|**int**|ID del server nella **Sys. Servers**. Questo nome viene fornito dalla connessione proveniente dal server "remoto".|  
 |**remote_name**|**sysname**|Nome dell'account di accesso fornito dalla connessione per il mapping. Se è NULL, viene utilizzato il nome dell'account di accesso specificato nella connessione.|  
 |**local_principal_id**|**int**|ID dell'entità server a cui viene eseguito il mapping dell'account di accesso. Se è 0, sull'account di accesso remoto viene eseguito il mapping all'account di accesso con lo stesso nome.|  
 |**modify_date**|**datetime**|Data dell'ultima modifica dell'account di accesso collegato.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Server collegati viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+ [Viste del catalogo di server collegati &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

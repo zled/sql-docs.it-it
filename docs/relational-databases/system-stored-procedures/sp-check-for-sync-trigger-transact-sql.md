@@ -1,5 +1,5 @@
 ---
-title: sp_check_for_sync_trigger (Transact-SQL) | Documenti Microsoft
+title: sp_check_for_sync_trigger (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f389415adf06d6c7fce1862d42655bf4e96e2c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ed3cd29b694e0e87f207376ad54b06fc0827b45b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991458"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020260"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +51,9 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  ID di oggetto della tabella in cui vengono controllati i trigger per l'aggiornamento immediato. *tabid* viene **int** non prevede alcun valore predefinito.  
   
  [ **@trigger_op =** ] '*output_parameters*' OUTPUT  
- Specifica se il parametro di output restituisce il tipo di trigger da cui viene richiamato. *output_parameters* viene **char (10)** e può essere uno dei valori seguenti.  
+ Specifica se il parametro di output restituisce il tipo di trigger da cui viene richiamato. *output_parameters* viene **char (10)** i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Componenti aggiuntivi**|Trigger INSERT|  
 |**UPD**|Trigger UPDATE|  
@@ -61,15 +61,15 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |NULL (predefinito)||  
   
  [  **@fonpublisher =** ] *fonpublisher*  
- Specifica la posizione in cui viene eseguita la stored procedure. *fonpublisher* viene **bit**, con valore predefinito è 0. 0 indica che l'esecuzione avviene nel Sottoscrittore, mentre 1 indica che avviene nel server di pubblicazione.  
+ Specifica la posizione in cui viene eseguita la stored procedure. *fonpublisher* viene **bit**, valore predefinito pari a 0. 0 indica che l'esecuzione avviene nel Sottoscrittore, mentre 1 indica che avviene nel server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- 0 indica che la stored procedure non viene richiamata nel contesto di un trigger per l'aggiornamento immediato. 1 indica che viene chiamato all'interno del contesto di un trigger di aggiornamento immediato ed è il tipo di trigger restituito in *@trigger_op*.  
+ 0 indica che la stored procedure non viene richiamata nel contesto di un trigger per l'aggiornamento immediato. 1 indica che viene richiamata nel contesto di un trigger per l'aggiornamento immediato ed è il tipo di trigger restituito in *@trigger_op*.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_check_for_sync_trigger** viene utilizzata nella replica snapshot e transazionale.  
   
- **sp_check_for_sync_trigger** viene utilizzato per il coordinamento tra la replica e trigger definiti dall'utente. Questa stored procedure determina se viene richiamata nel contesto di un trigger di replica. Ad esempio, è possibile chiamare la routine **sp_check_for_sync_trigger** nel corpo di un trigger definito dall'utente. Se **sp_check_for_sync_trigger** restituisce **0**, il trigger definito dall'utente continua l'elaborazione. Se **sp_check_for_sync_trigger** restituisce **1**, il trigger definito dall'utente viene chiusa. Ciò garantisce che il trigger definito dall'utente non venga attivato quando il trigger di replica aggiorna la tabella.  
+ **sp_check_for_sync_trigger** viene utilizzata per coordinare la replica e trigger definiti dall'utente. Questa stored procedure determina se viene richiamata nel contesto di un trigger di replica. Ad esempio, è possibile chiamare la routine **sp_check_for_sync_trigger** nel corpo di un trigger definito dall'utente. Se **sp_check_for_sync_trigger** restituisce **0**, il trigger definito dall'utente continua l'elaborazione. Se **sp_check_for_sync_trigger** restituisce **1**, il trigger definito dall'utente viene chiusa. Ciò garantisce che il trigger definito dall'utente non venga attivato quando il trigger di replica aggiorna la tabella.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato il codice che può essere utilizzato in un trigger in una tabella del Sottoscrittore.  
@@ -83,7 +83,7 @@ RETURN
 ```  
   
 ## <a name="example"></a>Esempio  
- Inoltre è possibile aggiungere il codice a un trigger in una tabella nel server di pubblicazione; il codice è simile, ma la chiamata a **sp_check_for_sync_trigger** include un parametro aggiuntivo.  
+ Il codice può anche essere aggiunto a un trigger in una tabella nel server di pubblicazione; il codice è simile, ma la chiamata a **sp_check_for_sync_trigger** include un parametro aggiuntivo.  
   
 ```  
 DECLARE @retcode int, @trigger_op char(10), @table_id int, @fonpublisher int  
@@ -94,8 +94,8 @@ IF @retcode = 1
 RETURN  
 ```  
   
-## <a name="permissions"></a>Autorizzazioni  
- **sp_check_for_sync_trigger** stored procedure può essere eseguita da qualsiasi utente con autorizzazioni SELECT per il [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vista di sistema.  
+## <a name="permissions"></a>Permissions  
+ **sp_check_for_sync_trigger** stored procedure può essere eseguita da qualsiasi utente con autorizzazioni SELECT il [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vista di sistema.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  

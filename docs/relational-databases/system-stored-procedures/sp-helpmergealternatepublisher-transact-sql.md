@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergealternatepublisher (Transact-SQL) | Documenti Microsoft
+title: sp_helpmergealternatepublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergealternatepublisher
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f51c69c6034963dff80377570120dcd65027b762
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8cba4d17060e32ef24b8e5b07e689992982ca94
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995328"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035254"
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publisher=**] **'***publisher***'**  
- È il nome del server di pubblicazione alternativo. *publisher* è **sysname**, non prevede alcun valore predefinito.  
+ È il nome del server di pubblicazione alternativo. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- È il nome del database di pubblicazione. *publisher_db* è **sysname**, non prevede alcun valore predefinito.  
+ È il nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@publication=**] **'***pubblicazione***'**  
- È il nome della pubblicazione. *pubblicazione* è **sysname**, non prevede alcun valore predefinito.  
+ È il nome della pubblicazione. *publication* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -66,15 +66,15 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 |**enabled**|**bit**|Specifica se il server è un server di pubblicazione alternativo. **1** specifica che il server di pubblicazione sia abilitato come server di pubblicazione alternativo. **0** specifica che non è abilitato.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helpmergealternatepublisher** viene utilizzata nella replica di tipo merge.  
   
  Durante ogni sessione di merge viene eseguita una ricerca dell'elenco dei server di pubblicazione alternativi sia nel server di pubblicazione che nel Sottoscrittore. Il processo di merge aggiunge o elimina voci nell'elenco dei server di pubblicazione alternativi, in modo che entrambi gli elenchi nel Sottoscrittore e nel server di pubblicazione corrispondano.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri dell'elenco accesso pubblicazione per la pubblicazione possono eseguire **sp_helpmergealternatepublisher**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri dell'elenco di accesso alla pubblicazione per la pubblicazione possono eseguire **sp_helpmergealternatepublisher**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

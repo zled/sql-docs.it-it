@@ -1,5 +1,5 @@
 ---
-title: la procedura sp_monitor (Transact-SQL) | Documenti Microsoft
+title: la procedura sp_monitor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 277062160e01f0111eeade2dc4a05b3c6a3ab59d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f7e84891d55949751645e3b3d35d8b13fc3a742
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259631"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024056"
 ---
 # <a name="spmonitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Visualizza statistiche su [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Visualizza le statistiche sulle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,15 +44,15 @@ sp_monitor
 ```  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Description|  
 |-----------------|-----------------|  
-|**last_run**|Tempo **sp_monitor** ultima esecuzione.|  
+|**last_run**|Tempo **sp_monitor** data dell'ultima esecuzione.|  
 |**current_run**|Tempo **sp_monitor** è in esecuzione.|  
-|**secondi**|Numero di secondi trascorsi dopo **sp_monitor** è stata eseguita.|  
+|**secondi**|Numero di secondi trascorsi a partire **sp_monitor** è stata eseguita.|  
 |**cpu_busy**|Numero di secondi di attività della CPU del server per l'elaborazione di operazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**io_busy**|Numero di secondi trascorsi per l'esecuzione di operazioni di input e output in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Inattività**|Numero di secondi durante i quali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è rimasto inattivo.|  
@@ -64,12 +64,12 @@ sp_monitor
 |**total_errors**|Numero di errori rilevati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante la lettura e la scrittura.|  
 |**Connessioni**|Numero di accessi o tentativi di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="remarks"></a>Osservazioni  
- Tramite una serie di funzioni, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene tenuto traccia della quantità di operazioni eseguite. L'esecuzione di **sp_monitor** Visualizza i valori correnti restituiti da queste funzioni e Mostra la quantità sono stati modificati dall'ultima volta che è stata eseguita la procedura.  
+## <a name="remarks"></a>Note  
+ Tramite una serie di funzioni, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene tenuto traccia della quantità di operazioni eseguite. L'esecuzione **sp_monitor** consente di visualizzare i valori correnti restituiti da queste funzioni e viene illustrato quanto essi sono stati modificati dall'ultima volta la routine è stata eseguita.  
   
- Per ogni colonna, le statistiche vengono stampate nel formato *numero*(*numero*)-*numero*% o *numero*(*numero*). Il primo *numero* indica il numero di secondi (per **cpu_busy**, **io_busy**, e **inattivo**) o il numero totale (per gli altri variabili) poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato riavviato. Il *numero* tra parentesi indica il numero di secondi o il numero totale dall'ultima volta **sp_monitor** è stata eseguita. La percentuale è la percentuale di tempo trascorso dal **sp_monitor** ultima esecuzione. Ad esempio, se il report mostra **cpu_busy** 4250 (215)-68%, la CPU è stata occupata per 4250 secondi dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verso l'alto, 215 secondi dall'ultimo avvio **sp_monitor** stato ultima esecuzione e il 68% del Totale tempo trascorso dal **sp_monitor** ultima esecuzione.  
+ Per ogni colonna, la statistica è stampata in forma *numero*(*numero*)-*numero*% o *numero*(*numero*). Il primo *numero* si riferisce al numero di secondi (per **cpu_busy**, **io_busy**, e **inattività**) oppure il numero totale (per gli altri le variabili) poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato riavviato. Il *numero* tra parentesi indica il numero di secondi o il numero totale dall'ultima volta **sp_monitor** è stata eseguita. La percentuale è la percentuale di tempo trascorso dal **sp_monitor** data dell'ultima esecuzione. Ad esempio, se il report illustra **cpu_busy** 4250 (215)-68%, la CPU è stata occupata per 4250 secondi dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verso l'alto, 215 secondi dall'ultimo avvio **sp_monitor** stato ultima esecuzione e il 68% del Totale tempo trascorso dal **sp_monitor** data dell'ultima esecuzione.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  

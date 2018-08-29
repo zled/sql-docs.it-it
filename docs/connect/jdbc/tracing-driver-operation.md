@@ -14,12 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: bcb5b6636fcabab8d6cb5eb3709f632f9968c3a7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279262"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42786653"
 ---
 # <a name="tracing-driver-operation"></a>Creazione di tracce
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "39279262"
 |TDS.Channel|Questa categoria consente di eseguire le tracce delle azioni del canale di comunicazione TCP con SQL Server. I messaggi registrati includono l'apertura e la chiusura di socket, nonché le operazioni di lettura e scrittura. Vengono inoltre eseguite le tracce dei messaggi correlati alla definizione di una connessione SSL (Secure Socket Layer) con SQL Server.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINE, FINER o FINEST.|  
 |TDS.Writer|Questa categoria consente di eseguire le tracce delle operazioni di scrittura nel canale TDS. Si noti che vengono eseguite le tracce solo della lunghezza delle operazioni di scrittura e non del contenuto. Vengono inoltre eseguite le tracce dei problemi quando al server viene inviato un segnale di attenzione per annullare l'esecuzione di un'istruzione.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINEST.|  
 |TDS.Reader|Questa categoria consente di eseguire le tracce di alcune operazioni di lettura dal canale TDS con livello FINEST. Con tale livello le tracce possono risultare dettagliate. Con i livelli WARNING e SEVERE questa categoria consente di eseguire le tracce quando il driver riceve un protocollo TDS non valido da SQL Server prima della chiusura della connessione.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINER e FINEST.|  
-|TDS.Command|Questa categoria consente di eseguire la traccia delle transizioni di stato di basso livello e di altre informazioni associate all'esecuzione di comandi TDS, ad esempio le esecuzioni di istruzioni [!INCLUDE[tsql](../../includes/tsql_md.md)], i recuperi di cursori ResultSet, i commit e così via.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINEST.|  
+|TDS.Command|Questa categoria consente di eseguire la traccia delle transizioni di stato di basso livello e di altre informazioni associate all'esecuzione di comandi TDS, ad esempio le esecuzioni di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], i recuperi di cursori ResultSet, i commit e così via.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINEST.|  
 |TDS.TOKEN|Questa categoria consente di registrare solo i token dei pacchetti di flussi TDS e risulta meno dettagliata della categoria TDS.DATA. Può essere abilitata solo impostando il livello di registrazione su FINEST.<br /><br /> Con il livello FINEST questa categoria consente di eseguire le tracce dei token TDS quando vengono elaborati nella risposta. Con il livello SEVERE esegue le tracce quando viene rilevato un token TDS non valido.|  
 |SQLServerDatabaseMetaData|Consente di registrare i messaggi nella classe [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md). Le applicazioni possono impostare il livello di registrazione su FINE.|  
 |SQLServerResultSetMetaData|Consente di registrare i messaggi nella classe [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md). Le applicazioni possono impostare il livello di registrazione su FINE.|  

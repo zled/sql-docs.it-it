@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.endpoints catalog view
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 929cbba80469c80bd7384d97ae22abacda501a8a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce1f8b2ecd2b182a8b6f8bd8a84fbc29d0d7b33c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998153"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027483"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "37998153"
 |**state_desc**|**nvarchar(60)**|Descrizione dello stato dell'endpoint:<br /><br /> STARTED = L'endpoint è in attesa ed elabora le richieste.<br /><br /> STOPPED = L'endpoint è in attesa, ma non elabora le richieste.<br /><br /> DISABLED = L'endpoint non è in attesa.<br /><br /> Il valore predefinito è STOPPED.<br /><br /> Ammette i valori Null.|  
 |**is_admin_endpoint**|**bit**|Specifica se l'endpoint è destinato a un utilizzo amministrativo.<br /><br /> 0 = Endpoint non amministrativo.<br /><br /> 1 = Endpoint amministrativo.<br /><br /> Non ammette i valori Null.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

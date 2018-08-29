@@ -1,5 +1,5 @@
 ---
-title: server_event_sessions (Transact-SQL) | Documenti Microsoft
+title: Sys. server_event_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - xe
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06f4385e35efe104bf83f98ef325a6d51e960df8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3a040f58f84fa5ff85409f9b16229fae928076b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222022"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029418"
 ---
 # <a name="sysservereventsessions-transact-sql"></a>sys.server_event_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33222022"
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|ID univoco della sessione dell'evento. Non ammette i valori Null.|  
-|name|**sysname**|Nome definito dall'utente per identificare la sessione eventi. nome è univoco. Non ammette i valori Null.|  
+|NAME|**sysname**|Nome definito dall'utente per identificare la sessione eventi. nome è univoco. Non ammette i valori Null.|  
 |event_retention_mode|**nchar(1)**|Determina la modalità di gestione della perdita di eventi. L'impostazione predefinita è S. Non sono ammessi valori Null. I valori validi sono i seguenti:<br /><br /> S. Mapping su event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> M. Mapping su event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> N. Mapping su event_retention_mode_desc = NO_EVENT_LOSS|  
 |event_retention_mode_desc|**sysname**|Descrive la modalità di gestione della perdita di eventi. L'impostazione predefinita è ALLOW_SINGLE_EVENT_LOSS. Non ammette i valori Null. I valori validi sono i seguenti:<br /><br /> ALLOW_SINGLE_EVENT_LOSS. Gli eventi possono essere persi dalla sessione. Gli eventi singoli vengono eliminati solo quando tutti i buffer dell'evento sono completi. La perdita di eventi singoli quando i buffer sono completi lascia spazio a caratteristiche di prestazioni accettabili di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], minimizzando la perdita nel flusso dell'evento elaborato.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS. I buffer di eventi completi possono essere persi dalla sessione. Il numero di eventi persi dipende dalla dimensione della memoria allocata alla sessione, dalla partizione della memoria e dalla dimensione degli eventi nel buffer. Questa opzione minimizza l'impatto sulle prestazioni nel server quando i buffer degli eventi vengono completati rapidamente. Tuttavia, molti eventi della sessione possono essere perduti.<br /><br /> NO_EVENT_LOSS. Non è consentita alcuna perdita di eventi. Questa opzione assicura che tutti gli eventi generati siano mantenuti. L'utilizzo di questa opzione forza tutte le attività che attivano eventi ad aspettare fino a che lo spazio è disponibile in un buffer degli eventi. Ciò può determinare una riduzione rilevabile del livello delle prestazioni quando la sessione dell'evento è attiva.|  
 |max_dispatch_latency|**int**|Quantità di tempo, espresso in millisecondi, durante il quale gli eventi verranno trattenuti in memoria prima di essere resi disponibili alle destinazioni della sessione. I valori validi sono compresi tra 1 e 2147483648 e -1. Un valore -1 indica che la latenza di recapito è infinita. Ammette i valori Null.|  
@@ -51,7 +51,7 @@ ms.locfileid: "33222022"
 |track_causality|**bit**|Abilita o disabilita il rilevamento della causalità. Se è impostato su 1 (ON), il rilevamento viene abilitato e gli eventi correlati su connessioni server diverse possono essere correlati. L'impostazione predefinita è 0 (OFF). Non ammette i valori Null.|  
 |startup_state|**bit**|Valore che determina se la sessione viene avviata automaticamente all'avvio del server. Il valore predefinito è 0. Non ammette i valori Null. È uno dei seguenti valori:<br /><br /> 0 (OFF). La sessione non inizia all'avvio del server.<br /><br /> 1 (ON). La sessione dell'evento inizia all'avvio del server.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  

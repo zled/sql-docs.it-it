@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca0f63442af44bdce4b8c3b18af0beab1cd8a9ee
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: a717bcf2a5c7b0c0b80bece12b77871573414a31
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278712"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42784726"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accesso alle informazioni di diagnostica nel registro eventi estesi
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ com.microsoft.sqlserver.jdbc.traceactivity = on
   
  Per altre informazioni, vedere [Creazione di tracce](../../connect/jdbc/tracing-driver-operation.md). Questo flag di traccia viene utilizzato con i logger degli oggetti JDBC corrispondenti per stabilire se tracciare e inviare ActivityId nel driver JDBC. Oltre ad aggiornare il file Logging.Properties, è necessario abilitare il logger com.microsoft.sqlserver.jdbc al livello FINER o superiore. Se si vuole inviare ActivityId al server per le richieste effettuate da una classe specifica, è necessario abilitare il logger della classe corrispondente al livello FINER o FINEST. Se ad esempio la classe è SQLServerStatement, abilitare il logger com.microsoft.sqlserver.jdbc.SQLServerStatement.  
   
- Di seguito è riportato un esempio in cui viene usato [!INCLUDE[tsql](../../includes/tsql_md.md)] per avviare una sessione di eventi estesi che verrà archiviata in un buffer circolare e che registrerà l'ID attività inviato da un client nelle operazioni batch e RPC:  
+ Di seguito è riportato un esempio in cui viene usato [!INCLUDE[tsql](../../includes/tsql-md.md)] per avviare una sessione di eventi estesi che verrà archiviata in un buffer circolare e che registrerà l'ID attività inviato da un client nelle operazioni batch e RPC:  
   
 ```sql
 create event session MySession on server  

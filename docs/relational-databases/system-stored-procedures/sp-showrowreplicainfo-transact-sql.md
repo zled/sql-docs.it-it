@@ -1,5 +1,5 @@
 ---
-title: sp_showrowreplicainfo (Transact-SQL) | Documenti Microsoft
+title: sp_showrowreplicainfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be0fcfb203c6f9e5fc72909930433926675c64f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9b56608d6ba26760a0a6da5e841f6ce38848774
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003158"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028180"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
  Identificatore univoco della riga. *ROWGUID* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
   
  [ **@show**=] **'***Mostra***'**  
- Determina la quantità di informazioni da restituire nel set di risultati. *Mostra* viene **nvarchar(20)** con un valore predefinito è BOTH. Se **riga**, viene restituiti solo informazioni sulla versione di riga. Se **colonne**, viene restituiti solo informazioni sulla versione di colonna. Se **entrambi**, di righe e vengono restituite informazioni di colonna.  
+ Determina la quantità di informazioni da restituire nel set di risultati. *mostrare* viene **nvarchar(20)** con valore predefinito è BOTH. Se **riga**, viene restituiti solo le informazioni sulla versione di riga. Se **colonne**, viene restituiti solo le informazioni sulla versione di colonna. Se **entrambi**, di righe e vengono restituite informazioni di colonna.  
   
 ## <a name="result-sets-for-row-information"></a>Set di risultati per informazioni sulla riga  
   
@@ -69,7 +69,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_nickname**|**binary(6)**|Nome alternativo del database in cui è stata immessa la voce.|  
 |**version**|**int**|Versione della voce.|  
 |**current_state**|**nvarchar(9)**|Restituisce informazioni sullo stato corrente della riga.<br /><br /> **y** -i dati di riga rappresentano lo stato corrente della riga.<br /><br /> **n** -dati di riga non rappresentano lo stato corrente della riga.<br /><br /> **\<n/a >** : non applicabile.<br /><br /> **\<sconosciuto >** -non è possibile determinare lo stato corrente.|  
-|**rowversion_table**|**nchar(17)**|Indica se le versioni di riga vengono archiviate nel [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) tabella o la [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) tabella.|  
+|**rowversion_table**|**nchar(17)**|Indica se le versioni delle righe vengono archiviate nel [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) tabella o nella [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) tabella.|  
 |**Commento**|**nvarchar(255)**|Informazioni aggiuntive relative alla voce sulla versione di riga. Questo campo è in genere vuoto.|  
   
 ## <a name="result-sets-for-column-information"></a>Set di risultati per informazioni sulla colonna  
@@ -84,16 +84,16 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**Commento**|**nvarchar(255)**|Informazioni aggiuntive relative alla voce sulla versione di colonna. Questo campo è in genere vuoto.|  
   
 ## <a name="result-set-for-both"></a>Set di risultati per informazioni su riga e colonna  
- Se il valore **entrambi** scelto per *Mostra*, viene restituito il set di risultati sia la riga e colonna.  
+ Se il valore **entrambe** scelto per *mostrano*, viene restituita sia la riga e colonna set di risultati.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_showrowreplicainfo** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Autorizzazioni  
- **sp_showrowreplicainfo** può essere eseguita solo dai membri del **db_owner** ruolo predefinito del database nel database di pubblicazione o dai membri dell'elenco di accesso alla pubblicazione (pubblicazione) nel database di pubblicazione.  
+## <a name="permissions"></a>Permissions  
+ **sp_showrowreplicainfo** può essere eseguita solo dai membri del **db_owner** ruolo predefinito del database nel database di pubblicazione o dai membri dell'elenco di accesso (PAL) nel database di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Rilevare e risolvere conflitti di replica di tipo Merge](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)   
+ [Rilevare e risolvere i conflitti tra repliche di tipo Merge](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

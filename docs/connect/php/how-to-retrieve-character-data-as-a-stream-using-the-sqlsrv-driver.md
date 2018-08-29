@@ -17,12 +17,12 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9099e0854b0030e79645399377d8f47dc90c85a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5bdb429478ff01782a571aab1d39c805ed501b7f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054069"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786689"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Procedura: Recupero di dati di tipo carattere come flusso usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ Nell'esempio seguente viene recuperata una riga dalla tabella *Production.Produc
   
 Il recupero di dati come flusso viene eseguito usando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) e [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) specificando flusso di caratteri come tipo restituito. Il tipo restituito viene specificato usando la costante **SQLSRV_PHPTYPE_STREAM**. Per informazioni sulle costanti **sqlsrv**, vedere [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-Nell'esempio si presuppone che [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

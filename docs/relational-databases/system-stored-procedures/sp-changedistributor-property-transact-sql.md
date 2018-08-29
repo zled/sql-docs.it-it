@@ -1,5 +1,5 @@
 ---
-title: sp_changedistributor_property (Transact-SQL) | Documenti Microsoft
+title: sp_changedistributor_property (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedistributor_property
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b44507077740162e2d07f9066a13c4eb14fabfa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecdecaef950761b59b1e55dfaf0224a8f442f3ed
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32987746"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018357"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@property=**] **'***proprietà***'**  
- Proprietà di un determinato server di distribuzione. *proprietà* viene **sysname**, e può essere uno dei valori seguenti.  
+ Proprietà di un determinato server di distribuzione. *proprietà* viene **sysname**, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**heartbeat_interval**|Periodo massimo in minuti durante il quale un agente può essere eseguito senza registrare alcun messaggio di stato.|  
 |NULL (predefinito)|Tutti disponibili *proprietà* vengono stampati i valori.|  
@@ -58,15 +58,15 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
  Valore per la proprietà specificata del server di distribuzione. *valore* viene **nvarchar (255)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_changedistributor_property** viene utilizzata in tutti i tipi di replica.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pro_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_changedistributor_property**.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: sp_helpremotelogin (Transact-SQL) | Documenti Microsoft
+title: sp_helpremotelogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60fe6f30365e63394f80b481fe155b26caa4061b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e0dc7cdc8e647adf1d8ea5e4e2903509c16a2f62
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249443"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033374"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +66,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 |remote_user_name|**sysname**|Account di accesso nel server remoto che esegue il mapping a local_user_name.|  
 |opzioni|**sysname**|Trusted = Quando l'account di accesso remoto si connette al server locale dal server remoto, non viene richiesta alcuna password.<br /><br /> Untrusted (o vuoto) = Quando l'account di accesso remoto si connette al server locale dal server remoto, viene sempre richiesta una password.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Per elencare i nomi dei server remoti definiti nel server locale, utilizzare sp_helpserver.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Le autorizzazioni non vengono controllate.  
   
 ## <a name="examples"></a>Esempi  
@@ -91,7 +91,7 @@ EXEC sp_helpremotelogin;
 ## <a name="see-also"></a>Vedere anche  
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

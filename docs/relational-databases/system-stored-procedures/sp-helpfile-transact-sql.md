@@ -1,5 +1,5 @@
 ---
-title: sp_helpfile (Transact-SQL) | Documenti Microsoft
+title: sp_helpfile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpfile
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4de2e386d30c718177482cd50d38f169922f5d8a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 74acb22b50ce918f070c817cb8954b46e47bb876
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245122"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023839"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,15 +55,15 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome logico del file.|  
-|**fileid**|**smallint**|Identificatore numerico del file. Non viene restituito se *nome* è specificato *.*|  
-|**nome file**|**nchar(260)**|Nome fisico del file.|  
+|**fileid**|**smallint**|Identificatore numerico del file. Non viene restituito se *name* omette *.*|  
+|**Nome del file**|**nchar(260)**|Nome fisico del file.|  
 |**filegroup**|**sysname**|Filegroup a cui appartiene il file.<br /><br /> NULL = Il file è un file di log. Questo tipo di file non viene mai incluso in un filegroup.|  
 |**size**|**nvarchar(15)**|Dimensione del file in kilobyte.|  
 |**maxsize**|**nvarchar(15)**|Dimensioni massime consentite per il file. Se questo campo include il valore UNLIMITED, le dimensioni del file possono aumentare fino a riempire il disco.|  
 |**aumento delle dimensioni**|**nvarchar(15)**|Incremento per l'aumento delle dimensioni del file. Indica la quantità di spazio aggiunta al file ogni volta che è richiesto spazio aggiuntivo.<br /><br /> 0 = la dimensione del file è fissa e non aumenterà.|  
-|**Utilizzo**|**varchar(9)**|File di dati, il valore è **'solo dati'** e per il file di log è il valore **'log solo'**.|  
+|**Utilizzo**|**varchar(9)**|Per file di dati, il valore è **'solo data'** e per il file di log è il valore **'di log solo'**.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -77,7 +77,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   

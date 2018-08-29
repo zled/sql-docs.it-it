@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscriber_schedule (Transact-SQL) | Documenti Microsoft
+title: sp_changesubscriber_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,15 @@ helpviewer_keywords:
 - sp_changesubscriber_schedule
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f07d6cdb364e6ff4ef03cae49db7c320c9778c4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b5ac5b579a2988e2cd7d1f123d51dad7043c509
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029084"
 ---
 # <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,13 +76,13 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  Frequenza di ripianificazione in minuti durante il periodo definito. *frequency_subday* viene **int**, il valore predefinito è **4**.  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- Intervallo per *frequency_subday*. *frequency_subday_interval* viene **int**, il valore predefinito è **5**.  
+ È l'intervallo *frequency_subday*. *frequency_subday_interval* viene **int**, il valore predefinito è **5**.  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
  Ora del giorno della prima esecuzione pianificata dell'attività di distribuzione. *active_start_time_of_day* viene **int**, il valore predefinito è **0**.  
   
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- Ora del giorno dell'ultima esecuzione pianificata dell'attività di distribuzione. *active_end_time_of_day* viene **int**, il valore predefinito è **235959**, ovvero 11:59: le ore 23.59.59 nel formato 24 ore.  
+ Ora del giorno dell'ultima esecuzione pianificata dell'attività di distribuzione. *active_end_time_of_day* viene **int**, il valore predefinito è **235959**, ovvero 59: 11:59 P.M. nel formato 24 ore.  
   
  [  **@active_start_date=**] *active_start_date*  
  Data della prima esecuzione pianificata per l'attività di distribuzione, nel formato AAAAMMGG. *active_start_date* viene **int**, il valore predefinito è **0**.  
@@ -93,15 +94,15 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  Specifica un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere utilizzato quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  *server di pubblicazione* non deve essere utilizzata quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_changesubscriber_schedule** viene utilizzata in tutti i tipi di replica.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_changesubscriber_schedule**.  
   
 ## <a name="see-also"></a>Vedere anche  

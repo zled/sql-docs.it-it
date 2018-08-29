@@ -1,5 +1,5 @@
 ---
-title: sp_procoption (Transact-SQL) | Documenti Microsoft
+title: sp_procoption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_procoption
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d78b81013f7101cce34dcdc4713a800ce36e8930
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3c4c9907c52ad99e1a397b4ad08f9897b6a0c4d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254345"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018211"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +47,21 @@ sp_procoption [ @ProcName = ] 'procedure'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@ProcName =** ] **'***procedure***'**  
- È il nome della routine per cui impostare un'opzione. *stored procedure* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
+ È il nome della routine per cui si desidera impostare un'opzione. *routine* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
   
  [  **@OptionName =** ] **'***opzione***'**  
- Nome dell'opzione da impostare. L'unico valore per *opzione* è **avvio**.  
+ Nome dell'opzione da impostare. L'unico valore per *opzione* viene **avvio**.  
   
  [  **@OptionValue =** ] **'***valore***'**  
- Indica se impostare l'opzione on (**true** o **su**) o off (**false** o **off**). *valore* viene **varchar(12)**, non prevede alcun valore predefinito.  
+ Indica se attivare l'opzione (**true** o **sul**) o su off (**false** oppure **off**). *valore* viene **varchar(12)**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o numero di errore (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
- Procedure di avvio devono essere il **master** database e non può contenere parametri INPUT o OUTPUT. L'esecuzione delle stored procedure inizia quando tutti i database sono stati recuperati e il messaggio relativo al completamento del recupero viene registrato all'avvio.  
+## <a name="remarks"></a>Note  
+ Procedure di avvio devono essere il **master** del database e non può contenere parametri INPUT o OUTPUT. L'esecuzione delle stored procedure inizia quando tutti i database sono stati recuperati e il messaggio relativo al completamento del recupero viene registrato all'avvio.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  

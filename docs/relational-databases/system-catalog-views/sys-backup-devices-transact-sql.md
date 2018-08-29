@@ -1,5 +1,5 @@
 ---
-title: Sys. backup_devices (Transact-SQL) | Documenti Microsoft
+title: Sys. backup_devices (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,21 +21,20 @@ helpviewer_keywords:
 - backup devices [SQL Server], viewing information
 - sys.backup_devices catalog view
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be1c29322063c33797ff56451b55c619fd07db82
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4f7ec178a19cc62891f41e1431d3272aca3237ca
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178247"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026002"
 ---
 # <a name="sysbackupdevices-transact-sql"></a>sys.backup_devices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni dispositivo di backup registrato mediante **sp_addumpdevice** o creato in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Contiene una riga per ogni dispositivo di backup registrato mediante **sp_addumpdevice** o create in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -44,7 +43,7 @@ ms.locfileid: "33178247"
 |**type_desc**|**nvarchar(60)**|Descrizione del tipo di dispositivo di backup:<br /><br /> DISK<br /><br /> DISKETTE (obsoleto)<br /><br /> TAPE<br /><br /> PIPE (obsoleto)<br /><br /> VIRTUAL_DEVICE (per l'utilizzo facoltativo da fornitori di terze parti)<br /><br /> In genere, vengono utilizzati solo DISK e TAPE.|  
 |**physical_name**|**nvarchar(260)**|Nome o percorso del file fisico del dispositivo di backup.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

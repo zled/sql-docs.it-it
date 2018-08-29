@@ -1,5 +1,5 @@
 ---
-title: sp_helpqreader_agent (Transact-SQL) | Documenti Microsoft
+title: sp_helpqreader_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpqreader_agent
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be49f8a6303096487ef2c36593280fcc72e38a91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d240d66768ee4b812542f959108ebea6baec4d9a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995948"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022709"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +46,26 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@frompublisher=** ] *frompublisher*  
- Specifica se la stored procedure viene chiamata nel server di pubblicazione o nel server di distribuzione. *frompublisher* è di tipo bit e il valore predefinito pari a 0. **1** significa che la stored procedure viene chiamata dal server di pubblicazione, e **0** significa che la stored procedure viene chiamata dal server di distribuzione.  
+ Specifica se la stored procedure viene chiamata nel server di pubblicazione o nel server di distribuzione. *frompublisher* è di tipo bit e il valore predefinito è pari a 0. **1** significa che la stored procedure viene chiamata dal server di pubblicazione, e **0** significa che la stored procedure viene chiamata dal server di distribuzione.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'agente.|  
-|**name**|**Nvarchar (100)**|Nome dell'agente.|  
+|**name**|**Nvarchar(100)**|Nome dell'agente.|  
 |**job_id**|**uniqueidentifier**|ID univoco del processo dell'agente.|  
-|**job_login**|**nvarchar(512)**|È l'account di Windows con cui viene eseguito l'agente di distribuzione, viene restituito nel formato *dominio*\\*username*.|  
-|**job_password**|**sysname**|Per motivi di sicurezza, un valore di **\* \* \* \* \* \* \* \* \* \*** è sempre restituito.|  
+|**job_login**|**nvarchar(512)**|L'account di Windows con cui viene eseguito l'agente di distribuzione, viene restituito nel formato *DOMAIN*\\*username*.|  
+|**job_password**|**sysname**|Per motivi di sicurezza, un valore pari **\* \* \* \* \* \* \* \* \* \*** è sempre restituito.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helpqreader_agent** viene utilizzata nella replica transazionale.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Quando il valore di *frompublisher* è **1**, solo i membri del **sysadmin** al server di pubblicazione o i membri del ruolo predefinito del server di **db_owner**ruolo predefinito del database nel database di pubblicazione possono eseguire **sp_helpqreader_agent**. In caso contrario, solo i membri del **sysadmin** al server di distribuzione o i membri del ruolo predefinito del server di **db_owner** ruolo predefinito del database nel database di distribuzione possono eseguire **sp_helpqreader_ agente**.  
+## <a name="permissions"></a>Permissions  
+ Quando il valore di *frompublisher* viene **1**, solo i membri del **sysadmin** nel server di pubblicazione o i membri del ruolo predefinito del server di **db_owner**ruolo predefinito del database nel database di pubblicazione possono eseguire **sp_helpqreader_agent**. In caso contrario, solo i membri del **sysadmin** nel server di distribuzione membri del ruolo predefinito del server di **db_owner** ruolo predefinito del database nel database di distribuzione possono eseguire **sp_helpqreader_ agente**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Abilitare le sottoscrizioni aggiornabili per le pubblicazioni transazionali](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  

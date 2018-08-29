@@ -1,5 +1,5 @@
 ---
-title: Sys. Configurations (Transact-SQL) | Documenti Microsoft
+title: Sys. Configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25de8a6eb70c79551caca8188c4f67a786e62172
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4f006cdbe3fa99f206af97dcae5edf97a6a86be0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181717"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030560"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,18 +45,18 @@ ms.locfileid: "33181717"
 |**value_in_use**|**sql_variant**|Valore corrente dell'opzione.|  
 |**description**|**nvarchar(255)**|Descrizione dell'opzione di configurazione.|  
 |**is_dynamic**|**bit**|1 = La variabile viene applicata quando viene eseguita l'istruzione RECONFIGURE.|  
-|**is_advanced**|**bit**|1 = la variabile viene visualizzata solo quando il **Mostra advancedoption** è impostata.|  
+|**is_advanced**|**bit**|1 = la variabile viene visualizzata solo quando la **mostrare advancedoption** è impostata.|  
   
- Per un elenco di tutte le opzioni di configurazione di server, vedere [opzioni di configurazione del Server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Per un elenco di tutte le opzioni di configurazione di server, vedere [opzioni di configurazione Server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  
->  Per le opzioni di configurazione a livello di database, vedere [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Per configurare Soft-NUMA, vedere [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+>  Per le opzioni di configurazione a livello di database, vedere [ALTER DATABASE ambito di configurazione &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Per configurare Soft-NUMA, vedere [Soft-NUMA &#40;di SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo di configurazione a livello server &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
+ [Viste del catalogo a livello di server di configurazione &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_MSchange_snapshot_agent_properties (Transact-SQL) | Documenti Microsoft
+title: sp_MSchange_snapshot_agent_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_MSchange_snapshot_agent_properties
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ad2369da53ddd339fadafac0b16e9c9a2bd2ac4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 67bd8a178ba3e7759257567fdb46af6ddd79daa4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003488"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019680"
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifica le proprietà di un processo dell'agente Snapshot eseguita a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva del server di distribuzione. Questa stored procedure viene utilizzata per modificare le proprietà quando il server di pubblicazione viene eseguito in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. La stored procedure viene eseguita nel database di distribuzione del server di distribuzione.  
+  Modifica le proprietà di un processo dell'agente Snapshot eseguito in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva del server di distribuzione. Questa stored procedure viene utilizzata per modificare le proprietà quando il server di pubblicazione viene eseguito in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. La stored procedure viene eseguita nel database di distribuzione del server di distribuzione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,9 +74,9 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@frequency_type =** ] *frequency_type*  
- Frequenza di esecuzione dell'agente snapshot. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
+ Frequenza di esecuzione dell'agente snapshot. *frequency_type* viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Su richiesta|  
@@ -87,12 +87,12 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**40**|All'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|  
   
  [  **@frequency_interval =** ] *frequency_interval*  
- È il valore da applicare alla frequenza impostata da *frequency_type*. *frequency_interval* viene **int**, non prevede alcun valore predefinito.  
+ Il valore da applicare alla frequenza impostata *frequency_type*. *frequency_interval* viene **int**, non prevede alcun valore predefinito.  
   
  [  **@frequency_subday =** ] *frequency_subday*  
- Unità di *freq_subday_interval*. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
+ È l'unità di misura *freq_subday_interval*. *frequency_subday* viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Secondo|  
@@ -100,7 +100,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**8**|Ora|  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- Intervallo per *frequency_subday*. *frequency_subday_interval* viene **int**, non prevede alcun valore predefinito.  
+ È l'intervallo *frequency_subday*. *frequency_subday_interval* viene **int**, non prevede alcun valore predefinito.  
   
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  Data di esecuzione dell'agente snapshot. *frequency_relative_interval* viene **int**, non prevede alcun valore predefinito.  
@@ -124,10 +124,10 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  Nome di un processo dell'agente snapshot esistente se viene utilizzato un processo esistente. *snapshot_agent_name* viene **nvarchar(100)**, non prevede alcun valore predefinito.  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
- Modalità di sicurezza utilizzata dall'agente per la connessione al server di pubblicazione. *publisher_security_mode* viene **int**, non prevede alcun valore predefinito. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione, e **1** specifica l'autenticazione di Windows. Il valore **0** deve essere specificato per non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+ Modalità di sicurezza utilizzata dall'agente per la connessione al server di pubblicazione. *publisher_security_mode* viene **int**, non prevede alcun valore predefinito. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione, e **1** specifica l'autenticazione di Windows. Un valore pari **0** deve essere specificato per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@publisher_login**=] **'***publisher_login***'**  
- Account di accesso utilizzato per la connessione al server di pubblicazione. *publisher_login* viene **sysname**, non prevede alcun valore predefinito. *publisher_login* deve essere specificato quando *publisher_security_mode* viene **0**. Se *publisher_login* è NULL e server di pubblicazione *_ * * security_mode* è **1**, l'account Windows specificato *job_login* sarà utilizzato durante la connessione al server di pubblicazione.  
+ Account di accesso utilizzato per la connessione al server di pubblicazione. *publisher_login* viene **sysname**, non prevede alcun valore predefinito. *publisher_login* deve essere specificato quando *publisher_security_mode* viene **0**. Se *publisher_login* è NULL e server di pubblicazione *_ * * security_mode* viene **1**, quindi l'account Windows specificato nella *job_login* sarà utilizzata per la connessione al server di pubblicazione.  
   
  [ **@publisher_password**=] **'***publisher_password***'**  
  Password utilizzata per la connessione al server di pubblicazione. *publisher_password* viene **nvarchar(524**, non prevede alcun valore predefinito.  
@@ -147,25 +147,25 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  [ **@publisher_type**=] **'***publisher_type***'**  
  Specifica il tipo di server di pubblicazione nei casi in cui il server di pubblicazione non sia in esecuzione in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* viene **sysname**, e può essere uno dei valori seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Specifica un server di pubblicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Specifica un server di pubblicazione Oracle standard.|  
 |**ORACLE GATEWAY**|Specifica un server di pubblicazione Oracle Gateway.|  
   
- Per ulteriori informazioni sulle differenze tra un server di pubblicazione Oracle e un server di pubblicazione Oracle Gateway, vedere [Cenni preliminari sulla pubblicazione Oracle](../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
+ Per altre informazioni sulle differenze tra un server di pubblicazione Oracle e un server di pubblicazione Oracle Gateway, vedere [Panoramica della pubblicazione Oracle](../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_MSchange_snapshot_agent_properties** viene utilizzata nella replica snapshot, transazionale e di tipo merge.  
+## <a name="remarks"></a>Note  
+ **sp_MSchange_snapshot_agent_properties** viene utilizzata nella replica snapshot, la replica transazionale e di tipo merge.  
   
- È necessario specificare tutti i parametri durante l'esecuzione **sp_MSchange_snapshot_agent_properties**. Eseguire [sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) per restituire le proprietà correnti del processo dell'agente Snapshot.  
+ È necessario specificare tutti i parametri quando si esegue **sp_MSchange_snapshot_agent_properties**. Eseguire [sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) per restituire le proprietà correnti del processo dell'agente Snapshot.  
   
- Quando il server di pubblicazione viene eseguito in un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva, è necessario utilizzare [sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) per modificare le proprietà di un processo dell'agente Snapshot.  
+ Se il server di pubblicazione viene eseguito in un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva, è necessario usare [sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) per modificare le proprietà di un processo dell'agente Snapshot.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server nel server di distribuzione possono eseguire **sp_MSchange_snapshot_agent_properties**.  
   
 ## <a name="see-also"></a>Vedere anche  

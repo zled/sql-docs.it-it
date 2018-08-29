@@ -1,5 +1,5 @@
 ---
-title: sp_dropmessage (Transact-SQL) | Documenti Microsoft
+title: sp_dropmessage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_dropmessage
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3bac74ff66a266fd0987dc869145c70287232c09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 216f5e9ffca4865cb9a2deddbe38097099d74f9c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246916"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032984"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Elimina un messaggio di errore definito dall'utente specificato da un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile visualizzare i messaggi definiti dall'utente utilizzando il **Sys. Messages** vista del catalogo.  
+  Elimina un messaggio di errore definito dall'utente specificato da un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Messaggi definiti dall'utente possono essere visualizzati utilizzando il **Sys. Messages** vista del catalogo.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,27 +46,27 @@ sp_dropmessage [ @msgnum = ] message_number
   
 ## <a name="arguments"></a>Argomenti  
  [  **@msgnum =** ] *message_number*  
- Numero del messaggio da eliminare. *message_number* deve essere un messaggio definito dall'utente che dispone di un numero di messaggio maggiore di 50000. *message_number* viene **int**, con un valore predefinito è NULL.  
+ Numero del messaggio da eliminare. *message_number* deve essere un messaggio definito dall'utente che ha un numero maggiore di 50000. *message_number* viene **int**, con un valore predefinito è NULL.  
   
- [  **@lang =** ] **'***language***'**  
- Lingua del messaggio da eliminare. Se **tutti** è specificato, tutte le versioni localizzate di *message_number* vengono eliminati. *linguaggio* viene **sysname**, con un valore predefinito è NULL.  
+ [  **@lang =** ] **'***linguaggio***'**  
+ Lingua del messaggio da eliminare. Se **tutte** è specificato, tutte le versioni localizzate dei *message_number* vengono eliminati. *linguaggio* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ Nessuna.  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **sysadmin** e **serveradmin** ruoli predefiniti del server.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **sysadmin** e **serveradmin** ruoli predefiniti del server.  
   
-## <a name="remarks"></a>Osservazioni  
- A meno che non **tutti** specificato per *language*localizzato tutte le versioni di un messaggio devono essere eliminate prima degli Stati Uniti prima di poter eliminare la versione inglese (USA).  
+## <a name="remarks"></a>Note  
+ A meno che non **tutti i** è specificato per *language*, localizzate tutte le versioni di un messaggio devono essere eliminate prima degli Stati Uniti prima di poter eliminare la versione inglese (USA).  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. Eliminazione di un messaggio definito dall'utente  
- Nell'esempio seguente viene eliminato un messaggio definito dall'utente, numero `50001`, da **Sys. Messages**.  
+ Nell'esempio seguente viene eliminato un messaggio definito dall'utente, numero `50001`, dalla **Sys. Messages**.  
   
 ```  
 USE master;  

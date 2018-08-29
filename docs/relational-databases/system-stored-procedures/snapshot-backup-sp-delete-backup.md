@@ -13,16 +13,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2955570ee99eaa05d9a689ccbe62973af3208d80
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fbf04bbd9b60a99a2e972db139daaf8bb4361389
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054448"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037454"
 ---
 # <a name="spdeletebackup-transact-sql"></a>sp_delete_backup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sys.sp_delete_backup
  *[ @db_name =] database_name*  
  Nome del database che contiene lo snapshot da eliminare. Quando un nome di database è specificato, il sistema verifica che l'URL di backup fornito è un URL di backup per il database specificato e Usa [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) per eliminare ogni snapshot. Se non viene specificato alcun nome di database, questo controllo del database non viene eseguito.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede l'autorizzazione ALTER ANY DATABASE o l'autorizzazione ALTER per il database specificato.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -14,18 +14,18 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6bd763d709238c6bd25fbe7a90acb7b617004925
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 01ec347bd34786fe3dc9f8533972c212847b1faa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661833"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784748"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>Utilizzo di una stored procedure senza parametri
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Il tipo più semplice di stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] che è possibile chiamare è quello che non contiene parametri e restituisce un solo set di risultati. In [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è disponibile la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) che è possibile usare per chiamare questo tipo di stored procedure ed elaborare i dati restituiti.
+Il tipo più semplice di stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile chiamare è quello che non contiene parametri e restituisce un solo set di risultati. In [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è disponibile la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) che è possibile usare per chiamare questo tipo di stored procedure ed elaborare i dati restituiti.
 
 Quando si usa il driver JDBC per chiamare una stored procedure senza parametri, è necessario usare la sequenza di escape SQL `call`. La sintassi della sequenza di escape `call` senza parametri è la seguente:
 

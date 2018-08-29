@@ -21,17 +21,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_database_firewall_rule procedure
 ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0178f70f2ea71af12f53109b4dbde0240977c9d9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 225d5d7571e213308de337240ec8a0897f074a6a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049489"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037485"
 ---
 # <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
  [ **@name =**] **'***nome***'**  
  Nome dell'impostazione del firewall a livello di database che verrà rimossa. *nome* viene **nvarchar (128)** non prevede alcun valore predefinito. L'identificatore di Unicode `N` è facoltativo per [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo a livello di server dell'entità account di accesso creato dal processo di provisioning o un'entità di Azure Active Directory assegnato come amministratore può eliminare le regole del firewall a livello di database.  
   
 ## <a name="example"></a>Esempio  

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_log_shipping_secondary_database (Transact-SQL) | Documenti Microsoft
+title: sp_delete_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_secondary_database
 ms.assetid: c71b21c0-ec04-4fbd-9735-01128b736935
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7c9d8c89292eaee178b71e278d740cdddff67bcd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8d36528068c958e72266ee016858d9233d04194d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257063"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030465"
 ---
 # <a name="spdeletelogshippingsecondarydatabase-transact-sql"></a>sp_delete_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +51,16 @@ sp_delete_log_shipping_secondary_database
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ Nessuna.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_delete_log_shipping_secondary_database** deve essere eseguita la **master** database nel server secondario.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

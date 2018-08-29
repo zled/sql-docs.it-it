@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergefilter (Transact-SQL) | Documenti Microsoft
+title: sp_dropmergefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergefilter
 ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e44ef9e0fe6dec28143a1d017da37732491d4441
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72df83ad770e380136a954f6f8abaf9726bee650
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990066"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036088"
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,26 +61,26 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
   
  **0** specifica che le modifiche apportate all'articolo di merge non invalidano lo snapshot non è valido.  
   
- **1** specifica che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot non è valido. Se è questo il caso, il valore **1** concede l'autorizzazione per l'esecuzione del nuovo snapshot.  
+ **1** significa che le modifiche apportate all'articolo di merge potrebbe invalidare lo snapshot non è valido. Se è il caso, il valore **1** concede l'autorizzazione per il nuovo snapshot.  
   
  [ **@force_reinit_subscription**=] *force_reinit_subscription*  
  Abilita o disabilita la possibilità di contrassegnare una sottoscrizione come non valida. *force_reinit_subscription* è un **bit**, con un valore predefinito **0**.  
   
  **0** specifica che le modifiche apportate al filtro di articolo di merge non invalidano le sottoscrizioni non è valido.  
   
- **1** indica che le modifiche apportate al filtro di articolo di merge causano le sottoscrizioni non è valido.  
+ **1** significa che le modifiche apportate al filtro di articolo di merge invalidano le sottoscrizioni non è valido.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_dropmergefilter** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_dropmergefilter**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_dropmergefilter**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modifica delle proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Modificare le proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   

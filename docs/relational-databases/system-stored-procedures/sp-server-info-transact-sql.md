@@ -1,5 +1,5 @@
 ---
-title: sp_server_info (Transact-SQL) | Documenti Microsoft
+title: sp_server_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0715ea7f2f58b8212b48e990c3e2d2f76301b373
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9355b4a6ca344111c5b3d9365823b2175942bcea
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261117"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026208"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
  ID dell'attributo. *attribute_id* viene **int**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- Nessuno  
+ None  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -58,7 +58,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Nome dell'attributo.|  
 |**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|Impostazione corrente dell'attributo.|  
   
- Nella tabella seguente sono elencati gli attributi. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Le librerie client ODBC vengono utilizzano gli attributi **1**, **2**, **18**, **22**, e **500** in fase di connessione ora.  
+ Nella tabella seguente sono elencati gli attributi. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Le librerie client ODBC vengono utilizzano gli attributi **1**, **2**, **18**, **22**, e **500** alla connessione ora.  
   
 |ATTRIBUTE_ID|Descrizione ATTRIBUTE_NAME|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -75,12 +75,12 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**18**|COLLATION_SEQ<br /><br /> Specifica l'ordinamento del set di caratteri per il server corrente.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> Specifica se il sistema DBMS sottostante supporta o meno i punti di salvataggio denominati.|S|  
 |**20**|MULTI_RESULT_SETS<br /><br /> Specifica se il database sottostante o il gateway stesso supporta o meno più set di risultati (è possibile inviare più istruzioni attraverso il gateway con più set di risultati restituiti al client).|S|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> Specifica se in **sp_tables**, il gateway restituisce solo le tabelle, viste e così via, accessibile all'utente corrente (ovvero, l'utente che dispone dell'autorizzazione SELECT almeno per la tabella).|S|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> Specifica se nella **sp_tables**, il gateway restituisce solo le tabelle, viste e così via, accessibile all'utente corrente (ovvero, l'utente che dispone almeno delle autorizzazioni SELECT per la tabella).|S|  
 |**100**|USERID_LENGTH<br /><br /> Specifica il numero massimo di caratteri per un nome utente.|128|  
-|**101**|QUALIFIER_TERM<br /><br /> Specifica il termine del sistema DBMS per il qualificatore di tabella (la prima parte di un nome composto da tre parti).|database|  
+|**101**|QUALIFIER_TERM<br /><br /> Specifica il termine del sistema DBMS per il qualificatore di tabella (la prima parte di un nome composto da tre parti).|Database|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> Specifica se il sistema DBMS sottostante supporta o meno transazioni denominate.|S|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> Specifica se è possibile eseguire le stored procedure come eventi del linguaggio.|S|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> Specifica se in **sp_stored_procedures**, il gateway restituisce solo le stored procedure eseguibili dall'utente corrente.|S|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> Specifica se nella **sp_stored_procedures**, il gateway restituisce solo le stored procedure eseguibili dall'utente corrente.|S|  
 |**105**|MAX_INDEX_COLS<br /><br /> Specifica il numero massimo di colonne di un indice del sistema DBMS.|16|  
 |**106**|RENAME_TABLE<br /><br /> Specifica se è possibile rinominare le tabelle.|S|  
 |**107**|RENAME_COLUMN<br /><br /> Specifica se è possibile rinominare le colonne.|S|  
@@ -92,14 +92,14 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**113**|REMOTE_SPROC<br /><br /> Specifica se è possibile eseguire stored procedure tramite le funzioni di stored procedure remote di DB-Library.|S|  
 |**500**|SYS_SPROC_VERSION<br /><br /> Specifica la versione delle stored procedure di catalogo implementate.|Numero di versione corrente|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_server_info** restituisce un subset delle informazioni fornite da **SQLGetInfo** in ODBC.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Le Stored procedure del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

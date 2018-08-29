@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_disable_table (Transact-SQL) | Documenti Microsoft
+title: Sys. sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_table
 - change data capture [SQL Server], disabling tables
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 16356cc8a5d427a9432ac8c753b1e51d915337d4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9450d80191ac611004cc39528820f49949232823
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255925"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028329"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,19 +63,19 @@ sys.sp_cdc_disable_table
  [  **@capture_instance=** ] **'***capture_instance***'** | **'** tutti **'**  
  Nome dell'istanza di acquisizione da disabilitare per la tabella di origine specificata. *capture_instance* viene **sysname** e non può essere NULL.  
   
- Se si specifica "all", tutte le istanze definite per di acquisizione *source_name* sono disabilitati.  
+ Quando si specifica "all", tutte le istanze di acquisizione definite per *source_name* sono disabilitati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
- **Sys. sp_cdc_disable_table** cadute change data capture Modifica tabella e funzioni di sistema associate con l'istanza di acquisizione e tabella di origine specificata. Elimina tutte le righe associate a questa istanza di acquisizione specificata dal set di tabelle di sistema di change data capture di **is_tracked_by_cdc** colonna per la voce della tabella nel [Sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) vista del catalogo impostato su 0.  
+## <a name="remarks"></a>Note  
+ **Sys. sp_cdc_disable_table** cadute change data capture modificare tabelle e funzioni di sistema associate all'istanza di origine specificato nella tabella e lo stato capture. Elimina tutte le righe associate a questa istanza di acquisizione specificata dalla tabelle di sistema di change data capture e viene impostata la **is_tracked_by_cdc** colonna per la voce della tabella nel [Sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) vista del catalogo impostato su 0.  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **db_owner** ruolo predefinito del database.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **db_owner** ruolo predefinito del database.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene disabilitata l'acquisizione dei dati delle modifiche per la tabella `HumanResources.Employee`.  

@@ -1,5 +1,5 @@
 ---
-title: sp_vupgrade_replication (Transact-SQL) | Documenti Microsoft
+title: sp_vupgrade_replication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_vupgrade_replication
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c12d5f2b9ffbbf2d3d1d3ce11b76e32a3f3ed12f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f95cf47caaa3c5fd6c361647389031f97b98185
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031104"
 ---
 # <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +50,13 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@login=**] **'***account di accesso***'**  
- Account di accesso dell'amministratore di sistema da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro non è obbligatorio se *security_mode* è impostato su **1**, ovvero l'autenticazione di Windows.  
+ Account di accesso dell'amministratore di sistema da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro non è obbligatorio se *security_mode* è impostata su **1**, ovvero l'autenticazione di Windows.  
   
 > [!NOTE]  
 >  Questo parametro viene ignorato quando si esegue l'aggiornamento a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
   
  [  **@password=**] **'***password***'**  
- Password dell'amministratore di sistema da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *password* viene **sysname**, il valore predefinito è **'** (stringa vuota). Questo parametro non è obbligatorio se *security_mode* è impostato su **1**, ovvero l'autenticazione di Windows.  
+ Password dell'amministratore di sistema da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *la password* viene **sysname**, il valore predefinito è **'** (stringa vuota). Questo parametro non è obbligatorio se *security_mode* è impostata su **1**, ovvero l'autenticazione di Windows.  
   
 > [!NOTE]  
 >  Questo parametro viene ignorato quando si esegue l'aggiornamento a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
@@ -75,12 +76,12 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 >  Questo parametro viene ignorato quando si esegue l'aggiornamento a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_vupgrade_replication** viene utilizzato durante l'aggiornamento di tutti i tipi di replica.  
+## <a name="remarks"></a>Note  
+ **sp_vupgrade_replication** viene usato durante l'aggiornamento di tutti i tipi di replica.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_vupgrade_replication**.  
   
 ## <a name="see-also"></a>Vedere anche  

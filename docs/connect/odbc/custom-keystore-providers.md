@@ -14,12 +14,12 @@ caps.latest.revision: 1
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 0d3a3b25ca2ead96d23b0d367ab633d900951de8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 613f8809003ba8f4501ea95371dedd44cff18a8d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047516"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784256"
 ---
 # <a name="custom-keystore-providers"></a>Provider di archivi chiavi personalizzati
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -147,7 +147,7 @@ Nome segnaposto per una funzione di decrittografia chiave ECEK definito dal prov
 |`alg`|[Input] Il valore della [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) attributo di metadati per la chiave ECEK specificata. Con terminazione null wide-stringa di caratteri *. Ciò consente di identificare l'algoritmo di crittografia usata per crittografare la chiave ECEK specificata.|
 |`ecek`|[Input] Puntatore per la chiave ECEK da decrittografare.|
 |`ecekLen`|[Input] Lunghezza della chiave ECEK.|
-|`cekOut`|[Output] Il provider deve allocare memoria per la chiave ECEK decrittografata e scrivere il relativo indirizzo all'indicatore di misura a cui punta cekOut. Deve essere possibile liberare questo blocco di memoria usando il [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) o gratuito (funzione) (Linux/Mac). Se non è memoria allocata a causa di un errore o in caso contrario, il provider deve impostare * cekOut a un puntatore null.|
+|`cekOut`|[Output] Il provider deve allocare memoria per la chiave ECEK decrittografata e scrivere il relativo indirizzo all'indicatore di misura a cui punta cekOut. Deve essere possibile liberare questo blocco di memoria usando il [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o gratuito (funzione) (Linux/Mac). Se non è memoria allocata a causa di un errore o in caso contrario, il provider deve impostare * cekOut a un puntatore null.|
 |`cekLen`|[Output] Il provider di scrivere all'indirizzo a cui punta cekLen la lunghezza della chiave ECEK decrittografata in cui è scritto per * * cekOut.|
 |`Return Value`|Restituito diverso da zero per indicare l'esito positivo o zero per indicare l'esito negativo.|
 
@@ -164,7 +164,7 @@ Nome segnaposto per una funzione di crittografia chiave CEK definito dal provide
 |`alg`|[Input] Il valore della [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) attributo di metadati per la chiave ECEK specificata. Con terminazione null wide-stringa di caratteri *. Ciò consente di identificare l'algoritmo di crittografia usata per crittografare la chiave ECEK specificata.|
 |`cek`|[Input] Puntatore alla CEK deve essere crittografato.|
 |`cekLen`|[Input] Lunghezza della chiave CEK.|
-|`ecekOut`|[Output] Il provider deve allocare memoria per la CEK crittografata e scrivere il relativo indirizzo all'indicatore di misura a cui punta ecekOut. Deve essere possibile liberare questo blocco di memoria usando il [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) o gratuito (funzione) (Linux/Mac). Se non è memoria allocata a causa di un errore o in caso contrario, il provider deve impostare * ecekOut a un puntatore null.|
+|`ecekOut`|[Output] Il provider deve allocare memoria per la CEK crittografata e scrivere il relativo indirizzo all'indicatore di misura a cui punta ecekOut. Deve essere possibile liberare questo blocco di memoria usando il [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o gratuito (funzione) (Linux/Mac). Se non è memoria allocata a causa di un errore o in caso contrario, il provider deve impostare * ecekOut a un puntatore null.|
 |`ecekLen`|[Output] Il provider di scrivere all'indirizzo a cui punta ecekLen la lunghezza della chiave CEK crittografata in cui è scritto per * * ecekOut.|
 |`Return Value`|Restituito diverso da zero per indicare l'esito positivo o zero per indicare l'esito negativo.|
 
@@ -190,7 +190,7 @@ Il **onError** parametro punta a una funzione di segnalazione degli errori, con 
 |Argomento|Descrizione|
 |:--|:--|
 |`ctx`|[Input] Il contesto per segnalare l'errore.|
-|`msg`|[Input] Il messaggio di errore al report. Stringa con terminazione null di caratteri wide. Per consentire di informazioni con parametri sia presente, questa stringa può contenere le sequenze di formattazione di inserimento nel formato accettato dal [FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx) (funzione). La funzionalità estesa può essere specificata da questo parametro, come descritto di seguito.|
+|`msg`|[Input] Il messaggio di errore al report. Stringa con terminazione null di caratteri wide. Per consentire di informazioni con parametri sia presente, questa stringa può contenere le sequenze di formattazione di inserimento nel formato accettato dal [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) (funzione). La funzionalità estesa può essere specificata da questo parametro, come descritto di seguito.|
 |...|[Input] Parametri variadic aggiuntive per gli identificatori di formato di messaggio, come appropriato.|
 
 Per segnalare quando si è verificato un errore, la funzione provider onError le chiamate provider, fornendo il parametro di contesto passato dal driver e un messaggio di errore con parametri aggiuntivi facoltativi da formattare in esso. Il provider può chiamare questa funzione più volte per inviare più messaggi di errore consecutivamente all'interno di chiamata di una funzione del provider. Ad esempio

@@ -14,18 +14,18 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 125c15caac95f152c6f5009b1a794bd0fb625a2c
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 9b2eb246686e69c6c890b069b400662515dc71cd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661863"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787430"
 ---
 # <a name="using-savepoints"></a>Utilizzo dei punti di salvataggio
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-I punti di salvataggio consentono di eseguire il rollback di parti di transazioni. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è possibile creare un punto di salvataggio usando l'istruzione SAVE TRANSACTION savepoint_name. In seguito viene eseguita un'istruzione ROLLBACK TRANSACTION savepoint_name per eseguire il rollback del punto di salvataggio anziché della parte iniziale della transazione.
+I punti di salvataggio consentono di eseguire il rollback di parti di transazioni. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile creare un punto di salvataggio usando l'istruzione SAVE TRANSACTION savepoint_name. In seguito viene eseguita un'istruzione ROLLBACK TRANSACTION savepoint_name per eseguire il rollback del punto di salvataggio anziché della parte iniziale della transazione.
 
 I punti di salvataggio risultano utili nelle situazioni in cui è improbabile che si verifichino degli errori. L'utilizzo di un punto di salvataggio per il rollback di parte di una transazione nel caso di errore non frequente può risultare più efficace rispetto a provare ciascuna transazione per verificare se un aggiornamento è valido prima di eseguire effettivamente l'aggiornamento. Poiché gli aggiornamenti e i rollback sono operazioni dispendiose, i punti di salvataggio sono efficaci solo se la probabilità che si verifichi l'errore è bassa e il costo del controllo preventivo della validità di un aggiornamento è relativamente alto.
 

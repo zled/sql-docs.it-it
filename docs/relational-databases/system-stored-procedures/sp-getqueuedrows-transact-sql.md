@@ -1,5 +1,5 @@
 ---
-title: sp_getqueuedrows (Transact-SQL) | Documenti Microsoft
+title: sp_getqueuedrows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getqueuedrows
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ec0e31b852a1aea3cfd964a47660fd4953c196d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7aa57cc268f5bc70bc0c2ebf03e0f05a4d8950d8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994418"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029002"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
  Consente il filtraggio dell'output in base all'ID della transazione. *transaction_id* viene **nvarchar(70)**, con un valore predefinito è NULL. Se specificato, viene visualizzato l'ID della transazione associato al comando in coda. Se è NULL, vengono visualizzati tutti i comandi nella coda.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Visualizza tutte le righe alle quali è associata almeno una transazione in coda per la tabella sottoscritta.  
@@ -65,16 +65,16 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**Azione**|**nvarchar(10)**|Tipo di azione da eseguire in corrispondenza della sincronizzazione.<br /><br /> INS= inserimento<br /><br /> DEL = eliminazione<br /><br /> UPD = aggiornamento|  
-|**Tranid**|**nvarchar(70)**|ID della transazione in cui è stato eseguito il comando.|  
+|**tranid**|**nvarchar(70)**|ID della transazione in cui è stato eseguito il comando.|  
 |**tabella column1... n**||Il valore per ogni colonna della tabella specificata *tablename*.|  
 |**MSrepl_tran_version**|**uniqueidentifier**|Questa colonna viene utilizzata per tenere traccia delle modifiche ai dati replicati e per eseguire il rilevamento dei conflitti nel server di pubblicazione. La colonna viene aggiunta alla tabella automaticamente.|  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_getqueuedrows** viene utilizzata nei Sottoscrittori che partecipano all'aggiornamento in coda.  
+## <a name="remarks"></a>Note  
+ **sp_getqueuedrows** usata nei Sottoscrittori che partecipano all'aggiornamento in coda.  
   
- **sp_getqueuedrows** trova le righe di una tabella specifica in una sottoscrizione del database che hanno partecipato un aggiornamento in coda, ma attualmente non sono stati risolti dall'agente di lettura coda.  
+ **sp_getqueuedrows** trova le righe di una tabella specifica in una sottoscrizione di database che hanno partecipato a un aggiornamento in coda, ma attualmente non sono stati risolti dall'agente di lettura coda.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  **sp_getqueuedrows** richiede le autorizzazioni SELECT sulla tabella specificata nella *tablename*.  
   
 ## <a name="see-also"></a>Vedere anche  

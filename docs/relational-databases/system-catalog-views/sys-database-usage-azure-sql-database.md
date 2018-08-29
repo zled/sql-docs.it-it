@@ -22,17 +22,16 @@ helpviewer_keywords:
 - database_usage
 - sys.database_usage
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: affdc08bb7ae507ca30edfa986cd68a81ba564f2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1816ab7f6e4ad35453c61fed8670c27b1f0ac833
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038819"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027386"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "38038819"
 |sku|Il tipo del livello di servizio per il database: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
 |quantity|Numero massimo di database di un tipo SKU presente durante il giorno.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Accesso in lettura a questa vista è disponibile per tutti gli utenti con autorizzazioni sufficienti per connettersi al **master** database.  
   
 ## <a name="remarks"></a>Note  

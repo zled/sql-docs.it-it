@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_generate_wrapper_function (Transact-SQL) | Documenti Microsoft
+title: Sys. sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,21 +21,20 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f8f81b97ad6b1c1bf09ee33bd460aab01872327
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6ddf84aa517b7f7e21e605264e1efa7ca1977d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259261"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022941"
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Genera script per creare funzioni wrapper per funzioni di query Change Data Capture disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'API supportata nei wrapper generati consente l'intervallo di query specificare come un intervallo di data/ora. In questo modo la funzione può essere utilizzata in molte applicazioni di data warehouse, inclusi quelli che sono stati sviluppati da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] progettisti di pacchetti che utilizzano dati delle modifiche di acquisire la tecnologia per determinare il carico incrementale.  
+  Genera script per creare funzioni wrapper per funzioni di query Change Data Capture disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'API è supportata nei wrapper generati consente l'intervallo di query specificare come un intervallo di data/ora. In questo modo la funzione può essere utilizzata in molte applicazioni di data warehousing, incluse quelle sviluppate da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] finestre di progettazione di pacchetti che usano change data capture tecnologia per determinare il carico incrementale.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -77,7 +76,7 @@ sys.sp_cdc_generate_wrapper_function
 |**function_name**|**nvarchar(145)**|Nome della funzione generata.|  
 |**create_script**|**nvarchar(max)**|Script che crea la funzione wrapper relativa all'istanza di acquisizione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Lo script che crea la funzione per eseguire il wrapping delle query relative a tutte le modifiche per un'istanza di acquisizione viene sempre generato. Se l'istanza di acquisizione supporta query relative alle modifiche totali, lo script per generare un wrapper per tale tipo di query viene comunque creato.  
   
 ## <a name="examples"></a>Esempi  

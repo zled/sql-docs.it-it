@@ -1,5 +1,5 @@
 ---
-title: sp_deletetracertokenhistory (Transact-SQL) | Documenti Microsoft
+title: sp_deletetracertokenhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_deletetracertokenhistory
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fdfe59e931fe224106eddb9358a5cba06e57c61a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2734c4f1922ccd7258383dd5e79665cf26c8b4fc
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989656"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023515"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,34 +53,34 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
  Nome della pubblicazione in cui è stato inserito il token di traccia. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@tracer_id=** ] *tracer_id*  
- ID del token di traccia da eliminare. *tracer_id* viene **int**, con valore predefinito è NULL. Se **null**, quindi vengono eliminati tutti i token di traccia appartenenti alla pubblicazione.  
+ ID del token di traccia da eliminare. *tracer_id* viene **int**, con un valore predefinito NULL. Se **null**, quindi vengono eliminati tutti i token di traccia appartenenti alla pubblicazione.  
   
  [  **@cutoff_date=** ] *cutoff_date*  
- Specifica un valore di cambio data in modo che tutti i token di traccia inseriti nella pubblicazione prima di tale data vengano rimossi. *cutoff_date* è di tipo datetime con valore predefinito è NULL.  
+ Specifica un valore di cambio data in modo che tutti i token di traccia inseriti nella pubblicazione prima di tale data vengano rimossi. *cutoff_date* è di tipo datetime, un valore predefinito NULL.  
   
  [  **@publisher=** ] **'***publisher***'**  
  Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  Questo parametro deve essere specificato solo per non[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
+>  Questo parametro deve essere specificato solo per non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
- Nome del database di pubblicazione. *publisher_db* viene **sysname**, con valore predefinito è NULL. Questo parametro viene ignorato se la stored procedure viene eseguita nel server di pubblicazione.  
+ Nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito NULL. Questo parametro viene ignorato se la stored procedure viene eseguita nel server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_deletetracertokenhistory** viene utilizzata nella replica transazionale.  
   
- Quando si esegue **sp_deletetracertokenhistory**, è possibile specificare solo uno dei *tracer_id* o *cutoff_date*. Se si specificano entrambi i parametri, viene generato un errore.  
+ Quando si esegue **sp_deletetracertokenhistory**, è possibile specificare solo uno dei *tracer_id* oppure *cutoff_date*. Se si specificano entrambi i parametri, viene generato un errore.  
   
- Se non si esegue **sp_deletetracertokenhistory** per rimuovere i metadati di token di traccia, le informazioni vengono rimosse quando si verifica la pulizia della cronologia regolarmente pianificate.  
+ Se non si esegue **sp_deletetracertokenhistory** per rimuovere i metadati dei token di traccia, le informazioni verranno rimossi quando si verifica la pulizia della cronologia regolarmente pianificate.  
   
- Gli ID di token di traccia, è possono determinare eseguendo [sp_helptracertokens &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) o eseguendo il [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) tabella di sistema.  
+ Gli ID dei token di traccia può essere determinato eseguendo [sp_helptracertokens &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) oppure eseguendo una query il [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) tabella di sistema.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database nel database di pubblicazione o **db_owner** predefiniti del database o  **replmonitor** ruoli nel database di distribuzione possono eseguire **sp_deletetracertokenhistory**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database nel database di pubblicazione, o **db_owner** predefiniti del database o  **replmonitor** nel database di distribuzione possono eseguire **sp_deletetracertokenhistory**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Misurare la latenza e convalidare le connessioni per la replica transazionale](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   

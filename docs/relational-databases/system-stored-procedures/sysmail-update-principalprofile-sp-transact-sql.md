@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_principalprofile_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_update_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sysmail_update_principalprofile_sp
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 caps.latest.revision: 46
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a86fc4775ee1096d72451ace855bb19a1094c3c5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e4e6a55660f3b5a4acc17147de269271fd2c2b1f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260574"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022770"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,42 +47,42 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
 ## <a name="arguments"></a>Argomenti  
  [ **@principal_id** =] *principal_id*  
- L'ID dell'utente del database o del ruolo nel **msdb** database per l'associazione da modificare. *principal_id* viene **int**, con un valore predefinito è NULL. Entrambi *principal_id* o *principal_name* deve essere specificato.  
+ L'ID dell'utente del database o del ruolo nel **msdb** database per l'associazione da modificare. *principal_id* viene **int**, con un valore predefinito è NULL. Entrambi *principal_id* oppure *principal_name* deve essere specificato.  
   
  [ **@principal_name** =] **'***principal_name***'**  
- Il nome dell'utente del database o del ruolo nel **msdb** database per l'associazione da aggiornare. *principal_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *principal_id* o *principal_name* può essere specificato.  
+ Il nome dell'utente del database o del ruolo nel **msdb** database per l'associazione da aggiornare. *principal_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *principal_id* oppure *principal_name* può essere specificato.  
   
  [ **@profile_id** = ] *profile_id*  
- ID del profilo per l'associazione da modificare. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* o *profile_name* deve essere specificato.  
+ ID del profilo per l'associazione da modificare. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- Nome del profilo per l'associazione da modificare. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* o *profile_name* deve essere specificato.  
+ Nome del profilo per l'associazione da modificare. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
   
  [ **@is_default** =] **'***is_default***'**  
  Specifica se il profilo è il profilo predefinito per l'utente del database. A un utente del database può essere associato un solo profilo predefinito. *is_default* viene **bit**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Questa stored procedure consente di modificare il profilo predefinito per l'utente del database. A un utente del database può essere associato un solo profilo privato predefinito.  
   
- Quando il nome dell'entità per l'associazione è **pubblica** o l'id dell'entità per l'associazione è **0**, questa stored procedure modifica il profilo pubblico. È possibile associare un solo profilo pubblico predefinito.  
+ Quando è il nome dell'entità per l'associazione **pubbliche** o l'id dell'entità per l'associazione viene **0**, questa stored procedure modifica il profilo pubblico. È possibile associare un solo profilo pubblico predefinito.  
   
  Quando **@is_default** è '**1**' e l'entità è associata a più di un profilo, il profilo specificato diventa il profilo predefinito per l'entità. Il profilo che in precedenza era il profilo predefinito è tuttora associato all'entità, ma non è più il profilo predefinito.  
   
  La stored procedure **sysmail_update_principalprofile_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
  **A. L'impostazione di un profilo come profilo pubblico predefinito per un database**  
   
- Nell'esempio seguente imposta il profilo `General Use Profile` per il profilo pubblico predefinito per gli utenti di **msdb** database.  
+ Nell'esempio seguente imposta il profilo `General Use Profile` sia il profilo pubblico predefinito per gli utenti di **msdb** database.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -91,9 +91,9 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
     @is_default = '1';  
 ```  
   
- **B. Impostazione di un profilo come profilo privato predefinito per un utente**  
+ **B. Impostazione di un profilo per il profilo privato predefinito per un utente**  
   
- Nell'esempio seguente imposta il profilo `AdventureWorks Administrator` profilo predefinito per l'entità `ApplicationUser` nel **msdb** database. Il profilo deve essere già associato all'entità. Il profilo che in precedenza era il profilo predefinito è tuttora associato all'entità, ma non è più il profilo predefinito.  
+ Nell'esempio seguente imposta il profilo `AdventureWorks Administrator` come profilo predefinito per l'entità `ApplicationUser` nel **msdb** database. Il profilo deve essere già associato all'entità. Il profilo che in precedenza era il profilo predefinito è tuttora associato all'entità, ma non è più il profilo predefinito.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  

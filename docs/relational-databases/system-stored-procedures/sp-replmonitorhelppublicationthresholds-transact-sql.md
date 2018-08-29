@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelppublicationthresholds (Transact-SQL) | Documenti Microsoft
+title: sp_replmonitorhelppublicationthresholds (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelppublicationthresholds
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c77f8e36cc33dfee704ef8f5b945a58c7011a23b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d87de8d4ab74bc5c9d776b9d08e9e0680e2530cd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999568"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032239"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +59,9 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
  Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@publication_type**=] *publication_type*  
- Tipo di pubblicazione. *publication_type* viene **int**, e può essere uno dei valori seguenti.  
+ Tipo di pubblicazione. *publication_type* viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**0**|Pubblicazione transazionale.|  
 |**1**|Pubblicazione snapshot.|  
@@ -72,20 +72,20 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**metric_id**|**int**|ID della misurazione delle prestazioni di replica. I possibili valori sono i seguenti:<br /><br /> **1expiration** -monitoraggi delle scadenze imminenti delle sottoscrizioni di pubblicazioni transazionali.<br /><br /> **2latency** -monitoraggi delle prestazioni delle sottoscrizioni di pubblicazioni transazionali.<br /><br /> **4mergeexpiration** -monitoraggi delle scadenze imminenti delle sottoscrizioni a pubblicazioni di tipo merge.<br /><br /> **5mergeslowrunduration** -consente di monitorare la durata delle sincronizzazioni di tipo merge attraverso connessioni a larghezza di banda ridotta (Remote).<br /><br /> **6mergefastrunduration** -consente di monitorare la durata delle sincronizzazioni di tipo merge su connessioni a banda larga (LAN).<br /><br /> **7mergefastrunspeed** -controlla la frequenza di sincronizzazione delle sincronizzazioni di tipo merge su connessioni a banda larga (LAN).<br /><br /> **8mergeslowrunspeed** -controlla la frequenza di sincronizzazione delle sincronizzazioni di tipo merge attraverso connessioni a larghezza di banda ridotta (Remote).|  
+|**metric_id**|**int**|ID della misurazione delle prestazioni di replica. I possibili valori sono i seguenti:<br /><br /> **1expiration** -esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni a pubblicazioni transazionali.<br /><br /> **2latency** -esegue il monitoraggio delle prestazioni delle sottoscrizioni di pubblicazioni transazionali.<br /><br /> **4mergeexpiration** -esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni di pubblicazioni di tipo merge.<br /><br /> **5mergeslowrunduration** -monitora la durata delle sincronizzazioni di tipo merge attraverso connessioni a larghezza di banda ridotta (Remote).<br /><br /> **6mergefastrunduration** -monitora la durata delle sincronizzazioni di tipo merge attraverso connessioni a banda larga (LAN).<br /><br /> **7mergefastrunspeed** -monitora la frequenza di sincronizzazione delle sincronizzazioni di tipo merge attraverso connessioni a banda larga (LAN).<br /><br /> **8mergeslowrunspeed** -monitora la frequenza di sincronizzazione delle sincronizzazioni di tipo merge attraverso connessioni a larghezza di banda ridotta (Remote).|  
 |**title**|**sysname**|Nome della misurazione delle prestazioni di replica.|  
 |**Valore**|**int**|Valore soglia della misurazione delle prestazioni.|  
-|**shouldalert**|**bit**|È se deve essere generato un avviso quando la metrica supera la soglia definita per la pubblicazione. il valore **1** indica che deve essere generato un avviso.|  
-|**IsEnabled**|**bit**|Se il monitoraggio è abilitato per questa misurazione delle prestazioni di replica per la pubblicazione. il valore **1** indica che il monitoraggio è abilitato.|  
+|**shouldalert**|**bit**|È se deve essere generato un avviso quando la metrica supera la soglia definita per la pubblicazione. un valore pari **1** indica che deve essere generato un avviso.|  
+|**IsEnabled**|**bit**|È se il monitoraggio è abilitato per la metrica di prestazioni della replica per la pubblicazione. un valore pari **1** indica che il monitoraggio è attivato.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_replmonitorhelppublicationthresholds** viene utilizzato con tutti i tipi di replica.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **db_owner** o **replmonitor** ruolo predefinito del database nel database di distribuzione possono eseguire **sp_replmonitorhelppublicationthresholds**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **db_owner** oppure **replmonitor** ruolo predefinito del database nel database di distribuzione possono eseguire **sp_replmonitorhelppublicationthresholds**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitorare la replica a livello di programmazione](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

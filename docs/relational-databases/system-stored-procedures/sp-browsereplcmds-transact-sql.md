@@ -1,5 +1,5 @@
 ---
-title: sp_browsereplcmds (Transact-SQL) | Documenti Microsoft
+title: sp_browsereplcmds (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19c4c3b162d882f3d7a31701ad2cc838fcaaed74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 744f28362bcb64d0d4e294e464cbd94c26f13d60
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991298"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036555"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,16 +67,16 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  Specifica se i comandi con l'oggetto specificato *article_id* vengono restituiti. *article_id* viene **int**, con un valore predefinito è NULL.  
   
  [  **@command_id =**] *command_id*  
- È il percorso del comando [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) che si desidera decodificare. *command_id* viene **int**, con un valore predefinito è NULL. Se specificato, è necessario specificare anche tutti gli altri parametri e *xact_seqno_start*deve essere identico a *xact_seqno_end*.  
+ È il percorso del comando nel [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) da decodificare. *command_id* viene **int**, con un valore predefinito è NULL. Se specificato, tutti gli altri parametri devono essere specificati anche, e *xact_seqno_start*deve essere identico al *xact_seqno_end*.  
   
  [  **@agent_id =**] *agent_id*  
- Indica che vengono restituiti solo i comandi per un agente di replica specifico. *agent_id* viene **int**, con valore predefinito è NULL.  
+ Indica che vengono restituiti solo i comandi per un agente di replica specifico. *agent_id* viene **int**, con un valore predefinito NULL.  
   
  [  **@compatibility_level =**] *compatibility_level*  
- È la versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui il *compatibility_level* è **int**, con un valore predefinito è 9000000.  
+ È la versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui le *compatibility_level* viene **int**, con valore predefinito è 9000000.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -94,15 +93,15 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_db_version**|**int**|Versione del database in cui ha origine la transazione.|  
 |**originator_lsn**|**varbinary(16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine. Utilizzato nella replica transazionale peer-to-peer.|  
 |**comando**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
-|**command_id**|**int**|ID del comando in [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
+|**command_id**|**int**|ID del comando nel [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
   
  È possibile suddividere i comandi lunghi in più righe nei set di risultati.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_browsereplcmds** viene utilizzata nella replica transazionale.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** fisso di server o del ruolo di **db_owner** o **replmonitor** ruoli predefiniti del database nel database di distribuzione possono eseguire **sp_browsereplcmds**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** fissa ruolo del server o i membri del **db_owner** oppure **replmonitor** ruoli predefiniti del database nel database di distribuzione possono eseguire **sp_browsereplcmds**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

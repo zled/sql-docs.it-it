@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_update_policy_category_subscription
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 46ca3100a203d3afc9e3b618d4264629ddf1ce58
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d285728aafbfedc3c194ab65351a90d1daba019
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261027"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033283"
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,12 +61,12 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
  Nome della categoria di criteri a cui si esegue la sottoscrizione per il database. *policy_category* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syspolicy_update_policy_category_subscription nel contesto del database di sistema msdb.  
   
- Per ottenere valori per *policy_category_subscription_id* e per *policy_category*, è possibile utilizzare la query seguente:  
+ Per ottenere valori per *policy_category_subscription_id* e per *policy_category*, è possibile usare la query seguente:  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_type, a.target_object  
@@ -77,7 +76,7 @@ INNER JOIN msdb.dbo.syspolicy_policy_categories AS b
 ON a.policy_category_id = b.policy_category_id;  
 ```  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

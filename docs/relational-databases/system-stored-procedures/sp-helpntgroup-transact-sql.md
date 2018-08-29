@@ -1,5 +1,5 @@
 ---
-title: sp_helpntgroup (Transact-SQL) | Documenti Microsoft
+title: sp_helpntgroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpntgroup
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d47be90ed518d818dfc731121215935f30bf9a1f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f049e76dc7d31331c0939c9d24809f8752ea9f7c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247812"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032593"
 ---
 # <a name="sphelpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@ntname =** ] **'***nome***'**  
- Nome del gruppo di Windows. *nome* viene **sysname**, con un valore predefinito è NULL. *nome* deve essere un gruppo di Windows valido con accesso al database corrente. Se *nome* non viene specificato, l'output vengono inclusi tutti i gruppi di Windows con accesso al database corrente.  
+ Nome del gruppo di Windows. *nome* viene **sysname**, con un valore predefinito è NULL. *nome* deve essere un gruppo di Windows valido con accesso al database corrente. Se *nome* non viene specificato, tutti i gruppi di Windows con accesso al database corrente vengono inclusi nell'output.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -59,10 +59,10 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |**SID**|**varbinary(85)**|ID di sicurezza (SID) del **NTGroupName**.|  
 |**HasDbAccess**|**int**|1 = Il gruppo di Windows dispone dell'accesso al database.|  
   
-## <a name="remarks"></a>Osservazioni  
- Per visualizzare un elenco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruoli nel database corrente, utilizzare **sp_helprole**.  
+## <a name="remarks"></a>Note  
+ Per visualizzare un elenco del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruoli nel database corrente, usare **sp_helprole**.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  

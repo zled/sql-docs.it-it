@@ -1,5 +1,5 @@
 ---
-title: sp_changearticlecolumndatatype (Transact-SQL) | Documenti Microsoft
+title: sp_changearticlecolumndatatype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04da16aadb8caf05ee28882c11658e81bf5bbfe7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 017131fd7bda406fdee178d8e36ab5443c487d4d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989646"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026627"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "32989646"
   Modifica il mapping del tipo di dati della colonna dell'articolo per una pubblicazione Oracle. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
 > [!NOTE]  
->  Sono disponibili per impostazione predefinita i mapping dei tipi di dati tra i tipi supportati dal server di pubblicazione. Utilizzare **sp_changearticlecolumndatatype** solo quando si esegue l'override di queste impostazioni predefinite.  
+>  Sono disponibili per impostazione predefinita i mapping dei tipi di dati tra i tipi supportati dal server di pubblicazione. Uso **sp_changearticlecolumndatatype** solo quando si esegue l'override delle impostazioni predefinite.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +64,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  Nome della colonna per cui modificare il mapping dei tipi di dati. *colonna* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@type** =] **'***tipo***'**  
- È il nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il tipo di dati nella colonna di destinazione. *tipo di* viene **sysname**, con un valore predefinito è NULL.  
+ È il nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *tipo di* viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@length** =] *lunghezza*  
  Lunghezza del tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella colonna di destinazione. *lunghezza* viene **bigint**, con un valore predefinito è NULL.  
@@ -77,20 +76,20 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **Sp_changearticlecolumndatatype** viene usato per sostituire i mapping dei tipi di dati predefiniti tra i tipi supportati di server di pubblicazione (Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Per visualizzare questi mapping dei tipi di dati predefiniti, eseguire [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
+## <a name="remarks"></a>Note  
+ **Sp_changearticlecolumndatatype** viene usato per sostituire il mapping dei tipi di dati predefiniti tra i tipi supportati di server di pubblicazione (Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Per visualizzare questi mapping dei tipi di dati predefiniti, eseguire [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
   
- **sp_changearticlecolumndatatype** è supportato solo per server di pubblicazione Oracle. Se si esegue questa stored procedure su una pubblicazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene generato un errore.  
+ **sp_changearticlecolumndatatype** è supportata solo per i server di pubblicazione Oracle. Se si esegue questa stored procedure su una pubblicazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene generato un errore.  
   
  **sp_changearticlecolumndatatype** deve essere eseguita per ogni mapping di colonna di articolo che deve essere modificata.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_changearticlecolumndatatype**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_changearticlecolumndatatype**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modifica delle proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Modificare le proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

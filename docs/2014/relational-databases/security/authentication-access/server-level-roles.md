@@ -21,16 +21,15 @@ helpviewer_keywords:
 - server-level roles [SQL Server]
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8c2878ee1142dfb7069febb652dac6a3aceaba97
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87bbf94aa898d19a8f3a96d059644848ce95a298
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301901"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035311"
 ---
 # <a name="server-level-roles"></a>Ruoli a livello di server
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce ruoli a livello di server per semplificare la gestione delle autorizzazioni in un server. Questi ruoli sono entità di sicurezza che raggruppano altre entità. L'ambito delle autorizzazioni dei ruoli a livello di server è l'intero server. I*ruoli* equivalgono ai *gruppi* nel sistema operativo Windows.  

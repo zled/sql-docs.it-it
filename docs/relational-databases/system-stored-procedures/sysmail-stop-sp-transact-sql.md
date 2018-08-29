@@ -1,5 +1,5 @@
 ---
-title: sysmail_stop_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_stop_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_stop_sp
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
-caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f304337470d0117b6f44d03bf7e459c6b9f51d5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0d52e7f18373303673afc3e5ef67aeb91e094360
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257783"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021135"
 ---
 # <a name="sysmailstopsp-transact-sql"></a>sysmail_stop_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,25 +43,25 @@ sysmail_stop_sp
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Nessuno  
+ None  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Questa stored procedure è nel **msdb** database.  
   
  Questa stored procedure arresta la coda di Posta elettronica database contenente le richieste dei messaggi in uscita e disabilita [!INCLUDE[ssSB](../../includes/sssb-md.md)] per il programma esterno.  
   
  Se le code vengono arrestate, il programma esterno Posta elettronica database non elabora i messaggi. Questa stored procedure consente di arrestare l'esecuzione di Posta elettronica database per motivi di manutenzione o risoluzione dei problemi.  
   
- Per avviare posta elettronica Database, utilizzare **sysmail_start_sp**. Si noti che **sp_send_dbmail** continua ad accettare posta elettronica quando il [!INCLUDE[ssSB](../../includes/sssb-md.md)] gli oggetti vengono arrestati.  
+ Per avviare posta elettronica Database, usare **sysmail_start_sp**. Si noti che **sp_send_dbmail** continua ad accettare posta elettronica quando la [!INCLUDE[ssSB](../../includes/sssb-md.md)] gli oggetti sono stati arrestati.  
   
 > [!NOTE]  
->  Questa stored procedure arresta solo le code di Posta elettronica database e non disattiva il recapito dei messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] nel database. Questa stored procedure non disabilita le stored procedure estese di Posta elettronica database per ridurre la superficie di attacco. Per disabilitare le stored procedure estese, vedere il [opzione Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) del **sp_configure** stored procedure di sistema.  
+>  Questa stored procedure arresta solo le code di Posta elettronica database e non disattiva il recapito dei messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] nel database. Questa stored procedure non disabilita le stored procedure estese di Posta elettronica database per ridurre la superficie di attacco. Per disabilitare le stored procedure estese, vedere la [opzione Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) delle **sp_configure** stored procedure di sistema.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'arresto di posta elettronica Database nel **msdb** database. Nell'esempio si presuppone che il programma esterno Posta elettronica database sia stato abilitato.  

@@ -1,5 +1,5 @@
 ---
-title: Sys.trigger_event_types (Transact-SQL) | Documenti Microsoft
+title: Sys.trigger_event_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.trigger_event_types catalog view
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b9d5f6df14e02395ea204f7037d2324a0f936b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c2db90c3796263171c90ded10ef95ab6c632e4d1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219822"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024928"
 ---
 # <a name="systriggereventtypes-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "33219822"
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**type**|**int**|Tipo di evento o gruppo di eventi che attiva il trigger.|  
-|**type_name**|**nvarchar(64)**|Nome di un evento o gruppo di eventi. Questo valore può essere specificato nella clausola FOR di un [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) istruzione.|  
+|**type_name**|**nvarchar(64)**|Nome di un evento o gruppo di eventi. Questo valore può essere specificato nella clausola FOR di un' [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) istruzione.|  
 |**parent_type**|**int**|Tipo del gruppo di eventi padre dell'evento o del gruppo di eventi.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

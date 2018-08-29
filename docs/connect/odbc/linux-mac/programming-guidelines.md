@@ -12,40 +12,40 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd77c85b089c0167306aeaad5c6d65a313e77624
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3068d2a796e7e28e4eda58514cc316fe504bbce3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983437"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784962"
 ---
 # <a name="programming-guidelines"></a>Linee guida per la programmazione
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Le funzionalità di programmazione di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in macOS e Linux si basano su ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client si basa su ODBC in Windows Data Access Components ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250), Riferimento per i programmatori di ODBC).  
+Le funzionalità di programmazione di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in macOS e Linux si basano su ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client si basa su ODBC in Windows Data Access Components ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250), Riferimento per i programmatori di ODBC).  
 
-Un'applicazione ODBC può utilizzare Multiple Active Result Set (MARS) e altri [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] specifiche funzionalità includendo `/usr/local/include/msodbcsql.h` dopo aver incluso le intestazioni unixODBC (`sql.h`, `sqlext.h`, `sqltypes.h`, e `sqlucode.h`). Per elementi specifici di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], quindi, usare gli stessi nomi simbolici che si userebbero nelle applicazioni ODBC Windows.
+Un'applicazione ODBC può utilizzare Multiple Active Result Set (MARS) e altri [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specifiche funzionalità includendo `/usr/local/include/msodbcsql.h` dopo aver incluso le intestazioni unixODBC (`sql.h`, `sqlext.h`, `sqltypes.h`, e `sqlucode.h`). Per elementi specifici di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], quindi, usare gli stessi nomi simbolici che si userebbero nelle applicazioni ODBC Windows.
 
 ## <a name="available-features"></a>Funzionalità disponibili  
-Quando si usa il driver ODBC in macOS o Linux, sono valide le sezioni seguenti della documentazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client for ODBC ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)):  
+Quando si usa il driver ODBC in macOS o Linux, sono valide le sezioni seguenti della documentazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client for ODBC ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)):  
 
 -   [Comunicazione con SQL Server (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
--   [Supporto del timeout della connessione e delle query](http://msdn.microsoft.com/library/ms130822.aspx)  
--   [Cursori](http://msdn.microsoft.com/library/ms130794(SQL.110).aspx)  
+-   [Supporto del timeout della connessione e delle query](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+-   [Cursori](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
 -   [Miglioramenti relativi a data e ora (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
 -   [Esecuzione di query (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
--   [Gestione di errori e messaggi](http://msdn.microsoft.com/library/ms131289.aspx)  
--   [Autenticazione Kerberos](http://msdn.microsoft.com/library/cc280459.aspx)  
+-   [Gestione di errori e messaggi](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
+-   [Autenticazione Kerberos](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
 -   [Tipi CLR definiti dall'utente di grandi dimensioni (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
 -   [Esecuzione di transazioni (ODBC) (escluse le transazioni distribuite)](http://msdn.microsoft.com/library/ms131706.aspx)  
 -   [Risultati dell'elaborazione (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
--   [Esecuzione delle stored procedure](http://msdn.microsoft.com/library/ms131440.aspx)
+-   [Esecuzione delle stored procedure](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [Supporto per colonne di tipo sparse (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
--   [Crittografia SSL](http://msdn.microsoft.com/library/ms131691.aspx)
+-   [Crittografia SSL](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [Parametri con valori di tabella](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [UTF-8 e UTF-16 per l'interfaccia API dei comandi e dei dati](http://msdn.microsoft.com/library/ff878241.aspx)
--   [Uso delle funzioni catalogo](http://msdn.microsoft.com/library/ms131490.aspx)  
+-   [Uso delle funzioni catalogo](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## <a name="unsupported-features"></a>Caratteristiche non supportate
 
@@ -110,7 +110,7 @@ Di conseguenza, in un Mac o Linux ambiente tipico in cui la codifica è UTF-8, g
 
 I dati SQLWCHAR devono essere in formato UTF-16LE (Little Endian).
 
-Quando si associano parametri di input con SQLBindParameter, se un carattere narrow SQL digitare, ad esempio SQL_VARCHAR viene specificato, il driver converte i dati forniti dal client di codifica per il valore predefinito (in genere la tabella codici 1252) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] codifica. Per i parametri di output, il driver converte dalla codifica specificata nelle informazioni di regole di confronto associate ai dati al client di codifica. Tuttavia, potrebbe verificarsi una perdita dei dati---caratteri nella codifica di origine non rappresentabile nella codifica di destinazione verranno convertito in un punto interrogativo ('? ').
+Quando si associano parametri di input con SQLBindParameter, se un carattere narrow SQL digitare, ad esempio SQL_VARCHAR viene specificato, il driver converte i dati forniti dal client di codifica per il valore predefinito (in genere la tabella codici 1252) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] codifica. Per i parametri di output, il driver converte dalla codifica specificata nelle informazioni di regole di confronto associate ai dati al client di codifica. Tuttavia, potrebbe verificarsi una perdita dei dati---caratteri nella codifica di origine non rappresentabile nella codifica di destinazione verranno convertito in un punto interrogativo ('? ').
 
 Per evitare la perdita di dati quando si associano parametri di input, specificare un tipo di carattere SQL Unicode, ad esempio SQL_NVARCHAR. In questo caso, il driver converte dal client di codifica UTF-16, che possono rappresentare tutti i caratteri Unicode. Inoltre, la colonna di destinazione o il parametro nel server deve inoltre essere un tipo di Unicode (**nchar**, **nvarchar**, **ntext**) o a uno con delle regole di confronto/codifica, che può essere rappresenta tutti i caratteri di dati di origine. Per evitare la perdita di dati con i parametri di output, specificare un tipo SQL Unicode e un Unicode C tipo (SQL_C_WCHAR), causando il driver restituire dati come UTF-16; o C narrow digitare e verificare che il client di codifica può rappresentare tutti i caratteri dei dati di origine (questo è sempre possibile eseguire con UTF-8).
 
@@ -122,14 +122,14 @@ In ODBC Driver 13 e 13.1, quando caratteri multibyte UTF-8 o caratteri sostituti
 
 ## <a name="additional-notes"></a>Note aggiuntive  
 
-1.  È possibile effettuare una connessione amministrativa dedicata (DAC) usando l'autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] e **host, porta**. Un membro del ruolo Sysadmin deve prima individuare la porta DAC. Visualizzare [connessione di diagnostica per gli amministratori di Database](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port) per individuare la modalità. Ad esempio, se la porta DAC è 33000, è possibile connettersi a questa porta con `sqlcmd` come indicato di seguito:  
+1.  È possibile effettuare una connessione amministrativa dedicata (DAC) usando l'autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e **host, porta**. Un membro del ruolo Sysadmin deve prima individuare la porta DAC. Visualizzare [connessione di diagnostica per gli amministratori di Database](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port) per individuare la modalità. Ad esempio, se la porta DAC è 33000, è possibile connettersi a questa porta con `sqlcmd` come indicato di seguito:  
 
     ```
     sqlcmd –U <user> -P <pwd> -S <host>,33000
     ```
 
     > [!NOTE]  
-    > Le connessioni DAC devono usare l'autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+    > Le connessioni DAC devono usare l'autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
     
 2.  Gestione driver UnixODBC restituisce "Identificatore di opzione o di attributo non valido" per tutti gli attributi di istruzione quando questi vengono passati tramite SQLSetConnectAttr. In Windows, quando SQLSetConnectAttr riceve il valore di un attributo di istruzione, il driver imposta questo valore in tutte le istruzioni attive figlio dell'handle di connessione.  
 

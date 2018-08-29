@@ -14,18 +14,18 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2556a8d637b78dbc0c0ab9c8740d1e63f156e3b
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: a463bcd89bd2b38b6f0c6ec316039bc28c49d4f3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662173"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784925"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Utilizzo di una stored procedure con parametri di output
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Una stored procedure [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] che è possibile chiamare è una procedura che restituisce uno o più parametri OUT, ovvero parametri usati dalla stored procedure per restituire i dati all'applicazione chiamante. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] rende disponibile la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), che è possibile usare per chiamare stored procedure di questo tipo ed elaborare i dati restituiti da queste.
+Una stored procedure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile chiamare è una procedura che restituisce uno o più parametri OUT, ovvero parametri usati dalla stored procedure per restituire i dati all'applicazione chiamante. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] rende disponibile la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), che è possibile usare per chiamare stored procedure di questo tipo ed elaborare i dati restituiti da queste.
 
 Quando si chiama questo tipo di stored procedure usando il driver JDBC, è necessario usare la sequenza di escape SQL `call` insieme al metodo [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) della classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). La sintassi della sequenza di escape `call` con parametri OUT è la seguente:
 
@@ -36,12 +36,12 @@ Quando si chiama questo tipo di stored procedure usando il driver JDBC, è neces
 
 Quando si costruisce la sequenza di escape `call`, specificare i parametri OUT usando il carattere ? (punto interrogativo), che funge da segnaposto per i valori di parametro che verranno restituiti dalla stored procedure. Per specificare il valore di un parametro OUT, è necessario specificare il tipo di dati di ogni parametro usando il metodo [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) della classe SQLServerCallableStatement prima di eseguire la stored procedure.
 
-Il valore specificato per il parametro OUT nel metodo registerOutParameter deve essere uno dei tipi di dati JDBC presenti in java.sql.Types, che a sua volta corrisponde a uno dei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nativi. Per altre informazioni su Microsoft JDBC e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di dati, vedere [informazioni sui tipi di dati del Driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
+Il valore specificato per il parametro OUT nel metodo registerOutParameter deve essere uno dei tipi di dati JDBC presenti in java.sql.Types, che a sua volta corrisponde a uno dei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativi. Per altre informazioni su Microsoft JDBC e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati, vedere [informazioni sui tipi di dati del Driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
 
 Quando si passa un valore al metodo registerOutParameter per un parametro OUT, è necessario specificare non solo il tipo di dati da usare per il parametro, ma anche la posizione ordinale o il nome del parametro nella stored procedure. Ad esempio, se la stored procedure contiene un unico parametro OUT, il valore ordinale sarà 1. Se la stored procedure contiene due parametri, il primo valore ordinale sarà 1 e il secondo sarà 2.
 
 > [!NOTE]  
-> Il driver JDBC non supporta l'uso dei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] CURSOR, SQLVARIANT, TABLE e TIMESTAMP come parametri OUT.
+> Il driver JDBC non supporta l'uso dei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CURSOR, SQLVARIANT, TABLE e TIMESTAMP come parametri OUT.
 
 Come esempio, viene creata la seguente stored procedure nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
 

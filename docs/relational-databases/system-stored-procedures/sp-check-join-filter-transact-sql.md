@@ -1,5 +1,5 @@
 ---
-title: sp_check_join_filter (Transact-SQL) | Documenti Microsoft
+title: sp_check_join_filter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - sp_check_join_filter
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83e25f05600cb1a9319b865c4f7e0340e139dec5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c1941e4aeec64d388f93dc6d6e026c08011786
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991108"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025693"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,22 +66,22 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|Specifica se la pubblicazione consente di partizioni pre-calcolate. dove **1** significa che è possono utilizzare le partizioni di valore, e **0** significa che non possono essere utilizzate.|  
-|**has_dynamic_filters**|**bit**|Specifica se la clausola di filtro include almeno una funzione di filtro con parametri; dove **1** indica che viene utilizzata una funzione di filtro con parametri, e **0** significa che tale funzione non è stata utilizzata.|  
+|**can_use_partition_groups**|**bit**|Se la pubblicazione consente le partizioni pre-calcolate. in cui **1** significa che è possono utilizzare le partizioni di valore, e **0** significa che non possono essere utilizzate.|  
+|**has_dynamic_filters**|**bit**|Se la clausola di filtro include almeno una funzione di filtro con parametri; in cui **1** indica che viene utilizzata una funzione di filtro con parametri, e **0** significa che tale funzione non viene utilizzata.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Elenco delle funzioni nella clausola di filtro che definiscono un filtro con parametri per un articolo, separate con un punto e virgola.|  
-|**uses_host_name**|**bit**|Se il [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) funzione viene utilizzata nella clausola di filtro, in cui **1** significa che questa funzione è presenta.|  
-|**uses_suser_sname**|**bit**|Se il [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) funzione viene utilizzata nella clausola di filtro, in cui **1** significa che questa funzione è presenta.|  
+|**uses_host_name**|**bit**|Se il [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) funzione viene utilizzata nella clausola di filtro, in cui **1** indica che questa funzione viene utilizzata.|  
+|**uses_suser_sname**|**bit**|Se il [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) funzione viene utilizzata nella clausola di filtro, in cui **1** indica che questa funzione viene utilizzata.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_check_join_filter** viene utilizzata nella replica di tipo merge.  
   
- **sp_check_join_filter** possa essere eseguita su tutte le tabelle correlate anche se non è pubblicata. Questa stored procedure può essere utilizzata per verificare una clausola di filtro di join prima della definizione di un filtro di join tra due articoli.  
+ **sp_check_join_filter** può essere eseguito su tutte le tabelle correlate anche se non è pubblicata. Questa stored procedure può essere utilizzata per verificare una clausola di filtro di join prima della definizione di un filtro di join tra due articoli.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_check_join_filter**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_check_join_filter**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

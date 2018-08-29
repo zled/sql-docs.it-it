@@ -1,5 +1,5 @@
 ---
-title: sp_registercustomresolver (Transact-SQL) | Documenti Microsoft
+title: sp_registercustomresolver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_registercustomresolver
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56bc885e9c149b736bee5f5662816fdb90a144eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d891a458c6f150a72d5c04393825e49b5a0dabe2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998958"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027148"
 ---
 # <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,25 +53,25 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
  Specifica un nome descrittivo per la logica di business personalizzata in fase di registrazione. *article_resolver* viene **nvarchar(255**, non prevede alcun valore predefinito.  
   
  [  **@resolver_clsid=** ] **'***resolver_clsid***'**  
- Specifica il valore CLSID dell'oggetto COM in fase di registrazione. Logica di business personalizzata *resolver_clsid* è **nvarchar (50)**, con un valore predefinito è NULL. È necessario impostare questo parametro su un valore CLSID valido oppure su NULL in caso di registrazione di un assembly di un gestore della logica di business.  
+ Specifica il valore CLSID dell'oggetto COM in fase di registrazione. Logica di business personalizzata *resolver_clsid* viene **nvarchar (50)**, con un valore predefinito è NULL. È necessario impostare questo parametro su un valore CLSID valido oppure su NULL in caso di registrazione di un assembly di un gestore della logica di business.  
   
  [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'**  
- Specifica il tipo di logica di business personalizzata di cui è in corso la registrazione. *is_dotnet_assembly* viene **nvarchar(50**, con un valore predefinito è FALSE. **true** indica che la logica di business personalizzata è un gestore della logica di business Assembly. **false** indica che si tratta di un componente COM.  
+ Specifica il tipo di logica di business personalizzata di cui è in corso la registrazione. *is_dotnet_assembly* viene **nvarchar (50)**, con un valore predefinito è FALSE. **true** indica che la logica di business personalizzata è un gestore della logica di business stesso Assembly. **false** indica che è un componente COM.  
   
  [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***'**  
- Nome dell'assembly che implementa il gestore della logica di business. *dotnet_assembly_name* viene **nvarchar(255**, con valore predefinito è NULL. È necessario specificare il percorso completo dell'assembly se non viene distribuito nella stessa directory dell'eseguibile dell'agente di merge, nella stessa directory dell'applicazione che avvia l'agente di merge in modalità sincrona oppure nella Global Assembly Cache (GAC).  
+ Nome dell'assembly che implementa il gestore della logica di business. *dotnet_assembly_name* viene **nvarchar(255**, con un valore predefinito NULL. È necessario specificare il percorso completo dell'assembly se non viene distribuito nella stessa directory dell'eseguibile dell'agente di merge, nella stessa directory dell'applicazione che avvia l'agente di merge in modalità sincrona oppure nella Global Assembly Cache (GAC).  
   
  [  **@dotnet_class_name=** ] **'***dotnet_class_name***'**  
- Nome della classe che sostituisce <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per implementare il gestore della logica di business. Il nome deve essere specificato nel formato **Namespace. ClassName**. *dotnet_class_name* viene **nvarchar(255**, con valore predefinito è NULL.  
+ Nome della classe che sostituisce <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per implementare il gestore della logica di business. Il nome deve essere specificato nel formato **ClassName**. *dotnet_class_name* viene **nvarchar(255**, con un valore predefinito NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_registercustomresolver** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_registercustomresolver**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_registercustomresolver**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementare un gestore della logica di business per un articolo di merge](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   

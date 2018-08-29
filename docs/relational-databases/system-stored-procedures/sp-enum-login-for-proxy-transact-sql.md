@@ -1,5 +1,5 @@
 ---
-title: sp_enum_login_for_proxy (Transact-SQL) | Documenti Microsoft
+title: sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-caps.latest.revision: 18
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f3c4751f3d9dfaa60110f7e859bc8157de2c9246
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7faec16e49bb2776babb126a5f4d314889b70c2b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249933"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036273"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +46,16 @@ sp_enum_login_for_proxy
   
 ## <a name="arguments"></a>Argomenti  
  [ **@name**=] '*nome*'  
- Il nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entità, l'account di accesso, ruolo del server o **msdb** ruolo del database per l'elenco dei proxy. Il nome è **nvarchar (256)**, con un valore predefinito è NULL.  
+ Il nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] principale, account di accesso, ruolo del server, oppure **msdb** ruolo del database per l'elenco dei proxy. Il nome è **nvarchar(256)**, con un valore predefinito è NULL.  
   
  [ **@proxy_id**=] *id*  
- Numero di identificazione del proxy per cui visualizzare un elenco di informazioni. Il *proxy_id* è **int**, con un valore predefinito è NULL. Entrambi i *id* o *proxy_name* può essere specificato.  
+ Numero di identificazione del proxy per cui visualizzare un elenco di informazioni. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
   
  [ **@proxy_name**=] **'***proxy_name***'**  
- Nome del proxy per cui visualizzare un elenco di informazioni. Il *proxy_name* è **sysname**, con un valore predefinito è NULL. Entrambi i *id* o *proxy_name* può essere specificato.  
+ Nome del proxy per cui visualizzare un elenco di informazioni. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -68,16 +66,16 @@ sp_enum_login_for_proxy
 |**name**|**sysname**|Nome dell'entità di sicurezza per l'associazione.|  
 |**flags**|**int**|Tipo dell'entità di sicurezza.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso<br /><br /> **1** = ruolo predefinito del sistema<br /><br /> **2** = ruolo del database in **msdb**|  
   
-## <a name="remarks"></a>Osservazioni  
- Quando viene specificato alcun parametro, **sp_enum_login_for_proxy** Elenca informazioni su tutti gli account di accesso nell'istanza per ogni proxy.  
+## <a name="remarks"></a>Note  
+ Quando viene specificato alcun parametro, **sp_enum_login_for_proxy** Elenca le informazioni su tutti gli account di accesso nell'istanza per ogni proxy.  
   
- Quando viene fornito un id o un nome del proxy, **sp_enum_login_for_proxy** Elenca gli account di accesso che dispongono dell'accesso al proxy. Quando viene fornito un nome di accesso, **sp_enum_login_for_proxy** Elenca l'accesso a proxy con l'account di accesso.  
+ Quando viene specificato il nome del proxy o un id del proxy, **sp_enum_login_for_proxy** Elenca gli account di accesso che dispongono dell'accesso al proxy. Quando viene specificato un nome di account di accesso, **sp_enum_login_for_proxy** i proxy che l'account di accesso ha accesso a elenchi.  
   
  Quando vengono specificate le informazioni sul proxy e un nome dell'account di accesso, il set di risultati restituisce una riga se l'account di accesso specificato può accedere al proxy specificato.  
   
- Questa stored procedure si trova in **msdb**.  
+ Questa stored procedure si trova nella **msdb**.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Le autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  

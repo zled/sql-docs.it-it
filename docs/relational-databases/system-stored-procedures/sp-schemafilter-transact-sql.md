@@ -1,5 +1,5 @@
 ---
-title: sp_schemafilter (Transact-SQL) | Documenti Microsoft
+title: sp_schemafilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_schemafilter
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce33fa1ffb73f3ba663eb9ec7fedf0e13d5ec8e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4da23d87736d7ad9af4c00c5f4704e9cbbdd5160
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997518"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027035"
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +51,12 @@ sp_schemafilter [ @publisher = ] 'publisher'
  È il nome del non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [**@schema** =] **'***schema***'**  
- Nome dello schema. *schema* viene **sysname**, con valore predefinito è NULL.  
+ Nome dello schema. *lo schema* viene **sysname**, con un valore predefinito NULL.  
   
  [**@operation** =] **'***operazione***'**  
  Operazione da eseguire nello schema. *operazione* viene **nvarchar(4)**, e può essere uno dei valori seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**add**|Aggiunge lo schema specificato all'elenco di schemi non idonei per la pubblicazione.|  
 |**drop**|Elimina lo schema specificato dall'elenco di schemi non idonei per la pubblicazione.|  
@@ -69,12 +69,12 @@ sp_schemafilter [ @publisher = ] 'publisher'
 |**NomeSchema**|**sysname**|Nome dello schema non idoneo per la pubblicazione.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_schemafilter** deve essere utilizzato solo per server di pubblicazione eterogenei.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server nel server di distribuzione possono eseguire **sp_schemafilter**.  
   
 ## <a name="see-also"></a>Vedere anche  

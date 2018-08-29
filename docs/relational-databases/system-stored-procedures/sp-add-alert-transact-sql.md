@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_alert
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
-caps.latest.revision: 40
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dd9e96ece5a5b8a3dc39c6246e0f2201bbffab1d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e727c63007942f2dd6d110860deb182b04ab1db1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240641"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034081"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,16 +61,16 @@ sp_add_alert [ @name = ] 'name'
  Nome dell'avviso. Tale nome viene visualizzato nel messaggio di posta elettronica o di cercapersone inviato in risposta all'avviso. Deve essere univoco e può contenere la percentuale (**%**) caratteri. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@message_id =** ] *message_id*  
- Numero dell'errore del messaggio che definisce l'avviso (Corrisponde in genere a un numero di errore di **sysmessages** tabella.) *message_id* è **int**, il valore predefinito è **0**. Se *gravità* viene utilizzato per definire l'avviso, *message_id* deve essere **0** o NULL.  
+ Numero dell'errore del messaggio che definisce l'avviso (Corrisponde in genere a un numero di errore il **sysmessages** tabella.) *message_id* viene **int**, il valore predefinito è **0**. Se *severity* viene usato per l'avviso, definire *message_id* deve essere **0** o NULL.  
   
 > [!NOTE]  
 >  Solo **sysmessages** errori scritti nel registro applicazioni di Microsoft Windows possono causare un avviso da inviare.  
   
  [  **@severity =** ] *gravità*  
- Il livello di gravità (da **1** tramite **25**) che definisce l'avviso. Qualsiasi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messaggio archiviato nel **sysmessages** inviata nella tabella di [!INCLUDE[msCoName](../../includes/msconame-md.md)] nel registro applicazioni di Windows con indicazione della gravità provoca l'avviso da inviare. *livello di gravità* viene **int**, con un valore predefinito è 0. Se *message_id* viene utilizzato per definire l'avviso, *gravità* deve essere **0**.  
+ Il livello di gravità (da **1** attraverso **25**) che definisce l'avviso. Eventuali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messaggio archiviato nel **sysmessages** inviata alla tabella il [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows con indicazione della gravità provoca l'avviso da inviare. *livello di gravità* viene **int**, con un valore predefinito è 0. Se *message_id* viene usato per l'avviso, definire *gravità* deve essere **0**.  
   
- [  **@enabled =** ] *abilitato*  
- Indica lo stato corrente dell'avviso. *abilitata* viene **tinyint**, con un valore predefinito è 1 (abilitato). Se **0**, l'avviso non è abilitato e non viene generato.  
+ [  **@enabled =** ] *abilitata*  
+ Indica lo stato corrente dell'avviso. *abilitata* viene **tinyint**, con un valore predefinito è 1 (abilitato). Se **0**, l'avviso non è abilitato e non venga attivato.  
   
  [  **@delay_between_responses =** ] *delay_between_responses*  
  Periodo di attesa, in secondi, tra le risposte all'avviso. *delay_between_responses*viene **int**, il valore predefinito è **0**, non ovvero non esiste alcun intervallo di attesa tra le risposte (ogni occorrenza dell'avviso genera una risposta). La risposta può assumere una delle due forme seguenti:  
@@ -83,23 +82,23 @@ sp_add_alert [ @name = ] 'name'
  L'impostazione di tale valore impedisce, ad esempio, l'invio di più messaggi di posta elettronica quando un avviso viene generato ripetutamente in un breve periodo di tempo.  
   
  [  **@notification_message =** ] **'***notification_message***'**  
- Messaggio aggiuntivo facoltativo inviato all'operatore come parte del messaggio di posta elettronica, **net send**, o una notifica tramite cercapersone. *notification_message* viene **nvarchar(512)**, con un valore predefinito è NULL. Specifica di *notification_message* è utile per aggiungere note speciali, ad esempio procedure di correzione.  
+ Messaggio aggiuntivo facoltativo inviato all'operatore come parte del messaggio di posta elettronica, **net send**, o notifica tramite cercapersone. *notification_message* viene **nvarchar(512)**, con un valore predefinito è NULL. Che specifica *notification_message* è utile per aggiungere note speciali, ad esempio procedure correttive.  
   
  [ **@include_event_description_in =** ] *include_event_description_in*  
- Indica se la descrizione dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere inclusa nel messaggio di notifica. *include_event_description_in*viene **tinyint**, il valore predefinito è **5** (posta elettronica e **net send**) e può avere uno o più dei valori seguenti combinati con un **o** operatore logico.  
+ Indica se la descrizione dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere inclusa nel messaggio di notifica. *include_event_description_in*viene **tinyint**, il valore predefinito è **5** (messaggio di posta elettronica e **net send**) e può avere uno o più dei valori seguenti combinati con un **o** operatore logico.  
   
 > [!IMPORTANT]  
 >  Le opzioni Cercapersone e **net send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
-|**0**|Nessuno|  
+|**0**|None|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
 |**4**|**net send**|  
   
  [  **@database_name =** ] **'***database***'**  
- Database in cui deve verificarsi l'errore affinché l'avviso venga generato. Se *database*non viene specificato, l'avviso viene attivato indipendentemente dalla posizione dell'errore. *database* viene **sysname**. I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
+ Database in cui deve verificarsi l'errore affinché l'avviso venga generato. Se *database*viene omesso, l'avviso viene attivato indipendentemente dalla posizione dell'errore. *database* viene **sysname**. I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
   
  [  **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
  Sequenza di caratteri della descrizione dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword_pattern* viene **nvarchar(100)**, con un valore predefinito è NULL. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table %**).  
@@ -108,10 +107,10 @@ sp_add_alert [ @name = ] 'name'
  Numero di identificazione del processo da eseguire in risposta all'avviso. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name =** ] **'***job_name***'**  
- Nome del processo da eseguire in risposta all'avviso. *job_name*viene **sysname**, con un valore predefinito è NULL.  
+ Nome del processo da eseguire in risposta all'avviso. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+>  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  Non implementato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0. *raise_snmp_trap* viene **tinyint**, con un valore predefinito è 0.  
@@ -135,12 +134,12 @@ sp_add_alert [ @name = ] 'name'
  Query che consente di specificare l'evento WMI per l'avviso. *Wmi_query* viene **nvarchar(512)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_add_alert** deve essere eseguita la **msdb** database.  
   
  Di seguito sono descritti i casi in cui gli errori/messaggi generati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e da applicazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono inviati al registro applicazioni di Windows in modo da poter generare avvisi:  
@@ -149,7 +148,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   Qualsiasi istruzione RAISERROR richiamata con la clausola WITH LOG  
   
--   Qualsiasi **Sys. Messages** errore modificato o creato tramite **sp_altermessage**  
+-   Eventuali **Sys. Messages** errore modificato o creato tramite **sp_altermessage**  
   
 -   Qualsiasi evento registrato tramite **xp_logevent**  
   
@@ -165,7 +164,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   Gli eventi generati con la stored procedure **xp_logevent** si verificano nel database master. Pertanto, **xp_logevent** genera un avviso solo se **@database_name** per l'avviso è **'master'** o NULL.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_alert**.  
   
 ## <a name="examples"></a>Esempi  

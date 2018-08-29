@@ -1,5 +1,5 @@
 ---
-title: sp_helpsubscriptionerrors (Transact-SQL) | Documenti Microsoft
+title: sp_helpsubscriptionerrors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_helpsubscriptionerrors
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d02a5a5323956bb5835d41ff3c9df6fcccf630d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 870e8197a8182ab813ea8b165b46b4888f96726e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031964"
 ---
 # <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 |**time**|**datetime**|Ora in cui si è verificato l'errore.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|ID del tipo di origine dell'errore.|  
-|**source_name**|**Nvarchar (100)**|Nome dell'origine dell'errore.|  
+|**source_name**|**Nvarchar(100)**|Nome dell'origine dell'errore.|  
 |**error_code**|**sysname**|Codice di errore.|  
 |**error_text**|**ntext**|Messaggio di errore.|  
 |**xact_seqno**|**varbinary(16)**|Numero iniziale di sequenza del file di log delle transazioni relativo al batch con errori di esecuzione. Viene utilizzato solo dagli agenti di distribuzione e corrisponde al numero di sequenza del log delle transazioni per la prima transazione nel batch con errori di esecuzione.|  
@@ -79,13 +80,13 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 |**session_id**|**int**|ID della sessione dell'agente in cui si è verificato l'errore.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_helpsubscriptionerrors** viene utilizzato con la replica transazionale e snapshot.  
+## <a name="remarks"></a>Note  
+ **sp_helpsubscriptionerrors** viene usato con la replica transazionale e snapshot.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_helpsubscriptionerrors**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_helpsubscriptionerrors**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   

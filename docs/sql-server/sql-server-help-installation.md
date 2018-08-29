@@ -16,12 +16,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 537b5ed189edfb66b2842179ad44b2da81a064dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e43296dc139f2e8b53454f088fc341ab40656f5f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036019"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774743"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Guida offline di SQL Server e Help Viewer
 
@@ -105,7 +105,7 @@ SSMS 17.x e VS 2015 e 2017 usano Help Viewer 2.x, che supporta ala Guida di SQL 
 |Riferimento al linguaggio XQuery (SQL Server) | Riferimento al linguaggio XQuery (SQL Server)|
 
 > [!NOTE]
-> Se Help Viewer si blocca mentre aggiunge il contenuto, modificare la riga Cache LastRefreshed="\<mm/gg/aaaa> 00:00:00" nel file %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings o HlpViewer_VisualStudiox_en-US.settings usando una data futura. Per altre informazioni su questo problema, vedere [Il visualizzatore della Guida di Visual Studio si blocca](https://msdn.microsoft.com/en-us/library/dd831853.aspx).
+> Se Help Viewer si blocca mentre aggiunge il contenuto, modificare la riga Cache LastRefreshed="\<mm/gg/aaaa> 00:00:00" nel file %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings o HlpViewer_VisualStudiox_en-US.settings usando una data futura. Per altre informazioni su questo problema, vedere [Il visualizzatore della Guida di Visual Studio si blocca](/visualstudio/welcome-to-visual-studio).
 
 **Per visualizzare il contenuto della Guida offline in SSMS con Help Viewer v2.x**
 

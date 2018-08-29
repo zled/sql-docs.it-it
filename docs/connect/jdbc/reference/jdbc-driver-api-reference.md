@@ -14,18 +14,18 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14e597d2788e57eb49903f52ebd40132ead9a35f
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 1a6949c49dc019e1dc7b9d875fb3ee7f38363a46
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174908"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785806"
 ---
 # <a name="jdbc-driver-api-reference"></a>Riferimento all'API del driver JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] specifica un'API che può essere usata all'interno del codice di programmazione Java per connettersi e interagire con un database [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+Il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] specifica un'API che può essere usata all'interno del codice di programmazione Java per connettersi e interagire con un database [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 
 
@@ -78,8 +78,8 @@ Documentazione per JDBC versione 6.0 e alcune versioni successive, è anche qui.
 |Nome interfaccia|Descrizione|  
 |--------------------|-----------------|  
 |[Interfaccia ISQLServerCallableStatement](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|Consente di specificare il nome della stored procedure da chiamare insieme ai parametri di input e di output.|  
-|[Interfaccia ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Rappresenta una connessione JDBC a un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].|  
-|[Classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|Rappresenta un elenco di proprietà specifiche della connessione a un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] usando un oggetto [ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
+|[Interfaccia ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Rappresenta una connessione JDBC a un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|[Classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|Rappresenta un elenco di proprietà specifiche della connessione a un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando un oggetto [ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)|Rappresenta l'implementazione di base della funzionalità dell'istruzione preparata di JDBC.|  
 |[ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)|Rappresenta un set di risultati JDBC.|  
 |[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|Rappresenta l'implementazione di base della funzionalità dell'istruzione JDBC.|
@@ -98,9 +98,9 @@ Documentazione per JDBC versione 6.0 e alcune versioni successive, è anche qui.
 |[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)|Implementa l'oggetto ISQLServerConnectopn.|  
 |[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)|Rappresenta connessioni di database fisiche per le gestioni dei pool di connessioni.|  
 |[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)|Rappresenta i metadati per il database.|  
-|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|Rappresenta un elenco di proprietà specifiche della connessione a un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] usando un oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
+|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|Rappresenta un elenco di proprietà specifiche della connessione a un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando un oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)|Rappresenta una object factory per la materializzazione delle origini dati dall'interfaccia JNDI (Java Naming and Directory Interface).|  
-|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|Rappresenta il driver JDBC. Questa classe include metodi per la connessione a un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] e per il recupero di informazioni sul driver JDBC.|  
+|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|Rappresenta il driver JDBC. Questa classe include metodi per la connessione a un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e per il recupero di informazioni sul driver JDBC.|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)|Rappresenta un'esecuzione non riuscita o incompleta di un'istruzione SQL.|  
 |[Classe SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md)|Rappresenta un oggetto CLOB (Character Large Binary Object) che utilizza il set di caratteri nazionali.|  
 |[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)|Rappresenta i metadati per i parametri delle istruzioni preparate.|  

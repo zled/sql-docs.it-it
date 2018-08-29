@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_validate_redirected_publisher
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89bb592d13d395bff62a09668efb9a3d0ecae60c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8dcf1b3562c693ae56c451f9b2bc6d267d5eec13
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978943"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020919"
 ---
 # <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "37978943"
   
  Se la convalida non riesce, vengono generati gli errori con la relativa descrizione.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Chiamante deve essere un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database per database di distribuzione o un membro di un elenco accesso pubblicazione per una pubblicazione definita associati al database di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  

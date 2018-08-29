@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_secondary_primary (Transact-SQL) | Documenti Microsoft
+title: sp_add_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f4f5ef8c72155b83595f04c92cdeb2c1cf16a34
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40e4e8e4ab9603648abe6f92ae99a287755390a8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239211"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019941"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,10 +73,10 @@ sp_add_log_shipping_secondary_primary
  Nome da utilizzare per il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent creato per copiare i backup del log delle transazioni nel server secondario. *copy_job_name* viene **sysname** e non può essere NULL.  
   
  [ **@restore_job_name** =] '*restore_job_name*'  
- È il nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo dell'agente nel server secondario che ripristina i backup del database secondario. *restore_job_name* viene **sysname** e non può essere NULL.  
+ È il nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo dell'agente nel server secondario che ripristina i backup nel database secondario. *restore_job_name* viene **sysname** e non può essere NULL.  
   
  [ **@file_retention_period** =] '*file_retention_period*'  
- Il periodo di tempo, espresso in minuti, che viene mantenuto un file di backup nel server secondario nel percorso specificato per il @backup_destination_directory parametro prima di essere eliminati. *history_retention_period* viene **int**, con un valore predefinito è NULL. Se non si specifica un valore, verrà utilizzato il valore 14420.  
+ Il periodo di tempo, espresso in minuti, che un file di backup viene mantenuto nel server secondario nel percorso specificato per il @backup_destination_directory parametro prima di essere eliminati. *history_retention_period* viene **int**, con un valore predefinito è NULL. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
  [ **@monitor_server** = ] '*monitor_server*'  
  Nome del server di monitoraggio. *Monitor_server* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
@@ -110,9 +109,9 @@ sp_add_log_shipping_secondary_primary
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_add_log_shipping_secondary_primary** deve essere eseguita la **master** database nel server secondario. Questa stored procedure esegue le operazioni seguenti:  
   
 1.  Genera un ID secondario per il server e il database primari specificati.  
@@ -123,14 +122,14 @@ sp_add_log_shipping_secondary_primary
   
     2.  Crea un processo di copia per l'ID secondario disabilitato.  
   
-    3.  Imposta l'ID di processo di copia di **log_shipping_secondary** voce per l'ID di processo del processo di copia.  
+    3.  Imposta l'ID di processo di copia **log_shipping_secondary** voce per l'ID del processo del processo di copia.  
   
     4.  Crea un processo di ripristino per l'ID secondario disabilitato.  
   
-    5.  Impostare l'ID di processo di ripristino nel **log_shipping_secondary** voce per l'ID di processo del processo di ripristino.  
+    5.  Impostare l'ID del processo nel **log_shipping_secondary** voce per l'ID del processo del processo di ripristino.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
   
 ## <a name="examples"></a>Esempi  
  In questo esempio viene illustrato l'utilizzo di **sp_add_log_shipping_secondary_primary** stored procedure per impostare le informazioni per il database primario [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nel server secondario.  
@@ -153,7 +152,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

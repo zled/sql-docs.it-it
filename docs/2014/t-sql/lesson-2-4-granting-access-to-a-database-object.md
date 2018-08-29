@@ -5,23 +5,21 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - granting access to database objects
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d07ed4bc46ef1872f656adb09ce1883b04514f02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca5d79ff168234a069a0afe321573e0c83d10dad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187568"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017916"
 ---
 # <a name="granting-access-to-a-database-object"></a>Concessione dell'accesso a un oggetto di database
   In qualità di amministratore, l'utente è autorizzato a eseguire l'istruzione SELECT dalla tabella **Products** e dalla vista **vw_Names**, nonché a eseguire la procedura **pr_Names**. All'utente Mary non sono tuttavia concesse tali autorizzazioni. Per concedere a tale utente le autorizzazioni necessarie, utilizzare l'istruzione GRANT.  

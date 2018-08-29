@@ -1,5 +1,5 @@
 ---
-title: sp_repldone (Transact-SQL) | Documenti Microsoft
+title: sp_repldone (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_repldone
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b06b31afb6daae2f6faa8436f0ec6ed88ef494ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eda5dc47a5fa841b29bc01634395acd7fff53ace
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000228"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024508"
 ---
 # <a name="sprepldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33000228"
   Aggiorna il record che identifica l'ultima transazione distribuita del server. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
 > [!CAUTION]  
->  Se si esegue **sp_repldone** manualmente, si potrebbero invalidare l'ordine e la coerenza delle transazioni recapitate. **sp_repldone** deve essere utilizzato solo per la risoluzione dei problemi di replica come indicato da un professionista del supporto tecnico esperto della replica.  
+>  Se si esegue **sp_repldone** manualmente, si potrebbero invalidare l'ordine e la consistenza delle transazioni recapitate. **sp_repldone** deve essere utilizzato solo per la risoluzione dei problemi di replica come indicato da un professionista del supporto tecnico esperto della replica.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +56,7 @@ sp_repldone [ @xactid= ] xactid
  È il numero di sequenza del log (LSN) del primo record relativo all'ultima transazione distribuita del server. *xactid* viene **binary(10)**, non prevede alcun valore predefinito.  
   
  [  **@xact_seqno=**] *xact_seqno*  
- È il numero LSN dell'ultimo record relativo all'ultima transazione distribuita del server. *xact_seqno* viene **binary(10)**, non prevede alcun valore predefinito.  
+ È il numero LSN dell'ultimo record per l'ultima transazione distribuita del server. *xact_seqno* viene **binary(10)**, non prevede alcun valore predefinito.  
   
  [  **@numtrans=**] *numtrans*  
  È il numero di transazioni distribuite. *numtrans* viene **int**, non prevede alcun valore predefinito.  
@@ -65,25 +65,25 @@ sp_repldone [ @xactid= ] xactid
  Numero di millisecondi, se specificato, necessario per distribuire l'ultimo batch di transazioni. *tempo* viene **int**, non prevede alcun valore predefinito.  
   
  [  **@reset=**] *reimpostare*  
- Stato della reimpostazione. *reimpostare* viene **int**, non prevede alcun valore predefinito. Se **1**, tutti replicate nel log delle transazioni contrassegnate come distribuite. Se **0**, il log delle transazioni viene reimpostato sulla prima transazione replicata e Nessuna transazione replicata viene contrassegnata come distribuita. *reimpostare* è valido solo quando entrambe *xactid* e *xact_seqno* sono NULL.  
+ Stato della reimpostazione. *reimpostare* viene **int**, non prevede alcun valore predefinito. Se **1**, replicate tutte le transazioni nel log vengono contrassegnate come distribuite. Se **0**, il log delle transazioni viene reimpostato sulla prima transazione replicata e Nessuna transazione replicata viene contrassegnata come distribuita. *reimpostare* è valido solo quando entrambe *xactid* e *xact_seqno* sono NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_repldone** viene utilizzata nella replica transazionale.  
   
- **sp_repldone** viene utilizzato dal processo di lettura log per tenere traccia delle transazioni che sono state distribuite.  
+ **sp_repldone** usata dal processo di lettura log per rilevare le transazioni distribuite.  
   
- Con **sp_repldone**, è possibile manualmente che il server che una transazione è stata replicata (inviata al server di distribuzione). È inoltre possibile cambiare la transazione contrassegnata come transazione successiva in attesa di replica e scorrere l'elenco delle transazioni replicate. Tutte le transazioni che precedono la transazione specificata, inclusa tale transazione, vengono contrassegnate come distribuite.  
+ Con **sp_repldone**, è possibile informare manualmente il server che una transazione è stata replicata (inviata ai server di distribuzione). È inoltre possibile cambiare la transazione contrassegnata come transazione successiva in attesa di replica e scorrere l'elenco delle transazioni replicate. Tutte le transazioni che precedono la transazione specificata, inclusa tale transazione, vengono contrassegnate come distribuite.  
   
- I parametri obbligatori *xactid* e *xact_seqno* possono essere ottenuti utilizzando **sp_repltrans** o **sp_replcmds**.  
+ I parametri obbligatori *xactid* e *xact_seqno* possono essere ottenuti utilizzando **sp_repltrans** oppure **sp_replcmds**.  
   
-## <a name="permissions"></a>Autorizzazioni  
- I membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_repldone**.  
+## <a name="permissions"></a>Permissions  
+ I membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_repldone**.  
   
 ## <a name="examples"></a>Esempi  
- Quando *xactid* è NULL, *xact_seqno* è NULL, e *reimpostare* è **1**, tutti replicate nel log delle transazioni contrassegnate come distribuite. Ciò risulta utile quando nel log delle transazioni sono presenti transazioni replicate non più valide e si desidera troncare il log, ad esempio:  
+ Quando *xactid* è NULL, *xact_seqno* è NULL, e *reimpostare* è **1**, tutto replicate nel log delle transazioni contrassegnate come distribuite. Ciò risulta utile quando nel log delle transazioni sono presenti transazioni replicate non più valide e si desidera troncare il log, ad esempio:  
   
 ```  
 EXEC sp_repldone @xactid = NULL, @xact_segno = NULL, @numtrans = 0,     @time = 0, @reset = 1  

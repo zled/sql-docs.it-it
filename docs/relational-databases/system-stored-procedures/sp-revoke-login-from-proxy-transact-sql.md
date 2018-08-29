@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_revoke_login_from_proxy
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6275facb81f14269eca19979c115c5ea80844563
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 66a96c8c55bf344c7750e4706ad8c89593a29fde
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253550"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027854"
 ---
 # <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,18 +50,18 @@ sp_revoke_login_from_proxy
  Il nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso, ruolo del server o **msdb** ruolo del database per rimuovere l'accesso. *nome* viene **nvarchar(256)** non prevede alcun valore predefinito.  
   
  [  **@proxy_id=** ] *id*  
- ID del proxy per il quale rimuovere l'accesso. Entrambi *id* o *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi. Il *id* è **int**, con un valore predefinito è NULL.  
+ ID del proxy per il quale rimuovere l'accesso. Entrambi *id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi. Il *id* viene **int**, con un valore predefinito è NULL.  
   
  [  **@proxy_name=** ] **'***proxy_name***'**  
- Nome del proxy per il quale rimuovere l'accesso. Entrambi *id* o *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi. Il *proxy_name* è **sysname**, con un valore predefinito è NULL.  
+ Nome del proxy per il quale rimuovere l'accesso. Entrambi *id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  L'esecuzione dei processi di proprietà dell'account di accesso che fanno riferimento al proxy corrente avranno esito negativo.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire questa stored procedure, è necessario che gli utenti siano membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  

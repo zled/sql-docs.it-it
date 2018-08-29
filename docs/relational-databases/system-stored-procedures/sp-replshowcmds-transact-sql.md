@@ -1,5 +1,5 @@
 ---
-title: sp_replshowcmds (Transact-SQL) | Documenti Microsoft
+title: sp_replshowcmds (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_replshowcmds
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74526c46a3758829a89c71d41c071070ec907d5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4572fb1e09be2064fda17860ac64beb495783177
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023430"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,20 +60,20 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**type**|**int**|Tipo di comando.|  
 |**comando**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_replshowcmds** viene utilizzata nella replica transazionale.  
   
- Utilizzando **sp_replshowcmds**, è possibile visualizzare le transazioni che non sono attualmente distribuite non (quelle che rimangono nel log delle transazioni che non sono state inviate al server di distribuzione).  
+ Usando **sp_replshowcmds**, è possibile visualizzare le transazioni che sono attualmente non distribuiti (quelle che rimangono nel log delle transazioni che non sono stati inviati al server di distribuzione).  
   
- I client che eseguono **sp_replshowcmds** e **sp_replcmds** all'interno dello stesso database ricevono l'errore 18752.  
+ I client che eseguono **sp_replshowcmds** e **sp_replcmds** nello stesso database ricevono l'errore 18752.  
   
- Per evitare questo errore, è necessario disconnettere il primo client o il ruolo del client come agente di lettura log deve essere liberato eseguendo **sp_replflush**. Dopo che tutti i client sono disconnessi dal lettore di log, **sp_replshowcmds** può essere eseguito correttamente.  
+ Per evitare questo errore, è necessario disconnettere il primo client o il ruolo del client come agente di lettura log deve essere liberato eseguendo **sp_replflush**. Dopo che tutti i client sono stati disconnessi dall'agente di lettura log **sp_replshowcmds** può essere eseguito correttamente.  
   
 > [!NOTE]  
->  **sp_replshowcmds** deve essere eseguito solo per risolvere eventuali problemi di replica.  
+>  **sp_replshowcmds** deve essere eseguito solo per risolvere i problemi con la replica.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_replshowcmds**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_replshowcmds**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Messaggi di errore](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_serveroption (Transact-SQL) | Documenti Microsoft
+title: sp_serveroption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/11/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_serveroption
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99f936f0a8d127dd33ebce8b86c0a958cafccf66
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 7222b3963e3c2ff3b96966d254c075bea0cd44ad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33260947"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025400"
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,33 +55,33 @@ sp_serveroption [@server = ] 'server'
   
 |valore|Description|  
 |-----------|-----------------|  
-|**regole di confronto compatibili**|Influisce sull'esecuzione delle query distribuite in server collegati. Se questa opzione è impostata su **true**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si presuppone che tutti i caratteri nel server collegato compatibili con il server locale, relativamente al set e regole di confronto di sequenza di caratteri (oppure di ordinamento). Ciò consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di inviare al provider i confronti per colonne di tipo carattere. Se questa opzione non è impostata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valuta sempre i confronti per le colonne di tipo carattere localmente.<br /><br /> Impostare questa opzione solo se nell'origine dei dati corrispondente al server collegato il set di caratteri e il tipo di ordinamento corrispondono a quelli del server locale.|  
-|**Nome delle regole di confronto**|Specifica il nome delle regole di confronto utilizzate dall'origine dei dati remota se **utilizzare regole di confronto remote** è **true** e l'origine dati non è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati. È necessario specificare il nome di uno dei set di regole di confronto supportate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Utilizzare questa opzione per accedere a un'origine dei dati OLE DB diversa da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]che utilizza regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Il server collegato deve supportare regole di confronto singole da utilizzare per tutte le colonne del server. Non impostare questa opzione quando il server collegato supporta più regole di confronto nella stessa origine dei dati oppure non è possibile stabilire se le regole di confronto del server collegato corrispondono a una delle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**Timeout connessione**|Secondi valuein di timeout per la connessione a un server collegato.<br /><br /> Se **0**, utilizzare il **sp_configure** predefinito.|  
-|**Accesso ai dati**|Consente di attivare e disabilitare un server collegato per l'accesso a query distribuite. Può essere utilizzata solo per **sys** aggiunte tramite voci **sp_addlinkedserver**.|  
+|**regole di confronto compatibili**|Influisce sull'esecuzione delle query distribuite in server collegati. Se questa opzione è impostata su **true**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presuppone che tutti i caratteri del server collegato sono compatibili con il server locale, relativamente al sequenza delle regole di confronto e set di caratteri (o ordinamento). Ciò consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di inviare al provider i confronti per colonne di tipo carattere. Se questa opzione non è impostata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valuta sempre i confronti per le colonne di tipo carattere localmente.<br /><br /> Impostare questa opzione solo se nell'origine dei dati corrispondente al server collegato il set di caratteri e il tipo di ordinamento corrispondono a quelli del server locale.|  
+|**nome delle regole di confronto**|Specifica il nome delle regole di confronto utilizzate dall'origine dei dati remota se **usare regole di confronto remote** viene **true** e l'origine dati non è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zdroj dat. È necessario specificare il nome di uno dei set di regole di confronto supportate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Utilizzare questa opzione per accedere a un'origine dei dati OLE DB diversa da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]che utilizza regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Il server collegato deve supportare regole di confronto singole da utilizzare per tutte le colonne del server. Non impostare questa opzione quando il server collegato supporta più regole di confronto nella stessa origine dei dati oppure non è possibile stabilire se le regole di confronto del server collegato corrispondono a una delle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**timeout della connessione**|Secondi valuein timeout per la connessione a un server collegato.<br /><br /> Se **0**, utilizzare il **sp_configure** predefinito.|  
+|**accesso ai dati**|Consente di attivare e disabilitare un server collegato per l'accesso a query distribuite. Può essere usato solo per **sys** le voci aggiunte tramite **sp_addlinkedserver**.|  
 |**dist**|Server di distribuzione.|  
-|**convalida differita dello schema**|Determina se lo schema delle tabelle remote viene controllato.<br /><br /> Se **true**, ignorare il controllo delle tabelle remote all'inizio della query dello schema.|  
+|**convalida differita dello schema**|Determina se lo schema delle tabelle remote viene controllato.<br /><br /> Se **true**, ignorare controllo dello schema delle tabelle remote all'inizio della query.|  
 |**pub**|Server di pubblicazione.|  
 |**timeout query**|Timeout per le query eseguite nel server collegato.<br /><br /> Se **0**, utilizzare il **sp_configure** predefinito.|  
 |**rpc**|Abilita l'esecuzione di chiamate RPC dal server specificato.|  
 |**chiamate RPC in uscita**|Abilita l'esecuzione di chiamate RPC al server specificato.|  
 |**sub**|Sottoscrittore.|  
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Utilizzare regole di confronto remote**|Determina se vengono utilizzate le regole di confronto di una colonna remota o di un server locale.<br /><br /> Se **true**, le regole di confronto delle colonne remote viene utilizzato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origini dati e regole di confronto specificate **nome regole di confronto** viene utilizzato per non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origini dati.<br /><br /> Se **false**, query distribuite vengono sempre utilizzate le regole di confronto predefinite del server locale, mentre **nome regole di confronto** e le regole di confronto delle colonne remote vengono ignorati. Il valore predefinito è **false**. (Il **false** valore è compatibile con la semantica delle regole di confronto utilizzata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.)|  
-|**promozione delle transazioni remote proc**|Questa opzione consente di proteggere le azioni di una procedura da server a server tramite una transazione MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Quando questa opzione è impostata su TRUE (o ON) chiama una stored procedure remota viene avviata una transazione distribuita e integrazione della transazione in MS DTC. L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene chiamata la stored procedure remota corrisponde all'origine della transazione e ne controlla il completamento. Quando per la connessione viene successivamente eseguita un'istruzione COMMIT TRANSACTION o ROLLBACK TRANSACTION, l'istanza di controllo richiede che il completamento della transazione distribuita nei computer interessati venga gestito da MS DTC.<br /><br /> Dopo l'avvio di una transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)], è possibile chiamare stored procedure remote in altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definite come server collegati. Tutti i server collegati sono integrati nella transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)]. MS DTC garantisce inoltre che la transazione venga completata in ogni server collegato.<br /><br /> Se questa opzione è impostata su FALSE (o OFF), una transazione locale non sarà promossa a transazione distribuita durante una chiamata di procedura remota in un server collegato.<br /><br /> Se prima di effettuare una chiamata di una procedura da server a server la transazione è già una transazione distribuita, questa opzione non ha alcun effetto. La chiamata di procedura nel server collegato verrà eseguita nella stessa transazione distribuita.<br /><br /> Se prima di effettuare una chiamata di una procedura da server a server non vi sono transazioni attive nella connessione, questa opzione non ha alcun effetto. La procedura viene quindi eseguita nel server collegato senza transazioni attive.<br /><br /> Il valore predefinito per questa opzione è TRUE (o ON).|  
+|**usare regole di confronto remote**|Determina se vengono utilizzate le regole di confronto di una colonna remota o di un server locale.<br /><br /> Se **true**, le regole di confronto delle colonne remote viene usato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origini dati e le regole di confronto specificato nel **nome regole di confronto** viene usato per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origini dati.<br /><br /> Se **false**, le query distribuite userà sempre le regole di confronto predefinite del server locale, mentre **nome regole di confronto** e le regole di confronto delle colonne remote vengono ignorate. Il valore predefinito è **false**. (Il **false** valore è compatibile con la semantica delle regole di confronto utilizzata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.)|  
+|**promozione delle transazioni procedure remote**|Questa opzione consente di proteggere le azioni di una procedura da server a server tramite una transazione MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Quando questa opzione è TRUE (o ON) chiama una stored procedure remota viene avviata una transazione distribuita e integrazione della transazione in MS DTC. L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene chiamata la stored procedure remota corrisponde all'origine della transazione e ne controlla il completamento. Quando per la connessione viene successivamente eseguita un'istruzione COMMIT TRANSACTION o ROLLBACK TRANSACTION, l'istanza di controllo richiede che il completamento della transazione distribuita nei computer interessati venga gestito da MS DTC.<br /><br /> Dopo l'avvio di una transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)], è possibile chiamare stored procedure remote in altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definite come server collegati. Tutti i server collegati sono integrati nella transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)]. MS DTC garantisce inoltre che la transazione venga completata in ogni server collegato.<br /><br /> Se questa opzione è impostata su FALSE (o OFF), una transazione locale non sarà promossa a transazione distribuita durante una chiamata di procedura remota in un server collegato.<br /><br /> Se prima di effettuare una chiamata di una procedura da server a server la transazione è già una transazione distribuita, questa opzione non ha alcun effetto. La chiamata di procedura nel server collegato verrà eseguita nella stessa transazione distribuita.<br /><br /> Se prima di effettuare una chiamata di una procedura da server a server non vi sono transazioni attive nella connessione, questa opzione non ha alcun effetto. La procedura viene quindi eseguita nel server collegato senza transazioni attive.<br /><br /> Il valore predefinito per questa opzione è TRUE (o ON).|  
   
  [  **@optvalue =**] **'***option_value***'**  
- Specifica o meno il *option_name* deve essere abilitato (**TRUE** o **su**) o disabilitato (**FALSE** o **off**). *option_value* viene **varchar (** 10 **)**, non prevede alcun valore predefinito.  
+ Specifica o meno il *option_name* deve essere abilitata (**TRUE** o **sul**) o disabilitato (**FALSE** o **off**). *option_value* viene **varchar (** 10 **)**, non prevede alcun valore predefinito.  
   
- *option_value* può essere un numero intero non negativo per il **timeout connessione** e **timeout query** opzioni. Per il **nome regole di confronto** opzione *option_value* può essere un nome regole di confronto o NULL.  
+ *option_value* può essere un numero intero non negativo per il **timeout della connessione** e **timeout query** opzioni. Per il **nome delle regole di confronto** opzione *option_value* può essere un nome delle regole di confronto o NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Remarks  
- Se il **regole di confronto compatibili** opzione è impostata su TRUE, **nome regole di confronto** viene impostata automaticamente su NULL. Se **nome regole di confronto** è impostata su un valore non null, **regole di confronto compatibili** viene impostata automaticamente su FALSE.  
+## <a name="remarks"></a>Note  
+ Se il **regole di confronto compatibili** opzione è impostata su TRUE, **nome regole di confronto** viene impostata automaticamente su NULL. Se **nome delle regole di confronto** è impostata su un valore non null, **regole di confronto compatibili** viene impostata automaticamente su FALSE.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione ALTER ANY LINKED SERVER per il server.  
   
 ## <a name="examples"></a>Esempi  

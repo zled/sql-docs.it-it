@@ -1,5 +1,5 @@
 ---
-title: sp_droparticle (Transact-SQL) | Documenti Microsoft
+title: sp_droparticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_droparticle
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a05199bb255a3ae4050f2bca7a6d2f4352d5533a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc5a59df61730eba41316454c58afc3695689bd9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990866"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033293"
 ---
 # <a name="spdroparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,37 +59,37 @@ sp_droparticle [ @publication= ] 'publication'
  [  **@ignore_distributor =**] *ignore_distributor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+ [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot non è valido. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
- **1** specifica che le modifiche apportate all'articolo possono invalidare lo snapshot non è valido e se sono disponibili sottoscrizioni che richiedono un nuovo snapshot, consente l'autorizzazione per lo snapshot esistente deve essere contrassegnato come obsoleto e di generarne uno nuovo.  
+ **1** specifica che le modifiche apportate all'articolo possono invalidare lo snapshot non è valido e se sono presenti sottoscrizioni esistenti richiedono un nuovo snapshot, consente lo snapshot esistente deve essere contrassegnato come obsoleto e di generarne uno nuovo.  
   
  [ **@publisher**=] **'***publisher***'**  
  Specifica un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere utilizzato quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  *server di pubblicazione* non deve essere utilizzata quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
  [ **@from_drop_publication**=] *from_drop_publication*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_droparticle** viene utilizzata nella replica snapshot e transazionale.  
   
- Per gli articoli filtrati orizzontalmente, **sp_droparticle** controlla il **tipo** colonna dell'articolo nella [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabella determinare se una vista o un filtro, deve anche essere eliminato. Se sono disponibili viste o filtri generati in modo automatico, questi vengono eliminati insieme all'articolo. Le viste e i filtri creati in modo manuale non vengono eliminati.  
+ Per gli articoli filtrati orizzontalmente, **sp_droparticle** controlla le **tipo** colonna dell'articolo nella [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) alla tabella determinare se una vista o un filtro, deve anche essere eliminato. Se sono disponibili viste o filtri generati in modo automatico, questi vengono eliminati insieme all'articolo. Le viste e i filtri creati in modo manuale non vengono eliminati.  
   
- L'esecuzione di **sp_droparticle** per eliminare un articolo da una pubblicazione non rimuove l'oggetto dal database di pubblicazione o dell'oggetto corrispondente dal database di sottoscrizione. Utilizzare `DROP <object>` per rimuovere manualmente questi oggetti, se necessario.  
+ L'esecuzione **sp_droparticle** per eliminare un articolo da una pubblicazione non rimuove l'oggetto dal database di pubblicazione o dell'oggetto corrispondente dal database di sottoscrizione. Utilizzare `DROP <object>` per rimuovere manualmente questi oggetti, se necessario.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_droparticle](../../relational-databases/replication/codesnippet/tsql/sp-droparticle-transact-_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_droparticle**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_droparticle**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare un articolo](../../relational-databases/replication/publish/delete-an-article.md)   

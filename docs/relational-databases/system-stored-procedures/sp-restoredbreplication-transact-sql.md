@@ -1,5 +1,5 @@
 ---
-title: sp_restoredbreplication (Transact-SQL) | Documenti Microsoft
+title: sp_restoredbreplication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_restoredbreplication
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea73a77c47b4579cda2e97dcea77a8f6516157c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 21cdf75f248890bcf6fd18f53f4797cbebae36a2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996988"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022320"
 ---
 # <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Rimuove le impostazioni di replica se si ripristina un database in un server, database o sistema diverso da quello di origine che non supporta l'esecuzione di processi di replica. Quando si ripristina un database replicato in un server o database diverso da quello in cui è stato eseguito il backup, le impostazioni di replica non possono essere conservate. Durante il ripristino, il server chiama **sp_restoredbreplication** direttamente per rimuovere automaticamente i metadati della replica dal database ripristinato.  
+  Rimuove le impostazioni di replica se si ripristina un database in un server, database o sistema diverso da quello di origine che non supporta l'esecuzione di processi di replica. Quando si ripristina un database replicato in un server o database diverso da quello in cui è stato eseguito il backup, le impostazioni di replica non possono essere conservate. Nel ripristino, il server chiama **sp_restoredbreplication** direttamente per rimuovere automaticamente i metadati della replica dal database ripristinato.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,13 +61,13 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_restoredbreplication** viene utilizzata in tutti i tipi di replica.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** o **dbcreator** ruolo predefinito del server o **dbo** lo schema del database può eseguire **sp_restoredbreplication**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** oppure **dbcreator** ruolo predefinito del server o la **dbo** dello schema del database può eseguire **sp_restoredbreplication**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

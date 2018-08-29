@@ -1,5 +1,5 @@
 ---
-title: sp_reinitmergepullsubscription (Transact-SQL) | Documenti Microsoft
+title: sp_reinitmergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitmergepullsubscription
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20c701adf431f550f107a9cef08f1a3e49a9d611
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54245be4b829b4dc6bffe59d79c93d63576338f6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996948"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031193"
 ---
 # <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
  Indica se le modifiche nel Sottoscrittore vengono caricate prima della reinizializzazione della sottoscrizione. *upload_first* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **true**, le modifiche vengono caricate prima della reinizializzazione della sottoscrizione. Se **false**, le modifiche non vengono caricate.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_reinitmergepullsubscription** viene utilizzata nella replica di tipo merge.  
   
  Se si aggiunge, elimina o modifica un filtro con parametri, le modifiche in sospeso nel Sottoscrittore non possono essere caricate nel server di pubblicazione durante la reinizializzazione. Per caricare le modifiche in sospeso, sincronizzare tutte le sottoscrizioni prima di modificare il filtro.  
@@ -74,8 +74,8 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_reinitmergepullsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_2.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_reinitmergepullsubscription**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_reinitmergepullsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Reinizializzare una sottoscrizione](../../relational-databases/replication/reinitialize-a-subscription.md)   

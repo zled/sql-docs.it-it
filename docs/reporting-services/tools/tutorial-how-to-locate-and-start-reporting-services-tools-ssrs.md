@@ -25,11 +25,12 @@ caps.latest.revision: 63
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13258b6c570aa0e40c5cca7cbde7b583abd5f297
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ce5c4f7872003f3d2f74dddd31cf93929202185
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405936"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Esercitazione: Individuazione e avvio degli strumenti di Reporting Services (SSRS)
 
@@ -137,43 +138,43 @@ Scaricare [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
   
  Per iniziare il primo report, vedere [Creare un report tabella semplice &#40;Esercitazione su SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Per sapere di più sugli strumenti di progettazione query che è possibile usare in Progettazione report, vedere [Strumenti di progettazione query &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
-##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
- [Generatore report in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) è un'applicazione autonoma che è possibile usare per creare report impaginati all'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile personalizzare e aggiornare tutti i report esistenti, sia che siano stati creati in Progettazione report o in versioni precedenti di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. È possibile installarlo dal portale Web di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dall'Area download Microsoft.  
+##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+ [Generatore report in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) è un'applicazione autonoma che è possibile usare per creare report impaginati all'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile personalizzare e aggiornare tutti i report esistenti, sia che siano stati creati in Progettazione report o in versioni precedenti di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. È possibile installarlo dal portale Web di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dall'Area download Microsoft.  
   
  [Scaricare Generatore report](http://go.microsoft.com/fwlink/?LinkID=219138) dall'Area download Microsoft.  
   
-### <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd"></a>Per iniziare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
+### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>Per iniziare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
 1.  Nel portale Web di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scegliere  **Report impaginato** dal menu **Nuovo**.  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  Se [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] non è ancora installato in questo computer, selezionare **Scarica [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]**.  
+2.  Se [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] non è ancora installato in questo computer, selezionare **Scarica [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]**.  
   
      e  
   
      [Scaricare Generatore report](http://go.microsoft.com/fwlink/?LinkID=219138) dall'Area download Microsoft.  
   
-3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] verrà aperto e sarà possibile creare o aprire un report impaginato.  
+3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] verrà aperto e sarà possibile creare o aprire un report impaginato.  
   
-##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]  
+##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
  Usare [SQL Server Mobile Report Publisher](http://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) per creare report per dispositivi mobili che è possibile visualizzare nel portale Web di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e in dispositivi mobili quali iPad e iPhone.   È possibile installarlo dal portale Web di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dall'Area download Microsoft.  
   
  [Download SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkID=733527) dall'Area download Microsoft.  
   
-### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-short-mdmd"></a>Per iniziare [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]  
+### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>Per iniziare [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
 1.  Nel portale Web di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scegliere  **Report per dispositivi mobili** dal menu **Nuovo**.  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  Se [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] non è ancora installato in questo computer, selezionare **Scarica [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]**.  
+2.  Se [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] non è ancora installato in questo computer, selezionare **Scarica [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]**.  
   
      e  
   
      [Download SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkID=733527) dall'Area download Microsoft.  
   
-3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] verrà aperto e sarà possibile creare o aprire un report per dispositivi mobili.  
+3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] verrà aperto e sarà possibile creare o aprire un report per dispositivi mobili.  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

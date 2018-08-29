@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35f5311da7b2d878a738695ee62a65c947f98693
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78cfd43dfa297f44555d8790e3bea41efcde9652
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000778"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033392"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,25 +69,25 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
  [ **@resync_type** = ] *resync_type*  
  Definisce quando avviare il processo di risincronizzazione. *resync_type* viene **int**, e può essere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**0**|La sincronizzazione ha inizio dopo lo snapshot iniziale. Questa opzione comporta il maggior utilizzo di risorse, in quanto tutte le modifiche apportate dopo lo snapshot iniziale vengono riapplicate nel Sottoscrittore.|  
 |**1**|La sincronizzazione ha inizio dopo l'ultima convalida riuscita. Tutte le generazioni nuove o incomplete eseguite dopo l'ultima convalida riuscita vengono riapplicate nel Sottoscrittore.|  
-|**2**|Viene avviata la sincronizzazione della data specificata *resync_date_str*. Tutte le generazioni nuove o incomplete eseguite dopo tale data vengono riapplicate nel Sottoscrittore.|  
+|**2**|La sincronizzazione ha inizio dalla data specificata *resync_date_str*. Tutte le generazioni nuove o incomplete eseguite dopo tale data vengono riapplicate nel Sottoscrittore.|  
   
  [ **@resync_date_str=**] *resync_date_string*  
- Definisce la data di inizio del processo di risincronizzazione. *resync_date_string* viene **nvarchar(30)**, con un valore predefinito è NULL. Questo parametro viene utilizzato quando il *resync_type* è un valore di **2**. La data specificata viene convertita nell'equivalente **datetime** valore.  
+ Definisce la data di inizio del processo di risincronizzazione. *resync_date_string* viene **nvarchar(30)**, con un valore predefinito è NULL. Questo parametro viene utilizzato quando la *resync_type* è un valore di **2**. La data specificata viene convertita nell'equivalente **datetime** valore.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_resyncmergesubscription** viene utilizzata nella replica di tipo merge.  
   
- Il valore **0** per il *resync_type* parametro, che consente di riapplicare tutte le modifiche apportate dopo lo snapshot iniziale, potrebbe essere elevato utilizzo di risorse, ma comunque molto minore rispetto a una reinizializzazione completa. Se, ad esempio, lo snapshot iniziale è stato recapitato un mese fa, vengono riapplicati i dati relativi all'ultimo mese. Se lo snapshot iniziale contiene 1 gigabyte (GB) di dati, ma i dati modificati nell'ultimo mese corrispondono a 2 megabyte (MB), risulta più efficiente riapplicare i dati anziché l'intero snapshot da 1 GB.  
+ Un valore pari **0** per il *resync_type* parametro, che Riapplica tutte le modifiche apportate dopo lo snapshot iniziale, potrebbe essere a elevato utilizzo di risorse, ma comunque molto minore rispetto a una reinizializzazione completa. Se, ad esempio, lo snapshot iniziale è stato recapitato un mese fa, vengono riapplicati i dati relativi all'ultimo mese. Se lo snapshot iniziale contiene 1 gigabyte (GB) di dati, ma i dati modificati nell'ultimo mese corrispondono a 2 megabyte (MB), risulta più efficiente riapplicare i dati anziché l'intero snapshot da 1 GB.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_resyncmergesubscription**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_resyncmergesubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

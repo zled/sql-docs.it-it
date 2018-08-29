@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_rename_policy (Transact-SQL) | Documenti Microsoft
+title: sp_syspolicy_rename_policy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_rename_policy
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 167ebb066fb7fe7e125aafb395c913c0e11a7ed7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2e23c1c9b5d198f57f703db359fce38ddb339cc6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259561"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017896"
 ---
 # <a name="spsyspolicyrenamepolicy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +51,18 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
  [ **@policy_id=** ] *policy_id*  
  Identificatore dei criteri che si desidera rinominare. *policy_id* viene **int**e deve essere specificato se *nome* è NULL.  
   
- [  **@new_name=** ] **'***nuovo_nome***'**  
- È il nuovo nome per il criterio. *nuovo_nome* viene **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
+ [  **@new_name=** ] **'***new_name***'**  
+ È il nuovo nome per il criterio. *new_name* viene **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syspolicy_rename_policy nel contesto del database di sistema msdb.  
   
- È necessario specificare un valore per *nome* o *policy_id*. Non possono essere entrambi NULL. Per ottenere questi valori, eseguire una query sulla vista di sistema msdb.dbo.syspolicy_policies.  
+ È necessario specificare un valore per *name* oppure *policy_id*. Non possono essere entrambi NULL. Per ottenere questi valori, eseguire una query sulla vista di sistema msdb.dbo.syspolicy_policies.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

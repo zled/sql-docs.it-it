@@ -22,17 +22,16 @@ helpviewer_keywords:
 - sp_set_database_firewall_rule
 - firewall_rules, setting database rules
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
-caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6fa2b1effae12bd8132c331d4e1ba33055c656e0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bdc27614f72f8b49027d2e39c1c81d22743a39f4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984123"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022685"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
   
  Quando si aggiunge un'impostazione del firewall a livello di database in cui sono uguali a iniziale e finale degli indirizzi IP `0.0.0.0`, si abilita l'accesso al database nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server da qualsiasi risorsa di Azure. Specificare un valore per il *nome* parametro che consenta di ricordare che cos'è l'impostazione del firewall per.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione **CONTROL** per il database.  
   
 ## <a name="examples"></a>Esempi  

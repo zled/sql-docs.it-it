@@ -1,5 +1,5 @@
 ---
-title: http_endpoints (Transact-SQL) | Documenti Microsoft
+title: http_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.http_endpoints catalog view
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0bd82aa39d7639c52c7c18c35091adc18b4b485
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f27d3aa958625974fa6b11313cecb831f2308b1c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180777"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028599"
 ---
 # <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "33180777"
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**< colonne ereditate >**||Eredita le colonne da [Endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**< colonne ereditate >**||Eredita le colonne da [Sys. Endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**Sito**|**nvarchar(128)**|Nome del computer host per il sito, come specificato nell'opzione SITE =.|  
 |**url_path**|**nvarchar(4000)**|Parte del percorso dell'URL per l'endpoint HTTP, come specificato nell'opzione PATH=.|  
 |**is_clear_port_enabled**|**bit**|1 = Porta non protetta abilitata con l'opzione PORT = CLEAR.|  
@@ -55,7 +55,7 @@ ms.locfileid: "33180777"
 |**DEFAULT_LOGON_DOMAIN**|**nvarchar(128)**|Dominio di accesso predefinito se si abilita l'autenticazione BASIC. Valore dell'opzione DEFAULT LOGON DOMAIN.<br /><br /> NULL se non specificato o se l'autenticazione BASIC non è abilitata.|  
 |**is_compression_enabled**|**bit**|1 = Opzione COMPRESSION = ENABLED impostata.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

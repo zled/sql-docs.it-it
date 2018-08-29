@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9957a3273f2e33fea59560c4af30ec0315eea92
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 000d33df0320333e688051f1888659d152f62dde
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458025"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784579"
 ---
 # <a name="setting-the-data-source-properties"></a>Impostazione delle proprietà delle origini dei dati
 
@@ -29,7 +29,7 @@ Le origini dati sono il meccanismo ideale con cui creare connessioni JDBC in un 
 
 I prodotti Java EE, quali server applicazioni e motori servlet/JSP, consentono in genere di configurare origini dati per l'accesso ai database. Tutte le proprietà elencate nell'argomento [Impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md) possono essere specificate ovunque la configurazione consenta di immettere una proprietà come coppia proprietà=valore.
 
-Per altre informazioni sulle origini dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vedere la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Per un esempio di come usare le classi di SQLServerDataSource per stabilire una connessione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] del database, vedere [origine dati di esempio](../../connect/jdbc/data-source-sample.md).
+Per altre informazioni sulle origini dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Per un esempio di come usare le classi di SQLServerDataSource per stabilire una connessione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del database, vedere [origine dati di esempio](../../connect/jdbc/data-source-sample.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindsession
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
-caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e1654987b889848fdc81f7be273aca10cd1d231
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 86c735cece67642ab6cd42c5e8164df7f7400d8e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036229"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036994"
 ---
 # <a name="spbindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "38036229"
   Associa o Annulla l'associazione ad altre sessioni nella stessa istanza di una sessione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'associazione di sessioni consente a due o più sessioni di partecipare alla stessa transazione e condividere i blocchi fino a quando non viene eseguita un'istruzione ROLLBACK TRANSACTION o COMMIT TRANSACTION.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilizzare invece MARS (Multiple Active Results Sets) o transazioni distribuite. Per altre informazioni, vedere [usando Multiple Active Result Set &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilizzare invece MARS (Multiple Active Results Sets) o transazioni distribuite. Per altre informazioni vedere [Uso di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,7 +63,7 @@ sp_bindsession { 'bind_token' | NULL }
   
  Annullare l'associazione a una sessione, utilizzare **sp_bindsession** senza specificare *bind_token* o mediante il passaggio di valori NULL nel *bind_token*.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  

@@ -1,5 +1,5 @@
 ---
-title: sp_browsesnapshotfolder (Transact-SQL) | Documenti Microsoft
+title: sp_browsesnapshotfolder (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsesnapshotfolder
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90371326d42ab34fcf5d20b92d5a19f479ab1b6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f399ac4baf1191ec4bc554e1921519300f315744
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989766"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017358"
 ---
 # <a name="spbrowsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
  Nome del database di sottoscrizione. *subscriber_db* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -65,15 +64,15 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar(512)**|Percorso completo della directory snapshot.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_browsesnapshotfolder** viene utilizzata nella replica snapshot e transazionale.  
   
  Se il *sottoscrittore* e *subscriber_db* campi sono NULL, la stored procedure restituisce la cartella snapshot dello snapshot più recente disponibile per la pubblicazione. Se il *sottoscrittore* e *subscriber_db* i campi vengono specificati, la stored procedure restituisce la cartella snapshot per la sottoscrizione specificata. Se per la pubblicazione non è stato generato uno snapshot, viene restituito un set di risultati vuoto.  
   
  Se la pubblicazione è configurata per la generazione di file di snapshot sia nella directory di lavoro che nella cartella snapshot del server di pubblicazione, il set dei risultati include due righe. La prima riga contiene la cartella snapshot della pubblicazione e la seconda la directory di lavoro del server di pubblicazione. **sp_browsesnapshotfolder** è utile per determinare la directory in cui vengono generati i file di snapshot.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_browsesnapshotfolder**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_browsesnapshotfolder**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_mergemetadataretentioncleanup (Transact-SQL) | Documenti Microsoft
+title: sp_mergemetadataretentioncleanup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_mergemetadataretentioncleanup
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ac0c7820ab4f336057a3d747409b0e1af09248d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 00f34d410b8ada86f93fe92d59415d5f0ea5ff8e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996088"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025810"
 ---
 # <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,15 +61,15 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
  Solo per uso interno.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 > [!IMPORTANT]  
->  Se sono presenti più pubblicazioni in un database, e uno di tali pubblicazioni viene utilizzato un periodo di memorizzazione infinito, in esecuzione **sp_mergemetadataretentioncleanup** non pulizia il rilevamento delle modifiche di tipo merge della replica metadati per il database. È pertanto opportuno utilizzare il periodo di memorizzazione infinito con cautela. Per determinare se una pubblicazione presenta un periodo di memorizzazione indefinito, eseguire [sp_helpmergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) di pubblicazione e annotare tutte le pubblicazioni nel risultato impostare con il valore **0** per **memorizzazione**.  
+>  Se sono presenti più pubblicazioni in un database e una di esse viene utilizzato un periodo di memorizzazione infinito, in esecuzione **sp_mergemetadataretentioncleanup** non pulire il rilevamento delle modifiche di tipo merge della replica metadati per il database. È pertanto opportuno utilizzare il periodo di memorizzazione infinito con cautela. Per determinare se una pubblicazione di tipo ha un periodo di conservazione infinito, eseguire [sp_helpmergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) nel server di pubblicazione e nota delle pubblicazioni nel risultato impostato con il valore **0** per **conservazione**.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **db_owner** fissa utenti nell'elenco di accesso alla pubblicazione o ruolo del database per un database pubblicato può eseguire **sp_mergemetadataretentioncleanup**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **db_owner** corrette del database o gli utenti nell'elenco di accesso alla pubblicazione per un database pubblicato possono eseguire **sp_mergemetadataretentioncleanup**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_help_change_data_capture (Transact-SQL) | Documenti Microsoft
+title: Sys. sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1fd52d38d96f83c6be7c0a327fca797f934a466
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f29ac764c9d948d435765abd3d11d260cbd0d59c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263217"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027247"
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,18 +50,18 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="arguments"></a>Argomenti  
  [ @source_schema =] '*source_schema*'  
- Nome dello schema a cui appartiene la tabella di origine. *source_schema* viene **sysname**, con un valore predefinito è NULL. Quando *source_schema* è specificato, *source_name* deve anche essere specificato.  
+ Nome dello schema a cui appartiene la tabella di origine. *source_schema* viene **sysname**, con un valore predefinito è NULL. Quando *source_schema* omette *source_name* deve anche essere specificato.  
   
  Se diverso da NULL, *source_schema* deve esistere nel database corrente.  
   
- Se *source_schema* è diverso da NULL, *source_name* deve inoltre essere non NULL.  
+ Se *source_schema* è diverso da NULL, *source_name* deve anche essere non NULL.  
   
  [ @source_name =] '*source_name*'  
- Nome della tabella di origine. *source_name* viene **sysname**, con un valore predefinito è NULL. Quando *source_name* è specificato, *source_schema* deve anche essere specificato.  
+ Nome della tabella di origine. *source_name* viene **sysname**, con un valore predefinito è NULL. Quando *source_name* omette *source_schema* deve anche essere specificato.  
   
  Se diverso da NULL, *source_name* deve esistere nel database corrente.  
   
- Se *source_name* è diverso da NULL, *source_schema* deve inoltre essere non NULL.  
+ Se *source_name* è diverso da NULL, *source_schema* deve anche essere non NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -87,11 +86,11 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Elenco delle colonne dell'indice utilizzato per identificare in modo univoco le righe nella tabella di origine.|  
 |captured_column_list|**nvarchar(max)**|Elenco delle colonne di origine acquisite.|  
   
-## <a name="remarks"></a>Osservazioni  
- Quando entrambi *source_schema* e *source_name* NULL per impostazione predefinita, oppure vengono impostate in modo esplicito il valore NULL, questa stored procedure restituisce informazioni per tutti i database che il chiamante dispone di selezionare le istanze di acquisizione l'accesso. Quando *source_schema* e *source_name* sono non NULL, viene restituite solo le informazioni sulla tabella abilitata denominata specifica.  
+## <a name="remarks"></a>Note  
+ Quando entrambe *source_schema* e *source_name* NULL per impostazione predefinita, oppure vengono impostate in modo esplicito il carattere NULL, questa stored procedure restituisce informazioni per tutti i database di istanze di acquisizione che il chiamante ha selezionare l'accesso a. Quando *source_schema* e *source_name* sono non NULL, viene restituite solo le informazioni sulla tabella abilitata denominata specifica.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Quando *source_schema* e *source_name* sono NULL, l'autorizzazione del chiamante determina le tabelle abilitate che vengono inclusi nel set di risultati. I chiamanti devono disporre dell'autorizzazione SELECT in tutte le colonne acquisite dell'istanza di acquisizione nonché dell'appartenenza a qualsiasi ruolo di controllo definito per le informazioni di tabella da includere. I membri del ruolo del database db_owner possono visualizzare le informazioni su tutte le istanze di acquisizione definite. Se vengono richieste informazioni per una tabella abilitata specifica, alla tabella denominata vengono applicati gli stessi criteri SELECT e di appartenenza.  
+## <a name="permissions"></a>Permissions  
+ Quando *source_schema* e *source_name* sono NULL, l'autorizzazione del chiamante determina le tabelle abilitate che sono inclusi nel set di risultati. I chiamanti devono disporre dell'autorizzazione SELECT in tutte le colonne acquisite dell'istanza di acquisizione nonché dell'appartenenza a qualsiasi ruolo di controllo definito per le informazioni di tabella da includere. I membri del ruolo del database db_owner possono visualizzare le informazioni su tutte le istanze di acquisizione definite. Se vengono richieste informazioni per una tabella abilitata specifica, alla tabella denominata vengono applicati gli stessi criteri SELECT e di appartenenza.  
   
 ## <a name="examples"></a>Esempi  
   

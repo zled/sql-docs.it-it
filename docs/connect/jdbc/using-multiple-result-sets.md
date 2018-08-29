@@ -14,18 +14,18 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e17da2ae58d76268ec962c007b0fd81b5fc06d60
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 08f1f202ded4c9e0053cfc6c315b87c6f4616eee
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662403"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786498"
 ---
 # <a name="using-multiple-result-sets"></a>Utilizzo di più set di risultati
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Quando si usano stored procedure inline SQL o di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] che restituiscono più set di risultati, in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è disponibile il metodo [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) nella classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) per recuperare ogni set di dati restituito. Quando si esegue un'istruzione che restituisce più set di risultati, è inoltre possibile usare il metodo [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) della classe SQLServerStatement, che restituisce un valore **booleano** che indica se il valore restituito è un set di risultati o un conteggio aggiornamenti.
+Quando si usano stored procedure inline SQL o di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che restituiscono più set di risultati, in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è disponibile il metodo [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) nella classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) per recuperare ogni set di dati restituito. Quando si esegue un'istruzione che restituisce più set di risultati, è inoltre possibile usare il metodo [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) della classe SQLServerStatement, che restituisce un valore **booleano** che indica se il valore restituito è un set di risultati o un conteggio aggiornamenti.
 
 Se il metodo execute restituisce **true**, l'istruzione eseguita ha restituito uno o più set di risultati. Per accedere al primo set di risultati, chiamare il metodo getResultSet. Per determinare se sono disponibili ulteriori set di risultati, chiamare il metodo [getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md) che, in caso affermativo, restituisce un valore **booleano** **true**. Se sono disponibili più set di risultati, chiamare di nuovo il metodo getResultSet per visualizzarli. È possibile ripetere la procedura finché non sono stati elaborati tutti i set di risultati. Se restituisce il metodo getMoreResults **false**, sono presenti non set di risultati più al processo.
 

@@ -14,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d684a808a2bb6c8c9aa23c6dce969acb933c44db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8debb182069b7294f1fb8027c072a3fb720b62c8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238781"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022069"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
   Il*controllo* di un'istanza del [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o di un database individuale comporta il rilevamento e la registrazione di eventi che si verificano nel [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di creare controlli del server che possono contenere specifiche del controllo del server per gli eventi a livello di server e specifiche del controllo del database per gli eventi a livello di database. Gli eventi controllati possono essere scritti nei registri eventi o nei file di controllo.  
@@ -167,7 +166,7 @@ ms.locfileid: "37238781"
 |[sys.server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Contiene informazioni sui dettagli (azioni) delle specifiche del controllo del server in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server.|  
 |[sys.server_file_audits](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)|Contiene informazioni estese sul tipo di controllo dei file in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  A ogni funzionalità e comando per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit sono associati requisiti di autorizzazione singoli.  
   
  Per creare, modificare o eliminare un controllo del server o una specifica del controllo del server, le entità server devono disporre dell'autorizzazione ALTER ANY SERVER AUDIT o CONTROL SERVER. Per creare, modificare o eliminare una specifica del controllo del database, le entità di database devono disporre dell'autorizzazione ALTER ANY DATABASE AUDIT o dell'autorizzazione ALTER o CONTROL per il database. Le entità devono inoltre disporre dell'autorizzazione necessaria per connettersi al database o dell'autorizzazione ALTER ANY SERVER AUDIT o CONTROL SERVER.  
@@ -191,7 +190,7 @@ ms.locfileid: "37238781"
 > [!CAUTION]  
 >  Le entità nel ruolo sysadmin possono alterare qualsiasi componente del controllo, mentre quelle nel ruolo db_owner possono alterare le specifiche del controllo in un database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit convaliderà una situazione in cui un accesso che crea o modifica una specifica del controllo dispone almeno dell'autorizzazione ALTER ANY DATABASE AUDIT, ma non esegue alcuna convalida quando si collega un database. È necessario presupporre che tutte le specifiche del controllo del database siano attendibile come le entità nel ruolo sysadmin o db_owner.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Creazione di un controllo del server e di una specifica del controllo del server](create-a-server-audit-and-server-audit-specification.md)  
   
  [Creazione di un controllo del server e di una specifica del controllo del database](create-a-server-audit-and-database-audit-specification.md)  

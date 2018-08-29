@@ -1,5 +1,5 @@
 ---
-title: sp_addmergepushsubscription_agent (Transact-SQL) | Documenti Microsoft
+title: sp_addmergepushsubscription_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepushsubscription_agent
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0e9b278672b8358c3b8c7db42cc629d2207179c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60058b5f9779ee9fead3284641cce81ae3702dfb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993228"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032821"
 ---
 # <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
  [  **@job_login =** ] **'***job_login***'**  
- Account di accesso per l'account di Windows utilizzato per l'esecuzione dell'agente. *job_login* viene **nvarchar(257)**, con valore predefinito è NULL. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione e per le connessioni al Sottoscrittore e al server di pubblicazione in caso di utilizzo dell'autenticazione integrata di Windows.  
+ Account di accesso per l'account di Windows utilizzato per l'esecuzione dell'agente. *job_login* viene **nvarchar(257)**, con un valore predefinito NULL. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione e per le connessioni al Sottoscrittore e al server di pubblicazione in caso di utilizzo dell'autenticazione integrata di Windows.  
   
  [  **@job_password =** ] **'***job_password***'**  
  Password dell'account di Windows utilizzato per l'esecuzione dell'agente. *job_password* viene **sysname**, non prevede alcun valore predefinito.  
@@ -113,12 +112,12 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
  [ **@job_name =** ] **'***job_name***'**  
- Nome di un processo esistente dell'agente. *job_name* viene **sysname**, con valore predefinito è NULL. Questo parametro viene specificato solo quando la sottoscrizione viene sincronizzata utilizzando un processo esistente anziché un nuovo processo (impostazione predefinita). Se non si è un membro del **sysadmin** ruolo predefinito del server, è necessario specificare *job_login* e *job_password* quando si specifica *job_name*.  
+ Nome di un processo esistente dell'agente. *nome_processo* viene **sysname**, con un valore predefinito NULL. Questo parametro viene specificato solo quando la sottoscrizione viene sincronizzata utilizzando un processo esistente anziché un nuovo processo (impostazione predefinita). Se non si è un membro del **sysadmin** ruolo predefinito del server, è necessario specificare *job_login* e *job_password* quando si specifica *job_name*.  
   
  [  **@frequency_type =** ] *frequency_type*  
  Frequenza per l'esecuzione pianificata dell'agente di merge. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Su richiesta|  
@@ -131,12 +130,12 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |NULL (predefinito)||  
   
 > [!NOTE]  
->  Se si specifica un valore **64** fa sì che l'agente di Merge per l'esecuzione in modalità continua. Corrisponde all'impostazione di **-continua** parametro per l'agente. Per altre informazioni, vedere [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+>  Se si specifica un valore di **64** fa sì che l'agente di Merge per l'esecuzione in modalità continua. Corrisponde all'impostazione di **-continua** parametro per l'agente. Per altre informazioni, vedere [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  [  **@frequency_interval =** ] *frequency_interval*  
  Giorni in cui viene eseguito l'agente di merge. *frequency_interval* viene **int**, e può essere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Domenica|  
 |**2**|Lunedì|  
@@ -151,9 +150,9 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |NULL (predefinito)||  
   
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Data dell'agente di merge. Questo parametro viene utilizzato quando *frequency_type* è impostato su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, e può essere uno dei valori seguenti.  
+ Data dell'agente di merge. Questo parametro viene utilizzato quando *frequency_type* è impostata su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, e può essere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Primo|  
 |**2**|Secondo|  
@@ -168,7 +167,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  [  **@frequency_subday =** ] *frequency_subday*  
  Frequenza di ripianificazione durante il periodo definito. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Secondo|  
@@ -177,7 +176,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |NULL (predefinito)||  
   
  [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- Intervallo per *frequency_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
+ È l'intervallo *frequency_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
   
  [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
  Ora del giorno della prima esecuzione pianificata dell'agente di merge, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è NULL.  
@@ -192,23 +191,23 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  Data dell'ultima esecuzione pianificata dell'agente di merge, nel formato AAAAMMGG. *active_end_date* viene **int**, con un valore predefinito è NULL.  
   
  [  **@enabled_for_syncmgr =** ] **'***enabled_for_syncmgr***'**  
- Specifica se la sottoscrizione può essere sincronizzata tramite Gestione sincronizzazione Microsoft Windows. *enabled_for_syncmgr* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **false**, la sottoscrizione non è registrata con Gestione sincronizzazione. Se **true**, la sottoscrizione viene registrata con Gestione sincronizzazione e può essere sincronizzata senza avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Specifica se la sottoscrizione può essere sincronizzata tramite Gestione sincronizzazione Microsoft Windows. *enabled_for_syncmgr* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **false**, la sottoscrizione non è registrata con Gestione sincronizzazione Microsoft. Se **true**, la sottoscrizione viene registrata con Gestione sincronizzazione e può essere sincronizzata senza avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_addmergepushsubscription_agent** viene utilizzata nella replica di tipo merge e utilizza funzionalità simili a quelle [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepushsubscript_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_addmergepushsubscription_agent**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_addmergepushsubscription_agent**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
  [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   

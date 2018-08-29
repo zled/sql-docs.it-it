@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51310c2848526942e23152b9c02a4ad914118392
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: c582cfcd744d009cae0c966c4640f7406c200246
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459555"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785662"
 ---
 # <a name="sparse-columns"></a>Colonne di tipo sparse
 
@@ -27,7 +27,7 @@ ms.locfileid: "39459555"
 
 Le colonne di tipo sparse sono colonne comuni che dispongono di archiviazione ottimizzata per i valori Null. Tali colonne consentono di ridurre i requisiti di spazio per i valori Null aumentando tuttavia l'overhead per il recupero dei valori non Null. È consigliabile utilizzare colonne di tipo sparse quando la quantità di spazio risparmiata è compresa almeno tra il 20% e il 40%.
 
-Il driver JDBC 3.0 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] supporta colonne di tipo sparse quando si connette a un server [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (o versioni successive). È possibile utilizzare l'oggetto [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), l'oggetto [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) o l'oggetto [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) per determinare quale colonna è di tipo sparse e quale quella del set di colonne.
+Il driver JDBC 3.0 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta colonne di tipo sparse quando si connette a un server [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (o versioni successive). È possibile utilizzare l'oggetto [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), l'oggetto [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) o l'oggetto [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) per determinare quale colonna è di tipo sparse e quale quella del set di colonne.
 
 Il file di codice per questo esempio è denominato SparseColumns.java e si trova nella seguente posizione:  
 

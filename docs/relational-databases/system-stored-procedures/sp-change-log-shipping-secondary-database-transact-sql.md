@@ -1,5 +1,5 @@
 ---
-title: sp_change_log_shipping_secondary_database (Transact-SQL) | Documenti Microsoft
+title: sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_secondary_database
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
-caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e4ee6324e92130f3f887fe3a36ecd5469cd9d99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bee5104ed19e6d7d7454a0fc91fb5059153bb8b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239141"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023630"
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,10 +74,10 @@ sp_change_log_shipping_secondary_database
  Se impostato su 1, gli utenti vengono disconnessi dal database secondario quando viene eseguita un'operazione di ripristino. Predefinito = 0. *disconnect_users* viene **bit** e non può essere NULL.  
   
  [  **@block_size =** ] '*block_size*'  
- Dimensioni, in byte, per il blocco del dispositivo di backup. *block_size* viene **int** con valore predefinito è -1.  
+ Dimensioni, in byte, per il blocco del dispositivo di backup. *block_size* viene **int** con valore predefinito è-1.  
   
  [  **@buffer_count =** ] '*buffer_count*'  
- Numero totale di buffer utilizzati dall'operazione di backup o di ripristino. *buffer_count* viene **int** con valore predefinito è -1.  
+ Numero totale di buffer utilizzati dall'operazione di backup o di ripristino. *buffer_count* viene **int** con valore predefinito è-1.  
   
  [ **@max_transfer_size =** ] '*max_transfer_size*'  
  Dimensione, espressa in byte, della richiesta di input o output massimo emessa da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il dispositivo di backup. *max_transfersize* viene **int** e può essere NULL.  
@@ -93,26 +92,26 @@ sp_change_log_shipping_secondary_database
  Specifica se un avviso verrà generato quando *restore_threshold*viene superato. 1 = abilitato; 0 = disabilitato. *threshold_alert_enabled* viene **bit** e non può essere NULL.  
   
  [  **@history_retention_period =** ] '*history_retention_period*'  
- Periodo di memorizzazione della cronologia espresso in minuti. *history_retention_period* viene **int**. Se non viene specificato, verrà utilizzato il valore 1440.  
+ Periodo di memorizzazione della cronologia espresso in minuti. *history_retention_period* viene **int**. Se non viene specificato, verrà utilizzato un valore 1440.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_change_log_shipping_secondary_database** deve essere eseguita la **master** database nel server secondario. Questa stored procedure esegue le operazioni seguenti:  
   
-1.  Modifica le impostazioni di **log_shipping_secondary_database** registra in base alle esigenze.  
+1.  Modifica le impostazioni nel **log_shipping_secondary_database** registra in base alle esigenze.  
   
-2.  Modifica il record di monitoraggio locale in **log_shipping_monitor_secondary** nel server secondario utilizzando gli argomenti specificati, se necessario.  
+2.  Il record di monitoraggio locale viene modificato **log_shipping_monitor_secondary** nel server secondario utilizzando gli argomenti specificati, se necessario.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
   
 ## <a name="examples"></a>Esempi  
- In questo esempio viene illustrato l'utilizzo **sp_change_log_shipping_secondary_database** per aggiornare i parametri di database secondario per il database **LogShipAdventureWorks**.  
+ In questo esempio viene illustrato l'utilizzo **sp_change_log_shipping_secondary_database** per aggiornare i parametri del database secondario per il database **LogShipAdventureWorks**.  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_secondary_database   
@@ -127,7 +126,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

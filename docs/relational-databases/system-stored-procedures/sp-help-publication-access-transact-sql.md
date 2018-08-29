@@ -1,5 +1,5 @@
 ---
-title: sp_help_publication_access (Transact-SQL) | Documenti Microsoft
+title: sp_help_publication_access (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_publication_access
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4a8503a1c93283c2af8e6b4e2494cfdaff632b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 803b5d26fa2294a9e53d3afb597a232384dfd38d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995608"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036186"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_help_publication_access [ @publication = ] 'publication'
  Nome della pubblicazione a cui si desidera accedere. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@return_granted=**] **'***return_granted***'**  
- ID di accesso. *return_granted* viene **bit**, con un valore predefinito è 1. Se **0** specificato e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzata l'autenticazione, vengono restituiti gli account di accesso disponibili visualizzati nel server di pubblicazione, ma non nel server di distribuzione. Se **0** specificato e viene utilizzata l'autenticazione di Windows, gli account di accesso non sia stata esplicitamente negato l'accesso a livello server di pubblicazione o server di distribuzione vengono restituiti.  
+ ID di accesso. *return_granted* viene **bit**, con un valore predefinito è 1. Se **0** è specificato e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzata l'autenticazione, vengono restituiti gli account di accesso disponibili visualizzati nel server di pubblicazione, ma non nel server di distribuzione. Se **0** specificato e viene utilizzata l'autenticazione di Windows, gli account di accesso negato non specificamente accedere al server di pubblicazione o un server di distribuzione vengono restituiti.  
   
  [  **@login=**] **'***account di accesso***'**  
  ID dell'account di accesso di sicurezza standard. *account di accesso* viene **sysname**, il valore predefinito è **%**.  
@@ -60,28 +60,28 @@ sp_help_publication_access [ @publication = ] 'publication'
  [  **@initial_list =**] *initial_list*  
  Specifica se devono essere restituiti tutti i membri con accesso alla pubblicazione oppure solo i membri che avevano accesso prima che venissero aggiunti nuovi membri all'elenco. *initial_list* è di tipo bit e il valore predefinito **0**.  
   
- **1** restituisce informazioni per tutti i membri del **sysadmin** ruolo predefinito del server con un account di accesso validi nel server di distribuzione presenti al momento della creazione della pubblicazione, nonché l'account di accesso corrente.  
+ **1** restituisce informazioni per tutti i membri del **sysadmin** ruolo predefinito del server con un account di accesso validi nel server di distribuzione esistenti dal momento della creazione della pubblicazione, nonché l'account di accesso corrente.  
   
- **0** restituisce informazioni per tutti i membri del **sysadmin** ruolo predefinito del server con account di accesso validi nel server di distribuzione presenti al momento della creazione della pubblicazione anche per tutti gli utenti nell'elenco di accesso alla pubblicazione che non appartenere ai **sysadmin** ruolo predefinito del server.  
+ **0** restituisce informazioni per tutti i membri del **sysadmin** ruolo predefinito del server con account di accesso validi nel server di distribuzione esistenti dal momento della pubblicazione è stata creata anche come tutti gli utenti nell'elenco di accesso alla pubblicazione che non dispongono appartenere al **sysadmin** ruolo predefinito del server.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**nvarchar(256)**|Nome effettivo dell'account di accesso.|  
-|**Isntname**|**int**|**0** = account di accesso non è un utente di Windows.<br /><br /> **1** = account di accesso è un utente di Windows.|  
-|**Isntgroup**|**int**|**0** = account di accesso non è un gruppo di Windows.<br /><br /> **1** = account di accesso è un gruppo di Windows.|  
+|**isntname**|**int**|**0** = account di accesso non è un utente di Windows.<br /><br /> **1** = account di accesso è un utente di Windows.|  
+|**isntgroup**|**int**|**0** = account di accesso non è un gruppo di Windows.<br /><br /> **1** = account di accesso è un gruppo di Windows.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_help_publication_access** viene utilizzata in tutti i tipi di replica.  
   
- Quando entrambi **Isntname** e **Isntgroup** nel risultato sono set **0**, si presuppone che l'account di accesso sia un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso.  
+ Quando entrambe **Isntname** e **Isntgroup** nel risultato sono set **0**, si presuppone che l'account di accesso è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_help_publication_access**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_help_publication_access**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   

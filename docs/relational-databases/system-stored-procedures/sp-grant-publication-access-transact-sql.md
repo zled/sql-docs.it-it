@@ -1,5 +1,5 @@
 ---
-title: sp_grant_publication_access (Transact-SQL) | Documenti Microsoft
+title: sp_grant_publication_access (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_grant_publication_access
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c6739cd65e016e08773831d0bc87e46ac27ae1f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 681e62cea3b5bf9a22cedd1ab1803737b2080642
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994198"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023939"
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,24 +45,24 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
   
 ## <a name="arguments"></a>Argomenti  
  [ **@publication**=] **'***pubblicazione***'**  
- Nome della pubblicazione a cui si desidera accedere. **'***pubblicazione***'** viene **sysname**, non prevede alcun valore predefinito.  
+ Nome della pubblicazione a cui si desidera accedere. **«***publication***'** viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@login**=] **'***account di accesso***'**  
- ID di accesso. **'***account di accesso***'** viene **sysname**, non prevede alcun valore predefinito.  
+ ID di accesso. **«***account di accesso***'** viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@reserved =**] **'***riservato***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_grant_publication_access** viene utilizzata in repliche snapshot, transazionali e di tipo merge.  
+## <a name="remarks"></a>Note  
+ **sp_grant_publication_access** viene utilizzata nella replica di tipo merge e snapshot, transazionale.  
   
  È possibile chiamare questa stored procedure ripetutamente.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_grant_publication_access**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_grant_publication_access**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_help_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   

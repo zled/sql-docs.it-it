@@ -17,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-caps.latest.revision: 53
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08f0e46bde340eb1b64f8c7ad9ba2d1f8ec63d9f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ea2923af852801639d3cc2007d872a2823bc5d1b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989333"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026870"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -315,7 +314,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  In caso di selezione delle opzioni **sync_type** , i parametri *replication support only*, *initialize with backup*o *initialize from lsn*e l'agente di lettura log devono essere in esecuzione dopo aver eseguito **sp_addsubscription**, in modo che gli script impostati vengano scritti nel database di distribuzione. L'agente di lettura log deve essere in esecuzione con un account membro del ruolo predefinito del server **sysadmin** . Quando l'opzione **sync_type** è impostata su *Automatic*, non sono richieste azioni dell'agente di lettura log speciali.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del ruolo predefinito del server sysadmin o del ruolo predefinito del database db_owner possono eseguire sp_addsubscription. Per le sottoscrizioni pull, gli utenti che dispongono di un account di accesso nell'elenco di accesso della pubblicazione possono eseguire sp_addsubscription.  
   
 ## <a name="example"></a>Esempio  

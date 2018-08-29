@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.trace_categories catalog view
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
-caps.latest.revision: 26
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85c5ad8a9cd6e901151797e763913713f2a228b7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 70f8d0cf2e5815d0a1f39568985e087ceaf3507a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993763"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031579"
 ---
 # <a name="systracecategories-transact-sql"></a>sys.trace_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "37993763"
 |**name**|**nvarchar(128)**|Nome univoco della categoria. Questo parametro non è localizzato.|  
 |**type**|**tinyint**|Tipo di categoria:<br /><br /> 0 = normale<br /><br /> 1 = connessione<br /><br /> 2 = errore|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

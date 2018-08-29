@@ -1,5 +1,5 @@
 ---
-title: Sys. server_file_audits (Transact-SQL) | Documenti Microsoft
+title: Sys. server_file_audits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,14 +21,15 @@ helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e10ec5dc755f1a8487aecd40b620eb0a3eefe8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d0ac050160e62718a87a5dfa920471861eaadcfd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035931"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +39,10 @@ ms.lasthandoff: 05/04/2018
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|ID del controllo.|  
-|name|**sysname**|Nome del controllo.|  
+|NAME|**sysname**|Nome del controllo.|  
 |audit_guid|**uniqueidentifier**|GUID del controllo.|  
 |create_date|**datetime**|Data UTC di creazione del controllo dei file.|  
-|modify_date|**DateTime**|Data UTC dell'ultima modifica del controllo dei file.|  
+|modify_date|**DataTime**|Data UTC dell'ultima modifica del controllo dei file.|  
 |principal_id|**int**|ID del proprietario del controllo come registrato nel server.|  
 |Tipo|**char(2)**|Tipo di controllo:<br /><br /> 0 = Registro eventi di sicurezza NT<br /><br /> 1 = Registro eventi applicazioni NT<br /><br /> 2 = File nel file system|  
 |type_desc|**nvarchar(60)**|Descrizione del tipo di controllo.|  
@@ -57,8 +58,8 @@ ms.lasthandoff: 05/04/2018
 |log_file_path|**nvarchar(260)**|Percorso in cui si trova il controllo. Il percorso è un percorso di file o del registro applicazioni a seconda del tipo di controllo.|  
 |log_file_name|**nvarchar(260)**|Nome di base per il file di log specificato in CREATE AUDIT DDL. Al file base_log_name viene aggiunto un numero incrementale come suffisso per creare il nome del file di log.|  
   
-## <a name="permissions"></a>Autorizzazioni  
- Entità che dispongono di **ALTER ANY SERVER AUDIT** o **VIEW ANY DEFINITION** autorizzazione hanno accesso a questa vista del catalogo. Inoltre, l'entità non deve essere negato **VIEW ANY DEFINITION** autorizzazione.  
+## <a name="permissions"></a>Permissions  
+ Le entità con la **ALTER ANY SERVER AUDIT** oppure **VIEW ANY DEFINITION** autorizzazione ha accesso a questa vista del catalogo. Inoltre, l'entità non deve essere negata **VIEW ANY DEFINITION** l'autorizzazione.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

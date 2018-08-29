@@ -1,5 +1,5 @@
 ---
-title: sp_droppullsubscription (Transact-SQL) | Documenti Microsoft
+title: sp_droppullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_droppullsubscription
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f87d5298d9f67c349a71faf8cff95b2ac23304d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c7f78803805c03acef7e0c7055c60eab2b1924
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989678"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021114"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,17 +61,17 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_droppullsubscription** viene utilizzata nella replica snapshot e transazionale.  
   
- **sp_droppullsubscription** Elimina la riga corrispondente nella [MSreplication_subscriptions &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) tabella e l'agente di distribuzione corrispondente nel Sottoscrittore. Se nessuna riga viene mantenuta nella [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), viene eliminata anche la tabella.  
+ **sp_droppullsubscription** Elimina la riga corrispondente nella [MSreplication_subscriptions &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) tabella e l'agente di distribuzione corrispondente nel Sottoscrittore. Se nessuna riga viene mantenuta nel [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), Elimina la tabella.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server o l'utente che ha creato la sottoscrizione pull può eseguire **sp_droppullsubscription**. Il **db_owner** ruolo predefinito del database è in grado di eseguire solo **sp_droppullsubscription** se l'utente che ha creato la sottoscrizione pull appartiene a questo ruolo.  
   
 ## <a name="see-also"></a>Vedere anche  

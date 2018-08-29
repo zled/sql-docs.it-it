@@ -21,16 +21,15 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 01ea98feb38ee8fcfdf7a021f9663bd8001ff941
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc696a697c251bb8b800f22d948f1141a92ecae6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274667"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020513"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
   In questo argomento viene descritto come creare un account di accesso in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un account di accesso è l'identità della persona o del processo che esegue la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -61,7 +60,7 @@ ms.locfileid: "37274667"
   
 ##  <a name="Security"></a> Sicurezza  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione `ALTER ANY LOGIN` o `ALTER LOGIN` per il server.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  

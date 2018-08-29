@@ -1,5 +1,5 @@
 ---
-title: sp_helplogins (Transact-SQL) | Documenti Microsoft
+title: sp_helplogins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40a25164c12e9a1c886a7cba6b8f9b0277daf0ed
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d497fdd54fd0a8fce44282a2caa819fef60a76fb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253927"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028790"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
   
 ## <a name="arguments"></a>Argomenti  
  [ **@LoginNamePattern =** ] **'***login***'**  
- Nome dell'account di accesso. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve esistere se specificato. Se *accesso* viene omesso, vengono restituite informazioni su tutti gli account di accesso.  
+ Nome dell'account di accesso. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve esistere se specificato. Se *account di accesso* viene omesso, vengono restituite informazioni su tutti gli accessi.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -57,27 +57,27 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome dell'account di accesso.|  
 |**SID**|**varbinary(85)**|ID di sicurezza (SID) dell'account di accesso.|  
-|**DefDBName**|**sysname**|Database predefinito che **LoginName** utilizza per la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**DefDBName**|**sysname**|Database predefinito **LoginName** Usa quando ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**DefLangName**|**sysname**|Lingua predefinita utilizzata da **LoginName**.|  
 |**Auser**|**Char(5)**|Yes = **LoginName** ha un nome utente associato in un database.<br /><br /> No = **LoginName** non dispone di un nome utente associato.|  
-|**Associata**|**Char(7)**|Yes = **LoginName** ha un account di accesso remoto associato.<br /><br /> No = **LoginName** non dispone di un account di accesso associato.|  
+|**Associata**|**Char(7)**|Yes = **LoginName** ha un account di accesso remoto associato.<br /><br /> No = **LoginName** non ha un account di accesso associato.|  
   
  Il secondo report contiene informazioni sugli utenti sui quali viene eseguito il mapping a ogni account di accesso e le appartenenze al ruolo dell'account di acceso, come illustrato nella tabella seguente.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome dell'account di accesso.|  
-|**DBName**|**sysname**|Database predefinito che **LoginName** utilizza per la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**UserName**|**sysname**|Account utente che **LoginName** viene eseguito il mapping nella **DBName**e i ruoli che **LoginName** è un membro nel **DBName**.|  
+|**DBName**|**sysname**|Database predefinito **LoginName** Usa quando ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**UserName**|**sysname**|Account utente su cui **LoginName** viene eseguito il mapping nei **DBName**e i ruoli che **LoginName** è un membro nel **DBName**.|  
 |**UserOrAlias**|**Char(8)**|MemberOf = **UserName** è un ruolo.<br /><br /> Utente = **UserName** è un account utente.|  
   
-## <a name="remarks"></a>Osservazioni  
- Prima di rimuovere un account di accesso, utilizzare **sp_helplogins** per identificare gli account utente che vengono eseguito il mapping all'account di accesso.  
+## <a name="remarks"></a>Note  
+ Prima di rimuovere un account di accesso, usare **sp_helplogins** per identificare gli account utente che vengono eseguito il mapping all'account di accesso.  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **securityadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **securityadmin** ruolo predefinito del server.  
   
- Per identificare tutti gli account utente mappati a un determinato account di accesso, **sp_helplogins** deve controllare tutti i database all'interno del server. Pertanto, per ogni database nel server, è necessario che sia soddisfatta almeno una delle seguenti condizioni:  
+ Per identificare tutti gli account utente mappati a un determinato account di accesso **sp_helplogins** deve controllare tutti i database all'interno del server. Pertanto, per ogni database nel server, è necessario che sia soddisfatta almeno una delle seguenti condizioni:  
   
 -   L'utente che esegue **sp_helplogins** dispone dell'autorizzazione per accedere al database.  
   

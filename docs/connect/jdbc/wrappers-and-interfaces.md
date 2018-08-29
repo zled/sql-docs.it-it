@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58276b03877423afe86f9c68841656b00ce0a8c6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: ad3412a5d296a7d243d6b73b6275c613da5c962b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457785"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785289"
 ---
 # <a name="wrappers-and-interfaces"></a>Wrapper e interfacce
 
@@ -61,7 +61,7 @@ L'interfaccia Java definisce due metodi: **isWrapperFor** e **unwrap**. Il metod
 
 ## <a name="interfaces"></a>Interfacce
 
-A partire dalla versione 3.0 del driver JDBC per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], sono disponibili interfacce che consentono a un server applicazioni di accedere a un metodo specifico del driver dalla classe associata. Il wrapping della classe può essere eseguito dal server applicazioni tramite la creazione di un proxy, esponendo la funzionalità specifica di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] da un'interfaccia. Il driver [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta le interfacce che includono costanti e metodi specifici di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], per consentire a un server applicazioni di creare un proxy della classe.
+A partire dalla versione 3.0 del driver JDBC per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sono disponibili interfacce che consentono a un server applicazioni di accedere a un metodo specifico del driver dalla classe associata. Il wrapping della classe può essere eseguito dal server applicazioni tramite la creazione di un proxy, esponendo la funzionalità specifica di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] da un'interfaccia. Il driver [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta le interfacce che includono costanti e metodi specifici di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], per consentire a un server applicazioni di creare un proxy della classe.
 
 Le interfacce derivano da interfacce Java standard ed è pertanto possibile utilizzare lo stesso oggetto dopo averne annullato il wrapping per accedere alla funzionalità specifica del driver o alla funzionalità generica di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 

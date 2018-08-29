@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_alert_job
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b2a41f6d453fd1d029426afb5753f558a73ba08
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1979d0e4493d76d628d4a65974bb5a13760a5229
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245827"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021875"
 ---
 # <a name="spdeletelogshippingalertjob-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +44,22 @@ sp_delete_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Nessuno  
+ Nessuna.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ Nessuna.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_delete_log_shipping_alert_job** deve essere eseguita la **master** database nel server di monitoraggio.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
   
 ## <a name="examples"></a>Esempi  
- In questo esempio viene illustrata l'esecuzione di **sp_delete_log_shipping_alert_job** per eliminare un processo di avviso.  
+ In questo esempio illustra l'esecuzione degli **sp_delete_log_shipping_alert_job** per eliminare un processo di avviso.  
   
 ```  
 USE master;  
@@ -69,7 +68,7 @@ EXEC sp_delete_log_shipping_alert_job;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

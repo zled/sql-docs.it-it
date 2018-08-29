@@ -1,5 +1,5 @@
 ---
-title: sp_get_distributor (Transact-SQL) | Documenti Microsoft
+title: sp_get_distributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_get_distributor
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f4cd34760ff4bd447bc5a2621508629264adee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 088b2d2c6e334d48fae3e9257f76c5fd8129c15d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994098"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021290"
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,17 +48,17 @@ sp_get_distributor
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**Installato**|**int**|**0** = No. **1** = Sì|  
+|**installato**|**int**|**0** = No. **1** = Sì|  
 |**server di distribuzione**|**sysname**|Nome del server di distribuzione|  
 |**database di distribuzione installato**|**int**|**0** = No. **1** = Sì|  
-|**è la distribuzione server di pubblicazione**|**int**|**0** = No. **1** = Sì|  
+|**è autore di distribuzione**|**int**|**0** = No. **1** = Sì|  
 |**con server di pubblicazione di distribuzione remoto**|**int**|**0** = No. **1** = Sì|  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_get_distributor** viene utilizzata principalmente le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in snapshot, transazionale e di tipo merge.  
+## <a name="remarks"></a>Note  
+ **sp_get_distributor** viene usato principalmente dai [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in snapshot, transazionale e di tipo merge.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Qualsiasi utente può eseguire **sp_get_distributor**. Un set di risultati non NULL viene restituito quando la stored procedure viene eseguita dai membri del **db_owner** o **replmonitor** ruoli predefiniti del database nel database di distribuzione o i membri del  **db_owner** ruolo predefinito del database su almeno un database pubblicato. Un set di risultati non NULL viene restituito anche quando questa stored procedure viene eseguita dagli utenti nell'elenco di accesso alla pubblicazione (PAL) di almeno un database pubblicato o nell'elenco di accesso del database di distribuzione per un Server di pubblicazione non SQL, possono inoltre eseguire **sp _get_distributor**.  
+## <a name="permissions"></a>Permissions  
+ Qualsiasi utente può eseguire **sp_get_distributor**. Un set di risultati non NULL viene restituito quando la stored procedure viene eseguita dai membri del **db_owner** oppure **replmonitor** ruoli predefiniti del database nel database di distribuzione o i membri del  **db_owner** ruolo predefinito del database su almeno un database pubblicato. Un set di risultati non NULL viene restituito anche quando questa stored procedure viene eseguita dagli utenti nell'elenco di accesso (PAL) di almeno un database pubblicato o nell'elenco di accesso del database di distribuzione per un Server di pubblicazione non SQL, possono anche eseguire **sp _get_distributor**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md)   

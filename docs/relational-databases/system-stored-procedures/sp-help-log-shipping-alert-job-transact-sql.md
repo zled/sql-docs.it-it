@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_alert_job
 ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc50fac70f531643cb39f584426e245fd0c232b8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 59245cd3df3054fd8143bc4bf9f8a893b19852a5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241140"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032903"
 ---
 # <a name="sphelplogshippingalertjob-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +44,22 @@ sp_help_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Nessuno  
+ None  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Questa stored procedure restituisce il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID processo dell'agente del log shipping processo Gestione avvisi. Se non esiste alcun processo per la gestione degli avvisi di log shipping, restituisce un set di risultati vuoto.  
+ Questa stored procedure restituisce il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID processo dell'agente di processo degli avvisi del log shipping. Se non esiste alcun processo per la gestione degli avvisi di log shipping, restituisce un set di risultati vuoto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_help_log_shipping_alert_job** deve essere eseguita la **master** database nel server di monitoraggio.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

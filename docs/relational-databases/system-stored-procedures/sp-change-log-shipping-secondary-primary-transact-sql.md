@@ -1,5 +1,5 @@
 ---
-title: sp_change_log_shipping_secondary_primary (Transact-SQL) | Documenti Microsoft
+title: sp_change_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_change_log_shipping_secondary_primary
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 499c95fc980bd6e8d996b14c47907b814cbb94aa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 284aca27c2c75cb23d489e915acf1ef48a082c7a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240001"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019487"
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,20 +84,20 @@ sp_change_log_shipping_secondary_primary
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_change_log_shipping_secondary_primary** deve essere eseguita la **master** database nel server secondario. Questa stored procedure esegue le operazioni seguenti:  
   
 1.  Modifica le impostazioni nel **log_shipping_secondary** registra in base alle esigenze.  
   
-2.  Se il server di monitoraggio è diverso dal server secondario, modifiche record di monitoraggio in **log_shipping_monitor_secondary** sul monitor di server utilizzando gli argomenti specificati, se necessario.  
+2.  Se il server di monitoraggio è diverso dal server secondario, le modifiche record di monitoraggio in **log_shipping_monitor_secondary** sul monitor server utilizzando gli argomenti specificati, se necessario.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

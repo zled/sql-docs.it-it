@@ -1,5 +1,5 @@
 ---
-title: sp_helptracertokenhistory (Transact-SQL) | Documenti Microsoft
+title: sp_helptracertokenhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helptracertokenhistory
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6cab0dacd02e57cead03cdb0aeef35a385afb349
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: deeab8c5a6f7e7b8897c55a86ccf95f965645574
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996688"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026140"
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
  Nome della pubblicazione in cui è stato inserito il token di traccia. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@tracer_id=** ] *tracer_id*  
- È l'ID del token di traccia nel [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) tabella per cui cronologia vengono restituite informazioni. *tracer_id* viene **int**, non prevede alcun valore predefinito.  
+ È l'ID del token di traccia nella [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) tabella per cui cronologia vengono restituite informazioni. *tracer_id* viene **int**, non prevede alcun valore predefinito.  
   
  [  **@publisher=** ] **'***publisher***'**  
  Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  Questo parametro deve essere specificato solo per non[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
+>  Questo parametro deve essere specificato solo per non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
- Nome del database di pubblicazione. *publisher_db* viene **sysname**, con valore predefinito è NULL. Questo parametro viene ignorato se la stored procedure viene eseguita nel server di pubblicazione.  
+ Nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito NULL. Questo parametro viene ignorato se la stored procedure viene eseguita nel server di pubblicazione.  
   
 ## <a name="result-set"></a>Set di risultati  
   
@@ -74,9 +74,9 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 |**overall_latency**|**bigint**|Numero di secondi che intercorrono tra il commit del record del token di traccia nel server di pubblicazione e il commit nel Sottoscrittore.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helptracertokenhistory** viene utilizzata nella replica transazionale.  
   
  Eseguire [sp_helptracertokens &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) per ottenere un elenco dei token di traccia per la pubblicazione.  
@@ -86,8 +86,8 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokenhistor_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database nel database di pubblicazione o **db_owner** predefiniti del database o  **replmonitor** ruoli nel database di distribuzione possono eseguire **sp_helptracertokenhistory**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database nel database di pubblicazione, o **db_owner** predefiniti del database o  **replmonitor** nel database di distribuzione possono eseguire **sp_helptracertokenhistory**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Misurare la latenza e convalidare le connessioni per la replica transazionale](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   

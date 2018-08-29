@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_enable_table (Transact-SQL) | Documenti Microsoft
+title: Sys. sp_cdc_enable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0ed70b21e667a1738433335e3e3c869c3b410523
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 309c72bea23d32f50070e140f641030703ee42b1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263519"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032891"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,26 +74,26 @@ sys.sp_cdc_enable_table
  [  **@capture_instance =** ] **'***capture_instance***'**  
  Nome dell'istanza di acquisizione utilizzato per denominare gli oggetti Change Data Capture specifici dell'istanza. *capture_instance* viene **sysname** e non può essere NULL.  
   
- Se non specificato, il nome deriva dal nome di schema di origine più il nome della tabella di origine nel formato *schemaname_sourcename*. *capture_instance* non può superare i 100 caratteri e deve essere univoco all'interno del database. Se è specificato o derivato, *capture_instance* vengono eliminati gli spazi vuoti a destra della stringa.  
+ Se non specificato, il nome è derivato dal nome dello schema di origine più il nome della tabella di origine nel formato *schemaname_sourcename*. *capture_instance* non può superare i 100 caratteri e deve essere univoco all'interno del database. Se specificato o derivato, *capture_instance* vengono tagliati gli spazi vuoti a destra della stringa.  
   
- Una tabella di origine può avere un massimo di due istanze di acquisizione. Per altre informazioni, vedere [sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
+ Una tabella di origine può avere un massimo di due istanze di acquisizione. Per altre informazioni, vedere [Sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
  [  **@supports_net_changes =** ] *supports_net_changes*  
- Indica se deve essere abilitato il supporto per l'esecuzione di query per le modifiche delta per questa istanza di acquisizione. *supports_net_changes* viene **bit** con un valore predefinito è 1 se la tabella contiene una chiave primaria o la tabella contiene un indice univoco identificato mediante il @index_name parametro. In caso contrario, il valore predefinito del parametro è 0.  
+ Indica se deve essere abilitato il supporto per l'esecuzione di query per le modifiche delta per questa istanza di acquisizione. *supports_net_changes* viene **bit** con valore predefinito è 1 se la tabella contiene una chiave primaria o la tabella dispone di un indice univoco identificato mediante il @index_name parametro. In caso contrario, il valore predefinito del parametro è 0.  
   
  Se è 0, vengono generate solo le funzioni di supporto per l'esecuzione di query per tutte le modifiche.  
   
  Se è 1, vengono generate le funzioni necessarie per l'esecuzione di query per le modifiche delta.  
   
- Se *supports_net_changes* è impostato su 1, *index_name* devono essere specificati, o tabella di origine deve avere una chiave primaria definita.  
+ Se *supports_net_changes* è impostato su 1, *index_name* devono essere specificati, o la tabella di origine deve avere una chiave primaria definita.  
   
  [  **@index_name =** ] **' * * * index_name*'  
- Nome di un indice univoco da utilizzare per identificare in modo univoco le righe nella tabella di origine. *index_name* viene **sysname** e può essere NULL. Se specificato, *index_name* deve essere un indice univoco valido nella tabella di origine. Se *index_name* viene specificato, le colonne indice identificate ha la precedenza su eventuali colonne chiave primarie definite come l'identificatore di riga univoco per la tabella.  
+ Nome di un indice univoco da utilizzare per identificare in modo univoco le righe nella tabella di origine. *index_name* viene **sysname** e può essere NULL. Se specificato, *index_name* deve essere un indice univoco valido nella tabella di origine. Se *index_name* viene specificato, le colonne indice identificate ha la precedenza su alcuna colonna chiave primaria definite come identificatore di riga univoco per la tabella.  
   
  [  **@captured_column_list =** ] **'***captured_column_list***'**  
  Identifica le colonne della tabella di origine da includere nella tabella delle modifiche. *captured_column_list* viene **nvarchar (max)** e può essere NULL. Se il valore è NULL, nella tabella delle modifiche vengono incluse tutte le colonne.  
   
- I nomi delle colonne devono essere colonne valide nella tabella di origine. Le colonne definite in un indice di chiave primaria, o le colonne definite in un indice a cui fa riferimento *index_name* deve essere incluso.  
+ I nomi delle colonne devono essere colonne valide nella tabella di origine. Le colonne definite in un indice di chiave primaria o le colonne definite in un indice fa riferimento *index_name* deve essere incluso.  
   
  *captured_column_list* è un elenco delimitato da virgole di nomi di colonna. I nomi delle singole colonne all'interno dell'elenco possono essere racchiusi tra virgolette ("") o parentesi quadrate ([]). Se un nome di una colonna contiene una virgola incorporata, il nome della colonna deve essere racchiuso tra virgolette.  
   
@@ -114,27 +113,27 @@ sys.sp_cdc_enable_table
 >  SWITCH PARTITION è un'operazione eseguita sui metadati, ma apporta modifiche anche ai dati. Le modifiche dei dati associate a tale operazione non vengono acquisite nella tabella delle modifiche di Change Data Capture. Si consideri ad esempio una tabella in cui sono presenti tre partizioni cui vengono apportate modifiche. Il processo di acquisizione registrerà le operazioni di inserimento, aggiornamento ed eliminazione eseguite sulla tabella dall'utente. Tuttavia, se una partizione è stata trasferita in un'altra tabella, ad esempio per l'esecuzione di un'eliminazione bulk, le righe spostate come parte di questa operazione non verranno acquisite come righe eliminate nella tabella di modifica. Analogamente, se alla tabella viene aggiunta una nuova partizione in cui sono presenti righe che contengono dati, tali righe non verranno riflesse nella tabella di modifica. Questa situazione può provocare incoerenza tra i dati quando le modifiche vengono utilizzate da un'applicazione e applicate a una destinazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
- Prima di abilitare una tabella per Change Data Capture, è necessario abilitare il database. Per determinare se il database è abilitato per change data capture, eseguire una query di **is_cdc_enabled** colonna il [Sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vista del catalogo. Per abilitare il database, utilizzare il [sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) stored procedure.  
+## <a name="remarks"></a>Note  
+ Prima di abilitare una tabella per Change Data Capture, è necessario abilitare il database. Per determinare se il database è abilitato per change data capture, eseguire una query di **is_cdc_enabled** colonna il [Sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vista del catalogo. Per abilitare il database, usare il [Sys. sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) stored procedure.  
   
  Quando Change Data Capture viene abilitato per una tabella, vengono generate una tabella delle modifiche e una o due funzioni di query. La tabella delle modifiche viene utilizzata come repository per le modifiche della tabella di origine estratte dal log delle transazioni dal processo di acquisizione. Le funzioni di query vengono utilizzate per estrarre i dati dalla tabella delle modifiche. I nomi di queste funzioni sono derivati dal *capture_instance* parametro nei modi seguenti:  
   
--   Funzione modifiche all: **CDC. fn_cdc_get_all_changes_ < capture_instance >**  
+-   Funzione di tutte le modifiche: **CDC. fn_cdc_get_all_changes < capture_instance >**  
   
--   Funzione di rilevamento delle modifiche delta: **CDC. fn_cdc_get_net_changes_ < capture_instance >**  
+-   Funzione di rilevamento delle modifiche delta: **CDC. fn_cdc_get_net_changes < capture_instance >**  
   
- **Sys. sp_cdc_enable_table** crea anche i processi di acquisizione e pulizia per il database se la tabella di origine è la prima tabella nel database deve essere abilitata per change data capture e non esistono pubblicazioni transazionali per il database. Imposta il **is_tracked_by_cdc** colonna il [Sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) vista su 1 del catalogo.  
+ **Sys. sp_cdc_enable_table** crea anche i processi di acquisizione e pulizia per il database se la tabella di origine è la prima tabella nel database deve essere abilitata per change data capture e non esistono pubblicazioni transazionali per il database. Imposta il **is_tracked_by_cdc** colonna il [Sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) catalogo visualizzazione su 1.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non deve essere in esecuzione quando Change Data Capture viene abilitato per una tabella. Tuttavia, il processo di acquisizione elaborerà il log delle transazioni e scriverà voci nella tabella delle modifiche solo se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in esecuzione.  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **db_owner** ruolo predefinito del database.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **db_owner** ruolo predefinito del database.  
   
 ## <a name="examples"></a>Esempi  
   

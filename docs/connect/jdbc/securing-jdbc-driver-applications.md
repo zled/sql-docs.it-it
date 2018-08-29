@@ -14,12 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15ac2b868066efcf978fc92d17b381e08ce2932d
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 091c7a2e7df6a073f7404af9b512a9b6404e6324
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454925"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784743"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Protezione delle applicazioni del driver JDBC
 
@@ -36,7 +36,7 @@ Negli argomenti di questa sezione vengono descritti alcuni problemi di sicurezza
 | [Protezione delle stringhe di connessione](../../connect/jdbc/securing-connection-strings.md) | Vengono descritte le tecniche per la protezione delle informazioni utilizzate per la connessione a un'origine dati.                                                                                    |
 | [Convalida dell'input utente](../../connect/jdbc/validating-user-input.md)             | Vengono descritte le tecniche per la convalida dell'input utente.                                                                                                                          |
 | [Sicurezza dell'applicazione](../../connect/jdbc/application-security.md)               | Viene descritto come utilizzare le autorizzazioni relative ai criteri Java per proteggere un'applicazione del driver JDBC.                                                                                |
-| [Uso della crittografia SSL](../../connect/jdbc/using-ssl-encryption.md)               | Viene descritto come stabilire un canale di comunicazione sicuro con un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilizzando SSL (Secure Sockets Layer). |
+| [Uso della crittografia SSL](../../connect/jdbc/using-ssl-encryption.md)               | Viene descritto come stabilire un canale di comunicazione sicuro con un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando SSL (Secure Sockets Layer). |
 | [Modalità FIPS](../../connect/jdbc/fips-mode.md)                                     | Viene descritto come usare JDBC driver in modalità conforme a FIPS.                                                                                                              |
   
 ## <a name="see-also"></a>Vedere anche  

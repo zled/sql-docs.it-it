@@ -22,16 +22,15 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4b3ae73ca452d15504d59f02f4103f04fced28ec
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6ea43a226b7f390abbf551cdb73818d5f3daea8d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396315"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030653"
 ---
 # <a name="create-a-database-user"></a>Creazione di un utente di database
   In questo argomento viene descritto come creare un utente del database mappato a un account di accesso [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'utente del database è l'identità dell'account di accesso quando è connesso a un database. Può utilizzare lo stesso nome dell'account, ma non si tratta di una condizione obbligatoria. In questo argomento si presuppone che esista già un account di accesso in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per informazioni su come creare un account di accesso, vedere [creare un account di accesso](create-a-login.md).  

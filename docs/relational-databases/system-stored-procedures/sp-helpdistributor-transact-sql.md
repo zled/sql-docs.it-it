@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributor (Transact-SQL) | Documenti Microsoft
+title: sp_helpdistributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributor
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e634d01d6bf241d6d626fb6c28038aa6175b2468
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0b7e22c946626c10d08781e00886083d0991d01
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003138"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022580"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@distributor=**] **'***distributore***'** OUTPUT  
- Nome del server di distribuzione. Server di distribuzione è **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+ Nome del server di distribuzione. Server di distribuzione **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
  [  **@distribdb=**] **'***distribdb***'** OUTPUT  
  Nome del database di distribuzione. *distribdb* viene **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
@@ -100,29 +100,29 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**Server di distribuzione**|**sysname**|Nome del server di distribuzione.|  
-|**Database di distribuzione**|**sysname**|Nome del database di distribuzione.|  
+|**server di distribuzione**|**sysname**|Nome del server di distribuzione.|  
+|**database di distribuzione**|**sysname**|Nome del database di distribuzione.|  
 |**Directory**|**nvarchar(255)**|Nome della directory di lavoro.|  
-|**Account**|**nvarchar(255)**|Nome dell'account utente di Windows.|  
-|**memorizzazione di punto di distrib min**|**int**|Periodo di memorizzazione minimo per la distribuzione.|  
-|**memorizzazione di punto di distrib max**|**int**|Periodo di memorizzazione massimo per la distribuzione.|  
-|**periodo di memorizzazione cronologia**|**int**|Periodo di memorizzazione per la cronologia.|  
-|**agente di pulizia della cronologia**|**Nvarchar (100)**|Nome dell'agente di pulizia del contenuto della cronologia.|  
-|**agente di pulizia di distribuzione**|**Nvarchar (100)**|Nome dell'agente di pulizia dei riferimenti alla distribuzione.|  
+|**account**|**nvarchar(255)**|Nome dell'account utente di Windows.|  
+|**conservazione di distrib min**|**int**|Periodo di memorizzazione minimo per la distribuzione.|  
+|**distrib massima conservazione**|**int**|Periodo di memorizzazione massimo per la distribuzione.|  
+|**periodo memorizzazione cronologia**|**int**|Periodo di memorizzazione per la cronologia.|  
+|**agente di pulizia della cronologia**|**Nvarchar(100)**|Nome dell'agente di pulizia del contenuto della cronologia.|  
+|**agente**|**Nvarchar(100)**|Nome dell'agente di pulizia dei riferimenti alla distribuzione.|  
 |**nome del server RPC**|**sysname**|Nome del server di distribuzione remoto o locale.|  
-|**nome dell'account di accesso RPC**|**sysname**|Account di accesso utilizzato per le chiamate di procedure remote al server di distribuzione remoto.|  
+|**nome account di accesso RPC**|**sysname**|Account di accesso utilizzato per le chiamate di procedure remote al server di distribuzione remoto.|  
 |**tipo di server di pubblicazione**|**sysname**|Tipo di server di pubblicazione. Può essere uno dei tipi seguenti:<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helpdistributor** viene utilizzata in tutti i tipi di replica.  
   
- Se vengono specificati uno o più parametri di output durante l'esecuzione **sp_helpdistributor**, tutti i parametri di output, impostati su NULL vengono assegnati valori in uscita e non viene restituito alcun set di risultati. Se non viene specificato alcun parametro di output, viene restituito un set di risultati.  
+ Se vengono specificati uno o più parametri di output durante l'esecuzione **sp_helpdistributor**, tutti i parametri di output, impostati su NULL vengono assegnati i valori in uscita e non viene restituito alcun set di risultati. Se non viene specificato alcun parametro di output, viene restituito un set di risultati.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Il seguenti set di risultati le colonne o parametri di output vengono restituiti ai membri del **sysadmin** ruolo predefinito del server nel server di pubblicazione e **db_owner** ruolo predefinito del database nel database di pubblicazione:  
+## <a name="permissions"></a>Permissions  
+ Il seguenti set di risultati le colonne o parametri di output vengono restituiti ai membri del **sysadmin** ruolo predefinito del server nel server di pubblicazione e il **db_owner** ruolo predefinito del database nel database di pubblicazione:  
   
 |Colonna del set di risultati|Parametro di output|  
 |-----------------------|----------------------|  

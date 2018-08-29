@@ -16,19 +16,19 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6e45f2253abd85387ce43b4888e934e6f2dbfde
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c37c170360e966e730b120601efd6867f2bb2659
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984403"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42786877"
 ---
 # <a name="using-integrated-authentication"></a>Uso dell'autenticazione integrata
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Linux e macOS supporta le connessioni che usano l'autenticazione integrata Kerberos. Supporta il centro distribuzione chiavi di MIT Kerberos e può essere usato con GSSAPI (Generic Security Services Application Program Interface) e librerie Kerberos v5.
+[!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS supporta le connessioni che usano l'autenticazione integrata Kerberos. Supporta il centro distribuzione chiavi di MIT Kerberos e può essere usato con GSSAPI (Generic Security Services Application Program Interface) e librerie Kerberos v5.
   
-## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversionmdmd-from-an-odbc-application"></a>Uso dell'autenticazione integrata per la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] da un'applicazione ODBC  
+## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversion-mdmd-from-an-odbc-application"></a>Uso dell'autenticazione integrata per la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da un'applicazione ODBC  
 
 È possibile abilitare l'autenticazione integrata di Kerberos specificando **Trusted_Connection = yes** nella stringa di connessione di **SQLDriverConnect** o **SQLConnect**. Ad esempio  
 
@@ -40,13 +40,13 @@ Quando ci si connette con un DSN, è anche possibile aggiungere **Trusted_Connec
   
 Il `-E` opzione di `sqlcmd` e il `-T` opzione della `bcp` possono essere usati anche per specificare l'autenticazione integrata, vedere [ci si connette con **sqlcmd** ](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) e[ La connessione con **bcp** ](../../../connect/odbc/linux-mac/connecting-with-bcp.md) per altre informazioni.
 
-Assicurarsi che l'entità di sicurezza del client che esegue la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sia già stata autenticata con Kerberos KDC.
+Assicurarsi che l'entità di sicurezza del client che esegue la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sia già stata autenticata con Kerberos KDC.
   
 **ServerSPN** e **FailoverPartnerSPN** non sono supportati.  
   
 ## <a name="deploying-a-linux-or-macos-odbc-driver-application-designed-to-run-as-a-service"></a>Distribuzione di un Linux o macOS ODBC Driver applicazione progettata per l'esecuzione come servizio
 
-Un amministratore di sistema può distribuire un'applicazione da eseguire come servizio che usa l'autenticazione Kerberos per connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Un amministratore di sistema può distribuire un'applicazione da eseguire come servizio che usa l'autenticazione Kerberos per connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 È necessario innanzitutto configurare Kerberos nel client e quindi verificare che l'applicazione possa usare le credenziali Kerberos dell'entità di sicurezza predefinita.
 
@@ -64,11 +64,11 @@ La pagina relativa a[configurazione e uso di Kerberos](http://commons.oreilly.co
   
 ## <a name="tracking-access-to-a-database"></a>Rilevamento dell'accesso a un database
 
-Un amministratore del database può creare un audit trail di accesso a un database quando vengono usati account di sistema per accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con l'autenticazione integrata.  
+Un amministratore del database può creare un audit trail di accesso a un database quando vengono usati account di sistema per accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'autenticazione integrata.  
   
-L'accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] usa l'account di sistema e non vi è alcuna funzionalità in Linux per rappresentare il contesto di sicurezza. Sono pertanto necessari più dati per determinare l'utente.
+L'accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa l'account di sistema e non vi è alcuna funzionalità in Linux per rappresentare il contesto di sicurezza. Sono pertanto necessari più dati per determinare l'utente.
   
-Per controllare le attività in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] per conto di utenti diversi dagli account di sistema, è necessario che l'applicazione usi [!INCLUDE[tsql](../../../includes/tsql_md.md)] **EXECUTE AS**.  
+Per controllare le attività in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per conto di utenti diversi dagli account di sistema, è necessario che l'applicazione usi [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
 Per migliorare le prestazioni, l'applicazione può usare pool di connessioni con autenticazione integrata e controllo. Tuttavia, la combinazione di pool di connessioni, autenticazione integrata e controllo crea un rischio per la sicurezza perché il programma di gestione dei driver unixODBC consente a utenti diversi di riutilizzare le connessioni in pool. Per altre informazioni, vedere la pagina relativa ai [pool di connessioni ODBC](http://www.unixodbc.org/doc/conn_pool.html).  
 
@@ -76,7 +76,7 @@ Prima del riutilizzo, è necessario che l'applicazione reimposti le connessioni 
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>Uso di Active Directory per la gestione delle identità utente
 
-Non è necessario che l'amministratore di sistema dell'applicazione gestisca più set di credenziali di accesso per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. È possibile configurare Active Directory come centro distribuzione chiavi (KDC) per l'autenticazione integrata. Visualizzare [Microsoft Kerberos](https://msdn.microsoft.com/library/windows/desktop/aa378747(v=vs.85).aspx) per altre informazioni.
+Non è necessario che l'amministratore di sistema dell'applicazione gestisca più set di credenziali di accesso per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. È possibile configurare Active Directory come centro distribuzione chiavi (KDC) per l'autenticazione integrata. Visualizzare [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos) per altre informazioni.
 
 ## <a name="using-linked-server-and-distributed-queries"></a>Uso di un server collegato e di query distribuite
 
@@ -84,21 +84,21 @@ Gli sviluppatori possono distribuire un'applicazione che usa un server collegato
   
 -   L'utente accede a un computer client ed esegue l'autenticazione nel server applicazioni.  
   
--   Il server applicazioni esegue l'autenticazione come database diverso e si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+-   Il server applicazioni esegue l'autenticazione come database diverso e si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] esegue l'autenticazione come utente di database in un altro database ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esegue l'autenticazione come utente di database in un altro database ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 Dopo aver configurato l'autenticazione integrata, le credenziali vengono passate al server collegato.  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>Autenticazione integrata e sqlcmd
-Per accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con l'autenticazione integrata, usare l'opzione `-E` di `sqlcmd`. Verificare che l'account che esegue `sqlcmd` è associato all'entità client Kerberos predefinita.
+Per accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'autenticazione integrata, usare l'opzione `-E` di `sqlcmd`. Verificare che l'account che esegue `sqlcmd` è associato all'entità client Kerberos predefinita.
 
 ## <a name="integrated-authentication-and-bcp"></a>Autenticazione integrata e bcp
-Per accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con l'autenticazione integrata, usare l'opzione `-T` di `bcp`. Verificare che l'account che esegue `bcp` è associato all'entità client Kerberos predefinita. 
+Per accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'autenticazione integrata, usare l'opzione `-T` di `bcp`. Verificare che l'account che esegue `bcp` è associato all'entità client Kerberos predefinita. 
   
 È possibile usare `-T` con il `-U` o `-P` opzione.
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>Sintassi supportata per un nome SPN registrato da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversion-mdmd"></a>Sintassi supportata per un nome SPN registrato da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 Di seguito è indicata la sintassi usata per i nomi SPN nella stringa di connessione o negli attributi di connessione:  
 
@@ -123,7 +123,7 @@ forwardable = yes
 .zzzz.corp.contoso.com = ZZZZ.CORP.CONTOSO.COM  
 ```  
   
-Se il computer Linux o macOS è configurato per l'utilizzo di Dynamic Host Configuration Protocol (DHCP) con un server DHCP di Windows che fornisce i server DNS da usare, è possibile usare **dns_lookup_kdc = true**. A questo punto, è possibile usare Kerberos per accedere al dominio eseguendo il comando `kinit alias@YYYY.CORP.CONTOSO.COM`. I parametri passati a `kinit` fanno distinzione tra maiuscole e le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] computer configurato come nel dominio deve disporre di tale utente `alias@YYYY.CORP.CONTOSO.COM` aggiunti per account di accesso. È ora possibile usare connessioni trusted (**Trusted_Connection=YES** in una stringa di connessione, **bcp -T** o **sqlcmd -E**).  
+Se il computer Linux o macOS è configurato per l'utilizzo di Dynamic Host Configuration Protocol (DHCP) con un server DHCP di Windows che fornisce i server DNS da usare, è possibile usare **dns_lookup_kdc = true**. A questo punto, è possibile usare Kerberos per accedere al dominio eseguendo il comando `kinit alias@YYYY.CORP.CONTOSO.COM`. I parametri passati a `kinit` fanno distinzione tra maiuscole e le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer configurato come nel dominio deve disporre di tale utente `alias@YYYY.CORP.CONTOSO.COM` aggiunti per account di accesso. È ora possibile usare connessioni trusted (**Trusted_Connection=YES** in una stringa di connessione, **bcp -T** o **sqlcmd -E**).  
   
 L'ora nel computer Linux o macOS e l'ora nel centro di distribuzione chiavi (KDC) Kerberos, devono essere simili. Verificare che l'ora di sistema sia impostata correttamente, ad esempio usando il protocollo NTP (Network Time Protocol).  
 

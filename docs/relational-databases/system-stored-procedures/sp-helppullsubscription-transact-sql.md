@@ -1,5 +1,5 @@
 ---
-title: sp_helppullsubscription (Transact-SQL) | Documenti Microsoft
+title: sp_helppullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helppullsubscription
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ada01ed2c7e447077026e65a9ca5776911b14dcd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b115e3e5c0bf52014db1d9704c0761b72c238059
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003618"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023811"
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,14 +65,14 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Nome del server di pubblicazione.|  
-|**database di pubblicazione**|**sysname**|Nome del database del server di pubblicazione.|  
-|**Pubblicazione**|**sysname**|Nome della pubblicazione.|  
+|**server di pubblicazione**|**sysname**|Nome del database del server di pubblicazione.|  
+|**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**independent_agent**|**bit**|Indica se per questa pubblicazione è disponibile un agente di distribuzione autonomo.|  
 |**tipo di sottoscrizione**|**int**|Tipo di sottoscrizione della pubblicazione.|  
-|**agente di distribuzione**|**Nvarchar (100)**|Agente di distribuzione che gestisce la sottoscrizione.|  
+|**agente di distribuzione**|**Nvarchar(100)**|Agente di distribuzione che gestisce la sottoscrizione.|  
 |**Descrizione della pubblicazione**|**nvarchar(255)**|Descrizione della pubblicazione.|  
 |**ora dell'ultimo aggiornamento**|**data**|Data e ora dell'aggiornamento delle informazioni della sottoscrizione. Si tratta di una stringa UNICODE con data ISO (114) + ora ODBC (121). Il formato è yyyymmdd hh:mi:sss.mmm dove 'yyyy' rappresenta l'anno, 'mm' il mese, 'dd' il giorno, 'hh' l'ora, 'mi' i minuti, 'sss' i secondi e 'mmm' i millisecondi.|  
-|**Nome della sottoscrizione**|**varchar(386)**|Nome della sottoscrizione.|  
+|**nome della sottoscrizione**|**varchar(386)**|Nome della sottoscrizione.|  
 |**timestamp dell'ultima transazione**|**varbinary(16)**|Timestamp dell'ultima transazione replicata.|  
 |**modalità di aggiornamento**|**tinyint**|Tipo di aggiornamenti consentiti.|  
 |**job_id dell'agente di distribuzione**|**int**|ID di processo dell'agente di distribuzione.|  
@@ -82,8 +82,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**immediate_sync**|**bit**|Indica se i file di sincronizzazione vengono creati o ricreati a ogni esecuzione dell'agente snapshot.|  
 |**account di accesso server di pubblicazione**|**sysname**|ID dell'account di accesso utilizzato nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password server di pubblicazione**|**nvarchar(524**|Password (crittografata) utilizzata dal server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**server di pubblicazione security_mode**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows<br /><br /> **2** = i trigger di sincronizzazione utilizzano un valore statico **sysservers** voce per eseguire la chiamata di procedura remota (RPC), e *publisher* deve essere definito nel **sysservers**tabella come un server remoto o un server collegato.|  
-|**Server di distribuzione**|**sysname**|Nome del server di distribuzione.|  
+|**security_mode server di pubblicazione**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows<br /><br /> **2** = i trigger di sincronizzazione utilizzano un valore statico **sysservers** voce per eseguire la chiamata di procedura remota (RPC), e *server di pubblicazione* deve essere definito nel **sysservers**tabella come un server remoto o un server collegato.|  
+|**server di distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**distributor_login**|**sysname**|ID dell'account di accesso utilizzato nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**|**nvarchar(524**|Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_security_mode**|**int**|Modalità di sicurezza implementata nel server di distribuzione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows|  
@@ -93,26 +93,26 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**ftp_password**|**nvarchar(524**|Disponibile solo per compatibilità con le versioni precedenti.|  
 |**alt_snapshot_folder**|**nvarchar(255)**|Percorso di archiviazione della cartella snapshot, se diverso o aggiuntivo rispetto a quello predefinito.|  
 |**working_directory**|**nvarchar(255)**|Percorso completo della directory in cui vengono trasferiti i file di snapshot tramite il servizio FTP, se l'opzione corrispondente è stata specificata.|  
-|**use_ftp**|**bit**|Indica che la sottoscrizione viene inserita nella pubblicazione tramite Internet e che le proprietà di indirizzamento FTP sono configurate. Se **0**, la sottoscrizione non utilizza FTP. Se **1**, la sottoscrizione utilizza FTP.|  
+|**use_ftp**|**bit**|Indica che la sottoscrizione viene inserita nella pubblicazione tramite Internet e che le proprietà di indirizzamento FTP sono configurate. Se **0**, sottoscrizione non utilizza il servizio FTP. Se **1**, sottoscrizione utilizza il servizio FTP.|  
 |**publication_type**|**int**|Specifica il tipo di replica della pubblicazione:<br /><br /> **0** = la replica transazionale<br /><br /> **1** = replica snapshot<br /><br /> **2** = replica di tipo merge|  
 |**dts_package_name**|**sysname**|Specifica il nome del pacchetto Data Transformation Services (DTS).|  
 |**dts_package_location**|**int**|Posizione in cui è archiviato il pacchetto DTS:<br /><br /> **0** = server di distribuzione<br /><br /> **1** = sottoscrittore|  
 |**offload_agent**|**bit**|Specifica se l'agente può essere attivato in remoto. Se **0**, l'agente non può essere attivato in remoto.|  
 |**offload_server**|**sysname**|Nome di rete del server utilizzato per l'attivazione remota.|  
-|**last_sync_status**|**int**|Stato della sottoscrizione:<br /><br /> **0** = tutti i processi sono in attesa di iniziare<br /><br /> **1** = uno o più processi sono in avvio<br /><br /> **2** = tutti i processi sono stati eseguiti correttamente<br /><br /> **3** = almeno un processo è in esecuzione<br /><br /> **4** = tutti i processi sono pianificati e inattivi<br /><br /> **5** = almeno un processo sta provando a eseguire dopo un precedente errore<br /><br /> **6** = almeno un processo non è stato eseguito correttamente|  
+|**last_sync_status**|**int**|Stato della sottoscrizione:<br /><br /> **0** = tutti i processi sono in attesa dell'avvio<br /><br /> **1** = uno o più processi di avvio<br /><br /> **2** = tutti i processi sono stati eseguiti correttamente<br /><br /> **3** = almeno un processo è in esecuzione<br /><br /> **4** = tutti i processi sono pianificati e inattivi<br /><br /> **5** = almeno un processo sta tentando di eseguire dopo un precedente errore<br /><br /> **6** = almeno un processo non è stato eseguito correttamente|  
 |**last_sync_summary**|**sysname**|Descrizione dei risultati dell'ultima sincronizzazione.|  
 |**last_sync_time**|**datetime**|Data e ora dell'aggiornamento delle informazioni della sottoscrizione. Si tratta di una stringa UNICODE con data ISO (114) + ora ODBC (121). Il formato è yyyymmdd hh:mi:sss.mmm dove 'yyyy' rappresenta l'anno, 'mm' il mese, 'dd' il giorno, 'hh' l'ora, 'mi' i minuti, 'sss' i secondi e 'mmm' i millisecondi.|  
-|**job_login**|**nvarchar(512)**|È l'account di Windows con cui viene eseguito l'agente di distribuzione, viene restituito nel formato *dominio*\\*username*.|  
-|**job_password**|**sysname**|Per motivi di sicurezza, il valore "**\*\*\*\*\*\*\*\*\*\***" è sempre restituito.|  
+|**job_login**|**nvarchar(512)**|L'account di Windows con cui viene eseguito l'agente di distribuzione, viene restituito nel formato *domain*\\*username*.|  
+|**job_password**|**sysname**|Per motivi di sicurezza, un valore di "**\*\*\*\*\*\*\*\*\*\***" è sempre restituiti.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helppullsubscription** viene utilizzata nella replica snapshot e transazionale.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_helppullsubscription** .  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_helppullsubscription** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   

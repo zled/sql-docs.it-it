@@ -14,25 +14,25 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdfaa0fa75c8ff37ed3c165b5e080cee9cd7a0ba
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: f5878e83f9b23f273da46f356b05f8ce6563712e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662383"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786102"
 ---
 # <a name="working-with-a-connection"></a>Utilizzo di una connessione
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Nelle sezioni seguenti vengono illustrati alcuni esempi dei diversi modi di connessione a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tramite la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
+Nelle sezioni seguenti vengono illustrati alcuni esempi dei diversi modi di connessione a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 
 > [!NOTE]  
-> Se si verificano problemi durante la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tramite il driver JDBC, vedere [Risoluzione dei problemi di connettività](../../connect/jdbc/troubleshooting-connectivity.md) per suggerimenti su come correggerli.
+> Se si verificano problemi durante la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il driver JDBC, vedere [Risoluzione dei problemi di connettività](../../connect/jdbc/troubleshooting-connectivity.md) per suggerimenti su come correggerli.
 
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>Creazione di una connessione mediante la classe DriverManager
 
-L'approccio più semplice per creare una connessione a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] consiste nel caricare il driver JDBC e chiamare il metodo getConnection della classe DriverManager, come nell'esempio seguente:
+L'approccio più semplice per creare una connessione a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste nel caricare il driver JDBC e chiamare il metodo getConnection della classe DriverManager, come nell'esempio seguente:
 
 ```java
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  

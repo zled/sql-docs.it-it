@@ -22,17 +22,16 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 55408f62c8e66c33bcb58682831970312c51130d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7091aa6596fd66260ae43d39f0f19e5770b6dcdf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998173"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030141"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -87,9 +86,9 @@ ms.locfileid: "37998173"
 |**connettività**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Nota: Si applica solo ai Database SQL Azure V11.*<br /><br /> Sessione terminata a causa di un utilizzo eccessivo di TEMPDB. Provare a modificare la query per ridurre l'utilizzo dello spazio delle tabelle temporanee. Per altre informazioni, vedere [dei limiti delle risorse](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connettività**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Nota: Si applica solo ai Database SQL Azure V11.*<br /><br /> Sessione terminata a causa di un utilizzo eccessivo dello spazio del log delle transazioni. Provare a modificare meno righe in una sola transazione. Per altre informazioni, vedere [dei limiti delle risorse](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connettività**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Nota: Si applica solo ai Database SQL Azure V11.*<br /><br /> Sessione terminata a causa di un utilizzo eccessivo della memoria. Provare a modificare la query per elaborare meno righe. Per altre informazioni, vedere [dei limiti delle risorse](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**motore**|**deadlock**|0|**deadlock**|2|Si è verificato un deadlock.|  
+|**Motore**|**deadlock**|0|**deadlock**|2|Si è verificato un deadlock.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Gli utenti che dispongono dell'autorizzazione di accesso di **master** database hanno accesso in lettura a questa visualizzazione.  
   
 ## <a name="remarks"></a>Note  

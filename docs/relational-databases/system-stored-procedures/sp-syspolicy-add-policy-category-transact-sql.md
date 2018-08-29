@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_add_policy_category
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 134777b90dcb5213d1f8a747de4bd34151afcca2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 20bf30b2f0ad96ce46f6990d3d4efeab1a1fe398
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254726"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033315"
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,18 +49,18 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
  Nome della categoria di criteri. *nome* viene **sysname**ed è obbligatorio. *nome* non può essere NULL o una stringa vuota.  
   
  [  **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
- Determina se la sottoscrizione di database per la categoria di criteri è obbligatoria. *mandate_database_subscriptions* è un **bit** e il valore predefinito è 1 (abilitato).  
+ Determina se la sottoscrizione di database per la categoria di criteri è obbligatoria. *mandate_database_subscriptions* è un **bit** , valore predefinito è 1 (abilitato).  
   
  [ **@policy_category_id=** ] *policy_category_id*  
  Identificatore della categoria di criteri. *policy_category_id* viene **int**e viene restituito come OUTPUT.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syspolicy_add_policy_category nel contesto del database di sistema msdb.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

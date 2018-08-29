@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributiondb (Transact-SQL) | Documenti Microsoft
+title: sp_helpdistributiondb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02065dbaa89a16c0d00ce8737bb79f29c5256495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df4a44be4ef3271e6af8e7148bfee50f40c71617
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996928"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018297"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**name**|**sysname**|Nome del database di distribuzione.|  
 |**min_distretention**|**int**|Periodo di memorizzazione minimo espresso in ore che deve trascorrere prima dell'eliminazione delle transazioni.|  
 |**max_distretention**|**int**|Periodo di memorizzazione massimo espresso in ore trascorso il quale le transazioni vengono eliminate.|  
-|**periodo di memorizzazione cronologia**|**int**|Numero di ore di memorizzazione della cronologia.|  
+|**periodo memorizzazione cronologia**|**int**|Numero di ore di memorizzazione della cronologia.|  
 |**history_cleanup_agent**|**sysname**|Nome dell'agente di pulizia del contenuto della cronologia.|  
 |**distribution_cleanup_agent**|**sysname**|Nome dell'agente di pulizia dei riferimenti alla distribuzione.|  
 |**status**|**int**|Solo per uso interno.|  
@@ -67,13 +67,13 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**log_file_size**|**int**|Dimensioni iniziali del file di log in MB.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helpdistributiondb** viene utilizzata in tutti i tipi di replica.  
   
-## <a name="permissions"></a>Autorizzazioni  
- I membri del **db_owner** ruolo predefinito del database o **replmonitor** possono eseguire in un database di distribuzione e gli utenti nell'elenco di accesso alla pubblicazione di una pubblicazione che utilizza il database di distribuzione **sp_helpdistributiondb** per restituire informazioni relative ai file. I membri del **pubblica** ruolo può eseguire **sp_helpdistributiondb** per restituire informazioni non relative ai file per i database di distribuzione a cui hanno accesso.  
+## <a name="permissions"></a>Permissions  
+ I membri del **db_owner** ruolo predefinito del database o il **replmonitor** ruolo in un database di distribuzione e gli utenti nell'elenco di accesso alla pubblicazione di una pubblicazione che utilizza il database di distribuzione possono eseguire **sp_helpdistributiondb** per restituire le informazioni relative ai file. I membri del **pubbliche** possono eseguire **sp_helpdistributiondb** per restituire informazioni non correlate a file per i database di distribuzione a cui hanno accesso.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

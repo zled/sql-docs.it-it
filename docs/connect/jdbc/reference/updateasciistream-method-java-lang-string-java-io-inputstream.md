@@ -1,5 +1,5 @@
 ---
-title: Metodo (Java.IO. InputStream) updateAsciiStream | Documenti Microsoft
+title: Metodo (java.io.InputStream) updateAsciiStream | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 074b8ddbc5a4973e309b9be96f65518afade2837
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5fbc4cb8b8affaaaf146c9dfcfe5ad833d3d1f9b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850316"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785971"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream"></a>Metodo updateAsciiStream (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void updateAsciiStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parametri  
  *columnLabel*  
   
- Oggetto **stringa** che contiene l'etichetta di colonna.  
+ Valore **String** contenente l'etichetta della colonna.  
   
  *x*  
   
@@ -46,12 +46,12 @@ public void updateAsciiStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo updateAsciiStream viene specificato dal metodo updateAsciiStream nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo updateAsciiStream viene specificato dal metodo updateAsciiStream nell'interfaccia ResultSet.  
   
- Questo metodo passa caratteri ASCII (byte) da un oggetto InputStream alle colonne di tipo carattere convertibili, l'intervallo ASCII [0x00 – 0x7F] di Unicode e 874, 932, 936, 949, 950 e 1250 a 1258 tabelle codici. Esegue una conversione nella pagina delle regole di confronto di destinazione. Se si tenta di aggiornare una colonna di destinazione non convertibile, verrà generata un'eccezione. Per le colonne binarie, vengono passati byte non elaborati.  
+ Questo metodo passa caratteri ASCII (byte) da un oggetto InputStream a colonne di tipo carattere convertibili, ovvero l'intervallo ASCII [0x00 - 0x7F] di Unicode e le tabelle codici 874, 932, 936 949 e 950 e da 1250 a 1258. Esegue una conversione nella pagina delle regole di confronto di destinazione. Se si tenta di aggiornare una colonna di destinazione non convertibile, verrà generata un'eccezione. Per le colonne binarie, vengono passati byte non elaborati.  
   
- Questo metodo per il **immagine**, **testo**, e **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipi di dati potrebbero influire sulle prestazioni.  
+ Utilizzo di questo metodo per la **immagine**, **testo**, e **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i tipi di dati potrebbero influire sulle prestazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateAsciiStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   

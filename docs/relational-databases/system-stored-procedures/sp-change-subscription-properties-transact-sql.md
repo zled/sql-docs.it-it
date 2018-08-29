@@ -1,5 +1,5 @@
 ---
-title: sp_change_subscription_properties (Transact-SQL) | Documenti Microsoft
+title: sp_change_subscription_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c049bd3ede58a884028cf3f1415660ebf2365f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 352a97795452a73837fb6111dd62c915844cd373
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036683"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +65,9 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  Nuovo valore della proprietà. *valore* viene **nvarchar(1000)**, non prevede alcun valore predefinito.  
   
  [  **@publication_type =** ] *publication_type*  
- Specifica il tipo di replica della pubblicazione. *publication_type* viene **int**, e può essere uno dei valori seguenti.  
+ Specifica il tipo di replica della pubblicazione. *publication_type* viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Tipo di pubblicazione|  
+|valore|Tipo di pubblicazione|  
 |-----------|----------------------|  
 |**0**|Transazionale|  
 |**1**|Snapshot|  
@@ -76,7 +76,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   
-|Proprietà|Value|Description|  
+|Proprietà|valore|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Specifica la posizione della cartella alternativa per lo snapshot. Se il valore è NULL, i file di snapshot vengono prelevati dalla posizione predefinita specificata dal server di pubblicazione.|  
 |**distrib_job_login**||Account di accesso per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente.|  
@@ -86,7 +86,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_security_mode**|**1**|Consente di utilizzare l'autenticazione di Windows per la connessione al server di distribuzione.|  
 ||**0**|Consente di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione al server di distribuzione.|  
 |**dts_package_name**||Specifica il nome del pacchetto di SQL Server 2000 Data Transformation Services (DTS). Questo valore può essere specificato solo se la pubblicazione è di tipo transazionale o snapshot.|  
-|**dts_package_password**||Specifica la password per il pacchetto. *dts_package_password* viene **sysname** con un valore predefinito è NULL, che indica che la proprietà della password deve rimanere invariata.<br /><br /> Nota: Un pacchetto DTS deve avere una password.<br /><br /> Questo valore può essere specificato solo se la pubblicazione è di tipo transazionale o snapshot.|  
+|**dts_package_password**||Specifica la password per il pacchetto. *dts_package_password* viene **sysname** con valore predefinito è NULL, che indica che la proprietà della password deve rimanere invariata.<br /><br /> Nota: Un pacchetto DTS deve avere una password.<br /><br /> Questo valore può essere specificato solo se la pubblicazione è di tipo transazionale o snapshot.|  
 |**dts_package_location**||Posizione di archiviazione del pacchetto DTS. Questo valore può essere specificato solo se la pubblicazione è di tipo transazionale o snapshot.|  
 |**dynamic_snapshot_location**||Specifica il percorso della cartella in cui vengono salvati i file di snapshot. Questo valore può essere specificato solo se la pubblicazione è di tipo merge.|  
 |**ftp_address**||Disponibile solo per compatibilità con le versioni precedenti.|  
@@ -96,15 +96,15 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**Nome host**||Nome host utilizzato per la connessione al server di pubblicazione.|  
 |**internet_login**||Account di accesso utilizzato dall'agente di merge per la connessione al server Web che ospita la sincronizzazione Web tramite l'autenticazione di base.|  
 |**internet_password**||Password utilizzata dall'agente di merge per la connessione al server Web in cui ha luogo la sincronizzazione Web mediante l'autenticazione di base.|  
-|**internet_security_mode**|**1**|Consente di utilizzare l'autenticazione integrata di Windows per la sincronizzazione Web. È consigliabile utilizzare l'autenticazione di base per la sincronizzazione Web. Per altre informazioni, vedere [Configurare la sincronizzazione Web](../../relational-databases/replication/configure-web-synchronization.md).|  
+|**internet_security_mode**|**1**|Consente di utilizzare l'autenticazione integrata di Windows per la sincronizzazione Web. È consigliabile utilizzare l'autenticazione di base per la sincronizzazione Web. Per altre informazioni, vedere [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  
 ||**0**|Consente di utilizzare l'autenticazione di base per la sincronizzazione Web.<br /><br /> Nota: La sincronizzazione Web richiede una connessione SSL al server Web.|  
 |**internet_timeout**||Periodo di tempo, espresso in secondi, al termine del quale una richiesta di sincronizzazione Web scade.|  
 |**internet_url**||URL che rappresenta la posizione del listener per la replica per la sincronizzazione Web.|  
 |**merge_job_login**||Account di accesso per l'account di Windows utilizzato per l'esecuzione dell'agente.|  
 |**merge_job_password**||Password dell'account di Windows utilizzato per l'esecuzione dell'agente.|  
-|**publisher_login**||Account di accesso per il server di pubblicazione. Modifica *publisher_login* è supportato solo per le sottoscrizioni di pubblicazioni di tipo merge.|  
-|**publisher_password**||Password del server di pubblicazione. Modifica *publisher_password* è supportato solo per le sottoscrizioni di pubblicazioni di tipo merge.|  
-|**publisher_security_mode**|**1**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di Windows. Modifica *publisher_security_mode* è supportato solo per le sottoscrizioni di pubblicazioni di tipo merge.|  
+|**publisher_login**||Account di accesso per il server di pubblicazione. Modificando *publisher_login* è supportata solo per le sottoscrizioni a pubblicazioni di tipo merge.|  
+|**publisher_password**||Password del server di pubblicazione. Modificando *publisher_password* è supportata solo per le sottoscrizioni a pubblicazioni di tipo merge.|  
+|**publisher_security_mode**|**1**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di Windows. Modificando *publisher_security_mode* è supportata solo per le sottoscrizioni a pubblicazioni di tipo merge.|  
 ||**0**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**use_ftp**|**true**|Consente di utilizzare il protocollo FTP anziché il protocollo regolare per il recupero degli snapshot.|  
 ||**false**|Consente di utilizzare il protocollo regolare per il recupero degli snapshot.|  
@@ -113,20 +113,20 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**working_directory**||Nome della directory di lavoro utilizzata per l'archiviazione temporanea dei file di dati e dello schema della pubblicazione quando per il trasferimento dei file di snapshot viene utilizzato il protocollo FTP (File Transfer Protocol).|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_change_subscription_properties** viene utilizzata in tutti i tipi di replica.  
   
- **sp_change_subscription_properties** viene utilizzato per le sottoscrizioni pull.  
+ **sp_change_subscription_properties** viene usato per le sottoscrizioni pull.  
   
- Per i server di pubblicazione Oracle, il valore di *publisher_db* viene ignorato perché Oracle consente solo di un database per ogni istanza del server.  
+ Server di pubblicazione Oracle, il valore di *publisher_db* viene ignorato perché Oracle consente solo di un database per ogni istanza del server.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_change_subscription_properties**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_change_subscription_properties**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzazione e modifica delle proprietà delle sottoscrizioni pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
+ [Visualizzare e modificare le proprietà delle sottoscrizioni pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
  [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   

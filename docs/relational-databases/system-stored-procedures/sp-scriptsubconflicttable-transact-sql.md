@@ -1,5 +1,5 @@
 ---
-title: sp_scriptsubconflicttable (Transact-SQL) | Documenti Microsoft
+title: sp_scriptsubconflicttable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_scriptsubconflicttable
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86a5b01b46aee8a08c0e490b0d59e3887211d51e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f9eddd0192cff32db884f153a00b0f5526d16028
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997658"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020850"
 ---
 # <a name="spscriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
  Nome dell'articolo della sottoscrizione. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -60,11 +60,11 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 |-----------------|---------------|-----------------|  
 |**cmdtext**|**nvarchar(4000)**|Restituisce lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] per la creazione della tabella dei conflitti nel Sottoscrittore per l'articolo di sottoscrizione in coda. Lo script viene eseguito nel database di sottoscrizione del Sottoscrittore.|  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_scriptsubconflicttable** viene utilizzato per i sottoscrittori con sottoscrizioni in cui lo snapshot iniziale viene applicato manualmente. La tabella dei conflitti è una tabella facoltativa nel Sottoscrittore.  
+## <a name="remarks"></a>Note  
+ **sp_scriptsubconflicttable** viene usato per i sottoscrittori con sottoscrizioni in cui lo snapshot iniziale viene applicato manualmente. La tabella dei conflitti è una tabella facoltativa nel Sottoscrittore.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_scriptsubconflicttable**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_scriptsubconflicttable**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Rilevamento e risoluzione dei conflitti per l'aggiornamento in coda](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   

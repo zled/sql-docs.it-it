@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorsubscriptionpendingcmds (Transact-SQL) | Documenti Microsoft
+title: sp_replmonitorsubscriptionpendingcmds (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorsubscriptionpendingcmds
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c94d01031094e03ddde2fc9bcdf234729ecd11c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7be00206267ea37c74c3b1055598ac9a2770a622
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001044"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038534"
 ---
 # <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +66,9 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
  Nome del database di sottoscrizione. *subscriber_db* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@subscription_type** =] *subscription_type*  
- Tipo di sottoscrizione: *publication_type* viene **int**e non prevede alcun valore predefinito e può essere uno dei valori seguenti.  
+ Tipo di sottoscrizione: *publication_type* viene **int**e non prevede alcun valore predefinito i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**0**|Sottoscrizione push|  
 |**1**|Sottoscrizione pull|  
@@ -81,13 +81,13 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 |**estimatedprocesstime**|**int**|Stima del numero di secondi necessari per il recapito di tutti i comandi in sospeso al Sottoscrittore.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_replmonitorsubscriptionpendingcmds** viene utilizzato con la replica transazionale.  
+## <a name="remarks"></a>Note  
+ **sp_replmonitorsubscriptionpendingcmds** viene usato con la replica transazionale.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** al server di distribuzione o i membri del ruolo predefinito del server di **db_owner** ruolo predefinito del database nel database di distribuzione possono eseguire **sp _ replmonitorsubscriptionpendingcmds**. Elenco dei membri dell'accesso alla pubblicazione per una pubblicazione che utilizza il database di distribuzione può eseguire **sp_replmonitorsubscriptionpendingcmds** per restituire i comandi in sospeso per tale pubblicazione.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** nel server di distribuzione membri del ruolo predefinito del server di **db_owner** ruolo predefinito del database nel database di distribuzione possono eseguire **sp _ replmonitorsubscriptionpendingcmds**. Elenco dei membri dell'accesso alla pubblicazione per una pubblicazione che utilizza il database di distribuzione può eseguire **sp_replmonitorsubscriptionpendingcmds** restituire comandi in sospeso per tale pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitorare la replica a livello di programmazione](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_mergedummyupdate (Transact-SQL) | Documenti Microsoft
+title: sp_mergedummyupdate (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_mergedummyupdate
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d31ad74486c8be2b964f4dd3f02c5b5a04ac0b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c06f7c39d495808bd700947082b7416f7dd2853
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994838"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021570"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
  Identificatore di riga. *ROWGUID* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_mergedummyupdate** viene utilizzata nella replica di tipo merge.  
   
- **sp_mergedummyupdate** è utile se si scrive un'alternativa per il Visualizzatore conflitti di replica (Wzcnflct.exe).  
+ **sp_mergedummyupdate** è utile se si scrive il proprio alternativa per il Visualizzatore conflitti di replica (Wzcnflct.exe).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **db_owner** ruolo predefinito del database possono eseguire **sp_mergedummyupdate**.  
   
 ## <a name="see-also"></a>Vedere anche  

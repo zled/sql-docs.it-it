@@ -1,5 +1,5 @@
 ---
-title: sp_repltrans (Transact-SQL) | Documenti Microsoft
+title: sp_repltrans (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_repltrans
 ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd00140e94d77e4daed159a97e41ad4a493fa624
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 827ff7056b25ea3984838b5a4993eea63738920b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995538"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022606"
 ---
 # <a name="sprepltrans-transact-sql"></a>sp_repltrans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ sp_repltrans
 ```  
   
 ## <a name="result-sets"></a>Set di risultati  
- **sp_repltrans** restituisce informazioni sul database di pubblicazione da cui viene eseguito, consentendo di visualizzare le transazioni non distribuite (quelle che rimangono nel log delle transazioni che non sono stati inviati per il Server di distribuzione). Il set di risultati include i numeri di sequenza del file di log del primo e dell'ultimo record per ogni transazione. **sp_repltrans** è simile a [sp_replcmds &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) ma non restituisce i comandi per le transazioni.  
+ **sp_repltrans** restituisce informazioni sul database di pubblicazione da cui viene eseguito, per consentire la visualizzazione delle transazioni non distribuite (quelle che rimangono nel log delle transazioni che non sono stati inviati per il Server di distribuzione). Il set di risultati include i numeri di sequenza del file di log del primo e dell'ultimo record per ogni transazione. **sp_repltrans** è simile a [sp_replcmds &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) ma non restituisce i comandi per le transazioni.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_repltrans** viene utilizzata nella replica transazionale.  
   
  **sp_repltrans** non è supportata per non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_repltrans**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_repltrans**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   

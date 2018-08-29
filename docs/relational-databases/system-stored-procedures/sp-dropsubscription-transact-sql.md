@@ -1,5 +1,5 @@
 ---
-title: sp_dropsubscription (Transact-SQL) | Documenti Microsoft
+title: sp_dropsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropsubscription
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6477b090fd3a98626b79a6db83cea729b4dec07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0dc8bba63c8b1ffef6e1c24810c9457e1e9b5242
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993758"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029113"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
  Nome della pubblicazione associata. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. Se **tutti**, vengono annullate tutte le sottoscrizioni per tutte le pubblicazioni del Sottoscrittore specificato. *pubblicazione* è un parametro obbligatorio.  
   
  [  **@article=** ] **'***articolo***'**  
- Nome dell'articolo. *articolo* viene **sysname**, con valore predefinito è NULL. Se **tutti**, specificato di sottoscrizioni a tutti gli articoli per ogni pubblicazione e nel Sottoscrittore vengono eliminati. Utilizzare **tutti** per le pubblicazioni che consentono immediatamente l'aggiornamento.  
+ Nome dell'articolo. *articolo* viene **sysname**, con un valore predefinito NULL. Se **tutti**, specificato di sottoscrizioni a tutti gli articoli per ogni pubblicazione e nel Sottoscrittore vengono eliminate. Uso **tutti** per le pubblicazioni che consentono immediatamente l'aggiornamento.  
   
  [  **@subscriber=** ] **' * **sottoscrizione*r**' * *  
  Nome del Sottoscrittore da cui si desidera eliminare le sottoscrizioni. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, vengono eliminate tutte le sottoscrizioni per tutti i sottoscrittori.  
@@ -69,9 +69,9 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_dropsubscription** viene utilizzata nella replica snapshot e transazionale.  
   
  Se si elimina la sottoscrizione di un articolo in una pubblicazione a sincronizzazione immediata, non è possibile aggiungerla nuovamente, a meno che le sottoscrizioni di tutti gli articoli della pubblicazione non vengano eliminate e aggiunte nuovamente in una sola operazione.  
@@ -79,12 +79,12 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database o l'utente che ha creato la sottoscrizione può eseguire **sp_dropsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare una sottoscrizione Push](../../relational-databases/replication/delete-a-push-subscription.md)   
- [stored procedure sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   

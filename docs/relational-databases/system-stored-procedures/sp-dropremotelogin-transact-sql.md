@@ -1,5 +1,5 @@
 ---
-title: sp_dropremotelogin (Transact-SQL) | Documenti Microsoft
+title: sp_dropremotelogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropremotelogin
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4565f5a3005a556d24777a220ff020816f01a346
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 89633f39028047e4caf4bb2dd8db0f4ce022c96c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256587"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026498"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,22 +54,22 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
  Nome facoltativo dell'account di accesso nel server locale associato al server remoto. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve già esistere se specificato.  
   
  [  **@remotename =** ] **'***remote_name***'**  
- Nome facoltativo dell'account di accesso remoto che viene eseguito il mapping a *accesso* durante l'accesso dal server remoto. *remote_name* viene **sysname**, con un valore predefinito è NULL.  
+ Nome facoltativo dell'account di accesso remoto viene mappato a *account di accesso* durante l'accesso dal server remoto. *remote_name* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
- Se solo *remoteserver* viene specificato, vengono rimossi tutti gli account di accesso remoto per il server remoto dal server locale. Se *accesso* è specificato, tutti remoto agli account di accesso *remoteserver* mappato allo specifico account di accesso locale vengono rimosse dal server locale. Se *remote_name* viene anche specificato solo l'account di accesso remoto per l'utente remoto da *remoteserver* viene rimosso dal server locale.  
+## <a name="remarks"></a>Note  
+ Se solo *remoteserver* viene specificato, vengono rimossi tutti gli account di accesso remoto per il server remoto dal server locale. Se *account di accesso* è anche gli account di accesso specificato in tutte le modalità remota dal *remoteserver* mappate a questo specifico account di accesso locale vengono rimosse dal server locale. Se *remote_name* viene specificato anche, solo l'account di accesso remoto per l'utente remoto da *remoteserver* viene rimosso dal server locale.  
   
- Per aggiungere utenti al server locale, utilizzare **sp_addlogin**. Per rimuovere utenti dal server locale, utilizzare **sp_droplogin**.  
+ Per aggiungere utenti al server locale, usare **sp_addlogin**. Per rimuovere utenti dal server locale, usare **sp_droplogin**.  
   
- Gli account di accesso remoti sono necessari solo in caso di utilizzo di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 e versioni successive utilizzano invece account di accesso dei server collegati. Utilizzare **sp_addlinkedsrvlogin** e **sp_droplinkedsrvlogin** per aggiungere e rimuovere gli accessi server collegato.  
+ Gli account di accesso remoti sono necessari solo in caso di utilizzo di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 e versioni successive utilizzano invece account di accesso dei server collegati. Uso **sp_addlinkedsrvlogin** e **sp_droplinkedsrvlogin** per aggiungere e rimuovere gli accessi server collegato.  
   
  **sp_dropremotelogin** non può essere eseguita all'interno di una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **sysadmin** o **securityadmin** ruoli predefiniti del server.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **sysadmin** oppure **securityadmin** ruoli predefiniti del server.  
   
 ## <a name="examples"></a>Esempi  
   

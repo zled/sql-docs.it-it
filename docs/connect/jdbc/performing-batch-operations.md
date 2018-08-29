@@ -14,24 +14,24 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c668dabd9b9a1957ffb69d034a59cc8df1cc4025
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 39596d1bc481005606a7442d755b3cc9a1ec668b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279015"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786661"
 ---
 # <a name="performing-batch-operations"></a>Esecuzione di operazioni batch
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Per garantire prestazioni migliori quando si eseguono più aggiornamenti di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] consente di inviare più aggiornamenti come singola unità di lavoro, denominata anche batch.  
+  Per garantire prestazioni migliori quando si eseguono più aggiornamenti di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] consente di inviare più aggiornamenti come singola unità di lavoro, denominata anche batch.  
   
  Le classi [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) possono essere usate tutte per inviare aggiornamenti in blocco. Il metodo [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) viene usato per aggiungere un comando. Il metodo [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) viene usato per cancellare l'elenco dei comandi. Il metodo [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) viene usato per inviare tutti i comandi per l'elaborazione. Possono essere eseguite come parte di un batch solo le istruzioni DDL (Data Definition Language) e DML (Data Manipulation Language) che restituiscono un semplice conteggio di aggiornamento.  
   
  Il metodo executeBatch restituisce una matrice di valori **int** che corrispondono al conteggio aggiornamenti di ogni comando. Se uno dei comandi non riesce, viene generata una BatchUpdateException e utilizzare il metodo getUpdateCounts della classe BatchUpdateException per recuperare la matrice del conteggio di aggiornamento. Se un comando non riesce, il driver continua a elaborare i comandi rimanenti. Tuttavia, se un comando contiene un errore di sintassi sarà impossibile eseguire le istruzioni del batch.  
   
 > [!NOTE]  
->  Se non è necessario usare i conteggi degli aggiornamenti, è possibile eseguire prima un'istruzione SET NOCOUNT ON in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Il traffico di rete verrà ridotto e aumenteranno le prestazioni dell'applicazione.  
+>  Se non è necessario usare i conteggi degli aggiornamenti, è possibile eseguire prima un'istruzione SET NOCOUNT ON in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il traffico di rete verrà ridotto e aumenteranno le prestazioni dell'applicazione.  
   
  Come esempio viene creata la tabella seguente nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:  
   

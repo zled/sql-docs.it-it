@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_profile (Transact-SQL) | Documenti Microsoft
+title: sp_help_agent_profile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_agent_profile
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 724cec30c6790fb7bc8e56b7fd6fe7cc273fe301
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 551122d7e31d33f50c6c1c4e4f48f76716eaa7d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995308"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024066"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@agent_type=**] *agent_type*  
- Tipo di agente. *agent_type* viene **int**, il valore predefinito è **0**, e può essere uno dei valori seguenti.  
+ Tipo di agente. *agent_type* viene **int**, il valore predefinito è **0**, i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|agente snapshot|  
 |**2**|Agente di lettura log|  
@@ -72,13 +72,13 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**def_profile**|**bit**|Indica se il profilo corrisponde al profilo predefinito per il tipo di agente specificato.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_help_agent_profile** viene utilizzata in tutti i tipi di replica.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **replmonitor** ruolo predefinito del database possono eseguire **sp_help_agent_profile**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **replmonitor** ruolo predefinito del database possono eseguire **sp_help_agent_profile**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Usare i profili agenti di replica](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

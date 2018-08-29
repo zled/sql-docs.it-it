@@ -1,5 +1,5 @@
 ---
-title: sp_helpxactsetjob (Transact-SQL) | Documenti Microsoft
+title: sp_helpxactsetjob (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpxactsetjob
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef643efb849a0f178ac98bf439360fca87d21983
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 58ebd1b5592a7a4b17f665555689b32e8456d714
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997208"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027517"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,25 +56,25 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**lastdate**|**varchar(22)**|Data dell'ultima esecuzione del processo.|  
 |**thisdate**|**varchar(22)**|Ora della modifica|  
 |**nextdate**|**varchar(22)**|Data della successiva esecuzione del processo.|  
-|**interrotto**|**varchar(1)**|Flag che indica se il processo è interrotto.|  
-|**intervallo**|**varchar(200)**|Intervallo del processo.|  
+|**interrotto**|**varchar (1)**|Flag che indica se il processo è interrotto.|  
+|**Intervallo**|**varchar(200)**|Intervallo del processo.|  
 |**errori**|**int**|Numero di errori per il processo.|  
 |**xactsetjobwhat**|**varchar(200)**|Nome della procedura eseguita dal processo.|  
-|**xactsetjob**|**varchar(1)**|Stato del processo. I possibili valori sono i seguenti:<br /><br /> **1** -il processo è abilitato.<br /><br /> **0** -il processo è disabilitato.|  
+|**xactsetjob**|**varchar (1)**|Stato del processo. I possibili valori sono i seguenti:<br /><br /> **1** -il processo è abilitato.<br /><br /> **0** -il processo sia disabilitato.|  
 |**xactsetlonginterval**|**int**|Intervallo lungo per il processo.|  
 |**xactsetlongthreshold**|**int**|valore soglia lungo per il processo.|  
 |**xactsetshortinterval**|**int**|Intervallo breve per il processo.|  
 |**xactsetshortthreshold**|**int**|valore soglia breve per il processo.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helpxactsetjob** viene utilizzata nella replica snapshot e transazionale per un server di pubblicazione Oracle.  
   
  **sp_helpxactsetjob** restituisce sempre le impostazioni correnti per il processo Xactset (HREPL_XactSetJob) nel server di pubblicazione. Se il processo Xactset è attualmente nella coda dei processi, restituisce anche gli attributi del processo dalla vista del dizionario dei dati USER_JOB creata nell'ambito dell'account di amministratore nel server di pubblicazione Oracle.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo un membro con il **sysadmin** ruolo predefinito del server possono eseguire **sp_helpxactsetjob**.  
   
 ## <a name="see-also"></a>Vedere anche  

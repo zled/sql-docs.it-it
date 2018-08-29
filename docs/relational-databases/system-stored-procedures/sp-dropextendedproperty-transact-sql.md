@@ -1,5 +1,5 @@
 ---
-title: sp_dropextendedproperty (Transact-SQL) | Documenti Microsoft
+title: sp_addextendedproperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dropextendedproperty
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 750b1df6bff427c2e5c4931ad3007a66ddbb1917
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9652fbb73cb3efc8d2ddd562593e2c2b457ab0e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258430"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023186"
 ---
 # <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,29 +67,29 @@ sp_dropextendedproperty
 >  I tipi USER e TYPE come tipi di livello 0 verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate. Utilizzare SCHEMA come tipo di livello 0 anziché USER. Per TYPE utilizzare SCHEMA come tipo di livello 0 e TYPE come tipo di livello 1.  
   
  [ @level0name=] {'*level0_object_name*'}  
- Nome del tipo di oggetto di livello 0 specificato. *level0_object_name* viene **sysname** con un valore predefinito è NULL.  
+ Nome del tipo di oggetto di livello 0 specificato. *level0_object_name* viene **sysname** con valore predefinito è NULL.  
   
  [ @level1type=] {'*level1_object_type*'}  
- Tipo di oggetto di livello 1. *level1_object_type* viene **varchar(128)** con un valore predefinito è NULL. I possibili valori sono AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
+ Tipo di oggetto di livello 1. *level1_object_type* viene **varchar(128)** con valore predefinito è NULL. I possibili valori sono AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
   
  [ @level1name=] {'*level1_object_name*'}  
- Nome del tipo di oggetto di livello 1 specificato. *level1_object_name* viene **sysname** con un valore predefinito è NULL.  
+ Nome del tipo di oggetto di livello 1 specificato. *level1_object_name* viene **sysname** con valore predefinito è NULL.  
   
  [ @level2type=] {'*level2_object_type*'}  
- Tipo di oggetto di livello 2. *level2_object_type* viene **varchar(128)** con un valore predefinito è NULL. I possibili valori sono COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
+ Tipo di oggetto di livello 2. *level2_object_type* viene **varchar(128)** con valore predefinito è NULL. I possibili valori sono COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
   
  [ @level2name=] {'*level2_object_name*'}  
- Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* viene **sysname** con un valore predefinito è NULL.  
+ Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* viene **sysname** con valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Ai fini della definizione delle proprietà estese, gli oggetti inclusi in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono classificati in base a tre livelli, ovvero 0, 1 e 2. Il livello 0 è il livello più alto e viene definito come oggetti inclusi nell'ambito del database. Gli oggetti di livello 1 sono inclusi nell'ambito di uno schema o utente, mentre gli oggetti di livello 2 sono contenuti dagli oggetti di livello 1. È possibile definire le proprietà estese per gli oggetti di qualsiasi livello. I riferimenti a un oggetto presente in un livello devono essere qualificati con i tipi e i nomi di tutti gli oggetti di livello superiore.  
   
- Un valore valido *property_name*, se tutti i tipi di oggetto e i nomi sono null e una proprietà presente nel database corrente, tale proprietà viene eliminata. Vedere l'esempio B più avanti in questo argomento.  
+ Un valore valido *property_name*, se tutti i tipi di oggetto e i nomi sono null e una proprietà esiste nel database corrente, tale proprietà viene eliminata. Vedere l'esempio B più avanti in questo argomento.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  I membri dei ruoli predefiniti del database db_owner e db_ddladmin possono eliminare le proprietà estese di qualsiasi oggetto, anche se il ruolo db_ddladmin non può aggiungere proprietà al database stesso oppure a utenti o ruoli.  
   
  Gli utenti possono eliminare le proprietà estese degli oggetti di cui sono proprietari oppure per i quali dispongono delle autorizzazioni ALTER o CONTROL.  
@@ -137,7 +137,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   

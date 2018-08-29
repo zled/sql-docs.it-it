@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ISequentialStream interface, samples
 - GetColumns method
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e51fb6d127657cddcdca3cde3d3d7d769088f53f
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 20c8698a0deb259cac3ec63d8c277651315ff682
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107007"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032640"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Recuperare colonne mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "39107007"
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come recuperare una singola riga mediante IRow. In questo esempio viene recuperata una colonna per volta dalla riga. In questo esempio viene illustrato l'utilizzo di IRow::Open() e di IRow::GetColumns(). Per leggere i dati della colonna, nell'esempio viene utilizzato un oggetto ISequentialStream::Read.  
   
- Per l'esempio seguente è necessario disporre del database di esempio AdventureWorks, scaricabile dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
   
  Il primo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) consente di creare una tabella utilizzata dall'esempio.  
   

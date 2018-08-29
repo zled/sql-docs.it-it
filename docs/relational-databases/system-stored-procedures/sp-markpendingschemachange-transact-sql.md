@@ -1,5 +1,5 @@
 ---
-title: sp_markpendingschemachange (Transact-SQL) | Documenti Microsoft
+title: sp_markpendingschemachange (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_markpendingschemachange
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3bfd0bb51e6d269b84fdb57a5a64139ce23cedc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08d059d2a2a01ba7f0c4fe86fee0673adb0041ef
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994818"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032344"
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,21 +52,21 @@ sp_markpendingschemachange [@publication = ] 'publication'
  Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@schemaversion=** ] *schemaversion*  
- Identifica una modifica dello schema in sospeso. *attributo SchemaVersion* viene **int**, con valore predefinito è **0**. Uso [sp_enumeratependingschemachanges &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) per elencare le modifiche dello schema in sospeso per la pubblicazione.  
+ Identifica una modifica dello schema in sospeso. *SchemaVersion* viene **int**, con valore predefinito è **0**. Uso [sp_enumeratependingschemachanges &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) per elencare le modifiche dello schema in sospeso per la pubblicazione.  
   
  [  **@status=** ] **'***stato***'**  
- Indica se una modifica dello schema in sospeso verrà ignorata. *lo stato* viene **nvarchar(10)** con valore predefinito è **active**. Se il valore di *stato* è **ignorata**, quindi la modifica dello schema selezionato non verrà replicata.  
+ Indica se una modifica dello schema in sospeso verrà ignorata. *lo stato* viene **nvarchar(10)** con valore predefinito è **active**. Se il valore di *lo stato* viene **ignorato**, quindi non verrà replicata la modifica dello schema selezionato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_markpendingschemachange** è utilizzato nella replica di tipo merge.  
+## <a name="remarks"></a>Note  
+ **sp_markpendingschemachange** viene usato con la replica di tipo merge.  
   
- **sp_markpendingschemachange** è una stored procedure progettata per il supporto della replica di tipo merge e deve essere utilizzata solo quando altre azioni correttive, ad esempio la reinizializzazione, non è stato possibile risolvere il problema o sono troppo onerosi in termini di prestazioni.  
+ **sp_markpendingschemachange** è una stored procedure progettata per il supporto della replica di tipo merge e deve essere utilizzata solo quando altre azioni correttive, ad esempio la reinizializzazione, non sono stato possibile risolvere la situazione o sono troppo onerosi in condizioni delle prestazioni.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_markpendingschemachange**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_markpendingschemachange**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  

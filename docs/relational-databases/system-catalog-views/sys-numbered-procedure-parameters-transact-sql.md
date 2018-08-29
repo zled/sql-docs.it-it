@@ -1,5 +1,5 @@
 ---
-title: numbered_procedure_parameters (Transact-SQL) | Documenti Microsoft
+title: numbered_procedure_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - sys.numbered_procedure_parameters catalog view
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c64c6eadb57cf8e1c2d431a7d8af5164f704e21b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0594feab6b69a9917b084cfa20c71af9885a880a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181147"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021898"
 ---
 # <a name="sysnumberedprocedureparameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni parametro di una stored procedure numerata. Quando si crea una stored procedure numerata, alla procedura di base è associato il numero 1. Alle successive procedure sono associati i numeri 2, 3 e così via. **numbered_procedure_parameters** contiene le definizioni dei parametri per tutte le successive procedure, dalla numero 2 e versioni successive. In questa vista non sono visualizzati i parametri per la stored procedure di base (numero 1). La stored procedure di base è simile a una stored procedure non numerata. Di conseguenza, i relativi parametri sono rappresentati in [Sys. Parameters (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md).  
+  Contiene una riga per ogni parametro di una stored procedure numerata. Quando si crea una stored procedure numerata, alla procedura di base è associato il numero 1. Alle successive procedure sono associati i numeri 2, 3 e così via. **numbered_procedure_parameters** contiene le definizioni dei parametri per tutte le successive procedure, dalla numero 2 e versioni successive. In questa vista non sono visualizzati i parametri per la stored procedure di base (numero 1). La stored procedure di base è simile a una stored procedure non numerata. Pertanto, i relativi parametri sono rappresentati nel [Sys. Parameters (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  Le stored procedure numerate sono deprecate. pertanto non è consigliabile utilizzarle. Un evento DEPRECATION_ANNOUNCEMENT viene generato quando viene compilata una query che utilizza questa vista del catalogo.  
@@ -46,20 +46,20 @@ ms.locfileid: "33181147"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene il parametro.|  
 |**procedure_number**|**smallint**|Numero della procedura nell'oggetto, maggiore o uguale a 2.|  
-|**name**|**sysname**|Nome del parametro. È univoco all'interno di **procedure_number**.|  
+|**name**|**sysname**|Nome del parametro. È univoco all'interno **procedure_number**.|  
 |**parameter_id**|**int**|ID del parametro. È univoco all'interno di **procedure_number**.|  
 |**system_type_id**|**tinyint**|ID del tipo di sistema del parametro|  
 |**user_type_id**|**int**|ID del tipo di parametro, come definito dall'utente.|  
 |**max_length**|**smallint**|Lunghezza massima del parametro in byte.<br /><br /> -1 = Il tipo di dati della colonna è varchar(max), nvarchar(max) o varbinary(max).|  
-|**precisione**|**tinyint**|Precisione del parametro se numerica. In caso contrario 0.|  
-|**scala**|**tinyint**|Scala del parametro se numerica. In caso contrario 0.|  
+|**Precisione**|**tinyint**|Precisione del parametro se numerica. In caso contrario 0.|  
+|**Scalabilità**|**tinyint**|Scala del parametro se numerica. In caso contrario 0.|  
 |**is_output**|**bit**|1 = Il parametro è un parametro di output o restituito. In caso contrario 0|  
 |**is_cursor_ref**|**bit**|1 = Il parametro è un parametro di riferimento a un cursore.|  
   
 > [!NOTE]  
 >  I parametri XML e CLR non sono supportati per le stored procedure numerate.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

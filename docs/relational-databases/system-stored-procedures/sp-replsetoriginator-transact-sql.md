@@ -1,5 +1,5 @@
 ---
-title: sp_replsetoriginator (Transact-SQL) | Documenti Microsoft
+title: sp_replsetoriginator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replsetoriginator
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 680fdf8c36c87549de43825ffd2a7aa5c8fba0f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bfba001bb6890c4a15975c78aee7818f02835b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996138"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026820"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
  Nome del database in cui viene applicata la transazione. *originating_db* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_replsetoriginator** viene eseguita dall'agente di distribuzione per registrare l'origine delle transazioni applicate dalla replica. Queste informazioni vengono utilizzate per richiamare il rilevamento di loopback per le sottoscrizioni transazionali bidirezionali per cui è stata impostata la proprietà di loopback.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** nel server di pubblicazione, i membri del ruolo predefinito del server di **db_owner** ruolo predefinito del database nel database di pubblicazione oppure gli utenti nell'elenco di accesso (PAL) alla pubblicazione possono eseguire **sp_replsetoriginator**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** nel server di pubblicazione, i membri del ruolo predefinito del server di **db_owner** ruolo predefinito del database nel database di pubblicazione, o gli utenti nell'elenco di accesso (PAL) alla pubblicazione può eseguire **sp_replsetoriginator**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

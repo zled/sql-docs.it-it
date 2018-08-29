@@ -1,5 +1,5 @@
 ---
-title: sp_removedbreplication (Transact-SQL) | Documenti Microsoft
+title: sp_removedbreplication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aee6f832fda56d69e064ef49c669ab2d945c5140
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbeda476ae204ce33c44dd858f90e19a677e74e4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998005"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026577"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,23 +58,23 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 |||  
 |-|-|  
 |**TRAN**|Rimuove gli oggetti di pubblicazione correlati alla replica transazionale.|  
-|**Unione**|Rimuove gli oggetti di pubblicazione correlati alla replica di tipo merge.|  
+|**merge**|Rimuove gli oggetti di pubblicazione correlati alla replica di tipo merge.|  
 |**entrambi** (impostazione predefinita)|Rimuove tutti gli oggetti di pubblicazione correlati alla replica.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_removedbreplication** viene utilizzata in tutti i tipi di replica.  
   
  **sp_removedbreplication** è utile quando si ripristina un database replicato che non è presenti oggetti di replica che devono essere ripristinati.  
   
- **sp_removedbreplication** non può essere eseguita su un database contrassegnato come di sola lettura.  
+ **sp_removedbreplication** non può essere usato su un database contrassegnato come di sola lettura.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_removedbreplication**.  
   
 ## <a name="example"></a>Esempio  

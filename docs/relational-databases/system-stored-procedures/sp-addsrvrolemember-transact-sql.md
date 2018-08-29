@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_addsrvrolemember
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d718d3cb44a4a1f148cd92df72dde7465b61762
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4c8636eaa9b2d83fcde0596a14cbc6658beaf158
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38056099"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022451"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
  sp_addsrvrolemember non può essere eseguita all'interno di una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo a cui viene aggiunto il nuovo membro.  
   
 ## <a name="examples"></a>Esempi  

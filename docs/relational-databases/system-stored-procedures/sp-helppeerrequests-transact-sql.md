@@ -1,5 +1,5 @@
 ---
-title: sp_helppeerrequests (Transact-SQL) | Documenti Microsoft
+title: sp_helppeerrequests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_helppeerrequests
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfb696723ce749ec3db1cea12b88a4bf36a27c8f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba660dbcaf09b3df5890032ab0f1b428cce7860e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996178"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028101"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce informazioni su tutte le richieste di state ricevute dai partecipanti a una topologia di replica peer-to-peer, in cui tali richieste sono state iniziate eseguendo [sp_requestpeerresponse &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) qualsiasi database pubblicato della topologia. Questa stored procedure viene eseguita nel database di pubblicazione di un server di pubblicazione che partecipa a una topologia di replica peer-to-peer. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
+  Restituisce informazioni su tutte le richieste di stato ricevute dai partecipanti in una topologia di replica peer-to-peer, in cui queste richieste sono state iniziate eseguendo [sp_requestpeerresponse &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) in corrispondenza di qualsiasi database pubblicato della topologia. Questa stored procedure viene eseguita nel database di pubblicazione di un server di pubblicazione che partecipa a una topologia di replica peer-to-peer. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,27 +50,27 @@ sp_helppeerrequests [ @publication = ] 'publication'
  Nome della pubblicazione in una topologia peer-to-peer per cui sono state inviate richieste dello stato. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@description**=] **'***descrizione***'**  
- Valore che può essere usato per identificare richieste dello stato individuali, che consente di filtrare le risposte restituite in base all'utente definite informazioni fornite durante la chiamata [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Descrizione* viene **nvarchar(4000**, il valore predefinito è **%**. Per impostazione predefinita, tutte le richieste dello stato per la pubblicazione vengono restituite. Questo parametro viene utilizzato per restituire solo le richieste di stato con una descrizione corrisponde al valore specificato *descrizione*, in cui vengono confrontate le stringhe di caratteri tramite un [come &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)clausola.  
+ Valore che può essere usato per identificare richieste dello stato individuali, che consente di filtrare le risposte restituite in base all'utente definite le informazioni fornite durante la chiamata [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Descrizione* viene **nvarchar (4000)**, il valore predefinito è **%**. Per impostazione predefinita, tutte le richieste dello stato per la pubblicazione vengono restituite. Questo parametro viene utilizzato per restituire solo le richieste di stato con una descrizione corrispondente al valore specificato nel *description*, in cui vengono confrontate le stringhe di caratteri tramite un [come &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)clausola.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica una richiesta.|  
-|**Pubblicazione**|**sysname**|Nome della pubblicazione per cui è stata inviata la richiesta dello stato.|  
+|**pubblicazione**|**sysname**|Nome della pubblicazione per cui è stata inviata la richiesta dello stato.|  
 |**sent_date**|**datetime**|Data e ora dell'invio della richiesta dello stato.|  
 |**description**|**nvarchar(4000)**|Informazioni definite dall'utente che possono essere utilizzate per identificare richieste dello stato individuali.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helppeerrequests** viene utilizzata nella replica transazionale peer-to-peer.  
   
- **sp_helppeerrequests** viene utilizzato quando si ripristina un database pubblicato in una topologia peer-to-peer.  
+ **sp_helppeerrequests** viene usato quando si ripristina un database pubblicato in una topologia peer-to-peer.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_helppeerrequests**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_helppeerrequests**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   

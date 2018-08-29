@@ -14,22 +14,22 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d58e4913be6db14bec53f5e8bbf63055b2a1344
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 61926079d3a9494831e0a182b4217ecb5b8b92b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662353"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787040"
 ---
 # <a name="using-basic-data-types"></a>Utilizzo di tipi di dati di base
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa i tipi di dati JDBC di base per convertire i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] in un formato comprensibile nel linguaggio di programmazione Java e viceversa. Il driver JDBC fornisce supporto per le API di JDBC 4.0, che include il **SQLXML** tipo di dati e tipi di dati nazionali (Unicode), ad esempio **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, e **NCLOB**.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa i tipi di dati JDBC di base per convertire i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un formato comprensibile nel linguaggio di programmazione Java e viceversa. Il driver JDBC fornisce supporto per le API di JDBC 4.0, che include il **SQLXML** tipo di dati e tipi di dati nazionali (Unicode), ad esempio **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, e **NCLOB**.  
   
 ## <a name="data-type-mappings"></a>Mapping di tipi di dati
 
-Nella tabella seguente sono elencati i mapping predefiniti tra i tipi di dati di base di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], JDBC e del linguaggio di programmazione Java:  
+Nella tabella seguente sono elencati i mapping predefiniti tra i tipi di dati di base di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], JDBC e del linguaggio di programmazione Java:  
   
 | Tipi di SQL Server   | Tipi JDBC (java.sql.Types)                        | Tipi del linguaggio Java          |
 | ------------------ | -------------------------------------------------- | ---------------------------- |
@@ -70,7 +70,7 @@ Nella tabella seguente sono elencati i mapping predefiniti tra i tipi di dati di
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
-(1) Per usare java.sql.Time con il tipo time di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è necessario impostare la proprietà di connessione **sendTimeAsDatetime** su false.  
+(1) Per usare java.sql.Time con il tipo time di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario impostare la proprietà di connessione **sendTimeAsDatetime** su false.  
   
 (2) è possibile accedere a livello di codice ai valori della **datetimeoffset** con [classe DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
   

@@ -16,17 +16,17 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 707db709188db15bc3627d65a2dba5a2bc516308
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 626f2144d29ba15d162e35c40ebc9b5b9317fded
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041402"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783926"
 ---
 # <a name="connecting-with-bcp"></a>Connessione a bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-L'utilità [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) è disponibile in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Linux e macOS. Questa pagina illustra le differenze rispetto alla versione di Windows di `bcp`.
+L'utilità [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) è disponibile in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS. Questa pagina illustra le differenze rispetto alla versione di Windows di `bcp`.
   
 - Il carattere di terminazione del campo è tabulazione ("\t").  
   
@@ -82,7 +82,7 @@ Specifica il numero della prima riga da esportare da una tabella o da importare 
 Specifica che durante l'operazione il valore delle colonne vuote deve essere Null, ovvero che non verranno inseriti valori predefiniti in tali colonne.  
   
 - -l  
-Specifica un timeout accesso. L'opzione -l specifica il numero di secondi che devono trascorrere prima che si verifichi il timeout di un accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] quando si prova la connessione a un server. Il timeout di accesso predefinito è 15 secondi. Il valore del timeout deve essere un numero compreso tra 0 e 65534. Se il valore specificato non è numerico o non è compreso in tale intervallo, `bcp` genera un messaggio di errore. Un valore pari a 0 specifica un timeout infinito.
+Specifica un timeout accesso. L'opzione -l specifica il numero di secondi che devono trascorrere prima che si verifichi il timeout di un accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si prova la connessione a un server. Il timeout di accesso predefinito è 15 secondi. Il valore del timeout deve essere un numero compreso tra 0 e 65534. Se il valore specificato non è numerico o non è compreso in tale intervallo, `bcp` genera un messaggio di errore. Un valore pari a 0 specifica un timeout infinito.
   
 - -L *last_row*  
 Specifica il numero dell'ultima riga da esportare da una tabella o da importare da un file di dati.  
@@ -97,25 +97,25 @@ Esegue l'operazione di copia bulk usando i tipi di dati nativi del database.
 Specifica la password per l'ID di accesso.  
   
 - -Q  
-Esegue l'istruzione SET QUOTED_IDENTIFIERS ON durante la connessione tra l'utilità `bcp` e l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Esegue l'istruzione SET QUOTED_IDENTIFIERS ON durante la connessione tra l'utilità `bcp` e l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -r *row_terminator*  
 Specifica il carattere di terminazione della riga.  
   
 - -r  
-Specifica che la copia bulk dei dati relativi a valuta, data e ora verrà eseguita in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] utilizzando il formato definito per le impostazioni locali del computer client.  
+Specifica che la copia bulk dei dati relativi a valuta, data e ora verrà eseguita in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando il formato definito per le impostazioni locali del computer client.  
   
 - -S *server*  
-Specifica il nome del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] istanza a cui connettersi, o se -D viene usata, un DSN.  
+Specifica il nome del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza a cui connettersi, o se -D viene usata, un DSN.  
   
 - -t *field_terminator*  
 Specifica il carattere di terminazione del campo.  
   
 - -T  
-Specifica che l'utilità `bcp` si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tramite una connessione trusted che usa la sicurezza integrata.  
+Specifica che l'utilità `bcp` si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite una connessione trusted che usa la sicurezza integrata.  
   
 - -U *login_id*  
-Specifica l'ID di accesso utilizzato per connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Specifica l'ID di accesso utilizzato per connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -V  
 Visualizza numero di versione e informazioni sul copyright per l'utilità `bcp`.  
@@ -144,7 +144,7 @@ Usa i tipi di dati nativi del database per i dati non di tipo carattere e i cara
 Specifica il nome di un file in cui viene reindirizzato l'output dal prompt dei comandi.  
   
 - -V (80 | 90 | 100)  
-Consente di usare tipi di dati di una versione precedente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Consente di usare tipi di dati di una versione precedente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -X  
 Se usato con le opzioni format e -f format_file, genera un file di formato basato su XML anziché un file di formato predefinito non XML.  

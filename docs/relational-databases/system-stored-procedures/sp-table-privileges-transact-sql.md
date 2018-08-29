@@ -1,5 +1,5 @@
 ---
-title: sp_table_privileges (Transact-SQL) | Documenti Microsoft
+title: sp_table_privileges (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_table_privileges
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d2863e17258fd0dea68548a15c059676c745424
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ddd0407cda5bf3a623c0fad4121384aaa61d8264
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259531"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032191"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,16 +53,16 @@ sp_table_privileges [ @table_name = ] 'table_name'
  [ @table_owner=] '*table_owner*'  
  Proprietario della tabella utilizzata per restituire informazioni sul catalogo. *TABLE_OWNER*viene **nvarchar (** 384 **)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se owner viene omesso, vengono applicate le regole di visibilità della tabella predefinite nel sistema DBMS sottostante.  
   
- Se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituite le colonne di tale tabella. Se *proprietario* viene omesso e l'utente corrente non dispone di una tabella con l'oggetto specificato *nome*, viene eseguita la ricerca per una tabella con l'oggetto specificato *table_name* di proprietà di proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
+ Se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituite le colonne di tale tabella. Se *proprietario* non viene specificato e l'utente corrente non dispone di una tabella con la proprietà specificata *nome*, viene eseguita la ricerca per una tabella con la proprietà specificata *table_name* di proprietà di proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
   
  [ @table_qualifier=] '*table_qualifier*'  
- Nome del qualificatore di tabella. *TABLE_QUALIFIER* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*composti*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+ Nome del qualificatore di tabella. *TABLE_QUALIFIER* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (*composti*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
  [ @fUsePattern=] '*fUsePattern*'  
- Determina se il carattere di sottolineatura (_), simbolo di percentuale (%) e tra parentesi quadre ([o]) caratteri vengono interpretate come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* viene **bit**, con un valore predefinito è 1.  
+ Determina se il carattere di sottolineatura (_), simbolo di percentuale (%) e tra parentesi quadre ([o]) caratteri vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* viene **bit**, con un valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- Nessuno  
+ None  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -76,10 +76,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**sysname**|Una delle autorizzazioni di tabella disponibili. I possibili valori delle autorizzazioni possono essere quelli seguenti o altri valori supportati dall'origine dati al momento della definizione dell'implementazione:<br /><br /> SELECT = l'utente GRANTEE può recuperare i dati di una o più colonne.<br /><br /> INSERT = L'utente GRANTEE può inserire dati in nuove righe di una o più colonne.<br /><br /> UPDATE = L'utente GRANTEE può modificare i dati esistenti di una o più colonne.<br /><br /> DELETE = L'utente GRANTEE può rimuovere righe dalla tabella.<br /><br /> REFERENCES = l'utente GRANTEE può fare riferimento a una colonna di una tabella esterna in una relazione chiave primaria/chiave esterna. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo tipo di relazione viene definito tramite vincoli di tabella.<br /><br /> L'ambito di azione ottenuto dall'utente GRANTEE tramite un privilegio di tabella specifico dipende dall'origine dati. Il privilegio UPDATE, ad esempio, può permettere all'utente GRANTEE di aggiornare tutte le colonne di una tabella in una certa origine dei dati e solo le colonne per le quali l'utente GRANTOR dispone del privilegio UPDATE in un'origine dei dati diversa.|  
 |IS_GRANTABLE|**sysname**|Indica se all'utente GRANTEE è consentito o meno concedere autorizzazioni ad altri utenti (autorizzazione per la concessione di autorizzazioni). I possibili valori sono YES, NO e NULL. Un valore sconosciuto, o NULL, fa riferimento a un'origine dati per le quali l'autorizzazione per la concessione di autorizzazioni non è applicabile.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  La stored procedure sp_table_privileges corrisponde a sp_table_privileges in ODBC. I risultati restituiti vengono ordinati in base alle colonne TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME e PRIVILEGE.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="examples"></a>Esempi  
@@ -93,7 +93,7 @@ EXEC sp_table_privileges
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Le Stored procedure del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

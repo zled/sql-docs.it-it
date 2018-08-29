@@ -1,5 +1,5 @@
 ---
-title: sp_mergearticlecolumn (Transact-SQL) | Documenti Microsoft
+title: sp_mergearticlecolumn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e426586be6229cb62e36d8fdcab13663785240b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50886bd5bd4ab34852362e678a2f8c2f4a2fc459
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999558"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023929"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,32 +61,32 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  Identifica le colonne su cui creare la partizione verticale. *colonna* viene **sysname**, con un valore predefinito è NULL. Se NULL e `@operation = N'add'`, per impostazione predefinita all'articolo vengono aggiunte tutte le colonne della tabella di origine. *colonna* non può essere NULL quando *operazione* è impostata su **drop**. Per escludere le colonne da un articolo, eseguire **sp_mergearticlecolumn** e specificare *colonna* e `@operation = N'drop'` per ogni colonna da rimuovere dall'oggetto specificato *articolo*.  
   
  [  **@operation =**] **'***operazione***'**  
- Stato della replica. *operazione* viene **nvarchar(4)**, con un valore predefinito è ADD. **aggiungere** contrassegna la colonna per la replica. **DROP** Cancella la colonna.  
+ Stato della replica. *operazione* viene **nvarchar(4)**, con un valore predefinito di aggiunta. **aggiungere** contrassegna la colonna per la replica. **DROP** Cancella la colonna.  
   
  [  **@schema_replication=**] **'***schema_replication***'**  
  Specifica che le modifiche dello schema verranno propagate quando verrà eseguito l'agente di merge. *schema_replication* viene **nvarchar(5**, con un valore predefinito è FALSE.  
   
 > [!NOTE]  
->  Solo **FALSE** è supportato per *schema_replication*.  
+>  Solo **FALSE** è supportata per *schema_replication*.  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+ [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  Abilita o disabilita la funzionalità che consente di invalidare uno snapshot. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
   
- **0** specifica che le modifiche apportate all'articolo di merge non provocherà lo snapshot non è valido.  
+ **0** specifica che le modifiche apportate all'articolo di merge verranno non invalidano lo snapshot non è valido.  
   
- **1** indica che le modifiche apportate all'articolo di merge possono invalidare lo snapshot non è valido, ovvero se il caso, il valore **1** concede l'autorizzazione per l'esecuzione del nuovo snapshot.  
+ **1** specifica che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot non è valido, e se è il caso, il valore **1** concede l'autorizzazione per il nuovo snapshot.  
   
  [* *@force_reinit_subscription =] * * * force_reinit_subscription*  
  Abilita o disabilita la funzionalità che consente di reinizializzare la sottoscrizione. *force_reinit_subscription* è di tipo bit e il valore predefinito **0**.  
   
  **0** indica che le modifiche apportate all'articolo di merge non comportano la reinizializzazione della sottoscrizione.  
   
- **1** specifica che le modifiche apportate all'articolo di merge possono causare la reinizializzazione della sottoscrizione e se il caso, il valore **1** concede l'autorizzazione per la reinizializzazione.  
+ **1** specifica che le modifiche apportate all'articolo di merge possono causare la reinizializzazione della sottoscrizione e se è il caso, il valore **1** concede l'autorizzazione per la reinizializzazione della sottoscrizione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_mergearticlecolumn** viene utilizzata nella replica di tipo merge.  
   
  Non è possibile eliminare una colonna Identity dall'articolo se viene utilizzata la gestione automatica degli intervalli di valori Identity. Per altre informazioni, vedere [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).  
@@ -98,12 +98,12 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_mergearticlecolumn**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_mergearticlecolumn**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Definire e modificare un filtro di riga con parametri per un articolo di merge](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Definizione e modifica di un filtro di join tra articoli di merge](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Definizione e modifica di un filtro di riga con parametri per un articolo di merge](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Filtrare i dati pubblicati](../../relational-databases/replication/publish/filter-published-data.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

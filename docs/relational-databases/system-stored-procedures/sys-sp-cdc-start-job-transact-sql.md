@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_start_job (Transact-SQL) | Documenti Microsoft
+title: Sys. sp_cdc_start_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_start_job
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d5d423c3bf0eea7488839928b9c11b9e266a16c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e744a907cf7991c0e913bc8a240a5743b91d8a2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249770"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031549"
 ---
 # <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,24 +46,24 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>Argomenti  
  [[  **@job_type=** ] **'***job_type***'** ]  
- Tipo di processo da aggiungere. *job_type* viene **nvarchar(20)** con valore predefinito è **acquisire**. Gli input validi sono **acquisire** e **pulizia**.  
+ Tipo di processo da aggiungere. *job_type* viene **nvarchar(20)** con valore predefinito è **acquisire**. Gli input validi sono **Acquisisci** e **pulizia**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  sys.sp_cdc_start_job può essere utilizzato da un amministratore per avviare in modo esplicito il processo di acquisizione o di pulizia.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-starting-a-capture-job"></a>A. Avvio di un processo di acquisizione  
- Nell'esempio seguente viene avviato il processo di acquisizione per il database `AdventureWorks2012`. Specificare un valore per *job_type* non è necessaria perché il tipo di processo predefinito è **acquisire**.  
+ Nell'esempio seguente viene avviato il processo di acquisizione per il database `AdventureWorks2012`. Se si specifica un valore per *job_type* non è necessaria perché il tipo di processo predefinito è **capture**.  
   
 ```  
 USE AdventureWorks2012;  

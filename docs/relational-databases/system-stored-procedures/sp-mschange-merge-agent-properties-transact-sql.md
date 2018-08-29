@@ -1,5 +1,5 @@
 ---
-title: sp_MSchange_merge_agent_properties (Transact-SQL) | Documenti Microsoft
+title: sp_MSchange_merge_agent_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_MSchange_merge_agent_properties
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0a56df34ca780de662d11d826af1b3b88e847e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 375d4799f4345fa354c6d6731ec3b98ca3db571f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000068"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019969"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
  Nella tabella seguente vengono descritte le proprietà del processo dell'agente di merge che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
-|Proprietà|Value|Description|  
+|Proprietà|valore|Description|  
 |--------------|-----------|-----------------|  
 |**description**||Breve descrizione della sottoscrizione.|  
 |**merge_job_login**||Account di accesso per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente.|  
@@ -90,14 +90,14 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 >  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_MSchange_merge_agent_properties** viene utilizzata nella replica di tipo merge.  
   
- Quando il server di pubblicazione viene eseguito in un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva, è necessario utilizzare [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) per modificare le proprietà di un processo di agente di Merge che sincronizza una sottoscrizione push eseguita nel server di distribuzione.  
+ Se il server di pubblicazione viene eseguito in un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva, è necessario usare [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) per modificare le proprietà di un processo dell'agente di Merge che sincronizza una sottoscrizione push eseguita nel server di distribuzione.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server nel server di distribuzione possono eseguire **sp_MSchange_merge_agent_properties**.  
   
 ## <a name="see-also"></a>Vedere anche  

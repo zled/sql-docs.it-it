@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9c755a658b0a63966a2db4be4e55b09b1004a0a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 88ce3b6db5911aa881907c1b4d80dd59d0f416b2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982513"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786288"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader"></a>Metodo updateCharacterStream (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public void updateCharacterStream(java.lang.String columnLabel,
   
  Questo metodo passa caratteri Unicode da un oggetto Reader alle colonne di testo e binarie selezionate. Include tutte le colonne di testo e le colonne **binary**, **varbinary**, **varbinary(max)**, **image** e **xml**, ma non le colonne **udt**.  
   
- Utilizzo di questo metodo per la **immagine**, **testo**, e **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] i tipi di dati potrebbero influire sulle prestazioni.  
+ Utilizzo di questo metodo per la **immagine**, **testo**, e **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i tipi di dati potrebbero influire sulle prestazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

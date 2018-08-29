@@ -1,5 +1,5 @@
 ---
-title: Sys.column_xml_schema_collection_usages (Transact-SQL) | Documenti Microsoft
+title: Sys.column_xml_schema_collection_usages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.column_xml_schema_collection_usages catalog view
 ms.assetid: 4fd1ec7f-b9dc-4ddb-ab3a-0d59ab05ad20
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66cc3bc6a9f5b6150831f03c252aec4f3444c202
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c525bf31fc35cff8da571aa28e495c26e2cabb96
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178297"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027780"
 ---
 # <a name="syscolumnxmlschemacollectionusages-transact-sql"></a>sys.column_xml_schema_collection_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33178297"
 |**column_id**|**int**|ID della colonna. Valore univoco all'interno dell'oggetto.|  
 |**xml_collection_id**|**int**|ID della raccolta contenente lo spazio dei nomi dell'XML Schema di convalida per la colonna.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

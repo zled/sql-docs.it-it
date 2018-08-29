@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Documenti Microsoft
+title: sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_delete_policy_execution_history
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d4e7f496124727389993c1e249b80aeaa7414b5f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b87056b364b5861c771496622176024a8748008c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262734"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019237"
 ---
 # <a name="spsyspolicydeletepolicyexecutionhistory-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +51,12 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
  Data meno recente per la quale si desidera mantenere la cronologia di esecuzione dei criteri. Qualsiasi cronologia di esecuzione precedente a questa data viene eliminata. *oldest_date* viene **datetime**ed è obbligatorio. Può essere NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syspolicy_delete_policy_execution_history nel contesto del database di sistema msdb.  
   
- Per ottenere valori per *policy_id*, e per visualizzare le date della cronologia di esecuzione, è possibile utilizzare la query seguente:  
+ Per ottenere valori per *policy_id*, e per visualizzare le date della cronologia di esecuzione, è possibile usare la query seguente:  
   
 ```  
 SELECT a.name AS N'policy_name', b.policy_id, b.start_date, b.end_date  
@@ -70,13 +69,13 @@ ON a.policy_id = b.policy_id
   
 -   Per eliminare l'intera cronologia di esecuzione, specificare NULL per entrambi *policy_id* e per *oldest_date*.  
   
--   Per eliminare l'intera cronologia di esecuzione per criteri specifici, specificare un identificatore dei criteri *policy_id*, e specificare NULL come *oldest_date*.  
+-   Per eliminare l'intera cronologia di esecuzione per criteri specifici, specificare un identificatore dei criteri *policy_id*, e si specifica NULL come *oldest_date*.  
   
--   Per eliminare la cronologia di esecuzione di criteri per tutti i criteri prima di una data specifica, specificare NULL per *policy_id*e specificare una data per *oldest_date*.  
+-   Per eliminare la cronologia di esecuzione dei criteri per tutti i criteri prima di una data specifica, specificare NULL per *policy_id*e specificare una data *oldest_date*.  
   
- Per archiviare la cronologia di esecuzione dei criteri, è possibile aprire il log Cronologia criteri in Esplora oggetti ed esportare la cronologia di esecuzione in un file. Per accedere il log cronologia criteri, espandere **Management**, fare doppio clic su **Gestione criteri di**, quindi fare clic su **Visualizza cronologia**.  
+ Per archiviare la cronologia di esecuzione dei criteri, è possibile aprire il log Cronologia criteri in Esplora oggetti ed esportare la cronologia di esecuzione in un file. Per accedere al log cronologia criteri, espandere **Management**, fare doppio clic su **gestione dei criteri**, quindi fare clic su **Visualizza cronologia**.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

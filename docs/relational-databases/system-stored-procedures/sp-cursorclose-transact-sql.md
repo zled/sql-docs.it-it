@@ -1,5 +1,5 @@
 ---
-title: sp_cursorclose (Transact-SQL) | Documenti Microsoft
+title: sp_cursorclose (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursorclose
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb3db5049ff370a9dccad98dd7e90efb2e346f0f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b1556ebbfd0f5e01cfccae734036122360e68944
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237127"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022007"
 ---
 # <a name="spcursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Chiude e dealloca il cursore e rilascia tutte le risorse associate; vale a dire, viene eliminata la tabella temporanea utilizzata come supporto per i valori KEYSET o STATIC **cursore**. è possibile richiamare sp_cursorclose specificando ID = 9 in un pacchetto del flusso TDS.  
+  Chiude e dealloca il cursore, nonché rilascia tutte le risorse associate; vale a dire, Elimina la tabella temporanea utilizzata per il supporto di KEYSET o STATIC **cursore**. richiamare sp_cursorclose specificando ID = 9 in un pacchetto del flusso TDS.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,12 +45,12 @@ sp_cursorclose cursor
   
 ## <a name="arguments"></a>Argomenti  
  *cursor*  
- È un cursore *gestire* valore generato tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e restituito dalla routine sp_cursoropen. *cursore* è un parametro obbligatorio che richiede un' **int** valore di input.  
+ È un cursore *gestiscono* valore generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e restituito dalla routine sp_cursoropen. *cursore* è un parametro obbligatorio che richiede un **int** valore di input.  
   
 > [!NOTE]  
 >  Il valore di input -1 verrà applicato a tutti i cursori della connessione corrente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  *cursore* restituirà messaggi di errore se la procedura è stata eseguita dopo che era stato chiuso il cursore o se viene specificato un handle non valido.  
   
  Lo stato di RPC indica l'esito positivo o negativo complessivo.  

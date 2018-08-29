@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_purge_history (Transact-SQL) | Documenti Microsoft
+title: sp_syspolicy_purge_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_purge_history
 ms.assetid: 6db414e7-4946-4bd2-8264-6b490810b306
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e59d843103da4dbee71013cf18116c1a9be5c441
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 95c595a1806ca31202b2797aaf6958b533fd0eb2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263197"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020730"
 ---
 # <a name="spsyspolicypurgehistory-transact-sql"></a>sp_syspolicy_purge_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_syspolicy_purge_history
  Questa stored procedure non ha alcun parametro.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syspolicy_purge_history nel contesto del database di sistema msdb.  
   
  Per visualizzare il periodo di memorizzazione cronologia, è possibile utilizzare la query seguente:  
@@ -64,7 +63,7 @@ GO
 > [!NOTE]  
 >  Se il periodo di memorizzazione cronologia è pari a 0, la cronologia della valutazione dei criteri non verrà rimossa.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

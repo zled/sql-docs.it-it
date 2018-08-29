@@ -14,22 +14,22 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56c724017d364f3e581a6f4add22ece0091a2406
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d97499468b1d44f761b01888312e1ba97c722c7c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978753"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786470"
 ---
 # <a name="supporting-xml-data"></a>Supporto dei dati XML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è disponibile il tipo di dati **xml**, che consente di archiviare documenti e frammenti XML in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Il tipo di dati **xml**,un tipo di dati predefinito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è simile per alcuni aspetti ad altri tipi predefiniti, quali **int** e **varchar**. Come accade con altri tipi predefiniti, è possibile usare il tipo di dati **xml** come tipo di variabile, come tipo di parametro o come tipo restituito da una funzione oppure come tipo di colonna quando si crea una tabella; oppure nelle funzioni [!INCLUDE[tsql](../../includes/tsql_md.md)] CAST e CONVERT. Nel driver JDBC, è possibile eseguire il mapping del tipo di dati **xml** come stringa, matrice di byte, flusso o oggetto CLOB, BLOB o SQLXML. Il mapping predefinito è come stringa.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile il tipo di dati **xml**, che consente di archiviare documenti e frammenti XML in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il tipo di dati **xml**,un tipo di dati predefinito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è simile per alcuni aspetti ad altri tipi predefiniti, quali **int** e **varchar**. Come accade con altri tipi predefiniti, è possibile usare il tipo di dati **xml** come tipo di variabile, come tipo di parametro o come tipo restituito da una funzione oppure come tipo di colonna quando si crea una tabella; oppure nelle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST e CONVERT. Nel driver JDBC, è possibile eseguire il mapping del tipo di dati **xml** come stringa, matrice di byte, flusso o oggetto CLOB, BLOB o SQLXML. Il mapping predefinito è come stringa.  
   
- Con il driver JDBC viene fornito il supporto per l'API di JDBC 4.0, in cui viene presentata l'interfaccia SQLXML. Tale interfaccia definisce i metodi per interagire e modificare i dati XML. Il **SQLXML** è un tipo di dati JDBC 4.0 e viene eseguito il mapping di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** tipo di dati. Per utilizzare il tipo di dati SQLXML nelle applicazioni, è necessario impostare il classpath in modo da includere il file sqljdbc4.jar. Se l'applicazione tenta di utilizzare il file sqljdbc3.jar durante l'accesso all'oggetto SQLXML o ai relativi metodi, verrà generata un'eccezione.  
+ Con il driver JDBC viene fornito il supporto per l'API di JDBC 4.0, in cui viene presentata l'interfaccia SQLXML. Tale interfaccia definisce i metodi per interagire e modificare i dati XML. Il **SQLXML** è un tipo di dati JDBC 4.0 e viene eseguito il mapping di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml** tipo di dati. Per utilizzare il tipo di dati SQLXML nelle applicazioni, è necessario impostare il classpath in modo da includere il file sqljdbc4.jar. Se l'applicazione tenta di utilizzare il file sqljdbc3.jar durante l'accesso all'oggetto SQLXML o ai relativi metodi, verrà generata un'eccezione.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] convalida sempre i dati XML prima di archiviarli nella colonna del database. Le applicazioni possono usare il tipo di dati **SQLXML**, poiché il driver JDBC ne esegue automaticamente il mapping al tipo di dati **xml**. Il supporto per **SQLXML** è disponibile in sqljdbc4.jar. Visualizzare [requisiti di sistema per il Driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) per l'elenco di versioni JRE supportate dal [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convalida sempre i dati XML prima di archiviarli nella colonna del database. Le applicazioni possono usare il tipo di dati **SQLXML**, poiché il driver JDBC ne esegue automaticamente il mapping al tipo di dati **xml**. Il supporto per **SQLXML** è disponibile in sqljdbc4.jar. Visualizzare [requisiti di sistema per il Driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) per l'elenco di versioni JRE supportate dal [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  Gli argomenti di questa sezione descrivono l'interfaccia SQLXML e illustrano come programmare con il tipo di dati **SQLXML** usando i metodi dell'API JDBC.  
   

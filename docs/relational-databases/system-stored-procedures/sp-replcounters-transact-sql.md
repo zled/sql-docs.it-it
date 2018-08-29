@@ -1,5 +1,5 @@
 ---
-title: sp_replcounters (Transact-SQL) | Documenti Microsoft
+title: sp_replcounters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_replcounters
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cc67b000b231146c9544ea7ef1bc1e2a3b6b667
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 314f7f24ededf85927205f0615af39138898c795
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997088"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027138"
 ---
 # <a name="spreplcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_replcounters
 |-----------------|---------------|-----------------|  
 |**Database**|**sysname**|Nome del database.|  
 |**Transazioni replicate**|**int**|Numero di transazioni nel log in attesa di recapito al database di distribuzione.|  
-|**Frequenza di replica trans/sec**|**float**|Numero medio di transazioni al secondo recapitate al database di distribuzione.|  
+|**Frequenza di replica transazioni/sec**|**float**|Numero medio di transazioni al secondo recapitate al database di distribuzione.|  
 |**Latenza di replica**|**float**|Tempo medio di permanenza delle transazioni nel log prima della distribuzione, espresso in secondi.|  
 |**Replbeginlsn**|**binary(10)**|Numero di sequenza del file di log (LSN) corrispondente al punto di troncamento corrente nel log.|  
 |**Replnextlsn**|**binary(10)**|LSN del record di commit successivo in attesa di recapito al database di distribuzione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_replcounters** viene utilizzata nella replica transazionale.  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **db_owner** ruolo predefinito del database o **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **db_owner** ruolo predefinito del database oppure **sysadmin** ruolo predefinito del server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

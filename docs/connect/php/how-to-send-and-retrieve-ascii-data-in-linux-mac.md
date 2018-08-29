@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: yitam
 ms.author: v-yitam
 manager: mbarwin
-ms.openlocfilehash: 32599ca0facc7a35877f6d59573b27209ce68d31
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0cf0256c337d8851f6223ea895eb7e6d90e30665
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979823"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784070"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Procedura: Inviare e recuperare dati ASCII in Linux e macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ La codifica per il driver PDO_SQLSRV predefinita è UTF-8 (PDO::SQLSRV_ENCODING_
 ## <a name="example"></a>Esempio  
 Gli esempi seguenti illustrano come inviare e recuperare dati ASCII usando il driver PHP per SQL Server specificando determinate impostazioni locali prima di effettuare la connessione. Le impostazioni locali in varie piattaforme di Linux potrebbero essere denominate in modo diverso dalle stesse impostazioni locali in macOS. Ad esempio, le impostazioni locali US ISO-8859-1 (Latin 1) sono `en_US.ISO-8859-1` in Linux, mentre in macOS è il nome `en_US.ISO8859-1`.
   
-Gli esempi presuppongono che [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] viene installato in un server. Quando gli esempi vengono eseguiti dal browser, tutto l'output viene scritto nel browser.  
+Gli esempi presuppongono che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene installato in un server. Quando gli esempi vengono eseguiti dal browser, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

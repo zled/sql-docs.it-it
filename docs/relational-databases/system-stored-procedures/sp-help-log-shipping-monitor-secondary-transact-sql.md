@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_monitor_secondary (Transact-SQL) | Documenti Microsoft
+title: sp_help_log_shipping_monitor_secondary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_monitor_secondary
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
-caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6e667981bd9fb3ba0f67e260da05a7b92d324d5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 598f988483e3bef6ffe784f7be18145ebf1a89e5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247360"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028005"
 ---
 # <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_help_log_shipping_monitor_secondary
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Colonna|Description|  
+|colonna|Description|  
 |------------|-----------------|  
 |**secondary_server**|Il nome dell'istanza secondaria del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione di log shipping.|  
 |**secondary_database**|Nome del database secondario nella configurazione di log shipping.|  
@@ -76,14 +75,14 @@ sp_help_log_shipping_monitor_secondary
 |**last_restored_date_utc**|Data e ora UTC (Coordinated Universal Time o ora di Greenwich) dell'ultima operazione di ripristino nel database secondario.|  
 |**history_retention_period**|Periodo di tempo, in minuti, durante il quale i record della cronologia di log shipping vengono mantenuti per un database secondario specificato prima di essere eliminati.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_help_log_shipping_monitor_secondary** deve essere eseguita la **master** database nel server di monitoraggio.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

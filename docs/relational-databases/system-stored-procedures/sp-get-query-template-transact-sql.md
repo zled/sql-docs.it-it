@@ -1,5 +1,5 @@
 ---
-title: sp_get_query_template (Transact-SQL) | Documenti Microsoft
+title: sp_get_query_template (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fac47c5b84894f681ffc9c6729dd526f9e8488c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e2d96ffa9a2375905246a515601c77afdc50d231
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253507"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027747"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce il formato con parametri di una query. I risultati restituiti sono simili al formato con parametri di una query risultante dall'utilizzo della parametrizzazione forzata. sp_get_query_template viene principalmente utilizzata durante la creazione delle guide di piano di modello.  
+  Restituisce il formato con parametri di una query. I risultati restituiti sono simili al formato con parametri di una query risultante dall'utilizzo della parametrizzazione forzata. sp_get_query_template viene principalmente utilizzata durante la creazione delle guide di piano TEMPLATE.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,25 +47,25 @@ sp_get_query_template
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- '*query_text*'  
- Query per la quale la versione con parametri deve essere generata. '*query_text*' deve essere racchiuso tra virgolette singole e preceduto dall'identificatore Unicode N. N'*query_text*' il valore assegnato per il @querytext parametro. Il tipo è **nvarchar (max)**.  
+ «*query_text*»  
+ Query per la quale la versione con parametri deve essere generata. «*query_text*' deve essere racchiuso tra virgolette singole ed essere preceduto dall'identificatore Unicode N. N'*query_text*' è il valore assegnato per il @querytext parametro. Il tipo è **nvarchar (max)**.  
   
  @templatetext  
- È un parametro di output di tipo **nvarchar (max)**, specificato come indicato, che riceve il formato con parametri di *query_text* come valore letterale stringa.  
+ È un parametro di output di tipo **nvarchar (max)**, specificato come indicato, che riceve la forma parametrizzata della *query_text* come valore letterale stringa.  
   
  @parameters  
- È un parametro di output di tipo **nvarchar (max)**, specificato come indicato, che riceve un valore letterale stringa dei tipi di parametro i nomi e i dati che sono stati associati parametri in @templatetext.  
+ È un parametro di output di tipo **nvarchar (max)**, specificato come indicato, che riceve un valore letterale stringa dei dati e i nomi dei tipi di parametro che sono stati associati parametri in @templatetext.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  sp_get_query_template restituisce un errore se:  
   
--   Non assegna parametri i valori letterali costanti in *query_text*.  
+-   Non assegna parametri in valori letterali costanti *query_text*.  
   
--   *query_text* è NULL, non una stringa Unicode, non è sintatticamente valida o non possono essere compilate.  
+-   *query_text* è NULL, non una stringa Unicode, non è sintatticamente valida o non può essere compilato.  
   
  Se sp_get_query_template restituisce un errore, non modifica i valori del @templatetext e @parameters i parametri di output.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo del database public.  
   
 ## <a name="examples"></a>Esempi  
@@ -119,7 +119,7 @@ SELECT @my_parameters;
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Definizione delle funzionalità di parametrizzazione delle query tramite guide di piano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Specificare il comportamento di parametrizzazione delle query tramite guide di piano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   
   

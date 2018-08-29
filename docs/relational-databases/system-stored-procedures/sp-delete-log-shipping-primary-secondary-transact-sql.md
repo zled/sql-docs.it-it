@@ -1,5 +1,5 @@
 ---
-title: sp_delete_log_shipping_primary_secondary (Transact-SQL) | Documenti Microsoft
+title: sp_delete_log_shipping_primary_secondary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_primary_secondary
 ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5a209eeacb1f43006cb3d5fff224f120bbf0f447
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7d8ab661a4f11d6669700a4f0963acf55f99c26f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258918"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023400"
 ---
 # <a name="spdeletelogshippingprimarysecondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,12 +59,12 @@ sp_delete_log_shipping_primary_secondary
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ Nessuna.  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_delete_log_shipping_primary_secondary** deve essere eseguita la **master** database nel server primario. Questa stored procedure rimuove una voce per un database secondario da **log_shipping_primary_secondaries** nel server primario.  
+## <a name="remarks"></a>Note  
+ **sp_delete_log_shipping_primary_secondary** deve essere eseguita la **master** database nel server primario. Questa stored procedure rimuove la voce per un database secondario da **log_shipping_primary_secondaries** nel server primario.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
@@ -80,7 +79,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

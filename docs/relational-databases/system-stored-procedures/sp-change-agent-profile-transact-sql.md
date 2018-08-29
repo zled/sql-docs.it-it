@@ -1,5 +1,5 @@
 ---
-title: sp_change_agent_profile (Transact-SQL) | Documenti Microsoft
+title: sp_change_agent_profile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_change_agent_profile
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66d4bb93d94492b572b9653c0be6a458f38565b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 441877f6212af070da39b828e5aaaae40e6a3ed7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035183"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,12 +63,12 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 |**description**|Descrizione del profilo.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_change_agent_profile** viene utilizzata in tutti i tipi di replica.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_change_agent_profile**.  
   
 ## <a name="see-also"></a>Vedere anche  

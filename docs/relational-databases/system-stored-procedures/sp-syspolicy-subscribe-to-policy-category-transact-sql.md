@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_subscribe_to_policy_category
 ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1d507bd8107474d50f0f99d12f88ddf971b21b25
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 530a45bc4b3a1691637d6a09aec2d05403f8bfb3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253740"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029612"
 ---
 # <a name="spsyspolicysubscribetopolicycategory-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +46,15 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
  [  **@policy_category=** ] **'***policy_category***'**  
  Nome della categoria di criteri a cui si esegue la sottoscrizione per il database. *policy_category* viene **sysname**ed è obbligatorio.  
   
- Per ottenere valori per *policy_category*, eseguire una query sulla vista di sistema syspolicy_policy_categories.  
+ Per ottenere valori per *policy_category*, eseguire query sulla vista di sistema syspolicy_policy_categories.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syspolicy_subscribe_to_policy_category nel contesto del database in cui si desidera aggiungere una sottoscrizione di categoria di criteri.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
 ## <a name="examples"></a>Esempi  

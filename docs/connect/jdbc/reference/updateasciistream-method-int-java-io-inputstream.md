@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a98f78397a2bd9b86b788c696ad13c11f5e9dbe9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f5d1ac4c8c6c5a89d365dfc760463323de00f210
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020159"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785505"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream"></a>Metodo updateAsciiStream (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public void updateAsciiStream(int columnIndex,
   
  Questo metodo passa caratteri ASCII (byte) da un oggetto InputStream a colonne di tipo carattere convertibili, ovvero l'intervallo ASCII [0x00 - 0x7F] di Unicode e le tabelle codici 874, 932, 936 949 e 950 e da 1250 a 1258. Esegue una conversione nella pagina delle regole di confronto di destinazione. Se si tenta di aggiornare una colonna di destinazione non convertibile, verrà generata un'eccezione. Per le colonne binarie, vengono passati byte non elaborati.  
   
- Utilizzo di questo metodo per la **immagine**, **testo**, e **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] i tipi di dati potrebbero influire sulle prestazioni.  
+ Utilizzo di questo metodo per la **immagine**, **testo**, e **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i tipi di dati potrebbero influire sulle prestazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateAsciiStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   

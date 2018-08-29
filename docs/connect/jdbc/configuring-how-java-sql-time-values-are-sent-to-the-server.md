@@ -14,17 +14,17 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a52f214b0383a8cabe04bd8c10b7c9ecdef2b21
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: fcb15ace351d53ed072738ea9e8978eb681294b0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278722"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785645"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configurazione della modalità di invio dei valori java.sql.Time al server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Se si usa un oggetto java.sql.Time o il tipo JDBC java.sql.Types.TIME per impostare un parametro, è possibile configurare la modalità di invio del valore java.sql.Time al server come tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **time** o come tipo **datetime**.  
+  Se si usa un oggetto java.sql.Time o il tipo JDBC java.sql.Types.TIME per impostare un parametro, è possibile configurare la modalità di invio del valore java.sql.Time al server come tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **time** o come tipo **datetime**.  
   
  Questo scenario si applica quando si utilizza uno dei seguenti metodi:  
   
@@ -44,19 +44,19 @@ ms.locfileid: "39278722"
   
  Il valore della proprietà di connessione **sendTimeAsDatetime** può essere modificato a livello di codice con [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] non supportano il **ora** tipo di dati, in modo che le applicazioni che utilizzano Java in genere archiviano Java valori come **datetime** o**smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] i tipi di dati.  
+ Le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] non supportano il **ora** tipo di dati, in modo che le applicazioni che utilizzano Java in genere archiviano Java valori come **datetime** o**smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati.  
   
- Se si desidera utilizzare il **data/ora** e **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di dati quando si lavora con i valori Java, è necessario impostare la **sendTimeAsDatetime** proprietà di connessione al **true**. Se si desidera utilizzare il **tempo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] del tipo di dati quando si lavora con valori di Java, è consigliabile impostare il **sendTimeAsDatetime** proprietà di connessione su **false**.  
+ Se si desidera utilizzare il **data/ora** e **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati quando si lavora con i valori Java, è necessario impostare la **sendTimeAsDatetime** proprietà di connessione al **true**. Se si desidera utilizzare il **tempo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del tipo di dati quando si lavora con valori di Java, è consigliabile impostare il **sendTimeAsDatetime** proprietà di connessione su **false**.  
   
- Se si inviano valori java.sql.Time in un parametro il cui tipo di dati può archiviare anche la data, tali date predefinite sono diverse a seconda che il valore java.sql.Time venga inviato come valore **datetime** (1/1/1970) o **time** (1/1/1900). Per altre informazioni sulle conversioni di dati quando si inviano dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vedere [Uso di dati relativi a data e ora](http://go.microsoft.com/fwlink/?LinkID=145211).  
+ Se si inviano valori java.sql.Time in un parametro il cui tipo di dati può archiviare anche la data, tali date predefinite sono diverse a seconda che il valore java.sql.Time venga inviato come valore **datetime** (1/1/1970) o **time** (1/1/1900). Per altre informazioni sulle conversioni di dati quando si inviano dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Uso di dati relativi a data e ora](http://go.microsoft.com/fwlink/?LinkID=145211).  
   
- Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 **sendTimeAsDatetime** true per impostazione predefinita. In una versione successiva la proprietà di connessione **sendTimeAsDatetime** può essere impostata su False per impostazione predefinita.  
+ Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0 **sendTimeAsDatetime** true per impostazione predefinita. In una versione successiva la proprietà di connessione **sendTimeAsDatetime** può essere impostata su False per impostazione predefinita.  
   
  Per assicurarsi che l'applicazione continui a funzionare come previsto, indipendentemente dal valore predefinito della proprietà di connessione **sendTimeAsDatetime**, è possibile:  
   
--   Usare java.sql.Time in caso di uso del tipo di dati **time**[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   Usare java.sql.Time in caso di uso del tipo di dati **time**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Usare Java con il **data/ora**, **smalldatetime**, e **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] i tipi di dati.  
+-   Usare Java con il **data/ora**, **smalldatetime**, e **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati.  
   
 SendTimeAsDatetime deve essere false per le colonne crittografate le colonne crittografate non supportano la conversione dall'ora in datetime. A partire da Microsoft JDBC Driver 6.0 per SQL Server, la classe SQLServerConnection ha i seguenti due metodi per il valore della proprietà sendTimeAsDatetime set/get.
 

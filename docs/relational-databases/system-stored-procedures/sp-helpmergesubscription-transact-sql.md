@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergesubscription (Transact-SQL) | Documenti Microsoft
+title: sp_helpmergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb5387d011b3987262415e3a88b5fd8bc65a8e2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37939073edaef5c8647cd173a83dfb05e63ae3cd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002918"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019770"
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**. È necessario che la pubblicazione esista già e che sia conforme alle regole per gli identificatori. Se è NULL o **%**, vengono restituite informazioni su tutte le pubblicazioni di tipo merge e le sottoscrizioni nel database corrente.  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**. È necessario che la pubblicazione esista già e che sia conforme alle regole per gli identificatori. Se è NULL oppure **%**, vengono restituite informazioni su tutte le pubblicazioni di tipo merge e le sottoscrizioni nel database corrente.  
   
  [  **@subscriber=**] **'***sottoscrittore***'**  
  Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, il valore predefinito è **%**. Se è NULL o %, vengono restituite informazioni su tutte le sottoscrizioni della pubblicazione specificata.  
@@ -67,30 +67,30 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
  Nome del database del server di pubblicazione. *publisher_db*viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutti i database di pubblicazione.  
   
  [  **@subscription_type=**] **'***subscription_type***'**  
- Tipo di sottoscrizione. *subscription_type*viene **nvarchar(15)**, e può essere uno dei valori seguenti.  
+ Tipo di sottoscrizione. *subscription_type*viene **nvarchar(15)**, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**push** (impostazione predefinita)|Sottoscrizione push|  
-|**Pull**|Sottoscrizione pull|  
+|**Eseguire il pull**|Sottoscrizione pull|  
 |**both**|Sottoscrizione sia push che pull|  
   
  [  **@found=**] **'***trovato***' OUTPUT**  
- Flag che indica le righe che restituiscono valori. *trovato*viene **int** e un parametro di OUTPUT, con un valore predefinito è NULL. **1** indica la pubblicazione è stata trovata. **0** indica la pubblicazione non è stata trovata.  
+ Flag che indica le righe che restituiscono valori. *trovato*viene **int** e un parametro di OUTPUT con valore predefinito è NULL. **1** indica la pubblicazione è stata trovata. **0** indica la pubblicazione non è stata trovata.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|Nome della sottoscrizione.|  
-|**Pubblicazione**|**sysname**|Nome della pubblicazione.|  
+|**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**publisher**|**sysname**|Nome del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
 |**subscriber**|**sysname**|Nome del Sottoscrittore.|  
 |**subscriber_db**|**sysname**|Nome del database di sottoscrizione.|  
-|**status**|**int**|Stato della sottoscrizione:<br /><br /> **0** = tutti i processi sono in attesa di iniziare<br /><br /> **1** = uno o più processi sono in avvio<br /><br /> **2** = tutti i processi sono stati eseguiti correttamente<br /><br /> **3** = almeno un processo è in esecuzione<br /><br /> **4** = tutti i processi sono pianificati e inattivi<br /><br /> **5** = almeno un processo sta provando a eseguire dopo un precedente errore<br /><br /> **6** = almeno un processo non è stato eseguito correttamente|  
+|**status**|**int**|Stato della sottoscrizione:<br /><br /> **0** = tutti i processi sono in attesa dell'avvio<br /><br /> **1** = uno o più processi di avvio<br /><br /> **2** = tutti i processi sono stati eseguiti correttamente<br /><br /> **3** = almeno un processo è in esecuzione<br /><br /> **4** = tutti i processi sono pianificati e inattivi<br /><br /> **5** = almeno un processo sta tentando di eseguire dopo un precedente errore<br /><br /> **6** = almeno un processo non è stato eseguito correttamente|  
 |**subscriber_type**|**int**|Tipo di Sottoscrittore.|  
-|**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** impostato su both|  
+|**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = entrambi|  
 |**priority**|**float(8)**|Numero che indica il livello di priorità della sottoscrizione.|  
 |**sync_type**|**tinyint**|Tipo di sincronizzazione della sottoscrizione.|  
 |**description**|**nvarchar(255)**|Breve descrizione della sottoscrizione di tipo merge.|  
@@ -99,21 +99,21 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**offload_enabled**|**bit**|Specifica se per un agente di replica è impostata l'esecuzione con ripartizione del carico di lavoro nel Sottoscrittore. Se è NULL, l'agente viene eseguito nel server di pubblicazione.|  
 |**offload_server**|**sysname**|Nome del server in cui è in esecuzione l'agente.|  
 |**use_interactive_resolver**|**int**|Specifica se durante la fase di riconciliazione viene utilizzato il sistema di risoluzione dei conflitti interattivo. Se **0**, il sistema di risoluzione interattivo non viene utilizzato.|  
-|**Nome host**|**sysname**|Valore specificato per una sottoscrizione filtrata in base il valore di [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) (funzione).|  
-|**subscriber_security_mode**|**smallint**|Modalità di sicurezza nel Sottoscrittore, in cui **1** indica l'autenticazione di Windows e **0** significa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.|  
+|**Nome host**|**sysname**|Valore fornito durante una sottoscrizione filtrata in base al valore della [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) (funzione).|  
+|**subscriber_security_mode**|**smallint**|Modalità di sicurezza del sottoscrittore, dove **1** indica l'autenticazione di Windows, e **0** significa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.|  
 |**subscriber_login**|**sysname**|Nome dell'account di accesso nel Sottoscrittore.|  
 |**subscriber_password**|**sysname**|La password effettiva per il Sottoscrittore non viene mai restituita. Il risultato viene mascherato da una "**\*\*\*\*\*\***" stringa.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helpmergesubscription** viene utilizzata nella replica di tipo merge per restituire le informazioni sulla sottoscrizione archiviate nel server di pubblicazione o sottoscrittore di ripubblicazione.  
   
  Per le sottoscrizioni anonime, il *subscription_type*valore è sempre **1** (pull). Tuttavia, è necessario eseguire [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) nel Sottoscrittore per informazioni sulle sottoscrizioni anonime.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database o l'elenco di accesso per la pubblicazione a cui appartiene la sottoscrizione può eseguire **sp _ helpmergesubscription**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database o elenco di accesso alla pubblicazione per la pubblicazione a cui appartiene la sottoscrizione può eseguire **sp _ helpmergesubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

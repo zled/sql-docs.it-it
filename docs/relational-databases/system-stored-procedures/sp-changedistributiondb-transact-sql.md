@@ -1,5 +1,5 @@
 ---
-title: sp_changedistributiondb (Transact-SQL) | Documenti Microsoft
+title: sp_changedistributiondb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedistributiondb
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79a09738a497dd2398005494189e4af83d99075c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4056a3cc6e8dada73358a896dbe8925b09363166
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988286"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029577"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +51,9 @@ sp_changedistributiondb [ @database= ] 'database'
  Nome del database di distribuzione. *database* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@property=**] **'***proprietà***'**  
- Proprietà da modificare per il database specificato. *proprietà* viene **sysname**, e può essere uno dei valori seguenti.  
+ Proprietà da modificare per il database specificato. *proprietà* viene **sysname**, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**history_retention**|Periodo di memorizzazione delle tabelle di cronologia.|  
 |**max_distretention**|Periodo di memorizzazione massimo per la distribuzione.|  
@@ -64,15 +64,15 @@ sp_changedistributiondb [ @database= ] 'database'
  Nuovo valore della proprietà specificata. *valore* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_changedistributiondb** viene utilizzata in tutti i tipi di replica.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/sp-changedistributiondb-_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_changedistributiondb**.  
   
 ## <a name="see-also"></a>Vedere anche  

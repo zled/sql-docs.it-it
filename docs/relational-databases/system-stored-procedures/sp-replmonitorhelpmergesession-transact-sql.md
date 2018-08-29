@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelpmergesession (Transact-SQL) | Documenti Microsoft
+title: sp_replmonitorhelpmergesession (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1d59aba126e66d523e23c680c55f679cbbfa6ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25bacdedf9ed9be6baa5e467cf81b809ff9cab1f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003585"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037674"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,34 +56,34 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  [ **@hours** =] *ore*  
  Intervallo di tempo, espresso in ore, per cui vengono restituite informazioni sulle sessioni passate dell'agente. *ore* viene **int**, che può essere uno degli intervalli seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |< **0**|Restituisce informazioni sulle esecuzioni passate dell'agente, per al massimo 100 esecuzioni.|  
 |**0** (predefinito)|Restituisce informazioni su tutte le esecuzioni passate dell'agente.|  
-|> **0**|Restituisce informazioni sull'agente esecuzioni che si sono verificati negli ultimi *ore* numero di ore.|  
+|> **0**|Restituisce informazioni sull'agente di esecuzioni che si sono verificati nelle ultime *ore* numero di ore.|  
   
  [ **@session_type** =] *session_type*  
- Filtra il set di risultati in base al risultato finale della sessione. *session_type* viene **int**, e può essere uno dei valori seguenti.  
+ Filtra il set di risultati in base al risultato finale della sessione. *session_type* viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1** (impostazione predefinita)|Sessioni dell'agente con esito positivo o da ritentare.|  
 |**0**|Sessioni dell'agente con esito negativo.|  
   
  [ **@publisher** =] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene utilizzato durante l'esecuzione **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
+ Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene usato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
   
  [ **@publisher_db** = ] **'***publisher_db***'**  
- Nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene utilizzato durante l'esecuzione **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
+ Nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene usato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
   
  [  **@publication=** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene utilizzato durante l'esecuzione **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene usato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|ID della sessione del processo dell'agente.|  
+|**Session_id**|**int**|ID della sessione del processo dell'agente.|  
 |**Stato**|**int**|Stato dell'esecuzione dell'agente:<br /><br /> **1** = avvio<br /><br /> **2** = esito positivo<br /><br /> **3** = in corso<br /><br /> **4** = inattivo<br /><br /> **5** = nuovo tentativo<br /><br /> **6** = esito negativo|  
 |**StartTime**|**datetime**|Data e ora di inizio della sessione del processo dell'agente.|  
 |**EndTime**|**datetime**|Data e ora di completamento della sessione del processo dell'agente.|  
@@ -91,22 +91,22 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**UploadedCommands**|**int**|Numero di comandi caricati durante la sessione dell'agente.|  
 |**DownloadedCommands**|**int**|Numero di comandi scaricati durante la sessione dell'agente.|  
 |**ErrorMessages**|**int**|Numero di messaggi di errore generati durante la sessione dell'agente.|  
-|**ID errore**|**int**|ID dell'errore che si è verificato|  
+|**ErrorID**|**int**|ID dell'errore che si è verificato|  
 |**PercentageDone**|**decimal**|Percentuale stimata del numero totale di modifiche già recapitate in una sessione attiva.|  
 |**TimeRemaining**|**int**|Numero stimato di secondi rimanenti in una sessione attiva.|  
 |**CurrentPhase**|**int**|Fase corrente di una sessione attiva. I possibili valori sono i seguenti.<br /><br /> **1** = caricamento<br /><br /> **2** = download|  
 |**LastMessage**|**nvarchar(500)**|Ultimo messaggio registrato dall'agente di merge durante la sessione.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_replmonitorhelpmergesession** consente di monitorare la replica di tipo merge.  
+## <a name="remarks"></a>Note  
+ **sp_replmonitorhelpmergesession** viene usato per monitorare la replica di tipo merge.  
   
- Quando viene eseguito sul server di sottoscrizione, **sp_replmonitorhelpmergesession** solo restituisce informazioni sulle ultime cinque sessioni dell'agente di Merge.  
+ Quando viene eseguito sul sottoscrittore **sp_replmonitorhelpmergesession** solo restituisce informazioni sulle ultime cinque sessioni dell'agente di Merge.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **db_owner** o **replmonitor** ruolo predefinito del database nel database di distribuzione nel server di distribuzione o nel database di sottoscrizione nel Sottoscrittore possono eseguire **sp _ replmonitorhelpmergesession**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **db_owner** oppure **replmonitor** ruolo predefinito del database nel database di distribuzione nel server di distribuzione o nel database di sottoscrizione del sottoscrittore possono eseguire **sp _ replmonitorhelpmergesession**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitorare la replica a livello di programmazione](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

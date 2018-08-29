@@ -1,5 +1,5 @@
 ---
-title: sp_getagentparameterlist (Transact-SQL) | Documenti Microsoft
+title: sp_getagentparameterlist (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getagentparameterlist
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3eb58b1f831c1eaec76189b55c8758b0aa6485f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d313f0445183366735e9c1fe2b65a8eb823fcc3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994118"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021241"
 ---
 # <a name="spgetagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@agent_type =** ] **'***agent_type***'**  
- Agente di replica per il quale aggiungere il parametro. *agent_type* viene **int**, e può essere uno dei valori seguenti:  
+ Agente di replica per il quale aggiungere il parametro. *agent_type* viene **int**, i possibili valori sono i seguenti:  
   
-|Value|Agente|  
+|valore|Agent|  
 |-----------|-----------|  
 |**1**|Snapshot|  
 |**2**|Agente di lettura log|  
@@ -57,11 +57,11 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 |**9**|Agente di lettura coda|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_getagentparameter**.  
   
 ## <a name="see-also"></a>Vedere anche  

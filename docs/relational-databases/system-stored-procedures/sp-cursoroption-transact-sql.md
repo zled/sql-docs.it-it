@@ -1,5 +1,5 @@
 ---
-title: sp_cursoroption (Transact-SQL) | Documenti Microsoft
+title: sp_cursoroption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b404bdb0b96883df1b1e39b9190285b4795aeaa4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5b3bb6500d4d1bc29859c428820d28ec48d6aa72
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240041"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026556"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Imposta le opzioni del cursore o restituisce informazioni sul cursore create dalla routine sp_cursoropen archiviati. è possibile richiamare sp_cursoroption specificando ID = 8 in un pacchetto del flusso TDS.  
+  Imposta le opzioni del cursore o restituisce informazioni sul cursore create dalla routine sp_cursoropen archiviati. richiamare sp_cursoroption specificando ID = 8 in un pacchetto del flusso TDS.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,15 +45,15 @@ sp_cursoroption cursor, code, value
   
 ## <a name="arguments"></a>Argomenti  
  *cursor*  
- È un *gestire* valore generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e restituito dalla routine sp_cursoropen archiviati. *cursore* richiede un' **int** valore per l'esecuzione di input.  
+ È un *gestiscono* valore generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e restituito dalla routine sp_cursoropen archiviati. *cursore* richiede un' **int** valore di input per l'esecuzione.  
   
  *Codice*  
  Consente di specificare i vari fattori dei valori restituiti del cursore. *codice* richiede uno dei seguenti **int** valori di input:  
   
-|Value|Nome|Description|  
+|valore|nome|Description|  
 |-----------|----------|-----------------|  
-|0x0001|TEXTPTR_ONLY|Restituisce il puntatore di testo, anziché i dati effettivi, per determinate colonne di tipo text o image designate.<br /><br /> TEXTPTR_ONLY consente i puntatori di testo da utilizzare come *handle* per gli oggetti blob che successivamente possono essere recuperati in modo selettivo o aggiornata mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] o funzionalità DBLIB (ad esempio, [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT o DBLIB DBWRITETEXT).<br /><br /> Se viene assegnato il valore "0", tutte le colonne di tipo text e image nell'elenco di selezione restituiranno puntatori di testo anziché dati.|  
-|0x0002|CURSOR_NAME|Assegna il nome specificato *valore* fino al cursore. A sua volta, consente di utilizzare ODBC [!INCLUDE[tsql](../../includes/tsql-md.md)] posizionate le istruzioni di aggiornamento/eliminazione sui cursori aperti mediante sp_cursoropen.<br /><br /> La stringa può essere specificata come qualsiasi tipo di dati Unicode o character.<br /><br /> Poiché [!INCLUDE[tsql](../../includes/tsql-md.md)] le istruzioni UPDATE/DELETE posizionate operano, per impostazione predefinita, nella prima riga nel caso di un cursore sp_cursor SETPOSITION deve essere utilizzato per posizionare il cursore prima di eseguire l'istruzione UPDATE/DELETE posizionata.|  
+|0x0001|TEXTPTR_ONLY|Restituisce il puntatore di testo, anziché i dati effettivi, per determinate colonne di tipo text o image designate.<br /><br /> TEXTPTR_ONLY consente i puntatori di testo da utilizzare come *handle* agli oggetti blob che possono essere recuperati in seguito in modo selettivo o l'aggiornamento usando [!INCLUDE[tsql](../../includes/tsql-md.md)] o funzionalità DBLIB (ad esempio, [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT o DBLIB DBWRITETEXT).<br /><br /> Se viene assegnato il valore "0", tutte le colonne di tipo text e image nell'elenco di selezione restituiranno puntatori di testo anziché dati.|  
+|0x0002|CURSOR_NAME|Assegna il nome specificato nel *valore* fino al cursore. A sua volta, consente a ODBC di utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] posizionate le istruzioni di aggiornamento ed eliminazione sui cursori aperti mediante sp_cursoropen.<br /><br /> La stringa può essere specificata come qualsiasi tipo di dati Unicode o character.<br /><br /> Poiché [!INCLUDE[tsql](../../includes/tsql-md.md)] le istruzioni UPDATE/DELETE posizionate operano, per impostazione predefinita, nella prima riga in un cursore con sp_cursor SETPOSITION deve essere usato per posizionare il cursore prima di eseguire l'istruzione UPDATE/DELETE posizionata.|  
 |0x0003|TEXTDATA|Restituisce i dati effettivi, anziché il puntatore di testo, per determinate colonne di tipo text o image in recuperi successivi, ovvero annulla l'effetto di TEXTPTR_ONLY.<br /><br /> Se per una colonna specifica è abilitato TEXTDATA, la riga viene nuovamente recuperata o aggiornata e può quindi essere nuovamente impostata su TEXTPTR_ONLY. Analogamente a quanto accade per TEXTPTR_ONLY, il parametro di valore è un intero che specifica il numero di colonna e un valore zero restituisce tutte le colonne di tipo text o image.|  
 |0x0004|SCROLLOPT|Opzione di scorrimento. Per ulteriori informazioni, vedere "Valori dei codici restituiti" più avanti in questo argomento.|  
 |0x0005|CCOPT|Opzioni del controllo della concorrenza. Per ulteriori informazioni, vedere "Valori dei codici restituiti" più avanti in questo argomento.|  
@@ -63,10 +63,10 @@ sp_cursoroption cursor, code, value
  Definisce il valore restituito da *codice*. *valore* è un parametro obbligatorio che richiede un 0x0001, 0x0002 o 0x0003 *codice* valore di input.  
   
 > [!NOTE]  
->  Oggetto *codice* valore 2 è un tipo di dati stringa. Qualsiasi altro *codice* valore di input o restituito da *valore* è un numero intero.  
+>  Oggetto *codice* valore 2 è un tipo di dati stringa. Qualsiasi altra *codice* valore di input o restituito da *valore* è un numero intero.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- Il *valore* parametro può restituire uno dei seguenti *codice* valori.  
+ Il *valore* possono restituire uno dei seguenti parametri *codice* valori.  
   
 |Valore restituito|Description|  
 |------------------|-----------------|  

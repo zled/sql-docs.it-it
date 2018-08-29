@@ -1,5 +1,5 @@
 ---
-title: sp_addscriptexec (Transact-SQL) | Documenti Microsoft
+title: sp_addscriptexec (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e3122de37c27e8372c2aca77f4dde0b267a8d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50606c2b80e5aeae4cb68c453a130dc557111988
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989596"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035193"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_addscriptexec [ @publication = ] publication
  Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@scriptfile=** ] **'***scriptfile***'**  
- Percorso completo del file script SQL. *scriptfile* viene **nvarchar(4000**, non prevede alcun valore predefinito.  
+ Percorso completo del file script SQL. *scriptfile* viene **nvarchar (4000)**, non prevede alcun valore predefinito.  
   
  [  **@skiperror=** ] **'***skiperror***'**  
  Indica se l'agente di distribuzione o di merge deve essere arrestato in caso di errore durante l'elaborazione dello script. *SkipError* viene **bit**, con un valore predefinito è 0.  
@@ -65,32 +64,32 @@ sp_addscriptexec [ @publication = ] publication
  Specifica un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere utilizzato per la pubblicazione da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  *server di pubblicazione* non deve essere usata durante la pubblicazione da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_addscriptexec** viene utilizzata nella replica transazionale, replica e di tipo merge.  
   
- **sp_addscriptexec** non viene utilizzato per la replica snapshot.  
+ **sp_addscriptexec** non viene usato per la replica snapshot.  
   
- Per utilizzare **sp_addscriptexec**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio deve disporre di lettura e le autorizzazioni di scrittura per le autorizzazioni di lettura e di percorso snapshot alla posizione in cui gli script sono archiviate.  
+ Per utilizzare **sp_addscriptexec**, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio deve disporre di lettura e le autorizzazioni di scrittura per le autorizzazioni di posizione e lettura di snapshot per la posizione in cui gli script vengono archiviate.  
   
- Il [utilità sqlcmd](../../tools/sqlcmd-utility.md) viene utilizzato per eseguire lo script nel sottoscrittore e lo script viene eseguito nel contesto di sicurezza utilizzato dall'agente di distribuzione o dell'agente di Merge durante la connessione al database di sottoscrizione. Quando l'agente viene eseguito in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [utilità osql](../../tools/osql-utility.md) viene usata invece di [sqlcmd](../../tools/sqlcmd-utility.md).  
+ Il [utilità sqlcmd](../../tools/sqlcmd-utility.md) viene usato per eseguire lo script nel sottoscrittore e lo script viene eseguito nel contesto di sicurezza utilizzato dall'agente di distribuzione o dell'agente di Merge durante la connessione al database di sottoscrizione. Quando l'agente viene eseguito su una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il [utilità osql](../../tools/osql-utility.md) viene usato al posto di [sqlcmd](../../tools/sqlcmd-utility.md).  
   
- **sp_addscriptexec** è utile per applicare gli script nei Sottoscrittori e utilizza [sqlcmd](../../tools/sqlcmd-utility.md) per applicare il contenuto dello script al sottoscrittore. Tuttavia, poiché le configurazioni dei Sottoscrittori sono soggette a variazioni, gli script testati prima dell'invio al server di pubblicazione potrebbero comunque causare errori in un Sottoscrittore. *SkipError* offre la possibilità di impostare l'agente di distribuzione o dell'agente di Merge ignora gli errori e continua in caso di. Utilizzare [sqlcmd](../../tools/sqlcmd-utility.md) per testare gli script prima dell'esecuzione **sp_addscriptexec**.  
+ **sp_addscriptexec** è utile per applicare script a sottoscrittori e Usa [sqlcmd](../../tools/sqlcmd-utility.md) per applicare il contenuto dello script al sottoscrittore. Tuttavia, poiché le configurazioni dei Sottoscrittori sono soggette a variazioni, gli script testati prima dell'invio al server di pubblicazione potrebbero comunque causare errori in un Sottoscrittore. *SkipError* offre la possibilità di avere l'agente di distribuzione o dell'agente di Merge ignorare gli errori e continuare. Uso [sqlcmd](../../tools/sqlcmd-utility.md) per testare gli script prima dell'esecuzione **sp_addscriptexec**.  
   
 > [!NOTE]  
 >  Gli errori ignorati vengono comunque registrati nella cronologia dell'agente a titolo di riferimento.  
   
- Utilizzando **sp_addscriptexec** per registrare un file di script per le pubblicazioni utilizzando FTP per il recapito degli snapshot è supportato solo per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
+ Usando **sp_addscriptexec** per registrare un file di script per le pubblicazioni utilizzando FTP per il recapito di snapshot è supportato solo per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_addscriptexec**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_addscriptexec**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di script durante la sincronizzazione &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
+ [Eseguire script durante la sincronizzazione &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [Sincronizzare i dati](../../relational-databases/replication/synchronize-data.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

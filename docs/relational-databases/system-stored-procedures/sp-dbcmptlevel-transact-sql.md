@@ -1,5 +1,5 @@
 ---
-title: sp_dbcmptlevel (Transact-SQL) | Documenti Microsoft
+title: sp_dbcmptlevel (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dbcmptlevel
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 caps.latest.revision: 110
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 416842d369700f0ac7e0ecd18f84fc0b546a49f7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: acd4d6a2d87d97bd31b35779a9bc605dde41db04
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236850"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031944"
 ---
 # <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,18 +68,18 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Se viene specificato alcun parametro o se il *nome* parametro non viene specificato, **sp_dbcmptlevel** restituisce un errore.  
+ Se viene specificato alcun parametro o se il *name* parametro non viene specificato, **sp_dbcmptlevel** restituisce un errore.  
   
- Se *nome* viene specificato senza *versione*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce un messaggio di visualizzare il livello di compatibilità corrente del database specificato.  
+ Se *name* viene specificato senza *versione*, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce un messaggio che visualizza il livello di compatibilità corrente del database specificato.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Per una descrizione dei livelli di compatibilità, vedere [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo il proprietario del database, i membri del **sysadmin** ruolo predefinito del server e **db_owner** ruolo predefinito del database (se si modifica il database corrente) è possibile eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo il proprietario del database, i membri del **sysadmin** ruolo predefinito del server e il **db_owner** ruolo predefinito del database (se si modifica il database corrente) possono eseguire questa procedura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Parole chiave riservate &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

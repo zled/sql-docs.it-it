@@ -1,5 +1,5 @@
 ---
-title: sp_publisherproperty (Transact-SQL) | Documenti Microsoft
+title: sp_publisherproperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_publisherproperty
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 647bd0de356a8a31c531a027dffeca88cd8c3083
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37b94b68702394b73ae810b246c0701e876802de
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000888"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023254"
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Visualizza o modifica le proprietà di server di pubblicazione per non[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione. Questa stored procedure viene eseguita nel database di distribuzione.  
+  Visualizza o modifica proprietà server di pubblicazione per non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione. Questa stored procedure viene eseguita nel database di distribuzione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,39 +53,39 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  [**@propertyname** =] **'***propertyname***'**  
  Nome della proprietà da impostare. *PropertyName* viene **sysname**, e può essere uno dei valori seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
-|**xactsetbatching**|Indica se le transazioni nel server di pubblicazione sono raggruppate in set con consistenza transazionale per elaborazioni successive, noti come Xactset. Il valore **abilitato** significa che è possibile creare XactSet, ovvero l'impostazione predefinita. Il valore **disabilitato** significa che XactSet esistenti vengono elaborati da alcun nuovo XactSet viene creati.|  
-|**xactsetjob**|Indica se è attivo il processo Xactset per la creazione di Xactset. Il valore **abilitato** significa che il processo Xactset viene eseguito periodicamente per la creazione di XactSet nel server di pubblicazione. Il valore **disabilitato** significa che il XactSet vengono creati solo dall'agente di lettura Log quando esegue il polling server di pubblicazione per le modifiche.|  
+|**xactsetbatching**|Indica se le transazioni nel server di pubblicazione sono raggruppate in set con consistenza transazionale per elaborazioni successive, noti come Xactset. Un valore pari **abilitato** significa che è possibile creare XactSet, ovvero l'impostazione predefinita. Un valore pari **disabilitato** significa che XactSet esistenti vengono elaborati da alcun nuovo XactSet viene creati.|  
+|**xactsetjob**|Indica se è attivo il processo Xactset per la creazione di Xactset. Un valore pari **abilitato** significa che il processo Xactset viene eseguito periodicamente per creazione di XactSet nel server di pubblicazione. Un valore pari **disabilitato** significa che il XactSet vengono creati solo dall'agente di lettura Log quando si esegue il polling server di pubblicazione per le modifiche.|  
 |**xactsetjobinterval**|Intervallo tra le esecuzioni del processo Xactset, espresso in minuti.|  
   
- Quando *propertyname* viene omesso vengono restituite tutte le proprietà impostabili.  
+ Quando *propertyname* viene omessa vengono restituite tutte le proprietà impostabili.  
   
  [**@propertyvalue** =] **'***propertyvalue***'**  
- Nuovo valore per la proprietà. *PropertyValue* viene **sysname**, con valore predefinito è NULL. Quando *propertyvalue* viene omesso, l'impostazione corrente per la proprietà viene restituita.  
+ Nuovo valore per la proprietà. *PropertyValue* viene **sysname**, con un valore predefinito NULL. Quando *propertyvalue* viene omesso, l'impostazione corrente per la proprietà viene restituita.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**propertyname**|**sysname**|Restituisce le proprietà delle pubblicazioni seguenti che è possibile impostare:<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
-|**PropertyValue**|**sysname**|È l'impostazione corrente per la proprietà di **propertyname** colonna.|  
+|**PropertyValue**|**sysname**|È l'impostazione corrente per la proprietà nel **propertyname** colonna.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_publisherproperty** viene utilizzata nella replica transazionale per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
   
- Quando solo *publisher* viene specificato, il set di risultati include le impostazioni correnti per tutte le proprietà che possono essere impostate.  
+ Quando solo *server di pubblicazione* è specificato, il set di risultati include le impostazioni correnti per tutte le proprietà che è possibile impostare.  
   
- Quando *propertyname* viene specificato, viene visualizzata solo la proprietà nel set di risultati.  
+ Quando *propertyname* viene specificato, viene visualizzata solo la proprietà del set di risultati.  
   
  Se si specificano tutti i parametri, la proprietà viene modificata e non viene restituito alcun set di risultati.  
   
- Quando si modifica il **xactsetjobinterval** proprietà per un processo in esecuzione, è necessario riavviare il processo per il nuovo intervallo diventino effettive.  
+ Quando si modifica il **xactsetjobinterval** proprietà per un processo in esecuzione, è necessario riavviare il processo per il nuovo intervallo rendere effettive.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server nel server di distribuzione possono eseguire **sp_publisherproperty**.  
   
 ## <a name="see-also"></a>Vedere anche  

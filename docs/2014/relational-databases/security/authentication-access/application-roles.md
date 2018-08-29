@@ -19,16 +19,15 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 - groups [SQL Server], roles
 ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5613f0657b8b8c5a3a9083be022865d83264e5db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b82ecbd1fffd99e5830948f0bf2bb799d6f1a851
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262287"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019900"
 ---
 # <a name="application-roles"></a>Ruoli applicazione
   Un ruolo applicazione è un'entità di database che consente a un'applicazione di funzionare con proprie autorizzazioni simili a quelle per utenti. I ruoli applicazione possono essere utilizzati per consentire l'accesso a dati specifici solo agli utenti che si collegano attraverso un'applicazione particolare. A differenza dei ruoli di database, i ruoli applicazione non contengono membri e sono inattivi per impostazione predefinita. I ruoli applicazione funzionano con entrambe le modalità di autenticazione I ruoli applicazione vengono abilitati usando **sp_setapprole**, che richiede una password. Poiché si tratta di entità a livello di database, i ruoli applicazione possono accedere ad altri database solo tramite le autorizzazioni concesse in questi database all'account utente **guest**. Ogni database in cui l'account utente **guest** è stato disabilitato non sarà quindi accessibile ai ruoli applicazione di altri database.  
@@ -55,7 +54,7 @@ ms.locfileid: "37262287"
 > [!IMPORTANT]  
 >  L'opzione ODBC **encrypt** non è supportata da **SqlClient**. Per trasmettere informazioni riservate su una rete, utilizzare SSL (Secure Sockets Layer) o IPSec per crittografare il canale. Se è necessario mantenere le credenziali nell'applicazione client, crittografarle utilizzando le funzioni Crypto API. In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive, il parametro *password* è archiviato come hash unidirezionale.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |||  
 |-|-|  

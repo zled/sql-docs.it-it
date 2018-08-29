@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geometry_index (Transact-SQL) | Documenti Microsoft
+title: sp_help_spatial_geometry_index (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_help_spatial_geometry_index procedure
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2cd47f224f3e2d225fd58094ab11e4b64e78ec90
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40eff48fed7d9ba3a687d32858ad2a3f3cdbf154
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242032"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033454"
 ---
 # <a name="sphelpspatialgeometryindex-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce i nomi e valori per un set di proprietà specificato su un **geometry** indice spaziale. Il risultato viene restituito in formato di tabella. È possibile scegliere di restituire un set principale di proprietà oppure tutte le proprietà dell'indice.  
+  Restituisce i nomi e valori per un set specificato di proprietà su un **geometria** indice spaziale. Il risultato viene restituito in formato di tabella. È possibile scegliere di restituire un set principale di proprietà oppure tutte le proprietà dell'indice.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,15 +47,15 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Vedere [Stored procedure di argomenti e le proprietà dell'indice spaziale](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Visualizzare [Stored procedure di argomenti e le proprietà dell'indice spaziale](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
- Vedere [Stored procedure di argomenti e le proprietà dell'indice spaziale](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Visualizzare [Stored procedure di argomenti e le proprietà dell'indice spaziale](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per accedere alla procedura, l'utente deve essere assegnato a un ruolo PUBLIC. È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Le proprietà che contengono valori NULL non sono incluse nel set restituito.  
   
 ## <a name="example"></a>Esempio  
@@ -68,7 +68,7 @@ exec sp_help_spatial_geometry_index 'geometry_col', 'SIndx_SpatialTable_geometry
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Indice spaziale Stored procedure](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Stored procedure di indice spaziale](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index_xml](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)   
  [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Dati spaziali &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  

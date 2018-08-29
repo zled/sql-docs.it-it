@@ -1,5 +1,5 @@
 ---
-title: sp_addsynctriggers (Transact-SQL) | Documenti Microsoft
+title: sp_addsynctriggers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 711126c199480bd1d8ef836b9b587f51db8e4552
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 229daeed8cc9c38fc1379565d3f1acffd83317ec
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992198"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032571"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "32992198"
   Crea nel Sottoscrittore trigger utilizzati con tutti i tipi di sottoscrizioni aggiornabili, ovvero ad aggiornamento immediato, ad aggiornamento in coda e ad aggiornamento immediato sostituito dall'aggiornamento in coda in caso di errore. Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore.  
   
 > [!IMPORTANT]  
->  Il [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) stored procedure deve essere utilizzata al posto di **sp_addsynctrigger**. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) genera uno script che contiene il **sp_addsynctrigger** chiamate.  
+>  Il [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) procedura deve essere utilizzata al posto di **sp_addsynctrigger**. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) genera uno script che contiene il **sp_addsynctrigger** chiamate.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -102,13 +101,13 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  È il nome del **timestamp** colonna nel server di pubblicazione. *timestamp_col* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@filter_clause=**] **'***filter_clause***'**  
- Clausola di restrizione (WHERE) che definisce un filtro orizzontale. Quando si specifica la clausola di restrizione, omettere la parola chiave WHERE. *filter_clause*viene **nvarchar(4000**, con un valore predefinito è NULL.  
+ Clausola di restrizione (WHERE) che definisce un filtro orizzontale. Quando si specifica la clausola di restrizione, omettere la parola chiave WHERE. *filter_clause*viene **nvarchar (4000)**, con un valore predefinito è NULL.  
   
  [  **@primary_key_bitmap =**] **'***primary_key_bitmap***'**  
- Mappa di bit delle colonne chiave primaria nella tabella. *primary_key_bitmap* viene **varbinary(4000)**, non prevede alcun valore predefinito.  
+ Mappa di bit delle colonne chiave primaria nella tabella. *primary_key_bitmap* viene **varbinary(4000**, non prevede alcun valore predefinito.  
   
  [  **@identity_support =** ] *identity_support*  
- Abilita e disabilita la gestione automatica degli intervalli di valori Identity quando viene utilizzato l'aggiornamento in coda. *identity_support* è un **bit**, il valore predefinito è **0**. **0** significa che non vi è alcuna identità intervalli di valori supportati, **1** Abilita gestione degli intervalli di valori identity automatico.  
+ Abilita e disabilita la gestione automatica degli intervalli di valori Identity quando viene utilizzato l'aggiornamento in coda. *identity_support* è un **bit**, il valore predefinito è **0**. **0** indica che non siano presenti identità intervalli di valori, il supporto **1** consente degli intervalli di valori identity automatico.  
   
  [  **@independent_agent =** ] *independent_agent*  
  Specifica se è disponibile un solo agente di distribuzione (agente indipendente) per la pubblicazione oppure un agente di distribuzione per ogni coppia database di pubblicazione/database di sottoscrizione (agente condiviso). Questo valore è determinato dal valore della proprietà independent_agent della pubblicazione definito nel server di pubblicazione. *independent_agent* è di tipo bit e il valore predefinito **0**. Se **0**, l'agente è un agente condiviso. Se **1**, l'agente è un agente indipendente.  
@@ -117,16 +116,16 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  Nome del server di distribuzione. *server di distribuzione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@pubversion**=] *pubversion*  
- Indica la versione del server di pubblicazione. *pubversion* viene **int**, con un valore predefinito è 1. **1** indica che la versione del server di pubblicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 o versione precedente; **2** indica che il server di pubblicazione [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) o versione successiva. *pubversion* deve essere impostata in modo esplicito su **2** quando la versione del server di pubblicazione è [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 o versione successiva.  
+ Indica la versione del server di pubblicazione. *pubversion* viene **int**, con un valore predefinito è 1. **1** significa che è la versione di server di pubblicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 o precedente. **2** significa che il server di pubblicazione [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) o versione successiva. *pubversion* deve essere impostata esplicitamente su **2** quando la versione del server di pubblicazione è [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 o versione successiva.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_addsynctriggers** viene utilizzato dall'agente di distribuzione come parte dell'inizializzazione della sottoscrizione. In genere, non viene eseguita dagli utenti, ma può risultare utile se l'utente deve configurare una sottoscrizione nosync in modo manuale.  
+## <a name="remarks"></a>Note  
+ **sp_addsynctriggers** viene usato dall'agente di distribuzione come parte dell'inizializzazione della sottoscrizione. In genere, non viene eseguita dagli utenti, ma può risultare utile se l'utente deve configurare una sottoscrizione nosync in modo manuale.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_addsynctriggers**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_addsynctriggers**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

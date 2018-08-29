@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_unsubscribe_from_policy_category
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0c448584efd1921b7e88a84f17d2f53bb0596944
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1bad5bdd2dafa962689d3952b649388f20620722
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243920"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025250"
 ---
 # <a name="spsyspolicyunsubscribefrompolicycategory-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +46,15 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
  [  **@policy_category=** ] **'***policy_category***'**  
  Nome della sottoscrizione di categoria di criteri da eliminare. *policy_category* viene **sysname**ed è obbligatorio.  
   
- Per ottenere valori per *policy_category*, eseguire una query sulla vista di sistema syspolicy_policy_categories.  
+ Per ottenere valori per *policy_category*, eseguire query sulla vista di sistema syspolicy_policy_categories.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syspolicy_unsubscribe_from_policy_category nel contesto del database in cui si desidera rimuovere la sottoscrizione di categoria di criteri.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
 ## <a name="examples"></a>Esempi  

@@ -1,5 +1,5 @@
 ---
-title: sp_gettopologyinfo (Transact-SQL) | Documenti Microsoft
+title: sp_gettopologyinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_gettopologyinfo
 ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b05bcc47673bba1cad4cbf5cf936f3f7b9dca80
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee8f192a96bc88c1e37d0d61b6dcf12dc074d1ea
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025293"
 ---
 # <a name="spgettopologyinfo-transact-sql"></a>sp_gettopologyinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +46,22 @@ sp_gettopologyinfo [ @request_id = ] request_id
   
 ## <a name="arguments"></a>Argomenti  
  [ @request_id=] *request_id*  
- ID di una richiesta di stato di topologia. *request_id* viene **int**, con un valore predefinito è NULL. Per ottenere un ID, utilizzare il @request_id parametro di output [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) o eseguire una query di [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) tabella di sistema.  
+ ID di una richiesta di stato di topologia. *request_id* viene **int**, con un valore predefinito è NULL. Per ottenere un ID, utilizzare il @request_id dal parametro di output [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) oppure eseguire una query il [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) tabella di sistema.  
   
 ## <a name="result-sets"></a>Set di risultati  
- sp_gettopologyinfo restituisce un set di risultati con un'unica colonna XML. I dati nella colonna XML sono lo stesso quando i dati di [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) tabella di sistema.  
+ sp_gettopologyinfo restituisce un set di risultati con un'unica colonna XML. I dati nella colonna XML sono quello utilizzato per i dati di [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) tabella di sistema.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  sp_gettopologyinfo viene utilizzato nella replica transazionale peer-to-peer. Eseguire [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) prima di eseguire sp_gettopologyinfo. Queste procedure vengono utilizzate dalla Configurazione guidata topologia peer-to-peer, ma possono anche essere utilizzate direttamente se si richiedono informazioni sulla topologia in un formato XML. Se si preferiscono risultati tabulari, eseguire una query di [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) tabella di sistema.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin o al ruolo predefinito del database db_owner.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Replica transazionale peer-to-peer](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

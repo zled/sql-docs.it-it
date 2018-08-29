@@ -1,5 +1,5 @@
 ---
-title: sp_foreignkeys (Transact-SQL) | Documenti Microsoft
+title: sp_foreignkeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_foreignkeys
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf14d0f424a81b7e990d33d5dc596676e12505ad
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bd49a4fd7f1c172c2f46d686cef941d19add2dad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261840"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020660"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,17 +72,17 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  Nome del catalogo contenente una chiave esterna. *fktab_catalog*viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- Nessuno  
+ None  
   
 ## <a name="result-sets"></a>Set di risultati  
- Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*catalog ***.*** schema ***.*** tabella*), adottati nel set di risultati.  
+ Vari prodotti DBMS supportano nomi di tabelle in tre parti (*catalog ***.*** lo schema ***.*** tabella*), adottati nel set di risultati.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**PKTABLE_CAT**|**sysname**|Catalogo della tabella contenente la chiave primaria.|  
 |**PKTABLE_SCHEM**|**sysname**|Schema della tabella contenente la chiave primaria.|  
 |**PKTABLE_NAME**|**sysname**|Nome della tabella contenente la chiave primaria. Questo campo restituisce sempre un valore.|  
-|**PKCOLUMN_NAME**|**sysname**|Nome della colonna chiave primaria o delle colonne, per ogni colonna del **TABLE_NAME** restituito. Questo campo restituisce sempre un valore.|  
+|**PKCOLUMN_NAME**|**sysname**|Nome della colonna chiave primaria o delle colonne, per ogni colonna della **TABLE_NAME** restituito. Questo campo restituisce sempre un valore.|  
 |**FKTABLE_CAT**|**sysname**|Catalogo della tabella contenente la chiave esterna.|  
 |**FKTABLE_SCHEM**|**sysname**|Schema della tabella contenente la chiave esterna.|  
 |**FKTABLE_NAME**|**sysname**|Nome della tabella contenente una chiave esterna. Questo campo restituisce sempre un valore.|  
@@ -96,10 +96,10 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
  Nel set di risultati le colonne FK_NAME e PK_NAME restituiscono sempre NULL.  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_foreignkeys** nel set di righe di una query di **IDBSchemaRowset** interfaccia del provider OLE DB che corrisponde a *table_server*. Il *table_name*, *table_schema*, *table_catalog*, e *colonna* i parametri vengono passati a questa interfaccia per limitare le righe restituito.  
+## <a name="remarks"></a>Note  
+ **sp_foreignkeys** nel set di righe di una query di **IDBSchemaRowset** interfaccia del provider OLE DB che corrisponde a *table_server*. Il *nome_tabella*, *table_schema*, *table_catalog*, e *colonna* i parametri vengono passati a questa interfaccia per limitare le righe restituito.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="examples"></a>Esempi  
@@ -115,7 +115,7 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   

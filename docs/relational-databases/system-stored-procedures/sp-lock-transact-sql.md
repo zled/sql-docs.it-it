@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_lock
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
 caps.latest.revision: 56
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e081db089d628372f4d884a6eb801965acc5516
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 200c53117808f746eaa9b8dd4addb8ffe44624e7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38019869"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037082"
 ---
 # <a name="splock-transact-sql"></a>sp_lock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
   
  Tutte le transazioni distribuite non associate a una sessione sono transazioni orfane. In [!INCLUDE[ssDE](../../includes/ssde-md.md)] a tutte le transazioni distribuite orfane viene assegnato il valore SPID -2, in modo da semplificare l'identificazione delle transazioni distribuite che causano un blocco. Per altre informazioni, vedere [Usare transazioni contrassegnate per recuperare coerentemente i database correlati &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW SERVER STATE.  
   
 ## <a name="examples"></a>Esempi  

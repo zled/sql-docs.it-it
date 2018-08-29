@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_primary_secondary
 ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0598d778953e96e8247c8011c5e41cbc03380bba
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2ddbd6c115bcb620b3aaadd22d2293c681dc0c3a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33240701"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022625"
 ---
 # <a name="spaddlogshippingprimarysecondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,11 +61,11 @@ sp_add_log_shipping_primary_secondary
 ## <a name="result-sets"></a>Set di risultati  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  **sp_add_log_shipping_primary_secondary** deve essere eseguita la **master** database nel server primario.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
   
 ## <a name="examples"></a>Esempi  
  In questo esempio viene illustrato l'utilizzo **sp_add_log_shipping_primary_secondary** per aggiungere una voce per il database secondario **LogShipAdventureWorks** nel server secondario FLATIRON.  

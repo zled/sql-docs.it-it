@@ -1,5 +1,5 @@
 ---
-title: sp_marksubscriptionvalidation (Transact-SQL) | Documenti Microsoft
+title: sp_marksubscriptionvalidation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_marksubscriptionvalidation
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b088b43cfc625591d5160b6818949b0c933a696
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b6dc308d98d56ed3ecdc88b53624d0842cc90c5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997688"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028718"
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,22 +64,22 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 >  *server di pubblicazione* non deve essere utilizzato per una pubblicazione a cui appartiene un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_marksubscriptionvalidation** viene utilizzata nella replica transazionale.  
   
- **sp_marksubscriptionvalidation** non supporta non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i sottoscrittori.  
+ **sp_marksubscriptionvalidation** nepodporuje non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
   
- Per non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione non è possibile eseguire **sp_marksubscriptionvalidation** da una transazione esplicita. perché le transazioni esplicite non sono supportate attraverso la connessione al server collegato utilizzata per l'accesso al server di pubblicazione.  
+ Per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione non è possibile eseguire **sp_marksubscriptionvalidation** all'interno di una transazione esplicita. perché le transazioni esplicite non sono supportate attraverso la connessione al server collegato utilizzata per l'accesso al server di pubblicazione.  
   
- **sp_marksubscriptionvalidation** deve essere utilizzata in combinazione con [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), specificando il valore **1** per  *subscription_level*e può essere utilizzato con altre chiamate a **sp_marksubscriptionvalidation** per contrassegnare la transazione aperta corrente per altri sottoscrittori.  
+ **sp_marksubscriptionvalidation** deve essere usata in combinazione con [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), specificando il valore **1** per  *subscription_level*e può essere usato con altre chiamate a **sp_marksubscriptionvalidation** per contrassegnare la transazione aperta corrente per altri sottoscrittori.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_marksubscriptionvalidation**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_marksubscriptionvalidation**.  
   
 ## <a name="example"></a>Esempio  
- È possibile applicare la query seguente al database di pubblicazione per inviare comandi di convalida a livello di sottoscrizione. Tali comandi vengono quindi intercettati dagli agenti di distribuzione dei Sottoscrittori specificati. Si noti che la prima transazione convalida l'articolo '**art1**', mentre la seconda transazione convalida'**art2**'. Si noti inoltre che le chiamate a **sp_marksubscriptionvalidation** e [sp_article_validation &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) sono state inserite in una transazione. È consigliabile solo una chiamata a [sp_article_validation &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) per ogni transazione. Infatti [sp_article_validation &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) mantiene un blocco condiviso sulla tabella di origine per la durata della transazione. Le transazioni brevi consentono di ottenere la massima concorrenza.  
+ È possibile applicare la query seguente al database di pubblicazione per inviare comandi di convalida a livello di sottoscrizione. Tali comandi vengono quindi intercettati dagli agenti di distribuzione dei Sottoscrittori specificati. Si noti che la prima transazione convalida l'articolo '**art1**', mentre la seconda transazione convalida'**art2**'. Si noti anche che le chiamate a **sp_marksubscriptionvalidation** e [sp_article_validation &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) sono state inserite in una transazione. È consigliabile solo una chiamata a [sp_article_validation &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) per ogni transazione. Infatti [sp_article_validation &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) mantiene un blocco condiviso sulla tabella di origine per la durata della transazione. Le transazioni brevi consentono di ottenere la massima concorrenza.  
   
 ```  
 begin tran  

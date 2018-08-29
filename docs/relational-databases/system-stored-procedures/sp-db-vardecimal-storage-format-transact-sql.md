@@ -1,5 +1,5 @@
 ---
-title: sp_db_vardecimal_storage_format (Transact-SQL) | Documenti Microsoft
+title: sp_db_vardecimal_storage_format (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - table compression [SQL Server]
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 060f5e31593456168274507cb2abe789725c586d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6bd4332bcb13b306fb49b82dac2ed1c49ecc837b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239941"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024168"
 ---
 # <a name="spdbvardecimalstorageformat-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @dbname=] '*database_name*'  
+ [ @dbname=] '*nome_database*'  
  Nome del database per il quale deve essere modificato il formato di archiviazione. *database_name* viene **sysname**, non prevede alcun valore predefinito. Se il nome del database viene omesso, viene restituito lo stato del formato di archiviazione vardecimal di tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [ @vardecimal_storage_format=] {'ON' |' DISATTIVARE '}  
@@ -64,9 +64,9 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ## <a name="result-sets"></a>Set di risultati  
  Se il formato di archiviazione del database non può essere modificato, sp_db_vardecimal_storage_format restituisce un errore. Se lo stato corrente del database corrisponde a quello specificato, la stored procedure non produce alcun effetto.  
   
- Se il @vardecimal_storage_format argomento non è specificato, restituisce le colonne nome del Database e lo stato di Vardecimal.  
+ Se il @vardecimal_storage_format argomento non viene specificato, vengono restituite le colonne Database Name e Vardecimal State.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  sp_db_vardecimal_storage_format restituisce lo stato di vardecimal ma non consente di modificare tale stato.  
   
  sp_db_vardecimal_storage_format avrà esito negativo nelle circostanze seguenti:  
@@ -79,7 +79,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  Per modificare lo stato del formato di archiviazione vardecimal in OFF, è necessario che un database sia impostato sulla modalità di recupero con registrazione minima. In caso di impostazione di un database su tale modalità, la catena di log è interrotta. Dopo aver impostato lo stato del formato di archiviazione vardecimal su OFF, eseguire un backup completo del database.  
   
- La modifica dello stato in OFF avrà esito negativo se sono presenti tabelle in cui viene utilizzata la compressione di database di tipo vardecimal. Per modificare il formato di archiviazione di una tabella, utilizzare [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Per determinare le tabelle di un database in cui viene utilizzato il formato di archiviazione vardecimal, utilizzare la funzione `OBJECTPROPERTY` e cercare la proprietà `TableHasVarDecimalStorageFormat`, come illustrato nell'esempio seguente.  
+ La modifica dello stato in OFF avrà esito negativo se sono presenti tabelle in cui viene utilizzata la compressione di database di tipo vardecimal. Per modificare il formato di archiviazione di una tabella, usare [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Per determinare le tabelle di un database in cui viene utilizzato il formato di archiviazione vardecimal, utilizzare la funzione `OBJECTPROPERTY` e cercare la proprietà `TableHasVarDecimalStorageFormat`, come illustrato nell'esempio seguente.  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -114,6 +114,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

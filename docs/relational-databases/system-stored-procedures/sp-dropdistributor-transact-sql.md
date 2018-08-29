@@ -1,5 +1,5 @@
 ---
-title: sp_dropdistributor (Transact-SQL) | Documenti Microsoft
+title: sp_dropdistributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropdistributor
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0288daacc8f88decf6af642d0a864f3f08057fbd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e321b5e5976192146f9cd8d993304d5f5ae55e67
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989736"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029061"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
  [  **@no_checks=**] *no_checks*  
  Indica se è necessario verificare la presenza di oggetti dipendenti prima di rimuovere il server di distribuzione. *no_checks* viene **bit**, con un valore predefinito è 0.  
   
- Se **0**, **sp_dropdistributor** controlli per verificare che tutti gli oggetti di pubblicazione e distribuzione oltre il server di distribuzione sono stati eliminati.  
+ Se **0**, **sp_dropdistributor** controlli per assicurarsi che tutti gli oggetti di pubblicazione e la distribuzione oltre il server di distribuzione sono stati eliminati.  
   
  Se **1**, **sp_dropdistributor** Elimina tutti gli oggetti di pubblicazione e la distribuzione prima di disinstallare il server di distribuzione.  
   
@@ -58,22 +58,22 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
   
  Se **0**, **sp_dropdistributor** si connette al server di distribuzione e rimuove tutti gli oggetti di replica. Se **sp_dropdistributor** non riesce a connettersi al server di distribuzione, la stored procedure ha esito negativo.  
   
- Se **1**, viene stabilita alcuna connessione al server di distribuzione e gli oggetti di replica non vengono rimossi. Questo valore viene utilizzato se è in corso la disinstallazione del server di distribuzione oppure se il server è offline in modo permanente. Gli oggetti per questo server di pubblicazione nel server di distribuzione vengono rimossi solo dopo la reinstallazione successiva del server di distribuzione.  
+ Se **1**, non viene stabilita alcuna connessione al server di distribuzione e gli oggetti di replica non vengono rimossi. Questo valore viene utilizzato se è in corso la disinstallazione del server di distribuzione oppure se il server è offline in modo permanente. Gli oggetti per questo server di pubblicazione nel server di distribuzione vengono rimossi solo dopo la reinstallazione successiva del server di distribuzione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_dropdistributor** viene utilizzata in tutti i tipi di replica.  
   
- Se sono presenti altri oggetti server di pubblicazione o distribuzione sul server, **sp_dropdistributor** ha esito negativo a meno che non **@no_checks** è impostato su **1**.  
+ Se sono presenti altri oggetti server di pubblicazione o distribuzione nel server **sp_dropdistributor** ha esito negativo a meno che non **@no_checks** è impostata **1**.  
   
- Questa stored procedure deve essere eseguita dopo l'eliminazione del database di distribuzione tramite l'esecuzione di **sp_dropdistributiondb**.  
+ Questa stored procedure deve essere eseguita dopo l'eliminazione del database di distribuzione eseguendo **sp_dropdistributiondb**.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributor-trans_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_dropdistributor**.  
   
 ## <a name="see-also"></a>Vedere anche  

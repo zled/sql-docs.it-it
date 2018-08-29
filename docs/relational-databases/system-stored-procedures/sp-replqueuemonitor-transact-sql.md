@@ -1,5 +1,5 @@
 ---
-title: sp_replqueuemonitor (Transact-SQL) | Documenti Microsoft
+title: sp_replqueuemonitor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replqueuemonitor
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c1d4737d5f1502d98a58f268b58c93cf71d71ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57bf20aa17d7c60e0902a1e216b4d892da54f62f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998710"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023309"
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,22 +62,22 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
  ID transazione. *tranid*viene **sysname**, con un valore predefinito è NULL. che indica tutte le transazioni.  
   
  [**@queuetype=** ] **'***queuetype***'** ]  
- Tipo di coda in cui vengono archiviate le transazioni. *queuetype* viene **tinyint** con valore predefinito è **0**, e può essere uno dei valori seguenti.  
+ Tipo di coda in cui vengono archiviate le transazioni. *queuetype* viene **tinyint** con valore predefinito è **0**, i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**0**|Tutti i tipi di coda|  
 |**1**|accodamento messaggi|  
 |**2**|Coda di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_replqueuemonitor** viene utilizzata per la replica snapshot o transazionale con sottoscrizioni ad aggiornamento in coda. I messaggi in coda che non includono comandi SQL o che fanno parte di un comando SQL esteso non vengono visualizzati.  
+## <a name="remarks"></a>Note  
+ **sp_replqueuemonitor** viene utilizzata nella replica snapshot o transazionale con sottoscrizioni ad aggiornamento in coda. I messaggi in coda che non includono comandi SQL o che fanno parte di un comando SQL esteso non vengono visualizzati.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_replqueuemonitor**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_replqueuemonitor**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

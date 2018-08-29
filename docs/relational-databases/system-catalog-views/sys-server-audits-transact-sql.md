@@ -1,5 +1,5 @@
 ---
-title: Sys. server_audits (Transact-SQL) | Documenti Microsoft
+title: Sys. server_audits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.server_audits catalog view
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f71da894aa31fa192c5abc6f64683fa1c2036f99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f6dd82c3232e941d4db08f9e5079d9e821e84804
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221922"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024533"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33221922"
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|ID del controllo.|  
 |**name**|**sysname**|Nome del controllo.|  
-|**AUDIT_GUID**|**uniqueidentifier**|GUID per il controllo che consente di enumerare i controlli con membro Server&#124;le operazioni di collegamento specifiche del controllo del Database durante l'avvio del server e database.|  
+|**AUDIT_GUID**|**uniqueidentifier**|GUID per il controllo che consente di enumerare i controlli con membro&#124;operazioni di collegamento specifiche del controllo del Database durante l'avvio del server e database.|  
 |**create_date**|**datetime**|Data UTC di creazione del controllo.|  
 |**modify_date**|**datetime**|Data UTC dell'ultima modifica del controllo.|  
 |**principal_id**|**int**|ID del proprietario del controllo registrato nel server.|  
@@ -52,8 +52,8 @@ ms.locfileid: "33221922"
 |**QUEUE_DELAY**|**int**|Tempo massimo di attesa, in millisecondi, prima della scrittura su disco. Se il valore è 0, il controllo garantirà una scrittura prima che un evento possa continuare.|  
 |**predicato**|**nvarchar(3000)**|Espressione del predicato applicata all'evento.|  
   
-## <a name="permissions"></a>Autorizzazioni  
- Entità che dispongono di **ALTER ANY SERVER AUDIT** o **VIEW ANY DEFINITION** autorizzazione hanno accesso a questa vista del catalogo. Inoltre, l'entità non deve essere negato **VIEW ANY DEFINITION** autorizzazione.  
+## <a name="permissions"></a>Permissions  
+ Le entità con la **ALTER ANY SERVER AUDIT** oppure **VIEW ANY DEFINITION** autorizzazione ha accesso a questa vista del catalogo. Inoltre, l'entità non deve essere negata **VIEW ANY DEFINITION** l'autorizzazione.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

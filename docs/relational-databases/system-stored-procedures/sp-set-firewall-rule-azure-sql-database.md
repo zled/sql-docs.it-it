@@ -22,17 +22,16 @@ helpviewer_keywords:
 - sp_set_firewall_rule
 - firewall_rules, setting server rules
 ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e9315c7ca138d352ee9f0cdffca9abe3a2242dc0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 190369a7e5d202f826197d69f09425a7a6763e21
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38056109"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026810"
 ---
 # <a name="spsetfirewallrule-azure-sql-database"></a>sp_set_firewall_rule (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -65,7 +64,7 @@ sp_set_firewall_rule [@name =] 'name',
   
  Nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] i dati dell'account di accesso necessari per autenticare una connessione e le regole del firewall a livello di server vengono memorizzati temporaneamente nella cache in ogni database. Questa cache viene aggiornata periodicamente. Per forzare un aggiornamento della cache di autenticazione e assicurarsi che un database abbia la versione più recente della tabella di account di accesso, eseguire [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo l'accesso. dell'entità a livello di server creati dal processo di provisioning o un'entità di Azure Active Directory assegnato come amministratore è possibile creare o modificare le regole firewall a livello di server. L'utente deve essere connesso al database master per eseguire sp_set_firewall_rule.  
   
 ## <a name="examples"></a>Esempi  

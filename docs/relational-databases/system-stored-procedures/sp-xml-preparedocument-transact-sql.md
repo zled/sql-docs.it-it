@@ -1,5 +1,5 @@
 ---
-title: sp_xml_preparedocument (Transact-SQL) | Documenti Microsoft
+title: sp_xml_preparedocument (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02946ee1a36df965d11c85eabbaba86d7f1a7e14
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: afc84c779c05dc2826bde815b4f499abc95c8380
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262681"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025720"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +39,15 @@ ms.locfileid: "33262681"
 >  Un documento analizzato viene archiviato nella cache interna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il parser MSXML utilizza un ottavo della memoria totale disponibile per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per evitare di esaurire la memoria, eseguire **sp_xml_removedocument** per liberare la memoria.  
   
 > [!NOTE]  
->  Per garantire la compatibilità, **sp_xml_preparedocument** comprime i caratteri CR (char(13)) e avanzamento riga (caratteri char(10)) negli attributi anche se questi caratteri vengono sostituiti con entità.  
+>  Per le versioni precedenti, compatibilità **sp_xml_preparedocument** comprime i caratteri CR (char(13)) e LF (caratteri char(10)) negli attributi anche se questi caratteri vengono sostituiti con entità.  
   
 > [!NOTE]  
->  Il parser XML richiamato da **sp_xml_preparedocument** consente di analizzare le dichiarazioni di entità e definizioni DTD interne. Perché è stato costruito da utenti malintenzionati le DTD ed entità dichiarazioni possono essere utilizzate per eseguire un attacco denial of service, è consigliabile che gli utenti non vengano passati direttamente documenti XML da origini non attendibili **sp_xml_preparedocument**.  
+>  Il parser XML richiamato da **sp_xml_preparedocument** consente di analizzare le dichiarazioni di entità e definizioni DTD interne. Perché è stato costruito da utenti malintenzionati le DTD ed entità le dichiarazioni possono essere usate per eseguire un attacco denial of service, è consigliabile che gli utenti passare non direttamente i documenti XML da origini non attendibili **sp_xml_preparedocument**.  
 >   
->  Per ridurre gli attacchi espansione di entità ricorsiva, **sp_xml_preparedocument** limita a 10.000 il numero di entità che possono essere espansi sotto una singola entità al livello superiore di un documento. Tale limite non viene applicato a entità carattere o numeriche e consente di archiviare documenti con numerosi riferimenti a entità impedendo tuttavia l'espansione ricorsiva di qualsiasi entità in una catena di lunghezza superiore a 10.000 espansioni.  
+>  Per mitigare attacchi di espansione ricorsiva entità, **sp_xml_preparedocument** è limitato a 10.000 il numero di entità che possono essere espansi sotto una singola entità al livello superiore di un documento. Tale limite non viene applicato a entità carattere o numeriche e consente di archiviare documenti con numerosi riferimenti a entità impedendo tuttavia l'espansione ricorsiva di qualsiasi entità in una catena di lunghezza superiore a 10.000 espansioni.  
   
 > [!NOTE]  
->  **sp_xml_preparedocument** limita il numero di elementi che possono essere aperti contemporaneamente a 256.  
+>  **sp_xml_preparedocument** limita il numero di elementi che possono essere aperti contemporaneamente su 256.  
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,14 +73,14 @@ OUTPUT
 >  **sp_xml_preparedocument** può elaborare solo testo o XML non tipizzato. Se un valore istanza da utilizzare come input è già XML tipizzato, eseguire innanzitutto il cast di tale valore in una nuova istanza XML non tipizzata oppure come stringa, quindi passare il valore come input. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
  [ *xpath_namespaces* ]  
- Specifica le dichiarazioni degli spazi dei nomi utilizzate nelle espressioni XPath di riga e colonna in OPENXML. *xpath_namespaces* è un parametro di testo: **char**, **nchar**, **varchar**, **nvarchar**, **testo**, **ntext** o **xml**.  
+ Specifica le dichiarazioni degli spazi dei nomi utilizzate nelle espressioni XPath di riga e colonna in OPENXML. *xpath_namespaces* è un parametro di testo: **char**, **nchar**, **varchar**, **nvarchar**, **testo**, **ntext** oppure **xml**.  
   
- Il valore predefinito è  **\<radice xmlns:mp = "urn: schemas-microsoft-com: xml-metaprop" >**. *xpath_namespaces* fornisce l'URI dello spazio dei nomi per i prefissi utilizzati nelle espressioni XPath in OPENXML tramite un documento XML ben formato. *xpath_namespaces* dichiara il prefisso che deve essere utilizzato per fare riferimento allo spazio dei nomi **urn: schemas-microsoft-com: xml-metaprop**; in questo modo i metadati relativi a elementi XML analizzati. Questa tecnica consente di ridefinire il prefisso dello spazio dei nomi di metaproprietà conservando allo stesso tempo lo spazio dei nomi. Il prefisso **mp** è ancora valido per **urn: schemas-microsoft-com: xml-metaprop** anche se *xpath_namespaces* non contiene tale dichiarazione.  
+ Il valore predefinito è  **\<radice xmlns:mp = "urn: schemas-microsoft-com: xml-metaprop" >**. *xpath_namespaces* fornisce l'URI dello spazio dei nomi per i prefissi utilizzati in espressioni XPath in OPENXML tramite un documento XML ben formato. *xpath_namespaces* dichiara il prefisso deve essere usato per fare riferimento allo spazio dei nomi **urn: schemas-microsoft-com: xml-metaprop**; in questo modo i metadati relativi a elementi XML analizzati. Questa tecnica consente di ridefinire il prefisso dello spazio dei nomi di metaproprietà conservando allo stesso tempo lo spazio dei nomi. Il prefisso **mp** sia ancora valido per **urn: schemas-microsoft-com: xml-metaprop** anche se *xpath_namespaces* non contiene tale dichiarazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o >0 (esito negativo)  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -132,7 +131,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 ```  
   
 ### <a name="c-specifying-a-namespace-uri"></a>C. Specificazione di URI di spazi dei nomi  
- Nell'esempio seguente viene restituito un handle per la nuova rappresentazione interna del documento XML specificato come input. La chiamata a `sp_xml_preparedocument` mantiene il `mp` come prefisso per il mapping dello spazio dei nomi di metaproprietà e aggiunge il `xyz` prefisso di mapping allo spazio dei nomi `urn:MyNamespace`.  
+ Nell'esempio seguente viene restituito un handle per la nuova rappresentazione interna del documento XML specificato come input. La chiamata a `sp_xml_preparedocument` mantiene la `mp` anteporre al mapping dello spazio dei nomi di metaproprietà e aggiunge le `xyz` prefisso di mapping allo spazio dei nomi `urn:MyNamespace`.  
   
 ```  
 DECLARE @hdoc int;  

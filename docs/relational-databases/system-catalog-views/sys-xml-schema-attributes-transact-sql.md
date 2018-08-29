@@ -1,5 +1,5 @@
 ---
-title: Sys.xml_schema_attributes (Transact-SQL) | Documenti Microsoft
+title: Sys.xml_schema_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,21 +20,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_attributes catalog view
 ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e7271dd8521ad4f84c0c3fa528b088dc217dbe9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a40f4cbe1e3f1a4f2fa2ba39023f0840a201b3a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220452"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017245"
 ---
 # <a name="sysxmlschemaattributes-transact-sql"></a>sys.xml_schema_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni componente di XML schema che è un attributo, **symbol_space** di **A**.  
+  Restituisce una riga per ogni componente di XML schema che è un attributo **symbol_space** dei **oggetto**.  
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**\<colonne ereditate >**|--|Eredita da [xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
@@ -42,7 +41,7 @@ ms.locfileid: "33220452"
 |**must_be_qualified**|**bit**|1 = L'attributo deve essere qualificato come spazio dei nomi in modo esplicito.<br /><br /> 0 = L'attributo può essere qualificato come spazio dei nomi in modo implicito. (predefinito)|  
 |**default_value**|**nvarchar**<br /><br /> **(4000)**|Valore predefinito dell'attributo. È NULL se non viene specificato un valore predefinito.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_execution_history_details (Transact-SQL) | Documenti Microsoft
+title: syspolicy_policy_execution_history_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_execution_history_details view
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1c3c5836dd2811e95db27392e9bd77cbe91f6e38
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 252c61b6fbaf5635361df79f89a4f9ec7ec66e50
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220872"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031837"
 ---
 # <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "33220872"
 |exception_message|**nvarchar(max)**|Messaggio generato da un'eventuale eccezione.|  
 |exception|**nvarchar(max)**|Descrizione dell'eventuale eccezione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Durante la risoluzione di problemi relativi alla gestione basata su criteri, eseguire una query sulla vista syspolicy_policy_execution_history_details per stabilire quali combinazioni di destinazione ed espressione di condizione hanno avuto esito negativo, in quali casi hanno avuto esito negativo e per analizzare gli errori correlati.  
   
  Nella query seguente la vista `syspolicy_policy_execution_history_details` viene combinata con le viste `syspolicy_policy_execution_history_details` e `syspolicy_policies` per visualizzare il nome dei criteri, il nome della condizione e le informazioni sugli errori.  
@@ -70,7 +69,7 @@ JOIN msdb.dbo.syspolicy_policy_execution_history_details AS PolHistDet
 WHERE PolHistDet.result = 0 ;  
 ```  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
 ## <a name="see-also"></a>Vedere anche  

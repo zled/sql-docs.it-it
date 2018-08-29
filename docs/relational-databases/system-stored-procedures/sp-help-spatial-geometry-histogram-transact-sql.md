@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_help_spatial_geometry_histogram
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d12665106633cbbdf46284089ef5f7eb79d7ccbf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 731004301f0419d3ce4229e2e901bf9b3bd0507e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049309"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026100"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 |**cella**|**geometry**|Poligono rettangolare che rappresenta ciascuna cella. La forma della cella è identica alla forma della cella utilizzata per l'indicizzazione spaziale.|  
 |**row_count**|**bigint**|Indica il numero di oggetti spaziali che toccano o contengono la cella.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Utente deve essere un membro del **pubblica** ruolo. È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto.  
   
 ## <a name="remarks"></a>Note  

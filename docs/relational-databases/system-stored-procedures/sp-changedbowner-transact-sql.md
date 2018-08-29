@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_changedbowner
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cb7d6df77a581b82ca79e1962c80df827ffd1718
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f8d60e80914068ee973d23a6cbd8e4607960e12c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038829"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032614"
 ---
 # <a name="spchangedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_changedbowner [ @loginame = ] 'login'
   
  È possibile modificare il proprietario di qualsiasi entità a protezione diretta mediante l'istruzione ALTER AUTHORIZATION. Per altre informazioni, vedere [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione TAKE OWNERSHIP per il database. Se il nuovo proprietario dispone di un utente corrispondente nel database, è richiesta l'autorizzazione IMPERSONATE per l'account di accesso. In caso contrario, è richiesta l'autorizzazione CONTROL SERVER per il server.  
   
 ## <a name="examples"></a>Esempi  

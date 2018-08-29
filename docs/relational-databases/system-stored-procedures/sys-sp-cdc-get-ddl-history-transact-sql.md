@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_get_ddl_history (Transact-SQL) | Documenti Microsoft
+title: sp_cdc_get_ddl_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_ddl_history
 - sys.sp_cdc_get_ddl_history
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2cafbdcab4ad480493181cc7b2f6b160e34ea681
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2a5b652807c0392e7c55c51173aa1aeecbae4dba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252630"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036359"
 ---
 # <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +65,10 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_lsn|**binary(10)**|Numero di sequenza del file di log (LSN) associato alla modifica DDL.|  
 |ddl_time|**datetime**|Ora associata alla modifica DDL.|  
   
-## <a name="remarks"></a>Osservazioni  
- Le modifiche DDL alla tabella di origine che modificano la struttura della colonna nella tabella di origine, ad esempio aggiunta o eliminazione di una colonna o la modifica del tipo di dati di una colonna esistente, vengono mantenute nel [ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) tabella. È possibile creare un report su queste modifiche utilizzando questa stored procedure. Le voci di cdc.ddl_history vengono create quando il processo di acquisizione legge la transazione DDL nel log.  
+## <a name="remarks"></a>Note  
+ Le modifiche DDL alla tabella di origine che modificano la struttura della colonna nella tabella di origine, ad esempio l'aggiunta o eliminazione di una colonna o la modifica il tipo di dati di una colonna esistente, vengono mantenute nel [ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) tabella. È possibile creare un report su queste modifiche utilizzando questa stored procedure. Le voci di cdc.ddl_history vengono create quando il processo di acquisizione legge la transazione DDL nel log.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede l'appartenenza al ruolo predefinito del database db_owner per la restituzione delle righe relative a tutte le istanze di acquisizione del database. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database.  
   
 ## <a name="examples"></a>Esempi  

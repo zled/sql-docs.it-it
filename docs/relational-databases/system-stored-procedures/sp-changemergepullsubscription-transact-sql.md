@@ -1,5 +1,5 @@
 ---
-title: sp_changemergepullsubscription (Transact-SQL) | Documenti Microsoft
+title: sp_changemergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31e745e3ab75ae237a440db10c05b3ed4cd7d29e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81b03ee49bb3184490d8ba8182b70557e5b0d8a8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992388"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018276"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  [  **@value=**] **'***valore***'**  
  Nuovo valore della proprietà specificata. *valore*viene **nvarchar(255**, e può essere uno dei valori nella tabella.  
   
-|Proprietà|Value|Description|  
+|Proprietà|valore|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Percorso di archiviazione della cartella snapshot, se diverso da quello predefinito o se si tratta di una cartella aggiuntiva.|  
 |**description**||Descrizione della sottoscrizione pull di tipo merge.|  
-|**Server di distribuzione**||Nome del server di distribuzione.|  
+|**server di distribuzione**||Nome del server di distribuzione.|  
 |**distributor_login**||ID di accesso utilizzato nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**||Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_security_mode**|**1**|Consente di utilizzare l'autenticazione di Windows per la connessione al server di distribuzione.|  
@@ -92,7 +92,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**publisher_password**||Password (crittografata) utilizzata dal server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_security_mode**|**0**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**1**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di Windows.|  
-||**2**|Trigger di sincronizzazione utilizzano un valore statico **sysservers** voce per effettuare la chiamata di procedura remota (RPC) e il server di pubblicazione deve essere definita nel **sysservers** tabella come un server remoto o un server collegato.|  
+||**2**|Trigger di sincronizzazione utilizzano un valore statico **sysservers** voce per eseguire la chiamata di procedura remota (RPC) e il server di pubblicazione deve essere definito nel **sysservers** tabella come un server remoto o un server collegato.|  
 |**sync_type**|**Automatico**|Lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti per primi nel Sottoscrittore.|  
 ||**Nessuno**|Il Sottoscrittore dispone già dello schema e dei dati iniziali per le tabelle pubblicate. Le tabelle di sistema e i dati vengono sempre trasferiti.|  
 |**use_ftp**|**true**|Utilizza il protocollo FTP anziché il protocollo normale per il recupero degli snapshot.|  
@@ -105,20 +105,20 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |NULL (predefinito)||Restituisce l'elenco di valori supportati per *proprietà*.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_changemergepullsubscription** viene utilizzata nella replica di tipo merge.  
   
  Vengono considerati come Sottoscrittore e database del Sottoscrittore il server e il database correnti.  
   
  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_changemergepullsubscription**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_changemergepullsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzazione e modifica delle proprietà delle sottoscrizioni pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
+ [Visualizzare e modificare le proprietà delle sottoscrizioni pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   

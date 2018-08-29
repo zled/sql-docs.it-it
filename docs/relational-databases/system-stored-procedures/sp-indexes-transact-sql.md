@@ -1,5 +1,5 @@
 ---
-title: sp_indexes (Transact-SQL) | Documenti Microsoft
+title: sp_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_indexes
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95940aac67d5f525503721246025ff25bbfc7e1c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3185e5b5fe0af7db68fd8bb91dfdf568bb14d354
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259993"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034728"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @is_unique=] '*is_unique*'  
  Tipo di indice per cui si desidera ottenere informazioni. *is_unique* viene **bit**, con un valore predefinito è NULL, e può essere uno dei valori seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |1|Restituisce informazioni sugli indici univoci.|  
 |0|Restituisce informazioni sugli indici non univoci.|  
@@ -81,7 +81,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |TABLE_SCHEM|**sysname**|Schema della tabella.|  
 |TABLE_NAME|**sysname**|Nome della tabella remota.|  
 |NON_UNIQUE|**smallint**|Indica se l'indice è o meno univoco:<br /><br /> 0 = Univoco<br /><br /> 1 = Non univoco|  
-|INDEX_QUALIFER|**sysname**|Nome del proprietario dell'indice. In alcuni prodotti DBMS gli indici possono essere creati da utenti diversi dal proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna è sempre identico **TABLE_NAME**.|  
+|INDEX_QUALIFER|**sysname**|Nome del proprietario dell'indice. In alcuni prodotti DBMS gli indici possono essere creati da utenti diversi dal proprietario della tabella. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna è sempre identico **TABLE_NAME**.|  
 |INDEX_NAME|**sysname**|Nome dell'indice.|  
 |TYPE|**smallint**|Tipo di indice:<br /><br /> 0 = Statistiche di una tabella<br /><br /> 1 = Cluster<br /><br /> 2 = Hash<br /><br /> 3 = altro|  
 |ORDINAL_POSITION|**int**|Posizione ordinale della colonna nell'indice. La prima colonna nell'indice è 1. In questa colonna viene sempre restituito un valore.|  
@@ -91,7 +91,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |PAGES|**int**|Numero di pagine necessarie per l'archiviazione dell'indice o della tabella.|  
 |FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non restituisce un valore.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="examples"></a>Esempi  
@@ -109,7 +109,7 @@ EXEC sp_indexes @table_server = 'Seattle1',
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_get_redirected_publisher (Transact-SQL) | Documenti Microsoft
+title: sp_get_redirected_publisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ f1_keywords:
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28785969ea0bab2319d52461aa3e9a60f9be916d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a2abcc6205929146a37be95fa3943cad1b0ce4d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994988"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028618"
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_get_redirected_publisher
  Utilizzato per ignorare la convalida del server di pubblicazione reindirizzato. Se è 0, viene eseguita la convalida. Se pari a 1, non viene eseguita la convalida. *bypass_publisher_validation* viene **bit**, con un valore predefinito è 0.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -67,17 +67,17 @@ sp_get_redirected_publisher
 |**error_severity**|**int**|La gravità dell'errore di convalida.|  
 |**error_message**|**nvarchar(4000)**|Il testo del messaggio di errore di convalida.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  *redirected_publisher* restituisce il nome del server di pubblicazione corrente. Restituisce null se il server di pubblicazione e database di pubblicazione non sono stati reindirizzati utilizzando **sp_redirect_publisher**.  
   
- Se non è richiesta la convalida o se non esiste alcuna voce per il server di pubblicazione e il database di pubblicazione, *error_number* e *error_severity* restituiscono 0 e *error_message* Restituisce null.  
+ Se non è richiesta la convalida o se non esiste alcuna voce per il server di pubblicazione e il database di pubblicazione *error_number* e *error_severity* restituiscono 0 e *error_message* Restituisce null.  
   
- Se è richiesta la convalida, la convalida stored procedure [sp_validate_redirected_publisher &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) viene chiamato per verificare che la destinazione del reindirizzamento sia un host adatto per la pubblicazione database. Se la convalida ha esito positivo, **sp_get_redirected_publisher** restituisce il nome del server di pubblicazione reindirizzato, 0 per il *error_number* e *error_severity* colonne e valori null nella il *error_message* colonna.  
+ Se è richiesta la convalida, la convalida stored procedure [sp_validate_redirected_publisher &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) viene chiamata per verificare che la destinazione del reindirizzamento sia un host adatto per la pubblicazione database. Se la convalida ha esito positivo, **sp_get_redirected_publisher** restituisce il nome del server di pubblicazione reindirizzato, 0 per il *error_number* e *error_severity* colonne e valori null nel il *error_message* colonna.  
   
  Se la convalida viene richiesta e non riesce, il nome del server di pubblicazione reindirizzato viene restituito insieme alle informazioni sull'errore.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Chiamante deve essere un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database per il database di distribuzione o un membro di un elenco di accesso per una pubblicazione definita associato al database di pubblicazione.  
+## <a name="permissions"></a>Permissions  
+ Chiamante deve essere un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database per database di distribuzione o un membro di un elenco accesso pubblicazione per una pubblicazione definita associati al database di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

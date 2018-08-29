@@ -1,5 +1,5 @@
 ---
-title: sp_showpendingchanges (Transact-SQL) | Documenti Microsoft
+title: stored procedure sp_showpendingchanges (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b59856ba83d3118a9246bb5cd93a8d63e7745f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 229136548d40e985869bd1f01685cb0c3dad6f4f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000738"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030702"
 ---
 # <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
  Nome del server a cui vengono applicate le modifiche replicate. *destination_server* viene **sysname**, con valore predefinito è NULL.  
   
  [ @publication **=** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, con valore predefinito è NULL. Quando *pubblicazione* viene specificato, i risultati sono limitati solo per la pubblicazione specificata.  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito NULL. Quando *publication* viene specificato, i risultati sono limitati solo per la pubblicazione specificata.  
   
  [ @article **=** ] **'***articolo***'**  
- Nome dell'articolo. *articolo* viene **sysname**, con valore predefinito è NULL. Quando *articolo* viene specificato, i risultati sono limitati solo per l'articolo specificato.  
+ Nome dell'articolo. *articolo* viene **sysname**, con un valore predefinito NULL. Quando *articolo* è specificato, i risultati sono limitati solo per l'articolo specificato.  
   
  [ @show_rows **=** ] *show_rows*  
- Specifica se il set di risultati contiene informazioni più specifiche sulle modifiche in sospeso, con un valore predefinito di **0**. Se un valore di **1** è specificato, il set di risultati contiene le colonne is_delete e rowguid.  
+ Specifica se il set di risultati contiene informazioni più specifiche sulle modifiche in sospeso, con valore predefinito è **0**. Se il valore **1** viene specificato, il set di risultati contiene le colonne is_delete e rowguid.  
   
 ## <a name="result-set"></a>Set di risultati  
   
@@ -70,26 +70,26 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |destination_server|**sysname**|Nome del server nel quale è in corso la replica delle modifiche.|  
 |pub_name|**sysname**|Nome della pubblicazione.|  
 |destination_db_name|**sysname**|Nome del database nel quale è in corso la replica delle modifiche.|  
-|is_dest_subscriber|**bit**|Indica che è in corso la replica delle modifiche in un Sottoscrittore. Il valore **1** indica che le modifiche vengono replicate in un sottoscrittore. **0** significa che le modifiche vengano replicate a un server di pubblicazione.|  
+|is_dest_subscriber|**bit**|Indica che è in corso la replica delle modifiche in un Sottoscrittore. Un valore pari **1** indica che le modifiche vengono replicate in un sottoscrittore. **0** significa che le modifiche vengano replicate a un server di pubblicazione.|  
 |article_name|**sysname**|Nome dell'articolo nella tabella di origine delle modifiche.|  
 |pending_deletes|**int**|Numero di eliminazioni in attesa della replica.|  
 |pending_ins_and_upd|**int**|Numero di inserimenti e aggiornamenti in attesa della replica.|  
-|is_delete|**bit**|Indica se la modifica in sospeso è un'eliminazione. Il valore **1** indica che la modifica è un'operazione di eliminazione. Richiede un valore di **1** per @show_rows.|  
-|rowguid|**uniqueidentifier**|GUID che identifica la riga modificata. Richiede un valore di **1** per @show_rows.|  
+|is_delete|**bit**|Indica se la modifica in sospeso è un'eliminazione. Un valore pari **1** indica che la modifica è un'operazione di eliminazione. Richiede il valore **1** per @show_rows.|  
+|rowguid|**uniqueidentifier**|GUID che identifica la riga modificata. Richiede il valore **1** per @show_rows.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  La stored procedure sp_showpendingchanges viene utilizzata per la replica di tipo merge.  
   
- sp_showpendingchanges viene utilizzata quando la risoluzione dei problemi di replica di tipo merge.  
+ stored procedure sp_showpendingchanges viene utilizzata la risoluzione dei problemi di replica di tipo merge.  
   
  Il risultato della stored procedure sp_showpendingchanges non include righe di generazione 0.  
   
- Se un articolo specificato per *articolo* non appartiene alla pubblicazione specificata per *pubblicazione* viene restituito un conteggio pari a 0 per pending_deletes e pending_ins_and_upd.  
+ Quando un articolo specificato per *articolo* non appartiene alla pubblicazione specificata per *publication,* viene restituito un conteggio pari a 0 per pending_deletes e pending_ins_and_upd.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del ruolo predefinito del server sysadmin o del ruolo predefinito del database db_owner possono eseguire sp_showpendingchanges.  
   
 ## <a name="see-also"></a>Vedere anche  

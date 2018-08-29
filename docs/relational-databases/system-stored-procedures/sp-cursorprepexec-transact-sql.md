@@ -1,5 +1,5 @@
 ---
-title: sp_cursorprepexec (Transact-SQL) | Documenti Microsoft
+title: sp_cursorprepexec (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_cursorprepexec
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 378a389780e8af6ed966c4e0757352b16fbc0dd1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 175971e37ad9977af11bbf76e4753b525943a982
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240381"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021419"
 ---
 # <a name="spcursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,34 +46,34 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
   
 ## <a name="arguments"></a>Argomenti  
  *handle preparato*  
- È un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generato preparato *gestire* identificatore. *handle preparato* è obbligatorio e restituisce **int**.  
+ È un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generati preparato *gestire* identificatore. *handle preparato* è obbligatorio e restituisce **int**.  
   
  *cursor*  
  Identificatore del cursore generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *cursore* è un parametro obbligatorio che deve essere fornito su tutte le routine successive che agiscono su questo cursore, ad esempio sp_cursorfetch.  
   
- *Params*  
- Identifica le istruzioni con parametri. Il *params* definizione delle variabili viene sostituita per i marcatori di parametro nell'istruzione. *params* è un parametro obbligatorio che richiede un **ntext**, **nchar**, o **nvarchar** valore di input.  
+ *params*  
+ Identifica le istruzioni con parametri. Il *params* definizione delle variabili viene sostituita per i marcatori di parametro nell'istruzione. *params* è un parametro obbligatorio che richiede un **ntext**, **nchar**, oppure **nvarchar** valore di input.  
   
 > [!NOTE]  
->  Utilizzare un **ntext** stringa come input quando *stmt* è con parametri e *scrollopt* valore PARAMETERIZED_STMT è impostata su ON.  
+>  Usa un' **ntext** stringa come input valore quando *stmt* con i parametri e le *scrollopt* valore PARAMETERIZED_STMT è impostata su ON.  
   
  *istruzione*  
- Definisce il set di risultati del cursore. Il *istruzione* parametro è obbligatorio e richiede un **ntext**, **nchar** o **nvarchar** valore di input.  
+ Definisce il set di risultati del cursore. Il *istruzione* parametro è obbligatorio e richiede un' **ntext**, **nchar** oppure **nvarchar** valore di input.  
   
 > [!NOTE]  
 >  Le regole per la specifica del valore stmt sono le stesse di quelle per sp_cursoropen, con l'eccezione che il *stmt* deve essere di tipo di dati string **ntext**.  
   
  *options*  
- Parametro facoltativo tramite cui viene restituita una descrizione delle colonne dei set di risultati del cursore. *le opzioni* richiede le seguenti condizioni **int** valore di input.  
+ Parametro facoltativo tramite cui viene restituita una descrizione delle colonne dei set di risultati del cursore. *le opzioni* è necessario quanto segue **int** valore di input.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede uno dei seguenti **int** valori di input.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -95,7 +95,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *ccopt*  
  Opzioni del controllo della concorrenza. *ccopt* è un parametro facoltativo che richiede uno dei seguenti **int** valori di input.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (precedentemente noto come LOCKCC)|  
@@ -109,14 +109,14 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Come con *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possibile assegnare un valore diverso da quello richiesto.  
+ Come per gli *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può assegnare un valore diverso da quello richiesto.  
   
  *conteggio delle righe*  
  Parametro facoltativo che indica il numero di righe del buffer di recupero da utilizzare con AUTO_FETCH. Il valore predefinito è 20 righe. *conteggio delle righe* si comporta in modo diverso quando assegnato come valore di input rispetto a un valore restituito.  
   
 |Come valore di input|Come valore restituito|  
 |--------------------|---------------------|  
-|Quando in cui viene specificato AUTO_FETCH con i cursori FAST_FORWARD *rowcount* rappresenta il numero di righe da inserire nel buffer di recupero.|Rappresenta il numero di righe nel set di risultati. Quando il *scrollopt* viene specificato il valore AUTO_FETCH, *rowcount* restituisce il numero di righe recuperate nel buffer di recupero.|  
+|Quando viene specificato AUTO_FETCH con i cursori FAST_FORWARD *rowcount* rappresenta il numero di righe da inserire nel buffer di recupero.|Rappresenta il numero di righe nel set di risultati. Quando la *scrollopt* viene specificato il valore AUTO_FETCH, *rowcount* restituisce il numero di righe recuperate nel buffer di recupero.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  Se *params* restituisce un valore NULL, quindi l'istruzione non è con parametri.  

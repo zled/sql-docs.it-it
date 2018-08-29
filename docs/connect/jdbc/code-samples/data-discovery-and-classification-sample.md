@@ -13,18 +13,18 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f5a705de3823ea04d1cb79f8e6106152599fc0b
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: bb31601b55af1b95c53b37c846c3a8bbf17b10f4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467739"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784731"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Individuazione dati e classificazione SQL
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Ciò [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] applicazione di esempio illustra come usare i metodi di richiamo di set di risultati per recuperare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 'individuazione dati di SQL e la classificazione informazioni' dalle tabelle che contiene tali informazioni.
+Ciò [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] applicazione di esempio illustra come usare i metodi di richiamo di set di risultati per recuperare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 'individuazione dati di SQL e la classificazione informazioni' dalle tabelle che contiene tali informazioni.
   
 Il file di codice per questo esempio è denominato DataDiscoveryAndClassification.java e possono essere trovati nel percorso seguente:  
 

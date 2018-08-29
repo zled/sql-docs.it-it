@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscriptiondtsinfo (Transact-SQL) | Documenti Microsoft
+title: sp_changesubscriptiondtsinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changesubscriptiondtsinfo
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55c43914d883ce5f704ad6c7648d473bd38611fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ffbeb38fbdde20f3fdccd9be817c1111e3f651f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990986"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034091"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,28 +49,28 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@job_id=**] *job_id*  
- ID di processo dell'agente di distribuzione per la sottoscrizione push. *job_id* viene **varbinary(16)**, non prevede alcun valore predefinito. Per trovare l'ID di processo di distribuzione, eseguire **sp_helpsubscription** o **sp_helppullsubscription**.  
+ ID di processo dell'agente di distribuzione per la sottoscrizione push. *job_id* viene **varbinary(16)**, non prevede alcun valore predefinito. Per trovare l'ID di processo di distribuzione, eseguire **sp_helpsubscription** oppure **sp_helppullsubscription**.  
   
  [ **@dts_package_name**=] **'***dts_package_name***'**  
- Nome del pacchetto DTS. *dts_package_name* è un **sysname**, con un valore predefinito è NULL. Ad esempio, per specificare un pacchetto denominato **DTSPub_Package**, si specificherà `@dts_package_name = N'DTSPub_Package'`.  
+ Nome del pacchetto DTS. *dts_package_name* è un **sysname**, con un valore predefinito è NULL. Ad esempio, specificare un pacchetto denominato **DTSPub_Package**, si specificherà `@dts_package_name = N'DTSPub_Package'`.  
   
  [ **@dts_package_password**=] **'***dts_package_password***'**  
- Specifica la password per il pacchetto. *dts_package_password* viene **sysname** con un valore predefinito è NULL, che indica che la proprietà della password deve rimanere invariata.  
+ Specifica la password per il pacchetto. *dts_package_password* viene **sysname** con valore predefinito è NULL, che indica che la proprietà della password deve rimanere invariata.  
   
 > [!NOTE]  
 >  A ogni pacchetto DTS deve essere associata una password.  
   
  [ **@dts_package_location**=] **'***dts_package_location***'**  
- Specifica la posizione del pacchetto. *dts_package_location* è un **nvarchar(12**, con un valore predefinito è NULL, che indica che il percorso del pacchetto deve rimanere invariata. Il percorso del pacchetto può essere modificato per **distributore** o **sottoscrittore**.  
+ Specifica la posizione del pacchetto. *dts_package_location* è un **nvarchar (12)**, con un valore predefinito è NULL, che indica che il percorso del pacchetto rimane invariata. Il percorso del pacchetto può essere modificato da **distributore** oppure **sottoscrittore**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_changesubscriptiondtsinfo** viene utilizzato per la replica snapshot e transazionali che corrispondono solo le sottoscrizioni push.  
+## <a name="remarks"></a>Note  
+ **sp_changesubscriptiondtsinfo** viene usato per la replica snapshot e transazionali che sono solo per le sottoscrizioni push.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server, **db_owner** ruolo predefinito del database o l'autore della sottoscrizione può eseguire **sp_changesubscriptiondtsinfo**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server **db_owner** ruolo predefinito del database o il creatore della sottoscrizione può eseguire **sp_changesubscriptiondtsinfo**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_getmergedeletetype (Transact-SQL) | Documenti Microsoft
+title: sp_getmergedeletetype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_getmergedeletetype
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04437ebf7d33c81a847fe8f17ca74a0cb68b4279
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96258cb01e49c3d0b3fc2b83960e7d4aff6b64a1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027758"
 ---
 # <a name="spgetmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,17 +54,17 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
  [  **@delete_type=**] *delete_type* **OUTPUT**  
  Codice che indica il tipo di eliminazione. *delete_type* viene **int**, non prevede alcun valore predefinito. *delete_type* è anche un parametro di OUTPUT e può essere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Eliminazione eseguita dall'utente|  
 |**5**|Eliminazione parziale|  
 |**6**|Eliminazione eseguita dal sistema|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_getmergedeletetype** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_getmergedeletetype**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_getmergedeletetype**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

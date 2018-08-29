@@ -1,5 +1,5 @@
 ---
-title: sp_setnetname (Transact-SQL) | Documenti Microsoft
+title: sp_setnetname (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8671aea34c2a6ffb4e8da9791a535f0dfd0d0baf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 71dcca516c1533c048d424e68d6aaae197d032ba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251627"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024885"
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_setnetname
   
 ## <a name="arguments"></a>Argomenti  
  **@server = '** *server* **'**  
- Nome del server remoto specificato nella sintassi di chiamata a stored procedure remote codificata dall'utente. Esattamente una riga **Sys. Servers** deve essere già esistente per utilizzare questa *server*. *server* è di tipo **sysname**e non prevede alcun valore predefinito.  
+ Nome del server remoto specificato nella sintassi di chiamata a stored procedure remote codificata dall'utente. Esattamente una riga **Sys. Servers** deve esistere già per utilizzare questa *server*. *server* è di tipo **sysname**e non prevede alcun valore predefinito.  
   
  **@netname ='** *nome_rete* **'**  
  Nome di rete del computer a cui vengono effettuate chiamate a stored procedure remote. *nome_rete* viene **sysname**, non prevede alcun valore predefinito.  
@@ -58,12 +58,12 @@ sp_setnetname
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se il nome del computer contiene identificatori non validi, potrebbero verificarsi problemi durante l'esecuzione di alcune chiamate a stored procedure remote a computer Windows.  
   
- I server collegati e i server remoti sono inclusi nello stesso spazio dei nomi. Devono quindi avere nomi diversi. Tuttavia, è possibile definire sia un server collegato e un server remoto in un server specificato tramite l'assegnazione di nomi diversi e usando **sp_setnetname** per impostare il nome di rete di uno di essi al nome di rete del server sottostante.  
+ I server collegati e i server remoti sono inclusi nello stesso spazio dei nomi. Devono quindi avere nomi diversi. Tuttavia, è possibile definire sia un server collegato e un server remoto in un server specificato tramite l'assegnazione di nomi diversi e usando **sp_setnetname** per impostare il nome di rete di uno di essi il nome di rete del server sottostante.  
   
 ```  
 --Assume sqlserv2 is actual name of SQL Server   
@@ -76,10 +76,10 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 ```  
   
 > [!NOTE]  
->  Utilizzando **sp_setnetname** in modo che punti a un server collegato al server locale non è supportata. I server a cui viene fatto riferimento in questo modo non possono partecipare a transazioni distribuite.  
+>  Usando **sp_setnetname** in modo che punti a un server collegato al server locale non è supportato. I server a cui viene fatto riferimento in questo modo non possono partecipare a transazioni distribuite.  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **sysadmin** e **setupadmin** ruoli predefiniti del server.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **sysadmin** e **setupadmin** ruoli predefiniti del server.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrata una tipica sequenza di amministrazione utilizzata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire la chiamata a una stored procedure remota.  
@@ -93,7 +93,7 @@ EXEC Win_1.master.dbo.sp_who;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

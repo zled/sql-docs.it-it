@@ -1,5 +1,5 @@
 ---
-title: sp_change_agent_parameter (Transact-SQL) | Documenti Microsoft
+title: sp_change_agent_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,21 +19,20 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_agent_parameter
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d01a06f119a0c1d7669f0c811e8bee03e5eeb912
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 764bce06a3efe9d4ae2c4fbae1fa2cac6305c3bf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992528"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027376"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le modifiche a un parametro di un profilo di agente di replica archiviato nella [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) tabella di sistema. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione in cui l'agente è in esecuzione.  
+  Modifiche di un parametro di un profilo dell'agente di replica archiviato nella [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) tabella di sistema. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione in cui l'agente è in esecuzione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,12 +48,12 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
  ID del profilo. *profile_id* viene **int**, non prevede alcun valore predefinito.  
   
  [  **@parameter_name=**] **'***parameter_name***'**  
- Nome del parametro. *parameter_name* viene **sysname**, non prevede alcun valore predefinito. I parametri che è possibile modificare per i profili sistema dipendono dal tipo di agente. Per individuare il tipo di agente in questo *profile_id* rappresenta, individuare il *profile_id* colonna il **Msagent_profiles** tabella e prendere nota di *agent_type*  valore.  
+ Nome del parametro. *parameter_name* viene **sysname**, non prevede alcun valore predefinito. I parametri che è possibile modificare per i profili sistema dipendono dal tipo di agente. Per scoprire qual tipo di agente *profile_id* rappresenta, individuare il *profile_id* colonna il **Msagent_profiles** tabella e prendere nota il *agent_type*  valore.  
   
 > [!NOTE]  
 >  Se un parametro è supportato per un determinato *agent_type*, ma non è stato definito nel profilo agente, viene restituito un errore. Per aggiungere un parametro a un profilo agente è necessario eseguire [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
- Per un agente Snapshot (*agent_type*=**1**), se definito nel profilo, è possano modificare le proprietà seguenti:  
+ Per un agente Snapshot (*agent_type*=**1**), se definiti nel profilo, è possano modificare le proprietà seguenti:  
   
 -   **70Subscribers**  
   
@@ -72,7 +71,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **OutputVerboseLevel**  
   
--   **Dimensioni del pacchetto**  
+-   **PacketSize**  
   
 -   **QueryTimeout**  
   
@@ -80,7 +79,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UsePerArticleContentsView**  
   
- Per un agente di lettura Log (*agent_type*=**2**), se definito nel profilo, è possano modificare le proprietà seguenti:  
+ Per un agente di lettura Log (*agent_type*=**2**), se definiti nel profilo, è possano modificare le proprietà seguenti:  
   
 -   **HistoryVerboseLevel**  
   
@@ -92,7 +91,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **OutputVerboseLevel**  
   
--   **Dimensioni del pacchetto**  
+-   **PacketSize**  
   
 -   **PollingInterval**  
   
@@ -102,7 +101,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ReadBatchThreshold**  
   
- Per un agente di distribuzione (*agent_type*=**3**), se definito nel profilo, è possano modificare le proprietà seguenti:  
+ Per un agente di distribuzione (*agent_type*=**3**), se definiti nel profilo, è possano modificare le proprietà seguenti:  
   
 -   **BcpBatchSize**  
   
@@ -128,7 +127,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **OutputVerboseLevel**  
   
--   **Dimensioni del pacchetto**  
+-   **PacketSize**  
   
 -   **PollingInterval**  
   
@@ -140,7 +139,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **TransactionsPerHistory**  
   
- Per un agente di Merge (*agent_type*=**4**), se definito nel profilo, è possano modificare le proprietà seguenti:  
+ Per un agente di Merge (*agent_type*=**4**), se definiti nel profilo, è possano modificare le proprietà seguenti:  
   
 -   **AltSnapshotFolder**  
   
@@ -194,7 +193,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **OutputVerboseLevel**  
   
--   **Dimensioni del pacchetto**  
+-   **PacketSize**  
   
 -   **ParallelUploadDownload**  
   
@@ -204,9 +203,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **PollingInterval**  
   
--   **ProcessMessagesAtPublisher**  
+-   **ProcessMessagesAtPublisher è**  
   
--   **ProcessMessagesAtSubscriber**  
+-   **ProcessMessagesAtSubscriber è**  
   
 -   **QueryTimeout**  
   
@@ -230,7 +229,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **Oggetto ValidateInterval**  
   
- Per un agente di lettura coda (*agent_type*=**9**), se definito nel profilo, è possano modificare le proprietà seguenti:  
+ Per un agente di lettura coda (*agent_type*=**9**), se definiti nel profilo, è possano modificare le proprietà seguenti:  
   
 -   **HistoryVerboseLevel**  
   
@@ -248,18 +247,18 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **SQLQueueMode**  
   
- Per visualizzare i parametri che sono stati definiti per un determinato profilo, eseguire **sp_help_agent_profile** e prendere nota di *profile_name* associato il *profile_id*. Con l'appropriato *profile_id*, quindi eseguire **sp_help_agent_parameters** utilizzando tale *profile_id* per visualizzare i parametri associati al profilo. È possibile aggiungere parametri a un profilo eseguendo [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
+ Per visualizzare i parametri che sono stati definiti per un determinato profilo, eseguire **sp_help_agent_profile** e notare il *profile_name* associato il *profile_id*. Con l'appropriato *profile_id*, quindi eseguire **sp_help_agent_parameters** utilizzando quel *profile_id* per visualizzare i parametri associati al profilo. Parametri possono essere aggiunti a un profilo eseguendo [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
  [  **@parameter_value=**] **'***parameter_value***'**  
  Nuovo valore del parametro *parameter_value* viene **nvarchar(255**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_change_agent_parameter** viene utilizzata in tutti i tipi di replica.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_change_agent_parameter**.  
   
 ## <a name="see-also"></a>Vedere anche  

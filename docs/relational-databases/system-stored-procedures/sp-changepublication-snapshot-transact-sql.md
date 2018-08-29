@@ -1,5 +1,5 @@
 ---
-title: sp_changepublication_snapshot (Transact-SQL) | Documenti Microsoft
+title: sp_changepublication_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changepublication_snapshot
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d83772784d2d0c67d76087013c13621e5ca7c906
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d06d3db840f9674f65de72a589e427945ba89a4c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992838"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027472"
 ---
 # <a name="spchangepublicationsnapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
  [  **@frequency_type =**] *frequency_type*  
  Frequenza per l'esecuzione pianificata dell'agente. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Su richiesta|  
@@ -86,7 +86,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
  [  **@frequency_interval =**] *frequency_interval*  
  Specifica i giorni in cui viene eseguito l'agente. *frequency_interval* viene **int**, e può essere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Domenica|  
 |**2**|Lunedì|  
@@ -101,9 +101,9 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |NULL (predefinito)||  
   
  [  **@frequency_subday =**] *frequency_subday*  
- Unità di *freq_subday_interval*. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
+ È l'unità di misura *freq_subday_interval*. *frequency_subday* viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Secondo|  
@@ -112,7 +112,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |NULL (predefinito)||  
   
  [  **@frequency_subday_interval =**] *frequency_subday_interval*  
- Intervallo per *frequency_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
+ È l'intervallo *frequency_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
   
  [  **@frequency_relative_interval =**] *frequency_relative_interval*  
  Data di esecuzione dell'agente snapshot. *frequency_relative_interval* viene **int**, con un valore predefinito è NULL.  
@@ -133,16 +133,16 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
  Ora del giorno dell'ultima esecuzione pianificata dell'agente snapshot, nel formato HHMMSS. *active_end_time_of_day* viene **int**, con un valore predefinito è NULL.  
   
  [  **@snapshot_job_name =** ] **'***snapshot_agent_name***'**  
- Nome di un processo dell'agente snapshot esistente se viene utilizzato un processo esistente. *snapshot_agent_name* viene **nvarchar(100)** con valore predefinito è NULL.  
+ Nome di un processo dell'agente snapshot esistente se viene utilizzato un processo esistente. *snapshot_agent_name* viene **nvarchar(100)** con un valore predefinito NULL.  
   
  [  **@publisher_security_mode =** ] *publisher_security_mode*  
- Modalità di sicurezza utilizzata dall'agente per la connessione al server di pubblicazione. *publisher_security_mode* viene **smallint**, con un valore predefinito è NULL. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione, e **1** specifica l'autenticazione di Windows. Il valore **0** deve essere specificato per non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
+ Modalità di sicurezza utilizzata dall'agente per la connessione al server di pubblicazione. *publisher_security_mode* viene **smallint**, con un valore predefinito è NULL. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione, e **1** specifica l'autenticazione di Windows. Un valore pari **0** deve essere specificato per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [  **@publisher_login =** ] **'***publisher_login***'**  
- Account di accesso utilizzato per la connessione al server di pubblicazione. *publisher_login* viene **sysname**, con un valore predefinito è NULL. *publisher_login* deve essere specificato quando *publisher_security_mode* viene **0**. Se *publisher_login* è NULL e *publisher_security_mode* è **1**, l'account Windows specificato *job_login* viene utilizzato quando connessione al server di pubblicazione.  
+ Account di accesso utilizzato per la connessione al server di pubblicazione. *publisher_login* viene **sysname**, con un valore predefinito è NULL. *publisher_login* deve essere specificato quando *publisher_security_mode* viene **0**. Se *publisher_login* è NULL e *publisher_security_mode* viene **1**, quindi l'account Windows specificato nella *job_login* viene usato quando la connessione al server di pubblicazione.  
   
  [  **@publisher_password =** ] **'***publisher_password***'**  
  Password utilizzata per la connessione al server di pubblicazione. *publisher_password* viene **sysname**, con un valore predefinito è NULL.  
@@ -163,20 +163,20 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
  Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere utilizzato durante la creazione di un agente Snapshot in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  *server di pubblicazione* non deve essere usata durante la creazione di un agente Snapshot in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_changepublication_snapshot** viene utilizzata nella replica snapshot, transazionale e di tipo merge.  
+## <a name="remarks"></a>Note  
+ **sp_changepublication_snapshot** viene utilizzata nella replica snapshot, la replica transazionale e di tipo merge.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_changepublication_snapshot**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_changepublication_snapshot**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà della pubblicazione](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Modifica delle proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Modificare le proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

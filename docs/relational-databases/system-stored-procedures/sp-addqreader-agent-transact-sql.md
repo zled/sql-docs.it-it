@@ -1,5 +1,5 @@
 ---
-title: sp_addqreader_agent (Transact-SQL) | Documenti Microsoft
+title: sp_addqreader_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqreader_agent
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d89800f8eeaa7c960b636f93555009cbc87c028f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d3e67683fe75f555b58acf09cb2b1bee939d7151
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990666"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034712"
 ---
 # <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,22 +57,22 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 >  Non archiviare informazioni di autenticazione in file script. Per una sicurezza ottimale, i nomi e le password degli account di accesso dovrebbero essere passati in fase di esecuzione.  
   
  [ **@job_name**=] **'***job_name***'**  
- Nome di un processo esistente dell'agente. *job_name* viene **sysname**, con valore predefinito è NULL. Questo parametro viene specificato solo quando l'agente viene creato con un processo esistente anziché con un nuovo processo creato (impostazione predefinita).  
+ Nome di un processo esistente dell'agente. *nome_processo* viene **sysname**, con un valore predefinito NULL. Questo parametro viene specificato solo quando l'agente viene creato con un processo esistente anziché con un nuovo processo creato (impostazione predefinita).  
   
  [  **@frompublisher=** ] *frompublisher*  
- Specifica se la procedura viene eseguita nel server di pubblicazione. *frompublisher* è di tipo bit e il valore predefinito è **0**. Il valore **1** significa che la procedura viene eseguita dal server di pubblicazione nel database di pubblicazione.  
+ Specifica se la procedura viene eseguita nel server di pubblicazione. *frompublisher* è di tipo bit e il valore predefinito **0**. Un valore pari **1** significa che la procedura viene eseguita dal server di pubblicazione nel database di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_addqreader_agent** viene utilizzata nella replica transazionale.  
   
  **sp_addqreader_agent** deve essere eseguita almeno una volta in un server di distribuzione che supporta in coda l'aggiornamento dopo [sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) ma prima [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
   
  Il processo di agente di lettura coda viene rimosso quando si esegue [sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_addqreader_agent**.  
   
 ## <a name="see-also"></a>Vedere anche  

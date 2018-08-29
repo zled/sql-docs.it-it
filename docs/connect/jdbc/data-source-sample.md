@@ -14,18 +14,18 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4a21ae103b226fb74ffa384b1d0696162d72931
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: d9b5da0ee2138296a4b0c7bf12e6e33a06d029cd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453975"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784575"
 ---
 # <a name="data-source-sample"></a>Esempio di origine dei dati
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Con questa applicazione di esempio [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] viene illustrato come connettersi a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando un oggetto origine dati. Viene inoltre illustrato come recuperare dati da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando una stored procedure.
+Con questa applicazione di esempio [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] viene illustrato come connettersi a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando un oggetto origine dati. Viene inoltre illustrato come recuperare dati da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando una stored procedure.
 
 Il file di codice per questo esempio è denominato ConnectDataSource.java ed è disponibile nel percorso seguente:
 

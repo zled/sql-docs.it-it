@@ -1,5 +1,5 @@
 ---
-title: sp_helpdbfixedrole (Transact-SQL) | Documenti Microsoft
+title: sp_helpdbfixedrole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpdbfixedrole
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a1ca726e6770fd4a36e34651a83c55ab1e5475b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 387ea35ed6e2c6be10eb738e0c53f26bbbbf60da
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252772"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022093"
 ---
 # <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,9 +55,9 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Nome del ruolo predefinito del database.|  
-|**Description**|**nvarchar(70)**|Descrizione del **DbFixedRole.**|  
+|**Descrizione**|**nvarchar(70)**|Descrizione di **DbFixedRole.**|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  I ruoli predefiniti del database vengono definiti a livello del database e dispongono delle autorizzazioni per l'esecuzione di specifiche attività amministrative a livello del database, come indicato nella tabella seguente. Non è possibile aggiungere o rimuovere i ruoli predefiniti del database e non è possibile modificare le autorizzazioni concesse a un ruolo predefinito del database.  
   
 |Ruolo predefinito del database|Description|  
@@ -80,7 +80,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**sp_helprole**|Visualizza un elenco dei membri di un ruolo predefinito del database.|  
 |**sp_droprolemember**|Rimuove un membro da un ruolo predefinito del database.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
  Le informazioni restituite sono soggette a limitazioni di accesso ai metadati. Non vengono visualizzate le entità per le quali l'entità di database non dispone dell'autorizzazione. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -97,7 +97,7 @@ GO
  [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

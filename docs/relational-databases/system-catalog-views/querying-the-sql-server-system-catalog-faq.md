@@ -1,5 +1,5 @@
 ---
-title: L'esecuzione di query di catalogo di sistema SQL Server domande frequenti | Documenti Microsoft
+title: L'esecuzione di query nel catalogo di sistema SQL Server domande frequenti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 caps.latest.revision: 51
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc310dc86a720dbf0bd2a833a6bedd63f1875b27
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bf88696005c7ac3f743f23f1ee75fd362a3e5243
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181757"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030509"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>Domande frequenti sull'esecuzione di query sul catalogo di sistema di SQL Server
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,67 +40,67 @@ ms.locfileid: "33181757"
   
 ### <a name="data-types"></a>Tipi di dati  
   
--   [Ricerca per categorie i tipi di dati delle colonne di una tabella specificata?](#_FAQ7)  
+-   [Ricerca per categorie di tipi di dati delle colonne di una tabella specificata?](#_FAQ7)  
   
 -   [Ricerca per categorie di tipi di dati LOB di una tabella specificata?](#_FAQ14)  
   
--   [Ricerca per categorie-le colonne che dipendono da un tipo di dati specificato?](#_FAQ22)  
+-   [Come trovo le colonne che dipendono da un tipo di dati specificato?](#_FAQ22)  
   
--   [Ricerca per categorie le colonne calcolate che dipendono da un tipo definito dall'utente CLR specificato o un tipo di dati alias?](#_FAQ23)  
+-   [Come trovo le colonne calcolate che dipendono da un tipo definito dall'utente CLR specificato o un tipo di dati alias?](#_FAQ23)  
   
--   [Ricerca per categorie-i parametri che dipendono da un tipo definito dall'utente CLR specificato o un tipo alias?](#_FAQ24)  
+-   [Come è possibile trovare i parametri che dipendono da un tipo definito dall'utente CLR specificato o un tipo alias?](#_FAQ24)  
   
--   [Ricerca per categorie-i vincoli CHECK che dipendono da un tipo definito dall'utente CLR specificato?](#_FAQ25)  
+-   [Come è possibile trovare i vincoli CHECK che dipendono da un tipo definito dall'utente CLR specificato?](#_FAQ25)  
   
--   [Ricerca per categorie-stored procedure Transact SQL che dipendono da un tipo definito dall'utente CLR specificato o un tipo alias, viste e funzioni Transact-SQL?](#_FAQ26)  
+-   [Come individuare le viste, funzioni Transact-SQL e le procedure di Transact-SQL archiviate che dipendono da un tipo definito dall'utente CLR specificato o un tipo alias?](#_FAQ26)  
   
 ### <a name="tables-indexes-views-and-constraints"></a>Tabelle, indici, viste e vincoli  
   
--   [Ricerca di tutte le tabelle definite dall'utente in un database specificato](#_FAQ31)  
+-   [Come individuare tutte le tabelle definite dall'utente in un database specificato?](#_FAQ31)  
   
--   [Ricerca per categorie tutte le tabelle che non dispongono di un indice cluster in un database specificato?](#_FAQ1)  
+-   [Come è trovare tutte le tabelle che non dispongono di un indice cluster in un database specificato?](#_FAQ1)  
   
--   [Ricerca di tutte le tabelle che non dispongono di un indice](#_FAQ4)  
+-   [Come è trovare tutte le tabelle che non dispongono di un indice?](#_FAQ4)  
   
--   [Ricerca di tutte le tabelle che non contengono una chiave primaria](#_FAQ3)  
+-   [Come è trovare tutte le tabelle che non è una chiave primaria?](#_FAQ3)  
   
--   [Ricerca di tutte le tabelle che dispongono di una colonna identity](#_FAQ5)  
+-   [Come è trovare tutte le tabelle che dispongono di una colonna identity?](#_FAQ5)  
   
 -   [Come individuare tutte le tabelle e indici partizionati?](#_FAQ32)  
   
--   [Ricerca di tutte le viste in un database](#_FAQ13)  
+-   [Come trovare tutte le visualizzazioni in un database?](#_FAQ13)  
   
--   [Ricerca la definizione di una vista](#_FAQ35)  
+-   [Come individuare la definizione di una vista?](#_FAQ35)  
   
--   [Ricerca di tutte le entità che sono state modificate negli ultimi N giorni](#_FAQ6)  
+-   [Come è possibile trovare tutte le entità che sono state modificate negli ultimi N giorni?](#_FAQ6)  
   
--   [Ricerca per categorie le colonne di una chiave primaria per una tabella specificata?](#_FAQ16)  
+-   [Come trovo le colonne di una chiave primaria per una tabella specificata?](#_FAQ16)  
   
--   [Ricerca per categorie le colonne di una chiave esterna per una tabella specificata?](#_FAQ17)  
+-   [Come trovo le colonne di una chiave esterna per una tabella specificata?](#_FAQ17)  
   
--   [Come determinare se una colonna viene utilizzata in un'espressione di colonna calcolata?](#_FAQ20)  
+-   [Come è possibile determinare se una colonna viene utilizzata in un'espressione di colonna calcolata?](#_FAQ20)  
   
--   [Ricerca di tutte le colonne che vengono utilizzate in un'espressione di colonna calcolata](#_FAQ21)  
+-   [Come individuare tutte le colonne utilizzate in un'espressione di colonna calcolata?](#_FAQ21)  
   
--   [Ricerca di tutti i vincoli per una tabella specificata](#_FAQ27)  
+-   [Come individuare tutti i vincoli per una tabella specificata?](#_FAQ27)  
   
--   [Ricerca di tutti gli indici per una tabella specificata](#_FAQ28)  
+-   [Come individuare tutti gli indici per una tabella specificata?](#_FAQ28)  
   
--   [Ricerca per categorie tutte le tabelle con un nome di colonna specificato?](#_FAQ30)  
+-   [Come trovare tutte le tabelle con un nome di colonna specificato?](#_FAQ30)  
   
--   [Ricerca di tutte le statistiche su un oggetto specificato](#_FAQ33)  
+-   [Come trovare tutte le statistiche su un oggetto specificato?](#_FAQ33)  
   
--   [Come individuare tutte le statistiche e le colonne di statistiche su un oggetto specificato?](#_FAQ34)  
+-   [Come individuare tutte le statistiche e le colonne delle statistiche su un oggetto specificato?](#_FAQ34)  
   
 ### <a name="modules-stored-procedures-user-defined-functions-and-triggers"></a>Moduli (stored procedure, funzioni definite dall'utente e trigger)  
   
--   [Ricerca di tutte le stored procedure in un database](#_FAQ9)  
+-   [Come trovare tutte le stored procedure in un database?](#_FAQ9)  
   
--   [Ricerca di tutte le funzioni definite dall'utente in un database](#_FAQ12)  
+-   [Come individuare tutte le funzioni definite dall'utente in un database?](#_FAQ12)  
   
--   [Ricerca per categorie-i parametri per una stored procedure o una funzione?](#_FAQ10)  
+-   [Come trovare i parametri per una stored procedure o una funzione?](#_FAQ10)  
   
--   [Come è possibile individuare le dipendenze in una funzione specificata?](#_FAQ8)  
+-   [Come trovare le dipendenze in una funzione specificata?](#_FAQ8)  
   
 -   [Come è possibile visualizzare la definizione di un modulo?](#_FAQ15)  
   
@@ -108,13 +108,13 @@ ms.locfileid: "33181757"
   
 ### <a name="schemas-users-roles-and-permissions"></a>Schemi, utenti, ruoli e autorizzazioni  
   
--   [Ricerca per categorie-tutti i proprietari delle entità contenute in uno schema specificato?](#_FAQ2)  
+-   [Come trovare tutti i proprietari delle entità contenute in un determinato schema?](#_FAQ2)  
   
--   [Ricerca per categorie le autorizzazioni concesse o negate per un'entità specificata?](#_FAQ18)  
+-   [Come trovare le autorizzazioni concesse o negate per un'entità specificata?](#_FAQ18)  
   
 ## <a name="answers"></a>Risposte  
   
-###  <a name="_FAQ1"></a> Ricerca per categorie tutte le tabelle che non dispongono di un indice cluster in un database specificato?  
+###  <a name="_FAQ1"></a> Come è trovare tutte le tabelle che non dispongono di un indice cluster in un database specificato?  
  Prima di eseguire le query seguenti, sostituire `<database_name>` con un nome di database valido.  
   
 ```  
@@ -146,7 +146,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ2"></a> Ricerca per categorie-tutti i proprietari delle entità contenute in uno schema specificato?  
+###  <a name="_FAQ2"></a> Come trovare tutti i proprietari delle entità contenute in un determinato schema?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name>` con nomi validi.  
   
 ```  
@@ -174,7 +174,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ3"></a> Ricerca di tutte le tabelle che non contengono una chiave primaria  
+###  <a name="_FAQ3"></a> Come è trovare tutte le tabelle che non è una chiave primaria?  
  Prima di eseguire le query seguenti, sostituire `<database_name>` con un nome di database valido.  
   
 ```  
@@ -209,7 +209,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ4"></a> Ricerca di tutte le tabelle che non dispongono di un indice  
+###  <a name="_FAQ4"></a> Come è trovare tutte le tabelle che non dispongono di un indice?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome di database valido.  
   
 ```  
@@ -226,7 +226,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ5"></a> Ricerca di tutte le tabelle che dispongono di una colonna identity  
+###  <a name="_FAQ5"></a> Come è trovare tutte le tabelle che dispongono di una colonna identity?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome di database valido.  
   
 ```  
@@ -261,7 +261,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ7"></a> Ricerca per categorie i tipi di dati delle colonne di una tabella specificata?  
+###  <a name="_FAQ7"></a> Ricerca per categorie di tipi di dati delle colonne di una tabella specificata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.table_name>` con nomi validi.  
   
 ```  
@@ -286,7 +286,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ8"></a> Come è possibile individuare le dipendenze in una funzione specificata?  
+###  <a name="_FAQ8"></a> Come trovare le dipendenze in una funzione specificata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.function_name>` con nomi validi.  
   
 ```  
@@ -304,7 +304,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ9"></a> Ricerca di tutte le stored procedure in un database  
+###  <a name="_FAQ9"></a> Come trovare tutte le stored procedure in un database?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido.  
   
 ```  
@@ -323,7 +323,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ10"></a> Ricerca per categorie-i parametri per una stored procedure o una funzione?  
+###  <a name="_FAQ10"></a> Come trovare i parametri per una stored procedure o una funzione?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.object_name>` con nomi validi.  
   
 ```  
@@ -349,7 +349,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ12"></a> Ricerca di tutte le funzioni definite dall'utente in un database  
+###  <a name="_FAQ12"></a> Come individuare tutte le funzioni definite dall'utente in un database?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome di database valido.  
   
 ```  
@@ -368,7 +368,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ13"></a> Ricerca di tutte le viste in un database  
+###  <a name="_FAQ13"></a> Come trovare tutte le visualizzazioni in un database?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome di database valido.  
   
 ```  
@@ -386,7 +386,7 @@ FROM sys.views;
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ6"></a> Ricerca di tutte le entità che sono state modificate negli ultimi N giorni  
+###  <a name="_FAQ6"></a> Come è possibile trovare tutte le entità che sono state modificate negli ultimi N giorni?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<n_days>` con valori validi.  
   
 ```  
@@ -470,7 +470,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ16"></a> Ricerca per categorie le colonne di una chiave primaria per una tabella specificata?  
+###  <a name="_FAQ16"></a> Come trovo le colonne di una chiave primaria per una tabella specificata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.table_name>` con nomi validi.  
   
 ```  
@@ -513,7 +513,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ17"></a> Ricerca per categorie le colonne di una chiave esterna per una tabella specificata?  
+###  <a name="_FAQ17"></a> Come trovo le colonne di una chiave esterna per una tabella specificata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.table_name>` con nomi validi.  
   
 ```  
@@ -537,7 +537,7 @@ WHERE f.parent_object_id = OBJECT_ID('<schema_name.table_name>');
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ18"></a> Ricerca per categorie le autorizzazioni concesse o negate per un'entità specificata?  
+###  <a name="_FAQ18"></a> Come trovare le autorizzazioni concesse o negate per un'entità specificata?  
  Nell'esempio seguente viene creata una funzione per restituire il nome dell'entità per la quale vengono verificate le autorizzazioni. La funzione viene richiamata nelle query seguenti. È necessario creare la funzione in ogni database nel quale si desidera verificare le autorizzazioni.  
   
 ```  
@@ -620,7 +620,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ20"></a> Come determinare se una colonna viene utilizzata in un'espressione di colonna calcolata?  
+###  <a name="_FAQ20"></a> Come è possibile determinare se una colonna viene utilizzata in un'espressione di colonna calcolata?  
  Prima di eseguire la query seguente, sostituire `<database_name>`, `<schema_name.table_name>` e `<column_name`> con nomi validi.  
   
 ```  
@@ -642,7 +642,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ21"></a> Ricerca di tutte le colonne che vengono utilizzate in un'espressione di colonna calcolata  
+###  <a name="_FAQ21"></a> Come individuare tutte le colonne utilizzate in un'espressione di colonna calcolata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido.  
   
 ```  
@@ -664,8 +664,8 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ22"></a> Ricerca per categorie-le colonne che dipendono da un tipo definito dall'utente CLR specificato o un tipo alias?  
- Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.data_type_name>` con Specificazione dello schema tipo CLR valido definito dall'utente o nome di tipo alias qualificato dello schema. La query seguente richiede l'appartenenza di **db_owner** ruolo o autorizzazioni per visualizzare tutte le colonne dipendenti e una colonna calcolata metadati nel database.  
+###  <a name="_FAQ22"></a> Come trovo le colonne che dipendono da un tipo definito dall'utente CLR specificato o un tipo alias?  
+ Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.data_type_name>` con valido con Specificazione dello schema definiti dall'utente tipo CLR o nome del tipo alias con Specificazione dello schema. La query seguente richiede l'appartenenza al gruppo il **db_owner** ruolo o le autorizzazioni per visualizzare tutte le colonne dipendenti e alla colonna calcolata i metadati nel database.  
   
 ```  
 USE <database_name>;  
@@ -686,7 +686,7 @@ GO
   
 ```  
   
- La query seguente restituisce una vista ridotta e limitata delle colonne dipende da un tipo CLR definito dall'utente o un alias, ma il set di risultati è visibile per il **pubblica** ruolo. È possibile utilizzare questa query se si sono concesse le autorizzazioni REFERENCE per il tipo definito dall'utente ad altri utenti e non si dispone dell'autorizzazione per visualizzare i metadati degli oggetti che utilizzano il tipo creati da altri utenti.  
+ La query seguente restituisce una vista ridotta e limitata delle colonne dipende da un tipo CLR definito dall'utente o un alias, ma il set di risultati è visibile per la **pubblica** ruolo. È possibile utilizzare questa query se si sono concesse le autorizzazioni REFERENCE per il tipo definito dall'utente ad altri utenti e non si dispone dell'autorizzazione per visualizzare i metadati degli oggetti che utilizzano il tipo creati da altri utenti.  
   
 ```  
 USE <database_name>;  
@@ -702,7 +702,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ23"></a> Ricerca per categorie le colonne calcolate che dipendono da un tipo definito dall'utente CLR specificato o un tipo alias?  
+###  <a name="_FAQ23"></a> Come trovo le colonne calcolate che dipendono da un tipo definito dall'utente CLR specificato o un tipo alias?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.data_type_name>` con un tipo CLR definito dall'utente valido e qualificato a livello di schema o un nome di tipo alias.  
   
 ```  
@@ -719,8 +719,8 @@ WHERE referenced_major_id = TYPE_ID('<schema_name.data_type_name>')
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ24"></a> Ricerca per categorie-i parametri che dipendono da un tipo definito dall'utente CLR specificato o un tipo alias?  
- Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.data_type_name>` con un tipo CLR definito dall'utente valido e qualificato a livello di schema o un nome di tipo alias. La query seguente richiede l'appartenenza di **db_owner** ruolo o autorizzazioni per visualizzare tutte le colonne dipendenti e una colonna calcolata metadati nel database.  
+###  <a name="_FAQ24"></a> Come è possibile trovare i parametri che dipendono da un tipo definito dall'utente CLR specificato o un tipo alias?  
+ Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.data_type_name>` con un tipo CLR definito dall'utente valido e qualificato a livello di schema o un nome di tipo alias. La query seguente richiede l'appartenenza al gruppo il **db_owner** ruolo o le autorizzazioni per visualizzare tutte le colonne dipendenti e alla colonna calcolata i metadati nel database.  
   
 ```  
 USE <database_name>;  
@@ -745,7 +745,7 @@ GO
   
 ```  
   
- La query seguente restituisce una vista ridotta e limitata dei parametri che dipendono da un tipo CLR definito dall'utente o un alias, ma il set di risultati è visibile per il **pubblica** ruolo. È possibile utilizzare questa query se si sono concesse le autorizzazioni REFERENCE per il tipo definito dall'utente ad altri utenti e non si dispone dell'autorizzazione per visualizzare i metadati degli oggetti che utilizzano il tipo creati da altri utenti.  
+ La query seguente restituisce una vista ridotta e limitata dei parametri che dipendono da un tipo CLR definito dall'utente o un alias, ma il set di risultati è visibile per la **pubblica** ruolo. È possibile utilizzare questa query se si sono concesse le autorizzazioni REFERENCE per il tipo definito dall'utente ad altri utenti e non si dispone dell'autorizzazione per visualizzare i metadati degli oggetti che utilizzano il tipo creati da altri utenti.  
   
 ```  
 USE <database_name>;  
@@ -761,8 +761,8 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ25"></a> Ricerca per categorie-i vincoli CHECK che dipendono da un tipo definito dall'utente CLR specificato?  
- Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.data_type_name>` con un nome di tipo definito dall'utente CLR valido, Specificazione dello schema.  
+###  <a name="_FAQ25"></a> Come è possibile trovare i vincoli CHECK che dipendono da un tipo definito dall'utente CLR specificato?  
+ Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.data_type_name>` con un nome di tipo definito dall'utente CLR valido, con Specificazione dello schema.  
   
 ```  
 USE <database_name>;  
@@ -781,10 +781,10 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ26"></a> Ricerca per categorie-stored procedure Transact SQL che dipendono da un tipo definito dall'utente CLR specificato o un tipo alias, viste e funzioni Transact-SQL?  
+###  <a name="_FAQ26"></a> Come individuare le viste, funzioni Transact-SQL e le procedure di Transact-SQL archiviate che dipendono da un tipo definito dall'utente CLR specificato o un tipo alias?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.data_type_name>` con un tipo CLR definito dall'utente valido e qualificato a livello di schema o un nome di tipo alias.  
   
- I parametri definiti in una funzione o una procedura vengono associati a schema in modo implicito. Di conseguenza, i parametri che dipendono da un tipo CLR definito dall'utente o un tipo di alias possono essere visualizzati utilizzando il [sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) vista del catalogo. Le procedure e i trigger non sono associati a schema. Questo significa che le dipendenze tra qualsiasi espressione definita nel corpo della procedura o del trigger e un tipo CLR definito dall'utente o un tipo alias non vengono mantenute. Viste associate a schema e funzioni definite dall'utente che dispongono di espressioni che dipendono da un tipo definito dall'utente CLR associate a schema o di tipo alias vengono mantenute nel **sql_dependencies** vista del catalogo. Le dipendenze tra i tipi e le funzioni o le procedure CLR non vengono mantenute.  
+ I parametri definiti in una funzione o una procedura vengono associati a schema in modo implicito. Di conseguenza, i parametri che dipendono da un tipo CLR definito dall'utente o un tipo alias possono essere visualizzati utilizzando il [Sys. sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) vista del catalogo. Le procedure e i trigger non sono associati a schema. Questo significa che le dipendenze tra qualsiasi espressione definita nel corpo della procedura o del trigger e un tipo CLR definito dall'utente o un tipo alias non vengono mantenute. Viste e funzioni definite dall'utente che dispongono di espressioni che dipendono da un tipo CLR definito dall'utente associate a schema o tipo alias vengono mantenute nel **Sys. sql_dependencies** vista del catalogo. Le dipendenze tra i tipi e le funzioni o le procedure CLR non vengono mantenute.  
   
  La query seguente restituisce tutte le dipendenze associate a schema nelle viste, nelle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e nelle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] per un tipo CLR definito dall'utente o un tipo alias specificato.  
   
@@ -809,7 +809,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ27"></a> Ricerca di tutti i vincoli per una tabella specificata  
+###  <a name="_FAQ27"></a> Come individuare tutti i vincoli per una tabella specificata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.table_name>` con nomi validi.  
   
 ```  
@@ -833,7 +833,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ28"></a> Ricerca di tutti gli indici per una tabella specificata  
+###  <a name="_FAQ28"></a> Come individuare tutti gli indici per una tabella specificata?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.table_name>` con nomi validi.  
   
 ```  
@@ -862,7 +862,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ30"></a> Ricerca per categorie-tutti gli oggetti che hanno un nome di colonna specificato?  
+###  <a name="_FAQ30"></a> Come è possibile trovare tutti gli oggetti che hanno un nome di colonna specificato?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<column_name>` con nomi validi.  
   
 ```  
@@ -875,7 +875,7 @@ GO
   
 ```  
   
- Oppure  
+ e  
   
 ```  
 USE <database_name>;  
@@ -892,7 +892,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ31"></a> Ricerca di tutte le tabelle definite dall'utente in un database specificato  
+###  <a name="_FAQ31"></a> Come individuare tutte le tabelle definite dall'utente in un database specificato?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido.  
   
 ```  
@@ -928,7 +928,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ33"></a> Ricerca di tutte le statistiche su un oggetto specificato  
+###  <a name="_FAQ33"></a> Come trovare tutte le statistiche su un oggetto specificato?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.object_name>` con un nome di tabella, vista indicizzata o funzione con valori di tabella valido.  
   
 ```  
@@ -947,7 +947,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ34"></a> Come individuare tutte le statistiche e le colonne di statistiche su un oggetto specificato?  
+###  <a name="_FAQ34"></a> Come individuare tutte le statistiche e le colonne delle statistiche su un oggetto specificato?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.object_name>` con un nome di tabella, vista indicizzata o funzione con valori di tabella valido.  
   
 ```  
@@ -968,7 +968,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ35"></a> Ricerca la definizione di una vista  
+###  <a name="_FAQ35"></a> Come individuare la definizione di una vista?  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<schema_name.object_name>` con nomi validi.  
   
 ```  

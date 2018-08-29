@@ -14,12 +14,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31cc897383c7ffc8a11bc74a1881b12313da68f4
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: ec8254c61cabff08ae788327ee2e5449ed68ec7f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278822"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785122"
 ---
 # <a name="building-the-connection-url"></a>Costruzione dell'URL della connessione
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "39278822"
     > [!NOTE]  
     >  Per una connessione ottimale a un'istanza denominata, si consiglia di impostare un valore per portNumber. In questo modo si evita un round trip al server per determinare il numero di porta. Se si utilizzano sia portNumber che instanceName, portNumber avrà la precedenza e instanceName verrà ignorato.  
   
--   **property** (facoltativo) indica una o più proprietà della connessione. Per altre informazioni, vedere [Impostazione delle proprietà delle connessioni](../../connect/jdbc/setting-the-connection-properties.md). È possibile specificare qualsiasi proprietà presente nell'elenco. Le proprietà, tuttavia, possono essere delimitate solo usando il carattere di punto e virgola (';') e non possono essere duplicate.  
+-   **property** (facoltativo) indica una o più proprietà della connessione. Per altre informazioni, vedere [Impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md). È possibile specificare qualsiasi proprietà presente nell'elenco. Le proprietà, tuttavia, possono essere delimitate solo usando il carattere di punto e virgola (';') e non possono essere duplicate.  
   
 > [!CAUTION]  
 >  Per garantire maggiore sicurezza, si consiglia di evitare di costruire l'URL della connessione sulla base dei dati inseriti dall'utente. Nell'URL dovrebbero essere specificati solo il nome del server e il driver. Per i valori relativi a nome utente e password, utilizzare le raccolte delle proprietà della connessione. Per altre informazioni sulla sicurezza delle applicazioni JDBC, vedere [protezione di applicazioni del Driver JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "39278822"
 > [!NOTE]  
 >  Sebbene nell'esempio precedente siano stati utilizzati un nome utente e una password nella stringa di connessione, è consigliabile utilizzare la sicurezza integrata per garantire maggiore protezione. Per altre informazioni, vedere la sezione [Connessione con l'autenticazione integrata](#Connectingintegrated) più avanti in questo argomento.  
   
- La seguente stringa di connessione illustra come connettersi a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tramite l'autenticazione integrata e Kerberos da un'applicazione in esecuzione su un sistema operativo supportato da [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]:  
+ La seguente stringa di connessione illustra come connettersi a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'autenticazione integrata e Kerberos da un'applicazione in esecuzione su un sistema operativo supportato da [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]:  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -77,7 +77,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>Più istanze denominate di SQL Server  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] consente l'installazione di più istanze di database per server. Ciascuna istanza è definita in base a un nome specifico. Per eseguire la connessione a un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile specificare il numero di porta di tale istanza (metodo preferito) oppure specificare il nome dell'istanza come proprietà dell'URL di JDBC o proprietà **datasource**. Se non viene specificato né il nome né il numero della porta, viene creata una connessione all'istanza predefinita. Vedere gli esempi seguenti:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente l'installazione di più istanze di database per server. Ciascuna istanza è definita in base a un nome specifico. Per eseguire la connessione a un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile specificare il numero di porta di tale istanza (metodo preferito) oppure specificare il nome dell'istanza come proprietà dell'URL di JDBC o proprietà **datasource**. Se non viene specificato né il nome né il numero della porta, viene creata una connessione all'istanza predefinita. Vedere gli esempi seguenti:  
   
  Per utilizzare un numero di porta, procedere come segue:  
   

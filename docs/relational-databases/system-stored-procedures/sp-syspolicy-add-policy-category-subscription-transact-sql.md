@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_add_policy_category_subscription
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c3e5f4079a75fca4112da1185a941b3a77e6b85
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6006c4cbcbd33b4881faf4399cee082a4891ceda
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253120"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030912"
 ---
 # <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +47,28 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@target_type=** ] **'***target_type***'**  
- Tipo di destinazione della sottoscrizione di categoria. *target_type* viene **sysname**, è necessario e deve essere impostato su 'DATABASE'.  
+ Tipo di destinazione della sottoscrizione di categoria. *target_type* viene **sysname**è obbligatorio e deve essere impostata su 'DATABASE'.  
   
  [  **@target_object=** ] **'***target_object***'**  
  È il nome del database in cui viene eseguita la sottoscrizione alla categoria. *target_object* viene **sysname**ed è obbligatorio.  
   
  [  **@policy_category=** ] **'***policy_category***'**  
- È il nome della categoria di criteri per la sottoscrizione. *policy_category* viene **sysname**ed è obbligatorio.  
+ È il nome della categoria di criteri da sottoscrivere. *policy_category* viene **sysname**ed è obbligatorio.  
   
- Per ottenere valori per *policy_category*, eseguire una query sulla vista di sistema syspolicy_policy_categories.  
+ Per ottenere valori per *policy_category*, eseguire query sulla vista di sistema syspolicy_policy_categories.  
   
  [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
  Identificatore della sottoscrizione di categoria. *policy_category_subscription_id* viene **int**e viene restituito come OUTPUT.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syspolicy_add_policy_category_subscription nel contesto del database di sistema msdb.  
   
  Se si specifica una categoria di criteri non esistente, verrà creata una nuova categoria di criteri e la sottoscrizione sarà obbligatoria per tutti i database all'esecuzione della stored procedure. Se la sottoscrizione obbligatoria per la nuova categoria viene successivamente cancellata, la sottoscrizione sarà valida solo per il database specificato come *target_object*. Per altre informazioni sulla modifica dell'impostazione di una sottoscrizione obbligatoria, vedere [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Questa stored procedure viene eseguita nel contesto del proprietario corrente della stessa.  
   
 ## <a name="examples"></a>Esempi  

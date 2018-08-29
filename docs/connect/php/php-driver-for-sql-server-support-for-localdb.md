@@ -13,22 +13,22 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 438802c4645ff3acdc1bed42af22e4e32786e1d0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f408cb1f6cb82610cfa74a4d59a3ce15e4307e64
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992913"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784051"
 ---
-# <a name="support-for-localdb"></a>Supporto per Local DB
+# <a name="support-for-localdb"></a>Supporto per LocalDB
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-LocalDB è una versione lightweight della [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] cui è stato reso disponibile dal [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. In questo argomento viene discussa la modalità di connessione a un database in un'istanza del database locale.
+LocalDB è una versione lightweight della [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cui è stato reso disponibile dal [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. In questo argomento viene discussa la modalità di connessione a un database in un'istanza del database locale.
 
 ## <a name="remarks"></a>Remarks
 
-Per altre informazioni su LocalDB, incluse le procedure per installarlo e configurare l'istanza di Local DB, vedere la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] argomento della documentazione Online su [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
+Per altre informazioni su LocalDB, incluse le procedure per installarlo e configurare l'istanza di Local DB, vedere la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] argomento della documentazione Online su [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express LocalDB.
 
 In breve, database locale consente di:
 

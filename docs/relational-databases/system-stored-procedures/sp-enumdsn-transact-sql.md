@@ -1,5 +1,5 @@
 ---
-title: sp_enumdsn (Transact-SQL) | Documenti Microsoft
+title: sp_enumdsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_enumdsn
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90d5e3c361471777952378cccfafb9f5b4f479fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30aa77cb33e5d55bef6b110e020116467536eaff
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993448"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031073"
 ---
 # <a name="spenumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,23 +45,23 @@ sp_enumdsn
 ```  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**Nome dell'origine dati**|**sysname**|Nome dell'origine dei dati.|  
-|**Description**|**varchar(255)**|Descrizione dell'origine dei dati.|  
-|**Tipo**|**int**|Tipo di origine dei dati:<br /><br /> **1** = DSN ODBC<br /><br /> **3** = origine dati OLE DB|  
+|**Descrizione**|**varchar(255)**|Descrizione dell'origine dei dati.|  
+|**Tipo**|**int**|Tipo di origine dei dati:<br /><br /> **1** = DSN ODBC<br /><br /> **3** = origine dei dati OLE DB|  
 |**Nome del provider**|**varchar(255)**|Nome del provider OLE DB. Il valore è NULL per DSN ODBC.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Ogni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio dispone di un contesto utente. ovvero un set di voci del Registro di sistema che include le definizioni delle origini dei dati ODBC disponibili per l'utente. Il contesto utente dipende dal nome utente utilizzato per l'esecuzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Ad esempio, se il server è in esecuzione nel contesto utente dell'account di sistema, i DSN restituiti sono tutti DSN di sistema associati all'account di sistema. Se invece il server viene eseguito con un account utente privato, vengono restituiti solo i DSN definiti per tale account privato di tale utente.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_enumdsn**.  
   
 ## <a name="see-also"></a>Vedere anche  

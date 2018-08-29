@@ -1,5 +1,5 @@
 ---
-title: sp_unbindrule (Transact-SQL) | Documenti Microsoft
+title: sp_unbindrule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_unbindrule
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be14a4885cea481edda6ba7465ac2c5aa969ec1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d7a014b00a5fba5192e3bd9227f88968980dfd89
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257437"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028924"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,19 +55,19 @@ sp_unbindrule [ @objname = ] 'object_name'
 >  *object_name* può contenere parentesi quadre **[]** come caratteri delimitatori degli identificatori. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
  [  **@futureonly=** ] **'***futureonly_flag***'**  
- Utilizzato solo per disassociare una regola da un tipo di dati alias. *futureonly_flag* viene **varchar(15)**, con un valore predefinito è NULL. Quando *futureonly_flag* è **futureonly**, le colonne esistenti di tale tipo di dati non si perdono la regola specificata.  
+ Utilizzato solo per disassociare una regola da un tipo di dati alias. *futureonly_flag* viene **varchar(15)**, con un valore predefinito è NULL. Quando *futureonly_flag* viene **futureonly**, le colonne esistenti di tale tipo di dati non si perdono la regola specificata.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Per visualizzare il testo di una regola, eseguire **sp_helptext** specificando il nome della regola come parametro.  
   
- Quando si disassocia una regola, le informazioni sul binding vengono rimosse dal **Columns** tabella se la regola è associata a una colonna e dal **Sys. Types** se la regola è associata a un tipo di dati alias di tabella.  
+ Quando una regola non è associata, le informazioni sul binding vengono rimosse dal **Sys. Columns** tabella se la regola è stata associata a una colonna e dal **Sys. Types** se la regola è stata associata a un tipo di dati alias di tabella.  
   
- Una regola disassociata da un tipo di dati alias viene disassociata anche dalle colonne a cui è applicato tale tipo di dati. La regola potrebbe tuttavia rimanere associata alle colonne i cui tipi di dati è sono modificati successivamente tramite la clausola ALTER COLUMN di un'istruzione ALTER TABLE, in particolare, è necessario annullare la regola da queste colonne tramite **sp_unbindrule** e specificando il nome della colonna.  
+ Una regola disassociata da un tipo di dati alias viene disassociata anche dalle colonne a cui è applicato tale tipo di dati. La regola potrebbe tuttavia rimanere associata alle colonne con tipi di dati è sono modificati successivamente tramite la clausola ALTER COLUMN di un'istruzione ALTER TABLE, è necessario disassociare la regola da queste colonne in modo specifico usando **sp_unbindrule** e specificando la nome della colonna.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per disassociare una regola dalla colonna di una tabella è necessaria l'autorizzazione ALTER sulla tabella. Per disassociare una regola da un tipo di dati alias è necessaria l'autorizzazione CONTROL sul tipo di dati o l'autorizzazione ALTER sullo schema a cui appartiene il tipo.  
   
 ## <a name="examples"></a>Esempi  
@@ -111,7 +111,7 @@ EXEC sp_unbindrule '[t.4].c1';
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
  [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   

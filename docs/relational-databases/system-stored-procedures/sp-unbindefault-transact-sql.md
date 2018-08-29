@@ -1,5 +1,5 @@
 ---
-title: sp_unbindefault (Transact-SQL) | Documenti Microsoft
+title: sp_unbindefault (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_unbindefault
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80453657de70133f269b35387813389ecb7cff0a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 51d6461bf5ad23cc39853a86054652bb8d20b63a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262319"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031923"
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,15 +57,15 @@ sp_unbindefault [ @objname = ] 'object_name'
 >  *object_name* può contenere parentesi quadre **[]** come caratteri delimitatori degli identificatori. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
  [  **@futureonly=** ] **'***futureonly_flag***'**  
- Utilizzato solo per disassociare un valore predefinito da un tipo di dati alias. *futureonly_flag* viene **varchar(15)**, con un valore predefinito è NULL. Quando *futureonly_flag* è **futureonly**, le colonne esistenti del tipo di dati non viene disassociato il valore predefinito specificato.  
+ Utilizzato solo per disassociare un valore predefinito da un tipo di dati alias. *futureonly_flag* viene **varchar(15)**, con un valore predefinito è NULL. Quando *futureonly_flag* viene **futureonly**, le colonne esistenti del tipo di dati non viene disassociato il valore predefinito specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Per visualizzare il testo di un valore predefinito, eseguire **sp_helptext** con il nome del valore predefinito come parametro.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per disassociare un valore predefinito da una colonna di una tabella, è necessario disporre dell'autorizzazione ALTER per la tabella. Per disassociare un valore predefinito da un tipo di dati alias, è necessario disporre dell'autorizzazione CONTROL per il tipo o dell'autorizzazione ALTER per lo schema a cui il tipo appartiene.  
   
 ## <a name="examples"></a>Esempi  
@@ -108,7 +108,7 @@ EXEC sp_unbindefault '[t.3].c1';
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
  [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   

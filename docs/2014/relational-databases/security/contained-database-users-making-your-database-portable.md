@@ -12,16 +12,15 @@ helpviewer_keywords:
 - contained database, users
 - user [SQL Server], about contained database users
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bf2413a954c0034e8122586f1054bdc0cffef2db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84395743cd55b0229b7e97310559fa593331126c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294712"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024748"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utenti di database indipendente: rendere portabile un database
   Usare gli utenti di database indipendente per autenticare le connessioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] a livello di database. Un database indipendente è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (e del database master) che ospita il database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta gli utenti di database indipendente per l'autenticazione di Windows e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando si usa [!INCLUDE[ssSDS](../../includes/sssds-md.md)], combinare gli utenti di del database indipendente con le regole firewall a livello di database. Questo argomento illustra le differenze e i vantaggi correlati all'uso del modello di database indipendente rispetto al modello tradizionale basato su account di accesso/utente e alle regole firewall a livello di server o Windows. L'uso del modello tradizionale basato su account di accesso/utente e delle regole firewall a livello di server può essere ancora necessario in scenari specifici, per la gestibilità o per la logica di business dell'applicazione.  

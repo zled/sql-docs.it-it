@@ -1,5 +1,5 @@
 ---
-title: sp_changesubstatus (Transact-SQL) | Documenti Microsoft
+title: sp_changesubstatus (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94c26330636d4e13fe84a2776a72315a418d3d96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 269b2eab987560b2c043c887d7a90c2c4ddc1a95
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993468"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019438"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,25 +73,25 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**. Se *pubblicazione* non viene specificato, tutte le pubblicazioni sono interessate.  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**. Se *publication* non viene specificato, tutte le pubblicazioni sono interessate.  
   
  [  **@article=**] **'***articolo***'**  
  Nome dell'articolo. Deve essere univoco all'interno della pubblicazione. *articolo* viene **sysname**, il valore predefinito è **%**. Se *articolo* non viene specificato, tutti gli articoli sono interessati.  
   
  [  **@subscriber=**] **'***sottoscrittore***'**  
- Nome del Sottoscrittore di cui si desidera modificare lo stato. *Sottoscrittore* viene **sysname**, il valore predefinito è **%**. Se *sottoscrittore* viene omesso, viene modificato lo stato per tutti i sottoscrittori per l'articolo specificato.  
+ Nome del Sottoscrittore di cui si desidera modificare lo stato. *Sottoscrittore* viene **sysname**, il valore predefinito è **%**. Se *sottoscrittore* non viene specificato, lo stato viene modificato per tutti i sottoscrittori per l'articolo specificato.  
   
  [  **@status =**] **'***stato***'**  
- Stato della sottoscrizione nel **syssubscriptions** tabella. *lo stato* viene **sysname**e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
+ Stato della sottoscrizione nella **syssubscriptions** tabella. *lo stato* viene **sysname**e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Attiva**|Il Sottoscrittore è sincronizzato e in fase di ricezione dei dati.|  
-|**Inattivo**|Alla voce relativa al Sottoscrittore non è associata alcuna sottoscrizione.|  
-|**sottoscrizione**|Il Sottoscrittore richiede dati, ma non è ancora sincronizzato.|  
+|**inattivo**|Alla voce relativa al Sottoscrittore non è associata alcuna sottoscrizione.|  
+|**sottoscritto**|Il Sottoscrittore richiede dati, ma non è ancora sincronizzato.|  
   
  [  **@previous_status=**] **'***previous_status***'**  
- Stato precedente della sottoscrizione. *previous_status* viene **sysname**, con un valore predefinito è NULL. Questo parametro consente di modificare le sottoscrizioni che lo sono specificato, consentendo in tal modo le funzioni del gruppo su un set specifico di sottoscrizioni (ad esempio, impostando tutte attive nuovamente le sottoscrizioni a **sottoscritto**).  
+ Stato precedente della sottoscrizione. *previous_status* viene **sysname**, con un valore predefinito è NULL. Questo parametro consente di modificare tutte le sottoscrizioni che hanno attualmente lo stato specificato, consentendo in tal modo le funzioni di gruppo in un set specifico di sottoscrizioni (ad esempio, impostando tutte attive verso le sottoscrizioni **sottoscritto**).  
   
  [  **@destination_db=**] **'***destination_db***'**  
  Nome del database di destinazione. *destination_db* viene **sysname**, il valore predefinito è **%**.  
@@ -100,12 +100,12 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  Frequenza di pianificazione dell'attività di distribuzione. *frequency_type* viene **int**, con un valore predefinito è NULL.  
   
  [  **@frequency_interval=**] *frequency_interval*  
- È il valore da applicare alla frequenza impostata da *frequency_type*. *frequency_interval* viene **int**, con un valore predefinito è NULL.  
+ Il valore da applicare alla frequenza impostata *frequency_type*. *frequency_interval* viene **int**, con un valore predefinito è NULL.  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- Data dell'attività di distribuzione. Questo parametro viene utilizzato quando *frequency_type* è impostato su 32 (mensile relativa). *frequency_relative_interval* viene **int**, e può essere uno dei valori seguenti.  
+ Data dell'attività di distribuzione. Questo parametro viene utilizzato quando *frequency_type* è impostato su 32 (mensile relativa). *frequency_relative_interval* viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Primo|  
 |**2**|Secondo|  
@@ -118,9 +118,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* viene **int**, con un valore predefinito è NULL.  
   
  [  **@frequency_subday=**] *frequency_subday*  
- Frequenza di ripianificazione in minuti durante il periodo definito. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
+ Frequenza di ripianificazione in minuti durante il periodo definito. *frequency_subday* viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Secondo|  
@@ -129,7 +129,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |NULL (predefinito)||  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- Intervallo per *frequency_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
+ È l'intervallo *frequency_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
  Ora del giorno della prima esecuzione pianificata dell'attività di distribuzione, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è NULL.  
@@ -144,7 +144,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  Data dell'ultima esecuzione pianificata dell'attività di distribuzione, nel formato AAAAMMGG. *active_end_date* viene **int**, con un valore predefinito è NULL.  
   
  [  **@optional_command_line=**] **'***optional_command_line***'**  
- Riga di comando facoltativa. *optional_command_line* viene **nvarchar(4000**, con un valore predefinito è NULL.  
+ Riga di comando facoltativa. *optional_command_line* viene **nvarchar (4000)**, con un valore predefinito è NULL.  
   
  [  **@distribution_jobid=**] *distribution_jobid*  
  ID del processo dell'agente di distribuzione nel server di distribuzione per la sottoscrizione quando lo stato inattivo della sottoscrizione viene modificato da inattivo ad attivo. Negli altri casi non è definito. Se una chiamata a questa stored procedure richiede l'utilizzo di più agenti di distribuzione, il risultato non è definito. *distribution_jobid* viene **Binary (16)**, con un valore predefinito è NULL.  
@@ -157,23 +157,23 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
  [  **@offloadagent=** ] *remote_agent_activation*  
  > [!NOTE]  
->  L'attivazione remota dell'agente è deprecata e non è più supportata. Questo parametro è supportato solo per compatibilità con gli script di versioni precedenti. Impostazione *remote_agent_activation* su un valore diverso da **0** genera un errore.  
+>  L'attivazione remota dell'agente è deprecata e non è più supportata. Questo parametro è supportato solo per compatibilità con gli script di versioni precedenti. L'impostazione *remote_agent_activation* su un valore diverso da **0** genera un errore.  
   
  [  **@offloadserver=** ] **'***remote_agent_server_name***'**  
  > [!NOTE]  
->  L'attivazione remota dell'agente è deprecata e non è più supportata. Questo parametro è supportato solo per compatibilità con gli script di versioni precedenti. Impostazione *remote_agent_server_name* su qualsiasi valore diverso da NULL genera un errore.  
+>  L'attivazione remota dell'agente è deprecata e non è più supportata. Questo parametro è supportato solo per compatibilità con gli script di versioni precedenti. L'impostazione *remote_agent_server_name* su qualsiasi valore diverso da NULL genera un errore.  
   
  [ **@dts_package_name**=] **'***dts_package_name***'**  
  Specifica il nome del pacchetto Data Transformation Services (DTS). *dts_package_name* è un **sysname**, con un valore predefinito è NULL. Ad esempio, per un pacchetto denominato **DTSPub_Package** si specificherà `@dts_package_name = N'DTSPub_Package'`.  
   
  [ **@dts_package_password**=] **'***dts_package_password***'**  
- Specifica la password per il pacchetto. *dts_package_password* viene **sysname** con un valore predefinito è NULL, che indica che la proprietà della password deve rimanere invariata.  
+ Specifica la password per il pacchetto. *dts_package_password* viene **sysname** con valore predefinito è NULL, che indica che la proprietà della password deve rimanere invariata.  
   
 > [!NOTE]  
 >  A ogni pacchetto DTS deve essere associata una password.  
   
  [ **@dts_package_location**=] *dts_package_location*  
- Specifica la posizione del pacchetto. *dts_package_location* è un **int**, il valore predefinito è **0**. Se **0**, il pacchetto si trova nel server di distribuzione. Se **1**, il percorso del pacchetto corrisponde al sottoscrittore. Il percorso del pacchetto può essere **distributore** o **sottoscrittore**.  
+ Specifica la posizione del pacchetto. *dts_package_location* è un **int**, il valore predefinito è **0**. Se **0**, il pacchetto si trova nel server di distribuzione. Se **1**, il percorso del pacchetto corrisponde al sottoscrittore. La posizione del pacchetto può essere **distributore** oppure **sottoscrittore**.  
   
  [ **@skipobjectactivation**=] *skipobjectactivation*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -185,21 +185,21 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  Specifica un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere utilizzato quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  *server di pubblicazione* non deve essere utilizzata quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_changesubstatus** viene utilizzata nella replica snapshot e transazionale.  
   
- **sp_changesubstatus** modificherà lo stato del sottoscrittore nel **syssubscriptions** tabella con stato modificato. Se necessario, aggiorna lo stato degli articoli nel **sysarticles** tabella impostandolo su attivo o inattivo. Se necessario, imposta il flag di replica o disattivare **sysobjects** tabella per la tabella replicata.  
+ **sp_changesubstatus** modificherà lo stato del sottoscrittore nel **syssubscriptions** tabella con lo stato modificato. Se necessario, aggiorna lo stato di articolo nel **sysarticles** tabella impostandolo su attivo o inattivo. Se necessario, imposta il flag di replica attiva o disattiva **sysobjects** tabella per la tabella replicata.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server, **db_owner** ruolo predefinito del database o l'autore della sottoscrizione può eseguire **sp_changesubstatus**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server **db_owner** ruolo predefinito del database o il creatore della sottoscrizione può eseguire **sp_changesubstatus**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [stored procedure sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   

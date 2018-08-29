@@ -17,16 +17,15 @@ helpviewer_keywords:
 - characters [SQL Server], password policies
 - strong passwords [SQL Server]
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 58aea76071a92e1ea9638a745d7a8493f9b778ec
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bf9bac77913385c4cdf2d219fbacb5a380e5101b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083013"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025928"
 ---
 # <a name="strong-passwords"></a>Password complesse
   Le password possono costituire il punto debole nell'ambito distribuzione della sicurezza in un server. È dunque necessario prestare grande attenzione alla scelta delle password. Una password complessa ha le caratteristiche seguenti:  
@@ -53,7 +52,7 @@ ms.locfileid: "39083013"
   
 -   Include o inizia con uno spazio.  
   
--   Inizia con il simbolo $ o \@ carattere.  
+-   Inizia con il carattere $ o \@.  
   
  Gli account di accesso e le password usati in una stringa di connessione OLE DB o ODBC non devono contenere i caratteri seguenti: [] {}() , ; ? * ! \@(Indici per tabelle con ottimizzazione per la memoria). Questi caratteri vengono utilizzati per inizializzare una connessione o per separare i relativi valori.  
   

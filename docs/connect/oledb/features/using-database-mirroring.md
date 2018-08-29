@@ -19,14 +19,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, database mirroring
 - OLE DB Driver for SQL Server, database mirroring
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7688a2ca435a3bf342205f04af4544f8e306f40c
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 1e15ed88f461fac8297fae327c14366c345346a9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108863"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024281"
 ---
 # <a name="using-database-mirroring"></a>Utilizzo del mirroring del database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "39108863"
   
  Il mirroring del database, introdotto in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], è una soluzione per aumentare la disponibilità del database e la ridondanza dei dati. Poiché il driver OLE DB per SQL Server offre supporto implicito per il mirroring del database, dopo aver eseguito la configurazione per il database, lo sviluppatore non deve scrivere codice né intraprendere altre azioni.  
   
- Il mirroring del database, implementato per ogni database, consente di conservare una copia di un database di produzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un server di standby. Tale server può essere warm standby o hot standby, a seconda della configurazione e dello stato della sessione di mirroring del database. Un server hot standby supporta il failover rapido senza perdita di transazioni di cui è stato eseguito il commit, mentre un server warm standby supporta la forzatura del servizio (con possibile perdita di dati).  
+ Il mirroring del database, implementato per ogni database, consente di conservare una copia di un database di produzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un server di standby. Tale server può essere warm standby o hot standby, a seconda della configurazione e dello stato della sessione di mirroring del database. Un server hot standby supporta il failover rapido senza perdita di transazioni di cui è stato eseguito il commit, mentre un server warm standby supporta la forzatura del servizio (con possibile perdita di dati).  
   
  Il database di produzione è chiamato *database principale*, mentre la copia di standby è chiamata *database mirror*. Il database principale e il database mirror devono trovarsi in istanze separate di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (istanze server) e, se possibile, risiedere in computer separati.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "39108863"
  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità del driver OLE DB per SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
+ [Driver OLE DB per funzionalità di SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Connettere client a una sessione di mirroring del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Mirroring del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

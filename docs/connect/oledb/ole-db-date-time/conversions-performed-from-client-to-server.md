@@ -14,21 +14,21 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d4b68de60f6d1ffa345018478b5abc70ecf2839b
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: b2339270e54cd05209e4843c66e3339b9aae270f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109823"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028030"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversioni eseguite da client a server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Questo articolo descrive le conversioni di data/ora eseguite tra un'applicazione client scritta con il Driver OLE DB per SQL Server e [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (o versione successiva).  
+  Vengono descritte le conversioni di data/ora eseguite tra un'applicazione client scritta con la specifica driver OLE DB per SQL Server e [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (o versione successiva).  
   
 ## <a name="conversions"></a>Conversioni  
  In questo articolo vengono descritte le conversioni eseguite sul client. Se il client specifica una precisione frazionaria dei secondi per un parametro che differisce da quella definita nel server, la conversione client potrebbe comportare un errore nei casi in cui il server consentirebbe l'esecuzione dell'operazione. In particolare, il client tratta come errore qualsiasi troncamento dei secondi frazionari, mentre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] arrotonda valori al secondo intero più vicino.  

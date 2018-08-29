@@ -1,5 +1,5 @@
 ---
-title: extended_procedures (Transact-SQL) | Documenti Microsoft
+title: Sys. extended_procedures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - sys.extended_procedures catalog view
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be24a61208f854976b45a7ba927e83a4c87fecb5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a753cdd737512d8a450e1a7156c477e19b5e45fd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177997"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021268"
 ---
 # <a name="sysextendedprocedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni oggetto che rappresenta una stored procedure estesa con **sys** = X. Poiché le stored procedure estese sono installate nel **master** database, sono visibili solo da quel contesto di database. Selezionando il **extended_procedures** vista in qualsiasi altro contesto di database restituirà un set di risultati vuoto.  
+  Contiene una riga per ogni oggetto che rappresenta una stored procedure estesa, con **sys.objects.type** = X. Poiché le stored procedure estese sono installate nel **master** database, sono visibili solo da quel contesto di database. Selezionando il **Sys. extended_procedures** vista in qualsiasi altro contesto di database restituirà un set di risultati vuoto.  
 
   
 |Nome colonna|Tipo di dati|Description|  
@@ -42,7 +42,7 @@ ms.locfileid: "33177997"
 |**\<Colonne ereditate da Sys. Objects >**||Per un elenco delle colonne ereditate da questa vista, vedere [Sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**Nome_DLL**|**nvarchar(260)**|Nome, incluso il percorso, della DLL di questa stored procedure estesa.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

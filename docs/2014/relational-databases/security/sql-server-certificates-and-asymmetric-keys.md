@@ -11,16 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server], certificates and asymmetric keys
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0e638dfb02fb5b944a6d7607cdc3bb320a8aeb94
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e789ea94a33db2f53a526c00a588d259eba69c1b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191591"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027917"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificati SQL Server e chiavi simmetriche
   La crittografia a chiave pubblica (PKI) è un sistema di tutela della segretezza dei messaggi in cui un utente crea una chiave *pubblica* e una chiave *privata* . La chiave privata viene tenuta segreta, mentre la chiave pubblica può essere distribuita ad altri. Sebbene le chiavi siano collegate da una relazione matematica, non è possibile estrapolare facilmente la chiave privata utilizzando la chiave pubblica. La chiave pubblica viene utilizzata per crittografare dati mentre quella privata viene impiegata per decrittografarli. Un messaggio crittografato con la chiave pubblica può essere decrittografato solo utilizzando la chiave privata corretta. Poiché si tratta di due chiavi diverse, queste chiavi sono *asimmetriche*.  
@@ -73,7 +72,7 @@ ms.locfileid: "37191591"
 |[makecert](http://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Vengono creati certificati.|  
 |[sn](http://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Vengono creati nomi sicuri per le chiavi simmetriche.|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Scelta di un algoritmo di crittografia](encryption/choose-an-encryption-algorithm.md)  
   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  

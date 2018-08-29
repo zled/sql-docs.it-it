@@ -1,5 +1,5 @@
 ---
-title: sp_reinitpullsubscription (Transact-SQL) | Documenti Microsoft
+title: sp_reinitpullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1f044d6ae29565326b130e248e4e0e770ab8e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ed19307a7a79856b808ade07338e2e8d595fdf4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997078"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018254"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,24 +57,24 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
  Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è all, che indica che tutte le sottoscrizioni per la reinizializzazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_reinitpullsubscription** viene utilizzata nella replica transazionale.  
   
- **sp_reinitpullsubscription** non è supportato per la replica transazionale peer-to-peer.  
+ **sp_reinitpullsubscription** non è supportata per la replica transazionale peer-to-peer.  
   
  **sp_reinitpullsubscription** può essere chiamato dal sottoscrittore per reinizializzare la sottoscrizione, durante l'esecuzione successiva dell'agente di distribuzione.  
   
- Sottoscrizioni alle pubblicazioni create con un valore di **false** per **@immediate_sync** non è possibile reinizializzare dal sottoscrittore.  
+ Sottoscrizioni alle pubblicazioni create con un valore pari **false** per **@immediate_sync** non è possibile reinizializzare dal sottoscrittore.  
   
- È possibile reinizializzare una sottoscrizione pull, eseguire **sp_reinitpullsubscription** nel Sottoscrittore o **sp_reinitsubscription** nel server di pubblicazione.  
+ È possibile reinizializzare una sottoscrizione pull, eseguire **sp_reinitpullsubscription** nel Sottoscrittore oppure **sp_reinitsubscription** nel server di pubblicazione.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_reinitpullsubscription**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_reinitpullsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Reinizializzare una sottoscrizione](../../relational-databases/replication/reinitialize-a-subscription.md)   

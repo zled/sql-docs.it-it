@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33dcb1a7e9b00968b4b02aa2d32b2ab0cc769d10
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 5e8a0435a606152852c39450801497cd100fe90d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39455211"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785982"
 ---
 # <a name="caching-result-set-data-sample"></a>Esempio di memorizzazione nella cache dei dati dei set di risultati
 
@@ -30,7 +30,7 @@ Con questa applicazione di esempio [!INCLUDE[jdbcNoVersion](../../../includes/jd
 > [!NOTE]  
 > La limitazione del numero di righe inserite nella cache del client è un'operazione diversa dalla limitazione del numero totale di righe contenute in un set di risultati. Per controllare il numero totale di righe contenute in un set di risultati, usare il metodo [setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) dell'oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), ereditato dagli oggetti [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
-Per impostare un limite per il numero di righe memorizzate nella cache del client, è prima necessario usare un cursore lato server quando si crea uno degli oggetti Statement specificando esplicitamente il tipo di cursore da usare durante la creazione dell'oggetto Statement. Ad esempio, nel driver JDBC è disponibile il tipo di cursore TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, ovvero un cursore lato server di sola lettura, fast forward only, da usare con i database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Per impostare un limite per il numero di righe memorizzate nella cache del client, è prima necessario usare un cursore lato server quando si crea uno degli oggetti Statement specificando esplicitamente il tipo di cursore da usare durante la creazione dell'oggetto Statement. Ad esempio, nel driver JDBC è disponibile il tipo di cursore TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, ovvero un cursore lato server di sola lettura, fast forward only, da usare con i database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 > Un'alternativa all'utilizzo del tipo di cursore specifico per SQL Server è l'utilizzo della proprietà della stringa di connessione selectMethod, impostandone il valore su "cursor". Per altre informazioni sui tipi di cursore supportati dal driver JDBC, vedere [informazioni sui tipi di cursore](../../../connect/jdbc/understanding-cursor-types.md).  

@@ -20,16 +20,15 @@ helpviewer_keywords:
 - audit action groups [SQL Server]
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b8dd9598fa04b51f250daacaab010739b3855341
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9425c18109817aa3f0112262b6b0928d4e77cf2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225281"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029804"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Azioni e gruppi di azioni di SQL Server Audit
   La funzionalità [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di controllare gruppi di eventi ed eventi singoli a livello di server e di database. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](sql-server-audit-database-engine.md).  

@@ -1,5 +1,5 @@
 ---
-title: sp_browsemergesnapshotfolder (Transact-SQL) | Documenti Microsoft
+title: sp_browsemergesnapshotfolder (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsemergesnapshotfolder
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e69c698e36e850a76178a279f47a99407376585
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 153abe2a9466c6f0496dfe86b852571828111a43
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32987276"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020999"
 ---
 # <a name="spbrowsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
  Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -57,15 +56,15 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar(2000)**|Percorso completo della directory snapshot.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_browsemergesnapshotfolder** viene utilizzata nella replica di tipo merge.  
   
  Se la pubblicazione è configurata in modo da generare file di snapshot sia nella directory di lavoro del server di pubblicazione che nella cartella snapshot del server di pubblicazione, nel set di risultati saranno presenti due righe, delle quali la prima contiene la cartella snapshot della pubblicazione e la seconda contiene la directory di lavoro del server di pubblicazione.  
   
  **sp_browsemergesnapshotfolder** è utile per determinare la directory in cui vengono generati i file di snapshot di tipo merge. Il percorso della cartella e il relativo contenuto possono quindi essere copiati su supporti rimovibili e lo snapshot può essere utilizzato per la sincronizzazione di una sottoscrizione da una posizione snapshot alternativa.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_browsemergesnapshotfolder**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_browsemergesnapshotfolder**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

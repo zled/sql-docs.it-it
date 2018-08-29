@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_profile_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_update_profile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_profile_sp
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
-caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a1b6d810355590ddc69c0b57fa0fc3e24e461696
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c4cbd14af00e8a2c4858c611b051cc0bc03a1993
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259651"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030643"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,29 +45,29 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
   
 ## <a name="arguments"></a>Argomenti  
  [ **@profile_id** = ] *profile_id*  
- ID del profilo da aggiornare. *profile_id* viene **int**, con un valore predefinito è NULL. Almeno uno dei *profile_id* o *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
+ ID del profilo da aggiornare. *profile_id* viene **int**, con un valore predefinito è NULL. Almeno uno dei *profile_id* oppure *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- Nome del profilo da aggiornare oppure nuovo nome del profilo. *profile_name* viene **sysname**, con un valore predefinito è NULL. Almeno uno dei *profile_id* o *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
+ Nome del profilo da aggiornare oppure nuovo nome del profilo. *profile_name* viene **sysname**, con un valore predefinito è NULL. Almeno uno dei *profile_id* oppure *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
   
  [ **@description** =] **'***descrizione***'**  
  Nuova descrizione del profilo. *Descrizione* viene **nvarchar(256)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se si specificano sia l'ID che il nome del profilo, la procedura modifica il nome del profilo utilizzando il nome specificato e quindi aggiorna la descrizione del profilo. Se si specifica solo uno di questi argomenti, la procedura aggiorna la descrizione del profilo.  
   
  La stored procedure **sysmail_update_profile_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
  **A. Modifica della descrizione di un profilo**  
   
- Nell'esempio seguente modifica la descrizione per il profilo denominato `AdventureWorks Administrator` nel **msdb** database.  
+ Nell'esempio seguente modifica la descrizione del profilo denominato `AdventureWorks Administrator` nella **msdb** database.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profile_sp  
@@ -76,7 +75,7 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
     ,@description = 'Administrative mail profile.';  
 ```  
   
- **B. Modifica del nome e una descrizione di un profilo**  
+ **B. Modifica del nome e descrizione di un profilo**  
   
  Nell'esempio seguente vengono modificati il nome e la descrizione del profilo con ID `750`.  
   

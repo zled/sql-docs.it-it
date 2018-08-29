@@ -1,5 +1,5 @@
 ---
-title: sp_publication_validation (Transact-SQL) | Documenti Microsoft
+title: sp_publication_validation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f893c6a42d16c9d36d2a28a2c77c80bc62fa56bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 878d8bc69813664d29a09e58daa7e6f7e4b8db76
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000568"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030535"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,42 +55,42 @@ sp_publication_validation [ @publication = ] 'publication'
  [**@rowcount_only=**] *rowcount_only*  
  Indica se restituire solo il conteggio delle righe per la tabella. *rowcount_only* viene **smallint** e può essere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
-|**0**|Esegue un checksum compatibile con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Nota: Quando un articolo è filtrato orizzontalmente, viene eseguita un'operazione di conteggio delle righe anziché un'operazione di checksum.|  
+|**0**|Esegue un checksum compatibile con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Nota: Quando un articolo è filtrato orizzontalmente, invece di un'operazione di checksum viene eseguita un'operazione di conteggio delle righe.|  
 |**1** (impostazione predefinita)|Esegue solo la convalida mediante conteggio delle righe.|  
-|**2**|Esegue la convalida mediante conteggio delle righe e checksum binario.<br /><br /> Nota: Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori versione 7.0, solo una convalida mediante conteggio delle righe viene eseguita.|  
+|**2**|Esegue la convalida mediante conteggio delle righe e checksum binario.<br /><br /> Nota: Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori versione 7.0, solo una convalida mediante conteggio delle righe viene eseguito.|  
   
  [**@full_or_fast=**] *full_or_fast*  
  Metodo utilizzato per il conteggio delle righe. *full_or_fast* viene **tinyint** e può essere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**0**|Esegue un conteggio completo con COUNT(*).|  
-|**1**|Un conteggio rapido in **sysindexes**. Il conteggio delle righe in [Sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) è molto più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché [Sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) in modo differito è aggiornato, il conteggio delle righe potrebbe non essere accurata.|  
-|**2** (impostazione predefinita)|Esegue un conteggio rapido condizionale eseguendo innanzitutto un tentativo con il metodo rapido. Se il metodo rapido evidenzia delle differenze, viene applicato il metodo completo. Se *expected_rowcount* è NULL e la stored procedure viene utilizzata per ottenere il valore, viene utilizzato sempre un Count completo.|  
+|**1**|Un conteggio rapido in **sysindexes**. Conteggio delle righe [sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) è molto più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché [sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) in modalità differita è aggiornato, il conteggio delle righe potrebbe non essere accurata.|  
+|**2** (impostazione predefinita)|Esegue un conteggio rapido condizionale eseguendo innanzitutto un tentativo con il metodo rapido. Se il metodo rapido evidenzia delle differenze, viene applicato il metodo completo. Se *expected_rowcount* è NULL e la stored procedure viene utilizzata per ottenere il valore, viene utilizzato sempre un Count (\*) completo.|  
   
  [  **@shutdown_agent=**] *shutdown_agent*  
- Indica se l'agente di distribuzione deve essere chiuso immediatamente dopo il completamento della convalida. *shutdown_agent* viene **bit**, il valore predefinito è **0**. Se **0**, l'agente di replica non viene arrestato. Se **1**, l'agente di replica viene chiuso dopo l'ultimo articolo è convalidato.  
+ Indica se l'agente di distribuzione deve essere chiuso immediatamente dopo il completamento della convalida. *shutdown_agent* viene **bit**, il valore predefinito è **0**. Se **0**, l'agente di replica non viene arrestato. Se **1**, l'agente di replica viene chiuso al termine della convalida dell'ultimo articolo.  
   
  [ **@publisher** =] **'***publisher***'**  
  Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere utilizzato quando si richiede la convalida in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  *server di pubblicazione* non deve essere utilizzata quando si richiede la convalida in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_publication_validation** viene utilizzata nella replica transazionale.  
   
- **sp_publication_validation** può essere chiamato in qualsiasi momento dopo l'attivazione degli articoli associati alla pubblicazione. Questa procedura può essere eseguita in modo manuale una sola volta oppure nell'ambito di un processo con pianificazione periodica per la convalida dei dati.  
+ **sp_publication_validation** può essere chiamato in qualsiasi momento dopo gli articoli associati alla pubblicazione sono stati attivati. Questa procedura può essere eseguita in modo manuale una sola volta oppure nell'ambito di un processo con pianificazione periodica per la convalida dei dati.  
   
- Se l'applicazione include sottoscrittori ad aggiornamento immediato **sp_publication_validation** rilevi errori di vario tipo. **sp_publication_validation** Calcola prima del conteggio delle righe o del checksum nel server di pubblicazione e quindi nel Sottoscrittore. Dato che il trigger per l'aggiornamento immediato può propagare un aggiornamento dal Sottoscrittore al server di pubblicazione dopo l'esecuzione del conteggio delle righe o del checksum nel server di pubblicazione ma prima del completamento di queste operazioni nel Sottoscrittore, i valori potrebbero cambiare. Per assicurarsi che i valori nel Sottoscrittore e nel server di pubblicazione non vengano modificati durante la convalida di una pubblicazione, arrestare il servizio Microsoft Distributed Transaction Coordinator (MS DTC) nel server di pubblicazione durante l'operazione di convalida.  
+ Se l'applicazione include sottoscrittori ad aggiornamento immediato **sp_publication_validation** rilevi errori. **sp_publication_validation** Calcola prima del conteggio delle righe o del checksum nel server di pubblicazione e quindi nel Sottoscrittore. Dato che il trigger per l'aggiornamento immediato può propagare un aggiornamento dal Sottoscrittore al server di pubblicazione dopo l'esecuzione del conteggio delle righe o del checksum nel server di pubblicazione ma prima del completamento di queste operazioni nel Sottoscrittore, i valori potrebbero cambiare. Per assicurarsi che i valori nel Sottoscrittore e nel server di pubblicazione non vengano modificati durante la convalida di una pubblicazione, arrestare il servizio Microsoft Distributed Transaction Coordinator (MS DTC) nel server di pubblicazione durante l'operazione di convalida.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_publication_validation**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_publication_validation**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Convalidare i dati nel Sottoscrittore](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
