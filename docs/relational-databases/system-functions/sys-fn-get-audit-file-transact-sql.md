@@ -25,13 +25,13 @@ caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9216f9babb03814fb7f644add94f20db7bcc4439
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 229544e74b8a4c8f541c547f185bb6a954f44807
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556911"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43097800"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ fn_get_audit_file ( file_pattern,
     
     Questo argomento deve includere sia un percorso (lettera di unità o condivisione di rete) che un nome di file, che può includere un carattere jolly. Un asterisco (*) è utilizzabile per raccogliere più file da un set di file di controllo. Esempio:  
   
-    -   **\<percorso >\\ \* ** : è possibile raccogliere tutti i file si trova nel percorso di controllo.  
+    -   **\<percorso >\\ \***  : è possibile raccogliere tutti i file si trova nel percorso di controllo.  
   
     -   **\<percorso > \LoginsAudit_{GUID}** : è possibile raccogliere tutti i file con il nome specificato e la coppia GUID di controllo.  
   
@@ -66,7 +66,7 @@ fn_get_audit_file ( file_pattern,
  
     Questo argomento viene usato per specificare l'URL blob (tra cui l'endpoint di archiviazione e il contenitore). Mentre non supporta un carattere jolly asterisco, è possibile usare un prefisso del nome del file parziale (blob) (anziché il nome del blob completo) per raccogliere più file (BLOB) che iniziano con questo prefisso. Esempio:
  
-      - **\<Storage_endpoint\>/\<contenitore\>/\<ServerName\>/\<DatabaseName\> / ** -consente di raccogliere tutti i file di controllo (BLOB) per il database specifico.    
+      - **\<Storage_endpoint\>/\<contenitore\>/\<ServerName\>/\<DatabaseName\> /**  -consente di raccogliere tutti i file di controllo (BLOB) per il database specifico.    
       
       - **\<Storage_endpoint\>/\<contenitore\>/\<ServerName\>/\<DatabaseName\> / \< AuditName\>/\<CreationDate\>/\<FileName\>xel** -raccoglie un file di controllo specifico (blob).
   

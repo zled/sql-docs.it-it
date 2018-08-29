@@ -17,13 +17,13 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f04b3c7e14e5b5394d1b49ce686ba9fbcabeb5c0
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 928b7b19a05398e47adea2e3197e3679709f6d90
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542671"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43108585"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Allocare handle e connettersi a SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "39542671"
   
 2.  Includere il file di intestazione specifico del driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Odbcss.h.  
   
-3.  Chiamare [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) con un **il parametro HandleType impostato** di SQL_HANDLE_ENV per inizializzare ODBC e allocare un handle di ambiente.  
+3.  Chiamare [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) con un **HandleType** SQL_HANDLE_ENV per inizializzare ODBC e allocare un handle di ambiente.  
   
-4.  Chiamare [la funzione SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) con **attributo** impostato su SQL_ATTR_ODBC_VERSION e **opzione ValuePtr** impostato su SQL_OV_ODBC3 per indicare l'applicazione utilizzerà una funzione ODBC 3. x-formato chiamate.  
+4.  Chiamare [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) con **attributo** impostato su SQL_ATTR_ODBC_VERSION e **ValuePtr** impostato su SQL_OV_ODBC3 per indicare l'applicazione userà una funzione ODBC in formato 3.x chiamate.  
   
 5.  Facoltativamente, richiamare [la funzione SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) per impostare l'ambiente di altre opzioni, oppure chiamare [SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403) per ottenere le opzioni di ambiente.  
   
-6.  Chiamare [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) con un **il parametro HandleType impostato** di su SQL_HANDLE_DBC per allocare un handle di connessione.  
+6.  Chiamare [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) con un **HandleType** SQL_HANDLE_DBC per allocare un handle di connessione.  
   
 7.  Facoltativamente, richiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) per impostare le opzioni di connessione, oppure chiamare [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) per ottenere le opzioni di connessione.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "39542671"
   
 11. Richiamare la funzione SQLDisconnect per disconnettersi da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e rendere disponibile la connessione gestire per una nuova connessione.  
   
-12. Chiamare [la funzione SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) con un **il parametro HandleType impostato** di SQL_HANDLE_DBC per liberare l'handle di connessione.  
+12. Chiamare [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) con un **HandleType** SQL_HANDLE_DBC per liberare l'handle di connessione.  
   
-13. Chiamare **la funzione SQLFreeHandle** con un **il parametro HandleType impostato** di SQL_HANDLE_ENV per liberare l'handle di ambiente.  
+13. Chiamare **SQLFreeHandle** con un **HandleType** SQL_HANDLE_ENV per liberare l'handle di ambiente.  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  

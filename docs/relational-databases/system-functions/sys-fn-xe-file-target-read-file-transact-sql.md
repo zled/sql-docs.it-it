@@ -26,13 +26,13 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9d21a49c24dd33ffebd00eae8e33ed9e4601706c
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 29a0eda47d510292d657bfdb7912a9fe8940b023
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39535711"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43099619"
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|Contenuto dell'evento in formato XML. Non ammette i valori Null.|  
 |file_name|**nvarchar(260)**|Nome del file che contiene l'evento. Non ammette i valori Null.|  
 |file_offset|**bigint**|Offset del blocco nel file che contiene l'evento. Non ammette i valori Null.|  
-|timestamp_utc|**datetime2**|**Si applica a **: da [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Data e ora (fuso orario UTC) dell'evento. Non ammette i valori Null.|  
+|timestamp_utc|**datetime2**|**Si applica a** : da [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Data e ora (fuso orario UTC) dell'evento. Non ammette i valori Null.|  
 
   
 ## <a name="remarks"></a>Note  

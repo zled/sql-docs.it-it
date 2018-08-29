@@ -17,13 +17,13 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 63eb495ba59966aec507ac4325986d1886a14e3c
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 718e3ba9099fb95de31b76b935629336104f4c8e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542341"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43109171"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,14 +33,14 @@ ms.locfileid: "39542341"
   
  Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può restituire più set di righe di risultati in una singola esecuzione dell'istruzione. Ogni set di risultati deve essere associato separatamente. Per ulteriori informazioni sull'associazione di più set di risultati, vedere [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md).  
   
- Lo sviluppatore può associare le colonne di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specifici tipi di dati C tramite il *TargetType* valore **SQL_C_BINARY**. Le colonne associate a tipi specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono portabili. I tipi di dati ODBC C specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiti corrispondono alle definizioni del tipo di DB-Library e gli sviluppatori di DB-Library che si occupano della portabilità delle applicazioni potrebbero sfruttare questa caratteristica.  
+ Lo sviluppatore può associare le colonne da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-tipi di dati C specifici usando la *TargetType* valore **SQL_C_BINARY**. Le colonne associate a tipi specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono portabili. I tipi di dati ODBC C specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiti corrispondono alle definizioni del tipo di DB-Library e gli sviluppatori di DB-Library che si occupano della portabilità delle applicazioni potrebbero sfruttare questa caratteristica.  
   
  Il troncamento dei dati di Reporting è un processo impegnativo per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client. È possibile evitare il troncamento assicurandosi che la larghezza di tutti i buffer di dati associati sia sufficiente per restituire i dati. Per i dati di tipo character, la larghezza deve includere lo spazio per un carattere di terminazione della stringa quando viene utilizzato il comportamento predefinito del driver per la terminazione della stringa. Ad esempio, associa una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char(5)** colonna in una matrice dei risultati di cinque caratteri troncamento per ogni valore recuperato. L'associazione della stessa colonna a una matrice di sei caratteri evita il troncamento fornendo un elemento character in cui archiviare il terminatore null. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) può essere utilizzato per recuperare dati long character e binari senza troncamento.  
   
- Per i tipi di dati di grande valore, se il buffer utente fornito non è sufficientemente grande da contenere l'intero valore della colonna, **SQL_SUCCESS_WITH_INFO** viene restituito e i dati della stringa"; avviso destra troncamento". Il **StrLen_or_IndPtr** argomento conterrà il numero di caratteri/byte memorizzati nel buffer.  
+ Per tipi di dati di valori di grandi dimensioni, se il buffer fornito dall'utente non è sufficientemente grande da contenere l'intero valore della colonna **SQL_SUCCESS_WITH_INFO** viene restituito e i dati della stringa"; viene generato l'avviso "troncamento a destra. Il **StrLen_or_IndPtr** argomento conterrà il numero di caratteri/byte archiviati nel buffer.  
   
 ## <a name="sqlbindcol-support-for-enhanced-date-and-time-features"></a>Supporto di SQLBindCol per le caratteristiche avanzate di data e ora  
- I valori di colonna risultato dei tipi data/ora vengono convertiti come descritto in [le conversioni da SQL a C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Si noti che per recuperare le colonne datetimeoffset e l'ora come le strutture corrispondenti (**SQL_SS_TIME2_STRUCT** e **SQL_SS_TIMESTAMPOFFSET_STRUCT**), *TargetType*deve essere specificato come **SQL_C_DEFAULT** o **SQL_C_BINARY**.  
+ I valori di colonna risultato dei tipi data/ora vengono convertiti come descritto in [le conversioni da SQL a C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Si noti che per recuperare le colonne time e datetimeoffset relative strutture corrispondenti (**SQL_SS_TIME2_STRUCT** e **valore SQL_SS_TIMESTAMPOFFSET_STRUCT**), *TargetType*deve essere specificato come **SQL_C_DEFAULT** oppure **SQL_C_BINARY**.  
   
  Per altre informazioni, vedere [data e miglioramenti per la fase &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.computed_columns (Transact-SQL) | Documenti di Microsoft
+title: Sys. computed_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sys.computed_columns catalog view
 ms.assetid: c962c619-e18f-4315-9251-8d9862462299
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9708eb66a90039a5098497863cbe54923e2651e2
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f518ac42aa976b6ef99cdcdf91e5d6b7a92fbb4d
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541431"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43097073"
 ---
 # <a name="syscomputedcolumns-transact-sql"></a>sys.computed_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "39541431"
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**\<colonne ereditate >**||Il **sys.computed_columns** vista restituisce tutte le colonne di **sys.columns** visualizzazione. Vengono inoltre restituite le colonne aggiuntive descritte di seguito. Per una descrizione delle colonne che la **sys.computed_columns** vista erediti da **sys.columns**, vedere [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md). Il valore di **is_computed** colonna è sempre impostato su 1 il **sys.computed_columns** visualizzazione.|  
+|**\<colonne ereditate >**||Il **Sys. computed_columns** vista restituisce tutte le colonne il **Sys. Columns** visualizzazione. Vengono inoltre restituite le colonne aggiuntive descritte di seguito. Per una descrizione delle colonne che il **Sys. computed_columns** vista viene ereditata dalla **Sys. Columns**, vedere [Sys. Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md). Il valore della **is_computed** colonna è sempre impostata su 1 nel **Sys. computed_columns** visualizzazione.|  
 |**Definizione**|**nvarchar(max)**|Testo SQL che definisce la colonna calcolata.|  
 |**uses_database_collation**|**bit**|1 = La definizione della colonna dipende dalle regole di confronto predefinite del database; altrimenti, 0. Tale dipendenza impedisce la modifica delle regole di confronto predefinite del database.|  
 |**is_persisted**|**bit**|La colonna calcolata è persistente.|  

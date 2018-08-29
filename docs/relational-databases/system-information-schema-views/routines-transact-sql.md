@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ROUTINES view
 - INFORMATION_SCHEMA.ROUTINES view
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5053bb891d06888776e49613803d71a4273da30f
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b4404c25500d6732db6f2346b1fdedb34e9bed8f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39548888"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43102018"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "39548888"
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|Nome specifico del catalogo. Questo nome corrisponde a ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Nome specifico dello schema.<br /><br /> **\*\* Importanti \* \* ** non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Nome specifico dello schema.<br /><br /> **\*\* Importanti \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |SPECIFIC_NAME|**nvarchar (** 128 **)**|Nome specifico del catalogo. Questo nome corrisponde a ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar (** 128 **)**|Nome del catalogo della funzione.|  
-|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nome dello schema che contiene la funzione.<br /><br /> **\*\* Importanti \* \* ** non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nome dello schema che contiene la funzione.<br /><br /> **\*\* Importanti \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|Nome della funzione.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Restituisce PROCEDURE per le stored procedure e FUNCTION per le funzioni.|  
 |MODULE_CATALOG|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  

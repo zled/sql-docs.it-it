@@ -16,13 +16,13 @@ ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e3b6d81acd05d45c08ced9eea678303b85c8e345
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: aeb005de29c36c82e96ddc8e3720e375ece2e144
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542651"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43111278"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Creare un file di formato per la copia bulk (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "39542651"
   
 3.  Connettersi a SQL Server.  
   
-4.  Chiamare [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) per impostare le seguenti informazioni:  
+4.  Chiamare [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) per impostare le informazioni seguenti:  
   
     -   Nome della tabella o della vista dalla quale o nella quale si desidera eseguire la copia bulk.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "39542651"
   
 5.  Chiamare [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) per impostare il numero di colonne.  
   
-6.  Chiamare [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) per ogni colonna definire le caratteristiche del file di dati.  
+6.  Chiamare [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) per ogni colonna per definirne le caratteristiche del file di dati.  
   
-7.  Chiamare [bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) per creare un file di formato che descriva il file di dati creato dall'operazione di copia di massa.  
+7.  Chiamare [bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) per creare un file di formato che descriva il file di dati deve essere creato dall'operazione di copia bulk.  
   
-8.  Chiamare [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) per eseguire l'operazione di copia di massa.  
+8.  Chiamare [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) per eseguire l'operazione di copia bulk.  
   
  L'esecuzione di un'operazione di copia bulk in questo modo determina la creazione di un file di dati che contiene i dati oggetto della copia bulk e un file di formato che descrive il layout del file di dati.  
   

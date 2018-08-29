@@ -22,16 +22,16 @@ helpviewer_keywords:
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 caps.latest.revision: 54
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 836ef351d2af7e187420b680a90382fc504b9e89
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 92f91703c86ced77d18a2a3d31669b8bd9ce8a6e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39563075"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43087195"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |DATABASE|Database definito dall'utente. Quando si rinomina un database è necessario specificare questo tipo di oggetto.|  
 |INDEX|Indice definito dall'utente. Se si rinomina un indice con statistiche, vengono automaticamente rinominate anche le statistiche.|  
 |OBJECT|Un elemento di un tipo registrato in [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). È ad esempio possibile utilizzare OBJECT per rinominare oggetti che includono vincoli (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), tabelle utente e regole.|  
-|STATISTICS|**Si applica a **: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Statistiche create in modo esplicito da un utente o in modo implicito con un indice. Se si rinominano le statistiche di un indice, viene automaticamente rinominato anche l'indice.|  
+|STATISTICS|**Si applica a** : da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Statistiche create in modo esplicito da un utente o in modo implicito con un indice. Se si rinominano le statistiche di un indice, viene automaticamente rinominato anche l'indice.|  
 |USERDATATYPE|Oggetto [i tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) aggiunti tramite l'istruzione [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) oppure [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
 ## <a name="return-code-values"></a>Valori restituiti  

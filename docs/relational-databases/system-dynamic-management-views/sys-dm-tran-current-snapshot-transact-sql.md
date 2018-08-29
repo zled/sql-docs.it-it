@@ -23,21 +23,21 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4fd2319dff2d5cc5e7f4948ba6c1994fe2407222
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0852b77191dee62d0296f052f4c2441aed105784
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562285"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43095035"
 ---
 # <a name="sysdmtrancurrentsnapshot-transact-sql"></a>sys.dm_tran_current_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce una tabella virtuale che visualizza tutte le transazioni attive al momento dell'avvio della transazione snapshot corrente. Se la transazione corrente non è una transazione snapshot, questa funzione non restituisce alcuna riga. **Sys.dm_tran_current_snapshot** è simile a **sys.dm_tran_transactions_snapshot**, ad eccezione del fatto che **sys.dm_tran_current_snapshot** restituisce solo le transazioni attive per il transazione snapshot corrente.  
+  Restituisce una tabella virtuale che visualizza tutte le transazioni attive al momento dell'avvio della transazione snapshot corrente. Se la transazione corrente non è una transazione snapshot, questa funzione non restituisce alcuna riga. **Sys.dm_tran_current_snapshot** è simile a **DM tran_transactions_snapshot**, ad eccezione del fatto che **sys.dm_tran_current_snapshot** restituisce solo le transazioni attive per il transazione snapshot corrente.  
   
 > [!NOTE]  
->  Per chiamare questo metodo da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys.dm_pdw_nodes_tran_current_snapshot**.  
+>  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_tran_current_snapshot**.  
   
 ## <a name="syntax"></a>Sintassi  
   

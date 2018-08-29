@@ -1,8 +1,8 @@
 ---
-title: Importare e consolidare i report di valutazione Data Migration Assistant (SQL Server) | Microsoft Docs
-description: Informazioni su come importare i report di valutazione da Data Migration Assistant in un database di SQL Server e di consolidare più report
+title: Valutare un'azienda e di consolidare i report di valutazione (SQL Server) | Microsoft Docs
+description: Informazioni su come utilizzare DMA per valutare un'azienda e consolidare i report di valutazione prima di aggiornare SQL Server o la migrazione al Database SQL di Azure.
 ms.custom: ''
-ms.date: 04/16/2018
+ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,128 +18,226 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: be9fc224093f0d5ae14372d4674a52589a2d4801
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
-ms.translationtype: MT
+ms.openlocfilehash: 0b17f375ddc6ad9bac5a3b5d3f9bf4df9c588a02
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781772"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118439"
 ---
-# <a name="import-and-consolidate-data-migration-assistant-assessment-reports"></a>Importare e consolidare i report di valutazione Data Migration Assistant
+# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e di consolidare i report di valutazione con DMA
 
-È possibile usare la riga di comando per eseguire valutazioni della migrazione in modalità automatica, a partire da v2.1 Data Migration Assistant. Questa funzionalità consente di eseguire le valutazioni su larga scala. I risultati della valutazione sotto forma di un file JSON o CSV.
+Le istruzioni dettagliate riportate aiutarti a usare Data Migration Assistant per eseguire una valutazione di scalabilità ha esito positivo per l'aggiornamento di SQL Server in locale o in esecuzione SQL Server in macchine virtuali di Azure o per eseguire la migrazione al Database SQL di Azure.
 
-È possibile valutare più database in un'unica istanza dell'utilità della riga di comando Data Migration Assistant ed esportare tutti i risultati delle valutazioni in un singolo file JSON. In alternativa, è possibile valutare un database in esecuzione e consolidare in un secondo momento i risultati di questi più file JSON in un database SQL.
+## <a name="prerequisites"></a>Prerequisiti
 
-Per informazioni su come eseguire Data Migration Assistant dalla riga di comando, vedere [eseguito Data Migration Assistant da riga di comando](../dma/dma-commandline.md). 
+- Designare un computer di strumenti della rete da cui verrà avviato DMA. Assicurarsi che il computer disponga della connettività per le destinazioni di SQL Server.
+- Scaricare e installare:
+    - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v3.6 o versione successiva.
+    - [PowerShell](http://aka.ms/wmf5download) versione 5.0 o versione successiva.
+    - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 o successiva.
+    - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 o versione successiva.
+    - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
+- Scaricare ed estrarre:
+    - Il [modello di Power BI i report di DMA](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
+    - Il [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip).
 
-## <a name="import-assessment-results-into-a-sql-server-database"></a>Importare i risultati della valutazione in un database di SQL Server
+## <a name="loading-the-powershell-modules"></a>Il caricamento di moduli di PowerShell
+Salvare i moduli di PowerShell nella directory dei moduli di PowerShell consente di chiamare i moduli senza la necessità di caricare in modo esplicito prima dell'uso.
 
-Usare lo script di PowerShell disponibile in questo [repository Github](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant) per importare i risultati della valutazione dai file JSON in un database di SQL Server.
+Per caricare i moduli, procedere come segue:
+1. Passare a c:\Programmi\Microsoft files\windowspowershell\modules. e quindi creare una cartella denominata **DataMigrationAssistant**.
+2. Aprire il [moduli di PowerShell](https://msdnshared.blob.core.windows.net/media/2018/03/PowerShell-Modules.zip)e quindi salvarle nella cartella creata.
+
+      ![Moduli di PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
+
+    Ogni cartella contiene il file psm1 associati, come illustrato nella figura seguente:
+
+   ![File psm1 i moduli di PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules-psm1-files.png)
+
+   > [!NOTE]
+   > La cartella e file psm1 che contiene deve avere lo stesso nome.
+
+   > [!IMPORTANT]
+   > Potrebbe essere necessario sbloccare i file di PowerShell dopo averle salvate nella directory di WindowsPowerShell per garantire che i moduli da caricare in modo corretto. Per sbloccare un file di PowerShell, fare doppio clic sul file, seleziona **delle proprietà**, selezionare la **Unblock** casella di testo e quindi selezionare **Ok**.
+
+   ![proprietà file psm1](../dma/media//dma-consolidatereports/dma-psm1-file-properties.png)
+
+    PowerShell è ora necessario caricare questi moduli automaticamente quando si avvia una nuova sessione di PowerShell.
+
+## <a name="create-an-inventory-of-sql-servers"></a>Creare un inventario delle istanze di SQL Server
+Prima di eseguire lo script di PowerShell per valutare i computer SQL Server, è necessario creare un inventario dei server SQL che si desidera valutare.
+
+L'inventario può trovarsi in uno dei due formati:
+- File CSV di Excel
+- Tabella di SQL Server
+
+### <a name="if-using-a-csv-file"></a>Se si usa un file CSV
+Quando si usa un file csv per importare i dati, assicurarsi che esistono solo due colonne di dati – **nome istanza** e **Nome Database**, e che le colonne non includono le righe di intestazione.
+ 
+ ![contenuto del file CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
+
+### <a name="if-using-sql-server-table"></a>Se si usa una tabella di SQL Server
+Creare un database denominato **EstateInventory** e una tabella denominata **DatabaseInventory**. La tabella che contiene questi dati di inventario può avere qualsiasi numero di colonne, fino a quando esistono quattro colonne seguenti:
+- ServerName
+- InstanceName
+- DatabaseName
+- AssessmentFlag
+
+Se questo database non è presente nel computer gli strumenti, verificare che il computer di strumenti disponga della connettività di rete a questa istanza di SQL Server.
+
+Il vantaggio dell'uso di una tabella di SQL Server tramite un file CSV è che è possibile usare la colonna del contrassegno della valutazione per controllare l'istanza o database che ottiene prelevato per la valutazione, che rende più semplice separare le valutazioni in blocchi più piccoli.  Si possono quindi estendersi su più valutazioni (vedere la sezione sull'esecuzione di una valutazione più avanti in questo articolo), (vedere la sezione sull'esecuzione di una valutazione più avanti in questo articolo), che è più semplice che gestire più file CSV.
+
+Tenere presente che in base al numero di oggetti e della loro complessità, una valutazione può richiedere un estremamente lungo tempo (ore +), pertanto è consigliabile separare la valutazione in blocchi gestibili.
+
+## <a name="running-a-scaled-assessment"></a>Esegue una valutazione della scalabilità
+Dopo il caricamento di moduli di PowerShell nella directory dei moduli e creazione di un inventario, è necessario eseguire una valutazione con scalabilità, aprire PowerShell e che esegue la funzione dmaDataCollector.
+ 
+  ![elenchi di dmaDataCollector (funzione)](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
+
+I parametri associati alla funzione dmaDataCollector sono descritti nella tabella seguente.
+
+|Parametro  |Description
+|---------|---------|
+|**getServerListFrom** | L'inventario. I valori possibili sono **SqlServer** e **CSV**. |
+|**ServerName** | Il nome dell'istanza SQL Server dell'inventario quando si usa **SqlServer** nel **getServerListFrom** parametro. |
+|**DatabaseName** | Il database che ospita la tabella di inventario. |
+|**AssessmentName** | Il nome della valutazione DMA. |
+|**TargetPlatform** | Il tipo di destinazione della valutazione che si desidera eseguire.  I valori possibili sono **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, e **SQLServerWindows2017**. |
+|**AuthenticationMethod** | Il metodo di autenticazione per la connessione alle destinazioni di SQL Server a cui si desidera valutare. I valori possibili sono **SQLAuth** e **WindowsAuth**. |
+|**OutputLocation** | La directory in cui si desidera archiviare il codice JSON file di output della valutazione. A seconda del numero di database viene valutata e il numero di oggetti all'interno dei database, le valutazioni possono richiedere tempi estremamente lunghi. Il file verrà scritto dopo aver completato tutte le valutazioni. |
+
+Se si verifica un errore imprevisto, quindi la finestra di comando che ottiene avviata da questo processo verrà terminata.  Esaminare il log degli errori per determinare il motivo dell'errore.
+ 
+  ![Percorso log degli errori](../dma/media//dma-consolidatereports/dma-error-log-file-location.png)
+
+## <a name="consuming-the-assessment-json-file"></a>Utilizzo del file JSON di valutazione
+
+Al termine della valutazione, si è ora pronti per importare i dati in SQL Server per l'analisi. Per utilizzare il file JSON di valutazione, aprire PowerShell ed eseguire la funzione dmaProcessor.
+ 
+  ![elenco di dmaProcessor (funzione)](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
+
+I parametri associati alla funzione dmaProcessor sono descritti nella tabella seguente.
+
+|Parametro  |Description
+|---------|---------|
+|**processTo**  | Il percorso in cui verrà elaborato il file JSON. I valori possibili sono **SQLServer** e **AzureSQLDatabase**. |
+|**ServerName** | Istanza di SQL Server in cui verranno elaborati i dati.  Se si specifica **AzureSQLDatabase** per il **processTo** parametro, quindi includere solo il nome di SQL Server (non includere. database.windows.net). Verrà richiesto per due account di accesso quando la destinazione di Database SQL di Azure. il primo è le credenziali del tenant di Azure, mentre il secondo è l'account di accesso di amministratore per il Server SQL di Azure. |
+|**CreateDMAReporting** | Il database di gestione temporanea per creare per l'elaborazione del file JSON.  Se il database che si specifica già esiste e questo parametro è impostato su uno, quindi gli oggetti non ottenere creati.  Questo parametro è utile per la ricreazione di un singolo oggetto che è stato eliminato. |
+|**CreateDataWarehouse** | Crea il data warehouse che verrà usato nel report di Power BI. |
+|**DatabaseName** | Il nome del database DMAReporting. |
+|**warehouseName** | Nome del database del data warehouse. |
+|**jsonDirectory** | Directory contenente il file JSON di valutazione.  Se sono presenti più file JSON nella directory, essi vengono elaborati uno alla volta. |
+
+La funzione dmaProcessor dovrebbe richiedere solo alcuni secondi per elaborare un singolo file.
+
+## <a name="loading-the-data-warehouse"></a>Il caricamento del data warehouse
+Dopo il dmaProcessor ha completato l'elaborazione dei file di valutazione, i dati verranno caricati nel database DMAReporting nella tabella dati rapporto. A questo punto, è necessario caricare il data warehouse.
+
+1. Usare lo script LoadWarehouse per popolare i valori mancanti nelle dimensioni.
+
+    Lo script accettano i dati dalla tabella di dati rapporto nel database DMAReporting e caricarlo nel warehouse.  Se si verificano errori durante questo processo di caricamento, probabilmente sono un risultato di voci mancanti nelle tabelle delle dimensioni.
+
+2. Caricare il data warehouse.
+ 
+      ![LoadWarehouse contenuto caricato](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
+
+## <a name="set-your-database-owners"></a>Impostare i proprietari del database
+Sebbene non sia obbligatorio, per ottenere il massimo valore dai report, è consigliabile impostare i proprietari di database **dimDBOwner** dimensione e quindi aggiornare **DBOwnerKey** nel  **FactAssessment** tabella.  Seguendo questa procedura consentirà di sezionamento e filtro del report di Power BI in base ai proprietari di database specifici.
+
+È anche possibile usare lo script LoadWarehouse per fornire le istruzioni TSQL di base per impostare i proprietari di database.
+
+  ![Proprietari di impostazione LoadWarehouse](../dma/media//dma-consolidatereports/dma-LoadWarehouse-set-owners.png)
+
+## <a name="dma-reports"></a>Report DMA
+
+1. Aprire il modello DMA i report Power BI in Power BI Desktop.
+2. Immettere i dettagli del server che puntano alle **DMAWarehouse** del database e quindi selezionare **carico**.
+
+    > [!IMPORTANT]
+    > Non premere INVIO per accettare i valori.
+
+      ![Caricare il modello DMA i report Power BI](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
+
+   Dopo che il report ha aggiornato i dati di **DMAWarehouse** database, viene visualizzato un report simile al seguente.
+
+   ![Visualizzazione di report DMAWarehouse](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
+
+   > [!TIP]
+   > Se non è possibile visualizzare i dati che previsti, provare a modificare il segnalibro attivo.  Per altre informazioni, vedere la sezione funzionalità.
+
+## <a name="working-with-dma-reports"></a>Utilizzo dei report DMA
+Per utilizzare un report DMA, usare i filtri dei dati per filtrare in base:
+- Nome istanza
+- Nome database
+- Nome del team
+
+È anche possibile usare i segnalibri per cambiare il contesto di creazione di report tra:
+- Valutazioni di cloud
+- Valutazioni in locale
+
+  ![Segnalibri report DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks.png)
 
 > [!NOTE]
-> PowerShell versione 5 o versione successiva è obbligatorio.
+> Se si esegue solo una valutazione di Database SQL di Azure, vengono popolati solo i report di Cloud. Viceversa, se si esegue solo una valutazione in locale, vengono popolati solo i report in locale. Tuttavia, se si esegue un'istanza di Azure sia una valutazione di On-Premise e quindi caricano entrambi valutazioni nel warehouse, è possibile passare tra i report di Cloud e locale facendo clic CTRL l'icona associata.
 
-Quando si esegue lo script, è necessario fornire le informazioni seguenti: 
+## <a name="reports-visuals"></a>Oggetti visivi di report
+I dettagli visualizzati nei report di Power BI viene visualizzato nelle sezioni seguenti.
 
-- **serverName**: nome di istanza di SQL Server che si desidera importare la valutazione dei risultati dai file JSON.
+### <a name="readiness-"></a>% Conformità
 
-- **databaseName**: il nome del database che i risultati vengono importati a.
+  ![Percentuale conformità DMA](../dma/media//dma-consolidatereports/dma-readiness-percentage.png)
 
-- **jsonDirectory**: cartella in cui salvare i risultati della valutazione, in uno o più file JSON.
+Questo oggetto visivo viene aggiornato in base al contesto di selezione (tutti gli elementi, dell'istanza, database [multipli di]).
 
-- **processTo**: SQL Server
+### <a name="readiness-count"></a>Conteggio di conformità
 
-Aggiungere i valori precedenti nella sezione "Eseguire funzioni", come indicato di seguito.
+  ![Conteggio di conformità DMA](../dma/media//dma-consolidatereports/dma-readiness-count.png)
 
-```
-dmaProcessor -serverName localhost \`\
--databaseName DMAReporting \`\
--jsonDirectory "C:\\temp\\DMACmd\\output\\" \`\
--processTo SQLServer
-```
+Questo oggetto visivo Mostra il numero di database che sono pronti per eseguire la migrazione il numero di database che non sono ancora pronti per eseguire la migrazione.
 
-Lo script di PowerShell crea gli oggetti seguenti nell'istanza SQL specificata, se gli oggetti non esistono già:
+### <a name="readiness-bucket"></a>Bucket di conformità
 
-- **Database** : il nome fornito nei parametri di PowerShell
+  ![Bucket Readiness DMA](../dma/media//dma-consolidatereports/dma-readiness-bucket.png)
 
-  - Repository principale
+Questo oggetto visivo Mostra una suddivisione dei database da parte dei bucket di idoneità seguenti:
+- PRONTO PER 100%
+- PRONTI A 99 75%
+- 50-75% PRONTO
+- NON È PRONTO
 
-- **Tabella** – dati rapporto
+### <a name="issues-word-cloud"></a>Problemi Word Cloud
+ 
+  ![Problemi DMA WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
-  - Dati per reporting
+Questo oggetto visivo Mostra i problemi che attualmente si verificano all'interno nel contesto di selezione (tutti gli elementi, dell'istanza, database [multipli di]). Maggiore di word viene visualizzato sullo schermo, maggiore il numero di problemi in tale categoria. Si posiziona il puntatore del mouse su una parola Mostra il numero di problemi che si verificano in tale categoria.
 
-- **Tabella** -BreakingChangeWeighting
+### <a name="database-readiness"></a>Preparazione del database
 
-  - Tabella di riferimento per tutte le modifiche di rilievo. Qui è possibile definire i propri valori di ponderazione per poter influire sulla classificazione corretto aggiornamento percentuale (%) più accurata.
+  ![Report di conformità Database DMA](../dma/media//dma-consolidatereports/dma-database-readiness-report.png)
 
-- **Vista** – UpgradeSuccessRanking\_OnPrem
+In questa sezione è la parte principale del report, che mostra l'idoneità di un database di istanza. Questo report include una gerarchia di drill-down di:
+- InstanceDatabase
+- ChangeCategory
+- Title
+- ObjectType
+- ImpactedObjectName
 
-  - Visualizzazione con un fattore di successo per ogni database sia stata eseguita la migrazione in locale.
+ ![Drill-down report di conformità Database DMA](../dma/media//dma-consolidatereports/dma-database-readiness-report-drilldown.png)
 
-- **Vista** – UpgradeSuccessRanking\_Azure
+Questo report viene usato anche come punto di filtro per la creazione di Report piano di correzione.
 
-  - Visualizzazione con un fattore di successo per ogni database sia stata eseguita la migrazione in locale.
+Per analizzare il Report piano di correzione, fare clic su un punto dati nel grafico a barre, scegliere **drill-through**, quindi selezionare **piani di correzione**.
 
-- **Stored Procedure** – JSONResults\_Insert
+Questa attività consente di filtrare il report piano di correzione per il livello della gerarchia corrente in base al punto in cui si selezionano il drill-through opzione.
 
-  - Utilizzato per importare dati da un file JSON in SQL Server.
+  ![DMA Database Readiness drill-down report filtrato](../dma/media//dma-consolidatereports/dma-database-readiness-report-drilldown-filtered.png)
 
-- **Stored Procedure** – AzureFeatureParityResults\_Insert
+  ![Report piano di correzione DMA](../dma/media//dma-consolidatereports/dma-remediation-plan-report.png)
 
-  - Utilizzato per importare i risultati di parità di funzionalità di Azure da un file JSON in SQL Server.
+È possibile usare anche il report piano di correzione sul proprio per compilare una risoluzione personalizzata piano usando i filtri nel **filtri di visualizzazioni** pannello.
+ 
+  ![Opzioni di filtro report piano di correzione DMA](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
-- **Tipo di tabella** – JSONResults
-
-  - Usato per contenere i risultati JSON per le valutazioni in locale e passare al JSONResults\_stored procedure Insert
-
-- **Tipo di tabella** – AzureFeatureParityResults
-
-  - Usato per contenere i risultati di parità per la valutazione di azure la funzionalità di Azure e passare al AzureFeatureParityResults\_stored procedure Insert
-
-Lo script di PowerShell crea una **elaborati** directory all'interno della directory specificato che contiene i file JSON che devono essere elaborate.
-
-Al termine dell'esecuzione dello script, i risultati vengono importati nella tabella, dati rapporto.
-
-### <a name="viewing-the-results-in-sql-server"></a>Visualizzazione dei risultati in SQL Server
-
-Dopo il caricamento di dati, connettersi all'istanza di SQL Server. Verrà visualizzata una schermata come mostrato nella figura seguente:
-
-![Report consolidati nel database di SQL Server](../dma/media/DMAReportingDatabase.png)
-
-La tabella dbo. Tabella dati rapporto include il contenuto del file JSON in formato non elaborato.
-
-## <a name="on-premises-upgrade-success-ranking"></a>In locale aggiornare il rango di esito positivo
-
-Per visualizzare un elenco dei database e dal numero di dimensioni di successo di percentuale (%), selezionare la tabella dbo. Visualizzazione UpgradeSuccessRanking_OnPrem:
-
-![Dati in visualizzazione UpgradeSuccessRaning_OnPrem](../dma/media/UpgradeSuccessRankingView.png)
-
-Qui è possibile visualizzare per un determinato database qual è la probabilità di successo aggiornamento per i livelli di compatibilità diverso. Quindi, ad esempio, il database delle risorse Umane è stato valutato in base a livelli di compatibilità 100, 110, 120 e 130. Questa valutazione consente di visualizzare quantità sforzo implica la migrazione a una versione successiva di SQL Server dalla versione corrente che il database è attualmente in.
-
-La metrica che si è interessati è in genere sono presenti modifiche di rilievo quanti per un determinato database. Nell'esempio precedente, si noterà che il database delle risorse Umane disponga di un fattore di corretto aggiornamento del 50% per i livelli di compatibilità 100, 110, 120 e 130.
-
-Questa metrica può essere influenzata modificando i valori di ponderazione nella tabella dbo. Tabella BreakingChangeWeighting.
-
-Nell'esempio seguente, l'impegno a correggere il problema di sintassi nel database delle risorse Umane è considerato elevato in modo che un valore pari a 3 viene assegnato a **sforzo**. Perché non sarebbe richiedere lungo per risolvere il problema di sintassi, viene assegnato un valore pari a 1 per **FixTime**. Poiché non vi sarà un costo coinvolti nel apportare la modifica, viene assegnato un valore pari a 2 per **costo**. Utilizzo di questo valore diventa il Changerank combinata 2.
-
-> [!NOTE]
-> L'assegnazione dei punteggi è su una scala da 1 a 5.  1 è bassa e 5 elevato. Inoltre, il ChangeRank è una colonna calcolata.
-
-![I valori di attività, FixTime e costi per problema di sintassi](../dma/media/SyntaxIssueEffort.png)
-
-Ora disponibile in questo esempio, quando si esegue una query della tabella dbo. Visualizzazione UpgradeSuccessRanking_OnPrem, il fattore di corretto aggiornamento del database delle risorse Umane per modifiche di rilievo è eliminato.
-
-![Fattore di successo di aggiornamento per i database delle risorse Umane](../dma/media/UpgradeSuccessFactor_HR.png)
-
-## <a name="azure-upgrade-success-ranking"></a>Classificazione di Azure aggiornamento completato
-
-Per visualizzare un elenco di database per eseguire la migrazione al database SQL di Azure e dal numero di dimensioni di successo di percentuale, selezionare la tabella dbo. Visualizzazione UpgradeSuccessRanking_Azure.
-
-![Dati in visualizzazione UpgradeSuccessRanking_Azure](../dma/media/UpgradeSuccessRankingView_Azure.png)
-
-Qui si è interessati al valore MigrationBlocker. 100,00 significa che vi sia una classificazione di successo di 100% per lo spostamento di un database alla versione 12 del Database SQL di Azure.
-
-La differenza con questa visualizzazione è che non è attualmente alcun override per modificare la ponderazione per le regole di blocco della migrazione.
-
-Per informazioni sulla funzionalità di segnalazione in merito ai dati tramite Power BI, vedere [segnalare le valutazioni consolidate con Power BI](../dma/dma-powerbiassesreport.md).
+### <a name="script-disclaimer"></a>Dichiarazione di non responsabilità script
+*Gli script di esempio forniti in questo articolo non sono supportati in alcun programma di supporto tecnico standard di Microsoft o un servizio. Tutti gli script vengono forniti così come sono senza garanzie di alcun tipo. Microsoft ha declina tutte le garanzie implicite tra cui, in via esemplificativa, qualsiasi garanzia di commerciabilità o di adeguatezza per uno scopo specifico. Il rischio derivante dall'utilizzo o gli script di esempio e documentazione deell'utente. In nessun caso Microsoft, i relativi autori o chiunque altro coinvolti nella creazione, produzione o recapito degli script sarà responsabile per danni (incluso, in via esemplificativa, danni per perdita o mancato guadagno, interruzione dell'attività, perdita di le informazioni aziendali, o altre perdite economiche) derivanti dall'utilizzo di o all'impossibilità di usare gli script di esempio o documentazione, anche se Microsoft sia stata informata della possibilità del verificarsi di tali danni.  Autorizzazione prima di questi script di report in altri siti/repository/blog di ricerca.*

@@ -1,5 +1,5 @@
 ---
-title: sp_xp_cmdshell_proxy_account (Transact-SQL) | Documenti di Microsoft
+title: sp_xp_cmdshell_proxy_account (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - xp_cmdshell
 ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 48a92be607ea1d57740587840cb854299443b285
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: dd3ffc5ae80845ffbf61cc0ff83cd1d34f53f095
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560561"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43089647"
 ---
 # <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "39560561"
   Crea una credenziale proxy per **xp_cmdshell**.  
   
 > [!NOTE]  
->  **xp_cmdshell** è disattivato per impostazione predefinita. Per attivare **xp_cmdshell**, vedere [xp_cmdshell opzione di configurazione Server](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  **xp_cmdshell** è disabilitata per impostazione predefinita. Per abilitare **xp_cmdshell**, vedere [opzione di configurazione del Server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,9 +62,9 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- La credenziale proxy verrà chiamata **xp_cmdshell_proxy_account # # # #**.  
+ La credenziale proxy verrà chiamata **# # xp_cmdshell_proxy_account # #**.  
   
- Quando viene eseguita utilizzando l'opzione NULL, **sp_xp_cmdshell_proxy_account** Elimina le credenziali del proxy.  
+ Quando viene eseguito con l'opzione NULL, **sp_xp_cmdshell_proxy_account** consente di eliminare la credenziale proxy.  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione CONTROL SERVER.  

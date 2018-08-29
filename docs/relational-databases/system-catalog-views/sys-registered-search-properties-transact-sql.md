@@ -28,13 +28,13 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8a174f95ef4c6519c88002ca7393c0d5b1123e4a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 79fddbbaa06dc5486b08a1c7209d5952b1a10dcd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541571"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43107144"
 ---
 # <a name="sysregisteredsearchproperties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "39541571"
 |**property_int_id**|**int**|Valore integer che identifica questa proprietà di ricerca all'interno del set di proprietà. **property_int_id** è univoco all'interno del set di proprietà.|  
 |**property_name**|**nvarchar(64)**|Nome che identifica in modo univoco questa proprietà di ricerca nell'elenco delle proprietà di ricerca.<br /><br /> Nota: Per cercare in una proprietà, specificare il nome di [contiene](../../t-sql/queries/contains-transact-sql.md) predicato.|  
 |**property_description**|**nvarchar(512)**|Descrizione della proprietà.|  
-|**property_id**|**int**|ID di proprietà interna della proprietà all'interno dell'elenco di proprietà di ricerca identificato dalla ricerca di **property_list_id** valore.<br /><br /> Quando una determinata proprietà viene aggiunta a un elenco delle proprietà di ricerca specificato, il motore di ricerca full-text registra la proprietà e le assegna un ID interno specifico di tale elenco di proprietà. L'ID di proprietà interno, che è un valore intero, è univoco per ogni elenco delle proprietà di ricerca. Se una determinata proprietà viene registrata in più elenchi di proprietà di ricerca, è possibile che a ciascun elenco di proprietà di ricerca venga assegnato un ID di proprietà interno.<br /><br /> Nota: L'ID di proprietà interna è diverso dall'identificatore integer della proprietà specificata quando si aggiunge la proprietà all'elenco di proprietà di ricerca. Per altre informazioni, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Per visualizzare il contenuto di tutte le relative proprietà nell'indice full-text: <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
+|**property_id**|**int**|ID della proprietà di ricerca all'interno dell'elenco di proprietà di ricerca identificato dall'interno di **property_list_id** valore.<br /><br /> Quando una determinata proprietà viene aggiunta a un elenco delle proprietà di ricerca specificato, il motore di ricerca full-text registra la proprietà e le assegna un ID interno specifico di tale elenco di proprietà. L'ID di proprietà interno, che è un valore intero, è univoco per ogni elenco delle proprietà di ricerca. Se una determinata proprietà viene registrata in più elenchi di proprietà di ricerca, è possibile che a ciascun elenco di proprietà di ricerca venga assegnato un ID di proprietà interno.<br /><br /> Nota: L'ID di proprietà interna è diverso dall'identificatore integer della proprietà specificata quando si aggiunge la proprietà all'elenco di proprietà di ricerca. Per altre informazioni, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Per visualizzare il contenuto di tutte le relative proprietà nell'indice full-text: <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
   
 ## <a name="remarks"></a>Note  
  Per altre informazioni sugli elenchi delle proprietà di ricerca, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
