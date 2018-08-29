@@ -17,19 +17,19 @@ caps.latest.revision: 57
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d737e132369afdfe6d45d72d4c769e3970786bd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756aa4f5a4b03ffea76d907e8e2205428b565065
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031468"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411822"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services di SQL Server Management Studio (SSRS)
   Gli amministratori del server di report possono usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per:  
   
 -   Abilitare le funzionalità, impostare le impostazioni predefinite del server e gestire processi in esecuzione.  
   
--   Visualizzare e creare report personalizzati. Molti nodi di Esplora oggetti visualizzano un set di report standard installati con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. È necessario disporre di autorizzazioni di amministratore. Lo schema di un report personalizzato deve corrispondere allo schema dei report installati. Per altre informazioni, vedere [Report personalizzati in Management Studio](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979) e [Individuare la versione dello schema di definizione del report &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+-   Visualizzare e creare report personalizzati. Molti nodi di Esplora oggetti visualizzano un set di report standard installati con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. È necessario disporre di autorizzazioni di amministratore. Lo schema di un report personalizzato deve corrispondere allo schema dei report installati. Per altre informazioni, vedere [Report personalizzati in Management Studio](../../ssms/object/custom-reports-in-management-studio.md) e [Individuare la versione dello schema di definizione del report &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
  Gli autori di report possono utilizzare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33031468"
   
  In questa sezione sono disponibili istruzioni dettagliate per l'esecuzione di varie attività con i report usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La creazione e la gestione di pianificazioni condivise possono essere inoltre eseguiti utilizzando Gestione report.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
   

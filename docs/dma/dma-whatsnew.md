@@ -1,7 +1,7 @@
 ---
 title: Novità in Data Migration Assistant (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,17 +15,25 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 620590f03bf429dbc1633a1f78bb921def5fd585
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 188c19f173e8c53995d84a74ecc04d1cac9eae92
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982153"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118329"
 ---
-# <a name="whats-new-in-data-migration-assistant"></a>Novità in Data Migration Assistant
-Questo argomento elenca le aggiunte in ogni versione di Data Migration Assistant (DMA).
+# <a name="whats-new-in-data-migration-assistant"></a>Novità di Data Migration Assistant
+Questo articolo elenca le aggiunte in ogni versione di Data Migration Assistant (DMA).
+
+## <a name="dma-v40"></a>DMA v4.0
+La versione v4.0 di DMA introduce la funzionalità di raccomandazioni dello SKU del Database SQL di Azure, che consente agli utenti di identificare il valore minimo consigliato di SKU di Database SQL di Azure basati sui contatori delle prestazioni raccolti dai computer che ospita i database. Questa funzionalità offre consigli relativi ai prezzi di livello, a livello di calcolo e le dimensioni massime dei dati, nonché il costo stimato al mese. Offre inoltre la possibilità di eseguire il provisioning in blocco tutti i database in Azure.
+
+> [!NOTE]
+> Attualmente questa funzionalità sarà disponibile solo tramite l'interfaccia della riga di comando (CLI). Supporto per questa funzionalità tramite l'interfaccia utente DMA è pianificato per il recapito quest'anno.
+
+Per ulteriori informazioni, vedere l'articolo [identificare lo SKU del Database SQL di Azure corretto per il database locale](dma-sku-recommend-sql-db.md).
 
 ## <a name="dma-v36"></a>V3.6 DMA
 La versione v3.6 di DMA introduce "Correggi" per gli oggetti dello schema che sono interessati da blocchi di migrazione più comuni.
@@ -43,7 +51,7 @@ DMA utilizza la tecnologia Microsoft programma sintesi (PROSE) per suggerire che
 La versione v3.5 di DMA include le aggiunte seguenti:
 - Miglioramenti significativi delle prestazioni per la migrazione al Database SQL di Azure (i test di benchmark indicano che il processo è quattro volte più veloce rispetto alle versioni precedenti di DMA).
 - Il footprint di memoria è ulteriormente ottimizzato per migliorare la stabilità del flusso di lavoro della migrazione.
-- La possibilità di ignorare le valutazioni durante le migrazioni di schema e i dati (se si hanno già eseguito la valutazione e risolti tutti gli oggetti dello schema di rilievo prima della migrazione).
+- La possibilità di ignorare le valutazioni durante le migrazioni di schema e i dati (se già stata eseguita la valutazione e risolti tutti gli oggetti dello schema di rilievo prima della migrazione).
 - Una correzione per risolvere un problema con lo strumento in modo anomalo quando viene specificato un percorso di condivisione di rete non è valida per i file di backup, quando si esegue un aggiornamento di una versione legacy di SQL Server locale a una versione successiva o a SQL Server in macchine virtuali di Azure.
 
 ## <a name="dma-v34"></a>Versione 3.4 DMA
@@ -64,7 +72,7 @@ Se il file di backup fisico è in un computer che esegue:
 > Dettagli dell'utilizzo di una condivisione 'samba' o il comando '/mnt' rientrano nell'ambito di questo articolo.
 
 ### <a name="migrating-windows-logins"></a>La migrazione gli account di accesso di Windows
-Benché la migrazione degli account di accesso di Active Directory (AD) è ufficialmente supportata da SQL Server 2017 in Linux, richiede configurazione aggiuntiva per funzionare correttamente. Vedere l'argomento [autenticazione di Active Directory con SQL Server in Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) per informazioni dettagliate sull'impostazione degli account di accesso di Active Directory in SQL Server 2017 in Linux. Dopo aver eseguito la configurazione richiesta, il programma di installazione è stata completata ed è possibile migrare gli account di accesso di Active Directory come di consueto. Autenticazione standard di SQL funziona come previsto senza alcuna configurazione aggiuntiva.
+Benché la migrazione degli account di accesso di Active Directory (AD) è ufficialmente supportata da SQL Server 2017 in Linux, richiede configurazione aggiuntiva per funzionare correttamente. Vedere l'articolo [autenticazione di Active Directory con SQL Server in Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) per informazioni dettagliate sull'impostazione degli account di accesso di Active Directory in SQL Server 2017 in Linux. Dopo aver eseguito la configurazione richiesta, il programma di installazione è stata completata ed è possibile migrare gli account di accesso di Active Directory come di consueto. Autenticazione standard di SQL funziona come previsto senza alcuna configurazione aggiuntiva.
 
 ## <a name="dma-v32"></a>V 3.2 DMA
 La versione v 3.2 di DMA include le aggiunte seguenti:
@@ -86,20 +94,20 @@ La versione 3.0 di DMA estende la valutazione del database SQL di Azure per forn
 
 ## <a name="dma-v21"></a>V2.1 DMA
 La versione v2.1 di DMA include le aggiunte seguenti:
-- Supporto della riga di comando per l'esecuzione delle valutazioni in modalità automatica, che consente di eseguire valutazioni su larga scala. Per ulteriori informazioni, vedere l'argomento [eseguito Data Migration Assistant da riga di comando](dma-commandline.md).
+- Supporto della riga di comando per l'esecuzione delle valutazioni in modalità automatica, che consente di eseguire valutazioni su larga scala. Per ulteriori informazioni, vedere l'articolo [eseguito Data Migration Assistant da riga di comando](dma-commandline.md).
 - Miglioramenti delle prestazioni quando gli utenti di avviano e chiudere DMA.
-- La possibilità di configurare il timeout della connessione SQL. Per ulteriori informazioni, vedere l'argomento [impostazioni di configurazione per Data Migration Assistant](dma-configurationsettings.md).
+- La possibilità di configurare il timeout della connessione SQL. Per ulteriori informazioni, vedere l'articolo [impostazioni di configurazione per Data Migration Assistant](dma-configurationsettings.md).
 
 ## <a name="dma-v20"></a>DMA v2.0
 La versione 2.0 di DMA include migliorate raccomandazioni funzionalità per Stretch database per fornire tabelle in ordine di priorità appropriate che massimizzano i risparmi di archiviazione.
 
 ## <a name="dma-v10"></a>DMA v1.0
 La versione v1.0 di DMA è la versione iniziale, e consente di:
-- Individuazione dei problemi che possono influire sull'aggiornamento a una versione locale di SQL Server. Vengono descritti eventuali risultati come problemi di compatibilità e vengono suddivisi nelle seguenti aree:
+- Individuazione dei problemi che possono influire sull'aggiornamento a una versione locale di SQL Server. Vengono descritti eventuali risultati come problemi di compatibilità e organizzati in categorie nelle aree seguenti:
     - Modifiche di rilievo
     - Modifiche del comportamento
     - Funzionalità deprecate
-- Individuazione di nuove funzionalità della piattaforma di SQL Server di destinazione che il database può trarre vantaggio da un aggiornamento. Vengono descritti eventuali risultati come funzionalità consigliate e vengono suddivisi nelle seguenti aree:
+- Individuazione di nuove funzionalità della piattaforma di SQL Server di destinazione che il database può trarre vantaggio da un aggiornamento. Vengono descritti eventuali risultati come funzionalità consigliate e organizzati in categorie nelle aree seguenti:
     - restazioni
     - Security
     - Archiviazione

@@ -1,5 +1,5 @@
 ---
-title: sp_addsubscriber_schedule (Transact-SQL) | Documenti Microsoft
+title: sp_addsubscriber_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber_schedule
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c5d170d9060f232f2dbf6f5761a3c5ea51495fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 47f15ca86c8b0a8059ff42daa6c0cb5a806a037d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991578"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035531"
 ---
 # <a name="spaddsubscriberschedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,17 +60,17 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**. Il nome del Sottoscrittore deve essere univoco all'interno del database, non deve essere già esistente e non può essere NULL.  
   
  [  **@agent_type =** ] *agent_type*  
- Tipo di agente. *agent_type* viene **smallint**, e può essere uno dei valori seguenti.  
+ Tipo di agente. *agent_type* viene **smallint**, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**0** (predefinito)|Agente di distribuzione|  
 |**1**|Agente di merge|  
   
  [  **@frequency_type =** ] *frequency_type*  
- Frequenza di pianificazione dell'agente di distribuzione. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
+ Frequenza di pianificazione dell'agente di distribuzione. *frequency_type* viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Su richiesta|  
@@ -83,12 +82,12 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**128**|Periodica|  
   
  [  **@frequency_interval =** ] *frequency_interval*  
- È il valore da applicare alla frequenza impostata da *frequency_type*. *frequency_interval* viene **int**, il valore predefinito è **1**.  
+ Il valore da applicare alla frequenza impostata *frequency_type*. *frequency_interval* viene **int**, il valore predefinito è **1**.  
   
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Data dell'agente di distribuzione. Questo parametro viene utilizzato quando *frequency_type* è impostato su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, e può essere uno dei valori seguenti.  
+ Data dell'agente di distribuzione. Questo parametro viene utilizzato quando *frequency_type* è impostata su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1** (impostazione predefinita)|Primo|  
 |**2**|Secondo|  
@@ -100,9 +99,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* viene **int**, il valore predefinito è **0**.  
   
  [  **@frequency_subday =** ] *frequency_subday*  
- Frequenza di ripianificazione durante il periodo definito. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
+ Frequenza di ripianificazione durante il periodo definito. *frequency_subday* viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Secondo|  
@@ -110,13 +109,13 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**8**|Ora|  
   
  [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- Intervallo per *frequency_subday*. *frequency_subday_interval* viene **int**, il valore predefinito è **5**.  
+ È l'intervallo *frequency_subday*. *frequency_subday_interval* viene **int**, il valore predefinito è **5**.  
   
  [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
  Ora del giorno della prima esecuzione pianificata dell'agente di distribuzione nel formato HHMMSS. *active_start_time_of_day* viene **int**, il valore predefinito è **0**.  
   
  [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- Ora del giorno dell'ultima esecuzione pianificata dell'agente di distribuzione, nel formato HHMMSS. *active_end_time_of_day*viene **int**, un valore predefinito è 235959, che corrisponde alle 11:59: le ore 23.59.59 nel formato 24 ore.  
+ Ora del giorno dell'ultima esecuzione pianificata dell'agente di distribuzione, nel formato HHMMSS. *active_end_time_of_day*viene **int**, con un valore predefinito è 235959, che significa 59: 11:59 P.M. nel formato 24 ore.  
   
  [ **@active_start_date =** ] *active_start_date*  
  Data della prima esecuzione pianificata dell'agente di distribuzione nel formato AAAAMMGG. *active_start_date* viene **int**, il valore predefinito è **0**.  
@@ -131,12 +130,12 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 >  *server di pubblicazione* non deve essere specificato per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_addsubscriber_schedule** viene utilizzata nella replica snapshot, transazionale e di tipo merge.  
+## <a name="remarks"></a>Note  
+ **sp_addsubscriber_schedule** viene utilizzata nella replica snapshot, la replica transazionale e di tipo merge.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_addsubscriber_schedule**.  
   
 ## <a name="see-also"></a>Vedere anche  

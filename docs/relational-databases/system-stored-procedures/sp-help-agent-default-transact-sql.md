@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_default (Transact-SQL) | Documenti Microsoft
+title: sp_help_agent_default (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_agent_default
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ea2d817e869f7ff66ddf70243e01b2f334fb14b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a835b1bafa037e249450118cb08f3d886bb6283b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994658"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017817"
 ---
 # <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
  ID della configurazione predefinita per il tipo di agente. *profile_id* viene **int**, non prevede alcun valore predefinito. *profile_id* è anche un parametro di OUTPUT e restituisce l'ID della configurazione predefinita per il tipo di agente.  
   
  [  **@agent_type=**] **'***agent_type***'**  
- Tipo di agente. *agent_type* viene **int**e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
+ Tipo di agente. *agent_type* viene **int**e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Agente snapshot.|  
 |**2**|Agente di lettura log.|  
@@ -61,13 +61,13 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 |**9**|Agente di lettura coda|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_help_agent_default** viene utilizzata in tutti i tipi di replica.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **replmonitor** ruolo predefinito del database possono eseguire **sp_help_agent_default**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **replmonitor** ruolo predefinito del database possono eseguire **sp_help_agent_default**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

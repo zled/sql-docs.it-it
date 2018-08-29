@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_add_job (Transact-SQL) | Documenti Microsoft
+title: Sys. sp_cdc_add_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_add_job
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c42d2150a148f1a288c1fa447f4bb1d9020fe09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5d218512e68e3d96a95e43ba3d155ad11f997449
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261960"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017872"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,57 +56,57 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
  Tipo di processo da aggiungere. *job_type* viene **nvarchar(20)** e non può essere NULL. Gli input validi sono **'capture'** e **'cleanup'**.  
   
  [  **@start_job=** ] *start_job*  
- Flag che indica se il processo deve essere avviato immediatamente dopo essere stato aggiunto. *start_job* viene **bit** con un valore predefinito è 1.  
+ Flag che indica se il processo deve essere avviato immediatamente dopo essere stato aggiunto. *start_job* viene **bit** con valore predefinito è 1.  
   
  [ **@maxtrans** ] = *max_trans*  
- Numero massimo di transazioni da elaborare in ogni ciclo di analisi. *max_trans* viene **int** con un valore predefinito è 500. Se specificato, il valore deve essere un numero intero positivo.  
+ Numero massimo di transazioni da elaborare in ogni ciclo di analisi. *max_trans* viene **int** con valore predefinito è 500. Se specificato, il valore deve essere un numero intero positivo.  
   
  *max_trans* è valida solo per i processi di acquisizione.  
   
  [ **@maxscans** ] **= * * * max_scans*  
- Numero massimo di cicli di analisi da eseguire per estrarre tutte le righe dal log. *max_scans* viene **int** con un valore predefinito è 10.  
+ Numero massimo di cicli di analisi da eseguire per estrarre tutte le righe dal log. *max_scans* viene **int** con valore predefinito è 10.  
   
  *max_scan* è valida solo per i processi di acquisizione.  
   
- [ **@continuous** ] **= * * * continua*  
- Viene indicato se il processo di acquisizione deve essere eseguito continuamente (1) o solo una volta (0). *Continuous* viene **bit** con un valore predefinito è 1.  
+ [ **@continuous** ] **= * * * continue*  
+ Viene indicato se il processo di acquisizione deve essere eseguito continuamente (1) o solo una volta (0). *Continuous* viene **bit** con valore predefinito è 1.  
   
- Quando *continua* = 1, il [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) processo analizza il log ed elabora fino a (*max_trans* \* *max_scans*) transazioni. Attende quindi il numero di secondi specificato in *polling_interval* prima di iniziare l'analisi del log successivo.  
+ Quando *continui* = 1, il [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) processo analizza il log ed elabora fino a (*max_trans* \* *max_scans*) transazioni. Attende quindi il numero di secondi specificato nel *polling_interval* prima di iniziare l'analisi del log successivo.  
   
- Quando *continua* = 0, il **sp_cdc_scan** processo viene eseguito fino a *max_scans* analisi del log, elaborando fino a *max_trans* delle transazioni durante ogni analisi e quindi viene chiusa.  
+ Quando *continui* = 0, il **sp_cdc_scan** processo esegue fino a *max_scans* analisi del log, elaborando fino a *max_trans* delle transazioni durante ogni analisi e quindi viene chiusa.  
   
  *Continua* è valida solo per i processi di acquisizione.  
   
  [ **@pollinginterval** ] **= * * * polling_interval*  
- Numero di secondi tra cicli di analisi del log. *polling_interval* viene **bigint** con un valore predefinito è 5.  
+ Numero di secondi tra cicli di analisi del log. *polling_interval* viene **bigint** con valore predefinito è 5.  
   
  *polling_interval* è valido solo per l'acquisizione processi quando *continua* è impostato su 1. Se specificato, il valore non può essere negativo e non può superare 24 ore. Se viene specificato il valore 0, non esiste alcun intervallo di attesa tra le analisi del log.  
   
  [ **@retention** ] **= * * * conservazione*  
- Numero di minuti per i quali le righe dei dati delle modifiche devono essere conservate nelle tabelle delle modifiche. *conservazione* viene **bigint** con un valore predefinito è 4320 (72 ore). Il valore massimo è 52494800 (100 anni). Se specificato, il valore deve essere un numero intero positivo.  
+ Numero di minuti per i quali le righe dei dati delle modifiche devono essere conservate nelle tabelle delle modifiche. *conservazione* viene **bigint** con valore predefinito è 4320 (72 ore). Il valore massimo è 52494800 (100 anni). Se specificato, il valore deve essere un numero intero positivo.  
   
  *conservazione* è valida solo per i processi di pulizia.  
   
  [  **@threshold =** ] **'***delete_threshold***'**  
- Numero massimo di voci che possono essere eliminate utilizzando un'unica istruzione nel processo di pulizia. *delete_threshold* viene **bigint** con un valore predefinito è 5000.  
+ Numero massimo di voci che possono essere eliminate utilizzando un'unica istruzione nel processo di pulizia. *delete_threshold* viene **bigint** con valore predefinito è 5000.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Un processo di pulizia viene creato utilizzando i valori predefiniti quando la prima tabella nel database è abilitata per Change Data Capture. Un processo di acquisizione viene creato utilizzando i valori predefiniti quando la prima tabella nel database è abilitata per Change Data Capture e per il database non esistono pubblicazioni transazionali. Se esiste una pubblicazione transazionale, per attivare il meccanismo di acquisizione viene utilizzato l'agente di lettura del log delle transazioni. Non è quindi necessario né consentito un processo di acquisizione separato.  
   
  Poiché i processi di pulizia e di acquisizione vengono creati per impostazione predefinita, questa stored procedure è necessaria solo quando un processo è stato eliminato in modo esplicito e deve essere ricreato.  
   
- Il nome del processo viene **cdc. ***< nome_database >*** Cleanup** oppure **cdc. ***< nome_database >*** Capture**, dove *< nome_database >* è il nome del database corrente. Se un processo con lo stesso nome esiste già, il nome viene aggiunto un punto (**.**) seguito da un identificatore univoco, ad esempio: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Il nome del processo è **cdc. ***< nome_database >*** Cleanup** oppure **cdc. ***< nome_database >*** Capture**, dove *< database_name >* è il nome del database corrente. Se un processo con lo stesso nome esiste già, il nome viene aggiunto un punto (**.**) seguita da un identificatore univoco, ad esempio: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
- Per visualizzare la configurazione corrente di un processo di pulizia o di acquisizione, utilizzare [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Per modificare la configurazione di un processo, utilizzare [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
+ Per visualizzare la configurazione corrente di un processo di pulizia o di acquisizione, usare [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Per modificare la configurazione di un processo, usare [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **db_owner** ruolo predefinito del database.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **db_owner** ruolo predefinito del database.  
   
 ## <a name="examples"></a>Esempi  
   

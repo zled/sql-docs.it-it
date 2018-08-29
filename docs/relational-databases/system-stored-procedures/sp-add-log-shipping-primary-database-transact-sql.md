@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_primary_database
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
-caps.latest.revision: 35
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39627cca65071d2f08fe990c63d6e3ce836ce3b0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b73ec62b6b0abc8ab8334efdc5f26c5bd2748605
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240031"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034739"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  Password dell'account utilizzato per accedere al server di monitoraggio.  
   
  [  **@backup_threshold=** ] *backup_threshold*  
- Periodo di tempo, espresso in minuti, dopo l'ultimo backup prima di un *threshold_alert* viene generato l'errore. *backup_threshold* viene **int**, con un valore predefinito è 60 minuti.  
+ Periodo di tempo, espresso in minuti, trascorso dall'ultimo backup prima di un *threshold_alert* viene generato un errore. *backup_threshold* viene **int**, con un valore predefinito è 60 minuti.  
   
  [  **@threshold_alert=** ] *threshold_alert*  
  Avviso da generare quando viene superata la soglia per il backup. *threshold_alert* viene **int**, con un valore predefinito è 14,420.  
@@ -110,35 +109,35 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  ID del database primario nella configurazione per il log shipping. *primary_id* viene **uniqueidentifier** e non può essere NULL.  
   
  [ **@backup_compression**=] *backup_compression_option*  
- Specifica se una configurazione di log shipping utilizza [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Questo parametro è supportato solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva.  
+ Specifica se Usa una configurazione di log shipping [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Questo parametro è supportato solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva.  
   
  0 = disabilitati. I backup del log non vengono mai compressi.  
   
  1 = abilitati. I backup del log vengono sempre compressi.  
   
- 2 = utilizzare l'impostazione di [consente di visualizzare o configurare l'opzione di configurazione del Server di backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Si tratta del valore predefinito.  
+ 2 = utilizzare l'impostazione delle [visualizzare o configurare l'opzione di configurazione del Server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Si tratta del valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_add_log_shipping_primary_database** deve essere eseguita la **master** database nel server primario. Questa stored procedure esegue le funzioni seguenti:  
   
 1.  Genera un ID primario e aggiunge una voce per il database primario nella tabella **log_shipping_primary_databases** utilizzando gli argomenti specificati.  
   
 2.  Crea un processo di backup per il database primario disabilitato.  
   
-3.  Imposta l'ID di processo di backup di **log_shipping_primary_databases** voce per l'ID di processo del processo di backup.  
+3.  Imposta l'ID di processo di backup di **log_shipping_primary_databases** voce per l'ID del processo del processo di backup.  
   
 4.  Aggiunge un record di monitoraggio locale nella tabella **log_shipping_monitor_primary** nel server primario utilizzando gli argomenti specificati.  
   
-5.  Se il server di monitoraggio è diverso dal server primario, aggiunge un record di monitoraggio in **log_shipping_monitor_primary** sul monitor di server utilizzando gli argomenti specificati.  
+5.  Se il server di monitoraggio è diverso dal server primario, aggiunge un record di monitoraggio **log_shipping_monitor_primary** sul monitor server utilizzando gli argomenti specificati.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
   
 ## <a name="examples"></a>Esempi  
  In questo esempio il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] viene aggiunto come database primario in una configurazione per il log shipping.  
@@ -167,7 +166,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepullsubscription (Transact-SQL) | Documenti Microsoft
+title: sp_dropmergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_dropmergepullsubscription
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f623dfa9aa2f00f681092543c4539da37ab7485
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fa2a31c5ef60b869fe387e4a3ac8155a73d3690
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017957"
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. Questo parametro è obbligatorio. Specificare un valore di **tutti** per rimuovere le sottoscrizioni a tutte le pubblicazioni  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. Questo parametro è obbligatorio. Specificare il valore **tutti** per rimuovere le sottoscrizioni a tutte le pubblicazioni  
   
  [  **@publisher=**] **'***publisher***'**  
  Nome del server di pubblicazione. *server di pubblicazione*viene **sysname**, con un valore predefinito è NULL. Questo parametro è obbligatorio.  
@@ -57,20 +58,20 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
  Nome del database del server di pubblicazione. *publisher_db*viene **sysname**, con un valore predefinito è NULL. Questo parametro è obbligatorio.  
   
  [  **@reserved=**] **'***riservato***'**  
- Riservato per utilizzi futuri. *riservata* viene **bit**, il valore predefinito è **0**.  
+ Riservato per utilizzi futuri. *riservato* viene **bit**, il valore predefinito è **0**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_dropmergepullsubscription** viene utilizzata nella replica di tipo merge.  
   
- **sp_dropmergepullsubscription** Elimina l'agente di Merge per la sottoscrizione pull di tipo merge, anche se l'agente di Merge non viene creata nel **sp_addmergepullsubscription**.  
+ **sp_dropmergepullsubscription** Elimina l'agente di Merge per la sottoscrizione pull di tipo merge, anche se l'agente di Merge non viene creato in **sp_addmergepullsubscription**.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_dropmergepullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepullsubscrip_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server o l'utente che ha creato la sottoscrizione pull di tipo merge può eseguire **sp_dropmergepullsubscription**. Il **db_owner** ruolo predefinito del database è in grado di eseguire solo **sp_dropmergepullsubscription** se l'utente che ha creato la sottoscrizione pull di tipo merge appartiene a questo ruolo.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: sp_changemergesubscription (Transact-SQL) | Documenti Microsoft
+title: sp_changemergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2426efe2b47c5bdd6fbf952202d70dbc4fc5e365
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82fcd86e9b80c2492da938000a0510d52583dc55
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991508"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018057"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
  [  **@value=**] **'***valore***'**  
  Nuovo valore per l'oggetto specificato *proprietà*. *valore* viene **nvarchar(255**, e può essere uno dei valori nella tabella.  
   
-|Proprietà|Value|Description|  
+|Proprietà|valore|Description|  
 |--------------|-----------|-----------------|  
 |**description**||Descrizione della sottoscrizione di tipo merge.|  
 |**priority**||Priorità della sottoscrizione. La priorità viene utilizzata dal sistema di risoluzione predefinito per eseguire una selezione in caso di conflitti.|  
@@ -84,15 +84,15 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |NULL (predefinito)|NULL (predefinito)||  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_changemergesubscription** viene utilizzata nella replica di tipo merge.  
   
  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_changemergesubscription**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_changemergesubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

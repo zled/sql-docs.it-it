@@ -1,5 +1,5 @@
 ---
-title: sp_dropdistpublisher (Transact-SQL) | Documenti Microsoft
+title: sp_dropdistpublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropdistpublisher
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf5001349f38cf69a130d35f57424b8820af61fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc49942492078a1659d36fd4ad00d2116918cd5f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990436"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018221"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,21 +53,21 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
  [  **@no_checks=** ] *no_checks*  
  Specifica se **sp_dropdistpublisher** verifica che il server di pubblicazione sia stato disinstallato il server come server di distribuzione. *no_checks* viene **bit**, il valore predefinito è **0**.  
   
- Se **0**, la replica verifica che il server di pubblicazione remoto sia stato disinstallato il server locale come server di distribuzione. Se il server di pubblicazione è locale, durante la replica viene verificato che nel server locale non siano più presenti oggetti di pubblicazione o di distribuzione.  
+ Se **0**, replica viene verificato che il server di pubblicazione remoto sia stato disinstallato il server locale come server di distribuzione. Se il server di pubblicazione è locale, durante la replica viene verificato che nel server locale non siano più presenti oggetti di pubblicazione o di distribuzione.  
   
  Se **1**, tutti gli oggetti di replica associati alla distribuzione del server di pubblicazione vengono eliminati anche se non è possibile raggiungere un server di pubblicazione remoto. Dopo questa operazione, il server di pubblicazione remoto è necessario disinstallare la replica tramite [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) con **@ignore_distributor**  =  **1**.  
   
  [  **@ignore_distributor=** ] *ignore_distributor*  
- Specifica se gli oggetti di distribuzione vengono mantenuti nel server di distribuzione quando il server di pubblicazione viene rimosso. *ignore_distributor* viene **bit** e può essere uno dei valori seguenti:  
+ Specifica se gli oggetti di distribuzione vengono mantenuti nel server di distribuzione quando il server di pubblicazione viene rimosso. *ignore_distributor* viene **bit** i possibili valori sono i seguenti:  
   
- **1** = gli oggetti di distribuzione che appartengono al *publisher* rimangono nel server di distribuzione.  
+ **1** = gli oggetti di distribuzione che appartengono al *server di pubblicazione* rimangono nel server di distribuzione.  
   
- **0** = gli oggetti di distribuzione per il *publisher* vengono pulite nel server di distribuzione.  
+ **0** = gli oggetti di distribuzione per il *server di pubblicazione* vengono pulite nel server di distribuzione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_dropdistpublisher** viene utilizzata in tutti i tipi di replica.  
   
  Durante l'eliminazione di un server di pubblicazione Oracle, se non è possibile eliminare il server di pubblicazione **sp_dropdistpublisher** restituisce un errore e gli oggetti di database di distribuzione per il server di pubblicazione vengono rimossi.  
@@ -75,7 +75,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistpublisher-tra_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_dropdistpublisher**.  
   
 ## <a name="see-also"></a>Vedere anche  
