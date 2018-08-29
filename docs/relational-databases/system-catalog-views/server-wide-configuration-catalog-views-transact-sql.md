@@ -1,5 +1,5 @@
 ---
-title: Viste del catalogo di configurazione a livello di server (Transact-SQL) | Documenti Microsoft
+title: Viste del catalogo a livello di Server Configuration (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2015
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - server-wide configuration catalog views [SQL Server]
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0374a2febf76d40f74a1b748abef08b6a56bb02
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dedc23e16b8b77e996391283a1a51c3816997ead
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178977"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034135"
 ---
 # <a name="server-wide-configuration-catalog-views-transact-sql"></a>Viste del catalogo di configurazione valide per l'intero server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

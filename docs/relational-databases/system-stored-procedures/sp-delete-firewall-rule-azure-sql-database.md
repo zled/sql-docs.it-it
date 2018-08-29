@@ -21,17 +21,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_firewall_rule procedure
 ms.assetid: cf93eed1-ba97-4850-9fcc-b9c5a9317908
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5d5f53e8bd0062ca5ecf46c4462e326db5cdc243
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f072cc411eaa54757c518b94fec93f9435ccf2c9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049475"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033874"
 ---
 # <a name="spdeletefirewallrule-azure-sql-database"></a>sp_delete_firewall_rule (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_delete_firewall_rule [@name =] 'name'
 ## <a name="remarks"></a>Note  
  Nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] i dati dell'account di accesso necessari per autenticare una connessione e le regole del firewall a livello di server vengono memorizzati temporaneamente nella cache in ogni database. Questa cache viene aggiornata periodicamente. Per forzare un aggiornamento della cache di autenticazione e assicurarsi che un database abbia la versione più recente della tabella di account di accesso, eseguire [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo l'account di accesso dell'entità di livello server creato dal processo di provisioning può eliminare le regole firewall a livello di server. L'utente deve essere connesso al database master per l'esecuzione sp_delete_firewall_rule.  
   
 ## <a name="example"></a>Esempio  

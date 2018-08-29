@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_rename_condition
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0c44a683e247b8de88c1223f1320683486611d9c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 09cfb601bbe73d202fcc478edf0160f4c31bd110
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257500"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033713"
 ---
 # <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,18 +50,18 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
  [ **@condition_id=** ] *condition_id*  
  È l'identificatore per la condizione che si desidera rinominare. *condition_id* viene **int**e deve essere specificato se *nome* è NULL.  
   
- [  **@new_name=** ] **'***nuovo_nome***'**  
- È il nuovo nome della condizione. *nuovo_nome* viene **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
+ [  **@new_name=** ] **'***new_name***'**  
+ È il nuovo nome della condizione. *new_name* viene **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syspolicy_rename_condition nel contesto del database di sistema msdb.  
   
- È necessario specificare un valore per *nome* o *condition_id*. Non possono essere entrambi NULL. Per ottenere questi valori, eseguire una query sulla vista di sistema msdb.dbo.syspolicy_conditions.  
+ È necessario specificare un valore per *name* oppure *condition_id*. Non possono essere entrambi NULL. Per ottenere questi valori, eseguire una query sulla vista di sistema msdb.dbo.syspolicy_conditions.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

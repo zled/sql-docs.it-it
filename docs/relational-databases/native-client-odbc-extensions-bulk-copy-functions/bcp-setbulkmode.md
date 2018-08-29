@@ -16,19 +16,19 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0b114ef8b2e52b060f30c5537fb9dc83ffb136d4
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 48a3d9ef9299eb26bea2d41b2744ad311e2bfacd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541841"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43103272"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  bcp_setbulkmode consente di specificare il formato di colonna in una copia di massa, l'impostazione di tutti gli attributi di colonna in una sola chiamata di funzione.  
+  bcp_setbulkmode consente di specificare il formato della colonna in un'operazione di copia bulk, l'impostazione di tutti gli attributi di colonna in una singola chiamata di funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,24 +67,24 @@ RETCODE bcp_setbulkmode (
  SUCCEED o FAIL  
   
 ## <a name="remarks"></a>Note  
- bcp_setbulkmode può essere utilizzato per copiare da una query o una tabella. Quando bcp_setbulkmode viene utilizzato per la copia di un'istruzione di query di massa, deve essere chiamato prima di chiamare bcp_control con BCP_HINT.  
+ bcp_setbulkmode utilizzabile da copiare da una query o una tabella. Quando si bcp_setbulkmode viene usato per eseguire la copia un'istruzione di query bulk, deve essere chiamato prima di chiamare bcp_control con BCP_HINT.  
   
- bcp_setbulkmode è un'alternativa all'utilizzo di [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) e [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md), che consentono solo di specificare il formato di una colonna per ogni chiamata di funzione.  
+ bcp_setbulkmode è un'alternativa all'uso [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) e [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md), che consentono solo di specificare il formato di una colonna per ogni chiamata di funzione.  
   
  Nella tabella seguente sono elencate le costanti per il parametro *property*.  
   
 |Proprietà|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Specifica la modalità di output carattere.<br /><br /> Corrisponde all'opzione – c BCP. EXE e per bcp_setcolfmt con **BCP_FMT_TYPE** impostata su **SQLCHARACTER**.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Specifica la modalità di output Unicode.<br /><br /> Corrisponde all'opzione – w BCP. EXE e bcp_setcolfmt con **BCP_FMT_TYPE** impostata su **SQLNCHAR**.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Specifica tipi nativi per i tipi non carattere e Unicode per i tipi carattere.<br /><br /> Corrisponde all'opzione – N BCP. EXE e bcp_setcolfmt con **BCP_FMT_TYPE** impostata su **SQLNCHAR** se il tipo di colonna è una stringa (predefinito se non è una stringa).|  
-|BCP_OUT_NATIVE_MODE|Specifica tipi di database nativi.<br /><br /> Corrisponde all'opzione – n BCP. EXE e bcp_setcolfmt con **BCP_FMT_TYPE** proprietà è impostata sul valore predefinito.|  
+|BCP_OUT_CHARACTER_MODE|Specifica la modalità di output carattere.<br /><br /> Corrisponde all'opzione-c in BCP. EXE e con bcp_setcolfmt **BCP_FMT_TYPE** impostata su **SQLCHARACTER**.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Specifica la modalità di output Unicode.<br /><br /> Corrisponde all'opzione-w in BCP. File EXE e con bcp_setcolfmt **BCP_FMT_TYPE** impostata su **SQLNCHAR**.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Specifica tipi nativi per i tipi non carattere e Unicode per i tipi carattere.<br /><br /> Corrisponde all'opzione-N in BCP. File EXE e con bcp_setcolfmt **BCP_FMT_TYPE** impostata su **SQLNCHAR** se il tipo di colonna è una stringa (impostazione predefinita se non è una stringa).|  
+|BCP_OUT_NATIVE_MODE|Specifica tipi di database nativi.<br /><br /> Corrisponde all'opzione-n in BCP. File EXE e con bcp_setcolfmt **BCP_FMT_TYPE** proprietà impostata sul valore predefinito.|  
   
- Non è necessario utilizzare bcp_setbulkmode con una sequenza di chiamate di funzione che include bcp_setcolfmt, bcp_control e bcp_readfmt. Ad esempio, è necessario non chiamare bcp_control(BCPTEXTFILE) e bcp_setbulkmode.  
+ Non è consigliabile usare bcp_setbulkmode con una sequenza di chiamate di funzione che include bcp_setcolfmt bcp_control e bcp_readfmt. Ad esempio, è necessario chiamare non bcp_control(BCPTEXTFILE) e bcp_setbulkmode.  
   
- È possibile chiamare bcp_control e bcp_setbulkmode sono opzioni che non siano in conflitto con bcp_setbulkmode. Ad esempio, è possibile chiamare bcp_control(BCPFIRST) e bcp_setbulkmode.  
+ È possibile chiamare bcp_control e bcp_setbulkmode bcp_control opzioni che non siano in conflitto con bcp_setbulkmode. Ad esempio, è possibile chiamare bcp_control(BCPFIRST) e bcp_setbulkmode.  
   
- Se si tenta di chiamare bcp_setbulkmode con una sequenza di chiamate di funzione che include bcp_setcolfmt, bcp_control e bcp_readfmt, una delle chiamate di funzione restituirà un errore di sequenza. Se si sceglie di correggere l'errore, richiamare bcp_init per reimpostare tutte le impostazioni e ricominciare.  
+ Se si prova a chiamare bcp_setbulkmode con una sequenza di chiamate di funzione che include bcp_setcolfmt bcp_control e bcp_readfmt, una delle chiamate di funzione restituirà un errore nella sequenza. Se si sceglie di correggere l'errore, chiamare bcp_init per reimpostare tutte le impostazioni e ricominciare da capo.  
   
  Di seguito sono riportati alcuni esempi di chiamate di funzione che restituisce un errore di sequenza della funzione:  
   

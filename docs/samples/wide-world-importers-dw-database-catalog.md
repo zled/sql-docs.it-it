@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 757820680533cfa2eaff8403e2056f0a4d3b1a96
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+ms.openlocfilehash: cbdcbe160e585fc1d5dfc30c51f511f32d4a0be9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556951"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43104665"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catalogo del database WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -66,7 +66,7 @@ WideWorldImportersDW ha le seguenti tabelle dei fatti. La descrizione include la
 |JSON|`Sales.Orders` e `Sales.OrderLines`|Vendite persone, produttività di selezione/packer e sul tempo necessario per selezionare gli ordini. Inoltre, bassa scorte portano a ordini arretrati.|
 |Vendita|`Sales.Invoices` e `Sales.InvoiceLines`|Le date di vendita, le date di consegna, redditività nel corso del tempo, redditività dal venditore.|
 |Acquisto|`Purchasing.PurchaseOrderLines`|Visual Studio previsto effettivo lead time|
-|Transazione|`Sales.CustomerTransactions` e `Purchasing.SupplierTransactions`|Problema date vs finalizzazione date e importi di misurazione.|
+|Transaction|`Sales.CustomerTransactions` e `Purchasing.SupplierTransactions`|Problema date vs finalizzazione date e importi di misurazione.|
 |Spostamento dei|`Warehouse.StockTransactions`|Spostamenti nel tempo.|
 |Possiedono|`Warehouse.StockItemHoldings`|Livelli di scorte disponibili e il valore.|
 

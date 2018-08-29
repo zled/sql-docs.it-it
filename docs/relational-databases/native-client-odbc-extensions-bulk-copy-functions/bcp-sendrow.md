@@ -21,13 +21,13 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 937ea3a4086e65712f77b569976902fbd2038007
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f0f0a66abc37d80abff53b91f3c1d63059f9c1f3
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39561911"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43103199"
 ---
 # <a name="bcpsendrow"></a>bcp_sendrow
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,13 +51,13 @@ RETCODE bcp_sendrow (
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Note  
- Il **bcp_sendrow** funzione genera una riga da variabili di programma e lo invia a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Il **bcp_sendrow** funzione compila una riga dalle variabili di programma e lo invia a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Prima di chiamare **bcp_sendrow**, è necessario effettuare chiamate a [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per specificare le variabili di programma contenente i dati di riga.  
+ Prima di chiamare **bcp_sendrow**, è necessario effettuare chiamate al [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per specificare le variabili di programma che contiene i dati di riga.  
   
- Se **bcp_bind** viene chiamato se si specifica un tipo di dati long di lunghezza variabile, ad esempio, un *eDataType* parametro di SQLTEXT e un valore non NULL *pData* parametro, **bcp_sendrow** invia l'intero valore, proprio come accade per qualsiasi altro tipo di dati. Se, tuttavia, **bcp_bind** ha un valore NULL *pData* parametro, **bcp_sendrow** restituisce il controllo all'applicazione immediatamente dopo che tutte le colonne con i dati specificati vengono inviate a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'applicazione può quindi chiamare [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) più volte per inviare i dati long di lunghezza variabile [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un blocco alla volta. Per ulteriori informazioni, vedere [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
+ Se **bcp_bind** viene chiamato specificando un tipo di dati long a lunghezza variabile, ad esempio, un *eDataType* parametro di SQLTEXT e un valore non NULL *pData* ,parametro**bcp_sendrow** invia l'intero valore dei dati, come avviene per qualsiasi altro tipo di dati. Se, tuttavia **bcp_bind** ha un valore NULL *pData* parametro **bcp_sendrow** restituisce il controllo all'applicazione subito dopo tutte le colonne con i dati specificati vengono inviate a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'applicazione può quindi chiamare [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) ripetutamente per inviare i dati long a lunghezza variabile per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un blocco alla volta. Per altre informazioni, vedere [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
   
- Quando **bcp_sendrow** viene utilizzato per eseguire una copia righe da variabili di programma in massa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelle, righe vengono salvate solo quando l'utente chiama [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) o [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) . L'utente può scegliere di chiamare **bcp_batch** una volta ogni *n* righe o in un lull tra periodi di dati in arrivo. Se **bcp_batch** viene mai chiamato, le righe vengono salvate quando **bcp_done** viene chiamato.  
+ Quando **bcp_sendrow** consente di copia bulk di righe dalle variabili di programma in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelle, delle righe viene eseguito solo quando l'utente chiama [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) oppure [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) . L'utente può scegliere di chiamare **bcp_batch** una volta ogni *n* righe o quando è presente una pausa nei periodi di dati in ingresso. Se **bcp_batch** viene mai chiamato, le righe vengono eseguito quando **bcp_done** viene chiamato.  
   
  Per informazioni su una sostanziale modifica inizio la copia di massa in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], vedere [esecuzione di operazioni di copia di massa &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   

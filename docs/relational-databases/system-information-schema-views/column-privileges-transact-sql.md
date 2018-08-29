@@ -18,17 +18,16 @@ helpviewer_keywords:
 - COLUMN_PRIVILEGES view
 - INFORMATION_SCHEMA.COLUMN_PRIVILEGES view
 ms.assetid: 8ae29a85-2b77-48db-a2b9-a1720287b271
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cdcae5e35710bee65ebcd8c8b712ffecd692828c
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d0dded3497f4852d31d3ddf324006a2b942e0806
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562455"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43105668"
 ---
 # <a name="columnprivileges-transact-sql"></a>COLUMN_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "39562455"
 |**UTENTE CHE CONCEDE**|**nvarchar (** 128 **)**|Utente che concede il privilegio.|  
 |**ALL'UTENTE AUTORIZZATO**|**nvarchar (** 128 **)**|Beneficiario del privilegio.|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificatore della tabella.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la tabella.<br /><br /> **\*\* Importanti \* \* ** non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la tabella.<br /><br /> **\*\* Importanti \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella.|  
 |**COLUMN_NAME**|**sysname**|Nome colonna.|  
 |**PRIVILEGE_TYPE**|**varchar (** 10 **)**|Tipo di privilegio.|  

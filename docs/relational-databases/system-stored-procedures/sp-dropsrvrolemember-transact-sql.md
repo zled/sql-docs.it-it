@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropsrvrolemember
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ff304ce765010d2097c76574b0186df43d8b9104
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a800b6ad29588ec883d8a587eb20d64980d5625e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049369"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034444"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +77,7 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
   
  sp_dropsrvrolemember non può essere eseguita all'interno di una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede l'appartenenza di sysadmin e del ruolo del server o l'autorizzazione ALTER ANY LOGIN nel server e l'appartenenza al ruolo dal quale si desidera rimuovere il membro.  
   
 ## <a name="examples"></a>Esempi  

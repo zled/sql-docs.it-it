@@ -20,19 +20,19 @@ ms.assetid: 96fdff84-0ca7-460a-a240-94ee826ea41c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 04c3dc206b9092370ad0fd81ed41eb7d1336cbf1
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a82c5dca156d7f3c10f7854d2ea147890921ae01
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542871"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43102708"
 ---
 # <a name="freeing-a-statement-handle"></a>Rilascio di un handle di istruzione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  È più efficiente riutilizzare handle di istruzione anziché eliminarli e allocarne di nuovi. Prima di eseguire una nuova istruzione SQL su un handle di istruzione, le applicazioni devono verificare che le impostazioni delle istruzioni correnti siano corrette. Tra le impostazioni sono inclusi gli attributi di istruzione, le associazioni di parametri e le associazioni dei set di risultati. In genere, imposta i parametri e i risultati per l'istruzione SQL precedente deve essere annullata chiamando [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) con SQL_RESET_PARAMS e SQL_UNBIND opzioni e quindi nuovamente associata per la nuova istruzione SQL.  
+  È più efficiente riutilizzare handle di istruzione anziché eliminarli e allocarne di nuovi. Prima di eseguire una nuova istruzione SQL su un handle di istruzione, le applicazioni devono verificare che le impostazioni delle istruzioni correnti siano corrette. Tra le impostazioni sono inclusi gli attributi di istruzione, le associazioni di parametri e le associazioni dei set di risultati. In generale, imposta i parametri e il risultato per l'istruzione SQL precedente necessario disassociarlo tramite la chiamata [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) con il SQL_RESET_PARAMS e SQL_UNBIND opzioni e quindi eseguire nuove associazioni per la nuova istruzione SQL.  
   
  Quando l'applicazione ha terminato di utilizzare l'istruzione, viene chiamato [la funzione SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) per liberare l'istruzione. Si noti che **SQLDisconnect** viene liberato automaticamente tutte le istruzioni su una connessione.  
   

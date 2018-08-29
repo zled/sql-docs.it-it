@@ -1,5 +1,5 @@
 ---
-title: sp_changeqreader_agent (Transact-SQL) | Documenti Microsoft
+title: sp_changeqreader_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changeqreader_agent
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 033d33a282c7359895aba95c0e8f9d4d03e02c90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82b799ed8fab4a782a89f15dab779020d63a28f4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988176"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034596"
 ---
 # <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,19 +54,19 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
  Password dell'account di Windows utilizzato per l'esecuzione dell'agente. *job_password* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@frompublisher=** ] *frompublisher*  
- Specifica se la procedura viene eseguita nel server di pubblicazione. *frompublisher* è di tipo bit e il valore predefinito è **0**. Il valore **1** significa che la procedura viene eseguita dal server di pubblicazione nel database di pubblicazione.  
+ Specifica se la procedura viene eseguita nel server di pubblicazione. *frompublisher* è di tipo bit e il valore predefinito **0**. Un valore pari **1** significa che la procedura viene eseguita dal server di pubblicazione nel database di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_changeqreader_agent** viene utilizzata nella replica transazionale.  
   
- **sp_changeqreader_agent** viene utilizzata per modificare l'account di Windows con cui viene eseguito un agente di lettura coda. È possibile cambiare la password di un account di accesso di Windows esistente oppure specificare un nuovo account di accesso di Windows e la password.  
+ **sp_changeqreader_agent** viene utilizzato per modificare l'account di Windows con cui viene eseguito un agente di lettura coda. È possibile cambiare la password di un account di accesso di Windows esistente oppure specificare un nuovo account di accesso di Windows e la password.  
   
  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_changeqreader_agent**.  
   
 ## <a name="see-also"></a>Vedere anche  

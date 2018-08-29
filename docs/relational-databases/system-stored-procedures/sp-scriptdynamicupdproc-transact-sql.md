@@ -1,5 +1,5 @@
 ---
-title: sp_scriptdynamicupdproc (Transact-SQL) | Documenti Microsoft
+title: sp_scriptdynamicupdproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_scriptdynamicupdproc
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 707a4262c6d4ae31596d01c0194c7bc438af26ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9158cc2bfb9a482a126a199fb7cbec801007ebe5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998925"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034669"
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_scriptdynamicupdproc [ @artid =] artid
  ID dell'articolo. *artid* viene **int**, non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
- Restituisce un set di risultati è costituito da un singolo **nvarchar (4000)** colonna. Il set di risultati forma l'istruzione CREATE PROCEDURE completa utilizzata per creare la stored procedure personalizzata.  
+ Restituisce un set di risultati è costituito da un unico **nvarchar (4000)** colonna. Il set di risultati forma l'istruzione CREATE PROCEDURE completa utilizzata per creare la stored procedure personalizzata.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_scriptdynamicupdproc** viene utilizzata nella replica transazionale. La logica di scripting MCALL predefinita prevede l'inserimento di tutte le colonne all'interno dell'istruzione UPDATE e l'utilizzo di una mappa di bit per determinare le colonne modificate. Se una colonna non è stata modificata, viene eseguita un'operazione di reimpostazione del valore originale della colonna. Questa operazione in genere non causa problemi. Se la colonna è indicizzata, sono necessari altri processi di elaborazione. L'approccio dinamico prevede l'inserimento delle sole colonne modificate e consente pertanto di creare una stringa UPDATE ottimale. Per la compilazione dell'istruzione UPDATE dinamica in fase di esecuzione sono tuttavia necessari processi di elaborazione aggiuntivi. È consigliabile verificare gli approcci dinamico e statico e quindi scegliere la soluzione ottimale.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_scriptdynamicupdproc**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_scriptdynamicupdproc**.  
   
 ## <a name="examples"></a>Esempi  
- Questo esempio viene creato un articolo (con *artid* impostato su **1**) sul **autori** tabella il **pubs** database e specifica che l'aggiornamento istruzione è la procedura personalizzata da eseguire:  
+ Questo esempio viene creato un articolo (con *artid* impostata su **1**) nella **autori** nella tabella il **pubs** del database e specifica che l'aggiornamento istruzione è la procedura personalizzata da eseguire:  
   
 ```  
 'MCALL sp_mupd_authors'  

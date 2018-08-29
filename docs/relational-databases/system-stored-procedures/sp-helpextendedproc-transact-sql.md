@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpextendedproc
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7e9cc50f543232dea6b5ce39153eee2292284ac
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: efc909fc4877d744cd99a5286426670aeffdefdf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052249"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033858"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ## <a name="remarks"></a>Note  
  Quando *routine* omette **sp_helpextendedproc** restituisce informazioni sulla stored procedure estesa. Quando questo parametro viene omesso, **sp_helpextendedproc** restituisce tutti i nomi di stored procedure e i nomi delle DLL a cui ogni stored procedure estesa estesi appartiene.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'autorizzazione per eseguire **sp_helpextendedproc** viene concessa ai **pubblico**.  
   
 ## <a name="examples"></a>Esempi  

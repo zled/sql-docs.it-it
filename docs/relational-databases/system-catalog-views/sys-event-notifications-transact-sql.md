@@ -1,5 +1,5 @@
 ---
-title: Sys.event_notifications (Transact-SQL) | Documenti di Microsoft
+title: Sys. event_notifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.event_notifications catalog view
 ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1b07ca793821b39a549e709f52fa57bf1dd32dcb
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 15577292ae65b6ec89fe28965e54725b1bf43e68
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562095"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43074762"
 ---
 # <a name="syseventnotifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "39562095"
 |**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_ID**|**int**|ID diverso da zero dell'oggetto padre.<br /><br /> 0 = Il database rappresenta la classe padre.|  
 |**create_date**|**datetime**|Data di creazione.|  
-|**modify_date**|**datetime**|È sempre uguale a **create_date**.|  
+|**modify_date**|**datetime**|È sempre uguale **create_date**.|  
 |**service_name**|**nvarchar(256)**|Nome del servizio di destinazione a cui viene inviata la notifica.|  
 |**broker_instance**|**nvarchar(128)**|Istanza di Service Broker a cui viene inviata la notifica.|  
 |**principal_id**|**int**|ID dell'entità di database proprietaria della notifica degli eventi.|  

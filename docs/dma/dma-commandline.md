@@ -2,7 +2,7 @@
 title: Eseguire Data Migration Assistant dalla riga di comando (SQL Server) | Microsoft Docs
 description: Informazioni su come eseguire Data Migration Assistant dalla riga di comando per valutare i database di SQL Server per la migrazione
 ms.custom: ''
-ms.date: 08/18/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: b1435aa321d4bebbfd2747dbb634845eeeb6e137
-ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
+ms.openlocfilehash: 4d4e178247f80cc9b953f093a401b25dfd13e73e
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40393681"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152702"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Eseguire Data Migration Assistant dalla riga di comando
 La versione 2.1 e versioni successive, quando si installa Data Migration Assistant, viene installato anche in dmacmd.exe *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Usare dmacmd.exe per valutare i database in modalità automatica e restituire il risultato al file JSON o CSV. Questo metodo è particolarmente utile quando si valuta più database o database di grandi dimensioni. 

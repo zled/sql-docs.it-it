@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_secondary_database (Transact-SQL) | Documenti Microsoft
+title: sp_help_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_secondary_database
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
-caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e2a943234d835d1f78cf57c096fd8492849bfa0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bfdfd891065f0a0fa4cf30376fdaa0c55c5e10a0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259601"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033627"
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,17 +90,17 @@ sp_help_log_shipping_secondary_database
 |**history_retention_period**|Periodo di tempo, in minuti, durante il quale i record della cronologia di log shipping vengono mantenuti per un database secondario specificato prima di essere eliminati.|  
 |**last_restored_latency**|Intervallo, in minuti, intercorso tra la creazione del backup del log nel server primario e il relativo ripristino nel server secondario.<br /><br /> Il valore iniziale è NULL.|  
   
-## <a name="remarks"></a>Osservazioni  
- Se si include il *secondary_database* parametro, il set di risultati conterrà informazioni sul database secondario; se si include il *secondary_id* parametro, il set di risultati conterrà informazioni su tutti i database secondari associati a tale ID secondario.  
+## <a name="remarks"></a>Note  
+ Se si include il *secondary_database* parametro, il set di risultati conterrà informazioni sul database secondario; se si include la *secondary_id* parametro, il set di risultati conterrà informazioni su tutti i database secondari associati con tale ID secondario.  
   
  **sp_help_log_shipping_secondary_database** deve essere eseguita la **master** database nel server secondario.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

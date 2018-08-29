@@ -1,5 +1,5 @@
 ---
-title: sp_helparticlecolumns (Transact-SQL) | Documenti Microsoft
+title: sp_helparticlecolumns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helparticlecolumns
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b5f5e70a599df333a4d00083929108f9a7172d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6847491bbf8cbf517478ab6cb620f158577ca3e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995858"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034323"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,22 +66,22 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**id di colonna**|**int**|Identificatore della colonna.|  
+|**id della colonna**|**int**|Identificatore della colonna.|  
 |**column**|**sysname**|Nome della colonna.|  
 |**Pubblicato**|**bit**|Indica se la colonna è pubblicata:<br /><br /> **0** = No<br /><br /> **1** = Sì|  
 |**tipo di server di pubblicazione**|**sysname**|Tipo di dati della colonna nel server di pubblicazione.|  
-|**Tipo di sottoscrittore**|**sysname**|Tipo di dati della colonna nel Sottoscrittore.|  
+|**tipo di sottoscrittore**|**sysname**|Tipo di dati della colonna nel Sottoscrittore.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helparticlecolumns** viene utilizzata nella replica snapshot e transazionale.  
   
  **sp_helparticlecolumns** è utile per controllare una partizione verticale.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database o l'elenco di accesso per la pubblicazione corrente può eseguire **sp_helparticlecolumns**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database, o elenco di accesso alla pubblicazione per la pubblicazione corrente può eseguire **sp_helparticlecolumns**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definire e modificare un filtro di colonna](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
+ [Define and Modify a Column Filter](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   

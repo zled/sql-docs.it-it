@@ -25,13 +25,13 @@ caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 32f3ff7bb65822e0ce0c8e3e9192b88dd572c22b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: edcf376f9127ec1d9b874c24e0a11f67f7e334ff
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39537221"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43074148"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "39537221"
 |**XScale**|**tinyint**|Scala interna utilizzata dal server, da non utilizzare nelle query.|  
 |**TImpossibile**|**int**|ID della stored procedure che include i controlli di integrità per questo tipo di dati.|  
 |**domain**|**int**|ID della stored procedure che include i controlli di integrità per questo tipo di dati.|  
-|**uid**|**smallint**|ID dello schema del proprietario del tipo.<br /><br /> Per i database aggiornati da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'ID dello schema corrisponde all'ID utente del proprietario.<br /><br /> **\*\* Importanti \* \* ** se si usa uno dei seguenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istruzioni DDL, è necessario usare il [Sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) invece di vista del catalogo **Sys. systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Causa un errore di overflow o restituisce NULL se il numero di utenti e ruoli è maggiore di 32.767.|  
+|**uid**|**smallint**|ID dello schema del proprietario del tipo.<br /><br /> Per i database aggiornati da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'ID dello schema corrisponde all'ID utente del proprietario.<br /><br /> **\*\* Importanti \* \***  se si usa uno dei seguenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istruzioni DDL, è necessario usare il [Sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) invece di vista del catalogo **Sys. systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Causa un errore di overflow o restituisce NULL se il numero di utenti e ruoli è maggiore di 32.767.|  
 |**reserved**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|Se di tipo carattere, **collationid** è l'id delle regole di confronto del database corrente; in caso contrario, è NULL.|  
 |**usertype**|**smallint**|ID tipo utente. Causa un errore di overflow o restituisce NULL se il numero di tipi di dati è maggiore di 32.767.|  

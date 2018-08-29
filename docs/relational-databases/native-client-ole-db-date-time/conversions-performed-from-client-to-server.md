@@ -17,13 +17,13 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: c294fc52ee859ab3ee8c3efb18c7cda59a7e5810
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f1f75d750dd507eddc21b6541f719c41294511dc
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562535"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43104461"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversioni eseguite da client a server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "39562535"
   
 |Simbolo|Significato|  
 |------------|-------------|  
-|-|Non viene supportata alcuna conversione. Se l'associazione viene convalidato quando viene chiamato IAccessor:: CreateAccessor, DBBINDSTATUS_UPSUPPORTEDCONVERSION viene restituito in *rgStatus*. Quando la convalida della funzione di accesso viene rinviata, viene impostato DBSTATUS_E_BADACCESSOR.|  
+|-|Non viene supportata alcuna conversione. Se l'associazione viene convalidato quando viene chiamato IAccessor:: CreateAccessor, viene restituito DBBINDSTATUS_UPSUPPORTEDCONVERSION in *rgStatus*. Quando la convalida della funzione di accesso viene rinviata, viene impostato DBSTATUS_E_BADACCESSOR.|  
 |N/D|Non applicabile.|  
 |1|Se i dati forniti non sono validi, viene impostato DBSTATUS_E_CANTCONVERTVALUE. I dati di input vengono convalidati prima che vengano applicate le conversioni, pertanto quando un componente verrà ignorato da una conversione successiva, dovrà ancora essere valido per consentire la conversione.|  
 |2|I campi relativi all'ora vengono ignorati.|  

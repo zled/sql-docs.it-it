@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_primary_database
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
-caps.latest.revision: 27
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fd020ff499dfb230478434e70cee94edb45ba92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b064cf2e2005a495f077682404fb7569f683d245
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238781"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033464"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,13 +82,13 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  Password dell'account utilizzato per accedere al server di monitoraggio.  
   
  [  **@backup_threshold =** ] '*backup_threshold*'  
- Periodo di tempo, espresso in minuti, dopo l'ultimo backup prima di un *threshold_alert* viene generato l'errore. *backup_threshold* viene **int**, con un valore predefinito è 60 minuti.  
+ Periodo di tempo, espresso in minuti, trascorso dall'ultimo backup prima di un *threshold_alert* viene generato un errore. *backup_threshold* viene **int**, con un valore predefinito è 60 minuti.  
   
  [  **@threshold_alert =** ] '*threshold_alert*'  
  Avviso da generare quando viene superata la soglia per il backup. *threshold_alert* viene **int** e non può essere NULL.  
   
  [  **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
- Specifica se viene generato un avviso quando *backup_threshold* viene superato.  
+ Specifica se viene generato un avviso quando si *backup_threshold* viene superato.  
   
  1 = Abilitato.  
   
@@ -101,34 +100,34 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  Periodo di memorizzazione della cronologia espresso in minuti. *history_retention_period* viene **int**. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
  [ **@backup_compression**=] *backup_compression_option*  
- Specifica se una configurazione di log shipping utilizza [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Questo parametro è supportato solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva.  
+ Specifica se Usa una configurazione di log shipping [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Questo parametro è supportato solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva.  
   
  0 = disabilitati. I backup del log non vengono mai compressi.  
   
  1 = abilitati. I backup del log vengono sempre compressi.  
   
- 2 = utilizzare l'impostazione di [consente di visualizzare o configurare l'opzione di configurazione del Server di backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Si tratta del valore predefinito.  
+ 2 = utilizzare l'impostazione delle [visualizzare o configurare l'opzione di configurazione del Server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Si tratta del valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_change_log_shipping_primary_database** deve essere eseguita la **master** database nel server primario. Questa stored procedure esegue le operazioni seguenti:  
   
-1.  Modifica le impostazioni di **log_shipping_secondary_database** registrare, se necessario.  
+1.  Modifica le impostazioni nel **log_shipping_secondary_database** registrare, se necessario.  
   
 2.  Modifica il record locale in **log_shipping_monitor_primary** nel server primario utilizzando gli argomenti specificati, se necessario.  
   
-3.  Se il server di monitoraggio è diverso dal server primario, modifica il record in **log_shipping_monitor_primary** sul monitor di server utilizzando gli argomenti specificati, se necessario.  
+3.  Se il server di monitoraggio è diverso dal server primario, modifica il record in **log_shipping_monitor_primary** sul monitor server utilizzando gli argomenti specificati, se necessario.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
   
 ## <a name="examples"></a>Esempi  
- In questo esempio viene illustrato l'utilizzo di **sp_change_log_shipping_primary_database** per aggiornare le impostazioni associate al database primario [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ In questo esempio viene illustrato l'utilizzo del **sp_change_log_shipping_primary_database** per aggiornare le impostazioni associate al database primario [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_primary_database   
@@ -145,7 +144,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   

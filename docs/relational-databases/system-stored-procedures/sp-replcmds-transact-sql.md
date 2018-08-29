@@ -1,5 +1,5 @@
 ---
-title: sp_replcmds (Transact-SQL) | Documenti Microsoft
+title: sp_replcmds (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3690b3eaad187b341e4ad31fae1068aa56e45b05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 614b9ec8f418461ce8b42fcad09cd8729fba94d7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001428"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033556"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33001428"
   Restituisce i comandi per le transazioni contrassegnate per la replica. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
 > [!IMPORTANT]  
->  Il **sp_replcmds** procedure deve essere eseguita solo per risolvere eventuali problemi di replica.  
+>  Il **sp_replcmds** procedure deve essere eseguita solo per risolvere i problemi con la replica.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,13 +55,13 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**id dell'articolo**|**int**|ID dell'articolo.|  
+|**id articolo**|**int**|ID dell'articolo.|  
 |**che**|**bit**|Indica se si tratta di un comando parziale.|  
 |**comando**|**varbinary(1024)**|Valore del comando.|  
 |**xactid**|**binary(10)**|ID della transazione.|  
 |**xact_seqno**|**varbinary(16)**|Numero di sequenza della transazione.|  
 |**publication_id**|**int**|ID della pubblicazione.|  
-|**command_id**|**int**|ID del comando in [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
+|**command_id**|**int**|ID del comando nel [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
 |**command_type**|**int**|Tipo di comando.|  
 |**originator_srvname**|**sysname**|Server in cui ha origine la transazione.|  
 |**originator_db**|**sysname**|Database in cui ha origine la transazione.|  
@@ -70,8 +70,8 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**originator_db_version**|**int**|Versione del database in cui ha origine la transazione.|  
 |**originator_lsn**|**varbinary(16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine.|  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_replcmds** viene utilizzato dal processo di lettura log nella replica transazionale.  
+## <a name="remarks"></a>Note  
+ **sp_replcmds** viene usato dal processo di lettura log nella replica transazionale.  
   
  La replica considera il primo client che esegue **sp_replcmds** all'interno di un database come agente di lettura log.  
   
@@ -80,12 +80,12 @@ sp_replcmds [ @maxtrans = ] maxtrans
 > [!NOTE]  
 >  Poiché il nome di tabella nel database di origine è qualificato dal nome del proprietario, per la tabella del database di destinazione è necessario specificare lo stesso nome di proprietario.  
   
- I client che tentano di eseguire **sp_replcmds** all'interno dello stesso database ricevono l'errore 18752 fino a quando il primo client si disconnette. Dopo il primo client si disconnette, è possibile eseguire un altro client **sp_replcmds**, e diventa il nuovo agente di lettura log.  
+ I client che tentano di eseguire **sp_replcmds** nello stesso database ricevono l'errore 18752 fino a quando il primo client si disconnette. Dopo il primo client si disconnette, è possibile eseguire un altro client **sp_replcmds**, e diventa il nuovo agente di lettura log.  
   
- Viene aggiunto un numero di messaggio di avviso 18759 sia il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log degli errori e [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows se **sp_replcmds** non è in grado di replicare un comando di testo poiché non è il puntatore di testo recuperato nella stessa transazione.  
+ Viene aggiunto un numero di messaggi di avviso 18759 sia la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log degli errori e il [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows se **sp_replcmds** è in grado di replicare un comando di testo, perché non è il puntatore di testo recuperate nella stessa transazione.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_replcmds**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_replcmds**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Messaggi di errore](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
