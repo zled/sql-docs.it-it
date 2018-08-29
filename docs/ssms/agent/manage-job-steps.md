@@ -30,12 +30,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f942fa53b0b4db80a8f8f666a628ab43dde85691
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6995ca87cfd4c4c82c78e7859da9222e67c41e98
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980280"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774008"
 ---
 # <a name="manage-job-steps"></a>Gestire passaggi di processo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Un passaggio di processo è un'operazione eseguita dal processo in un database o
   
 -   Programmi eseguibili e comandi del sistema operativo.  
   
--   [!INCLUDE[tsql](../../includes/tsql_md.md)] istruzioni, incluse stored procedure e stored procedure estese.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni, incluse stored procedure e stored procedure estese.  
   
 -   Script di PowerShell.  
   
@@ -57,18 +57,18 @@ Un passaggio di processo è un'operazione eseguita dal processo in un database o
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] attività.  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] pacchetti.  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetti.  
   
-Ogni passaggio di processo viene eseguito in un contesto di sicurezza specifico. Se tramite il passaggio di processo viene specificato un proxy, il passaggio viene eseguito nel contesto di sicurezza della credenziale per il proxy. Se tramite il passaggio di processo non viene specificato un proxy, il passaggio viene eseguito nel contesto dell'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Solo i membri del ruolo predefinito del server sysadmin possono creare processi in cui non venga specificato esplicitamente un proxy.  
+Ogni passaggio di processo viene eseguito in un contesto di sicurezza specifico. Se tramite il passaggio di processo viene specificato un proxy, il passaggio viene eseguito nel contesto di sicurezza della credenziale per il proxy. Se tramite il passaggio di processo non viene specificato un proxy, il passaggio viene eseguito nel contesto dell'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Solo i membri del ruolo predefinito del server sysadmin possono creare processi in cui non venga specificato esplicitamente un proxy.  
   
 Poiché i passaggi di processo vengono eseguiti nel contesto di un utente specifico di [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows, l'utente deve essere in possesso delle autorizzazioni e della configurazione necessarie per l'esecuzione del passaggio di processo. Se, ad esempio, si crea un processo che richiede una lettera di unità o un percorso UNC (Universal Naming Convention), i passaggi di processo possono essere eseguiti con l'account utente di Windows durante la verifica delle operazioni. L'utente di Windows per il passaggio di processo, tuttavia, deve inoltre disporre delle autorizzazioni richieste, delle configurazioni della lettera di unità o dell'accesso all'unità necessaria. In caso contrario, il passaggio di processo non verrà eseguito correttamente. Per evitare questo problema, assicurarsi che il proxy per ogni passaggio di processo disponga delle autorizzazioni necessarie per l'operazione eseguita dal passaggio. Per altre informazioni, vedere [Sicurezza e protezione (Motore di database)](http://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7).  
   
 ## <a name="job-step-logs"></a>Log dei passaggi di processo  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent può scrivere output da alcuni passaggi di processo in un file del sistema operativo o nella tabella sysjobstepslogs del database msdb. I tipi di passaggi di processo seguenti consentono la scrittura dell'output in entrambe le destinazioni:  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può scrivere output da alcuni passaggi di processo in un file del sistema operativo o nella tabella sysjobstepslogs del database msdb. I tipi di passaggi di processo seguenti consentono la scrittura dell'output in entrambe le destinazioni:  
   
 -   Programmi eseguibili e comandi del sistema operativo.  
   
--   [!INCLUDE[tsql](../../includes/tsql_md.md)] .  
+-   Istruzioni[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] attività.  
   
@@ -77,7 +77,7 @@ Solo i passaggi di processo eseguiti dagli utenti membri del ruolo predefinito d
 I log dei passaggi di processo vengono eliminati automaticamente quando vengono eliminati i processi o i passaggi di processo.  
   
 > [!NOTE]  
-> La registrazione delle attività di replica e dei passaggi di processo dei pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] viene gestita dal rispettivo sottosistema. Non è possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent per configurare la registrazione di questi tipi di passaggi di processo.  
+> La registrazione delle attività di replica e dei passaggi di processo dei pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene gestita dal rispettivo sottosistema. Non è possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per configurare la registrazione di questi tipi di passaggi di processo.  
   
 ## <a name="executable-programs-and-operating-system-commands-as-job-steps"></a>Utilizzo di programmi eseguibili e comandi del sistema operativo come passaggi di processo  
 I programmi eseguibili e i comandi del sistema operativo possono essere utilizzati come passaggi di processo. Questi file possono avere estensione bat, cmd, com o exe.  
@@ -92,18 +92,18 @@ Quando si utilizza un programma eseguibile o un comando del sistema operativo co
     > È necessario indicare il percorso completo del programma eseguibile se questo non è incluso in una directory specificata nel percorso di sistema o nel percorso per l'account utente con cui viene eseguito il passaggio di processo.  
   
 ## <a name="transact-sql-job-steps"></a>Passaggi di processo Transact-SQL  
-Quando si crea un passaggio di processo [!INCLUDE[tsql](../../includes/tsql_md.md)] , è necessario eseguire le operazioni seguenti:  
+Quando si crea un passaggio di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] , è necessario eseguire le operazioni seguenti:  
   
 -   Identificare il database in cui eseguire il processo.  
   
--   Digitare l'istruzione [!INCLUDE[tsql](../../includes/tsql_md.md)] da eseguire. L'istruzione può chiamare una stored procedure o una stored procedure estesa.  
+-   Digitare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] da eseguire. L'istruzione può chiamare una stored procedure o una stored procedure estesa.  
   
-In alternativa, è possibile aprire un file [!INCLUDE[tsql](../../includes/tsql_md.md)] esistente come comando per il passaggio di processo.  
+In alternativa, è possibile aprire un file [!INCLUDE[tsql](../../includes/tsql-md.md)] esistente come comando per il passaggio di processo.  
   
-[!INCLUDE[tsql](../../includes/tsql_md.md)] I passaggi di processo non usano proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Il passaggio di processo viene invece eseguito come proprietario del passaggio oppure come account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent se il proprietario è un membro del ruolo predefinito del server sysadmin. I membri del ruolo predefinito del server sysadmin possono anche specificare che i passaggi di processo [!INCLUDE[tsql](../../includes/tsql_md.md)] vengano eseguiti nel contesto di un altro utente tramite il parametro *database_user_name* della stored procedure sp_add_jobstep. Per altre informazioni, vedere [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] I passaggi di processo non usano proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Il passaggio di processo viene invece eseguito come proprietario del passaggio oppure come account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent se il proprietario è un membro del ruolo predefinito del server sysadmin. I membri del ruolo predefinito del server sysadmin possono anche specificare che i passaggi di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] vengano eseguiti nel contesto di un altro utente tramite il parametro *database_user_name* della stored procedure sp_add_jobstep. Per altre informazioni, vedere [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
 > [!NOTE]  
-> Un singolo passaggio di processo [!INCLUDE[tsql](../../includes/tsql_md.md)] può contenere più batch. [!INCLUDE[tsql](../../includes/tsql_md.md)] I passaggi di processo possono contenere comandi GO incorporati.  
+> Un singolo passaggio di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] può contenere più batch. [!INCLUDE[tsql](../../includes/tsql-md.md)] I passaggi di processo possono contenere comandi GO incorporati.  
   
 ## <a name="powershell-scripting-job-steps"></a>Utilizzo di script di PowerShell come passaggi di processo  
 Quando si utilizza uno script di PowerShell per creare un passaggio di processo, come comando del passaggio è necessario specificare uno dei due elementi seguenti:  
@@ -112,12 +112,12 @@ Quando si utilizza uno script di PowerShell per creare un passaggio di processo,
   
 -   Un file script di PowerShell esistente da aprire.  
   
-Il sottosistema PowerShell di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] apre una sessione di PowerShell e carica gli snap-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell. Lo script di PowerShell usato come comando del passaggio di processo può fare riferimento al provider e ai cmdlet di PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Per altre informazioni sulla scrittura di script di PowerShell tramite gli snap-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell, vedere [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
+Il sottosistema PowerShell di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apre una sessione di PowerShell e carica gli snap-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Lo script di PowerShell usato come comando del passaggio di processo può fare riferimento al provider e ai cmdlet di PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni sulla scrittura di script di PowerShell tramite gli snap-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, vedere [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
 ## <a name="activex-scripting-job-steps"></a>Utilizzo di Script ActiveX come passaggi di processo  
   
 > [!IMPORTANT]  
-> Il passaggio di processo con script ActiveX verrà rimosso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.  
+> Il passaggio di processo con script ActiveX verrà rimosso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.  
   
 Quando si crea un passaggio di processo con script ActiveX, è necessario eseguire le operazioni seguenti:  
   
@@ -127,7 +127,7 @@ Quando si crea un passaggio di processo con script ActiveX, è necessario esegui
   
 È inoltre possibile aprire un file di script ActiveX esistente come comando per il passaggio di processo. In alternativa, i comandi degli script ActiveX possono essere compilati esternamente, ad esempio tramite Microsoft Visual Basic, e quindi eseguiti come file eseguibili.  
   
-Quando un comando di un passaggio di processo è uno script ActiveX, è possibile utilizzare l'oggetto SQLActiveScriptHost per stampare l'output nella cronologia dei passaggi di processo o per creare oggetti COM. SQLActiveScriptHost è un oggetto globale introdotto dal sistema di hosting di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent nello spazio dei nomi dello script. L'oggetto dispone di due metodi (Stampa e CreateObject). Nell'esempio seguente viene illustrato il funzionamento degli script ActiveX in Visual Basic Scripting Edition (VBScript).  
+Quando un comando di un passaggio di processo è uno script ActiveX, è possibile utilizzare l'oggetto SQLActiveScriptHost per stampare l'output nella cronologia dei passaggi di processo o per creare oggetti COM. SQLActiveScriptHost è un oggetto globale introdotto dal sistema di hosting di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nello spazio dei nomi dello script. L'oggetto dispone di due metodi (Stampa e CreateObject). Nell'esempio seguente viene illustrato il funzionamento degli script ActiveX in Visual Basic Scripting Edition (VBScript).  
   
 ```  
 ' VBScript example for ActiveX Scripting job step  
@@ -157,17 +157,17 @@ I passaggi dei processi di replica attivano uno degli agenti di replica seguenti
   
 -   Agente di lettura coda (processo QueueReader)  
   
-Durante la configurazione della replica, è possibile specificare di eseguire gli agenti di replica in tre modi diversi: in modo continuativo dopo l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, su richiesta o in base a una pianificazione. Per altre informazioni sugli agenti di replica, vedere [Panoramica degli agenti di replica](http://msdn.microsoft.com/a35ecd7d-f130-483c-87e3-ddc8927bb91b).  
+Durante la configurazione della replica, è possibile specificare di eseguire gli agenti di replica in tre modi diversi: in modo continuativo dopo l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, su richiesta o in base a una pianificazione. Per altre informazioni sugli agenti di replica, vedere [Panoramica degli agenti di replica](../../relational-databases/replication/agents/replication-agents-overview.md).  
   
 ## <a name="analysis-services-job-steps"></a>Passaggi di processo Analysis Services  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent supporta due tipi diversi di passaggi di processo Analysis Services, ovvero i passaggi di processo con comandi e i passaggi di processo con query.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent supporta due tipi diversi di passaggi di processo Analysis Services, ovvero i passaggi di processo con comandi e i passaggi di processo con query.  
   
 ### <a name="analysis-services-command-job-steps"></a>Passaggi di processo con comandi di Analysis Services  
 Quando si crea un passaggio di processo con un comando di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] , è necessario eseguire le operazioni seguenti:  
   
 -   Identificare il server OLAP di database in cui eseguire il passaggio di processo.  
   
--   Digitare l'istruzione da eseguire. È necessario che l'istruzione sia un file XML per il metodo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **di** . L'istruzione non può includere una busta SOAP completa o un file XML per il metodo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **di** . A differenza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] , i passaggi di processo di **Agent non supportano le buste SOAP complete e il metodo** Discover [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+-   Digitare l'istruzione da eseguire. È necessario che l'istruzione sia un file XML per il metodo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **di** . L'istruzione non può includere una busta SOAP completa o un file XML per il metodo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **di** . A differenza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , i passaggi di processo di **Agent non supportano le buste SOAP complete e il metodo** Discover [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="analysis-services-query-job-steps"></a>Passaggi di processo con query Analysis Services  
 Quando si crea un passaggio di processo con una query di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] , è necessario eseguire le operazioni seguenti:  
@@ -179,7 +179,7 @@ Quando si crea un passaggio di processo con una query di [!INCLUDE[ssASnoversion
 Per altre informazioni su MDX, vedere [Elementi fondamentali dell'istruzione MDX (MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
 ## <a name="integration-services-packages"></a>Pacchetti Integration Services  
-Quando si crea un passaggio di processo con un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] , è necessario eseguire le operazioni seguenti:  
+Quando si crea un passaggio di processo con un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è necessario eseguire le operazioni seguenti:  
   
 -   Identificare l'origine del pacchetto.  
   
@@ -203,7 +203,7 @@ Quando si crea un passaggio di processo con un pacchetto di [!INCLUDE[ssISnovers
   
 Se il pacchetto è stato distribuito al catalogo SSIS e si specifica **Catalogo SSIS** come origine del pacchetto, molte di queste informazioni di configurazione vengono ottenute automaticamente dal pacchetto. Nella scheda **Configurazione** è possibile specificare l'ambiente, i valori dei parametri, i valori della gestione connessione, gli override delle proprietà e se il pacchetto è in esecuzione in un ambiente di runtime a 32 bit.  
   
-Per altre informazioni sulla creazione di passaggi di processo eseguiti come pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] , vedere [Processi di SQL Server Agent per i pacchetti](http://msdn.microsoft.com/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31).  
+Per altre informazioni sulla creazione di passaggi di processo eseguiti come pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vedere [Processi di SQL Server Agent per i pacchetti](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
@@ -211,14 +211,14 @@ Per altre informazioni sulla creazione di passaggi di processo eseguiti come pac
 |-|-|  
 |**Descrizione**|**Argomento**|  
 |Viene descritto come creare un passaggio di processo con un programma eseguibile.|[Creare un passaggio di processo CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)|  
-|Viene descritto come reimpostare le autorizzazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Configurare un utente per la creazione e la gestione di processi di SQL Server Agent](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
-|Viene descritto come creare un passaggio di processo di [!INCLUDE[tsql](../../includes/tsql_md.md)] Agent.|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  
-|Viene descritto come definire le opzioni per i passaggi di processo Transact-SQL di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Define Transact-SQL Job Step Options](../../ssms/agent/define-transact-sql-job-step-options.md)|  
+|Viene descritto come reimpostare le autorizzazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Configurare un utente per la creazione e la gestione di processi di SQL Server Agent](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
+|Viene descritto come creare un passaggio di processo di [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  
+|Viene descritto come definire le opzioni per i passaggi di processo Transact-SQL di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Define Transact-SQL Job Step Options](../../ssms/agent/define-transact-sql-job-step-options.md)|  
 |Viene descritto come creare un passaggio di processo dello script ActiveX.|[Create an ActiveX Script Job Step](../../ssms/agent/create-an-activex-script-job-step.md)|  
-|Viene descritto come creare e definire passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent tramite cui vengono eseguiti comandi e query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Analysis Services.|[Create an Analysis Services Job Step](../../ssms/agent/create-an-analysis-services-job-step.md)|  
-|Viene descritta quale azione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] occorre eseguire se si verifica un errore durante l'esecuzione del processo.|[Set Job Step Success or Failure Flow](../../ssms/agent/set-job-step-success-or-failure-flow.md)|  
+|Viene descritto come creare e definire passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite cui vengono eseguiti comandi e query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](../../ssms/agent/create-an-analysis-services-job-step.md)|  
+|Viene descritta quale azione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occorre eseguire se si verifica un errore durante l'esecuzione del processo.|[Set Job Step Success or Failure Flow](../../ssms/agent/set-job-step-success-or-failure-flow.md)|  
 |Viene descritto come visualizzare informazioni dettagliate sui passaggi di processo nella finestra di dialogo Proprietà passaggio processo.|[Visualizzare informazioni sui passaggi di processo](../../ssms/agent/view-job-step-information.md)|  
-|Viene descritto come eliminare un log dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
+|Viene descritto come eliminare un log dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
 [sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  

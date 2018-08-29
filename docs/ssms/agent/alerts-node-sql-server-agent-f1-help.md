@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8d9b92985a554616be1db41a6367307c00491d40
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8a41a92f8f17ab65d7fcbc0620772b7deefc625d
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015767"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774568"
 ---
 # <a name="alerts-node-sql-server-agent-f1-help"></a>Nodo Avvisi (Guida sensibile al contesto di SQL Server Agent)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,6 +29,6 @@ ms.locfileid: "38015767"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In questa sezione è inclusa la Guida sensibile al contesto relativa al nodo **Avvisi** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+In questa sezione è inclusa la Guida sensibile al contesto relativa al nodo **Avvisi** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 

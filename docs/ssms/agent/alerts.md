@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc18be0111569885414ab861a8b7f978e1bd128c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 27ac7d69367739e074a7d5c94ced4cdd9325097d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985683"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775293"
 ---
 # <a name="alerts"></a>Avvisi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "38985683"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Gli eventi vengono generati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e immessi nel registro applicazioni di [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent legge il registro applicazioni ed esegue un confronto tra gli eventi e gli avvisi definiti. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent rileva una corrispondenza, viene attivato un avviso, che rappresenta una risposta automatica a un evento. Oltre al controllo degli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent può inoltre eseguire il monitoraggio delle condizioni delle prestazioni e degli eventi WMI (Windows Management Instrumentation).  
+Gli eventi vengono generati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e immessi nel registro applicazioni di [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent legge il registro applicazioni ed esegue un confronto tra gli eventi e gli avvisi definiti. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent rileva una corrispondenza, viene attivato un avviso, che rappresenta una risposta automatica a un evento. Oltre al controllo degli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può inoltre eseguire il monitoraggio delle condizioni delle prestazioni e degli eventi WMI (Windows Management Instrumentation).  
   
 Per definire un avviso, è necessario specificare gli elementi seguenti:  
   
@@ -49,17 +49,17 @@ Per definire un avviso, è necessario specificare gli elementi seguenti:
   
 -   Evento o condizione delle prestazioni che attiva l'avviso.  
   
--   Azione eseguita da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in risposta all'evento o alla condizione delle prestazioni.  
+-   Azione eseguita da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in risposta all'evento o alla condizione delle prestazioni.  
   
 ## <a name="naming-an-alert"></a>Denominazione di un avviso  
-Ogni avviso deve essere dotato di un nome. I nomi degli avvisi devono essere univoci nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e non possono essere formati da più di **128** caratteri.  
+Ogni avviso deve essere dotato di un nome. I nomi degli avvisi devono essere univoci nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non possono essere formati da più di **128** caratteri.  
   
 ## <a name="selecting-an-event-type"></a>Selezione di un tipo di evento  
 Un avviso rappresenta la risposta a un evento di tipo specifico. Gli avvisi rispondono ai tipi di evento seguenti:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] eventi  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eventi  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] condizioni delle prestazioni  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] condizioni delle prestazioni  
   
 -   Eventi WMI  
   
@@ -70,22 +70,22 @@ Il tipo di evento determina i parametri utilizzati per specificare l'evento esat
   
 -   **Numero di errore**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent genera un avviso quando si verifica un errore specifico. È possibile, ad esempio, specificare il numero errore 2571 in risposta a tentativi non autorizzati di richiamare comandi DBCC (Database Console Commands).  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent genera un avviso quando si verifica un errore specifico. È possibile, ad esempio, specificare il numero errore 2571 in risposta a tentativi non autorizzati di richiamare comandi DBCC (Database Console Commands).  
   
 -   **Livello di gravità**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent genera un avviso quando si verifica un errore con il livello di gravità specificato. È possibile, ad esempio, specificare un livello di gravità 15 in risposta a errori di sintassi nelle istruzioni Transact-SQL.  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent genera un avviso quando si verifica un errore con il livello di gravità specificato. È possibile, ad esempio, specificare un livello di gravità 15 in risposta a errori di sintassi nelle istruzioni Transact-SQL.  
   
 -   **Database**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent genera un avviso solo quando l'evento viene generato in un database specifico. Questa opzione si applica insieme al numero di errore o al livello di gravità. Se, ad esempio, un'istanza contiene un database utilizzato per la produzione e uno utilizzato per la segnalazione, è possibile definire un avviso in risposta a errori di sintassi solo nel database di produzione.  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent genera un avviso solo quando l'evento viene generato in un database specifico. Questa opzione si applica insieme al numero di errore o al livello di gravità. Se, ad esempio, un'istanza contiene un database utilizzato per la produzione e uno utilizzato per la segnalazione, è possibile definire un avviso in risposta a errori di sintassi solo nel database di produzione.  
   
 -   **Testo dell'evento**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent genera un avviso quando l'evento indicato contiene una stringa di testo specifica nel messaggio dell'evento. È possibile, ad esempio, definire un avviso in risposta a messaggi contenenti il nome di una tabella o un vincolo specifico.  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent genera un avviso quando l'evento indicato contiene una stringa di testo specifica nel messaggio dell'evento. È possibile, ad esempio, definire un avviso in risposta a messaggi contenenti il nome di una tabella o un vincolo specifico.  
   
 ## <a name="selecting-a-performance-condition"></a>Selezione di una condizione delle prestazioni  
-È possibile determinare la generazione di un avviso in risposta a una condizione delle prestazioni specifica. In questo caso, è necessario specificare il contatore delle prestazioni da monitorare, una soglia per l'avviso e il comportamento indicato dal contatore se viene generato l'avviso. Per impostare una condizione delle prestazioni, è necessario definire gli elementi indicati di seguito nella pagina [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Generale **della finestra di dialogo** Nuovo avviso **o** Proprietà avviso **di** Agent:  
+È possibile determinare la generazione di un avviso in risposta a una condizione delle prestazioni specifica. In questo caso, è necessario specificare il contatore delle prestazioni da monitorare, una soglia per l'avviso e il comportamento indicato dal contatore se viene generato l'avviso. Per impostare una condizione delle prestazioni, è necessario definire gli elementi indicati di seguito nella pagina [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Generale **della finestra di dialogo** Nuovo avviso **o** Proprietà avviso **di** Agent:  
   
 -   **Oggetto**  
   
@@ -97,7 +97,7 @@ Il tipo di evento determina i parametri utilizzati per specificare l'evento esat
   
 -   **Istanza**  
   
-    L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] definisce l'istanza specifica, se disponibile, dell'attributo da monitorare.  
+    L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definisce l'istanza specifica, se disponibile, dell'attributo da monitorare.  
   
 -   **Avvisa se il contatore** e **Valore**  
   
@@ -109,15 +109,15 @@ Il tipo di evento determina i parametri utilizzati per specificare l'evento esat
     > Viene eseguito un campionamento periodico dei dati relativi alle prestazioni, che può determinare un lieve ritardo (qualche secondo) tra il raggiungimento della soglia e la generazione dell'avviso.  
   
 ## <a name="selecting-a-wmi-event"></a>Selezione di un evento WMI  
-È possibile impostare la generazione di un avviso in risposta a un evento WMI specifico. Per selezionare un evento WMI, è necessario definire gli elementi indicati di seguito nella pagina [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Generale **della finestra di dialogo** Nuovo avviso **o** Proprietà avviso **di** Agent:  
+È possibile impostare la generazione di un avviso in risposta a un evento WMI specifico. Per selezionare un evento WMI, è necessario definire gli elementi indicati di seguito nella pagina [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Generale **della finestra di dialogo** Nuovo avviso **o** Proprietà avviso **di** Agent:  
   
 -   **Namespace**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent viene registrato come client WMI nello spazio dei nomi WMI indicato per le query per gli eventi.  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene registrato come client WMI nello spazio dei nomi WMI indicato per le query per gli eventi.  
   
 -   **Query**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent usa l'istruzione WQL (Windows Management Instrumentation Query Language) indicata per identificare l'evento specifico.  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usa l'istruzione WQL (Windows Management Instrumentation Query Language) indicata per identificare l'evento specifico.  
   
 Di seguito vengono indicati alcuni collegamenti utili per l'esecuzione di operazioni comuni:  
   

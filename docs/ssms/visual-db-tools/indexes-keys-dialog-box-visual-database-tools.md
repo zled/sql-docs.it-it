@@ -18,19 +18,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae60933dc5f0614bd5a123b4ca61563b3c393a5a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c08c4c10b613f39e428a24d37e0e6f4e94e0148c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984993"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774613"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici/chiavi (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Questa finestra di dialogo consente di creare o modificare indici, chiavi primarie e chiavi univoche. Per accedere a questa finestra di dialogo, aprire la definizione della tabella con l'indice o la chiave, fare clic con il pulsante destro del mouse sulla griglia della definizione della tabella e quindi scegliere **Indici/chiavi**.  
   
 > [!NOTE]  
-> Se la tabella viene pubblicata per la replica, è necessario apportare modifiche allo schema usando l'istruzione [ALTER TABLE](http://msdn.microsoft.com/f1745145-182d-4301-a334-18f799d361d1) di Transact-SQL oppure SMO (SQL Server Management Objects). Quando si apportano modifiche allo schema utilizzando Progettazione tabelle o Progettazione diagrammi di database, viene effettuato il tentativo di rimuovere e rigenerare la tabella. La modifica allo schema non riuscirà, poiché non è consentita la rimozione di oggetti pubblicati.  
+> Se la tabella viene pubblicata per la replica, è necessario apportare modifiche allo schema usando l'istruzione [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) di Transact-SQL oppure SMO (SQL Server Management Objects). Quando si apportano modifiche allo schema utilizzando Progettazione tabelle o Progettazione diagrammi di database, viene effettuato il tentativo di rimuovere e rigenerare la tabella. La modifica allo schema non riuscirà, poiché non è consentita la rimozione di oggetti pubblicati.  
   
 ## <a name="options"></a>Opzioni  
 **Indice o chiave primari/univoci selezionati**  
@@ -67,7 +67,7 @@ Consente di immettere una descrizione della chiave o dell'indice. Per inserire u
 Se viene espansa, visualizza le informazioni relative a **Crea come CLUSTERED**.  
   
 **Crea come CLUSTERED**  
-Trasforma la chiave o l'indice in chiave o indice cluster. In una tabella è consentito un solo indice cluster. I dati nella tabella vengono archiviati secondo l'ordine dell'indice cluster. Per altre informazioni, vedere [Creare indici cluster](http://msdn.microsoft.com/47148383-c2c7-4f08-a9e4-7016bf2d1d13) e [Creare indici non cluster](http://msdn.microsoft.com/9402029a-1227-46c4-93aa-c2122eb1b943).  
+Trasforma la chiave o l'indice in chiave o indice cluster. In una tabella è consentito un solo indice cluster. I dati nella tabella vengono archiviati secondo l'ordine dell'indice cluster. Per altre informazioni, vedere [Creare indici cluster](../../relational-databases/indexes/create-clustered-indexes.md) e [Creare indici non cluster](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
 **Specifica spazio dei dati**  
 Se viene espansa, visualizza le informazioni relative a **(Tipo spazio dei dati)**, **Nome gruppo di file o schema di partizione**ed **Elenco colonne di partizione**.  
@@ -97,9 +97,9 @@ Indica se per le pagine intermedie dell'indice viene usata la stessa percentuale
 **Ignora chiavi duplicate**  
 Specifica l'effetto prodotto dall'inserimento di una riga con valore di chiave uguale a un valore di chiave esistente durante un'operazione di inserimento bulk. Se si sceglie:  
   
--   **Sì** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] genera un avviso, ignora la riga in ingresso errata e tenta di inserire le righe rimanenti.  
+-   **Sì** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un avviso, ignora la riga in ingresso errata e tenta di inserire le righe rimanenti.  
   
--   **No** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] genera un messaggio di errore ed esegue il rollback dell'intera operazione di inserimento bulk.  
+-   **No** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un messaggio di errore ed esegue il rollback dell'intera operazione di inserimento bulk.  
   
 **Colonne incluse**  
 Visualizza un elenco separato da virgole con i nomi di tutte le colonne che costituiscono la chiave di indice. Le colonne di sottochiave possono essere specificate solo per gli indici non cluster. La proprietà è nascosta per gli indici XML.  

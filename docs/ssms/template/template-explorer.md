@@ -24,23 +24,23 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d6fadfa9b084a16f6464bbebf6d6a8e32b7cbbb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a5f04afddbc388dba0e4efde00f4cd1096ce1bc0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015970"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775382"
 ---
 # <a name="template-explorer"></a>Esplora modelli
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] offre un'ampia gamma di modelli. I modelli sono file preimpostati contenenti script SQL che agevolano la creazione degli oggetti di database. Alla prima apertura di Esplora modelli, una copia dei modelli viene inserita nella cartella dell'utente in C:\Users in AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre un'ampia gamma di modelli. I modelli sono file preimpostati contenenti script SQL che agevolano la creazione degli oggetti di database. Alla prima apertura di Esplora modelli, una copia dei modelli viene inserita nella cartella dell'utente in C:\Users in AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates.  
   
 È possibile esplorare i modelli disponibili in Esplora modelli, quindi aprire un modello per incorporare il codice in una finestra dell'editor di codice. È inoltre possibile creare modelli personalizzati.  
   
 ## <a name="benefits-of-templates"></a>Vantaggi dei modelli  
 Sono disponibili modelli per soluzioni, progetti e diversi tipi di editor del codice. I modelli inclusi nell'applicazione consentono di creare oggetti, ad esempio database, tabelle, viste, indici, stored procedure, trigger, statistiche e funzioni. Sono inoltre disponibili modelli che facilitano la gestione del server mediante la creazione di proprietà estese, server collegati, account di accesso, ruoli, utenti e modelli per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)].  
   
-Gli script modello disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] includono parametri che consentono di personalizzare il codice. Dopo avere aperto il modello, usare la finestra di dialogo **Sostituisci parametri modello** per sostituire i parametri del modello con i valori desiderati.  
+Gli script modello disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] includono parametri che consentono di personalizzare il codice. Dopo avere aperto il modello, usare la finestra di dialogo **Sostituisci parametri modello** per sostituire i parametri del modello con i valori desiderati.  
   
 Creare modelli personalizzati per le attività eseguite di frequente. Organizzare gli script personalizzati in cartelle esistenti oppure creare una nuova struttura di cartelle.  
   

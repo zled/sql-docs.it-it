@@ -21,16 +21,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87ad2f292481d44c10dba92fe6e122ac71560f91
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dc8b19a65fa85972915774d14315ac67ef85391b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988888"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775631"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Cancella i risultati di una query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Dopo l'esecuzione di una query in **Progettazione query e Progettazione viste**, è possibile cancellare il contenuto del riquadro Risultati. Questa procedura è valida per le query create usando le opzioni **Open View** (Apri vista) o **Apri tabella** di Esplora oggetti. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]dopo l'esecuzione di una query nell'editor di query, è possibile cancellare il contenuto del riquadro Risultati solo chiudendo la finestra dell'editor di query o eseguendo un'altra query.  
+Dopo l'esecuzione di una query in **Progettazione query e Progettazione viste**, è possibile cancellare il contenuto del riquadro Risultati. Questa procedura è valida per le query create usando le opzioni **Open View** (Apri vista) o **Apri tabella** di Esplora oggetti. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]dopo l'esecuzione di una query nell'editor di query, è possibile cancellare il contenuto del riquadro Risultati solo chiudendo la finestra dell'editor di query o eseguendo un'altra query.  
   
 > [!NOTE]  
 > Con questa operazione non verranno annullate le modifiche apportate al database. Per altre informazioni sul funzionamento del riquadro Risultati, vedere [Utilizzo dei dati nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  

@@ -17,16 +17,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cc97cf0c6c6c332e6c6476e1152ba2c30db3802
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 31f3a7f0efa120cae62d2390d2d4bf5b571ee6f0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981314"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775744"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>Ambiente di SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] offre un ambiente completo per la gestione e lo sviluppo di query in [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] offre un ambiente completo per la gestione e lo sviluppo di query in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 [Elementi generali dell'interfaccia utente](../ssms/general-user-interface-elements.md)  
@@ -36,5 +36,5 @@ Vengono definite le caratteristiche generali dell'interfaccia utente, ad esempio
 Viene illustrato Esplora soluzioni, che offre una visualizzazione organizzata dei progetti e dei rispettivi file e un facile accesso ai comandi per gestirli.  
   
 [Controllo del codice sorgente di Esplora soluzioni](https://msdn.microsoft.com/library/ms173879.aspx)  
-Viene descritto come [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] si integra con i prodotti del controllo del codice sorgente.  
+Viene descritto come [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] si integra con i prodotti del controllo del codice sorgente.  
   

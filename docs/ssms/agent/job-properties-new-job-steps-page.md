@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8beaff6457919ea892715dbd527b8cb17ef9cef2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4d51e053e6ac4518743a737000baf926ccfd5adc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987823"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775389"
 ---
 # <a name="job-properties---new-job-steps-page"></a>Proprietà processo - Nuovo processo (pagina Passaggi)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "37987823"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Usare questa pagina per visualizzare e organizzare i passaggi per un processo di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+Usare questa pagina per visualizzare e organizzare i passaggi per un processo di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Opzioni  
 **Elenco dei passaggi del processo**  
@@ -41,7 +41,7 @@ Elenca i passaggi per il processo corrente.
 Consente di spostare un passaggio verso l'alto o verso il basso nell'elenco.  
   
 **Passaggio di avvio**  
-Consente di selezionare il passaggio avviato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent all'inizio del processo.  
+Consente di selezionare il passaggio avviato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent all'inizio del processo.  
   
 **Nuova**  
 Consente di creare un nuovo passaggio del processo sotto al passaggio selezionato.  

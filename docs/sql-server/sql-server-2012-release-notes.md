@@ -15,12 +15,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d4e350a885524670905e5aa67d146b1531c32dae
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: bc599762d69e06886e95a85c3e58dbf3923e2ddf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926202"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774951"
 ---
 # <a name="sql-server-2012-release-notes"></a>Note sulla versione di SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ o Gestione configurazione
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**Soluzione alternativa:** può verificarsi se il motore di SQL Server o Analysis Services non è stato installato. Per risolvere il problema, vedere i log del programma di installazione di SQL Server e risolvere i problemi relativi al motore di SQL Server e ad Analysis Services. Per altre informazioni, vedere la pagina relativa alla visualizzazione e alla lettura dei file di log del programma di installazione di SQL Server. Per altre informazioni, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](http://msdn.microsoft.com/library/ms143702(SQL.110).aspx).  
+**Soluzione alternativa:** può verificarsi se il motore di SQL Server o Analysis Services non è stato installato. Per risolvere il problema, vedere i log del programma di installazione di SQL Server e risolvere i problemi relativi al motore di SQL Server e ad Analysis Services. Per altre informazioni, vedere la pagina relativa alla visualizzazione e alla lettura dei file di log del programma di installazione di SQL Server. Per altre informazioni, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 L'aggiornamento del cluster di failover di SQL Server 2008/2008 R2 Analysis Services a SQL Server 2012 potrebbe non venir completato dopo la ridenominazione del nome di rete  
 **Problema:** dopo la modifica del nome di rete di un'istanza del cluster di failover di Microsoft SQL Server 2008 o 2008 R2 Analysis Services tramite lo strumento di amministrazione cluster di Windows, è possibile che l'operazione di aggiornamento non venga completata.  
@@ -225,7 +225,7 @@ SQL Server 2012 è supportato nei sistemi operativi Windows Vista SP2, Windows S
   
 8.  Nella pagina **Stato del ripristino** viene mostrato lo stato dell'operazione di ripristino. Nella pagina **Operazione completata** è indicato che l'operazione è stata completata.  
   
-Per altre informazioni su come ripristinare un'istanza di SQL Server, vedere [Ripristino di un'installazione non riuscita di SQL Server 2012](http://msdn.microsoft.com/library/cc646006(SQL.110).aspx).  
+Per altre informazioni su come ripristinare un'istanza di SQL Server, vedere [Ripristino di un'installazione non riuscita di SQL Server 2012](../database-engine/install-windows/repair-a-failed-sql-server-installation.md).  
   
 ### <a name="111-an-instance-of-sql-server-2012-might-fail-after-an-os-upgrade"></a>1.11 Un'istanza di SQL Server 2012 potrebbe non riuscire dopo un aggiornamento del sistema operativo  
 **Problema:** è possibile che un'istanza di SQL Server 2012 dia esito negativo con il seguente errore dopo l'aggiornamento del sistema operativo a Windows 7 SP1 da Windows Vista.  
@@ -237,7 +237,7 @@ Per altre informazioni su come ripristinare un'istanza di SQL Server, vedere [Ri
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 Per l'aggiornamento dell'edizione di SQL Server è richiesto un riavvio  
 **Problema**: quando si esegue l'aggiornamento dell'edizione di un'istanza di SQL Server 2012, è possibile che alcune delle funzionalità associate alla nuova edizione non vengano attivate immediatamente.  
   
-**Soluzione alternativa**: riavviare il computer dopo l'aggiornamento dell'edizione di un'istanza di SQL Server 2012. Per altre informazioni sugli aggiornamenti supportati in SQL Server 2012, vedere [Aggiornamenti di versione ed edizione supportati](http://msdn.microsoft.com/library/ms143393.aspx).  
+**Soluzione alternativa**: riavviare il computer dopo l'aggiornamento dell'edizione di un'istanza di SQL Server 2012. Per altre informazioni sugli aggiornamenti supportati in SQL Server 2012, vedere [Aggiornamenti di versione ed edizione supportati](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
   
 ### <a name="113-database-with-read-only-filegroup-or-files-cannot-be-upgraded"></a>1.13 Impossibile aggiornare un database con file o filegroup di sola lettura  
 **Problema**: non è possibile aggiornare un database collegandolo o ripristinandolo dal backup se il database o i relativi file/filegroup sono di sola lettura.  Viene restituito l'errore 3415.  Questo problema si verifica anche quando si esegue un aggiornamento sul posto di un'istanza di SQL Server, cioè quando si tenta di sostituire un'istanza esistente di SQL Server installando SQL Server 2012 e uno o più database esistenti sono di sola lettura.  
@@ -247,7 +247,7 @@ Per altre informazioni su come ripristinare un'istanza di SQL Server, vedere [Ri
 ### <a name="114-reinstalling-an-instance-of-sql-server-failover-custer-fails-if-you-use-the-same-ip-address"></a>1.14 La reinstallazione di un'istanza del cluster di failover di SQL Server non riesce se si usano lo stesso indirizzo IP  
 **Problema:** se si specifica un indirizzo IP non corretto durante un'installazione di un'istanza del cluster di failover di SQL Server, l'installazione non riesce. Dopo la disinstallazione dell'istanza con errori, e in caso di tentativo di reinstallazione dell'istanza del cluster di failover di SQL Server con lo stesso nome istanza, e indirizzo IP corretto, l'installazione non viene completata. L'errore è dovuto al gruppo di risorse duplicate lasciato dall'installazione precedente.  
   
-**Soluzione alternativa:** per risolvere il problema, utilizzare un nome istanza diverso durante la reinstallazione oppure eliminare manualmente il gruppo di risorse prima della reinstallazione. Per altre informazioni, vedere la pagina relativa all' [aggiunta o alla rimozione di nodi in un cluster di failover di SQL Server](http://msdn.microsoft.com/library/ms191545).  
+**Soluzione alternativa:** per risolvere il problema, utilizzare un nome istanza diverso durante la reinstallazione oppure eliminare manualmente il gruppo di risorse prima della reinstallazione. Per altre informazioni, vedere la pagina relativa all' [aggiunta o alla rimozione di nodi in un cluster di failover di SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

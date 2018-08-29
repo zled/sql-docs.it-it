@@ -17,16 +17,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b7a760a15c8ea953e87b8ff9ab550212c29cd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c28c04376a010c3329dcd1df28e716229cab8f27
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043168"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775379"
 ---
 # <a name="create-a-new-solution"></a>Creazione di una nuova soluzione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Quando viene creato un progetto, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] viene creata una soluzione per contenerlo. È possibile aprire una sola soluzione per volta. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] non consente di creare cartelle all'interno dei progetti. Per organizzare il lavoro, creare più progetti.  
+Quando viene creato un progetto, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] viene creata una soluzione per contenerlo. È possibile aprire una sola soluzione per volta. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non consente di creare cartelle all'interno dei progetti. Per organizzare il lavoro, creare più progetti.  
   
 Per accedere a Esplora soluzioni, scegliere **Esplora soluzioni** dal menu **Visualizza** .  
   

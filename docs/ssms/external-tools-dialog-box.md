@@ -19,16 +19,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4da622bd856de2c2eabf22a9f7f2fbef1f64144
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 83752eac337db70ea2aa382cc426c7eb1859d096
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979869"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774732"
 ---
 # <a name="external-tools-dialog-box"></a>Finestra di dialogo Strumenti esterni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Nella finestra di dialogo **Strumenti esterni** è possibile aggiungere strumenti esterni, ad esempio SQLCMD o Blocco note, al menu **Strumenti**. L'aggiunta di strumenti esterni consente di avviare facilmente altre applicazioni dall'ambiente di [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] . Durante l'avvio dello strumento, è possibile specificare argomenti e una directory di lavoro. L'output di alcuni strumenti può inoltre essere visualizzato nella finestra **Output** . La finestra di dialogo **Strumenti esterni** è accessibile dal menu **Strumenti** .  
+Nella finestra di dialogo **Strumenti esterni** è possibile aggiungere strumenti esterni, ad esempio SQLCMD o Blocco note, al menu **Strumenti**. L'aggiunta di strumenti esterni consente di avviare facilmente altre applicazioni dall'ambiente di [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Durante l'avvio dello strumento, è possibile specificare argomenti e una directory di lavoro. L'output di alcuni strumenti può inoltre essere visualizzato nella finestra **Output** . La finestra di dialogo **Strumenti esterni** è accessibile dal menu **Strumenti** .  
   
 ## <a name="options"></a>Opzioni  
 **Contenuto menu**  
@@ -56,7 +56,7 @@ Specificare il percorso del file da avviare.
 Consente di specificare le variabili passate allo strumento quando questo viene selezionato dal menu. Negli argomenti possono essere specificati valori che vengono passati allo strumento o al comando all'avvio. Un valore può ad esempio specificare un nome di file o una directory. Per selezionare un argomento da un elenco di argomenti predefiniti, utilizzare il pulsante freccia. È possibile aggiungere più argomenti. Per un elenco completo degli argomenti predefiniti e delle relative definizioni, vedere [Strumenti esterni - Argomenti](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md). È inoltre possibile immettere argomenti personalizzati, ad esempio opzioni della riga di comando, a seconda del comando o dello strumento utilizzato.  
   
 **Usa finestra di output**  
-Consente di aprire la finestra di output di [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] per visualizzare l'output del comando in esecuzione. Non tutti gli strumenti hanno un formato di output che può essere visualizzato nella finestra di output. Per altre informazioni, vedere [Finestra di output](http://msdn.microsoft.com/9808e00c-c8f6-45cc-896e-192b8420f747).  
+Consente di aprire la finestra di output di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per visualizzare l'output del comando in esecuzione. Non tutti gli strumenti hanno un formato di output che può essere visualizzato nella finestra di output. Per altre informazioni, vedere [Finestra di output](../relational-databases/scripting/transact-sql-debugger-output-window.md).  
   
 **Considera output come Unicode**  
 Interpreta output come Unicode.  
@@ -76,7 +76,7 @@ Immettendo i seguenti valori nella finestra di dialogo **Strumenti esterni** ver
 |messaggio|valore|  
 |-------|---------|  
 |**Title**|DAC|  
-|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath_md.md)]Tools\Binn\SQLCMD.exe|  
+|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**Argomenti**|-A|  
   
 ## <a name="see-also"></a>Vedere anche  

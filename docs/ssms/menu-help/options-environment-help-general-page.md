@@ -17,23 +17,23 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfc7a585b40acca4658174b403207ad8480abf46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7684bccbeb7151730cdfdd541ecf02850f24c377
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042638"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774186"
 ---
 # <a name="options-environment---help---general-page"></a>Opzioni (Ambiente - Guida - Generale)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Usare la finestra di dialogo **Opzioni** per selezionare i set di documenti e indicare se gli argomenti devono essere visualizzati all'interno di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] o in una finestra separata esterna. Per accedere a questa finestra di dialogo, scegliere **Opzioni** dal menu **Strumenti** , espandere **Guida** nel nodo **Ambiente** e fare clic su **Generale**.  
+Usare la finestra di dialogo **Opzioni** per selezionare i set di documenti e indicare se gli argomenti devono essere visualizzati all'interno di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o in una finestra separata esterna. Per accedere a questa finestra di dialogo, scegliere **Opzioni** dal menu **Strumenti** , espandere **Guida** nel nodo **Ambiente** e fare clic su **Generale**.  
   
 > [!NOTE]  
 > Le modifiche apportate alle opzioni di questa pagina non diventeranno effettive finché l'ambiente non viene riavviato.  
   
 ## <a name="settings"></a>Impostazioni  
 **Visualizza la Guida mediante**  
-Consente di specificare la modalità di visualizzazione della Guida. Selezionare **Visualizzatore esterno** dall'elenco a discesa per visualizzare gli argomenti in una finestra mobile esterna. Selezionare **Visualizzatore integrato** per visualizzare gli argomenti della Guida in una finestra del browser ancorata all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Consente di specificare la modalità di visualizzazione della Guida. Selezionare **Visualizzatore esterno** dall'elenco a discesa per visualizzare gli argomenti in una finestra mobile esterna. Selezionare **Visualizzatore integrato** per visualizzare gli argomenti della Guida in una finestra del browser ancorata all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 **Risultati ricerca per pagina**  
 Consente di specificare il numero di argomenti da visualizzare in una singola pagina **Risultati ricerca** .  

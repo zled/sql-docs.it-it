@@ -19,16 +19,16 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fa17a9e29159e4e4a16fdc23421b9b546c09177
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: aef7a76aaf7fceacf912741e6872cc74f61194c4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708980"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774603"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] (SSMS) è un ambiente integrato per la gestione di qualsiasi infrastruttura SQL. Usare SSMS per l'accesso, la configurazione, la gestione, l'amministrazione e lo sviluppo di tutti i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)], database SQL di Azure e Azure SQL Data Warehouse. SSMS è una singola utilità completa che integra un'ampia gamma di strumenti grafici con numerosi editor di script avanzati per offrire accesso a [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] per gli sviluppatori e gli amministratori di database qualsiasi sia il livello di competenza.
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) è un ambiente integrato per la gestione di qualsiasi infrastruttura SQL. Usare SSMS per l'accesso, la configurazione, la gestione, l'amministrazione e lo sviluppo di tutti i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], database SQL di Azure e Azure SQL Data Warehouse. SSMS è una singola utilità completa che integra un'ampia gamma di strumenti grafici con numerosi editor di script avanzati per offrire accesso a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per gli sviluppatori e gli amministratori di database qualsiasi sia il livello di competenza.
 
 
 
@@ -42,13 +42,13 @@ ms.locfileid: "34708980"
   
 |Descrizione|Componente|  
 |---------------|---------|  
-|Usare **Esplora oggetti** per visualizzare e gestire tutti gli oggetti in una o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].|[Esplora oggetti](../ssms/object/object-explorer.md)|  
+|Usare **Esplora oggetti** per visualizzare e gestire tutti gli oggetti in una o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Esplora oggetti](../ssms/object/object-explorer.md)|  
 |Come usare **Esplora modelli** per compilare e gestire file di testo preimpostato per velocizzare lo sviluppo di query e script.|[Esplora modelli](../ssms/template/template-explorer.md)|  
 |Come usare la funzionalità **Esplora soluzioni** deprecata per compilare i progetti usati per gestire elementi di amministrazione quali script e query.|[Esplora soluzioni](../ssms/solution/solution-explorer.md)|  
-|Come usare gli strumenti di progettazione visivi inclusi in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|Come usare gli editor di linguaggio di [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] per compilare ed eseguire il debug di query e script in modo interattivo.|[Editor di query e di testo (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
+|Come usare gli strumenti di progettazione visivi inclusi in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
+|Come usare gli editor di linguaggio di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per compilare ed eseguire il debug di query e script in modo interattivo.|[Editor di query e di testo (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
 
 
 ## <a name="next-steps"></a>Passaggi successivi  
-[Esercitazione su SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  
+[Esercitazione su SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
 [Esercitazione: Scrittura di istruzioni Transact-SQL](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  

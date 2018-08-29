@@ -19,16 +19,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93f7d71a0e3a1a4421f1d3503fddb66831fe553d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de6befec7a8a614d69c1c23072e39885eb1d3429
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049548"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775983"
 ---
 # <a name="sql-server-management-studio-web-browser"></a>Browser di SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] contiene una versione di [!INCLUDE[msCoName](../includes/msconame_md.md)] Internet Explorer. Questo browser consente di esplorare URL e di visualizzare la Guida di MSDN Library senza uscire da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. Per accedere al browser, scegliere **Browser** dal menu **Visualizza** e fare clic su **Visualizza browser**.  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] contiene una versione di [!INCLUDE[msCoName](../includes/msconame_md.md)] Internet Explorer. Questo browser consente di esplorare URL e di visualizzare la Guida di MSDN Library senza uscire da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per accedere al browser, scegliere **Browser** dal menu **Visualizza** e fare clic su **Visualizza browser**.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Elementi generali dell'interfaccia utente](../ssms/general-user-interface-elements.md)  

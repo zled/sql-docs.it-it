@@ -17,12 +17,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57d472c063bd4b2cf697186323942842f8d037c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbff0ee5307e9f0d6d7e53a740c950c869dc93c5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041878"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775301"
 ---
 # <a name="select-objects-object-explorer"></a>Seleziona oggetti (Esplora oggetti)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ Usare la finestra di dialogo **Seleziona oggetti** per aggiungere un oggetto a u
   
 ## <a name="options"></a>Opzioni  
 **Selezionare i tipi di oggetti seguenti**  
-Consente di visualizzare un elenco dei tipi ai quali appartengono gli oggetti da selezionare I tipi includono entità ed entità a sicurezza diretta a livello di database e a livello di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Questa casella viene popolata con le selezioni eseguite nella finestra di dialogo **Seleziona tipi di oggetti** alla quale è possibile accedere con il pulsante **Tipi di oggetti** .  
+Consente di visualizzare un elenco dei tipi ai quali appartengono gli oggetti da selezionare I tipi includono entità ed entità a sicurezza diretta a livello di database e a livello di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa casella viene popolata con le selezioni eseguite nella finestra di dialogo **Seleziona tipi di oggetti** alla quale è possibile accedere con il pulsante **Tipi di oggetti** .  
   
 **Immettere i nomi degli oggetti da selezionare**  
 Consente di immettere un elenco separato da punto e virgola dei nomi degli oggetti da selezionare. Gli oggetti da selezionare devono essere del tipo elencato nella casella **Selezionare i tipi di oggetti seguenti** . È possibile selezionare gli oggetti nell'elenco che viene visualizzato facendo clic sul pulsante **Sfoglia** .  

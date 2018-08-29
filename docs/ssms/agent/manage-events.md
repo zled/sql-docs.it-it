@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f1758496774b1b0d60257416e7b9133d313b671d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a2035ca0780e873f5d3cee8d9b649faa4f6ee8a9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981903"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774585"
 ---
 # <a name="manage-events"></a>Gestione di eventi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "38981903"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-È possibile inoltrare a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tutti i messaggi di evento con livello di gravità dell'errore corrispondente o superiore a un determinato valore. Questa caratteristica è nota come *inoltro degli eventi*. Il server di inoltro è un server dedicato che può essere anche un server master. L'inoltro degli eventi consente di gestire in modo centralizzato gli avvisi per un gruppo di server, riducendo in tal modo il carico di lavoro per i server utilizzati molto frequentemente.  
+È possibile inoltrare a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tutti i messaggi di evento con livello di gravità dell'errore corrispondente o superiore a un determinato valore. Questa caratteristica è nota come *inoltro degli eventi*. Il server di inoltro è un server dedicato che può essere anche un server master. L'inoltro degli eventi consente di gestire in modo centralizzato gli avvisi per un gruppo di server, riducendo in tal modo il carico di lavoro per i server utilizzati molto frequentemente.  
   
 Un singolo server che riceve gli eventi per un gruppo di altri server è denominato *server di gestione avvisi*. In un ambiente multiserver come server di gestione degli avvisi viene scelto il server master.  
   
 ## <a name="advantages-of-using-an-alerts-management-server"></a>Vantaggi derivanti dall'utilizzo di un server di gestione degli avvisi  
 I vantaggi derivanti dall'impostazione di un server di gestione degli avvisi sono:  
   
--   **Centralizzazione**. Da un unico server è possibile controllare in modo centralizzato e visualizzare globalmente gli eventi di più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+-   **Centralizzazione**. Da un unico server è possibile controllare in modo centralizzato e visualizzare globalmente gli eventi di più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Scalabilità**. È possibile amministrare molti server fisici come un unico server logico, nonché aggiungere o rimuovere server da questo gruppo di server fisici a seconda delle necessità.  
   
@@ -68,15 +68,15 @@ Per la configurazione di un server di gestione degli avvisi attenersi alle linee
   
 -   Pianificare con attenzione il traffico di rete associato alla configurazione di molti server per la condivisione dello stesso server di gestione degli avvisi. In caso di congestione, ridurre il numero di server che utilizzano lo stesso server di gestione degli avvisi.  
   
-    I server registrati in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] sono quelli selezionabili come server di inoltro degli avvisi.  
+    I server registrati in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono quelli selezionabili come server di inoltro degli avvisi.  
   
--   Definire nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] avvisi che richiedono una risposta specifica del server, anziché inoltrare gli avvisi al server di gestione degli avvisi.  
+-   Definire nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avvisi che richiedono una risposta specifica del server, anziché inoltrare gli avvisi al server di gestione degli avvisi.  
   
     Il server di gestione degli avvisi visualizza tutti i server che inoltrano avvisi come un insieme logico. Un server di gestione degli avvisi risponde ad esempio in modo identico a un evento 605 inoltrato dal server A e a un evento 605 inoltrato dal server B.  
   
--   Dopo aver configurato il sistema degli avvisi, controllare periodicamente se nel registro applicazioni di Microsoft Windows sono presenti eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+-   Dopo aver configurato il sistema degli avvisi, controllare periodicamente se nel registro applicazioni di Microsoft Windows sono presenti eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-    Le condizioni di errore rilevate dal motore degli avvisi vengono registrate nel registro applicazioni locale di Windows con il nome di origine "SQL Server Agent". Se ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent non è in grado di inviare notifiche tramite posta elettronica in base alle impostazioni definite, nel registro applicazioni verrà registrato un evento.  
+    Le condizioni di errore rilevate dal motore degli avvisi vengono registrate nel registro applicazioni locale di Windows con il nome di origine "SQL Server Agent". Se ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non è in grado di inviare notifiche tramite posta elettronica in base alle impostazioni definite, nel registro applicazioni verrà registrato un evento.  
   
 Se un avviso definito localmente è disattivato e viene generato un evento che avrebbe causato l'attivazione di tale avviso, l'evento verrà inoltrato al server di gestione degli avvisi purché soddisfi la condizione di inoltro degli avvisi. In tal modo, a seconda dei casi, gli utenti del sito locale potranno attivare o disattivare gli avvisi definiti sia localmente che nel server di gestione degli avvisi. È inoltre possibile richiedere che gli eventi siano sempre inoltrati, anche quando sono gestiti da avvisi locali.  
   

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c2e7ded81d62f01ec739cd02358410bbae299451
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 428b2e0c4dd2ac3657f209fbdc2e1bcacbc69f48
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981853"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774560"
 ---
 # <a name="poll-servers"></a>Polling dei server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Il comando consente di mantenere i server di destinazione sincronizzati con la d
   
 Se si usano gli elementi seguenti non è necessario inviare operazioni in modo esplicito:  
   
--   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] per controllare i processi multiserver.  
+-   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per controllare i processi multiserver.  
   
 -   Stored procedure di processo che non modificano pianificazioni o passaggi di processo.  
   

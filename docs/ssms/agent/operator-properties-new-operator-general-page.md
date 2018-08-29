@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5c85048f2e5fb02fd060d3c813b1b4cdbc23d637
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7f235ae1b47a40bc8f4318cf9f953be670ab1e95
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035876"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776009"
 ---
 # <a name="operator-properties---new-operator-general-page"></a>Proprietà Operatore - Nuovo operatore (pagina Generale)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38035876"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Utilizzare questa pagina per visualizzare e modificare le proprietà generali degli operatori di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+Utilizzare questa pagina per visualizzare e modificare le proprietà generali degli operatori di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Opzioni  
 **Nome**  
@@ -56,10 +56,10 @@ Consente di impostare gli orari in cui il cercapersone è attivo.
 Consente di selezionare i giorni in cui il cercapersone è attivo.  
   
 **Inizio giornata lavorativa**  
-Consente di selezionare l'ora a partire da cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent invierà messaggi al cercapersone.  
+Consente di selezionare l'ora a partire da cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent invierà messaggi al cercapersone.  
   
 **Fine giornata lavorativa**  
-Consente di selezionare l'ora a partire da cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent non invierà più messaggi al cercapersone.  
+Consente di selezionare l'ora oltre cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non invierà più messaggi al cercapersone.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Operatori](../../ssms/agent/operators.md)  

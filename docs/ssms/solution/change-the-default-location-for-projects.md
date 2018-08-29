@@ -18,20 +18,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 275fb31571f9f57df40eb146b80b76e0c7dfd95b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e42c55f9a6f1239ad035d12d6ac3c0a76049765
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041358"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775378"
 ---
 # <a name="change-the-default-location-for-projects"></a>Modifica del percorso predefinito per i progetti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Il percorso predefinito per file e progetti è costituito dalla cartella Projects di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] nella cartella Documenti.  
+Il percorso predefinito per file e progetti è costituito dalla cartella Projects di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nella cartella Documenti.  
   
 ### <a name="to-change-the-default-location-for-projects"></a>Per modificare il percorso predefinito per i progetti  
   
-1.  Modificare il percorso predefinito aprendo o salvando un file o un progetto da un altro percorso. [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] consente di archiviare il percorso del progetto aperto precedentemente e di usarlo per la successiva apertura o salvataggio di un progetto.  
+1.  Modificare il percorso predefinito aprendo o salvando un file o un progetto da un altro percorso. [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di archiviare il percorso del progetto aperto precedentemente e di usarlo per la successiva apertura o salvataggio di un progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esplora soluzioni](../../ssms/solution/solution-explorer.md)  

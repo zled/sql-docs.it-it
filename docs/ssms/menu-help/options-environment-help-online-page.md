@@ -17,16 +17,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 601439745dffa9c8902aa448cb8ce42c23ed867d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 445c56c70edc8f045ede5efdf921ba34c0ffa291
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042598"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775986"
 ---
 # <a name="options-environment---help---online-page"></a>Opzioni (Ambiente - Guida - pagina Online)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-La finestra di dialogo **Opzioni** consente di specificare le origini della Guida da usare per le ricerche di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], tra cui la Guida sensibile al contesto. Scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Ambiente** , selezionare **Guida**e quindi fare clic su **Online**. Se la pagina **Online** non viene visualizzata nell'elenco, selezionare la casella di controllo **Mostra tutte le impostazioni** nella finestra di dialogo **Opzioni** .  
+La finestra di dialogo **Opzioni** consente di specificare le origini della Guida da usare per le ricerche di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], tra cui la Guida sensibile al contesto. Scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Ambiente** , selezionare **Guida**e quindi fare clic su **Online**. Se la pagina **Online** non viene visualizzata nell'elenco, selezionare la casella di controllo **Mostra tutte le impostazioni** nella finestra di dialogo **Opzioni** .  
   
 **Al caricamento della Guida**  
 Impostare l'ordine di utilizzo delle origini della Guida sensibile al contesto e specifica le origini della Guida utilizzate.  

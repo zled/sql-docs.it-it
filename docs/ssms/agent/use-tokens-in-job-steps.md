@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 01eb7c21ff82d25e49982d5acd700ed9226f53bd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 942f13f947fad0692515ded169bb7bfccc3e0734
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971363"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774594"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utilizzo dei token nei passaggi dei processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,29 +35,29 @@ ms.locfileid: "37971363"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent consente di usare token negli script per passaggi di processi [!INCLUDE[tsql](../../includes/tsql_md.md)] . L'utilizzo di token quando si scrivono passaggi di processo offre la stessa flessibilità assicurata dalle variabili quando si scrivono programmi software. Dopo aver inserito un token nello script di un passaggio di processo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent sostituisce il token in fase di esecuzione, prima che il passaggio di processo venga eseguito dal sottosistema [!INCLUDE[tsql](../../includes/tsql_md.md)] .  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent consente di usare token negli script per passaggi di processi [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'utilizzo di token quando si scrivono passaggi di processo offre la stessa flessibilità assicurata dalle variabili quando si scrivono programmi software. Dopo aver inserito un token nello script di un passaggio di processo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sostituisce il token in fase di esecuzione, prima che il passaggio di processo venga eseguito dal sottosistema [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 > [!IMPORTANT]  
-> In [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 1 la sintassi del token dei passaggi del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent è stata modificata. Di conseguenza, è necessario inserire una macro di escape con tutti i token utilizzati nei passaggi di processo. In caso contrario, questi passaggi avranno esito negativo. L'utilizzo delle macro di escape e l'aggiornamento dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent che utilizzano token sono illustrati nelle sezioni "Informazioni sull'utilizzo dei token", "Token e macro di[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent" e "Aggiornamento dei passaggi di processo per l'utilizzo di macro" riportate di seguito. È inoltre cambiata la sintassi di [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] che prevedeva l'utilizzo delle parentesi quadre per chiamare i token dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, ad esempio "`[DATE]`". È ora necessario racchiudere tra parentesi i nomi dei token e inserire il simbolo di dollaro (`$`) all'inizio della sintassi del token, Ad esempio  
+> In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 la sintassi del token dei passaggi del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è stata modificata. Di conseguenza, è necessario inserire una macro di escape con tutti i token utilizzati nei passaggi di processo. In caso contrario, questi passaggi avranno esito negativo. L'utilizzo delle macro di escape e l'aggiornamento dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che utilizzano token sono illustrati nelle sezioni "Informazioni sull'utilizzo dei token", "Token e macro di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent" e "Aggiornamento dei passaggi di processo per l'utilizzo di macro" riportate di seguito. È inoltre cambiata la sintassi di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] che prevedeva l'utilizzo delle parentesi quadre per chiamare i token dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ad esempio "`[DATE]`". È ora necessario racchiudere tra parentesi i nomi dei token e inserire il simbolo di dollaro (`$`) all'inizio della sintassi del token, Ad esempio  
 >   
 > `$(ESCAPE_`*macro name*`(DATE))`  
   
 ## <a name="understanding-using-tokens"></a>Informazioni sull'utilizzo dei token  
   
 > [!IMPORTANT]  
-> Qualsiasi utente di Windows con autorizzazioni di scrittura per il registro eventi di Windows è in grado di accedere ai passaggi di processo attivati dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent o di WMI. Per evitare rischi per la sicurezza, i token di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent che possono essere utilizzati in processi attivati dagli avvisi sono disabilitati per impostazione predefinita. I token interessati sono: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** e **WMI(***property***)**. Si noti che in questa versione l'utilizzo dei token è esteso a tutti gli avvisi.  
+> Qualsiasi utente di Windows con autorizzazioni di scrittura per il registro eventi di Windows è in grado di accedere ai passaggi di processo attivati dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o di WMI. Per evitare rischi per la sicurezza, i token di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che possono essere utilizzati in processi attivati dagli avvisi sono disabilitati per impostazione predefinita. I token interessati sono: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** e **WMI(***property***)**. Si noti che in questa versione l'utilizzo dei token è esteso a tutti gli avvisi.  
 >   
-> Se si desidera utilizzare questi token, verificare innanzitutto che solo i membri di gruppi di sicurezza di Windows trusted, ad esempio il gruppo Administrators, dispongano delle autorizzazioni di scrittura per il registro eventi del computer in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . A questo punto, fare clic con il pulsante destro del mouse su **SQL Server Agent** in Esplora oggetti, scegliere **Proprietà**e nella pagina **Sistema avvisi** selezionare **Sostituisci token per tutte le risposte del processo ad avvisi** per abilitare questi token.  
+> Se si desidera utilizzare questi token, verificare innanzitutto che solo i membri di gruppi di sicurezza di Windows trusted, ad esempio il gruppo Administrators, dispongano delle autorizzazioni di scrittura per il registro eventi del computer in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A questo punto, fare clic con il pulsante destro del mouse su **SQL Server Agent** in Esplora oggetti, scegliere **Proprietà**e nella pagina **Sistema avvisi** selezionare **Sostituisci token per tutte le risposte del processo ad avvisi** per abilitare questi token.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent i token vengono sostituiti da valori stringa letterali esatti con un'operazione semplice ed efficiente. Tutti i token effettuano una distinzione tra maiuscole e minuscole. È necessario prendere in considerazione tale comportamento nei passaggi di processo e indicare correttamente i token da utilizzare oppure convertire la stringa di sostituzione nel tipo di dati corretto.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent i token vengono sostituiti da valori stringa letterali esatti con un'operazione semplice ed efficiente. Tutti i token effettuano una distinzione tra maiuscole e minuscole. È necessario prendere in considerazione tale comportamento nei passaggi di processo e indicare correttamente i token da utilizzare oppure convertire la stringa di sostituzione nel tipo di dati corretto.  
   
 Ad esempio, è possibile utilizzare l'istruzione seguente per inserire il nome del database in un passaggio di processo:  
   
 `PRINT N'Current database name is $(ESCAPE_SQUOTE(A-DBN))' ;`  
   
-In questo esempio la macro **ESCAPE_SQUOTE** viene inserita con il token **A-DBN** . In fase di esecuzione il token **A-DBN** verrà sostituito con il nome del database appropriato. Tramite la macro di escape è possibile utilizzare caratteri di escape per eventuali virgolette singole inavvertitamente passate nella stringa di sostituzione del token. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] In Agent una virgoletta singola verrà sostituita con due virgolette singole nella stringa finale.  
+In questo esempio la macro **ESCAPE_SQUOTE** viene inserita con il token **A-DBN** . In fase di esecuzione il token **A-DBN** verrà sostituito con il nome del database appropriato. Tramite la macro di escape è possibile utilizzare caratteri di escape per eventuali virgolette singole inavvertitamente passate nella stringa di sostituzione del token. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In Agent una virgoletta singola verrà sostituita con due virgolette singole nella stringa finale.  
   
-Se ad esempio la stringa passata per sostituire il token è `AdventureWorks2012'SELECT @@VERSION --`, il comando eseguito dal passaggio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent sarà il seguente:  
+Se ad esempio la stringa passata per sostituire il token è `AdventureWorks2012'SELECT @@VERSION --`, il comando eseguito dal passaggio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sarà il seguente:  
   
 `PRINT N'Current database name is AdventureWorks2012''SELECT @@VERSION --' ;`  
   
@@ -66,7 +66,7 @@ In questo caso, l'istruzione inserita `SELECT @@VERSION`non verrà eseguita. Al 
 Per eseguire il debug dell'utilizzo dei token nei passaggi di processo, utilizzare istruzioni PRINT come `PRINT N'$(ESCAPE_SQUOTE(SQLDIR))'` e salvare l'output del passaggio di processo in un file o in una tabella. Usare la pagina **Avanzate** della finestra di dialogo **Proprietà passaggio processo** per specificare un file o una tabella per l'output del passaggio di processo.  
   
 ## <a name="sql-server-agent-tokens-and-macros"></a>Token e macro di SQL Server Agent  
-Nelle tabelle seguenti vengono elencati e illustrati i token e le macro supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+Nelle tabelle seguenti vengono elencati e illustrati i token e le macro supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ### <a name="sql-server-agent-tokens"></a>Token di SQL Server Agent  
   
@@ -85,11 +85,11 @@ Nelle tabelle seguenti vengono elencati e illustrati i token e le macro supporta
 |**(MACH)**|Nome del computer.|  
 |**(MSSA)**|Nome del servizio SQLServerAgent master.|  
 |**(OSCMD)**|Prefisso per il programma usato per l'esecuzione dei passaggi di processo **CmdExec** .|  
-|**(SQLDIR)**|Directory in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Per impostazione predefinita corrisponde a C:\Programmi\Microsoft SQL Server\MSSQL.|  
+|**(SQLDIR)**|Directory in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impostazione predefinita corrisponde a C:\Programmi\Microsoft SQL Server\MSSQL.|  
 |**(SQLLOGDIR)**|Token di sostituzione per il percorso della cartella del log degli errori di SQL Server, ad esempio $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
 |**(STEPCT)**|Numero di esecuzioni del passaggio, escluse le esecuzioni non completate. Può essere utilizzato dal comando del passaggio per imporre l'interruzione di un ciclo a più passaggi.|  
 |**(STEPID)**|ID del passaggio.|  
-|**(SRVR)**|Nome del computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è un'istanza denominata, questo token include il nome dell'istanza.|  
+|**(SRVR)**|Nome del computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un'istanza denominata, questo token include il nome dell'istanza.|  
 |**(TIME)**|Ora corrente nel formato HHMMSS.|  
 |**(STRTTM)**|Ora nel formato HHMMSS in cui è stata avviata l'esecuzione del processo.|  
 |**(STRTDT)**|Data nel formato AAAAMMGG in cui è stata avviata l'esecuzione del processo.|  
@@ -105,11 +105,11 @@ Nelle tabelle seguenti vengono elencati e illustrati i token e le macro supporta
 |**$(ESCAPE_NONE(***nome_token***))**|Sostituisce il token senza utilizzare caratteri di escape per i caratteri della stringa. Questa macro viene utilizzata per assicurare la compatibilità con le versioni precedenti in ambienti in cui si presuppone che le stringhe di sostituzione dei token provengano esclusivamente da utenti trusted. Per ulteriori informazioni, vedere "Aggiornamento dei passaggi di processo per l'utilizzo di macro" più avanti in questo argomento.|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>Aggiornamento dei passaggi di processo per l'utilizzo di macro  
-In [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 1, i passaggi di processo che contengono token senza macro di escape avranno esito negativo e restituiranno un messaggio di errore in cui è indicato che il passaggio di processo contiene uno o più token che devono essere aggiornati con una macro prima che il processo possa essere eseguito.  
+In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, i passaggi di processo che contengono token senza macro di escape avranno esito negativo e restituiranno un messaggio di errore in cui è indicato che il passaggio di processo contiene uno o più token che devono essere aggiornati con una macro prima che il processo possa essere eseguito.  
   
 Nell'articolo 915845 della [!INCLUDE[msCoName](../../includes/msconame_md.md)] Knowledge Base: [I processi di SQL Server Agent che usano token hanno esito negativo in SQL Server 2005 Service Pack 1](http://support.microsoft.com/kb/915845)viene specificato uno script che può essere usato per aggiornare tutti i passaggi di processo che usano token con la macro **ESCAPE_NONE** . Dopo aver usato questo script, è consigliabile esaminare al più presto i passaggi di processo che usano token e sostituire la macro **ESCAPE_NONE** con una macro di escape appropriata per il contesto del passaggio di processo.  
   
-Nella tabella seguente viene indicata la modalità di gestione della sostituzione del token in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agente. Per attivare o disattivare la sostituzione dei token relativi agli avvisi, fare clic con il pulsante destro del mouse su **SQL Server Agent** in Esplora oggetti, scegliere **Proprietà**e selezionare o deselezionare la casella di controllo **Sostituisci token per tutte le risposte del processo ad avvisi** nella pagina **Sistema avvisi** .  
+Nella tabella seguente viene indicata la modalità di gestione della sostituzione del token in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente. Per attivare o disattivare la sostituzione dei token relativi agli avvisi, fare clic con il pulsante destro del mouse su **SQL Server Agent** in Esplora oggetti, scegliere **Proprietà**e selezionare o deselezionare la casella di controllo **Sostituisci token per tutte le risposte del processo ad avvisi** nella pagina **Sistema avvisi** .  
   
 |Sintassi dei token|Sostituzione dei token relativi agli avvisi attivata|Sostituzione dei token relativi agli avvisi disattivata|  
 |----------------|------------------------------|-------------------------------|  

@@ -21,12 +21,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54714f5d4c1cd0db5c9117e3812107caf039676e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dfa43eb6ced096a5ae4facd215cf06a87a97976f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997663"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774667"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>Impostazione di Progettazione diagrammi di database (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,9 +41,9 @@ Per usare Progettazione diagrammi di database, è necessario che un membro del r
 3.  Quando viene chiesto se si intende configurare i diagrammi di database, scegliere **Sì** .  
   
     > [!NOTE]  
-    > Nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] verranno create la tabella del diagramma di database, le stored procedure di sistema e una funzione di sistema.  
+    > Nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno create la tabella del diagramma di database, le stored procedure di sistema e una funzione di sistema.  
   
-4.  Tramite Visual Studio verranno creati i seguenti oggetti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
+4.  Tramite Visual Studio verranno creati i seguenti oggetti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
     1.  Tabella sysdiagrams  
   
