@@ -14,26 +14,26 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17d25f6084e136736dbc4c8a8ff3cb019ce4692e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d199b4cb7120be85c50eda758e27330705ff6fe9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991373"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787890"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>Domande frequenti per ODBC in Linux e macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Di seguito sono riportate le risposte a domande riguardanti il driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Linux e macOS.
+Di seguito sono riportate le risposte a domande riguardanti il driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS.
   
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 
 **Come funzionano le applicazioni ODBC esistenti in Linux o macOS con il driver?**  
 Dovrebbe essere possibile compilare ed eseguire le applicazioni ODBC compilate ed eseguite in Linux o macOS con altri driver. 
   
-**Quali funzionalità di [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] supporta questa versione del driver?**
+**Quali funzionalità di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] supporta questa versione del driver?**
 
-Il driver ODBC in Linux e macOS supporta tutte le funzionalità server di [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] ad eccezione del database locale. Per altre informazioni sulle funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supportate, vedere [Linee guida per la programmazione](../../../connect/odbc/linux-mac/programming-guidelines.md).  
+Il driver ODBC in Linux e macOS supporta tutte le funzionalità server di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ad eccezione del database locale. Per altre informazioni sulle funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supportate, vedere [Linee guida per la programmazione](../../../connect/odbc/linux-mac/programming-guidelines.md).  
   
 **Il driver supporta l'autenticazione Kerberos?**  
 Sì. Se si dispone di una configurazione dell'ambiente Kerberos esistente, deve essere in grado di connettersi ai server tramite il `Trusted_Connection=Yes` opzione della stringa di connessione o DSN. Per altre informazioni, vedere [Uso dell'autenticazione integrata](../../../connect/odbc/linux-mac/using-integrated-authentication.md).  

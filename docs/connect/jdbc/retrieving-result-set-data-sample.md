@@ -14,20 +14,20 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95c7157850f212893361e26927152c43af7b9a32
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 5cff468c8306631a03e7567f86cc5f5fd57137f8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457705"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787418"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Esempio di recupero dei dati del set di risultati
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Con questa applicazione [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] di esempio viene illustrato come recuperare un set di dati da un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e quindi visualizzare i dati.
+Con questa applicazione [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] di esempio viene illustrato come recuperare un set di dati da un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e quindi visualizzare i dati.
 
-Il file di codice per questo esempio è denominato RetrieveResultSet.java e si trova nella seguente posizione:
+Il file di codice per questo esempio è denominato RetrieveResultSet.java e si trova nella posizione seguente:
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\resultsets

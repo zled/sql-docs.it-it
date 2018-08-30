@@ -12,14 +12,14 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: b2ef9597f1791f722cb388b496e27400790baa9f
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 5e99ee74ce30b3ab8231f834bd8dc3e9c0bf4b5c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106184"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020539"
 ---
 # <a name="date-and-time-improvements"></a>Miglioramenti relativi a data e ora
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39106184"
   
  Per altre informazioni sui miglioramenti apportati alla data/ora, vedere [data e miglioramenti per la fase &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md).  
   
- Per informazioni sulle applicazioni di esempio in cui viene illustrata questa funzionalità, vedere la pagina relativa agli [esempi di programmazione dati di SQL Server](http://msftdpprodsamples.codeplex.com/).  
+ Per informazioni sulle applicazioni di esempio in cui viene illustrata questa funzionalità, vedere la [pagina relativa agli esempi di programmazione dati di SQL Server](http://msftdpprodsamples.codeplex.com/).  
   
 ## <a name="usage"></a>Utilizzo  
  Nelle sezioni seguenti vengono descritte le diverse modalità di utilizzo dei nuovi tipi di data e ora.  

@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - rows [OLE DB]
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7bd46f37b15fbc5fdd33a707a96c710d636ad3a7
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 5afd57404fd7871e72183b76c2fb416182bc5520
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107643"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017851"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>Recuperare righe da un set di risultati (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39107643"
 
   In questo esempio viene illustrato come recuperare righe da un set di risultati. Questo esempio non è supportato in IA64.  
   
- Per l'esempio seguente è necessario disporre del database di esempio AdventureWorks, scaricabile dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  

@@ -14,18 +14,18 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bea9da66105735a69b8d4d0eb53abeeacd233584
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9f27838db078539fd82421e23392de79db6166b1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454505"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787432"
 ---
 # <a name="sample-jdbc-driver-applications"></a>Applicazioni di esempio del driver JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Con le applicazioni di esempio [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] vengono illustrate diverse funzionalità del driver JDBC. Illustrano inoltre le buone regole di programmazione a cui attenersi quando si usa il driver JDBC con un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Con le applicazioni di esempio [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] vengono illustrate diverse funzionalità del driver JDBC. Illustrano inoltre le buone regole di programmazione a cui attenersi quando si usa il driver JDBC con un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 Tutte le applicazioni di esempio sono contenute nei file di codice *.java che è possibile compilare ed eseguire nel computer locale e che si trovano in varie sottocartelle nel seguente percorso:  
 
@@ -39,11 +39,11 @@ Negli argomenti di questa sezione viene descritto come configurare ed eseguire l
   
 | Argomento                                                                                                        | Descrizione                                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Connessione e recupero dei dati](../../connect/jdbc/connecting-and-retrieving-data.md)                       | Queste applicazioni di esempio illustrano come connettersi a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Vengono inoltre descritte le diverse modalità di recupero dei dati da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. |
-| [Uso dei tipi di dati &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)                 | Queste applicazioni di esempio illustrano come usare i metodi del tipo di dati del driver JDBC per utilizzare i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].                                                                                           |
-| [Utilizzo dei set di risultati](../../connect/jdbc/working-with-result-sets.md)                                   | Queste applicazioni di esempio illustrano come usare i set di risultati per elaborare i dati contenuti in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].                                                                                                         |
-| [Utilizzo di dati di grandi dimensioni](../../connect/jdbc/working-with-large-data.md)                                     | Queste applicazioni di esempio illustrano come usare il buffer adattivo per recuperare dati con valori di grandi dimensioni da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] senza l'overhead dei cursori server.                                                      |
-| [Individuazione dati e classificazione SQL](../../connect/jdbc/data-discovery-classification-sample.md) | Questa applicazione di esempio viene illustrato come recuperare le informazioni di individuazione dati e classificazione contenuti in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database da un oggetto set di risultati tramite il Driver JDBC.                                      |
+| [Connessione e recupero dei dati](../../connect/jdbc/connecting-and-retrieving-data.md)                       | Queste applicazioni di esempio illustrano come connettersi a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vengono inoltre descritte le diverse modalità di recupero dei dati da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. |
+| [Uso dei tipi di dati &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)                 | Queste applicazioni di esempio illustrano come usare i metodi del tipo di dati del driver JDBC per utilizzare i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].                                                                                           |
+| [Utilizzo dei set di risultati](../../connect/jdbc/working-with-result-sets.md)                                   | Queste applicazioni di esempio illustrano come usare i set di risultati per elaborare i dati contenuti in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].                                                                                                         |
+| [Utilizzo di dati di grandi dimensioni](../../connect/jdbc/working-with-large-data.md)                                     | Queste applicazioni di esempio illustrano come usare il buffer adattivo per recuperare dati con valori di grandi dimensioni da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza l'overhead dei cursori server.                                                      |
+| [Individuazione dati e classificazione SQL](../../connect/jdbc/data-discovery-classification-sample.md) | Questa applicazione di esempio viene illustrato come recuperare le informazioni di individuazione dati e classificazione contenuti in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database da un oggetto set di risultati tramite il Driver JDBC.                                      |
   
 ## <a name="see-also"></a>Vedere anche
 

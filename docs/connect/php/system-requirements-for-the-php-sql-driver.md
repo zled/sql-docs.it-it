@@ -1,5 +1,5 @@
 ---
-title: Requisiti di sistema dei driver Microsoft per PHP per SQL Server | Microsoft Docs
+title: Requisiti di sistema dei driver Microsoft per PHP per SQL Server
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -16,12 +16,12 @@ caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cfb813b857557a3a30bd89d9c96346ee261bc89
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 1941388b2bd7b0bb21e0da5a55876166c378c01e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174948"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785486"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Requisiti di sistema dei driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -67,7 +67,7 @@ Se si scarica la versione di Windows del driver in una versione a 64 bit di Wind
 |Driver ODBC 13  | | | |S| | |
 |Driver ODBC 11  |S|S|S|S|S|S|
 
-Se si usa il driver SQLSRV, [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) restituisce informazioni sulla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è usato da Microsoft ODBC Driver for SQL Server la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Se si usa il driver PDO_SQLSRV, è possibile individuarne la versione tramite [PDO::getAttribute](../../connect/php/pdo-getattribute.md).  
+Se si usa il driver SQLSRV, [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) restituisce informazioni sulla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è usato da Microsoft ODBC Driver for SQL Server la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Se si usa il driver PDO_SQLSRV, è possibile individuarne la versione tramite [PDO::getAttribute](../../connect/php/pdo-getattribute.md).  
 
 ## <a name="sql-server"></a>SQL Server
 

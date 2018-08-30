@@ -14,18 +14,18 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 450119d178c1c7961ee50c84d6bc737d49f23b08
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 60870d659112f8d2309d571588cc9ddd7e3e40ee
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456265"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787218"
 ---
 # <a name="reading-large-data-sample"></a>Esempio di lettura di dati di grandi dimensioni
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Questa applicazione [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] di esempio illustra come recuperare il valore di una singola colonna di grandi dimensioni da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando il metodo [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md).
+Questa applicazione [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] di esempio illustra come recuperare il valore di una singola colonna di grandi dimensioni da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando il metodo [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md).
 
 Il file di codice per questo esempio, ReadLargeData.java, è disponibile nel percorso seguente:
 

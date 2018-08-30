@@ -1,5 +1,5 @@
 ---
-title: Sicurezza delle applicazioni | Documenti Microsoft
+title: Sicurezza delle applicazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8226badb1031792badc1601cd12c2a0e2f13c9bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4132dfdc915f45f67b267a197dbfeef2004eb36f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827766"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787405"
 ---
 # <a name="application-security"></a>Sicurezza dell'applicazione
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Quando si utilizza il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], è importante prendere precauzioni per garantire la sicurezza dell'applicazione. Nelle sezioni seguenti vengono fornite informazioni relative alle procedure da implementare a questo scopo.  
+  Quando si utilizza [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è importante adottare tutte le misure necessarie per garantire la sicurezza delle applicazioni. Nelle sezioni seguenti vengono fornite informazioni relative alle procedure da implementare a questo scopo.  
   
 ## <a name="using-java-policy-permissions"></a>Utilizzo di autorizzazioni basate sui criteri Java  
- Quando si utilizza il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], è importante specificare le autorizzazioni di criteri Java necessarie che richiede il driver JDBC. Java Runtime Environment (JRE) offre un modello di sicurezza completo utilizzabile in fase di esecuzione per determinare se un thread dispone dei diritti di accesso a una risorsa. L'accesso può essere gestito grazie ai file dei criteri di sicurezza, i quali, a loro volta, sono gestiti dal distributore e dal ruolo sysadmin del contenitore. Le autorizzazioni elencate in questo argomento sono quelle che influiscono sul driver JDBC.  
+ Quando si utilizza [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], è importante specificare le autorizzazioni basate sui criteri Java necessarie richieste dal driver JDBC stesso. Java Runtime Environment (JRE) offre un modello di sicurezza completo utilizzabile in fase di esecuzione per determinare se un thread dispone dei diritti di accesso a una risorsa. L'accesso può essere gestito grazie ai file dei criteri di sicurezza, i quali, a loro volta, sono gestiti dal distributore e dal ruolo sysadmin del contenitore. Le autorizzazioni elencate in questo argomento sono quelle che influiscono sul driver JDBC.  
   
  Di seguito è riportato un esempio di autorizzazione tipica disponibile nel file dei criteri:  
   
@@ -63,9 +63,9 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  Il codice "file:/install_dir/lib/-" fa riferimento alla directory di installazione del driver JDBC.  
   
 ## <a name="protecting-server-communication"></a>Protezione delle comunicazioni con il server  
- Quando si utilizza il driver JDBC per comunicare con un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database, è possibile proteggere il canale di comunicazione con Internet Protocol Security (IPSEC) o sicura Sockets Layer (SSL) o entrambi.  
+ Quando si utilizza il driver JDBC per comunicare con un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile proteggere il canale di comunicazione utilizzando il protocollo IPSec (Internet Protocol Security) o SSL (Secure Sockets Layer) oppure entrambi.  
   
- Il supporto SSL può essere utilizzato per fornire un livello aggiuntivo di protezione oltre a IPsec. Per ulteriori informazioni sull'utilizzo di SSL, vedere [utilizzando la crittografia SSL](../../connect/jdbc/using-ssl-encryption.md).  
+ Il supporto SSL può essere utilizzato per fornire un livello aggiuntivo di protezione oltre a IPsec. Per altre informazioni sull'utilizzo di SSL, vedere [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni del driver JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  

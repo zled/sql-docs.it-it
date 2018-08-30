@@ -14,24 +14,24 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9269200560447593a50364a4b4801a8ec80f4ca
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 728e86f155a1bb61c7fe900f5e536eed991c206a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39455265"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787412"
 ---
 # <a name="working-with-large-data"></a>Utilizzo di dati di grandi dimensioni
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Il driver JDBC fornisce supporto per la memorizzazione nel buffer adattiva, che consente di recuperare qualsiasi tipo di dati con valori di grandi dimensioni senza l'overhead dei cursori server. Grazie al buffering adattivo, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] recupera i risultati dell'esecuzione di istruzioni da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] quando questi sono necessari per l'applicazione, anziché recuperarli tutti contemporaneamente. Quando l'applicazione non necessita più di accedere ai dati, questi vengono inoltre eliminati dal driver.  
+Il driver JDBC fornisce supporto per la memorizzazione nel buffer adattiva, che consente di recuperare qualsiasi tipo di dati con valori di grandi dimensioni senza l'overhead dei cursori server. Grazie al buffering adattivo, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] può recuperare i risultati dell'esecuzione di istruzioni da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando questi sono necessari per l'applicazione e non tutti contemporaneamente. Quando l'applicazione non necessita più di accedere ai dati, questi vengono inoltre eliminati dal driver.  
   
-In [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)] JDBC Driver versione 1.2 la modalità buffer predefinita era "**full**". Se l'applicazione non impostava la proprietà di connessione "responseBuffering" su "**adaptive**" nelle proprietà di connessione oppure tramite il metodo [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) dell'oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), il driver supportava la lettura dell'intero risultato dal server. Per ottenere il comportamento di buffering adattivo l'applicazione doveva impostare esplicitamente la proprietà di connessione "responseBuffering" su "**adaptive**".  
+In [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] JDBC Driver versione 1.2 la modalità di buffering predefinita era "**full**". Se l'applicazione non impostava la proprietà di connessione "responseBuffering" su "**adaptive**" nelle proprietà di connessione oppure tramite il metodo [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) dell'oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), il driver supportava la lettura dell'intero risultato dal server. Per ottenere il comportamento di buffering adattivo, l'applicazione doveva impostare esplicitamente la proprietà di connessione "responseBuffering" su "**adaptive**".  
   
-Il valore **adaptive** è la modalità di memorizzazione nel buffer predefinita e il driver JDBC memorizza nel buffer la quantità minima possibile di dati, solo in caso di necessità. Per altre informazioni sull'utilizzo del buffer adattivo, vedere [Using Adaptive Buffering](../../../connect/jdbc/using-adaptive-buffering.md).  
+il valore **adaptive** è la modalità di buffering predefinita e il driver JDBC memorizza nel buffer la quantità minima possibile di dati quando necessario. Per altre informazioni sull'utilizzo del buffer adattivo, vedere [Using Adaptive Buffering](../../../connect/jdbc/using-adaptive-buffering.md).  
   
-Gli argomenti della sezione descrivono vari modi per recuperare dati per valori di grandi dimensioni da un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Gli argomenti in questa sezione descrivono vari modi per recuperare dati per valori di grandi dimensioni da un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

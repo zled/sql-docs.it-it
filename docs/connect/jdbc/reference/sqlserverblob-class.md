@@ -1,5 +1,5 @@
 ---
-title: Classe SQLServerBlob | Documenti Microsoft
+title: Classe SQLServerBlob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83662d032d762eb4109576ab2f2aa253aaabb6fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c6f9ccb8e9a479d026430dece3ec1fed9bc8c33e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845506"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786687"
 ---
 # <a name="sqlserverblob-class"></a>Classe SQLServerBlob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "32845506"
   
  **Estende:** java.lang.Object  
   
- **Implementa:** Java, java.io.Serializable  
+ Implementa:** java.sql.Blob, java.io.Serializable  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,11 +44,11 @@ ms.locfileid: "32845506"
 public class SQLServerBlob  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Un BLOB viene archiviato in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] come un tipo di dati di immagine.  
+## <a name="remarks"></a>Remarks  
+ Un oggetto BLOB viene archiviato in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come tipo di dati IMAGE.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
- [Riferimento all'API del Driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Informazioni di riferimento sull'API del driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

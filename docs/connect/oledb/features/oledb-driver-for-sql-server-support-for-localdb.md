@@ -12,16 +12,16 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 669d221ada6ff693194266618952d53c17bb6d87
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: d57890c5f0eae3a18d68d904dd34ba20d41cce00
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107683"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020650"
 ---
-# <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>Driver OLE DB per il supporto SQL Server per LocalDB
+# <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>Supporto del driver OLE DB per SQL Server per Local DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "39107683"
   
 -   Uso **sqllocaldb.exe ho** per individuare il nome dell'istanza predefinita.  
   
--   Usare la parola chiave della stringa di connessione **AttachDBFilename** per specificare a quale file di database si deve collegare il server. Quando si usa **AttachDBFilename**, se non viene specificato il nome del database con la parola chiave della stringa di connessione **Database**, il database sarà rimosso dall'istanza del database locale quando l'applicazione viene chiusa.  
+-   Usare la parola chiave della stringa di connessione **AttachDBFilename** per specificare a quale file di database si deve collegare il server. Quando si usa **AttachDBFilename**, se non viene specificato il nome del database con la parola chiave della stringa di connessione **Database**, il database sarà rimosso dall'istanza di Local DB quando l'applicazione viene chiusa.  
   
 -   Specificare un'istanza del database locale nella stringa di connessione:  
   

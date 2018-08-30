@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ed5aca3c9f33ac691306d1c68a199975518003c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8b46b7a869b37518051555dd802e989b92f918da
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023718"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776418"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Finestra di dialogo Colonne indice (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ Consente di scegliere le colonne da includere nell'indice. Selezionare **<None>*
 Consente di selezionare l'ordinamento della colonna specificata. Le opzioni disponibili sono **Crescente** o **Decrescente**.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creare indici cluster](http://msdn.microsoft.com/en-us/47148383-c2c7-4f08-a9e4-7016bf2d1d13)  
-[Creare indici non cluster](http://msdn.microsoft.com/en-us/9402029a-1227-46c4-93aa-c2122eb1b943)  
+[Creare indici cluster](../../relational-databases/indexes/create-clustered-indexes.md)  
+[Creare indici non cluster](../../relational-databases/indexes/create-nonclustered-indexes.md)  
 [Finestra di dialogo Indici/chiavi &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   

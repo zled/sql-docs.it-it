@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - large data
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 1a55907e46e65a115dd5be40b1c616dd8cc3ab9a
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 8c3fc1c60b54bb4de97947ba07f1c673e05fed2e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106357"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019281"
 ---
 # <a name="set-large-data-ole-db"></a>Impostare dati di grandi dimensioni (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39106357"
 
   In questo esempio viene illustrato come impostare dati BLOB, creare una tabella, aggiungere un record di esempio, recuperare tale record nel set di righe e quindi impostare il valore del campo BLOB. Questo esempio non è supportato in IA64.  
   
- Per passare un puntatore al proprio oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama i metodi **IRowsetChange::SetData** o **IRowsetChange::InsertRow**.  
+ Per passare un puntatore al proprio oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama il metodo **IRowsetChange::SetData** o **IRowsetChange::InsertRow**.  
   
  Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
   

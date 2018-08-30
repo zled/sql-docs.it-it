@@ -14,17 +14,17 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e426530a16fbe6d9749b505723d3251e43f94aa7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 848a06e1b383b1416396111bf4d0e907bfba3568
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979704"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783928"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Crea una connessione a un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Crea una connessione a un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,9 +36,9 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 #### <a name="parameters"></a>Parametri  
 *$dsn*: stringa che contiene il nome del prefisso (sempre `sqlsrv`), due punti e la parola chiave Server. Ad esempio, `"sqlsrv:server=(local)"`. È possibile specificare facoltativamente altre parole chiave di connessione. Vedere [Connection Options](../../connect/php/connection-options.md) per una descrizione della parola chiave Server e di altre parole chiave di connessione. L'intera stringa *$dsn* è delimitata, quindi ogni parola chiave di connessione non deve essere delimitata singolarmente.  
   
-*$username*: parametro facoltativo. Stringa che contiene il nome dell'utente. Per connettersi usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , specificare l'ID di accesso. Per connettersi usando l'autenticazione di Windows, specificare `""`.  
+*$username*: parametro facoltativo. Stringa che contiene il nome dell'utente. Per connettersi usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare l'ID di accesso. Per connettersi usando l'autenticazione di Windows, specificare `""`.  
   
-*$password*: parametro facoltativo. Stringa che contiene la password dell'utente. Per connettersi usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , specificare la password. Per connettersi usando l'autenticazione di Windows, specificare `""`.  
+*$password*: parametro facoltativo. Stringa che contiene la password dell'utente. Per connettersi usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare la password. Per connettersi usando l'autenticazione di Windows, specificare `""`.  
   
 *$driver_options*: facoltativo. È possibile specificare gli attributi di Gestione driver del PDO e gli attributi dei driver specifici di [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]: PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Un attributo non valido non genera un'eccezione. Gli attributi non validi generano eccezioni quando viene specificato [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   

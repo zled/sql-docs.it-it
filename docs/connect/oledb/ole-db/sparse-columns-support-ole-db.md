@@ -12,21 +12,21 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d2f4cd73d4d20d4b54573b300c5006bebd5fb6eb
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 1cfbd5bce17c658a7dff33bc7a590a22d525c193
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109003"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018190"
 ---
 # <a name="sparse-columns-support-ole-db"></a>Supporto per colonne di tipo sparse (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  In questo argomento fornisce informazioni sul Driver OLE DB per il supporto di SQL Server per le colonne di tipo sparse. Per altre informazioni sulle colonne di tipo sparse, vedere [supporto per colonne di tipo Sparse nel Driver OLE DB per SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md). Per un esempio, vedere [colonne visualizzate e i metadati del catalogo per le colonne di tipo Sparse &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
+  In questo argomento fornisce informazioni sul Driver OLE DB per il supporto di SQL Server per le colonne di tipo sparse. Per altre informazioni sulle colonne di tipo sparse, vedere [supporto per colonne di tipo Sparse nel Driver OLE DB per SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md). [Visualizzare i metadati della colonna e del catalogo per le colonne di tipo sparse &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
 ## <a name="ole-db-statement-metadata"></a>Metadati di istruzione OLE DB  
  A partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], è disponibile un nuovo valore per il flag DBCOLUMNFLAGS, ovvero DBCOLUMNFLAGS_SS_ISCOLUMNSET. Questo valore deve essere impostato per colonne che sono valori **column_set**. Il flag DBCOLUMNFLAGS può essere recuperato tramite il *dwFlags* parametro IColumnsInfo:: e la colonna DBCOLUMN_FLAGS del set di righe restituito da IColumnsRowset::.  

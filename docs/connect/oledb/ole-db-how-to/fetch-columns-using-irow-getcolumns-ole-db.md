@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8340996f96d2307a980797e93073001768dbc98f
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 905ecac954433fb34789fe7fd49fd69c68c73a56
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108883"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021450"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Recuperare colonne tramite IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "39108883"
   
  Nella struttura DBCOLUMNACCESS, se pData è NULL e cbMaxLen è 0, tramite la chiamata a IRow->GetColumns viene restituita solo la larghezza di colonna effettiva. In questo caso, è possibile chiamare nuovamente IRow->GetColumns nella stessa colonna per recuperare i dati effettivi. Questo esempio non è supportato in IA64.  
   
- Per l'esempio seguente è necessario disporre del database di esempio AdventureWorks, scaricabile dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
   
  Il primo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) consente di creare una tabella utilizzata dall'esempio.  
   

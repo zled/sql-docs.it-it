@@ -1,5 +1,5 @@
 ---
-title: Note sulla versione dei driver Microsoft per PHP per SQL Server | Microsoft Docs
+title: Note sulla versione dei driver Microsoft per PHP per SQL Server
 ms.custom: ''
 ms.date: 07/20/2018
 ms.prod: sql
@@ -16,12 +16,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ef89936cb49105690795cd6c0312f7d81ed0b86
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: d06042b61e96da8e003cf893f86dac905832743b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174958"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42786821"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Note sulla versione dei driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -85,7 +85,7 @@ Questo argomento vengono illustrate le funzionalità aggiunte in ogni versione d
 
 - Supporto per PHP 5.4  PHP 5.2 non è supportato nella versione 3 di [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 - È stata aggiunta l'opzione di connessione AttachDBFileName. Per altre informazioni, vedere [Connection Options](../../connect/php/connection-options.md).  
-- Supporto per LocalDB, aggiunto in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Per altre informazioni, vedere [supporto per LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
+- Supporto per LocalDB, aggiunto in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Per altre informazioni, vedere [supporto per LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
 - È stata aggiunta l'opzione di connessione AttachDBFileName. Per altre informazioni, vedere [Connection Options](../../connect/php/connection-options.md).  
 - Supporto per le funzionalità di ripristino di emergenza a disponibilità elevata. Per altre informazioni, vedere [supporto per la disponibilità elevata, ripristino di emergenza](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
 - Supporto per i cursori sul lato client (memorizzazione nella cache di un set di risultati in memoria). Per altre informazioni, vedere [Tipi di cursore &#40;driverSQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) e [Tipi di cursore &#40;driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).

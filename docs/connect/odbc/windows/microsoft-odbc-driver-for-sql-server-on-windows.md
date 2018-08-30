@@ -1,5 +1,5 @@
 ---
-title: Installare Microsoft ODBC Driver for SQL Server in Windows
+title: Funzionalità di Microsoft ODBC Driver for SQL Server in Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 02/14/2018
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5d818e4ce5c267432e6e456e11720f546ebaa19
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 08d1c94854e4d073d4cb26a3e2e320a0d93c08f1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047439"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784603"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server in Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sono i driver ODBC autonomi che forniscono un'API application programming interface () che implementa le interfacce ODBC standard in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono i driver ODBC autonomi che forniscono un'API application programming interface () che implementa le interfacce ODBC standard in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 Il driver ODBC per SQL Server consente di creare nuove applicazioni. È inoltre possibile aggiornare le applicazioni precedenti che attualmente usano un driver ODBC meno recente. Il driver ODBC per SQL Server supporta le connessioni a database SQL di Azure, Azure SQL Data Warehouse, SQL Server 2017, SQL Server 2016, SQL Server 2014 R2, SQL Server 2012 e SQL Server 2008.  
 
@@ -33,12 +33,12 @@ Il driver ODBC per SQL Server consente di creare nuove applicazioni. È inoltre 
 | Versione       | Funzionalità supportate      |
 | ------------- |---------------| 
 | Microsoft ODBC Driver 17 per SQL Server | <ul><li>Supporto per Always Encrypted per l'API BCP</li><li>Nuovo attributo di stringa di connessione UseFMTONLY fa in modo che i driver per l'uso di metadati legacy in casi particolari che richiedono le tabelle temporanee</li>
-| Microsoft ODBC Driver 13.1 per SQL Server     | <ul><li>Crittografia sempre attiva</li><li>Configurare l'autenticazione di AD</li><li>Gruppi di disponibilità AlwaysOn</li></ul>   | 
-| Microsoft ODBC Driver 13 per SQL Server      | <ul><li>Internationalized Domain Name (IDN)</li></ul> |
+| Microsoft ODBC Driver 13.1 per SQL Server     | <ul><li>Crittografia sempre attiva</li><li>Autenticazione di Azure AD</li><li>Gruppi di disponibilità AlwaysOn</li></ul>   | 
+| Microsoft ODBC Driver 13 for SQL Server      | <ul><li>Internationalized Domain Name (IDN)</li></ul> |
 | Microsoft ODBC Driver 11 per SQL Server | <ul><li>Pool di connessioni compatibile con il driver</li><li>Resilienza della connessione</li><li>Esecuzione asincrona (metodo di polling)</li></ul> |    
 
 ## <a name="documentation"></a>Documentazione  
-Questa documentazione per Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] include:  
+Questa documentazione per Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include:  
   
 -   [Note sulla versione](../../../connect/odbc/windows/release-notes.md)  
 -   [Funzionalità di Microsoft ODBC Driver for SQL Server in Windows](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  
@@ -46,7 +46,7 @@ Questa documentazione per Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../..
 -   [Pool di connessioni compatibile con il driver nel driver ODBC per SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)  
 -   [Asynchronous Execution &#40;Notification Method&#41; Sample (Esempio di esecuzione asincrona - metodo di notifica)](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)  
 -   [Resilienza di connessione nel driver ODBC di Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)  
--   [Utilizzo di Always Encrypted con il JDBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+-   [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) (Utilizzo di Always Encrypted con il driver ODBC)
 -   [Uso di Azure Active Directory con ODBC Driver](../../../connect/odbc/using-azure-active-directory.md) 
 -   [Uso della stringa di connessione TransparentNetworkIPResolution](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
 

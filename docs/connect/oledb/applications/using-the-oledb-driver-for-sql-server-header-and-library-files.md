@@ -22,16 +22,16 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, library files
 - MSOLEDBSQL, library files
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 847d25310542a6eb10f929a04ee4e5e066bbb38e
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: bb2d14d1426e339773c4ed6494d95dea527eec29
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108703"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030597"
 ---
-# <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Uso dei file di intestazione e di libreria del driver OLE DB per SQL Server
+# <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Uso del driver OLE DB per intestazione SQL Server e file di libreria
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

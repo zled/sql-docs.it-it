@@ -14,12 +14,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd787ee638e570419362fd62a4844ff856e8dbf1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3287815e6622d2d44693b401e2829275d22a2785
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982353"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42783936"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Funzionalità di Microsoft ODBC Driver for SQL Server in Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -35,28 +35,28 @@ Azure Active Directory consente agli utenti, gli amministratori di database e i 
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Microsoft ODBC Driver 11 for SQL Server in Windows  
 
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] contiene tutte le funzionalità del driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client fornito con [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. Per altre informazioni, vedere [Programmazione in SQL Server Native Client](http://msdn.microsoft.com/library/ms130892.aspx). Il driver ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client è basato sul driver ODBC fornito con il sistema operativo Windows. Per altre informazioni, vedere [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx).  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene tutte le funzionalità del driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fornito con [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Per altre informazioni, vedere [Programmazione in SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md). Il driver ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client è basato sul driver ODBC fornito con il sistema operativo Windows. Per altre informazioni, vedere [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx).  
   
-Questa versione di Driver ODBC for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] contiene le nuove funzionalità seguenti:  
+Questa versione di Driver ODBC for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene le nuove funzionalità seguenti:  
   
 ### <a name="bcpexe-l-option-for-specifying-a-login-timeout"></a>opzione – l bcp.exe per specificare un timeout di accesso
  
-L'opzione –l specifica il numero di secondi che devono trascorrere prima che si verifichi il timeout di un accesso di `bcp.exe` a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] quando si prova la connessione a un server. Il timeout di accesso predefinito è 15 secondi. Il valore del timeout deve essere un numero compreso tra 0 e 65534. Se il valore specificato non è numerico o non è compreso in tale intervallo, `bcp.exe` genera un messaggio di errore. Un valore pari a 0 specifica un timeout infinito. Un timeout di accesso inferiore a (circa) 10 secondi non è affidabile.  
+L'opzione –l specifica il numero di secondi che devono trascorrere prima che si verifichi il timeout di un accesso di `bcp.exe` a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si prova la connessione a un server. Il timeout di accesso predefinito è 15 secondi. Il valore del timeout deve essere un numero compreso tra 0 e 65534. Se il valore specificato non è numerico o non è compreso in tale intervallo, `bcp.exe` genera un messaggio di errore. Un valore pari a 0 specifica un timeout infinito. Un timeout di accesso inferiore a (circa) 10 secondi non è affidabile.  
   
 ### <a name="driver-aware-connection-pooling"></a>Pool di connessioni compatibile con il driver  
-Il driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supporta il [pool di connessioni compatibile con il driver](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Per altre informazioni, vedere [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
+Il driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il [pool di connessioni compatibile con il driver](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Per altre informazioni, vedere [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
   
 ### <a name="asynchronous-execution-notification-method"></a>Esecuzione asincrona (metodo di notifica)  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supporta l'[esecuzione asincrona (metodo di notifica)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Per un esempio d'uso, vedere [Asynchronous Execution &#40;Notification Method&#41; Sample](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md) (Esempio di esecuzione asincrona - metodo di notifica).  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta l'[esecuzione asincrona (metodo di notifica)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Per un esempio d'uso, vedere [Asynchronous Execution &#40;Notification Method&#41; Sample](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md) (Esempio di esecuzione asincrona - metodo di notifica).  
   
 ### <a name="connection-resiliency"></a>Resilienza della connessione
 Per garantire che le applicazioni rimangano connesse a un database SQL di Microsoft Azure, il driver ODBC in Windows può ripristinare le connessioni inattive. Per altre informazioni, vedere [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).  
   
 ## <a name="behavior-changes"></a>Differenze di funzionamento
 
-Nelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client, il `-y0` opzione per `sqlcmd.exe` causato output risulta troncato in corrispondenza di 1 MB se la larghezza di visualizzazione è 0.
+Nelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, il `-y0` opzione per `sqlcmd.exe` causato output risulta troncato in corrispondenza di 1 MB se la larghezza di visualizzazione è 0.
   
-A partire da ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], non esiste limite alla quantità di dati recuperabili in un'unica colonna quando è specificato `–y0`. `sqlcmd.exe` ora trasmette colonne di dimensioni pari a 2 GB (massimo per il tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]).  
+A partire da ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], non esiste limite alla quantità di dati recuperabili in un'unica colonna quando è specificato `–y0`. `sqlcmd.exe` ora trasmette colonne di dimensioni pari a 2 GB (massimo per il tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 Un'altra differenza è che se si specifica sia `-h` e `-y0` genera ora un errore di creazione di report, le opzioni sono incompatibili. `-h`, che specifica il numero di righe da stampare tra le intestazioni di colonna e che non è mai stato compatibile con `-y0`, veniva ignorato anche se non venivano stampate intestazioni.
   

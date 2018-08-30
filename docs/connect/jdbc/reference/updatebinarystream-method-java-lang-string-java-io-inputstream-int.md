@@ -1,5 +1,5 @@
 ---
-title: Metodo updateBinaryStream (Java.IO. InputStream, int) | Documenti Microsoft
+title: Metodo updateBinaryStream(int, java.io.InputStream) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9653be9a73682bdcf0c465d1fb9b718bdadc9bbb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 890535e7f58c0f67950b05bec12ba9f1b7d98945
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851996"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787229"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream-int"></a>Metodo updateBinaryStream (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,27 +43,27 @@ public void updateBinaryStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parametri  
  *columnLabel*  
   
- AStringthat contiene l'etichetta di colonna.  
+ Valore String contenente l'etichetta della colonna.  
   
  *x*  
   
  Un oggetto InputStream.  
   
- *lunghezza*  
+ *length*  
   
- Un **int** che indica la lunghezza del flusso.  
+ Valore **int** che indica la lunghezza del flusso.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo updateBinaryStream viene specificato dal metodo updateBinaryStream nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo updateBinaryStream viene specificato dal metodo updateBinaryStream nell'interfaccia ResultSet.  
   
- Questo metodo passa byte da un oggetto InputStream selezionare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] colonne binarie quali binary, varbinary, varbinary (max), image, xml e udt. L'aggiornamento delle colonne di tipo carattere non è supportato con questo metodo. Per aggiornare colonne di tipo carattere con un InputStream, utilizzare il [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md) metodo.  
+ Questo metodo passa byte da un oggetto InputStream a colonne binarie di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] selezionate, ad esempio binary, varbinary, varbinary(max), image, xml e udt. L'aggiornamento delle colonne di tipo carattere non è supportato con questo metodo. Per aggiornare le colonne di tipo carattere con un InputStream, usare il metodo [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md).  
   
- Se la lunghezza del flusso è diversa rispetto a quella specificata nel *lunghezza* parametro, il driver JDBC genera un'eccezione quando viene inserita o aggiornata la riga.  
+ Se la lunghezza del flusso è diversa da quella specificata nel parametro *length*, il driver JDBC genera un'eccezione al momento dell'aggiornamento o dell'inserimento della riga.  
   
- Se la lunghezza del flusso è sconosciuta, il *lunghezza* parametro può essere impostato su -1 per indicare che il driver deve accettare il flusso indipendentemente dalla lunghezza. Con sqljdbc4.jar, si consiglia di utilizzare il metodo di JDBC 4.0 [metodo updateBinaryStream &#40;lang. String,. InputStream&#41; ](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream.md) se l'applicazione è richiesto aggiornare la colonna da un flusso la cui lunghezza è sconosciuto.  
+ Se la lunghezza del flusso è sconosciuta, il parametro *length* può essere impostato su -1 a indicare che il driver deve accettare il flusso indipendentemente dalla lunghezza. Con sqljdbc4.jar, è consigliabile usare il metodo [updateBinaryStream Method &#40;java.lang.String, java.io.InputStream&#41;](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream.md) di JDBC 4.0 se l'applicazione vuole aggiornare la colonna da un flusso la cui lunghezza è sconosciuta.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateBinaryStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)   

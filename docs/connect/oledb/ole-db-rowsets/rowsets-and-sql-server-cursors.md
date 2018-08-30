@@ -18,16 +18,16 @@ helpviewer_keywords:
 - properties [OLE DB]
 - cursors [OLE DB]
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: de602cbb2452c0d9d4201de89d7573a23c2704bc
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 0d967a5e39a62ff799e5842d7cb185cd1ca0036c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107187"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020964"
 ---
-# <a name="rowsets-and-sql-server-cursors"></a>Set di righe e cursori Server SQL
+# <a name="rowsets-and-sql-server-cursors"></a>Set di righe e cursori di Server SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

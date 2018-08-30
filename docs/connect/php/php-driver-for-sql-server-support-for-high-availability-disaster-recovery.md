@@ -14,17 +14,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d75a0c4285bddc8d3c237be35a51f1904de6d60
-ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
+ms.openlocfilehash: eb0af342ac2ccbe916fba9edb497e8197b2fe7f5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39367693"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787429"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Supporto per il ripristino di emergenza a disponibilità elevata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In questo argomento viene trattato il supporto di [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (aggiunto nella versione 3.0) per il ripristino di emergenza a disponibilità elevata -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)].  Il supporto [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] è stato aggiunto in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Per altre informazioni su [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vedere la documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+In questo argomento viene trattato il supporto di [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (aggiunto nella versione 3.0) per il ripristino di emergenza a disponibilità elevata -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)].  Il supporto [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] è stato aggiunto in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Per altre informazioni su [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vedere la documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Nella versione 3.0 di [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] è possibile specificare il listener di un gruppo di disponibilità (per ripristino di emergenza a disponibilità elevata) nella proprietà di connessione. Se un'applicazione [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] è connessa a un database AlwaysOn che esegue il failover, dopo il failover la connessione originale viene interrotta e l'applicazione deve aprire una nuova connessione per proseguire con l'esecuzione.  
   
@@ -34,7 +34,7 @@ Se non si sta eseguendo la connessione a un listener del gruppo di disponibilit�
 > L'aumento del timeout di connessione e l'implementazione della logica di riesecuzione per le connessioni aumentano le probabilità che un'applicazione si connetta a un gruppo di disponibilità. Inoltre, poiché potrebbe non essere possibile stabilire una connessione a causa del failover di un gruppo di disponibilità, è opportuno implementare la logica di riesecuzione delle connessioni, finché non si ottiene la riconnessione.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Connessione con MultiSubnetFailover  
-La proprietà di connessione **MultiSubnetFailover** indica che l'applicazione viene distribuita in un gruppo di disponibilità o nell'istanza del cluster di failover e che [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] effettua un tentativo di connessione al database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] primaria tramite la connessione a tutti gli indirizzi IP. Quando si specifica **MultiSubnetFailover=true** per una connessione, i ripetuti tentativi di connessione TCP del client vengono eseguiti più rapidamente rispetto agli intervalli di ritrasmissione TCP predefiniti del sistema operativo. In tal modo si abilita la riconnessione a seguito di failover di un gruppo di disponibilità AlwaysOn o un'istanza del cluster di failover AlwaysOn ed è applicabile a istanze del cluster di failover o a gruppi di disponibilità su una singola subnet o su più subnet.  
+La proprietà di connessione **MultiSubnetFailover** indica che l'applicazione viene distribuita in un gruppo di disponibilità o nell'istanza del cluster di failover e che [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] effettua un tentativo di connessione al database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] primaria tramite la connessione a tutti gli indirizzi IP. Quando si specifica **MultiSubnetFailover=true** per una connessione, i ripetuti tentativi di connessione TCP del client vengono eseguiti più rapidamente rispetto agli intervalli di ritrasmissione TCP predefiniti del sistema operativo. In tal modo si abilita la riconnessione a seguito di failover di un gruppo di disponibilità AlwaysOn o un'istanza del cluster di failover AlwaysOn ed è applicabile a istanze del cluster di failover o a gruppi di disponibilità su una singola subnet o su più subnet.  
   
 Specificare sempre **MultiSubnetFailover=true** in caso di connessione a un listener del gruppo di disponibilità di SQL Server 2012 o a un'istanza del cluster di failover di SQL Server 2012. **MultiSubnetFailover** consente un failover più veloce per tutti i gruppi di disponibilità, permette di abilitare l'istanza del cluster di failover in SQL Server 2012 e riduce notevolmente la durata del failover per le topologie AlwaysOn singole e su più subnet. Durante un failover su più subnet, verranno tentate connessioni in parallelo da parte del client. Durante un failover su una subnet, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] effettua tentativi ripetuti e frequenti di connessione TCP.  
   
@@ -48,9 +48,9 @@ Utilizzare le linee guida seguenti per connettersi a un server in un gruppo di d
   
 -   Per eseguire la connessione a un gruppo di disponibilità, specificare il listener del gruppo di disponibilità come server nella stringa di connessione.  
   
--   La connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] configurata con più di 64 indirizzi IP determinerà un errore di connessione.  
+-   La connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurata con più di 64 indirizzi IP determinerà un errore di connessione.  
   
--   Il comportamento di un'applicazione in cui viene usata la proprietà di connessione **MultiSubnetFailover** non è influenzato dal tipo di autenticazione, cioè dall'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], dall'autenticazione Kerberos, o dall’autenticazione di Windows.  
+-   Il comportamento di un'applicazione in cui viene usata la proprietà di connessione **MultiSubnetFailover** non è influenzato dal tipo di autenticazione, cioè dall'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dall'autenticazione Kerberos, o dall’autenticazione di Windows.  
   
 -   Aumentare il valore di **loginTimeout** per adattarlo alla durata del failover e ridurre il numero di nuovi tentativi di connessione dell'applicazione.  
   
@@ -96,7 +96,7 @@ try {
 ```
 
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Aggiornamento per l'utilizzo di cluster su più subnet dal mirroring del database  
-Si verificherà un errore di connessione se nella stringa di connessione sono presenti le parole chiave di connessione **MultiSubnetFailover** e **Failover_Partner**. Si verificherà un errore anche se viene usato **MultiSubnetFailover** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] restituisce una risposta del partner di failover in cui viene indicato che fa parte di una coppia del mirroring del database.  
+Si verificherà un errore di connessione se nella stringa di connessione sono presenti le parole chiave di connessione **MultiSubnetFailover** e **Failover_Partner**. Si verificherà un errore anche se viene usato **MultiSubnetFailover** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce una risposta del partner di failover in cui viene indicato che fa parte di una coppia del mirroring del database.  
   
 Se si aggiorna un'applicazione [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] che usa il mirroring del database in uno scenario su più subnet, è necessario rimuovere la proprietà di connessione **Failover_Partner** e sostituirla con **MultiSubnetFailover** impostata su **Yes**, nonché sostituire il nome del server nella stringa di connessione con un listener del gruppo di disponibilità. Se in una stringa di connessione vengono usati **Failover_Partner** e **MultiSubnetFailover=true** il driver genera un errore. Se tuttavia in una stringa di connessione vengono usati **Failover_Partner** e **MultiSubnetFailover=false** (o **ApplicationIntent=ReadWrite**) l'applicazione usa il mirroring del database.  
   
