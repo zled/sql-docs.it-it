@@ -2,7 +2,7 @@
 title: Eseguire una valutazione della migrazione di SQL Server (Data Migration Assistant) | Microsoft Docs
 description: Informazioni su come usare Data Migration Assistant per valutare un SQL Server in locale prima della migrazione a un altro SQL Server o Database SQL di Azure
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: ed36cf6d61107b336f61283ccd09af49f94be0c6
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
-ms.translationtype: HT
+ms.openlocfilehash: 1a8de403a529ca5b74c6391f0e3f4cef2cca26d2
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118499"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152782"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione di SQL Server con Data Migration Assistant
 
