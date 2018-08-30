@@ -1,5 +1,5 @@
 ---
-title: Sintassi della gerarchia (Transact-SQL) dell'oggetto | Documenti Microsoft
+title: Oggetto sintassi della gerarchica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - objects [SQL Server], hierarchy syntax
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e7b3df2aad780cabe33855374cc5b6372366eeaf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 979d67b930d95817c0c27f671885c9b5fd9fb0d4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238052"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032539"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Sintassi della gerarchia degli oggetti (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Il *propertyname* parametri di sp_OAGetProperty e sp_OASetProperty e *NomeMetodo* parametro di sp_OAMethod supportano una sintassi di gerarchia di oggetti che è simile a quello di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Quando viene adottata questa sintassi speciale, i parametri sopraindicati seguono il seguente formato generale.  
+  Il *propertyname* parametri di sp_OAGetProperty e sp_OASetProperty e il *NomeMetodo* parametro di sp_OAMethod supportano una sintassi di gerarchia di oggetti che è simile a quella di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Quando viene adottata questa sintassi speciale, i parametri sopraindicati seguono il seguente formato generale.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +48,7 @@ ms.locfileid: "33238052"
  Le virgolette doppie (") sono obbligatorie. La sintassi di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] con il punto esclamativo (!) non è supportata per le raccolte.  
   
  *Non*  
- È il nome di una proprietà o metodo di *TraversedObject*.  
+ È il nome di una proprietà o metodo per la *TraversedObject*.  
   
  Per specificare tutti i parametri indice o metodo tramite i parametri di sp_OAGetProperty, sp_OASetProperty o sp_OAMethod (compreso il supporto per i parametri di output di sp_OAMethod), utilizzare la sintassi seguente:  
   
@@ -61,7 +60,7 @@ ms.locfileid: "33238052"
   
  Le virgolette doppie (") sono obbligatorie. Tutti i parametri denominati devono essere specificati dopo tutti i parametri posizionali.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se *TraversedObject* non viene specificato, *PropertyOrMethod* è obbligatorio.  
   
  Se *PropertyOrMethod* non viene specificato, il *TraversedObject* viene restituito come un parametro di output di token di oggetto da procedure di automazione OLE archiviati. Se *PropertyOrMethod* è specificato, la proprietà o metodo di *TraversedObject* viene chiamato, e il valore della proprietà o valore restituito del metodo viene restituito come parametro di output dell'automazione OLE stored procedure.  
@@ -70,10 +69,10 @@ ms.locfileid: "33238052"
   
  Per ulteriori informazioni sulla sintassi degli oggetti OLE di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], consultare la documentazione di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
- Per ulteriori informazioni sui codici restituiti HRESULT, vedere [sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md).  
+ Per altre informazioni sui codici restituiti HRESULT, vedere [sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
- Di seguito sono esempi di sintassi della gerarchia degli oggetti che utilizzano un oggetto SQL-DMO di SQLServer.  
+ Di seguito sono esempi di sintassi della gerarchia degli oggetti che usano un oggetto SQL-DMO di SQL Server.  
   
 ```  
 -- Get the AdventureWorks2012 Person.Address Table object.  

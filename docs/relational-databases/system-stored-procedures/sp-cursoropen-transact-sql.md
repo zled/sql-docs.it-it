@@ -1,5 +1,5 @@
 ---
-title: sp_cursoropen (Transact-SQL) | Documenti Microsoft
+title: sp_cursoropen (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6dae6b21a86c6cc68ab241328c5c190580888c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c10ba380b31a2d8169dcf0a57de15418db059eac
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240321"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028160"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +47,17 @@ sp_cursoropen cursor OUTPUT, stmt
   
 ## <a name="arguments"></a>Argomenti  
  *cursor*  
- Identificatore del cursore generato da SQL Server. *cursore* è un *gestire* valore che deve essere fornito su tutte le routine successive che comportano il cursore, ad esempio sp_cursorfetch. *cursore* è un parametro obbligatorio con un **int** valore restituito.  
+ Identificatore del cursore generato da SQL Server. *cursore* è un *gestire* valore che deve essere fornito su tutte le routine successive che riguardano il cursore, ad esempio sp_cursorfetch. *cursore* è un parametro obbligatorio con un **int** valore restituito.  
   
  *cursore* consente a più cursori di essere attivi in un'unica connessione di database.  
   
  *stmt*  
- Parametro obbligatorio che definisce il set di risultati del cursore. Qualsiasi stringa di query valida (sintassi e associazione) di un tipo stringa (indipendentemente da Unicode, dimensione e così via) può essere utilizzato come un valore valido *stmt* tipo di valore.  
+ Parametro obbligatorio che definisce il set di risultati del cursore. Qualsiasi stringa di query valida (sintassi e associazione) di qualsiasi tipo di stringa (indipendentemente da Unicode, dimensione e così via) può essere utilizzato come un valore valido *stmt* tipo valore.  
   
  *scrollopt*  
  Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede uno dei seguenti **int** valori di input.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -79,7 +79,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  Opzioni del controllo della concorrenza. *ccopt* è un parametro facoltativo che richiede uno dei seguenti **int** valori di input.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (precedentemente noto come LOCKCC)|  
@@ -93,14 +93,14 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Come con *scrollopt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possibile ignorare la richiesta *ccopt* valori.  
+ Come per gli *scrollopt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono eseguire l'override di richiesta *ccopt* valori.  
   
  *conteggio delle righe*  
  Numero di righe del buffer di recupero da utilizzare con AUTO_FETCH. Il valore predefinito è 20 righe. *conteggio delle righe* si comporta in modo diverso quando assegnato come valore di input rispetto a un valore restituito.  
   
 |Come valore di input|Come valore restituito|  
 |--------------------|---------------------|  
-|Quando il AUTO_FETCH *scrollopt* valore *rowcount* rappresenta il numero di righe da inserire nel buffer di recupero.<br /><br /> Nota: > 0 è un valore valido quando viene specificato AUTO_FETCH, in caso contrario viene ignorato.|Rappresenta il numero di righe nel risultato impostato, tranne quando la *scrollopt* viene specificato il valore AUTO_FETCH.|  
+|Quando il AUTO_FETCH *scrollopt* viene specificato valore *rowcount* rappresenta il numero di righe da inserire nel buffer di recupero.<br /><br /> Nota: > 0 è un valore valido quando viene specificato AUTO_FETCH, ma in caso contrario, viene ignorato.|Rappresenta il numero di righe nel risultato impostato, tranne quando la *scrollopt* viene specificato il valore AUTO_FETCH.|  
   
 -  
   
@@ -127,13 +127,13 @@ sp_cursoropen cursor OUTPUT, stmt
   
  Quando viene generato un errore, è possibile che i valori restituiti siano incoerenti. L'accuratezza non può pertanto essere garantita.  
   
- Quando il *rowcount* viene specificato come valore restituito, si verifica il set di risultati seguente.  
+ Quando la *rowcount* parametro viene specificato come valore restituito, si verifica il set di risultati seguente.  
   
  -1  
  Valore restituito se il numero di righe è sconosciuto o non applicabile.  
   
  -n  
- Valore restituito quando un popolamento asincrono è attivo. Rappresenta il numero di righe che sono stati inseriti l'operazione di recupero del buffer quando il *scrollopt* viene specificato il valore AUTO_FETCH.  
+ Valore restituito quando un popolamento asincrono è attivo. Rappresenta il numero di righe che sono stati posizionati nell'operazione di recupero del buffer quando le *scrollopt* viene specificato il valore AUTO_FETCH.  
   
  Se RPC è in uso, i valori restituiti sono come segue.  
   
@@ -150,16 +150,16 @@ sp_cursoropen cursor OUTPUT, stmt
  Un cursore di avanzamento rapido è stato chiuso automaticamente.  
   
 > [!NOTE]  
->  Se la routine sp_cursoropen viene eseguita correttamente, vengono inviati i parametri restituiti RPC e un set di risultati con informazioni sul formato di colonna TDS (messaggi 0xa0 e 0xa1). Se non riesce, vengono inviati uno o più messaggi di errore TDS. In entrambi i casi, non verrà restituito alcun dato di riga e di *eseguita* numero di messaggi sarà zero. Se si utilizza una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a 7.0, vengono restituiti i messaggi 0xa0, 0xa1 (standard per le istruzioni SELECT) insieme ai flussi di token 0xa5 e 0xa4. Se si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, viene restituito 0x81 (standard per le istruzioni SELECT) insieme ai flussi di token 0xa5 e 0xa4.  
+>  Se la routine sp_cursoropen viene eseguita correttamente, vengono inviati i parametri restituiti RPC e un set di risultati con informazioni sul formato di colonna TDS (messaggi 0xa0 e 0xa1). Se non riesce, vengono inviati uno o più messaggi di errore TDS. In entrambi i casi, non verranno restituiti dati di riga e il conteggio del messaggio *done* sarà zero. Se si utilizza una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a 7.0, vengono restituiti i messaggi 0xa0, 0xa1 (standard per le istruzioni SELECT) insieme ai flussi di token 0xa5 e 0xa4. Se si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, viene restituito 0x81 (standard per le istruzioni SELECT) insieme ai flussi di token 0xa5 e 0xa4.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 ## <a name="stmt-parameter"></a>Parametro stmt  
- Se *stmt* specifica l'esecuzione di una stored procedure, i parametri di input siano definiti come costanti come parte di *stmt* stringa o specificata come *boundparam* argomenti. È possibile passare variabili dichiarate come parametri associati in questo modo.  
+ Se *stmt* specifica l'esecuzione di una stored procedure, i parametri di input possono essere definiti come costanti come parte delle *stmt* stringa o specificata come *boundparam* argomenti. È possibile passare variabili dichiarate come parametri associati in questo modo.  
   
  Il contenuto consentito del *stmt* parametro variano a seconda se il *ccopt* restituito ALLOW_DIRECT valore è stato collegato tramite OR al resto del *ccopt* valori, ad esempio:  
   
--   Se non è specificato ALLOW_DIRECT, ovvero un [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT o EXECUTE istruzione chiama una stored procedure contenente una singola istruzione SELECT deve essere utilizzata. Inoltre, l'istruzione SELECT deve essere qualificata come cursore; ovvero, non può contenere le parole chiave SELECT INTO o FOR BROWSE.  
+-   Se non è specificato ALLOW_DIRECT, ovvero un [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT o EXECUTE istruzione chiama una stored procedure contenente una singola istruzione SELECT deve essere utilizzata. Inoltre, l'istruzione SELECT deve essere qualificata come cursore; vale a dire, non può contenere le parole chiave SELECT INTO o FOR BROWSE.  
   
 -   Se viene specificato ALLOW_DIRECT, è possibile che vengano eseguite una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], incluse quelle che, a loro volta, eseguono altre stored procedure con più istruzioni. Le istruzioni non SELECT o qualsiasi istruzione SELECT che contenga le parole chiave SELECT INTO o FOR BROWSE verranno semplicemente eseguite e non comporteranno la creazione di un cursore. Questo vale per qualsiasi istruzione SELECT inclusa in un batch di più istruzioni. Nei casi in cui un'istruzione SELECT contiene clausole che riguardano solo i cursori, tali clausole vengono ignorate. Ad esempio, quando il valore di *ccopt* è 0x2002, si tratta di una richiesta per:  
   
@@ -182,15 +182,15 @@ sp_cursoropen cursor OUTPUT, stmt
  I primi quattro *ccopt* valori (READ_ONLY, SCROLL_LOCKS ed entrambi i valori OPTIMISTIC) si escludono a vicenda.  
   
 > [!NOTE]  
->  Scegliere uno dei primi quattro *ccopt* valori determina se il cursore è di sola lettura, o se sono utilizzati i metodi di blocchi o ottimistici per impedire una perdita di aggiornamenti. Se un *ccopt* valore non è specificato, il valore predefinito è OPTIMISTIC.  
+>  Scelta di uno dei primi quattro *ccopt* valori determina se il cursore è di sola lettura, o se vengono utilizzati metodi di blocchi o ottimistici per impedire la perdita di aggiornamenti. Se un *ccopt* valore non è specificato, il valore predefinito è OPTIMISTIC.  
   
  ALLOW_DIRECT e CHECK_ACCEPTED_TYPES possono essere collegati tramite OR a uno dei primi quattro valori.  
   
  UPDT_IN_PLACE può essere collegato tramite OR a READ_ONLY, SCROLL_LOCKS o a uno dei valori OPTIMISTIC.  
   
- Se CHECK_ACCEPTED_TYPES è ON, almeno uno degli ultimi quattro *ccopt* valori (READ_ONLY_ACCEPTABLE, SCROLL_LOCKS_ACCEPTABLE e uno dei valori OPTIMISTIC_ACCEPTABLE) devono inoltre essere impostata su ON.  
+ Se CHECK_ACCEPTED_TYPES è ON, almeno uno degli ultimi quattro *ccopt* valori (READ_ONLY_ACCEPTABLE, SCROLL_LOCKS_ACCEPTABLE e uno dei valori OPTIMISTIC_ACCEPTABLE) devono inoltre essere ON.  
   
- Funzioni UPDATE e DELETE posizionate possono essere eseguite solo all'interno nel buffer di recupero e solo se il *ccopt* valore è uguale a SCROLL_LOCKS o OPTIMISTIC. Se SCROLL_LOCKS è il valore specificato, la riuscita dell'operazione è garantita. Se OPTIMISTIC è il valore specificato, l'operazione non riuscirà se la riga è stata modificata successivamente all'ultimo recupero.  
+ Funzioni UPDATE e DELETE posizionate possono essere eseguite solo entro il buffer di recupero e solo se il *ccopt* valore è uguale a SCROLL_LOCKS o OPTIMISTIC. Se SCROLL_LOCKS è il valore specificato, la riuscita dell'operazione è garantita. Se OPTIMISTIC è il valore specificato, l'operazione non riuscirà se la riga è stata modificata successivamente all'ultimo recupero.  
   
  Il motivo di questo errore è che, quando il valore specificato è OPTIMISTIC, viene eseguita una funzione di controllo della concorrenza ottimistica mediante il confronto di timestamp o valori di checksum, come determinato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se una delle righe non corrisponde, l'operazione non riesce.  
   
@@ -213,7 +213,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  *{nome della variabile locale data type} [,... n].*  
   
- I parametri successivi vengono utilizzati per passare i valori con cui sostituire il *nome di variabile locale* nell'istruzione.  
+ I parametri successivi vengono utilizzati per passare i valori con cui sostituire il *nome della variabile locale* nell'istruzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
