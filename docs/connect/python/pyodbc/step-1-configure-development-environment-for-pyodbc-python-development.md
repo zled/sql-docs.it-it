@@ -14,12 +14,12 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d591227354a950b36e085b350e207c4a8e89ff25
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: 7f588174ea80677066628cb3e756d7c38bd42fba
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37890982"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42784972"
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Python con pyodbc
 
@@ -29,7 +29,7 @@ Connettersi al Database SQL tramite Python - pyodbc su Windows:
 1. **Scarica programma di installazione di Python**.  
   Se il computer dispone di Python, è necessario installarlo. Andare alla [pagina di download di Python](https://www.python.org/downloads/windows/) e scaricare il programma di installazione appropriato. Ad esempio, se si usa un computer a 64 bit, scaricare il programma di installazione di Python 2.7 o 3.7 (x64).  
   
-2. **Installare Python**.  Dopo aver scaricato il programma di installazione, procedere come segue: una. Fare doppio clic sul file per avviare il programma di installazione. B. Selezionare la lingua e accettare le condizioni. c. Seguire le istruzioni sullo schermo e Python devono essere installati nel computer. d. È possibile verificare che Python è installato, passare a `C:\Python27` oppure `C:\Python37` ed eseguire `python -v` o `py -v` (per 3.x) 
+2. **Installare Python**.  Dopo aver scaricato il programma di installazione, procedere come segue: una. Fare doppio clic sul file per avviare il programma di installazione. B. Selezionare la lingua e accettare le condizioni. c. Seguire le istruzioni sullo schermo e Python devono essere installati nel computer. d. È possibile verificare che Python è installato, passare a `C:\Python27` oppure `C:\Python37` ed eseguire `python -V` o `py -V` (per 3.x) 
       
 3. [**Installare Microsoft ODBC Driver for SQL Server in Windows**](../../odbc/windows/system-requirements-installation-and-driver-files.md#installing-microsoft-odbc-driver-for-sql-server)
   

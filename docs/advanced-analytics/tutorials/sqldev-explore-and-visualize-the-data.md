@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cffbc00b5b3a3c1c8ab01e14319f3267e323022a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6b34de3c71629a1563bf0d480306680dc6253748
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395493"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703624"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lezione 3: Esplorare e visualizzare i dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,7 @@ Nel set di dati originale gli identificatori di taxi e i record delle corse si t
 
 Per creare il tracciato, utilizzare [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), una delle funzioni R avanzate disponibili nel [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Questo passaggio viene tracciata un istogramma basato sui dati da un [!INCLUDE[tsql](../../includes/tsql-md.md)] query. È possibile eseguire il wrapping di questa funzione in una stored procedure **PlotHistogram**.
 
-1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Esplora oggetti, fare doppio clic sui **TaxiNYC_Sample** del database, espandere **programmabilità**, quindi espandere **Stored procedure** per visualizzare il procedure create nella lezione 2.
+1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Esplora oggetti, fare doppio clic sui **NYCTaxi_Sample** del database, espandere **programmabilità**, quindi espandere **Stored procedure** per visualizzare il procedure create nella lezione 2.
 
 2. Fare doppio clic su **PlotHistogram** e selezionare **Modify** per visualizzare l'origine. È possibile eseguire questa procedura per chiamare **rxHistogram** sui dati contenuti nella colonna della tabella nyctaxi_sample indicata.
 
@@ -126,7 +126,9 @@ La stored procedure restituisce l'immagine come un flusso di dati varbinary, che
     > [!NOTE]
     > Opzioni di comando per bcp sono tra maiuscole e minuscole.
   
-3.  Se la connessione viene stabilita, verrà richiesto di immettere altre informazioni sul formato di file grafico. Premere INVIO a ogni richiesta per accettare le impostazioni predefinite, ad eccezione di quanto segue:
+3.  Se la connessione viene stabilita, verrà richiesto di immettere altre informazioni sul formato di file grafico. 
+
+   Premere INVIO a ogni richiesta per accettare le impostazioni predefinite, ad eccezione di quanto segue:
     
     -   Per **prefix-length of field plot**digitare 0
   
