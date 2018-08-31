@@ -13,12 +13,12 @@ caps.latest.revision: 40
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ce093e33e944e84b3985bbf79e0e3c895aa3ebdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d03b293418329fe6eeeba532778acca45ec9c860
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063629"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776030"
 ---
 # <a name="tutorials-for-sql-server"></a>Esercitazioni di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38063629"
      
 -   Se in un'esercitazione viene usato uno dei database di [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] è necessario scaricare e usare la versione più recente da CodePlex. Per altre informazioni, vedere [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) (Script e database AdventureWorks per SQL Server 2016 CTP3).    
 -   Scaricare una cartella di lavoro di [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e i report di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] da usare con le esercitazioni di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , vedere la pagina relativa agli [esempi di Power View per SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734).  
-- Vedere il nuovo database di esempio [Wide World Importers](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) disponibile nel repository [sql-server-samples](https://github.com/Microsoft/sql-server-samples) di GitHub. 
+- Vedere il nuovo database di esempio [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md) disponibile nel repository [sql-server-samples](https://github.com/Microsoft/sql-server-samples) di GitHub. 
 
  
 ## <a name="current-tutorials"></a>Esercitazioni correnti  

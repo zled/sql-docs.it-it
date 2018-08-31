@@ -20,12 +20,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 617e0bb42882883a51f5da0bb22ae59eb18dae88
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7b9549bfce672b3ddf5c67ddb8a6a4968e87a5b7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064652"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776231"
 ---
 # <a name="create-a-project"></a>Creazione di un progetto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "38064652"
     Nella casella **Modelli** selezionare un modello. Sotto la casella **Modelli** viene visualizzata una breve descrizione del modello di progetto selezionato.  
   
     **Nome**  
-    Immettere il nome del progetto script che si desidera creare. Nel percorso visualizzato nel campo **Percorso** viene inoltre creata una cartella con lo stesso nome del progetto. Per alcuni progetti, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] crea file di origine e altri file di supporto e li aggiunge alla nuova cartella di progetto.  
+    Immettere il nome del progetto script che si desidera creare. Nel percorso visualizzato nel campo **Percorso** viene inoltre creata una cartella con lo stesso nome del progetto. Per alcuni progetti, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] crea file di origine e altri file di supporto e li aggiunge alla nuova cartella di progetto.  
   
     > [!NOTE]  
     > Per alcuni tipi di progetto, la casella di testo **Name** non è disponibile perché il nome viene impostato automaticamente quando si specifica il percorso. Le applicazioni e i servizi Web ad esempio vengono posizionati su un server Web e i relativi nomi si basano sulla directory virtuale specificata su tale server.  
@@ -100,7 +100,7 @@ ms.locfileid: "38064652"
   
 4.  Fare clic su **OK**.  
   
-È possibile stabilire un nome per il progetto script. I nomi delle cartelle vengono invece stabiliti da [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] e non possono essere modificati. È possibile configurare il percorso e l'unità per il set di cartelle comune mediante la finestra di dialogo **Aggiungi nuovo progetto** . Fare clic con il pulsante destro del mouse sull'icona della soluzione in **Esplora soluzioni**e scegliere **Aggiungi**. Il percorso predefinito per le cartelle dei progetti script è C:\Documents and Settings\\*nomeutente*\Documenti\SQL Server Management Studio\Projects\\.  
+È possibile stabilire un nome per il progetto script. I nomi delle cartelle vengono invece stabiliti da [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e non possono essere modificati. È possibile configurare il percorso e l'unità per il set di cartelle comune mediante la finestra di dialogo **Aggiungi nuovo progetto** . Fare clic con il pulsante destro del mouse sull'icona della soluzione in **Esplora soluzioni**e scegliere **Aggiungi**. Il percorso predefinito per le cartelle dei progetti script è C:\Documents and Settings\\*nomeutente*\Documenti\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esplora soluzioni](../../ssms/solution/solution-explorer.md)  

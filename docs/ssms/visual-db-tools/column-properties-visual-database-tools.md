@@ -21,16 +21,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c74d4bd3ccb6770acfdadcbb6cf266890233e91
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 491efcd61e5143439ed9cd22d510f978af062c63
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981803"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776128"
 ---
 # <a name="column-properties-visual-database-tools"></a>Proprietà colonne (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Per le colonne sono disponibili due set di proprietà: il set completo, visualizzabile nella scheda **Proprietà colonna** in Progettazione tabelle (disponibile solo per i database di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ) e un subset, visualizzabile nella finestra Proprietà in Esplora server.  
+Per le colonne sono disponibili due set di proprietà: il set completo, visualizzabile nella scheda **Proprietà colonna** in Progettazione tabelle (disponibile solo per i database di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e un subset, visualizzabile nella finestra Proprietà in Esplora server.  
   
 > [!NOTE]  
 > Le proprietà illustrate in questo argomento sono ordinate per categoria anziché alfabeticamente.  
@@ -42,7 +42,7 @@ Per le colonne sono disponibili due set di proprietà: il set completo, visualiz
 Queste proprietà vengono visualizzate nella finestra Proprietà quando si seleziona una colonna in Esplora server.  
   
 > [!NOTE]  
-> Queste proprietà, a cui si accede da Esplora server, sono di sola lettura. Per modificare le proprietà delle colonne dei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , selezionare la colonna in Progettazione tabelle. Le proprietà sono descritte di seguito in questo argomento.  
+> Queste proprietà, a cui si accede da Esplora server, sono di sola lettura. Per modificare le proprietà delle colonne dei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare la colonna in Progettazione tabelle. Le proprietà sono descritte di seguito in questo argomento.  
   
 **Categoria Identità**  
 Viene espansa per visualizzare le proprietà **Nome** e **Database** .  
@@ -60,13 +60,13 @@ Viene espansa per visualizzare le proprietà rimanenti.
 Mostra il tipo di dati della colonna selezionata. Per altre informazioni, vedere [Tipi di dati (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Incremento identità**  
-Mostra l'incremento che verrà aggiunto a **Valore di inizializzazione Identity** per ogni riga successiva della colonna Identity e (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]).  
+Mostra l'incremento che verrà aggiunto a **Valore di inizializzazione Identity** per ogni riga successiva della colonna Identity e (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
 **Valore di inizializzazione Identity**  
-Consente di visualizzare il valore di inizializzazione assegnato alla prima riga della tabella per la colonna di identità (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]).  
+Consente di visualizzare il valore di inizializzazione assegnato alla prima riga della tabella per la colonna di identità (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
 **Identità**  
-Indica se la colonna selezionata è la colonna di identità per la tabella. (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]).  
+Indica se la colonna selezionata è la colonna di identità per la tabella. (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
 **Length**  
 Indica il numero di caratteri consentiti per i tipi di dati basati su caratteri.  
@@ -84,7 +84,7 @@ Indica il numero massimo di cifre ammesse dopo la virgola decimale nei tipi di d
 Per accedere a queste proprietà, in Esplora server fare clic con il pulsante destro del mouse sulla tabella a cui appartiene la colonna, scegliere **Apri definizione tabella**e selezionare la riga nella griglia della tabella in Progettazione tabelle.  
   
 > [!NOTE]  
-> Queste proprietà si applicano solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+> Queste proprietà si applicano solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **Categoria Generale**  
 Viene espansa per visualizzare le proprietà **Nome**, **Consenti valori Null**, **Tipo di dati**, **Valore predefinito dell'associazione**, **Lunghezza**, **Precisione**e **Scala**.  
@@ -185,11 +185,11 @@ Indica se durante la replica vengono mantenuti i valori di identità originari. 
 Indica se questa colonna è replicata in un'altra posizione.  
   
 **RowGuid**  
-Indica se la colonna viene utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] come ROWGUID. Questo valore può essere impostato su **Sì** solo per una colonna con tipo di dati **uniqueidentifier**. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
+Indica se la colonna viene utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come ROWGUID. Questo valore può essere impostato su **Sì** solo per una colonna con tipo di dati **uniqueidentifier**. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
 **Dimensione**  
 Indica la dimensione in byte consentita dal tipo di dati della colonna. Ad esempio, un tipo di dati **nchar** può avere una lunghezza di 10 (il numero di caratteri), ma avrebbe una dimensione di 20 per quanto riguarda i set di caratteri Unicode.  
   
 > [!NOTE]  
-> La lunghezza di un tipo di dati **varchar(max)** varia per ogni riga. sp_help restituisce (-1) come lunghezza della colonna **varchar(max)** . [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] visualizza -1 come dimensione della colonna.  
+> La lunghezza di un tipo di dati **varchar(max)** varia per ogni riga. sp_help restituisce (-1) come lunghezza della colonna **varchar(max)** . [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] visualizza -1 come dimensione della colonna.  
   

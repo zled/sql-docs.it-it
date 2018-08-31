@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1947ca3301de74d1837633047a86dcf4460bfdaa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa285718d089457b70543fbd4d060c3a51ab3c9f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043798"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776406"
 ---
 # <a name="open-with-new-file"></a>Apri con (Nuovo file)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,11 +44,11 @@ Fare clic su questo pulsante per aggiungere un programma all'elenco visualizzato
 Per rimuovere un programma selezionare il programma e quindi fare clic su **Rimuovi**.  
   
 **Predefinito**  
-Per specificare un editor predefinito ed eventuali opzioni di codifica della lingua per il tipo di file selezionato, selezionare un programma nell'elenco visualizzato in **Selezionare un programma dall'elenco** e quindi fare clic su **Predefinito**. Alla successiva apertura di questo tipo di file in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], il documento verrà aperto nel nuovo editor predefinito.  
+Per specificare un editor predefinito ed eventuali opzioni di codifica della lingua per il tipo di file selezionato, selezionare un programma nell'elenco visualizzato in **Selezionare un programma dall'elenco** e quindi fare clic su **Predefinito**. Alla successiva apertura di questo tipo di file in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], il documento verrà aperto nel nuovo editor predefinito.  
   
 > [!NOTE]  
 > Nell'elenco di programmi visualizzato in **Selezionare un programma dall'elenco**, il nome dell'editor predefinito per il tipo di file selezionato è seguito da **(Predefinito)**.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Associazione di estensioni di file a un editor di codice](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[Associazione di estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   

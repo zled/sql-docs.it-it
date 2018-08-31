@@ -18,57 +18,57 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c176bad0f2cf71e2b805f74eb65daa4fe5dae85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 774b8b970f08c256bd7fb9a2c8c9bb8c6d39c07a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33052458"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775893"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Documentazione per gli utenti in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] la documentazione per gli utenti è disponibile tramite il menu ? e la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Il menu ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] offre diverse possibilità per ottenere informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Consente inoltre di accedere alla community di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] e alle risorse di MSDN Online che in precedenza non erano disponibili dall'ambiente della Guida. Quest'ultimo può essere inoltre configurato per essere avviato all'interno dell'ambiente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] o in una finestra esterna associata.  
+In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] la documentazione per gli utenti è disponibile tramite il menu ? e la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il menu ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre diverse possibilità per ottenere informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Consente inoltre di accedere alla community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e alle risorse di MSDN Online che in precedenza non erano disponibili dall'ambiente della Guida. Quest'ultimo può essere inoltre configurato per essere avviato all'interno dell'ambiente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o in una finestra esterna associata.  
   
 ## <a name="the-help-interface"></a>Interfaccia della Guida  
-**Sommario** e **Indice** assicurano funzionalità e un'interfaccia già note agli utenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . Le altre opzioni sono:  
+**Sommario** e **Indice** assicurano funzionalità e un'interfaccia già note agli utenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Le altre opzioni sono:  
   
 -   **Ricerca per categorie**  
   
-    Offre un set gerarchico di pagine collegate che contengono argomenti utili correlati ad attività comuni in [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . Il contenuto è organizzato in base al componente e all'attività, ad esempio argomenti relativi alla replica e così via.  
+    Offre un set gerarchico di pagine collegate che contengono argomenti utili correlati ad attività comuni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il contenuto è organizzato in base al componente e all'attività, ad esempio argomenti relativi alla replica e così via.  
   
 -   **Ricerca**  
   
-    Consente di cercare argomenti, con o senza filtri predefiniti. Cerca in [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] è una pagina a schede separata. Gli utenti possono eseguire ricerche selettive con uno o più filtri predefiniti per tipo di argomento, lingua o tecnologia. Per impostazione predefinita non viene utilizzato nessuno dei filtri predefiniti e la ricerca viene eseguita solo tra gli argomenti presenti nelle raccolte installate.  
+    Consente di cercare argomenti, con o senza filtri predefiniti. Cerca in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è una pagina a schede separata. Gli utenti possono eseguire ricerche selettive con uno o più filtri predefiniti per tipo di argomento, lingua o tecnologia. Per impostazione predefinita non viene utilizzato nessuno dei filtri predefiniti e la ricerca viene eseguita solo tra gli argomenti presenti nelle raccolte installate.  
   
-    Gli utenti possono includere risorse online nella ricerca attivando la Guida. Per ulteriori informazioni, vedere "MSDN Online e community di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] " più avanti in questo argomento.  
+    Gli utenti possono includere risorse online nella ricerca attivando la Guida. Per ulteriori informazioni, vedere "MSDN Online e community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] " più avanti in questo argomento.  
   
 -   **Guida dinamica**  
   
-    Consente di visualizzare automaticamente i collegamenti alle informazioni pertinenti mentre gli utenti lavorano nell'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] .  
+    Consente di visualizzare automaticamente i collegamenti alle informazioni pertinenti mentre gli utenti lavorano nell'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
 -   **Preferiti della Guida**  
   
     In questo elenco sono archiviati i segnalibri degli argomenti inseriti dall'utente per accedervi facilmente in seguito.  
   
-Uso della Guida (Guida di[!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer) collega gli utenti alla documentazione relativa al visualizzatore della Guida, ma gli argomenti si trovano in un insieme separato dalla documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . Per informazioni sul visualizzatore della Guida, selezionare **Uso della Guida** dal menu ? della Documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] .  
+Uso della Guida (Guida di[!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer) collega gli utenti alla documentazione relativa al visualizzatore della Guida, ma gli argomenti si trovano in un insieme separato dalla documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per informazioni sul visualizzatore della Guida, selezionare **Uso della Guida** dal menu ? della Documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online e community di SQL Server  
-Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] offre inoltre agli utenti la possibilità di contattare MSDN Online e le community dedicate a [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]presenti su Internet. È possibile effettuare le operazioni seguenti:  
+Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre inoltre agli utenti la possibilità di contattare MSDN Online e le community dedicate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]presenti su Internet. È possibile effettuare le operazioni seguenti:  
   
--   Accedere alle community di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] dalla pagina Ricerca per categorie.  
+-   Accedere alle community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dalla pagina Ricerca per categorie.  
   
--   Eseguire ricerche in MSDN Online e nei siti delle community di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] .  
+-   Eseguire ricerche in MSDN Online e nei siti delle community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 #### <a name="to-access-sql-server-focused-communities-from-the-how-do-i-page"></a>Per accedere alle community dedicate a SQL Server dalla pagina Ricerca per categorie  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]scegliere **Ricerca per categorie** dal menu **?**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]scegliere **Ricerca per categorie** dal menu **?**.  
   
-2.  Verrà visualizzata la pagina [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] **Ricerca per categorie** . Nell'intestazione laterale dei collegamenti ai siti della community, fare clic sul nome del sito della community a cui si desidera accedere.  
+2.  Verrà visualizzata la pagina [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Ricerca per categorie** . Nell'intestazione laterale dei collegamenti ai siti della community, fare clic sul nome del sito della community a cui si desidera accedere.  
   
     > [!NOTE]  
-    > Il computer su cui viene eseguito [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] deve essere dotato di una connessione diretta a Internet.  
+    > Il computer su cui viene eseguito [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deve essere dotato di una connessione diretta a Internet.  
   
-    Per eseguire ricerche in MSDN Online o nelle community di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] , è innanzitutto necessario attivare la ricerca online.  
+    Per eseguire ricerche in MSDN Online o nelle community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , è innanzitutto necessario attivare la ricerca online.  
   
 #### <a name="to-enable-online-search"></a>Per attivare la ricerca online  
   
@@ -91,12 +91,12 @@ Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../inclu
 La ricerca verrà eseguita su tutti i provider selezionati, indipendentemente dall'utilizzo dei filtri disponibili (tecnologia, lingua e tipo di argomento).  
   
 ## <a name="launching-help"></a>Avvio della Guida  
-Per visualizzare la Guida da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]sono disponibili due possibilità. Per impostazione predefinita quando si apre la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] dall'interno di [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]l'apertura avviene in una finestra del documento esterna all'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] . Questa finestra è ancora associata a [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)], può essere influenzata da alcuni eventi di [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] e quando viene chiuso [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]verrà chiusa anche la documentazione online. L'apertura della documentazione online secondo questa procedura è particolarmente utile quando si utilizzano due monitor. È possibile trascinare la finestra della documentazione online nel secondo monitor, lontano dal lavoro che si sta eseguendo nel primo ma sempre facilmente consultabile.  
+Per visualizzare la Guida da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]sono disponibili due possibilità. Per impostazione predefinita quando si apre la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dall'interno di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]l'apertura avviene in una finestra del documento esterna all'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] . Questa finestra è ancora associata a [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], può essere influenzata da alcuni eventi di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e quando viene chiuso [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]verrà chiusa anche la documentazione online. L'apertura della documentazione online secondo questa procedura è particolarmente utile quando si utilizzano due monitor. È possibile trascinare la finestra della documentazione online nel secondo monitor, lontano dal lavoro che si sta eseguendo nel primo ma sempre facilmente consultabile.  
   
-È inoltre possibile aprire la documentazione online come finestra del documento all'interno di [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]. Questa scelta è preferibile quando lo spazio dello schermo è limitato e si desidera sfruttare [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] e la sua capacità di nascondere le finestre.  
+È inoltre possibile aprire la documentazione online come finestra del documento all'interno di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Questa scelta è preferibile quando lo spazio dello schermo è limitato e si desidera sfruttare [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e la sua capacità di nascondere le finestre.  
   
 > [!NOTE]  
-> Se si vuole che la documentazione online sia completamente indipendente da [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)], aprire la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] dal menu **Start** per evitare interazioni con le operazioni eseguite nell'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] e per impedire che venga chiusa quando si esce da [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)].  
+> Se si vuole che la documentazione online sia completamente indipendente da [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], aprire la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal menu **Start** per evitare interazioni con le operazioni eseguite nell'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e per impedire che venga chiusa quando si esce da [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 #### <a name="to-configure-help-and-sql-server-books-online-to-launch-inside-the-management-studio-window"></a>Per configurare la Guida e la documentazione online di SQL Server in modo che vengano avviate all'interno della finestra di Management Studio  
   

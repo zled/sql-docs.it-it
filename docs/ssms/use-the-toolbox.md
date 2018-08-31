@@ -20,16 +20,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7eef59e5e20ff33936e0db32849c4f1be4bf6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06ce90737135ad4eb6e098d6d8005663c1e47338
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050098"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776110"
 ---
 # <a name="use-the-toolbox"></a>Utilizzo della casella degli strumenti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Gli elementi, il testo e i controlli presenti nella casella degli strumenti possono essere selezionati e trascinati in form, pagine e finestre di progettazione. È inoltre possibile trascinare gli elementi nuovamente da tali origini alla casella degli strumenti, in modo da poterli riutilizzare in seguito. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] , ad esempio, è possibile trascinare un'attività in un piano di manutenzione.  
+Gli elementi, il testo e i controlli presenti nella casella degli strumenti possono essere selezionati e trascinati in form, pagine e finestre di progettazione. È inoltre possibile trascinare gli elementi nuovamente da tali origini alla casella degli strumenti, in modo da poterli riutilizzare in seguito. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , ad esempio, è possibile trascinare un'attività in un piano di manutenzione.  
   
 Gli elementi della casella degli strumenti sono raggruppati in sezioni denominate schede. Di seguito è riportato un elenco di riferimento delle attività più comuni che è possibile eseguire nella casella degli strumenti, insieme alla relativa procedura:  
   

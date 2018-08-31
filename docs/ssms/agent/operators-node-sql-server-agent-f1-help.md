@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6bfa613c28084510ccdbadf3e0e8ec39b43cab50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f59cb9d63a0739f13ddc2c80b1e08bb843714cf
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33038368"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776366"
 ---
 # <a name="operators-node-sql-server-agent-f1-help"></a>Nodo Operatori (Guida sensibile al contesto di SQL Server Agent)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,5 +29,5 @@ ms.locfileid: "33038368"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Questa sezione contiene gli argomenti della Guida sensibile al contesto per il nodo **Operatori** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+Questa sezione contiene gli argomenti della Guida sensibile al contesto per il nodo **Operatori** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
