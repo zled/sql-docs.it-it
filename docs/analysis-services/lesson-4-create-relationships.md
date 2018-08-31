@@ -1,6 +1,6 @@
 ---
-title: 'Lezione 5: Creare relazioni | Microsoft Docs'
-ms.date: 05/08/2018
+title: 'Lezione 4: Creare relazioni | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 36993a468a6997ff8de40da542deac00b25b18b4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bbddc0966729b93b2e9ac202966dff645c28c32c
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034769"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792031"
 ---
 # <a name="lesson-4-create-relationships"></a>Lezione 4: Creare relazioni
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-In questa lezione si verranno verificate le relazioni create automaticamente quando sono stati importati i dati e aggiungere nuove relazioni tra tabelle diverse. Una relazione è una connessione tra due tabelle che stabilisce in che modo devono essere correlati i dati nelle due tabelle. Ad esempio, la tabella DimProduct e la tabella DimProductSubcategory dispongono di una relazione basata sul fatto che ogni prodotto appartiene a una sottocategoria. Per altre informazioni, vedere [relazioni](../analysis-services/tabular-models/relationships-ssas-tabular.md).
+In questa lezione verranno verificate le relazioni create automaticamente al momento dell'importazione dei dati e verranno aggiunte nuove relazioni tra tabelle diverse. Una relazione è una connessione tra due tabelle che stabilisce in che modo devono essere correlati i dati nelle due tabelle. Ad esempio, la tabella DimProduct e la tabella DimProductSubcategory dispongono di una relazione basata sul fatto che ogni prodotto appartiene a una sottocategoria. Per altre informazioni, vedere [relazioni](../analysis-services/tabular-models/relationships-ssas-tabular.md).
   
 Tempo stimato per il completamento della lezione: **10 minuti**  
   
@@ -37,14 +37,14 @@ Quando sono stati importati i dati tramite l'importazione guidata tabella, si so
     
     ![come-tabulare-lesson4-diagramma](../analysis-services/media/as-tabular-lesson4-diagram.png)
   
-    Usare i controlli della mini mappa nell'angolo inferiore destro di Progettazione modelli per regolare la vista in modo da includere il maggior numero di tabelle possibile. È anche possibile fare clic sulle tabelle e trascinarle in posizioni diverse, avvicinandole o disponendole in un ordine particolare. Lo spostamento delle tabelle non influisce sulle relazioni già presenti tra le tabelle. Per visualizzare tutte le colonne di una tabella specifica, fare clic su un bordo della tabella e trascinare per espanderla o renderla più piccola.  
+    Usare i controlli della mini mappa nell'angolo inferiore destro di Progettazione modelli per regolare la vista in modo da includere il maggior numero di tabelle possibile. È possibile fare clic e trascinare le tabelle in posizioni diverse, avvicinandole o disponendole in un ordine particolare. Lo spostamento delle tabelle non influisce sulle relazioni già presenti tra le tabelle. Per visualizzare tutte le colonne in una determinata tabella, fare clic e trascinare un bordo della tabella per espanderla o ridurla.  
   
 2.  Fare clic su linea continua tra il **DimCustomer** tabella e il **DimGeography** tabella. La linea continua tra queste due tabelle indica che questa relazione è attiva, ovvero viene utilizzata per impostazione predefinita nel calcolo delle formule DAX.  
   
-    Si noti che il **GeographyKey** colonna il **DimCustomer** tabella e il **GeographyKey** colonna nel **DimGeography** tabella ora entrambe visualizzate all'interno di una finestra. Ciò indica che si tratta delle colonne utilizzate nella relazione. Le proprietà della relazione sono ora visualizzate nella finestra **Proprietà** .  
+    Si noti che il **GeographyKey** colonna il **DimCustomer** tabella e il **GeographyKey** colonna nel **DimGeography** tabella ora entrambe visualizzate all'interno di una finestra. Questa visualizzazione sono le colonne utilizzate nella relazione. Le proprietà della relazione sono ora visualizzate nella finestra **Proprietà** .  
   
     > [!TIP]  
-    > Oltre a usare Progettazione modelli in vista diagramma, è anche possibile usare la finestra di dialogo Gestisci relazioni per mostrare le relazioni tra tutte le tabelle in un formato tabella. Fare doppio clic su **relazioni** in Esplora modelli tabulari e quindi fare clic su **Gestisci relazioni**. La finestra di dialogo Gestisci relazioni Mostra le relazioni create automaticamente quando sono stati importati i dati.  
+    > Oltre a usare Progettazione modelli in vista diagramma, è anche possibile usare la finestra di dialogo Gestisci relazioni per mostrare le relazioni tra tutte le tabelle in un formato tabella. Fare doppio clic su **relazioni** in Esplora modelli tabulari e quindi fare clic su **Gestisci relazioni**. La finestra di dialogo Gestisci relazioni per mostrare le relazioni create automaticamente quando sono stati importati i dati.  
   
 3.  Utilizzare Progettazione modelli in vista diagramma oppure la finestra di dialogo Gestisci relazioni, per verificare le relazioni seguenti siano state create quando ognuna delle tabelle è stata importata dal database AdventureWorksDW:  
   
@@ -63,7 +63,7 @@ Nella vista diagramma, si noterà una freccia, un asterisco e un numero sulle li
 
 ![come-tabulare-lesson4-line](../analysis-services/media/as-tabular-lesson4-line.png)
 
-La freccia indica la direzione del filtro, che l'asterisco indica che la tabella è il lato "molti" nella cardinalità della relazione e il 1 sono illustrati in questa tabella è il uno lato della relazione. Se è necessario modificare una relazione. ad esempio, modificare la direzione filtro relazione o la cardinalità, fare doppio clic la linea della relazione nella vista diagramma per aprire la finestra di dialogo Modifica relazione.
+La freccia indica la direzione del filtro, che l'asterisco indica che la tabella è il lato "molti" nella cardinalità della relazione e il 1 sono illustrati in questa tabella è il uno lato della relazione. Se è necessario modificare una relazione. ad esempio, modificare la direzione filtro relazione o la cardinalità, fare doppio clic sulla linea della relazione nella vista diagramma per aprire la finestra di dialogo Modifica relazione.
 
 ![come-tabulare-lesson4-edit](../analysis-services/media/as-tabular-lesson4-edit.png)
 
@@ -86,7 +86,7 @@ In alcuni casi, potrebbe essere necessario creare relazioni aggiuntive tra tabel
   
     Verrà visualizzata una linea punteggiata che è stata creata una relazione inattiva tra la **DueDate** colonna il **FactInternetSales** tabella e il **data** colonna il  **DimDate** tabella. È possibile creare più relazioni tra tabelle, ma può essere attiva una sola relazione per volta.  
   
-3.  Creare infine un'ulteriore relazione; nel **FactInternetSales** di tabella, fare clic e tenere premuto il **ShipDate** colonna, quindi trascinare il cursore il **data** colonna il **DimDate** tabella e quindi rilasciare.  
+3.  Creare infine un'ulteriore relazione; nel **FactInternetSales** di tabella, fare clic e tenere premuto il **ShipDate** colonna, quindi trascinare il cursore il **data** colonna il **DimDate**tabella e quindi rilasciare.  
     
      ![come-tabulare-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   

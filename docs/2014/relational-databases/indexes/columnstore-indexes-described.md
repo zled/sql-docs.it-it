@@ -19,12 +19,12 @@ caps.latest.revision: 50
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9cd8b98b2e62dbc11d62e07b9b0d7e2ac3e05c6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8dd4fdcc7031f56850cded09b098356d2fbad195
+ms.sourcegitcommit: 4a9c89d72d91158832e89d96eb88cda616d36452
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211321"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42802531"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *indice columnstore in memoria* archivia e gestisce i dati tramite archiviazione dei dati basata su colonne e l'elaborazione di query basata su colonne. Gli indici columnstore sono ideali per i carichi di lavoro di data warehousing che eseguono principalmente caricamenti bulk e query di sola lettura. Usare l'indice columnstore per migliorare fino a **10 volte le prestazioni delle query** rispetto all'archiviazione tradizionale orientata alle righe e fino a **7 volte la compressione dei dati** rispetto alle dimensioni dei dati non compressi.  

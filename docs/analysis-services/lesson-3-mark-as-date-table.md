@@ -1,6 +1,6 @@
 ---
-title: 'Lezione 4: Contrassegna come tabella data | Microsoft Docs'
-ms.date: 05/08/2018
+title: 'Lezione 3: Contrassegna come tabella data | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77f29250621485f5606a0bf33615e8d15eb7d80b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7cb63b6cb67303dd763263b7d9dbeea30cfc4e3b
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057809"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42791982"
 ---
-# <a name="lesson-3-mark-as-date-table"></a>Lezione 3: Contrassegna come tabella data
+# <a name="lesson-3-mark-as-date-table"></a>Lezione 3: Contrassegnare come tabella data
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Nella Lezione 2: Aggiungere dati è stata importata una tabella delle dimensioni denominata DimDate. Mentre nel modello questa tabella è denominata DimDate, può anche essere nota come un *tabella data*, perché contiene dati di data e ora.  

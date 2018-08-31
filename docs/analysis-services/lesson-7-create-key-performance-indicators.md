@@ -1,6 +1,6 @@
 ---
-title: 'Lezione 8: Creare indicatori di prestazioni chiave | Microsoft Docs'
-ms.date: 05/08/2018
+title: 'Lezione 7: Creare indicatori di prestazioni chiave | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: multidimensional-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e56d4a533caaf95077eb06fabb5fd0bc0c42b07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ecfedbbc4b7e606f1589f2b5415c5355bb0d95e1
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033409"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42790102"
 ---
 # <a name="lesson-7-create-key-performance-indicators"></a>Lezione 7: Creare indicatori di prestazioni chiave
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
