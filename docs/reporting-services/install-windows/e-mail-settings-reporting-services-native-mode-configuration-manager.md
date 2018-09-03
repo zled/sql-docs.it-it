@@ -1,29 +1,23 @@
 ---
 title: Impostazioni posta elettronica - Modalità nativa di Reporting Services (Gestione configurazione) | Microsoft Docs
-ms.custom: ''
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.emailsettings.F1
 helpviewer_keywords:
 - SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: a5d7f6a81a9f13aa82c8aef9320617d23c2f2fbd
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: d89166ee73dcc1b01d35ca8475a5487d60eb0e81
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322140"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268173"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Impostazioni posta elettronica - Modalità nativa di Reporting Services (Gestione configurazione)
 Reporting Services include un'estensione per il recapito tramite posta elettronica che consente di distribuire report tramite questa modalità. A seconda di come viene definita la sottoscrizione tramite posta elettronica, un recapito può essere costituito da una notifica, un collegamento, un allegato o un report incorporato. L'estensione per il recapito tramite posta elettronica può essere utilizzata con la tecnologia del server di posta elettronica esistente. Il server di posta elettronica deve essere un server SMTP o un server di inoltro. Il server di report si connette a un server SMTP tramite librerie Collaboration Data Objects, o CDO, (cdosys.dll) fornite dal sistema operativo.

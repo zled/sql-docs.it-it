@@ -1,14 +1,10 @@
 ---
 title: "Procedura: Distribuire un'estensione per l'elaborazione dati in Progettazione report | Microsoft Docs"
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,15 +12,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], deploying
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 0149acac40f39664cfbceefef959c39a861c6159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2955e1b272073e03c563a80627d63ca34b9bd9dc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265743"
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>Distribuzione di un'estensione per l'elaborazione dati in Progettazione report
   In Progettazione report vengono utilizzate le estensioni per l'elaborazione dati per il recupero e l'elaborazione dei dati durante la progettazione dei report. È necessario distribuire l'assembly di estensioni per l'elaborazione dati in Progettazione report come assembly privato. È inoltre necessario immettere una voce nel file di configurazione di Progettazione report, RSReportDesigner.config.  
