@@ -1,30 +1,24 @@
 ---
 title: Use Built-in Security in Windows SharePoint Services for Report Server Items | Microsoft Docs (Usare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report | Microsoft Docs)
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 5155c5689a4c7a51f2d392e8560a2c87dbf44fdd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6733d9db27ce01e7fcc063e1f6affa13be7b276
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033228"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280184"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Utilizzare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report
   In SharePoint sono disponibili funzionalità di sicurezza predefinite che è possibile utilizzare per accedere agli elementi del server di report da siti e raccolte di SharePoint. Se sono già state assegnate autorizzazioni per siti ed elenchi agli utenti, questi ultimi potranno accedere alle operazioni e agli elementi del server di report subito dopo la configurazione delle impostazioni per l'integrazione tra SharePoint e un server di report.  
@@ -32,7 +26,7 @@ ms.locfileid: "33033228"
 ## <a name="securable-items"></a>Elementi a sicurezza diretta  
  Le autorizzazioni definite per un sito o una raccolta possono essere utilizzate per concedere l'accesso agli elementi del server di report. Se tuttavia si desidera proteggere singoli elementi, sarà possibile impostare autorizzazioni per i tipi di contenuto seguenti:  
   
-|Tipo di file|Description|  
+|Tipo di file|Descrizione|  
 |---------------|-----------------|  
 |rdl|File di definizione del report. Specifica il layout del report e i comandi utilizzati per recuperare i dati. Un file di definizione del report utilizza le informazioni di connessione all'origine dati per recuperare i dati durante l'elaborazione del report. Se il file definisce un report ad hoc creato in Generatore report, a tale report sarà associato un file modello (con estensione smdl), il quale determina l'impostazione dell'ambito di esplorazione dei dati nel report visualizzabile.|  
 |smdl|File modello di report che descrive le strutture di dati e le relative relazioni. Viene utilizzato per creare ed eseguire report di Generatore report.|  

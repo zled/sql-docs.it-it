@@ -1,28 +1,22 @@
 ---
 title: Contatori delle prestazioni per oggetti prestazioni del servizio ReportServer | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 3a83e69235c79a255d1ba238b6acc24f873d5e51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22afdbbbd970f7362644b69a55b2e63e7dd59c34
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027718"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266821"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Contatori delle prestazioni per oggetti prestazioni del servizio ReportServer
   Questo argomento descrive i contatori delle prestazioni per gli oggetti prestazioni di **ReportServer:Service** e **ReportServerSharePoint:Service** che fanno parte di una distribuzione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
@@ -55,7 +49,7 @@ ms.locfileid: "33027718"
 (get-counter -listset "ReportServer:Service").paths  
 ```  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |**Connessioni attive**|Numero di connessioni attualmente attive nel server.|  
 |**Totale byte ricevuti**|Numero di byte ricevuti dal server. Questo contatore conta i byte non elaborati ricevuti complessivamente sia da Gestione report sia dal server di report.|  
@@ -88,7 +82,7 @@ ms.locfileid: "33027718"
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |**Stato utilizzo memoria**||  
 |**Livello compattazione memoria**||  

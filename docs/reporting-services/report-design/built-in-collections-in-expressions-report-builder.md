@@ -1,26 +1,20 @@
 ---
 title: Raccolte predefinite nelle espressioni (Generatore report e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: e73b24b9680a18dcc19ab294aa6357310ac6cf36
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 93c0b81d1a267f447564605b86b34fadcfcb1c83
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021214"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278153"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Raccolte predefinite nelle espressioni (Generatore report e SSRS)
   Nell'espressione di un report è possibile includere riferimenti alle raccolte predefinite seguenti: ReportItems, Parameters, Fields, DataSets, DataSources, Variables e a campi predefiniti per informazioni generali quali il nome del report. Nella finestra di dialogo **Espressione** non vengono visualizzate tutte le raccolte. Le raccolte DataSets e DataSources sono disponibili solo in fase di progettazione per i report pubblicati in un server di report. ReportItems è una raccolta di caselle di testo in un'area del report, ad esempio le caselle di testo visualizzate in una pagina o in un'intestazione.  
@@ -33,7 +27,7 @@ ms.locfileid: "33021214"
 ##  <a name="Collections"></a> Informazioni sulle raccolte predefinite  
  Nella tabella seguente sono elencate le raccolte predefinite disponibili quando si scrive un'espressione. Ogni riga include il nome a livello di programmazione della raccolta, con distinzione tra maiuscole e minuscole, l'indicazione se è possibile utilizzare la finestra di dialogo Espressione per aggiungere un riferimento alla raccolta in modo interattivo, un esempio e una descrizione in cui è specificato quando vengono inizializzati i valori della raccolta e sono quindi disponibili per l'uso.  
   
-|Raccolta predefinita|Categoria nella finestra di dialogo Espressione|Esempio|Description|  
+|Raccolta predefinita|Categoria nella finestra di dialogo Espressione|Esempio|Descrizione|  
 |--------------------------|-------------------------------------------|-------------|-----------------|  
 |**Elementi globali**|Campi predefiniti|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|Rappresenta le variabili globali utili per i report, quali il nome del report o il numero di pagina. Sempre disponibile.<br /><br /> Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |**Utente**|Campi predefiniti|`=User.UserID`<br /><br /> - oppure -<br /><br /> `=User.Language`|Rappresenta una raccolta di dati relativi all'utente che esegue il report, ad esempio l'impostazione della lingua o l'ID utente. Sempre disponibile.<br /><br /> Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  

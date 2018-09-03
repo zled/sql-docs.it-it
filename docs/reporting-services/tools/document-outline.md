@@ -1,28 +1,22 @@
 ---
 title: Struttura documento | Microsoft Docs
-ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.documentoutline.f1
 ms.assetid: 521f3772-043a-4bfa-a3d6-d5e3405ac09c
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: dec474498df962092a88b7b6615e81dbc5bdcbfd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5998af402cfee539a458d8fba608e09c9bf685e3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029338"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270222"
 ---
 # <a name="document-outline"></a>Struttura documento.
   Utilizzare la finestra Struttura documento per visualizzare la gerarchia degli elementi di un report. Nelle aree dati Tablix sono visualizzate tutte le caselle di testo e gli altri elementi del report contenuti nelle celle della Tablix. Quando si seleziona un elemento del report nell'area di progettazione, viene selezionato l'elemento del report corrispondente nella finestra Struttura documento. In questa visualizzazione è possibile individuare gli elementi del report nell'area di progettazione. Quando ad esempio si visualizza in anteprima un report con gli errori relativi alle espressioni, nella finestra Output viene visualizzato un messaggio per ogni errore. Nel messaggio è indicato il nome della casella di testo che contiene l'espressione con l'errore. Facendo clic sul nome della casella di testo nella finestra Struttura documento, lo si seleziona nell'area di progettazione e viene visualizzata l'espressione che contiene l'errore.  
