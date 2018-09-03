@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f77719ef5ea1dafa149a00a73ec470162b769f2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087193"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775667"
 ---
 # <a name="database-project-settings"></a>Impostazioni del progetto di database
 Le impostazioni del progetto di database vengono usate per controllare gli aspetti delle configurazioni relative a database, debug e compilazione. Tali impostazioni sono suddivise nelle categorie seguenti.  
@@ -108,7 +108,7 @@ Le impostazioni della tabella seguente si applicano a tutte le configurazioni di
 Verifica Transact-SQL estesa è una funzionalità disponibile nel sistema del progetto di database che consente agli sviluppatori di inviare il proprio progetto di database al servizio Transact-SQL Compiler Service in fase di compilazione, per la convalida del codice a fronte del parser e dell'interprete del motore di SQL Server.  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL Compiler Service  
-Il Servizio di compilazione Transact-SQL è un componente basato sul motore di database di Microsoft SQL Server 2012. Questo servizio consente di convalidare la sintassi e la semantica delle istruzioni DDL con la stessa affidabilità del motore di database di Microsoft SQL Server 2012. Ciò significa implicitamente che il Servizio di compilazione non supporta la sintassi o le funzionalità deprecate in Microsoft SQL Server 2012. Per ulteriori informazioni sulle funzionalità deprecate, vedere [Funzionalità del Motore di database non più utilizzate in SQL Server 2012](http://msdn.microsoft.com/en-us/library/ms144262%28v=sql.110%29.aspx).  
+Il Servizio di compilazione Transact-SQL è un componente basato sul motore di database di Microsoft SQL Server 2012. Questo servizio consente di convalidare la sintassi e la semantica delle istruzioni DDL con la stessa affidabilità del motore di database di Microsoft SQL Server 2012. Ciò significa implicitamente che il Servizio di compilazione non supporta la sintassi o le funzionalità deprecate in Microsoft SQL Server 2012. Per ulteriori informazioni sulle funzionalità deprecate, vedere [Funzionalità del Motore di database non più utilizzate in SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
   
 Ai fini della convalida del progetto di database, il Servizio compilazione crea un database parzialmente indipendente e simula l'esecuzione delle istruzioni DDL sul database. Per ulteriori informazioni, vedere i concetti relativi ai database parzialmente indipendenti nella pagina [Database indipendenti](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx).  
   
