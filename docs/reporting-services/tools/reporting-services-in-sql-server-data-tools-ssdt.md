@@ -17,12 +17,12 @@ caps.latest.revision: 76
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd93ead640b1e99ff1a3776cf0379c45aa9aff08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de8e4632223d81f8e49e78fee7ef14fb9983a268
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33037198"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406070"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
 
@@ -286,7 +286,7 @@ ms.locfileid: "33037198"
   
 -   Controllare le finestre e le modalità di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]:  
   
-    |Description|Combinazione di tasti|  
+    |Descrizione|Combinazione di tasti|  
     |-----------------|---------------------|  
     |Consente di compilare il progetto selezionato|CTRL+SHIFT+B|  
     |Consente di visualizzare la finestra Proprietà|F4|  
@@ -296,7 +296,7 @@ ms.locfileid: "33037198"
   
 -   Consente di controllare gli elementi nell'area di progettazione del report  
   
-    |Description|Combinazione di tasti|  
+    |Descrizione|Combinazione di tasti|  
     |-----------------|---------------------|  
     |Consente di spostare lo stato attivo da un elemento del report all'elemento successivo|TAB|  
     |Consente di spostare l'elemento del report selezionato|Tasti di direzione|  
@@ -313,7 +313,7 @@ ms.locfileid: "33037198"
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Scaricare SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
-[Esplora soluzioni](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[Esplora soluzioni](../../ssms/solution/solution-explorer.md)   
 [Report di Reporting Services](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [Deployment and Version Support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

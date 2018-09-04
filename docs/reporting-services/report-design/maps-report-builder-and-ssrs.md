@@ -1,7 +1,7 @@
 ---
 title: Mappe (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -22,12 +22,12 @@ caps.latest.revision: 30
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0e26ea4a4fc338cdb86e881d545436d00083c015
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e5a6a0c2bfb86e57f900a89c48e84ca68e6689f
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028918"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406243"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mappe (Generatore report e SSRS)
   Per visualizzare i dati aziendali su uno sfondo geografico, è possibile aggiungere una mappa al report impaginato [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Il tipo di mappa da selezionare dipende da quali informazioni si desidera comunicare nel report. È possibile aggiungere una mappa che visualizza solo le posizioni, una mappa a bolle in cui le dimensioni di queste ultime variano in base al numero di unità familiari presenti in un'area, una mappa con marcatori in cui lo stile del marcatore cambia a seconda del prodotto più remunerativo per ogni negozio oppure una mappa linea che consente di visualizzare gli itinerari tra i diversi negozi.  
@@ -84,7 +84,7 @@ ms.locfileid: "33028918"
   
 -   **File di forma ESRI.** I file di forma ESRI contengono dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI). Essi fanno riferimento a un set di file. I dati nel file con estensione shp specificano le forme geografiche o geometriche. I dati nel file con estensione dbf forniscono gli attributi per le forme. Per visualizzare una mappa in visualizzazione della struttura o eseguirla dal server di report, entrambi i file devono trovarsi nella stessa cartella. Quando si aggiungono dati spaziali da un file con estensione shp sul file system locale, i dati spaziali sono incorporati nel report. Per recuperare i dati spaziali dinamicamente in fase di esecuzione, caricare i file di forma nel server di report e specificarli come origine dei dati spaziali. Per altre informazioni, vedere la pagina relativa alla [ricerca di file di forma ESRI per una mappa](http://go.microsoft.com/fwlink/?linkid=178814).  
   
--   **Dati spaziali di SQL Server archiviati in un database.** È possibile usare una query che specifichi i tipi di dati **SQLGeometry** o **SQLGeography** da un database relazionare di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md) in [Documentazione in linea di SQL Server 2008](http://go.microsoft.com/fwlink/?linkid=98335).  
+-   **Dati spaziali di SQL Server archiviati in un database.** È possibile usare una query che specifichi i tipi di dati **SQLGeometry** o **SQLGeography** da un database relazionare di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
      Nel set di risultati visualizzato in Progettazione query ogni riga di dati spaziali viene trattata come un'unità e archiviata in un solo elemento della mappa. Ad esempio se ci sono più punti definiti in una riga nel set di risultati, le proprietà di visualizzazione si applicano a tutti i punti di quell'elemento della mappa.  
   

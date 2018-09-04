@@ -20,12 +20,12 @@ caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 94917fe4165b0d6d3fdd498c1aa3b482e4fff745
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 46245e2330faa9c1dec831c21b01b64c115788a0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968905"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406769"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016"></a>Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2016
 
@@ -45,9 +45,9 @@ Le funzionalità seguenti di SQL Server Reporting Services non sono supportate n
 
 ## <a name="features-not-supported-in-previous-versions-of-sql-server-reporting-services"></a>Funzionalità non supportate nelle versioni precedenti di SQL Server Reporting Services
 
-- [Funzionalità deprecate in SQL Server 2014 Reporting Services](https://msdn.microsoft.com/library/ms143509\(v=sql.120\).aspx)
+- [Funzionalità deprecate in SQL Server 2014 Reporting Services](deprecated-features-in-sql-server-reporting-services-ssrs.md)
 
-- [Funzionalità deprecate in SQL Server 2012 Reporting Services](https://msdn.microsoft.com/library/ms143509\(v=sql.110\).aspx)
+- [Funzionalità deprecate in SQL Server 2012 Reporting Services](deprecated-features-in-sql-server-reporting-services-ssrs.md)
 
 ## <a name="next-steps"></a>Passaggi successivi
 

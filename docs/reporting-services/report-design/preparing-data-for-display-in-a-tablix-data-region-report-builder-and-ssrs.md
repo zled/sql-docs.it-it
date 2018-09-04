@@ -1,7 +1,7 @@
 ---
 title: Preparare i dati per la visualizzazione in un'area dati Tablix (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e6b8f3672b21a43c87eb1dec7008593a93f3b850
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0106cac1213e9037008bc9c89b0ef501457c6446
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023968"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40412650"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Preparare i dati per la visualizzazione in un'area dati Tablix (Generatore report e SSRS)
   In un'area dati Tablix vengono visualizzati i dati di un set di dati. È possibile visualizzare tutti i dati recuperati per il set di dati o creare filtri in modo da visualizzare solo un subset dei dati. È inoltre possibile aggiungere espressioni condizionali per inserire valori Null o modificare la query affinché un set di dati includa colonne che definiscono il tipo di ordinamento per una colonna esistente.  
@@ -37,7 +37,7 @@ ms.locfileid: "33023968"
 =IIF(Fields!Size.Value IS NOTHING,"Null",Fields!Size.Value)  
 ```  
   
- Per altre informazioni sull'eliminazione di valori Null nei dati prima del recupero dei dati da un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite query [!INCLUDE[tsql](../../includes/tsql-md.md)] , vedere le sezioni relative a valori Null e valori Null e join nella documentazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclusa nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Per altre informazioni sull'eliminazione di valori Null nei dati prima del recupero da un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando le query [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [NULL e UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md).  
   
 ## <a name="handling-null-field-names"></a>Gestione dei nomi dei campi con valori Null  
  Il testing dei valori Null in un'espressione risulta appropriato fino a quando il campo stesso è presente nel set di risultati della query. Partendo dal codice personalizzato è possibile eseguire il testing per verificare la presenza del campo tra i campi della raccolta restituiti in fase di esecuzione dall'origine dati. Per altre informazioni, vedere [Riferimenti alla raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  

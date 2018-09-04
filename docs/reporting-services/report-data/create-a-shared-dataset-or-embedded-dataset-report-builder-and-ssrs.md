@@ -15,17 +15,19 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 15bf16dc24c14855356083093d386a2c0a6b78af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7815346582774bf53034aa368ea6459fe7fcd75
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022678"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432584"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Creare un set di dati condiviso o un set di dati incorporato (Generatore report e SSRS)
 È possibile usare i set di dati incorporati in un singolo report [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . I set di dati condivisi in un server di report possono essere ustati da più report, sia per dispositivi mobili che impaginati. Per creare un set di dati, è necessaria un'origine dati incorporata o condivisa.  
   
- Usare **Generatore report** per eseguire le operazioni seguenti:  
+## <a name="report-builder-tasks"></a>Attività incluse nel ruolo Generatore report
+
+Usare Generatore report per eseguire le operazioni seguenti:  
   
 1.  Creare un set di dati condiviso nella visualizzazione di progettazione del set di dati. Nei set di dati condivisi devono essere usate origini dati condivise pubblicate.  
   
@@ -33,7 +35,9 @@ ms.locfileid: "33022678"
   
 3.   Salvare il set di dati direttamente nel server di report o nel sito di SharePoint.  
   
- Usare **Progettazione report** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per eseguire le operazioni seguenti:  
+## <a name="report-designer-tasks"></a>Attività incluse nel ruolo Progettazione report
+
+Usare Progettazione report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per eseguire le operazioni seguenti:  
   
 1.  Creare un set di dati condiviso in Esplora soluzioni. Nei set di dati condivisi devono essere usate origini dati della cartella Origini dati condivise in Esplora soluzioni.  
   
@@ -46,7 +50,7 @@ ms.locfileid: "33022678"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>Per aprire Generatore report e creare un set di dati condiviso  
+## <a name="to-create-a-shared-dataset-in-report-builder"></a>Per creare un set di dati condiviso in Generatore report
   
 1.  Aprire Generatore report. Viene visualizzato il riquadro **Nuovo report o set di dati** , come illustrato nella figura seguente:  
   

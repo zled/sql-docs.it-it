@@ -20,15 +20,15 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7b0e65fda3c8aab492d45546428db43b8af7fc1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 482fc7069a480d41122535e139be2726df75f972
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022928"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410327"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Generatore report in SQL Server 2016
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] è uno strumento per la creazione di report impaginati, per gli utenti aziendali che preferiscono lavorare in un ambiente autonomo anziché usare Progettazione Report in Visual Studio.  Quando si progetta un report impaginato, si crea una definizione del report che specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, l'elaboratore di report usa la definizione del report specificata, recupera i dati e li combina con il layout per generare il report. È possibile visualizzare l'anteprima dei report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] e pubblicare il report in un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint dove potrà essere eseguito da altri utenti.  
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è uno strumento per la creazione di report impaginati, per gli utenti aziendali che preferiscono lavorare in un ambiente autonomo anziché usare Progettazione report in Visual Studio.  Quando si progetta un report impaginato, si crea una definizione del report che specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, l'elaboratore di report usa la definizione del report specificata, recupera i dati e li combina con il layout per generare il report. È possibile visualizzare l'anteprima dei report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e pubblicare il report in un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint dove potrà essere eseguito da altri utenti.  
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33022928"
   
 -   **Report da diverse origini dati.** È possibile compilare report usando dati da qualsiasi tipo di origine dati per cui sia disponibile un provider di dati gestito da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], un provider OLE DB oppure un'origine dati ODBC. È possibile creare report che utilizzano dati relazionali e multidimensionali da database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion e così via. È inoltre possibile utilizzare un'estensione per l'elaborazione dei dati XML per recuperare dati da qualsiasi origine dei dati XML. Per progettare origini dati personalizzate, è possibile utilizzare funzioni con valori di tabella.  
   
--   **Modificare report esistenti.** Con [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]è possibile personalizzare e aggiornare report creati in Progettazione report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+-   **Modificare report esistenti.** Con [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]è possibile personalizzare e aggiornare report creati in Progettazione report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 -   **Modificare i dati** filtrandoli, raggruppandoli e ordinandoli o aggiungendo formule o espressioni.  
   
@@ -79,15 +79,15 @@ ms.locfileid: "33022928"
   [Installare Generatore report](../../reporting-services/install-windows/install-report-builder.md)
 
   [Novità di Reporting Services e Generatore report per SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-  Descrive le nuove funzionalità disponibili in questa versione di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].   
+  Descrive le nuove funzionalità disponibili in questa versione di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
   [Esercitazione: Creazione di un report grafico rapido offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
- Presenta [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] e le procedure guidate disponibili per la creazione di report. Viene inoltre fornito un set di dati iniziale da utilizzare per evitare di connettersi a un'origine dati.  
+ Presenta [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e le procedure guidate disponibili per la creazione di report. Viene inoltre fornito un set di dati iniziale da utilizzare per evitare di connettersi a un'origine dati.  
   
  [Pianificazione di un report &#40;Generatore report&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Vengono fornite informazioni sugli aspetti che è necessario considerare prima di iniziare a compilare il report.  
   
  [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- Definisce i concetti chiave usati in tutta la documentazione relativa a [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] .  
+ Definisce i concetti chiave usati in tutta la documentazione relativa a [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  Vengono illustrati i diversi riquadri e le diverse aree della visualizzazione di progettazione report.  
@@ -96,6 +96,6 @@ ms.locfileid: "33022928"
  Vengono illustrati i diversi riquadri e le diverse aree della visualizzazione di progettazione del set di dati condiviso.  
   
  [Tasti di scelta rapida &#40;Generatore report&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
- Descrive le scelte rapida da tastiera disponibili per la navigazione e la progettazione di report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
+ Descrive le scelte rapida da tastiera disponibili per la navigazione e la progettazione di report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
 

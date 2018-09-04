@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d7999de8fa0a00d6479483b3b352fe52622a00b1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 886143cc00831cd6921a07738f6ffbd1e6ef36ef
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983777"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405602"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere installati in modalità nativa o in modalità SharePoint. La procedura da seguire per verificare l'installazione dipende dalla modalità del server di report.  
@@ -39,7 +39,7 @@ ms.locfileid: "38983777"
   
 2.  Verificare che il **Servizio SQL Server Reporting Services** sia installato e **In esecuzione** .  
   
-     Se non si visualizza il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nell'elenco, verificare che il servizio sia installato. Per altre informazioni, vedere [Installare il primo server di report in modalità SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+     Se non si visualizza il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nell'elenco, verificare che il servizio sia installato. Per altre informazioni, vedere [Installare il primo server di report in modalità SharePoint](install-the-first-report-server-in-sharepoint-mode.md).  
   
 ### <a name="to-verify-the-service-application"></a>Per verificare l'applicazione di servizio  
   
@@ -71,7 +71,7 @@ ms.locfileid: "38983777"
   
 1.  In una raccolta documenti di SharePoint creare un report semplice di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contenente solo una casella di testo, ad esempio un titolo. Il report non contiene origini dati e set di dati. L'obiettivo consiste nel verificare che sia possibile aprire Generatore report. In tal caso, verrà visualizzato in anteprima un report di base.  
   
-2.  Salvare il report nella raccolta documenti e quindi eseguire il report dalla raccolta. Per altre informazioni sulla creazione di report con Generatore report, vedere [Avviare Generatore report](http://msdn.microsoft.com/8c8c7d2e-b315-418d-bf65-90e7685e4259).  
+2.  Salvare il report nella raccolta documenti e quindi eseguire il report dalla raccolta. Per altre informazioni sulla creazione di report con Generatore report, vedere [Avviare Generatore report](../report-builder/start-report-builder.md).  
   
 ### <a name="reporting-services-samples"></a>Esempi di Reporting Services  
   

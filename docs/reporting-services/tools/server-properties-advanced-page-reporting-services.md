@@ -1,28 +1,26 @@
 ---
 title: Proprietà server (pagina Avanzate) - Reporting Services | Microsoft Docs
-ms.custom: ''
-ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: conceptual
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.advanced.f1
-ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 336a201dde0a1afba761e135d561079ce5c95d75
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.component: tools
+ms.suite: reporting-services
+ms.topic: conceptual
+ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
+caps.latest.revision: 18
+ms.custom: ''
+ms.reviewer: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.date: 08/16/2018
+ms.openlocfilehash: 2f1fe16e169fa26d0fec402a5b52306bc80e460a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999453"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410332"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Proprietà server (pagina Avanzate) - Reporting Services
 
@@ -49,11 +47,12 @@ Indica se la registrazione per l'esecuzione di report è attivata. Il valore pre
 **ExecutionLogDaysKept**  
 Numero di giorni durante i quali le informazioni sulle esecuzioni dei report vengono conservate nel log di esecuzione. I valori validi per questa proprietà sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1** le voci non vengono eliminate dalla tabella del log di esecuzione. Il valore predefinito è **60**.  
 
-> [!NOTE] 
+> [!NOTE]
 > Se si imposta un valore **0** vengono *eliminate* tutte le voci dal log di esecuzione. Il valore **-1** mantiene le voci del log di esecuzione e non le elimina.
 
-**SessionTimeout**  
-Intervallo, in secondi, durante il quale una sessione rimane attiva. Il valore predefinito è **600**.  
+Report RDLX **RDLXReportTimeout** *(report Power View in un server SharePoint)* che elabora il valore di timeout in secondi per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è **1800**.
+
+**SessionTimeout** Intervallo in secondi per il quale una sessione rimane attiva. Il valore predefinito è **600**.  
 
 **SharePointIntegratedMode**  
 Proprietà di sola lettura che indica la modalità del server. Se il valore è False, il server di report è in esecuzione in modalità nativa.  
@@ -61,8 +60,7 @@ Proprietà di sola lettura che indica la modalità del server. Se il valore è F
 **SiteName**  
 Nome del sito del server di report visualizzato nel titolo della pagina del portale Web. Il valore predefinito è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Questa proprietà può essere una stringa vuota. La lunghezza massima è di 8.000 caratteri.  
 
-**StoredParametersLifetime**  
-Specifica il numero massimo di giorni per cui è possibile conservare un parametro archiviato. I valori validi sono compresi tra **-1**, **+1** e **2,147,483,647**. Il valore predefinito è **180** giorni.  
+**StoredParametersLifetime** Specifica il numero massimo di giorni per cui è possibile mantenere un parametro archiviato. I valori validi sono compresi tra **-1**, **+1** e **2,147,483,647**. Il valore predefinito è **180** giorni.  
 
 **StoredParametersThreshold**  
 Specifica il numero massimo di valori dei parametri che possono essere archiviati nel server di report. I valori validi sono compresi tra **-1**, **+1** e **2,147,483,647**. Il valore predefinito è **1500**.  
@@ -72,6 +70,8 @@ Indica se il server di report deve utilizzare cookie di sessione per le comunica
 
 **ExternalImagesTimeout**  
 Determina l'intervallo di tempo consentito per il recupero di un file di immagine esterno prima del timeout della connessione. Il valore predefinito è **600** secondi.  
+
+**SnapshotCompression** Snapshot del server di report nel momento.
 
 **SnapshotCompression**  
 Definisce come vengono compressi gli snapshot. Il valore predefinito è **SQL**. I valori validi sono i seguenti:
@@ -97,7 +97,7 @@ Determina se la sicurezza integrata di Windows è supportata per le connessioni 
 |**False**|La sicurezza integrata di Windows non è attivata. Le origini dati dei report configurate per l'utilizzo della sicurezza integrata di Windows non verranno eseguite.|
 
 **EnableLoadReportDefinition**  
-Selezionare questa opzione per specificare se gli utenti possono eseguire report ad hoc da un report di Generatore report. Selezionando questa opzione si imposta la proprietà **EnableLoadReportDefinition** sul server di report.  
+Selezionare questa opzione per specificare se gli utenti possono eseguire un report non pianificato da un report di Generatore report. Selezionando questa opzione si imposta la proprietà **EnableLoadReportDefinition** sul server di report.  
 
 Se si deseleziona questa opzione, la proprietà viene impostata su False. Il server di report non genererà report click-through per i report che usano un modello di report come origine dati. Qualsiasi chiamata al metodo LoadReportDefinition verrà bloccata.  
 
@@ -105,27 +105,6 @@ La disattivazione di questa opzione consente di attenuare i rischi di attacchi D
 
 **EnableRemoteErrors**  
 Include informazioni esterne sugli errori, ad esempio, informazioni sull'errore relative alle origini dati del report, nei messaggi di errore restituiti agli utenti che richiedono i report dai computer remoti. I valori validi sono **true** e **false**. Il valore predefinito è **false**. Per altre informazioni, vedere [Abilita errori remoti &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
-
-**EnableReportDesignClientDownload**  
-Specifica se il pacchetto di installazione di Generatore report può essere scaricato dal server di report. Se si deseleziona questa impostazione, l'URL di Generatore report non funziona. 
-
-**EditSessionCacheLimit**  
-Consente di specificare il numero di voci della cache di dati che possono essere attive in una sessione di modifica del report. Il numero predefinito è 5.  
-
-**EditSessionTimeout**  
-Consente di specificare il numero di secondi prima del timeout di una sessione di modifica del report. Il valore predefinito è 7200 secondi (due ore).  
-
-**EnableCustomVisuals** ***(solo Server di report di Microsoft Power BI)***  
-Se i server di report di Microsof Power BI consentono la visualizzazione di oggetti visivi personalizzati di Power BI. I valori sono True e False.  Il valore predefinito è True.  
-
-**EnablePowerBIReportExportData** ***(solo Server di report di Microsoft Power BI)***  
-Se i server di report di Microsof Power BI consentono l'esportazione dei dati da oggetti visivi di Power BI. I valori sono True e False.  Il valore predefinito è True.  
-
-**ScheduleRefreshTimeoutMinutes** ***(solo server di report di Microsoft Power BI)***  
-Timeout in minuti per l'aggiornamento dei dati nell'aggiornamento pianificato dei report di Power BI con modelli AS incorporati. Il valore predefinito è 120 minuti.
-
-**EnableTestConnectionDetailedErrors**  
-Indica se inviare messaggi di errore dettagliati al computer client quando gli utenti verificano le connessioni all'origine dati mediante il server di report. Il valore predefinito è **true**. Se l'opzione viene impostata su **false**, vengono inviati solo messaggi di errore generici.
 
 **AccessControlAllowCredentials**  
 Indica se la risposta alla richiesta del client può essere esposta quando il flag "credenziali" è impostato su true. Il valore predefinito è **false**.
@@ -139,6 +118,45 @@ Indica se la risposta alla richiesta del client può essere esposta quando il fl
 **AccessControlExposeHeaders** Elenco separato da virgole delle intestazioni che il server esporrà ai client. Il valore predefinito è vuoto.
 
 **AccessControlMaxAge** Specifica il numero di secondi durante i quali i risultati della richiesta preliminare possono essere memorizzati nella cache. Il valore predefinito è 600 (10 minuti).
+
+**EditSessionCacheLimit**  
+Consente di specificare il numero di voci della cache di dati che possono essere attive in una sessione di modifica del report. Il numero predefinito è 5.  
+
+**EditSessionTimeout**  
+Consente di specificare il numero di secondi prima del timeout di una sessione di modifica del report. Il valore predefinito è 7200 secondi (due ore).  
+
+**EnableCustomVisuals** ***(solo Server di report di Power BI)*** Consente di abilitare la visualizzazione degli oggetti visivi personalizzati di Power BI. I valori consentiti sono True o False. *Il valore predefinito è True.*  
+
+**ExecutionLogLevel** Imposta il livello log dell'esecuzione. *L'impostazione predefinita è Normal.*
+
+**InterProcessTimeoutMinutes** Imposta il timeout del processo in minuti. *L'impostazione predefinita è 30.*
+
+**MaxFileSizeMb** Imposta la dimensione massima del report in MB. *L'impostazione predefinita è 1000.  Il valore massimo è 2000.*
+
+**ModelCleanupCycleminutes** Imposta il ciclo di pulizia del modello in minuti. *L'impostazione predefinita è 15.*
+
+**OfficeAccessTokenExpirationSeconds** ***(solo Server di report di Power BI)*** Imposta la durata prima della scadenza del token di accesso di Office in secondi. *Il valore predefinito è 60.*
+
+**OfficeOnlineDiscoveryURL** ***(solo Server di report di Power BI)*** Imposta l'indirizzo dell'istanza di Office Online Server per la visualizzazione delle cartelle di lavoro di Excel.
+
+**RequireIntune** Impostare questa opzione per richiedere che Intune acceda ai report dell'organizzazione tramite l'app Power BI per dispositivi mobili. *Il valore predefinito è False.*
+
+**ScheduleRefreshTimeoutMinutes** ***(solo Server di report di Power BI)*** Imposta il tempo desiderato per il timeout dell'aggiornamento predefinito. *Il valore predefinito è 120.*
+
+**ShowDownloadMenu** Impostare questa opzione per abilitare il menu di download di strumenti del client. *Il valore predefinito è True.*
+
+**TimeInitialDelaySeconds** Imposta il ritardo iniziale desiderato in secondi. *Il valore predefinito è 60.*
+
+**TrustedFileFormat** Imposta tutti i formati di file esterni che possono essere salvati. *Il valore predefinito sono le estensioni jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web e png.*
+
+**EnablePowerBIReportExportData** ***(solo Server di report di Microsoft Power BI)***  
+Abilita l'esportazione di dati del Server di report di Power BI da oggetti visivi di Power BI. I valori sono True e False.  Il valore predefinito è True.  
+
+**ScheduleRefreshTimeoutMinutes** ***(solo server di report di Microsoft Power BI)***  
+Timeout in minuti per l'aggiornamento dei dati nell'aggiornamento pianificato dei report di Power BI con modelli AS incorporati. Il valore predefinito è 120 minuti.
+
+**EnableTestConnectionDetailedErrors**  
+Indica se inviare messaggi di errore dettagliati al computer client quando gli utenti verificano le connessioni all'origine dati mediante il server di report. Il valore predefinito è **true**. Se l'opzione viene impostata su **false**, vengono inviati solo messaggi di errore generici.
 
 ## <a name="see-also"></a>Vedere anche
 

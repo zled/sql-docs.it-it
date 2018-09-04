@@ -13,12 +13,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 3023b3d2847e206aa5646a14aa8a5ee5eff68a9c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 31393f359faccf940178fd1d1a6b9d2e60d4b9e5
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331255"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43082468"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out Manager
 
@@ -38,13 +38,13 @@ In Esplora oggetti di SQL Server fare clic con il pulsante destro del mouse su *
 > [!NOTE]
 > È consigliabile eseguire SQL Server Management Studio come amministratore, poiché alcune operazioni di gestione di Scale Out, quali l'aggiunta di un'istanza Scale Out Worker, richiedono privilegi amministrativi.
 
-### <a name="2-open-scale-out-manager-by-running-ismanagerexe"></a>2. Aprire Scale Out Manager eseguendo il file ISManager.exe
+### <a name="2-open-scale-out-manager-by-running-managementtoolexe"></a>2. Aprire Scale Out Manager eseguendo ManagementTool.exe
 
-Trovare `ISManager.exe` in `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\Management`. Fare clic con il pulsante destro del mouse su **ISManager.exe** e selezionare **Esegui come amministratore**. 
+Trovare `ManagementTool.exe` in `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management`. Fare clic con il pulsante destro del mouse su **ManagementTool.exe** e selezionare **Esegui come amministratore**. 
 
 Dopo l'apertura di Scale Out Manager, immettere il nome istanza SQL Server di Scale Out Master e connettersi a tale istanza per gestire l'ambiente Scale Out.
 
-![Connessione nel portale](media/portal-connect.PNG)
+![Connessione nel portale](media/portal-connect-new.png)
 
 ## <a name="tasks-available-in-scale-out-manager"></a>Attività disponibili in Scale Out Manager
 In Scale Out Manager è possibile eseguire le operazioni seguenti:
@@ -52,42 +52,42 @@ In Scale Out Manager è possibile eseguire le operazioni seguenti:
 ### <a name="enable-scale-out"></a>Abilitare Scale Out
 Dopo aver eseguito la connessione a SQL Server, selezionare **Abilita** per abilitare Scale Out se non è abilitato.
 
-![Abilitare Scale Out nel portale](media/portal-enable-scale-out.PNG) 
+![Abilitare Scale Out nel portale](media/portal-enable-scale-out-new.PNG) 
 
 ### <a name="view-scale-out-master-status"></a>Visualizzare lo stato di Scale Out Master
 Lo stato di Scale Out Master viene visualizzato nella pagina **Dashboard**.
 
-![Dashboard del portale](media/portal-dashboard.PNG)
+![Dashboard del portale](media/portal-dashboard-new.PNG)
 
 ### <a name="view-scale-out-worker-status"></a>Visualizzare lo stato di Scale Out Worker
 Lo stato di Scale Out Worker viene visualizzato nella pagina **Dashboard**. È possibile selezionare ogni istanza Scale Out Worker per visualizzarne lo stato.
 
-![Strumento di gestione dei ruoli di lavoro del portale](media/portal-worker-manager.PNG)
+![Strumento di gestione dei ruoli di lavoro del portale](media/portal-worker-manager-new.PNG)
 
 ### <a name="add-a-scale-out-worker"></a>Aggiungere un'istanza Scale Out Worker
 Per aggiungere un'istanza di Scale Out Worker, fare clic sul pulsante **+** nella parte inferiore dell'elenco Scale Out Worker. 
 
 Immettere il nome computer dell'istanza di Scale Out Worker che si vuole aggiungere e fare clic su **Convalida**. Scale Out Manager verifica se l'utente corrente dispone di accesso agli archivi certificati nei computer che eseguono Scale Out Master e Scale Out Worker
 
-![Connessione di un ruolo di lavoro](media/connect-worker.PNG)
+![Connessione di un ruolo di lavoro](media/connect-worker-new.PNG)
 
 Se la convalida ha esito positivo, Scale Out Manager prova a leggere il file di configurazione del servizio worker e ad ottenere l'identificazione personale del certificato corrispondente. Per altre informazioni, vedere [Scale Out Worker](integration-services-ssis-scale-out-worker.md). Se Scale Out Manager non è in grado di leggere il file di configurazione del servizio worker, esistono due metodi alternativi per ottenere il certificato del worker. 
 
-1.  È possibile immettere direttamente l'identificazione personale del certificato worker.
+- È possibile immettere direttamente l'identificazione personale del certificato worker.
 
-    ![Certificato del ruolo di lavoro 1](media/portal-cert1.PNG)
+    ![Certificato del ruolo di lavoro 1](media/portal-cert1-new.PNG)
 
-2.  In alternativa è possibile rendere disponibile il file del certificato. 
+- In alternativa è possibile rendere disponibile il file del certificato.
 
-    ![Certificato del ruolo di lavoro 2](media/portal-cert2.PNG)
+    ![Certificato del ruolo di lavoro 2](media/portal-cert2-new.PNG)
 
 Dopo aver raccolto le informazioni necessarie, Scale Out Manager indica le operazioni da eseguire. In genere queste operazioni includono l'installazione del certificato, l'aggiornamento del file di configurazione del servizio worker e il riavvio del servizio worker.
 
-![Aggiungere conferma 1 del portale](media/portal-add-confirm1.PNG)
+![Aggiungere conferma 1 del portale](media/portal-add-confirm1-new.PNG)
 
-Se il certificato worker non è accessibile, aggiornarlo manualmente e riavviare il servizio worker.
+Se l'impostazione worker non è accessibile, aggiornarla manualmente e riavviare il servizio worker.
 
-![Aggiungere conferma 2 del portale](media/portal-add-confirm2.PNG)
+![Aggiungere conferma 2 del portale](media/portal-add-confirm2-new.PNG)
 
 Selezionare la casella di controllo **Conferma** e quindi selezionare **OK** per iniziare ad aggiungere un componente Scale Out Worker.
 
@@ -100,7 +100,7 @@ Per abilitare o disabilitare un componente Scale Out Worker, selezionarlo e quin
 ## <a name="edit-a-scale-out-worker-description"></a>Modificare la descrizione di un componente Scale Out Worker
 Per modificare la descrizione di un componente Scale Out Worker, selezionarlo e quindi selezionare **Modifica**. Dopo aver completato la modifica della descrizione, selezionare **Salva**.
 
-![Salvare il ruolo di lavoro nel portale](media/portal-save-worker.PNG)
+![Salvare il ruolo di lavoro nel portale](media/portal-save-worker-new.PNG)
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per altre informazioni, vedere gli articoli seguenti:

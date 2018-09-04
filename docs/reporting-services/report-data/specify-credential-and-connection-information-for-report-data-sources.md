@@ -1,7 +1,7 @@
 ---
 title: Specificare le credenziali e le informazioni sulla connessione per le origini dati del report | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2018
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -33,12 +33,12 @@ caps.latest.revision: 61
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 30e9d5668ada3bbe6d231147b9930f6d079c6f29
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e0a75286b8a4e3529202c5ef700d4157b85f2a8a
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550732"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42440066"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Specificare le credenziali e le informazioni sulla connessione per le origini dati del report
   Un server di report utilizza credenziali per connettersi a origini dei dati esterne che forniscono contenuto ai report o informazioni sui destinatari alle sottoscrizioni guidate dai dati. È possibile specificare credenziali che utilizzano l'autenticazione di Windows, l'autenticazione del database, l'autenticazione personalizzata o che non utilizzano alcuna autenticazione. Quando si invia una richiesta di connessione in rete, il server di report rappresenterà un account utente o l'account di esecuzione automatica. Per altre informazioni sul contesto di protezione in cui viene eseguita una richiesta di connessione, vedere [Configurazione dell'origine dei dati e connessioni di rete](#DataSourceConfigurationConnections) più avanti in questo argomento.  
@@ -51,7 +51,7 @@ ms.locfileid: "34550732"
 ## <a name="when-credentials-are-used-in-report-builder"></a>Uso delle credenziali in Generatore Report  
  In Generatore report le credenziali vengono spesso usate quando ci si connette a un server di report o per attività correlate a dati, ad esempio la creazione di un'origine dati incorporata, l'esecuzione di una query del set di dati o la visualizzazione in anteprima di un report. Le credenziali non vengono archiviate nel report. Esse vengono gestite separatamente nel server di report o nel client locale. Nell'elenco seguente vengono descritti i tipi di credenziali che potrebbe essere necessario fornire, dove sono archiviati e come vengono usati:  
   
--   Le credenziali del server di report immesse nella [Finestra di dialogo Accesso a Reporting Services &#40;Generatore report&#41;](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md).  
+-   Le credenziali del server di report immesse nella finestra di dialogo Accesso a Reporting Services.  
   
      Quando si salva, si pubblica su o si passa a un server di report o a un sito di SharePoint, potrebbe essere necessario immettere le proprie credenziali. Le credenziali immesse verranno usate fino alla fine della sessione di Generatore report. Se si sceglie di salvare le credenziali, esse vengono archiviate in modo sicuro con le impostazioni utente nel computer. Nelle sessioni di Generatore report successive, le credenziali salvate vengono usate per connettersi allo stesso server di report o sito di SharePoint. L'amministratore del server di report o di SharePoint specifica quale tipo di credenziali usare.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34550732"
   
      Queste credenziali vengono usate dal server di report per stabilire una connessione dati all'origine dati esterna. Per alcuni tipi di origini dati, le credenziali possono essere archiviate in modo sicuro nel server di report. Queste credenziali consentono ad altri utenti di eseguire il report senza fornire credenziali per la connessione dati sottostante.  
   
--   Le credenziali dell'origine dati immesse nella [Finestra di dialogo Immetti credenziali origine dei dati&#40;Generatore Report&#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) quando si esegue una query del set di dati, si aggiornano i campi del set di dati o si visualizza in anteprima il report.  
+-   Le credenziali dell'origine dati immesse nella finestra di dialogo **Immetti credenziali origine dati** quando si esegue una query del set di dati, si aggiornano i campi del set di dati o si visualizza in anteprima il report.  
   
      Queste credenziali vengono usate per stabilire una connessione dati da Generatore report e l'origine dati esterna o per visualizzare in anteprima un report configurato per la richiesta di credenziali. Le credenziali che si immettono in questa finestra di dialogo non sono archiviate nel server di report e non sono disponibili per l'utilizzo da parte di altri utenti. Generatore report memorizza nella cache le credenziali durante la sessione di modifica del report in modo che non sia necessario immetterle ogni volta che si esegue la query o si visualizza in anteprima il report.  
   

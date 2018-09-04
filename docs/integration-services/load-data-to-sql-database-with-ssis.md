@@ -1,6 +1,6 @@
 ---
-title: Caricare dati nel database SQL di Azure con SQL Server Integration Services (SSIS) | Microsoft Docs
-description: Questo articolo illustra come creare un pacchetto di SQL Server Integration Services (SSIS) per spostare dati da una vasta gamma di origini dati nel database SQL di Azure.
+title: Caricare dati in SQL Server o nel database SQL di Azure con SQL Server Integration Services (SSIS) | Microsoft Docs
+description: Questo articolo illustra come creare un pacchetto di SQL Server Integration Services (SSIS) per spostare dati da una vasta gamma di origini dati a SQL Server o al database SQL di Azure.
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,26 +10,27 @@ ms.devlang: NA
 ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
-ms.date: 08/14/2018
+ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: ed87e5a83e992ba5de6289d72465d92c94126748
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ab5ce3238285cbe687b2608edb5236d460baa197
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175023"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40411860"
 ---
-# <a name="load-data-into-azure-sql-database-with-sql-server-integration-services-ssis"></a>Caricare dati nel database SQL di Azure con SQL Server Integration Services (SSIS)
+# <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Caricare dati in SQL Server o nel database SQL di Azure con SQL Server Integration Services (SSIS)
 
-Creare un pacchetto di SQL Server Integration Services (SSIS) per caricare dati nel [database SQL di Azure](/azure/sql-database/). È anche possibile ristrutturare, trasformare e pulire i dati durante il passaggio attraverso il flusso di dati SSIS.
+Creare un pacchetto di SQL Server Integration Services (SSIS) per caricare dati in SQL Server o nel [database SQL di Azure](/azure/sql-database/). È anche possibile ristrutturare, trasformare e pulire i dati durante il passaggio attraverso il flusso di dati SSIS.
 
 Questo articolo illustra come eseguire le operazioni seguenti:
 
 * Creare un nuovo progetto di Integration Services in Visual Studio.
 * Progettare un pacchetto SSIS che carica i dati dall'origine nella destinazione.
 * Eseguire il pacchetto SSIS per caricare i dati.
+
 
 ## <a name="basic-concepts"></a>Concetti fondamentali
 
@@ -57,9 +58,13 @@ Per eseguire questa esercitazione, sono necessari:
 1. **SQL Server Integration Services (SSIS)**. SSIS è un componente di SQL Server e richiede una versione con licenza o la versione per sviluppatori o la versione di valutazione di SQL Server. Per ottenere una versione di valutazione di SQL Server, vedere [Evaluation Center per SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (facoltativo). Per ottenere l'edizione gratuita di Visual Studio Community, vedere [Visual Studio Community][Visual Studio Community]. Se non si vuole installare Visual Studio, è possibile installare solo SQL Server Data Tools (SSDT). SSDT installa una versione di Visual Studio con funzionalità limitate.
 3. **SQL Server Data Tools per Visual Studio (SSDT)**. Per ottenere SQL Server Data Tools per Visual Studio, vedere [Scaricare SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
-4. **Un database SQL di Azure e le autorizzazioni**. In questa esercitazione ci si connette a un'istanza del database SQL e si caricano i dati. È necessario avere le autorizzazioni per connettersi, creare una tabella e caricare i dati.
-5. **Dati di esempio**. Questa esercitazione usa i dati di esempio archiviati in SQL Server nel database di esempio AdventureWorks come dati di origine da caricare nel database SQL. Per ottenere il database di esempio AdventureWorks, vedere [Database di esempio AdventureWorks][AdventureWorks 2014 Sample Databases].
-6. **Una regola del firewall**. È necessario creare una regola del firewall nel database SQL con l'indirizzo IP del computer locale prima di poter caricare dati nel database SQL.
+4. In questa esercitazione ci si connette a un'istanza di SQL Server o del database SQL e si caricano i dati. È necessario avere le autorizzazioni per connettersi, creare una tabella e caricare i dati nelle seguenti destinazioni:
+   - **Un database SQL di Azure**. Per altre informazioni, vedere [Database SQL di Azure](/azure/sql-database/).  
+      oppure
+   - **Un'istanza di SQL Server**. SQL Server può essere eseguito in locale o in una macchina virtuale di Azure. Per scaricare una versione di valutazione gratuita o un'edizione per sviluppatori di SQL Server, vedere [Download di SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
+
+5. **Dati di esempio**. Questa esercitazione usa come dati di origine i dati di esempio archiviati in SQL Server, nel database di esempio AdventureWorks. Per ottenere il database di esempio AdventureWorks, vedere [Database di esempio AdventureWorks][AdventureWorks 2014 Sample Databases].
+6. **Una regola del firewall** se si caricano dati nel database SQL. È necessario creare una regola del firewall nel database SQL con l'indirizzo IP del computer locale prima di poter caricare dati nel database SQL.
 
 ## <a name="create-a-new-integration-services-project"></a>Creazione di un nuovo progetto di Integration Services
 1. Avviare Visual Studio.
@@ -81,7 +86,7 @@ Viene aperto Visual Studio e viene creato un nuovo progetto di Integration Servi
     ![][02]
 2. Fare doppio clic sull'attività Flusso di dati per passare alla scheda Flusso di dati.
 3. Dall'elenco Altre origini nella casella degli strumenti trascinare un'origine ADO.NET nell'area di progettazione. Con l'adattatore di origine ancora selezionato, modificare il nome su **Origine SQL Server** nel riquadro **Proprietà**.
-4. Dall'elenco Altre destinazioni nella casella degli strumenti,trascinare una destinazione ADO.NET all'area di progettazione sotto l'origine ADO.NET. Con l'adattatore di destinazione ancora selezionato, modificare il nome in **Destinazione DB SQL** nel riquadro **Proprietà**.
+4. Dall'elenco Altre destinazioni nella casella degli strumenti,trascinare una destinazione ADO.NET all'area di progettazione sotto l'origine ADO.NET. Con l'adattatore di destinazione ancora selezionato, modificare il nome in **Destinazione SQL** nel riquadro **Proprietà**.
    
     ![][09]
 
@@ -128,16 +133,16 @@ Viene aperto Visual Studio e viene creato un nuovo progetto di Integration Servi
 1. Fare doppio clic sull'adattatore di destinazione per aprire l'**Editor destinazione ADO.NET**.
    
     ![][11]
-2. Nella scheda **Gestione connessione** della finestra **Editor destinazione ADO.NET** fare clic sul pulsante **Nuovo** accanto all'elenco **Gestione connessione** per aprire la finestra di dialogo **Configura gestione connessione ADO.NET** e creare le impostazioni di connessione per il database SQL di Azure in cui questa esercitazione carica i dati.
+2. Nella scheda **Gestione connessione** della finestra **Editor destinazione ADO.NET** fare clic sul pulsante **Nuovo** accanto all'elenco **Gestione connessione** per aprire la finestra di dialogo **Configura gestione connessione ADO.NET** e creare le impostazioni di connessione per il database in cui questa esercitazione carica i dati.
 3. Nella finestra di dialogo **Configura gestione connessione ADO.NET** fare clic sul pulsante **Nuovo** per aprire la finestra di dialogo **Gestione connessione** e creare una nuova connessione dati.
 4. Nella finestra di dialogo **Gestione connessione** eseguire le operazioni seguenti.
    1. Per **Provider** selezionare il provider di dati SqlClient.
-   2. Per **Nome server** immettere il nome del database SQL.
+   2. In **Nome server** immettere il nome del server SQL Server o del server di database SQL.
    3. Nella sezione **Accesso al server** selezionare **Usa autenticazione di SQL Server** e immettere le informazioni di autenticazione.
-   4. Nella sezione **Connessione a un database** selezionare un database SQL esistente.
-   5. Fare clic su **Test connessione**.
-   6. Nella finestra di dialogo che indica i risultati del test di connessione fare clic su **OK** per tornare alla finestra di dialogo **Gestione connessione**.
-   7. Nella finestra di dialogo **Gestione connessione** fare clic su **OK** per ritornare alla finestra di dialogo **Configura gestione connessione ADO.NET**.
+   4. Nella sezione **Connessione al database** selezionare un database SQL esistente.
+    A. Fare clic su **Test connessione**.
+    B. Nella finestra di dialogo che indica i risultati del test di connessione fare clic su **OK** per tornare alla finestra di dialogo **Gestione connessione**.
+    c. Nella finestra di dialogo **Gestione connessione** fare clic su **OK** per ritornare alla finestra di dialogo **Configura gestione connessione ADO.NET**.
 5. Nella finestra di dialogo **Configura gestione connessione ADO.NET** fare clic su **OK** per ritornare all'**Editor destinazione ADO.NET**.
 6. Nell'**Editor destinazione ADO.NET** fare clic su **Nuovo** accanto all'elenco **Tabella o vista** per visualizzare la finestra di dialogo **Crea tabella** per creare una nuova tabella di destinazione con un elenco di colonne che corrisponde alla tabella di origine.
    
@@ -167,7 +172,7 @@ Quando l'esecuzione del pacchetto è terminata vengono visualizzati dei segni di
 
 ![][15]
 
-Congratulazioni! SQL Server Integration Services è stato usato per caricare dati nel database SQL di Azure.
+Congratulazioni! SQL Server Integration Services è stato usato per caricare dati nel database SQL Server o nel database SQL di Azure.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

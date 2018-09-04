@@ -14,29 +14,29 @@ caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d55619b72797f330e00336685d8066373de98c79
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 8eceeb7d18c8bccb9b489492fa9bbe09c7aa17a5
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322200"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405555"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] è un'app autonoma, installata nel computer dall'utente o da un amministratore. È possibile installarla dall'Area download Microsoft, da un server di report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] o da un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è un'app autonoma, installata nel computer in uso dall'utente o da un amministratore. È possibile installarla dall'Area download Microsoft, da un server di report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] o da un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- In genere un amministratore installa e configura [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], concede l'autorizzazione per scaricare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] dal portale Web e gestisce cartelle e autorizzazioni per report, parti del report e set di dati condivisi salvati nel server di report. Per altre informazioni sull'amministrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ In genere un amministratore installa e configura [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], concede l'autorizzazione per scaricare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dal portale Web e gestisce cartelle e autorizzazioni per report, parti del report e set di dati condivisi salvati nel server di report. Per altre informazioni sull'amministrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
-## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-from--a--web-portal-or-sharepoint-library"></a>Installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] da un portale Web o da una raccolta di SharePoint 
+## <a name="install-includessrbnoversionincludesssrbnoversionmd-from--a--web-portal-or-sharepoint-library"></a>Installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] da un portale Web o da una raccolta di SharePoint 
   
- È possibile avviare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] da un portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o da un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per informazioni, vedere [Avviare Generatore report](../../reporting-services/report-builder/start-report-builder.md).  
+ È possibile avviare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] da un portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o da un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per informazioni, vedere [Avviare Generatore report](../../reporting-services/report-builder/start-report-builder.md).  
   
 ### <a name="sharepoint-site-integrated-with-includessrsnoversionincludesssrsnoversion-mdmd"></a>Sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
  In un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se nel menu **Nuovo documento** non sono elencate le opzioni **Report di Generatore report**, **Modello di Generatore report**e **Origine dati report**, i relativi tipi di contenuto devono essere aggiunti alla raccolta di SharePoint. Per altre informazioni, vedere [Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
  
-## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-with-system-center-configuration-manager"></a>Installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] con System Center Configuration Manager 
+## <a name="install-includessrbnoversionincludesssrbnoversionmd-with-system-center-configuration-manager"></a>Installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] con System Center Configuration Manager 
   
- Un amministratore può usare anche un software come System Center Configuration Manager per installare automaticamente il programma nel computer. Per informazioni sull'uso del software specifico per l'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], fare riferimento alla relativa documentazione. Per altre informazioni, vedere il [sito di System Center Configuration Manager](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager).  
+ Un amministratore può usare anche un software come System Center Configuration Manager per installare automaticamente il programma nel computer. Per informazioni sull'uso del software specifico per l'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], fare riferimento alla relativa documentazione. Per altre informazioni, vedere il [sito di System Center Configuration Manager](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager).  
   
 > [!IMPORTANT]  
 >  Le funzionalità di sicurezza di Windows Vista e Windows 7 richiedono autorizzazioni elevate per l'esecuzione delle operazioni dalla riga di comando. L'installazione non è invisibile all'utente. Per renderla invisibile è necessario eseguire la riga di comando come amministratore.  
@@ -45,42 +45,42 @@ ms.locfileid: "35322200"
   
  Vedere la sezione **Requisiti di sistema** della [pagina di download di Generatore report](http://go.microsoft.com/fwlink/?LinkID=734968) nell'Area download Microsoft.
   
-##  <a name="download"></a> Per installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] dal sito di download  
+##  <a name="download"></a> Per installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dal sito di download  
   
 1.  Nella [pagina Generatore report dell'Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=734968) fare clic su **Download**.  
   
-2.  Dopo aver completato il download di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] , fare clic su  **Esegui**.  
+2.  Dopo aver completato il download di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], fare clic su **Esegui**.  
   
-     Verrà avviata la Configurazione guidata di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] per SQL Server.  
+     Verrà avviata la Configurazione guidata di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per SQL Server.  
   
 3.  Accettare i termini del contratto di licenza e fare clic su **Avanti**.  
   
 4.  Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Scegliere **Avanti**.  
   
     > [!NOTE]  
-    >  Se si intende usare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] quando è connesso a un server di report, è consigliabile specificare l'URL del server. È tuttavia possibile eseguire questa operazione dalla finestra di dialogo **Opzioni** in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
+    >  Se si intende usare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] quando è connesso a un server di report, è consigliabile specificare l'URL del server. È tuttavia possibile eseguire questa operazione dalla finestra di dialogo **Opzioni** in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
-5.  Fare clic su **Installa** per completare l'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
+5.  Fare clic su **Installa** per completare l'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
-## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-a-share"></a>Per installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] da una condivisione  
+## <a name="to-install-includessrbnoversionincludesssrbnoversionmd-from-a-share"></a>Per installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] da una condivisione  
   
-1.  Per informazioni sul percorso del file ReportBuilder3.msi che si esegue per installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] nel computer locale, rivolgersi all'amministratore.  
+1.  Per informazioni sul percorso del file ReportBuilder3.msi che si esegue per installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] nel computer locale, rivolgersi all'amministratore.  
   
-2.  Individuare il file ReportBuilder3.msi, ovvero il pacchetto di Windows Installer (MSI) per [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], e selezionarlo.  
+2.  Individuare il file ReportBuilder3.msi, ovvero il pacchetto di Windows Installer (MSI) per [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], e selezionarlo.  
   
-     Verrà avviata la Configurazione guidata di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] per SQL Server.  
+     Verrà avviata la Configurazione guidata di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per SQL Server.  
   
 3.  Completare i passaggi restanti di [To install Report Builder from the download site](#download).  
   
-## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-the-command-line"></a>Per installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] dalla riga di comando 
+## <a name="to-install-includessrbnoversionincludesssrbnoversionmd-from-the-command-line"></a>Per installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dalla riga di comando 
 
- È anche possibile eseguire un'installazione dalla riga di comando di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] e immettere argomenti per la personalizzazione dell'installazione. Oltre ai parametri intrinseci MSI standard, è possibile usare i parametri personalizzati specifici di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] : RBINSTALLDIR e REPORTSERVERURL. RBINSTALLDIR specifica la cartella di installazione radice per [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. REPORTSERVERURL specifica il server di report predefinito usato da [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] per salvare i report.  
+ È anche possibile eseguire un'installazione dalla riga di comando di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e immettere argomenti per la personalizzazione dell'installazione. Oltre ai parametri intrinseci di MSI standard, è possibile usare i parametri personalizzati specifici di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR e REPORTSERVERURL. RBINSTALLDIR specifica la cartella di installazione radice per [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL specifica il server di report predefinito usato da [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per salvare i report.  
   
  Se si vuole eseguire un'installazione invisibile all'utente che non richiede interazioni con l'interfaccia utente, specificare l'opzione **/quiet** . In base alle caratteristiche di progettazione, il flag dell'opzione quiet elimina la visualizzazione degli errori di installazione. Quando si usa questa opzione è quindi consigliabile includere l'opzione **/l** che specifica la registrazione.   
   
 1.  Nella [pagina Generatore report dell'Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=734968)fare clic su **Download**.  
   
-2.  Dopo aver completato il download di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] , fare clic su  **Salva**.  
+2.  Dopo aver completato il download di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], fare clic su **Salva**.  
   
 3.  Fare clic sul menu **Start** e scegliere **Esegui**.  
   
@@ -92,21 +92,21 @@ ms.locfileid: "35322200"
   
      `msiexec/i ReportBuilder3.msi /option [value] [/option [value]]`  
   
-     Le due opzioni specifiche dell'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] sono: RBINSTALLDIR e REPORTSERVERURL. Non è necessario includere questi argomenti nella riga di comando. Di seguito è riportato il comando di base:  
+     Le due opzioni specifiche dell'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] sono RBINSTALLDIR e REPORTSERVERURL. Non è necessario includere questi argomenti nella riga di comando. Di seguito è riportato il comando di base:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
 7.  Per eseguire il comando, premere INVIO.  
   
-## <a name="set-includessrbnoversionincludesssrbnoversion-mdmd-defaults"></a>Impostare i valori predefiniti di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
+## <a name="set-includessrbnoversionincludesssrbnoversionmd-defaults"></a>Impostare i valori predefiniti di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
--   Al termine dell'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], è possibile configurare alcune opzioni predefinite. Fare clic su **File** > **Opzioni**.  
+-   Al termine dell'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], è possibile configurare alcune opzioni predefinite. Fare clic su **File** > **Opzioni**.  
   
      È estremamente utile impostare il portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o il sito di SharePoint predefinito. Per altre informazioni, vedere [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md).  
   
 -   Fare clic su **Generatore report** .  
   
-     Se il server di report non è visibile nell'elenco di server esistenti, chiudere la finestra di dialogo **Apri report** , quindi fare clic su **Connetti** nella parte inferiore di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] per connettersi al server.  
+     Se il server di report non è visibile nell'elenco dei server esistenti, chiudere la finestra di dialogo **Apri report**, quindi fare clic su **Connetti** nella parte inferiore di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per connettersi al server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare Generatore report](../../reporting-services/report-builder/start-report-builder.md)   

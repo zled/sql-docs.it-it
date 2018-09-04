@@ -1,66 +1,59 @@
 ---
 title: 'Esercitazione: Firma di stored procedure con un certificato | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/23/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.technology: ''
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - signing stored procedures tutorial [SQL Server]
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 caps.latest.revision: 11
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b0cfd18b508f13499ce5cf7bdf4cc12be4440562
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2adac6728e7c288a50d525a0760a98a26c5b2b2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011938"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021085"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Esercitazione: Firma di stored procedure tramite un certificato
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In questa esercitazione viene illustrata la firma di stored procedure tramite un certificato generato da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
-> Per eseguire il codice dell'esercitazione deve essere configurata la sicurezza a modalità mista e deve essere installato il database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Scenario  
+> Per eseguire il codice dell'esercitazione deve essere configurata la sicurezza a modalità mista e deve essere installato il database AdventureWorks2017.   
   
 La firma di stored procedure tramite un certificato si rivela utile quando si desidera richiedere autorizzazioni per la stored procedure ma non concedere esplicitamente tali diritti all'utente. Nonostante sia possibile completare questa attività in altri modi, ad esempio mediante l'istruzione EXECUTE AS, l'utilizzo di un certificato consente di disporre di una traccia per individuare il chiamante originale della stored procedure. Ciò offre un elevato livello di controllo, in particolare durante operazioni DDL (Data Definition Language) o di sicurezza.  
   
-È possibile creare un certificato nel database master per concedere autorizzazioni a livello di server oppure in qualsiasi database utente per concedere autorizzazioni a livello di database. In questo scenario, un utente che non dispone di diritti per le tabelle di base deve accedere a una stored procedure nel database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] e si desidera controllare l'itinerario di accesso agli oggetti. Anziché utilizzare altri metodi delle catene di proprietà, verranno creati un account utente del server e del database senza alcun diritto per gli oggetti di base e un account utente del database con diritti per una tabella e una stored procedure. Sia la stored procedure che il secondo account utente del database verranno protetti con un certificato. Il secondo account del database disporrà dell'accesso a tutti gli oggetti e concederà l'accesso alla stored procedure al primo account utente del database.  
+È possibile creare un certificato nel database master per concedere autorizzazioni a livello di server oppure in qualsiasi database utente per concedere autorizzazioni a livello di database. In questo scenario, un utente che non dispone di diritti per le tabelle di base deve accedere a una stored procedure nel database AdventureWorks2017 e si vuole controllare l'itinerario di accesso agli oggetti. Anziché utilizzare altri metodi delle catene di proprietà, verranno creati un account utente del server e del database senza alcun diritto per gli oggetti di base e un account utente del database con diritti per una tabella e una stored procedure. Sia la stored procedure che il secondo account utente del database verranno protetti con un certificato. Il secondo account del database disporrà dell'accesso a tutti gli oggetti e concederà l'accesso alla stored procedure al primo account utente del database.  
   
 In questo scenario, verranno innanzitutto creati un certificato del database, una stored procedure e un utente e quindi verrà testato il processo eseguendo la procedura seguente:  
   
-1.  Configurare l'ambiente.  
-  
-2.  Creare un certificato.  
-  
-3.  Creare e firmare una stored procedure utilizzando il certificato.  
-  
-4.  Creare un account del certificato utilizzando il certificato.  
-  
-5.  Concedere i diritti per il database dell'account del certificato.  
-  
-6.  Visualizzare il contesto di accesso.  
-  
-7.  Reimpostare l'ambiente.  
-  
 Ogni blocco di codice dell'esempio è illustrato sulla stessa riga. Per copiare l'esempio completo, vedere [Esempio completo](#CompleteExample) alla fine dell'esercitazione.  
+
+## <a name="prerequisites"></a>Prerequisites
+Per completare questa esercitazione, sono necessari SQL Server Management Studio, l'accesso a un server che esegue SQL Server e un database AdventureWorks.
+
+- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Scaricare i [database di esempio AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+
+Per istruzioni su come ripristinare un database in SQL Server Management Studio, vedere [Ripristinare un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="1-configure-the-environment"></a>1. Configurazione dell'ambiente  
-Per impostare il contesto iniziale dell'esempio, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] aprire una nuova query ed eseguire il codice seguente per aprire il database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Con questo codice, il contesto di database viene modificato in `AdventureWorks2012` e viene creato un nuovo account di accesso al server e utente del database (`TestCreditRatingUser`) con una password.  
+Per impostare il contesto iniziale dell'esempio, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] aprire una nuova query ed eseguire il codice seguente per aprire il database AdventureWorks2017. Con questo codice, il contesto di database viene modificato in `AdventureWorks2012` e viene creato un nuovo account di accesso al server e utente del database (`TestCreditRatingUser`) con una password.  
   
-```  
-USE AdventureWorks2012;  
+```sql  
+USE AdventureWorks2017;  
 GO  
 -- Set up a login for the test user  
 CREATE LOGIN TestCreditRatingUser  
@@ -78,18 +71,18 @@ Per altre informazioni sull'istruzione CREATE USER, vedere [CREATE USER &#40;Tra
   
 Eseguire questo codice per creare un certificato del database e proteggerlo tramite una password.  
   
-```  
+```sql  
 CREATE CERTIFICATE TestCreditRatingCer  
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
       WITH SUBJECT = 'Credit Rating Records Access',   
-      EXPIRY_DATE = '12/05/2014';  
+      EXPIRY_DATE = '12/05/2020';  -- Error 3701 will occur if this date is not in the future
 GO  
 ```  
   
 ## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. Creazione e firma di una stored procedure utilizzando il certificato  
 Utilizzare il codice seguente per creare una stored procedure che selezioni i dati dalla tabella `Vendor` nello schema di database `Purchasing`, limitando l'accesso alle sole aziende con posizione creditizia 1. Si noti che nella prima sezione della stored procedure viene visualizzato il contesto dell'account utente che esegue la stored procedure, al solo scopo di dimostrare i concetti. Non è necessario per soddisfare i requisiti.  
   
-```  
+```sql  
 CREATE PROCEDURE TestCreditRatingSP  
 AS  
 BEGIN  
@@ -111,7 +104,7 @@ GO
   
 Eseguire questo codice per firmare la stored procedure con il certificato del database, utilizzando una password.  
   
-```  
+```sql  
 ADD SIGNATURE TO TestCreditRatingSP   
    BY CERTIFICATE TestCreditRatingCer  
     WITH PASSWORD = 'pGFD4bb925DGvbd2439587y';  
@@ -125,8 +118,8 @@ Per altre informazioni sulla firma di stored procedure, vedere [ADD SIGNATURE &#
 ## <a name="4-create-a-certificate-account-using-the-certificate"></a>4. Creazione di un account del certificato utilizzando il certificato  
 Eseguire questo codice per creare un utente del database (`TestCreditRatingcertificateAccount`) dal certificato. Tale account non dispone di accesso server e controllerà l'accesso alle tabelle sottostanti.  
   
-```  
-USE AdventureWorks2012;  
+```sql  
+USE AdventureWorks2017;  
 GO  
 CREATE USER TestCreditRatingcertificateAccount  
    FROM CERTIFICATE TestCreditRatingCer;  
@@ -136,7 +129,7 @@ GO
 ## <a name="5-grant-the-certificate-account-database-rights"></a>5. Concessione dei diritti per il database dell'account del certificato  
 Eseguire questo codice per concedere a `TestCreditRatingcertificateAccount` diritti per la tabella di base e la stored procedure.  
   
-```  
+```sql  
 GRANT SELECT   
    ON Purchasing.Vendor   
    TO TestCreditRatingcertificateAccount;  
@@ -153,7 +146,7 @@ Per altre informazioni sulla concessione di autorizzazioni per gli oggetti, vede
 ## <a name="6-display-the-access-context"></a>6. Visualizzazione del contesto di accesso  
 Per visualizzare i diritti associati all'accesso alla stored procedure, eseguire il codice seguente per concedere i diritti per l'esecuzione della stored procedure all'utente `TestCreditRatingUser`.  
   
-```  
+```sql  
 GRANT EXECUTE   
    ON TestCreditRatingSP   
    TO TestCreditRatingUser;  
@@ -162,14 +155,14 @@ GO
   
 Eseguire quindi il codice seguente per eseguire la stored procedure con l'account di accesso dbo utilizzato nel server. Osservare l'output delle informazioni sul contesto utente. L'account dbo verrà riportato come contesto con diritti propri e non tramite l'appartenenza a un gruppo.  
   
-```  
+```sql  
 EXECUTE TestCreditRatingSP;  
 GO  
 ```  
   
 Eseguire il codice seguente per utilizzare l'istruzione `EXECUTE AS` per eseguire la stored procedure tramite l'account `TestCreditRatingUser` In questo caso, il contesto utente sarà impostato sul contesto USER MAPPED TO CERTIFICATE.  
   
-```  
+```sql  
 EXECUTE AS LOGIN = 'TestCreditRatingUser';  
 GO  
 EXECUTE TestCreditRatingSP;  
@@ -184,7 +177,7 @@ Ciò illustra il livello di controllo disponibile grazie alla firma della stored
 ## <a name="7-reset-the-environment"></a>7. Reimpostazione dell'ambiente  
 Nel codice seguente viene utilizzata l'istruzione `REVERT` per ripristinare dbo come contesto dell'account corrente e quindi viene reimpostato l'ambiente.  
   
-```  
+```sql  
 REVERT;  
 GO  
 DROP PROCEDURE TestCreditRatingSP;  
@@ -204,9 +197,9 @@ Per altre informazioni sull'istruzione REVERT, vedere [REVERT &#40;Transact-SQL&
 ## <a name="CompleteExample"></a>Esempio completo  
 In questa sezione è riportato il codice completo dell'esempio.  
   
-```  
-/* Step 1 - Open the AdventureWorks2012 database */  
-USE AdventureWorks2012;  
+```sql  
+/* Step 1 - Open the AdventureWorks2017 database */  
+USE AdventureWorks2017;  
 GO  
 -- Set up a login for the test user  
 CREATE LOGIN TestCreditRatingUser  
@@ -220,7 +213,7 @@ GO
 CREATE CERTIFICATE TestCreditRatingCer  
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
       WITH SUBJECT = 'Credit Rating Records Access',   
-      EXPIRY_DATE = '12/05/2014';  
+      EXPIRY_DATE = '12/05/2020';   -- Error 3701 will occur if this date is not in the future
 GO  
   
 /* Step 3 - Create a stored procedure and  

@@ -85,13 +85,14 @@ helpviewer_keywords:
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a12eab1a7ea003c1837c68f53eae33989ed884ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 509fd76b510df010e4dc3c7f8364dc2424e223d9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225151"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411829"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installare SQL Server dal prompt dei comandi
 
@@ -886,7 +887,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=SQLEngine, PolyBase|Installa il motore PolyBase.|  
   
 ##  <a name="RoleParameters"></a> Parametri role  
- Il ruolo di installazione o parametro /Role viene utilizzato per installare una selezione preconfigurata di funzionalità. I ruoli di [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] consentono di installare un'istanza di [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] in una farm SharePoint esistente o in una nuova farm non configurata. Vengono forniti due ruoli di installazione per supportare ogni scenario. È possibile scegliere solo uno di questi ruoli da installare per volta. Se si sceglie un ruolo di installazione, tramite il programma di installazione verranno installate le funzionalità e i componenti che appartengono al ruolo. Non è possibile modificare le funzionalità e i componenti definiti per quel ruolo. Per altre informazioni sull'uso dei parametri role delle funzionalità, vedere [Installazione di Power Pivot dal prompt dei comandi](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
+ Il ruolo di installazione o parametro /Role viene utilizzato per installare una selezione preconfigurata di funzionalità. I ruoli di SASS consentono di installare un'istanza di SASS in una farm SharePoint esistente o in una nuova farm non configurata. Vengono forniti due ruoli di installazione per supportare ogni scenario. È possibile scegliere solo uno di questi ruoli da installare per volta. Se si sceglie un ruolo di installazione, tramite il programma di installazione verranno installate le funzionalità e i componenti che appartengono al ruolo. Non è possibile modificare le funzionalità e i componenti definiti per quel ruolo. Per altre informazioni sull'uso dei parametri role delle funzionalità, vedere [Installazione di Power Pivot dal prompt dei comandi](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
   
  Il ruolo AllFeatures_WithDefaults rappresenta il comportamento predefinito per le edizioni di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e consente di ridurre il numero di finestre di dialogo presentate all'utente. Può essere specificato dalla riga di comando in caso di installazione di un'edizione di SQL Server diversa da [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
   

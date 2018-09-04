@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3503952eb791c4423826626b98e8f8feb2bce0c7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 961f4e01d9a3a027f7b6cf065103a8076feac52b
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066669"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432512"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Risolvere i problemi di recupero dei dati con i report di Reporting Services
 Il primo passaggio dell'elaborazione del report consiste nel recuperare i dati del report per ogni set di dati tramite la query del set di dati. Quando si visualizza in anteprima un report in locale, è necessario che le connessioni all'origine dati e le credenziali dispongano delle autorizzazioni sufficienti per recuperare i dati nel computer. Quando si esegue un report nel server di report, è necessario che le connessioni all'origine dati e le credenziali dispongano delle autorizzazioni sufficienti per recuperare i dati nel server di report. Utilizzare questo argomento per risolvere i problemi relativi al recupero dei dati del report.   
@@ -47,7 +47,7 @@ Per le origini dati con le credenziali richieste oppure specificate nella string
 Verificare che la password non includa caratteri speciali. Se la modifica della password costituisce un'operazione complessa, rivolgersi all'amministratore del database per fare in modo che le credenziali appropriate vengano archiviate in locale e sul server come parte del nome di un'origine dei dati (DSN) ODBC del sistema. Per altre informazioni, vedere "OdbcConnection.ConnectionString" nella documentazione di .NET Framework SDK in MSDN.   
   
 > [!NOTE]  
->È consigliabile non aggiungere le informazioni di accesso, ad esempio la password, alla stringa di connessione. Progettazione report fornisce una pagina **Credenziali** nella finestra di dialogo [Proprietà origine dati](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) o [Proprietà origine dati condivisa](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) che può essere usata per immettere le credenziali. Tali credenziali vengono archiviate in modo protetto nel computer utilizzato per creare il report.  
+>È consigliabile non aggiungere le informazioni di accesso, ad esempio la password, alla stringa di connessione. Progettazione report include una pagina **Credenziali** nella finestra di dialogo **Proprietà origine dati** o **Proprietà origine dati condivisa** che può essere usata per immettere le credenziali. Tali credenziali vengono archiviate in modo protetto nel computer utilizzato per creare il report.  
   
 ## <a name="why-do-i-see-no-data-when-i-run-my-query-in-the-query-designer"></a>Perché non vengono visualizzati i dati quando si esegue la query nella finestra Progettazione query?  
 Quando si crea un set di dati, la raccolta dei campi del set di dati viene visualizzata nel riquadro Dati report. Qualche volta la raccolta dei campi del set di dati non viene visualizzata come previsto.   
@@ -71,7 +71,7 @@ Per popolare la raccolta dei campi del set di dati, effettuare le operazioni seg
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 
 

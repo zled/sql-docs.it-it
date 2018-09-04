@@ -14,18 +14,18 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0a61f022087de7f3055281252b43ba088e4b5bff
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f2dbaee56bb157f4dc4630797f1675f18cf070bc
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980893"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406791"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Risolvere i problemi di installazione di Reporting Services
 
-  Se non è possibile installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a causa di errori restituiti durante l'installazione, utilizzare le indicazioni fornite in questo argomento per risolvere le condizioni che costituiscono la causa più probabile degli errori di installazione.  
+  Se non è possibile installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a causa di errori restituiti durante l'installazione, utilizzare le indicazioni fornite in questo articolo per risolvere le condizioni che costituiscono la causa più probabile degli errori di installazione.  
   
- Per informazioni su altri errori e problemi riguardanti [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vedere la pagina relativa a [errori e risoluzione dei problemi di SSRS.](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
+ Per informazioni su altri errori e problemi riguardanti [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere la pagina relativa a [errori e risoluzione dei problemi di SSRS](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx).  
   
  Controllare le [note sulla versione online](http://go.microsoft.com/fwlink/?linkid=236893) per verificare se vi sia descritto il problema rilevato.  
   
@@ -88,11 +88,11 @@ ms.locfileid: "38980893"
   
 -   Amministrazione centrale SharePoint 2013/2016 -> "Gestione applicazioni" -> "Gestisci applicazioni di servizio" -> menu "Nuovo"  
   
- **Soluzione alternativa:** per registrare e avviare SharePoint Services per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , completare i passaggi seguenti riportati di seguito.  
+ **Soluzione alternativa:** per registrare e avviare SharePoint Services per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], completare i passaggi seguenti riportati di seguito:  
   
 1.  Sul computer che esegue Amministrazione centrale SharePoint 2013/2016  
   
-    1.  Aprire la shell di gestione di SharePoint 2013/2016 con privilegi di amministratore. Fare clic con il pulsante destro del mouse sull'icona e scegliere "Esegui come amministratore". Eseguire i tre cmdlet seguenti dalla shell:  
+    1.  Aprire la shell di gestione di SharePoint 2013/2016 con privilegi di amministratore. Fare clic con il pulsante destro del mouse sull'icona e scegliere **Esegui come amministratore**. Eseguire i tre cmdlet seguenti dalla shell:  
   
     2.  ```  
         Install-SPRSService  
@@ -111,9 +111,9 @@ ms.locfileid: "38980893"
  ![Icona a forma di freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona a forma di freccia usata con il collegamento Torna all'inizio") [Risolvere i problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> I cmdlet di PowerShell per Reporting Services non sono disponibili e i comandi non sono riconosciuti  
- **Descrizione:** quando si tenta di eseguire un cmdlet di PowerShell per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , viene visualizzato un messaggio di errore simile al seguente:  
+ **Descrizione**: quando si tenta di eseguire un cmdlet di PowerShell per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], viene visualizzato un messaggio di errore simile al seguente:  
   
--   Termine 'Install-SPRSServiceInstall-SPRSService' **non riconosciuto** come nome di cmdlet, funzione, programma eseguibile o file script. Controllare l'ortografia del nome o verificare che il percorso sia incluso e corretto, quindi riprovare.At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
+-   Termine 'Install-SPRSServiceInstall-SPRSService' **non riconosciuto** come nome di cmdlet, funzione, programma eseguibile o file script. Verificare l'ortografia del nome, che il percorso sia incluso e corretto, quindi riprovare. At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
   
  **Soluzione alternativa:** completare una delle operazioni seguenti:  
   
@@ -123,16 +123,16 @@ ms.locfileid: "38980893"
   
  Se la **Shell di gestione di SharePoint 2013/2016** è aperta quando viene completata una delle soluzioni alternative, chiuderla e riaprirla.  
   
- Per ulteriori informazioni, vedere quanto segue:  
+ Per ulteriori informazioni, vedere gli articoli seguenti:  
   
 -   [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
--   [Installare il primo server di report in modalità SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)  
+-   [Installare il primo server di report in modalità SharePoint](install-the-first-report-server-in-sharepoint-mode.md)  
   
  ![Icona a forma di freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona a forma di freccia usata con il collegamento Torna all'inizio") [Risolvere i problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_URL_not_configured"></a> Viene visualizzato un messaggio di errore nel quale è indicato che l'URL non è configurato  
- **Descrizione:** viene visualizzato un messaggio di errore simile al seguente:  
+ **Descrizione**: viene visualizzato un messaggio di errore simile al seguente:  
   
  Questa funzionalità di SQL Server Reporting Services (SSRS) non è supportata. Usare Amministrazione centrale per verificare e correggere uno o più dei seguenti problemi:
  
@@ -168,9 +168,9 @@ ms.locfileid: "38980893"
 ###  <a name="bkmk_central_admin_blank"></a> La pagina Amministrazione centrale SharePoint è vuota  
  **Descrizione:** SharePoint 2013/2016 è stato installato senza errori. Tuttavia quando si passa ad Amministrazione centrale, viene visualizzata una pagina vuota.  
   
- **Soluzione alternativa:** questo non è un problema specifico di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ma è relativo alla configurazione delle autorizzazioni nell'installazione generale di SharePoint. Di seguito viene fornito un elenco di suggerimenti.  
+ **Soluzione alternativa:** questo non è un problema specifico di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ma è relativo alla configurazione delle autorizzazioni nell'installazione generale di SharePoint. Di seguito sono riportati alcuni suggerimenti:  
   
--   Esaminare l'argomento relativo a SharePoint negli ambienti di sviluppo. [Configurare un ambiente di sviluppo generale per SharePoint](https://msdn.microsoft.com/library/ee554869)  
+-   Leggere l'argomento relativo a SharePoint negli ambienti di sviluppo. [Configurare un ambiente di sviluppo generale per SharePoint](https://msdn.microsoft.com/library/ee554869)  
   
 -   Esaminare il post del forum: [Amministrazione centrale restituisce una pagina vuota dopo l'installazione in Windows 7](http://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
@@ -183,16 +183,16 @@ ms.locfileid: "38980893"
   
  Questa funzionalità non è supportata perché non esiste un'applicazione del servizio SQL Server Reporting Services o non è stato configurato un URL del server di report in Amministrazione centrale.  
   
- **Soluzione alternativa:** verificare che l'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia disponibile e configurata correttamente. Per altre informazioni, vedere [Installare il primo server di report in modalità SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).
+ **Soluzione alternativa:** verificare che l'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia disponibile e configurata correttamente. Per altre informazioni, vedere [Installare il primo server di report in modalità SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
   
  ![Icona a forma di freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona a forma di freccia usata con il collegamento Torna all'inizio") [Risolvere i problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> Viene visualizzato un messaggio di errore in cui è indicato che RS_SHP non è supportato con PREPAREIMAGE  
- **Descrizione:** quando si tenta di eseguire PREPAREIMAGE per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , viene visualizzato un messaggio di errore simile al seguente:  
+ **Descrizione:** quando si tenta di eseguire PREPAREIMAGE per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], viene visualizzato un messaggio di errore simile al seguente:  
   
  "Funzionalità specificata 'RS_SHP' non supportata durante l'esecuzione dell'azione PREPAREIMAGE perché l'utilità SysPrep non è supportata. Rimuovere le funzionalità non compatibili con SysPrep ed eseguire nuovamente l'installazione.  
   
- **Soluzione alternativa:** non esistono soluzioni alternative. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta SYSPREP.  
+ **Soluzione alternativa**: non esistono soluzioni alternative. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta SYSPREP.  
   
  ![Icona a forma di freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona a forma di freccia usata con il collegamento Torna all'inizio") [Risolvere i problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
   
@@ -220,7 +220,7 @@ ms.locfileid: "38980893"
   
  Per verificare che il problema sia stato risolto, aprire un Web browser e accedere all'URL del portale Web o del server di report. Aprire quindi Performance Monitor per verificare che i contatori funzionino correttamente.  
   
-#### <a name="to-re-add-the-performance-registry-keys-by-using-registry-editor"></a>Per aggiungere nuovamente le chiavi del Registro di sistema delle prestazioni utilizzando l'editor del Registro di sistema  
+#### <a name="to-add-the-performance-registry-keys-again-by-using-registry-editor"></a>Per aggiungere nuovamente le chiavi del Registro di sistema delle prestazioni utilizzando l'editor del Registro di sistema  
   
 1.  Aprire l'editor del Registro di sistema.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "38980893"
 
 ### <a name="Uninstall32BitBreaks64Bit"></a> La disinstallazione dell'istanza a 32 bit di SQL Server 2016 Reporting Services in una distribuzione side-by-side con un'istanza a 64 bit interrompe l'istanza a 64 bit
 
- Quando si esegue l'installazione side-by-side di un'istanza a 32 bit e di un'istanza a 64 bit di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] in un computer e si disinstalla l'istanza a 32 bit, quattro chiavi del Registro di sistema di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono rimosse. e di conseguenza, l'istanza a 64 bit di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]viene interrotta. Le chiavi del Registro di sistema di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che vengono rimosse quando si disinstalla l'istanza a 32 bit sono:  
+ Quando si esegue l'installazione side-by-side di un'istanza a 32 bit e di un'istanza a 64 bit di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] in un computer e si disinstalla l'istanza a 32 bit, quattro chiavi del Registro di sistema di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono rimosse. Di conseguenza, l'istanza a 64 bit di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene interrotta. Le chiavi del Registro di sistema di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che vengono rimosse quando si disinstalla l'istanza a 32 bit sono:  
   
  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance:Counter Names` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Windows Service\Performance:Counter Names` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance:Counter Types` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Windows Service\Performance:Counter Types`  
   

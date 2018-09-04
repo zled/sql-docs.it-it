@@ -7,10 +7,8 @@ ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.technology: ''
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -18,49 +16,52 @@ helpviewer_keywords:
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: fc70ec0b789ba0873b4e843b77132ec14bf4d7aa
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008803"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024464"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In questa esercitazione viene utilizzato uno scenario per illustrare i concetti sulla sicurezza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relativi a catene di proprietà e cambio di contesto utente.  
   
 > [!NOTE]  
-> Per eseguire il codice dell'esercitazione deve essere configurata la sicurezza a modalità mista e deve essere installato il database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Per altre informazioni sulla sicurezza in modalità mista, vedere [Scegliere una modalità di autenticazione](../relational-databases/security/choose-an-authentication-mode.md).  
+> Per eseguire il codice dell'esercitazione deve essere configurata la sicurezza a modalità mista e deve essere installato il database AdventureWorks2017. Per altre informazioni sulla sicurezza in modalità mista, vedere [Scegliere una modalità di autenticazione](../relational-databases/security/choose-an-authentication-mode.md).  
   
 ## <a name="scenario"></a>Scenario  
-In questo scenario due utenti necessitano degli account per accedere ai dati relativi agli ordini di acquisto archiviati nel database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . È necessario soddisfare i requisiti seguenti:  
+In questo scenario, due utenti necessitano di account per accedere ai dati relativi agli ordini di acquisto archiviati nel database AdventureWorks2017. È necessario soddisfare i requisiti seguenti:  
   
 -   Il primo account (TestManagerUser) deve essere in grado di visualizzare tutti i dettagli di ogni ordine di acquisto.  
-  
 -   Il secondo account (TestEmployeeUser) deve essere in grado di visualizzare il numero dell'ordine di acquisto, la data dell'ordine, la data di spedizione, i numeri di serie dei prodotti e gli articoli ordinati e ricevuti per ordine di acquisto, in base al numero di ordine di acquisto, per gli articoli per i quali sono state eseguite spedizioni parziali.  
-  
--   Tutti gli altri account devono mantenere le autorizzazioni correnti.  
-  
+-   Tutti gli altri account devono mantenere le autorizzazioni correnti.   
 Per soddisfare i requisiti di questo scenario, l'esempio è suddiviso in quattro parti in cui vengono illustrati i concetti delle catene di proprietà e dello scambio di contesto:  
   
-1.  Configurazione dell'ambiente.  
-  
-2.  Creazione di una stored procedure per l'accesso ai dati in base all'ordine di acquisto.  
-  
+1.  Configurazione dell'ambiente.   
+2.  Creazione di una stored procedure per l'accesso ai dati in base all'ordine di acquisto.   
 3.  Accesso ai dati tramite la stored procedure.  
-  
 4.  Reimpostazione dell'ambiente.  
   
-Ogni blocco di codice dell'esempio è illustrato sulla stessa riga. Per copiare l'esempio completo, vedere [Esempio completo](#CompleteExample) alla fine dell'esercitazione.  
+Ogni blocco di codice dell'esempio è illustrato sulla stessa riga. Per copiare l'esempio completo, vedere [Esempio completo](#CompleteExample) alla fine dell'esercitazione.
+
+## <a name="prerequisites"></a>Prerequisites
+Per completare questa esercitazione, sono necessari SQL Server Management Studio, l'accesso a un server che esegue SQL Server e un database AdventureWorks.
+
+- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Scaricare i [database di esempio AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+
+Per istruzioni su come ripristinare un database in SQL Server Management Studio, vedere [Ripristinare un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="1-configure-the-environment"></a>1. Configurazione dell'ambiente  
-Utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e il codice seguente per aprire il database `AdventureWorks2012` e utilizzare l'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] `CURRENT_USER` per controllare che come contesto venga visualizzato l'utente dbo.  
+Utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e il codice seguente per aprire il database `AdventureWorks2017` e utilizzare l'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] `CURRENT_USER` per controllare che come contesto venga visualizzato l'utente dbo.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  
@@ -68,7 +69,7 @@ GO
   
 Per altre informazioni sull'istruzione CURRENT_USER, vedere [CURRENT_USER &#40;Transact-SQL&#41;](../t-sql/functions/current-user-transact-sql.md).  
   
-Utilizzare questo codice come utente dbo per creare due utenti nel server e nel database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
+Usare questo codice come utente dbo per creare due utenti nel server e nel database AdventureWorks2017.  
   
 ```sql
 CREATE LOGIN TestManagerUser   
@@ -180,6 +181,12 @@ SELECT *
 FROM Purchasing.PurchaseOrderDetail;  
 GO  
 ```  
+
+L'errore restituito è il seguente:
+```
+Msg 229, Level 14, State 5, Line 6
+The SELECT permission was denied on the object 'PurchaseOrderHeader', database 'AdventureWorks2017', schema 'Purchasing'.
+```
   
 Poiché gli oggetti a cui fa riferimento la stored procedure creata nell'ultima sezione sono di proprietà di `TestManagerUser` in virtù della proprietà dello schema `Purchasing` , `TestEmployeeUser` può accedere alle tabelle di base tramite la stored procedure. Nel codice seguente, in cui viene ancora utilizzato `TestEmployeeUser` come contesto, viene passato l'ordine di acquisto 952 come parametro.  
   
@@ -223,7 +230,7 @@ Last Updated: Books Online
 Conditions:   Execute as DBO or sysadmin in the AdventureWorks database  
 Section 1:    Configure the Environment   
 */  
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  

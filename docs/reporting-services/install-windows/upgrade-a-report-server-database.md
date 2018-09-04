@@ -1,10 +1,9 @@
 ---
 title: Aggiornare un database del server di report | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -19,17 +18,18 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3f2966298694a136d25ccd371f9c6c9df7713a9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9997e0c0d68d01721a33924f8d7b1e7842a9a21a
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406787"
 ---
 # <a name="upgrade-a-report-server-database"></a>Aggiornare un database del server di report
 
 Il database del server di report fornisce archiviazione per una o più istanze del server di report. Poiché lo schema del database del server di report può essere modificato con ogni nuova versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario che la versione del database corrisponda alla versione dell'istanza del server di report in uso. Nella maggior parte dei casi, un database del server di report può essere aggiornato automaticamente senza alcun intervento dell'utente.  
   
- **Modalità nativa:** nella modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il database del server di report è costituito in realtà da due database i cui nomi predefiniti sono "ReportServer" e "ReportServerTempDB".  
+ **Modalità nativa:** nella modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il database del server di report è costituito in realtà da due database i cui nomi predefiniti sono ReportServer e ReportServerTempDB.  
   
  **Modalità SharePoint:** nella modalità SharePoint di SQL Server 2016 Reporting Services il database del server di report è in realtà una raccolta di database creata per ogni istanza dell'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
@@ -45,7 +45,7 @@ Il database del server di report fornisce archiviazione per una o più istanze d
   
      In Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è più disponibile un pulsante Aggiorna separato o uno script di aggiornamento. Queste funzionalità sono obsolete a partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a causa della funzionalità di aggiornamento automatico del servizio del server di report.  
   
- Al termine dell'aggiornamento dello schema, non sarà possibile eseguire il rollback dell'aggiornamento a una versione precedente. Eseguire sempre il backup del database del server di report qualora sia necessario ricreare un'installazione precedente.  
+ Al termine dell'aggiornamento dello schema non è possibile eseguire il rollback dell'aggiornamento a una versione precedente. Eseguire sempre il backup del database del server di report, per poterlo usare nel caso in cui sia necessario ricreare un'installazione precedente.  
   
 ## <a name="how-the-schema-metadata-and-report-server-content-is-updated"></a>Modalità di aggiornamento di schema, metadati e contenuto del server di report  
  Il database del server di report viene aggiornato in tre fasi:  
@@ -73,8 +73,7 @@ Il database del server di report fornisce archiviazione per una o più istanze d
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Gestione configurazione Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[Creare un database del server di report](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
-[Procedura guidata Modifica database](http://msdn.microsoft.com/library/1a2e8d18-5997-482f-a9c1-87d99f7407b8)   
+[Creare un database del server di report](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Eseguire la migrazione di un'installazione di Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 

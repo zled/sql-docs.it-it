@@ -1,7 +1,7 @@
 ---
 title: Usare il dashboard del gruppo di disponibilità Always On in SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 10/30/2017
+ms.date: 08/09/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -18,59 +18,48 @@ caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4512fb251a34eaeb53bfdc18bb3bec98473f0cf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 19772eb3ac64f060288a82353fa4d2ea705d9880
+ms.sourcegitcommit: b91c0a7e981749758bd38e47a530d4e7bf1c5dd9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770557"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40405175"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usare il dashboard del gruppo di disponibilità Always On in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Gli amministratori del database usano il dashboard del gruppo di disponibilità Always On per ottenere una vista immediata dell'integrità di un gruppo di disponibilità e delle relative repliche di disponibilità e database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Alcuni degli utilizzi tipici del dashboard del gruppo di disponibilità sono i seguenti:  
+  Gli amministratori del database usano il dashboard del gruppo di disponibilità Always On per visualizzare immediatamente l'integrità di un gruppo di disponibilità e delle relative repliche di disponibilità e database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Alcuni degli utilizzi tipici del dashboard del gruppo di disponibilità sono i seguenti:  
   
--   Scelta di una replica per un failover manuale.  
-  
+-   Scelta di una replica per un failover manuale.    
 -   Stima della perdita di dati in caso di failover forzato.  
-  
--   Valutazione delle prestazioni della sincronizzazione dei dati.  
-  
--   Valutazione dell'impatto sulle prestazioni di una replica secondaria con commit sincrono  
-  
- Il dashboard fornisce indicatori delle prestazioni e stati dei gruppi di disponibilità principali che facilitano le decisioni operative relative alla disponibilità elevata usando i tipi di informazioni seguenti.  
-  
--   Stato di rollup della replica  
-  
--   Modalità e stato di sincronizzazione  
-  
--   Perdita di dati stimata  
-  
--   Tempo di recupero stimato (ripetere aggiornamento)  
-  
--   Dettagli della replica di database  
-  
--   Modalità e stato di sincronizzazione  
-  
+-   Valutazione delle prestazioni della sincronizzazione dei dati.   
+-   Valutazione dell'impatto sulle prestazioni di una replica secondaria con commit sincrono 
+  -  Il dashboard fornisce indicatori delle prestazioni e stati dei gruppi di disponibilità principali che facilitano le decisioni operative relative alla disponibilità elevata usando i tipi di informazioni seguenti.  
+-   Stato di rollup della replica    
+-   Modalità e stato di sincronizzazione   
+-   Perdita di dati stimata    
+-   Tempo di recupero stimato (ripetere aggiornamento)    
+-   Dettagli della replica di database    
+-   Modalità e stato di sincronizzazione    
 -   Tempo per il ripristino del log  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a>Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
  È necessario essere connessi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (istanza del server) che ospita la replica primaria o una replica secondaria di un gruppo di disponibilità.  
   
-###  <a name="Security"></a> Sicurezza  
+### <a name="security"></a>Security  
   
-####  <a name="Permissions"></a> Permissions  
+#### <a name="permissions"></a>Permissions  
  È necessario disporre delle autorizzazioni CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a> Per avviare il dashboard Always On  
+##  <a name="to-start-the-always-on-dashboard"></a>Per avviare il dashboard Always On  
   
 1.  In Esplora oggetti connettersi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui si vuole eseguire il dashboard Always On.  
   
 2.  Espandere il nodo **Disponibilità elevata Always On**, fare clic con il pulsante destro del mouse sul nodo **Gruppi di disponibilità****Mostra dashboard**.  
   
-###  <a name="DashboardOptions"></a> Per modificare le opzioni del dashboard Always On  
+###  <a name="change-always-on-dashboard-options"></a>Modificare le opzioni del dashboard Always On  
  È possibile usare la finestra di dialogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Opzioni** per configurare il comportamento del dashboard Always On di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 1.  Dal menu **Strumenti** scegliere **Opzioni**.  
@@ -79,7 +68,7 @@ ms.locfileid: "34770557"
   
 3.  Per abilitare criteri definiti dall'utente, selezionare **Abilita criteri Always On definiti dall'utente**.  
   
-##  <a name="AvGroupsView"></a> Riepilogo del gruppo di disponibilità  
+##  <a name="availability-group-summary"></a>Riepilogo del gruppo di disponibilità  
  Nella schermata del gruppo di disponibilità viene visualizzata una riga di riepilogo per ogni gruppo di disponibilità per il quale l'istanza del server connesso ospita una replica. In questo riquadro sono visualizzate le colonne seguenti:  
   
  **Nome gruppo di disponibilità**  
@@ -183,16 +172,11 @@ Nel riquadro **Replica di disponibilità** vengono visualizzate le colonne segue
  **Stato operativo**  
  Indica lo stato operativo corrente della replica secondaria. Questo valore è nascosto per impostazione predefinita. I valori possibili sono:  
   
- **0**. Failover in sospeso  
-  
- **1**. In sospeso  
-  
- **2**. Online  
-  
- **3**. Offline  
-  
- **4**. Non riuscito  
-  
+ **0**. Failover in sospeso    
+ **1**. In sospeso    
+ **2**. Online    
+ **3**. Offline   
+ **4**. Non riuscito    
  **5**. Errore, nessun quorum  
   
  **NULL**. La replica non è locale.  
@@ -209,17 +193,13 @@ Nel riquadro **Replica di disponibilità** vengono visualizzate le colonne segue
 > [!NOTE]  
 >  Per informazioni sui contatori delle prestazioni per le repliche di disponibilità, vedere [SQL Server, replica di disponibilità](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a> Per raggruppare le informazioni su un gruppo di disponibilità  
+##  <a name="group-by-availability-group-information"></a>Raggruppare le informazioni in base a un gruppo di disponibilità  
  Per raggruppare le informazioni, fare clic su **Raggruppa per**, quindi selezionare una delle opzioni seguenti:  
   
--   **Repliche di disponibilità**  
-  
--   **Database di disponibilità**  
-  
+-   **Repliche di disponibilità**    
+-   **Database di disponibilità** 
 -   **Synchronization state**  
-  
--   **Conformità del failover**  
-  
+-   **Conformità del failover**   
 -   **Problemi**  
   
  Nel riquadro in cui sono visualizzate le informazioni raggruppate sono presenti le colonne seguenti:  
@@ -233,27 +213,22 @@ Nel riquadro **Replica di disponibilità** vengono visualizzate le colonne segue
  **Stato di sincronizzazione**  
  Indica se il database di disponibilità è attualmente sincronizzato con la replica primaria. Questo valore è visualizzato per impostazione predefinita. I possibili stati di sincronizzazione sono i seguenti:  
   
--   **Non in sincronizzazione**.  
-  
-    -   Per il ruolo primario, indica che il database non è pronto per la sincronizzazione del log delle transazioni con i database secondari corrispondenti.  
-  
+-   **Non in sincronizzazione**:  
+-   
+    -   Per il ruolo primario, indica che il database non è pronto per la sincronizzazione del log delle transazioni con i database secondari corrispondenti.   
     -   Per un database secondario, indica che il database non ha ancora avviato la sincronizzazione del log a causa di un problema di connessione, è stato sospeso o si trova in stati di transizione durante l'avvio o un cambio di ruolo.  
   
--   **Sincronizzazione in corso**.  
+-   **Sincronizzazione in corso**:
+-   
+     Su una replica primaria:   
+    - In un database primario, indica che questo database è pronto ad accettare una richiesta di analisi da un database secondario.  
+    - Su una replica secondaria, indica che è in corso uno spostamento dati attivo per quel database secondario. 
   
-     Su una replica primaria:  
   
-    -   Per un database primario, indica che questo database è pronto ad accettare una richiesta di analisi da un database secondario.  
+-   **Sincronizzato**: 
   
-    -   Su una replica secondaria, indica che è in corso uno spostamento dati attivo per quel database secondario.  
-  
-     Su una replica secondaria, indica che è in corso uno spostamento dati attivo per quella replica.  
-  
--   **Sincronizzato**.  
-  
-     Per un database primario, indica che almeno un database secondario è sincronizzato.  
-  
-     Per un database secondario, indica che il database è sincronizzato con il database primario corrispondente.  
+    - Per un database primario, indica che almeno un database secondario è sincronizzato.
+    - Per un database secondario, indica che il database è sincronizzato con il database primario corrispondente.  
   
 -   **Ripristino in corso**.  
   
@@ -272,15 +247,13 @@ Nel riquadro **Replica di disponibilità** vengono visualizzate le colonne segue
  **Failover Readiness**  
  Indica per quale replica di disponibilità è possibile eseguire il failover con o senza la potenziale perdita di dati. Questa colonna viene visualizzata per impostazione predefinita. I valori possibili sono:  
   
--   **Perdita di dati**  
-  
+-   **Perdita di dati**   
 -   **Nessuna perdita di dati**  
   
  **Problemi**  
  Indica il nome del problema. Questa colonna viene visualizzata per impostazione predefinita. I valori possibili sono:  
   
--   **Avvisi**. Fare clic per visualizzare le soglie e gli avvisi.  
-  
+-   **Avvisi**. Fare clic per visualizzare le soglie e gli avvisi.   
 -   **Critico**. Fare clic per visualizzare i problemi critici.  
   
  Per un elenco dei problemi relativi ai criteri di Always On, vedere [Criteri Always On per problemi operativi con gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
@@ -307,7 +280,7 @@ Nel riquadro **Replica di disponibilità** vengono visualizzate le colonne segue
  Indica la velocità in KB al secondo alla quale i record di log vengono inviati alla replica secondaria. Questo valore è nascosto per impostazione predefinita.  
   
  **Dimensione coda di rollforward (KB)**  
- Indica il numero di record del log nei file di log della replica secondaria di cui non è stato ancora eseguito il rollforward. Questo valore è nascosto per impostazione predefinita.  
+ Indica il numero di record di log nei file di log della replica secondaria di cui non è stato ancora eseguito il rollforward. Questo valore è nascosto per impostazione predefinita.  
   
  **Velocità fase di rollforward (KB/sec)**  
  Indica la velocità in KB al secondo alla quale viene eseguito il rollforward dei record di log. Questo valore è nascosto per impostazione predefinita.  
@@ -353,8 +326,16 @@ Nel riquadro **Replica di disponibilità** vengono visualizzate le colonne segue
   
  **Ora ultimo rollforward**  
  Indica l'ora di rollforward dell'ultimo record del log nel database secondario. Questo valore è nascosto per impostazione predefinita.  
-  
-##  <a name="RelatedTasks"></a> Attività correlate  
+ 
+
+## <a name="always-on-availability-group-latency-reports"></a>Report di latenza del gruppo di disponibilità Always On
+Il report di latenza del gruppo di disponibilità è un strumento di reporting incorporato nel dashboard del gruppo di disponibilità e disponibile in [SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md). Questa funzionalità comprende un report di facile comprensione che riporta in dettaglio il tempo dedicato alle diverse fasi del processo di trasporto del log. Ciò rappresenta un modo per limitare le cause potenziali della latenza durante il processo di sincronizzazione. 
+
+SQL Agent esegue la raccolta dei dati e deve essere abilitato nella replica primaria e in almeno una delle repliche secondarie. Visualizzare il report facendo clic con il pulsante destro del mouse sul gruppo di disponibilità > Report > Report standard in **Esplora oggetti** di SQL Server Management Studio.  
+
+Per altre informazioni, vedere [Report di latenza del gruppo di disponibilità Always On](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/).
+
+## <a name="related-tasks"></a>Attività correlate  
   
 -   [Utilizzare i criteri AlwaysOn per visualizzare l'integrità di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   

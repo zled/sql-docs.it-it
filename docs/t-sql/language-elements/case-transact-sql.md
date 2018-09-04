@@ -24,13 +24,13 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3e65dd6ddbb2b71c92e7e3dd967a4cf50af2d687
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 58c276a0e70857b09c30bc405a0437cb2fbba61f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453915"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43087800"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -120,7 +120,7 @@ END
   
  L'espressione CASE non può essere utilizzata per controllare il flusso di esecuzione di istruzioni, blocchi di istruzioni, funzioni definite dall'utente e stored procedure Transact-SQL. Per un elenco di metodi di controllo di flusso, vedere [Controllo di flusso &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
- Con l'istruzione CASE è possibile valutare in sequenza le relative condizioni e viene arrestata alla prima condizione soddisfatta. In alcune situazioni, un'espressione viene valutata prima che in un'istruzione CASE vengano ricevuti i risultati dell'espressione come input. È possibile che si verifichino errori nella valutazione di queste espressioni. Le espressioni di aggregazione visualizzate negli argomenti WHEN di un'istruzione CASE vengono innanzitutto valutate e, successivamente, fornite all'istruzione CASE. Ad esempio, nella query seguente si verifica un errore di divisione per zero durante la generazione del valore dell'aggregazione MAX. Questa condizione si presenta prima della valutazione dell'espressione CASE.  
+ Con l'espressione CASE è possibile valutare in sequenza le relative condizioni e viene arrestata alla prima condizione soddisfatta. In alcune situazioni, un'espressione viene valutata prima che in un'espressione CASE vengano ricevuti i risultati dell'espressione come input. È possibile che si verifichino errori nella valutazione di queste espressioni. Le espressioni di aggregazione visualizzate negli argomenti WHEN di un'espressione CASE vengono innanzitutto valutate e, successivamente, fornite all'espressione CASE. Ad esempio, nella query seguente si verifica un errore di divisione per zero durante la generazione del valore dell'aggregazione MAX. Questa condizione si presenta prima della valutazione dell'espressione CASE.  
   
 ```sql  
 WITH Data (value) AS   

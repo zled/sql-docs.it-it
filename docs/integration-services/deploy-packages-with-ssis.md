@@ -1,16 +1,14 @@
 ---
 title: 'Esercitazione SSIS: Distribuzione di pacchetti | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
 - deploying packages [Integration Services]
@@ -26,11 +24,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2fe1e201717808c8a6afef4e3ca756100b614a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f7f28ae86cab01c86aa7360618b080ec4ff124e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028815"
 ---
 # <a name="deploy-packages-with-ssis"></a>Esercitazione SSIS: Distribuzione di pacchetti
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include strumenti che consentono di distribuire in modo semplice i pacchetti in un altro computer. Gli strumenti di distribuzione consentono inoltre di gestire eventuali dipendenze, ad esempio configurazioni e file necessari per il pacchetto. In questa esercitazione verrà illustrato come utilizzare tali strumenti per installare pacchetti e relative dipendenze in un computer di destinazione.    
@@ -46,37 +45,49 @@ Il pacchetto di distribuzione verrà quindi copiato nel computer di destinazione
 I pacchetti verranno infine eseguiti in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] mediante l'Utilità di esecuzione pacchetti.    
     
 L'obiettivo di questa esercitazione è simulare la complessità delle problematiche di una possibile distribuzione reale. Se non è possibile distribuire i pacchetti in un altro computer è comunque possibile eseguire l'esercitazione installando i pacchetti nel database msdb nell'istanza locale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e quindi eseguirli in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] nella medesima istanza.    
-    
-## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione    
+
+**Tempo stimato per il completamento dell'esercitazione:** 2 ore
+
+## <a name="what-you-learn"></a>Informazioni ottenute dall'esercitazione    
 Il modo più efficace per acquisire familiarità con i nuovi strumenti e controlli e con le caratteristiche disponibili in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste nell'usarli. Questa esercitazione consente di eseguire in modo semplificato i passaggi necessari per creare un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e quindi aggiungervi i pacchetti e gli altri file necessari. Dopo aver completato il progetto, si procederà alla creazione di un pacchetto di distribuzione, alla copia del pacchetto nel computer di destinazione e quindi all'installazione in quest'ultimo dei pacchetti.    
     
-## <a name="requirements"></a>Requisiti    
+## <a name="prerequisites"></a>Prerequisites    
 Questa esercitazione è destinata agli utenti già esperti nelle operazioni di base sul file system, ma con una limitata conoscenza delle nuove caratteristiche disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ai fini dell'apprendimento dei concetti di base di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che verranno usati in questa esercitazione, potrebbe risultare utile completare prima la seguente esercitazione di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] : [Esercitazione SSIS: Creazione di un pacchetto ETL semplice](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
-**Computer di origine.** Nel computer in cui verrà creato il pacchetto di distribuzione **devono essere installati i componenti seguenti**:
-- SQL Server  
-- Dati di esempio, pacchetti completi, configurazioni e un file Leggimi. Questi file vengono installati insieme se si scarica il [database di esempio Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550).     
-> **Nota** Assicurarsi di disporre delle autorizzazioni per creare ed eliminare tabelle in AdventureWorks o altri dati usati.         
+### <a name="on-the-source-computer"></a>Nel computer di origine
+
+Nel computer in cui si crea il pacchetto di distribuzione **devono essere installati i componenti seguenti:**
+
+- SQL Server. Scaricare una versione di valutazione gratuita o un'edizione per sviluppatori di SQL da [Download di SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
+
+- Dati di esempio, pacchetti completi, configurazioni e un file Leggimi. Per scaricare i dati di esempio e i pacchetti di lezioni come file con estensione zip, vedere i [file delle esercitazioni di SQL Server Integration Services](https://www.microsoft.com/download/details.aspx?id=56827). La maggior parte dei file nel file ZIP è di sola lettura per evitare modifiche accidentali. Per scrivere l'output in un file o per modificarlo, potrebbe essere necessario disattivare l'attributo di sola lettura nelle proprietà del file.
+
+-   Database di esempio **AdventureWorks2014**. Per scaricare il database **AdventureWorks2014**, scaricare `AdventureWorks2014.bak` dai [database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) e ripristinare il backup.  
+
+-   È necessario avere le autorizzazioni per creare ed eliminare tabelle nel database AdventureWorks.
     
 -   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
     
-**Computer di destinazione.** Nel computer in cui verranno distribuiti i pacchetti **devono essere installati i componenti seguenti**:    
+### <a name="on-the-destination-computer"></a>Nel computer di destinazione
+
+Nel computer in cui verranno distribuiti i pacchetti **devono essere installati i componenti seguenti**:    
     
-- SQL Server
-- Dati di esempio, pacchetti completi, configurazioni e un file Leggimi. Questi file vengono installati insieme se si scarica il [database di esempio Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550). 
+- SQL Server. Scaricare una versione di valutazione gratuita o un'edizione per sviluppatori di SQL da [Download di SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
+
+- Dati di esempio, pacchetti completi, configurazioni e un file Leggimi. Per scaricare i dati di esempio e i pacchetti di lezioni come file con estensione zip, vedere i [file delle esercitazioni di SQL Server Integration Services](https://www.microsoft.com/download/details.aspx?id=56827). La maggior parte dei file nel file ZIP è di sola lettura per evitare modifiche accidentali. Per scrivere l'output in un file o per modificarlo, potrebbe essere necessario disattivare l'attributo di sola lettura nelle proprietà del file.
+
+-   Database di esempio **AdventureWorks2014**. Per scaricare il database **AdventureWorks2014**, scaricare `AdventureWorks2014.bak` dai [database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) e ripristinare il backup.  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per installare SSIS, vedere [Installare Integration Services](install-windows/install-integration-services.md).
     
--   È necessario disporre delle autorizzazioni per creare ed eliminare tabelle in AdventureWorks e per eseguire pacchetti in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].    
+-   È necessario avere le autorizzazioni per creare ed eliminare tabelle nel database AdventureWorks e per eseguire i pacchetti SSIS in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].    
     
--   È necessario disporre delle autorizzazioni di lettura e scrittura sulla tabella sysssispackages nel database di sistema msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .    
+-   È necessario disporre delle autorizzazioni di lettura e scrittura sulla tabella `sysssispackages` nel database di sistema `msdb` di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].    
     
 Se si prevede di distribuire i pacchetti nello stesso computer in cui si crea il pacchetto di distribuzione, è necessario che tale computer soddisfi i requisiti di entrambi i sistemi di origine e di destinazione.    
-    
-**Tempo stimato per il completamento dell'esercitazione:** 2 ore    
-    
+        
 ## <a name="lessons-in-this-tutorial"></a>Lezioni dell'esercitazione    
 [Lezione 1: Preparazione alla creazione del pacchetto di distribuzione](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 In questa lezione verrà preparata la distribuzione di una soluzione ETL creando un nuovo progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e aggiungendovi i pacchetti e gli altri file necessari.    
