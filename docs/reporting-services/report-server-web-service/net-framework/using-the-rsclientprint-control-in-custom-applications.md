@@ -1,14 +1,10 @@
 ---
 title: Uso del controllo RSClientPrint in applicazioni personalizzate | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 67ee94b303f8d75e3249b1f20b2ed891c632dc92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eef2cedf56fd314244a598ddc77df391f44237ca
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027868"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272980"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilizzo del controllo RSClientPrint in applicazioni personalizzate
   Il controllo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** consente la stampa sul lato client dei report visualizzati nel Visualizzatore HTML. Offre una finestra di dialogo **Stampa** per consentire all'utente di avviare un processo di stampa, visualizzare un'anteprima di un report, specificare le pagine da stampare e modificare i margini. Durante la stampa sul lato client, il server di report esegue il rendering del report con l'estensione per il rendering Immagine (EMF) e utilizza le funzionalità di stampa del sistema operativo per creare il processo di stampa e inviarlo a una stampante.  
@@ -72,7 +66,7 @@ ms.locfileid: "33027868"
   
 ### <a name="rsclientprint-properties"></a>Proprietà di RSClientPrint  
   
-|Proprietà|Tipo|LS|Default|Description|  
+|Proprietà|Tipo|LS|Default|Descrizione|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|LS|Impostazione del report|Recupera o imposta il margine sinistro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
 |MarginRight|Double|LS|Impostazione del report|Recupera o imposta il margine destro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
@@ -109,7 +103,7 @@ ms.locfileid: "33027868"
 ### <a name="rsprintclient-support-for-the-print-method"></a>Supporto di RSPrintClient per il metodo di stampa  
  L'oggetto **RSClientPrint** supporta il metodo **Print** usato per avviare la finestra di dialogo di stampa. Il metodo **Print** include gli argomenti descritti di seguito.  
   
-|Argomento|I/O|Tipo|Description|  
+|Argomento|I/O|Tipo|Descrizione|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|In|String|Specifica la directory virtuale del server di report, ad esempio `https://adventure-works/reportserver`.|  
 |ReportPathParameters|In|String|Specifica il nome completo del report nello spazio dei nomi delle cartelle del server di report, inclusi i parametri. I report vengono recuperati mediante l'accesso a un URL, ad esempio "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  

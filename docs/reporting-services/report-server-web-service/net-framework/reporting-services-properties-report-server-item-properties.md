@@ -1,14 +1,10 @@
 ---
 title: Proprietà degli elementi del server di report | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2b3ba4bdc49c822d059ec86b4cb8064877af0d90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 346fefd3cbbeb1e0422401ef22a4ce32106348a2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027008"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267637"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Proprietà di Reporting Services - Proprietà degli elementi del server di report
   Le proprietà degli elementi sono proprietà specifiche degli elementi del database del server di report. Tali elementi includono report, report collegati, cartelle, risorse, modelli e origini dati.  
@@ -37,7 +31,7 @@ ms.locfileid: "33027008"
 ## <a name="item-properties"></a>Proprietà degli elementi  
  Le proprietà seguenti si applicano a tutti gli elementi nel database del server di report.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**CreatedBy**|Nome dell'utente che ha originariamente aggiunto l'elemento al database del server di report.|  
 |**CreationDate**|Data e ora di aggiunta dell'elemento al database del server di report.|  
@@ -55,14 +49,14 @@ ms.locfileid: "33027008"
 ## <a name="folder-properties"></a>Proprietà delle cartelle  
  Oltre alle proprietà degli elementi elencate in precedenza, la proprietà seguente si applica alle cartelle nel database del server di report.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Reserved**|Valore restituito dal metodo <xref:ReportService2010.ReportingService2010.GetProperties%2A> per le cartelle riservate dal server di report. Le cartelle riservate includono Utenti, Report personali e /. Le cartelle riservate non possono essere modificate o rimosse.|  
   
 ## <a name="report-properties"></a>Proprietà dei report  
  Oltre alle proprietà degli elementi elencate in precedenza, le proprietà seguenti si applicano ai report nel database del server di report.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Lingua**|Lingua usata in un report. Il valore è un codice della lingua definito nella specifica Internet Engineering Task Force (IETF) RFC1766. La prima parte è costituita da una designazione di due caratteri della lingua di base. La seconda parte è separata da un trattino e definisce la variazione o il sottolinguaggio della lingua. Se un valore non viene specificato nell'elemento **Style** associato all'elemento **Body** nella definizione del report, il valore predefinito è costituito dalla lingua del server di report.|  
 |**ReportProcessingTimeout**|Timeout, in secondi, per un singolo report. Se questo valore è impostato, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**, durante l'elaborazione non si verifica il timeout del report. Se il valore è **null**, per il timeout per l'elaborazione del report viene usato il valore della proprietà di sistema **ReportProcessingTimeout**. Il valore predefinito è **null**. Per altre informazioni, vedere [Proprietà di sistema del server di report](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
@@ -76,7 +70,7 @@ ms.locfileid: "33027008"
 ## <a name="resource-properties"></a>Proprietà delle risorse  
  Oltre alle proprietà degli elementi elencate in precedenza, la proprietà seguente si applica alle risorse nel database del server di report.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**MimeType**|Tipo MIME di una risorsa nel database del server di report.|  
   

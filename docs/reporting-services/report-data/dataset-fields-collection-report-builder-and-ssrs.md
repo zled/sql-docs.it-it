@@ -1,26 +1,20 @@
 ---
 title: Raccolta di campi del set di dati (Generatore report e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: d7b5f9f4e9dba9018455eec10d552cdb9afc54e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0986f432f2d94bcc81bdf2112ebe19c589767ae
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023008"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273603"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Raccolta di campi del set di dati (Generatore report e SSRS)
   I campi del set di dati rappresentano i dati provenienti da una connessione dati. Un campo può presentare dati numerici o non numerici. Possono essere inclusi, ad esempio, importi delle vendite, vendite totali, nomi dei clienti, identificatori di database, URL, immagini, dati spaziali e indirizzi di posta elettronica. Nell'area di progettazione i campi vengono visualizzati come espressioni in elementi del report quali caselle di testo, tabelle e grafici.  
@@ -96,7 +90,7 @@ ms.locfileid: "33023008"
   
      I tipi di dati usati ad esempio da Elaborazione report per i nuovi tipi date e time introdotti in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono riportati nella tabella seguente:  
   
-    |Tipo di dati SQL|Tipo di dati CLR|Description|  
+    |Tipo di dati SQL|Tipo di dati CLR|Descrizione|  
     |-------------------|-------------------|-----------------|  
     |**Data**|**DateTime**|Solo data|  
     |**Time**|**TimeSpan**|Solo ora|  

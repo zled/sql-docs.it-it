@@ -1,26 +1,20 @@
 ---
 title: Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report | Microsoft Docs
-ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9927a7cdf05e82f48fb43bd954534c04f9a32dad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbdf7ee66f59738c0874c6bfc21b6ad4b33b1091
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036848"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267683"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report
 
@@ -53,7 +47,7 @@ Lo script può essere utilizzato per copiare il contenuto tra server di report n
 ###  <a name="bkmk_what_is_migrated"></a> Elementi e risorse di cui lo script esegue la migrazione  
  Lo script non sovrascrive elementi di contenuto esistenti con lo stesso nome.  Se lo script rileva nel server di destinazione elementi presenti nel server di origine con lo stesso nome, viene visualizzato un messaggio di errore per i singoli elementi e lo script continua. Nella tabella seguente sono elencati i tipi di contenuto e risorse di cui lo script può eseguire la migrazione nelle modalità del server di report di destinazione.  
   
-|Elemento|Migrato|SharePoint|Description|  
+|Elemento|Migrato|SharePoint|Descrizione|  
 |----------|--------------|----------------|-----------------|  
 |Password|**No**|**No**|**NON** viene eseguita la migrazione delle password. Dopo la migrazione degli elementi di contenuto, aggiornare le informazioni sulle credenziali nel server di destinazione. Ad esempio, origini dati con credenziali archiviate.|  
 |Report personali|**No**|**No**|La funzionalità "Report personali" in modalità nativa è basata su singoli account di accesso utente, pertanto il servizio di scripting non ha accesso al contenuto di "Report personali" per utenti diversi dal parametro **–u** usato per eseguire lo script RSS. "Report personali", poi, non è una funzionalità della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e gli elementi nelle cartelle non possono essere copiati in un ambiente SharePoint. Di conseguenza, lo script non copia gli elementi del report presenti nelle cartelle "Report personali" in un server di report di origine in modalità nativa.<br /><br /> Per eseguire la migrazione del contenuto in cartelle "Report personali" con questo script, completare la procedura seguente:<br /><br /> 1.  Creare nuove cartelle in Gestione report. Se lo si desidera, è possibile creare cartelle o sottocartelle per ogni utente.<br />2.  Effettuare l'accesso con l'account di un utente con contenuto in "Report personali".<br />3.  In Gestione report fare clic sulla cartella **Report personali**.<br />4.  Fare clic sulla visualizzazione **Dettagli** per la cartella.<br />5.  Selezionare ogni report che si desidera copiare.<br />6.  Sulla barra degli strumenti di Gestione report fare clic su **Sposta**.<br />7.  Selezionare la cartella di destinazione desiderata.<br />8.  Ripetere i passaggi da 2 a 7 per ogni utente.<br />9. Eseguire lo script.|  
@@ -206,7 +200,7 @@ Lo script può essere utilizzato per copiare il contenuto tra server di report n
   
 ##  <a name="bkmk_parameter_description"></a> Descrizione dei parametri  
   
-|Parametro|Description|Obbligatorio|  
+|Parametro|Descrizione|Obbligatorio|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|URL del server di report di origine|Sì|  
 |**-u** dominio\password **–p** password|Credenziali per il server di origine.|FACOLTATIVO, se non viene impostato vengono utilizzate le credenziali predefinite|  

@@ -1,26 +1,20 @@
 ---
 title: Formattazione di scale su un misuratore (Generatore report e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 74928d39b6a658cecff715bab0aab58922fe15c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77d1170d0760abd542db1d3a5b84f2ebd4682af4
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023988"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272811"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formattazione di scale su un misuratore (Generatore report e SSRS)
   In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , la scala misuratore è l'intervallo di numeri, limitati da un valore minimo e da un valore massimo, mostrato su un misuratore. Una scala di misuratore contiene generalmente segni di graduazione ed etichette che consentono una lettura accurata di quello che viene mostrato dall'indicatore di misura del misuratore ed è generalmente associata a una o più indicatori di misura del misuratore. Sullo stesso misuratore può essere presente più di una scala.  

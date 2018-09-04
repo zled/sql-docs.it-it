@@ -1,14 +1,10 @@
 ---
 title: Formattazione delle etichette degli assi in un grafico (Generatore report e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.majortickmarks.f1
@@ -28,16 +24,14 @@ f1_keywords:
 helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 326bc2a7516d7401fe3af763237b0f5f0c7a1170
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7b18f14d4a21b1515438715d24378a8e272a317
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027978"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273368"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formattazione delle etichette degli assi in un grafico (Generatore report e SSRS)
   Nei tipi di grafico basati su coordinate (grafico a barre, ad area, a punti, a linee, con intervalli e istogramma) sono inclusi due assi utilizzati per la classificazione e la visualizzazione di relazioni tra dati. A ogni asse verranno applicati tipi diversi di formattazione.  
@@ -63,7 +57,7 @@ ms.locfileid: "33027978"
   
  La scala dell'asse è associata a un valore minimo e a un valore massimo che definiscono l'intervallo dei dati da visualizzare lungo l'asse. Questi valori minimo e massimo vengono calcolati lungo ogni asse in base ai valori del set di risultati. Sull'asse dei valori la scala verrà sempre determinata dal numero minimo e massimo nel campo valori. Sull'asse delle categorie i tipi di valori minimo e massimo vengono determinati in base al tipo del campo categoria. I campi di un set di dati possono essere classificati in uno di tre tipi di campo categoria disponibili, illustrati nella tabella seguente.  
   
-|Tipo di campo categoria|Description|Esempio|  
+|Tipo di campo categoria|Descrizione|Esempio|  
 |-------------------------|-----------------|-------------|  
 |Numeric|Le categorie vengono tracciate in ordine numerico lungo l'asse X.|In un report sulle vendite basato sul numero di identificazione del dipendente vengono visualizzati i numeri di identificazione dei dipendenti lungo l'asse X.|  
 |Data/ora|Le categorie vengono tracciate in ordine cronologico lungo l'asse X.|In un report sulle vendite basato sul mese vengono visualizzate le date formattate lungo l'asse X.|  
@@ -119,7 +113,7 @@ ms.locfileid: "33027978"
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>Aggiunta o rimozione di margini laterali dall'asse delle categorie  
  Nei tipi di grafico a barre, istogramma e a dispersione vengono automaticamente aggiunti margini laterali alle estremità dell'asse X. Non è possibile modificare le dimensioni del margine. In tutti gli altri tipi di grafico non vengono aggiunti margini laterali. Per altre informazioni, vedere [Aggiungere o rimuovere i margini da un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
  [Posizionamento di etichette in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md)  

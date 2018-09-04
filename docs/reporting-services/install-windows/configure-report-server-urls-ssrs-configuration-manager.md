@@ -1,29 +1,23 @@
 ---
 title: Configurare gli URL del server di report (Gestione configurazione SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Windows service, virtual directories
 - report servers [Reporting Services], virtual directories
 - virtual directories [Reporting Services]
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9d49d5cae66834cd9cfd304198fc4f677020fe75
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: db96a1af36bea565d00587096dfdbbc925b1fedf
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322320"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273739"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurare gli URL del server di report (Gestione configurazione SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]gli URL vengono usati per accedere al servizio Web ReportServer e [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Per poter usare una delle due applicazioni, è necessario configurare almeno un URL per il servizio Web e per [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili valori predefiniti per entrambi gli URL dell'applicazione, appropriati per la maggior parte degli scenari di distribuzione, incluse le distribuzioni side-by-side con altri servizi e applicazioni Web.  
@@ -66,7 +60,7 @@ ms.locfileid: "35322320"
 ## <a name="authenticating-client-requests-sent-to-a-report-server-url"></a>Autenticazione delle richieste client inviate a un URL del server di report  
  Per impostazione predefinita, il tipo di autenticazione supportato negli endpoint URL è l'autenticazione di Windows. Si tratta dell'estensione di sicurezza predefinita. Se si implementa un provider di autenticazione personalizzata o basata su form, è necessario modificare le impostazioni di autenticazione nel server di report. Se si desidera, è inoltre possibile modificare le impostazioni di autenticazione di Windows in modo che corrispondano al sottosistema di autenticazione utilizzato nella rete. Per altre informazioni, vedere [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
  In questo argomento vengono fornite istruzioni per l'impostazione e la modifica di una prenotazione URL tramite lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   

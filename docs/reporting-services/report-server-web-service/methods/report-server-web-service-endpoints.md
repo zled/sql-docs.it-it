@@ -1,14 +1,10 @@
 ---
 title: Endpoint del servizio Web ReportServer | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - execution endpoints [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 66feb1faf61d3d317fdbae4d70d1344782608c6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c7c0362271c57f9e69a3b2d628d95b1ec629a07
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028688"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271855"
 ---
 # <a name="report-server-web-service-endpoints"></a>Endpoint del servizio Web ReportServer
   Il servizio Web ReportServer fornisce diversi endpoint per la gestione di un server di report e per l'esecuzione e la navigazione dei report.  
@@ -70,7 +64,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
 ## <a name="sharepoint-proxy-endpoints"></a>Endpoint proxy di SharePoint  
  Quando un server di report è configurato per la modalità integrata SharePoint ed è stato installato il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], nel server SharePoint viene installato un set di endpoint proxy. Gli endpoint proxy rappresentano l'API principale per lo sviluppo di soluzioni di report quando un server di report è configurato per la modalità integrata SharePoint. Quando lo sviluppo viene eseguito negli endpoint proxy, il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] gestisce lo scambio di credenziali tra il server SharePoint e il server di report nella modalità di autenticazione Account attendibile. Quando lo sviluppo viene eseguito negli endpoint del server di report, l'applicazione chiamante deve gestire lo scambio di credenziali nella modalità di autenticazione Account attendibile. Nella tabella seguente sono elencati gli endpoint installati con il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Endpoint proxy|Description|  
+|Endpoint proxy|Descrizione|  
 |--------------------|-----------------|  
 |<xref:ReportService2006>|Fornisce le API per la gestione di un server di report configurato per la modalità integrata SharePoint.<br /><br /> Nota: questo endpoint è deprecato in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
 |<xref:ReportService2010>|Fornisce le API per la gestione di un server di report configurato per la modalità nativa o la modalità integrata SharePoint.|  

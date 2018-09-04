@@ -1,29 +1,23 @@
 ---
 title: Formattazione dei punti dati di un grafico (Generatore report e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: f99265199740d65002f061c9f7c8ce612bf312d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2d7d53489a89c5cb7f4790f437e5e61e5892048
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028148"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269671"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formattazione dei punti dati di un grafico (Generatore report e SSRS)
 In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , per punto dati si intende l'entità singola più piccola di un grafico. Nei grafici senza forme la rappresentazione dei punti dati dipende dal relativo tipo di grafico. Una serie di linee è ad esempio costituita da uno o più punti dati connessi. Nei grafici con forme i punti dati sono rappresentati dai singoli segmenti o sezioni che costituiscono l'intero grafico. In un grafico a torta, ad esempio, ogni parte è un punto dati. Per altre informazioni, vedere [Tipi di grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -63,7 +57,7 @@ In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>Aggiunta di parole chiave per le etichette dei punti dati, le descrizioni comandi e per il testo legenda  
  Per rappresentare un elemento presente nel grafico è possibile utilizzare parole chiave specifiche con distinzione tra maiuscole e minuscole. Tali parole sono applicabili solo alle descrizioni comandi, al testo personalizzato della legenda e alle proprietà delle etichette dei punti dati. In molti casi una parola chiave del grafico presenta un'espressione semplice equivalente, con la differenza che la parola chiave è più veloce e più facile da digitare. Di seguito viene fornito un elenco delle parole chiave del grafico.  
   
-|Parola chiave del grafico|Description|Applicabile al tipo di grafico|Esempio di espressione semplice equivalente|  
+|Parola chiave del grafico|Descrizione|Applicabile al tipo di grafico|Esempio di espressione semplice equivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|Valore Y del punto dati.|All|`=Fields!MyDataField.Value`|  
 |#VALY2|Valore Y #2 del punto dati.|Con intervalli, a bolle|None|  
@@ -93,7 +87,7 @@ In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
 ## <a name="inserting-data-point-markers"></a>Inserimento di marcatore dei punti dati  
  Un marcatore del punto dati è un indicatore visivo usato per segnalare ogni punto dati di una serie. In un grafico a dispersione il marcatore viene usato per determinare la forma e la dimensione dei singoli punti dati. La dimensione del marcatore specificata dipende dal tipo di grafico. È possibile modificare la dimensione, il colore o lo stile del marcatore. I marcatori non sono disponibili per tipi di grafico con intervalli e forme o per sottotipi di grafico in pila.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Visualizzazione di descrizioni comandi in una serie &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
  [Visualizzare le etichette dei punti dati al di fuori di un grafico a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)  

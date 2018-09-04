@@ -1,28 +1,22 @@
 ---
 title: Formatting Report Items (Report Builder and SSRS) (Formattazione degli elementi del report (Generatore report e SSRS)) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2ba428db233723e060ceb62886ac0bf748794893
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6f7af332b2dcf1d0da2d81f15218f60ea6c746d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023448"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274561"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formattazione degli elementi del report (Generatore report e SSRS)
   La formattazione degli elementi del report consente di migliorare l'aspetto e la leggibilità del report. È possibile formattare le caselle di testo e i singoli elementi contenuti nelle caselle, le immagini, le espressioni e i dati in modalità progettazione report.  
@@ -42,7 +36,7 @@ ms.locfileid: "33023448"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  Viene descritto come formattare il testo e come personalizzare le opzioni di formattazione per diversi blocchi di testo all'interno di una casella di testo.  
   

@@ -1,28 +1,22 @@
 ---
 title: Elimina elementi catalogo (Management Studio) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: d3d92d7345862149380565911def8eb3a52454fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c40d7c339a770c3cec1fb86264006c8cf0edba6e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030028"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274680"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Elimina elementi catalogo (Management Studio)
   Questa pagina consente di eliminare pianificazioni condivise e definizioni di ruolo.  

@@ -1,26 +1,20 @@
 ---
 title: Esempi di URL per gli elementi in un server di report - Modalità SharePoint | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 42638cca55a7d567ebe3ec3bfad37880cca6aebe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ed59907caecb5921f7dc72cba16f009269c02b6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036988"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273452"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Esempi di URL per gli elementi in un server di report - Modalità SharePoint
   Per pubblicare report ed elementi correlati in una raccolta di SharePoint, è possibile pubblicare il contenuto mediante gli strumenti di creazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ad esempio Progettazione report, oppure caricare il contenuto tramite le azioni sito di SharePoint.  
@@ -36,7 +30,7 @@ ms.locfileid: "33036988"
   
  Per accedere al contenuto del server di report e proteggerlo, è possibile utilizzare gli elementi della gerarchia Web indicati di seguito. Altri oggetti, quali elenchi e pagine, non vengono utilizzati per accedere al contenuto del server di report e non sono pertanto descritti nella tabella seguente.  
   
-|Object|Description|  
+|Object|Descrizione|  
 |------------|-----------------|  
 |Applicazione Web di SharePoint|Le applicazioni Web di SharePoint possono essere installate come server autonomi o in una farm contenente una raccolta di server virtuali. Un'applicazione Web possiede un URL, ad esempio `http:*//servername*`, e può contenere più siti.|  
 |Sito|Un sito può essere un sito padre o un sito secondario di un'applicazione Web.|  
