@@ -1,30 +1,24 @@
 ---
 title: Ruoli predefiniti | Microsoft Docs
-ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 59deac2a0b2e20d94fad6dc46f6d70a76ee884ef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 480578f2454ed6410038800194336fc3cb831b65
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028558"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282433"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definizioni di ruolo - Ruoli predefiniti
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato con ruoli predefiniti che è possibile utilizzare per concedere l'accesso alle operazioni del server di report. Ogni ruolo predefinito definisce una raccolta di attività correlate. È possibile assegnare account utente e di gruppo ai ruoli predefiniti per fornire accesso immediato alle operazioni del server di report.  
@@ -44,7 +38,7 @@ ms.locfileid: "33028558"
   
  Nella tabella seguente sono descritti i ruoli predefiniti, l'ambito e la modalità di utilizzo.  
   
-|Ruolo predefinito|ambito|Description|  
+|Ruolo predefinito|ambito|Descrizione|  
 |---------------------|-----------|-----------------|  
 |[Ruolo Gestione contenuto](#bkmk_content)|Elemento|Include tutte le attività a livello di elemento. Gli utenti assegnati a questo ruolo dispongono dell'autorizzazione completa per gestire il contenuto del server di report, inclusa la possibilità di concedere autorizzazioni ad altri utenti e di definire la struttura della cartella per l'archiviazione di altri elementi.|  
 |[Ruolo Server di pubblicazione](#bkmk_publisher)|Elemento|Gli utenti assegnati a questo ruolo possono aggiungere elementi a un server di report, con la possibilità di creare e gestire le cartelle che contengono questi elementi.|  
@@ -62,7 +56,7 @@ ms.locfileid: "33028558"
 ### <a name="content-manager-tasks"></a>Attività del ruolo Gestione contenuto  
  Nella tabella seguente vengono elencate le attività incluse nel ruolo **Gestione contenuto** .  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
 |Utilizzo di report|Leggere le definizioni dei report.|  
 |Creazione di report collegati|Creare report collegati basati su un report non collegato.|  
@@ -99,7 +93,7 @@ ms.locfileid: "33028558"
 ### <a name="publisher-tasks"></a>Attività del server di pubblicazione  
  Nella tabella seguente vengono elencate le attività incluse nel ruolo **Server di pubblicazione** .  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
 |Creazione di report collegati|Creare report collegati e pubblicarli in una cartella del server di report.|  
 |Gestione di origini dei dati|Creare ed eliminare elementi delle origini dei dati condivise e visualizzare e modificare le proprietà e il contenuto delle origini dei dati.|  
@@ -121,7 +115,7 @@ ms.locfileid: "33028558"
 ### <a name="browser-tasks"></a>Attività del ruolo Visualizzazione  
  Nella tabella seguente vengono elencate le attività incluse nella definizione di ruolo **Visualizzazione** .  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
 |Visualizzazione di report|Eseguire report e visualizzare le proprietà dei report.|  
 |Visualizzazione di risorse|Visualizzare risorse e proprietà delle risorse.|  
@@ -140,7 +134,7 @@ ms.locfileid: "33028558"
 ### <a name="report-builder-tasks"></a>Attività incluse nel ruolo Generatore report  
  Nella tabella seguente vengono elencate le attività incluse nella definizione di ruolo **Generatore report** .  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
 |Utilizzo di report|Leggere le definizioni dei report.|  
 |Visualizzazione di report|Eseguire report e visualizzare le proprietà dei report.|  
@@ -162,7 +156,7 @@ ms.locfileid: "33028558"
 ### <a name="my-reports-tasks"></a>Attività Report personali  
  Nella tabella seguente vengono elencate le attività incluse nel ruolo **Report personali** .  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
 |Creazione di report collegati|Creare report collegati basati su report archiviati nella cartella Report personali dell'utente.|  
 |Gestione di cartelle|Creare, visualizzare ed eliminare cartelle e visualizzarne e modificarne le proprietà.|  
@@ -190,7 +184,7 @@ ms.locfileid: "33028558"
 ### <a name="system-administrator-tasks"></a>Attività del ruolo Amministratore sistema  
  Nella tabella seguente vengono elencate le attività incluse nel ruolo **Amministratore sistema** .  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
 |Esecuzione delle definizioni dei report|Avviare l'esecuzione della definizione del report senza pubblicarlo in un server di report.|  
 |Gestisci processi|Visualizzare e annullare processi in esecuzione. Per altre informazioni, vedere [Gestire un processo in esecuzione](../../reporting-services/subscriptions/manage-a-running-process.md).|  
@@ -206,7 +200,7 @@ ms.locfileid: "33028558"
   
 ### <a name="system-user-tasks"></a>Attività del ruolo Utente sistema  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
 |Esecuzione delle definizioni dei report|Eseguire un report senza pubblicarlo in un server di report.|  
 |Visualizzazione delle proprietà del server di report|Visualizzare proprietà relative al server di report, ad esempio il nome dell'applicazione, lo stato di attivazione della funzionalità Report personali e le impostazioni predefinite della cronologia dei report.<br /><br /> Se si rimuove questa attività dal ruolo **Utente sistema** , la pagina Impostazioni sito non sarà più disponibile. Non verrà inoltre visualizzato il titolo dell'applicazione nella parte superiore di ogni pagina. Per impostazione predefinita, il titolo per Gestione report è "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  

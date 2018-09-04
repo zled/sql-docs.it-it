@@ -19,17 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45e6d2f8d5a7c99bcc35350a8983eb831488e2fc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 28067056d1623780f774b834536327e2312d0485
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084043"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348592"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Aggiungere colonne a una tabella (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
- > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Aggiungere colonne a una tabella (Motore di database)](https://msdn.microsoft.com/library/ms190238(SQL.120).aspx).
+ > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Aggiungere colonne a una tabella (Motore di database)](add-columns-to-a-table-database-engine.md).
 
 
   In questo argomento viene descritto come aggiungere nuove colonne a una tabella in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  

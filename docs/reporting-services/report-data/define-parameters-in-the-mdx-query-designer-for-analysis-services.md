@@ -1,14 +1,10 @@
 ---
 title: Definizione dei parametri in Progettazione query MDX per Analysis Services | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: f8818e32f48d094d67da1ba828f5b5a5049cace0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 759f6118736192db17042704157b21cbf7eda5ad
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019688"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280560"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Definizione dei parametri in Progettazione query MDX per Analysis Services
   Per parametrizzare una query MDX per un'origine dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è necessario aggiungere un parametro di query alla query. In Progettazione query MDX, è possibile aggiungere un parametro di query sia in modalità progettazione sia in modalità query specificando un filtro. Dopo avere definito la query tramite un parametro di query, in Reporting Services vengono creati automaticamente un parametro di report e un set di dati per l'elenco dei valori validi. In questo modo un utente può specificare un valore che viene passato direttamente alla query.  

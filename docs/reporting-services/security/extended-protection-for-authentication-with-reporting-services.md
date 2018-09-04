@@ -1,26 +1,20 @@
 ---
 title: Protezione estesa per l'autenticazione con Reporting Services | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 6abe1579a0b54f701ed648746b4a5fc5ae597b08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 49827ffcafca3131554ec806afa61e49ad03dd58
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028308"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281367"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protezione estesa per l'autenticazione con Reporting Services
 
@@ -117,7 +111,7 @@ SSRS supporta e impone la protezione estesa abilitata nel sistema operativo. Se 
 ###  <a name="ConfigurationSettings"></a> Impostazioni di configurazione per la protezione estesa di Reporting Services  
  Nella tabella seguente vengono fornite le informazioni sulle impostazioni di configurazione incluse nel file **rsreportserver.config** per la protezione estesa.  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**RSWindowsExtendedProtectionLevel**|Specifica il grado di imposizione della protezione estesa. I valori validi sono:<br /><br /> **Off**: predefinito. Specifica che non viene eseguita alcuna verifica dell'associazione di canale o dell'associazione al servizio.<br /><br /> **Allow** supporta la protezione estesa ma non la richiede.  Specifica:<br /><br /> - La protezione estesa verrà imposta per le applicazioni client in esecuzione nei sistemi operativi che supportano la protezione estesa. La modalità di imposizione della protezione è determinata dall'impostazione **RsWindowsExtendedProtectionScenario**<br /><br /> - L'autenticazione sarà consentita per le applicazioni client in esecuzione nei sistemi operativi che non supportano la protezione estesa.<br /><br /> **Require** specifica:<br /><br /> - La protezione estesa verrà imposta per le applicazioni client in esecuzione nei sistemi operativi che supportano la protezione estesa.<br /><br /> - L'autenticazione **non** sarà consentita per le applicazioni in esecuzione nei sistemi operativi che non supportano la protezione estesa.|  
 |**RsWindowsExtendedProtectionScenario**|Specifica le forme di protezione estesa da convalidare, cioè l'associazione di canale, l'associazione al servizio o entrambe. I valori validi sono:<br /><br /> **Proxy**: predefinito. Specifica:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate di Windows quando è presente un token di associazione di canale.<br /><br /> - L'associazione al servizio viene imposta.<br /><br /> **Any** specifica:<br /><br /> - L'autenticazione NTLM, Kerberos e Negotiate di Windows e l'associazione di canale non sono necessari.<br /><br /> - L'associazione al servizio viene imposta.<br /><br /> **Direct** specifica:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate quando è presente un token CBT. È inoltre presente una connessione SSL al servizio corrente e il token CBT per la connessione SSL corrisponde al token CBT del token NTLM, Kerberos o Negotiate.<br /><br /> - L'associazione al servizio non viene imposta.<br /><br /> <br /><br /> Nota: L'impostazione **RsWindowsExtendedProtectionScenario** viene ignorata se **RsWindowsExtendedProtectionLevel** è impostato su **OFF**.|  
@@ -149,7 +143,7 @@ SSRS supporta e impone la protezione estesa abilitata nel sistema operativo. Se 
 ### <a name="hosts-collection-sources"></a>Origini della raccolta Host.  
  Nella tabella seguente vengono elencate le origini potenziali per la raccolta Host.  
   
-|Tipo di origine|Description|  
+|Tipo di origine|Descrizione|  
 |--------------------|-----------------|  
 |ComputerNameDnsDomain|Nome di dominio DNS assegnato al computer locale. Se il computer locale è un nodo di un cluster, verrà utilizzato il nome di dominio DNS del server virtuale del cluster.|  
 |ComputerNameDnsFullyQualified|Nome DNS completo che identifica in modo univoco il computer locale. Questo nome è una combinazione del nome host DNS e del nome di dominio DNS nel formato *NomeHost*.*NomeDominio*. Se il computer locale è un nodo di un cluster, verrà utilizzato il nome DNS completo del server virtuale del cluster.|  

@@ -1,28 +1,22 @@
 ---
 title: Configurare un server di report in un cluster per il bilanciamento del carico di rete | Microsoft Docs
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: ecf545bf56a9886fa2409b570673ba36ad698eff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06bc8c4f366dadc391be2d6388a4383768c88d00
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027808"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279379"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurare un server di report in un cluster per il bilanciamento del carico di rete
   Se si intende configurare la scalabilità orizzontale di un server di report per l'esecuzione in un cluster per il bilanciamento del carico di rete (NLB, Network Load Balancing), è necessario effettuare le operazioni seguenti:  
@@ -38,7 +32,7 @@ ms.locfileid: "33027808"
 ## <a name="steps-for-report-server-deployment-on-an-nlb-cluster"></a>Passaggi per la distribuzione del server di report in un cluster per il bilanciamento del carico di rete  
  Per installare e configurare la distribuzione, utilizzare le linee guida seguenti:  
   
-|Passaggio|Description|Ulteriori informazioni|  
+|Passaggio|Descrizione|Ulteriori informazioni|  
 |----------|-----------------|----------------------|  
 |1|Prima di installare Reporting Services nei nodi del server in un cluster per il bilanciamento del carico di rete, verificare i requisiti per la distribuzione con scalabilità orizzontale.|[Distribuzione con scalabilità orizzontale - Modalità nativa di Reporting Services &#40;Gestione configurazione&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |2|Configurare il cluster per il bilanciamento del carico di rete e verificarne il corretto funzionamento.<br /><br /> Assicurarsi di eseguire il mapping di un nome dell'intestazione host all'IP del server virtuale del cluster per il bilanciamento del carico di rete. Il nome dell'intestazione host viene utilizzato nell'URL del server di report ed è più semplice da ricordare e digitare rispetto a un indirizzo IP.|Per ulteriori informazioni, vedere la documentazione di Windows Server relativa alla versione del sistema operativo Windows utilizzato.|  

@@ -1,29 +1,24 @@
 ---
 title: Usare un file Office Data Connection (odc) con i report | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Office Data Connection (.odc) files
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 83af0a0eda5039eb1e9cedb554cd425e04a03145
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2777b3ace581c83f4dd08577c4bea690601a495f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275128"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Utilizzare una connessione Office Data Connection (odc) ai report
   In particolari scenari è possibile utilizzare un file Office Data Connection (odc) esistente per fornire informazioni di connessione a un report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Quando si vuole creare un'origine dati condivisa, è possibile usare un file con estensione odc al posto di un file con estensione rsds. Nel server di report il file con estensione odc viene infatti utilizzato in modo analogo del file con estensione rsds, ovvero per il recupero del tipo dell'origine dati, della stringa di connessione e delle informazioni relative alle credenziali.  

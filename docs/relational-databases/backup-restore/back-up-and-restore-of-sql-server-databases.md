@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 273f04bfc6a75abb2e14da9031cbfeb17c6674c0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 64793249bab1d862d401e0c8b8d2d78a8392edbc
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410512"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348151"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Backup e ripristino di database SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ Dispositivo di**backup**
 -   Vincoli relativi alle risorse, ad esempio hardware, personale, spazio per l'archiviazione dei supporti di backup, sicurezza fisica dei supporti archiviati e così via.  
 
 ### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>Impatto del modello di recupero sulle operazioni di backup e di ripristino  
- Le operazioni di backup e di ripristino si verificano nel contesto di un modello di recupero, ovvero una proprietà del database tramite la quale si controlla la modalità di gestione del log delle transazioni. Il modello di recupero di un database determina inoltre i tipi di scenari di backup e ripristino supportati per il database. In genere, in un database viene utilizzato il modello di recupero con registrazione minima o il modello di recupero con registrazione completa. Il modello di recupero con registrazione completa può essere integrato passando al modello di recupero con registrazione minima delle operazioni bulk prima delle operazioni bulk. Per un'introduzione a questi modelli di recupero e alla loro influenza sulla gestione del log delle transazioni, vedere [Log delle transazioni (SQL Server)](https://msdn.microsoft.com/library/ms190925(SQL.130).aspx)  
+ Le operazioni di backup e di ripristino si verificano nel contesto di un modello di recupero, ovvero una proprietà del database tramite la quale si controlla la modalità di gestione del log delle transazioni. Il modello di recupero di un database determina inoltre i tipi di scenari di backup e ripristino supportati per il database. In genere, in un database viene utilizzato il modello di recupero con registrazione minima o il modello di recupero con registrazione completa. Il modello di recupero con registrazione completa può essere integrato passando al modello di recupero con registrazione minima delle operazioni bulk prima delle operazioni bulk. Per un'introduzione a questi modelli di recupero e alla loro influenza sulla gestione del log delle transazioni, vedere [Log delle transazioni (SQL Server)](../logs/the-transaction-log-sql-server.md)  
   
  Il modello di recupero migliore per un database dipende dalle esigenze aziendali. Per evitare la gestione del log delle transazioni e semplificare le operazioni di backup e ripristino, è possibile utilizzare il modello di recupero con registrazione minima. Per ridurre al minimo il rischio di perdita di dati, aumentando tuttavia il numero di operazioni amministrative, è possibile utilizzare il modello di recupero con registrazione completa. Per informazioni sull'effetto dei modelli di recupero sulle operazioni di backup e ripristino, vedere [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   

@@ -1,26 +1,20 @@
 ---
 title: Riferimenti alle raccolte predefinite Globals e Users (Generatore report e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8f5e0a3a9876af054da4e868ec809609effc117c
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: d08513ed76a211fe7a6e7b53ecbe04b73f875d45
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40410407"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276873"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Raccolte predefinite - Riferimenti alle raccolte predefinite Globals e Users (Generatore report)
   La raccolta di campi predefinita, in cui sono incluse le raccolte **Globals** e **User** , rappresenta i valori globali forniti da Reporting Services durante l'elaborazione di un report. La raccolta **Globals** fornisce valori come il nome del report, l'ora di inizio dell'elaborazione e i numeri di pagina correnti per l'intestazione o il piè di pagina. La raccolta **User** fornisce le impostazioni relative a ID utente e lingua. Questi valori possono essere usati nelle espressioni per filtrare i risultati in un report.  

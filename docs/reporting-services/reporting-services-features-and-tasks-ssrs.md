@@ -1,34 +1,28 @@
 ---
 title: Caratteristiche e attività di Reporting Services (SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 12/18/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, programming
 - development [Reporting Services]
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 62b007fe8e7f451f5538113ccd0773c0ba173b83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce7bd172b582247d9eadc6f22ae4a9589e00dd8c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026148"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277171"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Caratteristiche e attività di Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è organizzato in base ai report, le caratteristiche dei report, le caratteristiche del server di report e le caratteristiche dei prodotti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
  [Server di report di Reporting Services](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  

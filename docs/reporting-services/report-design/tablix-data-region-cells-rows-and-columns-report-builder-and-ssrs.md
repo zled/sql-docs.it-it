@@ -1,14 +1,10 @@
 ---
 title: Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10058"
@@ -16,16 +12,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.deletecolumns.f1
 - sql13.rtp.rptdesigner.deleterows.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8eb51a0c7240f1eff35ecc754d3a6b1d6fdc1000
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8ec3075444b0885cb6e6ea5b52c2f2fe6b60941
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028668"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281346"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS)
   Per controllare la modalità di visualizzazione in un report impaginato [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dei dati di righe e colonne di un'area dati Tablix, è necessario comprendere in che modo specificare righe e colonne relative a dati dettaglio, dati di gruppo, etichette e totali. Per visualizzare i dati, in molti casi è possibile utilizzare le strutture predefinite per una tabella, una matrice o un elenco. Per altre informazioni, vedere [Tabelle &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md),  [Creare una matrice (Generatore report e SSRS)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) o [Creare le fatture e form con elenchi (Generatore report e SSRS)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
@@ -43,7 +37,7 @@ ms.locfileid: "33028668"
 ### <a name="row-and-column-handles"></a>Handle di riga e colonna  
  Quando si seleziona un'area dati Tablix, le icone degli handle di riga e colonna indicano lo scopo di ogni riga e colonna. Gli handle indicano le righe e le colonne che si trovano all'interno o all'esterno di un gruppo. Nella tabella seguente sono indicate alcune visualizzazioni degli handle.  
   
-|Icona|Description|  
+|Icona|Descrizione|  
 |----------|-----------------|  
 |![Handle di riga con 3 linee parallele per la riga di dettaglio](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Handle di riga con 3 linee parallele per la riga di dettaglio")|Solo il gruppo di dettagli nella gerarchia dei gruppi di righe|  
 |![Handle di riga con riga di dettaglio e un gruppo esterno](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Handle di riga con riga di dettaglio e un gruppo esterno")|Un gruppo esterno e il gruppo di dettagli figlio|  

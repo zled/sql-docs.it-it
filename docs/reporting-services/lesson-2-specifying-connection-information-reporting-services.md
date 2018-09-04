@@ -1,28 +1,22 @@
 ---
 title: 'Lesson 2: Specifying Connection Information (Reporting Services) (Lezione 2: Specifica delle informazioni di connessione (Reporting Services)) | Microsoft Docs'
-ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: e1c62880fd94706f9f034d86fecd587700019b6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ca21419e841482747410f50809d0d502f495f06
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015988"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274772"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lezione 2: Specifica delle informazioni di connessione (Reporting Services)
 Dopo aver aggiunto un report impaginato [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] al progetto dell'esercitazione nella Lezione 1, è necessario definire un'*origine dati*, vale a dire informazioni di connessione usate dal report per accedere ai dati da un database relazionale, multidimensionale o da un'altra risorsa.  

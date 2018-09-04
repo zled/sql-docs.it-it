@@ -1,26 +1,20 @@
 ---
 title: Aggiungere un collegamento ipertestuale a un URL (Generatore report e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/07/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 80fb8d9b4f416933e19931aeb29fdb33f533e9f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756cde54f9379ad5caabedfe9b0adcace65b1605
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023028"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277471"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Aggiungere un collegamento ipertestuale a un URL (Generatore report e SSRS)
 Informazioni su come aggiungere azioni con collegamento ipertestuale a caselle di testo, immagini, grafici e misuratori in report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . I collegamenti possono indirizzare ad altri report, a segnalibri di un report o a URL statici o dinamici. 

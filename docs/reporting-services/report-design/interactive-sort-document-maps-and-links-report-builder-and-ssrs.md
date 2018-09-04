@@ -1,26 +1,20 @@
 ---
 title: Ordinamento interattivo, mappe documento e collegamenti (Generatore report e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 1f1e305dbb657fcb675767e2489cc12bc30fdd50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ebaf0ab56245e66fb58e6e84532fa52f04bb2deb
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023428"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279192"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Ordinamento interattivo, mappe documento e collegamenti (Generatore report e SSRS)
   In ambienti basati sul Web è possibile aggiungere alcune caratteristiche per consentire agli utenti di interagire con i report. Gli utenti possono inoltre modificare l'ordinamento dei valori nel report, visualizzare o nascondere elementi nel report oppure fare clic sui collegamenti che consentono di passare ad altri report o pagine Web. È inoltre possibile aggiungere un sommario o una mappa documento. Gli utenti del report possono fare clic su elementi nel sommario o mappa documento per passare alle aree all'interno di un report.  
@@ -41,7 +35,7 @@ ms.locfileid: "33023428"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Ordinamento interattivo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
  Viene illustrato come aggiungere pulsanti di ordinamento interattivi alle intestazioni di colonna.  
   

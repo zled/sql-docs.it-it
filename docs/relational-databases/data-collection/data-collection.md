@@ -17,12 +17,12 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39bc4afa05f9f72fcf2ec08cdfd85e65fa8bce04
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d5e99d7bfd140af1e26217118211da98a167a93
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145602"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348176"
 ---
 # <a name="data-collection"></a>Raccolta dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,12 +115,12 @@ ms.locfileid: "33145602"
   
 ## <a name="things-you-can-do"></a>Operazioni possibili  
   
-|Description|Argomento|  
+|Descrizione|Argomento|  
 |----------------------|-----------|  
 |Gestire aspetti diversi della raccolta dati, ad esempio l'abilitazione o la disabilitazione della raccolta dati, la modifica della configurazione di un set di raccolta o la visualizzazione di dati nel data warehouse di gestione.|[Gestire la raccolta dati](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Usare questi report per ottenere informazioni per il monitoraggio della capacità del sistema e la risoluzione dei problemi relativi alle prestazioni.|[Report per i set di raccolta dati di sistema](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
 |Usare il data warehouse di gestione per la raccolta di dati da un server che costituisce una destinazione di raccolta dati.|[Data warehouse di gestione](../../relational-databases/data-collection/management-data-warehouse.md)| 
-|Sfruttare le funzionalità di traccia sul lato server di SQL Server Profiler per esportare una definizione della traccia da usare per creare un set di raccolta che usa il tipo di agente di raccolta Traccia SQL generico.| [Usare SQL Server Profiler per creare un set di raccolta Traccia SQL (SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
+|Sfruttare le funzionalità di traccia sul lato server di SQL Server Profiler per esportare una definizione della traccia da usare per creare un set di raccolta che usa il tipo di agente di raccolta Traccia SQL generico.| [Usare SQL Server Profiler per creare un set di raccolta Traccia SQL (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
   
 

@@ -1,26 +1,20 @@
 ---
 title: Funzione Previous (Generatore report e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: f5ce25413eb30996ed6003f33801800a9a132fea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01b2a6dc4b0d396fe6985ab0c4cefd689171fb2a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025518"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280857"
 ---
 # <a name="report-builder-functions---previous-function"></a>Funzioni di Generatore report - Funzione Previous
   Restituisce il valore o il valore di aggregazione specificato per l'istanza precedente di un elemento all'interno dell'ambito specificato.  
@@ -65,7 +59,7 @@ Previous(expression, scope)
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  L'esempio di codice seguente, se inserito nella riga di dati predefinita di un'area dati, fornisce il valore per il campo `LineTotal` nella riga precedente.  
   
 ### <a name="code"></a>codice  
@@ -74,7 +68,7 @@ Previous(expression, scope)
 =Previous(Fields!LineTotal.Value)  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  Nell'esempio seguente è illustrata un'espressione che calcola la somma delle vendite in un giorno del mese specifico e il valore precedente relativo allo stesso giorno del mese in un anno precedente. L'espressione viene aggiunta a una riga di una cella che appartiene al gruppo figlio `GroupbyDay`. Il gruppo padre è `GroupbyMonth`, che dispone di un gruppo padre `GroupbyYear`. L'espressione visualizza i risultati per GroupbyDay (ambito predefinito), quindi per `GroupbyYear` (elemento padre del gruppo padre `GroupbyMonth`).  
   
  Ad esempio, per un'area dati con un gruppo padre denominato `Year`che ha un gruppo figlio denominato `Month`che a sua volta ha un gruppo figlio denominato `Day` (3 livelli annidati). L'espressione `=Previous(Sum(Fields!Sales.Value,"Day"),"Year")` in una riga associata al gruppo `Day` restituisce il valore delle vendite per lo stesso giorno e mese dell'anno precedente.  

@@ -1,25 +1,20 @@
 ---
 title: Informazioni di riferimento sulle funzioni di aggregazione (Generatore report e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 931cd60d3a2e1691dcb6f9d2c58976ec242d2d68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e396de825687166c9d110c375e3c77e392e1fd89
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275590"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funzioni di Generatore report - Informazioni di riferimento sulle funzioni di aggregazione
   Per includere valori aggregati nel report, è possibile utilizzare funzioni di aggregazione predefinite nelle espressioni. La funzione di aggregazione predefinita per i campi numerici è SUM. È possibile modificare l'espressione e utilizzare una funzione di aggregazione predefinita o specificare un ambito differente. L'ambito identifica il set di dati da utilizzare per il calcolo.  
@@ -179,7 +174,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="TestingforScope"></a> Verifica dell'ambito  
  La funzione predefinita seguente controlla il contesto corrente di un elemento del report per verificare se è un membro di un ambito specifico.  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Indica se l'istanza corrente di un elemento è inclusa nell'ambito specificato.|  
   
@@ -188,7 +183,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="RetrievingRecursiveLevel"></a> Recupero del livello ricorsivo  
  La funzione predefinita seguente recupera il livello corrente quando viene elaborata una gerarchia ricorsiva. Usare il risultato di questa funzione con la proprietà **Padding** in una casella di testo per controllare il livello di rientro di una gerarchia visiva per un gruppo ricorsivo. Per altre informazioni, vedere [Creazione di gruppi di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|Restituisce il livello di nidificazione corrente in una gerarchia ricorsiva.|  
   

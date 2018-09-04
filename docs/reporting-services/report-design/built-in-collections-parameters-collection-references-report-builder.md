@@ -1,26 +1,20 @@
 ---
 title: Riferimenti alla raccolta dei parametri (Generatore report e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 6f4f702b15f214c43a5d866f27eba0519932d6f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70f4c9c14b2c79a6b97370ebf71298540399a93e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021798"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280281"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Raccolte predefinite- Riferimenti alla raccolta dei parametri (Generatore report)
   I parametri di un report sono una delle raccolte predefinite a cui è possibile fare riferimento da un'espressione. Includendo parametri in un'espressione, è possibile personalizzare i dati e l'aspetto dei report in base alle opzioni scelte da un utente. È possibile usare le espressioni per qualsiasi proprietà degli elementi del report o delle caselle di testo che includa l'opzione (*Fx*) o \<**Espressione**>. Le espressioni vengono anche utilizzate per controllare il contenuto e l'aspetto dei report in altri modi. Per altre informazioni, vedere [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
@@ -35,7 +29,7 @@ ms.locfileid: "33021798"
 ##  <a name="Single"></a> Utilizzo di un parametro a valore singolo in un'espressione  
  Nella tabella seguente sono riportati esempi della sintassi da utilizzare quando si include in un'espressione un riferimento a un parametro a valore singolo di un tipo di dati qualsiasi.  
   
-|Esempio|Description|  
+|Esempio|Descrizione|  
 |-------------|-----------------|  
 |`=Parameters!` *\<NomeParametro>* `.IsMultiValue`|Restituisce **False**.<br /><br /> Verifica se un parametro è multivalore. Se è **True**, il parametro è multivalore ed è costituito da una raccolta di oggetti. Se è **False**, il parametro è a valore singolo ed è costituito da un solo oggetto.|  
 |`=Parameters!` *\<NomeParametro>* `.Count`|Restituisce il valore intero 1. Per un parametro a valore singolo, il conteggio è sempre 1.|  
@@ -49,7 +43,7 @@ ms.locfileid: "33021798"
 ##  <a name="Multi"></a> Utilizzo di un parametro multivalore in un'espressione  
  Nella tabella seguente sono riportati esempi della sintassi da utilizzare quando si include in un'espressione un riferimento a un parametro multivalore di un tipo di dati qualsiasi.  
   
-|Esempio|Description|  
+|Esempio|Descrizione|  
 |-------------|-----------------|  
 |`=Parameters!` *\<NomeParametroMultivalore>* `.IsMultiValue`|Restituisce **True** o **False**.<br /><br /> Verifica se un parametro è multivalore. Se è **True**, il parametro è multivalore ed è costituito da una raccolta di oggetti. Se è **False**, il parametro è a valore singolo ed è costituito da un solo oggetto.|  
 |`=Parameters!` *\<NomeParametroMultivalore>* `.Count`|Restituisce un valore intero.<br /><br /> Fa riferimento al numero di valori. Per un parametro a valore singolo, il conteggio è sempre 1. Per un parametro multivalore, il conteggio è 0 o maggiore di zero.|  

@@ -1,14 +1,10 @@
 ---
 title: Contatori delle prestazioni per MSRS 2011 Web Service, oggetti prestazioni | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8851d1c5deac3b759452ec23115cb70dd3cf31f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5faebaba96b5162e0c4127f6898256455e7bc561
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028168"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278502"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Contatori delle prestazioni per MSRS 2011 Web Service, oggetti prestazioni
   In questo argomento vengono descritti i contatori delle prestazioni per gli oggetti prestazioni **MSRS 2011 Web Service** e **MSRS 2011 Windows Service** . Questi oggetti fanno parte di una distribuzione in modalità nativa di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
@@ -52,7 +46,7 @@ ms.locfileid: "33028168"
   
  Nella tabella seguente sono elencati i contatori inclusi con l'oggetto prestazioni **MSRS 2011 Web Service** .  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |**Sessioni attive**|Numero di sessioni attive. Tramite questo contatore viene restituito un conteggio cumulativo di tutte le sessioni del browser generate dalle esecuzioni dei report, indipendentemente dal fatto che siano ancora attive o meno.<br /><br /> Quando i record di sessione vengono rimossi, il contatore viene diminuito. Per impostazione predefinita, le sessioni vengono rimosse dopo dieci minuti di inattività.|  
 |**Riscontri nella cache/sec**|Numero di richieste al secondo di report memorizzati nella cache. Si tratta di richieste relative a report di nuovo visualizzabili, non delle richieste relative a report elaborati direttamente dalla cache. Vedere **Totale riscontri nella cache** più avanti in questo argomento.|  
@@ -82,7 +76,7 @@ ms.locfileid: "33028168"
   
  Nella tabella seguente sono elencati i contatori inclusi nell'oggetto prestazioni **MSRS 2011 Windows Service** .  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |**Sessioni attive**|Numero di sessioni attive archiviate nel database del server di report. Questo contatore restituisce un conteggio cumulativo di tutte le sessioni utilizzabili del browser generate dalle sottoscrizioni del report, indipendentemente dal fatto che siano attive o meno.|  
 |**Scaricamenti cache/sec**|Numero di scaricamenti della cache al secondo.|  

@@ -1,30 +1,24 @@
 ---
 title: File di configurazione ReportingServicesService | Microsoft Docs
-ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [Reporting Services]
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 071650750724cf8a58c4ac6377f9e2b1f635fe12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd16e3838519e9de7e10878837d5023c1f10842d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026738"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281008"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService - file di configurazione
  ||  
@@ -80,7 +74,7 @@ Il file ReportingServicesService.exe.config contiene impostazioni di configurazi
 ## <a name="configuration-settings"></a>Impostazioni di configurazione  
  Nella tabella seguente sono incluse informazioni su impostazioni specifiche. Le impostazioni sono elencate nell'ordine in cui vengono visualizzate nel file di configurazione.  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**RStrace**|Specifica gli spazi dei nomi utilizzati per errori e traccia.|  
 |**DefaultTraceSwitch**|Specifica il livello delle informazioni da includere nel log di traccia ReportServerService. Ogni livello include anche le informazioni raccolte da tutti i livelli inferiori. Non è consigliabile disabilitare la funzionalità di traccia. I valori validi includono:<br /><br /> 0= Disabilita la funzionalità di traccia<br /><br /> 1= Eccezioni e riavvii<br /><br /> 2= Eccezioni, riavvii, avvisi<br /><br /> 3= Eccezioni, riavvii, avvisi, messaggi di stato (valore predefinito)<br /><br /> 4= Modalità dettagliata|  

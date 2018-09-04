@@ -1,29 +1,23 @@
 ---
 title: File di configurazione RSReportDesigner | Microsoft Docs
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 45a1ca0907f5572f8409503fcb7227bcc8a08a62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e73cebccd25798f067bc807d01c3c110b8084e4d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026778"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280998"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner - file di configurazione
   Nel file RSReportDesigner.config sono archiviate le impostazioni delle estensioni per il rendering e l'elaborazione dati disponibili per Progettazione report. Le informazioni sulle estensioni per l'elaborazione dati sono contenute nell'elemento **Dati** . Le informazioni sulle estensioni per il rendering sono contenute nell'elemento **Rendering** . L'elemento **Progettazione** enumera i generatori di query usati in progettazione report.  
@@ -59,7 +53,7 @@ ms.locfileid: "33026778"
   
 ## <a name="configuration-settings"></a>Impostazioni di configurazione  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**SecureConnectionLevel**|Indica il livello di sicurezza della connessione del servizio Web. I valori validi sono compresi nell'intervallo da 0 a 3, dove 0 indica il livello meno protetto. Per altre informazioni, vedere [utilizzo di metodi del servizio Web protetti](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md).|  
 |**InstanceName**|Identificatore del server in cui viene visualizzata l'anteprima. Non modificare questo valore.|  

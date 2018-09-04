@@ -1,14 +1,10 @@
 ---
 title: Log di traccia del servizio del server di report | Microsoft Docs
-ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -16,15 +12,14 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: df621b94f8fecf5587cead165b88875b8d7dd4c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29efe95c5c8712b7c4423e3412252a8d66485936
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277128"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   Il log di traccia del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è un file di testo ASCII che contiene informazioni dettagliate relative alle operazioni del servizio del server di report.  Le informazioni nel file includono le operazioni eseguite dal servizio Web ReportServer, dal portale Web e dall'elaborazione in background. Nel file di log di traccia sono contenute inoltre informazioni ridondanti, che vengono registrate in altri file di log, e informazioni aggiuntive non disponibili altrove. Le informazioni contenute nel log di traccia sono utili se si esegue il debug di un'applicazione che include un server di report o se è necessario analizzare un problema specifico scritto nel log eventi o nel log di esecuzione, ad esempio durante la risoluzione dei problemi relativi alle sottoscrizioni.  
@@ -66,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente sono incluse informazioni su ogni impostazione.  
   
-|Impostazione|Description|Valori|  
+|Impostazione|Descrizione|Valori|  
 |-------------|-----------------|------------|  
 |**RStrace**|Specifica gli spazi dei nomi utilizzati per errori e traccia.||  
 |**DefaultTraceSwitch**|Specifica il livello delle informazioni da includere nel log di traccia ReportServerService. Ogni livello include anche le informazioni raccolte da tutti i livelli inferiori. Non è consigliabile disabilitare la funzionalità di traccia.|I valori validi sono:<br /><br /> <br /><br /> 0= Disabilita la funzionalità di traccia. Il file di log ReportServerService è abilitato per impostazione predefinita. Per disattivarlo, impostare il livello di traccia su 0.<br /><br /> 1= Eccezioni e riavvii<br /><br /> 2= Eccezioni, riavvii, avvisi<br /><br /> 3= Eccezioni, riavvii, avvisi, messaggi di stato (valore predefinito)<br /><br /> 4= Modalità dettagliata|  

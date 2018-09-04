@@ -1,26 +1,20 @@
 ---
 title: Images, Text Boxes, Rectangles, and Lines (Report Builder and SSRS) (Immagini, caselle di testo, rettangoli e linee (Generatore report e SSRS)) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8b28d823977ba0c86d658274b881f4f71d83c7d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15fee158a98e3057e0e83913531f6712fa6ac201
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023438"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280024"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Immagini, caselle di testo, rettangoli e linee (Generatore report e SSRS)
   Oltre alle aree dati quali tabelle, matrici e grafici, nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] vengono usati altri elementi, ad esempio immagini, caselle di testo e rettangoli, per aumentarne l'impatto visivo, evidenziare le informazioni più importanti o fornire informazioni correlate. È possibile modificare la formattazione di un elemento del report. È possibile, ad esempio, aggiungere un bordo o un riempimento, modificare la visibilità o la direzione iniziale oppure specificare valori esatti per le dimensioni e la posizione dell'elemento.  
@@ -28,7 +22,7 @@ ms.locfileid: "33023438"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Caselle di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
  Le caselle di testo possono essere inserite in qualunque punto del report e possono contenere etichette, campi o dati calcolati. Per definire il valore da visualizzare in una casella di testo quando si apre un report, si utilizzano le espressioni.  
   

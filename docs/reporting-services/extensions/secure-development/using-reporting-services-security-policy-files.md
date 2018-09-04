@@ -1,14 +1,10 @@
 ---
 title: Using Reporting Services Security Policy Files (Uso di file di criteri di sicurezza di Reporting Services) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,16 +17,14 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e606f248ba8343ab5bddae2b0968b80d0d7e4cb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0746a087870157e0336f20c5114387e02d48de48
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016738"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278512"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Utilizzo di file di criteri di sicurezza di Reporting Services
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] le informazioni sui criteri di sicurezza dei componenti sono archiviate in tre file di configurazione che vengono copiati nel file system durante l'installazione. Questi file possono contenere una combinazione di criteri di sicurezza per uso interno e definiti dall'utente per gli assembly del codice in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. I tre file di configurazione corrispondono a tre componenti a sicurezza diretta in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ovvero il server di report e il servizio Windows, l'applicazione Web Gestione report e la finestra di anteprima Progettazione report.  
@@ -43,7 +37,7 @@ ms.locfileid: "33016738"
 ## <a name="policy-files-in-reporting-services"></a>File di criteri di Reporting Services  
  Nella tabella seguente vengono elencati i file di configurazione dei criteri di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], i percorsi (presupponendo un'installazione predefinita) e le rispettive funzioni.  
   
-|Nome file|Percorso (installazione predefinita)|Description|  
+|Nome file|Percorso (installazione predefinita)|Descrizione|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|File di configurazione dei criteri del server di report. Questi criteri di sicurezza influiscono principalmente sulle espressioni del report e sugli assembly personalizzati dopo che un report è stato distribuito in un server di report. Questo file di criteri influisce inoltre sulle estensioni per i dati personalizzati, il recapito e il rendering e sulle estensioni di sicurezza distribuite nel server di report.|  
 |rsmgrpolicy.config|C:\Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|File di configurazione dei criteri di Gestione report. Questi criteri di sicurezza influiscono su tutti gli assembly che estendono Gestione report; ad esempio estensioni dell'interfaccia utente della sottoscrizione per il recapito personalizzato.|  

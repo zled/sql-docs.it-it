@@ -1,28 +1,22 @@
 ---
 title: Attività a livello di sistema | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system-level tasks [Reporting Services]
 ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 704aba49823742f237171000f14c10a3156f26a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52a08acf0e086fbc1db92f6da5ddf0ef8f682433
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029208"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276920"
 ---
 # <a name="tasks-and-permissions---system-level-tasks"></a>Attività e autorizzazioni - attività a livello di sistema
   Un'attività a livello di sistema è una raccolta di autorizzazioni correlate alle operazioni eseguibili per l'intero sito del server di report. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include anche attività a livello di elemento applicabili a elementi specifici. Per altre informazioni, vedere [Attività a livello di elemento](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md). Per ulteriori informazioni sulle attività e le autorizzazioni in generale, vedere [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
@@ -33,7 +27,7 @@ ms.locfileid: "33029208"
 ## <a name="permissions-in-system-level-tasks"></a>Autorizzazioni nelle attività a livello di sistema  
  Nella tabella seguente vengono indicate le autorizzazioni per ogni attività a livello di sistema. L'elenco delle autorizzazioni è puramente informativo e ha lo scopo di fornire una descrizione precisa delle funzionalità disponibili tramite ogni attività.  
   
-|Attività|Autorizzazioni|  
+|Attività|Permissions|  
 |----------|-----------------|  
 |Esecuzione delle definizioni dei report|Esecuzione delle definizioni dei report (il nome dell'autorizzazione e il nome dell'attività sono identici)|  
 |Generazione di eventi|Generazione di eventi|  

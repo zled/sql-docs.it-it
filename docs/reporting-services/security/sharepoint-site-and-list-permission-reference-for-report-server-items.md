@@ -1,14 +1,10 @@
 ---
 title: Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 79bfc468d44f86fad3aca24637ab66b25700cb39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c89daa9b9ede26b005480abdcfc2dfc2a675d065
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032918"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278703"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report
   In questo argomento vengono fornite informazioni di riferimento sulle autorizzazioni disponibili in SharePoint e che possono essere utilizzate per consentire l'accesso alle operazioni di un server di report eseguito in modalità integrata SharePoint. Tali informazioni sono utili per la scelta delle autorizzazioni da utilizzare per creare livelli di autorizzazione personalizzati.  
@@ -49,7 +43,7 @@ ms.locfileid: "33032918"
 ## <a name="list-permissions"></a>Autorizzazioni relative agli elenchi  
  Le autorizzazioni impostate per la raccolta che contiene gli elementi del server di report determinano la modalità con cui gli utenti potranno accedere a tali elementi.  
   
-|Autorizzazione|Description|F|c|V|Funzionamento del server di report|  
+|Autorizzazione|Descrizione|F|c|V|Funzionamento del server di report|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Gestione elenchi|Consente di creare ed eliminare elenchi, aggiungere o rimuovere colonne in un elenco e aggiungere o rimuovere le visualizzazioni pubbliche di un elenco.|X|||Creazione di una cartella in una raccolta di SharePoint durante un'operazione di pubblicazione eseguita da uno strumento di creazione. Questa autorizzazione è necessaria anche per la gestione della cronologia dei report.|  
 |Aggiungi elementi|Consente di aggiungere elementi a un elenco, documenti a raccolte documenti e commenti a discussioni Web.|X|X||Aggiunta di report, modelli di report, origini dati condivise e risorse (file di immagine esterni) a raccolte di SharePoint. Creazione di origini dati condivise. Generazione di modelli di report da origini dati condivise. Avvio di Generatore report e creazione di un nuovo report o caricamento di un modello in Generatore report.|  
@@ -66,7 +60,7 @@ ms.locfileid: "33032918"
 ## <a name="site-permissions"></a>Autorizzazioni relative ai siti  
  Le autorizzazioni relative ai siti consentono di accedere a operazioni del server di report non direttamente correlate agli elementi archiviati in una raccolta specifica, ad esempio la creazione e la modifica di pianificazioni condivise, che possono essere utilizzate da elementi di più raccolte, e la configurazione della web part Visualizzatore report, che può essere utilizzata in varie aree di un sito.  
   
-|Autorizzazione|Description|F|c|V|Funzionamento del server di report|  
+|Autorizzazione|Descrizione|F|c|V|Funzionamento del server di report|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Gestione autorizzazioni|Consente di creare e modificare i livelli di autorizzazione nel sito Web e di assegnare autorizzazioni a utenti e gruppi.|X|||Modifica delle autorizzazioni per tutte le operazioni e gli elementi di un server di report. Impostazione della sicurezza a livello di elemento di modello.|  
 |Gestione sito web|Consente di eseguire tutte le attività di amministrazione del sito Web, nonché di gestirne il contenuto.|X|||Creazione, modifica ed eliminazione di pianificazioni condivise.|  

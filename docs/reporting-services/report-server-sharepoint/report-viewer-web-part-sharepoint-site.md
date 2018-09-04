@@ -1,24 +1,19 @@
 ---
 title: Web part Visualizzatore di report in un sito di SharePoint - SSRS | Microsoft Docs
-ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server-sharepoint
-ms.reviewer: ''
+ms.technology: report-server-sharepoint
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: c29118ab8807d8bd0d51ee593488c66c89bf2942
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0a754b1e77fd1b65b88664b96b0fed0f7dbdd250
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978903"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275233"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>Web part Visualizzatore di report in un sito di SharePoint - Reporting Services
 

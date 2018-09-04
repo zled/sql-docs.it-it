@@ -1,28 +1,22 @@
 ---
 title: Aggiungere un report nuovo o esistente a un progetto report (SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 19da4c4bbd828af5bb5100d495f6c8565d17b989
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 000cc2de16014d18c3e04f2a5e4604d706bf7725
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029678"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277321"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Aggiungere un report nuovo o esistente a un progetto report (SSRS)
   Per aggiungere un nuovo report impaginato di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , è possibile usare la Creazione guidata report o aggiungere un nuovo report vuoto al progetto. È anche possibile aggiungere un report esistente. Dopo l'aggiunta di un report, il relativo nome verrà visualizzato nella cartella **Report** nel progetto.  
