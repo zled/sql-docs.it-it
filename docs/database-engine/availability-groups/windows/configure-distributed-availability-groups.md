@@ -13,12 +13,12 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dd177d3094f50cd226ed5613ded8fc0d76e6891
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f71ca47b4927e2ea7c6e73d216c062c253387baa
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769067"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348202"
 ---
 # <a name="configure-distributed-availability-group"></a>Configurare un gruppo di disponibilità distribuito  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ GO
 ## <a name="create-first-availability-group"></a>Creare un primo gruppo di disponibilità
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>Creare il gruppo di disponibilità primario nel primo cluster  
-Creare un gruppo di disponibilità nel primo WSFC.   In questo esempio il gruppo di disponibilità è denominato `ag1` per il database `db1`.      
+Creare un gruppo di disponibilità nel primo WSFC.   In questo esempio il gruppo di disponibilità è denominato `ag1` per il database `db1`. La replica primaria del gruppo di disponibilità primario è nota come **server primario globale** in un gruppo di disponibilità distribuito. Server1 è il server primario globale in questo esempio.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -114,7 +114,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>Creare un secondo gruppo di disponibilità  
- Creare quindi un secondo gruppo di disponibilità, `ag2`, nel secondo WSFC. In questo caso il database non è specificato, perché viene eseguito il seeding automatico del database stesso dal gruppo di disponibilità primario.  
+ Creare quindi un secondo gruppo di disponibilità, `ag2`, nel secondo WSFC. In questo caso il database non è specificato, perché viene eseguito il seeding automatico del database stesso dal gruppo di disponibilità primario.  La replica primaria del gruppo di disponibilità secondario è nota come **server di inoltro** in un gruppo di disponibilità distribuito. In questo esempio server3 è il server d'inoltro. 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -217,33 +217,37 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 In questo momento è supportato solo il failover manuale. L'istruzione Transact-SQL seguente effettua il failover del gruppo di disponibilità distribuito denominato `distributedag`:  
 
 
-1. Impostare la modalità di disponibilità sul commit sincrono per entrambi i gruppi di disponibilità. 
+1. Impostare il gruppo di disponibilità distribuito per il commit sincrono eseguendo il codice seguente *sia* nel server primario globale che nel server d'inoltro.   
     
       ```sql  
-      ALTER AVAILABILITY GROUP [distributedag] 
-      MODIFY 
-      AVAILABILITY GROUP ON
-      'ag1' WITH 
-         ( 
-          LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-          FAILOVER_MODE = MANUAL, 
-          SEEDING_MODE = MANUAL 
-          ), 
-      'ag2' WITH  
+      -- sets the distributed availability group to synchronous commit 
+       ALTER AVAILABILITY GROUP [distributedag] 
+       MODIFY 
+       AVAILABILITY GROUP ON
+       'ag1' WITH 
         ( 
-        LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022', 
-        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-        FAILOVER_MODE = MANUAL, 
-        SEEDING_MODE = MANUAL 
-        );  
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        ), 
+        'ag2' WITH  
+        ( 
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        );
        
+       -- verifies the commit state of the distributed availability group
+       select ag.name, ag.is_distributed, ar.replica_server_name, ar.availability_mode_desc, ars.connected_state_desc, ars.role_desc, 
+       ars.operational_state_desc, ars.synchronization_health_desc from sys.availability_groups ag  
+       join sys.availability_replicas ar on ag.group_id=ar.group_id
+       left join sys.dm_hadr_availability_replica_states ars
+       on ars.replica_id=ar.replica_id
+       where ag.is_distributed=1
+       GO
+
       ```  
    >[!NOTE]
    >In modo analogo ai gruppi di disponibilità, lo stato di sincronizzazione tra due repliche di gruppi di disponibilità parte di un gruppo di disponibilità distribuito dipende dalla modalità di disponibilità di entrambe le repliche. Ad esempio, affinché si verifichi il commit sincrono, sia il gruppo di disponibilità primario corrente sia il gruppo di disponibilità secondario devono essere configurati con modalità di disponibilità con commit sincrono.  
 
 
-1. Attendere che lo stato del gruppo di disponibilità distribuito diventi `SYNCHRONIZED`. Eseguire la query seguente nell'istanza di SQL Server che ospita la replica primaria del gruppo di disponibilità primario. 
+1. Attendere che lo stato del gruppo di disponibilità distribuito diventi `SYNCHRONIZED`. Eseguire la query seguente nel server primario globale corrispondente alla replica primaria del gruppo di disponibilità primario. 
     
       ```sql  
       SELECT ag.name
@@ -259,7 +263,7 @@ In questo momento è supportato solo il failover manuale. L'istruzione Transact-
 
     Continuare dopo che il gruppo di disponibilità **synchronization_state_desc** diventa `SYNCHRONIZED`. Se **synchronization_state_desc** non è `SYNCHRONIZED`, eseguire il comando ogni cinque secondi fino a quando non viene modificato. Non continuare fino a **synchronization_state_desc** = `SYNCHRONIZED`. 
 
-1. Nell'istanza di SQL Server che ospita la replica primaria del gruppo di disponibilità primario, impostare il ruolo del gruppo di disponibilità distribuito su `SECONDARY`. 
+1. Nel server primario globale impostare il ruolo del gruppo di disponibilità distribuito su `SECONDARY`. 
 
     ```sql
     ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 

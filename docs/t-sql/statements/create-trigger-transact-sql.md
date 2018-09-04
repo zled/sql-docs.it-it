@@ -32,12 +32,12 @@ caps.latest.revision: 140
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ecf29c3e591bce67ef204ad8aabdb4eea84fa992
-ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
+ms.openlocfilehash: fb429009395a190380f2200dba7ccd3f6cda4c27
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038138"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240269"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -558,7 +558,7 @@ END;
 ```  
   
 ### <a name="g-viewing-the-events-that-cause-a-trigger-to-fire"></a>G. Visualizzazione degli eventi che attivano un trigger  
- Nell'esempio seguente viene eseguita una query sulle viste del catalogo `sys.triggers` e `sys.trigger_events` per determinare gli eventi del linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] che attivano il trigger `safety`. `safety` è stato creato nell'esempio precedente.  
+ Nell'esempio seguente viene eseguita una query sulle viste del catalogo `sys.triggers` e `sys.trigger_events` per determinare gli eventi del linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] che attivano il trigger `safety`. Il trigger, `safety`, viene creato nell'esempio 'D' sopra riportato.  
   
 ```sql  
 SELECT TE.*  

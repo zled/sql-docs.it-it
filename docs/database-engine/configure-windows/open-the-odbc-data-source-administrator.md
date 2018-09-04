@@ -17,12 +17,12 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd3fe488c2ae6bff1b94a11996bc67a88fd72691
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 447f57e753c243958904d6f5c6c380ed157c222e
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863986"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381219"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Apertura di Amministratore origine dati ODBC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "32863986"
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-10"></a>Per aprire Amministrazione origine dati ODBC in Windows 10   
 
-1.  Nella pagina **iniziale** digitare **Origini dati ODBC**. Verrà visualizzata come scelta l' *app desktop Origini dati ODBC* . 
+1.  Nella pagina **iniziale** digitare **Origini dati ODBC**. Verrà visualizzata come scelta l'*app desktop Origini dati ODBC*. 
 
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-7"></a>Per aprire Amministrazione origine dati ODBC in Windows 7  

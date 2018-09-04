@@ -1,7 +1,7 @@
 ---
 title: Hint per la query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -58,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 534251e03b3f2a76994a3138475dc0de35388fd4
-ms.sourcegitcommit: 046d29e700981594725af698a5e079922cf5dbe7
+ms.openlocfilehash: 450812006d18f143ec2b6083bf2bd0701ea4c252
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39331597"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240289"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ms.locfileid: "39331597"
  Impedisce alla query di usare un indice columnstore ottimizzato per la memoria non cluster. Se la query contiene l'hint per la query per evitare l'utilizzo dell'indice columnstore e un hint per l'indice per utilizzare un indice columnstore, gli hint sono in conflitto e la query restituisce un errore.  
   
  MAX_GRANT_PERCENT = *percent*  
- Dimensioni della concessione di memoria massima in PERCENT. Nella query è garantito il non superamento di questo limite. Il limite effettivo può essere inferiore se l'impostazione di Resource Governor è inferiore al limite. I valori validi sono compresi tra 0,0 e 100,0.  
+ Dimensioni della concessione di memoria massima in PERCENT. Nella query è garantito il non superamento di questo limite. Il limite effettivo può essere inferiore se l'impostazione di Resource Governor è inferiore al valore specificato da questo hint. I valori validi sono compresi tra 0,0 e 100,0.  
   
 **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -285,11 +285,17 @@ ms.locfileid: "39331597"
  Disabilita il feedback delle concessioni di memoria in modalità batch. Per altre informazioni, vedere [Feedback delle concessioni di memoria in modalità batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  Disabilita i join adattivi in modalità batch. Per altre informazioni, vedere [Join adattivi in modalità batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
+*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
+ Forza il comportamento di Query Optimizer a livello di query, come se la query fosse stata compilata con il livello di compatibilità del database *n*, dove *n* è un livello di compatibilità del database supportato. Fare riferimento a [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) per un elenco dei valori attualmente supportati per *n*. **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].   
  
-> [!TIP]
-> Per i nomi degli hint non viene fatta distinzione tra maiuscole e minuscole.
+    > [!NOTE]
+    > L'hint QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n non sostituisce l'impostazione di stima della cardinalità legacy o predefinita, se viene forzato tramite configurazione con ambito database, flag di traccia o un altro hint per la query, ad esempio QUERYTRACEON.   
+    > Questo hint influisce solo sul comportamento di Query Optimizer. Non interessa altre funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che potrebbero dipendere dal [livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), ad esempio la disponibilità di alcune funzionalità di database.   
   
   È possibile eseguire una query nell'elenco di tutti i nomi USE HINT supportati usando la DMV [sys.dm_exec_valid_use_hints ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
+
+> [!TIP]
+> Per i nomi degli hint non viene fatta distinzione tra maiuscole e minuscole.   
   
 > [!IMPORTANT] 
 > Alcuni hint USE HINT possono essere in conflitto con i flag di traccia abilitati a livello globale o sessione o con le impostazioni di configurazione con ambito database. In questo caso, l'hint del livello di query (USE HINT) ha sempre la precedenza. Se un hint USE HINT è in conflitto con un altro hint per la query o un flag di traccia abilitato a livello di query (ad esempio tramite QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un errore quando si tenta di eseguire la query. 
@@ -331,7 +337,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 -   DMV  
 -   Sottoquery denominate  
   
-Gli hint di tabella INDEX, FORCESCAN e FORCESEEK possono essere specificati come hint per la query senza hint di tabella esistenti oppure possono essere utilizzati per sostituire uno o più hint INDEX, FORCESCAN o FORCESEEK esistenti nella query. Gli hint di tabella diversi da INDEX, FORCESCAN e FORCESEEK non sono consentiti come hint per la query, a meno che la query non disponga già di una clausola WITH che specifica l'hint di tabella. In questo caso è necessario specificare inoltre un hint corrispondente come un hint per la query utilizzando TABLE HINT nella clausola OPTION per mantenere la semantica della query. Ad esempio, se la query contiene l'hint di tabella NOLOCK, la clausola OPTION nel parametro **@hints** della guida di piano deve contenere anch'essa l'hint NOLOCK. Vedere l'esempio K. Quando un hint di tabella diverso da INDEX, FORCESCAN o FORCESEEK viene specificato utilizzando TABLE HINT nella clausola OPTION senza un hint per la query corrispondente, o viceversa, viene generato l'errore 8702, che indica che la clausola OPTION può comportare la modifica della semantica della query, e la query ha esito negativo.  
+Gli hint di tabella INDEX, FORCESCAN e FORCESEEK possono essere specificati come hint per la query senza hint di tabella esistenti oppure possono essere usati per sostituire rispettivamente uno o più hint INDEX, FORCESCAN o FORCESEEK nella query. Gli hint di tabella diversi da INDEX, FORCESCAN e FORCESEEK non sono consentiti come hint per la query, a meno che la query non disponga già di una clausola WITH che specifica l'hint di tabella. In questo caso è necessario specificare inoltre un hint corrispondente come un hint per la query utilizzando TABLE HINT nella clausola OPTION per mantenere la semantica della query. Ad esempio, se la query contiene l'hint di tabella NOLOCK, la clausola OPTION nel parametro **@hints** della guida di piano deve contenere anch'essa l'hint NOLOCK. Vedere l'esempio K. Quando un hint di tabella diverso da INDEX, FORCESCAN o FORCESEEK viene specificato utilizzando TABLE HINT nella clausola OPTION senza un hint per la query corrispondente, o viceversa, viene generato l'errore 8702, che indica che la clausola OPTION può comportare la modifica della semantica della query, e la query ha esito negativo.  
   
 ## <a name="examples"></a>Esempi  
   
