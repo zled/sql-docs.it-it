@@ -2,25 +2,18 @@
 title: Proprietà server (pagina Avanzate) - Reporting Services | Microsoft Docs
 author: markingmyname
 ms.author: maghan
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
+ms.technology: tools
 ms.suite: reporting-services
 ms.topic: conceptual
-ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
-ms.custom: ''
-ms.reviewer: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.date: 08/16/2018
-ms.openlocfilehash: 2f1fe16e169fa26d0fec402a5b52306bc80e460a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c0fef28c07244e220aab90873dd80226f9a3cddd
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410332"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266269"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Proprietà server (pagina Avanzate) - Reporting Services
 
@@ -89,12 +82,12 @@ Valore di timeout  predefinito per l'elaborazione dei report, espresso in second
 Numero massimo di snapshot archiviati per un report. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**, non vi sono limiti per gli snapshot.  
 
 **EnableIntegratedSecurity**  
-Determina se la sicurezza integrata di Windows è supportata per le connessioni alle origini dati dei report. Il valore predefinito è **True**. I valori validi sono i seguenti:
+Determina se la sicurezza integrata è supportata per le connessioni all'origine dati del report. Il valore predefinito è **True**. I valori validi sono i seguenti:
 
 |Valori|Descrizione|
 |---------|---------|
-|**True**|La sicurezza integrata di Windows è attivata.|
-|**False**|La sicurezza integrata di Windows non è attivata. Le origini dati dei report configurate per l'utilizzo della sicurezza integrata di Windows non verranno eseguite.|
+|**True**|La sicurezza integrata di Windows è abilitata.|
+|**False**|La sicurezza integrata di Windows non è abilitata. Le origini dati dei report configurate per l'uso della sicurezza integrata di Windows non verranno eseguite.|
 
 **EnableLoadReportDefinition**  
 Selezionare questa opzione per specificare se gli utenti possono eseguire un report non pianificato da un report di Generatore report. Selezionando questa opzione si imposta la proprietà **EnableLoadReportDefinition** sul server di report.  
@@ -139,15 +132,15 @@ Consente di specificare il numero di secondi prima del timeout di una sessione d
 
 **OfficeOnlineDiscoveryURL** ***(solo Server di report di Power BI)*** Imposta l'indirizzo dell'istanza di Office Online Server per la visualizzazione delle cartelle di lavoro di Excel.
 
-**RequireIntune** Impostare questa opzione per richiedere che Intune acceda ai report dell'organizzazione tramite l'app Power BI per dispositivi mobili. *Il valore predefinito è False.*
+**RequireIntune** Richiede che Intune acceda ai report dell'organizzazione tramite l'app Power BI per dispositivi mobili. *Il valore predefinito è False.*
 
 **ScheduleRefreshTimeoutMinutes** ***(solo Server di report di Power BI)*** Imposta il tempo desiderato per il timeout dell'aggiornamento predefinito. *Il valore predefinito è 120.*
 
-**ShowDownloadMenu** Impostare questa opzione per abilitare il menu di download di strumenti del client. *Il valore predefinito è True.*
+**ShowDownloadMenu** Abilita il menu di download degli strumenti client. *Il valore predefinito è True.*
 
 **TimeInitialDelaySeconds** Imposta il ritardo iniziale desiderato in secondi. *Il valore predefinito è 60.*
 
-**TrustedFileFormat** Imposta tutti i formati di file esterni che possono essere salvati. *Il valore predefinito sono le estensioni jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web e png.*
+**TrustedFileFormat** Imposta tutti i formati di file esterni che vengono aperti all'interno del browser nel sito del portale di Reporting Services. Per i formati di file esterni non inclusi nell'elenco viene proposto il download dell'opzione nel browser. I valori predefiniti sono jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.
 
 **EnablePowerBIReportExportData** ***(solo Server di report di Microsoft Power BI)***  
 Abilita l'esportazione di dati del Server di report di Power BI da oggetti visivi di Power BI. I valori sono True e False.  Il valore predefinito è True.  
