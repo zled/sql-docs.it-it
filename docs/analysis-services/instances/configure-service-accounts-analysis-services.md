@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f6df764389cc81f187dbbdddce364266442e628c
-ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
+ms.openlocfilehash: eb4fc34f5f3d86900111301c133e7339b4684e0a
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130607"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348340"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurare gli account del servizio (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "39130607"
  L'unico membro del gruppo è il SID per servizio. Subito dopo c'è l'account di accesso. Il nome dell'account di accesso è generico; serve per fornire il contesto al SID per servizio. Se successivamente si modifica l'account di accesso e quindi si torna a questa pagina, si noterà che il gruppo di sicurezza e il SID per servizio non cambiano, ma l'etichetta dell'account di accesso è diversa.  
   
 ##  <a name="bkmk_winpriv"></a> Privilegi di Windows assegnati all'account del servizio Analysis Services  
- Analysis Services deve ottenere le autorizzazioni dal sistema operativo per l'avvio del servizio e per richiedere le risorse di sistema. I requisiti variano in base alla modalità del server e a seconda se l'istanza è di tipo cluster. Se non si ha familiarità con i privilegi di Windows, vedere le pagine [Privileges](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) (Privilegi) e [Privilege Constants (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb530716\(v=vs.85\).aspx) (Costanti relative ai privilegi (Windows)) per informazioni dettagliate.  
+ Analysis Services deve ottenere le autorizzazioni dal sistema operativo per l'avvio del servizio e per richiedere le risorse di sistema. I requisiti variano in base alla modalità del server e a seconda se l'istanza è di tipo cluster. Se non si ha familiarità con i privilegi di Windows, vedere le pagine [Privileges](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) (Privilegi) e [Privilege Constants (Windows)](/windows/desktop/SecAuthZ/privilege-constants) (Costanti relative ai privilegi (Windows)) per informazioni dettagliate.  
   
  Tutte le istanze di Analysis Services richiedono il privilegio **Accesso come servizio** (SeServiceLogonRight). Il programma di installazione di SQL Server assegna il privilegio per l'account del servizio specificato durante l'installazione. Per i server in esecuzione in modalità multidimensionale e di data mining, questo è l'unico privilegio di Windows richiesto dall'account del servizio di Analysis Services per le installazioni di server autonomi ed è l'unico privilegio configurato dal programma di installazione per Analysis Services. Per le istanze cluster e tabulari è necessario aggiungere manualmente ulteriori privilegi di Windows.  
   
@@ -147,8 +147,8 @@ ms.locfileid: "39130607"
  [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Account del servizio SQL Server e SID Per servizio (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server utilizza un SID del servizio per fornire isolamento dei servizi (articolo KB)](http://support.microsoft.com/kb/2620201)   
- [Token di accesso (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [ID di sicurezza (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [Token di accesso (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [ID di sicurezza (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [Token di accesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [Elenchi di controllo di accesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   
