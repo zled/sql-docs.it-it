@@ -37,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ae24a68e74b5c349c5c7a3ed732d8260064a31c
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: cfd0cb735888be8e5869ed8f13cd66a981da375d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40184693"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42780762"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Edizioni e funzionalità supportate di SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -297,12 +297,12 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
   
 |Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Integrazione di R di base|Sì|Sì|Sì|Sì|no|   
-|Integrazione di R avanzato|Sì|no|no|no|no| 
+|Integrazione di R di base <sup>1</sup>|Sì|Sì|Sì|Sì|no|   
+|Integrazione di R avanzata <sup>2</sup>|Sì|no|no|no|no| 
 |Integrazione di Python di base|Sì|Sì|Sì|Sì|no|
 |Integrazione di Python avanzata|Sì|no|no|no|no| 
 |Machine Learning Server (Standalone)|Sì|no|no|no|no|   
-|Nodo di calcolo Polybase|Sì|Sì <sup>1</sup>|Sì <sup>1</sup>|Sì <sup>1</sup>|Sì <sup>1</sup> | 
+|Nodo di calcolo Polybase|Sì|Sì <sup>3</sup>|Sì <sup>3</sup>|Sì <sup>3</sup>|Sì <sup>3</sup> | 
 |Nodo head Polybase|Sì|no|no|no|no| 
 |JSON|Sì|Sì|Sì|Sì|Sì|   
 |Archivio query|Sì|Sì|Sì|Sì|Sì|   
@@ -322,7 +322,12 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Grafico|Sì|Sì|Sì|Sì|Sì|  
 
 
-<sup>1</sup> La scalabilità orizzontale con più nodi di calcolo richiede un nodo head.
+<sup>1</sup> L'integrazione di base è limitata a 2 core e ai set di dati in memoria. 
+
+<sup>2</sup> L'integrazione avanzata può usare tutti i core disponibili per l'elaborazione parallela dei set di dati con qualsiasi dimensione, nei limiti imposti dall'hardware. 
+
+<sup>3</sup> La scalabilità orizzontale con più nodi di calcolo richiede un nodo head.
+
 
 ## <a name="IS"></a> Integration Services
 

@@ -1,7 +1,7 @@
 ---
 title: Extensible Key Management TDE di SQL Server con Azure Key Vault - Passaggi di configurazione | Microsoft Docs
 ms.custom: ''
-ms.date: 06/11/2018
+ms.date: 08/24/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 34
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: e4b0ffd4d01aaf17d00c17390e4074653225efb7
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4f8581201f9303c87a848a7456849efa7a09396a
+ms.sourcegitcommit: 0ab652fd02039a014c9661f3c5ccf4281cfb025b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702982"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925991"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Extensible Key Management TDE di SQL Server con Azure Key Vault - Passaggi di configurazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,14 +153,14 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
     In questo caso, l'entità servizio di Azure Active Directory creata nella parte 1 viene usata per autorizzare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
     > [!IMPORTANT]  
-    >  L'entità servizio di Azure Active Directory deve avere almeno le autorizzazioni `get`, `list`, `wrapKey`e `unwrapKey` per l'insieme di credenziali delle chiavi.  
+    >  L'entità servizio di Azure Active Directory deve avere almeno le autorizzazioni `get`, `wrapKey` e `unwrapKey` per l'insieme di credenziali delle chiavi.  
   
      Come illustrato di seguito, usare l' **ID client** della parte 1 per il parametro `ServicePrincipalName` . `Set-AzureRmKeyVaultAccessPolicy` viene eseguito automaticamente e non produce output se riesce.  
   
     ```powershell  
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
-      -PermissionsToKeys get, list, wrapKey, unwrapKey  
+      -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
      Chiamare il cmdlet `Get-AzureRmKeyVault` per verificare le autorizzazioni. Nella sezione "Criteri di accesso" dell'output dell'istruzione il nome dell'applicazione AAD dovrebbe essere elencato come un altro tenant che ha accesso a questo insieme di credenziali delle chiavi.  

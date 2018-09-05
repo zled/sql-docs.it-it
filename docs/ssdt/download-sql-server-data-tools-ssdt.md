@@ -17,13 +17,13 @@ caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 78eb769a8f37ca055628a89aeebe7dd444673434
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+ms.openlocfilehash: 6989aaf0ccef6a9cb7656a23ffdc28062a33839b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988223"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43084930"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Scaricare e installare SQL Server Data Tools (SSDT) per Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,8 +70,8 @@ SSDT per Visual Studio 2017 ha gli stessi [requisiti di sistema](https://docs.mi
 
 Questa versione di **SSDT per VS 2017** può essere installata nelle lingue seguenti:  
 
-[Cinese (Repubblica popolare cinese)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
-[Cinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
+[Cinese (semplificato)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
+[Cinese (tradizionale)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
 [Inglese (Stati Uniti)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x409) | 
 [Francese]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40c)  
 [Tedesco]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x407) | 
@@ -100,8 +100,8 @@ Per un elenco completo delle modifiche, vedere il [log delle modifiche](changelo
   
 Questa versione di **SSDT per VS 2015** può essere installata nelle lingue seguenti:  
 
-[Cinese (Repubblica popolare cinese)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
-[Cinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
+[Cinese (semplificato)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
+[Cinese (tradizionale)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
 [Inglese (Stati Uniti)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x409) | 
 [Francese]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40c)  
 [Tedesco]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x407) | 
@@ -119,8 +119,8 @@ Un'immagine ISO di SSDT può essere utilizzata come metodo alternativo per insta
 > [!NOTE]
 > Le immagini ISO di SSDT per VS 2015 17.4 sono ora disponibili.
 
-[Cinese (Repubblica popolare cinese)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
-[Cinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
+[Cinese (semplificato)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
+[Cinese (tradizionale)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
 [Inglese (Stati Uniti)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x409) |
 [Francese]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40c)  
 [Tedesco]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x407) |

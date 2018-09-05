@@ -1,26 +1,20 @@
 ---
 title: Operatori nelle espressioni (Generatore report e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8c2d21c06a97b78bb774911078b6e9e5e00f1859
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a098567515f7f5884c787c288ea01b09bb34c06
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027438"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266727"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operatori nelle espressioni (Generatore report e SSRS)
   Un operatore è un simbolo che rappresenta le azioni applicate a uno o più termini di un'espressione. In un'espressione sono supportate le categorie di operatori seguenti: aritmetico, di confronto, di concatenazione, logico o bit per bit e di scorrimento bit.  
@@ -31,7 +25,7 @@ ms.locfileid: "33027438"
 ### <a name="arithmetic"></a>Aritmetico  
  Gli operatori aritmetici eseguono operazioni matematiche su due termini numerici in un'espressione.  
   
-|Operatore|Description|  
+|Operatore|Descrizione|  
 |--------------|-----------------|  
 |^|Eleva un numero alla potenza di un altro numero.|  
 |*|Moltiplica due numeri.|  
@@ -44,7 +38,7 @@ ms.locfileid: "33027438"
 ### <a name="comparison"></a>Confronto  
  Gli operatori di confronto consentono di confrontare due espressioni.  
   
-|Operatore|Description|  
+|Operatore|Descrizione|  
 |--------------|-----------------|  
 |<|Minore di.|  
 |\<=|Minore o uguale a.|  
@@ -58,7 +52,7 @@ ms.locfileid: "33027438"
 ### <a name="string-concatenation"></a>Concatenazione di stringhe  
  La concatenazione di stringhe aggiunge la seconda stringa alla prima in un'espressione. Per le altre operazioni con stringhe, utilizzare le funzioni predefinite.  
   
-|Operatore|Description|  
+|Operatore|Descrizione|  
 |--------------|-----------------|  
 |&|Concatena due stringhe|  
 |+|Concatena due stringhe|  
@@ -66,7 +60,7 @@ ms.locfileid: "33027438"
 ### <a name="logical-and-bitwise"></a>Logico e bit per bit  
  Gli operatori logici e bit per bit eseguono modifiche logiche tra due termini interi in un'espressione.  
   
-|Operatore|Description|  
+|Operatore|Descrizione|  
 |--------------|-----------------|  
 |And|Esegue una congiunzione logica di due espressioni booleane oppure una congiunzione bit per bit di due espressioni numeriche.|  
 |Not|Esegue una negazione logica di un'espressione booleana oppure una negazione bit per bit di un'espressione numerica.|  
@@ -78,7 +72,7 @@ ms.locfileid: "33027438"
 ### <a name="bit-shift"></a>Scorrimento di bit  
  Gli operatori bit per bit eseguono modifiche di bit tra due termini interi in un'espressione.  
   
-|Operatore|Description|  
+|Operatore|Descrizione|  
 |--------------|-----------------|  
 |<\<|Esegue uno scorrimento a sinistra aritmetico a sinistra in un modello di bit.|  
 |>>|Esegue uno scorrimento a destra aritmetico in un modello di bit.|  

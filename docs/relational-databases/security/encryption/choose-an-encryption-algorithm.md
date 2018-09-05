@@ -1,7 +1,7 @@
 ---
 title: Scegliere un algoritmo di crittografia | Microsoft Docs
 ms.custom: ''
-ms.date: 01/08/2016
+ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,13 +18,13 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5056f8097b9fc96448f5a281a5a67d7d047389b3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e96d3dd33c71172c10f5fcd99dbc7690286586c1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549601"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096559"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Scelta di un algoritmo di crittografia
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,11 +41,13 @@ ms.locfileid: "39549601"
   
 -   Le chiavi lunghe consentono in genere una crittografia più avanzata rispetto a quelle brevi.  
   
--   La crittografia asimmetrica è meno avanzata della crittografia simmetrica che usa la stessa lunghezza di chiave, ma è relativamente lenta.  
+-   La crittografia asimmetrica è più lenta della crittografia simmetrica.  
   
 -   Le crittografie a blocchi con chiavi lunghe sono più avanzate rispetto alle crittografie a flussi.  
   
 -   Le password lunghe e complesse sono più avanzate rispetto alle password brevi.  
+
+-   La crittografia simmetrica è in genere consigliata quando la chiave viene archiviata solo in locale, la crittografia asimmetrica è consigliata quando le chiavi devono essere condivise in rete.
   
 -   Se si crittografano molti dati, è necessario crittografarli tramite una chiave simmetrica e crittografare la chiave simmetrica con una asimmetrica.  
   
