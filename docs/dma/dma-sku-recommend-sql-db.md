@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 415de36195960c1a2fa60d3e5dd68168682028e0
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 84601b6a556df64d3708fd749af06be8e753048d
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152832"
+ms.locfileid: "43240149"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identificare lo SKU del Database SQL di Azure corretto per il database in locale
 
@@ -33,6 +33,9 @@ Questo articolo è incentrato principalmente sulla funzionalità consigli di DMA
 
 > [!NOTE] 
 > Questa funzionalità è attualmente disponibile solo tramite l'interfaccia della riga di comando (CLI). Supporto per questa funzionalità tramite l'interfaccia utente DMA verrà aggiunto in una versione futura.
+
+> [!IMPORTANT]
+> Le raccomandazioni dello SKU per il Database SQL di Azure sono attualmente disponibili per le migrazioni da SQL Server 2016 o versione successiva.
 
 Le istruzioni seguenti consentono di determinare le raccomandazioni dello SKU del Database SQL di Azure ed effettuare il provisioning dei database associati in Azure usando Data Migration Assistant.
 
@@ -58,7 +61,7 @@ Non devi eseguire questa attività per ogni database singolarmente. I contatori 
     - **OutputFilePath**: il percorso del file di output per salvare i contatori raccolti.
     - **CollectionTimeInSeconds**: la quantità di tempo durante il quale si vuole raccogliere i dati dei contatori delle prestazioni.
       Acquisire i contatori delle prestazioni per almeno 40 minuti ottenere una raccomandazione significativo. Maggiore è la durata dell'acquisizione, più accurato l'indicazione sarà.
-    - **DbConnectionString**: stringa di connessione che punta al database master ospitato nel computer da cui si raccolgono i dati dei contatori delle prestazioni.
+    - **DbConnectionString**: stringa di connessione che punta al database master ospitato nel computer da cui si sta raccogliendo i dati dei contatori delle prestazioni.
      
     Di seguito è una chiamata di esempio:
 
@@ -144,7 +147,7 @@ Segue una descrizione di ogni colonna.
 - **ExclusionReasons** -questo valore è vuoto se un livello è consigliato. Per ogni livello che non è consigliato, offriamo i motivi per cui è non stata rilevata.
 - **AppliedRules** -una notazione breve delle regole che sono state applicate.
 
-Si noti che il valore consigliato è lo SKU minimo richiesto per le query da eseguire in Azure con una percentuale di successo simile ai database in locale. Ad esempio, se lo SKU minima consigliato è S4 per il livello standard, quindi scegliere S3 o di sotto verrà impedire il timeout delle query o un errore di esecuzione.
+Il valore consigliato è lo SKU minimo richiesto per le query da eseguire in Azure con una percentuale di successo simile ai database in locale. Ad esempio, se lo SKU minima consigliato è S4 per il livello standard, quindi scegliere S3 o di sotto verrà impedire il timeout delle query o un errore di esecuzione.
 
 Il file HTML contiene queste informazioni in formato grafico. È possibile utilizzare il file HTML per le informazioni di sottoscrizione di Azure di input, selezionare il piano tariffario, dimensioni massime dei dati e a livello di calcolo per i database e generare uno script per eseguire il provisioning dei database. Questo script può essere eseguito tramite PowerShell.
 

@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9d55275269ee09daf933521330b093a8d98411fd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c1d6116509a87fae2e91307f06f527910c204510
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087113"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381169"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Autenticazione di Active Directory per SQL Server in Linux
 
@@ -52,7 +52,6 @@ Nell'esercitazione, vengono forniti i dettagli per informazioni su come configur
 ## <a name="known-issues"></a>Problemi noti
 
 - A questo punto, l'unico metodo di autenticazione supportato per l'endpoint del mirroring è certificato. Metodo di autenticazione di WINDOWS verrà abilitato nelle versioni future.
-- Gli strumenti di AD di terze parti come Centrify, Powerbroker, e Vintela non sono supportati.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

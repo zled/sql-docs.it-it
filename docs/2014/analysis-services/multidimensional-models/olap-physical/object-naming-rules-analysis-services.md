@@ -17,12 +17,12 @@ caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c59c295c627c311aaec574ecd04b153004c3c926
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b28929d0d09e9cf0d05631ed3b95da30b95dc4ab
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202081"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348392"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regole di denominazione degli oggetti (Analysis Services)
   In questo argomento vengono descritte le convenzioni di denominazione degli oggetti, come pure le parole e i caratteri riservati che non possono essere utilizzati in nomi di oggetto, codice o script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -73,11 +73,11 @@ ms.locfileid: "37202081"
   
 |Object|Caratteri non validi|  
 |------------|------------------------|  
-|`Server`|Seguire le convenzioni di denominazione del server Windows quando si denomina un oggetto server. Visualizzare [convenzioni di denominazione (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) per informazioni dettagliate.|  
+|`Server`|Seguire le convenzioni di denominazione del server Windows quando si denomina un oggetto server. Visualizzare [convenzioni di denominazione (Windows)](/windows/desktop/DNS/naming-conventions) per informazioni dettagliate.|  
 |`DataSource`|: / \ * &#124; ? "[] () {} <>|  
-|`Level` o `Attribute`|, , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
-|`Dimension` o `Hierarchy`|, , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
-|Tutti gli altri oggetti|, , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
+|`Level` o `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
+|`Dimension` o `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
+|Tutti gli altri oggetti|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
   
  **Eccezioni: Quando sono consentiti i caratteri riservati**  
   

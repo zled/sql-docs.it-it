@@ -1,5 +1,5 @@
 ---
-title: Le regole di denominazione (Analysis Services) dell'oggetto | Documenti Microsoft
+title: Oggetto le regole di denominazione (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,35 +9,35 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0200c7bedb0d0dd7dd990ef8cbe9ed2114978b8d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b10662d32952565ccf7b30a6615470d2557749f3
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025628"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348642"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regole di denominazione degli oggetti (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   In questo argomento vengono descritte le convenzioni di denominazione degli oggetti, come pure le parole e i caratteri riservati che non possono essere utilizzati in nomi di oggetto, codice o script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ##  <a name="bkmk_Names"></a> Convenzioni di denominazione  
- Ogni oggetto dispone di un **nome** e **ID** proprietà che devono essere univoci all'interno dell'ambito della raccolta padre. Ad esempio, due dimensioni possono avere lo stesso nome fintanto che ciascuna risiede in un database diverso.  
+ Ogni oggetto dispone di un **Name** e **ID** proprietà che devono essere univoci all'interno dell'ambito della raccolta padre. Ad esempio, due dimensioni possono avere lo stesso nome fintanto che ciascuna risiede in un database diverso.  
   
- Sebbene sia possibile specificare manualmente il **ID** viene in genere generato automaticamente quando viene creato l'oggetto. Non modificare mai il **ID** una volta avviata la compilazione di un modello. Tutti i riferimenti agli oggetti in un modello si basano le **ID**. Pertanto, la modifica un **ID** facilmente può causare il danneggiamento del modello.  
+ Sebbene sia possibile specificare manualmente, il **ID** viene solitamente generato automaticamente quando viene creato l'oggetto. È consigliabile non modificare il **ID** una volta avviata la compilazione di un modello. Tutti i riferimenti agli oggetti in un modello di base di **ID**. Pertanto, la modifica un' **ID** può facilmente causare il danneggiamento del modello.  
   
- **DataSource** e **DataSourceView** oggetti presentano eccezioni rilevanti alle convenzioni di denominazione. **Origine dati** ID può essere impostato su un punto singolo (.), che non è univoco, come un riferimento al database corrente. Una seconda eccezione è **DataSourceView**, che aderisce alle convenzioni di denominazione definite per **DataSet** oggetti in .NET Framework, in cui il **nome** viene utilizzato come il identificatore.  
+ **DataSource** e **DataSourceView** gli oggetti sono eccezioni rilevanti delle convenzioni di denominazione. **DataSource** ID può essere impostato su un punto singolo (.), che non è univoco, come un riferimento al database corrente. Una seconda eccezione è **DataSourceView**, che è conforme alle convenzioni di denominazione definite per **set di dati** oggetti in .NET Framework, in cui il **nome** viene utilizzato come il identificatore.  
   
- Le regole seguenti si applicano a **nome** e **ID** proprietà.  
+ Le regole seguenti riguardano **Name** e **ID** proprietà.  
   
 -   Per i nomi non viene fatta distinzione tra maiuscole e minuscole. Non è possibile avere un cubo denominato "sales" e un altro denominato "Sales" nello stesso database.  
   
--   Gli spazi iniziali o finali non sono consentiti nel nome dell'oggetto, sebbene sia possibile incorporare gli spazi all'interno del nome. Gli spazi iniziali e finali vengono eliminati in modo implicito. Si applica a entrambe le **nome** e **ID** di un oggetto.  
+-   Gli spazi iniziali o finali non sono consentiti nel nome dell'oggetto, sebbene sia possibile incorporare gli spazi all'interno del nome. Gli spazi iniziali e finali vengono eliminati in modo implicito. Questo vale per entrambi i **Name** e **ID** di un oggetto.  
   
 -   Il numero massimo di caratteri consentito è 100.  
   
 -   Non esiste alcun particolare requisito per il primo carattere di un identificatore, che può pertanto essere qualsiasi carattere valido.  
   
-##  <a name="bkmk_reserved"></a> Caratteri e le parole riservate  
+##  <a name="bkmk_reserved"></a> Caratteri e parole riservate  
  Le parole riservate sono in inglese e si applicano ai nomi di oggetto, non alle didascalie. Se inavvertitamente si utilizza una parola riservata nel nome di un oggetto, viene restituito un errore di convalida. Per i modelli di data mining e multidimensionali, le parole riservate descritte di seguito non possono mai essere utilizzate in un nome di oggetto.  
   
  Per i modelli tabulari, per cui la compatibilità del database è impostata su 1103, le regole di convalida sono meno restrittive per alcuni oggetti, senza la conformità ai requisiti di caratteri estesi e alle convenzioni di denominazione di alcune applicazioni client. I database che soddisfano questi criteri sono soggetti a regole di convalida meno restrittive. In questo caso, è possibile includere in un nome di oggetto un carattere limitato e passare la convalida.  
@@ -64,15 +64,15 @@ ms.locfileid: "34025628"
   
  Nella tabella seguente sono elencati i caratteri non validi per oggetti specifici.  
   
-|Oggetto|Caratteri non validi|  
+|Object|Caratteri non validi|  
 |------------|------------------------|  
-|**Server**|Seguire le convenzioni di denominazione del server Windows quando si denomina un oggetto server. Vedere [convenzioni di denominazione (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) per informazioni dettagliate.|  
+|**Server**|Seguire le convenzioni di denominazione del server Windows quando si denomina un oggetto server. Visualizzare [convenzioni di denominazione (Windows)](/windows/desktop/DNS/naming-conventions) per informazioni dettagliate.|  
 |**DataSource**|: / \ * &#124; ? "[] () {} <>|  
-|**Livello** o **attributo**|tramite tabelle annidate. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
-|**Dimensione** o **gerarchia**|tramite tabelle annidate. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
-|Tutti gli altri oggetti|tramite tabelle annidate. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} < >|  
+|**Livello** o **attributo**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
+|**Dimensione** o **gerarchia**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
+|Tutti gli altri oggetti|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} < >|  
   
- **Eccezioni: Quando i caratteri riservati consentiti**  
+ **Eccezioni: Quando sono consentiti i caratteri riservati**  
   
  Come indicato, i database di un livello specifico di compatibilità e modalità possono avere nomi di oggetto contenenti caratteri riservati. I nomi di oggetto KPI, misura, livello, gerarchia e attributo di dimensione possono contenere caratteri riservati per i database tabulari (1103 o superiore) che consentono l'utilizzo dei caratteri estesi:  
   

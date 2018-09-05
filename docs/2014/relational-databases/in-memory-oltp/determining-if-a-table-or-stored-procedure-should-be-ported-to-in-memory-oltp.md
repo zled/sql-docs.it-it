@@ -16,12 +16,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd81f459f09b06e0be06d53658b98b929eff5d6e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3e77095ab55527bd2c541eb2bdbe207bb03656f8
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392338"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348431"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
   L'agente di raccolta delle prestazioni delle transazioni in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] consente di valutare se OLTP in memoria può ottimizzare le prestazioni dell'applicazione di database. Nel report dell'analisi delle prestazioni delle transazioni viene inoltre indicata la quantità di operazioni che è necessario eseguire per abilitare OLTP in memoria nell'applicazione. Una volta identificata la tabella basata su disco da trasferire in OLTP in memoria, è possibile usare [Ottimizzazione guidata per la memoria](memory-optimization-advisor.md)per semplificarne la migrazione. Analogamente, l' [Native Compilation Advisor](native-compilation-advisor.md) semplifica il trasferimento di una stored procedure a una stored procedure compilata in modo nativo.  
@@ -38,7 +38,7 @@ ms.locfileid: "40392338"
   
  L'agente di raccolta delle prestazioni delle transazioni e i report di analisi delle prestazioni delle transazioni sono utili per eseguire le attività seguenti:  
   
--   Analizzare il carico di lavoro per determinare se OLTP in memoria consentirà di migliorare le prestazioni. L'agente di raccolta delle prestazioni delle transazioni raccoglie e valuta le caratteristiche relative alle prestazioni del carico di lavoro. , Il report di analisi delle prestazioni delle transazioni consiglia quindi tabelle e stored procedure per cui la conversione in OLTP in memoria potrebbe risultare utile.  
+-   Analizzare il carico di lavoro per determinare se OLTP in memoria consentirà di migliorare le prestazioni. L'agente di raccolta delle prestazioni delle transazioni raccoglie e valuta le caratteristiche relative alle prestazioni del carico di lavoro. . Il report di analisi delle prestazioni delle transazioni consiglia quindi tabelle e stored procedure per cui la conversione in OLTP in memoria potrebbe risultare utile.  
   
 -   Facilitare la pianificazione e l'esecuzione della migrazione a OLTP in memoria. Il percorso di migrazione da una tabella basata su disco a una tabella ottimizzata per la memoria può richiedere tempi lunghi. L'Ottimizzazione guidata per la memoria consente di identificare le incompatibilità presenti nella tabella che devono essere rimosse prima dello spostamento della tabella in OLTP in memoria. Lo strumento di ottimizzazione per la memoria consente inoltre di comprendere l'impatto che la migrazione di una tabella a una tabella ottimizzata per la memoria avrà sull'applicazione.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "40392338"
   
  È possibile configurare un agente di raccolta dati su un SQL Server 2012 o versione successiva di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Per poter caricare dati in un database del data warehouse di gestione in un'istanza diversa da quella in cui verrà eseguita la profilatura delle transazioni, è necessario un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent configurato con le credenziali corrette per un agente di raccolta dati. Per abilitare un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, è innanzitutto necessario definire le credenziali con un account di accesso abilitato per il dominio, che deve essere membro del gruppo `mdw_admin` per il database del data warehouse di gestione. Visualizzare [procedura: creare una credenziale (SQL Server Management Studio)](http://msdn.microsoft.com/library/ms190703\(v=sql.105\).aspx) per informazioni su come creare una credenziale.  
+ Per poter caricare dati in un database del data warehouse di gestione in un'istanza diversa da quella in cui verrà eseguita la profilatura delle transazioni, è necessario un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent configurato con le credenziali corrette per un agente di raccolta dati. Per abilitare un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, è innanzitutto necessario definire le credenziali con un account di accesso abilitato per il dominio, che deve essere membro del gruppo `mdw_admin` per il database del data warehouse di gestione. Visualizzare [procedura: creare una credenziale (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) per informazioni su come creare una credenziale.  
   
  Per configurare la raccolta dati da caricare in un database del data warehouse di gestione in un'istanza diversa  
   

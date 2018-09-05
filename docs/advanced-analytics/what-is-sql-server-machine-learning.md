@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fa0197d15869197bf61021d077a57dac399b1e58
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 6f29867351f0fa19817c7f39cbcca5da96a7e862
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118349"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240189"
 ---
 # <a name="machine-learning-services-in-sql-server-2017"></a>Machine Learning Services in SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,11 +41,13 @@ SQL Server 2017 supporta R e Python. Nella tabella seguente vengono descritti i 
 | Gli script ed esempi di Python | Come con R, Python include set di dati incorporato e gli script.  |
 | Modelli con training preliminare in R e Python | I modelli con training preliminare vengono creati per casi d'uso specifici e gestiti per il team di progettazione di analisi scientifica dei dati in Microsoft. È possibile usare i modelli con training preliminare come-consiste nell'assegnare un punteggio del sentiment negativo positivo in testo o funzionalità vengono rilevati in immagini usando nuovi input di dati fornito. I modelli eseguiti in servizi di Machine Learning, ma non possono essere installati tramite il programma di installazione di SQL Server. Per altre informazioni, vedere [Install con training preliminare modelli di machine learning in SQL Server](install/sql-pretrained-models-install.md). |
 
-## <a name="using-in-database-analytics"></a>Uso di analitica nel database
+## <a name="using-sql-mls"></a>Uso di servizio per inserzioni multiple SQL
 
-Analisti e sviluppatori hanno spesso il codice in esecuzione su un'istanza di SQL Server locale. L'approccio più comune per analitica nel database consiste nell'usare [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), il passaggio di script R o Python come parametro di input.
+Analisti e sviluppatori hanno spesso il codice in esecuzione su un'istanza di SQL Server locale. Aggiunta di servizi di Machine Learning e abilitando l'esecuzione dello script esterno, si ottengono la possibilità di eseguire codice R e Python in SQL Server tramite: eseguire il wrapping dello script in stored procedure, l'archiviazione dei modelli in una tabella di SQL Server o la combinazione di funzioni R o Python e T-SQL nelle query.
 
-Le interazioni classiche client-server sono un'altra modalità. Da qualsiasi workstation client che dispone di un IDE, è possibile installare [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) o nella [librerie Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)e quindi scrivere codice che effettua il push di esecuzione (detta un *calcolo remoto contesto*) dei dati e alle operazioni a un Server SQL remoto. 
+L'approccio più comune per analitica nel database consiste nell'usare [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), il passaggio di script R o Python come parametro di input.
+
+Le interazioni classiche client-server sono un altro approccio. Da qualsiasi workstation client che dispone di un IDE, è possibile installare [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) o nella [librerie Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)e quindi scrivere codice che effettua il push di esecuzione (detta un *calcolo remoto contesto*) dei dati e alle operazioni a un Server SQL remoto. 
 
 Infine, se si usa un' [server autonomo](r/r-server-standalone.md) e l'edizione Developer, è possibile creare soluzioni in una workstation client utilizzando le stesse librerie e gli interpreti e quindi distribuire codice di produzione in SQL Server Machine Learning Servizi (In-Database). 
 

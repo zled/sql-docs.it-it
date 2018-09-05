@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 34be09f068196ce51f44c47a02e36a9149ff17bf
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118299"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240029"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (Standalone) e Machine Learning Server (Standalone) in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ SQL Server 2016 è solo R. SQL Server 2017 supporta R e Python. La tabella segue
 | Gli script ed esempi di Python | Come con R, Python include set di dati incorporato e gli script. Trovare i dati revoscalepy \Programmi\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
 | Modelli con training preliminare in R e Python | I modelli con training preliminare vengono creati per casi d'uso specifici e gestiti per il team di progettazione di analisi scientifica dei dati in Microsoft. È possibile usare i modelli con training preliminare come-consiste nell'assegnare un punteggio del sentiment negativo positivo in testo o funzionalità vengono rilevati in immagini usando nuovi input di dati fornito. I modelli con training preliminare sono supportati e utilizzabile in un server autonomo, ma non è possibile installarli tramite l'installazione di SQL Server. Per altre informazioni, vedere [Install pretrained modelli di machine learning in SQL Server](../install/sql-pretrained-models-install.md). |
 
-## <a name="use-cases"></a>Casi d'uso
+## <a name="using-a-standalone-server"></a>Uso di un server autonomo
 
 In genere, gli sviluppatori di R e Python scegliere un server autonomo per spostare oltre ai vincoli di memoria e l'elaborazione dell'open source R e Python. Librerie di R e Python in esecuzione in un server autonomo possono caricare ed elaborare grandi quantità di dati su più core e aggregare i risultati in un singolo output consolidato. Le funzioni ad alte prestazioni, sono progettate per maggiore scalabilità e utilità: recapito di analitica predittiva, modellazione statistica, visualizzazioni dei dati e avanguardia algoritmi di machine learning in un prodotto commerciale server progettato e supportato da Microsoft.
 

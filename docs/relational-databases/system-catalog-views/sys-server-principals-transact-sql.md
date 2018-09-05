@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc9531e174c95f43d93f0b041094af842c2487a4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9c8a7aeb998b9a79faa644a3d371bb5f4f98c8f5
+ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106261"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43694694"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "43106261"
 |**default_language_name**|**sysname**|Lingua predefinita per l'entità.|  
 |**credential_id**|**int**|ID di una credenziale associata all'entità. Se all'entità non è associata alcuna credenziale, credential_id è NULL.|  
 |**owning_principal_id**|**int**|Il **principal_id** del proprietario di un ruolo del server. NULL se l'entità non è un ruolo del server.|  
-|**is_fixed_role**|**bit**|Restituisce 1 se l'entità è uno dei ruoli predefiniti del server. Per altre informazioni, vedere [Ruoli a livello di server](../../relational-databases/security/authentication-access/server-level-roles.md).|  
+|**is_fixed_role**|**bit**|Restituisce 1 se l'entità è uno dei ruoli con autorizzazioni fisse predefinito del server. Per altre informazioni, vedere [Ruoli a livello di server](../../relational-databases/security/authentication-access/server-level-roles.md).|  
   
 ## <a name="permissions"></a>Permissions  
  Qualsiasi account di accesso consente di visualizzare il proprio nome dell'account di accesso, gli account di accesso di sistema e i ruoli predefiniti del server. Per visualizzare altri account di accesso, è richiesta l'autorizzazione ALTER ANY LOGIN o un'autorizzazione per l'account di accesso. Per visualizzare i ruoli del server definiti dall'utente, è richiesta l'autorizzazione ALTER ANY SERVER ROLE o l'appartenenza al ruolo.  
@@ -61,7 +61,7 @@ ms.locfileid: "43106261"
  Nella query seguente vengono elencate le autorizzazioni concesse o negate in modo esplicito alle entità del server.  
   
 > [!IMPORTANT]  
->  Le autorizzazioni dei ruoli predefiniti del server non sono incluse in sys.server_permissions. Pertanto, le entità del server potrebbero contenere ulteriori autorizzazioni non presenti in questo elenco.  
+>  Le autorizzazioni dei ruoli predefiniti del server (diverso da public) non incluse in sys. server_permissions. Pertanto, le entità del server potrebbero contenere ulteriori autorizzazioni non presenti in questo elenco.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
