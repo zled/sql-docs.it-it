@@ -39,8 +39,7 @@ ms.locfileid: "40392768"
   
 -   [Risoluzione dei problemi relativi alla memoria](monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
-##  <a name="bkmk_CreateDB">
-            </a> Creare un database di esempio con tabelle ottimizzate per la memoria  
+##  <a name="bkmk_CreateDB"></a> Creare un database di esempio con tabelle ottimizzate per la memoria  
  Se si dispone già di un database con tabelle ottimizzate per la memoria è possibile saltare questa sezione.  
   
  Con i passaggi seguenti si crea un database con tre tabelle ottimizzate per la memoria che è possibile utilizzare nelle sezioni rimanenti di questo argomento. Nell'esempio è stato eseguito il mapping del database a un pool di risorse, in modo da poter controllare la quantità di memoria utilizzata dalle tabelle ottimizzate per la memoria.  
