@@ -3,13 +3,9 @@ title: Applicazioni livello dati | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-data-tier-apps
-ms.tgt_pltfrm: ''
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - designing DACs
@@ -17,16 +13,15 @@ helpviewer_keywords:
 - data-tier application [SQL Server], designing
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9273ba91e4662c6175a1d2922b7cab3e6d739f01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d66981713b0ba67c87a33530436c8159f8a6a33a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931126"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813337"
 ---
 # <a name="data-tier-applications"></a>Applicazioni livello dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +112,7 @@ ms.locfileid: "32931126"
   
  Entrambe queste funzionalità sono supportate dagli strumenti di gestione di database SQL Server Management Studio, il Portale di Azure e l'API DACFx.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'utente deve essere membro del ruolo **dbmanager** o avere autorizzazioni **CREATE DATABASE** per creare un database, compresa la creazione di un database con la distribuzione di un pacchetto DAC. L'utente deve essere membro del ruolo **dbmanager** o avere autorizzazioni **DROP DATABASE** per eliminare un database.  
   
 ## <a name="data-tier-application-tasks"></a>Attività dell'applicazione livello dati  
