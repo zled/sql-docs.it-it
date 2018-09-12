@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0767df9d8ad010e17560b1f2b5e2e227d52a9f99
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 588e945d95aca8946e327c0fff98e78c21dae8aa
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285697"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811747"
 ---
 # <a name="open-solutions-from-source-control"></a>Aprire Soluzioni dal controllo del codice sorgente
   Per aprire soluzioni direttamente dal controllo del codice sorgente, è possibile utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Quando si esegue questa operazione, viene creata automaticamente una copia della versione più recente dei file della soluzione nel percorso specificato.  

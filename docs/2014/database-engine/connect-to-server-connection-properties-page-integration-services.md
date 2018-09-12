@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0161171ff488627c5cc70dd81fac9a991f52aebe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e7ea7d5bafa4e08aa98f9eb8ebfca3dd4811987
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297081"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809628"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>Integration Services - Connetti al server (pagina Proprietà connessione)
   Usare questa scheda per visualizzare o specificare le opzioni relative alla connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o alla registrazione di [!INCLUDE[ssIS](../includes/ssis-md.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solamente durante la connessione. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solamente durante la registrazione del [!INCLUDE[ssIS](../includes/ssis-md.md)].  

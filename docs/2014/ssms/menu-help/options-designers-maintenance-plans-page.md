@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bacbb1b5b4ef708055affe400b12ac9604dbabc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96a513d1ff221b550c53ce31442ae91a9cf5c8dd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249521"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808047"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>Opzioni (finestre di progettazione-pagina piani)
   Utilizzare la finestra di dialogo **Opzioni** per determinare il comportamento predefinito della finestra di progettazione quando si aggiungono nuove forme all'area di progettazione. Scegliere **Opzioni** dal menu **Strumenti**, espandere **Finestre di progettazione**e selezionare **Piani di manutenzione**.  

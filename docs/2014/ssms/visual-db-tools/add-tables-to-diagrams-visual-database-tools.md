@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59ede7a063cf0f804dee05654c652afc516b2d5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0f0b4db6a44a20b92f4b9d08c52724a87ff6143
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299551"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812257"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>Aggiunta di tabelle a diagrammi (Visual Database Tools)
   È possibile aggiungere una tabella al diagramma di database per modificarne la struttura o per correlarla ad altre tabelle nel diagramma, aggiungendo una tabella di database esistente o inserendone una nuova non ancora definita nel database.  

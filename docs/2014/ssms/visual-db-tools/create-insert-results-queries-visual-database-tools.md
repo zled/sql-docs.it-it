@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34e1fb7b3744cd07f58f47dd68b8055908bdeb3c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a89fd3a76997655fb7f4a01498df9e05a8d6e59
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216491"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808787"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Creazione di query di accodamento (Visual Database Tools)
   Le query di accodamento consentono di copiare righe da una tabella a un'altra oppure all'interno di una stessa tabella. Ad esempio, in una tabella `titles` è possibile utilizzare una query di accodamento per copiare le informazioni riguardanti tutti i titoli di un editore in una seconda tabella da presentare all'editore stesso. La query di accodamento è analoga alla query di creazione tabella, con la differenza che le righe vengono copiate in una tabella esistente.  

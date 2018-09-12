@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa2ee7a5a54c02618230a91b67e0d4c1db8a294e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db65dfaec0688ab7eec9a7597bcf94b2cbcfc131
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224741"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811107"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>Proprietà passaggio processo: Passaggio di processo nuova (pagina generale)
+# <a name="job-step-properties-new-job-step-general-page"></a>Proprietà passaggio processo - Nuovo passaggio di processo (pagina Generale)
   Usare questa pagina per visualizzare e modificare le proprietà di un passaggio di processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o per definirne uno nuovo.  
   
  Per passare a questa pagina, in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] espandere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, fare clic con il pulsante destro del mouse su **Processi**, scegliere **Nuovo processo**, selezionare la pagina **Passaggi** e scegliere **Nuovo**. È anche possibile passare a questa pagina facendo clic con il pulsante destro del mouse su un processo in Esplora oggetti, scegliendo **Proprietà**, selezionando la pagina **Passaggi** e scegliendo **Nuovo**, **Inserisci**o **Modifica**.  
@@ -328,7 +327,7 @@ ms.locfileid: "37224741"
  **Percorso proprietà**  
  Consente di visualizzare o modificare il percorso per la proprietà.  
   
- **Value**  
+ **Valore**  
  Consente di visualizzare o modificare il valore della proprietà.  
   
  **Rimuovi**  

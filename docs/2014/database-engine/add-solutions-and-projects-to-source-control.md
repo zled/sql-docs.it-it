@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8365cf854d78f30be02ad3e15cd5d29c49205ce6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb720843f38c9fb7718f5bd3f2453cb42448e5d9
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171442"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813357"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Aggiungere soluzioni e progetti al controllo del codice sorgente
   Quando viene aggiunta una soluzione al controllo del codice sorgente, la soluzione diviene parte di un archivio dinamico di controllo delle versioni creato e gestito dal provider del controllo del codice sorgente. Ogni volta che viene archiviata, la nuova versione della soluzione diviene parte dell'archivio ed è disponibile per altri utenti inclusi nel controllo del codice sorgente.  

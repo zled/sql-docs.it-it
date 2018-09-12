@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14aa21e4c4710e8837da05b245d5442c57c1789d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b2e5ce955af2f073009a662f8bc4d844c82f6218
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186708"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811248"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>Aggiunta di un elemento della raccolta a un set di raccolta (Transact-SQL)
   È possibile aggiungere un elemento della raccolta a un set di raccolta esistente utilizzando le stored procedure fornite con l'agente di raccolta dati.  

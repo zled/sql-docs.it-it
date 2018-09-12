@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4efcce69f6a270064e79e415c76e56ac350e607f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19aca7390b0e7b56b9fecf568bb17820777dc680
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291801"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807497"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Utilizzo di colonne in query di aggregazione (Visual Database Tools)
   Quando si creano query di aggregazione con [Progettazione query e Progettazione viste](visual-database-tools.md) , le operazioni vengono eseguite sulla base di alcuni presupposti che garantiscono la generazione di una query valida. Se, ad esempio, si crea una query di aggregazione e si contrassegna una colonna di dati per l'output, in Progettazione query e Progettazione viste la colonna viene automaticamente inserita nella clausola GROUP BY, in modo che non sia possibile visualizzare inavvertitamente il contenuto di una singola riga in un riepilogo.  

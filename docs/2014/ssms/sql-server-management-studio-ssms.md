@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
@@ -14,12 +13,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 893b4c108feb62f6cd076090bf4f0506765df819
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8ba142bcac50883ded20c7ff54d282e64a86562
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178986"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813157"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è un ambiente integrato per la gestione dell'infrastruttura di SQL Server. In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] vengono forniti gli strumenti per configurare, monitorare e amministrare le istanze di SQL Server. Vengono inoltre forniti gli strumenti per distribuire, monitorare e aggiornare i componenti livello dati, ad esempio i database e i data warehouse utilizzati dalle applicazioni, e per compilare query e script.  

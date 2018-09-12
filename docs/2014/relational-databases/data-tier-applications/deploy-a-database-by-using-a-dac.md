@@ -3,10 +3,7 @@ title: Distribuire un database tramite un'applicazione livello dati | Microsoft 
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - deploy database wizard
 - database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec4cff220e8e3e08c71eb5a43986817c3c434332
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a26f457642321144427e57bb00a343a44b16ba70
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199561"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811667"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Distribuire un database tramite un'applicazione livello dati
   Usare la procedura guidata **Distribuisci database in SQL Azure** per distribuire un database tra un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e un server [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o tra due server [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -57,7 +53,7 @@ ms.locfileid: "37199561"
 ###  <a name="Security"></a> Sicurezza  
  Per migliorare la sicurezza, gli account di accesso dell'autenticazione di SQL Server vengono archiviati in un file BACPAC dell'applicazione livello dati senza password. Quando il file BACPAC viene importato, l'account di accesso viene creato come account disabilitato con una password generata. Per abilitare gli account di accesso, è necessario accedere usando un account che dispone dell'autorizzazione ALTER ANY LOGIN e usare ALTER LOGIN per abilitare l'account di accesso e assegnare una nuova password che può essere comunicata all'utente. Questa operazione non è necessaria per gli account di accesso dell'autenticazione di Windows, in quanto le relative password non sono gestite da SQL Server.  
   
-#### <a name="permissions"></a>Autorizzazioni  
+#### <a name="permissions"></a>Permissions  
  Per la procedura guidata sono richieste autorizzazioni di esportazione dell'applicazione livello dati sul database di origine. Per l'account di accesso sono richieste almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, nonché le autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'esportazione di un'applicazione livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene esportata l'applicazione livello dati. Possono esportare un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa** .  
   
  Per la procedura guidata sono richieste autorizzazioni di importazione dell'applicazione livello dati sull'istanza o sul server di destinazione. L'account di accesso deve essere un membro del ruolo predefinito del server **sysadmin** , **serveradmin** o **dbcreator** con autorizzazioni ALTER ANY LOGIN. È anche possibile importare un'applicazione livello dati usando l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** . L'importazione di un'applicazione livello dati con gli account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo loginmanager o serveradmin. L'importazione di un'applicazione livello dati senza account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo dbmanager o serveradmin.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c23214b2ce0fccf5b96934cab3b4561d224ff677
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa43bd29d20b7ddedd7c5968f5b4341e11713541
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246171"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810557"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utilizzo dei token nei passaggi dei processi
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent consente di usare token negli script per passaggi di processi [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'utilizzo di token quando si scrivono passaggi di processo offre la stessa flessibilità assicurata dalle variabili quando si scrivono programmi software. Dopo aver inserito un token nello script di un passaggio di processo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sostituisce il token in fase di esecuzione, prima che il passaggio di processo venga eseguito dal sottosistema [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -33,7 +32,7 @@ ms.locfileid: "37246171"
 > [!IMPORTANT]  
 >  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 la sintassi del token dei passaggi del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è stata modificata. Di conseguenza, è necessario inserire una macro di escape con tutti i token utilizzati nei passaggi di processo. In caso contrario, questi passaggi avranno esito negativo. L'utilizzo delle macro di escape e l'aggiornamento dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che utilizzano token sono illustrati nelle sezioni "Informazioni sull'utilizzo dei token", "Token e macro di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent" e "Aggiornamento dei passaggi di processo per l'utilizzo di macro" riportate di seguito. È inoltre cambiata la sintassi di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] che prevedeva l'utilizzo delle parentesi quadre per chiamare i token dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ad esempio "`[DATE]`". È ora necessario racchiudere tra parentesi i nomi dei token e inserire il simbolo di dollaro (`$`) all'inizio della sintassi del token, Esempio:  
 >   
->  `$(ESCAPE_` *nome della macro* `(DATE))`  
+>  `$(ESCAPE_` *Nome della macro* `(DATE))`  
   
 ## <a name="understanding-using-tokens"></a>Informazioni sull'utilizzo dei token  
   

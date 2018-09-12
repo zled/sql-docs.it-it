@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a64e2346479c95327c3f183331cc7971481521b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f2f1d25a1344f395779d084c659fc7a4579f098c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320711"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813047"
 ---
 # <a name="manage-checkouts"></a>Gestione delle estrazioni
   Dopo aver aggiunto un file al controllo del codice sorgente, prima di poterlo modificare è necessario estrarlo. Quando un file viene estratto dal controllo del codice sorgente, il provider del controllo del codice sorgente crea una copia dell'ultima versione sul disco locale e rimuove l'attributo di sola lettura del file. In alcuni casi potrebbe essere necessario modificare un file senza estrarlo. Per altre informazioni sulla modifica di un file senza estrarlo, vedere [modifica di file](../../2014/database-engine/edit-checked-in-files.md).  

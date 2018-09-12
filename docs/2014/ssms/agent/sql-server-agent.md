@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f3a29acfe387b4b4e80d9e9a0ee232476d6074d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68015cd04ad32dd20b48b0aa6f4b83971a63fa31
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230471"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808397"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è un servizio di Microsoft Windows per l'esecuzione di attività amministrative pianificate, denominate *processi* in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -152,7 +151,7 @@ ms.locfileid: "37230471"
   
  Ogni proxy corrisponde a una credenziale di sicurezza e può essere associato a un set di sottosistemi e a un set di account di accesso. È possibile utilizzare il proxy solo per i passaggi di processo che utilizzano un sottosistema associato al proxy stesso. Per creare un passaggio di processo che utilizza un proxy specifico, il proprietario del processo deve utilizzare un account di accesso associato a tale proxy oppure essere un membro di un ruolo con accesso senza limitazioni ai proxy. I membri del `sysadmin` ruolo predefinito del server hanno accesso illimitato al proxy. I membri del ruolo **SQLAgentUserRole**, **SQLAgentReaderRole**o **SQLAgentOperatorRole** possono utilizzare solo i proxy ai quali sono specificamente autorizzati ad accedere. È necessario concedere l'accesso a proxy specifici a ogni utente membro di uno di questi ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, in modo che possa creare passaggi di processo che utilizzano tali proxy.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per automatizzare l'amministrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedere come descritto di seguito:  
   
 1.  Individuare le attività amministrative o gli eventi server che si verificano regolarmente e che possono essere gestiti a livello di programmazione. È possibile automatizzare un'attività se implica una sequenza prevedibile di passaggi e si verifica a un'ora specifica o in risposta a un evento specifico.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1e82e9c32d7b3c31b22fc22338733003ea7fba5b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 014593ae08c47b24e547a2c32b6a5cc1af12c105
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219201"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812377"
 ---
 # <a name="activity-monitor"></a>Monitoraggio attività
   Monitoraggio attività consente di visualizzare informazioni sui processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sul modo in cui questi processi influiscono sull'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -37,7 +36,7 @@ ms.locfileid: "37219201"
   
 3.  Per applicare un filtro in base a una o più colonne, fare clic sulla freccia a discesa nell'intestazione della colonna, quindi selezionare un valore.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  Per un'introduzione a Monitoraggio attività, utilizzare le attività riportate di seguito.  
   
 |||  

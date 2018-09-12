@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 825cdbb6f25afb31d49e8150c19790385bc1cf14
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 676d87266ecb64d52a97ed1ee27c01a4cffa1fb1
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312301"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812097"
 ---
 # <a name="change-source-control"></a>Modificare il controllo del codice sorgente
   Consente di creare e gestire le connessioni e le associazioni che collegano una soluzione o un progetto salvato localmente a una cartella del database del controllo del codice sorgente.  
@@ -84,7 +83,7 @@ ms.locfileid: "37312301"
 |Unknown|Lo stato dell'elemento incluso nel controllo del codice sorgente non è ancora stato determinato.|  
 |Non incluso nel controllo del codice sorgente|L'elemento non è inserito nel controllo del codice sorgente.|  
   
- **Annullamento del binding**  
+ **annullamento del binding**  
  Visualizzare il **controllo del codice sorgente** finestra di dialogo che consente di rimuovere gli elementi selezionati dal controllo del codice sorgente e disassociarli in modo permanente gli elementi dalle cartelle attuali.  
   
 ## <a name="see-also"></a>Vedere anche  
