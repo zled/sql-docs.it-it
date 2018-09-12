@@ -1,7 +1,7 @@
 ---
 title: Agente snapshot repliche | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 09/07/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1fce4a187ffb9887cf56d2ef621cb753ededc833
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 699fc162d167bf22695d6eb1d7e5b1ede5704d12
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190171"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311691"
 ---
 # <a name="replication-snapshot-agent"></a>Agente snapshot repliche
   Agente snapshot repliche è un file eseguibile che consente di preparare i file di snapshot contenenti lo schema e i dati delle tabelle pubblicate e degli oggetti di database, di archiviare i file nella cartella snapshot e di registrare i processi di sincronizzazione nel database di distribuzione.  
@@ -62,7 +62,8 @@ ms.locfileid: "37190171"
 [-MaxNetworkOptimization [0|1]]  
 [-Outputoutput_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
-[-PacketSizepacket_size]  
+[-PacketSizepacket_size]
+[-PrefetchTables [0|1] ]  
 [-ProfileNameprofile_name]  
 [-PublisherDBpublisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -112,7 +113,7 @@ ms.locfileid: "37190171"
  Account di accesso utilizzato per la connessione al server di distribuzione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **-DistributorPassword** *distributor_password*  
- Password utilizzata per la connessione al server di distribuzione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . ,  
+ Password utilizzata per la connessione al server di distribuzione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . .  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  Specifica la modalità di sicurezza del database di distribuzione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di Windows.  
@@ -194,6 +195,14 @@ ms.locfileid: "37190171"
 |**0**|Vengono stampati solo i messaggi di errore.|  
 |**1** (impostazione predefinita)|Vengono stampati tutti i messaggi di report di stato (impostazione predefinita).|  
 |**2**|Vengono stampati tutti i messaggi di errore e i messaggi di report di stato. Questa opzione è utile per l'esecuzione del debug.|  
+
+ **-PrefetchTables** [ **0**| **1**]  
+ Parametro facoltativo che specifica se gli oggetti tabella verranno eseguita la prelettura e memorizzati nella cache.  Il comportamento predefinito è eseguire la prelettura determinate proprietà di tabella usando il componente SMO basato su un calcolo interno.  Questo parametro può essere utile scenarions in cui SMO prelettura operazione accetta una notevole più per l'esecuzione. Se questo parametro non viene utilizzato, questa decisione viene presa in fase di esecuzione in base alla percentuale di tabelle che vengono aggiunti come articoli alla pubblicazione.  
+  
+|Valore di OutputVerboseLevel|Description|  
+|------------------------------|-----------------|  
+|**0**|Chiamata al metodo prelettura del componente SMO è disabilitato.|  
+|**1**|Agente snapshot chiamerà il metodo prelettura per memorizzare nella cache alcune proprietà di tabella tramite SMO|  
   
  **-PacketSize** *packet_size*  
  Dimensione del pacchetto, in byte, utilizzata dall'agente snapshot durante la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il valore predefinito è 8192 byte.  
@@ -223,7 +232,7 @@ ms.locfileid: "37190171"
  Account di accesso utilizzato per la connessione al server di pubblicazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **-PublisherPassword**  *password_server_pubblicazione*  
- Password utilizzata per la connessione al server di pubblicazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . ,  
+ Password utilizzata per la connessione al server di pubblicazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . .  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  Specifica la modalità di sicurezza del server di pubblicazione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di Windows.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e0f9984a9d19126f54ebdf9f2422563718a3790a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91b05e3b4ff33e9c426b24b4c55e86958ae88647
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325581"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889158"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>Esempio: specifica della direttiva ELEMENTXSINIL
   Quando si specifica la direttiva ELEMENT per il recupero di codice XML incentrato sugli elementi, se la colonna contiene un valore NULL, l'elemento corrispondente non viene generato nella modalità EXPLICIT. È possibile specificare facoltativamente la direttiva ELEMENTXSINIL per richiedere la creazione dell'elemento per i valori NULL. In questo caso l'attributo `xsi:nil` viene impostato sul valore TRUE.  

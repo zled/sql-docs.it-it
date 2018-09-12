@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,12 +26,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a41c723b75d2170c0e991536bda48157c9915425
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebfe172528ef3881f3c62371350c3f2c7214ab81
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228851"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889867"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   La parola chiave [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML restituisce un set di righe simile a una tabella o una vista da documenti XML in memoria. OPENXML consente di accedere ai dati XML come se si trattasse di un set di righe relazionali, visualizzando la rappresentazione interna di un documento XML come un set di righe. I record del set di righe possono essere archiviati in tabelle di database.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea0416d01b12e7b43a2a64bdab302b2db6e639f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ed094b0f98514bcc6c50baf07de75b59161d911
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151016"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888467"
 ---
 # <a name="example-querying-xmltype-columns"></a>Esempio: esecuzione di query sulle colonne di tipo XML
   La query seguente sono incluse colonne di `xml` tipo. e vengono recuperati l'ID del modello del prodotto, il nome e le fasi di produzione nel primo centro di lavorazione dalla colonna `Instructions` di tipo `xml`.  

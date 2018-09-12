@@ -1,7 +1,7 @@
 ---
 title: sys.servers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-catalog-views
@@ -25,25 +25,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e8c70890bf8571621cd82aaab7e3d2796eb3bb0e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: f192a8ba5a7ae18287c13c8c58c6a54f27d14778
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038814"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171753"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni server collegato o remoto registrato e una riga per il server locale che dispone **server_id** = 0.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
-  
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|ID locale del server collegato.|  
-|**name**|**sysname**|Quando **server_id** = 0, questo è il nome del server.<br /><br /> Quando **server_id** > 0, si tratta del nome locale del server collegato.|  
-|**product**|**sysname**|Nome del prodotto del server collegato. "SQL Server" indica che si tratta di un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**name**|**sysname**|Quando **server_id** = 0, il valore restituito è il nome del server.<br /><br /> Quando **server_id** > 0, il valore restituito è il nome locale del server collegato.|  
+|**product**|**sysname**|Nome del prodotto del server collegato. Il valore "SQL Server" indica che un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**provider**|**sysname**|Nome del provider OLE DB per la connessione al server collegato.|  
 |**data_source**|**nvarchar(4000)**|Proprietà di connessione dell'origine dei dati OLE DB.|  
 |**Posizione**|**nvarchar(4000)**|Proprietà di connessione della posizione OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
@@ -72,13 +70,12 @@ ms.locfileid: "43038814"
   
  Non sono necessarie autorizzazioni per visualizzare il server locale (**server_id** = 0).  
   
- Quando si crea un server collegato o remoto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un mapping di account di accesso predefinito per il **pubblico** ruolo del server. Di conseguenza, per impostazione predefinita tutti gli account di accesso possono visualizzare tutti i server collegati e remoti. Per limitare la visibilità per questi server, rimuovere il mapping di account di accesso predefinito eseguendo [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) e specificando NULL per il *locallogin* parametro.  
+ Quando si crea un server collegato o remoto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un mapping di account di accesso predefinito per il **pubblico** ruolo del server. Mapping di account di accesso predefinito di conseguenza, tutti gli account di accesso possono visualizzare tutti i server collegati e remoti. Per limitare la visibilità per questi server, rimuovere il mapping di account di accesso predefinito eseguendo [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) e specificando NULL per il *locallogin* parametro.  
   
- Se il mapping predefinito degli account di accesso viene eliminato, solo gli utenti aggiunti esplicitamente come account di accesso collegato o remoto possono visualizzare i server collegati o remoti per cui dispongono di un account di accesso. Per visualizzare tutti i server collegati e remoti in seguito all'eliminazione del mapping predefinito degli account di accesso, sono richieste le autorizzazioni seguenti:  
+ Se il mapping predefinito degli account di accesso viene eliminato, solo gli utenti aggiunti esplicitamente come account di accesso collegato o remoto possono visualizzare i server collegati o remoti per cui dispongono di un account di accesso.  Le autorizzazioni seguenti sono necessari per visualizzare tutti i server collegati e remoti dopo il mapping predefinito degli account di accesso:  
   
--   ALTER ANY LINKED SERVER o ALTER ANY LOGIN ON SERVER  
-  
--   Appartenenza al gruppo il **setupadmin** oppure **sysadmin** ruoli predefiniti del server  
+- `ALTER ANY LINKED SERVER` o `ALTER ANY LOGIN ON SERVER`  
+- Appartenenza al gruppo il **setupadmin** oppure **sysadmin** ruoli predefiniti del server  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

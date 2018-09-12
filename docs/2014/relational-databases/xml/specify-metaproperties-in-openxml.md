@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d57525fb8ed9ca6718f072ef20c9e2cefe8e7ba9
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 55dad5adeafa9689f8d3a0910f1b345ee575ffbe
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084033"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889927"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Impostazione di metaproprietà in OPENXML
   Gli attributi delle metaproprietà in un documento XML sono attributi che descrivono le proprietà di un elemento XML (elemento, attributo o qualsiasi altro nodo DOM). Tali attributi non sono fisicamente presenti nel testo del documento XML, tuttavia OPENXML fornisce tali metaproprietà per tutti gli elementi XML. Queste metaproprietà consentono di estrarre informazioni, ad esempio la posizione locale o le informazioni sullo spazio dei nomi, dei nodi XML, ovvero informazioni più dettagliate rispetto a quelle disponibili nella rappresentazione testuale.  
@@ -43,21 +42,21 @@ ms.locfileid: "39084033"
   
 |Attributo della metaproprietà|Description|  
 |----------------------------|-----------------|  
-|**\@MP:ID**|Restituisce un identificatore del nodo DOM generato dal sistema e valido a livello globale per il documento. Se il documento non viene nuovamente analizzato, questo ID fa riferimento allo stesso nodo XML.<br /><br /> Un ID XML **0** indica che l'elemento è un elemento radice. Il relativo ID XML padre è NULL.|  
-|**\@MP:LocalName**|Archivia la parte locale del nome del nodo. Viene utilizzato insieme a un prefisso e a un URI dello spazio dei nomi per definire i nodi di elementi o attributi.|  
-|**\@MP:NamespaceURI**|Restituisce l'URI dello spazio dei nomi dell'elemento corrente. Se il valore di questo attributo è NULL, non sono presenti spazi dei nomi.|  
-|**\@MP:prefix**|Archivia il prefisso dello spazio dei nomi del nome dell'elemento corrente.<br /><br /> Se non è presente alcun prefisso (NULL) e viene specificato un URI, indica che lo spazio dei nomi specificato è lo spazio dei nomi predefinito. Se non viene specificato alcun URI, non verranno associati spazi dei nomi.|  
-|**\@MP:prev**|Archivia l'elemento di pari livello precedente in un nodo e fornisce informazioni sull'ordinamento degli elementi nel documento.<br /><br /> **\@MP:prev** contiene l'ID XML dell'elemento di pari livello precedente con lo stesso elemento padre. Se un elemento si trova all'inizio dell'elenco di pari livello  **\@mp:prev** è NULL.|  
-|**\@MP:xmltext**|Utilizzato per attività di elaborazione. Rappresenta la serializzazione testuale dell'elemento e dei relativi attributi nonché dei sottoelementi, come vengono utilizzati nella gestione dell'overflow di OPENXML.|  
+|**\@mp:id**|Restituisce un identificatore del nodo DOM generato dal sistema e valido a livello globale per il documento. Se il documento non viene nuovamente analizzato, questo ID fa riferimento allo stesso nodo XML.<br /><br /> Un ID XML **0** indica che l'elemento è un elemento radice. Il relativo ID XML padre è NULL.|  
+|**\@mp:localname**|Archivia la parte locale del nome del nodo. Viene utilizzato insieme a un prefisso e a un URI dello spazio dei nomi per definire i nodi di elementi o attributi.|  
+|**\@mp:namespaceuri**|Restituisce l'URI dello spazio dei nomi dell'elemento corrente. Se il valore di questo attributo è NULL, non sono presenti spazi dei nomi.|  
+|**\@mp:prefix**|Archivia il prefisso dello spazio dei nomi del nome dell'elemento corrente.<br /><br /> Se non è presente alcun prefisso (NULL) e viene specificato un URI, indica che lo spazio dei nomi specificato è lo spazio dei nomi predefinito. Se non viene specificato alcun URI, non verranno associati spazi dei nomi.|  
+|**\@mp:prev**|Archivia l'elemento di pari livello precedente in un nodo e fornisce informazioni sull'ordinamento degli elementi nel documento.<br /><br /> **\@mp:prev** contiene l'ID XML dell'elemento di pari livello precedente con lo stesso elemento padre. Se un elemento si trova all'inizio dell'elenco di elementi di pari livello, **\@mp:prev** è NULL.|  
+|**\@mp:xmltext**|Utilizzato per attività di elaborazione. Rappresenta la serializzazione testuale dell'elemento e dei relativi attributi nonché dei sottoelementi, come vengono utilizzati nella gestione dell'overflow di OPENXML.|  
   
  Nella tabella seguente vengono illustrate le proprietà padre aggiuntive che consentono di recuperare le informazioni relative alla gerarchia.  
   
 |Attributo della metaproprietà padre|Description|  
 |-----------------------------------|-----------------|  
-|**\@MP:parentId**|Corrisponde a **... /\@mp:id**|  
-|**\@MP:parentlocalname**|Corrisponde a **... /\@mp:localname**|  
-|**\@MP:parentnamespacerui**|Corrisponde a **... /\@mp:namespaceuri**|  
-|**\@MP:parentprefix**|Corrisponde a **... /\@mp:prefix**|  
+|**\@mp:parentid**|Corrisponde a **../\@mp:id**|  
+|**\@mp:parentlocalname**|Corrisponde a **../\@mp:localname**|  
+|**\@mp:parentnamespacerui**|Corrisponde a **../\@mp:namespaceuri**|  
+|**\@mp:parentprefix**|Corrisponde a **../\@mp:prefix**|  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato l'utilizzo di OPENXML per visualizzare i set di righe in modi diversi.  
@@ -67,11 +66,11 @@ ms.locfileid: "39084033"
   
  Nell'istruzione OPENXML si noti quanto segue:  
   
--   Il **id** viene eseguito il mapping di colonna per il  **\@mp:id** attributo della metaproprietà per indicare che la colonna includerà l'ID generato dal sistema univoci XML dell'elemento.  
+-   La colonna **id** viene mappata all'attributo della metaproprietà **\@mp:id** a indicare che la colonna contiene l'ID XML univoco generato dal sistema dell'elemento.  
   
--   Il **padre** colonna è mappata a  **\@mp:parentid** e indica che la colonna includerà l'ID XML dell'elemento padre dell'elemento.  
+-   La colonna **parent** viene mappata a **\@mp:parentid** a indicare che la colonna contiene l'ID XML del padre dell'elemento.  
   
--   Il **parentLocalName** colonna è mappata a  **\@mp:parentlocalname** e indica che la colonna contiene il nome locale dell'elemento padre.  
+-   La colonna **parentLocalName** viene mappata a**\@mp:parentlocalname** a indicare che la colonna contiene il nome locale del padre.  
   
  L'istruzione SELECT restituisce quindi il set di righe fornito da OPENXML:  
   
@@ -164,13 +163,13 @@ EXEC sp_xml_removedocument @idoc
 ### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>C. Impostazione della metaproprietà xmltext per il recupero dei dati non utilizzati in una colonna  
  In questo esempio, l'istruzione OPENXML viene utilizzata per visualizzare il documento XML di esempio come un set di righe. L'esempio descrive inoltre come recuperare i dati XML non utilizzati tramite il mapping tra l'attributo della metaproprietà **xmltext** e una colonna del set di righe nell'istruzione OPENXML.  
   
- Il **commento** colonna viene definita come colonna di overflow tramite il mapping per il  **\@mp:xmltext** metaproprietà. Il parametro *flags* viene impostato su **9** (XML_ATTRIBUTE e XML_NOCOPY), per indicare che il mapping è **incentrato sugli attributi** e che nella colonna di overflow verranno copiati solo i dati non utilizzati.  
+ La colonna **comment** viene identificata come colonna di overflow tramite il mapping alla metaproprietà **\@mp:xmltext**. Il parametro *flags* viene impostato su **9** (XML_ATTRIBUTE e XML_NOCOPY), per indicare che il mapping è **incentrato sugli attributi** e che nella colonna di overflow verranno copiati solo i dati non utilizzati.  
   
  L'istruzione SELECT restituisce quindi il set di righe definito dall'istruzione OPENXML.  
   
- In questo esempio, il  **\@mp:parentlocalname** metaproperty è impostato per una colonna **ParentLocalName**, nel set di righe generato dall'istruzione OPENXML. Questa colonna includerà pertanto il nome locale dell'elemento padre.  
+ In questo esempio, la metaproprietà **\@mp:parentlocalname** viene impostata per la colonna **ParentLocalName** nel set di righe generato dall'istruzione OPENXML. Questa colonna includerà pertanto il nome locale dell'elemento padre.  
   
- Nel set di righe vengono definite altre due colonne, **parent** e **comment**. Il **padre** colonna è mappata a  **\@mp:parentid** e indica che la colonna includerà l'ID XML dell'elemento padre dell'elemento. La colonna comment viene definita come colonna di overflow tramite il mapping per il  **\@mp:xmltext** metaproprietà.  
+ Nel set di righe vengono definite altre due colonne, **parent** e **comment**. La colonna **parent** viene mappata a **\@mp:parentid** a indicare che la colonna contiene l'ID XML dell'elemento padre dell'elemento. La colonna comment viene definita come colonna di overflow tramite il mapping alla metaproprietà **\@mp:xmltext**.  
   
 ```  
 DECLARE @idoc int  

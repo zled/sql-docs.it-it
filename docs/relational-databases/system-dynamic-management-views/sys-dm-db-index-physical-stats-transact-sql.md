@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d42c55b62530a47332e4868c3080f3f21be9be8d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 59972833705c4d8ab7c054a1a7aac8d6ee9824f8
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085554"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375704"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ sys.dm_db_index_physical_stats (
 |compressed_page_count|**bigint**|Numero di pagine compresse.<br /><br /> Per gli heap, alle pagine appena allocate non viene applicata la compressione di tipo PAGE. A un heap viene applicata la compressione di tipo PAGE in due condizioni speciali, ovvero quando i dati vengono importati mediante un'operazione bulk o quando un heap viene ricompilato. Alle operazioni DML tipiche che determinano le allocazioni delle pagine non verrà applicata la compressione di tipo PAGE. Ricompilare un heap quando il valore compressed_page_count aumenta oltre la soglia desiderata.<br /><br /> Per tabelle in cui è presente un indice cluster, il valore compressed_page_count indica l'efficacia della compressione di tipo PAGE.|  
 |hobt_id|BIGINT|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Per solo gli indici columnstore, questo è l'ID per un set di righe che tiene traccia dei dati columnstore interno per una partizione. I set di righe vengono archiviate come dati heap o binario strutture ad albero. Hanno lo stesso ID di indice come indice columnstore padre. Per altre informazioni, vedere [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL se|  
 |column_store_delete_buffer_state|TINYINT|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = LO SVUOTAMENTO<br /><br /> 3 = LO SCARICAMENTO<br /><br /> 4 = RITIRO<br /><br /> 5 = PRONTO|  
-|column_store_delete_buff_state_desc||**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE: l'indice dell'elemento padre non è un indice columnstore.<br /><br /> Aprire – Deleter e gli scanner di usano.<br /><br /> SVUOTAMENTO – Deleter sono lo svuotamento ma scanner comunque usano.<br /><br /> Lo SCARICAMENTO: buffer viene chiuso e righe nel buffer vengono scritti nella bitmap di eliminazione.<br /><br /> RITIRO, le righe nel buffer di eliminazione chiuso sono stati scritti nella bitmap di eliminazione, ma il buffer non è stato troncato perché siano ancora usando lo scanner. Gli scanner di nuovo non necessario per l'utilizzo di buffer ritiro perché il buffer open è sufficiente.<br /><br /> PRONTO-questo buffer di eliminazione è pronto per l'uso.|  
+|column_store_delete_buff_state_desc||**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NON è valida: l'indice dell'elemento padre non è un indice columnstore.<br /><br /> Aprire – Deleter e gli scanner di usano.<br /><br /> SVUOTAMENTO – Deleter sono lo svuotamento ma scanner comunque usano.<br /><br /> Lo SCARICAMENTO: buffer viene chiuso e righe nel buffer vengono scritti nella bitmap di eliminazione.<br /><br /> RITIRO, le righe nel buffer di eliminazione chiuso sono stati scritti nella bitmap di eliminazione, ma il buffer non è stato troncato perché siano ancora usando lo scanner. Gli scanner di nuovo non necessario per l'utilizzo di buffer ritiro perché il buffer open è sufficiente.<br /><br /> PRONTO-questo buffer di eliminazione è pronto per l'uso.|  
   
 ## <a name="remarks"></a>Note  
  La funzione a gestione dinamica sys.dm_db_index_physical_stats sostituisce l'istruzione DBCC SHOWCONTIG.  

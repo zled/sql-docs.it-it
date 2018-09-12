@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8974a7a44f7f88dedd81e734af5a8b1f86530a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ed5e1d620a5a56848a57f67b92345fc535db3cf
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186488"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888497"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Utilizzo della modalità AUTO con FOR XML
   Come descritto in [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md), la modalità AUTO restituisce i risultati della query come elementi XML annidati. ma non consente di controllare in modo preciso la struttura del valore XML generato. È consigliabile utilizzare query in modalità AUTO solo se si desidera generare gerarchie semplici. Tuttavia, l' [uso della modalità EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md) e l' [uso della modalità PATH con FOR XML](use-path-mode-with-for-xml.md) assicurano maggiore controllo e flessibilità nella definizione della forma di elementi XML dal risultato di una query.  

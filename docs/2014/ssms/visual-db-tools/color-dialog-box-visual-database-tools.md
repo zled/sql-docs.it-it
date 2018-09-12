@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2b6ecc75ade6da9d489c30105ad3bc4e961bf59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7cbccdf13e88375e39dcd53c5e8461eb76064e34
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220551"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820817"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Finestra di dialogo Colore (Visual Database Tools)
   La **finestra di dialogo Colore** restituisce il valore RGB di un colore selezionato dall'utente. È possibile effettuare una selezione da un set di colori di base determinato dal driver video oppure da un set di colori personalizzati. Effettuare le selezioni da Colori di base oppure creare i colori personalizzati. Per definire i colori, fare clic nella matrice dei colori o digitare i valori nelle caselle **Tonalità**, **Sat**, **Lum**, **Rosso**, **Verde**e **Blu** .  

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -30,12 +29,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60c004e7bf1deaf2e51a11e9e558884b2ca684f5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b568b8098445a202b638151df729ac17638de09a
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084023"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889877"
 ---
 # <a name="examples-using-openxml"></a>Esempi: utilizzo di OPENXML
   Negli esempi presentati in questo argomento viene illustrato come utilizzare l'istruzione OPENXML per visualizzare un documento XML come set di righe. Per informazioni sulla sintassi di OPENXML, vedere [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Negli esempi vengono illustrati tutti gli aspetti dell'istruzione OPENXML, ma non ne vengono specificate le metaproprietà. Per altre informazioni su come specificare le metaproprietà in OPENXML, vedere [Specificare metaproprietà in OPENXML](specify-metaproperties-in-openxml.md).  
@@ -472,7 +471,7 @@ EXEC sp_xml_removedocument @docHandle
   
  Nell'istruzione OPENXML si noti quanto segue:  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail\@ProductID) termina con l'attributo XML **ProductID**. Nel set di righe risultante viene creata una riga per ogni nodo di attributo selezionato nel documento XML.  
+-   Il parametro *rowpattern* (/ROOT/Customer/Order/OrderDetail/\@ProductID) termina con l'attributo XML, **ProductID**. Nel set di righe risultante viene creata una riga per ogni nodo di attributo selezionato nel documento XML.  
   
 -   In questo esempio il parametro *flags* non è specificato e i mapping vengono definiti dal parametro *ColPattern* .  
   
@@ -480,9 +479,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   Il modello XPath (**.**) specificato come *ColPattern* per la colonna **ProdID** nel set di righe identifica il nodo di contesto, ovvero il nodo corrente. Il valore specificato per *rowpattern* è l'attributo **ProductID** dell'elemento <`OrderDetail`>.  
   
--   Il *ColPattern*, **... /\@Quantity**, specificato per il **Qty** colonna nel set di righe identifica il **Quantity** attributo dell'elemento padre, <`OrderDetail`>, nodo di contesto nodo \<ProductID >.  
+-   Il valore di *ColPattern*, **../\@Quantity**, specificato per la colonna **Qty** nel set di righe identifica l'attributo **Quantity** del nodo padre, <`OrderDetail`>, del nodo di contesto, \<ProductID>.  
   
--   Analogamente, il *ColPattern*, **... /.. /\@OrderID**, specificato per il **OID** colonna nel set di righe identifica il **OrderID** attributo dell'elemento padre, <`Order`>, del nodo padre di il nodo di contesto. Il nodo padre è <`OrderDetail`>, mentre il nodo di contesto è <`ProductID`>.  
+-   Analogamente, il valore di *ColPattern*, **../../\@OrderID**, specificato per la colonna **OID** nel set di righe identifica l'attributo **OrderID** dell'elemento padre, <`Order`>, del nodo padre del nodo di contesto. Il nodo padre è <`OrderDetail`>, mentre il nodo di contesto è <`ProductID`>.  
   
  L'istruzione SELECT recupera quindi tutte le colonne nel set di righe specificato da OPENXML.  
   
@@ -580,7 +579,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- In particolare, si passa un' **xml** variabile di tipo (\@x) per il **sp_xml_preparedocument** (funzione).  
+ In particolare, viene passata una variabile di tipo **xml**, \@x, alla funzione **sp_xml_preparedocument()**.  
   
  Risultato:  
   

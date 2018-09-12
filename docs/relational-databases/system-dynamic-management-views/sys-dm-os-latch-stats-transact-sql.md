@@ -22,11 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72dabd38cbb974ead8a231b4da9569dee9441284
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 03e3a5a0497a1d2da15124287d557f6e27bc3e7e
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375684"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/23/2018
   Restituisce informazioni relative a tutte le attese di latch organizzate per classe.  
   
 > [!NOTE]  
->  Per chiamare questo metodo dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys.dm_pdw_nodes_os_latch_stats**.  
+>  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_latch_stats**.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -42,14 +43,14 @@ ms.lasthandoff: 05/23/2018
 |waiting_requests_count|**bigint**|Numero di attese di latch nella classe specifica. Questo contatore viene incrementato all'inizio di un'attesa di latch.|  
 |wait_time_ms|**bigint**|Tempo totale di attesa dei latch, espresso in millisecondi, nella classe specifica.<br /><br /> **Nota:** questa colonna viene aggiornata ogni cinque minuti durante un'attesa di latch e alla fine di un'attesa di latch.|  
 |max_wait_time_ms|**bigint**|Tempo massimo che un oggetto memoria ha atteso il latch specifico. Un valore insolitamente elevato può indicare un deadlock interno.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È possibile utilizzare la vista sys.dm_os_latch_stats per identificare l'origine della contesa di latch mediante l'analisi dei numeri di attesa relativi e dei tempi di attesa per le varie classi di latch. In alcune situazioni è possibile risolvere o ridurre la contesa di latch. Si possono tuttavia presentare situazioni in cui è necessario contattare il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
  È possibile ripristinare il contenuto di sys.dm_os_latch_stats utilizzando `DBCC SQLPERF` come illustrato di seguito:  
@@ -104,7 +105,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|Utilizzato per sincronizzare le operazioni di backup differenziale con DBCC.|  
 |BACKUP_OPERATION|Utilizzato per la sincronizzazione delle strutture interne di dati all'interno di un'operazione di backup, ad esempio il backup di database, log o file.|  
 |BACKUP_FILE_HANDLE|Utilizzato per sincronizzare le operazioni di apertura di file durante un'operazione di ripristino.|  
-|BUFFER|Utilizzato per sincronizzare l'accesso a breve termine alle pagine di database. È richiesto un latch del buffer prima di leggere o modificare qualsiasi pagina di database. Una contesa di latch del buffer può indicare numerosi problemi, inclusi I/O lenti e pagine utilizzate con maggiore frequenza.<br /><br /> Questa classe di latch copre tutti i possibili utilizzi dei latch di pagina. Sys.dm os_wait_stats distingue le attese di latch di pagina da quelle provocate da operazioni dei / o lettura e scrittura nella pagina.|  
+|BUFFER|Utilizzato per sincronizzare l'accesso a breve termine alle pagine di database. È richiesto un latch del buffer prima di leggere o modificare qualsiasi pagina di database. Una contesa di latch del buffer può indicare numerosi problemi, inclusi I/O lenti e pagine utilizzate con maggiore frequenza.<br /><br /> Questa classe di latch copre tutti i possibili utilizzi dei latch di pagina. DM os_wait_stats distingue le attese dei latch di pagina da quelle provocate da operazioni dei / o di lettura e scrittura nella pagina provocate.|  
 |BUFFER_POOL_GROW|Utilizzato per la sincronizzazione della gestione dei buffer interni durante le operazioni di aumento delle dimensioni del pool di buffer.|  
 |DATABASE_CHECKPOINT|Utilizzato per serializzare i checkpoint all'interno di un database.|  
 |CLR_PROCEDURE_HASHTABLE|Solo per uso interno.|  
@@ -125,7 +126,7 @@ GO
 |FCB|Utilizzato per sincronizzare l'accesso al blocco di controllo file.|  
 |FCB_REPLICA|Solo per uso interno.|  
 |FGCB_ALLOC|Utilizzato per sincronizzare l'accesso alle informazioni sull'allocazione round robin all'interno di un filegroup.|  
-|FGCB_ADD_REMOVE|Utilizzato per sincronizzare l'accesso a filegroup per operazioni ADD e DROP su file.|  
+|FGCB_ADD_REMOVE|Utilizzare per sincronizzare l'accesso a filegroup per add, drop, aumento delle dimensioni e compattazione operazioni sui file.|  
 |FILEGROUP_MANAGER|Solo per uso interno.|  
 |FILE_MANAGER|Solo per uso interno.|  
 |FILESTREAM_FCB|Solo per uso interno.|  
@@ -168,7 +169,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|Solo per uso interno.|  
 |SERVICE_BROKER_HOST_NAME|Solo per uso interno.|  
 |SERVICE_BROKER_READ_CACHE|Solo per uso interno.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Utilizzato per sincronizzare una mappa del livello di istanza di code waiter. Una coda esiste per ogni tupla ID versione del Database e ID della coda di database. Contesa di latch di questa classe può verificarsi quando un numero di connessioni è: In un WAITFOR(RECEIVE) attesa stato; la chiamata WAITFOR(RECEIVE); superato il timeout WAITFOR; ricezione di un messaggio. eseguire il commit o il rollback della transazione che contiene il WAITFOR(RECEIVE); È possibile ridurre la contesa, riducendo il numero di thread in stato di attesa WAITFOR(RECEIVE). |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Utilizzato per sincronizzare una mappa a livello di istanza di code di oggetti waiter. Per ogni tupla ID versione del Database e ID della coda di database esiste una sola coda. La contesa di latch di questa classe può verificarsi quando un numero di connessioni è: In un WAITFOR(RECEIVE) attesa dello stato; la chiamata a WAITFOR(RECEIVE); superamento del timeout WAITFOR; ricezione di un messaggio. eseguire il commit o rollback della transazione contenente il WAITFOR(RECEIVE); È possibile ridurre la contesa, riducendo il numero di thread in uno stato di attesa WAITFOR(RECEIVE). |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Solo per uso interno.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Solo per uso interno.|  
 |SERVICE_BROKER_TRANSPORT|Solo per uso interno.|  

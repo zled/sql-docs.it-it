@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ac7345e2e4f71db13801e2813ea77aa88f5cdc69
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: ee810c998f8aecf17c3496540c65471e0b29e102
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084674"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343086"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Esercitazione: Funzioni RevoScaleR usano R con dati di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7b977d079589dbb4c54d5c31fec644d9f984dd61
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 384c8c94bdef65e41af999848c9bac63fc0c8d40
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40434851"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888367"
 ---
 # <a name="python-libraries-and-data-types"></a>Librerie e tipi di dati Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,16 +29,14 @@ Un sottoinsieme delle funzionalità RevoScaleR (rxLinMod, rxLogit, rxPredict, rx
 
 Per altre informazioni, vedere [What ' s revoscalepy?](what-is-revoscalepy.md).
 
+Python supporta un numero limitato di tipi di dati rispetto a SQL Server. Di conseguenza, ogni volta che si utilizzano dati da SQL Server negli script di Python, i dati potrebbero essere implicitamente convertiti in un tipo di dati compatibile. Tuttavia, spesso una conversione esatta non può essere eseguita automaticamente e viene restituito un errore.
+
 ## <a name="python-and-sql-data-types"></a>Tipi di dati SQL e Python
-
-Python supporta un numero limitato di tipi di dati rispetto a SQL Server.
-
-Di conseguenza, ogni volta che si utilizzano i dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] negli script di Python, i dati potrebbero essere convertiti in modo implicito in un tipo di dati compatibile. Tuttavia, spesso una conversione esatta non può essere eseguita automaticamente e viene restituito un errore.
 
 Questa tabella elenca le conversioni implicite che vengono fornite. Non sono supportati altri tipi di dati.
 
 |SQLtype|Tipo di Python|
-|-|-|
+|-------|-----------|
 |**bigint**|`numeric`|
 |**binary**|`raw`|
 |**bit**|`bool`|

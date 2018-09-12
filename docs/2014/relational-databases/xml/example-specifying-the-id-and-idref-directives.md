@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b6ea8ca74c7ca587b0ecbc6ef4ee3c3f1decc16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 34cabf718a824ea26c25fa54e5bb7c9206af9720
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319761"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888737"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Esempio: specifica delle direttive ID, IDREF
   Questo esempio è pressoché lo stesso di [Specificare la direttiva ELEMENTXSINIL](example-specifying-the-elementxsinil-directive.md) . L'unica differenza è che la query specifica le direttive **ID** e **IDREF** . Queste direttive sovrascrivono i tipi dell'attributo **SalesPersonID** negli elementi <`OrderHeader`> e <`OrderDetail`>. creano collegamenti tra più documenti. Per visualizzare i tipi sovrascritti è necessario lo schema. La query specifica pertanto l'opzione **XMLDATA** nella clausola FOR XML per ottenere il recupero dello schema.  

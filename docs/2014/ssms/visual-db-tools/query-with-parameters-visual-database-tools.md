@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1822c3af10346c72ead4e68d1f51ebe599e8d059
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8969363ad3b30fb430f5cbe04e7b0f644582cc9b
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226451"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820957"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Esecuzione di query mediante parametri (Visual Database Tools)
   In molti casi può essere utile creare una query da riutilizzare più volte nelle applicazioni inserendo di volta in volta dati diversi. In questa sezione vengono fornite informazioni sulla creazione di query con parametri per un uso generale.  

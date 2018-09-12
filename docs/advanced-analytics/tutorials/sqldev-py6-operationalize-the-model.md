@@ -1,5 +1,5 @@
 ---
-title: Passaggio 6 di rendere operativo il modello di Python usando SQL Server | Documenti Microsoft
+title: Passaggio 6 di rendere operativo il modello di Python con SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,28 +7,28 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: aedd6beeb720c24a6960950abc6a29c1bf89a5fa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1af856e020228850a9311c5c4fa823d58908b57e
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203473"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888957"
 ---
-# <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Passaggio 6: Rendere operativo il modello di Python utilizzando SQL Server
+# <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Passaggio 6: Rendere operativo il modello di Python con SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo articolo fa parte di un'esercitazione, [analitica Python nel database per gli sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md). 
+Questo articolo fa parte di un'esercitazione [analitica di Python nel database per sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md). 
 
-In questo passaggio descritto come *rendere operative le* i modelli che è stato eseguito il training e salvato nel passaggio precedente.
+In questo passaggio viene illustrato come *rendere operativo* i modelli che è stato eseguito il training e salvato nel passaggio precedente.
 
-In questo scenario, si intende rendere operativo distribuzione del modello nell'ambiente di produzione per il punteggio. L'integrazione con SQL Server è piuttosto semplice, poiché è possibile incorporare codice Python in una stored procedure. Per ottenere stime dal modello in base a nuovi input, chiamare la stored procedure da un'applicazione e passare i nuovi dati.
+In questo scenario, messa in funzione significa sulla distribuzione del modello nell'ambiente di produzione per l'assegnazione dei punteggi. L'integrazione con SQL Server rende questa piuttosto semplice, poiché è possibile incorporare codice Python in una stored procedure. Per ottenere le stime dal modello basato su nuovi input, è sufficiente chiamare la stored procedure da un'applicazione e passare i nuovi dati.
 
-In questa lezione illustra due metodi per la creazione di stime basate su un modello di Python: batch classificazione e assegnazione dei punteggi di riga per riga.
+In questa lezione illustra due metodi per la creazione di stime basate su un modello Python: assegnazione dei punteggi e di una riga di punteggio batch.
 
-- **Operazione di punteggio batch:** per fornire più righe di dati di input, passare una query di selezione come argomento alla stored procedure. Il risultato è una tabella di osservazioni corrispondente al case di input.
-- **Assegnazione dei punteggi singoli:** passare un set di valori di parametri singoli come input.  La stored procedure restituisce una singola riga o un singolo valore.
+- **Assegnazione dei punteggi batch:** per fornire più righe di dati di input, passare una query di selezione come argomento alla stored procedure. Il risultato è una tabella di osservazioni corrispondenti ai case di input.
+- **Assegnazione dei punteggi singoli:** passare un set di valori dei singoli parametri come input.  La stored procedure restituisce una singola riga o un singolo valore.
 
-Tutto il codice Python necessario per il punteggio viene fornito come parte delle stored procedure.
+Tutto il codice di Python necessario per il punteggio viene fornito come parte delle stored procedure.
 
 | Nome della stored procedure | Batch o singolo | Origine del modello|
 |----|----|----|
@@ -39,22 +39,22 @@ Tutto il codice Python necessario per il punteggio viene fornito come parte dell
 
 ## <a name="batch-scoring"></a>Punteggio batch
 
-Le prime due stored procedure illustrano la sintassi di base per il wrapping di una chiamata di stima Python in una stored procedure. Entrambe le stored procedure è necessaria una tabella di dati come input.
+Le prime due stored procedure illustrano la sintassi di base per il wrapping di una chiamata di stima di Python in una stored procedure. Entrambe le stored procedure è necessaria una tabella di dati come input.
 
-- Il nome del modello esatto da utilizzare viene fornito come parametro di input per la stored procedure. La stored procedure carica il modello serializzato dalla tabella di database `nyc_taxi_models`.table, utilizzando l'istruzione SELECT nella stored procedure.
-- Il modello serializzato è archiviato nella variabile Python `mod` per un'ulteriore elaborazione usando Python.
-- Vengono ottenuti i nuovi case che devono essere calcolato il punteggio di [!INCLUDE[tsql](../../includes/tsql-md.md)] query specificata in `@input_data_1`. Man mano che vengono letti i dati della query, le righe vengono salvate nel frame di dati predefinito `InputDataSet`.
-- Sia stored procedure usare funzioni `sklearn` per calcolare una metrica di accuratezza, AUC (area nella curva). Metriche di accuratezza, ad esempio AUC possono essere generate solo se si specifica anche l'etichetta di destinazione (il _inclinato_ colonna). Le stime non richiedono l'etichetta di destinazione (variabile `y`), ma non il calcolo di metriche di accuratezza.
+- Il nome del modello esatto da usare viene fornito come parametro di input per la stored procedure. La stored procedure consente di caricare il modello serializzato dalla tabella di database `nyc_taxi_models`.table, tramite l'istruzione SELECT nella stored procedure.
+- Il modello serializzato è archiviato nella variabile Python `mod` per un'ulteriore elaborazione con Python.
+- I nuovi casi devono essere calcolato il punteggio vengono ottenuti con la [!INCLUDE[tsql](../../includes/tsql-md.md)] query specificata nel `@input_data_1`. Man mano che vengono letti i dati della query, le righe vengono salvate nel frame di dati predefinito `InputDataSet`.
+- Sia stored procedure usano le funzioni da `sklearn` per calcolare una metrica di accuratezza, AUC (area sotto curva). Se si specifica anche l'etichetta di destinazione può essere generata solo la metrica di accuratezza, ad esempio area sottesa alla curva (il _tipped_ colonna). Le stime non sono necessario l'etichetta di destinazione (variabile `y`), ma non il calcolo delle metriche di accuratezza.
 
-    Pertanto, se non si dispone di etichette di destinazione per i dati da classificare, è possibile modificare la stored procedure per i calcoli AUC rimuovere e restituire solo le probabilità di suggerimento dalle funzionalità (variabile `X` nella stored procedure).
+    Pertanto, se non si dispone di etichette di destinazione per i dati a cui assegnare un punteggio, è possibile modificare la stored procedure per rimuovere i calcoli area sottesa alla curva e restituire solo le probabilità di suggerimento dalle funzionalità (variabile `X` nella stored procedure).
 
 ### <a name="predicttipscikitpy"></a>PredictTipSciKitPy
 
-La stored procedure deve avere stato già creata per l'utente. Se si riesce a trovare, eseguire le istruzioni T-SQL seguenti per creare le stored procedure.
+La stored procedure deve già creata per l'utente. Se si riesce a trovare, eseguire le istruzioni T-SQL seguenti per creare le stored procedure.
 
-Questa stored procedure richiede un modello basato sul scikit-informazioni su pacchetto, poiché utilizza le funzioni specifiche per tale pacchetto:
+Questa stored procedure richiede un modello di base di scikit-informazioni su pacchetto, perché Usa le funzioni specifiche per tale pacchetto:
 
-+ Il frame di dati contenente l'input viene passato per il `predict_proba` funzione del modello di regressione logistica `mod`. Il `predict_proba` funzione (`probArray = mod.predict_proba(X)`) restituisce un **float** che rappresenta la probabilità che verrà assegnato un suggerimento (qualsiasi valore).
++ Il frame di dati che contiene gli input viene passato per il `predict_proba` funzioni del modello di regressione logistica `mod`. Il `predict_proba` funzione (`probArray = mod.predict_proba(X)`) restituisce una **float** che rappresenta la probabilità che verrà concessa una Mancia (di qualsiasi importo).
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTipSciKitPy] (@model varchar(50), @inquery nvarchar(max))
@@ -96,10 +96,10 @@ GO
 
 ### <a name="predicttiprxpy"></a>PredictTipRxPy
 
-Questa stored procedure utilizza gli stessi input e crea lo stesso tipo di punteggi la stored procedure precedente, ma utilizzate funzioni di **revoscalepy** pacchetto fornito con machine learning di SQL Server.
+Questa stored procedure Usa gli stessi input e crea lo stesso tipo dei punteggi come stored procedure precedente, ma usa le funzioni dal **revoscalepy** pacchetto fornito con SQL Server machine Learning Services.
 
 > [!NOTE] 
-> Il codice per questa stored procedure è stato modificato leggermente tra prime versioni rilasciate e la versione RTM, in modo da riflettere le modifiche al pacchetto revoscalepy. Vedere il [modifiche](#changes) tabella per informazioni dettagliate.
+> Il codice per questa stored procedure è cambiata leggermente tra prime versioni rilasciate e la versione RTM, in modo da riflettere le modifiche al pacchetto revoscalepy. Vedere le [modifiche](#changes) tabella per informazioni dettagliate.
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTipRxPy] (@model varchar(50), @inquery nvarchar(max))
@@ -137,16 +137,16 @@ END
 GO
 ```
 
-## <a name="run-batch-scoring-using-a-select-query"></a>Esecuzione dell'assegnazione punteggio batch utilizzando una query di selezione
+## <a name="run-batch-scoring-using-a-select-query"></a>Eseguire l'assegnazione del punteggio batch utilizzando una query SELECT
 
-Le stored procedure **PredictTipSciKitPy** e **PredictTipRxPy** richiedono due parametri di input: 
+Le stored procedure **PredictTipSciKitPy** e **PredictTipRxPy** richiede due parametri di input: 
 
 - La query che recupera i dati per l'assegnazione dei punteggi
 - Il nome di un modello con training
 
 Passando gli argomenti per la stored procedure, è possibile selezionare un particolare modello o modificare i dati utilizzati per l'assegnazione dei punteggi.
 
-1. Utilizzare il **scikit-informazioni su** del modello per il punteggio, chiamare la stored procedure **PredictTipSciKitPy**, passando il nome del modello e stringa di query come input.
+1. Usare la **scikit-informazioni** del modello per l'assegnazione dei punteggi, chiamare la stored procedure **PredictTipSciKitPy**, passando il nome del modello e stringa di query come input.
 
     ```SQL
     DECLARE @query_string nvarchar(max) -- Specify input query
@@ -157,37 +157,37 @@ Passando gli argomenti per la stored procedure, è possibile selezionare un part
     EXEC [dbo].[PredictTipSciKitPy] 'SciKit_model', @query_string;
     ```
 
-    La stored procedure restituisce la probabilità stimate per ogni versione di andata e ritorno passato come parte della query di input. 
+    La stored procedure restituisce la probabilità stimate per ciascuna corsa che è stato passato come parte della query di input. 
     
-    Se si utilizza SQL Server Management Studio (SQL Server Management Studio) per l'esecuzione di query, le probabilità verranno visualizzati come una tabella di **risultati** riquadro. Il **messaggi** riquadro restituisce la metrica di accuratezza (AUC o area nella curva) con un valore pari a circa 0,56.
+    Se si usa SSMS (SQL Server Management Studio) per l'esecuzione di query, le probabilità vengono visualizzati come una tabella nel **risultati** riquadro. Il **messaggi** riquadro restituisce le metriche di accuratezza (area sottesa alla curva o, area under curve) con un valore di circa 0,56.
 
-2. Utilizzare il **revoscalepy** del modello per il punteggio, chiamare la stored procedure **PredictTipRxPy**, passando il nome del modello e stringa di query come input.
+2. Usare la **revoscalepy** del modello per l'assegnazione dei punteggi, chiamare la stored procedure **PredictTipRxPy**, passando il nome del modello e stringa di query come input.
 
     ```SQL
     EXEC [dbo].[PredictTipRxPy] 'revoscalepy_model', @query_string;
     ```
 
-## <a name="single-row-scoring"></a>Assegnazione dei punteggi a riga singola
+## <a name="single-row-scoring"></a>Singola riga e di assegnazione dei punteggi
 
-In alcuni casi, invece di punteggio batch, si potrebbe decidere di passare in un singolo case, il recupero di valori da un'applicazione e la restituzione di un singolo risultato in base a tali valori. Ad esempio, è possibile impostare un foglio di lavoro Excel, l'applicazione web o report per chiamare la stored procedure e passare a tale input digitati o selezionati dagli utenti.
+In alcuni casi, invece di assegnazione punteggio batch, si potrebbe decidere di passare in un singolo case, il recupero di valori da un'applicazione e la restituzione di un singolo risultato basato su tali valori. Ad esempio, è possibile impostare un foglio di lavoro Excel, l'applicazione web o report per chiamare la stored procedure e passare a esso gli input digitati o selezionati dagli utenti.
 
-In questa sezione si apprenderà come creare stime singole chiamando due stored procedure:
+In questa sezione si apprenderà come creare le stime singole chiamando due stored procedure:
 
-+ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy) è progettato per il punteggio di singola riga mediante il scikit-informazioni su modello.
-+ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy) è progettato per il punteggio di singola riga utilizzando il modello revoscalepy.
-+ Se non hai training ancora un modello, tornare alla [passaggio 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
++ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy) è destinato a riga singola assegnazione del punteggio utilizzando il scikit-informazioni su modello.
++ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy) è destinato a riga singola assegnazione del punteggio utilizzando il modello revoscalepy.
++ Se ancora stato eseguito il training di un modello ancora, tornare alla [passaggio 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
 
-Entrambi i modelli di accettano come input una serie di valori singoli, ad esempio il numero di passeggeri, la distanza di andata e ritorno e così via. Una funzione con valori di tabella, `fnEngineerFeatures`, viene utilizzato per convertire i valori di latitudine e longitudine dagli input a una nuova funzionalità, indirizzare distanza. [Lezione 4](sqldev-py4-create-data-features-using-t-sql.md) contiene una descrizione di questa funzione con valori di tabella.
+Entrambe accettano modelli come input una serie di valori singoli, ad esempio il numero di passeggeri, distanza della corsa e così via. Una funzione con valori di tabella, `fnEngineerFeatures`, viene usato per convertire i valori di latitudine e longitudine dagli input a una nuova funzionalità, distanza diretta. [Lezione 4](sqldev-py4-create-data-features-using-t-sql.md) contiene una descrizione di questa funzione con valori di tabella.
 
 Entrambe le stored procedure creano un punteggio in base al modello di Python.
 
 > [!NOTE]
 > 
-> È importante specificare tutte le funzionalità di input richieste dal modello Python quando si chiama la stored procedure da un'applicazione esterna. Per evitare errori, potrebbe essere necessario eseguire il cast o convertire i dati di input in un tipo di dati di Python, oltre alla convalida tipo di dati e lunghezza dei dati.
+> È importante fornire tutte le funzionalità di input richieste dal modello Python quando si chiama la stored procedure da un'applicazione esterna. Per evitare errori, è necessario eseguire il cast o convertire i dati di input in un tipo di dati di Python, oltre alla convalida tipo di dati e lunghezza dei dati.
 
 ### <a name="predicttipsinglemodescikitpy"></a>PredictTipSingleModeSciKitPy
 
-È opportuno esaminare il codice della stored procedure che esegue l'assegnazione dei punteggi usando il **scikit-informazioni** modello.
+È opportuno esaminare il codice della stored procedure che esegue l'assegnazione del punteggio utilizzando il **scikit-informazioni su** modello.
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTipSingleModeSciKitPy] (@model varchar(50), @passenger_count int = 0,
@@ -251,7 +251,7 @@ GO
 
 ### <a name="predicttipsinglemoderxpy"></a>PredictTipSingleModeRxPy
 
-La stored procedure seguente esegue l'assegnazione dei punteggi usando il **revoscalepy** modello.
+La stored procedure seguente esegue l'assegnazione del punteggio utilizzando il **revoscalepy** modello.
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTipSingleModeRxPy] (@model varchar(50), @passenger_count int = 0,
@@ -319,7 +319,7 @@ GO
 
 ### <a name="generate-scores-from-models"></a>Generare punteggi da modelli
 
-Dopo aver create le stored procedure, è facile generare un punteggio in base a entrambi i modelli. La semplice apertura di un nuovo **Query** finestra e digitare o incollare i parametri per ognuna delle colonne di funzionalità. I sette necessari sono i valori per queste colonne di funzionalità, nell'ordine:
+Dopo aver create le stored procedure, è facile generare un punteggio in base a dei modelli. Aprire una nuova **Query** finestra e digitare o incollare i parametri per ognuna delle colonne di funzionalità. I sette necessari sono i valori per queste colonne di funzionalità, nell'ordine:
     
 + *passenger_count*
 + *trip_distance* v*trip_time_in_secs*
@@ -328,41 +328,41 @@ Dopo aver create le stored procedure, è facile generare un punteggio in base a 
 + *dropoff_latitude*
 + *dropoff_longitude*
 
-1. Per generare una stima utilizzando il **revoscalepy** modello, eseguita l'istruzione seguente:
+1. Per generare una stima utilizzando la **revoscalepy** modello, eseguita l'istruzione seguente:
   
     ```SQL
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-2. Per generare un punteggio usando il **scikit-informazioni** modello, eseguita l'istruzione seguente:
+2. Per generare un punteggio tramite il **scikit-informazioni su** modello, eseguita l'istruzione seguente:
 
     ```SQL
     EXEC [dbo].[PredictTipSingleModeSciKitPy] 'linear_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-L'output di entrambe le procedure è la probabilità di un suggerimento viene pagato il viaggio taxi con i parametri specificati o le funzionalità.
+L'output di entrambe le procedure è la probabilità di un suggerimento in corso a pagamento per una corsa in taxi con i parametri specificati o funzionalità.
 
 ### <a name="changes"></a> Modifiche
 
-In questa sezione elenca le modifiche al codice utilizzati in questa esercitazione. Queste modifiche sono state apportate in modo da riflettere la versione più recente **revoscalepy** versione. Per informazioni sull'API, vedere [Python funzione riferimenti alla libreria](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference).
+In questa sezione elenca le modifiche al codice usato in questa esercitazione. Queste modifiche sono state apportate in modo da riflettere la versione più recente **revoscalepy** versione. Per informazioni sull'API, vedere [riferimento alle libreria di funzioni Python](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference).
 
-| Modificare i dettagli | Note|
+| Dettagli delle modifiche | Note|
 | ----|----|
-| eliminare `import pandas` in tutti i campioni| pandas caricati per impostazione predefinita|
-| funzione `rx_predict_ex` modificata in `rx_predict`| Le versioni RTM e definitive richiedono `rx_predict_ex`|
-| funzione `rx_logit_ex` modificata in `rx_logit`| Le versioni RTM e definitive richiedono `rx_logit_ex`|
+| eliminato `import pandas` in tutti gli esempi| pandas ora caricato per impostazione predefinita|
+| funzione `rx_predict_ex` modificata in `rx_predict`| Le versioni RTM e versioni non definitive richiedono `rx_predict_ex`|
+| funzione `rx_logit_ex` modificata in `rx_logit`| Le versioni RTM e versioni non definitive richiedono `rx_logit_ex`|
 | ` probList.append(probArray._results["tipped_Pred"])` modificato in `prob_list = prob_array["tipped_Pred"].values`| aggiornamenti all'API|
 
-Se è installato Servizi di Python utilizzando una versione provvisoria di SQL Server 2017, si consiglia di eseguire l'aggiornamento. È inoltre possibile aggiornare solo i componenti di Python e R usando la versione più recente del Server di Machine Learning. Per ulteriori informazioni, vedere [utilizzando l'associazione per aggiornare un'istanza di SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Se è installato Servizi Python usando una versione provvisoria di SQL Server 2017, è consigliabile eseguire l'aggiornamento. È inoltre possibile aggiornare solo i componenti Python e R usando la versione più recente di Machine Learning Server. Per altre informazioni, vedere [utilizzando l'associazione per aggiornare un'istanza di SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ## <a name="conclusions"></a>Conclusioni
 
-In questa esercitazione appreso come utilizzare il codice Python incorporato nelle stored procedure. L'integrazione con [!INCLUDE[tsql](../../includes/tsql-md.md)] rende molto più semplice per distribuire modelli di Python per la stima e incorporare la ripetizione di training del modello come parte di un flusso di lavoro di dati dell'organizzazione.
+In questa esercitazione si è appreso come usare il codice Python incorporato nelle stored procedure. L'integrazione con [!INCLUDE[tsql](../../includes/tsql-md.md)] rende molto più semplice per distribuire i modelli di Python per la stima e incorporare ripetizione del training del modello come parte di un flusso di lavoro dei dati aziendali.
 
 ## <a name="previous-step"></a>Passaggio precedente
 
-[Passaggio 5: Eseguire il training e salvare un modello di Python](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Passaggio 5: Training e salvataggio di un modello Python](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Servizi di Machine Learning con Python](../python/sql-server-python-services.md)
+[Estensione di Python in SQL Server](../concepts/extension-python.md)

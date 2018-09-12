@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea8fee364cd69580b8b7d0b6438349dbf2b1298c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084183"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375674"
 ---
 # <a name="lesson-1-create-a-database-and-permissions"></a>Lezione 1: Creare un database e autorizzazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,7 +103,7 @@ In questa sezione sono elencati alcuni problemi comuni che possono verificarsi d
   
     Quando lo schema è associato un nome utente specifico, l'utente è il _proprietario dello schema_. Ogni volta che si crea un oggetto, l'oggetto sarà sempre creato in base al proprio schema, a meno che non si chieda specificatamente di crearlo in un altro schema.
   
-    Ad esempio, se si crea una tabella con il nome `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `.db_datareader < database_name >. TestData'.
+    Ad esempio, se si crea una tabella con il nome **TestData**, e lo schema predefinito è **db_datareader**, la tabella viene creata con il nome `<database_name>.db_datareader.TestData`.
   
     Per questo motivo, un database può contenere più tabelle con lo stesso nome, purché le tabelle appartengano a schemi diversi.
    

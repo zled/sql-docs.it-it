@@ -1,29 +1,30 @@
 ---
 title: Installare SQL Server Machine Learning Services (In-Database) in Windows | Microsoft Docs
+description: R in SQL Server o Python in SQL Server è disponibile quando si installa Servizi Machine Learning di SQL Server 2017 in Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 09/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b5b37ef8d9fd3fba6b9e87839f32112724db9abe
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 285745a36552a0029ae0df383fc629b94632d524
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118579"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311651"
 ---
 # <a name="install-sql-server-machine-learning-services"></a>Installare SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-A partire da SQL Server 2017, viene fornito supporto per R e Python per analitica nel database in SQL Server Machine Learning Services, il successore di funzionalità R Services introdotte in SQL Server 2016. Librerie di funzioni sono disponibili in R e Python ed eseguire come script esterni in un'istanza del motore di database. 
+A partire da SQL Server 2017, R e Python supportano per analitica nel database viene fornito in SQL Server Machine Learning Services, il successore [SQL Server R Services](../r/sql-server-r-services.md) introdotta in SQL Server 2016. Librerie di funzioni sono disponibili in R e Python ed eseguire come script esterni in un'istanza del motore di database. 
 
 Questo articolo illustra come installare il componente di machine learning tramite l'esecuzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione guidata e segue il le istruzioni visualizzate.
 
 ## <a name="bkmk_prereqs"> </a> Elenco di controllo pre-installazione
 
-+ Il programma di installazione di SQL Server 2017 è necessario se si desidera installare servizi di Machine Learning con supporto del linguaggio per R, Python o entrambi. Se invece si dispone di supporto di installazione di SQL Server 2016, è possibile installare [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) per ottenere supporto del linguaggio R.
++ Il programma di installazione di SQL Server 2017 è necessaria per servizi di Machine Learning con R e Python. Se invece si dispone di supporto di installazione di SQL Server 2016, vedere [installare SQL Server 2016 R Services](sql-r-services-windows-install.md) per ottenere supporto del linguaggio R.
 
 + È necessaria un'istanza di motore di database. È possibile installare solo le funzionalità R o Python, anche se è possibile aggiungerli in modo incrementale a un'istanza esistente.
 
@@ -146,7 +147,7 @@ Utilizzare la procedura seguente per verificare che tutti i componenti usati per
 
     Il valore di **run_value** dovrebbe ora essere impostato su 1.
     
-2. Aprire il **Services** pannello o Gestione configurazione SQL Server e verificare **Launchpad di SQL Server service** è in esecuzione. È necessario un servizio per ogni istanza di motore di database con R o Python installato. Per altre informazioni, vedere [componenti per supportare l'integrazione di Python](../python/new-components-in-sql-server-to-support-python-integration.md). 
+2. Aprire il **Services** pannello o Gestione configurazione SQL Server e verificare **Launchpad di SQL Server service** è in esecuzione. È necessario un servizio per ogni istanza di motore di database con R o Python installato. Per altre informazioni sul servizio, vedere [framework di estendibilità](../concepts/extensibility-framework.md). 
    
 3. Se Launchpad è in esecuzione, è necessario essere in grado di eseguire semplici script R e Python per verificare che il runtime di scripting esterno possa comunicare con SQL Server.
 
