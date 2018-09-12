@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c70c039fd32643dc69c12e76109f5a7fc900379
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6ff97973a1e3d34d3e6601b9bb14f9edc4c4abd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217851"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816327"
 ---
 # <a name="source-control-basics"></a>Nozioni fondamentali sul controllo del codice sorgente
   Il controllo del codice sorgente è un sistema nel quale un componente centrale di un prodotto server archivia e tiene traccia delle versioni dei file, controllando inoltre l'accesso ai file. Un tipico sistema di controllo del codice sorgente include un provider di controllo del codice sorgente e due o più client di controllo del codice sorgente.  
@@ -51,7 +50,7 @@ ms.locfileid: "37217851"
 > [!NOTE]  
 >  In questa documentazione si presuppone l'utilizzo di [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe come provider del controllo del codice sorgente. Se si utilizza un provider diverso, potrebbero esservi delle differenze tra questa documentazione e il software in uso. In questo caso, consultare la documentazione del provider del controllo del codice sorgente utilizzato.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |||  
 |-|-|  

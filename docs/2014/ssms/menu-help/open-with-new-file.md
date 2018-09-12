@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b254e3d03945f3a7c3641c036a54df18ba13f7bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89d4d09713717d74a5116b7295523be3f24e7cfa
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272097"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815217"
 ---
 # <a name="open-with-new-file"></a>Apri con (Nuovo file)
   È possibile aprire un documento in uno o più editor scegliendo **Apri** dal menu **File** e quindi facendo clic su **File**. Nella finestra di dialogo **Apri file** selezionare il file, fare clic sulla freccia accanto al pulsante **Apri** e quindi fare clic su **Apri con**. Nella finestra di dialogo **Apri con** selezionare il programma preferito nell'elenco **Selezionare un programma dall'elenco** e quindi fare clic su **Apri**.  

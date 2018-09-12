@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18288e60d5fd3fe276ac900eb6c7d11aa54caf8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1692a2f0e913486875c44f284a01f18020f0148
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301371"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819897"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personalizzazione della quantità di informazioni visualizzate nei diagrammi (Visual Database Tools)
   Quando si aggiunge una tabella a un diagramma di database, la tabella viene visualizzata con un determinato numero di proprietà. È infatti possibile scegliere da un menu di possibili alternative la quantità di informazioni da visualizzare oppure creare un set di proprietà personalizzato.  

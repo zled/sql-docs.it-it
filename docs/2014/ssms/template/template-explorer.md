@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8702521d385b6036825190ed5652bf395997160
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ffcff965e3a8ab7896f7bd0dcce8faa1bbc9774
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241807"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817507"
 ---
 # <a name="template-explorer"></a>Esplora modelli
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre un'ampia gamma di modelli. I modelli sono file preimpostati contenenti script SQL che agevolano la creazione degli oggetti di database. Alla prima apertura di Esplora modelli, una copia dei modelli viene inserita nella cartella dell'utente in C:\Users in AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates.  
@@ -44,7 +43,7 @@ ms.locfileid: "37241807"
   
  L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta anche frammenti di codice che possono essere inseriti in percorsi specifici in uno script facendo clic con il pulsante destro del mouse sul percorso.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  Utilizzare i seguenti argomenti per ottenere un'introduzione ai modelli.  
   
 |**Description**|**Argomento**|  

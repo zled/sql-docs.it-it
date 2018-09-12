@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 204b3a4419ffe486907e8a60bcf7fd229c78192e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc741ae71ffec313b44ead1c2f634631fb99405a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277257"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818907"
 ---
 # <a name="open-projects-from-source-control"></a>Apertura di progetti dal controllo del codice sorgente
   È possibile utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per aprire i progetti direttamente dal controllo del codice sorgente. Quando si esegue questa operazione, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] recupera la versione più recente del progetto e lo copia sul disco locale. Nell'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] viene inoltre creata automaticamente una soluzione per il progetto.  

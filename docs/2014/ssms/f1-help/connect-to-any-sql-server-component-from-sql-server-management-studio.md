@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,23 +18,23 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b2e90c7befa7e65deb307a272a42fff203af04bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6632cdb0f0179d2a32d991e6abb77b5a7dbb72d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255293"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815947"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>Connessione ai componenti di SQL Server da SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre funzionalità per la gestione di qualsiasi componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilizzare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per collegarsi a:  
   
 -   Istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)](Indici per tabelle con ottimizzazione per la memoria).  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (Indici per tabelle con ottimizzazione per la memoria).  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](Indici per tabelle con ottimizzazione per la memoria).  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (Indici per tabelle con ottimizzazione per la memoria).  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)](Indici per tabelle con ottimizzazione per la memoria).  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (Indici per tabelle con ottimizzazione per la memoria).  
   
  Sebbene [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] consenta di lavorare con le query senza prima stabilire una connessione a un'origine dei dati, la maggior parte delle altre attività richiede una connessione. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] offre la finestra di dialogo **Connetti al server** per configurare le proprietà di connessione ai componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . All'avvio di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , si apre la finestra di dialogo **Connetti al server** in cui viene chiesto di connettersi a un server. La finestra di dialogo **Connetti al server** visualizza le ultime impostazioni di connessione usate.  
   

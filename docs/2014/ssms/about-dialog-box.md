@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7dbf08b5fdb44c2dc8b843c09b52e3e986093c02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2476fc9b16380da551f4e9752a74c8de22d1fb10
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315191"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818177"
 ---
 # <a name="about-dialog-box"></a>Finestra di dialogo Informazioni su
   La finestra di dialogo **Informazioni su** visualizza informazioni sul prodotto e consente di visualizzare informazioni sul computer in cui il prodotto è in esecuzione. Per le copie di valutazione, in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è riportato il numero di giorni che rimangono fino alla scadenza dell'installazione. Questa finestra di dialogo è accessibile dal menu **?** .  
