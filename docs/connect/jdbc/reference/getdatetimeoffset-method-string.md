@@ -1,5 +1,5 @@
 ---
-title: Metodo getDateTimeOffset (String) | Documenti Microsoft
+title: Metodo getDateTimeOffset (String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b49a2459b17a471f3326f0d8a63553467438bcd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a42c4b7be5e693ef81a24cdf3c44dba8033f70de
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834416"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784952"
 ---
 # <a name="getdatetimeoffset-method-string"></a>Metodo getDateTimeOffset (String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Questo metodo è stato aggiunto in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Driver JDBC 3.0.  
+  Questo metodo è stato aggiunto in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] JDBC Driver 3.0 per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Recupera il valore del parametro designato come un [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) oggetto in base all'indice del parametro di linguaggio di programmazione Java.  
+ Recupera il valore del parametro designato come oggetto [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) nel linguaggio di programmazione Java in base all'indice del parametro.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,8 +46,8 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(String sCol)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- È possibile impostare un [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) valore del parametro con [Setdatetimeoffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md).  
+## <a name="remarks"></a>Remarks  
+ È possibile impostare una [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) valore del parametro con [Setdatetimeoffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getDateTimeOffset &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   

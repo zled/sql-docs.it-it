@@ -1,5 +1,5 @@
 ---
-title: Metodo getVersionColumns (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getVersionColumns (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 722fd20c9210b14cb503ab3a0189815fa3cc83dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 449af2fc385e569c8a08051f155f704108153f84
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841626"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786486"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>Metodo getVersionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,28 +43,28 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 #### <a name="parameters"></a>Parametri  
  *catalog*  
   
- Oggetto **stringa** che contiene il nome del catalogo.  
+ Valore **String** contenente il nome del catalogo.  
   
  *schema*  
   
- Oggetto **stringa** che contiene il modello di nome dello schema.  
+ Valore **String** contenente il modello del nome dello schema.  
   
  *table*  
   
- Oggetto **stringa** che contiene il nome della tabella.  
+ Valore **String** contenente il nome della tabella.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getVersionColumns viene specificato dal metodo getVersionColumns nell'interfaccia DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getVersionColumns conterrà le informazioni seguenti:  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |SCOPE|**short**|Non supportato dal driver JDBC.|  
 |COLUMN_NAME|**String**|Nome della colonna.|  
@@ -76,10 +76,10 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 |PSEUDO_COLUMN|**short**|Indica se la colonna è una pseudocolonna. Può essere uno dei valori seguenti:<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
   
 > [!NOTE]  
->  Per ulteriori informazioni sui dati restituiti dal metodo getVersionColumns, vedere "sp_datatype_info (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione in linea.  
+>  Per altre informazioni sui dati restituiti dal metodo getVersionColumns, vedere "sp_datatype_info (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il metodo getVersionColumns per restituire informazioni sulle colonne che vengono aggiornate automaticamente nella tabella Person. Contact il [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] database di esempio.  
+ L'esempio seguente illustra come usare il metodo getVersionColumns per restituire le informazioni sulle colonne aggiornate automaticamente nella tabella Person.Contact del database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetVersionColumns(Connection con) {  

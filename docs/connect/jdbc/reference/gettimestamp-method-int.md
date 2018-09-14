@@ -1,5 +1,5 @@
 ---
-title: Metodo getTimestamp (int) | Documenti Microsoft
+title: Metodo getTimestamp (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9169645c578a2f5a45c75248c61e99d61771bb11
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e60839e4bd4cd42211712233f75cfc0018a2ee01
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838806"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786667"
 ---
 # <a name="gettimestamp-method-int"></a>Metodo getTimestamp (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,18 +41,18 @@ public java.sql.Timestamp getTimestamp(int index)
 #### <a name="parameters"></a>Parametri  
  *index*  
   
- Un **int** che indica l'indice del parametro.  
+ Valore **int** che specifica l'indice del parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto di tipo Timestamp.  
+ Un oggetto di Timestamp.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getTimestamp viene specificato dal metodo getTimestamp nell'interfaccia Java.SQL. CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getTimestamp viene specificato dal metodo getTimestamp nell'interfaccia CallableStatement.  
   
- Questo metodo restituisce valori solo dalle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime** e **smalldatetime** colonne.  
+ Questo metodo restituisce valori solo dalle colonne **datetime** e **smalldatetime** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getTimestamp &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

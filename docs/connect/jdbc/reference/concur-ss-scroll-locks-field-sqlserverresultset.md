@@ -1,5 +1,5 @@
 ---
-title: Campo CONCUR_SS_SCROLL_LOCKS (SQLServerResultSet) | Documenti Microsoft
+title: Il campo CONCUR_SS_SCROLL_LOCKS (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3965327a41cacb25e76346b82128fb583aaf83b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 04915501bf8e4618b35c8019779af5e60cda8057
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828006"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785984"
 ---
 # <a name="concurssscrolllocks-field-sqlserverresultset"></a>Campo CONCUR_SS_SCROLL_LOCKS (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Utilizzato per specificare un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] il tipo di concorrenza ottimistica con blocchi di riga di lettura/scrittura.  
+  Usato per specificare un tipo di concorrenza ottimistica di lettura/scrittura di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con blocchi di riga.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ public static final int CONCUR_SS_SCROLL_LOCKS
 ```  
   
 ## <a name="field-value"></a>Valore di campo  
- Un **int** valore 1009.  
+ Un' **int** pari a 1009.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

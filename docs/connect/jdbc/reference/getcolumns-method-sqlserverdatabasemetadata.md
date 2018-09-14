@@ -1,5 +1,5 @@
 ---
-title: Metodo getColumns (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getColumns (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1268316bb7a2038eb04da91fa438ebba88d0525
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d1a8d682e0bb099d082578b98e70dd6930033024
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833686"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784209"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>Metodo getColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,32 +44,32 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 #### <a name="parameters"></a>Parametri  
  *catalog*  
   
- Oggetto **stringa** che contiene il nome del catalogo.  
+ Valore **String** contenente il nome del catalogo.  
   
  *schema*  
   
- Oggetto **stringa** che contiene il modello di nome dello schema.  
+ Valore **String** contenente il modello del nome dello schema.  
   
  *table*  
   
- Oggetto **stringa** che contiene il modello di nome di tabella.  
+ Valore **String** contenente il modello del nome della tabella.  
   
  *col*  
   
- Oggetto **stringa** che contiene il modello di nome di colonna.  
+ Valore **String** contenente il modello del nome della colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getColumns viene specificato dal metodo getColumns nell'interfaccia DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getColumns conterrà le informazioni seguenti:  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Nome del catalogo.|  
 |TABLE_SCHEM|**String**|Nome dello schema della tabella.|  
@@ -82,14 +82,14 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**smallint**|Scala della colonna.|  
 |NUM_PREC_RADIX|**smallint**|Radice della colonna.|  
 |NULLABLE|**smallint**|Indica se la colonna ammette i valori Null. Può essere uno dei valori seguenti:<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**String**|Commenti associati alla colonna.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] restituisce sempre null per questa colonna.  |  
+|REMARKS|**String**|Commenti associati alla colonna.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restituisce sempre null per questa colonna.|  
 |COLUMN_DEF|**String**|Valore predefinito della colonna.|  
 |SQL_DATA_TYPE|**smallint**|Valore del tipo di dati SQL visualizzato nel campo TYPE del descrittore. Questa colonna corrisponde alla colonna DATA_TYPE, tranne per i tipi di dati datetime e interval SQL-92. In questa colonna viene sempre restituito un valore.|  
 |SQL_DATETIME_SUB|**smallint**|Codice di sottotipo per i tipi di dati SQL-92 datetime e interval. Per gli altri tipi di dati in questa colonna viene restituito NULL.|  
 |CHAR_OCTET_LENGTH|**int**|Numero massimo di byte nella colonna.|  
 |ORDINAL_POSITION|**int**|Indice della colonna all'interno della tabella.|  
 |IS_NULLABLE|**String**|Indica se la colonna ammette valori Null.|  
-|SS_IS_SPARSE|**smallint**|Se la colonna è di tipo sparse, questo presenta il valore 1. in caso contrario, 0. <sup>1</sup>|  
+|SS_IS_SPARSE|**smallint**|Se la colonna è di tipo sparse, il relativo valore è 1; in caso contrario, è 0.<sup>1</sup>|  
 |SS_IS_COLUMN_SET|**smallint**|Se la colonna è la colonna column_set di tipo sparse, il relativo valore è 1; in caso contrario, è 0. <sup>1</sup>|  
 |SS_IS_COMPUTED|**smallint**|Indica se una colonna in TABLE_TYPE è una colonna calcolata. <sup>1</sup>|  
 |IS_AUTOINCREMENT|**String**|"YES" se la colonna è incrementata automaticamente. "NO" se la colonna non è incrementata automaticamente. "" (stringa vuota) se il driver non è in grado di determinare se la colonna è incrementata automaticamente. <sup>1</sup>|  
@@ -99,18 +99,18 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|Nome del catalogo in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome del catalogo, questa variabile contiene una stringa vuota. <sup>1</sup>|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|Nome dello schema in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome dello schema, viene visualizzata una stringa vuota. <sup>1</sup>|  
 |SS_XML_SCHEMACOLLECTION_NAME|**String**|Nome di una raccolta di XML Schema. Se non è possibile trovare il nome, viene visualizzata una stringa vuota. <sup>1</sup>|  
-|SS_DATA_TYPE|**tinyint**|Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo di dati utilizzato da stored procedure estese.<br /><br /> **Nota** per ulteriori informazioni sui tipi di dati restituito da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], vedere "Tipi di dati (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione Online.|  
+|SS_DATA_TYPE|**tinyint**|Tipo di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usato in stored procedure estese.<br /><br /> **Nota** Per altre informazioni sui tipi di dati restituiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere "Tipi di dati (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
- (1) questa colonna non sarà presente se ci si connette a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)].  
+ (1) Questa colonna non è presente se ci si connette a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 > [!NOTE]  
->  Per ulteriori informazioni sui dati restituiti dal metodo getColumns, vedere "sp_columns (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione in linea.  
+>  Per altre informazioni sui dati restituiti dal metodo getColumns, vedere "sp_columns (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Nel [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Driver JDBC 3.0, verrà visualizzato il seguente comportamento cambia da versioni precedenti del Driver JDBC:  
+ In [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 sono disponibili le seguenti modifiche di comportamento rispetto alle versioni precedenti del driver JDBC:  
   
  La colonna DATA_TYPE include le modifiche seguenti:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo di dati|Tipo restituito in JDBC Driver 2.0 (o, se connessi a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) e costante numerica associata|Tipo restituito in JDBC Driver 3.0 quando si è connessi a [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] o versione successiva|  
+|Tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Tipo restituito in JDBC Driver 2.0 (o in caso di connessione a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]) e costante numerica associata|Tipo restituito in JDBC Driver 3.0 in caso di connessione a [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] o versione successiva|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |tipo definito dall'utente maggiore di 8 kB|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |geography|LONGVARBINARY (-4)|VARBINARY (-3)|  
@@ -119,47 +119,47 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |nvarchar(max)|LONGVARCHAR (-1) o LONGNVARCHAR (JDBC 4) (-16)|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|  
 |ntext|LONGVARCHAR (-1)|VARCHAR (12)|  
 |time|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|TIME (-154)|  
-|data|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|DATE (91)|  
+|Data|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|DATE (91)|  
 |datetime2|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|TIMESTAMP (93)|  
 |datetimeoffset|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|microsoft.sql.Types.DATETIMEOFFSET (-155)|  
   
  La colonna COLUMN_SIZE presenta le modifiche seguenti:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo di dati|Tipo restituito in Microsoft JDBC Driver 2.0|Tipo restituito in Microsoft JDBC Driver 3.0|  
+|Tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Tipo restituito in Microsoft JDBC Driver 2.0|Tipo restituito in Microsoft JDBC Driver 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647 (metadati del database)|  
 |xml|1073741823|2147483647 (metadati del database)|  
 |tipo definito dall'utente minore o uguale a 8 kB|8 KB (set di risultati e metadati del parametro)|Dimensioni effettive restituite dalla stored procedure.|  
 |time||Lunghezza in caratteri della rappresentazione di stringa del tipo, presupponendo la precisione massima consentita del componente delle frazioni di secondo.|  
-|data||Uguale a time|  
+|Data||Uguale a time|  
 |datetime2||Uguale a time|  
 |datetimeoffset||Uguale a time|  
   
  La colonna BUFFER_LENGTH presenta la modifica seguente:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo di dati|Tipo restituito in Microsoft JDBC Driver 2.0|Tipo restituito in Microsoft JDBC Driver 3.0|  
+|Tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Tipo restituito in Microsoft JDBC Driver 2.0|Tipo restituito in Microsoft JDBC Driver 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |tipo definito dall'utente maggiore di 8 kB||2147483647|  
   
  La colonna TYPE_NAME presenta le modifiche seguenti:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo di dati|Tipo restituito in Microsoft JDBC Driver 2.0|Tipo restituito in Microsoft JDBC Driver 3.0|  
+|Tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Tipo restituito in Microsoft JDBC Driver 2.0|Tipo restituito in Microsoft JDBC Driver 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |ntext|text|varchar|  
 |varbinary(max)|image|varbinary|  
   
  La colonna DECIMAL_DIGITS presenta le modifiche seguenti:  
   
-|Tipo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]|Driver JDBC 2.0|Driver JDBC 3.0|  
+|Tipo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Driver JDBC 2.0|Driver JDBC 3.0|  
 |--------------------------------------------------------------|---------------------|---------------------|  
 |time|null|7 (o inferiore se specificato)|  
-|data|null|null|  
+|Data|null|null|  
 |datetime2|null|7 (o inferiore se specificato)|  
 |datetimeoffset|null|7 (o inferiore se specificato)|  
   
  La colonna SQL_DATA_TYPE presenta le modifiche seguenti:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo di dati|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Valore dei dati di 2008 in JDBC Driver 2.0|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Valore di dati di 2008 in JDBC Driver 3.0|  
+|Tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Valore dei dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 in JDBC Driver 2.0|Valore dei dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 in JDBC Driver 3.0|  
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |ntext|-10|-9|  
 |nvarchar(max)|-1|-9|  
@@ -170,12 +170,12 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |geometry|-4|-151|  
 |hierarchyid|-4|-151|  
 |time|-9|92|  
-|data|-9|91|  
+|Data|-9|91|  
 |datetime2|-9|93|  
 |datetimeoffset|-9|-155|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il metodo getColumns per restituire informazioni per la tabella Person Contact il [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] database di esempio.  
+ L'esempio seguente illustra come usare il metodo getColumns per restituire le informazioni per la tabella Person.Contact del database di esempio [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 import java.sql.*;  

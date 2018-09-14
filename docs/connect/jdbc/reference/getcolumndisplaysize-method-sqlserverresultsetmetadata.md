@@ -1,5 +1,5 @@
 ---
-title: Metodo getColumnDisplaySize (SQLServerResultSetMetaData) | Documenti Microsoft
+title: Metodo getColumnDisplaySize (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97d5899370329d49d6ed289e8742ebcab6d402d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f7f2c1f3efa0b4aeb6417d947ba524b10ff44035
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832166"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785798"
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>Metodo getColumnDisplaySize (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,18 +41,18 @@ public int getColumnDisplaySize(int column)
 #### <a name="parameters"></a>Parametri  
  *column*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un **int** che indica la larghezza massima. Se la larghezza non è nota, restituisce 0.  
+ Valore **int** che indica la larghezza massima. Se la larghezza non è nota, restituisce 0.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getColumnDisplaySize viene specificato dal metodo getColumnDisplaySize nell'interfaccia Java.SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getColumnDisplaySize viene specificato dal metodo getColumnDisplaySize nell'interfaccia ResultSetMetaData.  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Driver JDBC 3.0 per presenta modifiche di comportamento nella colonna COLUMN_SIZE. Vedere [GetColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) per ulteriori informazioni.  
+ [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft JDBC Driver 3.0 include modifiche di comportamento nella colonna COLUMN_SIZE. Per altre informazioni, vedere [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   

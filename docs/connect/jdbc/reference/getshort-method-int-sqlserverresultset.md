@@ -1,5 +1,5 @@
 ---
-title: Metodo getShort (int) (SQLServerResultSet) | Documenti Microsoft
+title: Metodo getShort (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3b8071bc458696e0cb5dcaf654a52f1ddd5442b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 78f37af4ff69b6a4a4040981d0787e398c6d635c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838896"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784727"
 ---
 # <a name="getshort-method-int-sqlserverresultset"></a>Metodo getShort (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera il valore di indice della colonna designata nella riga corrente di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto come un **breve** nel linguaggio di programmazione Java.  
+  Recupera il valore dell'indice di colonna designato nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come elemento **short** nel linguaggio di programmazione Java.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ public short getShort(int columnIndex)
 #### <a name="parameters"></a>Parametri  
  *columnIndex*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
  Oggetto **breve** valore.  
@@ -49,10 +49,10 @@ public short getShort(int columnIndex)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getShort viene specificato dal metodo getShort nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getShort viene specificato dal metodo getShort nell'interfaccia ResultSet.  
   
- Questo metodo è supportato solo su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipi di dati che possono restituire in modo sicuro un valore integer, ad esempio smallint, tinyint e bit. L'utilizzo di questo metodo su qualsiasi altro tipo di dati genererà un'eccezione.  
+ Questo metodo è supportato solo sui tipi di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che possono restituire in modo sicuro un valore integer, ad esempio smallint, tinyint e bit. L'utilizzo di questo metodo su qualsiasi altro tipo di dati genererà un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getShort &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)   

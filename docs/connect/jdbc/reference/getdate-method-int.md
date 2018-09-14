@@ -1,5 +1,5 @@
 ---
-title: Metodo getDate (int) | Documenti Microsoft
+title: Metodo getDate (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2586a2a6cd70d6a2751ecab8b71d9d2bb6407218
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e6c4defabb0397462d45f683d52ec9344ce4eefb
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834376"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784957"
 ---
 # <a name="getdate-method-int"></a>Metodo getDate (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,18 +41,18 @@ public java.sql.Date getDate(int index)
 #### <a name="parameters"></a>Parametri  
  *index*  
   
- Un **int** che indica l'indice del parametro.  
+ Valore **int** che specifica l'indice del parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto Date.  
+ Un oggetto Data.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getDate è specificato dal metodo getDate nell'interfaccia Java.SQL. CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getDate viene specificato dal metodo getDate nell'interfaccia java.sql.CallableStatement.  
   
- Questo metodo restituisce una parte della data valida di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime** o **smalldatetime** il tipo di dati, con la parte dell'ora impostata sull'ora di base Java di 00:00 (mezzanotte).  
+ Questo metodo restituisce una parte della data valida di un tipo di dati **datetime** o **smalldatetime** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], con la parte dell'ora impostata sull'ora di base 00.00 (mezzanotte) di Java.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getDate &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   

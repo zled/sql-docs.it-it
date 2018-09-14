@@ -1,5 +1,5 @@
 ---
-title: Metodo setUser (SQLServerDataSource) | Documenti Microsoft
+title: Metodo setUser (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b6bf6d311e318dd9f233de2f698ad1d7892714e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b6f50e60bfbf13a92ffb2cbcbd1a4920236427e9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845056"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786124"
 ---
 # <a name="setuser-method-sqlserverdatasource"></a>Metodo setUser (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public void setUser(java.lang.String user)
 #### <a name="parameters"></a>Parametri  
  *user*  
   
- Oggetto **stringa** che contiene il nome utente.  
+ Valore **String** contenente il nome utente.  
   
-## <a name="remarks"></a>Osservazioni  
- Il metodo setUser imposta il nome utente che verrà utilizzato per connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Se il valore di nome utente non è impostato, il [getUser](../../../connect/jdbc/reference/getuser-method-sqlserverdatasource.md) metodo restituisce il valore predefinito null.  
+## <a name="remarks"></a>Remarks  
+ Il metodo setUser imposta il nome utente che verrà usato per la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se il valore del nome utente non è impostato, il metodo [getUser](../../../connect/jdbc/reference/getuser-method-sqlserverdatasource.md) restituisce il valore predefinito Null.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

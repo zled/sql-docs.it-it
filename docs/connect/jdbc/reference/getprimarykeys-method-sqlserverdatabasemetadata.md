@@ -1,5 +1,5 @@
 ---
-title: Metodo getPrimaryKeys (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getPrimaryKeys (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15e8882067a67ec5d276e23c7cb3d2ea3684bf38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 80ea0345ffa8e608c3e67ab90b0ad108cde143d4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837446"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785797"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>Metodo getPrimaryKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,30 +41,30 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Cat*  
+ *cat*  
   
- Oggetto **stringa** che contiene il nome del catalogo.  
+ Valore **String** contenente il nome del catalogo.  
   
  *schema*  
   
- Oggetto **stringa** che contiene il nome dello schema.  
+ Valore **String** contenente il nome dello schema.  
   
  *table*  
   
- Oggetto **stringa** che contiene il nome della tabella.  
+ Valore **String** contenente il nome della tabella.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getPrimaryKeys viene specificato dal metodo getPrimaryKeys nell'interfaccia DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getPrimaryKeys conterrà le informazioni seguenti:  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |TABLE_CAT|String|Nome del database contenente la tabella specificata.|  
 |TABLE_SCHEM|String|Schema della tabella.|  
@@ -74,10 +74,10 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 |PK_NAME|String|Nome della chiave primaria.|  
   
 > [!NOTE]  
->  Per ulteriori informazioni sui dati restituiti dal metodo getPrimaryKeys, vedere "sp_pkeys (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione in linea.  
+>  Per altre informazioni sui dati restituiti dal metodo getPrimaryKeys, vedere "sp_pkeys (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il metodo getPrimaryKeys per restituire informazioni sulle chiavi primarie della tabella Person. Contact il [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] database di esempio.  
+ L'esempio seguente illustra come usare il metodo getPrimaryKeys per restituire le informazioni sulle chiavi primarie della tabella Person.Contact del database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetPrimaryKeys(Connection con) {  

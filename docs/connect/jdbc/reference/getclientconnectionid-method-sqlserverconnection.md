@@ -1,5 +1,5 @@
 ---
-title: Metodo getClientConnectionID (SQLServerConnection) | Documenti Microsoft
+title: Metodo getClientConnectionID (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcd24325ca26bacc9f474e925f99848d68351417
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 83f20b5da967972b1b1d8c6381506468a9de3f6b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832526"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784037"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>Metodo getClientConnectionID (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,8 +38,8 @@ public Java.util.UUID SQLServerConnection.getClientConnectionID();
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Per ulteriori informazioni sull'accesso alle informazioni di diagnostica nel log degli eventi estesi, vedere [l'accesso a informazioni di diagnostica nel Log degli eventi estesi](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
+## <a name="remarks"></a>Remarks  
+ Per altre informazioni sull'accesso alle informazioni di diagnostica nel log degli eventi estesi, vedere [l'accesso a informazioni di diagnostica nel Log degli eventi estesi](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
  Nell'esempio seguente viene mostrato come ottenere l'ID connessione:  
   
@@ -60,9 +60,9 @@ Connection cn = pcon.getConnection();
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  
 ```  
   
- **getClientConnectionID** funziona indipendentemente dalla versione del server si connette a, ma i registri eventi estesi e voce degli errori del buffer circolare di connettività non saranno presenti in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 2008 R2 e versioni precedenti.  
+ **getClientConnectionID** funziona indipendentemente dalla versione del server si connette a, ma i log di eventi estesi e voce sugli errori di buffer circolare di connettività non saranno presenti in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 e versioni precedenti.  
   
- È possibile individuare l'ID connessione nel log degli eventi estesi per verificare se l'errore sia nel server qualora l'evento esteso per la registrazione dell'ID connessione sia abilitato. È anche possibile individuare l'ID di connessione nel buffer circolare di connessione ([la risoluzione dei problemi di connettività in SQL Server 2008 con il Buffer circolare di connettività](http://go.microsoft.com/fwlink/?LinkId=207752)) per determinati errori di connessione. Se l'ID connessione non si trova nel buffer circolare di connessione, si può presumere che si tratti di un errore di rete.  
+ È possibile individuare l'ID connessione nel log degli eventi estesi per verificare se l'errore sia nel server qualora l'evento esteso per la registrazione dell'ID connessione sia abilitato. È anche possibile trovare l'ID connessione nel buffer circolare di connessione ([Risoluzione dei problemi di connettività in SQL Server 2008 con il buffer circolare della connettività](http://go.microsoft.com/fwlink/?LinkId=207752)) per determinati errori di connessione. Se l'ID connessione non si trova nel buffer circolare di connessione, si può presumere che si tratti di un errore di rete.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: Metodo getTime (lang, java.util.Calendar) | Documenti Microsoft
+title: Metodo getTime (java.lang.String, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d24681d9cb7ff5f8f0488c4bdeb4c0be1d9993f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b72cbb765ae11de0ece12547dd0b8a15e87f393f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838392"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787008"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar"></a>Metodo getTime (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera il valore del parametro designato come oggetto java.SQL. Time nel linguaggio di programmazione Java, dato il nome del parametro, utilizzando l'oggetto di calendario specificato.  
+  Recupera il valore del parametro designato come oggetto java.sql.Time nel linguaggio di programmazione Java, in base al nome del parametro, utilizzando l'oggetto Calendar specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,22 +42,22 @@ public java.sql.Time getTime(java.lang.String sCol,
 #### <a name="parameters"></a>Parametri  
  *sCol*  
   
- Oggetto **stringa** che contiene il nome del parametro.  
+ Valore **String** contenente il nome del parametro.  
   
  *licenza CAL*  
   
- Un oggetto di calendario.  
+ Un oggetto calendario.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto di tempo.  
+ Un oggetto di runtime.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getTime viene specificato dal metodo getTime nell'interfaccia Java.SQL. CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getTime viene specificato dal metodo getTime nell'interfaccia java.sql.CallableStatement.  
   
- Vedere il grafico denominato "Conversioni dei metodi di richiamo" in [informazioni sulle conversioni di tipi di dati](../../../connect/jdbc/understanding-data-type-conversions.md) per vedere quali [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipi di dati possono essere recuperati con questo metodo.  
+ Vedere il grafico denominato "Conversioni dei metodi di richiamo" nella [informazioni sulle conversioni di tipi di dati](../../../connect/jdbc/understanding-data-type-conversions.md) per vedere quali [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i tipi di dati possono essere recuperati con questo metodo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getTime &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

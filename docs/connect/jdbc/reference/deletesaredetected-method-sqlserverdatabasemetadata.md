@@ -1,5 +1,5 @@
 ---
-title: Metodo deletesAreDetected (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo deletesAreDetected (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be04cfff99afb70570cf00fc7191738593be2cc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d6def9d94b1cbfb1b3e6bee07454d5f5adad2392
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832286"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784399"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>Metodo deletesAreDetected (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  È possibile rilevare consente di recuperare o meno di eliminare una riga visibile chiamando il [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) metodo il [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) classe.  
+  Recupera un valore che indica se è possibile rilevare una riga visibile eliminata chiamando il metodo [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) della classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ public boolean deletesAreDetected(int type)
 #### <a name="parameters"></a>Parametri  
  *type*  
   
- Un **int** che indica il set di risultati tipo, che può essere uno dei valori seguenti come definito in Java.SQL. ResultSet o SQLServerResultSet:  
+ Valore **int** che indica il tipo di set di risultati, che può essere uno dei valori seguenti, in base a quanto definito in java.sql.ResultSet o SQLServerResultSet:  
   
 ## <a name="javasqlresultset-types"></a>Tipi java.sql.ResultSet  
  TYPE_FORWARD_ONLY  
@@ -62,18 +62,18 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se una riga eliminata viene sostituita. **false** se la riga eliminata viene rimossa.  
+ **true** se la riga eliminata viene sostituito da uno spazio vuoto. **false** se la riga eliminata viene rimossa.  
   
- Quando si utilizza il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database, questo metodo restituisce **true** per i cursori TYPE_SS_SCROLL_KEYSET e **false** per tutti gli altri risultati del set di tipi.  
+ Quando si usa [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], questo metodo restituisce **true** per i cursori TYPE_SS_SCROLL_KEYSET e **false** per tutti gli altri tipi di set di risultati.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo deletesAreDetected viene specificato dal metodo deletesAreDetected nell'interfaccia DatabaseMetaData.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] rileva le righe eliminate per tutti i tipi di cursore aggiornabili, anche se il rilevamento è temporaneo per i cursori forward e dinamici.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rileva le righe eliminate per tutti i tipi di cursore aggiornabile, anche se il rilevamento è temporaneo per i cursori forward e dinamici.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

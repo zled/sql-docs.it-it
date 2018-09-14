@@ -1,5 +1,5 @@
 ---
-title: Metodo insertsAreDetected (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo insertsAreDetected (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4883b1e6baece15e5ef01ddbefc6d4eb5143cb8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0a9db62fe63e075733b6829dad11f51ec97996c3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840576"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787884"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>Metodo insertsAreDetected (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o meno in cui è possibile rilevare un inserimento riga visibile chiamando il metodo [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) metodo il [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) classe.  
+  Recupera un valore che indica se è possibile rilevare un inserimento di riga visibile chiamando il metodo [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) della classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,16 +62,16 @@ public boolean insertsAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se è possibile rilevare l'inserimento della riga. In caso contrario, **false**.  
+ **true** se l'inserimento di righe può essere rilevato. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo insertsAreDetected viene specificato dal metodo insertsAreDetected nell'interfaccia DatabaseMetaData.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] non rileva le righe inserite per qualsiasi tipo di cursore.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non rilevare le righe inserite per qualsiasi tipo di cursore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

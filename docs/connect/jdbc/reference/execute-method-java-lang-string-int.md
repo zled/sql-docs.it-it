@@ -1,5 +1,5 @@
 ---
-title: Metodo Execute (lang. String, int[]) | Documenti Microsoft
+title: Metodo Execute (lang. String, int[]) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afe080df57157ae62e604ff8057027a45df39fc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 84d3b4d916b91c95efaff5ad9e995e6bad40a9ad
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833326"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42787379"
 ---
 # <a name="execute-method-javalangstring-int"></a>Metodo execute (java.lang.String, int[])
 
-  Esegue l'istruzione SQL specificata, che può restituire più risultati e segnala [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion-md.md)] che le chiavi generate automaticamente indicate nella matrice specificata devono essere rese disponibili per il recupero.
+  Esegue l'istruzione SQL specificata, che può restituire più risultati, e segnala a [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] che le chiavi generate automaticamente indicate nella matrice specificata devono essere rese disponibili per il recupero.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,11 +41,11 @@ public final boolean execute(
 #### <a name="parameters"></a>Parametri
 *sql*
 
-Oggetto **stringa** che contiene un'istruzione SQL.
+Valore **String** contenente un'istruzione SQL.
 
 *columnIndexes*
 
-Matrice di **int**che indica gli indici di colonna delle chiavi generate automaticamente che devono essere rese disponibili.
+Matrice di valori **int** che indicano gli indici di colonna delle chiavi generate automaticamente che devono essere resi disponibili.
 
 ## <a name="return-value"></a>Valore restituito
 **true** se il primo risultato è un set di risultati. In caso contrario, **false**.
@@ -53,8 +53,8 @@ Matrice di **int**che indica gli indici di colonna delle chiavi generate automat
 ## <a name="exceptions"></a>Eccezioni
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Osservazioni
-Questo metodo execute viene specificato dal metodo execute nell'interfaccia Java.SQL. Statement.
+## <a name="remarks"></a>Remarks
+Questo metodo execute viene specificato dal metodo execute dell'interfaccia Statement.
 
 ## <a name="see-also"></a>Vedere anche
 

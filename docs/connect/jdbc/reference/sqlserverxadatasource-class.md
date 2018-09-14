@@ -1,5 +1,5 @@
 ---
-title: Classe SQLServerXADataSource | Documenti Microsoft
+title: Classe SQLServerXADataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b69edd13e84599e4e3e11ba56a3a1c34ee1d36ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d53011410bec69b795a5f50464ce0bb4a5eac425
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850526"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785962"
 ---
 # <a name="sqlserverxadatasource-class"></a>Classe SQLServerXADataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Rappresenta una factory per [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) gli oggetti che viene utilizzata internamente.  
+  Rappresenta una factory per oggetti [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) usata internamente.  
   
  **Pacchetto:** com.microsoft.sqlserver.jdbc  
   
  **Estende:** [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
   
- **Implementa:** XADataSource  
+ **Implementa:** javax.sql.XADataSource  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,17 +39,17 @@ ms.locfileid: "32850526"
 public class SQLServerXADataSource  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Oggetto che implementa l'interfaccia di SQLServerXADataSource viene generalmente registrato con un servizio di denominazione che utilizza il Java Naming and Directory Interface (JNDI).  
+## <a name="remarks"></a>Remarks  
+ Un oggetto che implementa l'interfaccia SQLServerXADataSource viene generalmente registrato con un servizio di denominazione che usa l'interfaccia JNDI (Java Naming and Directory Interface).  
   
- La classe SQLServerXADataSource fornisce connessioni di database per l'utilizzo in transazioni distribuite (XA). La classe SQLServerXADataSource supporta anche il pool di connessioni fisiche. Le interfacce di SQLServerXADataSource e SQLServerXAConnection, che sono definite nel pacchetto javax.sql, vengono implementate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+ La classe SQLServerXADataSource specifica connessioni di database da usare nelle transazioni distribuite (XA). La classe SQLServerXADataSource supporta anche il pool di connessioni fisiche. Le interfacce di SQLServerXADataSource e SQLServerXAConnection, che sono definite nel pacchetto javax. SQL, vengono implementate dal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Un oggetto SQLServerXAConnection è una connessione in pool che può partecipare in una transazione distribuita. Più precisamente, estende l'interfaccia SQLServerPooledConnection di SQLServerXAConnection aggiungendo il metodo [getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md). Questo metodo produce un [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) oggetto che può essere utilizzato da un gestore transazioni per coordinare il lavoro effettuato in questa connessione con gli altri partecipanti nella transazione distribuita. Poiché estendono l'interfaccia di SQLServerPooledConnection, SQLServerXAConnection oggetti supportano tutti i metodi di oggetti SQLServerPooledConnection. Si tratta di connessioni fisiche riutilizzabili a un'origine dati sottostante che generano handle di connessioni logiche che possono essere passati nuovamente a un'applicazione JDBC.  
+ Un oggetto SQLServerXAConnection è una connessione in pool che può partecipare a una transazione distribuita. Più precisamente, SQLServerXAConnection estende l'interfaccia di SQLServerPooledConnection aggiungendo il metodo [getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md). Questo metodo produce un oggetto [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) che può essere usato da un gestore transazioni per coordinare le attività eseguite in questa connessione con gli altri partecipanti della transazione distribuita. Poiché estendono l'interfaccia di SQLServerPooledConnection, gli oggetti SQLServerXAConnection supportano tutti i metodi di SQLServerPooledConnection oggetti. Si tratta di connessioni fisiche riutilizzabili a un'origine dati sottostante che generano handle di connessioni logiche che possono essere passati nuovamente a un'applicazione JDBC.  
   
- Gli oggetti SQLServerXAConnection vengono generati da un oggetto SQLServerXADataSource. Gli oggetti di SQLServerConnectionPoolDataSource e SQLServerXADataSource sono simili poiché vengono entrambi implementati sotto un livello di origine dati che è visibile all'applicazione JDBC. Questa architettura consente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supporta le transazioni distribuite in modo trasparente all'applicazione. SQLServerXADataSource può essere configurato per integrarsi con [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Distributed Transaction Coordinator (DTC) per fornire una reale elaborazione di transazioni distribuite.  
+ Gli oggetti SQLServerXAConnection vengono generati da un oggetto SQLServerXADataSource. Gli oggetti di SQLServerConnectionPoolDataSource e SQLServerXADataSource sono simili poiché vengono entrambi implementati sotto un livello di origine dati visibile all'applicazione JDBC. Questa architettura consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di supportare transazioni distribuite in modo trasparente all'applicazione. L'oggetto SQLServerXADataSource può essere configurato per integrarsi con [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Distributed Transaction Coordinator (DTC) per offrire una reale elaborazione di transazioni distribuite.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
- [Riferimento all'API del Driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Informazioni di riferimento sull'API del driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

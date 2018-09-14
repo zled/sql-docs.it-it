@@ -1,5 +1,5 @@
 ---
-title: Metodo setBytes (SQLServerCallableStatement) | Documenti Microsoft
+title: Metodo setBytes (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5990743ccdf751bbfab7afe80aa4927846c0380d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1e947e81dcec4cc1db52e6ad3265d90b00ab4f87
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842046"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787186"
 ---
 # <a name="setbytes-method-sqlservercallablestatement"></a>Metodo setBytes (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Imposta il parametro designato sulla matrice specificata di **byte** valori.  
+  Imposta il parametro designato sulla matrice di valori **byte** specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,19 +42,19 @@ public void setBytes(java.lang.String sCol,
 #### <a name="parameters"></a>Parametri  
  *sCol*  
   
- Oggetto **stringa** che contiene il nome del parametro.  
+ Valore **String** contenente il nome del parametro.  
   
- *B*  
+ *b*  
   
  Matrice di **byte** valori.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- In una versione precedente del driver, è possibile utilizzare SetBytes per convertire valori tra matrici di byte e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo di dati **data**, **ora**, **datetime2** , o **datetimeoffset**. In questa versione l'utilizzo del metodo con questi tipi di dati provoca un'eccezione indicante che la conversione non è supportata.  
+## <a name="remarks"></a>Remarks  
+ In una versione precedente del driver era possibile usare SQLServerCallableStatement.setBytes per convertire valori tra matrici di byte e il tipo di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **date**, **time**, **datetime2** o **datetimeoffset**. In questa versione l'utilizzo del metodo con questi tipi di dati provoca un'eccezione indicante che la conversione non è supportata.  
   
- Questo metodo setBytes viene specificato dal metodo setBytes nell'interfaccia Java.SQL. CallableStatement.  
+ Questo metodo setBytes viene specificato dal metodo setBytes nell'interfaccia java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

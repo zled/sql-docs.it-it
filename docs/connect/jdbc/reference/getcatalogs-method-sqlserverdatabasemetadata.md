@@ -1,5 +1,5 @@
 ---
-title: Metodo getCatalogs (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getCatalogs (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20537ecc2ecb42b1384e52e3e95dd611f7ad8797
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 84f5f8668dea2b06a6390235be315ee25a27ba80
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832206"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787015"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>Metodo getCatalogs (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,25 +39,25 @@ public java.sql.ResultSet getCatalogs()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getCatalogs viene specificato dal metodo getCatalogs nell'interfaccia DatabaseMetaData.  
   
 > [!NOTE]  
->  In SQL Azure, è necessario connettersi al database master per chiamare **Getcatalogs**. SQL Azure non supporta la restituzione dell'intero set di cataloghi da un database utente. **SQLServerDatabaseMetaData.getCatalogs** utilizza la vista sys. Databases per ottenere i cataloghi. Fare riferimento alla trattazione delle autorizzazioni in [Sys. Databases (Database di SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) comprendere **Getcatalogs** comportamento in SQL Azure.  
+>  In SQL Azure, è necessario connettersi al database master per chiamare **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure non supporta la restituzione dell'intero set di cataloghi da un database utente. **SQLServerDatabaseMetaData.getCatalogs** utilizza la vista sys. Databases per ottenere i cataloghi. Fare riferimento alla trattazione delle autorizzazioni in [Sys. Databases (Database SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) comprendere **SQLServerDatabaseMetaData.getCatalogs** comportamento in SQL Azure.  
   
  Il set di risultati restituito dal metodo getCatalogs conterrà le informazioni seguenti:  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|Il nome del catalogo, inclusi i database di sistema di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].|  
+|TABLE_CAT|**String**|Nome del catalogo, inclusi i database di sistema di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come utilizzare il metodo getCatalogs per restituire i nomi di tutti i database contenuti in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], inclusi i database di sistema.  
+ L'esempio seguente illustra come usare il metodo getCatalogs per restituire i nomi di tutti i database contenuti in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], inclusi i database di sistema.  
   
 ```  
 public static void executeGetCatalogs(Connection con) {  

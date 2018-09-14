@@ -1,5 +1,5 @@
 ---
-title: getTime (metodo) (lang) (SQLServerResultSet) | Documenti Microsoft
+title: Metodo getTime (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 827e2740ff3b077cf849a1faff781eafa05db98c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d7c1fdfee7bcb3fc7925f38dda1df6a6c5692908
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841276"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786999"
 ---
-# <a name="gettime-method-javalangstring-sqlserverresultset"></a>getTime (metodo) (lang) (SQLServerResultSet)
+# <a name="gettime-method-javalangstring-sqlserverresultset"></a>Metodo getTime (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera il valore del nome della colonna designata nella riga corrente di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto come oggetto java.SQL. Time nel linguaggio di programmazione Java.  
+  Recupera il valore del nome della colonna designata nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto java.sql.Time nel linguaggio di programmazione Java.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,18 +41,18 @@ public java.sql.Time getTime(java.lang.String columnName)
 #### <a name="parameters"></a>Parametri  
  *columnName*  
   
- Oggetto **stringa** che contiene il nome della colonna.  
+ Valore **String** contenente il nome della colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto di tempo.  
+ Un oggetto di runtime.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getTime viene specificato dal metodo getTime nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getTime viene specificato dal metodo getTime nell'interfaccia ResultSet.  
   
- Questo metodo restituisce una parte di ora valido di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo di dati datetime o smalldatetime, con la parte della data impostata sulla data di base di Java 1970/01/01.  
+ Questo metodo restituisce una parte dell'ora valida di un tipo di dati datetime o smalldatetime di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], con la parte della data impostata sulla data di base di Java (01/01/1970).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getTime &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   

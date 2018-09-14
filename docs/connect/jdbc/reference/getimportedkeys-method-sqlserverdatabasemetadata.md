@@ -1,5 +1,5 @@
 ---
-title: Metodo getImportedKeys (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getImportedKeys (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de5ae39ff10c32737df637c9a6f29aab19d27574
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e086d412777dcb67e5e59bc9dad89a46e925d004
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836686"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784433"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>Metodo getImportedKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,30 +41,30 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Cat*  
+ *cat*  
   
- Oggetto **stringa** che contiene il nome del catalogo.  
+ Valore **String** contenente il nome del catalogo.  
   
  *schema*  
   
- Oggetto **stringa** che contiene il nome dello schema.  
+ Valore **String** contenente il nome dello schema.  
   
  *table*  
   
- Oggetto **stringa** che contiene il nome della tabella.  
+ Valore **String** contenente il nome della tabella.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getImportedKeys viene specificato dal metodo getImportedKeys nell'interfaccia DatabaseMetaData.  
   
- Il set di risultati restituito dal metodo getImportedKeys conterrà le informazioni seguenti:  
+ Il set di risultati restituito dal metodo getImportedKeys contiene le informazioni seguenti:  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|Nome del catalogo che contiene la tabella di chiave primaria.|  
 |PKTABLE_SCHEM|**String**|Nome dello schema della tabella di chiave primaria.|  
@@ -82,10 +82,10 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
 |DEFERRABILITY|**short**|Indica se la valutazione del vincolo di chiave esterna può essere posticipata fino a quando non viene eseguito un commit. Può essere uno dei valori seguenti:<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  
->  Per ulteriori informazioni sui dati restituiti dal metodo getImportedKeys, vedere "sp_fkeys (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione in linea.  
+>  Per altre informazioni sui dati restituiti dal metodo getImportedKeys, vedere "sp_fkeys (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il metodo getImportedKeys per restituire informazioni su tutte le chiavi primarie che fanno riferimento chiavi esterne della tabella Person. Address di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] database di esempio.  
+ L'esempio seguente illustra come usare il metodo getImportedKeys per restituire le informazioni su tutte le chiavi primarie che fanno riferimento alle chiavi esterne della tabella Person.Address nel database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetImportedKeys(Connection con) {  

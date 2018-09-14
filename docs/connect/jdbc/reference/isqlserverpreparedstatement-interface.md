@@ -1,5 +1,5 @@
 ---
-title: Interfaccia ISQLServerPreparedStatement | Documenti Microsoft
+title: Interfaccia ISQLServerPreparedStatement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ec1e10bc98fe8e1f61c15d97777e1c85a27031e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5710c5345508f3172814d8960cfce18bb11ba5ec
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839046"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784764"
 ---
 # <a name="isqlserverpreparedstatement-interface"></a>Interfaccia ISQLServerPreparedStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Rappresenta l'implementazione di base della funzionalità dell'istruzione preparata di JDBC. Questa interfaccia è stata aggiunta in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Driver JDBC 3.0.  
+  Rappresenta l'implementazione di base della funzionalità dell'istruzione preparata di JDBC. Questa interfaccia è stata aggiunta in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
  **Pacchetto:** com.microsoft.sqlserver.jdbc  
   
- **Estende:** PreparedStatement, [ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)  
+ **Estende:** java.sql.PreparedStatement, [ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,16 +37,16 @@ ms.locfileid: "32839046"
 public interface ISQLServerPreparedStatement  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Questa interfaccia è implementata da [classe SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
+## <a name="remarks"></a>Remarks  
+ Questa interfaccia viene implementata da [della classe SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
   
- Questa interfaccia espone i seguenti [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-metodi specifici:  
+ L'interfaccia espone i metodi specifici di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] seguenti:  
   
 |Metodo|Per ulteriori informazioni, vedere|  
 |------------|-------------------------------|  
 |public void setDateTimeOffset(int, microsoft.sql.DateTimeOffset)|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento all'API del Driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Informazioni di riferimento sull'API del driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

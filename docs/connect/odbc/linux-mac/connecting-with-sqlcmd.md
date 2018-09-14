@@ -16,19 +16,19 @@ caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c330fd329f28fa7d89b62b9af6bb8d4bb67c2bc4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 792d167461ae330689bda8dfd10806258ccd704f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015805"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784059"
 ---
 # <a name="connecting-with-sqlcmd"></a>Connessione con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-L'utilità [sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) è disponibile in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Linux e macOS.
+L'utilità [sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) è disponibile in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS.
   
-I comandi seguenti mostrano come usare l'autenticazione di Windows (Kerberos) e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] l'autenticazione, rispettivamente:
+I comandi seguenti mostrano come usare l'autenticazione di Windows (Kerberos) e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l'autenticazione, rispettivamente:
   
 ```  
 sqlcmd –E –Sxxx.xxx.xxx.xxx  
@@ -73,12 +73,12 @@ Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a 
 > [!NOTE]  
 > **-K** non è supportata in CTP per SUSE Linux. È tuttavia possibile specificare la parola chiave **ApplicationIntent=ReadOnly** in un file DSN passato a `sqlcmd`. Per altre informazioni, vedere "Supporto di DSN in `sqlcmd` e `bcp`" alla fine di questo argomento.  
   
-- -l *timeout* specificare il numero di secondi prima un `sqlcmd` timeout di accesso quando si prova a connettersi a un server.
+- -l *timeout* Specifica il numero di secondi che devono trascorrere prima che si verifichi il timeout di un accesso a `sqlcmd` quando si tenta la connessione a un server.
 
 - -m *livello_errore* Controlla i messaggi di errore inviati a stdout.  
   
 - **-M * * * multisubnet_failover*  
-Specificare sempre **-M** in caso di connessione al listener di un gruppo di disponibilità di [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] o a un'istanza del cluster di failover di [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **-M** consente un rilevamento più veloce dei failover e una connessione più rapida al server attualmente attivo. Se non si specifica **–M** , significa che l'opzione **-M** è disattivata. Per altre informazioni sulle [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], vedere [Driver ODBC in Linux e macOS - disponibilità elevata e ripristino di emergenza](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Specificare sempre **-M** in caso di connessione al listener di un gruppo di disponibilità di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o a un'istanza del cluster di failover di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** consente un rilevamento più veloce dei failover e una connessione più rapida al server attualmente attivo. Se non si specifica **–M** , significa che l'opzione **-M** è disattivata. Per altre informazioni sulle [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], vedere [Driver ODBC in Linux e macOS - disponibilità elevata e ripristino di emergenza](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-M** non è supportata in CTP per SUSE Linux. È tuttavia possibile specificare la parola chiave **MultiSubnetFailover=Yes** in un file DSN passato a `sqlcmd`. Per altre informazioni, vedere "Supporto di DSN in `sqlcmd` e `bcp`" alla fine di questo argomento.  
@@ -102,7 +102,7 @@ Specificare sempre **-M** in caso di connessione al listener di un gruppo di dis
 - -s *column_separator_char* specificare il carattere separatore di colonna.  
 
 - -S [*protocollo*:] *server*[**,***porta*]  
-Specificare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] per connettersi a, o se -D viene usata, un DSN. Il driver ODBC in Linux e macOS richiede - S. Si noti che **tcp** è l'unico protocollo valido.  
+Specificare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per connettersi a, o se -D viene usata, un DSN. Il driver ODBC in Linux e macOS richiede - S. Si noti che **tcp** è l'unico protocollo valido.  
   
 - -t *timeout_query* Specifica il numero di secondi prima del timeout di un comando o di un'istruzione SQL.  
   
@@ -162,7 +162,7 @@ Nella versione corrente, sono disponibili i comandi seguenti:
 ## <a name="unavailable-options"></a>Opzioni non disponibili
 Nella versione corrente non sono disponibili le opzioni seguenti:  
 
-- -A Stabilisce la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tramite una connessione amministrativa dedicata (DAC, Dedicated Administrator Connection). Per informazioni su come effettuare una connessione amministrativa dedicata (DAC), vedere [Linee guida per la programmazione](../../../connect/odbc/linux-mac/programming-guidelines.md).  
+- -A Stabilisce la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite una connessione amministrativa dedicata (DAC, Dedicated Administrator Connection). Per informazioni su come effettuare una connessione amministrativa dedicata (DAC), vedere [Linee guida per la programmazione](../../../connect/odbc/linux-mac/programming-guidelines.md).  
   
 - -f *tabella_codici* Specifica le tabelle codici di input e output.  
   

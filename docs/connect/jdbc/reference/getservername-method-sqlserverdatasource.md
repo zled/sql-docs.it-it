@@ -1,5 +1,5 @@
 ---
-title: Metodo getServerName (SQLServerDataSource) | Documenti Microsoft
+title: Metodo getServerName (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd2d58a2c47553fee1d5c8d4cf9355998078e4d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8e709a5adc084c316733333a9012beee3fd77ef4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838657"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784222"
 ---
 # <a name="getservername-method-sqlserverdatasource"></a>Metodo getServerName (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Restituisce il nome del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] istanza.  
+  Restituisce il nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,10 +39,10 @@ public java.lang.String getServerName()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto **stringa** che contiene il nome del server oppure null se è impostato alcun valore.  
+ Valore **String** contenente il nome del server o Null se non viene impostato alcun valore.  
   
-## <a name="remarks"></a>Osservazioni  
- Il nome del server è il nome host del computer di destinazione che esegue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Se la proprietà getServerName non è impostata, getServerName restituisce il valore predefinito null.  
+## <a name="remarks"></a>Remarks  
+ Il nome del server è il nome host del computer di destinazione che esegue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se la proprietà getServerName non è impostata, getServerName restituisce il valore predefinito Null.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

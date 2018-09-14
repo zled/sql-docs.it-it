@@ -1,5 +1,5 @@
 ---
-title: getObject (metodo) (lang) | Documenti Microsoft
+title: getObject (metodo) (lang) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82618a47bc45d9d204e7c37305289796e77e5a60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6f6952daf4c1428d59b0e83656571a578af255f8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837266"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786273"
 ---
 # <a name="getobject-method-javalangstring"></a>Metodo getObject (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,30 +41,30 @@ public java.lang.Object getObject(java.lang.String sCol)
 #### <a name="parameters"></a>Parametri  
  *sCol*  
   
- Oggetto **stringa** che contiene il nome del parametro.  
+ Valore **String** contenente il nome del parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un **oggetto** valore.  
+ Valore **Object**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getObject viene specificato dal metodo getObject nell'interfaccia Java.SQL. CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getObject viene specificato il metodo getObject nell'interfaccia CallableStatement.  
   
  Il metodo restituirà il valore della colonna specificata come oggetto Java. Il tipo dell'oggetto Java sarà il tipo di oggetto Java predefinito che corrisponde al tipo SQL della colonna, in base al mapping per i tipi predefiniti indicato nella specifica JDBC. Se si tratta di un valore NULL SQL, il driver restituisce un valore Null Java.  
   
- Questo metodo può essere utilizzato anche per leggere tipi di dati astratti specifici del database. Nell'API di JDBC 2.0 il comportamento del metodo getObject viene esteso per materializzare i dati di tipi SQL definiti dall'utente. Quando una colonna contiene un valore di tipo structured o distinct, il comportamento di questo metodo è come se fosse una chiamata a `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
+ Questo metodo può essere utilizzato anche per leggere tipi di dati astratti specifici del database. Nell'API di JDBC 2.0, il comportamento del metodo getObject è esteso ai fini della materializzazione dei dati di tipi SQL definiti dall'utente. Quando una colonna contiene un valore di tipo Structured o Distinct, il comportamento di questo metodo è analogo a quello di una chiamata a `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
   
- A partire dal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Driver JDBC 3.0 per:  
+ A partire da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0:  
   
--   Un valore di tipo **data** verrà restituito come oggetto java.SQL. date.  
+-   Un valore di tipo **date** verrà restituito come oggetto java.sql.Date.  
   
--   Un valore di tipo **ora** verrà restituito come oggetto java.SQL.  
+-   Un valore di tipo **time** verrà restituito come oggetto java.sql.Time.  
   
--   Un valore di tipo **datetime2** sarà restituito come oggetto java.SQL. timestamp.  
+-   Un valore di tipo **datetime2** verrà restituito come oggetto java.sql.Timestamp.  
   
--   Un valore di tipo **datetimeoffset** verrà restituito come oggetto Microsoft.SQL.  
+-   Un valore di tipo **datetimeoffset** verrà restituito come oggetto microsoft.sql.DateTimeOffset.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getObject &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   

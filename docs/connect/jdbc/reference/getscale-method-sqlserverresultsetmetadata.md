@@ -1,5 +1,5 @@
 ---
-title: Metodo getScale (SQLServerResultSetMetaData) | Documenti Microsoft
+title: Metodo getScale (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a16a779cef867e5ce3550832be8ec4d5640e3b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 08f640544101f72dbe2ddda875eed701a7eb306f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837106"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787862"
 ---
 # <a name="getscale-method-sqlserverresultsetmetadata"></a>Metodo getScale (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,18 +41,18 @@ public int getScale(int column)
 #### <a name="parameters"></a>Parametri  
  *column*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un **int** che indica la scala della colonna.  
+ Valore **int** che indica la scala della colonna.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getScale viene specificato dal metodo getScale nell'interfaccia Java.SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getScale viene specificato dal metodo getScale nell'interfaccia ResultSetMetaData.  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Driver JDBC 3.0 per presenta modifiche di comportamento nella colonna DECIMAL_DIGITS. Vedere [GetColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) per ulteriori informazioni.  
+ [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft JDBC Driver 3.0 include modifiche di comportamento nella colonna DECIMAL_DIGITS. Per altre informazioni, vedere [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   

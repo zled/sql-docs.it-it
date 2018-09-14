@@ -1,5 +1,5 @@
 ---
-title: Metodo setPortNumber (SQLServerDataSource) | Documenti Microsoft
+title: Metodo setPortNumber (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5665bd5ed6f10a755f3980607995b19887908379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 608c83e843941f80d4f6c9805711394975fb0c20
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844506"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787889"
 ---
 # <a name="setportnumber-method-sqlserverdatasource"></a>Metodo setPortNumber (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Imposta il numero di porta da utilizzare per comunicare con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+  Imposta il numero di porta da usare per comunicare con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,12 +39,12 @@ public void setPortNumber(int portNumber)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Numero di porta*  
+ *portNumber*  
   
- Un **int** valore che contiene il numero di porta.  
+ Valore **int** contenente il numero di porta.  
   
-## <a name="remarks"></a>Osservazioni  
- Il numero di porta è il numero di porta TCP/IP viene utilizzato quando si apre una connessione socket a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Se la proprietà portNumber non è impostata, il [getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md) il metodo restituisce il valore predefinito 1433.  
+## <a name="remarks"></a>Remarks  
+ Il numero di porta è il numero di porta TCP/IP usato quando si apre una connessione socket a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se la proprietà portNumber non è impostata, il metodo [getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md) restituisce il valore predefinito 1433.  
   
 > [!NOTE]  
 >  Il metodo setPortNumber non esegue alcun controllo sul valore di porta passato di intervallo. È possibile passare un numero di porta che non è valido, come 99999, senza generare un errore.  

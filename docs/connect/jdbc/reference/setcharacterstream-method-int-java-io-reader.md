@@ -1,5 +1,5 @@
 ---
-title: Metodo setCharacterStream (int, Java.IO. Reader) | Documenti Microsoft
+title: Metodo setCharacterStream (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7fa0e3edcc88e105f631105fb6d3735c6baa6348
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4a0c8554e85a3341a79c80b1b4e6c6c050cfcda1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843456"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785796"
 ---
 # <a name="setcharacterstream-method-int-javaioreader"></a>Metodo setCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Imposta il parametro designato per l'oggetto specificato Java.IO. Reader.  
+  Imposta il parametro designato sull'oggetto java.io.Reader specificato.  
   
 > [!NOTE]  
->  Questa funzionalità è stata introdotta con la [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Driver JDBC versione 2.0.  
+>  Questa caratteristica è stata introdotta nella versione 2.0 del driver JDBC per [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,19 +38,19 @@ public final void setCharacterStream(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *parameterIndex*  
+ *parametro parameterIndex*  
   
- Un **int** che indica il numero di parametro.  
+ Valore **int** che indica il numero di parametro.  
   
- *Lettore*  
+ *reader*  
   
- Oggetto che contiene i dati Unicode Java.IO. Reader.  
+ Oggetto java.io.Reader che contiene i dati Unicode.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo setCharacterStream viene specificato dal metodo setCharacterStream nell'interfaccia Java.SQL. PreparedStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo setCharacterStream viene specificato dal metodo setCharacterStream nell'interfaccia PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo setCharacterStream &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)   

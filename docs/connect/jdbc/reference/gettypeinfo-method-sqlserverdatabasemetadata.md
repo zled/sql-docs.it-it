@@ -1,5 +1,5 @@
 ---
-title: Metodo getTypeInfo (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getTypeInfo (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d81b932d536240b01c79e8e4a8e8589efae4d603
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a1917982457f00ff4e383d8ba8d317de4352cb61
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843256"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785671"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Metodo getTypeInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,17 +39,17 @@ public java.sql.ResultSet getTypeInfo()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getTypeInfo viene specificato dal metodo getTypeInfo nell'interfaccia DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getTypeInfo conterrà le informazioni seguenti:  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|Nome del tipo di dati.|  
 |DATA_TYPE|**short**|Tipo di dati SQL da java.sql.Types.|  
@@ -58,11 +58,11 @@ public java.sql.ResultSet getTypeInfo()
 |LITERAL_SUFFIX|**String**|Uno o più caratteri che seguono il nome di una costante.|  
 |CREATE_PARAMS|**String**|Descrizione dei parametri di creazione per il tipo di dati.|  
 |NULLABLE|**short**|Indica se la colonna può contenere un valore Null. Può essere uno dei valori seguenti:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
-|CASE_SENSITIVE|**boolean**|Indica se il tipo di dati supporta la distinzione tra maiuscole e minuscole. "**true**"se il tipo viene fatta distinzione tra maiuscole e minuscole; in caso contrario,"**false**".|  
+|CASE_SENSITIVE|**boolean**|Indica se il tipo di dati supporta la distinzione tra maiuscole e minuscole. "**true**"se il tipo è distinzione maiuscole / minuscole; in caso contrario,"**false**".|  
 |SEARCHABLE|**short**|Indica se la colonna può essere utilizzata in una clausola WHERE SQL. Può essere uno dei valori seguenti:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|Indica il segno del tipo di dati. "**true**"se il tipo è senza segno; in caso contrario,"**false**".|  
 |FIXED_PREC_SCALE|**boolean**|Indica se il tipo di dati può essere un valore money. "**true**" se il tipo di dati è di tipo money; in caso contrario, "**false**".|  
-|AUTO_INCREMENT|**boolean**|Indica se il tipo di dati può essere incrementato automaticamente. "**true**"se il tipo può essere incrementato automaticamente; in caso contrario,"**false**".|  
+|AUTO_INCREMENT|**boolean**|Indica se il tipo di dati può essere incrementato automaticamente. "**true**"se il tipo può essere auto incrementato; in caso contrario,"**false**".|  
 |LOCAL_TYPE_NAME|**String**|Nome localizzato del tipo di dati.|  
 |MINIMUM_SCALE|**short**|Numero massimo di cifre a destra del separatore decimale.|  
 |MAXIMUM_SCALE|**short**|Numero minimo di cifre a destra del separatore decimale.|  
@@ -70,13 +70,13 @@ public java.sql.ResultSet getTypeInfo()
 |SQL_DATETIME_SUB|**int**|Non supportato dal driver JDBC.|  
 |NUM_PREC_RADIX|**int**|Numero di bit o di cifre per il calcolo del numero massimo che una colonna può contenere.|  
 |INTERVAL_PRECISION|**smallint**|Valore di precisione iniziale dell'intervallo.|  
-|USERTYPE|**smallint**|Il **usertype** valore il **systypes** tabella. Per ulteriori informazioni, vedere la documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].|  
+|USERTYPE|**smallint**|Valore **usertype** della tabella **systypes**. Per ulteriori informazioni, vedere la documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 > [!NOTE]  
->  Per ulteriori informazioni sui dati restituiti dal metodo getTypeInfo, vedere "sp_datatype_info (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione in linea.  
+>  Per altre informazioni sui dati restituiti dal metodo getTypeInfo, vedere "sp_datatype_info (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come utilizzare il metodo getTypeInfo per restituire informazioni sui tipi di dati utilizzati un [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)] (o versione successiva) database.  
+ L'esempio seguente illustra come usare il metodo getTypeInfo per restituire informazioni sui tipi di dati usati in un database di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (o versioni successive).  
   
 ```  
 public static void executeGetTypeInfo(Connection con) {  

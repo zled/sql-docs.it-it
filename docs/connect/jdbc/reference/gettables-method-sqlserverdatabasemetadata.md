@@ -1,5 +1,5 @@
 ---
-title: Metodo getTables (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getTables (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64b6559137dca42bf2602b19aaa92c754dc255be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2bbe1c39895febd9d853afee54c034d6eb77c3b1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840806"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785636"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>Metodo getTables (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,38 +44,38 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 #### <a name="parameters"></a>Parametri  
  *catalog*  
   
- Oggetto **stringa** che contiene il nome del catalogo. Se si specifica Null per questo parametro, non è necessario utilizzare il nome del catalogo.  
+ Valore **String** contenente il nome del catalogo. Se si specifica Null per questo parametro, non è necessario utilizzare il nome del catalogo.  
   
  *schema*  
   
- Oggetto **stringa** che contiene il modello di nome dello schema. Se si specifica Null per questo parametro, non è necessario utilizzare il nome dello schema.  
+ Valore **String** contenente il modello del nome dello schema. Se si specifica Null per questo parametro, non è necessario utilizzare il nome dello schema.  
   
  *tableName*  
   
- Oggetto **stringa** che contiene il modello di nome di tabella.  
+ Valore **String** contenente il modello del nome della tabella.  
   
- *Tipi*  
+ *types*  
   
  Matrice di stringhe contenente i tipi di tabelle da includere. Null indica che devono essere inclusi tutti i tipi di tabelle.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getTables viene specificato dal metodo getTables nell'interfaccia DatabaseMetaData.  
   
- Set di risultati restituito dal metodo getTables conterrà le informazioni seguenti:  
+ Il set di risultati restituito dal metodo getTables conterrà le informazioni seguenti:  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Nome del database contenente la tabella specificata.|  
 |TABLE_SCHEM|**String**|Nome dello schema della tabella.|  
 |TABLE_NAME|**String**|Il nome della tabella.|  
 |TABLE_TYPE|**String**|Tipo di tabella.|  
-|REMARKS|**String**|Descrizione della tabella.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] non restituisce un valore per questa colonna.  |  
+|REMARKS|**String**|Descrizione della tabella.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non restituisce un valore per questa colonna.|  
 |TYPE_CAT|**String**|Non supportato dal driver JDBC.|  
 |TYPE_SCHEM|**String**|Non supportato dal driver JDBC.|  
 |TYPE_NAME|**String**|Non supportato dal driver JDBC.|  
@@ -83,10 +83,10 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |REF_GENERATION|**String**|Non supportato dal driver JDBC.|  
   
 > [!NOTE]  
->  Per ulteriori informazioni sui dati restituiti dal metodo getTables, vedere "sp_tables (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione in linea.  
+>  Per ulteriori informazioni sui dati restituiti dal metodo getTables, vedere "sp_tables (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il metodo getTables per restituire le informazioni di descrizione di tabella per la tabella Person Contact il [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] database di esempio.  
+ Nell'esempio seguente viene illustrato come utilizzare il metodo getTables per restituire le informazioni sulla descrizione della tabella Person.Contact del database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetTables(Connection con) {  

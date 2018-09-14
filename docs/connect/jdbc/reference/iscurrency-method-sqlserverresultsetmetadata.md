@@ -1,5 +1,5 @@
 ---
-title: Metodo isCurrency (SQLServerResultSetMetaData) | Documenti Microsoft
+title: Metodo isCurrency (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 885e7a8f8f1e32822530b4afa414415e2b667db6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 442fe1d519820651f6a22fa601642092d87669dc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839556"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786136"
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>Metodo isCurrency (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public boolean isCurrency(int column)
 #### <a name="parameters"></a>Parametri  
  *column*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
  **true** se la colonna è un valore di cassa. In caso contrario, **false**.  
@@ -49,10 +49,10 @@ public boolean isCurrency(int column)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo isCurrency viene specificato dal metodo isCurrency nell'interfaccia Java.SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo isCurrency viene specificato dal metodo isCurrency nell'interfaccia ResultSetMetaData.  
   
- Questo metodo restituirà **true** solo con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipi di dati money e smallmoney.  
+ Questo metodo restituirà **true** solo con tipi di dati money e smallmoney di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

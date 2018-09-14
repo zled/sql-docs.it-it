@@ -1,5 +1,5 @@
 ---
-title: Metodo getReference (SQLServerDataSource) | Documenti Microsoft
+title: Metodo getReference (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ec73d5918cebbc5a3c8ccd8261fc492717d8660
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6a34933b8f210e7591da73bb3f9a44bc67246dd7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837156"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786473"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>Metodo getReference (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Restituisce un riferimento a questo [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) oggetto.  
+  Restituisce un riferimento a questo oggetto [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,12 +39,12 @@ public javax.naming.Reference getReference()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto di riferimento.  
+ Un oggetto di riferimento.  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getReference viene specificato dal metodo getReference nell'interfaccia javax.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getReference viene specificato dal metodo getReference nell'interfaccia Referenceable.  
   
- Prima di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Driver JDBC 3.0, se Settruststorepassword veniva chiamato su un oggetto SQLServerDataSource, la password sarebbe stata disponibile nell'oggetto restituito da sqlserverdatasource. GetReference, consentendone l'oggetto da utilizzare per eseguire connessioni aggiuntive. Nel driver JDBC 3.0 sarà necessario impostare la password sull'oggetto restituito da SQLServerDataSource.getReference, prima di eseguire connessioni con l'oggetto.  
+ Prima di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, se l'oggetto SQLServerDataSource.setTrustStorePassword veniva chiamato su un oggetto SQLServerDataSource, la password era disponibile nell'oggetto restituito da SQLServerDataSource.getReference, e questo poteva essere usato per eseguire connessioni aggiuntive. Nel driver JDBC 3.0 sarà necessario impostare la password sull'oggetto restituito da SQLServerDataSource.getReference, prima di eseguire connessioni con l'oggetto.  
   
  Inoltre, se si imposta SQLServerDataSource.setTrustStorePassword prima di associare le proprietà delle origini dati, la chiamata a SQLServerDataSource.setTrustStorePassword deve essere effettuata prima di ottenere la connessione. Ad esempio,  
   

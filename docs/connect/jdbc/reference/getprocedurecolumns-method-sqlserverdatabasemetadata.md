@@ -1,5 +1,5 @@
 ---
-title: Metodo getProcedureColumns (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getProcedureColumns (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d323f4ba70e439eb5ec6ee1ec6178c8d8ec69dc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cae6530dc0b37b57d986ab160ce9be0bf4d5a33e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843276"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786702"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>Metodo getProcedureColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,32 +44,32 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 #### <a name="parameters"></a>Parametri  
  *sCatalog*  
   
- Oggetto **stringa** che contiene il nome del catalogo. Se si specifica Null per questo parametro, non è necessario utilizzare il nome del catalogo.  
+ Valore **String** contenente il nome del catalogo. Se si specifica Null per questo parametro, non è necessario utilizzare il nome del catalogo.  
   
  *SLO*  
   
- Oggetto **stringa** che contiene il modello di nome dello schema. Se si specifica Null per questo parametro, non è necessario utilizzare il nome dello schema.  
+ Valore **String** contenente il modello del nome dello schema. Se si specifica Null per questo parametro, non è necessario utilizzare il nome dello schema.  
   
  *proc*  
   
- Oggetto **stringa** che contiene il modello di nome di stored procedure.  
+ Valore **String** contenente il modello del nome della procedura.  
   
  *col*  
   
- Oggetto **stringa** che contiene il modello di nome di colonna. Se si specifica Null per questo parametro, viene restituita una riga per ogni colonna.  
+ Valore **String** contenente il modello del nome della colonna. Se si specifica Null per questo parametro, viene restituita una riga per ogni colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getProcedureColumns viene specificato dal metodo getProcedureColumns nell'interfaccia DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getProcedureColumns conterrà le informazioni seguenti:  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**String**|Nome del database in cui si trova la stored procedure specificata.|  
 |PROCEDURE_SCHEM|**String**|Schema per la stored procedure.|  
@@ -83,10 +83,10 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |SCALE|**short**|Numero di cifre a destra del separatore decimale.|  
 |RADIX|**short**|Base per i tipi numerici.|  
 |NULLABLE|**short**|Indica se la colonna può contenere un valore Null. Può essere uno dei valori seguenti:<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
-|REMARKS|**String**|Descrizione della colonna della procedura.<br /><br /> <br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] non restituisce un valore per questa colonna.|  
+|REMARKS|**String**|Descrizione della colonna della procedura.<br /><br /> <br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non restituisce un valore per questa colonna.|  
 |COLUMN_DEF|**String**|Valore predefinito della colonna.|  
-|SQL_DATA_TYPE|**smallint**|Questa colonna corrisponde alla **DATA_TYPE** colonna, tranne che per il **datetime** e ISO **intervallo** tipi di dati.|  
-|SQL_DATETIME_SUB|**smallint**|Il **datetime** ISO **intervallo** sottocodice se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i dati di tipi diversi da **datetime** e ISO **intervallo**, questa colonna è NULL.|  
+|SQL_DATA_TYPE|**smallint**|Questa colonna corrisponde alla colonna **DATA_TYPE**, tranne che per i tipi di dati **datetime** e ISO **interval**.|  
+|SQL_DATETIME_SUB|**smallint**|Sottocodice **datetime** ISO **interval** se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i dati di tipi diversi da **data/ora** e ISO **intervallo**, questa colonna è NULL.|  
 |CHAR_OCTET_LENGTH|**int**|Numero massimo di byte nella colonna.|  
 |ORDINAL_POSITION|**int**|Indice della colonna all'interno della tabella.|  
 |IS_NULLABLE|**String**|Indica se la colonna ammette valori Null.|  
@@ -98,13 +98,13 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|Nome di una raccolta di XML Schema. Se non è possibile trovare il nome, viene visualizzata una stringa vuota.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|Nome del catalogo contenente il tipo definito dall'utente (UDT).|  
 |SS_XML_SCHEMACOLLECTION_NAME|**String**|Nome dello schema contenente il tipo definito dall'utente (UDT).|  
-|SS_DATA_TYPE|**tinyint**|Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo di dati utilizzato da stored procedure estese.<br /><br /> <br /><br /> **Nota:** per ulteriori informazioni sui tipi di dati restituito da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], vedere "Tipi di dati (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione Online.|  
+|SS_DATA_TYPE|**tinyint**|Tipo di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usato in stored procedure estese.<br /><br /> <br /><br /> **Nota**: per altre informazioni sui tipi di dati restituiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere "Tipi di dati (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 > [!NOTE]  
->  Per ulteriori informazioni sui dati restituiti dal metodo getProcedureColumns, vedere "sp_sproc_columns (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione in linea.  
+>  Per altre informazioni sui dati restituiti dal metodo getProcedureColumns, vedere "sp_sproc_columns (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il metodo getProcedureColumns per restituire informazioni sulle stored procedure uspGetBillOfMaterials nel [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] database di esempio.  
+ L'esempio seguente illustra come usare il metodo getProcedureColumns per restituire informazioni sulla stored procedure uspGetBillOfMaterials nel database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetProcedureColumns(Connection con) {  

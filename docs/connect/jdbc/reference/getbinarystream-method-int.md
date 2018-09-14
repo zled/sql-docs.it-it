@@ -1,5 +1,5 @@
 ---
-title: Metodo getBinaryStream (int) | Documenti Microsoft
+title: Metodo getBinaryStream (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5147934e43cd1e0ae50262aa3de35dee8bc7763c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6cae82023ce19760ae3ed324458f6a6fae6e46f3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831976"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785663"
 ---
 # <a name="getbinarystream-method-int"></a>Metodo getBinaryStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera il valore di indice della colonna designata nella riga corrente di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto come flusso binario di byte non interpretati.  
+  Recupera il valore dell'indice della colonna designata nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come flusso binario di byte non interpretati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ public java.io.InputStream getBinaryStream(int columnIndex)
 #### <a name="parameters"></a>Parametri  
  *columnIndex*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
  Un oggetto InputStream.  
@@ -49,15 +49,15 @@ public java.io.InputStream getBinaryStream(int columnIndex)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getBinaryStream viene specificato dal metodo getBinaryStream nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getBinaryStream viene specificato dal metodo getBinaryStream nell'interfaccia ResultSet.  
   
- Questo metodo può essere utilizzato solo con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipi di dati di binary, varbinary, varbinary (max) e immagine. Se si tenta di utilizzarlo con altri tipi di dati genererà un'eccezione.  
+ Questo metodo può essere usato solo con i tipi di dati binary, varbinary, varbinary(max) e image di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se si tenta di utilizzarlo con altri tipi di dati genererà un'eccezione.  
   
  Una volta ottenuto il valore come flusso tramite questo metodo, tale valore può essere letto in blocchi dal flusso. Questo metodo è particolarmente adatto per il recupero di valori LONGVARBINARY di grandi dimensioni.  
   
 > [!NOTE]  
->  Prima di ottenere il valore di qualsiasi altra colonna, è necessario leggere tutti i dati nel flusso restituito. La chiamata successiva a un metodo di richiamo chiude in modo implicito il flusso. Inoltre, un flusso restituito 0 quando viene chiamato il metodo InputStream.available, se vi è dati disponibile o meno.  
+>  Prima di ottenere il valore di qualsiasi altra colonna, è necessario leggere tutti i dati nel flusso restituito. La chiamata successiva a un metodo di richiamo chiude in modo implicito il flusso. Un flusso può anche restituire 0 quando viene chiamato il metodo InputStream.available, siano o meno disponibili dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getBinaryStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)   

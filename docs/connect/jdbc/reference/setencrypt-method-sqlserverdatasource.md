@@ -1,5 +1,5 @@
 ---
-title: Metodo setEncrypt (SQLServerDataSource) | Documenti Microsoft
+title: Metodo setEncrypt (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 723c5c5402fb32f0ad74bf303dd7c682b88d1c84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9e0a40414bb388e6063e4be6525e986975ccf0af
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843206"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786110"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>Metodo setEncrypt (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Imposta un **booleano** valore che indica se la proprietà di crittografia è abilitata.  
+  Imposta un valore **Boolean** che indica se la proprietà encrypt è abilitata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,24 +39,24 @@ public void setEncypt(boolean encrypt)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Crittografare*  
+ *encrypt*  
   
- **true** se la crittografia Secure Sockets Layer (SSL) è abilitata tra il client e il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. In caso contrario, **false**.  
+ **true** se è abilitata la crittografia Secure Sockets Layer (SSL) tra il client e il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In caso contrario, **false**.  
   
-## <a name="remarks"></a>Osservazioni  
- Se la proprietà encrypt è impostata su **true**, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] assicura che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] utilizza la crittografia SSL per tutti i dati inviati tra client e server, se il server è installato un certificato. Il valore predefinito è **false**.  
+## <a name="remarks"></a>Remarks  
+ Se la proprietà encrypt è impostata su **true**, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fa in modo che in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] venga usata la crittografia SSL per tutti i dati inviati tra il client e il server, se nel server è installato un certificato. Il valore predefinito è **false**.  
   
  Il driver JDBC rileva l'ambiente Java Virtual Machine (JVM) in cui viene eseguito durante il tentativo di stabilire un handshake SSL.  
   
- Se la proprietà encrypt è impostata su **true**, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] Usa provider di sicurezza JSSE predefinito di JVM per negoziare la crittografia SSL con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. È possibile che il provider di sicurezza predefinito non supporti tutte le funzionalità necessarie per negoziare la crittografia SSL. Ad esempio, il provider di sicurezza predefinito non può supportare la dimensione della chiave pubblica RSA utilizzata nel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] certificato SSL. In questo caso, è possibile che venga generato un errore dal provider di sicurezza predefinito, a causa del quale la connessione viene terminata dal driver JDBC. Per risolvere il problema, eseguire una delle operazioni seguenti:  
+ Se la proprietà encrypt è impostata su **true**, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] usa il provider di sicurezza JSSE predefinito di JVM per negoziare la crittografia SSL con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. È possibile che il provider di sicurezza predefinito non supporti tutte le funzionalità necessarie per negoziare la crittografia SSL. Tale provider può, ad esempio, non supportare la dimensione della chiave pubblica RSA usata nel certificato SSL di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In questo caso, è possibile che venga generato un errore dal provider di sicurezza predefinito, a causa del quale la connessione viene terminata dal driver JDBC. Per risolvere il problema, eseguire una delle operazioni seguenti:  
   
--   Configurare il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con un certificato server con una chiave pubblica RSA più piccola  
+-   Configurare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con un certificato del server con una chiave pubblica RSA di dimensione inferiore  
   
--   Configurare JVM per l'utilizzo di un provider di sicurezza JSSE diverso nel "\<java-home > / lib/security/java.security" file delle proprietà di sicurezza  
+-   Configurare JVM per l'uso di un provider di sicurezza JSSE diverso nel file delle proprietà di sicurezza "\<java-home>/lib/security/java.security"  
   
 -   Utilizzare una versione di JVM diversa.  
   
- Se la proprietà di crittografia non viene specificata o impostata su **false**, il driver non imporrà la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] per supportare la crittografia SSL. Se il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] istanza non è configurata per forzare la crittografia SSL, viene stabilita una connessione senza crittografia. Se il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] istanza è configurata per forzare la crittografia SSL, il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] verrà automaticamente abilita la crittografia SSL quando eseguono correttamente configurato JVM, altrimenti la connessione viene terminata e il driver genererà un errore.  
+ Se la proprietà encrypt non è specificata o è impostata su **false**, il driver non impone a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il supporto della crittografia SSL. Se l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non è configurata in modo da forzare la crittografia SSL, viene stabilita una connessione senza crittografia. Se l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è configurata in modo da forzare la crittografia SSL, questa viene abilitata automaticamente da [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] durante l'esecuzione in un ambiente JVM correttamente configurato. In caso contrario, la connessione viene terminata e il driver genera un errore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

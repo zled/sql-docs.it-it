@@ -1,5 +1,5 @@
 ---
-title: rowInserted (metodo) (SQLServerResultSet) | Documenti Microsoft
+title: Metodo rowInserted (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca82265b8fde94c29495c529928087a20ddc5544
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5b11d932eab77c0987d605b6914666e58d1d3b06
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842026"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786478"
 ---
-# <a name="rowinserted-method-sqlserverresultset"></a>rowInserted (metodo) (SQLServerResultSet)
+# <a name="rowinserted-method-sqlserverresultset"></a>Metodo rowInserted (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Recupera informazioni sull'eventuale presenza di un inserimento nella riga corrente.  
@@ -39,18 +39,18 @@ public boolean rowInserted()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se una riga è stato un inserimento e gli inserimenti vengono rilevati. In caso contrario, **false**.  
+ **true** se una riga è stata eseguita un inserimento e gli inserimenti vengono rilevati. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo rowUpdated viene specificato dal metodo rowUpdated nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo rowUpdated viene specificato dal metodo rowUpdated nell'interfaccia ResultSet.  
   
- Il valore restituito dipende dal fatto che questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto è in grado di rilevare gli inserimenti visibili.  
+ Il valore restituito dipende dalla possibilità dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) di rilevare gli inserimenti visibili.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] non rileva le righe inserite per qualsiasi tipo di cursore.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non rilevare le righe inserite per qualsiasi tipo di cursore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

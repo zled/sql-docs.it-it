@@ -1,5 +1,5 @@
 ---
-title: Interfaccia ISQLServerDataSource | Documenti Microsoft
+title: Interfaccia ISQLServerDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9106cd417574d1e29d974236544116e2e0530fb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 498554dc92e9ec8e52a36227412b9e74f28c40ba
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843136"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784250"
 ---
 # <a name="isqlserverdatasource-interface"></a>Interfaccia ISQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Factory per creare connessioni all'origine dati rappresentata da questo oggetto. Questa interfaccia è stata aggiunta in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Driver JDBC 3.0.  
+  Factory per creare connessioni all'origine dati rappresentata da questo oggetto. Questa interfaccia è stata aggiunta in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
  **Pacchetto:** com.microsoft.sqlserver.jdbc  
   
@@ -37,10 +37,10 @@ ms.locfileid: "32843136"
 public interface ISQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Questa interfaccia è implementata da [classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
+## <a name="remarks"></a>Remarks  
+ Questa interfaccia viene implementata da [classi di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Questa interfaccia espone i seguenti [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-metodi specifici:  
+ L'interfaccia espone i metodi specifici di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] seguenti:  
   
 |Metodo|Per ulteriori informazioni, vedere|  
 |------------|-------------------------------|  
@@ -57,7 +57,7 @@ public interface ISQLServerDataSource
 |public int getPacketSize()|[getPacketSize](../../../connect/jdbc/reference/getpacketsize-method-sqlserverdatasource.md)|  
 |public int getPortNumber()|[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)|  
 |public String getResponseBuffering()|[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverdatasource.md)|  
-|public String getSelectMethod()|[metodo getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md)|  
+|public String getSelectMethod()|[getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md)|  
 |public boolean getSendStringParametersAsUnicode()|[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|  
 |public boolean getSendTimeAsDatetime()|[getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md)|  
 |public String getServerName()|[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|  
@@ -96,6 +96,6 @@ public interface ISQLServerDataSource
 |public void setXopenStates(boolean)|[setXopenStates](../../../connect/jdbc/reference/setxopenstates-method-sqlserverdatasource.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento all'API del Driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Informazioni di riferimento sull'API del driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Metodo getExportedKeys (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getExportedKeys (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52e96e79dd6e7e9b51824608e161be5648796d01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 28d1c4ef8b1c5ae0422fd140cd16a318843f6a22
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836216"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786274"
 ---
 # <a name="getexportedkeys-method-sqlserverdatabasemetadata"></a>Metodo getExportedKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,30 +41,30 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Cat*  
+ *cat*  
   
- Oggetto **stringa** che contiene il nome del catalogo.  
+ Valore **String** contenente il nome del catalogo.  
   
  *schema*  
   
- Oggetto **stringa** che contiene il nome dello schema.  
+ Valore **String** contenente il nome dello schema.  
   
  *table*  
   
- Oggetto **stringa** che contiene il nome della tabella.  
+ Valore **String** contenente il nome della tabella.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getExportedKeys viene specificato dal metodo getExportedKeys nell'interfaccia DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getExportedKeys conterrà le informazioni seguenti:  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|Nome del catalogo che contiene la tabella di chiave primaria.|  
 |PKTABLE_SCHEM|**String**|Nome dello schema della tabella di chiave primaria.|  
@@ -82,10 +82,10 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
 |DEFERRABILITY|**short**|Indica se la valutazione del vincolo di chiave esterna può essere posticipata fino a quando non viene eseguito un commit. Può essere uno dei valori seguenti:<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  
->  Per ulteriori informazioni sui dati restituiti dal metodo getExportedKeys, vedere "sp_fkeys (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione in linea.  
+>  Per altre informazioni sui dati restituiti dal metodo getExportedKeys, vedere "sp_fkeys (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il metodo getExportedKeys per restituire informazioni su tutte le chiavi esterne che fanno riferimento a chiavi primarie della tabella Person Contact il [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] database di esempio.  
+ L'esempio seguente illustra come usare il metodo getExportedKeys per restituire le informazioni su tutte le chiavi esterne che fanno riferimento alle chiavi primarie della tabella Person.Contact nel database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetExportedKeys(Connection con) {  

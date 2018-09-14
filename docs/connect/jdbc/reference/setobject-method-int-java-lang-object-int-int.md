@@ -1,5 +1,5 @@
 ---
-title: Metodo setObject (int, lang, int, int) | Documenti Microsoft
+title: Metodo setObject (int, java.lang.Object, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61e81b3eebdae47b2fd60d279a8ca1614d8e5267
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 922c6f315c560ac4b26a8140f47e79aaebae5b45
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844856"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786294"
 ---
 # <a name="setobject-method-int-javalangobject-int-int"></a>Metodo setObject (int, java.lang.Object, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public final void setObject(int n,
 #### <a name="parameters"></a>Parametri  
  *n*  
   
- Un **int** che indica il numero di parametro.  
+ Valore **int** che indica il numero di parametro.  
   
  *obj*  
   
@@ -52,21 +52,21 @@ public final void setObject(int n,
   
  *targetSqlType*  
   
- Un **int** che indica il tipo di destinazione, come definito in Java.SQL.  
+ Valore **int** che indica il tipo di destinazione come definito in java.sql.Types.  
   
  *scala*  
   
- Un **int** che indica il numero di cifre a destra del separatore decimale. Questo parametro viene ignorato per tutti i tipi diversi da NUMERIC e DECIMAL.  
+ Valore **int** che indica il numero di cifre a destra del separatore decimale. Questo parametro viene ignorato per tutti i tipi diversi da NUMERIC e DECIMAL.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo setObject viene specificato dal metodo setObject nell'interfaccia Java.SQL. PreparedStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo setObject viene specificato dal metodo setObject nell'interfaccia PreparedStatement.  
   
- A partire da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Driver JDBC 3.0, il comportamento di questo metodo viene modificato dal **sendTimeAsDatetime** proprietà di connessione ([impostando le proprietà di connessione](../../../connect/jdbc/setting-the-connection-properties.md)) e [ Setsendtimeasdatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ A partire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Driver JDBC 3.0, il comportamento di questo metodo viene modificato per il **sendTimeAsDatetime** proprietà di connessione ([impostando le proprietà di connessione](../../../connect/jdbc/setting-the-connection-properties.md)) e [ Setsendtimeasdatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Per ulteriori informazioni, vedere [Java.SQL configurazione come i valori vengono inviati al Server](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Per altre informazioni, vedere [Java configurazione come valori vengono inviati al Server](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo setObject &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   

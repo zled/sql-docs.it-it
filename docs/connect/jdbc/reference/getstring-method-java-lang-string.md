@@ -1,5 +1,5 @@
 ---
-title: getString (metodo) (lang) | Documenti Microsoft
+title: getString (metodo) (lang) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c35a0473277359e12eac9e93990dd3f4dc213bd2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d2c46c423709fddda42c18aa3f5d9c57c56fc432
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838006"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785948"
 ---
 # <a name="getstring-method-javalangstring"></a>Metodo getString (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera il valore del parametro designato come un **stringa** nel linguaggio di programmazione Java specificato il nome del parametro.  
+  Recupera il valore del parametro designato come oggetto **String** nel linguaggio di programmazione Java in base al nome del parametro.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,18 +41,18 @@ public java.lang.String getString(java.lang.String sCol)
 #### <a name="parameters"></a>Parametri  
  *sCol*  
   
- Oggetto **stringa** che contiene il nome del parametro.  
+ Valore **String** contenente il nome del parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto **stringa** valore.  
+ Valore **String**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getString viene specificato dal metodo getString nell'interfaccia Java.SQL. CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getString viene specificato dal metodo getString nell'interfaccia CallableStatement.  
   
- Tutte le colonne [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] può essere restituito come stringa. Pertanto, possono essere restituite una rappresentazione di stringa di tutti i tipi numerici e basati su caratteri e una rappresentazione in stringa esadecimale di colonne binarie quali binary, varbinary, varbinary(max), image, timestamp e uniqueidentifier.  
+ Tutte le colonne in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono essere restituite come stringa. Pertanto, possono essere restituite una rappresentazione di stringa di tutti i tipi numerici e basati su caratteri e una rappresentazione in stringa esadecimale di colonne binarie quali binary, varbinary, varbinary(max), image, timestamp e uniqueidentifier.  
   
  I tipi dipendenti dai percorsi quali money, smallmoney, datetime, smalldatetime, float, real, decimal e numeric restituiranno il formato canonico toString() per il valore sottostante del tipo.  
   

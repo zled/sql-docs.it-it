@@ -1,5 +1,5 @@
 ---
-title: Classe SQLServerClob | Documenti Microsoft
+title: Classe SQLServerClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 514368a42c47213db586b49fb521ca9a4b19a273
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8d4ae3c44fadc45cf577bc3da4801580ed480f27
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845956"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786297"
 ---
 # <a name="sqlserverclob-class"></a>Classe SQLServerClob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "32845956"
   
  **Estende:** java.lang.Object  
   
- **Implementa:** CLOB, java.io.Serializable  
+ **Implementa:** java.sql.Clob, java.io.Serializable  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,11 +39,11 @@ ms.locfileid: "32845956"
 public class SQLServerClob  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Un oggetto CLOB viene archiviato [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] come tipo di dati TEXT o NTEXT.  
+## <a name="remarks"></a>Remarks  
+ Un oggetto CLOB viene archiviato in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come tipo di dati TEXT o NTEXT.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   
- [Riferimento all'API del Driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Informazioni di riferimento sull'API del driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

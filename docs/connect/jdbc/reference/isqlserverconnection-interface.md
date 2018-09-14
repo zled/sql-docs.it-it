@@ -1,5 +1,5 @@
 ---
-title: Interfaccia ISQLServerConnection | Documenti Microsoft
+title: Interfaccia ISQLServerConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ca0e0504a7f28622ba2419545d2167ad917f784
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f7b9c02332b5a680fcb04c2a9d38c27f6fe5a9e2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841436"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787012"
 ---
 # <a name="isqlserverconnection-interface"></a>Interfaccia ISQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Rappresenta una connessione JDBC a un [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database. Questa interfaccia è stata aggiunta in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Driver JDBC 3.0.  
+  Rappresenta una connessione JDBC a un database [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questa interfaccia è stata aggiunta in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
  **Pacchetto:** com.microsoft.sqlserver.jdbc  
   
- **Estende:** Java  
+ **Estende:** java.sql.Connection  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +37,10 @@ ms.locfileid: "32841436"
 public interface ISQLServerConnection  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Questa interfaccia è implementata da [classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
+## <a name="remarks"></a>Remarks  
+ Questa interfaccia viene implementata da [classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
- Questa interfaccia espone i seguenti [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-campo specifico:  
+ Questa interfaccia espone il campo specifico di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] seguente:  
   
 |Campo|Per ulteriori informazioni, vedere|  
 |-----------|-------------------------------|  
@@ -48,6 +48,6 @@ public interface ISQLServerConnection
 |public UUID getClientConnectionId()|[getClientConnectionID()](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento all'API del Driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Informazioni di riferimento sull'API del driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

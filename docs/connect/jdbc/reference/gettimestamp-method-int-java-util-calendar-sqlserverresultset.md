@@ -1,5 +1,5 @@
 ---
-title: Metodo getTimestamp (int, java.util.Calendar) | Documenti Microsoft
+title: Metodo getTimestamp (int, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d7d8b65960e724e63282110eb540e57a4a3b9432
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e7fad5c0d40c6e6ab336fd8e68194074278d9916
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841346"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787025"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar-sqlserverresultset"></a>Metodo getTimestamp (int, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera il valore di indice della colonna designata nella riga corrente di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto come oggetto java.SQL. timestamp nel linguaggio linguaggio di programmazione, utilizzando un oggetto di calendario.  
+  Recupera il valore dell'indice della colonna designata nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto java.sql.Timestamp nel linguaggio di programmazione Java, utilizzando un oggetto Calendar.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,22 +42,22 @@ public java.sql.Timestamp getTimestamp(int columnIndex,
 #### <a name="parameters"></a>Parametri  
  *columnIndex*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
  *licenza CAL*  
   
- Un oggetto di calendario.  
+ Un oggetto calendario.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto di tipo Timestamp.  
+ Un oggetto di Timestamp.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getTimestamp viene specificato dal metodo getTimestamp nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getTimestamp viene specificato dal metodo getTimestamp nell'interfaccia ResultSet.  
   
- Questo metodo restituisce valori solo dalle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] colonne datetime e smalldatetime.  
+ Questo metodo restituisce valori solo dalle colonne datetime e smalldatetime di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getTimestamp &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)   

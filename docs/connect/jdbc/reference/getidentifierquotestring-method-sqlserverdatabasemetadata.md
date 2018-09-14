@@ -1,5 +1,5 @@
 ---
-title: Metodo getIdentifierQuoteString (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getIdentifierQuoteString (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33650f545e6687162512d662b23c68fee417ab40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ff2b0fa1bcde11d012b6fadebe240f40302eebbc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835386"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787196"
 ---
 # <a name="getidentifierquotestring-method-sqlserverdatabasemetadata"></a>Metodo getIdentifierQuoteString (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera il **stringa** che viene usato per delimitare gli identificatori SQL.  
+  Recupera il valore **String** usato per racchiudere tra virgolette gli identificatori SQL.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,15 +39,15 @@ public java.lang.String getIdentifierQuoteString()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto **stringa** che contiene gli identificatori delimitati.  
+ Valore **String** contenente gli identificatori delimitati.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getIdentifierQuoteString viene specificato dal metodo getIdentifierQuoteString nell'interfaccia DatabaseMetaData.  
   
- Quando si utilizza il [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Driver JDBC con un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database, questo metodo restituisce **doppie** tra virgolette ("").  
+ Quando si usa il driver JDBC di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] con un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], questo metodo restituisce le **virgolette** ("").  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

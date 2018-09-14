@@ -1,5 +1,5 @@
 ---
-title: Metodo getByte (int) (SQLServerResultSet) | Documenti Microsoft
+title: Metodo getByte (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 680ec767951137aa18d686939bc3941d9549006e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 984c18407995e577bcafac596e8a7ef94ec7eb1d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831096"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784918"
 ---
 # <a name="getbyte-method-int-sqlserverresultset"></a>Metodo getByte (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera il valore di indice della colonna designata nella riga corrente di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto come un **byte** nel linguaggio di programmazione Java.  
+  Recupera il valore dell'indice di colonna designato nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come elemento **byte** nel linguaggio di programmazione Java.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,18 +41,18 @@ public byte getByte(int columnIndex)
 #### <a name="parameters"></a>Parametri  
  *columnIndex*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto **byte** valore.  
+ Valore **byte**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getByte viene specificato dal metodo getByte nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getByte viene specificato dal metodo getByte nell'interfaccia ResultSet.  
   
- Questo metodo è supportato solo in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipi di dati che possono restituire in modo sicuro un valore di byte, ad esempio tinyint e bit. Tutti gli altri tipi di dati genereranno un'eccezione.  
+ Questo metodo è supportato solo sui tipi di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che possono restituire in modo sicuro un valore byte, ad esempio tinyint e bit. Tutti gli altri tipi di dati genereranno un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getByte &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)   

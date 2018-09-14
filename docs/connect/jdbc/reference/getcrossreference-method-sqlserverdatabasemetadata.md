@@ -1,5 +1,5 @@
 ---
-title: Metodo getCrossReference (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getCrossReference (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8876c49e809cf1bd941937c294d6122bb3c7d3f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 06b89ccbb7884b7f4d3af6aeeedde3d4f25d9ae5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833736"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785292"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>Metodo getCrossReference (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,40 +46,40 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 #### <a name="parameters"></a>Parametri  
  *gatto1*  
   
- Oggetto **stringa** che contiene il nome del catalogo della tabella che contiene la chiave primaria.  
+ Valore **String** contenente il nome del catalogo della tabella che contiene la chiave primaria.  
   
  *schem1*  
   
- Oggetto **stringa** che contiene il nome dello schema della tabella che contiene la chiave primaria.  
+ Valore **String** contenente il nome dello schema della tabella che contiene la chiave primaria.  
   
- *TAB1*  
+ *tab1*  
   
- Oggetto **stringa** che contiene il nome della tabella che contiene la chiave primaria della tabella.  
+ Valore **String** contenente il nome tabella della tabella che contiene la chiave primaria.  
   
  *Cat2*  
   
- Oggetto **stringa** che contiene il nome del catalogo della tabella che contiene la chiave esterna.  
+ Valore **String** contenente il nome del catalogo della tabella che contiene la chiave esterna.  
   
  *schem2*  
   
- Oggetto **stringa** che contiene il nome dello schema della tabella che contiene la chiave esterna.  
+ Valore **String** contenente il nome dello schema della tabella che contiene la chiave esterna.  
   
  *TAB2*  
   
- Oggetto **stringa** che contiene il nome della tabella che contiene la chiave esterna della tabella.  
+ Valore **String** contenente il nome tabella della tabella che contiene la chiave esterna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getCrossReference viene specificato dal metodo getCrossReference nell'interfaccia DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getCrossReference conterrà le informazioni seguenti:  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|Nome del catalogo che contiene la tabella di chiave primaria.|  
 |PKTABLE_SCHEM|**String**|Nome dello schema della tabella di chiave primaria.|  
@@ -97,10 +97,10 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 |DEFERRABILITY|**short**|Indica se la valutazione del vincolo di chiave esterna può essere posticipata fino a quando non viene eseguito un commit. Può essere uno dei valori seguenti:<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  
->  Per ulteriori informazioni sui dati restituiti dal metodo getCrossReference, vedere "sp_fkeys (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione in linea.  
+>  Per altre informazioni sui dati restituiti dal metodo getCrossReference, vedere "sp_fkeys (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il metodo getCrossReference per restituire informazioni sulla relazione di chiave primaria ed esterna tra le tabelle Person. Contact e HumanResources. Employee il [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] database di esempio.  
+ L'esempio seguente illustra come usare il metodo getCrossReference per restituire informazioni sulle relazioni delle chiavi primaria ed esterna tra le tabelle Person.Contact e HumanResources.Employee del database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetCrossReference(Connection con) {  

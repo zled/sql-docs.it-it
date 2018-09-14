@@ -1,5 +1,5 @@
 ---
-title: Driver ODBC in Linux e macOS - disponibilità elevata e ripristino di emergenza | Documenti Microsoft
+title: Driver ODBC in Linux e macOS - Disponibilità elevata e ripristino di emergenza | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -14,52 +14,52 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d416abb8076e4728724ff971845a9efd970cccc2
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
-ms.translationtype: MT
+ms.openlocfilehash: 810d5e7f43c97ccc99494073aefb3b26965bd0a5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34052101"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42787895"
 ---
-# <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Driver ODBC in Linux e macOS il supporto per la disponibilità elevata e ripristino di emergenza
+# <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Supporto del driver ODBC in Linux e macOS per disponibilità elevata e ripristino di emergenza
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Il driver ODBC per il supporto di Linux e macOS [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Per ulteriori informazioni su [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], vedere:  
+Il driver ODBC per il supporto Linux e macOS [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Per altre informazioni su [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], vedere:  
   
--   [Listener del gruppo di disponibilità, connettività Client e Failover dell'applicazione (SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione (SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)  
   
 -   [Creazione e configurazione di gruppi di disponibilità (SQL Server)](http://msdn.microsoft.com/library/ff878265.aspx)  
   
 -   [Clustering di failover e gruppi di disponibilità AlwaysOn (SQL Server)](http://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità AlwaysOn)](http://msdn.microsoft.com/library/ff878253.aspx)  
+-   [Repliche secondarie attive: repliche secondarie leggibili (gruppi di disponibilità AlwaysOn)](http://msdn.microsoft.com/library/ff878253.aspx)  
   
-È possibile specificare il listener di un determinato gruppo di disponibilità nella stringa di connessione. Se un'applicazione ODBC in Linux o macOS è connesso a un database in un gruppo di disponibilità che esegue il failover, la connessione originale viene interrotta e l'applicazione deve aprire una nuova connessione per continuare a funzionare dopo il failover.
+È possibile specificare il listener di un determinato gruppo di disponibilità nella stringa di connessione. Se un'applicazione ODBC in Linux o macOS è connessa a un database in un gruppo di disponibilità, la connessione originale viene interrotta e deve esserne aperta una nuova per l'applicazione affinché quest'ultima possa continuare a funzionare dopo il failover.
 
-Il driver ODBC in Linux e macOS scorrere in sequenza tutti gli indirizzi IP associati a un nome host DNS se non si connette a un listener del gruppo di disponibilità e più indirizzi IP sono associati con il nome host.
+I driver ODBC in Linux e macOS eseguire l'iterazione sequenziale con tutti gli indirizzi IP associati un nome host DNS se non ci si connette a un listener del gruppo di disponibilità e più indirizzi IP sono associati il nome host.
 
-Se il primo indirizzo IP restituito del server DNS non è collegabile, queste iterazioni possono richiedere molto tempo. Quando ci si connette a un listener del gruppo di disponibilità, il driver tenta di stabilire connessioni a tutti gli indirizzi IP in parallelo. Se un tentativo di connessione ha esito positivo, il driver ignora tutti i tentativi di connessione in sospeso.
+Se il primo indirizzo IP restituito del server DNS non è collegabile, le iterazioni possono richiedere tempi lunghi. Quando ci si connette al listener di un gruppo di disponibilità, il driver tenta di stabilire connessioni a tutti gli indirizzi IP in parallelo. Se un tentativo di connessione ha esito positivo, il driver ignora tutti i tentativi di connessione in sospeso.
 
 > [!NOTE]  
-> Poiché una connessione può non riuscire a causa di un failover del gruppo di disponibilità, implementare una logica di ripetizione tentare una connessione non riuscita fino a quando la connessione viene ristabilita. L'aumento del timeout di connessione e l'implementazione di una logica di ripetizione dei tentativi per le connessioni aumentano le probabilità di connessione a un gruppo di disponibilità.
+> Poiché il failover di un gruppo di disponibilità potrebbe causare l'esito negativo di una connessione, è anche opportuno implementare una logica di ripetizione dei tentativi per le connessioni finché non si ottiene la riconnessione. L'aumento del timeout di connessione e l'implementazione di una logica di ripetizione dei tentativi per le connessioni aumentano le probabilità di connessione a un gruppo di disponibilità.
 
 ## <a name="connecting-with-multisubnetfailover"></a>Connessione con MultiSubnetFailover
 
-Specificare sempre **MultiSubnetFailover = Yes** durante la connessione a un [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] listener del gruppo di disponibilità o [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] istanza Cluster di Failover. **MultiSubnetFailover** consente il failover più veloce per tutti i gruppi di disponibilità e istanza del cluster di failover in [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **MultiSubnetFailover** riduce anche notevolmente il tempo di failover per le topologie AlwaysOn singole e su più subnet. Durante un failover su più subnet, vengono tentate connessioni in parallelo da parte del client. Durante un failover della subnet, il driver Ritenta in modo insistente la connessione TCP.
+Specificare sempre **MultiSubnetFailover=Yes** in caso di connessione al listener di un gruppo di disponibilità di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o a un'istanza del cluster di failover di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **MultiSubnetFailover** garantisce un failover più veloce per tutti i gruppi di disponibilità e per tutte le istanze del cluster di failover in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **MultiSubnetFailover** riduce anche notevolmente il tempo di failover per le topologie AlwaysOn a subnet singola e a più subnet. Durante un failover su più subnet, vengono tentate connessioni in parallelo da parte del client. Durante un failover su subnet, il driver Ritenta in modo insistente la connessione TCP.
 
-La proprietà di connessione **MultiSubnetFailover** indica che l'applicazione è in corso di distribuzione in un gruppo di disponibilità o in un'istanza del cluster di failover. Il driver tenta di connettersi al database del server primario [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] istanza tentando di connettersi a tutti gli IP indirizzi. Quando ci si connette con **MultiSubnetFailover = Yes**, il client riesegue i tentativi di connessione TCP più velocemente rispetto a intervalli di ritrasmissione TCP predefinita del sistema operativo. Dopo il failover,**MultiSubnetFailover = Yes** consente una riconnessione più veloce di un gruppo di disponibilità AlwaysOn o di un'istanza del cluster di failover AlwaysOn. **MultiSubnetFailover = Yes** si applica sia a singolo e con più subnet gruppi di disponibilità istanze del Cluster di Failover.  
+La proprietà di connessione **MultiSubnetFailover** indica che l'applicazione è in corso di distribuzione in un gruppo di disponibilità o in un'istanza del cluster di failover. Il driver tenta di connettersi al database nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] primaria tentando di connettersi a tutti gli indirizzi IP. Se si connette con **MultiSubnetFailover=Yes**, il client riesegue i tentativi di connessione TCP più velocemente rispetto agli intervalli di ritrasmissione TCP predefinita del sistema operativo. Dopo il failover,**MultiSubnetFailover = Yes** consente una riconnessione più veloce di un gruppo di disponibilità AlwaysOn o di un'istanza del cluster di failover AlwaysOn. **MultiSubnetFailover = Yes** si applica a gruppi di disponibilità e a cluster di failover sia a subnet singola che a più subnet.  
 
-Usare **MultiSubnetFailover=Yes** in caso di connessione al listener di un gruppo di disponibilità o a un'istanza del cluster di failover. In caso contrario, le prestazioni dell'applicazione possono essere influenzate negativamente.
+Usare **MultiSubnetFailover=Yes** in caso di connessione al listener di un gruppo di disponibilità o a un'istanza del cluster di failover. In caso contrario, le prestazioni dell'applicazione potrebbero essere influenzate negativamente.
 
-Quando ci si connette a un server in un gruppo di disponibilità o l'istanza del Cluster di Failover, tenere presente quanto segue:
+Si notino le linee guida seguenti per connettersi a un server in un gruppo di disponibilità o nell'istanza del cluster di failover:
   
 -   Specificare **MultiSubnetFailover = Yes** per migliorare le prestazioni durante la connessione a una singola subnet o un gruppo di disponibilità su più subnet.
 
 -   Specificare il listener del gruppo di disponibilità del gruppo di disponibilità del server nella stringa di connessione.
   
--   È possibile connettersi a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] istanza configurata con più di 64 indirizzi IP.
+-   Non è possibile connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurata con più di 64 indirizzi IP.
 
--   Entrambi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] o dall'autenticazione Kerberos può essere utilizzato con **MultiSubnetFailover = Yes** senza modificare il comportamento dell'applicazione.
+-   Entrambe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o dall'autenticazione Kerberos può essere utilizzato con **MultiSubnetFailover = Yes** senza influenzare il comportamento dell'applicazione.
 
 -   È possibile aumentare il valore di **loginTimeout** per adattarlo alla durata del failover e ridurre il numero di nuovi tentativi di connessione dell'applicazione.
 
@@ -85,7 +85,7 @@ Due parole chiave di stringa di connessione ODBC supportano [!INCLUDE[ssHADR](..
   
 -   **MultiSubnetFailover**  
   
-Per altre informazioni sulle parole chiave di stringa di connessione ODBC, vedere [Utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](http://msdn.microsoft.com/library/ms130822.aspx).  
+Per altre informazioni sulle parole chiave di stringa di connessione ODBC, vedere [Uso delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 Gli attributi di connessione equivalenti sono:
   
@@ -93,13 +93,13 @@ Gli attributi di connessione equivalenti sono:
   
 -   **SQL_COPT_SS_MULTISUBNET_FAILOVER**  
   
-Per ulteriori informazioni sugli attributi di connessione ODBC, vedere [SQLSetConnectAttr](http://msdn.microsoft.com/library/ms131709.aspx).  
+Per altre informazioni sugli attributi di connessione ODBC, vedere [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
-Un'applicazione ODBC che utilizza [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] per stabilire la connessione può utilizzare una delle due funzioni:  
+Un'applicazione ODBC che usa [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] può eseguire la connessione tramite una delle due funzioni seguenti:  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |------------|---------------|  
-|[Funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** supporta sia **ApplicationIntent** e **MultiSubnetFailover** tramite un nome origine dati (DSN) o un attributo di connessione.|  
+|[Funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** supporta sia **ApplicationIntent** che **MultiSubnetFailover** tramite un nome origine dati (DSN, Data Source Name) o un attributo di connessione.|  
 |[Funzione SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** supporta **ApplicationIntent** e **MultiSubnetFailover** tramite DSN, parola chiave di stringa di connessione o attributo di connessione.|
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: Metodo getObject (int, java.util.Map) | Documenti Microsoft
+title: Metodo getObject (int, java.util.Map) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edaea99a49f6c6230cd03a8060c02140ae036475
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1ab9980300916901658366176885bdaadacbf33f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836976"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786679"
 ---
 # <a name="getobject-method-int-javautilmap"></a>Metodo getObject (int, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera il valore del parametro designato come oggetto nel linguaggio di programmazione Java specificato all'indice del parametro, utilizzando l'oggetto mappa specificato.  
+  Recupera il valore del parametro designato come oggetto nel linguaggio di programmazione Java in base all'indice del parametro, usando l'oggetto Map specificato.  
   
 > [!NOTE]  
->  Questo metodo non è attualmente supportato per il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. L'utilizzo di questo metodo restituirà sempre il mapping predefinito.  
+>  Questo metodo non è attualmente supportato da [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. L'utilizzo di questo metodo restituirà sempre il mapping predefinito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,26 +45,26 @@ public java.lang.Object getObject(int index,
 #### <a name="parameters"></a>Parametri  
  *index*  
   
- Un **int** che indica l'indice del parametro.  
+ Valore **int** che specifica l'indice del parametro.  
   
- *mappa*  
+ *map*  
   
- Oggetto mappa.  
+ Un oggetto Map.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un **oggetto** valore.  
+ Valore **Object**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getObject viene specificato dal metodo getObject nell'interfaccia Java.SQL. CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getObject viene specificato il metodo getObject nell'interfaccia CallableStatement.  
   
  Il metodo restituirà il valore della colonna specificata come oggetto Java. Il tipo dell'oggetto Java sarà il tipo di oggetto Java predefinito che corrisponde al tipo SQL della colonna, in base al mapping per i tipi predefiniti indicato nella specifica JDBC. Se si tratta di un valore NULL SQL, il driver restituisce un valore Null Java.  
   
- Questo metodo può essere utilizzato anche per leggere tipi di dati astratti specifici del database. Nell'API di JDBC 2.0 il comportamento del metodo getObject viene esteso per materializzare i dati di tipi SQL definiti dall'utente. Quando una colonna contiene un valore di tipo structured o distinct, il comportamento di questo metodo è come se fosse una chiamata a `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
+ Questo metodo può essere utilizzato anche per leggere tipi di dati astratti specifici del database. Nell'API di JDBC 2.0, il comportamento del metodo getObject è esteso ai fini della materializzazione dei dati di tipi SQL definiti dall'utente. Quando una colonna contiene un valore di tipo Structured o Distinct, il comportamento di questo metodo è analogo a quello di una chiamata a `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
   
- A partire dal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Driver JDBC 3.0 per:  
+ A partire da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0:  
   
 -   Un valore di tipo date sarà restituito come oggetto java.sql.Date.  
   

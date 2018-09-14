@@ -1,5 +1,5 @@
 ---
-title: Metodo (lang) (SQLServerStatement) executeUpdate | Documenti Microsoft
+title: Metodo executeUpdate (java.lang.String) (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 148f2887e01d5238ac7461f4922eea77af599bdd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5a9acd92a357866a6a7dea79f215710d9687019a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833626"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784776"
 ---
 # <a name="executeupdate-method-javalangstring-sqlserverstatement"></a>Metodo executeUpdate (java.lang.String) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Esegue l'istruzione SQL specificata, che può essere un'istruzione INSERT, UPDATE o DELETE, oppure un'istruzione SQL che non restituisce nulla, ad esempio un'istruzione SQL DDL. A partire da [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Driver JDBC 3.0, il metodo executeUpdate restituirà il numero corretto di righe aggiornate in un'operazione di unione.  
+  Esegue l'istruzione SQL specificata, che può essere un'istruzione INSERT, UPDATE o DELETE, oppure un'istruzione SQL che non restituisce nulla, ad esempio un'istruzione SQL DDL. A partire dalla versione 3.0 del driver JDBC per [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il metodo executeUpdate restituirà il numero corretto di righe aggiornate in un'operazione MERGE.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,18 +41,18 @@ public int executeUpdate(java.lang.String sql)
 #### <a name="parameters"></a>Parametri  
  *sql*  
   
- Oggetto **stringa** che contiene l'istruzione SQL.  
+ Valore **String** contenente l'istruzione SQL.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un **int** che indica il numero di righe interessate oppure 0 se si utilizza un'istruzione DDL.  
+ Valore **int** che indica il numero di righe interessate oppure 0 se si usa un'istruzione DDL.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo executeUpdate viene specificato dal metodo executeUpdate nell'interfaccia Java.SQL. Statement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo executeUpdate viene specificato dal metodo nell'interfaccia Statement executeUpdate.  
   
- Se l'esecuzione di una stored procedure restituisce un conteggio di aggiornamento che è maggiore di uno o genera più set di risultati, utilizzare il [eseguire](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) metodo per eseguire la stored procedure.  
+ Se l'esecuzione di una stored procedure restituisce un conteggio di aggiornamenti maggiore di uno o genera più set di risultati, usare il metodo [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) per eseguire la stored procedure.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo executeUpdate &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   

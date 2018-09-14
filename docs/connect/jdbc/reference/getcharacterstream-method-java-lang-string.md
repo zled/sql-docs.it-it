@@ -1,5 +1,5 @@
 ---
-title: Metodo (lang) getCharacterStream | Documenti Microsoft
+title: Metodo (lang) getCharacterStream | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52cdfa3a4fdc594d03692e6cd8befa4bbc95a40a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f8d1df393d88348a8645a78ecd11a170c8d9d746
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831856"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785631"
 ---
 # <a name="getcharacterstream-method-javalangstring"></a>Metodo getCharacterStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera il valore del nome della colonna designata nella riga corrente di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto come oggetto java.IO. Reader.  
+  Recupera il valore del nome della colonna designata nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto java.io.Reader.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,18 +41,18 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
 #### <a name="parameters"></a>Parametri  
  *columnName*  
   
- Oggetto **stringa** che contiene il nome della colonna.  
+ Valore **String** contenente il nome della colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto del lettore.  
+ Oggetto lettore.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getCharacterStream viene specificato dal metodo getCharacterStream nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getCharacterStream viene specificato dal metodo getCharacterStream nell'interfaccia ResultSet.  
   
- Questo metodo leggerà solo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipi di dati carattere Unicode, ad esempio nchar, nvarchar, nvarchar (max) e ntext. Tutti gli altri tipi di dati, inclusi i tipi di caratteri ASCII, genereranno un'eccezione. Per leggere i tipi di dati ASCII, utilizzare il [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md) metodo.  
+ Questo metodo legge solo tipi di dati character Unicode di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quali nchar, nvarchar, nvarchar(max) e ntext. Tutti gli altri tipi di dati, inclusi i tipi di caratteri ASCII, genereranno un'eccezione. Per leggere i tipi di dati ASCII, usare il metodo [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)   

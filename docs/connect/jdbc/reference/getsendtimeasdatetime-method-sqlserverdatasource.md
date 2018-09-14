@@ -1,5 +1,5 @@
 ---
-title: Metodo getSendTimeAsDatetime (SQLServerDataSource) | Documenti Microsoft
+title: Metodo getSendTimeAsDatetime (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d9c9379a90dc85eb1579a8354816b8ee4abf93e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a105e66b346c130a1d310aab153cf4e78ced0d95
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837616"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784919"
 ---
 # <a name="getsendtimeasdatetime-method-sqlserverdatasource"></a>Metodo getSendTimeAsDatetime (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Questo metodo è stato aggiunto in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Driver JDBC 3.0.  
+  Questo metodo è stato aggiunto in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
- Restituisce l'impostazione del **sendTimeAsDatetime** proprietà di connessione.  
+ Restituisce l'impostazione delle **sendTimeAsDatetime** proprietà di connessione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,14 +36,14 @@ public boolean getSendTimeAsDatetime();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se Java verranno invece inviati al server come un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime** tipo. **false** se Java verranno invece inviati al server come un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **tempo** tipo.  
+ **true** se i valori Java verranno inviati al server come un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** tipo. **false** se i valori Java verranno inviati al server come un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ora** tipo.  
   
-## <a name="remarks"></a>Osservazioni  
- Vedere [impostando le proprietà di connessione](../../../connect/jdbc/setting-the-connection-properties.md) per ulteriori informazioni sul **sendTimeAsDatetime** proprietà di connessione.  
+## <a name="remarks"></a>Remarks  
+ Visualizzare [impostando le proprietà di connessione](../../../connect/jdbc/setting-the-connection-properties.md) per altre informazioni sul **sendTimeAsDatetime** proprietà di connessione.  
   
- [Setsendtimeasdatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) consente di impostare a livello di codice il **sendTimeAsDatetime** proprietà di connessione.  
+ L'oggetto [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) consente di impostare la proprietà di connessione **sendTimeAsDatetime** a livello di codice.  
   
- Per ulteriori informazioni, vedere [Java.SQL configurazione come i valori vengono inviati al Server](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Per altre informazioni, vedere [Java configurazione come valori vengono inviati al Server](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: Metodo setApplicationName (SQLServerDataSource) | Documenti Microsoft
+title: Metodo setApplicationName (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83dc2762c52a8564755355199faa59b1eb25991e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 661e8a31ad3fc240c1e8e51f03f2e4132e96fdc7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841516"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786834"
 ---
 # <a name="setapplicationname-method-sqlserverdatasource"></a>Metodo setApplicationName (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +39,12 @@ public void setApplicationName(java.lang.String applicationName)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *ApplicationName*  
+ *applicationName*  
   
- Oggetto **stringa** che contiene il nome dell'applicazione.  
+ Valore **String** che contiene il nome dell'applicazione.  
   
-## <a name="remarks"></a>Osservazioni  
- Il nome dell'applicazione viene utilizzato per identificare l'applicazione specifica nei diversi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] strumenti di registrazione e analisi. Se il nome dell'applicazione non è impostato, il metodo getApplicationName restituisce la stringa non localizzata "[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]".  
+## <a name="remarks"></a>Remarks  
+ Il nome dell'applicazione viene usato per identificare l'applicazione specifica nei diversi strumenti di profiling e registrazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se il nome dell'applicazione non è impostato, il metodo getApplicationName restituisce la stringa non localizzata "[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]".  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

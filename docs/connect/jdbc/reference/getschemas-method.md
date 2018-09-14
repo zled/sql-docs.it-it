@@ -1,5 +1,5 @@
 ---
-title: Metodo getSchemas () | Documenti Microsoft
+title: Metodo getSchemas () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04066c42fabfd81d5579e4900bd6072c7f767747
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bdfcd711d1ddc2b36fe4524b14cd12455f346b30
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839416"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785468"
 ---
 # <a name="getschemas-method-"></a>Metodo getSchemas ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,17 +39,17 @@ public java.sql.ResultSet getSchemas()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getSchemas viene specificato dal metodo getSchemas nell'interfaccia DatabaseMetaData.  
   
- Il set di risultati restituito dal metodo getSchemas contiene le informazioni seguenti:  
+ Il set di risultati restituito dal metodo getSchemas contiene le informazioni riportate di seguito:  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**String**|Nome dello schema.|  
 |TABLE_CATALOG|**String**|Nome di catalogo per lo schema.|  
@@ -57,10 +57,10 @@ public java.sql.ResultSet getSchemas()
  I risultati vengono ordinati in base a TABLE_CATALOG e quindi in base a TABLE_SCHEM. La prima colonna di ogni riga è TABLE_SCHEM, mentre la seconda è TABLE_CATALOG.  
   
 > [!NOTE]  
->  Per ulteriori informazioni sui dati restituiti dal metodo getSchemas, vedere "Schemas (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione in linea.  
+>  Per altre informazioni sui dati restituiti dal metodo getSchemas, vedere "sys.schemas (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il metodo getSchemas per restituire informazioni sul catalogo e i nomi associati a uno schema in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] quando l'argomento di connessione specifica il database da utilizzare.  
+ L'esempio seguente illustra come usare il metodo getSchemas per restituire informazioni sul catalogo e sui nomi di schema associati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando l'argomento della connessione specifica il database da usare.  
   
 ```  
 public static void executeGetSchemas(Connection con) {  

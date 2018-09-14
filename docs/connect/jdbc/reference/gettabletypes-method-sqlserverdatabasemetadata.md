@@ -1,5 +1,5 @@
 ---
-title: Metodo getTableTypes (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getTableTypes (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2bb52a365bedc945395400daa11ab6ca6f724726
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 50e141aeada1c64a2d91bdaf7c72a4c0190a9265
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839266"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783881"
 ---
 # <a name="gettabletypes-method-sqlserverdatabasemetadata"></a>Metodo getTableTypes (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,25 +39,25 @@ public java.sql.ResultSet getTableTypes()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getTableTypes viene specificato dal metodo getTableTypes nell'interfaccia DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getTableTypes conterrà le informazioni seguenti:  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |TABLE_TYPE|**String**|Tipo di tabella.|  
   
 > [!NOTE]  
->  Per ulteriori informazioni sui dati restituiti dal metodo getTableTypes, vedere "sp_tables (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione in linea.  
+>  Per ulteriori informazioni sui dati restituiti dal metodo getTableTypes, vedere "sp_tables (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il metodo getTableTypes per restituire le informazioni sul tipo di tabella nel [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] , database di esempio, dato che il database viene specificato nella stringa di connessione.  
+ Nell'esempio seguente viene illustrato come utilizzare il metodo getTableTypes per restituire le informazioni sul tipo di tabella nel database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)], dato che il database è specificato nella stringa di connessione.  
   
 ```  
 public static void executeGetTableTypes(Connection con) {  

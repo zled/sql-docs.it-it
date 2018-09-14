@@ -1,5 +1,5 @@
 ---
-title: Metodo getPortNumber (SQLServerDataSource) | Documenti Microsoft
+title: Metodo getPortNumber (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61ac4328c0a1da1229e568de52cc2d2c89cec437
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7ed56e9a1ece100cc5a8900a2a810bd52b8ab3be
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836756"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787009"
 ---
 # <a name="getportnumber-method-sqlserverdatasource"></a>Metodo getPortNumber (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Restituisce il numero di porta corrente utilizzato per comunicare con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+  Restituisce il numero della porta corrente usata per comunicare con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,10 +39,10 @@ public int getPortNumber()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Un **int** valore che contiene il numero di porta corrente.  
+ Valore **int** contenente il numero di porta corrente.  
   
-## <a name="remarks"></a>Osservazioni  
- Il numero di porta è il numero di porta TCP/IP viene utilizzato quando si apre una connessione socket a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Se la proprietà portNumber non è impostata, il metodo getPortNumber restituisce il valore predefinito 1433.  
+## <a name="remarks"></a>Remarks  
+ Il numero di porta è il numero di porta TCP/IP usato quando si apre una connessione socket a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se la proprietà portNumber non è impostata, il metodo getPortNumber restituisce il valore predefinito 1433.  
   
 > [!NOTE]  
 >  Il [setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) metodo non esegue alcun controllo sul valore di porta passato di intervallo. È possibile passare numeri che non sono validi, come 99999, senza generare un errore.  
