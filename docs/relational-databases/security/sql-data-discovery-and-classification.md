@@ -13,12 +13,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: b929409e034fb3305ed147ac912580d9e75ab1e4
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 95fcaa2334c0d7909b1b03583c3d8cab5ea707ab
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084634"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563837"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Individuazione dati e classificazione SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ I metadati di classificazione per i *tipi di informazioni* e le *etichette Riser
 * sys_information_type_name
 * sys_sensitivity_label_name
 
-I metadati sono accessibili tramite la vista del catalogo Proprietà estese [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
+I metadati sono accessibili tramite la vista del catalogo Proprietà estese [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
 
 L'esempio di codice seguente restituisce tutte le colonne classificate e le classificazioni corrispondenti:
 
@@ -150,8 +150,8 @@ Per database SQL di Azure, vedere [Individuazione dati e classificazione nel dat
 
 Potrebbe essere consigliabile proteggere le colonne sensibili applicando meccanismi di sicurezza a livello di colonna:
 
-* [Dynamic Data Masking](https://docs.microsoft.com/en-us/sql/relational-databases/security/dynamic-data-masking) per l'offuscamento delle colonne sensibili in uso.
-* [Always Encrypted](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine) per la crittografia delle colonne sensibili inattive.
+* [Dynamic Data Masking](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking) per l'offuscamento delle colonne sensibili in uso.
+* [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine) per la crittografia delle colonne sensibili inattive.
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

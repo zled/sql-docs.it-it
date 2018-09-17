@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38963e1953e707597ec98530687904c347b49582
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5be615c1f0e672bcd706380ae9adafa9bcbccded
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073524"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563822"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "43073524"
   
 -   La tabella di cronologia per la tabella ottimizzata per la memoria con controllo delle versioni di sistema deve essere basata su disco, che sia stata creata dall'utente finale o dal sistema.  
   
--   Le query che interessano solo la tabella corrente in memoria possono essere usate in [moduli T-SQL compilati in modo nativo](https://msdn.microsoft.com/en-us/library/dn133184.aspx). Le query temporali che usano la clausola FOR SYSTEM TIME non sono supportate nei moduli compilati in modo nativo. È supportato invece l'uso della clausola FOR SYSTEM TIME insieme a tabelle ottimizzate per la memoria in query ad hoc e in moduli non nativi.  
+-   Le query che interessano solo la tabella corrente in memoria possono essere usate in [moduli T-SQL compilati in modo nativo](https://msdn.microsoft.com/library/dn133184.aspx). Le query temporali che usano la clausola FOR SYSTEM TIME non sono supportate nei moduli compilati in modo nativo. È supportato invece l'uso della clausola FOR SYSTEM TIME insieme a tabelle ottimizzate per la memoria in query ad hoc e in moduli non nativi.  
   
 -   Con **SYSTEM_VERSIONING = ON** viene creata automaticamente una tabella di staging interna ottimizzata per la memoria per accettare le modifiche più recenti alle versioni di sistema in seguito alle operazioni di aggiornamento ed eliminazione nella tabella ottimizzata per la memoria corrente.  
   

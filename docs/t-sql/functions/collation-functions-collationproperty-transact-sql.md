@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 070e3ee283862b79833981f1eb4e9933c83c0707
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d466d64a2b5fe7425a86732970a6f7cf18e69bbe
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063971"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563573"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Funzioni delle regole di confronto - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,8 +52,8 @@ Proprietà delle regole di confronto. L'argomento *property* ha un tipo di dati 
   
 |Nome proprietà|Descrizione|  
 |---|---|
-|**CodePage**|Tabella codici non Unicode delle regole di confronto. Vedere [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/en-us/library/cc194886.aspx) (Appendice G - Tabelle di mapping DBCS/Unicode) e [Appendix H Code Pages](https://msdn.microsoft.com/en-us/library/cc195051.aspx) (Appendice H - Tabelle codici) per la conversione e la visualizzazione dei mapping dei caratteri di questi valori.|  
-|**LCID**|Identificatore delle impostazioni locali (LCID) di Windows per le regole di confronto. Vedere [LCID Structure](https://msdn.microsoft.com/en-us/library/cc233968.aspx) (Struttura LCID) per la conversione di questi valori (sarà necessario convertirli prima in **varbinary**).|  
+|**CodePage**|Tabella codici non Unicode delle regole di confronto. Vedere [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/library/cc194886.aspx) (Appendice G - Tabelle di mapping DBCS/Unicode) e [Appendix H Code Pages](https://msdn.microsoft.com/library/cc195051.aspx) (Appendice H - Tabelle codici) per la conversione e la visualizzazione dei mapping dei caratteri di questi valori.|  
+|**LCID**|Identificatore delle impostazioni locali (LCID) di Windows per le regole di confronto. Vedere [LCID Structure](https://msdn.microsoft.com/library/cc233968.aspx) (Struttura LCID) per la conversione di questi valori (sarà necessario convertirli prima in **varbinary**).|  
 |**ComparisonStyle**|Stile di confronto di Windows per le regole di confronto. Restituisce 0 per tutte le regole di confronto binarie, sia (\_BIN) che (\_BIN2), e anche quando tutte le proprietà distinguono tra maiuscole e minuscole. Valori della maschera di bit:<br /><br /> Ignora maiuscole/minuscole: 1<br /><br /> Ignora accento : 2<br /><br /> Ignora Kana : 65536<br /><br /> Ignora larghezza: 131072<br /><br /> Nota: anche se ha effetto sul comportamento di confronto, l'opzione con distinzione tra selettori di variazione (\_VSS) non è rappresentata in questo valore.|  
 |**Versione**|Versione delle regole di confronto, derivata dal campo relativo alla versione dell'ID delle regole di confronto. Restituisce un valore intero compreso tra 0 e 3.<br /><br /> Le regole di confronto con "140" nel nome restituiscono 3.<br /><br /> Le regole di confronto con "100" nel nome restituiscono 2.<br /><br /> Le regole di confronto con "90" nel nome restituiscono 1.<br /><br /> Tutte le altre regole di confronto restituiscono 0.|  
   

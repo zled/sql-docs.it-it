@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c47afb35579380fd35837aae517ed4af1f922155
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 5b08d882e1e44b7afc43b16042d877996136a81e
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276097"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563882"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Configurare e amministrare un server di report (modalità nativa SSRS)
   In questo argomento vengono riepilogati gli approcci disponibili per la configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È inoltre incluso un elenco di argomenti che illustrano come configurare componenti, caratteristiche specifiche o del server. Per configurare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile:  
@@ -48,7 +48,7 @@ ms.locfileid: "43276097"
  [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  Descrive come modificare la stringa di connessione usata dal server di report per la connessione al database.  
   
- [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
  Descrive come configurare un server di report in modo da supportare la distribuzione dei report tramite posta elettronica.  
   
  [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  

@@ -16,17 +16,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ddad036821e735f693a2e2dec031dcb07c76902
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3ccbb7da44967b7be3bb30b218a1b779215755db
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070894"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45533903"
 ---
 # <a name="view-collation-information"></a>Visualizzazione di informazioni sulle regole di confronto
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
-##  <a name="Top"></a> È possibile visualizzare le regole di confronto di un server, di un database o di una colonna in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando le opzioni di menu di Esplora oggetti oppure tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+<a name="Top"></a> È possibile visualizzare le regole di confronto di un server, di un database o di una colonna in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando le opzioni di menu di Esplora oggetti oppure tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##  <a name="Procedures"></a> Visualizzazione di un'impostazione relativa alle regole di confronto  
  È possibile usare uno dei seguenti elementi:  
@@ -65,13 +65,13 @@ ms.locfileid: "43070894"
   
 2.  Nella finestra Query, immettere l'istruzione seguente che usano la funzione di sistema SERVERPROPERTY.  
   
-    ```  
+    ```sql  
     SELECT CONVERT (varchar, SERVERPROPERTY('collation'));  
     ```  
   
 3.  In alternativa, è possibile usare la stored procedure di sistema sp_helpsort.  
   
-    ```  
+    ```sql  
     EXECUTE sp_helpsort;  
     ```  
   
@@ -81,7 +81,7 @@ ms.locfileid: "43070894"
   
 2.  Nella finestra Query, immettere l'istruzione seguente che usano la funzione di sistema SERVERPROPERTY.  
   
-    ```  
+    ```sql  
     SELECT name, description FROM sys.fn_helpcollations();  
     ```  
   
@@ -91,13 +91,13 @@ ms.locfileid: "43070894"
   
 2.  Nella finestra Query, immettere l'istruzione seguente che usano la vista del catalogo sys.databases.  
   
-    ```  
+    ```sql  
     SELECT name, collation_name FROM sys.databases;  
     ```  
   
 3.  In alternativa, è possibile usare la funzione di sistema DATABASEPROPERTYEX.  
   
-    ```  
+    ```sql  
     SELECT CONVERT (varchar, DATABASEPROPERTYEX('database_name','collation'));  
     ```  
   
@@ -107,7 +107,7 @@ ms.locfileid: "43070894"
   
 2.  Nella finestra Query, immettere l'istruzione seguente che usano la vista del catalogo sys.columns.  
   
-    ```  
+    ```sql  
     SELECT name, collation_name FROM sys.columns WHERE name = N'<insert character data type column name>';  
     ```  
   
@@ -117,6 +117,7 @@ ms.locfileid: "43070894"
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [Precedenza delle regole di confronto &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
+ [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md)      
  [sp_helpsort &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsort-transact-sql.md)  
   
   

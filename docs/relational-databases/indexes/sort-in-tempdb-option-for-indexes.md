@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecbe8b1fb2540eff9334e7c68a7b5a8872decb2b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4171e4b8636759c3df4ebfa0dc5eb0ee7f90c31c
+ms.sourcegitcommit: a41bad24d0619753471d3c79f4e57b051914836f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084654"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44499327"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>Opzione SORT_IN_TEMPDB per gli indici
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,19 +60,19 @@ ms.locfileid: "43084654"
   
  Se l'opzione SORT_IN_TEMPDB è impostata su OFF, lo spazio libero nel filegroup di destinazione deve corrispondere approssimativamente alle dimensioni dell'indice finale. Durante la prima fase vengono compilate le operazioni di ordinamento, che richiedono uno spazio quasi equivalente a quello necessario per l'indice finale. Durante la seconda fase vengono elaborati e quindi liberati gli extent delle operazioni di ordinamento. Poiché tali extent vengono liberati a una velocità analoga a quella con cui vengono acquisiti altri extent destinati alle pagine dell'indice finale, i requisiti di spazio complessivi non superano di molto le dimensioni dell'indice finale. Uno degli effetti collaterali è rappresentato dal fatto che se la quantità di spazio libero equivale approssimativamente alle dimensioni dell'indice finale, [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenderà a riutilizzare gli extent delle operazioni di ordinamento non appena vengono liberati. Il fatto che gli extent delle operazioni di ordinamento vengano liberati in modo relativamente casuale rende meno continui gli extent dell'indice. Se l'opzione SORT_IN_TEMPDB è impostata su OFF, la continuità degli extent dell'indice è maggiore se lo spazio libero nel filegroup di destinazione è sufficiente per consentire di allocare gli extent dell'indice da un pool contiguo anziché dagli extent delle operazioni di ordinamento appena deallocati.  
   
- Quando si crea un indice non cluster, deve essere disponibile una quantità di spazio libero corrispondete alle indicazioni seguenti:  
+Quando si crea un indice non cluster, deve essere disponibile una quantità di spazio libero corrispondete alle indicazioni seguenti:  
   
 -   Se l'opzione SORT_IN_TEMPDB è impostata su ON, in **tempdb** deve essere disponibile spazio sufficiente per archiviare le operazioni di ordinamento e nel filegroup di destinazione deve essere disponibile spazio sufficiente per archiviare la struttura finale dell'indice. Le operazioni di ordinamento includono le righe foglia dell'indice.  
   
 -   Se l'opzione SORT_IN_TEMPDB è impostata su OFF, nel filegroup di destinazione deve essere disponibile spazio sufficiente per archiviare la struttura finale dell'indice. È possibile che gli extent dell'indice abbiano una maggiore continuità se è disponibile una maggiore quantità di spazio libero.  
   
- Quando si crea un indice cluster in una tabella che non contiene indici non cluster, deve essere disponibile una quantità di spazio libero corrispondente alle indicazioni seguenti:  
+Quando si crea un indice cluster in una tabella che non contiene indici non cluster, deve essere disponibile una quantità di spazio libero corrispondente alle indicazioni seguenti:  
   
 -   Se l'opzione SORT_IN_TEMPDB è impostata su ON, in **tempdb** deve essere disponibile spazio sufficiente per archiviare le operazioni di ordinamento, incluse le righe di dati della tabella. Nel filegroup di destinazione deve essere disponibile spazio sufficiente per archiviare la struttura finale dell'indice, incluse le righe di dati della tabella e l'albero B dell'indice. Può essere necessario adeguare tale stima tenendo conto di fattori quali chiavi di grandi dimensioni oppure un fattore di riempimento con un valore basso.  
   
 -   Se l'opzione SORT_IN_TEMPDB è impostata su OFF, nel filegroup di destinazione deve essere disponibile spazio sufficiente per archiviare la tabella finale, inclusa la struttura dell'indice. È possibile che gli extent della tabella e dell'indice abbiano una maggiore continuità se è disponibile una maggiore quantità di spazio libero.  
   
- Quando si crea un indice cluster in una tabella che contiene indici non cluster, deve essere disponibile una quantità di spazio libero corrispondente alle indicazioni seguenti:  
+Quando si crea un indice cluster in una tabella che contiene indici non cluster, deve essere disponibile una quantità di spazio libero corrispondente alle indicazioni seguenti:  
   
 -   Se l'opzione SORT_IN_TEMPDB è impostata su ON, in **tempdb** deve essere disponibile spazio sufficiente per archiviare la raccolta delle operazioni di ordinamento relative all'indice di dimensioni maggiori (in genere l'indice cluster) e nel filegroup di destinazione deve essere disponibile spazio sufficiente per archiviare le strutture finali di tutti gli indici, incluso l'indice cluster che contiene le righe di dati della tabella.  
   

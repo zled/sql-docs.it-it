@@ -13,12 +13,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a7b8a9ee85c7f3d04bc45c21d2605c839bdff01a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9962b3a24c8a19ff253d22c28779259bcb1f292a
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783582"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564067"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ EXPLAIN SQL_statement
  *SQL_statement*  
  L'istruzione [!INCLUDE[DWsql](../../includes/dwsql-md.md)] per la quale viene eseguita l'istruzione **EXPLAIN**. *SQL_statement* può essere uno qualsiasi dei comandi seguenti: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'autorizzazione **SHOWPLAN** autorizzazione e l'autorizzazione per eseguire *SQL_statement*. Vedere [Autorizzazioni: GRANT, DENY o REVOKE &#40;Azure SQL Data Warehouse, Parallel Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>Valore restituito  
@@ -69,7 +69,7 @@ EXPLAIN SQL_statement
 |\<sql>|Esegue l'eco di *SQL_statement*.|  
 |\<params>|Tag attualmente non usato.|  
 |\<dsql_operations>|Riepiloga e contiene i passaggi della query e include informazioni sui costi per la query. Contiene anche tutti i blocchi `<dsql_operation>`. Questo tag contiene informazioni relative ai conteggi per l'intera query:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* è il tempo stimato totale per l'esecuzione della query in ms.<br /><br /> *total_number_operations* è il numero totale di operazioni per la query. Un'operazione da eseguire in parallelo in più nodi viene conteggiata come operazione singola.|  
-|\<dsql_operation>|Descrive una singola operazione all'interno del piano di query. Il tag \<dsql_operation > contiene il tipo di operazione come attributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* è uno dei valori descritti in [Querying Data (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c) (Query sui dati (SQL Server PDW)).<br /><br /> Il contenuto del blocco `\<dsql_operation>` dipende dal tipo di operazione.<br /><br /> Vedere la tabella riportata di seguito.|  
+|\<dsql_operation>|Descrive una singola operazione all'interno del piano di query. Il tag \<dsql_operation > contiene il tipo di operazione come attributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* è uno dei valori descritti in [Querying Data (SQL Server PDW)](http://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c) (Query sui dati (SQL Server PDW)).<br /><br /> Il contenuto del blocco `\<dsql_operation>` dipende dal tipo di operazione.<br /><br /> Vedere la tabella riportata di seguito.|  
   
 |Tipo di operazione|Contenuto|Esempio|  
 |--------------------|-------------|-------------|  

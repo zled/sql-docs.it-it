@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 35c0d964596afc1c072e4cdf191f84b9b9b978bf
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087563"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564207"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -1023,7 +1023,7 @@ Per migliorare le prestazioni di query che accedono a una grande quantità di da
 * Utilizzare un server con processori veloci e il maggior numero possibile di core del processore per sfruttare a pieno la funzionalità di elaborazione di query parallele.
 * Assicurarsi che per il server sia disponibile larghezza di banda sufficiente del controller I/O. 
 * Creare un indice cluster in ogni tabella partizionata grande per sfruttare le ottimizzazioni dell'analisi dell'albero B.
-* Quando si esegue il caricamento bulk di dati in tabelle partizionate, attenersi ai requisiti della procedura consigliata nel white paper [The Data Loading Performance Guide](http://msdn.microsoft.com/en-us/library/dd425070.aspx) (Guida alle prestazioni del caricamento dati).
+* Quando si esegue il caricamento bulk di dati in tabelle partizionate, attenersi ai requisiti della procedura consigliata nel white paper [The Data Loading Performance Guide](http://msdn.microsoft.com/library/dd425070.aspx) (Guida alle prestazioni del caricamento dati).
 
 ### <a name="example"></a>Esempio
 

@@ -20,12 +20,12 @@ caps.latest.revision: 80
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5197fb00840296dc4ef05b478d0dd3f0cd37c46
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 972b7bffab1ff6b4bf0710078d5c64a299ffe793
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770057"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564145"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34770057"
   
 -   Nei carichi di lavoro di sola lettura per le tabelle basate su disco viene usato il controllo delle versioni delle righe per rimuovere la contesa di blocco nei database secondari. Viene eseguito automaticamente il mapping a livello di transazioni di isolamento dello snapshot di tutte le query eseguite nei database secondari, anche quando gli altri livelli di isolamento delle transazioni sono impostati in modo esplicito. Tutti gli hint di blocco vengono ignorati. In questo modo si elimina la contesa lettore/writer.  
   
--   I carichi di lavoro di sola lettura per le tabelle ottimizzate per la memoria durevoli accedono ai dati esattamente nello stesso modo in cui si accede nel database primario, tramite le stored procedure native o l'interoperabilità SQL con le stesse limitazioni del livello di isolamento delle transazioni (vedere [Livelli di isolamento nel motore di database](http://msdn.microsoft.com/en-us/8ac7780b-5147-420b-a539-4eb556e908a7)). Il carico di lavoro di report o le query di sola lettura in esecuzione nella replica primaria possono essere eseguiti nella replica secondaria senza richiedere alcuna modifica. Analogamente, un carico di lavoro di report o le query di sola lettura in esecuzione in una replica secondaria possono essere eseguiti nella replica primaria senza richiedere alcuna modifica.  In modo analogo alle tabelle basate su disco, viene eseguito automaticamente il mapping a livello di transazioni di isolamento dello snapshot di tutte le query eseguite nei database secondari, anche quando gli altri livelli di isolamento delle transazioni sono impostati in modo esplicito.  
+-   I carichi di lavoro di sola lettura per le tabelle durevoli con ottimizzazione per la memoria accedono ai dati esattamente nello stesso modo in cui sono accessibili nel database primario, usando stored procedure native o l'interoperabilità SQL con le stesse limitazioni del livello di isolamento della transazione (vedere [Livelli di isolamento nel motore di database](http://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)). Il carico di lavoro di report o le query di sola lettura in esecuzione nella replica primaria possono essere eseguiti nella replica secondaria senza richiedere alcuna modifica. Analogamente, un carico di lavoro di report o le query di sola lettura in esecuzione in una replica secondaria possono essere eseguiti nella replica primaria senza richiedere alcuna modifica.  In modo analogo alle tabelle basate su disco, viene eseguito automaticamente il mapping a livello di transazioni di isolamento dello snapshot di tutte le query eseguite nei database secondari, anche quando gli altri livelli di isolamento delle transazioni sono impostati in modo esplicito.  
   
 -   Le operazioni DML sono consentite nelle variabili di tabella sia per i tipi di tabella basati su disco che per quelli con ottimizzazione per la memoria nella replica secondaria.  
   
@@ -204,8 +204,7 @@ ms.locfileid: "34770057"
   
 -   Il suffisso _readonly_database_statistic è riservato alle statistiche generate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Non è possibile usare questo suffisso quando si creano statistiche in un database primario. Per altre informazioni, vedere [Statistics](../../../relational-databases/statistics/statistics.md).  
   
-##  <a name="bkmk_AccessInMemTables">
-            </a> Accesso alle tabelle ottimizzate per la memoria in una replica secondaria  
+##  <a name="bkmk_AccessInMemTables"></a> Accesso alle tabelle ottimizzate per la memoria in una replica secondaria  
  Con le tabelle con ottimizzazione per la memoria in una replica secondaria possono essere usati gli stessi livelli di isolamento delle transazioni usati nella replica primaria. È consigliabile impostare il livello di isolamento a livello di sessione su READ COMMITTED e l'opzione a livello di database MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT su ON. Ad esempio  
   
 ```sql  

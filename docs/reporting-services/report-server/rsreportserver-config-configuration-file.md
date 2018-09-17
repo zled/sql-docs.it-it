@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d3ca27df3ccd68df1b5b3e10c67d7550742d236
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bcf0521ad8d6f32bd9c351c0f5f212c12dfebd57
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274740"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564187"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 Nel file [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** vengono archiviate le impostazioni usate dal servizio Web ReportServer e dall'elaborazione in background. Tutte le applicazioni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono eseguite all'interno di un singolo processo tramite cui è possibile leggere le impostazioni di configurazione archiviate nel file RSReportServer.config. Il file RSReportServer.config viene utilizzato nei server di report sia in modalità nativa, sia in modalità SharePoint. Nelle due modalità non vengono tuttavia utilizzate tutte le stesse impostazioni disponibili nel file di configurazione. La versione per la modalità SharePoint del file è più piccola, poiché molte delle impostazioni per la modalità SharePoint sono archiviate nei database di configurazione di SharePoint anziché nel file. In questo argomento viene descritto il file di configurazione predefinito installato per la modalità nativa e la modalità SharePoint e alcune delle impostazioni e dei comportamenti importanti controllati dal file di configurazione.  
@@ -237,7 +237,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
 |**ExcludedRenderFormats**, **RenderingExtension**|Queste impostazioni vengono utilizzate per escludere intenzionalmente formati di esportazione che non funzionano in modo corretto con il recapito tramite la condivisione file. Questi formati vengono utilizzati in genere per la creazione interattiva di report, la visualizzazione in anteprima o il precaricamento della cache del report e non producono file dell'applicazione facilmente visualizzabili da un'applicazione desktop.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="bkmk_email_extension"></a> Impostazioni di configurazione dell'estensione per la posta elettronica del server di report  
- La posta elettronica del server di report utilizza un dispositivo di rete di SMTP per inviare report agli indirizzi di posta elettronica. Prima che sia possibile utilizzare questa estensione per il recapito, è necessario configurarla. Per altre informazioni, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83) e [Recapito tramite posta elettronica in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+ La posta elettronica del server di report utilizza un dispositivo di rete di SMTP per inviare report agli indirizzi di posta elettronica. Prima che sia possibile utilizzare questa estensione per il recapito, è necessario configurarla. Per altre informazioni, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) e [Recapito tramite posta elettronica in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
