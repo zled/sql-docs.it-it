@@ -14,17 +14,17 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 319abf02d87a12e8df96e6e22666da54ade16d1d
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 0a26f0ef02fbe9c6b1dd47c9ff0d111a89340469
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084503"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563884"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procedura: Utilizzo di oggetti di Microsoft SQL Server 2012 nel progetto
 In questo esempio, si aggiungerà un oggetto Sequence a un progetto di database per Microsoft SQL Server 2012.  
   
-Le sequenze sono state introdotte in Microsoft SQL Server 2012. Una sequenza è un oggetto associato a schema definito dall'utente che genera una sequenza di valori numerici in base alla specifica con la quale è stata creata la sequenza. La sequenza di valori numerici viene generata in ordine crescente o decrescente a un intervallo definito e può essere ripetuta (ciclicamente) in base alle esigenze.  Per altre informazioni sugli oggetti Sequence, vedere [Numeri di sequenza](htttp://msdn.microsoft.com/en-us/library/ff878058(SQL.110).aspx). Per informazioni sulle novità disponibili in Microsoft SQL Server 2012, vedere [Novità di SQL Server 2012](http://msdn.microsoft.com/en-us/library/bb500435(SQL.110).aspx).  
+Le sequenze sono state introdotte in Microsoft SQL Server 2012. Una sequenza è un oggetto associato a schema definito dall'utente che genera una sequenza di valori numerici in base alla specifica con la quale è stata creata la sequenza. La sequenza di valori numerici viene generata in ordine crescente o decrescente a un intervallo definito e può essere ripetuta (ciclicamente) in base alle esigenze.  Per altre informazioni sugli oggetti Sequence, vedere [Numeri di sequenza](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). Per informazioni sulle novità disponibili in Microsoft SQL Server 2012, vedere [Novità di SQL Server 2012](http://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
   
 > [!WARNING]  
 > Nelle procedure seguenti vengono usate entità create nelle procedure precedenti nelle sezioni [Sviluppo del database connesso](../ssdt/connected-database-development.md) e [Sviluppo di database offline orientato ai progetti](../ssdt/project-oriented-offline-database-development.md).  

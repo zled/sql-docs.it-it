@@ -17,12 +17,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86b506d493b49e664062c704a4ebabf01e51b3a0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 5aea3337f9c3c60c51c41a2c1af8e812c50af8f6
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087553"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563597"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procedura: Modifica della piattaforma di destinazione e pubblicazione di un progetto di database
 È possibile impostare la versione di destinazione di SQL Server per il progetto di database SQL Server Data Tools (SSDT) su qualsiasi istanza supportata di SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 o SQL Azure). In questo modo, è possibile centralizzare lo sviluppo del database in un unico progetto, ma la pubblicazione viene eseguita in più versioni di istanze di SQL Server in base alle esigenze.  
@@ -46,7 +46,7 @@ In SSDT, l'esecuzione di questa attività risulta semplice poiché viene presa i
   
 3.  Si noti che nel riquadro **Elenco errori** viene visualizzato l'errore seguente: SQL70015: 'Schema di partizionamento e riferimento a filegroup' non supportato in SQL Azure.  
   
-    SSDT consente di convalidare automaticamente lo script in base alla piattaforma di destinazione. In questo caso, poiché il filegroup non è supportato in SQL Azure, viene restituito un errore da SSDT. Per un elenco di istruzioni Transact\-SQL non supportate in SQL Azure, vedere [Istruzioni Transact-SQL parzialmente supportate (database SQL di Microsoft Azure)](http://msdn.microsoft.com/en-us/library/ee336267.aspx).  
+    SSDT consente di convalidare automaticamente lo script in base alla piattaforma di destinazione. In questo caso, poiché il filegroup non è supportato in SQL Azure, viene restituito un errore da SSDT. Per un elenco di istruzioni Transact\-SQL non supportate in SQL Azure, vedere [Istruzioni Transact-SQL parzialmente supportate (database SQL di Microsoft Azure)](http://msdn.microsoft.com/library/ee336267.aspx).  
   
 4.  Rimuovere la clausola `ON` . Si noti che l'errore scompare immediatamente dall' **Elenco errori**.  
   

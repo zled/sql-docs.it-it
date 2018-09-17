@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae6d78109eb4a6898efc9bc3e972c9f65503cf63
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 197e6130a33df4413d9c936fca9291c02557acb7
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088523"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563880"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procedura: confrontare e sincronizzare i dati di due database
 È possibile confrontare i dati contenuti in due database. I database che si confrontano sono chiamati *origine* e *destinazione*.  
@@ -86,7 +86,7 @@ Per altre informazioni, vedere [Confrontare e sincronizzare i dati in una o più
   
     Sostituire i segnaposto (*sServerName*, *sDatabaseName*, *sUserName*, *sPassword*, *sDisplayName*, *tServerName*, *tDatabaseName*, *tUserName*, *tPassword* e *tDisplayName*) con i valori relativi ai database di origine e di destinazione.  
   
-    Se non si specifica un'origine e una destinazione, viene visualizzata la finestra di dialogo **Nuovo confronto dati**. Per altre informazioni sui parametri del comando Sql.NewDataComparison, vedere [Tabella di riferimento dei comandi di automazione per le funzionalità di database di Visual Studio Team System](https://msdn.microsoft.com/en-us/library/dd470565.aspx).  
+    Se non si specifica un'origine e una destinazione, viene visualizzata la finestra di dialogo **Nuovo confronto dati**. Per altre informazioni sui parametri del comando Sql.NewDataComparison, vedere [Tabella di riferimento dei comandi di automazione per le funzionalità di database di Visual Studio Team System](https://msdn.microsoft.com/library/dd470565.aspx).  
   
     I dati nei database di origine e di destinazione specificati vengono confrontati. I risultati vengono visualizzati in una sessione di Confronto dati. Per altre informazioni sulla visualizzazione dei risultati o sulla sincronizzazione dei dati, vedere [Visualizzazione delle differenze dei dati](#ViewDifferences) e [Sincronizzazione dei dati di database](#Synchronize).  
   

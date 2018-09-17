@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab996710a0c88d004b36f7bed1e6304a494bc9eb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b20a2432ae509923b2befd240a66de04c50502c4
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085073"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564127"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Procedura: Scrivere uno unit test di SQL Server in esecuzione nell'ambito di una singola transazione
 È possibile modificare unit test in modo che vengano eseguiti nell'ambito di una singola transazione. Se si adotta questo approccio, al termine del test è possibile eseguire il rollback di tutte le modifiche apportate dal test. Nelle procedure seguenti viene descritto come procedere:  
@@ -60,7 +60,7 @@ Per alcune procedure di questo argomento è necessario che il servizio Distribut
     Per altre informazioni sul funzionamento di ROLLBACK TRANSACTION con stored procedure e trigger, vedere la pagina nel sito Web Microsoft: [ROLLBACK TRANSACTION (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115927).  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>Per creare una transazione per un singolo metodo di test  
-In questo esempio viene usata una transazione di ambiente quando si usa il tipo [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope). Per impostazione predefinita, nelle connessioni di esecuzione e con privilegi non verrà utilizzata la transazione di ambiente, poiché le connessioni sono state create prima dell'esecuzione del metodo. In SqlConnection è incluso un metodo [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) che associa una connessione attiva a una transazione. Quando si crea una transazione di ambiente, questa viene registrata automaticamente come la transazione corrente ed è possibile accedervi tramite la proprietà [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current). In questo esempio viene eseguito il rollback della transazione quando la transazione di ambiente viene eliminata. Se si vuole eseguire il commit delle modifiche apportate dopo l'esecuzione dello unit test, è necessario chiamare il metodo [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete).  
+In questo esempio viene usata una transazione di ambiente quando si usa il tipo [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope). Per impostazione predefinita, nelle connessioni di esecuzione e con privilegi non verrà utilizzata la transazione di ambiente, poiché le connessioni sono state create prima dell'esecuzione del metodo. In SqlConnection è incluso un metodo [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) che associa una connessione attiva a una transazione. Quando si crea una transazione di ambiente, questa viene registrata automaticamente come la transazione corrente ed è possibile accedervi tramite la proprietà [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current). In questo esempio viene eseguito il rollback della transazione quando la transazione di ambiente viene eliminata. Se si vuole eseguire il commit delle modifiche apportate dopo l'esecuzione dello unit test, è necessario chiamare il metodo [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete).  
   
 #### <a name="to-create-a-transaction-for-a-single-test-method"></a>Per creare una transazione per un singolo metodo di test  
   

@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dd9936b3b100ffc4509369a49cff767094152c97
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085943"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564017"
 ---
 # <a name="transact-sql-editor-options"></a>Opzioni dell'editor Transact-SQL
 In questo argomento sono contenute informazioni su alcune opzioni dell'editor Transact-SQL. Per impostare queste opzioni, passare alla finestra **Opzione** tramite il menu **Strumenti\Opzioni**.  
@@ -57,7 +57,7 @@ In questo argomento sono contenute informazioni su alcune opzioni dell'editor Tr
 |**SET NOEXEC**|Quando è impostata su **ON**, indica a Microsoft® SQL Server™ di compilare ogni batch di istruzioni Transact-SQL, ma di non eseguirle. Quando invece è impostata su **OFF**, indica a Microsoft® SQL Server™ di eseguire tutti i batch dopo la compilazione. Per altre informazioni, vedere [SET NOEXEC](http://go.microsoft.com/fwlink/?LinkId=238770).|  
 |**SET PARSEONLY**|Controlla la sintassi di ogni istruzione Transact-SQL e restituisce eventuali messaggi di errore senza compilare o eseguire l'istruzione. Per ulteriori informazioni, vedere [SET PARSEONLY](http://go.microsoft.com/fwlink/?LinkId=238734).|  
 |**SET CONCAT_NULL_YIELDS_NULL**|Controlla se i risultati della concatenazione vengono considerati come valori stringa Null o vuoti. Per altre informazioni, vedere [SET CONCAT_NULL_YIELDS_NULL](http://go.microsoft.com/fwlink/?LinkId=238733).|  
-|**SET ARITHABORT**|Interrompe una query quando si verifica un errore di divisione per zero o di overflow durante l'esecuzione della query stessa. Per altre informazioni, vedere [SET ARITHABORT](http://msdn.microsoft.com/en-us/library/aa259212(v=SQL.80).aspx).|  
+|**SET ARITHABORT**|Interrompe una query quando si verifica un errore di divisione per zero o di overflow durante l'esecuzione della query stessa. Per altre informazioni, vedere [SET ARITHABORT](http://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx).|  
 |**SET SHOWPLAN_TEXT**|Impedisce l'esecuzione di istruzioni Transact-SQL di Microsoft® SQL Server™ e vengono restituite invece informazioni dettagliate sulla modalità di esecuzione delle istruzioni. Per altre informazioni, vedere [SET SHOWPLAN_TEXT](http://go.microsoft.com/fwlink/?LinkID=238737).|  
 |**SET STATISTICS TIME**|Visualizza il numero di millisecondi necessari per l'analisi, la compilazione e l'esecuzione di ogni istruzione.|  
 |**SET STATISTICS IO**|Determina in Microsoft® SQL Server™ la visualizzazione di informazioni sulla quantità di attività del disco generata da istruzioni Transact-SQL.|  

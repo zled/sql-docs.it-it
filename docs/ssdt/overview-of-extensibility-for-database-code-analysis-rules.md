@@ -17,15 +17,15 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82381b0fd553c57353847f714f09c02abc51a5b2
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c7f850f6fe3277a0026371d096454c16d0cf5a84
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082794"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563587"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>Panoramica dell'estendibilità delle regole di analisi del codice del database
-Le edizioni di Visual Studio contenenti SQL Server Data Tools includono regole di analisi del codice per segnalare avvisi relativi alla progettazione, alla denominazione e alle prestazioni di Transact\-SQL nel codice del database. Per altre informazioni, vedere [Analisi del codice di database per migliorare la qualità del codice](http://msdn.microsoft.com/en-us/library/dd172133(v=vs.100).aspx).  
+Le edizioni di Visual Studio contenenti SQL Server Data Tools includono regole di analisi del codice per segnalare avvisi relativi alla progettazione, alla denominazione e alle prestazioni di Transact\-SQL nel codice del database. Per altre informazioni, vedere [Analisi del codice di database per migliorare la qualità del codice](http://msdn.microsoft.com/library/dd172133(v=vs.100).aspx).  
   
 Se le regole di analisi del codice predefinite non coprono un problema di Transact\-SQL specifico che si vuole sia incluso, è possibile creare regole di analisi del codice del database personalizzate. Ad esempio, potrebbe essere necessario creare una regola personalizzata che eviti l'uso dell'istruzione WAITFOR DELAY, come illustrato in [Procedura dettagliata per la creazione di un assembly di regole personalizzate di analisi del codice statica per SQL Server](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md). Per creare le regole di analisi del codice del database personalizzate, è possibile usare le classi nello spazio dei nomi [CodeAnalysis](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.aspx).  
   
@@ -36,7 +36,7 @@ La figura seguente illustra l'interazione tra i componenti delle regole di anali
   
 ![Componenti delle regole di analisi del codice del database](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "Componenti delle regole di analisi del codice del database")  
   
-Quando si usa la funzionalità delle regole di analisi del codice del database, sia eseguendo direttamente l'analisi del codice statica (per altre informazioni, vedere [Procedura: Analizzare il codice Transact-SQL per trovare errori](http://msdn.microsoft.com/en-us/library/dd172119(v=vs.100).aspx)) che eseguendo una compilazione, tutte le regole vengono caricate e usate in base a come sono state configurate nel progetto. Per altre informazioni, vedere [Procedura: Abilitare e disabilitare regole specifiche relative all'analisi statica del codice del database](http://msdn.microsoft.com/en-us/library/dd172131(v=vs.100).aspx). Gestione estensioni caricherà inoltre qualsiasi assembly di regole personalizzate creato e registrato. Per altre informazioni, vedere [Procedura: Installare e gestire le estensioni delle funzionalità](../ssdt/how-to-install-and-manage-feature-extensions.md).  
+Quando si usa la funzionalità delle regole di analisi del codice del database, sia eseguendo direttamente l'analisi del codice statica (per altre informazioni, vedere [Procedura: Analizzare il codice Transact-SQL per trovare errori](http://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)) che eseguendo una compilazione, tutte le regole vengono caricate e usate in base a come sono state configurate nel progetto. Per altre informazioni, vedere [Procedura: Abilitare e disabilitare regole specifiche relative all'analisi statica del codice del database](http://msdn.microsoft.com/library/dd172131(v=vs.100).aspx). Gestione estensioni caricherà inoltre qualsiasi assembly di regole personalizzate creato e registrato. Per altre informazioni, vedere [Procedura: Installare e gestire le estensioni delle funzionalità](../ssdt/how-to-install-and-manage-feature-extensions.md).  
   
 Una classe di regola di analisi del codice personalizzata eredita da [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx). La classe di regole personalizzate può accedere a diversi oggetti utili tramite il relativo contesto di esecuzione della regola, tra cui:  
   
@@ -46,9 +46,9 @@ Una classe di regola di analisi del codice personalizzata eredita da [SqlCodeAna
   
 -   Per le regole che esaminano elementi specifici, viene incluso nel contesto l'oggetto Dac.Model.TSqlObject che rappresenta l'elemento dello schema nel modello.  
   
--   Molti oggetti dello schema contengono anche una rappresentazione di [ScriptDom](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx) a cui è possibile accedere tramite questo contesto. Si tratta di una rappresentazione basata sulla classe AST di un elemento che può essere utile per individuare potenziali problemi di sintassi, quali la presenza di [SelectStarExpression](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.selectstarexpression.aspx).  
+-   Molti oggetti dello schema contengono anche una rappresentazione di [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) a cui è possibile accedere tramite questo contesto. Si tratta di una rappresentazione basata sulla classe AST di un elemento che può essere utile per individuare potenziali problemi di sintassi, quali la presenza di [SelectStarExpression](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.selectstarexpression.aspx).  
   
-La regola crea un oggetto Dac.CodeAnalysis.SqlRuleProblem per rappresentare tutti i problemi rilevati. Quando viene creato questo oggetto, l'oggetto Dac.Model.TSqlObject appropriato ed eventualmente un elemento della rappresentazione di [ScriptDom](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx) vengono passati al costruttore e usati per determinare la posizione del problema nei file del codice sorgente. Al termine dell'analisi, tutti questi problemi vengono passati alla gestione errori e visualizzati nell'elenco errori.  
+La regola crea un oggetto Dac.CodeAnalysis.SqlRuleProblem per rappresentare tutti i problemi rilevati. Quando viene creato questo oggetto, l'oggetto Dac.Model.TSqlObject appropriato ed eventualmente un elemento della rappresentazione di [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) vengono passati al costruttore e usati per determinare la posizione del problema nei file del codice sorgente. Al termine dell'analisi, tutti questi problemi vengono passati alla gestione errori e visualizzati nell'elenco errori.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Estensione delle funzionalità del database](../ssdt/extending-the-database-features.md)  

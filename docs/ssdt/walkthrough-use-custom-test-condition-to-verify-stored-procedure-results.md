@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1dcc845c366b912f762e9bbf805c54c5de920fca
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 85393d548550f58d43533a0c7e11e0b951288dbb
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085833"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563907"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Procedura dettagliata: Utilizzo di una condizione di test personalizzata per verificare i risultati di una stored procedure
 In questa procedura dettagliata dell'estensione di funzionalità verrà creata una condizione di test di cui ne verrà verificata la funzionalità tramite la creazione di uno unit test di SQL Server. Il processo include la creazione di un progetto libreria di classi per la condizione di test, nonché la firma e l'installazione della condizione di test. Se è già disponibile una condizione di test che si vuole aggiornare, vedere [Procedura: Aggiornare una condizione di test personalizzata di Visual Studio 2010 da una versione precedente a SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
@@ -98,7 +98,7 @@ Nella prossima esercitazione verrà illustrato come aggiungere i riferimenti nec
     I riferimenti necessari verranno visualizzati nel nodo **Riferimenti** del progetto in **Esplora soluzioni**.  
   
 ## <a name="creating-the-resultsetcolumncountcondition-class"></a>Creazione della classe ResultSetColumnCountCondition  
-A questo punto, **Class1** verrà ridenominata in **ResultSetColumnCountCondition** e derivata da [testcondition](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). La classe **ResultSetColumnCountCondition** è una condizione di test semplice che verifica il numero delle colonne restituite in ResultSet. È possibile utilizzare questa condizione per essere certi che il contratto per una stored procedure sia corretto.  
+A questo punto, **Class1** verrà ridenominata in **ResultSetColumnCountCondition** e derivata da [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). La classe **ResultSetColumnCountCondition** è una condizione di test semplice che verifica il numero delle colonne restituite in ResultSet. È possibile utilizzare questa condizione per essere certi che il contratto per una stored procedure sia corretto.  
   
 1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse su Class1.cs, scegliere **Rinomina** e digitare **ResultSetColumnCountCondition.cs**.  
   
@@ -118,13 +118,13 @@ A questo punto, **Class1** verrà ridenominata in **ResultSetColumnCountConditio
         public class ResultSetColumnCountCondition  
     ```  
   
-4.  Derivare la classe da [testcondition](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx):  
+4.  Derivare la classe da [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx):  
   
     ```  
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  Aggiungere [ExportTestConditionAttribute](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx). Vedere [Procedura: Creare condizioni di test per la finestra di progettazione unit test di SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) per altre informazioni su UnitTesting.Conditions.ExportTestConditionAttribute.  
+5.  Aggiungere [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx). Vedere [Procedura: Creare condizioni di test per la finestra di progettazione unit test di SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) per altre informazioni su UnitTesting.Conditions.ExportTestConditionAttribute.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
