@@ -24,12 +24,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 93bb9dd2e67879368522886013772196e08dc17e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a8f595c79a36581bb5a2ff1ce94591134fb546dd
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37095316"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563629"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>Sys.server_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Il **sys.server_resource_stats** visualizzazione contiene diverse definizioni a 
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|Ora UTC che indica l'inizio dell'intervallo di reporting di quindici secondi|  
 |end_time|**datetime**|Ora UTC che indica la fine dell'intervallo di reporting di quindici secondi|
-|resource_type|Nvarchar (128)|Tipo di risorsa per il quale vengono fornite metriche|
+|resource_type|nvarchar (128)|Tipo di risorsa per il quale vengono fornite metriche|
 |resource_name|nvarchar (128)|Nome della risorsa.|
 |sku|nvarchar (128)|Gestito istanza livello di servizio dell'istanza. Di seguito sono indicati i valori possibili: <br><ul><li>Utilizzo generico</li></ul><ul><li>Business Critical</li></ul>|
 |hardware_generation|nvarchar (128)|Identificatore di generazione di hardware: ad esempio Gen 4 o generazione 5|
@@ -59,9 +59,9 @@ Il **sys.server_resource_stats** visualizzazione contiene diverse definizioni a 
 
  
 > [!TIP]  
->  Per altre informazioni su questi limiti e i livelli di servizio, vedere gli argomenti [livelli di servizio istanza gestita](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
+>  Per altre informazioni su questi limiti e i livelli di servizio, vedere gli argomenti [livelli di servizio istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
     
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Questa vista è disponibile per tutti i ruoli utente con autorizzazioni per la connessione per il **master** database.  
   
 ## <a name="remarks"></a>Note  
@@ -83,4 +83,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>Vedere anche  
- [I livelli di servizio istanza gestita](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
+ [I livelli di servizio istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)

@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89c9e6aae99d94525cfdf809e952300a84721b2e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fa08c3b344b399e3219c390eecb16760d23d560e
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068748"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534003"
 ---
 # <a name="automatic-tuning"></a>Ottimizzazione automatica
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ L'ottimizzazione automatica nel [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-m
 
 ## <a name="why-automatic-tuning"></a>Il motivo per cui l'ottimizzazione automatica?
 
-Una delle principali attività di amministrazione classica dei database esegue il monitoraggio del carico di lavoro, che identifica critici [!INCLUDE[tsql_md](../../includes/tsql-md.md)] esegue una query, gli indici che devono essere aggiunti per migliorare le prestazioni e usata raramente gli indici. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fornisce informazioni dettagliate per le query e gli indici che è necessario monitorare. Tuttavia, monitoraggio costante dei database è un'attività complessa e tediosa, in particolare quando si lavora con molti database. Potrebbe essere impossibile in modo efficiente gestire un numero enorme di database. Invece di monitoraggio e ottimizzazione del database manualmente, è possibile delegare alcune del monitoraggio e le azioni di ottimizzazione [!INCLUDE[ssde_md](../../includes/ssde_md.md)] usando funzionalità di ottimizzazione automatica.
+Tre delle principali attività di amministrazione classica dei database esegue il monitoraggio del carico di lavoro, che identifica critici [!INCLUDE[tsql_md](../../includes/tsql-md.md)] esegue una query, gli indici che devono essere aggiunte per migliorare le prestazioni e identificazione usata raramente. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fornisce informazioni dettagliate per le query e gli indici che è necessario monitorare. Tuttavia, costantemente il monitoraggio di un database è un'attività complessa e tediosa, in particolare quando si lavora con molti database. Potrebbe essere impossibile in modo efficiente gestire un numero enorme di database. Invece di monitoraggio e ottimizzazione del database manualmente, è possibile delegare alcune del monitoraggio e le azioni di ottimizzazione [!INCLUDE[ssde_md](../../includes/ssde_md.md)] usando funzionalità di ottimizzazione automatica.
 
-### <a name="how-does-automatic-tuning-works"></a>Come vengono funzionamento dell'ottimizzazione automatica?
+### <a name="how-does-automatic-tuning-work"></a>Come funziona automatica ottimizzazione?
 
-L'ottimizzazione automatica è un monitoraggio continuo e il processo di analisi che costantemente informazioni sulle caratteristiche del carico di lavoro e identificare potenziali problemi e miglioramenti.
+L'ottimizzazione automatica è un monitoraggio continuo e il processo di analisi che apprende continuamente le caratteristiche del carico di lavoro e identificare potenziali problemi e miglioramenti.
 
 ![Processo di ottimizzazione automatica](./media/tuning-process.png)
 

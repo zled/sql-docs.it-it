@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ee810c998f8aecf17c3496540c65471e0b29e102
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+ms.openlocfilehash: 4aa45d7ee690d55672c86be256e66d454860c2b6
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343086"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563885"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Esercitazione: Funzioni RevoScaleR usano R con dati di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +60,7 @@ Questa esercitazione è destinata ai data Scientist o per le persone che hanno g
   
     Per spostarsi avanti e indietro tra contesti di calcolo locali e remoti, è necessario disporre di due sistemi. Locale è in genere una workstation di sviluppo con la potenza di sufficienti per carichi di lavoro di analisi scientifica dei dati. Remote in questo caso è SQL Server 2017 o SQL Server 2016 con abilitata la funzionalità di R. 
     
-    Il passaggio di contesti di calcolo viene affermato su aventi la stessa versione RevoScaleR nei sistemi locali e remoti. In una workstation locale, è possibile ottenere i pacchetti RevoScaleR e i provider correlati mediante l'installazione o mediante uno dei seguenti: [macchina virtuale Data Science in Azure](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview), [(gratuito) con Microsoft R Client](https://docs.microsoft.com/en-us/machine-learning-server/r-client/what-is-microsoft-r-client), o [ Microsoft Machine Learning Server (Standalone)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install). Per l'opzione di server autonomi, installare l'edizione per sviluppatori gratuiti, tramite i programmi di installazione di Linux o Windows. È anche possibile usare il programma di installazione di SQL Server per installare un server autonomo.
+    Il passaggio di contesti di calcolo viene affermato su aventi la stessa versione RevoScaleR nei sistemi locali e remoti. In una workstation locale, è possibile ottenere i pacchetti RevoScaleR e i provider correlati mediante l'installazione o mediante uno dei seguenti: [macchina virtuale Data Science in Azure](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview), [(gratuito) con Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client), o [ Microsoft Machine Learning Server (Standalone)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install). Per l'opzione di server autonomi, installare l'edizione per sviluppatori gratuiti, tramite i programmi di installazione di Linux o Windows. È anche possibile usare il programma di installazione di SQL Server per installare un server autonomo.
       
 -   **Pacchetti R aggiuntivi**
   

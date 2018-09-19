@@ -1,6 +1,6 @@
 ---
 title: I ruoli | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,19 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ebefae10d3c1cd4791cc38fd5b9d30e5e29838a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981533"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975690"
 ---
 # <a name="roles"></a>Ruoli
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   I ruoli, nei modelli tabulari, consentono di definire le autorizzazioni dei membri per un modello. I membri del ruolo possono eseguire azioni sul modello, come definito dall'autorizzazione del ruolo. I ruoli definiti con autorizzazioni di lettura possono garantire inoltre sicurezza aggiuntiva a livello di riga tramite i relativi filtri. 
   
  Per SQL Server Analysis Services, i ruoli contengono membri di utenti da nome utente di Windows o dal gruppo di Windows e le autorizzazioni (lettura, processo, amministratore). Per Azure Analysis Services, gli utenti devono essere in Azure Active Directory e i nomi utente e i gruppi specificati devono essere dall'indirizzo di posta elettronica dell'organizzazione o UPN. 
-  
+
+> [!IMPORTANT]  
+>  Quando l'uso di SSDT per creare ruoli e aggiungere gli utenti dell'organizzazione a un modello tabulare di progetto che verrà distribuita in Azure Analysis Services, usare [area di lavoro integrata](workspace-database-ssas-tabular.md).
+
 > [!IMPORTANT]  
 >  Per gli utenti per connettersi a un modello distribuito tramite un'applicazione client di creazione di report, è necessario creare almeno un ruolo con almeno l'autorizzazione a cui gli utenti sono membri di lettura.  
   
@@ -47,7 +50,7 @@ ms.locfileid: "38981533"
   
  Ciascun ruolo può disporre di una delle seguenti autorizzazioni definite:  
   
-|Autorizzazioni|Description|Filtri di riga tramite DAX|  
+|Permissions|Description|Filtri di riga tramite DAX|  
 |-----------------|-----------------|----------------------------|  
 |None|I membri non possono apportare alcuna modifica allo schema del database modello, né eseguire query sui dati.|Filtri di riga non applicabili. Agli utenti con questo ruolo non è visibile alcun dato.|  
 |lettura|I membri possono eseguire query sui dati, in base ai filtri di riga, ma non possono visualizzare il database modello in SSMS, né possono apportare modifiche allo schema del database modello e l'utente non può elaborare il modello.|Filtri di riga applicabili. Agli utenti sono visibili solo i dati specificati nella formula DAX del filtro di riga.|  

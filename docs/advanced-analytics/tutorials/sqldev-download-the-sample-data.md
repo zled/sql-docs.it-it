@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
-ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
+ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42703604"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724335"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>Dati demo dei Taxi di NYC per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -118,7 +118,7 @@ La tabella seguente riepiloga gli oggetti creati nel database di esempio dei Tax
 
 |**Nome oggetto**|**Tipo oggetto**|**Descrizione**|
 |----------|------------------------|---------------|
-|**TaxiNYC_Sample** | Database |Create dallo script create-db-tb-upload-data.sql. Crea un database e due tabelle:<br /><br />Nella tabella dbo. nyctaxi_sample: contiene il set di dati principale NYC Taxi. Alla tabella viene aggiunto un indice columnstore cluster per migliorare le prestazioni di archiviazione e query. Il campione dell'1% del set di dati dei Taxi di NYC viene inserito in questa tabella.<br /><br />tabella dbo.nyc_taxi_models: usato per rendere permanente il modello con training analitica avanzata.|
+|**NYCTaxi_Sample** | Database |Create dallo script create-db-tb-upload-data.sql. Crea un database e due tabelle:<br /><br />Nella tabella dbo. nyctaxi_sample: contiene il set di dati principale NYC Taxi. Alla tabella viene aggiunto un indice columnstore cluster per migliorare le prestazioni di archiviazione e query. Il campione dell'1% del set di dati dei Taxi di NYC viene inserito in questa tabella.<br /><br />tabella dbo.nyc_taxi_models: usato per rendere permanente il modello con training analitica avanzata.|
 |**fnCalculateDistance** |funzione a valori scalari | Create dallo script fnCalculateDistance.sql. Calcola la distanza diretta tra posizioni di salita e. Questa funzione viene utilizzata [creare funzionalità di dati](sqldev-create-data-features-using-t-sql.md), [training e salvataggio di un modello](../r/sqldev-train-and-save-a-model-using-t-sql.md) e [Operazionalizzare il modello R](sqldev-operationalize-the-model.md).|
 |**fnEngineerFeatures** |funzione con valori di tabella | Create dallo script fnEngineerFeatures.sql. Crea nuova funzionalità di dati per il training del modello. Questa funzione viene utilizzata [creare funzionalità di dati](sqldev-create-data-features-using-t-sql.md) e [Operazionalizzare il modello R](sqldev-operationalize-the-model.md).|
 |**PlotHistogram** |stored procedure | Create dallo script PlotHistogram.sql. Chiama una funzione R per tracciare l'istogramma di una variabile e quindi restituisce il tracciato come oggetto binario. Questa stored procedure viene utilizzata [esplorare e visualizzare dati](sqldev-explore-and-visualize-the-data.md).|

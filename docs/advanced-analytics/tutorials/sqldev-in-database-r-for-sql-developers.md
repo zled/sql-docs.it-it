@@ -8,19 +8,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 16b3a19e8252e35fcefc817be2c8de11471b4eb3
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 7adfda1c31bd1fc32dc4149a568cfdd2149ab0b3
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394458"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724305"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>: Esercitazione analitica nel database con R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questa esercitazione per programmatori SQL indicazioni ottenere esperienza pratica con il linguaggio R per compilare e distribuire una soluzione di machine learning eseguendo il wrapping di codice R nelle stored procedure.
 
-Questa esercitazione Usa un noto set di dati pubblico, basata corse in taxi di New York city. Per rendere più rapido eseguire il codice di esempio, è stato creato un campione rappresentativo di % 1 dei dati. Si userà i dati per compilare un modello di classificazione binaria che consente di prevedere se una corsa specifica è tassista riceverà una Mancia o No, in base alle colonne come ora del giorno, distanza e località di partenza.
+Questa esercitazione Usa un noto set di dati pubblico, basata corse in taxi di New York City. Per rendere più rapido eseguire il codice di esempio, è stato creato un campione rappresentativo di % 1 dei dati. Si userà i dati per compilare un modello di classificazione binaria che consente di prevedere se una corsa specifica è tassista riceverà una Mancia o No, in base alle colonne come ora del giorno, distanza e località di partenza.
 
 > [!NOTE]
 > 

@@ -1,7 +1,7 @@
 ---
 title: Sys. elastic_pool_resource_stats (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 09/13/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a04b60738a48ddbe09db3eb8d7032d2f08b4ba9c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5f7f13ebb5699fc0fe2174e7ee1af9d6c44bcbfb
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997983"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563267"
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys. elastic_pool_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -54,12 +54,13 @@ ms.locfileid: "37997983"
 |**max_worker_percent**|**decimal(5,2)**|Massimi ruoli di lavoro simultanei (richieste) espresso in percentuale sulla base del limite del pool.|  
 |**max_session_percent**|**decimal(5,2)**|Numero massimo di sessioni simultaneo espresso in percentuale sulla base del limite del pool.|  
 |**elastic_pool_dtu_limit**|**int**|Pool elastico max DTU impostazione corrente per questo pool elastico durante questo intervallo.|  
-|**elastic_pool_storage_limit_mb**|**bigint**|Limite di archiviazione massima del pool elastico corrente l'impostazione per questo pool elastico in megabyte durante questo intervallo.|  
+|**elastic_pool_storage_limit_mb**|**bigint**|Limite di archiviazione massima del pool elastico corrente l'impostazione per questo pool elastico in megabyte durante questo intervallo.|
+|**avg_allocated_storage_percent**|**decimal(5,2)**|La percentuale di dati spazio allocato per tutti i database nel pool elastico.  Questa è la percentuale di spazio per i dati allocato alla dimensione massima dei dati per il pool elastico.  Per altre informazioni vedere: [gestione dello spazio del File nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>Note  
  In questa vista esiste nel database master del server logico. È necessario essere connessi al database master per eseguire query **Sys. elastic_pool_resource_stats**.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede l'appartenenza al **dbmanager** ruolo.  
   
 ## <a name="examples"></a>Esempi  

@@ -17,12 +17,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 93a6f3b3ca257a6f6d4c848b2d83bf441ab73cf4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 61f198242e458e97ea4833dbe970116e9669d9a7
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040409"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563757"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "38040409"
 |APP_NAME|**nvarchar(255)**|Consente di acquisire le informazioni sul nome dell'applicazione se lo si desidera impostare come parte del processo di connessione.|Qualsiasi stringa valida.|  
 |sql_spid|**int**|Il numero di id dello SPID Desiderato. Uso di `session_id` questa sessione. Usare la `sql_spid` colonna da aggiungere al **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Avviso \* \***  questa colonna contiene SPID chiuso.||  
   
- Per informazioni sul numero massimo di righe mantenuto da questa vista, vedere la sezione i valori massimi vista di sistema nel [valori minimi e massimi (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) argomento.  
+ Per informazioni sul numero massimo di righe mantenuto da questa vista, vedere la sezione i valori massimi vista di sistema nel [valori minimi e massimi (SQL Server PDW)](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9) argomento.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'autorizzazione `VIEW SERVER STATE`.  
   
 ## <a name="see-also"></a>Vedere anche  
