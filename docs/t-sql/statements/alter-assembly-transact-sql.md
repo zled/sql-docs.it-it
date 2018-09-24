@@ -1,7 +1,7 @@
 ---
 title: ALTER ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2017
+ms.date: 09/07/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,15 +27,15 @@ caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 10e01507c7c33f272872ecf5022ad287ccaeafa6
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 32f8f0b6aaaa44dc42a52babae398845779961d3
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942927"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171803"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Modifica un assembly mediante la modifica delle proprietà di catalogo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di un assembly. ALTER ASSEMBLY esegue un aggiornamento dell'assembly in base alla copia più recente dei moduli [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] che includono la relativa implementazione e aggiunge o rimuove i file a esso associati. Gli assembly vengono creati tramite l'istruzione [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
@@ -79,6 +79,9 @@ ALTER ASSEMBLY assembly_name
  Aggiorna un assembly in base alla copia più recente dei moduli [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] contenenti la relativa implementazione. È possibile usare questa opzione solo se non esistono file associati all'assembly specificato.  
   
  \<client_assembly_specifier> specifica il percorso di rete o il percorso locale in cui si trova l'assembly in fase di aggiornamento. Il percorso di rete include il nome del computer e della condivisione, nonché un percorso all'interno di quest'ultima. *manifest_file_name* specifica il nome del file contenente il manifesto dell'assembly.  
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta riferimenti a un file.
   
  \<assembly_bits> rappresenta il valore binario dell'assembly.  
   
@@ -118,13 +121,13 @@ ALTER ASSEMBLY assembly_name
  Rimuove il nome file associato all'assembly oppure tutti i file associati all'assembly dal database. Se specificata assieme all'opzione ADD FILE (descritto di seguito), l'opzione DROP FILE viene eseguita per prima. Ciò consente di sostituire un file con lo stesso nome.  
   
 > [!NOTE]  
->  Questa opzione non è disponibile in un database indipendente.  
+>  Questa opzione non è disponibile in un database indipendente o nel database SQL di Azure.  
   
  [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
  Carica un file da associare all'assembly, ad esempio codice sorgente, file di debug o altre informazioni correlate, nel server e da visualizzare nella vista del catalogo **sys.assembly_files**. *client_file_specifier* specifica il percorso dal quale caricare il file. In alternativa è possibile usare *file_bits* per specificare l'elenco di valori binari che compongono il file. *file_name* specifica il nome in base al quale il file deve essere archiviato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare *file_name* se *file_bits* è specificato. È invece facoltativo se è specificato *client_file_specifier*. Se *file_name* non viene specificato, la parte file_name di *client_file_specifier* viene usata come *file_name*.  
   
 > [!NOTE]  
->  Questa opzione non è disponibile in un database indipendente.  
+>  Questa opzione non è disponibile in un database indipendente o nel database SQL di Azure.  
   
 ## <a name="remarks"></a>Remarks  
  ALTER ASSEMBLY non interferisce con le sessioni in esecuzione che eseguono codice nell'assembly in fase di modifica. Le sessioni correnti completano l'esecuzione tramite l'utilizzo dei bit non modificati dell'assembly.  
@@ -168,7 +171,7 @@ ALTER ASSEMBLY assembly_name
   
  Se l'istruzione ALTER ASSEMBLY viene eseguita senza la clausola di dati UNCHECKED, vengono eseguite le verifiche per controllare che la nuova versione dell'assembly non abbia un impatto negativo sui dati delle tabelle. Le prestazioni potrebbero dipendere dalla quantità di dati che devono essere sottoposti a verifica.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'autorizzazione ALTER per l'assembly. È inoltre necessario disporre dei requisiti seguenti:  
   
 -   Per modificare un assembly il cui set di autorizzazioni esistente è EXTERNAL_ACCESS, è necessaria l'autorizzazione **EXTERNAL ACCESS ASSEMBLY** nel server.  
@@ -205,6 +208,10 @@ Sono necessarie le autorizzazioni seguenti per modificare un assembly CLR con `C
  ALTER ASSEMBLY ComplexNumber 
  FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
   ```
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta riferimenti a un file.
+
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. Aggiunta di un file da associare a un assembly  
  Nell'esempio seguente viene caricato il file del codice sorgente `Class1.cs` da associare all'assembly `MyClass`. In questo esempio si presuppone che l'assembly `MyClass` sia già stato creato nel database.  
   
@@ -212,7 +219,10 @@ Sono necessarie le autorizzazioni seguenti per modificare un assembly CLR con `C
 ALTER ASSEMBLY MyClass   
 ADD FILE FROM 'C:\MyClassProject\Class1.cs';  
 ```  
-  
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta riferimenti a un file.
+
 ### <a name="c-changing-the-permissions-of-an-assembly"></a>C. Modifica delle autorizzazioni di un assembly  
  Nell'esempio seguente il set di autorizzazioni dell'assembly `ComplexNumber` viene modificato da SAFE a `EXTERNAL ACCESS`.  
   

@@ -1,7 +1,7 @@
 ---
 title: Replica, rilevamento modifiche e Change Data Capture per i gruppi di disponibilità | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2018
+ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -18,12 +18,12 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37070e0b036d109624048603b24464a2019ec69d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bc5f16247663591862c60dccd2e75975195b327c
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769377"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311671"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replica, rilevamento modifiche e Change Data Capture per i gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ ms.locfileid: "34769377"
   
      Anche se in molti casi tramite un'applicazione client verrà sempre effettuato il tentativo di connessione alla replica primaria corrente, questo non è il solo modo per sfruttare [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Se un gruppo di disponibilità viene configurato per supportare repliche secondarie leggibili, è possibile raggruppare i dati delle modifiche anche dai nodi secondari.  
   
-     Quando viene configurato un gruppo di disponibilità, l'attributo ALLOW_CONNECTIONS associato a SECONDARY_ROLE viene usato per specificare il tipo di accesso secondario supportato. Se viene configurato come ALL, tutte le connessioni al database secondario saranno accettate, ma solo quelle per cui viene richiesto l'accesso in sola lettura avranno esito positivo. Se viene configurato come READ_ONLY, è necessario specificare la finalità di sola lettura mentre si stabilisce la connessione al database secondario affinché la connessione venga stabilita. Per altre informazioni, vedere [Configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
+     Quando viene configurato un gruppo di disponibilità, l'attributo ALLOW_CONNECTIONS associato a SECONDARY_ROLE viene usato per specificare il tipo di accesso secondario supportato. Se viene configurato come ALL, tutte le connessioni al database secondario saranno consentite, ma solo quelle per cui viene richiesto l'accesso in sola lettura avranno esito positivo. Se viene configurato come READ_ONLY, è necessario specificare la finalità di sola lettura mentre si stabilisce la connessione al database secondario affinché la connessione venga stabilita. Per altre informazioni, vedere [Configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
      La query seguente può essere usata per determinare se la finalità di sola lettura è necessaria per connettersi a una replica secondaria leggibile.  
   
@@ -211,12 +211,10 @@ Se Change Data Capture deve essere disabilitato in un database che fa parte di u
 |||||  
 |-|-|-|-|  
 ||**Server di pubblicazione**|**Distributor***\*|**Sottoscrittore**|  
-|**Transazionale**|Sì<br /><br /> Nota: non è incluso il supporto per la replica transazionale bidirezionale e reciproca.|no|Sì|  
+|**Transazionale**|Sì<br /><br /> Nota: non è incluso il supporto per la replica transazionale bidirezionale e reciproca.|Sì|Sì| 
 |**P2P**|no|no|no|  
-|**Merge**|Sì|no|Sì*|  
-|**Snapshot**|Sì|no|Sì*|  
-  
- *Il failover sul database della replica è una procedura manuale. Il failover automatico non è fornito.  
+|**Merge**|Sì|no|no|  
+|**Snapshot**|Sì|no|Sì|
   
  **Non è supportato l'uso del database di distribuzione con il mirroring del database.  
   

@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,19 +30,17 @@ caps.latest.revision: 153
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 83bf4405abdb8f245332a75cd731503cf07f7ce5
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782672"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171693"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Importa un file di dati in una tabella o una vista di database in un formato specificato dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -101,6 +99,10 @@ BULK INSERT
  *data_file* deve specificare un percorso valido dal server in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *data_file* corrisponde a un file remoto, è necessario specificare il nome UNC (Universal Naming Convention). Il formato del nome UNC è \\\\*NomeSistema*\\*NomeCondivisione*\\*Percorso*\\*NomeFile*. Ad esempio, `\\SystemX\DiskZ\Sales\update.txt`.   
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file può essere presente nell'archiviazione BLOB di Azure.
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
+
 
 **'** *data_source_name* **'**   
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
@@ -293,7 +295,11 @@ BULK INSERT bulktest..t_float
 FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');  
 GO  
 ```  
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
   
+
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>Tipi di dati per l'esportazione o l'importazione bulk di documenti SQLXML  
  Per eseguire l'esportazione o l'importazione bulk di dati SQLXML, utilizzare uno dei tipi di dati seguenti nel file di formato:  
   
@@ -338,7 +344,7 @@ Prima di [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, i file 
   
  Per altre considerazioni sulla sicurezza, vedere [Importare dati per operazioni bulk con BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  Sono necessarie le autorizzazioni INSERT e ADMINISTER BULK OPERATIONS. Nel database SQL di Azure, sono necessarie le autorizzazioni INSERT e ADMINISTER DATABASE BULK OPERATIONS. È inoltre richiesta l'autorizzazione ALTER TABLE se si verificano una o più delle condizioni seguenti:  
   
 -   Sono presenti vincoli e l'opzione CHECK_CONSTRAINTS non è specificata.  
@@ -367,6 +373,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
          ROWTERMINATOR =' |\n'  
       );  
 ```  
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
   
 ### <a name="b-using-the-firetriggers-argument"></a>B. Utilizzo dell'argomento FIRE_TRIGGERS  
  Nell'esempio seguente viene specificato l'argomento `FIRE_TRIGGERS`.  
@@ -381,6 +390,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
         FIRE_TRIGGERS  
       );  
 ```  
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
   
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. Utilizzo del carattere di avanzamento riga come carattere di terminazione della riga  
  Nell'esempio seguente viene importato un file che utilizza il carattere di avanzamento riga come carattere di terminazione della riga, come nel caso di output UNIX:  
@@ -395,6 +407,9 @@ EXEC(@bulk_cmd);
   
 > [!NOTE]  
 >  A causa della modalità di gestione dei file di testo in Microsoft Windows, **(\n** viene automaticamente sostituito con **\r\n)**.  
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
   
 ### <a name="d-specifying-a-code-page"></a>D. Definizione di una tabella codici  
  L'esempio seguente illustra come specificare una tabella codici.  
@@ -408,6 +423,10 @@ WITH
     FIELDTERMINATOR = ','  
 );  
 ```  
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
+
 ### <a name="e-importing-data-from-a-csv-file"></a>E. Importazione di dati da un file CSV   
 L'esempio seguente illustra come specificare un file CSV.   
 ```
@@ -415,6 +434,10 @@ BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
 WITH (FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
+
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Importazione di dati da un file nell'archiviazione BLOB di Azure   
 L'esempio seguente illustra come caricare dati da un file csv in una posizione di archiviazione BLOB di Azure configurata come origine dati esterna. Ciò richiede credenziali con ambito database tramite una firma di accesso condiviso.    
@@ -425,6 +448,9 @@ FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importazione di dati da un file nell'archiviazione BLOB di Azure e specifica di un file degli errori   
 L'esempio seguente illustra come caricare dati da un file csv in una posizione di archiviazione BLOB di Azure configurata come origine dati esterna e come specificare un file degli errori. Ciò richiede credenziali con ambito database tramite una firma di accesso condiviso. Si noti che, se in esecuzione nel database SQL di Azure, l'opzione ERRORFILE deve essere accompagnata da ERRORFILE_DATA_SOURCE. In caso contrario l'importazione potrebbe non riuscire con un messaggio di errore relativo alle autorizzazioni. Il file specificato in ERRORFILE non deve esistere nel contenitore.

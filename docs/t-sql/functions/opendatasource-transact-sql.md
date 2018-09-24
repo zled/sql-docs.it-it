@@ -1,7 +1,7 @@
 ---
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,21 +27,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 63619b21a6e82458a64128a4f892cac6c6220420
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 58b37be191f9b3ce95d7442a4ba9d68f9fdc2339
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457965"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171569"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce informazioni sulla connessione ad hoc all'interno di un nome di oggetto in quattro parti, senza utilizzare il nome di un server collegato.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![icona di collegamento](../../database-engine/configure-windows/media/topic-link.gif "icona di collegamento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,7 +62,7 @@ OPENDATASOURCE ( provider_name, init_string )
 |origine dati|DBPROP_INIT_DATASOURCE|Nome dell'origine dei dati a cui connettersi. Viene interpretato in modo diverso nei vari provider. Per il provider OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, indica il nome del server. Per il provider OLE DB di Jet indica il percorso completo del file mdb o xls.|  
 |Percorso|DBPROP_INIT_LOCATION|Posizione del database a cui connettersi.|  
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|Stringa di connessione specifica del provider.|  
-|Connect timeout|DBPROP_INIT_TIMEOUT|Intervallo di tempo trascorso il quale il tentativo di connessione viene considerato non riuscito.|  
+|Connect timeout|DBPROP_INIT_TIMEOUT|Valore di timeout trascorso il quale il tentativo di connessione viene considerato non riuscito.|  
 |ID utente|DBPROP_AUTH_USERID|ID utente da utilizzare per la connessione.|  
 |Password|DBPROP_AUTH_PASSWORD|Password da utilizzare per la connessione.|  
 |Catalogo|DBPROP_INIT_CATALOG|Nome del catalogo iniziale o predefinito nella connessione all'origine dei dati.|  
@@ -80,7 +78,7 @@ OPENDATASOURCE ( provider_name, init_string )
 > [!IMPORTANT]  
 >  L'autenticazione di Windows offre una sicurezza decisamente maggiore rispetto all'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando possibile, utilizzare l'autenticazione di Windows. OPENDATASOURCE non deve essere utilizzata con password esplicite nella stringa di connessione.  
   
- I requisiti relativi alla connessione per ogni provider sono analoghi a quelli per i parametri utilizzati durante la creazione di server collegati. I dettagli per molti provider di utilizzo comune vengono elencati nell'argomento [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+ I requisiti relativi alla connessione per ogni provider sono analoghi a quelli per i parametri utilizzati durante la creazione di server collegati. I dettagli per molti provider di utilizzo comune sono disponibili nell'articolo [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
  Qualsiasi chiamata a OPENDATASOURCE, OPENQUERY o OPENROWSET nella clausola FROM viene valutata separatamente e indipendentemente da qualsiasi altra chiamata a queste funzioni utilizzate come destinazione dell'aggiornamento, anche se alle due chiamate vengono forniti argomenti identici. In particolare, le condizioni di filtro o join applicate al risultato di una di tali chiamate non hanno effetto sui risultati dell'altra.  
   

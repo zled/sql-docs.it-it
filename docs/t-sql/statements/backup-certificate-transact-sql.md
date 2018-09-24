@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -32,19 +32,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e324d8823176e8153a6536be7dcd0a1ca8baae77
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: acc945ee464ae143f5ae9b2fd9ce803a3045d1f0
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43105734"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171593"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-asdw-pdw-md.md)]
 
   Esporta un certificato in un file.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![icona di collegamento](../../database-engine/configure-windows/media/topic-link.gif "icona di collegamento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -74,28 +74,32 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
 ## <a name="arguments"></a>Argomenti  
  *path_to_file*  
- Specifica il percorso completo, nome di file incluso, del file in cui verrà salvato il certificato. Questo parametro può essere un percorso locale o un percorso UNC di rete. L'impostazione predefinita è rappresentata dal percorso della cartella DATA di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Specifica il percorso completo, nome di file incluso, del file in cui verrà salvato il certificato. Questo percorso può essere un percorso locale o un percorso UNC di rete. L'impostazione predefinita è rappresentata dal percorso della cartella DATA di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *path_to_private_key_file*  
- Specifica il percorso completo, nome di file incluso, del file in cui verrà salvata la chiave privata. Questo parametro può essere un percorso locale o un percorso UNC di rete. L'impostazione predefinita è rappresentata dal percorso della cartella DATA di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Specifica il percorso completo, nome di file incluso, del file in cui verrà salvata la chiave privata. Questo percorso può essere un percorso locale o un percorso UNC di rete. L'impostazione predefinita è rappresentata dal percorso della cartella DATA di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+> [!IMPORTANT]
+> Database SQL di Azure non supporta il backup di un certificato in un file.
+
   
  *encryption_password*  
  Password utilizzata per crittografare la chiave privata prima di scriverla nel file di backup. Questa password è soggetta ai controlli di complessità delle password.  
   
  *decryption_password*  
- Password utilizzata per decrittografare la chiave privata prima di eseguire il backup della chiave. Non è necessaria se il certificato viene crittografato tramite la chiave master. 
+ Password utilizzata per decrittografare la chiave privata prima di eseguire il backup della chiave. Questo argomento non è necessario se il certificato viene crittografato tramite la chiave master. 
   
 ## <a name="remarks"></a>Remarks  
  Se la chiave privata è crittografata con una password nel database, è necessario specificare la password di decrittografia.  
   
- Quando si esegue il backup della chiave privata in un file, la crittografia è obbligatoria. La password utilizzata per proteggere il certificato sottoposto a backup non corrisponde alla password utilizzata per crittografare la chiave privata del certificato.  
+ Quando si esegue il backup della chiave privata in un file, la crittografia è obbligatoria. La password usata per proteggere il certificato non corrisponde alla password usata per crittografare la chiave privata del certificato.  
   
  Per ripristinare un certificato da un backup, usare l'istruzione [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).
  
- Quando si esegue un backup, i file verranno inclusi nell'elenco di controllo di accesso dell'istanza di SQL Server. Se è necessario ripristinare il certificato in un server in esecuzione con un account diverso è necessario modificare le autorizzazioni per i file in modo che possano essere letti dal nuovo account. 
+ Quando si esegue un backup, i file verranno inclusi nell'elenco di controllo di accesso per l'account del servizio dell'istanza di SQL Server. Se è necessario ripristinare il certificato in un server in esecuzione con un account diverso, sarà necessario modificare le autorizzazioni per i file in modo che possano essere letti dal nuovo account. 
   
 ## <a name="permissions"></a>Permissions  
- È richiesta l'autorizzazione CONTROL per il certificato ed è necessario conoscere la password utilizzata per crittografare la chiave privata. Se si esegue il backup della sola parte pubblica del certificato, sono richieste alcune autorizzazioni per il certificato ed è necessario che al chiamante non sia stata negata l'autorizzazione VIEW per il certificato.  
+ È richiesta l'autorizzazione CONTROL per il certificato ed è necessario conoscere la password utilizzata per crittografare la chiave privata. Se si esegue il backup della sola parte pubblica del certificato, questo comando richiede alcune autorizzazioni per il certificato ed è necessario che al chiamante non sia stata negata l'autorizzazione VIEW per il certificato.  
   
 ## <a name="examples"></a>Esempi  
   

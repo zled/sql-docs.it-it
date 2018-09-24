@@ -1,7 +1,7 @@
 ---
 title: Log delle modifiche per SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 09/05/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,18 +16,41 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cf2952b907da3dc44046e57796de761e62336de
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3e0a3d3cdd9904634e415d025c0866bff8140431
+ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096120"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743504"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log delle modifiche per SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Questo log delle modifiche è per [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Per i post dettagliati sulle novità e le modifiche, vedere il [blog del team di SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT per Visual Studio 2017 (15.8)
+Numero di build: 14.0.16174.0  
+Data di rilascio: 05 settembre 2018  
+
+### <a name="whats-new"></a>Novità
+
+**SSIS:**
+
+1. Regressione della correzione in Visual Studio 15.8 per l'errore di compilazione in seguito al salvataggio dell'attività/componente di script.
+1. Regressione della correzione in Visual Studio 15.8 per il malfunzionamento della distribuzione guidata.
+1. Risoluzione di un problema a causa del quale la gestione connessione ADO.NET non supporta il provider ADO.NET di terze parti.
+
+**Programma di installazione:**
+
+- Implementazione del riavvio intermedio durante l'installazione di SSDT in Windows 10.
+
+
+### <a name="known-issues"></a>Problemi noti:
+
+- L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente.
+
+
 
 
 ## <a name="ssdt-for-visual-studio-2017-1571"></a>SSDT per Visual Studio 2017 (15.7.1)

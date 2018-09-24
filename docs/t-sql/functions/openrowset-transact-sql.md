@@ -1,7 +1,7 @@
 ---
 title: OPENROWSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -29,12 +29,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 72b83f3f127aa4d63e9e39b2c828ad604a0b483d
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 2ff620929c51cde29b82096c6437f7a6bfeefa50
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454175"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171823"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -42,8 +42,6 @@ ms.locfileid: "39454175"
   Include tutte le informazioni di connessione necessarie per l'accesso remoto ai dati da un'origine dati OLE DB. Si tratta di un metodo alternativo per l'accesso alle tabelle di un server collegato e corrisponde a un metodo ad hoc eseguito una sola volta per la connessione e l'accesso ai dati remoti tramite OLE DB. Per ottenere riferimenti più frequenti alle origini dati OLE DB, utilizzare server collegati. Per altre informazioni, vedere [Server collegati &#40;Motore di database&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md). È possibile fare riferimento alla funzione `OPENROWSET` nella clausola FROM di una query come se fosse un nome di tabella. È anche possibile fare riferimento alla funzione `OPENROWSET` come tabella di destinazione di un'istruzione`INSERT`, `UPDATE` o `DELETE`, a seconda delle funzionalità del provider OLE DB. Anche quando la query può restituire più set di risultati, la funzione `OPENROWSET` restituisce solo il primo set.  
   
  `OPENROWSET` supporta anche le operazioni bulk tramite un provider BULK predefinito che consente di leggere i dati da un file e restituirli come set di righe.  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -110,6 +108,9 @@ OPENROWSET
   
  BULK  
  Utilizza il provider BULK per set di righe per OPENROWSET per leggere i dati da un file. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OPENROWSET è in grado di leggere da un file di dati senza caricare i dati in una tabella di destinazione. Ciò consente di utilizzare OPENROWSET con un'istruzione SELECT semplice.  
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
   
  Gli argomenti dell'opzione BULK consentono un controllo significativo su dove iniziare e terminare la lettura dei dati, come gestire gli errori e come interpretare i dati. È ad esempio possibile specificare che il file di dati deve essere letto come riga singola, set di righe a colonna singola di tipo **varbinary**, **varchar** o **nvarchar**. Il comportamento predefinito viene illustrato nelle descrizioni degli argomenti seguenti.  
   
@@ -123,7 +124,10 @@ OPENROWSET
  '*data_file*'  
  Percorso completo del file di dati i cui dati devono essere copiati nella tabella di destinazione.   
  **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file può essere presente nell'archiviazione BLOB di Azure. Per alcuni esempi, vedere [Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file può essere presente nell'archivio BLOB di Azure. Per alcuni esempi, vedere [Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
   
  \<bulk_options>  
  Specifica uno o più argomenti per l'opzione BULK.  
@@ -307,6 +311,8 @@ SELECT CustomerID, CompanyName
       'admin';'',Customers);  
 GO  
 ```  
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
   
 ### <a name="c-using-openrowset-and-another-table-in-an-inner-join"></a>C. Utilizzo di OPENROWSET e di un'altra tabella in un INNER JOIN  
  L'esempio seguente seleziona tutti i dati della tabella `Customers` dell'istanza locale del database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` e della tabella `Orders` del database `Northwind` di Access archiviato nello stesso computer.  
@@ -325,6 +331,10 @@ FROM Northwind.dbo.Customers AS c
    ON c.CustomerID = o.CustomerID ;  
 GO  
 ```  
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
+
   
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. Utilizzo di OPENROWSET per eseguire un inserimento bulk dei dati del file in una colonna varbinary(max).  
  Nell'esempio seguente viene creata una tabella di piccole dimensioni a titolo dimostrativo e vengono quindi inseriti i dati di un file denominato `Text1.txt` archiviato nella directory radice `C:` in una colonna `varbinary(max)`.  
@@ -342,7 +352,11 @@ INSERT INTO myTable(FileName, FileType, Document)
       * FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_BLOB) AS Document;  
 GO  
 ```  
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
   
+
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. Utilizzo del provider OPENROWSET BULK con un file di formato per recuperare le righe da un file di testo  
  Nell'esempio seguente viene utilizzato un file di formato per recuperare le righe da un file di testo delimitato da tabulazioni, `values.txt` contenente i dati seguenti:  
   
@@ -367,7 +381,11 @@ GO
 SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',   
    FORMATFILE = 'c:\test\values.fmt') AS a;  
 ```  
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
   
+
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. Indicazione di un file di formato e di una tabella codici  
  L'esempio seguente illustra come usare sia il file di formato che la tabella codici contemporaneamente.  
   
@@ -386,6 +404,10 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMAT='CSV') AS cars;  
 ```
 
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
+
+
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. Accesso ai dati da un file CSV senza un file di formato
 
 ```sql
@@ -393,6 +415,10 @@ SELECT * FROM OPENROWSET(
    BULK 'C:\Program Files\Microsoft SQL Server\MSSQL14.CTP1_1\MSSQL\DATA\inv-2017-01-19.csv',
    SINGLE_CLOB) AS DATA;
 ```
+
+> [!IMPORTANT]
+> Il database SQL di Azure non supporta la lettura da file di Windows.
+
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. Accesso ai dati da un file archiviato nell'archiviazione BLOB di Azure   
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   

@@ -18,12 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 26ecc54177da5a224e1c26c5dcac58d4e4d4cf3e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bb37f2598422d739be318eec79d6ddc3a9bfdb8f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410463"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811087"
 ---
 # <a name="create-an-entity-master-data-services"></a>Creare un'entità (Master Data Services)
 
@@ -57,7 +57,9 @@ ms.locfileid: "35410463"
      Se questo campo non viene completato, viene usato il nome entità.  
   
     > [!TIP]  
-    >  Usare il nome del modello come parte del nome della tabella di staging, ad esempio *Nomemodello_Nomeentità*. In questo modo risulta più agevole trovare le tabelle nel database. Per altre informazioni sulle tabelle di staging, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+    >  Usare il nome del modello come parte del nome della tabella di staging, ad esempio *Nomemodello_Nomeentità*. In questo modo risulta più agevole trovare le tabelle nel database. Per altre informazioni sulle tabelle di staging, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).
+    > [!TIP]  
+    >  Se si usano i nomi predefiniti per le tabelle di staging, MDS aggiungerà automaticamente gli identificatori (ad esempio, 1, 2) ai nomi delle tabelle di staging, se esiste un'entità con lo stesso nome in un altro modello.
   
 7.  Per il campo **Tipo di log delle transazioni** scegliere il tipo di log delle transazioni nell'elenco a discesa.  
   

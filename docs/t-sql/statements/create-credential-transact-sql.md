@@ -1,7 +1,7 @@
 ---
 title: CREATE CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -28,19 +28,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 87759a536e979600e7ff12d8ad932c4fcf4cd248
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 58250bd30559b497d6e2ab841086f9e5bbb26ffd
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458075"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171613"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Crea una credenziale a livello di server. Una credenziale è un record contenente le informazioni di autenticazione necessarie per connettersi a una risorsa all'esterno di SQL Server. La maggior parte delle credenziali include un utente e una password di Windows. Quando si salva il backup di un database in un determinato percorso, ad esempio, può essere necessario specificare credenziali speciali per accedere a tale percorso. Per altre informazioni, vedere [Credenziali (motore di database)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
 > [!NOTE]  
 >  Per creare credenziali a livello di database, vedere [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Usare una credenziale a livello di server quando è necessario usare le stesse credenziali per più database nel server. Usare le credenziali con ambito database per rendere portabile il database. Quando un database viene spostato in un nuovo server, vengono spostate anche le credenziali con ambito database. Usare le credenziali con ambito database nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -63,7 +61,10 @@ WITH IDENTITY = 'identity_name'
   
  IDENTITY **='***identity_name***'**  
  Specifica il nome dell'account da utilizzare per la connessione all'esterno del server. Quando la credenziale viene usata per accedere a Azure Key Vault, **IDENTITY** è il nome dell'insieme di credenziali delle chiavi. Vedere l'esempio C riportato di seguito. Quando le credenziali usano una firma di accesso condiviso (SAS), il valore di **IDENTITY** è *SHARED ACCESS SIGNATURE*. Vedere l'esempio D riportato di seguito.  
-  
+ 
+> [!IMPORTANT]
+> Database SQL di Azure supporta solo le identità Azure Key Vault e di firma di accesso condiviso. Le identità utente di Windows non sono supportate.
+ 
  SECRET **='***secret***'**  
  Specifica il segreto richiesto per l'autenticazione in uscita.  
   

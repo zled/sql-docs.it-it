@@ -1,7 +1,7 @@
 ---
 title: Scaricare SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 09/05/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: e2a11a9b01f6c1f45ba6f10bda351441235f8247
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 907b8a7d11bbd7889f3796d3f56633caec22a529
+ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152612"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743484"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Scaricare e installare SQL Server Data Tools (SSDT) per Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,19 +48,18 @@ Il programma di installazione elenca le istanze di Visual Studio disponibili per
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT per Visual Studio 2017 (programma di installazione autonomo)
 
-[![download](../ssdt/media/download.png) Download di SSDT per Visual Studio 2017 (15.7.1) ](https://go.microsoft.com/fwlink/?linkid=875613) 
+[![download](../ssdt/media/download.png) Download di SSDT per Visual Studio 2017 (15.8) ](https://go.microsoft.com/fwlink/?linkid=2014060) 
 
 > [!IMPORTANT]
-> - Prima di installare SSDT per Visual Studio 2017 (15.7.1), disinstallare le estensioni *Progetti di Analysis Services* e *Progetti di Reporting Services*, se già installate, e chiudere tutte le istanze di Visual Studio.
-> - Quando si installa SSDT in Windows 10 e si sceglie **Installare la nuova istanza di Microsoft SQL Server Data Tools per Visual Studio 2017**, prima deselezionare tutte le caselle di controllo e installare la nuova istanza. Dopo aver installato la nuova istanza, riavviare il computer e aprire di nuovo il programma di installazione di SSDT per continuare l'installazione.  
+> - Prima di installare SSDT per Visual Studio 2017 (15.8), disinstallare le estensioni *Progetti di Analysis Services* e *Progetti di Reporting Services*, se già installate, e chiudere tutte le istanze di Visual Studio.
 
 
 
 **Informazioni sulla versione**  
   
-Numero di versione: 15.7.1  
-Numero di build: 14.0.16167.0  
-Data di rilascio: 02 luglio 2018  
+Numero di versione: 15.8  
+Numero di build: 14.0.16174.0  
+Data di rilascio: 05 settembre 2018  
 
 Per un elenco completo delle modifiche, vedere il [log delle modifiche](changelog-for-sql-server-data-tools-ssdt.md).
 
@@ -70,17 +69,17 @@ SSDT per Visual Studio 2017 ha gli stessi [requisiti di sistema](https://docs.mi
 
 Questa versione di **SSDT per VS 2017** può essere installata nelle lingue seguenti:  
 
-[Cinese (semplificato)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
-[Cinese (tradizionale)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
-[Inglese (Stati Uniti)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x409) | 
-[Francese]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40c)  
-[Tedesco]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x407) | 
-[Italiano]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x410) | 
-[Giapponese]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x411) | 
-[Coreano]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x412) | 
-[Portoghese (Brasile)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x416) | 
-[Russo]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x419) | 
-[Spagnolo]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40a)  
+[Cinese (semplificato)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x804) | 
+[Cinese (tradizionale)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x404) | 
+[Inglese (Stati Uniti)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x409) | 
+[Francese]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x40c)  
+[Tedesco]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x407) | 
+[Italiano]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x410) | 
+[Giapponese]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x411) | 
+[Coreano]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x412) | 
+[Portoghese (Brasile)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x416) | 
+[Russo]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x419) | 
+[Spagnolo]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x40a)  
 
 
 

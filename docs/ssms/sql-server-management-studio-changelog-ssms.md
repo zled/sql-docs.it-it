@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Log delle modifiche (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 09/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,26 +15,107 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c45c55f72b6c864087a0df2d45d9da0ef3cfce1
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: edfb4248c5f5102742ab13d7a2615bb3c192481b
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899501"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889797"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Questo articolo fornisce informazioni dettagliate sugli aggiornamenti, i miglioramenti e le correzioni di bug per le versioni correnti e precedenti di SSMS. Scaricare le [versioni precedenti di SSMS indicate di seguito](#previous-ssms-releases).
 
 
+## <a name="ssms-179download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.9](download-sql-server-management-studio-ssms.md)
 
 
-## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+Numero di build: 14.0.17285.0<br>
+Data di rilascio: 04 settembre 2018
+
+### <a name="whats-new"></a>Novità
+
+**SQL Server Management Studio (SSMS) - Generale**
+
+
+Showplan:
+
+- Lo showplan grafico mostra ora i nuovi attributi per il feedback delle concessioni di memoria in modalità riga quando la funzionalità è attivata per un piano specifico: IsMemoryGrantFeedbackAdjusted e LastRequestedMemory, che vengono aggiunti all'elemento XML per i piani di query MemoryGrantInfo. Per altre informazioni sul feedback delle concessioni di memoria in modalità riga, vedere [Elaborazione di query adattive nei database SQL](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing).
+
+Azure SQL: 
+
+- Aggiunta del supporto per SKU vCore nella creazione di database di Azure. Per altre informazioni, vedere il [modello di acquisto basato su vCore](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model).
+ 
+
+### <a name="bug-fixes"></a>Correzioni di bug
+
+**SQL Server Management Studio (SSMS) - Generale**
+    
+Monitoraggio replica:
+
+- Risoluzione di un problema che impediva l'avvio di Monitoraggio replica (SqlMonitor.exe) (elemento User Voice: https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079) 
+
+Procedura guidata Importa file flat: 
+
+- Correzione del collegamento alla pagina della Guida per la finestra di dialogo della procedura guidata "Importa file flat" 
+- Risolto il problema a causa del quale la procedura guidata non consentiva la modifica della tabella di destinazione quando la tabella esisteva già: ciò consente agli utenti di ritentare l'operazione senza dover uscire dalla procedura guidata, eliminare la tabella in errore e quindi immettere nuovamente le informazioni nella procedura guidata (elemento User Voice: https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186). 
+
+Importa/Esporta l'applicazione livello dati:
+
+- Correzione di un problema (in DacFx) a causa del quale l'importazione di un file bacpac potrebbe non riuscire con un messaggio di tipo "Errore SQL72014: provider dati di .NET SqlClient: Msg 9108, Livello 16, Stato 10, Riga 1 Questo tipo di statistiche non può essere incrementale. " quando si lavora con tabelle con partizioni definite e senza indici. 
+
+Intellisense:
+
+- Correzione di un problema a causa del quale il completamento IntelliSense non funzionava quando si usava AAD con MFA. 
+
+Esplora oggetti: 
+
+- Correzione di un problema a causa del quale la "finestra di dialogo Filtro" veniva visualizzata in monitor casuali invece che nel monitor in cui era in esecuzione SSMS (sistemi con più monitor).
+
+Azure SQL: 
+
+- Correzione di un problema correlato all'enumerazione dei database in "Database disponibili" a causa del quale il database "master" non veniva visualizzato nell'elenco a discesa in presenza di una connessione a un database specifico. 
+- Correzione di un problema a causa del quale il tentativo di generare uno script ("Dati" o "Schema e dati") non riusciva in caso di connessione al database SQL Azure con AAD e MFA. 
+- Correzione di un problema in Progettazione viste (Viste) a causa del quale non era possibile selezionare "Aggiungi tabelle" dall'interfaccia utente in presenza di una connessione a un database di SQL Azure. 
+- Correzione di un problema a causa del quale l'editor di query di SQL Server Management Studio chiudeva e riapriva automaticamente le connessioni durante il rinnovo del token MFA. Questa correzione consentirà di evitare effetti collaterali all'insaputa dell'utente, come la chiusura di una transazione senza che venga mai riaperta. La modifica aggiunge la scadenza del token nella finestra delle proprietà. 
+- Correzione di un problema a causa del quale SQL Server Management Studio non applicava le richieste di password per gli account MSA importati per AAD con accesso MFA. 
+
+Monitoraggio attività: 
+
+- Correzione di un problema a causa del quale "Statistiche query dinamiche" si bloccava in caso di avvio da Monitoraggio attività con l'uso dell'autenticazione di SQL. 
+
+Integrazione di Microsoft Azure: 
+
+- Correzione di un problema a causa del quale SQL Server Management Studio mostra solo le prime 50 sottoscrizioni (finestre di dialogo Always Encrypted, finestre di dialogo per il backup/ripristino d URL e così via). 
+- Correzione di un problema a causa del quale SQL Server Management Studio generava un'eccezione ("Indice non compreso nell'intervallo") durante il tentativo di accedere a un account di Microsoft Azure senza account di archiviazione (nella finestra di dialogo per il ripristino del backup da URL). 
+
+Scripting per gli oggetti: 
+
+- Durante lo scripting "DROP e CREATE", SSMS ora evita la generazione di T-SQL dinamico.
+- Durante lo scripting di un oggetto di database, SQL Server Management Studio ora non genera script per impostare le configurazioni con ambito database, se sono impostate sui valori predefiniti.
+
+Help:
+
+- Correzione di un problema esistente da tempo, a causa del quale per "Uso della Guida" non veniva rispettata la modalità online/offline.
+- Quando si fa clic su "Guida | Progetti ed esempi della community" SQL Server Management Studio ora apre il browser predefinito che punta a una pagina Git e non visualizza errori/avvisi relativi all'uso di browser meno recenti.
+
+### <a name="known-issues"></a>Problemi noti
+
+- Attualmente non sono presenti problemi noti in questa versione.
+
+
+
+## <a name="previous-ssms-releases"></a>Versioni precedenti di SSMS
+
+Scaricare le versioni precedenti di SSMS facendo clic sui collegamenti ai titoli nelle sezioni seguenti.
+
+## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![download](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
 *È stato rilevato un bug nella versione 17.8 correlato al provisioning dei database SQL, quindi SSMS 17.8.1 sostituisce 17.8.*
-
 
 Numero di build: 14.0.17277.0<br>
 Data di rilascio: 26 giugno 2018
+
+[Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>Novità
@@ -93,10 +174,6 @@ Always Encrypted:
 - È possibile osservare latenza nel visualizzatore XEvents. Si tratta di un [problema noto in .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Considerare l'aggiornamento a NetFx 4.7.2.
 
 
-
-## <a name="previous-ssms-releases"></a>Versioni precedenti di SSMS
-
-Scaricare le versioni precedenti di SSMS facendo clic sui collegamenti ai titoli nelle sezioni seguenti.
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>![download](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)

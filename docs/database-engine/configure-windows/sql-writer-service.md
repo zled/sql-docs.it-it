@@ -25,12 +25,12 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6fab60401596743dc1cc38dd0c115e42ec89c71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80eb04dfefca7903592ea391d915e140d93f479f
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865566"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888347"
 ---
 # <a name="sql-writer-service"></a>servizio writer SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,14 @@ ms.locfileid: "32865566"
  Il Servizio Copia Shadow del volume (VSS) è costituito da un set di API COM che implementa un'infrastruttura per consentire l'esecuzione di backup dei volumi mentre le applicazioni in un sistema continuano a scrivere nei volumi. Tale servizio offre un'interfaccia uniforme, che consente la coordinazione tra le applicazioni utente per l'aggiornamento di dati sul disco, ovvero i writer, e quelle per il backup delle applicazioni, ovvero i richiedenti.  
   
  Il Servizio Copia Shadow del volume acquisisce e copia immagini stabili per il backup nei sistemi in esecuzione, in particolare nei server, senza ridurre inutilmente le prestazioni e la stabilità dei servizi offerti. Per ulteriori informazioni, vedere la documentazione del Servizio Copia Shadow del volume.  
+
+> [!NOTE]
+> Quando si usa VSS per eseguire il backup di una macchina virtuale che ospita un gruppo di disponibilità di base, se la macchina virtuale attualmente ospita database in stato di secondario, a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 tali database *non* verranno inclusi nel backup con la macchina virtuale.  Questo avviene perché i gruppi di disponibilità di base non supportano il backup dei database nella replica secondaria.  Prima di queste versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il backup ha esito negativo con un errore.
   
 ## <a name="virtual-backup-device-interface-vdi"></a>Virtual Backup Device Interface (VDI)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un'API denominata Virtual Backup Device Interface (VDI) che consente ai fornitori di software indipendenti di integrare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei propri prodotti, in modo da fornire supporto per operazioni di backup e di ripristino. Queste API sono state progettate per offrire affidabilità e prestazioni ottimali e per supportare la gamma completa di funzionalità di backup e di ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluse tutte le capacità di backup a caldo e di snapshot.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Il servizio writer SQL deve essere eseguito utilizzando l'account di **sistema locale** . Per la connessione a **il servizio writer SQL usa l'account di accesso** NT Service\SQLWriter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con l'account di accesso **NT Service\SQLWriter** il processo del servizio writer SQL può essere eseguito con un livello di privilegi più basso in un account designato come **senza account di accesso**. In questo modo viene limitata la vulnerabilità. Se il servizio writer SQL viene disabilitato, qualsiasi utilità basata su snapshot VSS, ad esempio System Center Data Protection Manager, e alcuni altri prodotti di terze parti vengono interrotti o, nel peggiore dei casi, vi è il rischio di eseguire backup di database non coerenti. Se né [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il sistema in cui si effettua l'esecuzione, né il sistema host (in caso di macchina virtuale) necessitano di altri elementi oltre al backup di [!INCLUDE[tsql](../../includes/tsql-md.md)] , il servizio writer SQL può essere disabilitato in modo sicuro e l'account di accesso può essere rimosso.  Si noti che il servizio writer SQL può essere richiamato da un backup a livello di sistema o di volume, se il backup è basato direttamente o meno su snapshot. Alcuni prodotti per il backup del sistema usano VSS per evitare il blocco causato da file aperti o bloccati. Il servizio writer SQL necessita di autorizzazioni elevate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] perché nel corso delle proprie attività deve bloccare brevemente tutte le operazioni di I/O per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="features"></a>Funzionalità  
@@ -77,4 +80,6 @@ ms.locfileid: "32865566"
   
 -   Ripristino di pagine  
   
-  
+## <a name="remarks"></a>Remarks
+Il servizio writer SQL è un servizio separato dal motore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene condiviso tra versioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e tra istanze diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso server.  Il file del servizio writer SQL viene fornito come parte del pacchetto di installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e verrà contrassegnato con lo stesso numero di versione del motore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui viene fornito.  Quando viene installata una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un server o viene aggiornata un'istanza esistente, se il numero di versione dell'istanza installata o aggiornata è maggiore del numero di versione del servizio writer SQL attualmente nel server, tale file verrà sostituito con quello dal pacchetto di installazione.  Si noti che se il servizio writer SQL viene aggiornato da un Service Pack o un aggiornamento cumulativo e si installa una versione RTM di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile sostituire una versione più recente del servizio writer SQL con una versione precedente, a condizione che l'installazione abbia un numero di versione principale più alto.  Ad esempio, si supponga che il servizio writer SQL venga aggiornato in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] CU2 SP2.  Se tale istanza viene aggiornata a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM, il servizio writer SQL aggiornato verrà sostituito con una versione precedente.  In questo caso, sarebbe necessario applicare l'aggiornamento cumulativo più recente alla nuova istanza per ottenere la versione più recente del servizio writer SQL.
+

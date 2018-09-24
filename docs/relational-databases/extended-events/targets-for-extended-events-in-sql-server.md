@@ -1,7 +1,7 @@
 ---
 title: Destinazioni per gli eventi estesi in SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: df5fc32aa7a6d42077e93d6b1dd4ca163404dc16
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d8a163b14cd44aab21a294fedee918b34fd95b0
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39533821"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171783"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinazioni per gli eventi estesi in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Gli eventi estesi di SQL Server possono interagire con Event Tracing for Windows
 Questa destinazione di ETW elabora *in modalità sincrona* i dati ricevuti, mentre la maggior parte delle destinazioni esegue l'elaborazione *in modalità asincrona*.
 
 > [!NOTE]
-> Il database SQL di Azure non supporta la destinazione ETW. Lo stesso vale per l'Istanza gestita di database SQL di Azure.
+> Il database SQL di Azure non supporta `etw_classic_sync_target target`.
 
 <!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
@@ -157,7 +157,7 @@ La destinazione **event_file** scrive l'output della sessione eventi dal buffer 
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
 
 > [!NOTE]
-> Il database SQL di Azure supporta la destinazione **event_file**, ma solo mediante un BLOB per l'output in Archiviazione di Azure. Il database SQL non può archiviare l'output in un file sull'unità disco rigido locale.
+> Database SQL di Azure supporta solo l'archiviazione di file `xel` in un archivio BLOB di Azure. 
 >
 > Per un esempio di codice **event_file** specifico per il database SQL (e l'Istanza gestita di database SQL), vedere [Codice di destinazione del file evento per eventi estesi nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 

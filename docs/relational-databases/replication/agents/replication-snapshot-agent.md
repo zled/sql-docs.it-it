@@ -1,7 +1,7 @@
 ---
 title: Agente snapshot repliche | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: replication
@@ -20,12 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 45976c2d0e99303c9aba9aa3251a1ea65f610901
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e2839e7dfa8c0dd32eb4904f4dde43e5ce992e6e
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349993"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311661"
 ---
 # <a name="replication-snapshot-agent"></a>Agente snapshot repliche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,6 +65,7 @@ snapshot [ -?]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
 [-PacketSize packet_size]  
+[-PrefetchTables [0|1] ]  
 [-ProfileName profile_name]  
 [-PublisherDB publisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -202,7 +203,15 @@ snapshot [ -?]
   
 > [!NOTE]  
 >  È consigliabile modificare le dimensioni dei pacchetti solo se si è certi che l'operazione determinerà un miglioramento delle prestazioni. Per la maggior parte delle applicazioni, le dimensioni predefinite risultano ottimali.  
+
+**-PrefetchTables** [ **0**| **1**]  
+ Parametro facoltativo che specifica se per gli oggetti tabella verranno eseguite la prelettura e la memorizzazione nella cache.  Il comportamento predefinito prevede la prelettura di determinate proprietà delle tabelle usando il componente SMO in base a un calcolo interno.  Questo parametro può essere utile in scenari in cui l'operazione di prelettura SMO richiede notevole tempo per l'esecuzione. Se questo parametro non viene usato, questa decisione viene presa in fase di esecuzione in base alla percentuale di tabelle che vengono aggiunte come articoli alla pubblicazione.  
   
+|Valore di OutputVerboseLevel|Descrizione|  
+|------------------------------|-----------------|  
+|**0**|La chiamata al metodo Prefetch del componente SMO è disabilitata.|  
+|**1**|L'agente di snapshot chiamerà il metodo Prefetch per memorizzare nella cache alcune proprietà di tabella tramite SMO|  
+
  **-ProfileName** *profile_name*  
  Specifica un profilo agente da utilizzare per i parametri dell'agente. Se **ProfileName** è NULL, il profilo agente è disabilitato. Se **ProfileName** non viene specificato, viene utilizzato il profilo predefinito per il tipo di agente. Per altre informazioni, vedere [Profili degli agenti di replica](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

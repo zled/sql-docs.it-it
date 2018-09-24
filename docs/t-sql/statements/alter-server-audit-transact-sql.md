@@ -1,7 +1,7 @@
 ---
 title: ALTER SERVER AUDIT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -24,19 +24,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f7c409bb68795ae2d15aa549aeca2a419e95c697
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 314e7c2c454c7ef885b66340c9a609cd1ab15125
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456115"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171843"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Consente di modificare un oggetto Server Audit utilizzando la funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +43,7 @@ ms.locfileid: "39456115"
 ```  
 ALTER SERVER AUDIT audit_name  
 {  
-    [ TO { { FILE ( <file_options> [, ...n] ) } | APPLICATION_LOG | SECURITY_LOG } ]  
+    [ TO { { FILE ( <file_options> [, ...n] ) } | APPLICATION_LOG | SECURITY_LOG } | URL]  
     [ WITH ( <audit_options> [ , ...n] ) ]   
     [ WHERE <predicate_expression> ]  
 }  
@@ -81,8 +79,11 @@ ALTER SERVER AUDIT audit_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- TO { FILE | APPLICATION_LOG | SECURITY }  
+ TO { FILE | APPLICATION_LOG | SECURITY |URL}  
  Determina la posizione della destinazione del controllo. Le opzioni possibili sono un file binario, il registro applicazioni o il registro di sicurezza di Windows.  
+
+> [!IMPORTANT]
+> In Istanza gestita di database SQL di Azure, il controllo SQL opera a livello di server e archivia i file `.xel` in Archiviazione BLOB di Azure.
   
  FILEPATH **= '***os_file_path***'**  
  Percorso dell'itinerario di controllo. Il nome del file viene generato in base al nome e al GUID del controllo.  

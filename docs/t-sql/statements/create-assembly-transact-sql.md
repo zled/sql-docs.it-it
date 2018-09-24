@@ -1,7 +1,7 @@
 ---
 title: CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,20 +27,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 99d7e5d69e560fd5d94c38bdab1d29f6d5e0860e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 44c9ba8b3514c1a28ef2bbe800e0bec0c41b1bba
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456755"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171560"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Crea un modulo di applicazione gestita contenente metadati di classe e codice gestito come un oggetto in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Facendo riferimento a questo modulo, è possibile creare nel database funzioni CLR (Common Language Runtime), stored procedure, trigger, funzioni di aggregazione definite dall'utente e tipi definiti dall'utente.  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 >  [!WARNING]
 >  CLR usa la Sicurezza dall'accesso di codice (CAS, Code Access Security) in .NET Framework, non più supportata come limite di sicurezza. Un assembly CLR creato con `PERMISSION_SET = SAFE` potrebbe essere in grado di accedere alle risorse di sistema esterne, chiamare codice non gestito e acquisire privilegi sysadmin. A partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], viene introdotta un'opzione `sp_configure` denominata `clr strict security` per migliorare la sicurezza degli assembly CLR. `clr strict security` è abilitata per impostazione predefinita e considera gli assembly CLR `SAFE` e `UNSAFE` come se fossero contrassegnati `EXTERNAL_ACCESS`. È possibile disabilitare l'opzione `clr strict security` per la compatibilità con le versioni precedenti, ma questa operazione è sconsigliata. Microsoft consiglia che tutti gli assembly siano firmati con un certificato o una chiave asimmetrica con un account di accesso corrispondente che disponga dell'autorizzazione `UNSAFE ASSEMBLY` nel database master. Per altre informazioni, vedere [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
   
@@ -71,6 +69,9 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  \<client_assembly_specifier>  
 Viene specificato il percorso locale o di rete in cui viene posizionato l'assembly caricato e il nome del file di manifesto che corrisponde all'assembly.  \<client_assembly_specifier> può essere espresso come stringa fissa o espressione tramite la quale viene restituita una stringa fissa, con variabili. CREATE ASSEMBLY non supporta il caricamento di assembly in più moduli. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono cercati anche tutti gli assembly dipendenti di questo assembly nello stesso percorso e tali assembly vengono caricati con lo stesso proprietario dell'assembly a livello di radice. Se tali assembly dipendenti non vengono trovati e non sono già caricati nel database corrente, CREATE ASSEMBLY ha esito negativo. Se gli assembly dipendenti sono già caricati nel database corrente, il proprietario degli assembly deve corrispondere al proprietario dell'assembly appena creato.
+
+> [!IMPORTANT]
+> Database SQL di Azure non supporta la creazione di un assembly da un file.
   
  \<client_assembly_specifier> non può essere specificato se l'utente connesso viene rappresentato.  
   
@@ -181,6 +182,9 @@ CREATE ASSEMBLY HelloWorld
 FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll  
 WITH PERMISSION_SET = SAFE;  
 ```  
+
+> [!IMPORTANT]
+> Database SQL di Azure non supporta la creazione di un assembly da un file.
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Esempio B: Creazione di un assembly dai bit dell'assembly  
   
