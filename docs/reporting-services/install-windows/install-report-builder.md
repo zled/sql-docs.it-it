@@ -64,7 +64,7 @@ ms.locfileid: "43272273"
   
      Verrà avviata la Configurazione guidata di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per SQL Server.  
   
-3.  Completare i passaggi restanti di [To install Report Builder from the download site](#download).  
+3.  Completare i passaggi restanti di [Per installare Generatore report dal sito di download](#download).  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversionmd-from-the-command-line"></a>Per installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dalla riga di comando 
 
