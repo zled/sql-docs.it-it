@@ -3,7 +3,7 @@ title: Chiave master del servizio | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -16,12 +16,12 @@ caps.latest.revision: 18
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: c666dd9aa749dbb448ebd6a874ca0ce0c9037af4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c414c096fad0901b95dcbf56474889fdb5843163
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701102"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013656"
 ---
 # <a name="service-master-key"></a>chiave master del servizio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "35701102"
 ## <a name="best-practice"></a>Procedura consigliata  
  Eseguire il backup della chiave master del servizio e archiviare la copia di backup in un altro luogo adeguatamente protetto.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-service-master-key-transact-sql.md)  
   
  [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-service-master-key-transact-sql.md)  

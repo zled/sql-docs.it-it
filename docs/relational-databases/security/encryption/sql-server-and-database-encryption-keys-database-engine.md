@@ -3,7 +3,7 @@ title: Chiavi di crittografia del database e di SQL Server (motore di database) 
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 18
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 919cb3039d648c54241526a0c0686bd5f55942df
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8e3b193b9488cfa0c058c92fe63af0e251c2abcf
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695332"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013746"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chiavi di crittografia del database e di SQL Server (Motore di database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,14 +64,14 @@ ms.locfileid: "35695332"
 > [!CAUTION]  
 >  Se si perde ogni accesso alle chiavi descritte in precedenza, si perderà l'accesso agli oggetti, alle connessioni e ai dati protetti da quelle chiavi. È possibile ripristinare la chiave master del servizio, come viene descritto nei collegamenti qui riportati, oppure è possibile ritornare al sistema di crittografa originale per recuperare l'accesso. Non è possibile recuperare l'accesso in altro modo.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
  Viene fornita una breve spiegazione della chiave master del servizio e delle procedure consigliate.  
   
  [Extensible Key Management &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
  Viene illustrata la modalità di utilizzo dei sistemi di gestione delle chiavi di terze parti con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Backup della chiave master del servizio](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)  
   
  [Ripristino della chiave master del servizio](../../../relational-databases/security/encryption/restore-the-service-master-key.md)  
