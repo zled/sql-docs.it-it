@@ -12,18 +12,20 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: c4390990701f95dddf19ca53354ffcb5af241d30
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6ccb65aad24ca84f95bb1022c7f074450823e2e9
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083533"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049441"
 ---
-# <a name="whats-new-for-sql-server-2017-on-linux"></a>Novità di SQL Server 2017 in Linux
+# <a name="whats-new-for-sql-server-on-linux"></a>Novità di SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Questo articolo descrive le funzionalità principali e i servizi disponibili per SQL Server 2017 in esecuzione su Linux.
+
+È stato rilasciato l'anteprima di SQL Server 2019. Questo articolo non illustra le versioni di anteprima di SQL Server 2019. Per altre informazioni sull'anteprima di SQL Server 2019, vedere [nuove funzionalità di anteprima di SQL Server 2019 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
 
 > [!NOTE]
 > Oltre a queste funzionalità in questo articolo, gli aggiornamenti cumulativi vengono rilasciati a intervalli regolari dopo il rilascio GA. che mettono a disposizione numerosi miglioramenti e diverse correzioni. Per informazioni sulla versione di aggiornamento Cumulativo più recente, vedere [ http://aka.ms/sql2017cu ](http://aka.ms/sql2017cu). Per il download del pacchetto e problemi noti, vedere la [note sulla versione](sql-server-linux-release-notes.md).

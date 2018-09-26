@@ -11,12 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b1003ddbda32ef1570f172e36d506ed58bc2f07b
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: 448db7c77d26e06651e01a7e790917757aff0e9d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268809"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713603"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Domande frequenti su SQL Server in Linux
 
@@ -60,7 +60,7 @@ Le sezioni seguenti forniscono domande e risposte comuni per SQL Server in esecu
 
    No. Linux in esecuzione in Windows 10 non è attualmente una piattaforma supportata per SQL Server e strumenti correlati.
 
-1. **Il file System Linux possono usare per i file di dati SQL Server 2017?**
+1. **Il file System di Linux può usare SQL Server per i file di dati?**
 
    SQL Server in Linux supporta attualmente ext4 e XFS. Verrà aggiunto il supporto per altri sistemi di file in base alle esigenze in futuro.
 
@@ -80,7 +80,7 @@ Le sezioni seguenti forniscono domande e risposte comuni per SQL Server in esecu
 
 1. **È disponibile uno strumento come SQL Server Management Studio che viene eseguito in Linux?**
 
-   Nuovo Microsoft SQL Operations Studio (preview) è uno strumento multipiattaforma per la gestione di SQL Server. Per altre informazioni, vedere [che cos'è Microsoft SQL Operations Studio (anteprima)](../sql-operations-studio/what-is.md).
+   Il nuovo Studio di Azure Data (anteprima) è uno strumento multipiattaforma per la gestione di SQL Server. Per altre informazioni, vedere [What ' s Data Studio di Azure (anteprima)](../azure-data-studio/what-is.md).
 
 1. **Sono disponibili in Linux comandi, ad esempio sqlcmd e bcp?**
 
@@ -125,7 +125,7 @@ Le sezioni seguenti forniscono domande e risposte comuni per SQL Server in esecu
 
 1. **È possibile migrare i dati da Oracle e altri motori di database a SQL Server in Linux?**
 
-   Sì. SSMA supporta la migrazione tra diversi tipi di motori di database: Microsoft Access, DB2, MySQL, Oracle e SAP ASE (noto in precedenza come SAP Sybase ASE). Per un esempio d'uso di SSMA, vedere [eseguire la migrazione di uno schema Oracle a SQL Server 2017 in Linux con SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json).
+   Sì. SSMA supporta la migrazione tra diversi tipi di motori di database: Microsoft Access, DB2, MySQL, Oracle e SAP ASE (noto in precedenza come SAP Sybase ASE). Per un esempio d'uso di SSMA, vedere [eseguire la migrazione di uno schema Oracle a SQL Server in Linux con SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json).
 
 1. **Quali autorizzazioni sono necessarie per i file di SQL Server?**
 

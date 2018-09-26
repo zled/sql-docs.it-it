@@ -1,7 +1,7 @@
 ---
 title: Quali sono le novità di SSMA per SAP ASE (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/14/2017
+ms.date: 09/22/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -16,15 +16,21 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d178cde4f921580c6c9953701d9e2101853400a2
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 3ade0baa7e970639769cf5bdba522e54d3843771
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392983"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362035"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Quali sono le novità di SSMA per SAP ASE (SybaseToSQL)
 Questo articolo elenca SSMA per la modifica di SAP ASE (in precedenza SSMA per Sybase) in ogni versione. 
+
+## <a name="ssma-v710"></a>V7.10 SSMA
+La versione v7.10 di SSMA per ASE SAP è stata migliorata con correzioni mirate progettate per offrire maggiore sicurezza e protezione della privacy per soddisfare le modifiche nei requisiti globali.
+
+> [!IMPORTANT]
+> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
 
 ## <a name="ssma-v79"></a>V7.9 SSMA
 La versione v7.9 di SSMA per ASE SAP contiene le seguenti modifiche:
@@ -54,7 +60,7 @@ La versione v7.7 di SSMA per ASE SAP contiene le seguenti modifiche:
 
 ## <a name="ssma-v76"></a>V7.6 SSMA
 La versione v7.6 di SSMA per ASE SAP contiene le seguenti modifiche:
-- SSMA per ASE SAP è stato migliorato con correzioni mirate che consentono di migliorare le metriche di qualità e la conversione e con il supporto per SQL Server 2017 (anteprima pubblica). Supporto per SQL Server 2017 in Windows e Linux è disponibile in anteprima pubblica e non deve essere utilizzato per le migrazioni di produzione.
+- SSMA per ASE SAP è stato migliorato con correzioni mirate che consentono di migliorare le metriche di qualità e la conversione e con il supporto per SQL Server 2017 (anteprima pubblica). Supporto per SQL Server 2017 in Windows e Linux è disponibile in anteprima pubblica e non deve essere usato per le migrazioni di produzione.
 - SSMA per ASE SAP è stato aggiornato per fornire il supporto per la conversione di funzioni di Sybase.
 
 > [!IMPORTANT]
@@ -87,7 +93,7 @@ La versione v7.3 di SSMA per Sybase contiene le seguenti modifiche:
   - Librerie che possono essere usate da SSMA per l'esecuzione di conversioni personalizzate.
     - È ora possibile creare codice in grado di gestire le conversioni di sintassi personalizzata e che non sono stati precedentemente gestiti da SSMA.
       - Le istruzioni su come costruire un convertitore personalizzato sono disponibili in questo post di blog [funzionalità di conversione di estensione di SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      - Può essere scaricare questo progetto di esempio per la conversione [post di blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      - Scaricare un progetto di esempio per la conversione da questo [post di blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## <a name="ssma-v72"></a>Versione 7.2 SSMA
 La versione di versione 7.2 di SSMA per Sybase contiene le seguenti modifiche:

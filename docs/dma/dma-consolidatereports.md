@@ -2,7 +2,7 @@
 title: Valutare un'azienda e di consolidare i report di valutazione (SQL Server) | Microsoft Docs
 description: Informazioni su come utilizzare DMA per valutare un'azienda e consolidare i report di valutazione prima di aggiornare SQL Server o la migrazione al Database SQL di Azure.
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 09/21/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 05c3df493c809132d6fbfad1d96cc84d4d873dd3
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 7cb08a66d0cc81268517b1ddf742bcdf0451d11b
+ms.sourcegitcommit: 9fe8964647a0d413304acfd2d3c0d87a79d70862
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152632"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493762"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e di consolidare i report di valutazione con DMA
 
@@ -88,7 +88,7 @@ Creare un database denominato **EstateInventory** e una tabella denominata **Dat
 
 Se questo database non è presente nel computer gli strumenti, verificare che il computer di strumenti disponga della connettività di rete a questa istanza di SQL Server.
 
-Il vantaggio dell'uso di una tabella di SQL Server tramite un file CSV è che è possibile usare la colonna del contrassegno della valutazione per controllare l'istanza o database che ottiene prelevato per la valutazione, che rende più semplice separare le valutazioni in blocchi più piccoli.  Si possono quindi estendersi su più valutazioni (vedere la sezione sull'esecuzione di una valutazione più avanti in questo articolo), (vedere la sezione sull'esecuzione di una valutazione più avanti in questo articolo), che è più semplice che gestire più file CSV.
+Il vantaggio dell'uso di una tabella di SQL Server tramite un file CSV è che è possibile usare la colonna del contrassegno della valutazione per controllare l'istanza o database che ottiene prelevato per la valutazione, che rende più semplice separare le valutazioni in blocchi più piccoli.  Si possono quindi estendersi su più valutazioni (vedere la sezione sull'esecuzione di una valutazione più avanti in questo articolo), che è più semplice che gestire più file CSV.
 
 Tenere presente che in base al numero di oggetti e della loro complessità, una valutazione può richiedere un estremamente lungo tempo (ore +), pertanto è consigliabile separare la valutazione in blocchi gestibili.
 
@@ -102,7 +102,7 @@ I parametri associati alla funzione dmaDataCollector sono descritti nella tabell
 |Parametro  |Description
 |---------|---------|
 |**getServerListFrom** | L'inventario. I valori possibili sono **SqlServer** e **CSV**. |
-|**ServerName** | Il nome dell'istanza SQL Server dell'inventario quando si usa **SqlServer** nel **getServerListFrom** parametro. |
+|**serverName** | Il nome dell'istanza SQL Server dell'inventario quando si usa **SqlServer** nel **getServerListFrom** parametro. |
 |**DatabaseName** | Il database che ospita la tabella di inventario. |
 |**AssessmentName** | Il nome della valutazione DMA. |
 |**TargetPlatform** | Il tipo di destinazione della valutazione che si desidera eseguire.  I valori possibili sono **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, e **SQLServerWindows2017**. |
@@ -124,7 +124,7 @@ I parametri associati alla funzione dmaProcessor sono descritti nella tabella se
 |Parametro  |Description
 |---------|---------|
 |**processTo**  | Il percorso in cui verrà elaborato il file JSON. I valori possibili sono **SQLServer** e **AzureSQLDatabase**. |
-|**ServerName** | Istanza di SQL Server in cui verranno elaborati i dati.  Se si specifica **AzureSQLDatabase** per il **processTo** parametro, quindi includere solo il nome di SQL Server (non includere. database.windows.net). Verrà richiesto per due account di accesso quando la destinazione di Database SQL di Azure. il primo è le credenziali del tenant di Azure, mentre il secondo è l'account di accesso di amministratore per il Server SQL di Azure. |
+|**serverName** | Istanza di SQL Server in cui verranno elaborati i dati.  Se si specifica **AzureSQLDatabase** per il **processTo** parametro, quindi includere solo il nome di SQL Server (non includere. database.windows.net). Verrà richiesto per due account di accesso quando la destinazione di Database SQL di Azure. il primo è le credenziali del tenant di Azure, mentre il secondo è l'account di accesso di amministratore per il Server SQL di Azure. |
 |**CreateDMAReporting** | Il database di gestione temporanea per creare per l'elaborazione del file JSON.  Se il database che si specifica già esiste e questo parametro è impostato su uno, quindi gli oggetti non ottenere creati.  Questo parametro è utile per la ricreazione di un singolo oggetto che è stato eliminato. |
 |**CreateDataWarehouse** | Crea il data warehouse che verrà usato nel report di Power BI. |
 |**DatabaseName** | Il nome del database DMAReporting. |

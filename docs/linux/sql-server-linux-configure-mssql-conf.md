@@ -1,6 +1,6 @@
 ---
 title: Configurare le impostazioni di SQL Server in Linux | Microsoft Docs
-description: Questo articolo descrive come usare lo strumento mssql-conf per configurare le impostazioni di SQL Server 2017 in Linux.
+description: Questo articolo descrive come usare lo strumento mssql-conf per configurare le impostazioni di SQL Server in Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,16 +12,19 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 2982ae05fd54a09b6ae5640c969bcb77d73c4a4c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 57ef9a199979c2538f536d3c9a2bf8aa7e0b37fa
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086263"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713533"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql-conf
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 **MSSQL-conf** è uno script di configurazione installato con SQL Server 2017 per Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Ubuntu. È possibile utilizzare questa utilità per impostare i parametri seguenti:
 
@@ -30,7 +33,7 @@ ms.locfileid: "39086263"
 | [Agente](#agent) | Abilitare SQL Server Agent |
 | [Confronto](#collation) | Impostare nuove regole di confronto per SQL Server in Linux. |
 | [Commenti e suggerimenti dei clienti](#customerfeedback) | Scegliere se SQL Server Invia commenti e suggerimenti a Microsoft. |
-| [Profilo di Posta elettronica database](#dbmail) | Impostare il profilo di posta elettronica database predefinito per SQL Server in Linux |
+| [Profilo di Posta elettronica database](#dbmail) | Impostare il profilo di posta elettronica database predefinito per SQL Server in Linux. |
 | [Directory dati predefinita](#datadir) | Modificare la directory predefinita per nuovi file di dati SQL Server database (mdf). |
 | [Directory log predefinita](#datadir) | Modifica la directory predefinita per i nuovi file di log (ldf) di database di SQL Server. |
 | [Directory predefinita dei file del database master](#masterdatabasedir) | Modifica la directory predefinita dei file di database master nell'installazione esistente di SQL.|
@@ -40,12 +43,44 @@ ms.locfileid: "39086263"
 | [Directory di backup predefinita](#backupdir) | Modificare la directory predefinita per i nuovi file di backup. |
 | [Tipo dump](#coredump) | Scegliere il tipo di file dump della memoria dump da raccogliere. |
 | [Disponibilità elevata](#hadr) | Abilitare gruppi di disponibilità. |
-| [Directory del controllo locale](#localaudit) | Impostare una directory da aggiungere i file di controllo locale. |
+| [Directory del controllo locale](#localaudit) | Impostare una directory per aggiungere file di controllo locale. |
 | [Impostazioni locali](#lcid) | Configurare le impostazioni locali per SQL Server da usare. |
 | [Limite di memoria](#memorylimit) | Impostare il limite di memoria per SQL Server. |
 | [Porta TCP](#tcpport) | Modificare la porta in cui SQL Server è in ascolto per le connessioni. |
 | [TLS](#tls) | Configurare la sicurezza a livello di trasporto. |
 | [Flag di traccia](#traceflags) | Impostare i flag di traccia che userà il servizio. |
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+**MSSQL-conf** è uno script di configurazione che viene installato con [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] per Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Ubuntu. È possibile utilizzare questa utilità per impostare i parametri seguenti:
+
+|||
+|---|---|
+| [Agente](#agent) | Abilitare SQL Server Agent |
+| [Confronto](#collation) | Impostare nuove regole di confronto per SQL Server in Linux. |
+| [Commenti e suggerimenti dei clienti](#customerfeedback) | Scegliere se SQL Server Invia commenti e suggerimenti a Microsoft. |
+| [Profilo di Posta elettronica database](#dbmail) | Impostare il profilo di posta elettronica database predefinito per SQL Server in Linux. |
+| [Directory dati predefinita](#datadir) | Modificare la directory predefinita per nuovi file di dati SQL Server database (mdf). |
+| [Directory log predefinita](#datadir) | Modifica la directory predefinita per i nuovi file di log (ldf) di database di SQL Server. |
+| [Directory predefinita dei file del database master](#masterdatabasedir) | Modifica la directory predefinita dei file di database master nell'installazione esistente di SQL.|
+| [Nome file predefinito del database master](#masterdatabasename) | Modifica il nome del file di database master. |
+| [Directory dump predefinita](#dumpdir) | Modificare la directory predefinita per nuove immagini della memoria e altri file sulla risoluzione dei problemi. |
+| [Directory log di errore predefinita](#errorlogdir) | Modifica la directory predefinita per i nuovi file di log degli errori di SQL Server, la traccia predefinita Profiler, sistema dello stato della sessione XE e Hekaton sessione XE. |
+| [Directory di backup predefinita](#backupdir) | Modificare la directory predefinita per i nuovi file di backup. |
+| [Tipo dump](#coredump) | Scegliere il tipo di file dump della memoria dump da raccogliere. |
+| [Disponibilità elevata](#hadr) | Abilitare gruppi di disponibilità. |
+| [Directory del controllo locale](#localaudit) | Impostare una directory per aggiungere file di controllo locale. |
+| [Impostazioni locali](#lcid) | Configurare le impostazioni locali per SQL Server da usare. |
+| [Limite di memoria](#memorylimit) | Impostare il limite di memoria per SQL Server. |
+| [Microsoft Distributed Transaction Coordinator](#msdtc) | Configurare e risolvere i problemi di MSDTC su Linux. |
+| [MLServices EULA](#mlservices-eula) | Accettare per mlservices pacchetti R e Python EULA. Si applica a SQL Server 2019.|
+| [Porta TCP](#tcpport) | Modificare la porta in cui SQL Server è in ascolto per le connessioni. |
+| [TLS](#tls) | Configurare la sicurezza a livello di trasporto. |
+| [Flag di traccia](#traceflags) | Impostare i flag di traccia che userà il servizio. |
+
+::: moniker-end
 
 > [!TIP]
 > Alcune di queste impostazioni possono inoltre essere configurato con le variabili di ambiente. Per altre informazioni, vedere [le impostazioni di configurazione SQL Server con le variabili di ambiente](sql-server-linux-configure-environment-variables.md).
@@ -56,13 +91,13 @@ ms.locfileid: "39086263"
 
 * Per lo scenario di cluster nel disco condiviso, non tentare di riavviare il **mssql-server** servizio per applicare le modifiche. SQL Server è in esecuzione come un'applicazione. Al contrario, portare la risorsa non in linea e quindi torna online.
 
-* In questi esempi vengono eseguiti mssql-conf per specificare il percorso completo: **/opt/mssql/bin/mssql-conf**. Se si sceglie di passare a tale percorso, invece, eseguire mssql-conf nel contesto della directory corrente: **. / mssql-conf**.
+* Questi esempi eseguono mssql-conf specificando il percorso completo: **/opt/mssql/bin/mssql-conf**. Se si sceglie di passare a tale percorso, invece, eseguire mssql-conf nel contesto della directory corrente: **. / mssql-conf**.
 
 ## <a id="agent"></a> Abilitare SQL Server Agent
 
 Il **sqlagent.enabled** impostazione consente [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). Per impostazione predefinita, SQL Server Agent è disabilitato. Se **sqlagent.enabled** non è presente nel file di impostazioni mssql.conf, internamente SQL Server si presuppone che SQL Server Agent è disabilitato.
 
-Per modificare queste impostazioni, procedere come segue:
+Per modificare questa impostazione, procedere come segue:
 
 1. Abilitare SQL Server Agent:
 
@@ -70,7 +105,7 @@ Per modificare queste impostazioni, procedere come segue:
    sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
    ```
 
-1. Riavviare il servizio SQL Server:
+2. Riavviare il servizio SQL Server:
 
    ```bash
    sudo systemctl restart mssql-server
@@ -379,10 +414,11 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-Per informazioni su come questo viene utilizzato con i gruppi di disponibilità, vedere i due argomenti seguenti.
+Per informazioni su come viene usato con i gruppi di disponibilità, vedere i due argomenti seguenti.
 
 - [Configurare il gruppo di disponibilità AlwaysOn per SQL Server in Linux](sql-server-linux-availability-group-configure-ha.md)
 - [Configurare il gruppo di disponibilità con scalabilità in lettura per SQL Server in Linux](sql-server-linux-availability-group-configure-rs.md)
+
 
 ## <a id="localaudit"></a> Directory del set di controllo locale
 
@@ -447,6 +483,81 @@ Il **memory.memorylimitmb** impostazione controlli la quantità memoria fisica (
    sudo systemctl restart mssql-server
    ```
 
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="msdtc"></a> Configurare MSDTC
+
+Il **network.rpcport** e **distributedtransaction.servertcpport** impostazioni vengono usate per configurare Microsoft Distributed Transaction Coordinator (MSDTC). Per modificare queste impostazioni, eseguire i comandi seguenti:
+
+1. Eseguire lo script mssql-conf come radice con il **impostare** comando "network.rpcport":
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set network.rpcport <rcp_port>
+   ```
+
+2. Impostare quindi l'impostazione "distributedtransaction.servertcpport":
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set distributedtransaction.servertcpport <servertcpport_port>
+   ```
+
+Oltre a impostare questi valori, è anche necessario configurare il routing e aggiornare il firewall per la porta 135. Per altre informazioni su come eseguire questa operazione, vedere [come configurare MSDTC in Linux](sql-server-linux-configure-msdtc.md).
+
+Esistono diverse altre impostazioni per mssql-conf che è possibile usare per monitorare e risolvere i problemi di MSDTC. Nella tabella seguente vengono descritte brevemente queste impostazioni. Per altre informazioni sul relativo uso, vedere i dettagli nell'articolo del supporto tecnico di Windows [come abilitare la traccia diagnostica per MS DTC](https://support.microsoft.com/en-us/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
+
+| impostazione MSSQL-conf | Description |
+|---|---|
+| distributedtransaction.allowonlysecurerpccalls | Configurare le chiamate rpc solo sicuro per le transazioni distribuite |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Configurare protezione per le chiamate rpc solo per distribuite |transazioni
+| distributedtransaction.MAXLOGSIZE | DTC transazione dimensioni file di log in MB. Valore predefinito è 64MB |
+| distributedtransaction.memorybuffersize | Dimensioni del buffer circolare in cui sono archiviate le tracce. Questa dimensione è espressa in MB e il valore predefinito è 10MB |
+| distributedtransaction.servertcpport | Porta del server rpc MSDTC |
+| distributedtransaction.trace_cm | Tracce nella gestione connessione |
+| distributedtransaction.trace_contact | Analizza il pool di contatto e i contatti |
+| distributedtransaction.trace_gateway | Origine di Gateway di tracce |
+| distributedtransaction.trace_log | Traccia log |
+| distributedtransaction.trace_misc | Tracce che non possono essere suddivise nelle altre categorie |
+| distributedtransaction.trace_proxy | Tracce generate nel proxy MSDTC |
+| distributedtransaction.trace_svc | Le tracce del servizio e .exe l'avvio del file |
+| distributedtransaction.trace_trace | L'infrastruttura di traccia |
+| distributedtransaction.trace_util | Analizza le routine di utilità che vengono chiamate da più posizioni |
+| distributedtransaction.trace_xa | Origine di traccia di gestione transazioni XA (XATM) |
+| distributedtransaction.tracefilepath | Cartella file di traccia devono essere archiviati |
+| distributedtransaction.turnoffrpcsecurity | Abilita o disabilita la sicurezza RPC per le transazioni distribuite |
+
+::: moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="mlservices-eula"></a> Accettare l'EULA MLServices
+
+Aggiunta [dell'apprendimento automatico i pacchetti R o Python](sql-server-linux-setup-machine-learning.md) al database di motore è necessario accettarne le condizioni di licenza per le distribuzioni open source di R e Python. Nella tabella seguente enumera tutti i comandi disponibili o le opzioni relative a mlservices EULA. Lo stesso parametro del contratto di licenza viene usato per R e Python, a seconda dei componenti installati.
+
+```bash
+# For all packages: database engine and mlservices
+# Setup prompts for mlservices EULAs, which you need to accept
+sudo /opt/mssql/bin/mssql-conf setup
+
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
+
+# Alternative valid syntax
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+
+# Rescind EULA acceptance
+sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
+```
+
+È anche possibile aggiungere direttamente l'accettazione delle condizioni di licenza di [mssql.conf file](#mssql-conf-format):
+
+```ini
+[EULA]
+accepteula = Y
+accepteulaml = Y
+```
+
+:::moniker-end
+
 ## <a id="tcpport"></a> Modificare la porta TCP
 
 Il **network.tcpport** quando si imposta la porta TCP in cui SQL Server è in ascolto per le connessioni. Per impostazione predefinita, questa porta viene impostata su 1433. Per modificare la porta, eseguire i comandi seguenti:
@@ -457,13 +568,13 @@ Il **network.tcpport** quando si imposta la porta TCP in cui SQL Server è in as
    sudo /opt/mssql/bin/mssql-conf set network.tcpport <new_tcp_port>
    ```
 
-1. Riavviare il servizio SQL Server:
+2. Riavviare il servizio SQL Server:
 
    ```bash
    sudo systemctl restart mssql-server
    ```
 
-1. Quando ci si connette a SQL Server a questo punto, è necessario specificare la porta personalizzata con una virgola (,) dopo il nome host o indirizzo IP. Per la connessione con SQLCMD, ad esempio, si utilizzerebbe il comando seguente:
+3. Quando ci si connette a SQL Server a questo punto, è necessario specificare la porta personalizzata con una virgola (,) dopo il nome host o indirizzo IP. Per la connessione con SQLCMD, ad esempio, si utilizzerebbe il comando seguente:
 
    ```bash
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
@@ -538,9 +649,13 @@ sudo cat /var/opt/mssql/mssql.conf
 
 Si noti che eventuali impostazioni non illustrate in questo file Usa valori predefiniti. La prossima sezione offre un campione **mssql.conf** file.
 
-## <a name="mssqlconf-format"></a>formato MSSQL.conf
+
+## <a id="mssql-conf-format"></a> formato MSSQL.conf
 
 Quanto segue **/var/opt/mssql/mssql.conf** file fornisce un esempio per ogni impostazione. È possibile usare questo formato apportare manualmente modifiche per il **mssql.conf** file in base alle esigenze. Se si modifica manualmente il file, è necessario riavviare SQL Server prima che vengano applicate le modifiche. Usare la **mssql.conf** file con Docker, è necessario disporre di Docker [persistenti i dati](sql-server-linux-configure-docker.md). Prima di tutto aggiungere completa **mssql.conf** file alla directory di host e quindi eseguire il contenitore. È disponibile un esempio di questo tipo in [commenti e suggerimenti dei clienti](sql-server-linux-customer-feedback.md).
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ```ini
 [EULA]
@@ -589,6 +704,65 @@ traceflag0 = 1204
 traceflag1 = 2345
 traceflag = 3456
 ```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+```ini
+[EULA]
+accepteula = Y
+accepteulaml = Y
+
+[coredump]
+captureminiandfull = true
+coredumptype = full
+
+[distributedtransaction]
+servertcpport = 51999
+
+[filelocation]
+defaultbackupdir = /var/opt/mssql/data/
+defaultdatadir = /var/opt/mssql/data/
+defaultdumpdir = /var/opt/mssql/data/
+defaultlogdir = /var/opt/mssql/data/
+
+[hadr]
+hadrenabled = 0
+
+[language]
+lcid = 1033
+
+[memory]
+memorylimitmb = 4096
+
+[network]
+forceencryption = 0
+ipaddress = 10.192.0.0
+kerberoskeytabfile = /var/opt/mssql/secrets/mssql.keytab
+rpcport = 13500
+tcpport = 1401
+tlscert = /etc/ssl/certs/mssql.pem
+tlsciphers = ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA
+tlskey = /etc/ssl/private/mssql.key
+tlsprotocols = 1.2,1.1,1.0
+
+[sqlagent]
+databasemailprofile = default
+errorlogfile = /var/opt/mssql/log/sqlagentlog.log
+errorlogginglevel = 7
+
+[telemetry]
+customerfeedback = true
+userrequestedlocalauditdirectory = /tmp/audit
+
+[traceflag]
+traceflag0 = 1204
+traceflag1 = 2345
+traceflag = 3456
+```
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Passaggi successivi
 

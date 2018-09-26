@@ -8,28 +8,32 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0afdb02c578de92bc91c5f47e973148136ebd919
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 76087367c1ba24894989038fb6fc22427d8be77b
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892878"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712724"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Configurazione del servizio Launchpad di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Un oggetto separato [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] servizio viene creato per l'istanza del motore di database a cui è stato aggiunto l'integrazione con SQL Server machine learning (R o Python).
+Un oggetto separato [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] servizio viene creato per ogni istanza del motore di database a cui è stato aggiunto l'integrazione con SQL Server machine learning (R o Python).
 
-## <a name="service-account-configuration"></a>Configurazione degli account del servizio
+## <a name="account-permissions"></a>Autorizzazioni dell'account
 
 Per impostazione predefinita, Launchpad di SQL Server è configurato per l'esecuzione **NT Service\MSSQLLaunchpad**, che viene eseguito il provisioning con tutte le autorizzazioni necessarie per eseguire gli script esterni. Rimozione delle autorizzazioni da questo account può comportare Launchpad è Impossibile avviare o accedere all'istanza di SQL Server in cui devono essere eseguiti gli script esterni.
 
-Autorizzazione necessaria per questo account vengono elencati di seguito. Se si modifica l'account del servizio, assicurarsi di usare la **criteri di sicurezza locali** applicazione da includere queste autorizzazioni:
+Se si modifica l'account del servizio, assicurarsi di usare la **criteri di sicurezza locali** dell'applicazione (**tutte le app** > **strumenti di amministrazione di Windows**  >  **Criteri di sicurezza locali**).
 
-+ Regolazione quote di memoria per un processo (SeIncreaseQuotaPrivilege)
-+ Ignorare controllo incrociato (SeChangeNotifyPrivilege)
-+ Accesso come servizio (SeServiceLogonRight)
-+ Sostituzione di token a livello di processo (SeAssignPrimaryTokenPrivilege)
+Nella tabella seguente sono elencate le autorizzazioni necessarie per questo account.
+
+| Impostazione di criteri di gruppo | Nome di costante |
+|----------------------|---------------|
+| [Regolazione limite risorse memoria per un processo](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
+| [Ignorare controllo incrociato](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
+| [Accedi come servizio](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
+| [Sostituzione di token a livello di processo](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
 
 Per altre informazioni sulle autorizzazioni necessarie per l'esecuzione di servizi di SQL Server, vedere [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
@@ -37,9 +41,14 @@ Per altre informazioni sulle autorizzazioni necessarie per l'esecuzione di servi
 
 ## <a name="configuration-properties"></a>Proprietà di configurazione
 
+In genere, non vi è alcun motivo per modificare la configurazione del servizio. Le proprietà che è stato possibile modificare includono l'account del servizio, il numero di processi esterni (20 per impostazione predefinita) o la password di criteri per gli account di lavoro di reimpostazione.
+
 1. Aprire [Gestione configurazione SQL Server](../../relational-databases/sql-server-configuration-manager.md). 
 
-2. Fare doppio clic su Launchpad di SQL Server e selezionare **proprietà**.
+  + Nella pagina iniziale, immettere **MMC** per aprire Microsoft Management Console.
+  + Sul **File** > **Aggiungi/Rimuovi Snap-in**, spostare **Gestione configurazione SQL Server** da disponibile a Snap-in selezionati.
+
+2. In Gestione configurazione SQL Server in servizi di SQL Server, fare doppio clic su Launchpad di SQL Server e selezionare **proprietà**.
 
     + Per modificare l'account del servizio, scegliere il **Accedi** scheda.
 
@@ -48,7 +57,7 @@ Per altre informazioni sulle autorizzazioni necessarie per l'esecuzione di servi
 > [!Note]
 > Nelle prime versioni di SQL Server 2016 R Services, è possibile modificare alcune proprietà del servizio modificando il [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] file di configurazione. Questo file non viene usato per la modifica delle configurazioni. Gestione configurazione SQL Server è l'approccio corretto per le modifiche alla configurazione del servizio, ad esempio l'account del servizio e il numero di utenti.
 
-#### <a name="debug-settings"></a>Impostazioni di debug
+## <a name="debug-settings"></a>Impostazioni di debug
 
 Alcune proprietà possono essere modificate solo tramite file di configurazione della finestra di avvio, che potrebbe essere utile in alcuni casi, ad esempio il debug. Il file di configurazione viene creato durante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di installazione e per impostazione predefinita viene salvato come file di testo normale nel percorso seguente: `<instance path>\binn\rlauncher.config`
 

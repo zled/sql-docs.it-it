@@ -1,6 +1,6 @@
 ---
-title: Configurare un contenitore di SQL Server in Kubernetes per la disponibilità elevata | Microsoft Docs
-description: Questa esercitazione illustra come distribuire una soluzione a disponibilità elevata SQL Server con Kubernetes nel servizio contenitore di Azure.
+title: Distribuire un contenitore di SQL Server in Kubernetes con servizi Kubernetes di Azure (AKS) | Microsoft Docs
+description: Questa esercitazione illustra come distribuire una soluzione a disponibilità elevata SQL Server con Kubernetes in Azure Kubernetes Service.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -11,20 +11,20 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 5c6e794fa2e76a0fec58d767d14e9ac73fb72534
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fba598abb0431d2e9a80b0cdc0976f72c6eadc15
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980123"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712683"
 ---
-# <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Configurare un contenitore di SQL Server in Kubernetes per la disponibilità elevata
+# <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Distribuire un contenitore di SQL Server in Kubernetes con servizi Kubernetes di Azure (AKS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Informazioni su come configurare un'istanza di SQL Server in Kubernetes nel servizio contenitore di Azure (AKS), con un archivio permanente per disponibilità elevata (HA). La soluzione offre la resilienza. Se l'istanza di SQL Server non riesce, Kubernetes nuovamente viene creata automaticamente in un nuovo pod. Servizio contenitore di AZURE offre la resilienza rispetto a un errore del nodo di Kubernetes. 
+Informazioni su come configurare un'istanza di SQL Server su Kubernetes in Azure Kubernetes Service (AKS), con un archivio permanente per disponibilità elevata (HA). La soluzione offre la resilienza. Se l'istanza di SQL Server non riesce, Kubernetes nuovamente viene creata automaticamente in un nuovo pod. Kubernetes offre anche la resilienza rispetto a un errore del nodo.
 
-Questa esercitazione illustra come configurare un'istanza di SQL Server a disponibilità elevata in contenitori che usano AKS. 
+Questa esercitazione illustra come configurare un'istanza di SQL Server a disponibilità elevata in un contenitore nel servizio contenitore di AZURE. È anche possibile [creare un gruppo di disponibilità SQL Server in Kubernetes](tutorial-sql-server-ag-kubernetes.md). Per confrontare le due diverse soluzioni di Kubernetes, vedere [disponibilità elevata per i contenitori di SQL Server](sql-server-linux-container-ha-overview.md).
 
 > [!div class="checklist"]
 > * Creare una password SA
@@ -33,7 +33,7 @@ Questa esercitazione illustra come configurare un'istanza di SQL Server a dispon
 > * Connettersi con SQL Server Management Studio (SSMS)
 > * Verificare l'errore e il ripristino
 
-## <a name="ha-solution-that-uses-kubernetes-running-in-azure-container-service"></a>Disponibilità elevata di soluzione che usa Kubernetes in esecuzione nel servizio contenitore di Azure
+## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>Soluzione a disponibilità elevata su Kubernetes in esecuzione in Azure Kubernetes Service
 
 Include il supporto per Kubernetes 1.6 e versioni successive [classi di archiviazione](http://kubernetes.io/docs/concepts/storage/storage-classes/), [attestazioni di volume permanente](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)e il [tipo di volume di disco di Azure](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). È possibile creare e gestire le istanze di SQL Server in modo nativo in Kubernetes. L'esempio in questo articolo illustra come creare un [distribuzione](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) per ottenere una configurazione a disponibilità elevata simile a un'istanza cluster di failover nel disco condiviso. In questa configurazione, Kubernetes svolgerà il ruolo dell'agente di orchestrazione del cluster. Quando un'istanza di SQL Server in un contenitore ha esito negativo, l'agente di orchestrazione avvia un'altra istanza del contenitore che collega alla stessa risorsa di archiviazione permanente.
 
@@ -43,11 +43,11 @@ Nel diagramma precedente `mssql-server` è un contenitore in un [pod](http://kub
 
 Nel diagramma seguente, il `mssql-server` contenitore non è riuscita. Come l'agente di orchestrazione Kubernetes garantisce il conteggio corretto delle istanze integre nella replica di impostarla e avvia un nuovo contenitore in base alla configurazione. L'agente di orchestrazione avvia un nuovo pod nello stesso nodo, e `mssql-server` si riconnette alla stessa risorsa di archiviazione permanente. Il servizio si connette a creati nuovamente `mssql-server`.
 
-![Diagramma del cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Diagramma del cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 Nel diagramma seguente, il nodo che ospita il `mssql-server` contenitore non è riuscita. L'agente di orchestrazione avvia nuovi pod in un nodo diverso, e `mssql-server` si riconnette alla stessa risorsa di archiviazione permanente. Il servizio si connette a creati nuovamente `mssql-server`.
 
-![Diagramma del cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Diagramma del cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -176,7 +176,7 @@ In questo passaggio, creare un manifesto per descrivere il contenitore basato su
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: microsoft/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server/mssql-server-linux
            ports:
            - containerPort: 1433
            env:

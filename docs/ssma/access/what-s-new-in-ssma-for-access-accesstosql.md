@@ -2,7 +2,7 @@
 title: Quali sono le novità in SSMA per Access(AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,15 +16,21 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b3fba0ce4efe8f168aa06aa27adb350d4d288dc6
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 290a88698052e8bf65ebe45e4cc0ba48ccc396ea
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "40392754"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362025"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novità in SSMA per Access (AccessToSQL)
 Questo articolo elenca SSMA per le modifiche all'accesso in ogni versione.  
+
+## <a name="ssma-v710"></a>V7.10 SSMA
+La versione v7.10 di SSMA for Access è stata migliorata con correzioni mirate progettate per offrire maggiore sicurezza e protezione della privacy per soddisfare le modifiche nei requisiti globali.
+
+> [!IMPORTANT]
+> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
 
 ## <a name="ssma-v79"></a>V7.9 SSMA
 La versione v7.9 di SSMA per Access contiene le seguenti modifiche:
@@ -84,7 +90,7 @@ La versione v7.3 di SSMA per Access contiene le seguenti modifiche:
   - Librerie che possono essere usate da SSMA per l'esecuzione di conversioni personalizzate.
     - È ora possibile creare codice in grado di gestire le conversioni di sintassi personalizzata e che non sono stati precedentemente gestiti da SSMA.
       - Le istruzioni su come costruire un convertitore personalizzato sono disponibili in questo post di blog [funzionalità di conversione di estensione di SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      - Può essere scaricare questo progetto di esempio per la conversione [post di blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      - Scaricare un progetto di esempio per la conversione da questo [post di blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## <a name="ssma-v72"></a>Versione 7.2 SSMA
 Il rilascio della versione 7.2 di SSMA per Access contiene le seguenti modifiche:

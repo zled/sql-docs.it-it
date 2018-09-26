@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 0497e1894c60e251a9cfb0d6229f1ace65b2476e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a89ce0acb22bf60dd05372a9cc7f7d28bb7fa3b1
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086273"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712393"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Istanze del Cluster di failover: SQL Server in Linux
 
@@ -72,7 +72,7 @@ Tutte le istanze FCI, siano essi in Linux o Windows Server, richiedono un tipo d
 In una configurazione che si estende su più posizioni, che viene archiviato in un data center deve essere sincronizzato con l'altro. In caso di failover, l'istanza FCI sarà in grado di portare in linea e lo spazio di archiviazione viene considerato come lo stesso. Raggiungere questo obiettivo richiederanno un metodo esterno per la replica di archiviazione, se avviene tramite un'utilità basata su software o hardware di archiviazione sottostante. 
 
 >[!NOTE]
->Per SQL Server 2017, le distribuzioni basate su Linux usano dischi presentati direttamente a un server di questo tipo devono essere formattate con XFS o EXT4. Altri sistemi di file non sono attualmente supportati. Tutte le modifiche si rifletteranno qui.
+>Per SQL Server, le distribuzioni basate su Linux usano dischi presentati direttamente a un server di questo tipo devono essere formattate con XFS o EXT4. Altri sistemi di file non sono attualmente supportati. Tutte le modifiche si rifletteranno qui.
 
 Il processo per la presentazione di spazio di archiviazione condiviso è lo stesso per i diversi metodi supportati:
 

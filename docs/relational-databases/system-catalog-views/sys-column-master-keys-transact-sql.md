@@ -1,7 +1,7 @@
 ---
 title: column_master_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-catalog-views
@@ -32,12 +32,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4251ecafad275e64021729abe54fc243d9077f9f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e683a88fb9490a7041ac02edc02a8ba2f63b1382
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079724"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713543"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,6 +52,10 @@ ms.locfileid: "43079724"
 |**modify_date**|**datetime**|Data che ultima modifica della chiave master della colonna.|  
 |**key_store_provider_name**|**sysname**|Nome del provider per l'archivio chiavi master della colonna che contiene la chiave CMK. I valori consentiti sono:<br /><br /> MSSQL_CERTIFICATE_STORE: se l'archivio chiavi master della colonna è un certificato Store.<br /><br /> Un valore definito dall'utente, se l'archivio chiavi master della colonna è di tipo personalizzato.|  
 |**key_path**|**nvarchar(4000)**|Un percorso di specifiche dell'archivio di chiave master della colonna della chiave. Il formato del percorso dipende dal tipo archivio chiave master della colonna. Esempio:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Per un archivio chiavi master della colonna personalizzata, lo sviluppatore è responsabile della definizione è il percorso di una chiave per l'archivio chiavi master della colonna personalizzata.|  
+|**allow_enclave_computations**|**bit**|Indica se la chiave master della colonna è l'enclave abilitato, (se le chiavi di crittografia di colonna, crittografate con la chiave master, possono essere usate per i calcoli all'interno di zone franche sicuri sul lato server). Per altre informazioni, vedere [Always Encrypted con zone franche sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
+|**signature**|**varbinary(max)**|Una firma digitale **key_path** e **allow_enclave_computations**, prodotto utilizzando la chiave master della colonna, che fa riferimento **key_path**.|
+
+
   
 ## <a name="permissions"></a>Permissions  
  Richiede la **VIEW ANY COLUMN MASTER KEY** l'autorizzazione.  

@@ -20,12 +20,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 276ef0d34d04f58b0b23b213dc52faf5b404693e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cbd74e51971e46eb26438333de419fa18dba5cd
+ms.sourcegitcommit: c3e233c13ebb6fbee60723590179da00802c3f3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101811"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058900"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph processing con SQL Server e Database SQL di Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -74,11 +74,22 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Completamente integrato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motore 
-Estensioni per i grafi sono completamente integrate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motore. Usiamo lo stesso motore di archiviazione, i metadati, il processore di query, e così via per archiviare ed eseguire query sui dati del grafico. Ciò consente agli utenti di eseguire query tra loro graph e i dati relazionali in una singola query. Gli utenti possono trarre vantaggio dalla combinazione di funzionalità di grafi con altri [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tecnologie come la tecnologia columnstore, a disponibilità elevata, R services, e così via. Database a grafo SQL supporta anche tutte le sicurezza e conformità di funzionalità disponibili con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Estensioni per i grafi sono completamente integrate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motore. Usare lo stesso motore di archiviazione, i metadati, il processore di query, e così via per archiviare ed eseguire query sui dati del grafico. Query su graph e dati relazionali in una singola query. La combinazione di funzionalità di grafi con altri [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tecnologie come la tecnologia columnstore, a disponibilità elevata, R services, e così via. Database a grafo SQL supporta anche tutte le sicurezza e conformità di funzionalità disponibili con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
-### <a name="tooling-and-ecosystem"></a>Gli strumenti e l'ecosistema  
-Gli utenti possono beneficiare gli strumenti esistenti e l'ecosistema che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre. Strumenti come il backup e ripristino, importare ed esportare, funzionano perfettamente BCP impostazione predefinita. Altri strumenti o servizi, ad esempio SSIS, SSRS o Power BI funzionerà con tabelle, graph nel modo in cui funzionano con tabelle relazionali.
- 
+### <a name="tooling-and-ecosystem"></a>Gli strumenti e l'ecosistema
+
+Trarre vantaggio dall'ecosistema e gli strumenti esistenti che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre. Strumenti come il backup e ripristino, importare ed esportare, funzionano perfettamente BCP impostazione predefinita. Altri strumenti o servizi, ad esempio SSIS, SSRS o Power BI funzionerà con tabelle, graph nel modo in cui funzionano con tabelle relazionali.
+
+## <a name="edge-constraints"></a>Vincoli di arco
+Un vincolo di arco è definito in una tabella edge grafico e da una coppia di tabella/e di nodo che è possibile connettere un tipo di bordo specificato. Ciò consente agli utenti un migliore controllo sul loro schemi di grafi. Con l'aiuto di vincoli di arco gli utenti possono limitare il tipo di nodi di che un determinato bordo è autorizzato a connettersi. 
+
+Per altre informazioni su come creare e usare i vincoli di arco, vedere [i vincoli di arco](../../relational-databases/tables/graph-edge-constraints.md)
+
+## <a name="merge-dml"></a>Merge DML 
+Il [MERGE](../../t-sql/statements/merge-transact-sql.md) istruzione esegue un'operazione insert, update o operazioni delete in una tabella di destinazione in base ai risultati di un join con una tabella di origine. Ad esempio, è possibile sincronizzare due tabelle inserendo, aggiornando o eliminando righe in una tabella di destinazione in base alle differenze tra la tabella di destinazione e la tabella di origine. Usare MATCH predicati in un'istruzione MERGE è ora supportato nel Database SQL di Azure e SQL Server vNext. Vale a dire, è ora possibile unire i dati del grafo corrente (tabelle nodi o bordi) con i nuovi dati utilizzando i predicati di corrispondenza per specificare le relazioni di graph in un'unica istruzione, invece di istruzioni INSERT/UPDATE/DELETE separate.
+
+Per altre informazioni su come corrispondenza può essere utilizzata nel merge DML, vedere [istruzione MERGE](../../t-sql/statements/merge-transact-sql.md)
+
  ## <a name="next-steps"></a>Passaggi successivi  
 Lettura di [Database a grafo SQL - architettura](./sql-graph-architecture.md)
    

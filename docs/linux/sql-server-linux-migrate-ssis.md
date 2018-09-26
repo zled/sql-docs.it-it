@@ -12,12 +12,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 1b01cfea93b2348d912b726bbad38f7e97dd0d94
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d01a53524bf03e0ea8318c41b05b9cc59499de33
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086843"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713223"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Estrarre, trasformare e caricare i dati in Linux con SSIS
 
@@ -85,7 +85,7 @@ Esistono tre modi per eseguire un pacchetto SSIS che viene crittografato con una
 ## <a name="schedule-packages"></a>Pianificare i pacchetti
 È possibile usare il sistema di Linux, ad esempio gli strumenti di pianificazione `cron` per pianificare i pacchetti. Per pianificare l'esecuzione del pacchetto in questa versione, è possibile utilizzare SQL Agent in Linux. Per altre informazioni, vedi [pacchetti di SSIS di pianificazione in Linux con cron](sql-server-linux-schedule-ssis-packages.md).
 
-## <a name="limitations-and-known-issues"></a>Problemi noti e limitazioni
+## <a name="limitations-and-known-issues"></a>Limitazioni e problemi noti
 
 Per informazioni dettagliate sulle limitazioni e problemi noti di SSIS in Linux, vedere [limitazioni e problemi noti per SSIS in Linux](sql-server-linux-ssis-known-issues.md).
 
@@ -93,8 +93,8 @@ Per informazioni dettagliate sulle limitazioni e problemi noti di SSIS in Linux,
 
 Per altre informazioni su SSIS in Linux, vedere il post di blog seguenti:
 
--   [È disponibile in SQL Server 2017 CTP2.1 SSIS in Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
--   [ODBC è supportato in SSIS in Linux (aggiornamento di SQL Server 2017 CTP 2.1)](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
+-   [È disponibile in SQL Server CTP2.1 SSIS in Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
+-   [ODBC è supportato in SSIS in Linux (aggiornamento di SQL Server CTP 2.1)](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
 
 ## <a name="more-info-about-ssis"></a>Altre informazioni su SSIS
 

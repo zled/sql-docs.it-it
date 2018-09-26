@@ -1,5 +1,5 @@
 ---
-title: Sys. sysprocesses (Transact-SQL) | Documenti Microsoft
+title: Sys. sysprocesses (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,12 +25,12 @@ caps.latest.revision: 57
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c3a27e699312793e734d9a94680677eb509a2bd5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f63aeb2b2a898335037f8a9df4b36186b66900f8
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233754"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712315"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "33233754"
 |last_batch|**datetime**|Ora dell'ultima esecuzione di una chiamata a una stored procedure remota o di un'istruzione EXECUTE da parte di un processo client.|  
 |ecid|**smallint**|ID del contesto di esecuzione utilizzato per identificare in modo univoco i thread secondari utilizzati per conto di un unico processo.|  
 |open_tran|**smallint**|Numero di transazioni aperte per il processo.|  
-|status|**nchar(30)**|Stato dell'ID del processo. I valori possibili sono:<br /><br /> **Dormant**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta reimpostando la sessione.<br /><br /> **in esecuzione** = nella sessione vengono eseguiti uno o più batch. Se si abilita la funzionalità MARS (Multiple Active Result Sets), una sessione può eseguire più batch. Per ulteriori informazioni, vedere [utilizzando Multiple Active Result Set & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **sfondo** = nella sessione viene eseguita un'attività in background, ad esempio il rilevamento di deadlock.<br /><br /> **Rollback** = la sessione è in corso il rollback di una transazione.<br /><br /> **in sospeso** = la sessione è in attesa di un thread di lavoro diventi disponibile.<br /><br /> **eseguibile** = l'attività della sessione è in coda eseguibile di un'utilità di pianificazione durante l'attesa di un quantum temporale.<br /><br /> **spinloop** = l'attività della sessione è in attesa di uno spinlock diventi disponibile.<br /><br /> **sospeso** = la sessione è in attesa di un evento, ad esempio i/o, per completare.|  
+|status|**nchar(30)**|Stato dell'ID del processo. I valori possibili sono:<br /><br /> **inattive**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta reimpostando la sessione.<br /><br /> **esecuzione** = la sessione è in esecuzione uno o più batch. Se si abilita la funzionalità MARS (Multiple Active Result Sets), una sessione può eseguire più batch. Per altre informazioni vedere [Uso di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **sfondo** = nella sessione viene eseguita un'attività in background, ad esempio il rilevamento dei deadlock.<br /><br /> **eseguire il rollback** = la sessione è in corso il rollback di una transazione.<br /><br /> **in sospeso** = la sessione è in attesa di un thread di lavoro diventi disponibile.<br /><br /> **Runnable** = l'attività della sessione è in coda eseguibile di un'utilità di pianificazione durante l'attesa di un quantum temporale.<br /><br /> **spinloop** = l'attività della sessione è in attesa di uno spinlock venga resa disponibile.<br /><br /> **sospeso** = la sessione è in attesa di un evento, ad esempio i/o, per il completamento.|  
 |sid|**binary(86)**|Identificatore univoco globale (GUID, Globally Unique Identifier) per l'utente.|  
 |hostname|**nchar(128)**|Nome della workstation.|  
 |program_name|**nchar(128)**|Nome dell'applicazione.|  
@@ -73,9 +73,10 @@ ms.locfileid: "33233754"
 |sql_handle|**binary(20)**|Rappresenta il batch o l'oggetto attualmente in esecuzione.<br /><br /> **Nota** questo valore è derivato dall'indirizzo batch o della memoria dell'oggetto. e non viene calcolato tramite l'algoritmo basato su hash di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |stmt_start|**int**|Offset iniziale dell'istruzione SQL corrente per il valore di sql_handle specificato.|  
 |stmt_end|**int**|Offset finale dell'istruzione SQL corrente per il valore di sql_handle specificato.<br /><br /> -1 = L'istruzione corrente viene eseguita fino alla fine dei risultati restituiti dalla funzione fn_get_sql per il valore di sql_handle specificato.|  
-|request_id|**int**|ID della richiesta. Utilizzato per identificare le richieste in esecuzione in una sessione specifica.|  
+|request_id|**int**|ID della richiesta. Utilizzato per identificare le richieste in esecuzione in una sessione specifica.|
+|page_resource |**binary(8)** |**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> Una rappresentazione esadecimale a 8 byte della risorsa di pagina se il `waitresource` colonna contiene una pagina. |  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se si dispone dell'autorizzazione VIEW SERVER STATE per il server, è possibile visualizzare tutte le sessioni in esecuzione nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In caso contrario, è possibile visualizzare solo la sessione corrente.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -8,21 +8,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 576526801188bc9459ec9e26470e5d17dd775f74
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: dce0928c0675172c503e6783aa25d6cbcaec9b5f
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348301"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713514"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>In tempo reale di assegnazione dei punteggi con sp_rxPredict in SQL Server machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Assegnazione dei punteggi in tempo reale Usa le funzionalità di estensione CLR in SQL Server per le stime a prestazioni elevate o punteggi in previsione dei carichi di lavoro. Perché l'assegnazione dei punteggi in tempo reale è indipendente dal linguaggio, viene eseguita senza dipendenze in R o Python esecuzioni. Supponendo che un modello creato da funzioni di Microsoft, sottoposti a training e serializzato in un formato binario in SQL Server, è possibile usare l'assegnazione di punteggi in tempo reale per generare i risultati stimati in nuovi input di dati nelle istanze di SQL Server che non dispongono di funzionalità del componente aggiuntivo R o Python installato.
+In tempo reale di assegnazione dei punteggi viene utilizzata la [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) sistema stored procedure e le funzionalità di estensione CLR in SQL Server per le stime a prestazioni elevate o punteggi in previsione dei carichi di lavoro. Assegnazione dei punteggi in tempo reale è indipendente dal linguaggio e viene eseguita senza dipendenze in R o Python esecuzioni. Supponendo che un modello creato e sottoposto a training usando funzioni di Microsoft e quindi serializzati in un formato binario in SQL Server, è possibile usare l'assegnazione di punteggi in tempo reale per generare i risultati stimati in nuovi input di dati nelle istanze di SQL Server che non è il componente aggiuntivo R o Python installato.
 
 ## <a name="how-real-time-scoring-works"></a>Funzionamento di assegnazione dei punteggi in tempo reale come
 
-Assegnazione dei punteggi in tempo reale è supportato in SQL Server 2017 e SQL Server 2016, sui tipi di modello specifico basati, ad esempio le funzioni RevoScaleR o MicrosoftML [(RevoScaleR) rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) o [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Usa le librerie C++ native per generare punteggi, in base all'input fornito a un modello di machine learning archiviato in un particolare formato binario.
+Assegnazione dei punteggi in tempo reale è supportata in SQL Server 2017 e SQL Server 2016, in [tipi di modello supportati](#bkmk_py_supported_algos) per lineare e logistica modellazione di albero delle decisioni e la regressione. Usa le librerie C++ native per generare punteggi, in base all'input fornito a un modello di machine learning archiviato in un particolare formato binario.
 
 Poiché un modello con training può essere usato per la valutazione senza dover chiamare un runtime di linguaggio esterno, viene ridotto l'overhead di più processi. Ciò supporta ottenere migliori prestazioni di stima per gli scenari di assegnazione dei punteggi di produzione. Poiché i dati non oltrepassino mai SQL Server, i risultati possono essere generati e inseriti in una nuova tabella senza conversione dei dati tra R e SQL.
 
@@ -30,8 +30,8 @@ Assegnazione dei punteggi in tempo reale è un processo in più passaggi:
 
 1. È necessario abilitare le stored procedure che esegue l'assegnazione dei punteggi in base al database.
 2. Caricare il modello con training preliminare in formato binario.
-3. Nuovi dati di input, sia tabulare o per singole righe, vengono fornite come input al modello.
-4. Per generare punteggi, chiamare il sp_rxPredict stored procedure.
+3. È fornire nuovi dati di input a cui assegnare un punteggio, righe tabulari o singole, come input per il modello.
+4. Per generare i punteggi, chiamare il [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) stored procedure.
 
 > [!TIP]
 > Per un esempio di assegnazione dei punteggi in tempo reale in azione, vedere [End End prestito prestiti stima compilati tramite Azure HDInsight cluster Spark e di SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
@@ -45,6 +45,8 @@ Assegnazione dei punteggi in tempo reale è un processo in più passaggi:
 + Il modello deve essere sottoposto a training in anticipo usando uno degli **rx** algoritmi. Per R, in tempo reale con di assegnazione dei punteggi `sp_rxPredict` funziona con [RevoScaleR e MicrosoftML supportati gli algoritmi](#bkmk_rt_supported_algos). Per Python, vedere [revoscalepy e microsoftml supportati gli algoritmi](#bkmk_py_supported_algos)
 
 + Serializzare il modello usando [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) per R, e [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) per Python. Queste funzioni di serializzazione sono state ottimizzate per supportare l'assegnazione dei punteggi veloce.
+
++ Salvare il modello all'istanza del motore di database da cui si desidera chiamarlo. Questa istanza non è necessario avere l'estensione di runtime di R o Python.
 
 > [!Note]
 > Assegnazione dei punteggi in tempo reale è attualmente ottimizzato per le stime rapide in un set di dati più piccolo, compreso tra alcune righe e centinaia di migliaia di righe. In grandi set di dati, tramite [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) potrebbe risultare più veloce.

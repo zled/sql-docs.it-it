@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: a803770f1c94113f0035b811f3004f0af8ff1adc
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a2cb44cf4f6a3b6c689ea66a4d353d97ce8c8af2
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392987"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713143"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installazione di ricerca Full-Text SQL Server in Linux
 
@@ -88,7 +88,7 @@ Se è necessaria un'installazione offline, individuare il download del pacchetto
 
 ## <a name="supported-languages"></a>Lingue supportate
 
-Ricerca full-Text utilizza [word breaker](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) che determinano come identificare le singole parole basate sul linguaggio. È possibile ottenere un elenco di word breaker registrati eseguendo una query di **Sys. fulltext_languages** vista del catalogo. Word breaker per i linguaggi seguenti vengono installati con SQL Server 2017:
+Ricerca full-Text utilizza [word breaker](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) che determinano come identificare le singole parole basate sul linguaggio. È possibile ottenere un elenco di word breaker registrati eseguendo una query di **Sys. fulltext_languages** vista del catalogo. Con SQL Server vengono installati i Word breaker per le lingue seguenti:
 
 | Linguaggio | ID della lingua |
 |---|---|
@@ -150,7 +150,7 @@ Ricerca full-Text utilizza [word breaker](../relational-databases/search/configu
 
 Ricerca full-Text funziona anche con il testo archiviato in file binari. Ma in questo caso, è necessario un filtro installato per elaborare il file. Per altre informazioni sui filtri, vedere [configurare e gestire filtri per la ricerca](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-È possibile visualizzare un elenco di filtri installati chiamando **sp_help_fulltext_system_components 'filter'**. Per SQL Server 2017, vengono installati i filtri seguenti:
+È possibile visualizzare un elenco di filtri installati chiamando **sp_help_fulltext_system_components 'filter'**. Per SQL Server, vengono installati i filtri seguenti:
 
 | Nome componente | ID classe | Versione |
 |---|---|---|

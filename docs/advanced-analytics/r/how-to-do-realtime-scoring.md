@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 09b94de43aaba54dced6d300587c0492b00c8f3d
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348212"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712473"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Come generare le previsioni e stime usando modelli di machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,9 +26,9 @@ La tabella seguente riepiloga i framework di assegnazione dei punteggi per la pr
 
 | Metodologia           | Interfaccia         | Requisiti della libreria | Velocità di elaborazione |
 |-----------------------|-------------------|----------------------|----------------------|
-| Framework di estendibilità | R: [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>Python: [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Nessuna. I modelli possono essere basati su qualsiasi funzione R o Python | Centinaia di millisecondi. <br/>Il caricamento di un ambiente di runtime ha un costo fisso, il calcolo della media di tre a 600 millisecondi, prima di tutti i nuovi dati viene assegnato un punteggio. |
-| Estensione CLR assegnazione dei punteggi in tempo reale | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) su un modello serializzato | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Decine di millisecondi, in Media. |
-| Estensione di C++ di assegnazione dei punteggi nativa| [Funzione T-SQL stimare](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) su un modello serializzato | R: RevoScaleR <br/>Python: revoscalepy | Meno di 20 millisecondi, in Media. | 
+| Framework di estendibilità | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Nessuna. I modelli possono essere basati su qualsiasi funzione R o Python | Centinaia di millisecondi. <br/>Il caricamento di un ambiente di runtime ha un costo fisso, il calcolo della media di tre a 600 millisecondi, prima di tutti i nuovi dati viene assegnato un punteggio. |
+| [Estensione CLR assegnazione dei punteggi in tempo reale](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) su un modello serializzato | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Decine di millisecondi, in Media. |
+| [Estensione di C++ di assegnazione dei punteggi nativa](../sql-native-scoring.md) | [Funzione T-SQL stimare](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) su un modello serializzato | R: RevoScaleR <br/>Python: revoscalepy | Meno di 20 millisecondi, in Media. | 
 
 Velocità di elaborazione e non sostanza dell'output è la funzionalità di differenziazione. Supponendo che le stesse funzioni e gli input, l'output con punteggio deve non variano in base utilizzato.
 
@@ -44,12 +44,13 @@ _Assegnazione dei punteggi_ è un processo in due passaggi. È possibile specifi
 
 Un passo indietro, il processo complessivo di preparazione del modello e quindi la generazione di punteggi può essere riepilogata in questo modo:
 
-1. Creare un modello usando un algoritmo supportato.
-2. Serializza il modello utilizzando un formato binario speciale.
-3. Rendere disponibile il modello a SQL Server. In genere questo si intende archiviare il modello serializzato in una tabella di SQL Server.
-4. Chiamare la funzione o una stored procedure, che specifica il modello e i dati di input come parametri.
+1. Creare un modello usando un algoritmo supportato. Supporto varia in base alla metodologia di assegnazione dei punteggi che scelto.
+2. Il training del modello.
+3. Serializza il modello utilizzando un formato binario speciale.
+3. Salvare il modello in SQL Server. In genere questo si intende archiviare il modello serializzato in una tabella di SQL Server.
+4. Chiamare la funzione o una stored procedure, specifica il modello e i dati di input come parametri.
 
-Quando l'input include molte righe di dati, è in genere più veloce per inserire i valori di stima in una tabella come parte del processo di assegnazione dei punteggi.  La generazione di un singolo punteggio è più adatta in uno scenario in cui ottenere i valori di input da una richiesta di form o utente e restituire il punteggio a un'applicazione client. Per migliorare le prestazioni durante la generazione di punteggi successivi, SQL Server potrebbe memorizzare nella cache il modello in modo che possa essere ricaricato in memoria.
+Quando l'input include molte righe di dati, è in genere più veloce per inserire i valori di stima in una tabella come parte del processo di assegnazione dei punteggi. La generazione di un singolo punteggio è più adatta in uno scenario in cui ottenere i valori di input da una richiesta di form o utente e restituire il punteggio a un'applicazione client. Per migliorare le prestazioni durante la generazione di punteggi successivi, SQL Server potrebbe memorizzare nella cache il modello in modo che possa essere ricaricato in memoria.
 
 ## <a name="compare-methods"></a>Confronto tra i metodi
 

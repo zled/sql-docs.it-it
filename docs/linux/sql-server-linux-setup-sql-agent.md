@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 32adfba6edf8497f7ea10f8f68401c99c246ae5c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: af15f6243dc29fc3c7596a758295cc53c66a55c0
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084363"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713563"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Installare SQL Server Agent in Linux
 
@@ -45,7 +45,7 @@ sudo systemctl restart mssql-server
 ## <a name="InstallAgentBelowCU4">Per le versioni 2017 CU3 e versioni precedenti, installare SQL Server Agent</a>
 
 > [!NOTE]
-> Le istruzioni di installazione seguenti si applicano ad SQL Server versioni 2017 CU3 e versioni precedenti. Prima di installare SQL Server Agent, innanzitutto [installare SQL Server 2017](sql-server-linux-setup.md#platforms). Ciò consente di configurare le chiavi e i repository che usano quando si installa il **mssql-server-agent** pacchetto.
+> Le istruzioni di installazione seguenti si applicano ad SQL Server versioni 2017 CU3 e versioni precedenti. Prima di installare SQL Server Agent, innanzitutto [installare SQL Server](sql-server-linux-setup.md#platforms). Ciò consente di configurare le chiavi e i repository che usano quando si installa il **mssql-server-agent** pacchetto.
 
 Installare SQL Server Agent per la tua piattaforma:
 - [Red Hat Enterprise Linux](#RHEL)

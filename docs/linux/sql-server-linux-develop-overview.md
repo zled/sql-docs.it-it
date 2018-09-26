@@ -12,18 +12,18 @@ ms.custom: sql-linux
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 317c2ea2064f7ffc286671a8fff7eef2f8149ee7
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c50b0ad1798f161d945a54e0e9a080a04a6eca05
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084921"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712973"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Come iniziare a sviluppare applicazioni per SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-È possibile creare applicazioni che si connettono e usano SQL Server 2017 su Linux da un'ampia gamma di linguaggi di programmazione, ad esempio c#, Java, Node. js, PHP, Python, Ruby e C++. È anche possibile usare i framework web popolari e i framework di ORM Object Relational Mapping ().
+È possibile creare applicazioni che si connettono e usano SQL Server in Linux da un'ampia gamma di linguaggi di programmazione, ad esempio c#, Java, Node. js, PHP, Python, Ruby e C++. È anche possibile usare i framework web popolari e i framework di ORM Object Relational Mapping ().
 
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
@@ -39,7 +39,7 @@ Il modo migliore per iniziare e crea applicazioni con SQL Server è per provarlo
 - Provare gli esempi di codice.
 
 > [!TIP]
-> Se si desidera sviluppare per SQL Server 2017 in Docker, esaminiamo il **macOS** esercitazioni.
+> Se si desidera sviluppare per SQL Server in Docker, esaminiamo il **macOS** esercitazioni.
 
 ## <a name="create-new-applications"></a>Creare nuove applicazioni
 
@@ -47,11 +47,11 @@ Se si crea una nuova applicazione, esaminare un elenco del [librerie di connetti
 
 ## <a name="use-existing-applications"></a>Usare le applicazioni esistenti
 
-Se si dispone di un'applicazione di database esistente, è possibile modificare semplicemente la relativa stringa di connessione alla destinazione SQL Server 2017 in Linux. Assicurarsi che conoscere le [problemi noti](sql-server-linux-release-notes.md) in SQL Server 2017 in Linux.
+Se si dispone di un'applicazione di database esistente, è possibile modificare semplicemente la relativa stringa di connessione alla destinazione di SQL Server in Linux. Assicurarsi che conoscere le [problemi noti](sql-server-linux-release-notes.md) in SQL Server in Linux.
 
 ## <a name="use-existing-sql-tools-on-windows-with-sql-server-on-linux"></a>Usare gli strumenti esistenti di SQL in Windows con SQL Server in Linux
 
-Gli strumenti che attualmente eseguono in Windows, ad esempio PowerShell, SQL Server Management Studio e SSDT funzionano anche con SQL Server 2017 in Linux. Anche se non vengono eseguite in modo nativo in Linux, è comunque possibile gestire le istanze remote di SQL Server in Linux. 
+Gli strumenti che attualmente eseguono in Windows, ad esempio PowerShell, SQL Server Management Studio e SSDT funzionano anche con SQL Server in Linux. Anche se non vengono eseguite in modo nativo in Linux, è comunque possibile gestire le istanze remote di SQL Server in Linux. 
 
 Vedere gli argomenti seguenti per altre informazioni:
 

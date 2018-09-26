@@ -1,7 +1,7 @@
 ---
 title: Architettura di grafi SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2017
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: graphs
@@ -20,12 +20,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 186d65c28eefc4fc350738932ba404202c067a61
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ebf687fb162b1c5c2ec17c0a0a5ec096dcfdd69d
+ms.sourcegitcommit: 07d4ebb8438f7c348880c39046e2b452b2152fd3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43090364"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47158072"
 ---
 # <a name="sql-graph-architecture"></a>Architettura di grafi SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -105,32 +105,32 @@ Nella tabella seguente sono elencati i valori validi per `graph_type` colonna
 Colonne implicite in una tabella nodi  
 |Nome colonna    |Tipo di dati  |is_hidden  |Commento  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |colonna graph_id interno  |
-|$node_id_\<hex_string> |NVARCHAR   |0  |Colonna di id di nodo esterno  |
+|graph_id_\<hex_string> |bigint |1  |interno `graph_id` colonna  |
+|$node_id_\<hex_string> |NVARCHAR   |0  |Nodo esterno `node_id` colonna  |
 
 Colonne implicite in una tabella bordi  
 |Nome colonna    |Tipo di dati  |is_hidden  |Commento  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |colonna graph_id interno  |
-|$edge_id_\<hex_string> |NVARCHAR   |0  |colonna di id sul lato esterno  |
-|from_obj_id_\<hex_string>  |INT    |1  |interno dall'id oggetto del nodo  |
-|from_id_\<hex_string>  |bigint |1  |Interno dal nodo graph_id  |
-|$from_id_\<hex_string> |NVARCHAR   |0  |esterno dall'id del nodo  |
-|to_obj_id_\<hex_string>    |INT    |1  |interni all'id di oggetto nodo  |
-|to_id_\<hex_string>    |bigint |1  |Interni al nodo graph_id  |
-|$to_id_\<hex_string>   |NVARCHAR   |0  |esterno all'id nodo  |
+|graph_id_\<hex_string> |bigint |1  |interno `graph_id` colonna  |
+|$edge_id_\<hex_string> |NVARCHAR   |0  |External `edge_id` colonna  |
+|from_obj_id_\<hex_string>  |INT    |1  |interno dal nodo `object_id`  |
+|from_id_\<hex_string>  |bigint |1  |Interno dal nodo `graph_id`  |
+|$from_id_\<hex_string> |NVARCHAR   |0  |esterno dal nodo `node_id`  |
+|to_obj_id_\<hex_string>    |INT    |1  |interni al nodo `object_id`  |
+|to_id_\<hex_string>    |bigint |1  |Interni al nodo `graph_id`  |
+|$to_id_\<hex_string>   |NVARCHAR   |0  |esterna al nodo `node_id`  |
  
 ### <a name="system-functions"></a>Funzioni di sistema
 Le funzioni predefinite seguenti vengono aggiunti. Queste funzionalità permetteranno agli utenti estrarre informazioni dalle colonne generate. Si noti che, questi metodi non determini l'input dell'utente. Se l'utente specifica un valore non valido `sys.node_id` il metodo estraggono la parte appropriata e restituirlo. Ad esempio, OBJECT_ID_FROM_NODE_ID richiederà un `$node_id` come input e restituiscono object_id della tabella, questo nodo appartiene. 
  
 |Predefinito   |Description  |
 |---  |---  |
-|OBJECT_ID_FROM_NODE_ID |Estrarre object_id da un node_id  |
-|GRAPH_ID_FROM_NODE_ID  |Estrarre il graph_id da un node_id  |
-|NODE_ID_FROM_PARTS |Costruire un node_id da un object_id e un graph_id  |
-|OBJECT_ID_FROM_EDGE_ID |Estrarre object_id da edge_id  |
-|GRAPH_ID_FROM_EDGE_ID  |Estrarre l'identità da edge_id  |
-|EDGE_ID_FROM_PARTS |Costruire edge_id di object_id e identità  |
+|OBJECT_ID_FROM_NODE_ID |Estrarre object_id da un `node_id`  |
+|GRAPH_ID_FROM_NODE_ID  |Estrarre il graph_id da un `node_id`  |
+|NODE_ID_FROM_PARTS |Costruire un node_id da un `object_id` e un oggetto `graph_id`  |
+|OBJECT_ID_FROM_EDGE_ID |Estrarre `object_id` da `edge_id`  |
+|GRAPH_ID_FROM_EDGE_ID  |Identità da estrarre `edge_id`  |
+|EDGE_ID_FROM_PARTS |Costruire `edge_id` da `object_id` e identità  |
 
 
 
@@ -138,25 +138,26 @@ Le funzioni predefinite seguenti vengono aggiunti. Queste funzionalità permette
 Scopri il [!INCLUDE[tsql-md](../../includes/tsql-md.md)] estensioni introdotte in SQL Server e Database SQL di Azure, che consentono la creazione e l'esecuzione di query su oggetti grafo. Le estensioni del linguaggio di query consentono di query e attraversare il grafo usando sintassi grafica ASCII.
  
 ### <a name="data-definition-language-ddl-statements"></a>Istruzioni Data Definition Language (DDL)
-|Attività   |Argomento correlato  |Note
+|Attività   |Articolo correlato  |Note
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` viene ora estesa per supportare la creazione di una tabella AS nodi o bordi di AS. Si noti che una tabella edge può o non abbiano tutti gli utenti definiti gli attributi.  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` viene ora estesa per supportare la creazione di una tabella AS nodi o bordi di AS. Si noti che una tabella edge può o non abbiano gli attributi definiti dall'utente.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|È possibile modificare nodi e le tabelle bordi esattamente una tabella relazionale, utilizza il `ALTER TABLE`. Gli utenti possono aggiungere o modificare le colonne definite dall'utente, indici o vincoli. Tuttavia, modificare le colonne grafico interne, ad esempio `$node_id` o `$edge_id`, verrà generato un errore.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Gli utenti possono creare indici su pseudo- colonne e le colonne definite dall'utente nel nodo e le tabelle bordi. Sono supportati tutti i tipi di indice, inclusi gli indici columnstore cluster e non cluster.  |
+|CREARE I VINCOLI DI ARCO    |[I vincoli di arco &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Gli utenti possono ora creare vincoli di arco sulle tabelle edge per applicare la semantica specifica e anche mantenere l'integrità dei dati  |
 |DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |È possibile eliminare nodi e le tabelle bordi esattamente una tabella relazionale, utilizza il `DROP TABLE`. Tuttavia, in questa versione, non sono presenti vincoli per garantire che nessun bordi puntare a un nodo eliminato e propagate l'eliminazione dei bordi, quando si elimina un nodo o una tabella nodi non è supportata. È consigliabile che se viene eliminata una tabella nodi, agli utenti rimuovere tutti i bordi connessi ai nodi in tale tabella nodi manualmente per mantenere l'integrità del grafico.  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Istruzioni Data Manipulation Language (DML)
-|Attività   |Argomento correlato  |Note
+|Attività   |Articolo correlato  |Note
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Inserimento in una tabella nodi equivale all'inserimento in una tabella relazionale. I valori per `$node_id` colonna generata automaticamente. Tentativo di inserire un valore in `$node_id` o `$edge_id` colonna verrà generato un errore. Gli utenti devono fornire valori per `$from_id` e `$to_id` colonne durante l'inserimento in una tabella bordi. `$from_id` e `$to_id` sono il `$node_id` valori dei nodi che si connette un determinato bordo.  |
 |Elimina | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|I dati dalle tabelle nodi o archi possono essere eliminati in esattamente come verrà eliminata dalle tabelle relazionali. Tuttavia, in questa versione, non sono presenti vincoli per garantire che nessun bordi puntare a un nodo eliminato e propagate l'eliminazione dei bordi, quando si elimina un nodo non è supportata. È consigliabile che ogni volta che un nodo viene eliminato, tutti i bordi di collegamento a tale nodo vengono eliminati anche, per mantenere l'integrità del grafico.  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |I valori nelle colonne definite dall'utente possono essere aggiornati usando l'istruzione UPDATE. Aggiornare le colonne grafico interne `$node_id`, `$edge_id`, `$from_id` e `$to_id` non è consentita.  |
-|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` istruzione non è supportata in una tabella nodi o bordi.  |
+|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` istruzione è supportata in una tabella nodi o bordi.  |
 
 
 ### <a name="query-statements"></a>Istruzioni di query
-|Attività   |Argomento correlato  |Note
+|Attività   |Articolo correlato  |Note
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|I nodi e archi vengono archiviati internamente come tabelle, di conseguenza la maggior parte delle operazioni supportate in una tabella in SQL Server o Database SQL di Azure sono supportata nelle tabelle di nodo e bordo  |
 |MATCH  | [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|CORRISPONDENZA incorporato è stato introdotto per supportare criteri di ricerca e l'attraversamento del grafico.  |
@@ -169,7 +170,7 @@ Esistono alcune limitazioni sul nodo e le tabelle bordi in questa versione:
 * I tipi di tabella e variabili di tabella non possono essere dichiarate come una tabella nodi o bordi. 
 * Nodo e le tabelle bordi non è possibile creare le tabelle temporali con controllo delle versioni del sistema.   
 * Nodo e le tabelle bordi non possono essere tabelle con ottimizzazione per la memoria.  
-* Gli utenti non è possibile aggiornare il from_id $ e le colonne to_id $ di un bordo usando l'istruzione UPDATE. Per aggiornare i nodi che si connette una rete perimetrale, gli utenti saranno necessario inserire il nuovo bordo sta puntando a nuovi nodi ed eliminare quello precedente.
+* Gli utenti non è possibile aggiornare il `$from_id` e `$to_id` colonne di un bordo usando l'istruzione UPDATE. Per aggiornare i nodi che si connette una rete perimetrale, gli utenti saranno necessario inserire il nuovo bordo sta puntando a nuovi nodi ed eliminare quello precedente.
 * Non sono supportate le query su oggetti grafico tra database. 
 
 

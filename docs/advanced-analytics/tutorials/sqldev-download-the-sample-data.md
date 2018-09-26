@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 58a996ae500a27a6878b30fc072bf09a75d4ba43
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724335"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712754"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>Dati demo dei Taxi di NYC per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -127,6 +127,14 @@ La tabella seguente riepiloga gli oggetti creati nel database di esempio dei Tax
 |**PredictTip**  |stored procedure |Create dallo script PredictTip.sql. Chiama il modello con training per creare stime tramite il modello. La stored procedure accetta una query come parametro di input e restituisce una colonna di valori numerici contenente i punteggi per le righe di input. Questa stored procedure viene utilizzata [Operazionalizzare il modello R](sqldev-operationalize-the-model.md).|
 |**PredictTipSingleMode**  |stored procedure| Create dallo script PredictTipSingleMode.sql. Chiama il modello con training per creare stime tramite il modello. Questa stored procedure accetta una nuova osservazione come input, con i singoli valori della funzionalità passati come parametri in linea, e restituisce un valore che stima il risultato in base alla nuova osservazione. Questa stored procedure viene utilizzata [Operazionalizzare il modello R](sqldev-operationalize-the-model.md).|
 |**TrainTipPredictionModel**  |stored procedure|Create dallo script TrainTipPredictionModel.sql. Esegue il training di un modello di regressione logistica mediante la chiamata di un pacchetto R. Il modello consente di stimare il valore della colonna indicata. Viene eseguito un training usando il 70% dei dati selezionati casualmente. L'output della stored procedure corrisponde al modello con training, che viene salvato nella tabella nyc_taxi_models. Questa stored procedure viene utilizzata [eseguire il training e salvataggio di un modello](../r/sqldev-train-and-save-a-model-using-t-sql.md).|
+
+## <a name="query-data-for-verification"></a>Eseguire query sui dati per la verifica
+
+Come passaggio di convalida, eseguire una query per verificare che i dati è stati caricati.
+
+1. In Esplora oggetti, nel database, espandere la **NYCTaxi_Sample** database e quindi aprire la cartella di tabelle.
+
+2. Fare doppio clic il **dbo. nyctaxi_sample** e scegliere **seleziona le prime 1000 righe** vengano restituiti dati.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

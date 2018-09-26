@@ -1,6 +1,6 @@
 ---
-title: Introduzione a SQL Server 2017 nel Cloud | Microsoft Docs
-description: Questa Guida introduttiva illustra come eseguire SQL Server 2017 in Linux nel cloud di propria scelta.
+title: Introduzione a SQL Server nel Cloud | Microsoft Docs
+description: Questa Guida introduttiva illustra come eseguire SQL Server in Linux nel cloud di propria scelta.
 author: annashres
 ms.author: annashres
 manager: craigg
@@ -11,18 +11,18 @@ ms.component: ''
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f63fc385171469ad13d21fd844bb130ac0e6e7cd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 638df74c4288f8f1b67232ff99cfd90393a52380
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084193"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713173"
 ---
-# <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>Guida introduttiva: Eseguire SQL Server 2017 nel cloud
+# <a name="quickstart-run-the-sql-server-in-the-cloud"></a>Guida introduttiva: Eseguire il Server SQL nel cloud
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In questa Guida introduttiva si installerà SQL Server 2017 su Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) o Ubuntu nel cloud di propria scelta. Passare a [effettuare il provisioning di una macchina virtuale Linux di SQL Server nel portale di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) per eseguire SQL Server su Linux in Azure.
+In questa Guida introduttiva si installerà SQL Server su Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) o Ubuntu nel cloud di propria scelta. Passare a [effettuare il provisioning di una macchina virtuale Linux di SQL Server nel portale di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) per eseguire SQL Server su Linux in Azure.
 
     > [!NOTE]
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
