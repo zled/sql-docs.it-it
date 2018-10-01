@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 01be4cebd589f5d30c4036a0a66f9fa29a4b48c7
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 0838b0d6620e5cfeaf528755ca5abe7d21f694df
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42774806"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47440245"
 ---
 # <a name="use-performance-objects"></a>Utilizzo degli oggetti prestazioni
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ Nella tabella seguente viene illustrata la modalità di assegnazione dei nomi pe
   
 |Tipo di istanza|Nome oggetto|  
 |-----------------|---------------|  
-|Default|**SQLAgent:***oggetto*:*contatore*|  
-|Denominato|**SQLAgent$**<br /> **&#42;nome_istanza&#42; :***oggetto*:*contatore*|  
+|Default|**SQLAgent:**_oggetto_:_contatore_|  
+|Denominato|**SQLAgent$**<br /> **& #42; nome_istanza& #42; :**_oggetto_:_contatore_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include gli oggetti prestazione seguenti per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
