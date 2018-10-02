@@ -4,17 +4,16 @@ ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 48721e1b9f57a558346b38e060758e94ea86010e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3df6da1da2786ede9dbde2ec417c5800046577fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266059"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611555"
 ---
 # <a name="report-data-ssrs"></a>Dati del report (SSRS)
   I dati del report possono provenire da più origini dei dati dell'organizzazione. Il primo passaggio nella progettazione di un report consiste nel creare le origini dati e i set di dati che rappresentano i dati del report sottostanti. Ogni origine dati include le informazioni sulle connessione dati. Ogni set di dati include un comando di query che consente di definire il set di campi da utilizzare come dati di un'origine dati. Per visualizzare i dati di ogni set di dati, aggiungere un'area dati, ad esempio una tabella, una matrice, un grafico o una mappa. Durante l'elaborazione del report, le query vengono eseguite sull'origine dati e ogni area dati viene espansa in base alle esigenze per visualizzare i risultati della query per il set di dati.  

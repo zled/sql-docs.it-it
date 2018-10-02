@@ -4,7 +4,6 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.categorygroupproperties.general.f1
@@ -18,12 +17,12 @@ f1_keywords:
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9192032176d81542d26df9465f80c323cd852b0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fe646114217d00fbdf18b6eb304c8826b8b949d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265983"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725969"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtro, raggruppamento e ordinamento di dati (Generatore report e SSRS)
   In un report le espressioni vengono usate per facilitare il controllo, l'organizzazione e l'ordinamento di dati del report. Per impostazione predefinita, mentre si creano set di dati e si progetta il layout del report, le proprietà degli elementi del report vengono impostate automaticamente su espressioni basate su campi del set di dati, parametri e altri elementi visualizzati nel riquadro dei dati del report. È inoltre possibile aggiungere un pulsante di ordinamento interattivo a una tabella o una cella della matrice, in modo da consentire a un utente di modificare in modo interattivo l'ordinamento della riga per gruppi o righe all'interno di gruppi.  

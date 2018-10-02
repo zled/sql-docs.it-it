@@ -4,25 +4,19 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- integration-services
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a1ae2d9cad10a1b5d81a68b6455579347e34194
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24aeaa696a55feb7ad4e60889e2853a71f81f08b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677659"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lezione 2-1 - Compilazione dell'utilità di distribuzione
 In questa attività verrà configurata e compilata un'utilità di distribuzione per il progetto Deployment Tutorial.  

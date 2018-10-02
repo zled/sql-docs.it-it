@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
 - data processing extensions [Reporting Services], custom DataSet objects
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8963d289b2d99e494fb53a9f42d23fc38fb2a038
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c8a2e36f2a897be3c9ea7f37077ae5e947ace9bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281169"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685309"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Utilizzo di un set di dati esterno con Reporting Services
   L'oggetto **DataSet** è fondamentale per il supporto di scenari di dati disconnessi e distribuiti con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. L'oggetto **DataSet** è una rappresentazione di dati residente in memoria che offre un modello di programmazione relazionale coerente indipendentemente dall'origine dati. Questo oggetto può essere utilizzato con più origini dati diverse, con dati XML o per gestire i dati locali dell'applicazione. L'oggetto **DataSet** rappresenta un set di dati completo, che include tabelle correlate, vincoli e relazioni tra le tabelle. Grazie alla versatilità dell'oggetto **DataSet** nell'archiviazione e nell'esposizione dei dati, i dati possono spesso essere elaborati e trasformati in un oggetto **DataSet** prima della creazione di qualsiasi report con tali dati.  

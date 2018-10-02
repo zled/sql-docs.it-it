@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
-caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4024cb96f79d8132dafb44046b084756d847c238
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2420e494a312f64ba84edbd9a77b26be2a53e33b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921126"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659329"
 ---
 # <a name="backup-encryption"></a>Crittografia dei backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +134,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
-|Argomento/Attività|Description|  
+|Argomento/Attività|Descrizione|  
 |-----------------|-----------------|  
 |[Creare un backup crittografato](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|Vengono descritti i passaggi di base necessari per creare un backup crittografato|  
 |[Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Fornisce un esempio di creazione di un backup crittografato protetto da chiavi nell'insieme di credenziali delle chiavi di Azure.|  

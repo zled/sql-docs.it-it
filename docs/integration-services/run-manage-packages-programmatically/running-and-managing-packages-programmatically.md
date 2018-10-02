@@ -5,23 +5,18 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 814b3750f110a0d838632880c90b7dd2a396b294
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1e6dee6bea3a3d4c0c6cd5c2f7bb3f6ac51abe88
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409493"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656699"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Esecuzione e gestione dei pacchetti a livello di programmazione
   Se è necessario gestire ed eseguire pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] all'esterno dell'ambiente di sviluppo, è possibile modificare i pacchetti a livello di programmazione. Questo approccio rende disponibili diverse opzioni:  
@@ -43,7 +38,7 @@ ms.locfileid: "35409493"
   
  È inoltre possibile utilizzare lo spazio dei nomi per distribuire e gestire progetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per una panoramica dello spazio dei nomi e i frammenti di codice, vedere l'intervento sul blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](http://go.microsoft.com/fwlink/?LinkId=253122), su blogs.msdn.com.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Differenze tra l'esecuzione locale e remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
  Vengono descritte le differenze critiche tra l'esecuzione di un pacchetto in locale o nel server.  
   

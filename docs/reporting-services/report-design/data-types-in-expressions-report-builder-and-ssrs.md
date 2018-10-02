@@ -4,17 +4,16 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 205d970baa75e34a20633d2a746f40646dc3f2d8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 168bd862f78b10726b3d62146fa41a6a3620d16d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271666"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619980"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
   I tipi di dati rappresentano tipologie di dati diversi che possono essere archiviati ed elaborati in modo efficiente. I tipi di dati standard includono testo, noto anche come stringhe, numeri con e senza posizioni decimali, date e ore e immagini. I valori in un report devono essere costituiti da un tipo di dati RDL (Report Definition Language). È possibile formattare un valore in base alle proprie preferenze quando si lo visualizza in un report. Un campo che rappresenta la valuta, ad esempio, viene archiviato nella definizione del report come numero a virgola mobile, ma può essere visualizzato in diversi formati a seconda della proprietà di formattazione scelta.  

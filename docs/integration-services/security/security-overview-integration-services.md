@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4c6a5c0334798aeae16b4e6dc6f43c7d3209b0f
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 86272ee2bd936b84c72e6cbc3fd9083d2d1c39bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410753"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616489"
 ---
 # <a name="security-overview-integration-services"></a>Panoramica sulla sicurezza (Integration Services)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] la sicurezza è costituita da diversi livelli che forniscono un ambiente di sicurezza protetto e flessibile. Questi livelli di sicurezza includono l'uso di firme digitali, proprietà dei pacchetti, ruoli di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e autorizzazioni del sistema operativo. La maggior parte di queste caratteristiche di sicurezza rientra nelle categorie di identità e di controllo dell'accesso.  
@@ -135,7 +132,7 @@ ms.locfileid: "35410753"
   
  È importante limitare l'accesso ai computer che eseguono un servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soprattutto se si tratta di un servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente l'enumerazione di cartelle remote. Gli utenti autenticati possono richiedere l'enumerazione di pacchetti. Anche se il servizio non viene individuato, le cartelle vengono comunque enumerate dal servizio stesso. Questi nomi di cartella potrebbero essere sfruttati da un utente malintenzionato. Se un amministratore ha configurato il servizio in modo da consentire l'enumerazione di cartelle in un computer remoto, agli utenti potrebbero essere visualizzati anche i nomi di cartella in genere non visibili.  
 
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  Nell'elenco seguente sono contenuti collegamenti ad argomenti che illustrano come eseguire un'attività relativa alla sicurezza.  
   
 -   [Creazione di un ruolo definito dall'utente](../../integration-services/security/integration-services-roles-ssis-service.md#create)  

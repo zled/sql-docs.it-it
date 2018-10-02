@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.bulkinserttask.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c96d6c75ebf58b0e51e7a83402c99b37c8210d2e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1277c3ac24e434b9e51b58cd41a7cfb307bcf5ea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402713"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728839"
 ---
 # <a name="bulk-insert-task"></a>Inserimento bulk - attività
   L'attività Inserimento bulk rappresenta un modo efficiente per copiare grandi quantità di dati in una tabella o in una vista di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si supponga, ad esempio, che nella propria società venga usato un mainframe per archiviare l'elenco prodotti, che include un milione di righe, ma che il sistema e-commerce dell'azienda usi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per popolare le pagine Web. È necessario aggiornare la tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei prodotti durante la notte utilizzando l'elenco master dei prodotti del mainframe. A tale scopo è possibile salvare l'elenco prodotti in un file delimitato da tabulazione e utilizzare l'attività Inserimento bulk per copiare i dati direttamente nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -107,7 +104,7 @@ ms.locfileid: "35402713"
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>Contenuto correlato  

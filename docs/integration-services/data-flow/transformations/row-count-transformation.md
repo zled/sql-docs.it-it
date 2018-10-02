@@ -4,12 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- integration-services
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.rowcounttrans.f1
@@ -20,15 +16,15 @@ helpviewer_keywords:
 - variables [Integration Services], updating
 - counting rows
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0148a0b0844f0977ea89686692ae6a23ecc090e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b0f82fd5a2f3096094b509ce636f74b5ddd27bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698659"
 ---
 # <a name="row-count-transformation"></a>Conteggio righe - trasformazione
   La trasformazione Conteggio righe consente di contare le righe che passano attraverso un flusso di dati e di memorizzare il totale in una variabile.  
@@ -48,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  Per informazioni su come impostare le proprietà del componente, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Vedere anche  

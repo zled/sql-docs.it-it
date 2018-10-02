@@ -5,12 +5,8 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,16 +21,15 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9fff879e523baaf7955dd985cfc6453dfada8330
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f81faab9a9ef4e9ecfeb1438dc45e27bf963e8f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404003"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47671479"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Utilizzo degli output degli errori in un componente del flusso di dati
   Ai componenti è possibile aggiungere oggetti <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> speciali, denominati output degli errori, in modo che il componente possa reindirizzare le righe che non è in grado di elaborare durante l'esecuzione. I problemi che si possono verificare con un componente sono in genere classificati come errori o troncamenti e sono specifici per ogni componente. I componenti che forniscono output degli errori offrono agli utenti la flessibilità di gestire le condizioni di errore filtrando le righe di errore dal set di risultati, interrompendo il componente quando si verifica un problema oppure ignorando gli errori e continuando.  

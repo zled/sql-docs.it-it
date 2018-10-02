@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15fee158a98e3057e0e83913531f6712fa6ac201
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 88717ffe6cdb7711b1b9ca19a1f57edd5930b7e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280024"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664060"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Immagini, caselle di testo, rettangoli e linee (Generatore report e SSRS)
   Oltre alle aree dati quali tabelle, matrici e grafici, nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] vengono usati altri elementi, ad esempio immagini, caselle di testo e rettangoli, per aumentarne l'impatto visivo, evidenziare le informazioni più importanti o fornire informazioni correlate. È possibile modificare la formattazione di un elemento del report. È possibile, ad esempio, aggiungere un bordo o un riempimento, modificare la visibilità o la direzione iniziale oppure specificare valori esatti per le dimensioni e la posizione dell'elemento.  

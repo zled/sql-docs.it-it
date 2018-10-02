@@ -5,9 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backup headers [SQL Server]
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - restore history tables [SQL Server]
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd442f668c272795321a93d23faf2ae832673788
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8c19200923dc21e3000263095438a65b63a019a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922386"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684739"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Informazioni sulla cronologia e sull'intestazione del backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +69,7 @@ ms.locfileid: "32922386"
 ##  <a name="BnRHistoryTables"></a> Tabelle di cronologia di backup e ripristino  
  In questa sezione vengono fornite informazioni generali sulle tabelle di cronologia in cui vengono archiviati i metadati di backup e ripristino nel database di sistema **msdb** .  
   
-|Tabella di cronologia|Description|  
+|Tabella di cronologia|Descrizione|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Include una riga per ogni file di dati o di log di cui viene eseguito il backup.|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|Include una riga per ciascun filegroup di un set di backup.|  
@@ -92,7 +89,7 @@ ms.locfileid: "32922386"
 > [!IMPORTANT]  
 >  Per le istruzioni Transact-SQL RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY e RESTORE VERIFYONLY è richiesta l'autorizzazione CREATE DATABASE. Questo requisito consente di proteggere i file di backup in modo da rendere le informazioni di backup più sicure rispetto alle versioni precedenti. Per informazioni su questa autorizzazione, vedere [GRANT - autorizzazioni per database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-|Istruzione di tipo informativo|Tabella di cronologia di backup|Description|  
+|Istruzione di tipo informativo|Tabella di cronologia di backup|Descrizione|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Restituisce un set di risultati con l'elenco dei file di database e del log contenuti nel set di backup specificato.<br /><br /> Per ulteriori informazioni, vedere "Elenco dei file di database e dei file del log delle transazioni" di seguito in questo argomento.|  
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Recupera tutte le informazioni sull'intestazione del backup per tutti i set di backup di un dispositivo specifico. Il risultato dell'esecuzione di RESTORE HEADERONLY è un set di risultati.<br /><br /> Per ulteriori informazioni, vedere "Visualizzazione delle informazioni sull'intestazione del backup" di seguito in questo argomento.|  

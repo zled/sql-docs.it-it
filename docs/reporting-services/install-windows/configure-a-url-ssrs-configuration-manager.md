@@ -3,19 +3,18 @@ title: Configurare un URL (Gestione configurazione SSRS) | Microsoft Docs
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29e043681ec2976cf020f5af8d3e415d9e8b2ad9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bc385863afdd0ec6c9c5fb06799f8109f0c9cea7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274365"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645149"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurare un URL (Gestione configurazione SSRS)
   Per usare [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o il servizio Web ReportServer, è necessario configurare almeno un URL per ogni applicazione. La configurazione degli URL è obbligatoria se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato in modalità "solo file", ovvero se è stata selezionata l'opzione **Installa senza configurare il server** nella pagina Opzioni di installazione Server report dell'Installazione guidata. Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato con la configurazione predefinita, gli URL sono già configurati per ogni applicazione.  

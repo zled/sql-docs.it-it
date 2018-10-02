@@ -6,21 +6,18 @@ ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7fc57db9bc8a305450aa2619d9b7c222fda91763
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 0eb8532c10069f50283e13ab997560330dfa5a1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334085"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715369"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Scalabilità orizzontale di Integration Services (SSIS)
 SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out garantisce l'esecuzione ad alte prestazioni dei pacchetti SSIS mediante la distribuzione delle singole esecuzioni su più computer. Dopo aver impostato Scale Out è possibile avviare più esecuzioni di pacchetti in parallelo da SQL Server Management Studio (SSMS) in modalità di scalabilità orizzontale.

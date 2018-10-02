@@ -4,22 +4,19 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - subscriptions [Reporting Services], delivery extensions
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9207ea9e53c0b7ad63d5756d2d857de2f88b9ee0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6631a46891be5cc248dc39b2ba1e876826d95f48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276953"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675319"
 ---
 # <a name="delivery-extensions-overview"></a>Cenni preliminari sulle estensioni per il recapito
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente agli utenti di creare e pubblicare report che dopo la creazione e la pubblicazione possono essere recapitati in diverse posizioni. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include inoltre diverse estensioni per il recapito e un'API di recapito tramite cui gli sviluppatori possono creare estensioni per il recapito aggiuntive per estendere ulteriormente le funzionalità di recapito in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

@@ -4,12 +4,8 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- integration-services
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.filesystemtask.f1
@@ -17,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63b354be996722779bc44f27115eb8ed6f0f79a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 19d117028e03fb3223ee3448ca555531ad47d94d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633889"
 ---
 # <a name="file-system-task"></a>Attività File system
   L'attività File system consente di eseguire operazioni su file e directory nel file system. Tramite l'attività File system un pacchetto può ad esempio creare, spostare o eliminare file e directory. È inoltre possibile utilizzare l'attività File system per impostare attributi su file e directory, ad esempio per impostare file come nascosti o in sola lettura.  
@@ -37,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="predefined-file-system-operations"></a>Operazioni predefinite dell'attività File system  
  L'attività File system include un set predefinito di operazioni, descritte nella tabella seguente.  
   
-|Operazione|Description|  
+|Operazione|Descrizione|  
 |---------------|-----------------|  
 |Copia directory|Copia una cartella da un percorso a un altro.|  
 |Copia file|Copia un file da un percorso a un altro.|  
@@ -59,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>Voci di log personalizzate disponibili nell'attività File System  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività File system. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**FileSystemOperation**|Indica l'operazione eseguita dall'attività. Questa voce di log viene scritta all'inizio dell'operazione sul file system e include informazioni sull'origine e sulla destinazione.|  
   
@@ -80,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un'attività che consente di eseguire il download e il caricamento di file di dati, nonché di gestire directory sui server. Per altre informazioni, vedere [Attività FTP](../../integration-services/control-flow/ftp-task.md).  
   
 ## <a name="file-system-task-editor-general-page"></a>Editor attività File system (pagina Generale)
@@ -100,7 +96,7 @@ ms.lasthandoff: 05/03/2018
  **IsDestinationPathVariable**  
  Consente di specificare se il percorso di destinazione è archiviato in una variabile. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**True**|Il percorso di destinazione è archiviato in una variabile. Se si seleziona questo valore, viene visualizzata l'opzione dinamica **DestinationVariable**.|  
 |**False**|Il percorso di destinazione è specificato in una gestione connessione file. Se si seleziona questo valore, viene visualizzata l'opzione dinamica **DestinationConnection**.|  
@@ -120,7 +116,7 @@ ms.lasthandoff: 05/03/2018
  **Operazione**  
  Consente di selezionare l'operazione di file system da eseguire. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Copia directory**|Consente di copiare una directory. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine e la destinazione.|  
 |**Copia file**|Consente di copiare un file. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine e la destinazione.|  

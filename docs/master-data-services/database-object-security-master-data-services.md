@@ -5,25 +5,22 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 42f181035f2fffff06540d060ed4a179ab88f806
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 8ebd4835fe24846df21b887841813f7cac596f7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329105"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598166"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicurezza di oggetti di database (Master Data Services)
 
@@ -50,7 +47,7 @@ ms.locfileid: "35329105"
 ##  <a name="Staging"></a> Dati di gestione temporanea  
  Nella tabella seguente, in ogni entità a protezione diretta la parola 'name' fa parte del nome. Viene indicato il nome della tabella di staging specificato quando viene creata un'entità. Per altre informazioni, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-|Azione|Entità a protezione diretta|Autorizzazioni|  
+|Azione|Entità a protezione diretta|Permissions|  
 |------------|----------------|-----------------|  
 |Creare, aggiornare ed eliminare i membri foglia e i relativi attributi.|stg.name_Leaf|Obbligatoria: INSERT<br /><br /> Facoltative: SELECT e UPDATE|  
 |Caricare i dati dalla tabella di staging Foglia nelle tabelle di database MDS appropriate.|stg.udp_name_Leaf|EXECUTE|  
@@ -64,7 +61,7 @@ ms.locfileid: "35329105"
   
 ##  <a name="rules"></a> Convalida dei dati rispetto a regole business  
   
-|Azione|Entità a protezione diretta|Autorizzazioni|  
+|Azione|Entità a protezione diretta|Permissions|  
 |------------|---------------|-----------------|  
 |Convalidare una versione di dati rispetto a regole business|mdm.udpValidateModel|EXECUTE|  
   
@@ -72,7 +69,7 @@ ms.locfileid: "35329105"
   
 ##  <a name="Versions"></a> Eliminazione di versioni  
   
-|Azione|Entità a protezione diretta|Autorizzazioni|  
+|Azione|Entità a protezione diretta|Permissions|  
 |------------|----------------|-----------------|  
 |Determinare l'ID della versione che si desidera eliminare|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |Eliminare una versione di un modello|mdm.udpVersionDelete|EXECUTE|  
@@ -81,7 +78,7 @@ ms.locfileid: "35329105"
   
 ##  <a name="Hierarchy"></a> Applicazione immediata di autorizzazioni per membri della gerarchia  
   
-|Azione|Entità a protezione diretta|Autorizzazioni|  
+|Azione|Entità a protezione diretta|Permissions|  
 |------------|----------------|-----------------|  
 |Applicare immediatamente autorizzazioni per membri|mdm.udpSecurityMemberProcessRebuildModel|EXECUTE|  
   

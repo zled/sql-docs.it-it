@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, administering
@@ -17,22 +14,21 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 - merge replication [SQL Server replication], administering
 ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bda8d8ed1a5e4ea2af9c7efefafa281285182e8
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: c8f676301eaa73b6f0eadbca62bc92b6726239f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357113"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729389"
 ---
 # <a name="administration-replication"></a>Amministrazione (replica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questa sezione vengono fornite informazioni sull'amministrazione delle topologie di replica. È consigliabile leggere innanzitutto l'argomento relativo contenente le procedure consigliate, quindi utilizzare i collegamenti disponibili nell'argomento che rimandano a informazioni più dettagliate incluse in questa e in altre sezioni.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedure consigliate per l'amministrazione della replica](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
  Descrive una serie di procedure consigliate e fornisce informazioni su backup e ripristino, monitoraggio, prestazioni e attività di manutenzione.  
   

@@ -5,12 +5,8 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -18,16 +14,15 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - sources [Integration Services], components
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec6e60970637a0c4b681e333aaf6566427094782
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 73ae0b025ff20bd7b269329b8045816de97d6888
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403583"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651359"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Creazione di un'origine con il componente script
   Utilizzare un componente di origine nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per caricare dati da un'origine dati da passare a trasformazioni e destinazioni a valle. Normalmente, ci si connette all'origine dati tramite una gestione connessione esistente.  

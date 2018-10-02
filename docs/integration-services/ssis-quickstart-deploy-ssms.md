@@ -1,23 +1,20 @@
 ---
 title: Distribuire un progetto SSIS con SSMS | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
-ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d93e2d18fa2d13106ae0add8c9be5bfe269602e3
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 06a8c045c9bd8e51a1ae924ec81cbdebcbf040da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455346"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605939"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Distribuire un progetto SSIS con SQL Server Management Studio (SSMS)
 Questa guida introduttiva illustra come usare SQL Server Management Studio (SSMS) per connettersi al database del catalogo SSIS e quindi eseguire la Distribuzione guidata di Integration Services per distribuire un progetto SSIS nel catalogo SSIS. 
@@ -47,7 +44,7 @@ Non è possibile usare le informazioni di questa guida introduttiva per distribu
 Per distribuire il progetto nel database SQL di Azure, ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSIS (SSISDB). Nelle procedure che seguono sono necessari il nome completo del server e le informazioni di accesso.
 
 1. Accedere al [portale di Azure](https://portal.azure.com/).
-2. Selezionare **Database SQL** nel menu a sinistra, quindi selezionare il database SSISDB nella pagina dei **database SQL**. 
+2. Selezionare **Database SQL** nel menu a sinistra e quindi il database SSISDB nella pagina **Database SQL**. 
 3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**. 
 4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
 
@@ -96,7 +93,7 @@ Usare SQL Server Management Studio per stabilire una connessione al catalogo SSI
     -   Immettere il nome completo del server. Se il server di destinazione è un server del database SQL di Azure, il nome è nel formato `<server_name>.database.windows.net`.
     -   Specificare le informazioni di autenticazione e quindi selezionare **Connetti**. Vedere [Metodi di autenticazione della Distribuzione guidata](#wizard_auth) in questo articolo.
     -   Selezionare **Sfoglia** per selezionare la cartella di destinazione in SSISDB.
-    -   Quindi selezionare **Avanti** per aprire la pagina **Verifica**. Il pulsante **Avanti** è abilitato solo dopo che è stato selezionato **Connetti**.
+    -   In seguito selezionare **Successivo** per aprire la pagina **Verifica**. Il pulsante **Successivo** viene abilitato solo dopo che è stato selezionato **Connetti**.
   
 4.  Nella pagina **Verifica** rivedere le impostazioni selezionate.
     -   È possibile modificare le selezioni facendo clic su **Indietro**o selezionando un qualsiasi passaggio nel riquadro sinistro.

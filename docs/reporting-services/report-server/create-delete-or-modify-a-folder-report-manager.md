@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - removing folders
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec8bc029591a9c693016cfd512190bb5128fc8b9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 437116ae427f9d5ed6492962ad290b496f7b1090
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279983"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666839"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Creare, eliminare o modificare una cartella (Gestione report)
   È possibile creare cartelle per organizzare e gestire gli elementi pubblicati in un server di report. La creazione di cartelle consente agli utenti di individuare in modo semplice i report desiderati. Per gli utenti con ruolo di gestione del contenuto, le cartelle costituiscono una struttura per l'applicazione di autorizzazioni. È possibile creare assegnazioni di ruolo su cartelle specifiche per limitare l'accesso a report in fase di sviluppo o che non devono essere distribuiti su larga scala.  
@@ -34,7 +33,7 @@ ms.locfileid: "43279983"
   
      Verrà visualizzata la pagina **Nuova cartella** .  
   
-3.  Digitare il nome della cartella. I nomi di cartella possono includere spazi, ma non caratteri riservati utilizzati per la codifica degli URL, ad esempio ; ? : \@ & = + , $ / * < > |. Non è possibile digitare una serie di nomi di cartella per creare più cartelle contemporaneamente.  
+3.  Digitare il nome della cartella. I nomi di cartella possono includere spazi, ma non caratteri riservati usati per la codifica degli URL: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. Non è possibile digitare una serie di nomi di cartella per creare più cartelle contemporaneamente.  
   
 4.  Se lo si desidera, digitare una descrizione.  
   

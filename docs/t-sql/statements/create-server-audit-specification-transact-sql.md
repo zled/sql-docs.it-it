@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_SERVER_AUDIT_SPECIFICATION_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CREATE SERVER AUDIT SPECIFICATION statement
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 913980e1aedfe47f38ab2575dd8e21c8b4961a93
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 144bc0915836fadf0965a305d8d10014106a85b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941417"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598450"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +62,7 @@ FOR SERVER AUDIT audit_name
 ## <a name="remarks"></a>Remarks  
  È necessario che un controllo esista prima che sia possibile creare la specifica del controllo del server. Quando viene creata una specifica del controllo del server, il relativo stato è disabilitato.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Gli utenti che dispongono dell'autorizzazione ALTER ANY SERVER AUDIT possono creare specifiche del controllo del server e associarle a qualsiasi controllo.  
   
  Dopo essere stata creata, la specifica del controllo del server può essere visualizzata dalle entità che dispongono dell'autorizzazione CONTROL SERVER oALTER ANY SERVER AUDIT o dell'account sysadmin oppure dalle entità che possono accedere esplicitamente al controllo.  

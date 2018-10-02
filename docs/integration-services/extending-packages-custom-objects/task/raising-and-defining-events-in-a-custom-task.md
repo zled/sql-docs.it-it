@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -27,15 +22,15 @@ helpviewer_keywords:
 - SSIS events, runtime
 - IDTSEvents interface
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d555471e59b8b968acd34b61a382c9c870055812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2ebd7391908190a113689816b09582d4a7992a2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727269"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Generazione e definizione di eventi in un'attività personalizzata
   Il motore di runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include una raccolta di eventi che forniscono lo stato di avanzamento durante la convalida e l'esecuzione di un'attività. L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> definisce questi eventi e viene fornita alle attività come parametro per i metodi <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>.  

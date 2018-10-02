@@ -3,7 +3,6 @@ title: Installazione di tipo "solo file" (Reporting Services) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - files-only installation [Reporting Services]
@@ -11,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c55108cab5fb57dbcca1e9f1ab2d3fd9d45489d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 510c5dc33aa70f988b5f69e66fd93d5f4aaf4ebd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266279"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666879"
 ---
 # <a name="files-only-installation-reporting-services"></a>Installazione di tipo "solo file" (Reporting Services)
   Con*installazione di tipo "solo file"* si intende un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in cui il programma di installazione crea la struttura di cartelle per i file di programma di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , copia i file su disco, registra il servizio del server di report nel computer locale, configura l'account del servizio, concede autorizzazioni file all'account del servizio e registra il provider WMI per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

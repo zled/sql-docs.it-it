@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e417d14e4c46172fc93eb4f0e386d4e211dee989
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c93c32d70ccc2cf1180b44e16c5983d584b2b19b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279993"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616070"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Associare un report a un'origine dati condivisa (SSRS)
   In alcune situazioni, ad esempio quando si sposta un report da un server di test a uno di produzione, può essere necessario salvare il file nel computer locale e quindi caricarlo in un altro server di report. Quando si carica il report nel nuovo server è necessario riassociarlo a un'origine dati condivisa archiviata nel nuovo server di report. Se il report non viene riassociato non funzionerà correttamente quando vi si accede dal nuovo server di report.  

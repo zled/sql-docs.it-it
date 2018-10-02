@@ -5,23 +5,18 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2ea8d3986a01f9f611058b3104dbf2ad21170e81
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: af4c525e2ce481b8053804d49f194449ed6cf58d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312760"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728259"
 ---
 # <a name="building-packages-programmatically"></a>Compilazione di pacchetti a livello di programmazione
   Se è necessario creare pacchetti in modo dinamico oppure gestire ed eseguire pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] all'esterno dell'ambiente di sviluppo, è possibile modificare i pacchetti a livello di programmazione. Questo approccio rende disponibili diverse opzioni:  
@@ -41,7 +36,7 @@ ms.locfileid: "35312760"
 > [!NOTE]  
 >  Quando si utilizza un pacchetto esistente come modello e si modificano le colonne esistenti nel flusso di dati, può essere necessario rimuovere le colonne esistenti e chiamare il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> dei componenti interessati.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Creazione di un pacchetto a livello di programmazione](../../integration-services/building-packages-programmatically/creating-a-package-programmatically.md)  
  Viene descritto come creare un pacchetto a livello di programmazione.  
   

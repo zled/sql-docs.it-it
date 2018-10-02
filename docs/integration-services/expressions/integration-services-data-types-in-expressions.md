@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b3766c3cdad4998d8d5b57c7b2d69bc1fb2d03ce
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 0cb8e9f1df15d2bed2409e6ea8f82de4b39042d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402963"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642699"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipi di dati nelle espressioni di Integration Services
   L'analizzatore di espressioni usa i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La prima volta che i dati entrano nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] il motore del flusso di dati converte i dati di tutte le colonne in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , mentre i dati delle colonne utilizzate da un'espressione hanno già un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le espressioni utilizzate nelle trasformazioni Suddivisione condizionale e Colonna derivata possono fare riferimento alle colonne perché fanno parte di un flusso di dati che include dati di colonna.  
@@ -133,7 +130,7 @@ ms.locfileid: "35402963"
   
  I risultati di molte operazioni e funzioni hanno un tipo di dati predeterminato, che può essere il tipo di dati dell'argomento o il tipo di dati a cui l'analizzatore di espressioni esegue il cast del risultato. Il risultato di un operatore OR logico (||), ad esempio, è sempre un valore booleano, mentre il risultato della funzione ABS è il tipo di dati numeric dell'argomento e il risultato di una moltiplicazione è il più piccolo tipo di dati numeric in grado di contenere il risultato senza causare una perdita di dati. Per altre informazioni sui tipi di dati dei risultati, vedere [Operatori &#40;espressione SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md) e [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Utilizzo di un'espressione in un componente flusso di dati](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenuto correlato  

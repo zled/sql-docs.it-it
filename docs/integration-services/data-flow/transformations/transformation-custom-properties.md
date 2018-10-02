@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -41,16 +39,15 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96c1a70d341160c4916fcfe2a067b4da79df2021
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: cee76028cbc0e416b320a8042eaf577dfeb621ec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332205"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722939"
 ---
 # <a name="transformation-custom-properties"></a>proprietà personalizzate della trasformazione
   Oltre alle proprietà comuni alla maggior parte degli oggetti del flusso di dati nel modello a oggetti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , molti oggetti del flusso di dati hanno proprietà personalizzate specifiche dell'oggetto. Tali proprietà personalizzate sono disponibili solo in fase di esecuzione e non sono trattate nella documentazione di riferimento relativa alla programmazione gestita in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
