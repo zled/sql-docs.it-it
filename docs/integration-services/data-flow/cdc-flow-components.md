@@ -4,23 +4,19 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- integration-services
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a95bd32614faeb7cade10a701819b3109d72dca4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78d5b8b15d9a063646e9a68e3a77c08166ffde8f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828599"
 ---
 # <a name="cdc-flow-components"></a>Componenti di flusso CDC
   I componenti Change Data Capture di Attunity per Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] consentono agli sviluppatori SSIS di utilizzare CDC e riducono la complessità dei pacchetti CDC.  
@@ -174,7 +170,7 @@ Al termine dell'installazione dei componenti, viene visualizzato un messaggio. F
 ## <a name="cdc-state"></a>Stato CDC  
  Ad ogni gruppo CDC è associato uno stato, rappresentato da una stringa con un formato specifico. Per altre informazioni, vedere [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md). Nella tabella seguente vengono illustrati i possibili valori dello stato CDC.  
   
-|State|Description|  
+|State|Descrizione|  
 |-----------|-----------------|  
 |0-(INITIAL)|Lo stato esistente prima dell'esecuzione di qualsiasi pacchetto nel gruppo CDC corrente. È anche lo stato quando lo stato CDC è vuoto.<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md).|  
 |1-ILSTART (Initial-Load-Started)|Si tratta dello stato esistente quando il pacchetto di caricamento iniziale viene avviato. Si verifica dopo la chiamata dell'attività di controllo CDC dall'operazione **MarkInitialLoadStart** .<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md).|  
@@ -193,13 +189,13 @@ Al termine dell'installazione dei componenti, viene visualizzato un messaggio. F
   
  Dopo avere eseguito correttamente il pacchetto di caricamento iniziale, il pacchetto di aggiornamento Trickle-Feed viene eseguito ripetutamente in base a una pianificazione predeterminata per elaborare le modifiche alle tabelle di origine. Ogni esecuzione del pacchetto di aggiornamento Trickle-Feed è un'esecuzione CDC.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Origine CDC](../../integration-services/data-flow/cdc-source.md)  
   
 -   [CDC Splitter](../../integration-services/data-flow/cdc-splitter.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 -   [Indirizzare il flusso CDC in base al tipo di modifica](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   

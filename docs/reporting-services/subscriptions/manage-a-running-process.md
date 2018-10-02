@@ -4,7 +4,6 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], status information
@@ -26,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1c49c84b16e5655b600eb880c3547d81ed9c4608
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 74a041097f0bd4d8ac824fcb24a21f2ff19339ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268867"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699859"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di monitorare lo stato dei processi in esecuzione nel server di report. Tramite il server di report viene effettuata un'analisi a intervalli regolari dei processi in corso e vengono scritte informazioni sullo stato nel database del server di report o nei database dell'applicazione di servizio per la modalità SharePoint. Un processo è considerato in corso se è in esecuzione una delle operazioni seguenti, ovvero esecuzione di query su un server di database locale o remoto, elaborazione di report e rendering di report.  

@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdafb729fcdc18b50f2a88a42c2bd4cf9b98adf2
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 790542daa3cf69f5d1cd149a3356545fe69b03e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332935"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733869"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mapping colonne (Importazione/Esportazione guidata SQL Server)
   Dopo aver selezionato le tabelle e le viste esistenti per copiare o rivedere la query fornita, fare clic su **Modifica mapping**per consentire a Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di visualizzare la finestra di dialogo **Mapping colonne** . In questa pagina è necessario specificare e configurare le colonne di destinazione per ricevere i dati copiati dalle colonne di origine. Spesso non è necessario apportare modifiche in questa pagina.

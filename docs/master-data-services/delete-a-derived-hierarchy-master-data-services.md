@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting derived hierarchies [Master Data Services]
 - derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 31d7deb101769d4892f761dfaf1e1d0b6d36dc2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae33c97b14c32a34e5e921b510707048b1f64a9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769739"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Eliminare una gerarchia derivata (Master Data Services)
 

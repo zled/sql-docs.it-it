@@ -4,17 +4,16 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8d5240e64e5b69c187e64cf25324394b108b04ba
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8771bb0ea61d33bddc57896ffeeb36e9acd80a74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276639"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785359"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Controllo delle intestazioni di riga e di colonna (Generatore report e SSRS)
   Una tabella, una matrice o un'area dati elenco possono estendersi orizzontalmente o verticalmente in più pagine. È possibile specificare se ripetere le intestazioni di riga o di colonna in ogni pagina. In un renderer interattivo come il portale Web o un'anteprima del report è anche possibile specificare se bloccare le intestazioni di riga o di colonna per mantenerle visualizzate quando si scorre un report in senso orizzontale o verso il basso. Nella prima riga di una tabella o di una matrice in genere sono contenute intestazioni di colonna che identificano i dati di ogni colonna, mentre nella prima colonna sono contenute intestazioni di riga che identificano i dati di ogni riga. Per i gruppi nidificati, è possibile ripetere il set iniziale di intestazioni di riga e di colonna contenenti etichette di gruppo. Per impostazione predefinita, in un'area dati elenco non sono incluse intestazioni.  

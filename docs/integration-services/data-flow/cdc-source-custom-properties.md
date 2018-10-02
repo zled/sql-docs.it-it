@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- integration-services
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcee03fe6f2f465df777d3124003c18a228bbf09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e399e410a39bf54e568af12eec1308dd6012063f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728739"
 ---
 # <a name="cdc-source-custom-properties"></a>Proprietà personalizzate dell'origine CDC
   Nella tabella seguente vengono descritte le proprietà personalizzate dell'origine CDC. Tutte le proprietà sono di lettura/scrittura.  
   
-|Nome proprietà|Tipo di dati|Description|  
+|Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
 |Connessione|ADO.Net Connection|Connessione ADO.NET al database CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per l'accesso alle tabelle delle modifiche.|  
 |StateVariable|String|Variabile del pacchetto di stringhe SSIS che gestisce lo stato CDC dell'esecuzione CDC corrente.|  

@@ -4,7 +4,6 @@ ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
@@ -16,12 +15,12 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db1356dd296ab2936ab67de9cf72cfdf61fd5284
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 52e879b6b5cbfcd38b2532391f1640f2b8f85681
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266229"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681489"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parametri report (Generatore report e Progettazione report)
   Questo argomento descrive gli usi comuni per i parametri di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , le proprietà che è possibile impostare e altre informazioni. I parametri del report consentono di controllare i dati del report, connettere report correlati e variare la presentazione del report. È possibile usare i parametri del report nei report impaginati creati in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e Progettazione report, nonché nei report per dispositivi mobili creati in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Altre informazioni sui [Concetti relativi ai parametri di report](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  

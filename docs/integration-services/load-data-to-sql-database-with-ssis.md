@@ -4,22 +4,20 @@ description: Questo articolo illustra come creare un pacchetto di SQL Server Int
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.technology: integration-services
 ms.devlang: NA
 ms.topic: conceptual
-ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: ab5ce3238285cbe687b2608edb5236d460baa197
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 8151b4e46e3a36eebc54642075aeb9b8648ac927
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40411860"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705499"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Caricare dati in SQL Server o nel database SQL di Azure con SQL Server Integration Services (SSIS)
 
@@ -60,7 +58,7 @@ Per eseguire questa esercitazione, sono necessari:
 3. **SQL Server Data Tools per Visual Studio (SSDT)**. Per ottenere SQL Server Data Tools per Visual Studio, vedere [Scaricare SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
 4. In questa esercitazione ci si connette a un'istanza di SQL Server o del database SQL e si caricano i dati. È necessario avere le autorizzazioni per connettersi, creare una tabella e caricare i dati nelle seguenti destinazioni:
    - **Un database SQL di Azure**. Per altre informazioni, vedere [Database SQL di Azure](/azure/sql-database/).  
-      oppure
+      o Gestione configurazione
    - **Un'istanza di SQL Server**. SQL Server può essere eseguito in locale o in una macchina virtuale di Azure. Per scaricare una versione di valutazione gratuita o un'edizione per sviluppatori di SQL Server, vedere [Download di SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 5. **Dati di esempio**. Questa esercitazione usa come dati di origine i dati di esempio archiviati in SQL Server, nel database di esempio AdventureWorks. Per ottenere il database di esempio AdventureWorks, vedere [Database di esempio AdventureWorks][AdventureWorks 2014 Sample Databases].

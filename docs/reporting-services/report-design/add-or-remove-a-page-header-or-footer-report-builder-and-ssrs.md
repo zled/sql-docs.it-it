@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b9228cd584a2db925f3092638ebf56aa4c678f84
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: be9b19dc11917de04b00592d1dbfdb22b54cd742
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268793"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790879"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Aggiungere o rimuovere un'intestazione o un piè di pagina (Generatore report e SSRS)
   È possibile aggiungere testo statico, immagini, linee, rettangoli e bordi a intestazioni di pagina o piè di pagina. È possibile posizionare espressioni e immagini con associazioni a dati in una casella di testo se si desiderano dati variabili o calcolati in un'intestazione o in un piè di pagina.  

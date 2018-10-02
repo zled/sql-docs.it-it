@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE VIEW
@@ -36,17 +34,16 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-caps.latest.revision: 85
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6d9ffdfee5a7347570fc6797d43dabc0beb9d4a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 25b196ffefd3319b96865ebef92bd778bf72ceb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102319"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808459"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,7 +148,7 @@ OR ALTER
  Esegue la crittografia delle voci della tabella [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) contenenti il testo dell'istruzione CREATE VIEW. Se si utilizza WITH ENCRYPTION, la vista non viene pubblicata nell'ambito della replica di SQL Server.  
   
  SCHEMABINDING  
- Associa la vista allo schema della tabella o delle tabelle sottostanti. Quando la clausola SCHEMABINDING viene specificata, non è possibile apportare alla tabella o alle tabelle di base modifiche che hanno effetto sulla definizione della vista. È necessario prima modificare o eliminare la definizione della vista per rimuovere le dipendenze dalla tabella da modificare. Quando si usa SCHEMABINDING, l'argomento *select_statement* deve includere i nomi composti da due parti (*schema ***.*** object*) delle tabelle, delle visualizzazioni o delle funzioni definite dall'utente a cui viene fatto riferimento. Tutti gli oggetti a cui viene fatto riferimento devono essere presenti nello stesso database.  
+ Associa la vista allo schema della tabella o delle tabelle sottostanti. Quando la clausola SCHEMABINDING viene specificata, non è possibile apportare alla tabella o alle tabelle di base modifiche che hanno effetto sulla definizione della vista. È necessario prima modificare o eliminare la definizione della vista per rimuovere le dipendenze dalla tabella da modificare. Quando si usa SCHEMABINDING, l'argomento *select_statement* deve includere i nomi composti da due parti (_schema_**.**_object_) delle tabelle, delle viste o delle funzioni definite dall'utente a cui viene fatto riferimento. Tutti gli oggetti a cui viene fatto riferimento devono essere presenti nello stesso database.  
   
  Le viste o le tabelle che fanno parte di una vista creata con la clausola SCHEMABINDING non possono essere eliminate, a meno che la vista non venga eliminata o modificata in modo che non sia più associata a uno schema. In caso contrario, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene generato un errore. Inoltre, l'esecuzione di istruzioni ALTER TABLE su tabelle che fanno parte di viste associate a schema ha esito negativo se tali istruzioni modificano la definizione della vista.  
   

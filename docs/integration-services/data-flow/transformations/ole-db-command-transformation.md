@@ -4,12 +4,8 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- integration-services
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.oledbcommandtrans.f1
@@ -17,15 +13,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f0f455371c8ce7c5a2f5b7a02b9dc9e5d712f2d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3913196ff2d9ea967915a5e61ab2d2aafee9f22
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799876"
 ---
 # <a name="ole-db-command-transformation"></a>Comando OLE DB - trasformazione
   La trasformazione Comando OLE DB esegue un'istruzione SQL per ogni riga in un flusso di dati. È ad esempio possibile eseguire un'istruzione SQL che inserisce, aggiorna o elimina righe in una tabella di database.  
@@ -51,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="logging"></a>Registrazione  
  È possibile registrare le chiamate eseguite dalla trasformazione Comando OLE DB a provider di dati esterni. Questa nuova funzionalità di registrazione può essere utilizzata per risolvere i problemi relativi alle connessioni e ai comandi a origini dati esterne impartiti dalla trasformazione Comando OLE DB. Per registrare le chiamate eseguite dalla trasformazione Comando OLE DB a provider di dati esterni, abilitare la registrazione dei pacchetti e selezionare l'evento **Diagnostic** a livello del pacchetto. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  È possibile configurare la trasformazione utilizzando Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o il modello a oggetti. Vedere la Guida per gli sviluppatori per informazioni dettagliate sulla configurazione a livello di codice di questa trasformazione.  
   
 ## <a name="configure-the-ole-db-command-transformation"></a>Configurazione della trasformazione Comando OLE DB

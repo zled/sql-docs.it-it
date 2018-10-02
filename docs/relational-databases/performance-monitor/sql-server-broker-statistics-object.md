@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Broker Statistics
 - Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a3d221c9f2d3b7e9e1c91d9b11d21afc537856c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6244e3f3ab3d04c24fa54ab7769a0fc707825e1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32954022"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732495"
 ---
 # <a name="sql-server-broker-statistics-object"></a>Oggetto Statistiche Broker di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Nell'oggetto prestazione SQLServer:Statistiche Broker sono inclusi contatori delle prestazioni che contengono informazioni generali su [!INCLUDE[ssSB](../../includes/sssb-md.md)] per un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto:  
   
-|Contatori dell'oggetto Statistiche Broker di SQL Server|Description|  
+|Contatori dell'oggetto Statistiche Broker di SQL Server|Descrizione|  
 |-------------------------------------------|-----------------|  
 |**Totale errori di attivazione**|Numero di volte in cui una stored procedure di attivazione di [!INCLUDE[ssSB](../../includes/sssb-md.md)] termina con un errore.|  
 |**Rollback transazioni Broker**|Numero di transazioni di cui è stato eseguito il rollback contenenti istruzioni DML correlate a [!INCLUDE[ssSB](../../includes/sssb-md.md)], ad esempio SEND e RECEIVE.|  

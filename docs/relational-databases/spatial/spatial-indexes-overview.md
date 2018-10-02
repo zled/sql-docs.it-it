@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6338a060ca3e5ab3f7e2f7a73b4a9a1fd9538c9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 40464a10cd58e870070636919f6f570efac97aa0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102983"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725169"
 ---
 # <a name="spatial-indexes-overview"></a>Panoramica degli indici spaziali
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +103,7 @@ ms.locfileid: "43102983"
   
  Ad esempio, nell'illustrazione precedente viene mostrato un ottagono che si inserisce perfettamente nella cella 15 della griglia di livello 1. Nella figura, la cella 15 è stata suddivisa a mosaico, sezionando l'ottagono in nove celle di livello 2. In questa illustrazione si presuppone che il limite di celle per oggetto sia 9 o più. Se tuttavia il limite di celle per oggetto è pari o inferiore a 8, la cella 15 non viene suddivisa e viene conteggiata da sola per l'oggetto.  
   
- Per impostazione predefinita il limite di celle per oggetto è pari a 16, una soluzione intermedia soddisfacente tra spazio e precisione per la maggior parte di indici spaziali. L'istruzione [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] supporta tuttavia una clausola CELLS_PER_OBJECT**=***n* che consente di specificare un limite di celle per oggetto compreso tra 1 a 8192 (inclusi).  
+ Per impostazione predefinita il limite di celle per oggetto è pari a 16, una soluzione intermedia soddisfacente tra spazio e precisione per la maggior parte di indici spaziali. Tuttavia, l'istruzione [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] supporta una clausola CELLS_PER_OBJECT**=**_n_ che consente di specificare un limite di celle per oggetto compreso tra 1 e 8192 inclusi.  
   
 > [!NOTE]  
 >  L'impostazione **cells_per_object** di un indice spaziale è visibile nella vista del catalogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
@@ -136,7 +132,7 @@ ms.locfileid: "43102983"
 >  È possibile specificare in modo esplicito questo schema a mosaico con la clausola USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) dell'istruzione [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ##### <a name="the-bounding-box"></a>Riquadro  
- I dati geometrici occupano un piano che può essere infinito. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia, un indice spaziale richiede uno spazio finito. Per stabilire uno spazio finito per la scomposizione, lo schema a mosaico per la griglia di geometria richiede un *riquadro*rettangolare. Il rettangolo di selezione è definito da quattro coordinate, **(***x-min***,***y-min***)** e **(***x-max***,***y-max***)**, che sono archiviate come proprietà dell'indice spaziale. Queste coordinate rappresentano gli elementi seguenti:  
+ I dati geometrici occupano un piano che può essere infinito. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia, un indice spaziale richiede uno spazio finito. Per stabilire uno spazio finito per la scomposizione, lo schema a mosaico per la griglia di geometria richiede un *riquadro*rettangolare. Il rettangolo di selezione è definito da quattro coordinate, **(**_x-min_**,**_y-min_**)** e **(**_x-max_**,**_y-max_**)**, che sono archiviate come proprietà dell'indice spaziale. Queste coordinate rappresentano gli elementi seguenti:  
   
 -   *x-min* è la coordinata x dell'angolo inferiore sinistro del rettangolo di selezione.  
   
@@ -149,11 +145,11 @@ ms.locfileid: "43102983"
 > [!NOTE]  
 >  Queste coordinate sono specificate dalla clausola BOUNDING_BOX dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
- Le coordinate **(***x-min***,***y-min***)** e **(***x-max***,***y-max***)** determinano la posizione e le dimensioni del rettangolo di selezione. Lo spazio al di fuori del riquadro viene considerato come una cella unica numerata con 0.  
+ Le coordinate **(**_x-min_**,**_y-min_**)** e **(**_x-max_**,**_y-max_**)** determinano la posizione e le dimensioni del rettangolo di selezione. Lo spazio al di fuori del riquadro viene considerato come una cella unica numerata con 0.  
   
  L'indice spaziale scompone lo spazio nel riquadro. che viene riempito dalla griglia di livello 1 della gerarchia di griglie. Per posizionare un oggetto geometrico nella gerarchia di griglie, l'indice spaziale confronta le coordinate dell'oggetto con quelle del riquadro.  
   
- La figura seguente illustra i punti definiti dalle coordinate **(***x-min***,***y-min***)** e **(***x-max***,***y-max***)** del rettangolo di selezione. Il livello superiore della gerarchia di griglie viene mostrato come una griglia 4x4. Ai fini dell'illustrazione, i livelli inferiori sono omessi. Lo spazio al di fuori del riquadro è indicato da uno zero (0). L'oggetto 'A' si estende in parte oltre il riquadro e l'oggetto 'B' si trova completamente al di fuori del riquadro nella cella 0.  
+ La figura seguente illustra i punti definiti dalle coordinate **(**_x-min_**,**_y-min_**)** e **(**_x-max_**,**_y-max_**)** del rettangolo di selezione. Il livello superiore della gerarchia di griglie viene mostrato come una griglia 4x4. Ai fini dell'illustrazione, i livelli inferiori sono omessi. Lo spazio al di fuori del riquadro è indicato da uno zero (0). L'oggetto 'A' si estende in parte oltre il riquadro e l'oggetto 'B' si trova completamente al di fuori del riquadro nella cella 0.  
   
  ![Rettangolo di selezione contenente le coordinate e la cella 0.](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Rettangolo di selezione contenente le coordinate e la cella 0.")  
   
