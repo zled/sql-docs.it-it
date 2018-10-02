@@ -4,10 +4,7 @@ ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Web service [Reporting Services], omitted values
 - XML Web service [Reporting Services], omitted values
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ceb68b8b-9214-4745-abc9-f47f33ecd6f7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9a808bb6f325cf487552ebfb315c669e862b2ee7
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4d9a155ee59beb30adb14608a3216006739b14f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269869"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725819"
 ---
 # <a name="omitting-values-for-optional-web-service-objects"></a>Omissione di valori per gli oggetti del servizio Web facoltativi
   Alle proprietà di diversi tipi complessi del servizio Web ReportServer è associata una proprietà nota come proprietà Specified. Il nome della proprietà è costituito dal nome della proprietà originale con l'aggiunta della parola "Specified". La presenza di questa proprietà indica che, a volte, è possibile omettere un valore per la proprietà originale. Si tratta di un risultato diretto della conversione da WSDL (Web Service Description Language) a una classe proxy [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Ad esempio, alla proprietà del servizio Web <xref:ReportService2010.DataSourceDefinition.Enabled%2A> del tipo complesso <xref:ReportService2010.DataSourceDefinition> è associata una proprietà denominata <xref:ReportService2010.DataSourceDefinition.EnabledSpecified%2A>. Se si compila un'applicazione e non si vuole impostare un valore per la proprietà <xref:ReportService2010.DataSourceDefinition.Enabled%2A>, non è necessario specificare un valore per <xref:ReportService2010.DataSourceDefinition.Enabled%2A>; verrà usato il valore predefinito **true**. È tuttavia necessario impostare <xref:ReportService2010.DataSourceDefinition.EnabledSpecified%2A> su **false**. Se si specifica un valore per la proprietà <xref:ReportService2010.DataSourceDefinition.Enabled%2A>, è necessario impostare anche <xref:ReportService2010.DataSourceDefinition.EnabledSpecified%2A> su **true**. È il caso delle proprietà scrivibili. Per le proprietà di sola lettura, non è necessaria alcuna azione.  

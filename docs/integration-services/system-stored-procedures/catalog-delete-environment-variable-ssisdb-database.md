@@ -4,23 +4,19 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- integration-services
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6101b37b0f307c44a3c23d7bff875c782cd1b6bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33137ce59bdafa567b1f675ddaa06cf59cd0b6fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752189"
 ---
 # <a name="catalogdeleteenvironmentvariable-ssisdb-database"></a>catalog.delete_environment_variable (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +47,7 @@ delete_environment_variable [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>Set di risultati  
  None  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazioni READ e MODIFY sull'ambiente  

@@ -5,25 +5,22 @@ ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-caps.latest.revision: 15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 17d4db723ab0cfbb7a8974460e0385f7cbebcd3b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 09b7d5894f46bca7b493601d9a7df40ed4c0935a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335355"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668079"
 ---
 # <a name="transactions-master-data-services"></a>Transazioni (Master Data Services)
 
@@ -91,7 +88,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
  Più utenti possono aggiornare gli stessi valori dell'entità senza errore, nonostante transazioni abilitate. In genere, l'ultima modifica al valore in una sequenza di tempo avrà la precedenza. Il conflitto duplicato delle modifiche può essere osservato manualmente nella cronologia delle transazioni e invertito manualmente dall'amministratore. La cronologia delle transazioni mostra le singole transazioni in base a **Valore precedente** e **Nuovo valore** per l'attributo in questione di ogni sessione, ma non risolve automaticamente il conflitto se esistono più valori **Nuovi valori** per lo stesso valore precedente.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

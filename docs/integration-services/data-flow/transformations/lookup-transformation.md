@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.lookuptrans.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8a7f9c717006eec8d1ee7deb4e807709b124ced
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 4621685d69a2bedffd35e1de896712efa40a0335
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332865"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730929"
 ---
 # <a name="lookup-transformation"></a>Trasformazione Ricerca
   La trasformazione Ricerca consente di eseguire ricerche unendo in join i dati contenuti nelle colonne di input con le colonne in un set di dati di riferimento. È possibile utilizzare la ricerca per accedere a informazioni aggiuntive in una tabella correlata basata sui valori presenti nelle colonne comuni.  
@@ -121,7 +118,7 @@ ms.locfileid: "35332865"
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si comportano in modo diverso ai fini del confronto tra le stringhe. Se la trasformazione Ricerca è configurata per caricare il set di dati di riferimento nella cache prima dell'esecuzione della trasformazione Ricerca, in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] viene eseguito il confronto della ricerca nella cache. In caso contrario, l'operazione di ricerca usa un'istruzione SQL con parametri e in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito il confronto della ricerca. Ciò significa che la trasformazione Ricerca potrebbe restituire un diverso numero di corrispondenze dalla stessa tabella di ricerca in base al tipo di cache.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice. Per informazioni dettagliate, vedere gli argomenti seguenti.  
   
 -   [Implementazione di una ricerca in modalità No Cache o Partial Cache](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  

@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 12/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0836b89b66c6999f006da2b4f52bb3c029081987
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6cf9281eb9147a133736deed0ed05c3dbbb95702
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059931"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684937"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,8 +53,7 @@ Quando è presente un carico di lavoro attivo, è necessaria altra memoria per t
   
 - [Memoria in caso di aumento delle dimensioni](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="bkmk_ExampleTable">
-            </a> Esempio di tabella ottimizzata per la memoria  
+###  <a name="bkmk_ExampleTable"></a> Esempio di tabella ottimizzata per la memoria  
 
 Si consideri il seguente schema di tabella ottimizzata per la memoria:
   

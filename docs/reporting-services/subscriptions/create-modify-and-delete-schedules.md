@@ -4,7 +4,6 @@ ms.date: 07/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - report-specific schedules [Reporting Services]
@@ -21,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d25ce57e3a625059e13de9becbdfac5a94c7630d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 346b348f2df1ccb6cd6373dad130b10c71ea1bcb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268433"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679789"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   Questo argomento fornisce informazioni sulla creazione, la modifica e l'eliminazione di pianificazioni [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] condivise.  Per gestire le pianificazioni condivise per la modalità nativa, usare la pagina Pianificazioni del portale Web o la cartella Pianificazioni condivise in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per la modalità SharePoint, utilizzare le pagine di gestione per l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

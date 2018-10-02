@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7cf50bad1e75b5729bc946f6887e02654b69d8d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 36e6c524a03aef1a55f95d174fff71421d5abe50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005974"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683049"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Specificare la modalità di propagazione delle modifiche per gli articoli transazionali
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ ms.locfileid: "38005974"
   
 -   **sp_MSdel_\<** *NomeTabella* **>**, per la gestione delle eliminazioni.  
   
- Il valore **\<***NomeTabella***>** usato nella procedura dipende dalla modalità adottata per aggiungere l'articolo alla pubblicazione e dal fatto che il database di sottoscrizione contenga o meno una tabella con lo stesso nome, ma di un proprietario diverso.  
+ Il **\<**_tablename_**>** utilizzato nella procedura dipende dalla modalità impiegata per aggiungere l'articolo alla pubblicazione e dal fatto che il database di sottoscrizione contenga una tabella con lo stesso nome, ma di un proprietario diverso.  
   
  Ognuna di queste procedure può essere sostituita da una procedura personalizzata che viene specificata durante l'aggiunta di un articolo a una pubblicazione. Le procedure personalizzate vengono utilizzate se un'applicazione richiede una logica personalizzata, ad esempio l'inserimento di dati in una tabella di controllo quando una riga viene aggiornata in un Sottoscrittore. Per ulteriori informazioni sulla definizione di stored procedure personalizzate, vedere l'elenco delle procedure riportato sopra.  
   

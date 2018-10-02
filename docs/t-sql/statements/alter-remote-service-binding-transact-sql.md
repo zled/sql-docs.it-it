@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER REMOTE SERVICE BINDING
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - ALTER REMOTE SERVICE BINDING statement
 - modifying remote service bindings
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
-caps.latest.revision: 37
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cd6cfcbb65e7ef90f88f7fa8a895d39e815e8824
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: b32bbcb94aa1f52c951c0bce341828e7df202b4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788902"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598359"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ ALTER REMOTE SERVICE BINDING binding_name
 ## <a name="remarks"></a>Remarks  
  La chiave pubblica nel certificato associato a *user_name* viene usata per autenticare i messaggi inviati al servizio remoto e crittografare una chiave di sessione che verrà quindi usata per crittografare la conversazione. Il certificato per *user_name* deve corrispondere al certificato per un account utente nel database che ospita il servizio remoto.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'autorizzazione per la modifica dell'associazione al servizio remoto viene concessa per impostazione predefinita al proprietario dell'associazione al servizio remoto, ai membri del ruolo predefinito del database **db_owner** e ai membri del ruolo predefinito del server **sysadmin**.  
   
  L'utente che esegue l'istruzione ALTER REMOTE SERVICE BINDING deve disporre dell'autorizzazione di rappresentazione per l'utente specificato nell'istruzione.  

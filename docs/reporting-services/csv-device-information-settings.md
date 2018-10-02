@@ -4,7 +4,6 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - CSV [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67173840f194967c605fe77b5703398f9dabb82a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 320ad1972dcf949200b6fafa5eafc4fda3bd2348
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270758"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678599"
 ---
 # <a name="csv-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo CSV
   Le impostazioni relative alle informazioni sul dispositivo per l'estensione per il rendering CSV consentono di modificare i delimitatori e i qualificatori e di specificare il tipo di gestione delle interruzioni di riga. È anche possibile specificare l'estensione di file, nonché la codifica e l'inclusione delle righe di intestazione nell'output. Poiché in genere i delimitatori sono caratteri speciali, è necessario codificarli in una sezione CDATA, se le impostazioni sono scritte in formato XML.  

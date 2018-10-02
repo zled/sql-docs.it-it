@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2349e70ca346a28743b5161ff1d2d554b4914c44
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33d2a7332bc4c096fcd53a8d37e16ff7698e89f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677770"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, oggetto di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "32955576"
   
  Questa tabella descrive i contatori **Databases** di SQL Server.  
   
-|Contatori di database di SQL Server|Description|  
+|Contatori di database di SQL Server|Descrizione|  
 |-----------------------------------|-----------------|  
 |**Transazioni attive**|Numero di transazioni attive per il database.|  
 |**Distanza media da fine log per richiesta pool di log**|Distanza media in byte dalla fine del log per ogni richiesta del pool di log, per le richieste effettuate nell'ultimo VLF.| 

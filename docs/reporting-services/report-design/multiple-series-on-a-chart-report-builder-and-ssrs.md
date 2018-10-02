@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4325971d589c10499f4368dec833f44e87e8e5e3
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0ad5cd38b1ec69c0a54444e63462957094d47498
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264922"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736659"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Più serie in un grafico (Generatore report e SSRS)
   Se in un grafico sono presenti più serie, è necessario identificare il sistema ottimale per confrontarle. È possibile utilizzare un grafico in pila per mostrare le proporzioni relative di ogni serie. Se si confrontano solo due serie che condividono un asse delle categorie (x), utilizzare l'asse secondario. Ciò si rivela utile per mostrare due serie correlate di dati, ad esempio, prezzo e volume o reddito e tasse. Se il grafico diventa illeggibile, utilizzare più aree del grafico per creare una maggiore separazione visiva tra le diverse serie.  

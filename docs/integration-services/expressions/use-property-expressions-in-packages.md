@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dc25504d28dc2d2db54182165b419414ad5a2632
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 97ab72d572ee533ed43dfde39b362c5bb16120a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333085"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726669"
 ---
 # <a name="use-property-expressions-in-packages"></a>utilizzo delle espressioni di proprietà nei pacchetti
   Un'espressione di proprietà è un'espressione assegnata a una proprietà per consentire l'aggiornamento dinamico della proprietà in fase di esecuzione. Un'espressione di proprietà, ad esempio, consente di aggiornare la riga A utilizzata dall'attività Invia messaggi inserendo un indirizzo di posta elettronica archiviato in una variabile.  
@@ -176,6 +173,6 @@ ms.locfileid: "35333085"
 -   Articolo tecnico relativo agli [esempi di espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [Uso di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

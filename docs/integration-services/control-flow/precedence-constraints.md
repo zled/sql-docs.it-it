@@ -4,12 +4,8 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- integration-services
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.precedenceconstraint.f1
@@ -21,15 +17,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02790fb579d3b899444834eee526da8fc852d569
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23753d15f1113b5a11a00e768c836f8860db96ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733659"
 ---
 # <a name="precedence-constraints"></a>Vincoli di precedenza
   I vincoli di precedenza collegano eseguibili, contenitori e attività di pacchetti in modo da formare un flusso di controllo e specificano le condizioni che determinano se tali eseguibili devono essere eseguiti. Un eseguibile può essere costituito da un gestore di evento o da un contenitore Ciclo For, Ciclo Foreach o Sequenza. Anche nei gestori di eventi vengono utilizzati vincoli di precedenza per collegare gli eseguibili in modo da formare un flusso di controllo.  
@@ -153,7 +149,7 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
   
     |Proprietà di lettura/scrittura|Azione di configurazione|  
     |--------------------------|--------------------------|  
-    |Description|Specificare una descrizione.|  
+    |Descrizione|Specificare una descrizione.|  
     |EvalOp|Selezionare un'operazione di valutazione. In caso di selezione dell'operazione **Expression**, **ExpressionAndConstant**o **ExpressionOrConstant** , è possibile specificare un'espressione.|  
     |Espressione|Se l'operazione di valutazione include un'espressione, specificare l'espressione. L'espressione deve restituire un valore booleano. Per altre informazioni sul linguaggio delle espressioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Impostare **LogicalAnd** in modo da specificare se il vincolo di precedenza viene valutato insieme ad altri vincoli di precedenza, quando più eseguibili precedono e sono collegati all'eseguibile soggetto al vincolo|  
