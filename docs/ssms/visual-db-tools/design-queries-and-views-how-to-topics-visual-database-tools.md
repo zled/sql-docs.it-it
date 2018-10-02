@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - • vs.solutionexplorer.file.query
@@ -22,22 +19,21 @@ helpviewer_keywords:
 - Query Designer [SQL Server], about Query Designer
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
-caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 13603df9721d8d58c86513261ec0da2ae327ab4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b81cc997b9d8d62c9a3c5ed458f2a2afba644a20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048278"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767129"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Procedure per la progettazione di query e viste (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Progettazione query e Progettazione viste può essere utile per la creazione e manutenzione dei componenti per il recupero e la manipolazione dei dati di un'applicazione.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 [Aprire Progettazione query e Progettazione viste &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
 Viene descritta la procedura per aprire una query o una vista nuova o esistente in Progettazione query e Progettazione viste.  
   
