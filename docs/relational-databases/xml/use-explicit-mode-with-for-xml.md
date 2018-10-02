@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: xml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0800899e6a8886bdfc6d8ce5668809d079d0d4fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23c2911c656087fe3d4c0f5a81ea037ff02d6706
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017918"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650329"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utilizzo della modalità EXPLICIT con FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -150,7 +146,7 @@ ElementName!TagNumber!AttributeName!Directive
   
  Se si specifica *AttributeName* il nome del tag viene sostituito dal nome specificato. In caso contrario, l'attributo viene aggiunto all'elenco corrente di attributi degli elementi che lo racchiudono inserendo il contenuto all'inizio dell'oggetto di contenimento senza codifica di entità. La colonna con questa direttiva deve essere di tipo testo, ad esempio **varchar**, **nvarchar**, **char**, **nchar**, **text**o **ntext**. Questa direttiva può essere usa solo con **hide**. Risulta particolarmente utile per il recupero dei dati di overflow archiviati in una colonna. Se il contenuto non è in un formato XML corretto, il funzionamento non è prevedibile.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  Negli esempi seguenti viene illustrato l'utilizzo della modalità EXPLICIT.  
   
 -   [Esempio: Recupero di informazioni sui dipendenti](../../relational-databases/xml/example-retrieving-employee-information.md)  

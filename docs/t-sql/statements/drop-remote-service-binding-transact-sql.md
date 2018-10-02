@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP REMOTE SERVICE BINDING
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - remote service bindings [Service Broker], dropping
 - DROP REMOTE SERVICE BINDING statement
 ms.assetid: 377789b4-bf94-488f-8c20-687d0bae447a
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e2f9c022ce4ac9fdb80d62244c1ff2bd59328ca1
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 6abe725d180b36de3eeea53c59666da1322214bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784257"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666049"
 ---
 # <a name="drop-remote-service-binding-transact-sql"></a>DROP REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ DROP REMOTE SERVICE BINDING binding_name
  *binding_name*  
  Nome dell'associazione al servizio remoto da eliminare. Non è possibile specificare i nomi del server, del database e dello schema.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'autorizzazione per l'eliminazione di un'associazione al servizio remoto viene concessa per impostazione predefinita al proprietario dell'associazione al servizio remoto, ai membri del ruolo predefinito del database db_owner e ai membri del ruolo predefinito del server sysadmin.  
   
 ## <a name="examples"></a>Esempi  

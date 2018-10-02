@@ -5,9 +5,7 @@ ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.locatebackupfileazure.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-caps.latest.revision: 79
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 01e55085d117541e2ecb8d8c4ee585afec205b03
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cf13f7db56ff7fedd5252283a927f4daff0ec5fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923346"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664430"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Ripristinare un backup del database tramite SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +75,7 @@ Per informazioni sul ripristino di SQL Server da un servizio di archiviazione BL
             **Aggiungi**  
             In base al tipo di supporto selezionato nell'elenco a discesa **Tipo di supporti di backup** , facendo clic su **Aggiungi** , si apre una delle finestre di dialogo seguenti. Se l'elenco nella casella di riepilogo **Supporti di backup** è pieno, il pulsante **Aggiungi** non è disponibile.
 
-            |Tipo di supporto|Finestra di dialogo|Description|    
+            |Tipo di supporto|Finestra di dialogo|Descrizione|    
             |----------------|----------------|-----------------|    
             |**File**|**Individua file di backup**|In questa finestra di dialogo è possibile selezionare un file locale nell'albero o specificare un file remoto utilizzandone il nome completo in formato UNC (Universal Naming Convention). Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|    
             |**Dispositivo**|**Seleziona dispositivo di backup**|In questa finestra di dialogo è possibile eseguire una selezione da un elenco di dispositivi di backup logici definiti sull'istanza del server.|    

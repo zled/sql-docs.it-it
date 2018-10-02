@@ -5,9 +5,7 @@ ms.date: 01/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL DATA SOURCE
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - polybase, alter external data source statement
 - ALTER EXTERNAL DATA SOURCE statement
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
-caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e7a8f604d87de12130967ce2ae27e26a542dc1c2
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 71a88e2909a1f335dbf6014aa8d53a1e0b08c93b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781822"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667249"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +73,7 @@ La credenziale usata deve essere creata usando `SHARED ACCESS SIGNATURE` come id
 ## <a name="remarks"></a>Remarks
  È possibile modificare una sola origine per volta. Le richieste simultanee di modifica della stessa origine mettono in attesa un'istruzione. È invece possibile modificare origini diverse nello stesso momento. Questa istruzione può essere eseguita contemporaneamente ad altre istruzioni.
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'autorizzazione ALTER ANY EXTERNAL DATA SOURCE.
  > [!IMPORTANT]  
  >  L'autorizzazione ALTER ANY EXTERNAL DATA SOURCE concede a qualsiasi entità di sicurezza la possibilità di creare e modificare qualsiasi oggetto origine dati esterna e, di conseguenza, la possibilità di accedere a tutte le credenziali con ambito database per il database. Questa autorizzazione deve essere considerata con privilegi elevati e quindi essere concessa solo a entità attendibili nel sistema.

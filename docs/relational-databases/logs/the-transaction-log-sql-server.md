@@ -5,25 +5,22 @@ ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 877c48ecbe9befaf0bb04f34a866dd8fee6671bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ecd041e75644fa726e2dc388c4b5ee34d8cded8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948076"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664689"
 ---
 # <a name="the-transaction-log-sql-server"></a>Log delle transazioni (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +102,7 @@ Per evitare l'esaurimento dello spazio, il troncamento si verifica automaticamen
   
  Il troncamento del log può essere posticipato da diversi fattori. Per individuare l'eventuale condizione che impedisce il troncamento del log, eseguire una query sulle colonne **log_reuse_wait** e **log_reuse_wait_desc** della vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Nella tabella seguente vengono descritti i valori di queste colonne.  
   
-|Valore di log_reuse_wait|Valore di log_reuse_wait_desc|Description|  
+|Valore di log_reuse_wait|Valore di log_reuse_wait_desc|Descrizione|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Attualmente sono disponibili uno o più [file di log virtuali (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) riusabili.|  
 |1|CHECKPOINT|Non si è verificato alcun checkpoint dall'ultimo troncamento del log oppure l'inizio del log non è stato ancora spostato oltre un [file di log virtuale (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Tutti i modelli di recupero)<br /><br /> Si tratta di una motivazione comune per il posticipo del troncamento del log. Per altre informazioni, vedere [Checkpoint di database &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  

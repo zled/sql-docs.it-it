@@ -6,8 +6,6 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.importschema
@@ -17,16 +15,15 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportDatabaseSummaryDialog.dialog
 - sql.data.tools.importscriptwizard.fileselection
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4fdaca995e96116b1268916d008b565454511489
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 17471823dcc3e77d23423fda3c81dbe8c958ab89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088483"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673259"
 ---
 # <a name="how-to-create-a-new-database-project"></a>Procedura: Creazione di un nuovo progetto di database
 È possibile creare un nuovo progetto di database e importare lo schema del database da un database esistente, un file di script con estensione sql o un'applicazione di livello dati (con estensione dacpac). È quindi possibile richiamare gli stessi strumenti visivi della finestra di progettazione (Editor Transact\-SQL, Progettazione tabelle) disponibili per lo sviluppo del database connesso per apportare modifiche al progetto di database offline e pubblicare di nuovo le modifiche nel database di produzione. Inoltre, è possibile salvare le modifiche come script da pubblicare in un secondo momento. Se si usa il riquadro **Proprietà progetto**, è possibile impostare la piattaforma di destinazione su versioni differenti di SQL Server (incluso SQL Azure).  

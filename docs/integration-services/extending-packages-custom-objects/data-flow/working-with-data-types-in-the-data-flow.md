@@ -4,28 +4,23 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom data flow components [Integration Services], mapping data types
 - data flow components [Integration Services], mapping data types
 - data types [Integration Services], converting
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca2120e054527dceaa7470e9afcebfc2f1cf34ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3560a83c6e292a5e3a46e97b5e34c3bac9eac894
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641799"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Utilizzo di tipi di dati nel flusso di dati
   Quando si sviluppa un componente del flusso di dati personalizzato in Integration Services, si utilizzano costantemente i tipi di dati, copiando dati in e dai buffer del flusso di dati e trasformando valori. Le informazioni di questo argomento consentono di scegliere i tipi di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] corretti e di utilizzare i metodi corretti per gestirli.  
