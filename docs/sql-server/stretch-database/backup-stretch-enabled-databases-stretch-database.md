@@ -5,8 +5,6 @@ ms.date: 06/14/2016
 ms.prod: sql
 ms.technology: backup-restore
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, backing up
@@ -15,12 +13,12 @@ ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 72c41239ba6b5f843ae28b8337fb7de4c4d50ebd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 190b318de25edd79d980fb81d69bff0e2634b87a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968723"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645159"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Backup e ripristino di database abilitati per Stretch (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,8 +48,7 @@ Il servizio SQL Server Stretch Database in Azure protegge i database remoti con 
 ### <a name="azure-reduces-the-risk-of-data-loss-with-geo-redundancy"></a>Azure riduce il rischio di perdita di dati con la ridondanza geografica  
 I backup dei database di Azure vengono memorizzati nell'archiviazione con ridondanza geografica e accesso in lettura (RA-GRS) di Azure e hanno quindi ridondanza geografica per impostazione predefinita. L'archiviazione con ridondanza geografica replica i dati in un'area secondaria a centinaia di miglia di distanza dall'area primaria. Nelle aree primaria e secondaria i dati vengono replicati tre volte in domini di errore e domini di aggiornamento separati. Ciò garantisce la durabilità dei dati anche in caso di interruzione o guasto totale che rende una delle aree di Azure non disponibile.
 
-### <a name="stretchRPO">
-            </a>Stretch Database riduce il rischio di perdita dei dati di Azure grazie al mantenimento temporaneo delle righe migrate
+### <a name="stretchRPO"></a>Stretch Database riduce il rischio di perdita dei dati di Azure grazie al mantenimento temporaneo delle righe migrate
 Dopo aver effettuato la migrazione delle righe idonee da SQL Server ad Azure, Estensione database mantiene le righe nella tabella di staging per un minimo di 8 ore. Se si ripristina un backup del database di Azure, Estensione database usa le righe salvate nella tabella di staging per risolvere le differenze tra il database di SQL Server e il database di Azure.
 
 Dopo aver ripristinato un backup dei dati di Azure, è necessario eseguire la stored procedure [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) per riconnettere il database di SQL Server abilitato per l'estensione al database di Azure remoto. Quando si esegue **sys.sp_rda_reauthorize_db**, Stretch Database risolve automaticamente le differenze tra il database di SQL Server e il database di Azure.
