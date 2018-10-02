@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, managing
@@ -16,12 +14,12 @@ ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fa0896d132d2cb30d6dde49d43af801cae9da12
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6de10b5f30073a33a23549cb4522d90a162ace7f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066499"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698559"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Gestione e risoluzione dei problemi di Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,8 +28,7 @@ ms.locfileid: "38066499"
   Per gestire e risolvere i problemi di Stretch Database, usare gli strumenti e i metodi descritti in questo articolo.  
 ## <a name="manage-local-data"></a>Gestire i dati locali  
   
-###  <a name="LocalInfo">
-            </a> Ottenere informazioni su tabelle e database locali abilitati per Stretch Database  
+###  <a name="LocalInfo"></a> Ottenere informazioni su tabelle e database locali abilitati per Stretch Database  
  Aprire le viste del catalogo **sys.databases** e **sys.tables** per visualizzare informazioni sulle tabelle e i database di SQL Server abilitati per l'estensione. Per altre informazioni, vedere [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) e [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md).  
  
  Per visualizzare la quantità di spazio usata da una tabella abilitata per l'estensione in SQL Server, eseguire questa istruzione.
@@ -58,8 +55,7 @@ GO
   
 ## <a name="manage-remote-data"></a>Gestire i dati remoti  
   
-###  <a name="RemoteInfo">
-            </a> Ottenere informazioni su tabelle e database remoti usati da Stretch Database  
+###  <a name="RemoteInfo"></a> Ottenere informazioni su tabelle e database remoti usati da Stretch Database  
  Aprire le viste del catalogo **sys.remote_data_archive_databases** e **sys.remote_data_archive_tables** per visualizzare informazioni sulle tabelle e i database remoti in cui sono memorizzati i dati migrati. Per altre informazioni, vedere [sys.remote_data_archive_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md) e [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md).  
  
 Per visualizzare la quantità di spazio usata da una tabella abilitata per l'estensione in Azure, eseguire questa istruzione.
