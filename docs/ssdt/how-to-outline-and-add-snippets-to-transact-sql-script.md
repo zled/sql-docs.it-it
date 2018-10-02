@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 741168fafc480c74d34a74c346d307321fa74e43
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c51fde6d4fa7587b4fd305d1744934d42e76bad9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085483"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732829"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Procedura: Struttura e aggiunta di frammenti di codice allo script Transact-SQL
 In SQL Server Data Tools è disponibile una libreria del codice contenente frammenti di codice che è possibile inserire direttamente nell'applicazione. Ogni frammento consente di eseguire un'attività di script completa, quale la creazione di una funzione, di una tabella, di un trigger, di un indice, di una vista, di un tipo di dati definito dall'utente e così via. L'inserimento di un frammento nel codice di origine può essere eseguito con pochi clic del mouse. Questi frammenti consentono di aumentare la produttività riducendo il tempo necessario per digitare.  
