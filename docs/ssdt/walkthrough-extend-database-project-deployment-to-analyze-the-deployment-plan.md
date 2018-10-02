@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 389f9d79713ca7a7ee1d33b91dd1778b0604f5f0
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: b7ac77271546fc6119f60fb218bb8c0d3c96c5a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563788"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822539"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Procedura dettagliata: estendere la distribuzione del progetto di database per analizzare il piano di distribuzione
 È possibile creare collaboratori alla distribuzione per eseguire azioni personalizzate quando si distribuisce un progetto SQL. È possibile creare un elemento DeploymentPlanModifier o DeploymentPlanExecutor. Utilizzare DeploymentPlanModifier per modificare il piano prima di eseguirlo e DeploymentPlanExecutor per eseguire operazioni mentre il piano è in esecuzione. In questa procedura dettagliata viene creato un elemento DeploymentPlanExecutor denominato DeploymentUpdateReportContributor che crea un report sulle azioni eseguite quando si distribuisce un progetto di database. Poiché questo collaboratore alla compilazione accetta un parametro per controllare se il report viene generato, è necessario eseguire un'operazione necessaria aggiuntiva.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ae970c69dbc12619f340e1a766198afc250b4e1e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2101d73b7e76cbc842277980b22c239dc826233c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824219"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,8 +36,7 @@ ms.locfileid: "38039969"
  >   [!NOTE]
  > Se successivamente si disabilita Stretch Database, tenere presente che questa operazione per una tabella o per un database non elimina l'oggetto remoto. Se si vuole eliminare la tabella remota o il database remoto, è necessario eliminarlo tramite il portale di gestione di Azure. Gli oggetti remoti continuano a generare costi di Azure fino a quando non vengono eliminati manualmente.
  
-##  <a name="EnableWizardTable">
-            </a> Usare la procedura guidata per abilitare Stretch Database in una tabella  
+##  <a name="EnableWizardTable"></a> Usare la procedura guidata per abilitare Stretch Database in una tabella  
  **Avviare la procedura guidata**  
  1.  In Esplora oggetti di SQL Server Management Studio selezionare la tabella in cui si vuole abilitare l'estensione.  
   
@@ -66,8 +62,7 @@ ms.locfileid: "38039969"
  **Risultati**  
  Controllare i risultati.  
   
-##  <a name="EnableTSQLTable">
-            </a> Usare Transact-SQL per abilitare Stretch Database in una tabella  
+##  <a name="EnableTSQLTable"></a> Usare Transact-SQL per abilitare Stretch Database in una tabella  
  È possibile usare Transact-SQL per abilitare Stretch Database in una tabella esistente o creare una nuova tabella con Stretch Database abilitato.  
   
 ### <a name="options"></a>Opzioni  
