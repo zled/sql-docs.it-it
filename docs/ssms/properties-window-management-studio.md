@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing properties
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - modifying properties
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f10c4c8373dd34e07651f83bd13434a1043ab31b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d16a701ee01d754c07577d44c4471477c297ba3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043198"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729089"
 ---
 # <a name="properties-window-management-studio"></a>Finestra Proprietà (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +31,7 @@ Nella finestra Proprietà vengono visualizzati diversi tipi di campi di modifica
   
 ## <a name="options"></a>Opzioni  
   
-|Elemento|Description|  
+|Elemento|Descrizione|  
 |-----------|---------------|  
 |**Nome oggetto**|Elenca l'oggetto o gli oggetti attualmente selezionati. Saranno visibili solo gli oggetti dell'editor attivo o della finestra di progettazione attiva.|  
 |**Per categoria**|Elenca, per categoria, tutte le proprietà e i relativi valori per l'oggetto selezionato. È possibile comprimere una categoria per ridurre il numero di proprietà visualizzate. Quando una categoria viene espansa o compressa, accanto al nome verrà visualizzato un segno più (+) o un segno meno (-). Le categorie sono elencate in ordine alfabetico.|  
