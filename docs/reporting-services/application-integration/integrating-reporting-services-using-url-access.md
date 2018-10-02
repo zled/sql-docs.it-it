@@ -4,22 +4,19 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - URL access [Reporting Services], about URL access
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3fc211bc0c43c5716a9753a2e3df5fe489c81c01
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 802708b1b630a42fe23860a906335e540e6c70f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281447"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752599"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Integrazione di Reporting Services tramite l'accesso con URL
   L'accesso con URL consente di accedere ai report tramite un URL del server di report. Una richiesta URL consente di accedere a un server di report specifico, nonché ai report, alle risorse e agli altri elementi presenti nel database del server di report. È anche possibile personalizzare la visualizzazione del report e l'esperienza di navigazione per gli utenti. La stringa di query dell'URL contiene le impostazioni relative alle informazioni sul dispositivo, nonché i parametri del report e l'output di rendering scelto. Il modo in cui le richieste URL vengono gestite dal server di report dipende dai parametri, dai prefissi di parametro e dal tipo di elemento a cui si accede tramite l'URL.  

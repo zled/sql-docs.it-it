@@ -5,25 +5,22 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.main.f1
 helpviewer_keywords:
 - Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a8219948f4d1673d5e7b7b45882c89db0580609
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: ffbb59250f7038ce235b959dd5ea183133d0bf11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790799"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Panoramica di Monitoraggio mirroring del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.locfileid: "35311950"
   
 -   Gli ultimi ruoli noti di ogni partner (principale o mirror)  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per monitorare il mirroring del database, è necessario essere membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **dbm_monitor** nel database **msdb** nell'istanza del server. Se l'utente è membro di **sysadmin** o di **dbm_monitor** su una sola delle istanze del server partner, il monitoraggio può connettersi solo a tale partner e non riesce a recuperare informazioni dall'altro partner.  
   
  Se l'utente è membro solo di **dbm_monitor** su un'istanza del server, disporrà di autorizzazioni limitate su tale istanza. L'utente sarà in grado di visualizzare esclusivamente la riga di stato più recente. Se l'utente si connette a un'istanza del server usando le autorizzazioni per **dbm_monitor** , Monitoraggio mirroring del database avvisa che l'utente ha autorizzazioni limitate.  
