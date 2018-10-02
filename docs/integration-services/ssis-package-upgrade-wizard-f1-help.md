@@ -4,12 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- integration-services
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: reference
 f1_keywords:
 - sql13.is.upgradewizard.ssisupgradewizard.f1
@@ -20,15 +16,15 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d5a99d26e02695c8c805e30f7a3bc9afb972178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c1d1da13379b9a273ca3b5e0c1809434c7ed165
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829489"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Guida sensibile al contesto dell'Aggiornamento guidato pacchetti SSIS
   Usare l'Aggiornamento guidato pacchetti SSIS per aggiornare i pacchetti creati in versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel formato della versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -53,7 +49,7 @@ ms.lasthandoff: 05/03/2018
  **Origine pacchetto**  
  Selezionare il percorso di archiviazione che contiene i pacchetti da aggiornare. Per questa opzione sono disponibili i valori elencati nella tabella seguente.  
   
-|Value|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**File System**|Indica che i pacchetti da aggiornare si trovano in una cartella nel computer locale.<br /><br /> Per eseguire il backup dei pacchetti originali prima dell'aggiornamento, è necessario archiviare i pacchetti originali nel file system. Per ulteriori informazioni, vedere l'argomento relativo alla procedura.|  
 |**Archivio pacchetti SSIS**|Indica che i pacchetti da aggiornare si trovano nell'archivio pacchetti. L'archivio pacchetti è costituito dal set di cartelle del file system gestito dal servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Gestione dei pacchetti &#40;servizio SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> La selezione di questo valore determina la visualizzazione delle opzioni dinamiche di **Origine pacchetto** corrispondenti.|  
@@ -105,7 +101,7 @@ ms.lasthandoff: 05/03/2018
  **Origine pacchetto**  
  Consente di specificare la posizione di archiviazione dei pacchetti di aggiornamento. Per questa opzione sono disponibili i valori elencati nella tabella seguente.  
   
-|Value|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**File System**|Indica che i pacchetti aggiornati devono essere salvati in una cartella nel computer locale.|  
 |**Archivio pacchetti SSIS**|Indica che i pacchetti aggiornati devono essere salvati nell'archivio pacchetti Integration Services. L'archivio pacchetti è costituito dal set di cartelle del file system gestito dal servizio Integration Services. Per altre informazioni, vedere [Gestione dei pacchetti &#40;servizio SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> La selezione di questo valore determina la visualizzazione delle opzioni dinamiche di **Origine pacchetto** corrispondenti.|  

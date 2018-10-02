@@ -5,22 +5,19 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e910b8388572c542dfd8f801ac5d0955817200b3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: e414944e29abfebdd665fdcaa57bf45d39023daf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310890"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807329"
 ---
 # <a name="managing-a-domain"></a>Gestione di un dominio
 
@@ -47,7 +44,7 @@ ms.locfileid: "35310890"
   
 -   Se il tipo di dati è una stringa, è possibile specificare che DQS non identifichi errori di sintassi quando si è certi che le stringhe non contengono tali errori.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  L'utilizzo di un dominio consente di effettuare le operazioni seguenti:  
   
 |||  
@@ -60,7 +57,7 @@ ms.locfileid: "35310890"
 |Utilizzare relazioni per correggere un termine che forma parte di un valore in un dominio|[Creare relazioni basate su termini](../data-quality-services/create-term-based-relations.md)|  
 |Completare, chiudere o annullare l'attività di gestione del dominio|[Termine dell'attività di gestione del dominio](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

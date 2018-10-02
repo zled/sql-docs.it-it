@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
 - Replication Monitor, about Replication Monitor
 ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4cc68e809bce846d863bd12532f070ebb3ecc282
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 17a826fc097d7cf72e5c8167b662e231935ba614
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358733"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850306"
 ---
 # <a name="monitoring-replication-overview"></a>Panoramica del monitoraggio della replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +39,7 @@ ms.locfileid: "37358733"
   
  Per monitorare la replica, è necessario che un utente sia un membro del ruolo predefinito del server **sysadmin** nel server di distribuzione o un membro del ruolo predefinito del database **replmonitor** nel database di distribuzione. Un amministratore di sistema può aggiungere qualsiasi utente al ruolo **replmonitor** , consentendo a tale utente di visualizzare l'attività di replica in Monitoraggio replica, ma non di amministrare la replica.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  Negli argomenti seguenti sono incluse informazioni sulle funzionalità di Monitoraggio replica.  
   
  [Panoramica dell'interfaccia di Monitoraggio replica](../../../relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md)  

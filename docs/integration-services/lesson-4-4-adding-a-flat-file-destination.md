@@ -5,23 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a66649974ee1821388ad362aedb14cfd1d20f1c7
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 9ed5aa9aab3e53288f2cc482f87b32048d45a56b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400213"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842789"
 ---
 # <a name="lesson-4-4---adding-a-flat-file-destination"></a>Lezione 4-4 - Aggiunta di una destinazione file flat
 L'output degli errori della trasformazione Lookup Currency Key reindirizza alla trasformazione Script tutte le righe di dati in cui l'operazione di ricerca ha avuto esito negativo. Per migliorare le informazioni sugli errori, la trasformazione Script esegue uno script che ottiene la descrizione degli errori.  
@@ -65,7 +60,7 @@ In questa attività, tutte queste informazioni sulle righe con esito negativo ve
 15. Fare clic su **OK**.  
   
 ## <a name="next-steps"></a>Next Steps  
-[Passaggio 5: Test del pacchetto creato nella lezione 4 dell'esercitazione](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+[Passaggio 5: Test del pacchetto creato nell'esercitazione della lezione 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   
   

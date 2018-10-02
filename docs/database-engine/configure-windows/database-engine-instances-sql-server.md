@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 34db3b2fe4d33fd7680fe22ecca31f5885742916
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e983bc2bbf7efe42d479dea90e8cf1f212adc15
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32868206"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807939"
 ---
 # <a name="database-engine-instances-sql-server"></a>Istanza del motore di database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +27,7 @@ ms.locfileid: "32868206"
   
  È possibile eseguire più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sullo stesso computer. Un'istanza può essere l'istanza predefinita. L'istanza predefinita non ha nome. Se una richiesta di connessione specifica solo il nome del computer, viene effettuata la connessione all'istanza predefinita. Un'istanza denominata è un'istanza di cui si specifica il nome al momento della relativa installazione. Una richiesta di connessione deve specificare il nome del computer e il nome dell'istanza affinché sia stabilita la connessione all'istanza. Non c'è nessun requisito per installare un'istanza predefinita; tutte le istanze in esecuzione su un computer possono essere istanze denominate.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

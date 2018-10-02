@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,15 +21,15 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], external metadata
 - external metadata [Integration Services]
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a54468923df0f3f41e00feac831e6e39f67c3676
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab4fa98f652b7e3bda9b29553cf5c7589d851a41
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840319"
 ---
 # <a name="implementing-external-metadata"></a>Implementazione di metadati esterni
   Quando un componente è disconnesso dalla relativa origine dati, è possibile convalidare le colonne nelle raccolte di colonne di input e output in base alle colonne presenti nell'origine dati esterna utilizzando l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>. Questa interfaccia consente di mantenere uno snapshot delle colonne presenti nell'origine dati esterna e di eseguire il mapping di queste colonne alle raccolte di colonne di input e output del componente.  

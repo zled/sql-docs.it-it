@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server Database Engine]
 - Database Engine [SQL Server], errors
 - events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de9cc2a589a7dbf9f8322a02841688f551de3f7a
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 1648487c3ed1354b2b50d59b123fd57b236172f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34321852"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797280"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Guida di riferimento a errori ed eventi (Motore di database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questa sezione sono selezionati i messaggi di errore del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che necessitano di ulteriore spiegazione.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Eventi ed errori di Motore di database](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
  Descrive il formato dei messaggi di errore di [!INCLUDE[ssDE](../../includes/ssde-md.md)] e illustra la procedura per visualizzare i messaggi di errore e restituirli alle applicazioni.  
   

@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: a5560581-fd57-4a45-b7ea-43b21a8a7419
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b11bbfb6ee1c0a1557215986d38b6151adf869a8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4c3db198ad707c298d48df5043627f327077a859
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280929"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818766"
 ---
 # <a name="print-reports-from-other-applications-report-builder-and-ssrs"></a>Stampare i report da altre applicazioni (Generatore report e SSRS)
   Generatore report include un'opzione di esportazione che consente di visualizzare facilmente un report in altre applicazioni. Il comando **Export** è disponibile nella barra degli strumenti del report visualizzata nella parte superiore di un report aperto in un browser o in un'applicazione Web. L'esportazione di un report consente di visualizzarlo in un'altra applicazione. Se ad esempio si esporta un report in formato Excel, il report viene aperto in [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]. L'esportazione di un report per operazioni di stampa è consigliata solo se l'applicazione dispone di caratteristiche di stampa specifiche che si desidera utilizzare.  
