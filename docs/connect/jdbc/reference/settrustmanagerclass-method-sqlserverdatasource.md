@@ -1,13 +1,11 @@
 ---
-title: Metodo (SQLServerDataSource) setTrustManagerClass | Documenti Microsoft
+title: Metodo setTrustManagerClass (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.setTrustManagerClass
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09ce7c9a8ccd99c6d150f67e41e0e1f73f9c0f45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7ae073d5adbc5a24b0afbb011bd4792cf09a5a94
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809899"
 ---
-# <a name="settrustmanagerclass-method-sqlserverdatasource"></a>setTrustManagerClass metodo (SQLServerDataSource)
+# <a name="settrustmanagerclass-method-sqlserverdatasource"></a>Metodo setTrustManagerClass (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Imposta il valore di stringa della proprietà di connessione TrustManagerClass.
+  Imposta il valore di stringa della proprietà di connessione le proprietà di connessione.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,9 +36,9 @@ public void setTrustManagerClass(java.lang.String trustManagerClass)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *trustManagerClass*  
+ *Le proprietà di connessione*  
   
- Oggetto **stringa** che contiene il nome classe completo di un javax.net.ssl.TrustManager personalizzato.
+ Oggetto **stringa** che contiene il nome completo della classe di un javax.net.ssl.TrustManager personalizzato.
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
