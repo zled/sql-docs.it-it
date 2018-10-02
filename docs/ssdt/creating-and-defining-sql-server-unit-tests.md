@@ -6,23 +6,20 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.DatabaseMethodNameDialog
 - sql.data.tools.unittesting.designer
 ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b52fc60f3102e7b6a38d254fba682ab4321d804
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1ed68e2510169ee0c56a3dfbf2e95c2cb164412b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688589"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Creazione e definizione di unit test di SQL Server
 È possibile eseguire unit test di SQL Server per verificare se le modifiche apportate a uno o più oggetti di database in uno schema abbiano interferito con le funzionalità esistenti in un'applicazione di database. Questi test costituiscono un'integrazione degli unit test creati dagli sviluppatori del software. È necessario eseguire entrambi i tipi di test per verificare il comportamento dell'applicazione.  
