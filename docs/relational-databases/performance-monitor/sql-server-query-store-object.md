@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Store object
 - SQL Server:Query Store
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 527ad5bc399654bd69a05bbca4f801e7c6d643ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c849a405c3cfd343e1c63027ca314008abad37b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951166"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608057"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, oggetto archivio query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +29,7 @@ ms.locfileid: "32951166"
   
  Questa tabella illustra i contatori **SQLServer:Query Store**.  
   
-|Contatori di archivio query di SQL Server|Description|  
+|Contatori di archivio query di SQL Server|Descrizione|  
 |-------------------------------------|-----------------|  
 |**Utilizzo della CPU dell'archivio query**|Indica l'utilizzo della CPU dell'archivio query.|  
 |**Letture logiche dell'archivio query**|Indica il numero di letture logiche eseguite dall'archivio query.|  
@@ -42,7 +38,7 @@ ms.locfileid: "32951166"
   
  Per ogni contatore nell'oggetto sono disponibili le istanze seguenti:  
   
-|Istanza dell'archivio query|Description|  
+|Istanza dell'archivio query|Descrizione|  
 |--------------------------|-----------------|  
 |**_Total**|Informazioni per l'archivio query per questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |\<nome database>|Informazioni dell'archivio query per questo database.|  

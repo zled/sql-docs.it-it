@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 375d21441757d274dbd62bcd94638b03a0ded57f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5985712af5eb0f4cb45446e5072229023456cea5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598889"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Finestra di dialogo Modifica avanzata (Condizione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +64,7 @@ ms.locfileid: "32956636"
   
 > **IMPORTANTE** Le funzioni che è possibile utilizzare per creare le condizioni della gestione basata su criteri non utilizzano sempre la sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] . Verificare di seguire la sintassi di esempio. Ad esempio, quando si usa la funzione **DateAdd** o **DatePart** , è necessario racchiudere l'argomento *datepart* tra virgolette singole.  
   
-|Funzione|Firma|Description|Argomenti|Valore restituito|Esempio|  
+|Funzione|Firma|Descrizione|Argomenti|Valore restituito|Esempio|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  
 |**Add()**|Numeric Add (Numeric *expression1*, Numeric *expression2*)|Esegue la somma di due numeri.|*expression1* ed *expression2* : qualsiasi espressione valida di un qualsiasi tipo di dati della categoria numerica, ad eccezione del tipo **bit** . Può essere una costante, una proprietà o una funzione che restituisce un tipo numerico.|Restituisce il tipo di dati dell'argomento con precedenza maggiore.|`Add(Property1, 5)`|  
 |**Array()**|Array Array (VarArgs *expression*)|Crea una matrice da un elenco di valori. Può essere utilizzata con funzioni di aggregazione, ad esempio Sum() e Count().|*expression* : espressione che verrà convertita in matrice.|Matrice|`Array(2,3,4,5,6)`|  

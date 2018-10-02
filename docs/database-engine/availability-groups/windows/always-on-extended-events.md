@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b6152a89af59acd56478b6dabee5d29f8d009f9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94b010e4b913d6e7259306cceb73d61cebcdb13b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32862556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629529"
 ---
 # <a name="always-on-availability-groups-extended-events"></a>Eventi estesi dei gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +87,7 @@ Per informazioni su alcuni eventi coperti da alwayson_health, vedere il [Riferim
   
 #### <a name="event-information"></a>Informazioni sull'evento  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |nome|availability_replica_state_change|  
 |Category|alwayson|  
@@ -98,7 +95,7 @@ Per informazioni su alcuni eventi coperti da alwayson_health, vedere il [Riferim
   
 #### <a name="event-fields"></a>Campi dell'evento  
   
-|nome|Type_name|Description|  
+|nome|Type_name|Descrizione|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|ID del gruppo di disponibilità.|  
 |availability_group_name|unicode_string|Nome del gruppo di disponibilità.|  
@@ -121,7 +118,7 @@ GO
   
 #### <a name="event-information"></a>Informazioni sull'evento  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |nome|availability_group_lease_expired|  
 |Category|alwayson|  
@@ -129,7 +126,7 @@ GO
   
 #### <a name="event-fields"></a>Campi dell'evento  
   
-|nome|Type_name|Description|  
+|nome|Type_name|Descrizione|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|ID del gruppo di disponibilità.|  
 |availability_group_name|unicode_string|Nome del gruppo di disponibilità.|  
@@ -149,7 +146,7 @@ GO
   
 #### <a name="event-information"></a>Informazioni sull'evento  
   
-|nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
 |Category|alwayson|  
@@ -157,7 +154,7 @@ GO
   
 #### <a name="event-fields"></a>Campi dell'evento  
   
-|nome|Type_name|Description|  
+|nome|Type_name|Descrizione|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|ID del gruppo di disponibilità.|  
 |availability_group_name|unicode_string|Nome del gruppo di disponibilità.|  
@@ -186,7 +183,7 @@ GO
 ###  <a name="BKMK_error_reported"></a> error_reported (vari numeri di errore): per i problemi di connessione o di trasporto  
  Ogni evento filtrato indica che si è verificato un problema di connettività nell'endpoint di mirroring del database o di trasporto da cui dipende il gruppo di disponibilità.  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |nome|error_reported<br /><br /> numeri da usare come filtro: 35201, 35202, 35206, 35204, 35207, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
 |Category|errori|  
@@ -194,7 +191,7 @@ GO
   
 #### <a name="error-numbers-to-filter"></a>Numeri di errore da usare come filtro  
   
-|Numero di errore|Description|  
+|Numero di errore|Descrizione|  
 |------------------|-----------------|  
 |35201|Si è verificato un timeout della connessione durante il tentativo di stabilire una connessione alla replica di disponibilità '%ls'.|  
 |35202|La connessione per il gruppo di disponibilità '%ls' dalla replica di disponibilità '%ls' con ID [%ls] a '%ls' con ID [%ls] è stata stabilita correttamente.  Questo è un messaggio informativo. Non è richiesta alcuna azione da parte dell'utente.|  
@@ -249,7 +246,7 @@ GO
   
 #### <a name="event-information"></a>Informazioni sull'evento  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |nome|data_movement_suspend_resume|  
 |Category|Alwayson|  
@@ -259,7 +256,7 @@ GO
   
 ||||  
 |-|-|-|  
-|nome|Type_name|Description|  
+|nome|Type_name|Descrizione|  
 |availability_group_id|guid|ID del gruppo di disponibilità.|  
 |availability_group_name|unicode_string|Nome del gruppo di disponibilità, se disponibile.|  
 |availability_replica_id|guid|ID della replica di disponibilità.|  
@@ -292,7 +289,7 @@ GO
   
 #### <a name="event-information"></a>Informazioni sull'evento  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |nome|alwayson_ddl_execution|  
 |Category|alwayson|  
@@ -300,7 +297,7 @@ GO
   
 #### <a name="event-fields"></a>Campi dell'evento  
   
-|nome|Type_name|Description|  
+|nome|Type_name|Descrizione|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|ID del gruppo di disponibilità.|  
 |availability_group_name|unicode_string|Nome del gruppo di disponibilità.|  
@@ -325,7 +322,7 @@ GO
   
 #### <a name="event-information"></a>Informazioni sull'evento  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |nome|availability_replica_manager_state_change|  
 |Category|alwayson|  
@@ -333,7 +330,7 @@ GO
   
 #### <a name="event-fields"></a>Campi dell'evento  
   
-|nome|Type_name|Description|  
+|nome|Type_name|Descrizione|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|Stato corrente di gestione repliche di disponibilità.<br /><br /> Online<br /><br /> Offline<br /><br /> WaitingForClusterCommunication|  
   
@@ -356,7 +353,7 @@ GO
   
 #### <a name="event-information"></a>Informazioni sull'evento  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |nome|error_reported<br /><br /> Numero di errore 1480: è in corso la modifica nel database REPLICATION_TYPE_MSG "DATABASE_NAME" dei ruoli da “OLD_ROLE” a “NEW_ROLE” a causa di REASON_MSG|  
 |Category|errori|  
