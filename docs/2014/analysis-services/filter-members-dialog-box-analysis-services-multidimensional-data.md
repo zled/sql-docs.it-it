@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.filtermembers.f1
 helpviewer_keywords:
 - Filter Members dialog box
 ms.assetid: 52c6da1d-9fb5-4dbc-bffa-248d11cd337c
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 567092a19f3bd8d45064059f805752c3f3d8823d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c8ec7fa93dd583b0f79de00f70451eef24976dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230061"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075051"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Filtra membri (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Filtra membri** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per filtrare i membri della dimensione in base alla didascalia dei membri, al nome dei membri, al nome univoco dei membri, al valore di colonna chiave o al valore di colonna valore per il livello corrente quando si visualizza una dimensione nella scheda **Esplorazione** di **Progettazione dimensioni**.  
