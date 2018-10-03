@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cde2105ac4291e7553b4a073d62ecb7e43348401
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f4582efcfd91c71e1b40b454712d5d0afeeb8765
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076771"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646449"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Creazione, modifica ed eliminazione di indici spaziali
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +67,7 @@ ms.locfileid: "43076771"
   
 11. Nella pagina **Spaziale** specificare i valori che si vogliono usare per le proprietà spaziali dell'indice.  
   
-     Quando si crea un indice in una colonna di tipo **geometry**, è necessario specificare le coordinate **(***X-min***,***Y-min***)** e **(***X-max***,***Y-max***)** del rettangolo di selezione. Per un indice in una colonna del tipo **geography** i campi del riquadro diventano di sola lettura dopo avere specificato lo schema a mosaico **Griglia geografica** , perché lo schema a mosaico della griglia geografica non usa un rettangolo di selezione.  
+     Quando si crea un indice in una colonna di tipo **geometry** è necessario specificare le coordinate **(**_X-min_**,**_Y-min_**)** e **(**_X-max_**,**_Y-max_**)** del rettangolo di selezione. Per un indice in una colonna del tipo **geography** i campi del riquadro diventano di sola lettura dopo avere specificato lo schema a mosaico **Griglia geografica** , perché lo schema a mosaico della griglia geografica non usa un rettangolo di selezione.  
   
      È eventualmente possibile specificare valori non predefiniti per il campo **Celle per oggetto** e per la densità griglia a qualsiasi livello dello schema a mosaico. Il numero predefinito di celle per oggetto è 16 per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o 8 per [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o versione successiva, mentre la densità della griglia predefinita è **Media** per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   

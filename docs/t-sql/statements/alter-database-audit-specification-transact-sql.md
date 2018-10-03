@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_DATABASE_AUDIT_SPECIFICATION_TSQL
@@ -19,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - ALTER DATABASE AUDIT SPECIFICATION statement
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
-caps.latest.revision: 22
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8c09b4c3c8099983304cd207ac5d5e4724dc2019
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 56fbd27b9e5e4d4e760743d94948540f0f6d87ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941277"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667129"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +87,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  Le specifiche del controllo del database sono oggetti non a sicurezza diretta che risiedono in un database specifico. È necessario impostare lo stato di una specifica di controllo sull'opzione OFF per apportare modifiche a una specifica del controllo del database. Se ALTER DATABASE AUDIT SPECIFICATION viene eseguita quando un controllo è abilitato con qualsiasi altra opzione diversa da STATE=OFF, verrà visualizzato un messaggio di errore. Per altre informazioni, vedere [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Gli utenti che dispongono dell'autorizzazione ALTER ANY DATABASE AUDIT possono modificare specifiche del controllo del database e associarle a qualsiasi controllo.  
   
  Dopo essere stata creata, la specifica del controllo del database può essere visualizzata dalle entità che dispongono dell'autorizzazione CONTROL SERVER o ALTER ANY DATABASE AUDIT o dell'account sysadmin oppure dalle entità che possono accedere esplicitamente al controllo.  

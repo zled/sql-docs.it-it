@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f28b5a581bf784f67ffdd1d90e84fb12a33c51c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c3a3087a98bfd56a68313003103e92cab7eb64d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952523"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766154"
 ---
 # <a name="sql-server-transactions-object"></a>Oggetto Transactions di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "32952523"
   
  La tabella seguente descrive i contatori di **SQLServer:Transactions** .  
   
-|Contatori dell'oggetto Transactions di SQL Server|Description|  
+|Contatori dell'oggetto Transactions di SQL Server|Descrizione|  
 |--------------------------------------|-----------------|  
 |**Spazio disponibile in tempdb (KB)**|Spazio disponibile in **tempdb**espresso in KB. Lo spazio disponibile deve essere sufficiente per contenere sia l'archivio delle versioni del livello di isolamento dello snapshot che tutti i nuovi oggetti temporanei creati in questa istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Tempo massimo esecuzione transazione**|Durata in secondi dall'inizio della transazione che è stata attiva più a lungo di tutte le altre transazioni correnti. Questo contatore mostra attività solo quando il database è nel livello di isolamento dello snapshot Read committed. Non registra attività se il database si trova in un altro livello di isolamento.|  

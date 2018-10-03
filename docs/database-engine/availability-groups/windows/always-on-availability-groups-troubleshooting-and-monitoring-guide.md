@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
-caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e82c43cbca60f1804c2a5b2becfcdbaaf734fd26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a1f55ad47ee17504118b3db5c00e61f39092e34
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32861696"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841009"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Guida alla risoluzione dei problemi e al monitoraggio dei gruppi di disponibilità Always On
  Questa guida consente di iniziare rapidamente a monitorare i gruppi di disponibilità Always On e a risolvere alcuni problemi più comuni dei gruppi di disponibilità. Riporta contenuto originale nonché una pagina di destinazione con informazioni utili pubblicate anche altrove. Sebbene in questa guida non sia possibile trattare in modo approfondito tutti i problemi che possono verificarsi nell'ambito dei gruppi di disponibilità, l'utente troverà un'indicazione della direzione da seguire per l'analisi della causa principale e la risoluzione dei problemi. 
@@ -30,7 +27,7 @@ ms.locfileid: "32861696"
 ##  <a name="BKMK_SCENARIOS"></a> Scenari di risoluzione dei problemi  
  Nella tabella seguente sono riportati collegamenti agli scenari di risoluzione dei problemi comuni per i gruppi di disponibilità. Questi sono suddivisi in categorie in base al tipo di scenario, ad esempio configurazione, connettività client, failover e prestazioni.  
   
-|Scenario|Tipo di scenario|Description|  
+|Scenario|Tipo di scenario|Descrizione|  
 |--------------|-------------------|-----------------|  
 |[Risolvere i problemi relativi alla configurazione dei gruppi di disponibilità Always On &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|Configurazione|Vengono fornite informazioni per la risoluzione dei problemi tipici relativi alla configurazione delle istanze del server per i gruppi di disponibilità. Tra i problemi di configurazione tipici sono inclusi la disabilitazione dei gruppi di disponibilità, la configurazione errata degli account, l'endpoint del mirroring del database inesistente, l'endpoint inaccessibile (errore di SQL Server 1418), l'accesso alla rete inesistente e l'esito negativo di un comando di creazione di join del database (errore di SQL Server 35250).|  
 |[Risolvere i problemi relativi a una operazione di aggiunta file non riuscita &#40;Gruppi di disponibilità Always On&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|Configurazione|Un'operazione di aggiunta file ha causato la sospensione del database secondario e l'attivazione dello stato NON IN SINCRONIZZAZIONE.|  
@@ -44,7 +41,7 @@ ms.locfileid: "32861696"
 ##  <a name="BKMK_TOOLS"></a> Strumenti utili per la risoluzione dei problemi  
  In fase di configurazione o di esecuzione dei gruppi di disponibilità, vari strumenti possono aiutare a diagnosticare diversi tipi di problemi. Nella tabella seguente vengono forniti collegamenti a informazioni utili su tali strumenti.  
   
-|Strumento|Description|  
+|Strumento|Descrizione|  
 |----------|-----------------|  
 |[Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)|Visibilità immediata dell'integrità del gruppo di disponibilità in un'interfaccia intuitiva.|  
 |[Criteri Always On](always-on-policies.md)|Usati dalla dashboard Always On.|  
@@ -64,7 +61,7 @@ ms.locfileid: "32861696"
   
  La tabella riportata di seguito fa riferimento ad argomenti che aiutano a monitorare l'integrità della soluzione dei gruppi di disponibilità.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Monitorare le prestazioni per i gruppi di disponibilità Always On](monitor-performance-for-always-on-availability-groups.md)|Descrive il processo di sincronizzazione dei dati per i gruppi di disponibilità, i controlli di flusso e le metriche utili per il monitoraggio di un gruppo di disponibilità. Viene illustrato anche come raccogliere le metriche per gli obiettivi RTO e RPO.|  
 |[Monitoraggio dei gruppi di disponibilità &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Fornisce informazioni sugli strumenti per eseguire il monitoraggio di un gruppo di disponibilità.|  

@@ -1,13 +1,11 @@
 ---
-title: CursorLocationEnum | Documenti Microsoft
+title: CursorLocationEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,27 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - CursorLocationEnum enumeration [ADO]
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e7752b4c460bccbca1b98d9a95d04df96006ea6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 832372ee3f8e80a9da4a758c759d9b5399a20a57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277420"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614735"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
-Specifica il percorso del servizio di cursore.  
+Specifica la posizione del servizio di cursore.  
   
 |Costante|valore|Description|  
 |--------------|-----------|-----------------|  
-|**adUseClient**|3|Utilizza i cursori sul lato client forniti da una libreria di cursori locali. I servizi cursore locali spesso consentirà molte funzionalità che i cursori forniti dal driver, non possono pertanto l'utilizzo di questa impostazione può garantire un vantaggio rispetto alla funzionalità che verranno abilitati. Per compatibilità con le versioni precedenti, il sinonimo **adUseClientBatch** è anche supportato.|  
-|**adUseNone**|1|Non utilizza i servizi di cursore. (Questa costante è obsoleta e verrà visualizzato solo per compatibilità con le versioni precedenti).|  
-|**adUseServer**|2|Valore predefinito. Utilizza i cursori forniti dal provider di dati o driver. Questi cursori sono a volte è molto flessibili e consentano ulteriori sensibilità alle modifiche apportate da altri file di dati. Tuttavia, alcune funzionalità del [il cursore per il servizio Microsoft OLE DB](../../../ado/guide/data/the-microsoft-cursor-service-for-ole-db.md), ad esempio l'associazione<br /><br /> [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti, non possono essere simulati con cursori sul lato server e queste funzionalità non sarà disponibile con questa impostazione.|  
+|**adUseClient**|3|Utilizza i cursori sul lato client forniti da una libreria di cursori locali. Il cursore locale services spesso consentirà molte funzionalità che i cursori fornito dal driver, non possono pertanto usare questa impostazione può offrire un vantaggio rispetto alla funzionalità che verranno abilitati. Per la compatibilità con le versioni precedenti, il sinonimo **adUseClientBatch** è anche supportato.|  
+|**adUseNone**|1|Non utilizzare servizi di cursore. (Questa costante è obsoleta e viene visualizzato unicamente per compatibilità con le versioni precedenti).|  
+|**adUseServer**|2|Valore predefinito. Utilizza i cursori forniti dal provider di dati o driver. Questi cursori sono a volte è molto flessibili e consentano aggiuntive sensibilità alle modifiche apportate da altri file di dati. Tuttavia, alcune funzionalità dei [The Microsoft Cursor Service per OLE DB](../../../ado/guide/data/the-microsoft-cursor-service-for-ole-db.md), ad esempio rimossa l'associazione<br /><br /> [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti, non possono essere simulati con cursori sul lato server e queste funzionalità non sarà disponibile con questa impostazione.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
  Package: **com.ms.wfc.data**  
   
 |Costante|  

@@ -1,31 +1,28 @@
 ---
-title: Origine di esempio di proprietà (VB) | Documenti Microsoft
+title: Esempio di proprietà (VB) di origine | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Source property [ADO], Visual Basic example
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc97f27fd4ac2ce65368946fdb8d386b959ffc27
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7b86baa47a755b52e99025a4a2fecc0922c80a08
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282070"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674189"
 ---
-# <a name="source-property-example-vb"></a>Esempio di proprietà Source (VB)
+# <a name="source-property-example-vb"></a>Esempio della proprietà Source (VB)
 Questo esempio viene illustrato il [origine](../../../ado/reference/ado-api/source-property-ado-recordset.md) proprietà aprendo tre [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) gli oggetti basati su origini dati diverse.  
   
 ```  
@@ -131,5 +128,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Proprietà Source (Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

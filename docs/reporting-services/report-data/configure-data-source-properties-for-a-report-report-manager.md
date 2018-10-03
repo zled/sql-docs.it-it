@@ -4,19 +4,18 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], embedded
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81c037101caec5bd9d1087ee4910bb5bedb47f0c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7e50917bd524e8ce8c68bc904e100b673419d684
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282113"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843939"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>Configurare le proprietà delle origini dati per un report impaginato
   Quando si esegue un report impaginato, il server di report recupera informazioni sulle proprietà per determinare come effettuare la connessione a un'origine dati. Il tipo di origine dati, la stringa di connessione e le informazioni sulle credenziali sono specificati nelle pagine delle proprietà dell'origine dati del report pubblicato. È possibile impostare le proprietà per modificare le informazioni sulla connessione all'origine dati rispetto ai valori originali specificati al momento della creazione del report.  

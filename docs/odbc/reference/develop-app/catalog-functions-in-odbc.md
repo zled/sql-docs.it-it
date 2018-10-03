@@ -1,47 +1,44 @@
 ---
-title: Catalogo delle funzioni di ODBC | Documenti Microsoft
+title: Funzioni di catalogo in ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - catalog functions [ODBC], listed
 - functions [ODBC], catalog functions
 ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0bbff6af05123484c09cbd514f626b05d438d79e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 84c870d45cc487fc9ec5497e43b764bd4187d2f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912026"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721249"
 ---
-# <a name="catalog-functions-in-odbc"></a>Funzioni di catalogo ODBC
-ODBC contiene le funzioni di catalogo seguenti:  
+# <a name="catalog-functions-in-odbc"></a>Funzioni di catalogo in ODBC
+ODBC contiene le funzioni del catalogo seguenti:  
   
 |Funzione|Description|  
 |--------------|-----------------|  
-|**SQLTables**|Restituisce un elenco dei cataloghi, schemi, tabelle o i tipi di tabella nell'origine dati.|  
+|**SQLTables**|Restituisce un elenco di cataloghi, schemi, tabelle o i tipi di tabella nell'origine dati.|  
 |**SQLColumns**|Restituisce un elenco di colonne in una o più tabelle.|  
-|**SQLStatistics**|Restituisce un elenco delle statistiche su una singola tabella. Restituisce inoltre un elenco di indici associate alla tabella.|  
-|**SQLSpecialColumns**|Restituisce un elenco di colonne che identifica in modo univoco una riga in una singola tabella. Restituisce inoltre un elenco di colonne della tabella che vengono aggiornate automaticamente.|  
+|**SQLStatistics**|Restituisce un elenco delle statistiche su una singola tabella. Restituisce anche un elenco di indici associate alla tabella.|  
+|**SQLSpecialColumns**|Restituisce un elenco di colonne che identifica in modo univoco una riga in una singola tabella. Restituisce anche un elenco di colonne della tabella che vengono aggiornate automaticamente.|  
 |**SQLPrimaryKeys**|Restituisce un elenco di colonne che compongono la chiave primaria di una singola tabella.|  
 |**SQLForeignKeys**|Restituisce un elenco di chiavi esterne in una singola tabella o un elenco di chiavi esterne in altre tabelle che fanno riferimento a una singola tabella.|  
 |**SQLTablePrivileges**|Restituisce un elenco di privilegi associati a una o più tabelle.|  
-|**SQLColumnPrivileges**|Restituisce un elenco di privilegi associati a una o più colonne in un'unica tabella.|  
+|**SQLColumnPrivileges**|Restituisce un elenco di privilegi associati a una o più colonne in una singola tabella.|  
 |**SQLProcedures**|Restituisce un elenco di procedure nell'origine dati.|  
-|**SQLProcedureColumns**|Restituisce un elenco di parametri di input e outpui, il valore restituito e le colonne nel set di risultati di una sola stored procedure.|  
-|**SQLGetTypeInfo**|Restituisce un elenco di tipi di dati SQL supportati dall'origine dati. Questi tipi di dati vengono in genere utilizzati **CREATE TABLE** e **ALTER TABLE** istruzioni.|  
+|**SQLProcedureColumns**|Restituisce un elenco di parametri di input e output, il valore restituito e le colonne in set di risultati di una sola stored procedure.|  
+|**SQLGetTypeInfo**|Restituisce un elenco di tipi di dati SQL supportati dall'origine dati. Questi tipi di dati vengono in genere utilizzati nelle **CREATE TABLE** e **ALTER TABLE** istruzioni.|  
   
- Poiché **SQLTables**, **SQLColumns**, **SQLStatistics**, e **SQLSpecialColumns** conformi alla Apri gruppo CLI e **SQLGetTypeInfo** è conforme a ISO 92 CLI, vengono implementati dalla maggior parte dei driver. Le funzioni di catalogo rimanenti sono nel livello di conformità di ODBC.  
+ In quanto **SQLTables**, **SQLColumns**, **SQLStatistics**, e **SQLSpecialColumns** conformi alla CLI di gruppo aprire e **SQLGetTypeInfo** conforme a ISO 92 CLI, vengono implementate dalla maggior parte dei driver. Le funzioni di catalogo rimanenti sono al livello di conformità di ODBC.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

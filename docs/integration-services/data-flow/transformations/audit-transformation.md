@@ -4,12 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- integration-services
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.audittrans.f1
@@ -18,15 +14,15 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7479bfd0d246bf3e70f7dc65a089844362f9b6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce5a320baf91ddf028e93ea9560cc9f8c5add5cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770640"
 ---
 # <a name="audit-transformation"></a>Controllo - trasformazione
   La trasformazione Controllo consente di includere nel flusso di dati di un pacchetto informazioni sull'ambiente in cui viene eseguito il pacchetto. Ad esempio, il nome del pacchetto, del computer e dell'operatore può essere aggiunto al flusso di dati. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include variabili di sistema che forniscono queste informazioni.  
@@ -34,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables"></a>Variabili di sistema  
  Nella tabella seguente sono descritte le variabili di sistema che possono essere utilizzate dalla trasformazione Controllo.  
   
-|Variabile di sistema|Indice|Description|  
+|Variabile di sistema|Indice|Descrizione|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|GUID che identifica l'istanza di esecuzione del pacchetto.|  
 |**PackageID**|1|Identificatore univoco del pacchetto.|  
@@ -71,7 +67,7 @@ ms.lasthandoff: 05/03/2018
  **Tipo di controllo**  
  Consente di selezionare una variabile di sistema disponibile per visualizzare le informazioni di controllo.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**GUID istanza esecuzione**|Consente di specificare il GUID che identifica in modo univoco l'istanza di esecuzione del pacchetto.|  
 |**ID pacchetto**|Consente di specificare il GUID che identifica in modo univoco il pacchetto.|  

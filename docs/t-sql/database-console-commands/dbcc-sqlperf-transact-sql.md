@@ -5,9 +5,7 @@ ms.date: 01/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQLPERF
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - space [SQL Server], transaction logs
 - DBCC SQLPERF statement
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
-caps.latest.revision: 43
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 4f8229b7765655bd75c2e0bfa2dc804c56a6fffa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fe8d7ae38915a335276e661e3ce5f28c61b9a40e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261137"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710999"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +82,7 @@ A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usare la DMV [sys
  
 Nel log delle transazioni viene registrata ogni transazione eseguita in un database. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) e [Guida sull'architettura e gestione del log delle transazioni di SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire `DBCC SQLPERF(LOGSPACE)` è richiesta l'autorizzazione `VIEW SERVER STATE` nel server. Per reimpostare le statistiche relative a latch e attese è richiesta l'autorizzazione `ALTER SERVER STATE` per il server.
   
 Nei livelli Premium e Business Critical di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` nel database. Nei livelli Standard, Basic e Utilizzo generico del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è richiesto l'account amministratore del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Le statistiche di reimpostazione di latch e attese non sono supportate.

@@ -4,12 +4,8 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- integration-services
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.foreachloopcontainer.f1
@@ -32,15 +28,15 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e7a04bc86317e2ceb04a4b2ae1e7fcff40470e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71f8cb6faeb5010cc39a05e2611753a04de812e1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822429"
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
   Il contenitore Ciclo Foreach definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **Foreach** nei linguaggi di programmazione. In un pacchetto per l'esecuzione del ciclo viene utilizzato un enumeratore Foreach.  Il contenitore Ciclo Foreach ripete il flusso di controllo per ogni membro di un enumeratore specificato.  
@@ -203,7 +199,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **Enumeratore**  
  Consente di selezionare il tipo di enumeratore nell'elenco. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Enumeratore Foreach File**|Consente di enumerare i file. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach File Enumerator**.|  
 |**Enumeratore Foreach Item**|Consente di enumerare i valori in un elemento. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach File Enumerator**.|  
@@ -344,7 +340,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **DocumentSourceType**  
  Consente di selezionare il tipo di origine del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -364,7 +360,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **EnumerationType**  
  Consente di selezionare un tipo di enumeratore nell'elenco. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Navigator**|Consente di eseguire l'enumerazione utilizzando uno strumento di spostamento XPathNavigator.|  
 |**Node**|Consente di enumerare i nodi restituiti da un'operazione XPath.|  
@@ -374,7 +370,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **OuterXPathStringSourceType**  
  Consente di selezionare il tipo di origine della stringa XPath. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente: 
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -397,7 +393,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **InnerXPathStringSourceType**  
  Consente di selezionare il tipo di origine della stringa XPath interna. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  

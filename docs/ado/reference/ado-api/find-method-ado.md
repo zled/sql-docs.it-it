@@ -1,13 +1,11 @@
 ---
-title: Find (metodo) (ADO) | Documenti Microsoft
+title: Metodo Find (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6569d6c65698738025267de0d97001eb041573e8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278720"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748220"
 ---
-# <a name="find-method-ado"></a>Find (metodo) (ADO)
-Cerca un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per la riga che soddisfa i criteri specificati. Facoltativamente, la direzione della ricerca, la riga iniziale e offset dalla riga iniziale può essere specificata. Se vengono soddisfatti i criteri, la posizione della riga corrente è impostata su record trovato. in caso contrario, la posizione viene impostata per la fine o inizio del **Recordset**.  
+# <a name="find-method-ado"></a>Metodo Find (ADO)
+Cerca un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per la riga che soddisfa i criteri specificati. Facoltativamente, può essere specificata la direzione della ricerca, la riga iniziale e offset della riga iniziale. Se vengono soddisfatti i criteri, la posizione della riga corrente è impostata sul record trovato. in caso contrario, la posizione è impostata su finale (o avvio) del **Recordset**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,31 +38,31 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *Criteri*  
  Oggetto **stringa** valore contenente un'istruzione che specifica il nome della colonna, l'operatore di confronto e valore da utilizzare nella ricerca.  
   
- *SkipRows*  
- Parametro facoltativo *.* Oggetto **lungo** valore, il cui valore predefinito è zero, che specifica l'offset di riga dalla riga corrente o *avviare* segnalibro per iniziare la ricerca. Per impostazione predefinita, verrà avviata la ricerca nella riga corrente.  
+ *Skiprows al*  
+ Facoltativo *.* Oggetto **lungo** valore, il cui valore predefinito è zero, che specifica l'offset di riga rispetto alla riga corrente oppure *avviare* segnalibro per iniziare la ricerca. Per impostazione predefinita, verrà avviata la ricerca nella riga corrente.  
   
  *SearchDirection*  
- Parametro facoltativo *.* Oggetto [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valore che specifica se la ricerca deve iniziare sulla riga corrente o la successiva riga disponibile nella direzione della ricerca. Arresta una ricerca alla fine del **Recordset** se il valore è **adSearchForward**. Arresta una ricerca all'inizio del **Recordset** se il valore è **adSearchBackward**.  
+ Facoltativo *.* Oggetto [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valore che specifica se la ricerca inizierà nella riga corrente o la successiva riga disponibile nella direzione della ricerca. Arresta una ricerca in fondo il **Recordset** se il valore è **adSearchForward**. Arresta una ricerca all'inizio del **Recordset** se il valore è **adSearchBackward**.  
   
  *Inizio*  
  Facoltativo. Oggetto **Variant** segnalibro che funziona come la posizione iniziale per la ricerca.  
   
-## <a name="remarks"></a>Remarks  
- Può essere specificato solo un nome di colonna singola *criteri*. Questo metodo non supporta le ricerche a più colonne.  
+## <a name="remarks"></a>Note  
+ Solo un nome di colonna singola può essere specificato *criteri*. Questo metodo non supporta le ricerche su più colonne.  
   
- L'operatore di confronto in *criteri* potrebbe essere "**>**"(maggiore di),"**\<**" (minore di), "=" (uguale), "> =" (maggiore o uguale a), "< =" (minore o uguale a), "<>" (non uguale), o "like" (criteri di ricerca).  
+ L'operatore di confronto *criteri* potrebbe essere "**>**"(maggiore),"**\<**" (minore di), "=" (uguale), "> =" (maggiore o uguale), "< =" (minore o uguale a), "<>" (non uguale), o "like" (criteri di ricerca).  
   
- Il valore in *criteri* può essere una stringa, un numero a virgola mobile o una data. I valori stringa sono delimitati da virgolette singole o virgolette "#" (simbolo di cancelletto) (ad esempio, "stato = 'WA'" o "stato = WA # #"). I valori di data vengono delimitati da virgolette "#" (simbolo di cancelletto) (ad esempio, "start_date > # #7/22/97"). Questi valori possono contenere ore, minuti e secondi per indicare i timestamp, ma non devono contenere millisecondi o si verificheranno errori.  
+ Il valore in *criteri* potrebbe essere una stringa, numero a virgola mobile o Data. Valori stringa sono delimitati da virgolette singole o doppie "" cancelletto (#) (ad esempio, "stato ="WA"" o "state = WA # #"). I valori delle date sono delimitati con segni di (cancelletto) "#" (ad esempio, "start_date > & 97/n. 7/22"). Questi valori possono contenere ore, minuti e secondi per indicare i timbri data / ora, ma non devono contenere millisecondi o si verificheranno errori.  
   
- Se l'operatore di confronto è "mi piace", il valore di stringa può contenere un asterisco (*) per trovare una o più occorrenze di qualsiasi carattere o una sottostringa. Ad esempio, "stato come sto\*'" corrisponde a Milano e Massachusetts. È anche possibile utilizzare asterischi iniziali e finali per trovare una sottostringa contenuta all'interno dei valori. Ad esempio, "stato ad esempio '\*come\*'" corrisponde Alaska, Arkansas e Massachusetts.  
+ Se l'operatore di confronto è "like", il valore della stringa può contenere un asterisco (*) per trovare una o più occorrenze di qualsiasi carattere o una sottostringa. Ad esempio, "stato come sto\*'" corrisponde a Maine e Massachusetts. È possibile utilizzare anche gli asterischi iniziali e finali per trovare una sottostringa contenuta all'interno dei valori. Ad esempio, "stato, ad esempio '\*come\*'" corrisponde a Alaska Arkansas e Massachusetts.  
   
- Asterischi possono essere utilizzati solo alla fine di una stringa di criteri o all'inizio e fine di una stringa di criteri, come illustrato in precedenza. È possibile usare l'asterisco come carattere jolly iniziale ('* str'), o come un carattere jolly incorporati di s\*r'). Ciò genererà un errore.  
-  
-> [!NOTE]
->  Si verifica un errore se non è una posizione di riga corrente prima di chiamare **trovare**. Qualsiasi metodo che imposta la posizione di riga, ad esempio [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), deve essere chiamato prima di chiamare **trovare**.  
+ Gli asterischi sono utilizzabile solo alla fine di una stringa di criteri o all'inizio e fine di una stringa di criteri, come illustrato in precedenza. È possibile usare l'asterisco come carattere jolly iniziale ('* str'), o come un carattere jolly incorporati di s\*r'). Ciò causerà un errore.  
   
 > [!NOTE]
->  Se si chiama il **trovare** metodo su un oggetto recordset e la posizione corrente del recordset all'ultimo record o alla fine del file (EOF), non sarà possibile trovare alcun elemento. È necessario chiamare il **MoveFirst** per impostare il cursore/posizione corrente all'inizio del recordset.  
+>  Si verifica un errore se una posizione della riga corrente non è impostata prima di chiamare **trovare**. Qualsiasi metodo che imposta la posizione di riga, ad esempio [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), deve essere chiamato prima di chiamare **trovare**.  
+  
+> [!NOTE]
+>  Se si chiama il **trovare** metodo su un set di record e la posizione corrente nel set di record è all'ultimo record o alla fine del file (EOF), non sarà possibile trovare alcuna operazione. È necessario chiamare il **MoveFirst** metodo per impostare il cursore/posizione corrente all'inizio del set di record.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

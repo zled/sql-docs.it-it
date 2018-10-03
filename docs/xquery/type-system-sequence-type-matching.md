@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - sequence type matching [XQuery]
 - XQuery, sequence type matching
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ce01e8b2f587527b264a3ea11021257375fb842
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9e1a8db0077b5ec164fe5939b126cfab98e218bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980023"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778389"
 ---
-# <a name="type-system---sequence-type-matching"></a>Sistema di tipi - corrispondenza del tipo di sequenza
+# <a name="type-system---sequence-type-matching"></a>Sistema di tipi - Corrispondenza per il tipo di sequenza
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Il valore di un'espressione XQuery è sempre rappresentato da una sequenza di zero o più elementi, che possono essere valori atomici o nodi. Il tipo di sequenza fa riferimento alla capacità di stabilire una corrispondenza tra il tipo di sequenza restituito da un'espressione di query e un tipo specifico. Esempio:  

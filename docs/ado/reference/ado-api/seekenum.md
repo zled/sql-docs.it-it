@@ -1,13 +1,11 @@
 ---
-title: SeekEnum | Documenti Microsoft
+title: SeekEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,30 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - SeekEnum enumeration [ADO]
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f61e71b03a05a8e13c1b069e4880f362ff0985a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a6e044c4a2cda01fcc9cbba2667beaae75a12caf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281590"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772729"
 ---
 # <a name="seekenum"></a>SeekEnum
-Specifica il tipo di [Seek](../../../ado/reference/ado-api/seek-method.md) da eseguire.  
+Specifica il tipo della [Seek](../../../ado/reference/ado-api/seek-method.md) da eseguire.  
   
 |Costante|valore|Description|  
 |--------------|-----------|-----------------|  
 |**adSeekFirstEQ**|1|Cerca la prima chiave uguale a *KeyValues*.|  
-|**adSeekLastEQ**|2|Cerca l'ultima chiave uguale a *KeyValues*.|  
-|**adSeekAfterEQ**|4|Cerca una chiave uguale a *KeyValues* o subito dopo dove sarebbero state eseguite corrispondenti.|  
+|**adSeekLastEQ**|2|Cerca la chiave dell'ultimo uguale a *KeyValues*.|  
+|**adSeekAfterEQ**|4|Cerca una chiave uguale a *KeyValues* o subito dopo in cui sarebbe state eseguite se tale corrispondenza.|  
 |**adSeekAfter**|8|Cerca una chiave subito dopo la posizione in cui una corrispondenza con *KeyValues* sarebbero state eseguite.|  
-|**adSeekBeforeEQ**|16|Cerca una chiave uguale a *KeyValues*o appena prima dove sarebbero state eseguite corrispondenti.|  
+|**adSeekBeforeEQ**|16|Cerca una chiave uguale a *KeyValues*o appena prima dove sarebbe state eseguite se tale corrispondenza.|  
 |**adSeekBefore**|32|Cerca immediatamente prima di una chiave in cui una corrispondenza con *KeyValues* sarebbero state eseguite.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
  Package: **com.ms.wfc.data**  
   
 |Costante|  

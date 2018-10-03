@@ -1,31 +1,28 @@
 ---
-title: Campo (ADO - sintassi WFC) | Documenti Microsoft
+title: Campo (ADO - WFC sintassi) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 327bedf139a68496e4d779dc76fd5273b0fdb99d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 709629c6ef42b8ffeb65959ab9491bbe3c178ab3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278180"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613839"
 ---
-# <a name="field-ado---wfc-syntax"></a>Campo (ADO - sintassi WFC)
-## <a name="package-commswfcdata"></a>pacchetto com.ms. wfc.  
+# <a name="field-ado---wfc-syntax"></a>Field (sintassi ADO/WFC)
+## <a name="package-commswfcdata"></a>creare un pacchetto com.ms. wfc.  
   
 ### <a name="methods"></a>Metodi  
   
@@ -48,7 +45,7 @@ public com.ms.com.IUnknown getDataFormat()
 public void setDataFormat(com.ms.com.IUnknown format)  
 ```  
   
- (Per ulteriori informazioni, vedere la documentazione per l'interfaccia IDataFormat).  
+ (Per altre informazioni, vedere la documentazione per l'interfaccia IDataFormat).  
   
 ```  
 public int getDefinedSize()  
@@ -67,14 +64,14 @@ public void setValue(Variant value)
 public AdoProperties getProperties()  
 ```  
   
-### <a name="field-accessor-methods"></a>Metodi di accesso di campo  
- Il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà di un [campo](../../../ado/reference/ado-api/field-object.md) oggetto Ottiene o imposta il contenuto di tale oggetto. Il contenuto è rappresentato come un tipo di oggetto che può essere assegnato un valore e i diversi tipi di dati VARIANT.  
+### <a name="field-accessor-methods"></a>Metodi della funzione di accesso di campo  
+ Il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà di un [campo](../../../ado/reference/ado-api/field-object.md) oggetto Ottiene o imposta il contenuto di tale oggetto. Il contenuto è rappresentato come una variante, un tipo di oggetto che può essere assegnato un valore e i diversi tipi di dati.  
   
- ADO/WFC implementa il **valore** proprietà con il **getValue** metodo, che restituisce un oggetto VARIANT; e **setValue** metodo, che accetta una variante come argomento. Le varianti sono altamente efficiente in alcuni linguaggi, ad esempio Microsoft Visual Basic.  
+ ADO/WFC implementa il **valore** proprietà con il **getValue** metodo, che restituisce un oggetto VARIANT; e il **setValue** metodo, che utilizza una variante come argomento. Varianti sono altamente efficienti in determinate lingue, ad esempio Microsoft Visual Basic.  
   
- Oltre al **valore** proprietà ADO/WFC include *della funzione di accesso* metodi che utilizzano tipi di dati Java per ottenere e impostare il contenuto di **campo** oggetti. La maggior parte di questi metodi ha il formato dei nomi **ottenere * * * il tipo di dati* o **impostare * * * il tipo di dati*.  
+ Oltre al **valore** ADO/WFC di proprietà, fornisce *della funzione di accesso* metodi che utilizzano tipi di dati Java per ottenere e impostare il contenuto del **campo** oggetti. La maggior parte di questi metodi presentano nomi nel formato **ottenere * * * DataType* o **impostare * * * DataType*.  
   
- Esistono due eccezioni degno di nota: una del **getObject** metodi restituisce un oggetto convertito in una classe specificata. Non esiste alcun **importante** proprietà; viene invece utilizzato un **isNull** proprietà che restituisce un valore booleano che indica se il campo è null.  
+ Esistono due importanti eccezioni: tra il **getObject** metodi restituisce un oggetto convertito in una classe specificata. È presente alcun **importante** proprietà; viene invece un' **isNull** proprietà che restituisce un valore booleano che indica se il campo è null.  
   
 ```  
 public native boolean getBoolean();  

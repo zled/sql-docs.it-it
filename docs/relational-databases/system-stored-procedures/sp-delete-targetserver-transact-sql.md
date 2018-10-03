@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_targetserver
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_targetserver
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b67e059a70c7edfda838d325928a95a8f4b43ab0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 63b8fdb66b868d7fc0c1c7a83d574bafb92224b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250836"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692245"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +46,22 @@ sp_delete_targetserver [ @server_name = ] 'server'
  Nome del server da rimuovere come server di destinazione disponibile. *server* viene **nvarchar(30)**, non prevede alcun valore predefinito.  
   
  [  **@clear_downloadlist=** ] *clear_downloadlist*  
- Specifica se cancellare l'elenco di download per il server di destinazione. *clear_downloadlist* è di tipo **bit**, il valore predefinito è **1**. Quando *clear_downloadlist* è **1**, la procedura cancella l'elenco di download per il server prima di eliminare il server. Quando *clear_downloadlist* è **0**, l'elenco di download non viene cancellata.  
+ Specifica se cancellare l'elenco di download per il server di destinazione. *clear_downloadlist* è di tipo **bit**, il valore predefinito è **1**. Quando *clear_downloadlist* viene **1**, la procedura cancella l'elenco di download per il server prima di eliminare il server. Quando *clear_downloadlist* viene **0**, l'elenco di download non viene cancellata.  
   
  [  **@post_defection=** ] *post_defection*  
- Viene specificato se inviare un'istruzione di esclusione al server di destinazione. *post_defection* è di tipo **bit**, con un valore predefinito è 1. Quando *post_defection* è **1**, la procedura invia un'istruzione di esclusione al server di destinazione prima di eliminare il server. Quando *post_defection* è **0**, la procedura non invia un'istruzione di esclusione al server di destinazione.  
+ Viene specificato se inviare un'istruzione di esclusione al server di destinazione. *post_defection* è di tipo **bit**, con un valore predefinito è 1. Quando *post_defection* viene **1**, la procedura invia un'istruzione di esclusione al server di destinazione prima di eliminare il server. Quando *post_defection* viene **0**, la procedura non invia un'istruzione di esclusione al server di destinazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
- Il normale per eliminare un server di destinazione consiste nel chiamare **sp_msx_defect** nel server di destinazione. Utilizzare **sp_delete_targetserver** solo quando è necessaria un'esclusione manuale.  
+## <a name="remarks"></a>Note  
+ Normalmente per eliminare un server di destinazione consiste nel chiamare **sp_msx_defect** nel server di destinazione. Uso **sp_delete_targetserver** solo quando è necessaria un'esclusione in modo manuale.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Per eseguire questa stored procedure, è necessario consentire agli utenti di **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Per eseguire questa stored procedure, gli utenti devono disporre i **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente il server `LONDON1` viene rimosso dall'elenco dei server di processo disponibili.  

@@ -5,9 +5,7 @@ ms.date: 11/23/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5cabb4763e85f8f1d052aa797ec6f868d9dac0aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab08ae1055d18b036f34791cbb90ccc95071e16e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869736"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639959"
 ---
 # <a name="database-engine-service-startup-options"></a>Opzioni di avvio del servizio del motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +49,14 @@ ms.locfileid: "32869736"
   
 ## <a name="list-of-startup-options"></a>Elenco delle opzioni di avvio  
 ### <a name="default-startup-options"></a>Opzioni di avvio predefinite  
-|Opzioni|Description|  
+|Opzioni|Descrizione|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|Percorso completo del file del database master (in genere, C:\Programmi\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf). Se non si imposta questa opzione, vengono utilizzati i parametri esistenti nel Registro di sistema.|  
 |**-e**  *error_log_path*|Percorso completo del file di log degli errori, in genere C:\Programmi\Microsoft SQL Server\MSSQL.*n*\MSSQL\LOG\ERRORLOG). Se non si imposta questa opzione, vengono utilizzati i parametri esistenti nel Registro di sistema.|  
 |**-l**  *master_log_path*|Percorso completo del file di log del database master (in genere C:\Programmi\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf). Se non si specifica questa opzione, vengono utilizzati i parametri esistenti nel Registro di sistema.|  
   
 ### <a name="other-startup-options"></a>Altre opzioni di avvio   
-|Opzioni |Description|   
+|Opzioni |Descrizione|   
 |---------------------------|-----------------|  
 |**-c**|Riduce i tempi necessari per l'avvio quando si avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal prompt dei comandi. Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] viene in genere avviato come servizio chiamando Gestione controllo servizi. Considerato che [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] non viene avviato come servizio quando viene eseguito l'avvio dal prompt dei comandi, usare **-c** per ignorare questo passaggio.|  
 |**-f**|Avvia un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la configurazione minima. È utile nel caso in cui l'impostazione di un valore di configurazione, ad esempio un'allocazione eccessiva di memoria, abbia impedito l'avvio del server. L'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la configurazione minima comporta l'attivazione della modalità utente singolo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere la descrizione di **-m** di seguito.|  
@@ -84,7 +81,7 @@ ms.locfileid: "32869736"
 ## <a name="compatibility-support"></a>Informazioni sulla compatibilità  
  Il parametro **-h**  non è supportato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Questo parametro è stato utilizzato in versioni precedenti di istanze a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per riservare spazio di indirizzi della memoria virtuale per metadati della memoria a caldo quando AWE è abilitato. Per ulteriori informazioni, vedere [Funzionalità di SQL Server obsolete in SQL Server 2016](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
 [Configurare l'opzione di configurazione del server scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
 [Configure Server Startup Options (Configurare le opzioni di avvio del server) &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)

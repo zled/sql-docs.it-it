@@ -1,59 +1,56 @@
 ---
-title: Esempi di codice ADO in Microsoft JScript | Documenti Microsoft
+title: Esempi di codice ADO in Microsoft JScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - ADO code examples, JScript
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c65e6242525e0c3615e7b00d9067897a9ac898c0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02dc045c97f79f70263d2ad2edabdbc2c0d2983f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275350"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646676"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Esempi di codice ADO in Microsoft JScript
-Utilizzare gli esempi di codice seguente per informazioni su come utilizzare ADO metodi, proprietà ed eventi durante la scrittura in JScript.  
+Usare gli esempi di codice seguente per informazioni su come usare i metodi ADO, proprietà ed eventi durante la scrittura in JScript.  
   
 > [!NOTE]
->  Incollare l'esempio di codice completo, dall'inizio alla fine, nell'editor di codice. L'esempio potrebbe non essere eseguita correttamente se vengono utilizzati esempi parziali o se la formattazione di paragrafo.  
+>  Incollare l'esempio di codice completo, dall'inizio alla fine, nell'editor di codice. L'esempio potrebbe non essere eseguita correttamente se vengono usati esempi parziali o se la formattazione di paragrafo.  
   
 ## <a name="methods"></a>Metodi  
   
--   [Esempio AddNew (metodo)](../../../ado/reference/ado-api/addnew-method-example-jscript.md)  
+-   [Esempio di metodo AddNew](../../../ado/reference/ado-api/addnew-method-example-jscript.md)  
   
--   [Aggiungere e CreateParameter metodi esempio](../../../ado/reference/ado-api/append-and-createparameter-methods-example-jscript.md)  
+-   [Append e CreateParameter esempio di metodi](../../../ado/reference/ado-api/append-and-createparameter-methods-example-jscript.md)  
   
--   [Eseguire, Requery e cancellare esempio dei metodi](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-jscript.md)  
+-   [Eseguire, rieseguire una query ed eliminare esempio di metodi](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-jscript.md)  
   
--   [Esempio del metodo Find](../../../ado/reference/ado-api/find-method-example-jscript.md)  
+-   [Esempio di metodo Find](../../../ado/reference/ado-api/find-method-example-jscript.md)  
   
 -   [Esempio di metodo GetRows](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
   
 ## <a name="properties"></a>Proprietà  
   
--   [Esempio di proprietà PageSize, PageCount e AbsolutePage](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
+-   [Proprietà AbsolutePage, PageCount, PageSize esempio di proprietà e](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
   
--   [Esempio AbsolutePosition e CursorLocation proprietà](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-jscript.md)  
+-   [Esempio di AbsolutePosition e CursorLocation di proprietà](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-jscript.md)  
   
--   [Proprietà ActiveCommand](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)  
+-   [Esempio di proprietà ActiveCommand](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)  
   
--   [Esempio di proprietà di direzione, CommandText, CommandTimeout, CommandType, dimensioni e ActiveConnection](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)  
+-   [ActiveConnection, CommandText, CommandTimeout, CommandType, dimensioni e direzione esempio di proprietà](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)  
   
--   [Esempio di proprietà DefinedSize e ActualSize](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-jscript.md)  
+-   [Esempio di ActualSize e DefinedSize di proprietà](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-jscript.md)  
   
 -   [Esempio di proprietà CacheSize](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)  
   
@@ -61,6 +58,6 @@ Utilizzare gli esempi di codice seguente per informazioni su come utilizzare ADO
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempi di codice ADO in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [VBScript esempi di codice ADO](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
+ [VBScript di esempi di codice ADO](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Esempi di codice ADO in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
  [Appendice D: Esempi ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

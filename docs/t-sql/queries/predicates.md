@@ -5,9 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,23 +19,22 @@ helpviewer_keywords:
 - predicates [full-text search]
 - expressions [SQL Server], predicates
 ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 682250ba21007ff42360145c803ea0a080ac454b
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: c16988c07959be5c127d22584ef72b1a73e14f4e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36256403"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722069"
 ---
 # <a name="predicates"></a>Predicati
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Espressione che restituisce TRUE, FALSE o UNKNOWN. I predicati vengono usati nelle condizioni di ricerca delle clausole [WHERE](../../t-sql/queries/where-transact-sql.md) e [HAVING](../../t-sql/queries/select-having-transact-sql.md), nelle condizioni di join delle clausole [FROM](../../t-sql/queries/from-transact-sql.md) e in altri costrutti in cui è necessario un valore booleano.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili i predicati riportati di seguito.  
   
 ||  

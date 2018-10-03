@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d8f879287391edfe5007862aab95913173e50ba
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d4e262ab70d75ef1f8ddff4772ceaf7adc68fec3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272383"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701349"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Creare un gruppo di gerarchie ricorsive (Generatore report e SSRS)
 Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un gruppo di gerarchie ricorsive organizza i dati da un unico set di dati di un report in cui sono inclusi più livelli gerarchici, ad esempio il report per definire la struttura di relazioni tra dipendenti e manager in una gerarchia organizzativa.  

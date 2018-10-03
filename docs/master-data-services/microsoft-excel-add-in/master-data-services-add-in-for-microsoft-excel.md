@@ -5,21 +5,18 @@ ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-caps.latest.revision: 30
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4caa29be4b948e2e756c057348c1aef7ec9feef6
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 436fc2d07406bd76939dcbe4d6012b5b0bce297e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753941"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Componente aggiuntivo Master Data Services per Microsoft Excel
 
@@ -52,7 +49,7 @@ ms.locfileid: "35334875"
   
 -   Un *attribute* è una colonna di dati. Ogni membro dispone di attributi. Ad esempio, l'attributo **Code** per il membro **Blue** è **B**. Per altre informazioni sugli attributi, vedere [Attributi &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_maintenance_plan_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c144581e7d1ed73da251d13419d5ec04a7fd687
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 665d4de0f1ee61942e4f1af431889672bcc313bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979053"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757419"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**plan_id**|**uniqueidentifier**|ID del piano di manutenzione.|  
 |**plan_name**|**sysname**|Nome del piano di manutenzione.|  
 |**date_created**|**datetime**|Data di creazione del piano di manutenzione.|  
-|**proprietario**|**sysname**|Proprietario del piano di manutenzione.|  
+|**Proprietario**|**sysname**|Proprietario del piano di manutenzione.|  
 |**max_history_rows**|**int**|Numero massimo di righe assegnate per la registrazione della cronologia del piano di manutenzione nella tabella di sistema.|  
 |**remote_history_server**|**int**|Nome del server remoto in cui è possibile scrivere il report della cronologia.|  
 |**max_remote_history_rows**|**int**|Numero massimo di righe assegnate nella tabella di sistema di un server remoto in cui è possibile scrivere il report della cronologia.|  
@@ -89,7 +85,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ## <a name="remarks"></a>Note  
  **sp_help_maintenance_plan** è il **msdb** database.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_help_maintenance_plan**.  
   
 ## <a name="examples"></a>Esempi  

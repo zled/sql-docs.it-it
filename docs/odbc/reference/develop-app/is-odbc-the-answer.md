@@ -1,31 +1,28 @@
 ---
-title: La risposta è ODBC? | Microsoft Docs
+title: Quando usare ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], ODBC
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be3439dd75ac7e67fc83c630f9cf0e2ef670a863
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f90f2395eac5dce76848d7bc309f1a3d5ce289f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911676"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600559"
 ---
-# <a name="is-odbc-the-answer"></a>La risposta è ODBC?
-Prima di affrontare il problema di interoperabilità, prendere in considerazione i seguenti aspetti: l'applicazione utilizzare ODBC affatto? Ciò potrebbe sembrare una domanda strano per porre in una Guida per ODBC, ma è, in realtà, una legittima. ODBC non è stato progettato per sostituire completamente l'API di database native, né è stato progettato per fornire l'accesso al database in tutte le circostanze. È stato progettato per fornire un'interfaccia comune per i database e può essere disponibile ai programmatori di dover conoscere e gestire i collegamenti a più database.  
+# <a name="is-odbc-the-answer"></a>Quando usare ODBC
+Prima di affrontare il problema di interoperabilità, prendere in considerazione i seguenti aspetti: l'applicazione utilizzino ODBC affatto? Ciò può sembrare una domanda strano per porre in una Guida a ODBC, ma è, infatti, una legittima. ODBC non è stata progettata per sostituire completamente l'API di database nativa, né è stato progettato per fornire l'accesso al database in qualsiasi circostanza. È stato progettato per fornire un'interfaccia comune per i database e può essere gratuito ai programmatori di dover apprendere e mantenere i collegamenti a più database.  
   
- Applicazioni personalizzate sono candidati ideali per l'API nativa sul database. Il motivo principale è che le applicazioni personalizzate spesso lavorare con un singolo DBMS e non sono necessari per l'interoperabilità. Database nativo API potrebbero presentano le prestazioni migliori rispetto a ODBC di esporre le funzionalità di un determinato DBMS e potrebbero esporre funzionalità non esposta da ODBC. Inoltre, poiché gli sviluppatori di applicazioni personalizzate sono in genere familiari con l'API di database nativo per il sistema DBMS, è necessario informazioni ODBC. Tuttavia, è interessante notare che per alcuni DBMS, ODBC è l'API nativa sul database.  
+ Le applicazioni personalizzate sono i candidati ideali per le API di database nativo. Il motivo principale è che le applicazioni personalizzate spesso funziona con un DBMS singolo e non necessario per essere interoperabile. Database nativo API potrebbero ottenere una migliore rispetto a ODBC di esporre le funzionalità del sistema DBMS per un particolare e potrebbero esporre le funzionalità non esposte da ODBC. Inoltre, poiché gli sviluppatori di applicazioni personalizzate sono in genere familiari con l'API di database nativo per il sistema DBMS, c'è motivo little per informazioni su ODBC. Tuttavia, è interessante notare che per alcuni DBMS, ODBC è l'API di database nativo.  
   
- Pertanto, quali applicazioni sono candidati per ODBC? I migliori candidati sono applicazioni che funzionano con più di un sistema DBMS. Questo include quasi tutte le applicazioni verticali e non generici. Include inoltre un numero di applicazioni personalizzate. Ad esempio, applicazioni personalizzate che utilizzano diversi DBMS diversi sono molto più semplice e più chiara per scrivere con ODBC rispetto con più API native. E applicazioni personalizzate scritte con ODBC sono molto più semplice eseguire la migrazione di una società si sposta da un DBMS a un altro o distribuisce la stessa applicazione su diversi DBMS.
+ Quindi, quali applicazioni sono candidati per ODBC? I candidati migliori sono le applicazioni che funzionano con più di un sistema DBMS. Ciò include quasi tutte le applicazioni verticali e non generici. Contiene inoltre un numero di applicazioni personalizzate. Ad esempio, le applicazioni personalizzate che usano diversi DBMS diverse sono molto più semplice e più facili da scrivere con ODBC rispetto a più API native. E applicazioni personalizzate scritte con ODBC sono molto più semplice eseguire la migrazione di un'azienda si sposta da un DBMS a altro o distribuisce l'applicazione stessa con diversi DBMS.

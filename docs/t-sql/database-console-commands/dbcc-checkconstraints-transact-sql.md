@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC CHECKCONSTRAINTS
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - constraints [SQL Server], consistency checks
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-caps.latest.revision: 45
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: a274fea3b1171774def99daea9248ca96cd4c365
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 763acaea371103ac9d87bf25aa2de787cef78854
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262568"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759641"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,13 +106,13 @@ Non è possibile specificare constraint_name o constraint_id per eseguire solo v
 ## <a name="result-sets"></a>Set di risultati  
 DBCC CHECKCONSTRAINTS restituisce un set di righe con le colonne seguenti.
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |Nome tabella|**varchar**|Nome della tabella.|  
 |Constraint Name|**varchar**|Nome del vincolo violato.|  
 |Where|**varchar**|Assegnazioni di valori di colonna che identificano una o più righe che violano il vincolo.<br /><br /> È possibile utilizzare il valore di questa colonna in una clausola WHERE di un'istruzione SELECT che esegue una query per individuare le righe che violano il vincolo.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .
   
 ## <a name="examples"></a>Esempi  

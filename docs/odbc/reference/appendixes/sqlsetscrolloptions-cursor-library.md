@@ -1,32 +1,29 @@
 ---
-title: SQLSetScrollOptions (libreria di cursori) | Documenti Microsoft
+title: SQLSetScrollOptions (libreria di cursori) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], Cursor Library
 ms.assetid: c5c0ac6d-a6c1-4077-8186-1644df1944f8
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96041fdfcf9dbad53513f402faad8b2aeaf37cf3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1fe6765c0ff8a057aac8e86ea5ad4aa1ac388b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906926"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739669"
 ---
 # <a name="sqlsetscrolloptions-cursor-library"></a>SQLSetScrollOptions (libreria di cursori)
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Si consiglia di utilizzare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
   
- In questo argomento viene illustrato l'utilizzo del **SQLSetScrollOptions** funzione nella libreria di cursori. Per informazioni generali su **SQLSetScrollOptions**, vedere [SQLSetScrollOptions funzione](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md).  
+ In questo argomento viene illustrato l'utilizzo dei **SQLSetScrollOptions** funzione nella libreria di cursori. Per informazioni generali sul **SQLSetScrollOptions**, vedere [funzione SQLSetScrollOptions](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md).  
   
- La libreria di cursori supporta **SQLSetScrollOptions** solo per compatibilità con le versioni precedenti; le applicazioni devono utilizzare invece gli attributi di istruzione SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE e SQL_ATTR_ROW_ARRAY_SIZE.
+ Supporta la libreria di cursori **SQLSetScrollOptions** solo per compatibilità con le versioni precedenti; le applicazioni devono usare invece gli attributi di istruzione SQL_ATTR_CURSOR_TYPE, SQL_ATTR_CONCURRENCY e SQL_ATTR_ROW_ARRAY_SIZE.

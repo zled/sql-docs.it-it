@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- integration-services
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.transfertasks.selectobjectsmodaldialogs.f1
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 950500222d6203389b489660f2feb7ea65423cb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d2f9db52d9e70f87c913db510b59fc387ce8868
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710209"
 ---
 # <a name="select-objects-to-transfer"></a>Selezione oggetti da trasferire
   Utilizzare questa finestra di dialogo per selezionare gli oggetti da trasferire tra due istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un'attività di trasferimento di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

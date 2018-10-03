@@ -1,34 +1,31 @@
 ---
-title: Esempio di metodo GetString (VC + +) | Documenti Microsoft
+title: Esempio di metodo GetString (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - GetString method [ADO], VC++ example
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a301175045bbe323c00b7b17b6217aaec9f7b74f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6e3692410379c6ef87ec2da4b40f09b0d498a187
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278900"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815589"
 ---
-# <a name="getstring-method-example-vc"></a>Esempio di metodo GetString (VC + +)
-Questo esempio viene illustrato il [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) metodo.  
+# <a name="getstring-method-example-vc"></a>Esempio del metodo GetString (VC++)
+Questo esempio viene illustrato il [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) (metodo).  
   
- Si supponga che si sta eseguendo il debug di un problema di accesso ai dati e si desidera un modo rapido e semplice di stampa del contenuto corrente di una piccola [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Si supponga si sta eseguendo il debug di un problema di accesso dati e si desidera un modo semplice e veloce di stampa del contenuto corrente di un piccolo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="example"></a>Esempio  
   
@@ -173,7 +170,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>Input di esempio  
+## <a name="sample-input"></a>Esempio di Input  
   
 ```  
 MD  

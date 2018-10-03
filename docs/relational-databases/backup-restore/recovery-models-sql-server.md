@@ -5,9 +5,7 @@ ms.date: 07/16/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], recovery models
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - full recovery model [SQL Server]
 - backing up transaction logs [SQL Server], recovery models
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
-caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f86cc963e5328247b1ee883abb658dcc57e81efc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c8c2efee10a38120717487fc6e04429de7f1bf6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921776"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653434"
 ---
 # <a name="recovery-models-sql-server"></a>Modelli di recupero (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.locfileid: "32921776"
 ##  <a name="RMov"></a> Panoramica del modello di recupero  
  Nella tabella seguente vengono riepilogati i tre modelli di recupero.  
   
-|modello di recupero|Description|Potenziale perdita di dati|Recupero temporizzato|  
+|modello di recupero|Descrizione|Potenziale perdita di dati|Recupero temporizzato|  
 |--------------------|-----------------|------------------------|-------------------------------|  
 |**Simple**|Non vengono eseguiti backup del log.<br /><br /> Lo spazio del log viene automaticamente recuperato per limitare i requisiti di spazio ed evitare la necessità di gestire lo spazio del log delle transazioni. Per informazioni sui backup di database nel modello di recupero con registrazione minima, vedere [Backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md).<br /><br /> Le operazioni che richiedono i backup dei log delle transazioni non sono supportate dal modello di recupero con registrazione minima. Le seguenti funzionalità non possono essere utilizzate nei modelli di recupero con registrazione minima:<br /><br /> - Log shipping<br /><br /> - Always On o mirroring del database<br /><br /> - Recupero dei supporti senza perdita di dati<br /><br /> - Ripristini temporizzati|Le modifiche eseguite in seguito al backup più recente non sono protette. In caso di emergenza sarà necessario applicare nuovamente tali modifiche.|Consente solo il recupero fino al momento corrispondente al termine di un backup. Per altre informazioni, vedere [Ripristini di database completi &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md). <br><br> Per una spiegazione più dettagliata del modello di recupero con registrazione minima, vedere [SQL Server Simple Recovery Model (modello di recupero con registrazione minima di SQL Server)](https://www.mssqltips.com/sqlservertutorial/4/sql-server-simple-recovery-model/) a cura degli esperti di [MSSQLTips!](https://www.mssqltips.com)|  
 |**Full**|Devono essere eseguiti backup del log.<br /><br /> Non si verifica alcuna perdita di dati dovuta a un file di dati perduto o danneggiato.<br /><br /> È possibile eseguire il recupero fino a un punto nel tempo arbitrario, ad esempio precedente all'errore dell'applicazione o dell'utente. Per informazioni sui backup di database nel modello di recupero con registrazione completa, vedere [Backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) e [Ripristini di database completi &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|In genere non sussiste alcun rischio.<br /><br /> Se la parte finale del log è danneggiata, sarà necessario ripetere le modifiche apportate dall'ultimo backup del log.|È possibile eseguire il recupero a una temporizzazione specifica, purché i backup siano completi fino a tale momento specifico. Per informazioni sull'utilizzo di backup del log per il ripristino al punto di errore, vedere [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).<br /><br /> Nota: se sono presenti due o più database in cui viene usato il modello di recupero con registrazione completa e che devono essere coerenti da un punto di vista logico, potrebbe essere necessario implementare procedure speciali per verificare la recuperabilità di questi database. Per altre informazioni, vedere [Recupero di database correlati che contengono transazioni contrassegnate](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md).|  

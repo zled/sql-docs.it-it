@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_operator
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3821ebe0886dd5a731e0459f3da686125c02a71c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 147269759746e143897757aab5518b784e705915
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240401"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751579"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,15 +56,15 @@ sp_add_operator [ @name = ] 'name'
  [ **@name=** ] **'***name***'**  
  Nome di un operatore (destinatario della notifica). Questo nome deve essere univoco e non può contenere la percentuale (**%**) caratteri. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@enabled=** ] *abilitato*  
- Indica lo stato corrente dell'operatore. *abilitata* viene **tinyint**, il valore predefinito è **1** (abilitato). Se **0**, l'operatore non è abilitato e non riceve notifiche.  
+ [  **@enabled=** ] *abilitata*  
+ Indica lo stato corrente dell'operatore. *abilitata* viene **tinyint**, il valore predefinito è **1** (abilitato). Se **0**, l'operatore non è abilitato e non riceve le notifiche.  
   
  [  **@email_address=** ] **'***email_address***'**  
  Indirizzo di posta elettronica dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *email_address* viene **nvarchar(100)**, con un valore predefinito è NULL.  
   
  È possibile specificare un indirizzo di posta elettronica fisico o un alias per *email_address*. Esempio:  
   
- '**jdoe**'o'**jdoe@xyz.com**'  
+ «**jdoe**'o'**jdoe@xyz.com**»  
   
 > [!NOTE]  
 >  È necessario utilizzare l'indirizzo di posta elettronica per Posta elettronica database.  
@@ -80,24 +76,24 @@ sp_add_operator [ @name = ] 'name'
  Data e ora successivamente alle quali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent invia notifica tramite cercapersone all'operatore specificato nei giorni della settimana, dal lunedì al venerdì. *weekday_pager_start_time*viene **int**, il valore predefinito è **090000**, che indica le 9.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
  [  **@weekday_pager_end_time=** ] *weekday_pager_end_time*  
- Il tempo trascorso il quale **SQLServerAgent** servizio non invia notifiche al cercapersone dell'operatore specificato giorni feriali da lunedì a venerdì. *weekday_pager_end_time*viene **int**, e il valore predefinito è 180000, che indica le 18.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
+ Il tempo trascorso il quale **SQLServerAgent** servizio non è più invia notifiche al cercapersone dell'operatore specificato nei giorni della settimana, dal lunedì al venerdì. *weekday_pager_end_time*viene **int**, e il valore predefinito è 180000, che indica le 18.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
  [  **@saturday_pager_start_time =**] *saturday_pager_start_time*  
- Il tempo trascorso il quale **SQLServerAgent** servizio invia notifiche al cercapersone dell'operatore specificato sabato. *saturday_pager_start_time* viene **int**, con un valore predefinito è 090000, che indica le 9.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
+ Il tempo trascorso il quale **SQLServerAgent** servizio invia notifiche al cercapersone dell'operatore specificato sabato. *saturday_pager_start_time* viene **int**, valore predefinito è 090000, che indica le 9.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
  [  **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
- Il tempo trascorso il quale **SQLServerAgent** servizio non invia notifiche al cercapersone dell'operatore specificato sabato. *saturday_pager_end_time*viene **int**, il valore predefinito è **180000**, ovvero le 18.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
+ Il tempo trascorso il quale **SQLServerAgent** servizio non è più invia notifiche al cercapersone dell'operatore specificato sabato. *saturday_pager_end_time*viene **int**, il valore predefinito è **180000**, ovvero le 18.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
  [ **@sunday_pager_start_time=** ] *sunday_pager_start_time*  
- Il tempo trascorso il quale **SQLServerAgent** servizio invia notifiche al cercapersone dell'operatore specificato domenica. *sunday_pager_start_time*viene **int**, il valore predefinito è **090000**, che indica le 9.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
+ Il tempo trascorso il quale **SQLServerAgent** servizio invia notifiche al cercapersone dell'operatore specificato la domenica. *sunday_pager_start_time*viene **int**, il valore predefinito è **090000**, che indica le 9.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
  [ **@sunday_pager_end_time =**] *sunday_pager_end_time*  
- Il tempo trascorso il quale **SQLServerAgent** servizio non invia notifiche al cercapersone dell'operatore specificato domenica. *sunday_pager_end_time*viene **int**, il valore predefinito è **180000**, ovvero le 18.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
+ Il tempo trascorso il quale **SQLServerAgent** servizio non è più invia notifiche al cercapersone dell'operatore specificato la domenica. *sunday_pager_end_time*viene **int**, il valore predefinito è **180000**, ovvero le 18.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
  [  **@pager_days=** ] *pager_days*  
- Numero che indica i giorni in cui l'operatore può essere rintracciato tramite cercapersone (in base all'ora di inizio e di fine specificate). *pager_days*viene **tinyint**, il valore predefinito è **0** che indica che l'operatore non è mai disponibile per la ricezione di una pagina. I valori validi sono da **0** tramite **127**. *pager_days*viene calcolato sommando i singoli valori dei giorni necessari. Ad esempio, da lunedì a venerdì è **2**+**4**+**8**+**16** + **32** = **62**. Nella tabella seguente vengono elencati i valori disponibili per ogni giorno della settimana.  
+ Numero che indica i giorni in cui l'operatore può essere rintracciato tramite cercapersone (in base all'ora di inizio e di fine specificate). *pager_days*viene **tinyint**, il valore predefinito è **0** che indica l'operatore non è mai disponibile per la ricezione di una pagina. I valori validi sono compresi **0** attraverso **127**. *pager_days*viene calcolato sommando i singoli valori dei giorni necessari. Ad esempio, da lunedì a venerdì viene **2**+**4**+**8**+**16** + **32** = **62**. Nella tabella seguente vengono elencati i valori disponibili per ogni giorno della settimana.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Domenica|  
 |**2**|Lunedì|  
@@ -114,19 +110,19 @@ sp_add_operator [ @name = ] 'name'
  Nome della categoria per questo operatore. *categoria* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_add_operator** deve essere eseguita la **msdb** database.  
   
  L'invio di messaggi sul cercapersone è supportato dal sistema di posta elettronica, in cui deve essere disponibile la funzionalità per il trasferimento di messaggi su cercapersone.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_add_operator**.  
   
 ## <a name="examples"></a>Esempi  

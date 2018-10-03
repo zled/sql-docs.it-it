@@ -1,42 +1,39 @@
 ---
-title: Tipi di cursori (ADO) | Documenti Microsoft
+title: Tipi di cursori (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], types
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ead4e034fde49ac9826e63f091d7234ec0ecff7e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ecf079c86362aeae78b7c9ceaad640b0ad1519c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272940"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786959"
 ---
 # <a name="types-of-cursors-ado"></a>Tipi di cursori (ADO)
-Come regola generale, l'applicazione deve utilizzare il cursore più semplice che fornisce l'accesso ai dati richiesti. Ogni caratteristica di cursore aggiuntive oltre le nozioni di base (forward-only, di sola lettura, statici, scorrevoli) dispone di un prezzo, nella memoria client, il carico di rete o prestazioni. In molti casi, le opzioni di cursore predefinito generano un cursore più complesso rispetto a effettivamente necessaria per l'applicazione.  
+Come regola generale, l'applicazione deve usare il cursore più semplice che fornisce l'accesso ai dati necessari. Ogni caratteristica di cursore aggiuntive oltre le nozioni di base (forward-only, di sola lettura, statici, scorrevoli) ha un prezzo, ovvero nella memoria del client, il carico di rete o delle prestazioni. In molti casi, le opzioni di cursore predefinito generano un cursore più complesso rispetto a effettivamente necessaria per l'applicazione.  
   
- La scelta del tipo di cursore dipende dalla modalità con cui l'applicazione utilizza il set di risultati e anche diverse considerazioni di progettazione, tra cui la dimensione del set di risultati, la percentuale dei dati possono essere usati, sensibilità alle modifiche dei dati e le prestazioni dell'applicazione requisiti.  
+ La scelta del tipo di cursore dipende dal modo in cui l'applicazione usa il set di risultati e anche diverse considerazioni di progettazione, tra cui la dimensione del set di risultati, la percentuale dei dati che possono essere usati, sensibilità alle modifiche dei dati e le prestazioni dell'applicazione requisiti.  
   
- In parole semplici, la scelta del cursore varia a seconda se è necessario modificare o semplicemente visualizzare i dati:  
+ In parole semplici, la scelta di cursore dipende dalla necessità di modificare o semplicemente visualizzarne i dati:  
   
--   Se è necessario solo lo scorrimento di un set di risultati, ma non modificare i dati, utilizzare un [forward-only](../../../ado/guide/data/forward-only-cursors.md) o [statico](../../../ado/guide/data/static-cursors.md) cursore.  
+-   Se è necessario solo per lo scorrimento di un set di risultati, ma non i dati delle modifiche, usare una [forward-only](../../../ado/guide/data/forward-only-cursors.md) oppure [statico](../../../ado/guide/data/static-cursors.md) cursore.  
   
--   Se si dispone di un set di risultati di grandi dimensioni ed è necessario selezionare solo poche righe, utilizzare un [keyset](../../../ado/guide/data/keyset-cursors.md) cursore.  
+-   Se si dispone di un set di risultati di grandi dimensioni ed è necessario selezionare solo poche righe, usare una [keyset](../../../ado/guide/data/keyset-cursors.md) cursore.  
   
--   Se si desidera sincronizzare un set di risultati con recente aggiunge, modifica ed Elimina tutti gli utenti simultanei, utilizzare un [dinamica](../../../ado/guide/data/dynamic-cursors.md) cursore.  
+-   Se si desidera sincronizzare un set di risultati con recenti aggiunte, modifiche ed eliminazioni da tutti gli utenti simultanei, usare una [dinamica](../../../ado/guide/data/dynamic-cursors.md) cursore.  
   
- Sebbene ogni tipo di cursore sembra essere distinti, tenere presente che questi tipi di cursore non sono molto varia a seconda come semplicemente il risultato della combinazione di caratteristiche e le opzioni.  
+ Sebbene sembri essere diverso ogni tipo di cursore, tenere presente che questi tipi di cursore non sono molto diverse varianti come semplicemente il risultato della combinazione di caratteristiche e le opzioni.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
