@@ -1,35 +1,29 @@
 ---
-title: Creazione di file di valore della variabile (AccessToSQL) | Documenti Microsoft
+title: Creazione di file di valore della variabile (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3865c268ef4da360b5e21cba96e88ddf6028ae6a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 005be9b3009ba8812219a6974fa13465bf786747
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680949"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Creazione di file di valore della variabile (AccessToSQL)
-Un File di valore di variabile è un file XML che include i valori dei parametri dei comandi (ad esempio il nome di server di origine o di destinazione) che cambiano spesso tra le migrazioni a server. Quando si verifica un numero elevato di migrazioni di database, più file di variabile per archiviare il valore di ogni server di origine vengono creati e a cui fa riferimento in un file di script master con il **– v** passare alla riga di comando. Questo comportamento consente di mantenere i valori statici, in alcuni file di script con i valori delle variabili in più file di variabile.  
+Un File con valori di variabile è un file XML che includono i valori dei parametri dei comandi (ad esempio il nome di server di origine o destinazione) che cambiano di frequente tra le migrazioni di server. Quando si verifica un numero elevato di migrazioni del database, più file variabili per archiviare il valore di ogni server di origine vengono creati e fa riferimento a un file di script master con il **– v** passare alla riga di comando. Questo comportamento consente di mantenere valori statici in alcuni file di script con i valori delle variabili in più file di variabili.  
   
 > [!NOTE]  
-> -  I nomi delle variabili sono preceduti e seguiti da un simbolo di dollaro $. Se una variabile non viene assegnata un valore nel file del valore della variabile, verificherà un errore durante l'analisi del file di script, risultante in bloccare il processo di esecuzione della console.  
-> -  The escape character for **$** is **$$**. Se il valore di un valore statico o variabile di un parametro contiene un **$** simbolo (dollaro), quindi **$$** deve essere specificata di considerarlo come un carattere anziché una variabile.  
-> -  Per motivi di manutenzione, le variabili possono essere dichiarate all'interno di `‘variable-group’` elementi per la separazione logica delle variabili definite dall'utente.  Utilizzo di questo elemento non è obbligatorio.  
+> -  I nomi delle variabili sono il prefisso e suffisso con un simbolo di dollaro $. Se una variabile non viene assegnata un valore nel file di valore della variabile, verificherà un errore durante l'analisi del file di script, risultante in blocco il processo di esecuzione della console.  
+> -  Il carattere di escape per **$** viene **$$**. Se il valore di un valore statico o variabile di un parametro contiene un **$** simbolo (dollaro), quindi **$$** deve essere specificata di considerarlo come un carattere anziché una variabile.  
+> -  Ai fini delle manutenibilità, le variabili possono essere dichiarate all'interno di `‘variable-group’` elementi per la separazione logica delle variabili definite dall'utente.  Utilizzo di questo elemento non è obbligatorio.  
   
 **Esempi:**  
   
@@ -94,12 +88,12 @@ Un File di valore di variabile è un file XML che include i valori dei parametri
 </variables>  
 ```  
   
-## <a name="variable-value-file-validation"></a>Convalida file di valore della variabile  
-L'utente facilmente è in grado di convalidare il file di valore della variabile nel file di definizione dello schema **ConsoleScriptVariablesSchema.xsd** disponibile nella cartella 'Schemi'.  
+## <a name="variable-value-file-validation"></a>Convalida del valore della variabile del file  
+L'utente può facilmente convalidare il file di valore della variabile in base al file di definizione dello schema **ConsoleScriptVariablesSchema.xsd** disponibile nella cartella "Schemi".  
   
 ## <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo nella console di gestione viene [creano i file di connessione del Server &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
+Il passaggio successivo in costi operativi console consiste [creazione di file di connessione del Server &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[La creazione dei file di connessione di Server (accesso)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
+[Creazione di file di connessione del Server (accesso)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

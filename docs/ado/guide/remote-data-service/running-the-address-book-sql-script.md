@@ -1,76 +1,73 @@
 ---
-title: Eseguire lo Script SQL di libro indirizzo | Documenti Microsoft
+title: Esecuzione dello Script SQL libro indirizzo | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91fb86db608d05db660f31a9bb66b82dbf7df6d7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 03934236450ec66e1f20e7dbaddd2a1170db787e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274370"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656349"
 ---
-# <a name="running-the-address-book-sql-script"></a>Eseguire lo Script SQL libro di indirizzo
+# <a name="running-the-address-book-sql-script"></a>Esecuzione dello script SQL per Address Book
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- È necessario utilizzare l'utilità della riga di comando ISQL/Query Analyzer o SQL Server Enterprise Manager per eseguire lo script SQL incluso (Sampleemp.sql) che:  
+ È necessario usare l'utilità della riga di comando ISQL/Query Analyzer o SQL Server Enterprise Manager per eseguire lo script SQL incluso (Sampleemp.sql) che:  
   
--   Crea un nuovo database, AddrBookDB, sul dispositivo predefinito.  
+-   Crea un nuovo database, AddrBookDB, nel dispositivo predefinito.  
   
 -   Si connette al database, AddrBookDB.  
   
--   Crea una tabella Employee.  
+-   Crea una tabella dei dipendenti.  
   
 -   Popola la tabella con dati di esempio.  
   
 -   Esegue un'istruzione SELECT semplice per verificare il popolamento della tabella di database.  
   
--   Consente di impostare un account utente denominato "adcdemo" con la password "adcdemo".  
+-   Configura un account utente denominato "adcdemo" con la password "adcdemo."  
   
 #### <a name="to-run-the-sampleempsql-script-in-microsoft-sql-server-65"></a>Per eseguire lo script Sampleemp.sql in Microsoft SQL Server 6.5  
   
-1.  Fare clic su **avviare**, scegliere **programmi**e quindi **Microsoft SQL Server 6.5**. Fare clic su **SQL Enterprise Manager**.  
+1.  Fare clic su **avviare**, scegliere **programmi**, quindi scegliere **Microsoft SQL Server 6.5**. Fare clic su **SQL Enterprise Manager**.  
   
-2.  Dal **strumenti** menu, fare clic su **strumento Query SQL**.  
+2.  Dal **Tools** menu, fare clic su **strumento di Query SQL**.  
   
-3.  Fare clic su **carica Script SQL** e passare a c:\Platform SDK\Samples\DataAccess\RDS\AddressBook.  
+3.  Fare clic su **lo Script SQL del carico** e passare a c:\Platform SDK\Samples\DataAccess\RDS\AddressBook.  
   
 4.  Selezionare il file Sampleemp.sql. Fare clic su **Apri**.  
   
-5.  Fare clic su di **Esegui Query** (la freccia verde sulla barra degli strumenti).  
+5.  Scegliere il **Esegui Query** (la freccia verde sulla barra degli strumenti).  
   
-6.  Dopo l'esecuzione, chiudere il **Query** e **Enterprise Manager** windows.  
+6.  Dopo l'esecuzione, chiudere la **Query** e **Enterprise Manager** windows.  
   
 #### <a name="to-run-the-sampleempsql-script-in-microsoft-sql-server-70"></a>Per eseguire lo script Sampleemp.sql in Microsoft SQL Server 7.0  
   
-1.  Fare clic su **avviare**, scegliere **programmi**e quindi **Microsoft SQL Server 7.0**. Fare clic su **Enterprise Manager**.  
+1.  Fare clic su **avviare**, scegliere **programmi**, quindi scegliere **Microsoft SQL Server 7.0**. Fare clic su **Enterprise Manager**.  
   
-2.  Assicurarsi che il Server SQL che si desidera utilizzare sia selezionato dall'elenco dei server registrati in Enterprise Manager.  
+2.  Assicurarsi che sia selezionato il Server SQL che si vuole usare dall'elenco dei server registrati in Enterprise Manager.  
   
-3.  Dal **strumenti** menu, fare clic su **Query Analyzer di SQL Server**.  
+3.  Dal **degli strumenti** menu, fare clic su **Query Analyzer di SQL Server**.  
   
-4.  Fare clic su di **carica Script SQL** pulsante (vale a dire la cartella aperta sulla barra degli strumenti) e accedere a c:\Platform SDK\Samples\DataAccess\RDS\AddressBook.  
+4.  Scegliere il **lo Script SQL del carico** pulsante (la cartella aperta sulla barra degli strumenti) e accedere a c:\Platform SDK\Samples\DataAccess\RDS\AddressBook.  
   
 5.  Selezionare il file Sampleemp.sql. Fare clic su **Apri**.  
   
-6.  Fare clic su di **Esegui Query** (la freccia verde sulla barra degli strumenti) o **F5**.  
+6.  Scegliere il **Esegui Query** (la freccia verde sulla barra degli strumenti) o **F5**.  
   
-7.  Dopo l'esecuzione, chiudere il **Query**, **Query Analyzer**, e **Enterprise Manager** windows.  
+7.  Dopo l'esecuzione, chiudere la **Query**, **Query Analyzer**, e **Enterprise Manager** windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione dell'applicazione di esempio Address Book](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)

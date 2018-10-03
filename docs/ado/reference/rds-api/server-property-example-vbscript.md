@@ -1,35 +1,32 @@
 ---
-title: Esempio di proprietà server (VBScript) | Documenti Microsoft
+title: Esempio di proprietà server (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Server property [RDS], VBScript example
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d50633d3214f69a46b7de0112a0f3548d622db7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2ccb6bd2b61350c71f44b1580b790ec66cdfff89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288830"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599740"
 ---
-# <a name="server-property-example-vbscript"></a>Esempio di proprietà server (VBScript)
+# <a name="server-property-example-vbscript"></a>Esempio della proprietà Server (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Il codice seguente viene illustrato come impostare il [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) parametro in fase di progettazione di tempo e associarlo a un controllo che supportano i dati utilizzando il provider SQLOLEDB. Tagliare e incollare il codice in un normale documento ASP e denominarlo **ServerDesignVBS**. Lo script identificherà il server.  
+ Il codice seguente viene illustrato come impostare il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) parametro in fase di progettazione di tempo e associarlo a un controllo con supporto dati utilizzando il provider SQLOLEDB. Tagliare e incollare questo codice in un documento ASP normale e denominarla **ServerDesignVBS**. Lo script identificherà il server.  
   
 ```  
 <!-- BeginServerDesignVBS -->  
@@ -93,7 +90,7 @@ body {
 <!-- EndServerDesignVBS -->  
 ```  
   
- Nell'esempio seguente viene illustrato come impostare i parametri necessari di **RDS. DataControl** in fase di esecuzione. Per testare questo esempio, tagliare e incollare il codice in un normale documento ASP e denominarlo **ServerRuntimeVBS**. Lo script identificherà il server.  
+ Nell'esempio seguente viene illustrato come impostare i parametri necessari di **Servizi Desktop remoto. DataControl** in fase di esecuzione. Per testare questo esempio, tagliare e incollare questo codice in un documento ASP normale e denominarla **ServerRuntimeVBS**. Lo script identificherà il server.  
   
 ```  
 <!-- BeginServerRuntimeVBS -->  
@@ -181,7 +178,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Proprietà Server (Servizi Desktop remoto)](../../../ado/reference/rds-api/server-property-rds.md)
 
 

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - return codes [Integration Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - parameterized SQL statements [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 057d80ade08d7d5266208b2d417e08d530a8d8df
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 3eb6bbc5a3c08ca8668219dd3a11354c2fed2ca8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056511"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Parametri e codici restituiti nell’attività Esegui SQL
   Le istruzioni SQL e stored procedure utilizzano spesso `input` parametri, `output` parametri e codici restituiti. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] l'attività Esegui SQL supporta parametri di tipo `Input`, `Output` e `ReturnValue`. Si utilizza il `Input` tipo per i parametri di input `Output` per i parametri di output e `ReturnValue` per i codici restituiti.  
@@ -49,16 +46,16 @@ ms.locfileid: "39083893"
 -   [Configurazione di parametri e codici restituiti nell'Editor attività Esegui SQL](#Configure_parameters_and_return_codes)  
   
 ##  <a name="Parameter_names_and_markers"></a> Utilizzo di nomi di parametro e marcatori  
- Nella sintassi del comando SQL possono essere utilizzati marcatori di parametro diversi, a seconda del tipo di connessione utilizzato dall'attività Esegui SQL. Ad esempio, il [!INCLUDE[vstecado](../includes/vstecado-md.md)] tipo di gestione connessione richiede che il comando SQL viene utilizzato un marcatore di parametro nel formato  **\@varParameter**, mentre per il tipo di connessione OLE DB richiede che il parametro di punto interrogativo (?) marcatore.  
+ Nella sintassi del comando SQL possono essere utilizzati marcatori di parametro diversi, a seconda del tipo di connessione utilizzato dall'attività Esegui SQL. Per il tipo di gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)], ad esempio, l'indicatore di parametro usato nel comando SQL deve avere il formato **\@varParameter**, mentre per il tipo di connessione OLE DB l'indicatore di parametro deve essere costituito da un punto interrogativo (?).  
   
- Anche i nomi che è possibile utilizzare come nomi di parametro nei mapping tra variabili e parametri variano a seconda del tipo di gestione connessione. Ad esempio, il [!INCLUDE[vstecado](../includes/vstecado-md.md)] tipo di gestione connessione utilizza un nome definito dall'utente con un \@ prefisso, mentre il tipo di gestione connessione OLE DB è necessario utilizzare il valore numerico di un numero ordinale in base 0 come nome del parametro.  
+ Anche i nomi che è possibile utilizzare come nomi di parametro nei mapping tra variabili e parametri variano a seconda del tipo di gestione connessione. Il tipo di gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)] usa ad esempio un nome definito dall'utente con prefisso \@, mentre il tipo di gestione connessione OLE DB richiede nomi di parametro costituiti dal valore numerico di un ordinale in base 0.  
   
  Nella tabella seguente sono riepilogati i requisiti dei comandi SQL, a seconda dei tipi di gestione connessione utilizzati dall'attività Esegui SQL.  
   
 |Tipo di connessione|Marcatore di parametro|Nome parametro|Comando SQL di esempio|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<nome parametro>|\@\<nome parametro>|Selezionare FirstName, LastName e titolo da Person. Contact in cui ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<nome parametro>|\@\<nome parametro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL e OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -151,7 +148,7 @@ ms.locfileid: "39083893"
   
 -   Per il tipo di connessione ADO è possibile utilizzare qualsiasi nome per i due parametri, ad esempio Param1 e Param2, ma è necessario eseguire il mapping di entrambi i parametri in base alla relativa posizione ordinale nell'elenco di parametri.  
   
--   Il [!INCLUDE[vstecado](../includes/vstecado-md.md)] tipo di connessione Usa i nomi dei parametri \@parmMinProductID e \@parmMaxProductID.  
+-   Per il tipo di connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)] vengono usati i nomi di parametro \@parmMinProductID e \@parmMaxProductID.  
   
 ##  <a name="Stored_procedures"></a> Utilizzo di parametri con Stored procedure  
  Anche i comandi SQL che eseguono stored procedure possono utilizzare il mapping dei parametri. Come avviene per le regole delle query con parametri, anche le regole che determinano la modalità di utilizzo di marcatori di parametro e nomi di parametro dipendono dal tipo di gestione connessione utilizzato dall'attività Esegui SQL.  

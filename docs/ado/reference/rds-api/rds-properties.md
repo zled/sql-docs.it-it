@@ -1,50 +1,47 @@
 ---
-title: Proprietà RDS | Documenti Microsoft
+title: Le proprietà di servizi desktop remoto | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS properties [ADO]
 - properties [ADO], RDS
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f56675c6a797362cc90b0739824fa44095ff43b6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 42f3c54649d3618f2f6e492e1c965ded491e3dbe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811959"
 ---
-# <a name="rds-properties"></a>Proprietà di servizi desktop remoto
+# <a name="rds-properties"></a>Proprietà di Servizi Desktop remoto
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 |||  
 |-|-|  
-|[Connettersi (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)|Indica il nome del database da cui vengono eseguite le operazioni di aggiornamento e di query.|  
-|[ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)|Indica se è abilitata l'esecuzione asincrona.|  
-|[FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)|Indica il tipo di recupero asincrono.|  
-|[FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)|Indica la colonna in cui valutare i criteri di filtro.|  
-|[FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|Indica l'operatore di valutazione da utilizzare nel valore di filtro.|  
-|[FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)|Indica il valore per filtrare i record.|  
-|[Gestore (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|Indica il nome di un programma di personalizzazione lato server (*gestore*) che estende la funzionalità del **RDSServer**ed eventuali parametri utilizzati per il *gestore*.|  
-|[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|Indica il numero di millisecondi di attesa prima del timeout di una richiesta.|  
-|[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|Indica lo stato di un **DataControl** oggetto durante il recupero dei dati nel relativo **Recordset** oggetto.|  
-|[Recordset e SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|Indica il **Recordset** oggetto restituito da un oggetto di business personalizzata.|  
-|[Server (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|Indica il protocollo di comunicazione e nome di Internet Information Services (IIS).|  
-|[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|Indica da quale colonna per ordinare i record.|  
-|[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|Indica se una sequenza di ordinamento è crescente o decrescente.|  
-|[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|Indica la stringa di query utilizzata per recuperare il **Recordset**.|  
-|[URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)|Indica una stringa contenente un URL relativo o assoluto.|
+|[Connect (Servizi Desktop remoto)](../../../ado/reference/rds-api/connect-property-rds.md)|Indica il nome del database da cui vengono eseguite le operazioni di query e aggiornamento.|  
+|[Proprietà ExecuteOptions (Servizi Desktop remoto)](../../../ado/reference/rds-api/executeoptions-property-rds.md)|Indica se è abilitata l'esecuzione asincrona.|  
+|[FetchOptions (Servizi Desktop remoto)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)|Indica il tipo di recupero asincrono.|  
+|[FilterColumn (Servizi Desktop remoto)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)|Indica la colonna in cui valutare i criteri di filtro.|  
+|[FilterCriterion (Servizi Desktop remoto)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|Indica l'operatore di valutazione da utilizzare nel valore di filtro.|  
+|[Valore FilterValue (Servizi Desktop remoto)](../../../ado/reference/rds-api/filtervalue-property-rds.md)|Indica il valore per filtrare i record.|  
+|[Gestore (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|Indica il nome di un programma di personalizzazione lato server (*gestore*) che estende la funzionalità del **RDSServer**e i parametri usati dal *gestore*.|  
+|[InternetTimeout (Servizi Desktop remoto)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|Indica il numero di millisecondi di attesa prima del timeout di una richiesta.|  
+|[ReadyState (Servizi Desktop remoto)](../../../ado/reference/rds-api/readystate-property-rds.md)|Indica lo stato di un **DataControl** dell'oggetto come il recupero dei dati nel relativo **Recordset** oggetto.|  
+|[Recordset e SourceRecordset (Servizi Desktop remoto)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|Indica la **Recordset** oggetto restituito da un oggetto business personalizzato.|  
+|[Server (Servizi Desktop remoto)](../../../ado/reference/rds-api/server-property-rds.md)|Indica il protocollo di nome e la comunicazione Internet Information Services (IIS).|  
+|[Proprietà SortColumn (Servizi Desktop remoto)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|Indica da quale colonna per ordinare i record.|  
+|[SortDirection (Servizi Desktop remoto)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|Indica se una sequenza di ordinamento è crescente o decrescente.|  
+|[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|Indica la stringa di query usata per recuperare il **Recordset**.|  
+|[URL (SERVIZI DESKTOP REMOTO)](../../../ado/reference/rds-api/url-property-rds.md)|Indica una stringa che contiene un URL relativo o assoluto.|
 
 
 

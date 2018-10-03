@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - file status information [SQL Server]
 - file history [SQL Server]
 - version control services [SQL Server], file status
 ms.assetid: 96601fc3-64b8-4dd8-9b73-cc6710293eb9
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 818960e4d85aae2c73e767250072e4108a55d9fa
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816657"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067071"
 ---
 # <a name="view-file-status"></a>Visualizzazione dello stato dei file
   Il controllo del codice sorgente gestisce informazioni dettagliate sullo stato su ogni elemento incluso nel controllo del codice sorgente. È possibile utilizzare queste informazioni per identificare lo stato corrente del file e creare un report sullo stato dell'elemento.  

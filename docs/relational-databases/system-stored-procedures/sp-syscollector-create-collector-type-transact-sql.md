@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_create_collector_type (Transact-SQL) | Documenti Microsoft
+title: sp_syscollector_create_collector_type (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collector_type
@@ -19,21 +16,20 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b65f9ccc2c68fffd8137dfc7a6d289e7c4f38e13
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254421"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781709"
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crea un tipo di agente di raccolta per l'agente di raccolta dati. Un tipo di agente di raccolta dati è un wrapper logico di [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetti che forniscono il meccanismo effettivo per raccogliere dati e caricarli nel data warehouse di gestione.  
+  Crea un tipo di agente di raccolta per l'agente di raccolta dati. Un tipo di agente di raccolta dati è un wrapper logico intorno al [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetti che forniscono il meccanismo effettivo per raccogliere dati e caricarli nel data warehouse di gestione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,10 +54,10 @@ sp_syscollector_create_collector_type
  Nome del tipo di agente di raccolta. *nome* viene **sysname** e deve essere specificato.  
   
  [ @parameter_schema =] '*parameter_schema*'  
- XML Schema per questo tipo di agente di raccolta. *parameter_schema* viene **xml** con un valore predefinito è NULL.  
+ XML Schema per questo tipo di agente di raccolta. *parameter_schema* viene **xml** con valore predefinito è NULL.  
   
  [ @parameter_formatter =] '*parameter_formatter*'  
- Modello da utilizzare per trasformare l'XML per l'utilizzo nella pagina delle proprietà del set di raccolta. *parameter_formatter* viene **xml** con un valore predefinito è NULL.  
+ Modello da utilizzare per trasformare l'XML per l'utilizzo nella pagina delle proprietà del set di raccolta. *parameter_formatter* viene **xml** con valore predefinito è NULL.  
   
  [@collection_package_id =] *collection_package_id*  
  È un identificatore univoco locale che punta al pacchetto di raccolta [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *collection_package_id* viene **uniqueidentifier** ed è obbligatorio.  
@@ -70,9 +66,9 @@ sp_syscollector_create_collector_type
  Identificatore univoco locale che punta al pacchetto di caricamento di [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *upload_package_id* viene **uniqueidentifier** ed è obbligatorio.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
 ## <a name="example"></a>Esempio  
