@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b568b8098445a202b638151df729ac17638de09a
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: f08cf0902bb58164957fde69ad49aec8f1d4155c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889877"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106891"
 ---
 # <a name="examples-using-openxml"></a>Esempi: utilizzo di OPENXML
   Negli esempi presentati in questo argomento viene illustrato come utilizzare l'istruzione OPENXML per visualizzare un documento XML come set di righe. Per informazioni sulla sintassi di OPENXML, vedere [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Negli esempi vengono illustrati tutti gli aspetti dell'istruzione OPENXML, ma non ne vengono specificate le metaproprietà. Per altre informazioni su come specificare le metaproprietà in OPENXML, vedere [Specificare metaproprietà in OPENXML](specify-metaproperties-in-openxml.md).  

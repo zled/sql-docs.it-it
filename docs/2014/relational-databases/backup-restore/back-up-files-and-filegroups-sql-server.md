@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up filegroups [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f453d2f34713a4a00b1a5d99870f3597ac32262e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: daf6011e57279d9142fe5ff0828872d80c197954
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332651"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105571"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Backup di file e filegroup (SQL Server)
   In questo argomento viene descritto come eseguire il backup di file e filegroup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell. Quando a causa delle dimensioni del database e dei requisiti relativi alle prestazioni non è consigliabile eseguire un backup completo del database, è possibile creare invece un backup del file. Un *backup del file* contiene tutti i dati inclusi in uno o più file o filegroup. Per altre informazioni sul backup dei file, vedere [Backup completi del file &#40;SQL Server&#41;](full-file-backups-sql-server.md) e [Backup differenziali &#40;SQL Server&#41;](differential-backups-sql-server.md).  

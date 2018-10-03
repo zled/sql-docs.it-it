@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - invalid requests [Reporting Services]
 - exceptions [Reporting Services], invalid requests
 - valid requests [Reporting Services]
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bc951abcc72ee191aad32b0af62c9c76395d1c66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d165b4137c8deb0afb232d58f0e19bb183ddf860
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313212"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098751"
 ---
 # <a name="preventing-invalid-requests"></a>Metodi per evitare le richieste non valide
   È possibile impedire la generazione di alcuni tipi di eccezioni analizzando il flusso dell'applicazione e assicurandosi che le richieste inviate al server di report siano valide. Nelle applicazioni che consentono agli utenti di aggiungere o aggiornare il nome di un report, un'origine dati o un altro elemento del server di report, è necessario convalidare il testo che un utente potrebbe immettere. È sempre necessario verificare se sono presenti caratteri riservati prima di inviare la richiesta a un server di report. Usare istruzioni **if** condizionali o altri costrutti logici nel codice per avvisare l'utente che non sono state soddisfatte le condizioni necessarie per l'invio delle richieste al server di report.  

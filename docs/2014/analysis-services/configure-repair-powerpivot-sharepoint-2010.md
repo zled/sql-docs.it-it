@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6cf032b8f36d9329cd3e5ae480ea5d667da2d36f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f59c5a1e4666c2cd1d0603298af62d75c43398f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284267"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112901"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Configurare o ripristinare PowerPivot per SharePoint 2010 (strumento di configurazione PowerPivot)
   Per configurare o ripristinare un'installazione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot per SharePoint 2010, usare lo strumento di configurazione PowerPivot. Tramite lo strumento di configurazione viene innanzitutto analizzato il sistema, dopodiché viene restituito un elenco di azioni necessarie per completare o ripristinare l'installazione. Con l'installazione guidata [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] vengono installati lo strumento di configurazione PowerPivot per SharePoint 2010 e quello per SharePoint 2013. In questo argomento viene descritto lo strumento di configurazione PowerPivot per SharePoint 2010. Per altre informazioni su SharePoint 2010, vedere [Configura o Ripristina PowerPivot per SharePoint 2013 &#40;strumento di configurazione PowerPivot&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).  
@@ -179,7 +176,7 @@ ms.locfileid: "37284267"
  Tramite lo strumento di configurazione PowerPivot viene eseguito il provisioning delle funzionalità della farm, delle applicazioni e dei servizi affinché vengano eseguiti con un singolo account. L'installazione risulterà semplificata, ma la distribuzione non soddisferà i requisiti di sicurezza di una farm di SharePoint. Per creare una distribuzione più affidabile, modificare i pool di applicazioni e le identità di servizio affinché l'esecuzione avvenga in account diversi al termine dell'installazione. Per altre informazioni, vedere [configurare account di servizio PowerPivot](power-pivot-sharepoint/configure-power-pivot-service-accounts.md).  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>Creare siti attendibili aggiuntivi in Excel Services  
- È possibile aggiungere siti attendibili in Excel Services per variare le autorizzazioni e le impostazioni di configurazione nei siti che forniscono cartelle di lavoro di Excel e dati PowerPivot. Per altre informazioni, vedere [Create a trusted location for PowerPivot sites in Central Administration](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ È possibile aggiungere siti attendibili in Excel Services per variare le autorizzazioni e le impostazioni di configurazione nei siti che forniscono cartelle di lavoro di Excel e dati PowerPivot. Per altre informazioni, vedere [Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ### <a name="add-servers-or-applications"></a>Aggiungere server o applicazioni  
  Nel tempo, se si rendessero necessarie ulteriori funzionalità di elaborazione e archiviazione dati, sarà possibile aggiungere una seconda istanza del server PowerPivot per SharePoint alla farm. Per istruzioni, vedere [elenco di controllo distribuzione: scalabilità orizzontale aggiungendo server PowerPivot a una farm di SharePoint 2010](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  

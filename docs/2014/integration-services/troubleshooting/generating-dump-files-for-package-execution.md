@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adf1b80d91e44aec066584ed81ebe2df66575ad3
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: cc56a469d6fb75f3d5a70fc323788ff726519474
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111980"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generazione di file di dump per l'esecuzione del pacchetto
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile creare file di dump del debug contenenti informazioni sull'esecuzione di un pacchetto. Tramite le informazioni di questi file, è possibile risolvere i problemi di esecuzione dei pacchetti.  
@@ -54,7 +51,7 @@ ms.locfileid: "39083073"
 |-------------------------|-----------------|-------------|  
 |Ambiente|Versione del sistema operativo, dati di utilizzo della memoria, ID del processo e nome immagine del processo. Le informazioni sull'ambiente sono riportate all'inizio del file tmp.|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory: 58% in use. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
 |Percorso e versione delle librerie a collegamento dinamico (DLL)|Percorso e numero di versione di ogni DLL caricata nel sistema durante l'elaborazione di un pacchetto.|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Loaded Module: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Loaded Module: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|Messaggi recenti|Messaggi recenti emessi dal sistema. Sono inclusi l'ora, il tipo, la descrizione e l'ID thread di ogni messaggio.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2] <<\<cringbufferlogging:: Ringbufferloggingrecord >>> ( \@ 0282F1A8)<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Descrizione: Componente mancante, non registrato, non aggiornabile oppure mancano interfacce necessarie. Informazioni di contatto per il componente: "".|  
+|Messaggi recenti|Messaggi recenti emessi dal sistema. Sono inclusi l'ora, il tipo, la descrizione e l'ID thread di ogni messaggio.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Descrizione: Componente mancante, non registrato, non aggiornabile oppure mancano interfacce necessarie. Informazioni di contatto per il componente: "".|  
   
 ## <a name="related-content"></a>Contenuto correlato  
  [Finestra di dialogo Esecuzione pacchetto](../execute-package-dialog-box.md)  

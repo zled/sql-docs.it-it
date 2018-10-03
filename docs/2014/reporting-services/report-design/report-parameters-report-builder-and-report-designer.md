@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 f1_keywords:
 - sql12.rtp.rptdesigner.subreportproperties.parameters.f1
 - sql12.rtp.rptdesigner.reportparameters.general.f1
@@ -19,16 +15,15 @@ f1_keywords:
 - "10070"
 - sql12.rtp.rptdesigner.reportparameters.advanced.f1
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 26fdc20f897d904319c9080120aa5770b53145bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e429badf8d6ad656f0ba5f0944a7d6bdf21553c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168292"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107334"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parametri report (Generatore report e Progettazione report)
   Questo argomento descrive gli usi comuni dei parametri di report SSRS, le proprietà che è possibile impostare e altre informazioni sui parametri. I parametri del report consentono di controllare i dati del report, connettere report correlati e variare la presentazione del report.  
@@ -136,7 +131,7 @@ ms.locfileid: "37168292"
 |--------------|-----------------|  
 |nome|Digitare un nome con distinzione tra maiuscole e minuscole per il parametro. Il nome deve iniziare con una lettera e contenere lettere, numeri e un carattere di sottolineatura (_). Il nome non può contenere spazi. Per i parametri generati automaticamente, il nome corrisponde al parametro nella query del set di dati. Per impostazione predefinita, i parametri creati manualmente sono simili a ParametroReport1.|  
 |Messaggio di richiesta|Il testo che viene visualizzato accanto al parametro nella barra degli strumenti del visualizzatore di report.|  
-|Tipo di dati|Quando sono definiti valori disponibili per un parametro, l'utente seleziona i valori da un elenco a discesa, anche quando il tipo di dati è `DateTime`. Un parametro di report deve corrispondere a uno dei seguenti tipi di dati:<br /><br /> `Boolean`(Indici per tabelle con ottimizzazione per la memoria). L'utente seleziona True o False mediante un pulsante di opzione.<br /><br /> `DateTime`(Indici per tabelle con ottimizzazione per la memoria). L'utente seleziona una data da un controllo calendario.<br /><br /> **Integer**. L'utente digita valori in una casella di testo.<br /><br /> **Float**. L'utente digita valori in una casella di testo.<br /><br /> `Text`(Indici per tabelle con ottimizzazione per la memoria). L'utente digita valori in una casella di testo.<br /><br /> Per altre informazioni sui tipi di dati di report, vedere [tipi di dati RDL](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
+|Tipo di dati|Quando sono definiti valori disponibili per un parametro, l'utente seleziona i valori da un elenco a discesa, anche quando il tipo di dati è `DateTime`. Un parametro di report deve corrispondere a uno dei seguenti tipi di dati:<br /><br /> `Boolean` (Indici per tabelle con ottimizzazione per la memoria). L'utente seleziona True o False mediante un pulsante di opzione.<br /><br /> `DateTime` (Indici per tabelle con ottimizzazione per la memoria). L'utente seleziona una data da un controllo calendario.<br /><br /> **Integer**. L'utente digita valori in una casella di testo.<br /><br /> **Float**. L'utente digita valori in una casella di testo.<br /><br /> `Text` (Indici per tabelle con ottimizzazione per la memoria). L'utente digita valori in una casella di testo.<br /><br /> Per altre informazioni sui tipi di dati di report, vedere [tipi di dati RDL](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
 |Consenti nessun valore|Selezionare questa opzione se il valore del parametro può corrispondere a una stringa vuota o a un valore vuoto.<br /><br /> Se si specificano valori validi per un parametro e si desidera che uno di essi sia un valore vuoto, è necessario includere tale valore come uno dei valori specificati. La selezione di questa opzione non include automaticamente un valore vuoto tra i valori disponibili.|  
 |Consenti valore Null|Selezionare questa opzione se il valore del parametro può essere un valore Null.<br /><br /> Se si specificano valori validi per un parametro e si desidera che uno dei valori sia Null, è necessario includere tale valore come uno dei valori specificati. La selezione di questa opzione non include automaticamente un valore Null tra i valori disponibili.|  
 |Consenti più valori|Fornire i valori disponibili per creare un elenco a discesa dal quale gli utenti possono scegliere. Si tratta di un metodo efficace per assicurarsi che nella query del set di dati vengano inviati solo valori validi.<br /><br /> Selezionare questa opzione se il valore per il parametro può essere costituito da più valori visualizzati in un elenco a discesa. I valori Null non sono consentiti. Se questa opzione è selezionata, verranno aggiunte caselle di controllo all'elenco di valori disponibili nell'elenco a discesa dei parametri. Nella parte superiore dell'elenco è inclusa una casella di controllo **Seleziona tutto**. Gli utenti possono selezionare i valori desiderati.<br /><br /> Se i dati che forniscono i valori cambiano rapidamente, l'utente potrebbe non visualizzare l'elenco più recente.|  

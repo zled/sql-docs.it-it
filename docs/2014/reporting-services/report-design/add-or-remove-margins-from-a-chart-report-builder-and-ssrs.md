@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c9f3ec8448c379cf57cb31f7724cc5596a4769a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1dce4183ff7e873fd16ac3df8a346a600c7cb0dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150342"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105831"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>Aggiungere o rimuovere i margini da un grafico (Generatore report e SSRS)
   Nei tipi di grafico istogramma e a dispersione vengono automaticamente aggiunti margini laterali alle estremità dell'asse X. Nei tipi di grafico a barre vengono automaticamente aggiunti margini laterali alle estremità dell'asse Y. In tutti gli altri tipi di grafico non vengono aggiunti margini laterali. Non è possibile modificare le dimensioni del margine.  

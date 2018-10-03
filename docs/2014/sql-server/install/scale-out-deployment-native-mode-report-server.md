@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8038c9cbbce2eeb68b6e23b91fba1d7b0a2e708e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151802"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099941"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Distribuzione con scalabilità orizzontale (server di report in modalità nativa)
   Usare la **distribuzione con scalabilità orizzontale** nella pagina [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager per visualizzare lo stato di inizializzazione per una distribuzione con scalabilità orizzontale o per aggiungere un server di report a una distribuzione con scalabilità orizzontale. Per *distribuzione con scalabilità orizzontale* si intendono due o più istanze del server di report che condividono un singolo database del server di report.  
@@ -67,7 +64,7 @@ ms.locfileid: "37151802"
   
      Per un server di report che fa già parte di una distribuzione con scalabilità orizzontale, è possibile utilizzare questa pagina per aggiungere o rimuovere nodi.  
   
- **Inizializzare**  
+ **inizializzare**  
  Fare clic su **Inizializza** per aggiungere un server di report alla distribuzione con scalabilità orizzontale. Questo passaggio consente di configurare un server di report per l'utilizzo di una chiave simmetrica in un database del server di report condiviso. È possibile utilizzare **Inizializza** per aggiungere un'istanza del server di report a una distribuzione con scalabilità orizzontale o per la risoluzione dei problemi di migrazione o installazione.  
   
  Un'istanza del server di report è disponibile solo se in precedenza è stata configurata una connessione al database condiviso del server di report. È necessario inoltre eseguire l'inizializzazione da un server di report già inizializzato per l'utilizzo del database del server di report.  

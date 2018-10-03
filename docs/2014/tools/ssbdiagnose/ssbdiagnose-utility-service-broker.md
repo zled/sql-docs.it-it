@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Service Broker, ssbdiagnose utility
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc76263bfc2be9d35839444b8fcd2cf8c116bc66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c9d0d1885413e5931f495c6eb5cd711bc0a9106
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172332"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111171"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilità ssbdiagnose (Service Broker)
   L'utilità **ssbdiagnose** segnala la presenza di problemi in conversazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o nella configurazione di servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . I controlli della configurazione possono essere eseguiti per due servizi oppure per un unico servizio. I problemi vengono segnalati nella finestra del prompt dei comandi in testo leggibile oppure in un file XML formattato che può essere reindirizzato a un file oppure a un altro programma.  
@@ -312,7 +309,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>Variabili di ambiente sqlcmd  
  L'utilità **ssbdiagnose** supporta le variabili di ambiente SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD e SQLCMDLOGINTIMOUT usate anche dall'utilità **sqlcmd** . Per impostare le variabili di ambiente, è possibile usare il comando SET del prompt dei comandi o il comando **setvar** negli script [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguiti tramite **sqlcmd**. Per altre informazioni sull'uso di **setvar** in **sqlcmd**, vedere [Utilizzo di sqlcmd con variabili di scripting](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  In ogni clausola **connectionoptions** l'account di accesso specificato mediante **-E** o **-U** deve essere un membro del ruolo predefinito del server **sysadmin** nell'istanza specificata in **-S**.  
   
 ## <a name="examples"></a>Esempi  
