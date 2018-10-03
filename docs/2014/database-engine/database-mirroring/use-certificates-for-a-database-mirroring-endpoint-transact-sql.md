@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: f7c23cc2-48dc-4b78-b441-89ca29a0bd9e
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d593de81b25e335e55e61dab5a8fce4205828656
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 116c5d900cf56d89c01bbf333d2d8bd3905aa371
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157132"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224991"
 ---
 # <a name="use-certificates-for-a-database-mirroring-endpoint-transact-sql"></a>Utilizzare certificati per un endpoint del mirroring del database (Transact-SQL)
   Per abilitare l'autenticazione del certificato per il mirroring del database in una determinata istanza del server, l'amministratore di sistema deve configurare ogni istanza del server per l'utilizzo dei certificati nelle connessioni in uscita e in ingresso. Le connessioni in uscita devono essere configurate per prime.  
@@ -63,7 +60,7 @@ ms.locfileid: "37157132"
   
  Per altre informazioni, vedere [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in ingresso &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  A meno che la sicurezza della rete in uso non sia già garantita, è consigliabile utilizzare la crittografia per le connessioni per il mirroring del database. Per altre informazioni, vedere [Endpoint del mirroring del database &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md).  
   
  Quando si copia un certificato in un altro sistema, utilizzare un metodo di copia sicuro. È estremamente importante garantire la protezione di tutti i certificati.  

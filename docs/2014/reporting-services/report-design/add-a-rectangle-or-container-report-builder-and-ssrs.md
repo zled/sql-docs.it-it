@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10061"
 - sql12.rtp.rptdesigner.rectangleproperties.general.f1
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 474fcf999291f9b26c242a8e1685431bd58297f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4114dc58ec310c990566d76dc090766f2a353622
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255773"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209051"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Aggiungere un rettangolo o un contenitore (Generatore report e SSRS)
   Aggiungere un rettangolo al report quando si desidera separare le aree del report con un elemento grafico, enfatizzare aree del report o fornire uno sfondo per uno o più elementi del report. I rettangoli sono utilizzati anche come contenitori per consentire di controllare il rendering di aree dati in un report. È possibile personalizzare l'aspetto di un rettangolo modificandone le proprietà quali lo sfondo e i colori del bordo. Per altre informazioni sull'uso di un rettangolo come contenitore, vedere [Rettangoli e linee &#40;Generatore report e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md) e [Visualizzare dati identici in una matrice e in un grafico &#40;Generatore report&#41;](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  

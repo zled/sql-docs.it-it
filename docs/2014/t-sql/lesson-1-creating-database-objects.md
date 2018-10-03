@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a17c04ee7fb0e164d50324e0d4a3bffb1c02eb2e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 31c3d4cdac735aea203a88aa51154ae7c14c95a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033159"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210491"
 ---
 # <a name="lesson-1-creating-database-objects"></a>Lezione 1: Creazione di oggetti di database
   In questa lezione vengono illustrate le procedure per creare un database, creare in quest'ultimo una tabella, nonché come accedere ai dati della tabella e modificarli. Poiché l'obiettivo di questa lezione è offrire un'introduzione all'uso di [!INCLUDE[tsql](../includes/tsql-md.md)], non verranno usate né descritte le numerose opzioni disponibili per le istruzioni.  

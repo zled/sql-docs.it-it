@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SQLAUDIT.FILTER.F1
@@ -19,12 +17,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b11a16c7ff45906b1ac0f5ca3e7a3e85bf199407
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 03636c3eaf9d416d32f0143503625a7c71b8a254
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43023618"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219611"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del server
   In questo argomento viene illustrato come creare un controllo del server e la specifica di un controllo del server in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Il*controllo* di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta il rilevamento e la registrazione di eventi che si verificano nel sistema. L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli. L'oggetto *specifica controllo server* appartiene a un controllo. È possibile creare una specifica del controllo del server per ogni controllo, poiché entrambi vengono creati nell'ambito dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](sql-server-audit-database-engine.md).  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-caps.latest.revision: 28
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 25f45f72ddbfc389deb77e6c20588660e599cb19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f0e371ceef793daea080e3a588f6b87161083a6c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205681"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208481"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisiti dell'applicazione Web (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] è un'applicazione Web ospitata da Internet Information Services (IIS). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funziona solo in Internet Explorer (IE) 7 o versione successiva. IE 7 e le versioni precedenti, Microsoft Edge e Chrome non sono supportati.  
@@ -51,7 +48,7 @@ ms.locfileid: "37205681"
   
 ||  
 |-|  
-|Server Web<br /><br /> Funzionalità HTTP comuni<br /><br /> Contenuto statico<br /><br /> Documento predefinito<br /><br /> Esplorazione directory<br /><br /> Errori HTTP<br /><br /> Sviluppo applicazioni<br /><br /> ASP.NET<br /><br /> Estendibilità .NET<br /><br /> Estensioni ISAPI<br /><br /> Filtri ISAPI<br /><br /> Integrità e diagnostica<br /><br /> Registrazione HTTP<br /><br /> Monitoraggio richieste<br /><br /> Security<br /><br /> Autenticazione di Windows<br /><br /> Filtro richieste<br /><br /> Prestazioni<br /><br /> Compressione contenuto statico<br /><br /> Strumenti di gestione<br /><br /> Console di gestione IIS|  
+|Server Web<br /><br /> Funzionalità HTTP comuni<br /><br /> Contenuto statico<br /><br /> Documento predefinito<br /><br /> Esplorazione directory<br /><br /> Errori HTTP<br /><br /> Sviluppo applicazioni<br /><br /> ASP.NET<br /><br /> Estendibilità .NET<br /><br /> Estensioni ISAPI<br /><br /> Filtri ISAPI<br /><br /> Integrità e diagnostica<br /><br /> Registrazione HTTP<br /><br /> Monitoraggio richieste<br /><br /> Sicurezza<br /><br /> Autenticazione di Windows<br /><br /> Filtro richieste<br /><br /> Prestazioni<br /><br /> Compressione contenuto statico<br /><br /> Strumenti di gestione<br /><br /> Console di gestione IIS|  
   
 ### <a name="role-and-role-services-windows-server-2012-or-windows-8-operating-systems"></a>Ruolo e servizi ruolo (sistemi operativi Windows Server 2012 o Windows 8)  
  In Windows Server 2012 è possibile utilizzare **Server Manager**, disponibile in Microsoft Management Console (MMC), per installare il ruolo **Server Web (IIS)** e i seguenti servizi ruolo necessari:  
@@ -61,7 +58,7 @@ ms.locfileid: "37205681"
   
 ||  
 |-|  
-|Internet Information Services<br /><br /> Strumenti di gestione Web<br /><br /> Console di gestione IIS<br /><br /> Servizi Web<br /><br /> Sviluppo applicazioni<br /><br /> Estendibilità .NET 3.5<br /><br /> Estendibilità .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Estensioni ISAPI<br /><br /> Filtri ISAPI<br /><br /> Funzionalità HTTP comuni<br /><br /> Documento predefinito<br /><br /> Esplorazione directory<br /><br /> Errori HTTP<br /><br /> Contenuto statico<br /><br /> [Nota: non installare la pubblicazione WebDAV]<br /><br /> Integrità e diagnostica<br /><br /> Registrazione HTTP<br /><br /> Monitoraggio richieste<br /><br /> restazioni<br /><br /> Compressione contenuto statico<br /><br /> Security<br /><br /> Filtro richieste<br /><br /> Autenticazione di Windows|  
+|Internet Information Services<br /><br /> Strumenti di gestione Web<br /><br /> Console di gestione IIS<br /><br /> Servizi Web<br /><br /> Sviluppo applicazioni<br /><br /> Estendibilità .NET 3.5<br /><br /> Estendibilità .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Estensioni ISAPI<br /><br /> Filtri ISAPI<br /><br /> Funzionalità HTTP comuni<br /><br /> Documento predefinito<br /><br /> Esplorazione directory<br /><br /> Errori HTTP<br /><br /> Contenuto statico<br /><br /> [Nota: non installare la pubblicazione WebDAV]<br /><br /> Integrità e diagnostica<br /><br /> Registrazione HTTP<br /><br /> Monitoraggio richieste<br /><br /> restazioni<br /><br /> Compressione contenuto statico<br /><br /> Sicurezza<br /><br /> Filtro richieste<br /><br /> Autenticazione di Windows|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>Funzionalità (sistemi operativi Windows Server 2008 o Windows Server 2008 R2, Windows 7)  
  Sul [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] o Windows Server 2008 R2, è possibile usare **Server Manager** per installare le seguenti funzionalità necessarie.  

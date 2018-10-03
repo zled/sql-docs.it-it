@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
-caps.latest.revision: 12
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f2e9a15b4a0f1441d63ab39a4b65861fcfef099e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d54486dfbedc54b8b21e4f515682fab00ebe057c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167052"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201430"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Funzionalità di Master Data Services non più supportate in SQL Server 2014
   In questo argomento vengono descritte le funzionalità di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] non più disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -29,7 +26,7 @@ ms.locfileid: "37167052"
   
 ## <a name="includesssql11includessssql11-mdmd-discontinued-features"></a>Funzionalità non più disponibili in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicurezza  
  Per semplificare l'assegnazione della sicurezza, non è più possibile assegnare autorizzazioni per oggetti modello agli oggetti Gerarchia derivata, Gerarchia esplicita e Gruppo di attributi.  
   
 -   Le autorizzazioni della gerarchia derivata sono ora basate sul modello. Ad esempio, se si desidera che un utente dispone dell'autorizzazione per una gerarchia derivata, è necessario assegnare **Update** per l'oggetto modello. È possibile assegnare **Deny** l'accesso a tutte le entità non si desidera l'utente abbia accesso.  

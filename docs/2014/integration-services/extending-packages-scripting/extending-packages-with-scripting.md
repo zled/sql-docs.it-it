@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Integration Services, scripting
 - SSIS, scripting
 - scripts [Integration Services], about scripting
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06a199eebc0cde91c928f2099118996cf9d6bf50
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b060579cfb55a1698007630240f86bdf4c170c5f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158602"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229271"
 ---
 # <a name="extending-packages-with-scripting"></a>Estensione di pacchetti tramite scripting
   Se i componenti predefiniti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non soddisfano i propri requisiti, è possibile estendere le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizzando il codice per definire estensioni personalizzate. Per l'estensione dei pacchetti sono disponibili due opzioni discrete: è possibile scrivere codice all'interno dei potenti wrapper forniti dall'attività Script e dal componente script oppure creare da zero estensioni personalizzate di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] derivando dalla classe di base fornita dal modello a oggetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

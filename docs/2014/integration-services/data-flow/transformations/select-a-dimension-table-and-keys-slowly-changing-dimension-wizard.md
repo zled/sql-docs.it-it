@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.selecttableandkeys.f1
 ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79d3fbb53d59c9a85ba7246e7e20179eb25085e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 277802a17e58de6f74274c88cb065ac22ed951e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292801"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200661"
 ---
 # <a name="select-a-dimension-table-and-keys-slowly-changing-dimension-wizard"></a>Selezione tabella dimensione e chiavi (Configurazione guidata dimensioni a modifica lenta)
   Utilizzare la pagina **Selezione tabella dimensione e chiavi** per selezionare una tabella della dimensione da caricare ed eseguire il mapping tra le colonne del flusso di dati e le colonne che verranno caricate.  

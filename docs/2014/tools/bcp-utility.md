@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: 198
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 478537d3e4f74a83593147a7e790ab2d5806ba34
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 9921e018b81d22097161d2ea93226e47b7880073
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310298"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205861"
 ---
 # <a name="bcp-utility"></a>Utilità bcp
   Il **bcp** utilità di copia bulk dei dati tra un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e un file di dati in un formato specificato dall'utente. L'utilità **bcp** può essere usata per importare un numero elevato di nuove righe nelle tabelle di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o per esportare dati dalle tabelle in file di dati. Ad eccezione del caso in cui venga usata con l'opzione **queryout** , l'utilità non richiede alcuna conoscenza di [!INCLUDE[tsql](../includes/tsql-md.md)]. Per importare dati in una tabella, è necessario utilizzare un file di formato creato per la tabella specifica oppure conoscere approfonditamente la struttura della tabella e i tipi di dati validi per le relative colonne.  
@@ -147,7 +144,7 @@ ms.locfileid: "39310298"
 |RAW|Non vengono eseguite conversioni tra tabelle codici. Per questo motivo, si tratta dell'opzione più rapida.|  
 |*code_page*|Numero di tabella codici specifico, ad esempio 850.<br /><br /> **\*\* Importanti \* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nepodporuje tabella codici 65001 (codifica UTF-8).|  
   
- `-d` *Database_name*  
+ `-d` *database_name*  
  Specifica il database al quale connettersi. Per impostazione predefinita, bcp.exe si connette al database predefinito dell'utente. Se `-d` *nome_database* e un nome in tre parti (*database_name.schema.table*, passato come primo parametro bcp.exe) viene specificato, verrà generato un errore perché non è possibile specificare il nome del database due volte. Se *database_name* inizia con un trattino (-) o una barra (/), non aggiungere uno spazio tra `-d` e il nome del database.  
   
  **-e** *err_file*  

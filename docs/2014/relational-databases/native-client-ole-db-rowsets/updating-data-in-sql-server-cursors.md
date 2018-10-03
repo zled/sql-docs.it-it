@@ -1,12 +1,10 @@
 ---
-title: L'aggiornamento dei dati nei cursori SQL Server | Microsoft Docs
+title: Aggiornamento dei dati in SQL Server i cursori | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - updating data [SQL Server]
@@ -16,32 +14,31 @@ helpviewer_keywords:
 - cursors [OLE DB]
 - data updates [SQL Server], OLE DB
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: caa3f5d35d51a90809175da88c9732fd883d291d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b5c0b188d8fd45c1177cab77501bdf80fc550987
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428330"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204141"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Aggiornamento dei dati nei cursori di SQL Server
-  Durante il recupero e aggiornamento dei dati tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursori, un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicazione consumer del provider OLE DB Native Client è associata mediante le stesse considerazioni e vincoli che si applicano a qualsiasi altra applicazione client.  
+  Quando il recupero e l'aggiornamento dei dati tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursori, una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicazione consumer di Native Client OLE DB provider è associato mediante le stesse considerazioni e vincoli applicabili a qualsiasi altra applicazione client.  
   
  Solo le righe dei cursori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] partecipano al controllo di accesso ai dati simultaneo. Quando il consumer richiede un set di righe modificabile, il controllo della concorrenza viene effettuato da DBPROP_LOCKMODE. Per modificare il livello di controllo di accesso simultaneo, il consumer imposta la proprietà DBPROP_LOCKMODE prima di aprire il set di righe.  
   
- I livelli di isolamento della transazione possono provocare ritardi significativi nel posizionamento delle righe se la progettazione delle applicazioni client lascia aperte le transazioni per lunghi periodi di tempo. Per impostazione predefinita, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client utilizza il livello di isolamento read committed specificato da DBPROPVAL_TI_READCOMMITTED. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta l'isolamento della lettura dirty quando la concorrenza del set di righe è di sola lettura. In un set di righe modificabile il consumer può pertanto richiedere un livello di isolamento superiore ma non inferiore.  
+ I livelli di isolamento della transazione possono provocare ritardi significativi nel posizionamento delle righe se la progettazione delle applicazioni client lascia aperte le transazioni per lunghi periodi di tempo. Per impostazione predefinita, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client utilizza il livello di isolamento read committed specificato da DBPROPVAL_TI_READCOMMITTED. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider supporta l'isolamento di lettura dirty quando la concorrenza di rowset è di sola lettura. In un set di righe modificabile il consumer può pertanto richiedere un livello di isolamento superiore ma non inferiore.  
   
 ## <a name="immediate-and-delayed-update-modes"></a>Modalità di aggiornamento immediato e posticipato  
- In modalità di aggiornamento immediato ogni chiamata a **IRowsetChange:: SetData** provoca un round trip per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se il consumer apporta più modifiche a una singola riga, è più efficace inviare tutte le modifiche con un unico **SetData** chiamare.  
+ In modalità di aggiornamento immediato, ogni chiamata a **IRowsetChange::SetData** provoca un round trip al computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se il consumer apporta più modifiche a una sola riga, risulta più efficiente inviare tutte le modifiche con un'unica chiamata a **SetData**.  
   
- In modalità di aggiornamento posticipato viene eseguito un round trip il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ogni riga indicata nel *cRows* e *rghRows* parametri del **IRowsetUpdate:: Update**.  
+ In modalità di aggiornamento posticipato, viene eseguito un round trip al computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ogni riga indicata nei parametri *cRows* e *rghRows* di **IRowsetUpdate::Update**.  
   
  In entrambe le modalità un round trip rappresenta una transazione distinta quando per il set di righe non è aperto alcun oggetto transazione.  
   
- Quando si utilizza **IRowsetUpdate:: Update**, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client tenta di elaborare ogni riga indicata. Errori dovuti a valori di dati, lunghezza o lo stato non validi per tutte le righe non si arresta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elaborazione del provider OLE DB Native Client. È possibile che vengano modificate tutte o nessuna delle altre righe che partecipano all'aggiornamento. Il consumer deve esaminare la *prgRowStatus* matrice per determinare l'errore per una specifica riga quando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client restituisce DB_S_ERRORSOCCURRED.  
+ Quando si utilizza **contrario**, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider tenta di elaborare ogni riga indicata. Errore si verifica a causa di valori di dati, lunghezza o stato non validi per tutte le righe non si arresta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client provider OLE DB di elaborazione. È possibile che vengano modificate tutte o nessuna delle altre righe che partecipano all'aggiornamento. Il consumer deve esaminare la *prgRowStatus* matrice per determinare l'errore per una specifica riga quando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client restituisce DB_S_ERRORSOCCURRED.  
   
  Un consumer non deve presupporre che le righe vengano elaborate in base a un ordine specifico. Se un consumer richiede un'elaborazione ordinata di modifica dei dati su più di una riga, deve stabilire l'ordine nella logica dell'applicazione e aprire una transazione per includere il processo.  
   

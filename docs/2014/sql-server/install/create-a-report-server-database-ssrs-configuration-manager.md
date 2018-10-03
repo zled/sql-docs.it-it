@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - report server database
 - databases [Reporting Services], creating
 ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 913ec99d330f1eb62cbc1a27572296856c28f48b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b18b94289516d1ba38be392a13438e3a38029c4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172212"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206271"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>Creare un database del server di report (Gestione configurazione SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **modalità nativa** usa due database relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione di metadati e oggetti del server di report. Un database è utilizzato per l'archiviazione primaria e l'altro per l'archiviazione dei dati temporanei. I database vengono creati assieme e associati in base al nome. Con un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i database sono denominati `reportserver` e `reportservertempdb`. I due database vengono detti collettivamente "database del server di report" o "catalogo del server di report".  

@@ -1,28 +1,25 @@
 ---
-title: SQLBindParameter | Microsoft Docs
+title: La funzione SQLBindParameter | Documenti di Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLBindParameter function
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
-caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50d2c364a6632052dbab387544e6c224d0bb1e05
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3bea7e5bac71c3e4fdd90253f30a503dc44f44d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430690"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209001"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter` Consente di eliminare le attività di conversione dei dati quando viene utilizzata per fornire dati per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client, conseguente notevole miglioramento delle prestazioni per i componenti client e server delle applicazioni. Un altro vantaggio è costituito da un'inferiore perdita di precisione durante l'inserimento o l'aggiornamento di tipi di dati numerici approssimativi.  
@@ -34,24 +31,24 @@ ms.locfileid: "37430690"
   
  Quando si utilizza il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, specificare SQL_PARAM_INPUT quando si associano parametri di input. Specificare solo SQL_PARAM_OUTPUT o SQL_PARAM_INPUT_OUTPUT quando si associano parametri di stored procedure definiti con la parola chiave OUTPUT.  
   
- [SQLRowCount](sqlrowcount.md) non è affidabile con i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client se un elemento di una matrice di parametri associati provoca un errore nell'esecuzione dell'istruzione. L'attributo SQL_ATTR_PARAMS_PROCESSED_PTR dell'istruzione ODBC indica il numero di righe elaborate prima del verificarsi dell'errore. L'applicazione può quindi attraversare la relativa matrice degli stati dei parametri per individuare il numero di istruzioni eseguite correttamente, se necessario.  
+ [SQLRowCount](sqlrowcount.md) non è affidabile con il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il driver ODBC Native Client se un elemento di matrice di una matrice di parametri di associazione a causa di un errore nell'esecuzione dell'istruzione. L'attributo SQL_ATTR_PARAMS_PROCESSED_PTR dell'istruzione ODBC indica il numero di righe elaborate prima del verificarsi dell'errore. L'applicazione può quindi attraversare la relativa matrice degli stati dei parametri per individuare il numero di istruzioni eseguite correttamente, se necessario.  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>Associazione di parametri per i tipi di caratteri SQL  
- Se il tipo di dati SQL passato è un tipo di carattere *ColumnSize* è la dimensione in caratteri (non byte). Se la lunghezza della stringa di dati in byte è maggiore di 8000, *ColumnSize* deve essere impostato su `SQL_SS_LENGTH_UNLIMITED`, che indica che non sono previsti limiti per le dimensioni del tipo SQL.  
+ Se il tipo di dati SQL passato è un tipo di carattere, *ColumnSize* è la dimensione in caratteri (non byte). Se la lunghezza della stringa di dati in byte è maggiore di 8000, *ColumnSize* deve essere impostato su `SQL_SS_LENGTH_UNLIMITED`, che indica che non sono previsti limiti per le dimensioni del tipo SQL.  
   
  Ad esempio, se il tipo di dati SQL `SQL_WVARCHAR`, *ColumnSize* non deve essere maggiore di 4000. Se la lunghezza effettiva dei dati è maggiore di 4000, allora *ColumnSize* deve essere impostato su `SQL_SS_LENGTH_UNLIMITED` in modo che `nvarchar(max)` verrà usato dal driver.  
   
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter e parametri con valori di tabella  
- Come altri tipi di parametro, i parametri con valori di tabella vengono associati da SQLBindParameter.  
+ Gli altri tipi di parametro sono associati parametri valutati a livello di tabella mediante la funzione SQLBindParameter.  
   
- Una volta associato un parametro con valori di tabella, vengono associate anche le colonne del parametro. Per associare le colonne, si chiama [SQLSetStmtAttr](sqlsetstmtattr.md) per impostare SQL_SOPT_SS_PARAM_FOCUS sul numero ordinale del parametro con valori di tabella. Quindi, chiamare la funzione SQLBindParameter per ogni colonna nel parametro con valori di tabella. Per tornare alle associazioni di parametro di livello principale, impostare SQL_SOPT_SS_PARAM_FOCUS su 0.  
+ Una volta associato un parametro con valori di tabella, vengono associate anche le colonne del parametro. Per associare le colonne, si chiama [SQLSetStmtAttr](sqlsetstmtattr.md) per impostare SQL_SOPT_SS_PARAM_FOCUS sul numero ordinale del parametro con valori di tabella. Quindi, chiamare la funzione SQLBindParameter per ogni colonna nel parametro valori di tabella. Per tornare alle associazioni di parametro di livello principale, impostare SQL_SOPT_SS_PARAM_FOCUS su 0.  
   
- Per informazioni sui mapping dei parametri ai campi di descrizione per i parametri con valori di tabella, vedere [valori di colonna e parametri Data Transfer of Table-Valued e associazione](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
+ Per informazioni sul mapping dei parametri ai campi del descrittore per parametri valutati a livello di tabella, vedere [associazione e i parametri Data Transfer of Table-Valued e i valori di colonna](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
  Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>Supporto di SQLBindParameter per le caratteristiche avanzate di data e ora  
- I valori dei parametri di tipi data/ora vengono convertiti come descritto in [le conversioni da C a SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Si noti che per i parametri di tipo `time` e `datetimeoffset` deve avere *ValueType* specificato come `SQL_C_DEFAULT` oppure `SQL_C_BINARY` se utilizzano le strutture corrispondenti (`SQL_SS_TIME2_STRUCT` e `SQL_SS_TIMESTAMPOFFSET_STRUCT`) vengono usati.  
+ Valori dei parametri di tipo Data/ora vengono convertiti come indicato [le conversioni da C a SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Si noti che per i parametri di tipo `time` e `datetimeoffset` deve avere *ValueType* specificato come `SQL_C_DEFAULT` oppure `SQL_C_BINARY` se utilizzano le strutture corrispondenti (`SQL_SS_TIME2_STRUCT` e `SQL_SS_TIMESTAMPOFFSET_STRUCT`) vengono usati.  
   
  Per altre informazioni, vedere [data e miglioramenti per la fase &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

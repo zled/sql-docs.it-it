@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.action.f1
 ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f51a23b7dddddc0365809fd6bc92c922fdd402fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32d1389fcb780fab6a370e6a9043600461baec4b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239961"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225551"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor dei form delle azioni (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro dell'editor dei form delle azioni della scheda **Azioni** in Progettazione cubi per creare e modificare azioni standard.  

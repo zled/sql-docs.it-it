@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
-caps.latest.revision: 65
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9aebdc8978cf552057610c2fdea05c59d6921fc
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393454"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227861"
 ---
 # <a name="memory-optimized-tables"></a>Tabelle con ottimizzazione per la memoria
   Con la funzionalità OLTP in memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile migliorare le prestazioni delle applicazioni OLTP tramite l'accesso ai dati efficiente e ottimizzato per la memoria, la compilazione nativa della logica di business e gli algoritmi senza blocchi e latch. La funzionalità include tabelle ottimizzate per la memoria e tipi di tabella, nonché la compilazione nativa delle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] per l'accesso efficiente a queste tabelle.  

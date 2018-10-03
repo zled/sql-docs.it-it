@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.cancelreportserverjobs.f1
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9995d9df8ee2a4a11dc43a36e1853bbf60667c54
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b2745d6eacbbf17e65ba8d17b4293b98f942d850
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248041"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206651"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>Annulla processi server di report (Management Studio)
   La finestra di dialogo **Annulla processi server di report** consente di visualizzare o annullare i report in corso. In questa finestra di dialogo vengono visualizzati tutti i processi attualmente in esecuzione nel server di report. Sebbene non sia possibile sospendere o riavviare i processi attualmente in corso di elaborazione, è possibile annullare tutti i processi o singoli processi il cui completamento sta richiedendo troppo tempo.  

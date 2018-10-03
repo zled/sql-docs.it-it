@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
 - importing data [Master Data Services]
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
-caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d1d0810c58b2dd0a899c95a358ddccac601b8380
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c9113e8e3ae1f65d42b1e55a81cee4dcfc2152b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162832"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217811"
 ---
 # <a name="data-import-master-data-services"></a>Importazione dati (Master Data Services)
   Dopo aver creato un modello per i dati in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], è possibile iniziare ad aggiungere dati e apportare modifiche ai dati nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.   È possibile usare stored procedure, tabelle di staging e Gestione dati master di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  

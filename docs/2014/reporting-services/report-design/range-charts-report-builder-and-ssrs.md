@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
-caps.latest.revision: 4
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ac10ea59e329f89630510fa6529e54ff2417efd4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9207eb48df3ad54fc8c826d83ad16daf3032befc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215421"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210191"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>Grafici a intervalli (Generatore report e SSRS)
   Il tipo di grafico a intervalli consente di visualizzare un set di punti dati, ognuno dei quali è definito da più valori per la stessa categoria. I valori sono rappresentati dall'altezza del marcatore misurata sull'asse del valore. Le etichette delle categorie vengono visualizzate sull'asse delle categorie. Nel grafico con intervalli semplice viene riempita l'area compresa tra il valore iniziale e finale per ogni punto dati.  

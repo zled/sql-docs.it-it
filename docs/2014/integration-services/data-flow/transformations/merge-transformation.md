@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergetrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - combining datasets
 - datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bde18a7396d10ce15020e92d373239b8c3dd96c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6125dbd164065afc0ee808bb77a4e2544606ef8c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215691"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226631"
 ---
 # <a name="merge-transformation"></a>Unione - trasformazione
   La trasformazione Unione consente di combinare due set di dati ordinati in un singolo set di dati. Le righe di ogni set di dati vengono inserite nell'output in base ai valori delle relative colonne chiave.  
@@ -68,7 +65,7 @@ ms.locfileid: "37215691"
   
 -   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  Per informazioni dettagliate sull'impostazione delle proprietà, vedere i seguenti argomenti:  
   
 -   [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  

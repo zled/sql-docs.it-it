@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], algorithms
 - machine learning algorithms [Analysis Services]
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
-caps.latest.revision: 72
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bba1521f808be45dabb89f1fe025ae1b9aa461bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 490857f9a8c95853d3f89bc8b0cfb85a165f1fd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243751"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218571"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algoritmi di data mining (Analysis Services - Data mining)
   Oggetto *algoritmo di data mining* è un set di approcci euristici e calcoli che crea un modello di data mining dai dati. Per creare un modello, tramite l'algoritmo vengono innanzitutto analizzati i dati forniti, ricercando tipi specifici di modelli o tendenze. I risultati dell'analisi vengono utilizzati dall'algoritmo per definire i parametri ottimali per la creazione del modello di data mining. Questi parametri vengono quindi applicati all'intero set di dati per estrarre modelli utilizzabili e statistiche dettagliate.  
@@ -92,7 +89,7 @@ ms.locfileid: "37243751"
 |**Query di data mining**|Vengono fornite più query che è possibile utilizzare con ogni tipo di modello. Negli esempi sono incluse query contenuto che consentono di acquisire informazioni sui modelli nel modello e query di stima per facilitare la compilazione di stime in base a tali modelli.|  
 ||[Esempi di query sul modello di associazione](association-model-query-examples.md)<br /><br /> [Esempi di query sul modello di clustering](clustering-model-query-examples.md)<br /><br /> [Esempi di query sul modello di alberi delle decisioni](decision-trees-model-query-examples.md)<br /><br /> [Esempi di query sul modello di regressione lineare](linear-regression-model-query-examples.md)<br /><br /> [Esempi di query sul modello di regressione logistica](logistic-regression-model-query-examples.md)<br /><br /> [Esempi di query sul modello Naive Bayes](naive-bayes-model-query-examples.md)<br /><br /> [Esempi di query sul modello di rete neurale](neural-network-model-query-examples.md)<br /><br /> [Esempi di query su modelli Sequence Clustering](sequence-clustering-model-query-examples.md)<br /><br /> [Esempi di query sui modelli Time Series](time-series-model-query-examples.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |**Argomento**|**Descrizione**|  
 |---------------|---------------------|  

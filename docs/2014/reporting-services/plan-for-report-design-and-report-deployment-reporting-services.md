@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5bd53bceaae8b1a898aecf94cc05818653498904
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ddb62344608d0fbd44376c0d6180dc973d3202a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194851"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209181"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Pianificare la progettazione e la distribuzione di report (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili diversi approcci per la creazione e distribuzione di report. Utilizzare questo argomento per la pianificazione di un ambiente di creazione di report e un server di report che interagiscono. In questo argomento viene fornita una panoramica del supporto delle definizioni di report mediante i componenti [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Una definizione di report è un file XML scritto in linguaggio RDL (Report Definition Language) o RDLC (Report Definition Language for Clients). Ogni definizione di report è conforme a una versione di schema specifica elencata all'inizio del file.  

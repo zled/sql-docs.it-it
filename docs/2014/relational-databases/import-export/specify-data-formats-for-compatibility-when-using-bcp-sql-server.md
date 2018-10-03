@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk exporting [SQL Server], compatibility
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data formats [SQL Server], compatibility
 - bcp utility [SQL Server], compatibility
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42266e1f4ab136045c16d1e0f41d6ae802c3f1c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b05f01a5c8100f4c06d8cc6b294bdb49e5baed71
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154542"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214771"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Impostazione dei formati di dati per la compatibilità mediante bcp (SQL Server)
   In questo argomento viene descritto l'attributi del formato dati, prompt specifici di campo e l'archiviazione dei dati di campo per campo in un file in formato non xml di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` comando. La comprensione di questi concetti può risultare utile per l'esportazione bulk di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fini di importazione in un altro programma, ad esempio un altra applicazione di database. I formati di dati predefiniti (native, character o Unicode) nella tabella di origine potrebbero non essere compatibili con il layout di dati previsto dall'altra applicazione. In questo caso, quando si esportano i dati è necessario descriverne il layout.  
