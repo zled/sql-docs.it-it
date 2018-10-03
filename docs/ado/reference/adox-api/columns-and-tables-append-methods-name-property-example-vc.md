@@ -1,13 +1,11 @@
 ---
-title: Tabelle e colonne aggiungere metodi di esempio della proprietà Name (VC + +) | Documenti Microsoft
+title: Tabelle e colonne metodi Append oggetti esempio della proprietà Name (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - Name property [ADOX], VC++ example
 - Append method [ADOX], VC++ example
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c783914dd96e3545927f308c861eb80e72ef7717
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cadebd87f664f603a94532531432446c015039d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285310"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760979"
 ---
-# <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Le colonne e tabelle aggiungere metodi, esempio di proprietà Name (VC + +)
+# <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Esempio dei metodi Append di Columns e Tables e della proprietà Name (VC++)
 Il codice seguente viene illustrato come creare una nuova tabella.  
   
 ```  
@@ -86,6 +83,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Append (metodo) (ADOX colonne)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append (metodo) (ADOX tabelle)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Append (metodo) (oggetti Column ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append (metodo) (oggetti Table ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Proprietà Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)

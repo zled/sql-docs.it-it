@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: xml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - type casting string instances [XML in SQL Server]
@@ -20,15 +17,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6181538998aefe964d728632bc1aa053436283dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba81057640891eded10eb09cd9d22af9ff2dc8c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779949"
 ---
 # <a name="create-instances-of-xml-data"></a>Creare istanze di dati XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -212,9 +209,9 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 ## <a name="using-bulk-load"></a>Utilizzo del caricamento bulk  
  La funzionalità avanzata [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md) consente di eseguire il caricamento bulk dei documenti XML nel database. È possibile eseguire un caricamento bulk delle istanze XML dai file nelle colonne di tipo **xml** del database. Per esempi funzionanti, vedere [Esempi di importazione ed esportazione bulk di documenti XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). Per altre informazioni sul caricamento dei documenti XML, vedere [Caricare dati XML](../../relational-databases/xml/load-xml-data.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Recuperare ed eseguire query su dati XML](../../relational-databases/xml/retrieve-and-query-xml-data.md)|Descrizione delle parti di istanze XML che non sono mantenute quando vengono archiviate nei database.|  
   

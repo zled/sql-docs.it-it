@@ -1,34 +1,31 @@
 ---
-title: Puntatori statici ODBC | Documenti Microsoft
+title: I cursori statici ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ODBC], static
 - static cursors [ODBC]
 ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2ee8c5945e3ebed86df370fd537f9bc543ce844
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ddd2b4d998ab2718757db4dd58de6aea8bee05e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910906"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757159"
 ---
-# <a name="odbc-static-cursors"></a>Puntatori statici ODBC
-Un cursore statico è uno in cui il set di risultati sembra essere statico. Non è in genere rilevare le modifiche apportate all'appartenenza, nella disposizione o valori di set di risultati dopo l'apertura del cursore. Si supponga, ad esempio, un cursore statico recupera una riga e un'altra applicazione, quindi aggiorna tale riga. Se un cursore statico recupera nuovamente la riga, i valori rilevati sono identiche, nonostante le modifiche apportate da altre applicazioni.  
+# <a name="odbc-static-cursors"></a>Cursori statici ODBC
+Un cursore statico è uno in cui il set di risultati viene visualizzata come statico. Non è in genere rilevare le modifiche apportate per l'appartenenza, ordine o i valori del set di risultati dopo l'apertura del cursore. Si supponga, ad esempio, un cursore statico recupera una riga e un'altra applicazione, quindi aggiorna tale riga. Se un cursore statico recupera nuovamente la riga, i valori rilevati sono identiche, nonostante le modifiche apportate da altre applicazioni.  
   
- I cursori statici rilevano i propri aggiornamenti, eliminazioni e inserimenti, anche non è necessario eseguire questa operazione. Se un cursore statico particolare rileva le modifiche viene segnalato tramite l'opzione SQL_STATIC_SENSITIVITY in **SQLGetInfo**. I cursori statici rilevano mai altri Aggiorna, Elimina e inserisce.  
+ I cursori statici possono rilevare i propri aggiornamenti, eliminazioni e inserimenti, anche se essi non sono necessari per eseguire questa operazione. Indica se un cursore statico particolare rileva queste modifiche viene segnalato tramite l'opzione SQL_STATIC_SENSITIVITY **SQLGetInfo**. I cursori statici rilevano mai altri aggiornamenti, eliminazione e inserimento.  
   
- La matrice di stato di riga specificata dall'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR può contenere SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO o SQL_ROW_ERROR per ogni riga. Restituisce SQL_ROW_UPDATED, SQL_ROW_DELETED o SQL_ROW_ADDED per le righe aggiornate, eliminate o inserite dal cursore, presupponendo che il cursore è possibile rilevare le modifiche.  
+ La matrice di stato di riga specificata dall'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR può contenere SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO o SQL_ROW_ERROR ogni riga. Restituisce SQL_ROW_UPDATED, SQL_ROW_DELETED o SQL_ROW_ADDED per le righe aggiornate, eliminate o inserite dal cursore, presupponendo che il cursore è possibile rilevare tali modifiche.  
   
- I cursori statici vengono in genere implementati dal blocco di righe nel set di risultati o eseguendo una copia dello snapshot, il risultato impostare. Anche se il blocco di righe è relativamente semplice, ha lo svantaggio di ridurre significativamente la concorrenza. Creazione di una copia consente maggiore concorrenza e consente il cursore tenere traccia dei propri aggiornamenti, eliminazioni e inserisce modificando la copia. Tuttavia, una copia è più costosa da verificare e può far divergere dai dati sottostanti, come i dati viene modificati da altri utenti.
+ I cursori statici vengono in genere implementati dal blocco di righe nel set di risultati o eseguendo una copia dello snapshot, del risultato impostare. Anche se il blocco di righe è relativamente facile, ha lo svantaggio di ridurre significativamente la concorrenza. Creazione di una copia consente maggiore concorrenza e consente il cursore tenere traccia dei propri aggiornamenti, eliminazioni e inserisce modificando la copia. Tuttavia, una copia è più costosa da apportare e può far divergere dai dati sottostanti come tali dati viene modificati da altri utenti.
