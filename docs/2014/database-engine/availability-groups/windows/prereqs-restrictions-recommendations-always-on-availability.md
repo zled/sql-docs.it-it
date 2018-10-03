@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-caps.latest.revision: 146
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5dc25e9314abf9aa025f489a087fdcc8ae98be36
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9a0f8896903c2a7f817efcfa8dcc238ce0532f90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259547"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151901"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn (SQL Server)
   In questo argomento si illustrano le considerazioni sulla distribuzione di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], inclusi prerequisiti, restrizioni e indicazioni su computer host, cluster WSCF (Windows Server Failover Clustering), istanze del server e gruppi di disponibilità. Per ognuno di questi componenti sono indicate le eventuali considerazioni sulla sicurezza e le autorizzazioni richieste.  

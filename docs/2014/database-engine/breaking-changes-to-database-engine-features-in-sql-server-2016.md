@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], what's new
 - breaking changes [SQL Server]
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
-caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c20cb1efa3cc6048e9c3b2284e76852ace41c66b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393200"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227091"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Modifiche che possono causare problemi di funzionamento apportate alle funzionalità del Motore di database in SQL Server 2014.
   Questo argomento descrive le modifiche di rilievo nel [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] e versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile che questi problemi si verifichino quando viene effettuato un aggiornamento. Per altre informazioni, vedere [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -46,7 +43,7 @@ ms.locfileid: "40393200"
 |ALTER TABLE|L'istruzione ALTER TABLE supporta unicamente nomi di tabella in due parti (schema.oggetto). Specificare un nome di tabella utilizzando i seguenti formati di ora non riesce in fase di compilazione dell'errore 117:<br /><br /> server.database.schema.tabella<br /><br /> .database.schema.tabella<br /><br /> ..schema.tabella<br /><br /> Nelle versioni precedenti l'uso del formato server.database.schema.tabella genera l'errore 4902. L'uso del formato .database.schema.tabella o ..schema.tabella è supportato. Per risolvere il problema, rimuovere l'uso di un prefisso in quattro parti.|  
 |Esplorazione dei metadati|L'esecuzione di una query su una vista tramite FOR BROWSE o SET NO_BROWSETABLE ON comporta la restituzione dei metadati della vista, non dell'oggetto sottostante. Questo comportamento corrisponde ad altri metodi di esplorazione dei metadati.|  
 |SOUNDEX|Con il livello di compatibilità del database 110, la funzione SOUNDEX consente di implementare nuove regole che potrebbero generare una differenza tra i valori calcolati dalla funzione e quelli calcolati con livelli di compatibilità precedenti. Dopo aver effettuato l'aggiornamento al livello di compatibilità 110, potrebbe essere necessario ricompilare gli indici, gli heap o i vincoli CHECK in cui viene usata la funzione SOUNDEX. Per altre informazioni, vedere [SOUNDEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/soundex-transact-sql)
- ,|  
+ .|  
 |Messaggio sul numero di righe per le istruzioni DML che hanno esito negativo|In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] il [!INCLUDE[ssDE](../includes/ssde-md.md)] invierà regolarmente il token TDS DONE con RowCount: 0 ai client quando un'istruzione DML ha esito negativo. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] un valore errato -1 viene inviato al client quando l'istruzione DML non riuscita si trova all'interno di un blocco TRY-CATCH e il [!INCLUDE[ssDE](../includes/ssde-md.md)] attiva la parametrizzazione automatica oppure il blocco TRY-CATCH non si trova sullo stesso livello dell'istruzione non riuscita. Ad esempio, se un blocco TRY-CATCH chiama una stored procedure e un'istruzione DML nella procedura ha esito negativo, il client riceverà erroneamente un valore -1.<br /><br /> Le applicazioni basate su questo comportamento errato avranno esito negativo.|  
 |SERVERPROPERTY ('Edizione')|Edizione del prodotto installata per l'istanza di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Usare il valore di questa proprietà per determinare le funzionalità e i limiti, come il numero massimo di CPU, supportati dal prodotto installato.<br /><br /> In base all'edizione Enterprise installata, questa proprietà può restituire 'Enterprise Edition' o 'Enterprise Edition: Core-based Licensing'. Le edizioni Enterprise sono differenziate in base alla capacità di calcolo massima per una sola istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni sui limiti di capacità di calcolo in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vedere [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).|  
 |CREATE LOGIN|Il `CREATE LOGIN WITH PASSWORD = '` *password* `' HASHED` opzione non può essere usata con hash creati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 o versioni precedenti.|  

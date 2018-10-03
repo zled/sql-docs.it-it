@@ -3,17 +3,17 @@ title: Installazione Standalone R Server o Machine Learning Server in SQL Server
 description: Panoramica introduttiva alla versione autonoma di R Server e Machine Learning Server nel programma di installazione di SQL Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/27/2018
+ms.date: 10/01/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: a821706126519e5d48026eae834e320f706d2e4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176431"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (Standalone) e Machine Learning Server (Standalone) in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ SQL Server fornisce il supporto di installazione per un Server R autonomo o Mach
 In SQL Server 2016, questa funzionalità è detta **R Server (Standalone)** ed è solo R. In SQL Server 2017, bensì **Machine Learning Server (Standalone)** e include R e Python.  
 
 > [!Note]
-> Installato dal programma di installazione di SQL Server, è funzionalmente equivalente alle versioni non SQL personalizzata di un server autonomo [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), che supportano gli stessi scenari utente, tra cui l'esecuzione remota, servizi web e l'operazionalizzazione e la raccolta completa di funzioni RevoScaleR e revoscalepy.
+> Installato dal programma di installazione di SQL Server, è funzionalmente equivalente alle versioni non SQL personalizzata di un server autonomo [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), che supportano gli stessi scenari utente, tra cui l'esecuzione remota, servizi web e l'operazionalizzazione e la raccolta completa di librerie di R e Python.
 
 ## <a name="components"></a>Components
 

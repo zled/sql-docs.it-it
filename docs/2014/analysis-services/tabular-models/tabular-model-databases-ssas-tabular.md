@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1d74fe1e59121466acf3671e3ce036a6b3e4e89
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 763561a3b13917c290794db145c6309267f9dc97
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259417"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190701"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Database modello tabulare (SSAS tabulare)
   Un database modello tabulare è un database di Analysis Services creato in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tramite il modello di progetto di modello tabulare di Analysis Services, in cui tabelle e relazioni sono le strutture primarie per la rappresentazione di dati.  
@@ -32,7 +29,7 @@ ms.locfileid: "37259417"
   
  [Accesso ai dati di modello tabulare](tabular-model-data-access.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Elaborare database, tabelle o partizioni](process-database-table-or-partition-analysis-services.md)  
   
  [Ruoli nei modelli tabulari &#40;tabulare di SSAS&#41;](tabular-model-roles-ssas-tabular.md)  

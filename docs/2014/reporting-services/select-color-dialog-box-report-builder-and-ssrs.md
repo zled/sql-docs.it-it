@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2b14615cb231f6df5385306ded4257a86998a56
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 42dc3c37a93bf3240b4332915488ad293b68ec66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185775"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184661"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Finestra di dialogo Seleziona colore (Generatore report e SSRS)
   Utilizzare la finestra di dialogo **Seleziona colore** per specificare le opzioni relative al colore per lo sfondo di una o più celle in un'area dati o in una casella di testo oppure per un grafico.  
@@ -66,7 +63,7 @@ ms.locfileid: "37185775"
  **Blu**  
  Valore decimale relativo alla parte blu del colore RGB. Utilizzare la casella di selezione per modificare il valore o digitare un valore compreso tra 0 e 255.  
   
- **Alfa**  
+ **alfa**  
  Valore decimale relativo alla parte alfa o di trasparenza del colore. Quando questo valore è abilitato, è possibile utilizzare il dispositivo di scorrimento per regolare il grado di trasparenza desiderato.  
   
  **Tonalità**  
