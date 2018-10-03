@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e58e42b2bede1c29024a17643b611190c980b905
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 048dbd899f8c330e053ce9e97ee78d38b7f4e336
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410710"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177181"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Inviare dati BLOB a SQL Server utilizzando IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
   In questo esempio viene illustrato come trasmettere dati BLOB di lunghezza variabile per riga mediante IRowsetFastLoad.  
   
  Per impostazione predefinita, in questo esempio viene illustrato come utilizzare IRowsetFastLoad per inviare dati BLOB di lunghezza variabile per riga tramite associazioni inline. I dati BLOB inline non devono superare la memoria disponibile. Le prestazioni di questo metodo sono migliori in presenza di dati BLOB di pochi megabyte perché non comportano un ulteriore overhead del flusso. In caso di dati di dimensione maggiore, in particolare dati non disponibili in blocco, il flusso assicura prestazioni migliori.  
   
- Quando si rimuovono i simboli di commento da #define USE_ISEQSTREAM nel codice sorgente, nell'esempio viene utilizzato ISequentialStream. L'implementazione del flusso è definito nell'esempio e può inviare dati BLOB di qualsiasi dimensione semplicemente modificando MAX_BLOB. Non è necessario che i dati del flusso rientrino nella memoria o siano disponibili in un blocco. Questo provider viene chiamato tramite IRowsetFastLoad::InsertRow. Passare un puntatore mediante IRowsetFastLoad::InsertRow all'implementazione del flusso nel buffer di dati (offset rgBinding.obValue) insieme alla quantità di dati disponibile per la lettura dal flusso. Alcuni provider potrebbero non dover conoscere la lunghezza dei dati al momento dell'associazione. In questo caso, è possibile omettere la lunghezza dall'associazione.  
+ Quando si rimuovono i simboli di commento da #define USE_ISEQSTREAM nel codice sorgente, nell'esempio viene utilizzato ISequentialStream. L'implementazione del flusso è definita nell'esempio e consente di inviare dati BLOB di qualsiasi dimensione semplicemente modificando MAX_BLOB. Non è necessario che i dati del flusso rientrino nella memoria o siano disponibili in un blocco. Questo provider viene chiamato tramite IRowsetFastLoad::InsertRow. Passare un puntatore mediante IRowsetFastLoad::InsertRow all'implementazione del flusso nel buffer di dati (offset rgBinding.obValue) insieme alla quantità di dati disponibile per la lettura dal flusso. Alcuni provider potrebbero non dover conoscere la lunghezza dei dati al momento dell'associazione. In questo caso, è possibile omettere la lunghezza dall'associazione.  
   
  Nell'esempio non viene utilizzata l'interfaccia del flusso del provider per scrivere i dati nel provider. Nell'esempio viene invece passato un puntatore all'oggetto flusso che il provider utilizzerà per leggere i dati. I provider (SQLOLEDB e SQLNCLI) di Microsoft in genere leggeranno i dati in blocchi di 1024 byte dall'oggetto finché non verranno elaborati tutti i dati. SQLOLEDB e SQLNCLI non dispongono di implementazioni complete per consentire al consumer di scrivere i dati nell'oggetto flusso del provider. Tramite l'oggetto flusso del provider è possibile inviare solo dati di lunghezza zero.  
   
@@ -41,7 +38,7 @@ ms.locfileid: "37410710"
 ## <a name="example"></a>Esempio  
  Eseguire il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per creare la tabella utilizzata dall'applicazione.  
   
- Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" a L"(local)\\\name", dove nome è un'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
+ Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
  Eseguire il terzo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per eliminare la tabella utilizzata dall'applicazione.  
   

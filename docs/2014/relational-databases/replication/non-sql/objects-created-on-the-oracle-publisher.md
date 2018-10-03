@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
-caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 671058db0556f58d6bd29b8960212b6e180862be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5331597181f8d04ae74dd5d3bc4b8781bd4eb04e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166904"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124821"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Oggetti creati nel server di pubblicazione Oracle
   Con la replica[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono installati oggetti di database nel server di pubblicazione Oracle in modo da abilitare il rilevamento e l'inoltro delle modifiche.[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non determina l'installazione di file binari nel server di pubblicazione Oracle. Nella tabella seguente vengono elencati gli oggetti creati nel server di pubblicazione Oracle quando viene identificato come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le descrizioni degli oggetti hanno esclusivamente scopo informativo. Non modificare tali oggetti.  
@@ -45,8 +42,8 @@ ms.locfileid: "37166904"
 |HREPL|Package e corpo package|Package di codice di supporto del server di pubblicazione, creato nel server di pubblicazione.|  
 |MSSQLSERVERDISTRIBUTOR|Sinonimo public|Sinonimo public per la tabella HREPL_Distributor. Se si configura un server di distribuzione da utilizzare con un server di pubblicazione Oracle e questo sinonimo è già presente nel database, viene eliminato e ricreato.<br /><br /> Eliminando il sinonimo public e l'utente di replica Oracle configurato con l'opzione CASCADE verranno rimossi tutti gli oggetti di replica dal server di pubblicazione Oracle.|  
 |HREPL_Len_I_J_K|Funzione|Funzione definita all'esterno del codice del package di pubblicazione Oracle, utilizzata per eseguire query relative alla lunghezza di una colonna LONG (in caso di generazione di comandi con parametri per tabelle con colonne LONG pubblicate). Viene creata una funzione per ogni tabella pubblicata con una colonna LONG.|  
-|HREPL_DropPublisher|Procedura|Procedura definita all'esterno del codice del package di pubblicazione Oracle, utilizzata per eliminare il server di pubblicazione Oracle.|  
-|HREPL_ExecuteCommand|Procedura|Procedura definita all'esterno del codice del package di pubblicazione Oracle, utilizzata per eseguire un comando nel server di pubblicazione.|  
+|HREPL_DropPublisher|Routine|Procedura definita all'esterno del codice del package di pubblicazione Oracle, utilizzata per eliminare il server di pubblicazione Oracle.|  
+|HREPL_ExecuteCommand|Routine|Procedura definita all'esterno del codice del package di pubblicazione Oracle, utilizzata per eseguire un comando nel server di pubblicazione.|  
 |HREPL_ArticleN_Trigger_Row|Trigger|Trigger generato per ogni tabella pubblicata, utilizzato per rilevare le modifiche alle righe.|  
 |HREPL_ArticleN_Trigger_Stmt|Trigger|Trigger generato per ogni tabella pubblicata, utilizzato per rilevare le modifiche a livello di istruzione.|  
 |HREPL_Article_I_J|Vista|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella pubblicata.|  

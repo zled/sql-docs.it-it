@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - exception message box [SQL Server]
 - displaying exception message box
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52a24c53fcb7efa367b089b4cf5baa0731d7ad5a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8cf02e2759c36ae6408beed0d72b677e130e105a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151332"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164111"
 ---
 # <a name="program-exception-message-box"></a>Programmare la finestra di messaggio eccezione
   È possibile usare la finestra di messaggio eccezione nelle applicazioni per fornire significativamente più controllo sulla messaggistica diverso da quello fornito dal <xref:System.Windows.Forms.MessageBox> classe. Per altre informazioni, vedere [finestra di messaggio eccezione programmazione](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Per informazioni su come ottenere e distribuire i file DLL della finestra di messaggio eccezione, vedere [distribuzione di un'applicazione di finestra di messaggio eccezione](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  
   
-## <a name="procedure"></a>Procedura  
+## <a name="procedure"></a>Routine  
   
 #### <a name="to-handle-an-exception-by-using-the-exception-message-box"></a>Per gestire un'eccezione tramite la finestra di messaggio eccezione  
   

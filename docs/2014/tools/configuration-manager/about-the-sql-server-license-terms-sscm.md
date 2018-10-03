@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
-caps.latest.revision: 5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5991bbfb135ccd0ab65f342bf59648e4c82de36e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b3268898498ff33273eba4aca0c67315001bce6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268097"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161451"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Informazioni sulle condizioni di licenza di SQL Server (SSCM)
   Il [!INCLUDE[msCoName](../../includes/msconame-md.md)]condizioni di licenza Software vengono copiate nel computer locale quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è installato. Quando più istanze della stessa edizione e lingua di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installate nello stesso computer, a tutte le istanze della stessa edizione e lingua verrà applicata una sola copia delle condizioni di licenza. I file vengono scritti a: %ProgramFiles%\Microsoft SQL Server\110\License licenza \ o % ProgramFiles (x86) %\Microsoft condizioni Server\110\License SQL\\.  

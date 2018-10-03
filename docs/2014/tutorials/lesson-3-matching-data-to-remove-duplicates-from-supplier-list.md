@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f244dc7d62f19967aae7ee3bc32a634008fcc94e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c5074a670fa1ab1c6a837f06b5cd27b21707400
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265781"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139593"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Lezione 3: Corrispondenza dei dati per rimuovere i duplicati dall'elenco fornitori
   Preparare la Knowledge Base per eseguire l'attività di corrispondenza creando criteri di corrispondenza nella Knowledge Base. In una Knowledge Base può essere presente solo un set di criteri di corrispondenza costituito da una o più regole di corrispondenza. Tramite una regola vengono identificati i domini coinvolti nel processo di corrispondenza e viene specificato il peso di ogni valore di dominio nella valutazione della corrispondenza. Nella regola specificare se i valori di dominio devono essere una corrispondenza esatta o se possono essere simili e indicare il livello di similitudine. Specificare inoltre se una corrispondenza di dominio è un prerequisito per il processo di corrispondenza. È possibile testare separatamente ogni regola, nonché tutti i criteri rispetto ai dati di esempio. Il processo di test consente di visualizzare i record i cui punteggi di corrispondenza sono maggiore di **punteggio record minimo** soglia specificato nella configurazione di DQS in un cluster (gruppo). È possibile continuare a modificare le regole nei criteri finché non si è soddisfatti.  

@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - CellSet object
 - retrieving data
 - data retrieval [ADOMD.NET], CellSet object
 ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69e53cab56cf22d6627fd8039e6a46735d934ca7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9bce95fa12e7f5437d6d1f3872470a57114b76d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180342"
 ---
 # <a name="retrieving-data-using-the-cellset"></a>Recupero di dati tramite l'oggetto CellSet
   Nel recupero di dati analitici, l'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> fornisce il livello più elevato di interattività e flessibilità. L'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> è costituito da una cache in memoria di dati e metadati gerarchici che mantiene la dimensionalità originale dei dati. L'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> può inoltre trovarsi in uno stato connesso o disconnesso. Grazie alla disponibilità della modalità disconnessa, l'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> può essere utilizzato per visualizzare dati e metadati in qualsiasi ordine e fornisce il modello a oggetti più completo per il recupero dei dati. A causa della possibilità di essere utilizzato anche in modalità disconnessa, l'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> è caratterizzato tuttavia dall'overhead maggiore e rappresenta il modello a oggetti per il recupero dei dati di ADOMD.NET più lento da popolare.  

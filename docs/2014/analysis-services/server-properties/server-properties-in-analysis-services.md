@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, configuration properties
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - properties [Analysis Services], configuration
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 19f6f04dfe165cb5f3af5bd5587232d65c8c4582
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c531faf5576c8d213026d7d200313b5f59464b3e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247351"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201857"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurare le proprietà del server in Analysis Services
   Un amministratore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può modificare le proprietà di configurazione del server predefinite per un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ogni istanza ha proprietà di configurazione proprie che è possibile impostare in modo indipendente rispetto ad altre istanze nello stesso server.  

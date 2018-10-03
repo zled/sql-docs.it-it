@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b90318de4420df1776c01e5e881740d9d44ea20
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5f24a5ca8ea44f3e05bc11d0148ab30d6f83e993
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278757"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148551"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Concedere le autorizzazioni per le stored procedure (Analysis Services)
   Stored procedure, o assembly, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sono routine esterne, scritte un [!INCLUDE[msCoName](../includes/msconame-md.md)] linguaggio di programmazione .NET, che estendono le funzionalità di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Gli assembly permettono allo sviluppatore di sfruttare tutte le potenzialità di integrazione tra più linguaggi, gestione delle eccezioni e supporto per il controllo delle versioni, per la distribuzione e per il debug.  

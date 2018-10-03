@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Report Builder
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
-caps.latest.revision: 29
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f6a75e3f558b13b1bd068341249c73649699256
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 284a99d74e8b0aa2e3c3b47cc1f277df537b7e9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311441"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168781"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installazione, disinstallazione e supporto di Generatore report
   Generatore report è uno strumento di creazione di report che consente di creare, aggiornare e condividere report, parti del report e set di dati condivisi. Generatore report è disponibile in due versioni: autonoma e [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. La versione autonoma viene installata nel computer in uso dall'utente o da un amministratore. Il [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versione viene installata automaticamente con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] e scaricato nel computer da Gestione Report o un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -132,7 +129,7 @@ ms.locfileid: "37311441"
   
  Per altre informazioni, vedere [Gestione contenuto del Server di Report &#40;modalità nativa SSRS&#41; ](report-server/report-server-content-management-ssrs-native-mode.md) nelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione Online di](http://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  L'amministratore concede l'autorizzazione al server di report. In qualità di utente di Generatore report, è necessario disporre delle autorizzazioni per il server di report prima di poter accedere al contenuto e alle funzionalità del server di report. Ad esempio potrebbe essere necessario utilizzare le parti del report archiviate nel server di report, aggiornare i report e salvarli nuovamente nel server di report, nonché eseguire i report in Gestione report. A seconda delle necessità e delle attività che si eseguono, possono essere concesse autorizzazioni di livello inferiore o superiore. Ad esempio, le autorizzazioni con privilegi minori vengono concesse agli utenti che devono solo aprire i report condivisi rispetto agli utenti che devono modificare un report condiviso.  
   
  Quando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene installato in modalità nativa, un amministratore può:  

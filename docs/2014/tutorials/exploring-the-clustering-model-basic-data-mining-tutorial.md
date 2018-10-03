@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35cbe12526fbd8ead78132f8560368b62e50aa61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26869ca780bc74e3c9c56b38b39195b893dbf523
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153382"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147771"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Esplorazione del modello di clustering (Esercitazione di base sul data mining)
   Il [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Clustering Raggruppa i case in cluster con caratteristiche simili. Tali raggruppamenti sono utili per l'esplorazione dei dati, l'identificazione delle relative anomalie e la creazione di stime.  
@@ -109,7 +106,7 @@ ms.locfileid: "37153382"
   
      Alcune delle differenze più sostanziali fra i clienti nel **Bike Buyers Low** e **Bike Buyers High** cluster includono l'età, automobile, il numero di figli e l'area.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  Per esplorare gli altri modelli di data mining, vedere gli argomenti seguenti.  
   
 -   [Esplorazione del modello di albero delle decisioni &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  

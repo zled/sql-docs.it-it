@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8884b6af873bb2b3fcc4c54ba4f6abce90035e72
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ee7c3d44f3575fd1bf25a6e304a379ca6ca6391b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394657"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136071"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Statistiche per tabelle con ottimizzazione per la memoria
   In Query Optimizer vengono utilizzate le statistiche sulle colonne per creare piani di query che consentono di migliorare le prestazioni di esecuzione delle query. Le statistiche vengono raccolte dalle tabelle del database e archiviate nei metadati del database.  
@@ -61,7 +58,7 @@ ms.locfileid: "40394657"
   
  Se i dati vengono modificati di frequente, è necessario aggiornare spesso le statistiche. Ad esempio, aggiornare le statistiche delle tabelle dopo un aggiornamento batch. Dopo l'aggiornamento delle statistiche, eliminare e ricreare le stored procedure compilate in modo nativo perché possano utilizzare le statistiche aggiornate.  
   
- ,  
+ .  
   
  Non aggiornare le statistiche durante i picchi di carico di lavoro.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: 75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7c483e09f0136ec85ef9a5355a31b0fab733d1af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b35f34499100e8331f968d6f9297280451885290
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169611"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità Always On)
   Le funzionalità secondarie attive di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] includono il supporto per l'accesso in sola lettura a una o più repliche secondarie (*repliche secondarie leggibili*). Una replica secondaria leggibile consente l'accesso in sola lettura a tutti i relativi database secondari. Tuttavia, i database secondari leggibili non sono impostati per la sola lettura. Sono dinamici. Un database secondario viene modificato in base ai cambiamenti apportati al database primario corrispondente. Per una replica secondaria tipica, i dati presenti nel database secondario, comprese le tabelle durevoli con ottimizzazione per la memoria, sono quasi in tempo reale. Inoltre, gli indici full-text sono sincronizzati con i database secondari. In molte circostanze, la latenza dei dati tra un database primario e il database secondario corrispondente è in genere solo di pochi secondi.  
@@ -124,8 +121,7 @@ ms.locfileid: "37176548"
   
  Ciò significa che si verifica della latenza, in genere solo pochi secondi, tra la replica primaria e quella secondaria. In rari casi, tuttavia, ad esempio se problemi di rete compromettono la velocità effettiva, la latenza può diventare significativa. La latenza aumenta quando si verificano colli di bottiglia I/O e quando viene sospeso lo spostamento dati. Per monitorare lo spostamento dati sospeso, è possibile usare il [dashboard AlwaysOn](use-the-always-on-dashboard-sql-server-management-studio.md) o la DMV [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) .  
   
-####  <a name="bkmk_LatencyWithInMemOLTP">
-            </a> Latenza dei dati nei database con tabelle ottimizzate per la memoria  
+####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latenza dei dati nei database con tabelle ottimizzate per la memoria  
  Quando si accede alle tabelle ottimizzate per la memoria sulla replica secondaria per il carico di lavoro di lettura, viene usato un *timestamp di sicurezza* per restituire le righe dalle transazioni di cui è stato eseguito il commit prima del *timestamp di sicurezza*. Il timestamp di sicurezza è l'hint per il timestamp meno recente usato dal thread di Garbage Collection per eseguire il processo di Garbage Collection delle righe sulla replica primaria. Il timestamp viene aggiornato quando il numero delle transazioni DML nelle tabelle ottimizzate per la memoria supera una soglia interna dopo l'ultimo aggiornamento. Ogni volta che il timestamp della transazione meno recente viene aggiornato sulla replica primaria, la transazione DML successiva in una tabella ottimizzata per la memoria durevole invia tale timestamp perché venga inviato alla replica secondaria come parte di un record di log speciale. Nel thread della fase di rollforward nella replica secondaria il timestamp di sicurezza viene aggiornato come parte dell'elaborazione del record di log.  
   
 #### <a name="the-impact-of-safe-timestamp-on-latency"></a>Impatto del timestamp di sicurezza sulla latenza  
@@ -207,8 +203,7 @@ GO
   
 -   Il suffisso _readonly_database_statistic è riservato alle statistiche generate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Non è possibile usare questo suffisso quando si creano statistiche in un database primario. Per altre informazioni, vedere [Statistics](../../../relational-databases/statistics/statistics.md).  
   
-##  <a name="bkmk_AccessInMemTables">
-            </a> Accesso alle tabelle ottimizzate per la memoria in una replica secondaria  
+##  <a name="bkmk_AccessInMemTables"></a> Accesso alle tabelle ottimizzate per la memoria in una replica secondaria  
  I livelli di isolamento del carico di lavoro di lettura nella replica secondaria sono solo quelli consentiti nella replica primaria. Non viene eseguito alcun mapping dei livelli di isolamento nella replica secondaria. In questo modo, un carico di lavoro di report, che può essere eseguito nella replica primaria, potrà essere eseguito nella replica secondaria senza richiedere alcuna modifica. Ciò semplifica la migrazione di un carico di lavoro di report dalla replica primaria a una secondaria o viceversa quando la replica secondaria non è disponibile.  
   
  L'esecuzione delle query seguenti avrà esito negativo nella replica secondaria, analogamente al modo in cui avviene per la replica primaria.  

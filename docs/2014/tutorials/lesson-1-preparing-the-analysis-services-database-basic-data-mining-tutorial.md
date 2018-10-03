@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2a796977-6568-4705-9d27-86a9b36658c2
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fb226ca3445559047172aa8a8167876e1824b7d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f7e417f786da7344ad43ebaab826a8d0e28f8e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328951"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173432"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Lezione 1: Preparazione del database di Analysis Services (Esercitazione di base sul data mining)
   Si è un nuovo dipendenti [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] chi viene affidato l'incarico di progettare un'applicazione di business intelligence in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] spera di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esperienza di data mining dei dati per individuare interessanti informazioni utilizzabili sulle persone che hanno acquistato una bicicletta. Si è quindi incaricati di eseguire una stima dei potenziali clienti che con maggiore probabilità acquisteranno una bicicletta in futuro.  
