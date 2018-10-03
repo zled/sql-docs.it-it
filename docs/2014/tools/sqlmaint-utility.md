@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94181b7b45ee1e1258678bbc4bc3357ebecb0bc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1e8da941588b466aeaf690214dfee836718569a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236125"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110062"
 ---
 # <a name="sqlmaint-utility"></a>utilità sqlmaint
   L'utilità **sqlmaint** consente di eseguire un set specifico di operazioni di manutenzione in uno o più database. Usare l'utilità **sqlmaint** per eseguire controlli DBCC, backup di un database e del relativo log delle transazioni, aggiornare statistiche e ricompilare indici. Tutte le attività di manutenzione dei database generano un report che può essere inviato a un file di testo, un file HTML o un account di posta elettronica specificato. **sqlmaint** esegue i piani di manutenzione dei database creati con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per eseguire i piani di manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi, usare l' [utilità dtexec](../integration-services/packages/dtexec-utility.md).  
@@ -242,7 +239,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   Si verifica un errore generale.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'utilità **sqlmaint** può essere eseguita da qualsiasi utente di Windows che abbia l'autorizzazione **Lettura/esecuzione** su `sqlmaint.exe`, archiviato nella cartella `x:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER1\MSSQL\Binn` per impostazione predefinita. L'account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificato con **-login_ID** deve avere anche le autorizzazioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necessarie per eseguire l'operazione specificata. Se la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza l'autenticazione di Windows, l'account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sul quale viene eseguito il mapping all'utente di Windows autenticato deve disporre delle autorizzazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necessarie per eseguire l'operazione specificata.  
   
  Ad esempio, per usare **-BkUpDB** è necessaria l'autorizzazione per eseguire l'istruzione BACKUP, mentre l'uso dell'argomento **-UpdOptiStats** richiede l'autorizzazione per eseguire l'istruzione UPDATE STATISTICS. Per ulteriori informazioni, vedere le sezioni dedicate alle autorizzazioni nei relativi argomenti della documentazione online.  

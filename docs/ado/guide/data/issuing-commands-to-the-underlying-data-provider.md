@@ -1,36 +1,33 @@
 ---
-title: Inviare i comandi al Provider di dati sottostante | Documenti Microsoft
+title: Invio di comandi al Provider di dati sottostante | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - underlying providers [ADO]
 - data shaping [ADO], commands
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a2e18440c651a65da820cf2f2d51b00ae98e92d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2267ff0af67682417b118e9fa01b2dceeb1454a8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634749"
 ---
-# <a name="issuing-commands-to-the-underlying-data-provider"></a>Inviare i comandi al Provider di dati sottostante
-Qualsiasi comando che non iniziano con la forma viene passato al provider di dati. Ciò equivale a eseguire un comando shape nel formato "SHAPE {comando provider}". Questi comandi *non* è necessario produrre una **Recordset**. Ad esempio, "forma {DROP TABLE MyTable} è un comando shape valido, presupponendo che il provider di dati supporta DROP TABLE.  
+# <a name="issuing-commands-to-the-underlying-data-provider"></a>Invio di comandi al provider di dati sottostante
+Tutti i comandi che non iniziano con forma viene passato al provider di dati. Ciò equivale a eseguire un comando shape nel formato "Comando SHAPE con {provider}". Eseguire questi comandi *non* è necessario produrre una **Recordset**. Ad esempio, "forma {DROP TABLE MyTable} è un comando shape perfettamente valido, presupponendo che il provider di dati supporta DROP TABLE.  
   
- Questa funzionalità consente sia i normali comandi del provider e i comandi di forma per condividere la stessa connessione e transazione.  
+ Questa funzionalità consente sia i comandi del provider normale e i comandi di forma per condividere la stessa connessione e transazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Shaping di esempio](../../../ado/guide/data/data-shaping-example.md)   
- [Grammatica formale forma](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Esempio di Data Shaping](../../../ado/guide/data/data-shaping-example.md)   
+ [Grammatica formale per Shape](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)

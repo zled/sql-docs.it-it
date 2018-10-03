@@ -1,18 +1,13 @@
 ---
-title: sysdatatypemappings (Transact-SQL) | Documenti Microsoft
+title: sysdatatypemappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sysdatatypemappings
 - sysdatatypemappings_TSQL
@@ -21,21 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - sysdatatypemappings view
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a447bf38ce77889b2dc6e0e0888b7f4cccb93c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2af4bba93611f2a67fb66f8a9a47a11d9b279d7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012938"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641751"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **sysdatatypemappings** vista viene utilizzata per indicare il mapping tra tipi di dati di SQL Server e i tipi di dati di un sistema di gestione di database (DBMS) non SQL Server. Questa vista è archiviata nel **msdb** database.  
+  Il **sysdatatypemappings** Vista consente di visualizzare il mapping tra tipi di dati di SQL Server e i tipi di dati di un sistema di gestione di database (DBMS) non SQL Server. Questa vista è archiviata nel **msdb** database.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -59,7 +53,7 @@ ms.locfileid: "33012938"
 |**destination_scale**|**int**|Scala del tipo di dati nel sistema DBMS di destinazione.|  
 |**destination_nullable**|**bit**|Indica se il tipo di dati nel sistema DBMS di destinazione supporta valori Null.|  
 |**destination_createparams**|**int**|Solo per uso interno.|  
-|**DataLoss**|**bit**|Indica se si verifica perdita dei dati durante l'esecuzione del mapping del tipo di dati tra il sistema DBMS di origine e quello di destinazione.|  
+|**perdita di dati**|**bit**|Indica se si verifica perdita dei dati durante l'esecuzione del mapping del tipo di dati tra il sistema DBMS di origine e quello di destinazione.|  
 |**is_default**|**bit**|Indica se il mapping dei tipi di dati viene utilizzato per impostazione predefinita.|  
   
 ## <a name="see-also"></a>Vedere anche  

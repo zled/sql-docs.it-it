@@ -1,18 +1,13 @@
 ---
-title: sysextendedarticlesview (Transact-SQL) | Documenti Microsoft
+title: sysextendedarticlesview (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sysextendedarticlesview_TSQL
 - sysextendedarticlesview
@@ -21,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sysextendedarticlesview view
 ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7600ee20683846aa5a2defb676d10daea0038d7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe6c88ac0dc8b131323282478a2330525d0fcf9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648189"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +49,13 @@ ms.lasthandoff: 05/03/2018
 |**sync_objid**|**int**|ID della tabella o della vista che rappresenta la definizione dell'articolo.|  
 |**type**|**tinyint**|Tipo di articolo:<br /><br /> **1** = articolo basato su log.<br /><br /> **3** = articolo basato su log con filtro manuale.<br /><br /> **5** = articolo basato su log con vista manuale.<br /><br /> **7** = articolo basato su log con filtro manuale e vista manuale.|  
 |**upd_cmd**|**nvarchar(255)**|Comando da eseguire a seguito di un'istruzione UPDATE; in caso contrario il comando viene ricostruito dal log.|  
-|**schema_option**|**binary**|Indica le proprietà dell'oggetto pubblicato da inserire nello script dello snapshot. Per un elenco di opzioni dello schema supportate, vedere [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
+|**schema_option**|**binary**|Indica le proprietà dell'oggetto pubblicato da inserire nello script dello snapshot. Per un elenco delle opzioni dello schema supportate, vedere [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
 |**dest_owner**|**nvarchar(128)**|Proprietario della tabella nel database di destinazione.|  
 |**ins_scripting_proc**|**int**|Identificatore di oggetto della stored procedure o dello script personalizzati eseguiti quando un'istruzione INSERT viene replicata.|  
 |**del_scripting_proc**|**int**|Identificatore di oggetto della stored procedure o dello script personalizzati eseguiti quando un'istruzione DELETE viene replicata.|  
 |**upd_scripting_proc**|**int**|Identificatore di oggetto della stored procedure o dello script personalizzati eseguiti quando un'istruzione UPDATE viene replicata.|  
 |**custom_script**|**int**|Identificatore di oggetto della stored procedure o dello script personalizzati eseguiti al completamento di un trigger DDL.|  
-|**fire_triggers_on_snapshot**|**int**|Indica se i trigger replicati vengono eseguiti o meno quando lo snapshot viene applicato. I possibili valori sono i seguenti.<br /><br /> **0** = trigger non vengono eseguiti.<br /><br /> **1** = i trigger vengono eseguiti.|  
+|**fire_triggers_on_snapshot**|**int**|Indica se i trigger replicati vengono eseguiti o meno quando lo snapshot viene applicato. I possibili valori sono i seguenti.<br /><br /> **0** = i trigger non vengono eseguiti.<br /><br /> **1** = i trigger vengono eseguiti.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

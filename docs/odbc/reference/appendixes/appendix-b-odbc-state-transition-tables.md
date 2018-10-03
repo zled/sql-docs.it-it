@@ -1,98 +1,95 @@
 ---
-title: 'Appendice b: tabelle di transizione dello stato di ODBC | Documenti Microsoft'
+title: 'Appendice b: tabelle della transizione di stato ODBC | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0d114dd574faf2909fa200f7c24ab0ccaa07804
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 55fb40d6aa9b235837c761cf1362374d5c77d96d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913896"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646219"
 ---
-# <a name="appendix-b-odbc-state-transition-tables"></a>Appendice b: tabelle di transizione dello stato di ODBC
-Le tabelle in questa appendice illustrano come le funzioni ODBC causano transizioni di ambiente, connessione, istruzione e gli stati del descrittore. Lo stato dell'ambiente, una connessione, istruzione o un descrittore determina in genere quando le funzioni che utilizzano il corrispondente tipo di handle (ambiente di connessione, istruzione o descrittore) possono essere chiamate. Gli stati di ambiente, connessione, l'istruzione e descrittore sovrappongano approssimativamente come illustrato nelle figure seguenti. Ad esempio, la sovrapposizione esatto della connessione stati C5 e C6 e istruzione indica S1 tramite S12 dati dipende dall'origine, poiché le transazioni iniziano in momenti diversi da origini dati diverse e varia a seconda dello stato di descrittore D1i (allocati in modo implicito descrittore) durante lo stato D1e (allocati in modo esplicito descrittore) lo stato dell'istruzione a cui è associato il descrittore, è indipendentemente dallo stato di qualsiasi istruzione. Per una descrizione di ogni stato, vedere [transizioni di ambiente](../../../odbc/reference/appendixes/environment-transitions.md), [connessione transizioni](../../../odbc/reference/appendixes/connection-transitions.md), [istruzione transizioni](../../../odbc/reference/appendixes/statement-transitions.md), e [descrittore transizioni ](../../../odbc/reference/appendixes/descriptor-transitions.md), più avanti in questa appendice.  
+# <a name="appendix-b-odbc-state-transition-tables"></a>Appendice B: Tabelle della transizione di stato ODBC
+Le tabelle in questa appendice mostrano come funzioni ODBC causano le transizioni di ambiente, connessione, istruzione e gli stati del descrittore. Lo stato dell'ambiente, connessione, istruzione o descrittore determina in genere quando le funzioni che usano il corrispondente tipo di handle (ambiente, connessione, istruzione o descrittore) possono essere chiamate. Gli stati di ambiente, connessione, istruzione e descrittore si sovrappongono all'incirca, come illustrato nelle figure seguenti. Ad esempio, la sovrapposizione esatta della connessione stati C5 e C6 e istruzione dichiara che s1 tramite S12 sono dati dipende dall'origine, poiché le transazioni iniziano in momenti diversi in origini dati diverse e lo stato di descrittore D1i (allocato in modo implicito descrittore) dipende dal sullo stato dell'istruzione a cui il descrittore è associato, mentre state D1e (allocato in modo esplicito descrittore) è indipendenti dallo stato di qualsiasi istruzione. Per una descrizione di ogni stato, vedere [transizioni di ambiente](../../../odbc/reference/appendixes/environment-transitions.md), [transizioni di connessione](../../../odbc/reference/appendixes/connection-transitions.md), [transizioni di istruzione](../../../odbc/reference/appendixes/statement-transitions.md), e [transizioni dei descrittori ](../../../odbc/reference/appendixes/descriptor-transitions.md), più avanti in questa appendice.  
   
- Gli stati di connessione e dell'ambiente si sovrappongono come indicato di seguito:  
+ Gli stati di connessione e dell'ambiente si sovrappongono nel modo seguente:  
   
- ![Sovrapposizione degli stati di connessione e dell'ambiente](../../../odbc/reference/appendixes/media/app01.gif "il server app01")  
+ ![Sovrapposizione degli stati di connessione e dell'ambiente](../../../odbc/reference/appendixes/media/app01.gif "app01")  
   
- Gli stati di connessione e l'istruzione si sovrappongono come indicato di seguito:  
+ Gli stati di connessione e l'informativa si sovrappongono nel modo seguente:  
   
- ![Istruzione e connessione stati sovrapposizione](../../../odbc/reference/appendixes/media/app02.gif "app02")  
+ ![Sovrapposizione degli stati di connessione e l'informativa](../../../odbc/reference/appendixes/media/app02.gif "app02")  
   
- Gli stati del descrittore e dell'istruzione si sovrappongono come indicato di seguito:  
+ Gli stati di istruzione e descrittore si sovrappongono nel modo seguente:  
   
- ![Istruzione e descrittore stati sovrapposizione](../../../odbc/reference/appendixes/media/app03.gif "app03")  
+ ![Sovrapposizione degli stati di istruzione e descrittore](../../../odbc/reference/appendixes/media/app03.gif "app03")  
   
- Gli stati di connessione e descrittore si sovrappongono come indicato di seguito:  
+ Gli stati di connessione e descrittore si sovrappongono nel modo seguente:  
   
- ![Connessione e descrittore stati sovrapposizione](../../../odbc/reference/appendixes/media/app04.gif "app04")  
+ ![Sovrapposizione degli stati di connessione e descrittore](../../../odbc/reference/appendixes/media/app04.gif "app04")  
   
  Ogni voce in una tabella di transizione può essere uno dei valori seguenti:  
   
--   **--** -Lo stato rimane invariato dopo l'esecuzione della funzione.  
+-   **--** Ovvero lo stato rimane invariato dopo l'esecuzione della funzione.  
   
 -   **E**  
-     ***n*** , **C*n * * *, **S*n * **, oppure **1!d * n***  : consente di spostare lo stato di ambiente, connessione, istruzione o descrittore per il stato specificato.  
+     ***n*** , **C*n * * *, **S*n * **, oppure **1!d * n***  : sposta lo stato di ambiente, connessione, istruzione o descrittore il stato specificato.  
   
--   **(QUALI)**  , Ovvero un handle non valido passato alla funzione. Se l'handle è stato un handle null oppure un handle valido di tipo errato, ad esempio, un handle di connessione è stato passato quando è richiesto un handle di istruzione, la funzione non restituisca SQL_INVALID_HANDLE; in caso contrario, il comportamento è indefinito e probabilmente irreversibile. Questo errore viene visualizzato solo quando è il risultato della chiamata della funzione nello stato specificato solo possibile. Questo errore non modifica lo stato e viene sempre rilevato da Gestione Driver, come indicato dalle parentesi.  
+-   **(IH)**  , Ovvero un handle non valido passato alla funzione. Se l'handle è un handle null oppure un handle valido del tipo errato, ad esempio, è stato passato un handle di connessione quando era obbligatorio un handle di istruzione, ovvero la funzione non restituisca SQL_INVALID_HANDLE; in caso contrario, il comportamento è indefinito e probabilmente irreversibile. Questo errore viene visualizzato solo quando è il risultato della chiamata alla funzione nello stato specificato solo possibile. Questo errore non modifica lo stato e viene sempre rilevato da Gestione Driver, come indicato dalla parentesi.  
   
--   **NS** : stato successivo. La transizione di istruzione è lo stesso come se l'istruzione non ha subito gli stati asincroni. Ad esempio, si supponga che un'istruzione che crea un set di risultati è in stato S11 dallo stato S1 perché **SQLExecDirect** restituito SQL_STILL_EXECUTING. La notazione NS nello stato S11 significa che le transizioni per l'istruzione siano uguali a quelli per un'istruzione nello stato S1 che crea un set di risultati. Se **SQLExecDirect** restituisce un errore, l'istruzione rimane nello stato S1; se ha esito positivo, l'istruzione passa allo stato S5; se necessita di dati, l'istruzione viene spostato in modo da indicare S8; e se è ancora in esecuzione, rimane in stato S11.  
+-   **NS** , ovvero lo stato successivo. La transizione di istruzione è lo stesso come se l'istruzione non ha esaminato gli stati asincroni. Ad esempio, si supponga che un'istruzione che crea un set di risultati entra nello stato S11 dallo stato S1, poiché **SQLExecDirect** restituito SQL_STILL_EXECUTING. La notazione NS nello stato S11 significa che le transizioni per l'istruzione sono identici a quelli per un'istruzione nello stato S1 che viene creato un set di risultati. Se **SQLExecDirect** restituisce un errore, l'istruzione rimane nello stato S1; se ha esito positivo, l'istruzione passa allo stato S5; se necessita di dati, l'istruzione passa allo stato S8; e se è ancora in esecuzione, rimane nello stato S11.  
   
--   ***XXXXX*** o **(*XXXXX*)** , ovvero un valore SQLSTATE è correlata alla tabella di transizione. SQLSTATE rilevate da Gestione Driver vengono racchiusi tra parentesi. La funzione ha restituito SQL_ERROR e SQLSTATE specificato, ma non modifica lo stato. Ad esempio, se **SQLExecute** viene chiamato prima **SQLPrepare**, restituisce SQLSTATE HY010 (funzione di errore nella sequenza).  
+-   ***XXXXX*** oppure **(*XXXXX*)** , ovvero un valore SQLSTATE correlata alla tabella delle transizioni; SQLSTATE rilevati da Gestione Driver sono racchiusi tra parentesi. La funzione ha restituito SQL_ERROR e il valore SQLSTATE specificato, ma non modifica lo stato. Ad esempio, se **SQLExecute** viene chiamato prima **SQLPrepare**, restituisce SQLSTATE HY010 (funzione di errore nella sequenza).  
   
 > [!NOTE]  
->  Le tabelle non vengono visualizzati gli errori non correlati alle tabelle che non modificano lo stato di transizione. Ad esempio, quando **SQLAllocHandle** viene chiamato con stato ambiente E1 e restituisce SQLSTATE HY001 (errore di allocazione della memoria), l'ambiente rimane nello stato E1; ciò non è indicato nella tabella di transizione dell'ambiente per  **SQLAllocHandle**.  
+>  Le tabelle non vengono visualizzati gli errori non correlati alle tabelle che non modificano lo stato di transizione. Ad esempio, quando **SQLAllocHandle** viene chiamato nello stato di ambiente E1 e restituisce SQLSTATE HY001 (errore di allocazione della memoria), l'ambiente rimane nello stato E1; ciò non è indicato nella tabella delle transizioni di ambiente per  **SQLAllocHandle**.  
   
- Se l'ambiente, connessione, l'istruzione o descrittore possa passare allo più stato, ogni possibile stato viene visualizzato e uno o più piè di pagina illustrano le condizioni in cui ogni transizione viene eseguita. Note seguenti possono essere visualizzata una tabella.  
+ Se l'ambiente, connessione, istruzione o descrittore possa spostare in più di uno stato, viene visualizzato ogni possibile stato e uno o più piè di pagina illustrano le condizioni in cui ogni transizione ha luogo. Le note seguenti possono essere in qualsiasi tabella.  
   
 |Piè di pagina|Significato|  
 |--------------|-------------|  
-|b|Prima o dopo. Il cursore è posizionato prima dell'inizio del set di risultati o dopo la fine del set di risultati.|  
-|c|Funzione corrente. La funzione corrente era in esecuzione in modo asincrono.|  
-|d|Bisogno di dati. La funzione ha restituito SQL_NEED_DATA.|  
+|b|Prima o dopo. Il cursore era posizionato prima dell'inizio del set di risultati o dopo la fine del set di risultati.|  
+|c|Funzione corrente. L'esecuzione della funzione corrente in modo asincrono.|  
+|d|Dati necessari. La funzione ha restituito SQL_NEED_DATA.|  
 |e|Errore. La funzione ha restituito SQL_ERROR.|  
-|i|Riga non valida. Il cursore è posizionato su una riga nel risultato set e la riga era state eliminate o si è verificato un errore in un'operazione della riga. Se la matrice di stato di riga esiste già, il valore della matrice di stato di riga per la riga è SQL_ROW_DELETED o SQL_ROW_ERROR. (La matrice di stato di riga a cui punta l'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR.)|  
-|nf|Non è stato trovato. La funzione ha restituito SQL_NO_DATA. Non si applica quando **SQLExecDirect**, **SQLExecute**, o **SQLParamData** restituisce SQL_NO_DATA dopo l'esecuzione di una ricerca istruzioni update o delete.|  
-|np|Non è preparato. L'istruzione non è stato preparato.|  
-|rif Nr|Nessun risultato. L'istruzione non fornirà o non ha creato un set di risultati.|  
+|i|Riga non valida. È stato posizionato il cursore su una riga nel risultato del set e la riga è stati eliminati o si è verificato un errore in un'operazione sulla riga. Se la matrice di stato di riga esistente, il valore della matrice di stato di riga per la riga è SQL_ROW_DELETED o SQL_ROW_ERROR. (La matrice di stato di riga a cui punta l'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR.)|  
+|nf|Non è stato trovato. La funzione ha restituito SQL_NO_DATA. Questo non è applicabile quando **SQLExecDirect**, **SQLExecute**, o **SQLParamData** restituisce SQL_NO_DATA dopo l'esecuzione di una ricerca istruzione update o delete.|  
+|np|Non è pronto. L'istruzione non è stato preparato.|  
+|Nr|Nessun risultato. L'istruzione non fornirà o non è stato creato un set di risultati.|  
 |o|Altra funzione. Un'altra funzione era in esecuzione in modo asincrono.|  
-|p|Preparato. L'istruzione è stata preparata.|  
-|r|Risultati. L'istruzione verrà o ha creato un set di risultati (eventualmente vuota).|  
+|p|Preparati. L'istruzione è stata preparata.|  
+|r|Risultati. L'istruzione verrà o è stato creato un set di risultati (eventualmente vuota).|  
 |s|Esito positivo. La funzione ha restituito SQL_SUCCESS_WITH_INFO o SQL_SUCCESS.|  
-|v|Riga valida. Il cursore è posizionato su una riga nel set di risultati e la riga era stata inserita, aggiornate correttamente, o un'altra operazione nella riga è stata completata correttamente. Se la matrice di stato di riga esiste già, il valore della matrice di stato di riga per la riga è SQL_ROW_ADDED, SQL_ROW_SUCCESS o SQL_ROW_UPDATED. (La matrice di stato di riga a cui punta l'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR.)|  
-|x|In esecuzione. La funzione ha restituito SQL_STILL_EXECUTING.|  
+|v|Riga valida. Il cursore è posizionato in una riga nel set di risultati e la riga era stata inserita correttamente, è stato aggiornato, o un'altra operazione sulla riga era stata completata correttamente. Se la matrice di stato di riga esistente, il valore della matrice di stato di riga per la riga è stata SQL_ROW_ADDED, SQL_ROW_SUCCESS o SQL_ROW_UPDATED. (La matrice di stato di riga a cui punta l'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR.)|  
+|x|In esecuzione. La funzione restituita SQL_STILL_EXECUTING.|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
- In questo esempio, la riga di transizione ambiente tabella per **SQLFreeHandle** quando *HandleType* è impostato su SQL_HANDLE_ENV come indicato di seguito.  
+ In questo esempio, la riga di transizione ambiente table per **SQLFreeHandle** quando *HandleType* SQL_HANDLE_ENV è come indicato di seguito.  
   
-|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessione|  
+|E0<br /><br /> Non allocato|E1<br /><br /> allocato|E2<br /><br /> Connessione|  
 |------------------------|----------------------|-----------------------|  
 |(IH)|E0|(HY010)|  
   
- Se **SQLFreeHandle** viene chiamato con stato ambiente E0 *HandleType* impostato su SQL_HANDLE_ENV, gestione Driver non restituisca SQL_INVALID_HANDLE. Se viene chiamato con stato E1 *HandleType* impostato su SQL_HANDLE_ENV, l'ambiente passa allo stato E0 se la funzione ha esito positivo e rimane in stato E1 se la funzione ha esito negativo. Se viene chiamato con stato E2 *HandleType* impostato su SQL_HANDLE_ENV, gestione Driver sempre restituisce SQL_ERROR e SQLSTATE HY010 (funzione di errore nella sequenza) e l'ambiente rimane nello stato E2.  
+ Se **SQLFreeHandle** viene chiamato con stato ambiente E0 *HandleType* impostato su SQL_HANDLE_ENV, gestione Driver non restituisca SQL_INVALID_HANDLE. Se viene chiamato con stato E1 *HandleType* impostato su SQL_HANDLE_ENV, l'ambiente passa allo stato E0 se la funzione ha esito positivo e rimane nello stato E1 se la funzione ha esito negativo. Se viene chiamato con stato E2 *HandleType* impostato su SQL_HANDLE_ENV, gestione Driver sempre restituisce SQL_ERROR e SQLSTATE HY010 (funzione di errore nella sequenza) e l'ambiente rimane nello stato E2.  
   
- Per comprendere le tabelle di transizione di stato, è necessario capire quale elemento (ambiente di connessione, istruzione o descrittore) fanno riferimento. Si supponga che una funzione accetta l'handle di un elemento di tipo X. La tabella di transizione dello stato di X per tale funzione viene descritta la funzione, con l'handle di un elemento di tipo X, influisce su tale elemento come chiamante. Ad esempio, **SQLDisconnect** accetta un handle di connessione. La tabella di transizione dello stato di connessione per **SQLDisconnect** viene descritto come **SQLDisconnect** influisce sullo stato della connessione per il quale viene chiamato.  
+ Per comprendere le tabelle della transizione di stato, è necessario comprendere quale elemento (ambiente, connessione, istruzione o descrittore) fanno riferimento. Si supponga che una funzione accetta l'handle di un elemento di tipo X. Tabella delle transizioni di stato X per tale funzione viene descritta la funzione, con l'handle di un elemento di tipo X, influisce su tale elemento come chiamante. Ad esempio, **SQLDisconnect** accetta un handle di connessione. La tabella di transizione dello stato di connessione per **SQLDisconnect** viene descritto come **SQLDisconnect** influisce sullo stato della connessione per il quale viene chiamato.  
   
- Si supponga che una funzione accetta l'handle di un elemento di tipo Y, in cui non è uguale a X Y. La tabella di transizione dello stato di X per tale funzione viene descritto come chiamare la funzione, con un handle di tipo X associata con l'elemento di tipo Y, interessa l'elemento di tipo Y. Ad esempio, l'istruzione tabella transizione dello stato per **SQLDisconnect** viene descritto come **SQLDisconnect** influisce sullo stato di un'istruzione quando viene chiamato con l'handle di connessione alla quale il l'istruzione è associato.  
+ Si supponga che una funzione accetta l'handle di un elemento di tipo Y, in cui non è uguale a X Y. Tabella delle transizioni di stato X per tale funzione viene descritto come chiamata di funzione, con un handle di tipo X che è associato l'elemento di tipo Y, interessa l'elemento di tipo Y. Ad esempio, l'istruzione transizione tabella di stato per **SQLDisconnect** viene descritto come **SQLDisconnect** influisce sullo stato di un'istruzione quando viene chiamato con l'handle della connessione con il quale il l'istruzione è associato.  
   
- Questa appendice contiene gli argomenti seguenti.  
+ In questa appendice contiene gli argomenti seguenti.  
   
 -   [Transizioni di ambiente](../../../odbc/reference/appendixes/environment-transitions.md)  
   

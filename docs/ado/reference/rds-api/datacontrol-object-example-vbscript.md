@@ -1,35 +1,32 @@
 ---
-title: Esempio di oggetto DataControl (VBScript) | Documenti Microsoft
+title: Esempio di oggetto DataControl (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - DataControl object [ADO], VBScript example
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13fb982f47f9990cf34be9445c6acbb139704ec8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 50263e587f3b8a3ce37e0169e23c02121051d990
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287540"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749329"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>Esempio di oggetto DataControl (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Il codice seguente viene illustrato come impostare il [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) parametri in fase di progettazione di tempo e associarle a un controllo con supporto dati. Tagliare e incollare questo codice tra le \<corpo > e \</Body > del documento e assegnargli il nome di tag in HTML un normale **DataControlDesignVBS**. Lo script identificherà il server.  
+ Il codice seguente viene illustrato come impostare il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) parametri in fase di progettazione di tempo e associarle a un controllo con supporto dati. Tagliare e incollare questo codice tra il \<Body > e \</Body > tag in HTML un normale del documento e denominarlo **DataControlDesignVBS**. Lo script identificherà il server.  
   
 ```  
 <!-- BeginDataControlDesignVBS -->  
@@ -96,7 +93,7 @@ BODY {
 <!-- EndDataControlDesignVBS -->  
 ```  
   
- Nell'esempio seguente viene illustrato come impostare i parametri necessari di **RDS. DataControl** in fase di esecuzione. Per testare questo esempio, tagliare e incollare questo codice tra le \<corpo > e \</Body > del documento e assegnargli il nome di tag in HTML un normale **DataControlRuntimeVBS**. Lo script identificherà il server.  
+ Nell'esempio seguente viene illustrato come impostare i parametri necessari di **Servizi Desktop remoto. DataControl** in fase di esecuzione. Per testare questo esempio, tagliare e incollare questo codice tra il \<Body > e \</Body > tag in HTML un normale del documento e denominarlo **DataControlRuntimeVBS**. Lo script identificherà il server.  
   
 ```  
 <!-- BeginDataControlRuntimeVBS -->  

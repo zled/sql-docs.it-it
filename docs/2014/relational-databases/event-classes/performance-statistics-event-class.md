@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d0191085ac2a294d1dce8a30b9292a1cd7cf8ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 506a577aaec5eb3713a646fa152530e255b79867
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171172"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176291"
 ---
-# <a name="performance-statistics-event-class"></a>Performance Statistics - classe di evento
+# <a name="performance-statistics-event-class"></a>Classe di evento Performance Statistics
   La classe di evento Performance Statistics consente di eseguire il monitoraggio delle prestazioni di query, stored prcoedure e trigger in esecuzione. Ciascuna delle sei sottoclassi di evento indica un evento generato nel corso di query, stored procedure e trigger all'interno del sistema. L'utilizzo di tali sottoclassi di evento in combinazione con le viste a gestione dinamica sys.dm_exec_query_stats, sys.dm_exec_procedure_stats e sys.dm_exec_trigger_stats associate consente di ricostituire la cronologia delle prestazioni di qualsiasi query, stored procedure o trigger specifico.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Colonne di dati della classe di evento Performance Statistics  
@@ -71,7 +68,7 @@ ms.locfileid: "37171172"
 |ObjectType|`int`|Valore che rappresenta il tipo di oggetto coinvolto nell'evento.<br /><br /> 8272 = stored procedure|28|Sì|  
 |BigintData2|`bigint`|Quantità di memoria totale, espressa in kilobyte, utilizzata durante la compilazione.|53|Sì|  
 |CPU|`int`|Tempo totale di CPU, espresso in millisecondi, dedicato alla compilazione.|18|Sì|  
-|Duration|`int`|Tempo totale, espresso in microsecondi, dedicato alla compilazione.|13|Sì|  
+|Durata|`int`|Tempo totale, espresso in microsecondi, dedicato alla compilazione.|13|Sì|  
 |IntegerData|`int`|Dimensioni, espresse in kilobyte, del piano compilato.|25|Sì|  
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
@@ -94,7 +91,7 @@ ms.locfileid: "37171172"
 |PlanHandle|`image`|Handle del piano compilato per il batch. Utilizzabile per ottenere il piano XML del batch tramite la vista a gestione dinamica dm_exec_query_plan.|65|Sì|  
 |BigintData2|`bigint`|Quantità di memoria totale, espressa in kilobyte, utilizzata durante la compilazione.|53|Sì|  
 |CPU|`int`|Tempo totale di CPU, espresso in microsecondi, dedicato alla compilazione.|18|Sì|  
-|Duration|`int`|Tempo totale, espresso in millisecondi, dedicato alla compilazione.|13|Sì|  
+|Durata|`int`|Tempo totale, espresso in millisecondi, dedicato alla compilazione.|13|Sì|  
 |IntegerData|`int`|Dimensioni, espresse in kilobyte, del piano compilato.|25|Sì|  
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  

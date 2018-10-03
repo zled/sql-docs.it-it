@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34cb8f45c8380cffdfd58c99078f05fd5c8bd2e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f88a82a1d59e9d41f9816b8fbc4e335ab2ad8c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187318"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119301"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Finestra di dialogo Filtro dei set di dati o Filtro modello
   Questa finestra di dialogo consente di compilare i filtri che è possibile applicare a un set di dati.  Il set di dati può essere un set esterno utilizzato per eseguire il test o un set di dati di case per un modello di data mining. Il nome della finestra di dialogo varia a seconda che il filtro venga utilizzato per un set di dati esterno o per un modello di data mining.  
@@ -46,7 +43,7 @@ ms.locfileid: "37187318"
 |**And/Or**|Scegliere un operatore per eseguire il join di più condizioni.|  
 |**Colonna della struttura di data mining**|Fare clic per selezionare un'origine dati, quindi fare clic sulle righe successive della griglia per aggiungere le colonne dall'origine dati.<br /><br /> La prima riga nella griglia specifica la vista origine dati. Dopo avere selezionato una vista origine dati, vengono visualizzate un'icona di tabella in **Colonna struttura di data mining** e la combinazione di tutti i criteri definiti per quell'origine dati nel campo **Valore** .<br /><br /> Dopo avere selezionato un'origine dati, nella casella **Colonna struttura di data mining** diventa disponibile un elenco a discesa di singole colonne dell'origine dati.|  
 |**Operatore**|Selezionare un operatore dall'elenco.|  
-|**Value**|Per le tabelle, nel campo **Valore** viene visualizzata la combinazione di tutti i filtri applicati all'origine dati. È anche possibile fare clic sul pulsante di compilazione **(…)** posizionato sulla destra della casella di testo per aprire la finestra di dialogo **Filtro** e compilare una condizione.|  
+|**Valore**|Per le tabelle, nel campo **Valore** viene visualizzata la combinazione di tutti i filtri applicati all'origine dati. È anche possibile fare clic sul pulsante di compilazione **(…)** posizionato sulla destra della casella di testo per aprire la finestra di dialogo **Filtro** e compilare una condizione.|  
   
  **Espressione**  
  Consente di visualizzare il set di criteri compilato tramite la griglia.  

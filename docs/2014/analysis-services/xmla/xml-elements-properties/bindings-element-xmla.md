@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Bindings Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Bindings element
 ms.assetid: caa34cab-f61f-4f39-b800-af1601714daa
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ee02beeb04987680cf9cf516bc6f25e66287b7b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55aab8ee9c7a2f45dfd04744457f063f5b784168
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302691"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173937"
 ---
 # <a name="bindings-element-xmla"></a>Elemento Bindings (XMLA)
   Contiene una raccolta di [Binding](binding-element-xmla.md) gli elementi per l'elemento padre [Batch](../xml-elements-commands/batch-element-xmla.md) oppure [processo](../xml-elements-commands/process-element-xmla.md) elemento.  
@@ -63,7 +60,7 @@ ms.locfileid: "37302691"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Batch](../xml-elements-commands/batch-element-xmla.md), [processo](../xml-elements-commands/process-element-xmla.md)|  
-|Elementi figlio|[Associazione](binding-element-xmla.md)|  
+|Elementi figlio|[associazione](binding-element-xmla.md)|  
   
 ## <a name="remarks"></a>Note  
   

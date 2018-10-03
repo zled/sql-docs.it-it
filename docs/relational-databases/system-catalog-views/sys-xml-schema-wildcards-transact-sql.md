@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.xml_schema_wildcards
@@ -20,30 +17,29 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_wildcards catalog view
 ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ad97b967511fcaab06c0adc2141f9e916fb699d6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 827c9feb6343b7af947b9dfb7232ba3718eaaec6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220022"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614886"
 ---
 # <a name="sysxmlschemawildcards-transact-sql"></a>sys.xml_schema_wildcards (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni componente di XML schema che è un carattere jolly dell'attributo (**tipo** di **V**) o carattere jolly dell'elemento (**tipo** di **W**), entrambi con **symbol_space** di **N**.  
+  Restituisce una riga per ogni componente di XML schema che è un carattere jolly dell'attributo (**genere** dei **V**) o carattere jolly dell'elemento (**tipo** del **W**), entrambi con **symbol_space** dei **N**.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**\<colonne ereditate >**||Eredita le colonne da [xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**process_content**|**char(1)**|Indica la modalità di elaborazione del contenuto.<br /><br /> S = Convalida di tipo strict (convalida obbligatoria)<br /><br /> L = Convalida di tipo lax (convalida se possibile)<br /><br /> P = Convalida di tipo skip|  
 |**process_content_desc**|**nvarchar(60)**|Descrizione della modalità di elaborazione del contenuto:<br /><br /> **STRICT_VALIDATION**<br /><br /> **LAX_VALIDATION**<br /><br /> **SKIP_VALIDATION**|  
-|**disallow_namespaces**|**bit**|0 = gli spazi dei nomi enumerati in [xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md) sono soli quelli consentiti.<br /><br /> 1 = Gli spazi dei nomi sono gli unici disabilitati.|  
+|**disallow_namespaces**|**bit**|0 = gli spazi dei nomi enumerati nel [xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md) sono gli unici consentiti.<br /><br /> 1 = Gli spazi dei nomi sono gli unici disabilitati.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

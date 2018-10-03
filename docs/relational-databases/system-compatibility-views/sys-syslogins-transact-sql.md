@@ -1,14 +1,11 @@
 ---
-title: Sys. syslogins (Transact-SQL) | Documenti Microsoft
+title: Sys. syslogins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syslogins_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sys.syslogins compatibility view
 - syslogins system table
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
-caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 924ae2b530c719085e21d7b045e4a872255b3009
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 599781eb8d06ac08a1c13af1b17523b56b39cf2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221732"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755201"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ ms.locfileid: "33221732"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -63,14 +59,14 @@ ms.locfileid: "33221732"
 |**isntname**|**int**|1 = L'account di accesso è un utente o un gruppo di Windows.<br /><br /> 0 = L'account di accesso è un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**isntgroup**|**int**|1 = L'account di accesso è un gruppo di Windows.|  
 |**isntuser**|**int**|1 = L'account di accesso è un utente di Windows.|  
-|**sysadmin**|**int**|1 = account di accesso è membro il **sysadmin** ruolo del server.|  
-|**securityadmin**|**int**|1 = account di accesso è membro il **securityadmin** ruolo del server.|  
-|**serveradmin**|**int**|1 = account di accesso è membro il **serveradmin** ruolo predefinito del server.|  
-|**setupadmin**|**int**|1 = account di accesso è membro il **setupadmin** ruolo predefinito del server.|  
-|**processadmin**|**int**|1 = account di accesso è membro il **processadmin** ruolo predefinito del server.|  
-|**diskadmin**|**int**|1 = account di accesso è membro il **diskadmin** ruolo predefinito del server.|  
-|**dbcreator**|**int**|1 = account di accesso è membro il **dbcreator** ruolo predefinito del server.|  
-|**bulkadmin**|**int**|1 = account di accesso è membro il **bulkadmin** ruolo predefinito del server.|  
+|**sysadmin**|**int**|1 = account di accesso è un membro del **sysadmin** ruolo del server.|  
+|**securityadmin**|**int**|1 = account di accesso è un membro del **securityadmin** ruolo del server.|  
+|**serveradmin**|**int**|1 = account di accesso è un membro del **serveradmin** ruolo predefinito del server.|  
+|**setupadmin**|**int**|1 = account di accesso è un membro del **setupadmin** ruolo predefinito del server.|  
+|**processadmin**|**int**|1 = account di accesso è un membro del **processadmin** ruolo predefinito del server.|  
+|**diskadmin**|**int**|1 = account di accesso è un membro del **diskadmin** ruolo predefinito del server.|  
+|**dbcreator**|**int**|1 = account di accesso è un membro del **dbcreator** ruolo predefinito del server.|  
+|**bulkadmin**|**int**|1 = account di accesso è un membro del **bulkadmin** ruolo predefinito del server.|  
 |**LoginName**|**nvarchar(128)**|Nome dell'account di accesso dell'utente. Disponibile per compatibilità con le versioni precedenti.|  
   
 ## <a name="see-also"></a>Vedere anche  

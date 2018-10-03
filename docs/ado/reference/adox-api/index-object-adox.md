@@ -1,13 +1,11 @@
 ---
-title: Indice di oggetto (ADOX) | Documenti Microsoft
+title: Indice di oggetto (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,58 +13,57 @@ f1_keywords:
 helpviewer_keywords:
 - Index object [ADOX]
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05663e8ef19fa6c825c49fe34865999fa9de461f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0b6fca30201a93b84f59e9356c5201e1070053d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285990"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822439"
 ---
 # <a name="index-object-adox"></a>Oggetto Index (ADOX)
 Rappresenta un indice di una tabella di database.  
   
-## <a name="remarks"></a>Remarks  
- Il codice seguente crea un nuovo **indice**:  
+## <a name="remarks"></a>Note  
+ Il codice seguente crea una nuova **indice**:  
   
 ```  
 Dim obj As New Index  
 ```  
   
- Con le proprietà e raccolte di un **indice** dell'oggetto, è possibile:  
+ Con le proprietà e raccolte di un' **indice** dell'oggetto, è possibile:  
   
 -   Identificare l'indice con il [nome](../../../ado/reference/adox-api/name-property-adox.md) proprietà.  
   
--   Accedere alle colonne di database dell'indice con il [colonne](../../../ado/reference/adox-api/columns-collection-adox.md) insieme.  
+-   Accedere alle colonne del database dell'indice con il [colonne](../../../ado/reference/adox-api/columns-collection-adox.md) raccolta.  
   
--   Specificare se le chiavi di indice devono essere univoche con la [Unique](../../../ado/reference/adox-api/unique-property-adox.md) proprietà.  
+-   Specificare se le chiavi di indice devono essere univoche con il [Unique](../../../ado/reference/adox-api/unique-property-adox.md) proprietà.  
   
 -   Specificare se l'indice è la chiave primaria per una tabella con il [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) proprietà.  
   
--   Specificare se i record con valori null nei relativi campi indice includono voci di indice con il [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) proprietà.  
+-   Specificare se i record con valori null nei relativi campi di indice presentano le voci di indice con il [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) proprietà.  
   
--   Specificare se gli indici cluster con il [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) proprietà.  
+-   Specificare se l'indice è in cluster con il [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) proprietà.  
   
--   Accedere alle proprietà di indice specifiche del provider con il [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) insieme.  
-  
-> [!NOTE]
->  Si verifica un errore quando si accoda un [colonna](../../../ado/reference/adox-api/column-object-adox.md) per il **colonne** raccolta di un **indice** se il **colonna** non esiste un [Tabella](../../../ado/reference/adox-api/table-object-adox.md) già aggiunto all'oggetto di [tabelle](../../../ado/reference/adox-api/tables-collection-adox.md) insieme.  
+-   Accedere alle proprietà di indice specifico del provider con il [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta.  
   
 > [!NOTE]
->  Il provider di dati potrebbe non supportare tutte le proprietà di **indice** oggetti. Se è stato impostato un valore per una proprietà che non è supportato dal provider, si verificherà un errore. Per i nuovi **indice** oggetti, l'errore si verifica quando l'oggetto viene aggiunto alla raccolta. Per gli oggetti esistenti, l'errore si verifica quando l'impostazione della proprietà.  
+>  Si verifica un errore quando si aggiunge un [colonna](../../../ado/reference/adox-api/column-object-adox.md) per il **colonne** raccolta di un **indice** se il **colonna** non esiste in un [Nella tabella](../../../ado/reference/adox-api/table-object-adox.md) oggetto già accodato per il [tabelle](../../../ado/reference/adox-api/tables-collection-adox.md) raccolta.  
   
 > [!NOTE]
->  Quando si creano **indice** oggetti, l'esistenza di un valore predefinito appropriato per una proprietà facoltativa non garantisce che il provider supporta la proprietà. Per ulteriori informazioni sulle proprietà, il provider supporta, vedere la documentazione del provider.  
+>  Il provider di dati non supportino tutte le proprietà del **indice** oggetti. Se è stato impostato un valore per una proprietà che non è supportato dal provider, si verificherà un errore. Per ottenere nuove **indice** oggetti, l'errore si verifica quando l'oggetto viene aggiunto alla raccolta. Per gli oggetti esistenti, l'errore si verifica quando l'impostazione della proprietà.  
   
- In questa sezione contiene l'argomento seguente.  
+> [!NOTE]
+>  Durante la creazione **indice** oggetti, l'esistenza di un valore predefinito appropriato per una proprietà facoltativa non garantisce che il provider supporta la proprietà. Per altre informazioni sulle proprietà che supporta il provider, vedere la documentazione del provider.  
+  
+ In questa sezione contiene gli argomenti seguenti.  
   
 -   [Proprietà, metodi ed eventi dell'oggetto Index](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Indici di esempio del metodo Append (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
+ [Esempio di metodo (VB) Append](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Esempio di proprietà IndexNulls (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)   
  [Esempio PrimaryKey e proprietà univoche (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [Esempio di proprietà SortOrder (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   

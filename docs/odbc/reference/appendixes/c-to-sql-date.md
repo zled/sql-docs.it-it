@@ -1,48 +1,45 @@
 ---
-title: 'C a SQL: data | Documenti Microsoft'
+title: 'C a SQL: data | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - date data type [ODBC]
 - converting data from c to SQL types [ODBC], date
 - data conversions from C to SQL types [ODBC], date
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63e28a29258b012f246be83123360a52a90e68ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8edb075be1bf64dad8f4ef18924a6396b7c64e80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909086"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796129"
 ---
-# <a name="c-to-sql-date"></a>C a SQL: data
-L'identificatore per il tipo di dati ODBC C data è:  
+# <a name="c-to-sql-date"></a>Da C a SQL: data
+L'identificatore per il tipo di dati C ODBC Data è:  
   
  SQL_C_TYPE_DATE  
   
- Nella tabella seguente viene illustrato SQL ODBC i tipi di dati a cui può essere convertito data dati C. Per una spiegazione delle colonne e delle condizioni nella tabella, vedere [la conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ La tabella seguente illustra il codice SQL ODBC i tipi di dati a cui data di dati C può essere convertito. Per una spiegazione delle colonne e le condizioni nella tabella, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
 |Identificatore di tipo SQL|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Lunghezza in byte di colonna > = 10<br /><br /> Colonna lunghezza < 10 byte<br /><br /> Valore di dati non è una data valida|n/d<br /><br /> 22001<br /><br /> 22008|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Lunghezza in byte di colonna > = 10<br /><br /> Colonna di lunghezza < 10 byte<br /><br /> Valore di dati non è una data valida|n/d<br /><br /> 22001<br /><br /> 22008|  
 |SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Lunghezza in caratteri colonna > = 10<br /><br /> Colonna carattere a lunghezza < 10<br /><br /> Valore di dati non è una data valida|n/d<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|Valore di dati è una data valida<br /><br /> Valore di dati non è una data valida|n/d<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Valore di dati è una data valida [a]<br /><br /> Valore di dati non è una data valida|n/d<br /><br /> 22007|  
+|SQL_TYPE_DATE|Valore dei dati è una data valida<br /><br /> Valore di dati non è una data valida|n/d<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Valore dei dati è una data valida [a]<br /><br /> Valore di dati non è una data valida|n/d<br /><br /> 22007|  
   
- [a] la porzione dell'ora del timestamp è impostata su zero.  
+ [a] parte relativa all'ora del timestamp è impostato su zero.  
   
- Per informazioni su quali sono i valori validi in una struttura SQL_C_TYPE_DATE, vedere [tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md), più indietro in questa appendice.  
+ Per informazioni su quali valori sono validi in una struttura SQL_C_TYPE_DATE, vedere [tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md), più indietro in questa appendice.  
   
- Quando i dati di data C viene convertiti in dati SQL di tipo carattere, i dati di caratteri risultante sono nel "*aaaa*-*mm*-*gg*" formato.  
+ Quando i dati di data C viene convertiti in dati di SQL di tipo carattere, i dati di tipo carattere risultante sono nel "*yyyy*-*mm*-*gg*" formato.  
   
- Il driver ignora il valore di lunghezza/indicatore quando la conversione dei dati dal tipo di dati Data C e si presuppone che le dimensioni del buffer di dati sono la dimensione del tipo di dati Data C. Viene passato il valore di lunghezza/indicatore di *StrLen_or_Ind* argomento **SQLPutData** e nel buffer specificato con il *StrLen_or_IndPtr* argomento **SQLBindParameter**. Il buffer dei dati è specificato con il *DataPtr* argomento in **SQLPutData** e *ParameterValuePtr* argomento **SQLBindParameter**.
+ Il driver ignora il valore di lunghezza/indicatore quando si convertono i dati dal tipo di dati date C e si presuppone che la dimensione del buffer di dati è la dimensione del tipo di dati Data C. Viene passato il valore di lunghezza/indicatore il *StrLen_or_Ind* nell'argomento **SQLPutData** e nel buffer specificato con il *StrLen_or_IndPtr* argomento in **SQLBindParameter**. Il buffer dei dati è specificato con il *DataPtr* nell'argomento **SQLPutData** e il *ParameterValuePtr* argomento in **SQLBindParameter**.

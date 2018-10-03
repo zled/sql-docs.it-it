@@ -1,13 +1,11 @@
 ---
-title: Creare oggetto RDSServer tramite il metodo CreateObject (VBScript) | Documenti Microsoft
+title: Creare l'oggetto RDSServer usando CreateObject (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - CreateObject method [ADO], VBScript example
 - Query method [ADO], VBScript example
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f48cf01641920635f9c7cfa020b118462832dae
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 878ffce8b18205dfcd99ec7e374a9eb4609d6f38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287630"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735939"
 ---
-# <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>Oggetto DataFactory, metodo di Query ed esempio CreateObject (metodo) (VBScript)
+# <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>Esempio dell'oggetto DataFactory e dei metodi Query e CreateObject (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Questo esempio viene creato un [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) utilizzando il [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) metodo il [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oggetto. Per testare questo esempio, tagliare e incollare questo codice tra le \<corpo > e \</Body > del documento e assegnargli il nome di tag in HTML un normale **DataFactoryVBS**. Lo script identificherà il server.  
+ Questo esempio viene creato un [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) dell'oggetto usando la [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) metodo del [Servizi Desktop remoto. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oggetto. Per testare questo esempio, tagliare e incollare questo codice tra il \<Body > e \</Body > tag in HTML un normale del documento e denominarlo **DataFactoryVBS**. Lo script identificherà il server.  
   
 ```  
 <!-- BeginDataFactoryVBS -->  
@@ -141,9 +138,9 @@ to bring back a Recordset. </H4>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CreateObject (metodo) (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
+ [Metodo CreateObject (Servizi Desktop remoto)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [Oggetto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [Oggetto DataSpace (Servizi Desktop remoto)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [Metodo Query (Servizi Desktop remoto)](../../../ado/reference/rds-api/query-method-rds.md)
 
 

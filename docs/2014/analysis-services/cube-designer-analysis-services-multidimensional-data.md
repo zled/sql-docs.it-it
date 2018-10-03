@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cube Designer
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc6972d90683de658dd0d8104cff138d59960904
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4333b9d2c15097b1954144738543250bb591621
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246281"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155421"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Progettazione cubi (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Progettazione cubi** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per modificare diverse proprietà di un cubo esistente, tra cui i gruppi di misure e le misure, le dimensioni del cubo e le relazioni tra le dimensioni, i calcoli, gli indicatori di prestazioni chiave (KPI), le azioni, le partizioni, le prospettive e le traduzioni inclusi nel cubo e visualizzare i dati contenuti nel cubo. Per visualizzare la finestra di dialogo **Progettazione cubi** è possibile:  

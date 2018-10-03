@@ -1,10 +1,8 @@
 ---
-title: Riferimento alle librerie ADO In un'applicazione Visual Basic 6 | Documenti Microsoft
+title: Riferimenti alle librerie ADO In un'applicazione Visual Basic 6 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,45 +14,44 @@ helpviewer_keywords:
 - referencing libraries in a Visual Basic application[ADO]
 - ADO, libraries
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b504f924019c20a6203e18974d72e086e65f06c8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e8e37459c5e48fe817a3bdbb6a824550cf977f66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273570"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696970"
 ---
-# <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Riferimento alle librerie ADO In un'applicazione Visual Basic 6
-Per importare le librerie di ADO in un'applicazione di Microsoft Visual Basic 6, è necessario impostare un riferimento nel progetto di Visual Basic.  
+# <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Riferimenti alle librerie ADO in un'applicazione Visual Basic 6
+Per importare le librerie ADO in un'applicazione di Microsoft Visual Basic 6, è necessario impostare un riferimento nel progetto di Visual Basic.  
   
-### <a name="to-set-a-reference-to-the-ado-libraries-in-a-visual-basic-project"></a>Per impostare un riferimento alla libreria ADO in un progetto di Visual Basic  
+### <a name="to-set-a-reference-to-the-ado-libraries-in-a-visual-basic-project"></a>Per impostare un riferimento alle librerie ADO in un progetto Visual Basic  
   
 1.  Creare un nuovo o aprire un progetto di Visual Basic esistente.  
   
-2.  Fare clic su di **progetto** voce di menu e quindi selezionare **riferimenti...**  dal Pannello di menu a discesa.  
+2.  Scegliere il **Project** voce di menu e quindi selezionare **riferimenti...**  dal Pannello di riepilogo.  
   
-3.  Da **riferimenti disponibili**, selezionare la casella per **Microsoft ActiveX Data Objects *n* libreria**, dove ***n*** rappresenta la versione più recente numero di versione. Il **percorso** campo sottostante è necessario identificare la scelta come *$installDir\msado15.dll*, dove *$installDir* rappresenta il percorso della directory in cui la libreria ADO è stato installato.  
+3.  Dal **riferimenti disponibili**, selezionare la casella **Microsoft ActiveX Data Objects *n* libreria**, dove ***n*** rappresenta la versione più recente numero di versione. Il **ubicazione** campo sottostante debba identificare la scelta come *$installDir\msado15.dll*, dove *$installDir* rappresenta il percorso della directory in cui la libreria ADO è stato installato.  
   
-4.  Se si prevede di utilizzare ADO MD, ripetere il passaggio 3 per selezionare **Microsoft ActiveX Data Objects (multidimensionali) *n* libreria**. Il **percorso** campo dovrebbe identificare questa scelta come *$installDir\msadomd.dll*.  
+4.  Se si prevede di utilizzare ADO MD, ripetere il passaggio 3 selezionare **Microsoft ActiveX Data Objects (multidimensionale) *n* libreria**. Il **ubicazione** campo deve identificare questa scelta come *$installDir\msadomd.dll*.  
   
-5.  Se si prevede di utilizzare ADOX, ripetere il passaggio 3 per selezionare **Microsoft ADO ext *n* per la sicurezza e DDL**. Il **percorso** campo dovrebbe identificare questa scelta come *$installDir\msadox.dll*.  
+5.  Se si prevede di usare ADOX, ripetere il passaggio 3 selezionare **Microsoft ADO ext *n* per la sicurezza e DDL**. Il **ubicazione** campo deve identificare questa scelta come *$installDir\msadox.dll*.  
   
-6.  Fare clic su **OK** per completare l'impostazione dei riferimenti.  
+6.  Fare clic su **OK** per completare l'impostazione di riferimenti.  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
- Installazione di ADO copia anche le librerie dei tipi seguenti di versioni precedenti:  
+ Installazione di ADO copia anche librerie dei tipi seguenti di versioni precedenti:  
   
 -   *msado27.tlb*, libreria dei tipi 2.7 ADO  
   
--   *msado26.tlb*, ADO 2.6 libreria  
+-   *msado26.tlb*, ADO 2.6 libreria di tipi  
   
 -   *msado25.tlb*, libreria dei tipi 2,5 ADO  
   
 -   *Msado21*, libreria dei tipi 2.1 ADO  
   
--   *msado20.tlb*, ADO libreria dei tipi 2.0  
+-   *msado20.tlb*, libreria dei tipi 2.0 ADO  
   
- Se l'applicazione deve usare uno qualsiasi di queste librerie di ADO per motivi di compatibilità con le versioni precedenti, è necessario importare la versione appropriata della libreria dei tipi. A tale scopo, seguire le procedure nella sezione precedente, sostituendo *msado15.dll* da *msadoXX.tlb*, dove *XX* rappresenta il numero di versione è necessario importare.
+ Se l'applicazione deve usare uno qualsiasi di queste librerie ADO per motivi di compatibilità con le versioni precedenti, è necessario importare la versione appropriata della libreria dei tipi. A tale scopo, seguire le procedure descritte nella sezione precedente, sostituendo *msado15.dll* dal *msadoXX.tlb*, dove *XX* rappresenta il numero di versione da importare.

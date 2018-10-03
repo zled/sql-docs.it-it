@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.connectiondialog.F1
 helpviewer_keywords:
 - report servers [Reporting Services], configuring
 ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 27b2d2d93d83057fd2de408b4a0cb61dd1cd0771
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb8a192a2d33e2068be75f0acd19fb76166f0705
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321781"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078431"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>Connettersi a un server di report in modalità nativa
   Utilizzare questa finestra di dialogo per connettersi a una locale o remota [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] istanza del server di report. È possibile usare questo strumento per la connessione a versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] i server di report. È possibile connettersi a una singola istanza per volta.  
@@ -46,7 +43,7 @@ ms.locfileid: "37321781"
  **Nome server**  
  Immettere il nome di rete del computer in cui [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è installato. Digitare solo il nome del computer senza includere barre o un prefisso.  
   
- **Trovare**  
+ **trovare**  
  Consente di trovare il computer specificato in **Nome server**.  
   
  **Istanza del Server di report**  

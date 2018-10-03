@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication]
 - replication [SQL Server], agents and profiles
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8c7c1f0d0e7044e39d24c6acb9f7abfbc1f3e90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b36b2dd74087c91ed753ed040af787ba3a8effc4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205361"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175177"
 ---
 # <a name="replication-agents"></a>Agenti di replica
   La replica utilizza numerosi programmi autonomi, denominati "agenti", per eseguire le attività associate al rilevamento delle modifiche e alla distribuzione dei dati. In questa sezione della documentazione vengono forniti riferimenti ai parametri per gli agenti di replica seguenti.  

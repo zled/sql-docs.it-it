@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], managing
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-caps.latest.revision: 69
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fc0febe87f937e8ad301bb070e22dcd44b788c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3a102af211ccaa8fad3d7792cf868653ca4797d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327071"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176941"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Gestione report (modalità nativa SSRS)
   Gestione report è uno strumento di gestione e accesso ai report basato sul Web che consente di amministrare una singola istanza del server di report da una postazione remota su una connessione HTTP. e offre funzionalità di visualizzatore di report e di navigazione. Contenuto dell'argomento:  
@@ -74,7 +71,7 @@ ms.locfileid: "37327071"
   
  In una nuova installazione solo gli amministratori locali dispongono di autorizzazioni sufficienti per utilizzare il contenuto e le impostazioni. Per concedere le autorizzazioni agli altri utenti, un amministratore locale deve creare le assegnazioni di ruolo appropriate per gestire l'accesso al server di report. Le pagine dell'applicazione e le operazioni che saranno in seguito disponibili per un utente dipendono dalle assegnazioni di ruolo di tale utente. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](security/grant-user-access-to-a-report-server.md).  
   
- Se si utilizza [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] o Windows Server 2008, è necessario configurare Gestione report per l'amministrazione locale. Per altre informazioni, vedere [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ Se si utilizza [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] o Windows Server 2008, è necessario configurare Gestione report per l'amministrazione locale. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="bkmk_start_report_manager"></a> Inizio e utilizzare Gestione Report  
  Gestione report è un'applicazione Web che si apre digitando l'apposito URL nella barra degli indirizzi di una finestra del browser. Quando si avvia Gestione report, le pagine, le opzioni e i collegamenti visualizzati variano in base alle autorizzazioni di cui si dispone sul server di report. Per eseguire un'attività, è necessario essere assegnato a un ruolo che include l'attività. Gli utenti assegnati a un ruolo con autorizzazioni complete hanno accesso a tutti i menu e le pagine disponibili per la gestione di un server di report. Un utente assegnato a un ruolo autorizzato a visualizzare ed eseguire i report, invece, potrà visualizzare solo le pagine e i menu correlati a queste attività specifiche. Per ogni utente è possibile impostare assegnazioni di ruolo diverse per server di report diversi o anche per le varie cartelle e i vari report archiviati in un singolo server di report.  

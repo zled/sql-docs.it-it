@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32bc1568a2e12b8e48978857f169a58f7dffef41
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a51f3daa31b65901f916bf61a3a734c66390b12c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187218"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146439"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Struttura dimensione, Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   Utilizzare la barra degli strumenti per eseguire operazioni frequenti nella pagina **Struttura dimensione** di **Progettazione dimensioni**.  
@@ -34,11 +31,11 @@ ms.locfileid: "37187218"
  **Visualizza attributi come**  
  Fare clic su questo pulsante per selezionare una delle modalità di visualizzazione seguenti del riquadro **Attributi** :  
   
--   Elenco  
+-   List  
   
      Consente di visualizzare un elenco di attributi per la dimensione corrente. Impostazione predefinita.  
   
--   Tree  
+-   Struttura ad albero  
   
      Consente di visualizzare una visualizzazione albero di attributi per la dimensione corrente, con le proprietà membro di un dato attributo visualizzate come nodo subordinato di tale attributo.  
   

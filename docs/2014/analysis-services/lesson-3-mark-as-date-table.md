@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a2a6ce44a66fbb1e9045116580acc726f648df9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26eb4f82b97d745f6269d57a76c479d677d6cc2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265747"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177531"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>Lezione 4: Contrassegna come tabella data
   Nella Lezione 2: Aggiungere dati è stata importata una tabella delle dimensioni denominata DimDate. Nella Lezione 3: Rinominare colonne è stato quindi modificato il nome della tabella DimDate in Data. Mentre nel modello questa tabella è ora denominata Date, può anche essere nota come *tabella data*, in quanto sono contenuti dati relativi a data e ora.  

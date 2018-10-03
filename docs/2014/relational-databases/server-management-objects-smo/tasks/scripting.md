@@ -1,32 +1,29 @@
 ---
-title: Scripting | Microsoft Docs
+title: Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - dependencies [SMO]
 - scripts [SMO]
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 375a8f90c4864c8f1f3db12c56db1bf0eda3b0a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b58c868536b3f34391dc8db15493c2302a9b6c0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262277"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179631"
 ---
 # <a name="scripting"></a>Generazione di script
-  In SMO la generazione di script è controllata dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Scripter> e dai relativi oggetti figlio oppure dal metodo `Script` in oggetti singoli. Il <xref:Microsoft.SqlServer.Management.Smo.Scripter> oggetto consente di controllare il mapping all'esterno di relazioni di dipendenza per oggetti in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  In SMO la generazione di script è controllata dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Scripter> e dai relativi oggetti figlio oppure dal metodo `Script` in oggetti singoli. Il <xref:Microsoft.SqlServer.Management.Smo.Scripter> oggetto controlla il mapping da relazioni di dipendenza per gli oggetti in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  La generazione di script avanzata tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Scripter> e i relativi oggetti figlio è un processo a tre fasi:  
   
@@ -36,7 +33,7 @@ ms.locfileid: "37262277"
   
 3.  Generazione dello script  
   
- Nella fase di individuazione viene utilizzato l'oggetto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>. A partire da un elenco URN di oggetti, il metodo <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> restituisce un oggetto <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> per gli oggetti presenti nell'elenco URN. Il valore booleano *fParents* parametro viene utilizzato per indicare se gli elementi padre o gli elementi figlio dell'oggetto specificato devono essere individuati. In questa fase è possibile modificare l'albero delle dipendenze.  
+ Nella fase di individuazione viene utilizzato l'oggetto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>. A partire da un elenco URN di oggetti, il metodo <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> restituisce un oggetto <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> per gli oggetti presenti nell'elenco URN. Valore Boolean *fParents* parametro viene utilizzato per specificare se i genitori o gli elementi figlio dell'oggetto specificato per essere individuati. In questa fase è possibile modificare l'albero delle dipendenze.  
   
  Nella fase di generazione dell'elenco viene passato l'albero e viene restituito l'elenco risultante. Questo elenco di oggetti è ordinato secondo la generazione di script e può essere modificato.  
   

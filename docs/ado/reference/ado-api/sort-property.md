@@ -1,13 +1,11 @@
 ---
-title: Proprietà Sort | Documenti Microsoft
+title: Proprietà Sort | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -21,37 +19,36 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a42a5160c1e9e86f25c4547aef0e0ead5babe250
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6c579c824d65d50dfd1b222615f247d97209db37
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281910"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675599"
 ---
-# <a name="sort-property"></a>Proprietà di ordinamento
-Indica uno o più nomi di campo in cui il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) è ordinato, e se ogni campo viene ordinato in ordine crescente o decrescente.  
+# <a name="sort-property"></a>Proprietà Sort
+Indica uno o più nomi di campo in cui il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) è ordinato, e se ogni campo è ordinata in ordine crescente o decrescente.  
   
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Restituisce o imposta un **stringa** i nomi di valore che indica il campo nel **Recordset** di ordinamento. Ogni nome è separato da una virgola e, facoltativamente, è seguito da uno spazio vuoto e la parola chiave, **ASC**, che consente di ordinare il campo in ordine crescente o **DESC**, che consente di ordinare il campo in ordine decrescente. Per impostazione predefinita, se è specificata alcuna parola chiave, il campo viene ordinato in ordine crescente.  
+ Imposta o restituisce un **stringa** i nomi di valore che indica il campo nel **Recordset** sul quale eseguire l'ordinamento. Ogni nome è separato da una virgola e viene seguito facoltativamente da uno spazio vuoto e la parola chiave **ASC**, che prevede l'ordinamento in ordine crescente, il campo o **DESC**, che consente di ordinare il campo in ordine decrescente. Per impostazione predefinita, se non viene specificata alcuna parola chiave, il campo viene ordinato in ordine crescente.  
   
-## <a name="remarks"></a>Remarks  
- Questa proprietà richiede la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà da impostare **adUseClient**. Verrà creato un indice temporaneo per ogni campo specificato nella **ordinamento** proprietà se non ne esiste già.  
+## <a name="remarks"></a>Note  
+ Questa proprietà richiede la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà viene impostata su **adUseClient**. Verrà creato un indice temporaneo per ogni campo specificato nel **ordinamento** proprietà se non ne esiste già.  
   
- L'operazione di ordinamento è efficiente poiché i dati non è fisicamente ordinati, ma semplicemente avviene nell'ordine specificato dall'indice.  
+ L'operazione di ordinamento è efficiente poiché i dati non vengono riorganizzati fisicamente, ma sono semplicemente possibile accedere nell'ordine specificato dall'indice.  
   
- Quando il valore della **ordinamento** proprietà è diverso da una stringa vuota, il **ordinamento** ordine della proprietà ha la precedenza sull'ordine specificato in un **ORDER BY** clausola incluse nell'istruzione SQL utilizzata per aprire la **Recordset**.  
+ Quando il valore del **ordinamento** proprietà è diversa da una stringa vuota, il **ordinamento** ordine della proprietà ha la precedenza sull'ordine specificato un **ORDER BY** clausola incluse nell'istruzione SQL utilizzata per aprire la **Recordset**.  
   
- Il **Recordset** non devono essere aperte prima di accedere il **ordinamento** proprietà; può essere impostato in qualsiasi momento dopo il **Recordset** viene creata un'istanza di oggetto.  
+ Il **Recordset** non devono essere aperte prima di accedere al **Sort** proprietà; può essere impostata in qualsiasi momento dopo la **Recordset** viene creata un'istanza di oggetto.  
   
- L'impostazione di **ordinamento** proprietà in una stringa vuota verrà reimpostato le righe in base all'ordine originale e verranno eliminati gli indici temporanei. Gli indici esistenti non verranno eliminati.  
+ Impostando il **ordinamento** proprietà in una stringa vuota verrà ripristinato l'ordine originale delle righe ed eliminare indici temporanei. Gli indici esistenti non verranno eliminati.  
   
- Si supponga che un **Recordset** contiene tre campi denominati *firstName*, *middleInitial*, e *lastName*. Impostare il **ordinamento** proprietà alla stringa di "`lastName DESC, firstName ASC`", che verranno ordinate il **Recordset** in base al cognome in ordine decrescente, quindi in base al nome in ordine crescente. Il secondo nome viene ignorato.  
+ Si supponga che un **Recordset** contiene tre campi denominati *firstName*, *middleInitial*, e *lastName*. Impostare il **ordinamento** proprietà nella stringa, "`lastName DESC, firstName ASC`", che ordinerà i **Recordset** in base al cognome in ordine decrescente e quindi in base al nome in ordine crescente. Il secondo nome viene ignorato.  
   
- Non può essere nome campo "ASC" o "DESC" poiché tali nomi siano in conflitto con le parole chiave **ASC** e **DESC**. È possibile creare un alias per un campo con un nome in conflitto con il **AS** (parola chiave) nella query che restituisce il **Recordset**.  
+ Nessun campo può essere denominato "ASC" o "DESC" in quanto tali nomi siano in conflitto con le parole chiave **ASC** e **DESC**. È possibile creare un alias per un campo con un nome in conflitto con il **AS** parola chiave nella query che restituisce il **Recordset**.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
@@ -60,5 +57,5 @@ Indica uno o più nomi di campo in cui il [Recordset](../../../ado/reference/ado
  [Esempio di proprietà Sort (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
  [Esempio di proprietà Sort (VC + +)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
  [Ottimizzare la proprietà dinamica (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [Proprietà SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
+ [Proprietà SortColumn (Servizi Desktop remoto)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [Proprietà SortDirection (Servizi Desktop remoto)](../../../ado/reference/rds-api/sortdirection-property-rds.md)

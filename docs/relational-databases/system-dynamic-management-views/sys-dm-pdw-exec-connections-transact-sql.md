@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
 ms.reviewer: ''
-ms.suite: sql
-ms.component: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7bafa5e91cbf8237b1e0b20ea40d79a471ca7978
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: ec3c51cadb6b16bbf756f1c3d28b436677f64956
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36886587"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710889"
 ---
 # <a name="sysdmpdwexecconnections-transact-sql"></a>sys.dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -38,7 +34,7 @@ ms.locfileid: "36886587"
 |client_id|**varchar(48)**|Indirizzo IP del client di connettersi a questo server. Ammette i valori Null.|  
 |sql_spid|**int**|ID del processo server della connessione. Uso `@@SPID` per restituire il `sql_spid` della connessione corrente. Per più illustrativi, usare il `session_id` invece.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessario **VIEW SERVER STATE** autorizzazione nel server.  
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 078ed4d8a791aba089255c725ddbedaa313920ba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 47efdd38b14a22f28026f98d2289c1c67fc65b9a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171672"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117561"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Modellazione multidimensionale (SSAS)
   Una soluzione multidimensionale Analysis Services utilizza strutture cubo per l'analisi dei dati aziendali in più dimensioni. La modalità multidimensionale è la modalità server predefinita di Analysis Services, in cui sono inclusi una query e un motore di calcolo per i dati OLAP, con modalità di archiviazione MOLAP, ROLAP e HOLAP per bilanciare prestazioni con requisiti di dati scalabili. Il motore OLAP di Analysis Services è il server OLAP leader del settore che offre ottimi risultati con un'ampia gamma di strumenti di Business Intelligence. La maggior parte delle distribuzioni di Analysis Services viene installata come server OLAP classico.  

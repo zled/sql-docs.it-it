@@ -1,13 +1,11 @@
 ---
-title: EventReasonEnum | Documenti Microsoft
+title: EventReasonEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - EventReasonEnum enumeration [ADO]
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b173fb6838b082b0600714f3756858dcc1615ba2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 743e36e379760cb2c148c5484bb7b49b08d1d27e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278440"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644641"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 Specifica il motivo che ha causato un evento si verifichi.  
@@ -34,20 +31,20 @@ Specifica il motivo che ha causato un evento si verifichi.
 |**adRsnAddNew**|1|Un'operazione di aggiunta di un nuovo record.|  
 |**adRsnClose**|9|Un'operazione ha chiuso il **Recordset**.|  
 |**adRsnDelete**|2|Un'operazione ha eliminato un record.|  
-|**adRsnFirstChange**|11|Un'operazione effettuata la prima modifica a un record.|  
-|**adRsnMove**|10|Un'operazione di spostata il puntatore del record all'interno di **Recordset**.|  
-|**adRsnMoveFirst**|12|Un'operazione ha spostato il puntatore del record del primo record di **Recordset**.|  
-|**adRsnMoveLast**|15|Un'operazione ha spostato il puntatore del record dell'ultimo record di **Recordset**.|  
-|**adRsnMoveNext**|13|Un'operazione ha spostato il puntatore del record sul record successivo nel **Recordset**.|  
-|**adRsnMovePrevious**|14|Un'operazione ha spostato il puntatore del record per record precedente il **Recordset**.|  
+|**adRsnFirstChange**|11|Un'operazione eseguita alla prima modifica a un record.|  
+|**adRsnMove**|10|Un'operazione ha spostato il puntatore di record all'interno di **Recordset**.|  
+|**adRsnMoveFirst**|12|Un'operazione ha spostato il puntatore di record del primo record di **Recordset**.|  
+|**adRsnMoveLast**|15|Un'operazione ha spostato il puntatore di record dell'ultimo record di **Recordset**.|  
+|**adRsnMoveNext**|13|Un'operazione ha spostato il puntatore di record sul record successivo nella **Recordset**.|  
+|**adRsnMovePrevious**|14|Un'operazione ha spostato il puntatore di record per record precedente la **Recordset**.|  
 |**adRsnRequery**|7|Un'operazione rieseguita la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
-|**adRsnResynch**|8|Un'operazione completa la risincronizzazione di **Recordset** con il database.|  
+|**adRsnResynch**|8|Un'operazione di risincronizzata il **Recordset** con il database.|  
 |**adRsnUndoAddNew**|5|Un'operazione ha annullato l'aggiunta di un nuovo record.|  
 |**adRsnUndoDelete**|6|Un'operazione ha annullato l'eliminazione di un record.|  
 |**adRsnUndoUpdate**|4|Un'operazione ha annullato l'aggiornamento di un record.|  
 |**adRsnUpdate**|3|Un'operazione ha aggiornato un record esistente.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
  Package: **com.ms.wfc.data**  
   
 |Costante|  

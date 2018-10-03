@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_qn_subscriptions
@@ -18,17 +16,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3f6886a16b8b1d87c2864ed93fd8be764700dc5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2cbfdd765681f99e50b38efcdb5c7c61c8cbd08b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834709"
 ---
-# <a name="query-notifications---sysdmqnsubscriptions"></a>-Notifiche di query Sys.dm qn_subscriptions
+# <a name="query-notifications---sysdmqnsubscriptions"></a>Eseguire una query notifiche - DM qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce informazioni sulle sottoscrizioni di notifica delle query attive nel server. È possibile utilizzare questa vista per individuare le sottoscrizioni attive nel server o in un database specificato oppure per individuare un'entità server specificata.  
@@ -50,15 +48,15 @@ ms.lasthandoff: 05/23/2018
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Molti-a-uno|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Molti-a-uno|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Il codice di stato 0 indica uno stato non definito.  
   
  I codici di stato seguenti indicano che è stata attivata una sottoscrizione a causa di una modifica:  
   
-|Codice|Stato minore|Info|  
+|codice|Stato minore|Info|  
 |----------|------------------|----------|  
 |65798|La sottoscrizione è stata attivata perché i dati sono stati modificati|sottoscrizione attivata dall'inserimento|  
-|65799|La sottoscrizione è stata attivata perché i dati sono stati modificati|Delete|  
+|65799|La sottoscrizione è stata attivata perché i dati sono stati modificati|DELETE|  
 |65800|La sottoscrizione è stata attivata perché i dati sono stati modificati|Update|  
 |65801|La sottoscrizione è stata attivata perché i dati sono stati modificati|Merge|  
 |65802|La sottoscrizione è stata attivata perché i dati sono stati modificati|troncamento di tabella|  
@@ -72,7 +70,7 @@ ms.lasthandoff: 05/23/2018
   
  I codici di stato seguenti indicano che non è stato possibile creare una sottoscrizione:  
   
-|Codice|Stato minore|Info|  
+|codice|Stato minore|Info|  
 |----------|------------------|----------|  
 |132609|La creazione della sottoscrizione non è riuscita perché l'istruzione non è supportata|query troppo complessa|  
 |132610|La creazione della sottoscrizione non è riuscita perché l'istruzione non è supportata|istruzione non valida per la sottoscrizione|  
@@ -83,7 +81,7 @@ ms.lasthandoff: 05/23/2018
   
  I codici di stato seguenti vengono utilizzati internamente e vengono classificati come modalità di controllo di termine e inizializzazione:  
   
-|Codice|Stato minore|Info|  
+|codice|Stato minore|Info|  
 |----------|------------------|----------|  
 |198656|Utilizzato internamente: modalità di controllo di termine e inizializzazione|modalità informazioni non definita|  
 |198928|La sottoscrizione è stata eliminata|la sottoscrizione è stata attivata perché è stato collegato il database|  
@@ -93,7 +91,7 @@ ms.lasthandoff: 05/23/2018
 |199168|La sottoscrizione è attiva|modalità informazioni non definita|  
 |199424|La sottoscrizione è stata inizializzata ma non è ancora attiva|modalità informazioni non definita|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW SERVER STATE nel server.  
   
 > [!NOTE]  

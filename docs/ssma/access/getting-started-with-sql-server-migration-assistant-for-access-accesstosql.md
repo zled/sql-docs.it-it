@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - error list pane
 - getting started
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - user interface
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
-caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 853386a30ade7c9833e9a6057cd2aa1084427094
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393317"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668669"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Introduzione a SQL Server Migration Assistant per Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per l'accesso consente di convertire rapidamente oggetti di database di Access da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o gli oggetti di database SQL di Azure, caricare gli oggetti risultanti nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure ed eseguire la migrazione dei dati da Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure. Se necessario, è anche possibile collegare le tabelle di accesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tabelle di database SQL di Azure in modo che è possibile continuare a usare le applicazioni front-end Access esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure.  
@@ -111,7 +105,7 @@ Progetto contenente pulsanti per l'utilizzo con i progetti, aggiunta di file di 
 #### <a name="the-migration-toolbar"></a>Barra degli strumenti di migrazione  
 Barra degli strumenti di migrazione include i comandi seguenti:  
   
-|Pulsante|Funzione|  
+|Button|Funzione|  
 |----------|------------|  
 |**Convertire, caricare ed eseguire la migrazione**|Converte i database di Access, carica gli oggetti convertiti nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure e viene eseguita la migrazione dei dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure, tutto in un unico passaggio.|  
 |**Creazione di Report**|Converte lo schema selezionato l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o sintassi di database SQL di Azure e quindi crea un report che mostra la conversione ha come esito positivo.<br /><br />Questo comando è disponibile solo quando gli oggetti selezionati in Visualizzatore metadati di accesso.|  
@@ -122,7 +116,7 @@ Barra degli strumenti di migrazione include i comandi seguenti:
 ### <a name="menus"></a>Menu  
 SSMA contiene i menu seguenti:  
   
-|Menu di scelta|Description|  
+|Menu|Description|  
 |--------|---------------|  
 |**File**|Contiene i comandi per la migrazione guidata, si lavora su progetti, aggiunta e rimozione dei file di database di Access e ci si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure.|  
 |**Modifica**|Contiene i comandi per la ricerca e lavora sul testo nelle pagine di dettagli, ad esempio la copia [!INCLUDE[tsql](../../includes/tsql-md.md)] dal riquadro dei dettagli SQL. Per aprire la **gestire i segnalibri** finestra di dialogo, dal menu Modifica, fare clic su Gestisci segnalibri. Nella finestra di dialogo, verrà visualizzato un elenco dei propri segnalibri esistenti. È possibile usare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  
