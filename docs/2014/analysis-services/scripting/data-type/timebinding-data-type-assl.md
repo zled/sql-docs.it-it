@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TimeBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - TimeBinding data type
 ms.assetid: f3c06978-c181-4a73-9b57-8fc30358faab
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7102bbea8eb516b93eb2e539a74b2110f22c6694
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5d8b1ea5b0b7350fdba80d5ea99b7f3c0cc9ee1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183338"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095581"
 ---
 # <a name="timebinding-data-type-assl"></a>Tipo di dati TimeBinding (ASSL)
   Definisce un tipo di dati derivato che rappresenta un'associazione a periodi di tempo.  
@@ -61,7 +58,7 @@ ms.locfileid: "37183338"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipi di dati di base|[Associazione](binding-data-type-assl.md)|  
+|Tipi di dati di base|[associazione](binding-data-type-assl.md)|  
 |Tipi di dati derivati|None|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  

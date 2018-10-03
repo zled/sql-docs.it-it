@@ -1,12 +1,10 @@
 ---
-title: 'Isscommandwithparameters:: Setparameterproperties (OLE DB) | Microsoft Docs'
+title: 'Isscommandwithparameters:: Setparameterproperties (OLE DB) | Documenti di Microsoft'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - SetParameterProperties method
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dafc28244a94a3738b91c454f75bc8bb26d0b391
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416970"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096981"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
   Imposta le proprietà dei parametri per i singoli parametri in base al numero ordinale oppure imposta proprietà dei parametri bulk specificando una matrice di strutture SSPARAMPROPS.  
@@ -40,7 +37,7 @@ SSPARAMPROPS rgParamProperties[]);
   
 ## <a name="arguments"></a>Argomenti  
  *cParams*[in]  
- Il numero di struttura SSPARAMPROPS le strutture nel *rgParamProperties* matrice. Se questo numero è zero, `ISSCommandWithParameters::SetParameterProperties` eliminerà tutte le proprietà che avrebbero potuto essere specificate per qualsiasi parametro nel comando.  
+ Numero di strutture SSPARAMPROPS nella matrice *rgParamProperties*. Se questo numero è zero, `ISSCommandWithParameters::SetParameterProperties` eliminerà tutte le proprietà che avrebbero potuto essere specificate per qualsiasi parametro nel comando.  
   
  *rgParamProperties*[in]  
  Matrice di strutture SSPARAMPROPS da impostare.  
@@ -73,12 +70,12 @@ SSPARAMPROPS rgParamProperties[]);
   
  `};`  
   
- Miglioramenti apportati al motore di database a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] consentire isscommandwithparameters:: Setparameterproperties ottenere descrizioni più accurate dei risultati previsti. Questi risultati più accurati differiscano dai valori restituiti da isscommandwithparameters:: Setparameterproperties nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [individuazione dei metadati](../native-client/features/metadata-discovery.md).  
+ Miglioramenti apportati al motore di database a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] consentire isscommandwithparameters:: Setparameterproperties ottenere descrizioni più accurate dei risultati previsti. Questi risultati più accurati differiscano dai valori restituiti da isscommandwithparameters:: Setparameterproperties nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Metadata Discovery](../native-client/features/metadata-discovery.md).  
   
 |Membro|Description|  
 |------------|-----------------|  
 |*iOrdinal*|Numero ordinale del parametro passato.|  
-|*cPropertySets*|Il numero di strutture DBPROPSET in *rgPropertySets*.|  
+|*cPropertySets*|Numero di strutture DBPROPSET in *rgPropertySets*.|  
 |*rgPropertySets*|Puntatore alla memoria nel quale restituire una matrice di strutture DBPROPSET.|  
   
 ## <a name="see-also"></a>Vedere anche  
