@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6dad3747b1a597603f071ebdcea4d7f46b478015
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 95b67c3db68d1641f6025ddacc1fd1370f26738b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392988"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129831"
 ---
 # <a name="application-level-partitioning"></a>Partizionamento a livello di applicazione
   Questo esempio illustra il partizionamento a livello di applicazione, in cui i dati vengono archiviati in una tabella ottimizzata per la memoria o una tabella basata su disco, a seconda del fatto che l'ordine si verifichi prima o dopo una data specifica. Tutti gli ordini più recenti o uguali al *hotDate* sono nelle tabelle ottimizzate per la memoria e tutti gli ordini prima le *hotDate* presenti nella tabella basata su disco. Si supponga un pesante carico di lavoro OLTP con molte transazioni simultanee. Questa regola di business (ordini recenti in una tabella ottimizzata per la memoria) deve essere applicata anche se diverse transazioni simultanee stanno tentando di modificare *hotDate*.  
