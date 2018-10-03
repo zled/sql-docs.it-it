@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ba88d7a078889de09af4bd33e484ae69519721c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5980f2f1213b0f74422cdac773e4dfa9c806fd5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056441"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
   In un istogramma le serie vengono visualizzate come set di barre verticali raggruppate per categoria. Gli istogrammi sono utili per mostrare le modifiche ai dati in un periodo di tempo o per illustrare confronti tra elementi. L'istogramma semplice è strettamente correlato al grafico a barre, in cui le serie vengono visualizzate come set di barre orizzontali, e all'istogramma a intervalli, in cui le serie vengono visualizzate come set di barre verticali con punti iniziali e finali variabili. Per altre informazioni, vedere [i grafici a barre &#40;Generatore Report e SSRS&#41; ](charts-report-builder-and-ssrs.md) e [grafici con intervalli &#40;Generatore Report e SSRS&#41;](range-charts-report-builder-and-ssrs.md).  
@@ -39,9 +36,9 @@ ms.locfileid: "37246193"
   
 -   **Cilindro 3D**. Istogramma con le barre a forma di cilindro in un grafico 3D.  
   
--   `Histogram`(Indici per tabelle con ottimizzazione per la memoria). Istogramma calcolato in modo tale che le barre siano disposte in una distribuzione normale.  
+-   `Histogram` (Indici per tabelle con ottimizzazione per la memoria). Istogramma calcolato in modo tale che le barre siano disposte in una distribuzione normale.  
   
--   `Pareto`(Indici per tabelle con ottimizzazione per la memoria). Istogramma con le barre disposte dal valore massimo al minimo.  
+-   `Pareto` (Indici per tabelle con ottimizzazione per la memoria). Istogramma con le barre disposte dal valore massimo al minimo.  
   
 ## <a name="data-considerations-for-a-column-chart"></a>Considerazioni sui dati per un istogramma  
   

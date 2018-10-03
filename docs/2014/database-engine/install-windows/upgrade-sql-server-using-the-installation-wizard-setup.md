@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71f2683e42e6a1af7c971b3e192ad534847896ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 06ffc2c8633407ddcc3f7c6d8a55933d05a3d26a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219791"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060571"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Eseguire l'aggiornamento a SQL Server 2014 utilizzando l'Installazione guidata (programma di installazione)
   Nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un singolo albero delle funzionalità per aggiornare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È inoltre possibile eseguire l'installazione side-by-side di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a una versione precedente oppure eseguire la migrazione di database e impostazioni di configurazione esistenti da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e applicarli a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -60,7 +57,7 @@ ms.locfileid: "37219791"
 > [!WARNING]  
 >  Non è possibile modificare le funzionalità da aggiornare, né aggiungere funzionalità durante l'operazione di aggiornamento. Per altre informazioni su come aggiungere funzionalità a un'istanza aggiornata del [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] una volta completata l'operazione di aggiornamento, vedere [aggiunta di caratteristiche a un'istanza di SQL Server 2014 &#40;installazione&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
   
-## <a name="procedure"></a>Procedura  
+## <a name="procedure"></a>Routine  
   
 #### <a name="to-upgrade-to-includesscurrentincludessscurrent-mdmd"></a>Per eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
