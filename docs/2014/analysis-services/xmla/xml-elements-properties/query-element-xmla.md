@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Query Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query element
 ms.assetid: 5a4544e4-012f-4a47-942c-23596400ea16
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02feb5cb14e6b6acdc6100070495d0c84b89e483
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68da02ef99a5668c7ee0a3a57a06aca90ae68a25
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293243"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224401"
 ---
 # <a name="query-element-xmla"></a>Elemento Query (XMLA)
   Contiene una query all'interno di [query](queries-element-xmla.md) raccolta usata per il [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) comando durante l'ottimizzazione basata sull'utilizzo.  
@@ -53,7 +50,7 @@ ms.locfileid: "37293243"
 |Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String|  
-|Valore predefinito|None|  
+|Valore predefinito|Nessuno|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -61,7 +58,7 @@ ms.locfileid: "37293243"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Query](queries-element-xmla.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Note  
  Il comando `DesignAggregations` supporta l'ottimizzazione basata sulle statistiche di utilizzo includendo uno o più elementi `Query` nella raccolta `Queries` del comando. Ogni `Query` elemento rappresenta una query di tipo goal utilizzata dal processo di progettazione per definire le aggregazioni destinate alle query utilizzate più di frequente. È possibile specificare query di tipo goal personalizzate oppure è possibile usare le informazioni archiviate da un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nel log di query per recuperare informazioni su più di frequente query utilizzate.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10126"
 ms.assetid: 117fb20c-2fda-437e-bcc5-9010d6d4b53b
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3dd8f40b00db99496d43199183ca34e95ca7dfc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a71801d6e572c36a6a67ae189441963d8d759382
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220021"
 ---
 # <a name="row-visibility-dialog-box-report-builder"></a>Finestra di dialogo Visibilità righe (Generatore report)
   Utilizzare la finestra di dialogo **Visibilità righe** per visualizzare o nascondere la riga selezionata quando il report viene eseguito per la prima volta oppure per utilizzare un altro elemento del report per attivare/disattivare la visibilità della riga.  

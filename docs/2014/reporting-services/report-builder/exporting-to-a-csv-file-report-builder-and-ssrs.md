@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2c6bcbf4ce4a3bb3121bd55b8df95070de817f93
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 76c8b145b5ad43cdba6a2d55cdcf62fedc0e2ff3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232691"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225957"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Esportazione in un file CSV (Generatore report e SSRS)
   L'estensione per il rendering CSV (Comma-Separated Value) consente di eseguire il rendering di report come rappresentazione bidimensionale dei dati di un report in un formato di testo normale standardizzato, facilmente leggibile e interscambiabile con numerose applicazioni.  
   
- Per la separazione dei campi e delle righe con l'estensione per il rendering CSV viene usato un delimitatore di stringhe di caratteri che è possibile configurare per impostare un carattere diverso dalla virgola. Il file risultante può essere aperto in un foglio di calcolo, ad esempio [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] , oppure usato come formato di importazione per altri programmi. Il report esportato viene salvato come file con estensione csv e restituisce il tipo MIME di `text/csv`.  
+ Per la separazione dei campi e delle righe con l'estensione per il rendering CSV viene utilizzato un delimitatore di stringhe di caratteri che è possibile configurare per impostare un carattere diverso dalla virgola. Il file risultante può essere aperto in un foglio di calcolo, ad esempio [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], oppure utilizzato come formato di importazione per altri programmi. Il report esportato viene salvato come file con estensione csv e restituisce il tipo MIME di `text/csv`.  
   
  Se si desidera usare dati correlati a grafici, barre dei dati, grafici sparkline, misuratori e indicatori in [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], esportare il report in un file CSV, quindi aprire il file in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
   
@@ -59,7 +56,7 @@ ms.locfileid: "37232691"
   
 -   Linea  
   
--   image  
+-   Image  
   
 -   Rectangle  
   
@@ -74,7 +71,7 @@ ms.locfileid: "37232691"
 |Casella di testo|Viene eseguito il rendering del contenuto della casella di testo. Nella modalità predefinita gli elementi vengono formattati in base alle proprietà di formattazione dell'elemento. Nella modalità conforme la formattazione può essere modificata dalle impostazioni relative alle informazioni sui dispositivi. Per altre informazioni sulle modalità di rendering CSV, vedere di seguito.|  
 |Tabella|Il rendering viene eseguito mediante l'espansione della tabella e la creazione di una riga e una colonna per ogni riga e colonna al livello di dettaglio inferiore. Per le righe e le colonne di subtotali non sono disponibili intestazioni. I report drill-through non sono supportati.|  
 |Matrice|Il rendering viene eseguito mediante l'espansione della matrice e la creazione di una riga e una colonna per ogni riga e colonna al livello di dettaglio inferiore. Per le righe e le colonne di subtotali non sono disponibili intestazioni.|  
-|Elenco|Viene eseguito il rendering di un record per ogni riga di dettagli o istanza nell'elenco.|  
+|List|Viene eseguito il rendering di un record per ogni riga di dettagli o istanza nell'elenco.|  
 |Sottoreport|L'elemento padre viene ripetuto per ogni istanza del contenuto.|  
 |Grafico|Il rendering viene eseguito mediante la creazione di una riga per ogni valore del grafico ed etichetta del membro. Le etichette delle serie e delle categorie nelle gerarchie sono rese bidimensionali e incluse nella riga per un valore del grafico.|  
 |Barra dei dati|Viene eseguito il rendering come grafico. In genere, in una barra dei dati non sono incluse gerarchie o etichette.|  

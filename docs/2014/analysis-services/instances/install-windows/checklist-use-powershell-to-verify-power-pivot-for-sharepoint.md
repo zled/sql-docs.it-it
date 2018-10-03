@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1c7a70d4cfa7b47d4155abd46982a88c11ebdbca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3f55fe765ce585256f257c006a358f511abc66a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149782"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229841"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Elenco di controllo: utilizzare PowerShell per verificare PowerPivot per SharePoint
   Senza il superamento della prova di verifica con cui viene confermata l'operatività dei servizi e dei dati in uso, non vengono completate né le installazioni di [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] né le operazioni di recupero. In questo articolo viene illustrata la modalità di esecuzione di queste procedure tramite Windows PowerShell. Ogni passaggio è inserito nella relativa sezione in modo da poter accedere direttamente ad attività specifiche. Ad esempio, eseguire lo script nella sezione [Database](#bkmk_databases) di questo argomento per verificare il nome dell'applicazione di servizio e i database del contenuto, se si desidera programmarli per la manutenzione o il backup.  

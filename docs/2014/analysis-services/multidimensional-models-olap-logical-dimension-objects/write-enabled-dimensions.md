@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - write-enabled dimensions [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - write-enabled cubes [Analysis Services]
 - writeback [Analysis Services], dimensions
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a928d7bd7e35114a174373933b974d32a1af5d40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf87518328e036b69dfc8596ec239b4770c1edab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293533"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225131"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensioni abilitate per la scrittura
     
@@ -59,7 +56,7 @@ ms.locfileid: "37293533"
 > [!NOTE]  
 >  Il writeback della dimensione non è supportato dalle dimensioni collegate.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Gli unici utenti aziendali autorizzati ad aggiornare una dimensione abilitata per la scrittura sono quelli inclusi nei ruoli del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a cui sono state concesse le autorizzazioni di lettura/scrittura nella dimensione. Per ogni ruolo, è possibile impostare i membri che possono o meno essere aggiornati. Affinché gli utenti aziendali possano aggiornare le dimensioni abilitate per la scrittura, è necessario che le applicazioni client utilizzate supportino questa funzionalità. Per tali utenti, è necessario che la dimensione abilitata per la scrittura sia inclusa in un cubo elaborato dopo l'ultima modifica della dimensione. Per altre informazioni, vedere [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
  Gli utenti e i gruppi inclusi nel ruolo Administrators possono aggiornare i membri degli attributi di una dimensione abilitata per la scrittura, anche se la dimensione non è inclusa in un cubo.  

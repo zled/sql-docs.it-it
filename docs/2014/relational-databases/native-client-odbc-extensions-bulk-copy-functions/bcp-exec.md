@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_exec
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_exec function
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a470efbed24dd15b4ebf45f2b5db8000f2e7e947
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1d5ce458ea8f5874620ea0561eeea5c6ff8e56bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407760"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214221"
 ---
 # <a name="bcpexec"></a>bcp_exec
   Esegue una copia bulk completa di dati tra una tabella di database e un file utente.  
@@ -62,7 +59,7 @@ pnRowsProcessed
   
  **bcp_exec** è l'unica funzione di copia che probabilmente continuerà a rimanere in attesa per un periodo di tempo in blocco. è anche l'unica funzione di copia bulk che supporta la modalità asincrona. Per impostare la modalità asincrona, utilizzare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) per impostare SQL_ATTR_ASYNC_ENABLE su SQL_ASYNC_ENABLE_ON prima di chiamare **bcp_exec**. Per testare il completamento, chiamare **bcp_exec** con gli stessi parametri. Se la copia bulk non ha ancora completato, **bcp_exec** restituisce SUCCEED_ASYNC. Restituisce inoltre nel *pnRowsProcessed* un conteggio dello stato del numero di righe che sono stati inviati al server. Il commit delle righe inviate al server non viene eseguito fino a quando non viene raggiunta la fine di un batch.  
   
- Per informazioni su una sostanziale modifica nella funzione di copia bulk a partire [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], vedere [esecuzione di operazioni di copia Bulk &#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Per informazioni su una sostanziale modifica inizio la copia di massa in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], vedere [esecuzione di operazioni di copia di massa &#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare **bcp_exec**:  

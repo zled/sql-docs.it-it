@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server Management Studio], source controls
 - source controls [SQL Server Management Studio], connections
 ms.assetid: 538e3beb-f99c-4095-bd65-6413e872d26e
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cacfeef1468a0aec47ecd8e0b27a432bb689d1ef
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812987"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222821"
 ---
 # <a name="change-source-control-connections"></a>Modifica delle connessioni del controllo del codice sorgente
   La prima volta che viene aggiunta o aperta una soluzione dal controllo del codice sorgente, il provider del controllo crea un'associazione tra la cartella radice della directory della soluzione locale e la cartella corrispondente del server.  

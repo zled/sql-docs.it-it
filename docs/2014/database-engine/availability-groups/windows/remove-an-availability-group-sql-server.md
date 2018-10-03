@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.deleteag.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], removing
 - Availability Groups [SQL Server], dropping
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
-caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9ff8c441e73f24fee00a5c599ad3a1d8223b3fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c815ff9b1c5bb4fb13f622aab2624be9db9f8b76
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219821"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219751"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>Rimuovere un gruppo di disponibilità (SQL Server)
   In questo argomento si illustra come eliminare (rimuovere) un gruppo di disponibilità AlwaysOn utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se un'istanza del server che ospita una delle repliche di disponibilità è offline quando si elimina un gruppo di disponibilità, la replica di disponibilità locale verrà eliminata dall'istanza del server quando torna online. La rimozione di un gruppo di disponibilità comporta l'eliminazione di qualsiasi listener del gruppo di disponibilità associato.  

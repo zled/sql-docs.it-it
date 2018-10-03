@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
-caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 561c02100785ba1b56b6498fdd0f8fd3b3b6241f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae13b028a740469a2acc4957038d7c2a2f5a6fc6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197931"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213891"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Creare un endpoint del mirroring del database per l'autenticazione Windows (Transact-SQL)
   In questo argomento si illustra come creare un endpoint del mirroring del database in cui si utilizza l'autenticazione di Windows in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per supportare il mirroring del database o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario un endpoint del mirroring del database. In un'istanza del server può essere incluso uno solo di questo tipo di endpoint, che a sua volta dispone di una sola porta. Un endpoint del mirroring del database può utilizzare qualsiasi porta disponibile nel sistema locale al momento della creazione dell'endpoint. Tutte le sessioni di mirroring del database in un'istanza del server sono in attesa su quella porta, che viene utilizzata anche per tutte le connessioni in ingresso per il mirroring del database.  

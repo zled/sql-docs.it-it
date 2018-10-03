@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.mapping.f1
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2ef3b40128d46617eed7bae707c0bfdae37416c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b17a415b2ba28237453ac94f12f8706f6b4d7d20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266617"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212598"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>Editor destinazione elaborazione partizione (pagina Mapping)
   Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione elaborazione partizione** per eseguire il mapping tra le colonne di input e le colonne di partizione.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d6d757969acb1509641a74cc1c528bc717e01bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e68be637511fb00774d35b564b0e5ec5979b60d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323941"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228241"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>Esercitazione: Preparazione del server per la replica
   È importante pianificare la sicurezza prima di configurare la topologia di replica. In questa esercitazione viene illustrato come proteggere la topologia di replica e come configurare la distribuzione, ovvero il primo passaggio nella replica dei dati. È necessario completare questa esercitazione prima delle altre esercitazioni sulla replica.  
@@ -37,7 +34,7 @@ ms.locfileid: "37323941"
   
  Per utilizzare l'esercitazione è necessario che nel sistema siano installati i componenti seguenti:  
   
--   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita.  
+-   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita.  
   
  **Tempo previsto per il completamento di questa esercitazione: 30 minuti.**  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c92fc27326167977f5fcab323e3b885f9ede635
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb95e8bf7237fcf7ebae4321d14de690ebd0b2c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312711"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142711"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtri per i modelli di data mining (Analysis Services - Data mining)
   I filtri dei modelli basati sui dati consentono di creare modelli di data mining che utilizzano subset di dati in una struttura di data mining. I filtri garantiscono grande flessibilità per la progettazione di strutture di data mining e origini dati, poiché è possibile creare una sola struttura di data mining sulla base di una vista origine dati completa. Sarà quindi possibile creare filtri per utilizzare solo una parte dei dati per il training e il testing di una varietà di modelli, anziché compilare una struttura diversa e i relativi modelli per ciascun subset di dati.  

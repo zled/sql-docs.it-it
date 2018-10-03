@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], dimensions
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - dimensions [Analysis Services], standard
 - standard dimensions [Analysis Services]
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
-caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ff912d4c828efec8bacd163ae6b47f980a94beb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e71f45689554a8f45f492eb974815935d112e0e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319251"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226621"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Creare una dimensione utilizzando una tabella esistente
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile usare Creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione da una tabella esistente. A questo scopo selezionare l'opzione **Usa una tabella esistente** nella pagina **Seleziona metodo di creazione** della procedura guidata. L'utilizzo di questa opzione fa sì che la struttura della dimensione venga creata in base alle tabelle della dimensione, alle relative colonne e a tutte le relazioni tra colonne presenti in una vista origine dati esistente. La procedura guidata campiona i dati nella tabella di origine e nelle tabelle correlate. Usa questi dati per definire le colonne attributo basate sulle colonne nelle tabelle delle dimensioni, nonché per definire le gerarchie di attributi, denominate gerarchie *definite dall'utente* . È possibile utilizzare Progettazione dimensioni al termine della Creazione guidata dimensione per aggiungere, rimuovere e configurare attributi e gerarchie nella dimensione.  

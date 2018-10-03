@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 177e0cda681e81082e5b52fc324880f04a5d608c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c04ffa97900e7fd392b5c8b53a2ba7cdb0c5d8dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221531"
 ---
 # <a name="ado-net-custom-properties"></a>Proprietà personalizzate ADO NET
   **Proprietà personalizzate delle origini**  
@@ -46,8 +43,8 @@ ms.locfileid: "37195632"
   
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
-|BatchSize|Valore intero|Numero di righe in un batch inviato al server. Il valore **0** indica che le dimensioni del batch corrispondono alle dimensioni del buffer interno. Il valore predefinito di questa proprietà è **0**.|  
-|CommandTimeout|Valore intero|Numero massimo di secondi durante i quali è possibile eseguire il comando SQL prima del timeout. Il valore **0** corrisponde a un intervallo infinito. Il valore predefinito di questa proprietà è **0**.|  
+|BatchSize|Integer|Numero di righe in un batch inviato al server. Il valore **0** indica che le dimensioni del batch corrispondono alle dimensioni del buffer interno. Il valore predefinito di questa proprietà è **0**.|  
+|CommandTimeout|Integer|Numero massimo di secondi durante i quali è possibile eseguire il comando SQL prima del timeout. Il valore **0** corrisponde a un intervallo infinito. Il valore predefinito di questa proprietà è **0**.|  
 |TableOrViewName|String|Nome della tabella o vista di destinazione.|  
   
  Per altre informazioni, vedere [Destinazione ADO NET](ado-net-destination.md).  

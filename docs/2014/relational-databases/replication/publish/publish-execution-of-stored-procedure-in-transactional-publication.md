@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
 - stored procedures [SQL Server replication], publishing
 ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55cfa244fa0d4ac5716a2978487b5b4be74ad257
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ff370a48d3f73f9b451eb90e69b5ce978d2b741c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274817"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228731"
 ---
 # <a name="publish-the-execution-of-a-stored-procedure-in-a-transactional-publication-sql-server-management-studio"></a>Pubblicazione dell'esecuzione di una stored procedure in una pubblicazione transazionale (SQL Server Management Studio)
   Specificare che nella finestra di dialogo **Proprietà articolo - \<Articolo>** deve essere pubblicata l'esecuzione di una stored procedure, anziché la sola definizione. Questa finestra di dialogo è disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  

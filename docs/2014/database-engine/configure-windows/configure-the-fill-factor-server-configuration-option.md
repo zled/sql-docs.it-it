@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - fill factor option [SQL Server]
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0aca71264624f9f4c874c334f4d3558de6e97ee0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b9c672f1e7add8fe9b9f99032bc772b6fed4352a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243511"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219191"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>Configurare l'opzione di configurazione del server fill factor
   In questo argomento si illustra come configurare l'opzione di configurazione del server **fill factor** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il fattore di riempimento viene fornito per ottimizzare l'archiviazione dati e le prestazioni degli indici. Quando si crea o si ricompila un indice, il valore del fattore di riempimento consente di determinare la percentuale di spazio in ogni pagina al livello foglia da riempire di dati, riservando il resto come spazio libero per la crescita futura. Per altre informazioni, vedere [Specificare un fattore di riempimento per un indice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  

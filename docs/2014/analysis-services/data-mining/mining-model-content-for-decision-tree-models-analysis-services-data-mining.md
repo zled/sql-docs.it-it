@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae76bbfc4e85e0f01e384849bf6b67e52f4c574f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dbd89984e64ac3ca37c3ac9ec31e19191606dc9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217571"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. Per una spiegazione del modello di data mining applicabile a tutti i tipi di modello, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). È importante ricordare che l'algoritmo Microsoft Decision Trees è un algoritmo ibrido che consente di creare modelli con funzioni molto diverse: un albero delle decisioni può rappresentare associazioni, regole o persino regressione lineare. La struttura dell'albero è sostanzialmente la stessa, ma la modalità di interpretazione delle informazioni dipenderà dallo scopo per il quale è stato creato il modello.  

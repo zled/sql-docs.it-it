@@ -5,8 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], permissions
@@ -14,12 +12,12 @@ ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e811af7aa55fc6ced619d1a69347867bf2aef05
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79abbfe8d9c3fd8d88c883e5fbbdb198f9de4e1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150402"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223887"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>Concedere autorizzazioni per una stored procedure
   In questo argomento viene illustrato come concedere autorizzazioni per una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le autorizzazioni possono essere concesse a un utente, a un ruolo del database o a un ruolo applicazione nel database.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 9594eca6b955081be5689862d96d1c9d09a6a664
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d02f24574d6a49edcdbeca2ccfc6fea95893356
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202661"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224211"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generazione di feed di dati dai report (Generatore report e SSRS)
   Il [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] estensione per il rendering Atom genera un documento di servizio Atom che elenca i feed di dati disponibili in un report e i dati di feed di dati delle aree in un report. Questa estensione viene usata per generare feed di dati conformi ad Atom, leggibili e scambiabili con applicazioni che possono usare i feed di dati generati dai report. Ad esempio è possibile usare l'estensione per il rendering Atom per generare feed di dati che, in seguito, possono essere usati nel client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -39,7 +36,7 @@ ms.locfileid: "37202661"
 ##  <a name="ReportDataAsDataFeeds"></a> Report come feed di dati  
  È possibile esportare un report di produzione come un feed di dati oppure creare un report il cui scopo principale è quello di fornire dati alle applicazioni, sotto forma di feed di dati. L'utilizzo dei report come feed di dati rappresenta un ulteriore modo per fornire dati alle applicazioni quando i dati non sono facilmente accessibili tramite i provider di dati client o quando si preferisce nascondere la complessità dell'origine dati e rendere più semplice l'utilizzo dei dati. Se si utilizzano i dati del report come feed di dati è inoltre possibile avvalersi delle caratteristiche di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ad esempio Gestione report, sicurezza, pianificazione e snapshot del report per gestire i report che forniscono i feed di dati.  
   
- Per ottenere il massimo dall'estensione per il rendering Atom, è necessario capire il modo in cui viene eseguito il rendering del report in feed di dati. Se si usano report esistenti, risulta utile essere in grado di stimare i feed di dati che saranno generati dai report, mentre se i report vengono scritti per essere specificatamente usati come feed di dati, la possibilità di includere i dati e ottimizzare il layout del report per aumentare l'utilità dei feed di dati risulta vantaggiosa.  
+ Per ottenere il massimo dall'estensione per il rendering Atom, è necessario capire il modo in cui viene eseguito il rendering del report in feed di dati. Se si utilizzano report esistenti, risulta utile essere in grado di stimare i feed di dati che saranno generati dai report, mentre se i report vengono scritti per essere specificatamente utilizzati come feed di dati, la possibilità di includere i dati e ottimizzare il layout del report per aumentare l'utilità dei feed di dati risulta vantaggiosa.  
   
  Per altre informazioni, vedere [Generare i feed di dati da un report &#40;Generatore report e SSRS&#41;](generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
@@ -50,13 +47,13 @@ ms.locfileid: "37202661"
   
  Quando si esegue il rendering dei dati del report tramite l'estensione per il rendering Atom, il documento di servizio Atom elenca i feed di dati disponibili per un report. Nel documento è elencato almeno un feed di dati per ogni area dati nel report. Tabelle e misuratori generano solo un feed di dati ognuno, mentre matrici, elenchi e grafici potrebbero generarne di più a seconda dei dati che visualizzano.  
   
- Nel diagramma seguente viene mostrato un report che usa due tabelle e un grafico.  
+ Nel diagramma seguente viene mostrato un report che utilizza due tabelle e un grafico.  
   
  ![RS_Atom_TableAndChartDataFeeds](../media/rs-atom-tableandchartdatafeeds.gif "RS_Atom_TableAndChartDataFeeds")  
   
  Il documento di servizio Atom generato da questo report include tre feed di dati, uno per ogni tabella e uno per il grafico.  
   
- Le aree dati della matrice potrebbero disporre di più di un feed di dati, a seconda della struttura della matrice. Nel diagramma seguente viene mostrato un report che usa una matrice che genera due feed di dati.  
+ Le aree dati della matrice potrebbero disporre di più di un feed di dati, a seconda della struttura della matrice. Nel diagramma seguente viene mostrato un report che utilizza una matrice che genera due feed di dati.  
   
  ![RS_Atom_PeerDynamicColumns](../media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
@@ -85,7 +82,7 @@ ms.locfileid: "37202661"
 ### <a name="data-section"></a>Sezione di dati  
  La sezione di dati dei feed di dati contiene un elemento <`entry`> per ogni riga nel set di righe bidimensionale generato dall'estensione per il rendering Atom.  
   
- Nel diagramma seguente viene mostrato un report che usa gruppi e totali.  
+ Nel diagramma seguente viene mostrato un report che utilizza gruppi e totali.  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
@@ -112,7 +109,7 @@ ms.locfileid: "37202661"
  `</entry>`  
   
 ### <a name="working-with-data-feeds"></a>Utilizzo dei feed di dati  
- Tutti i feed di dati generati dal report includono gli elementi del report che si trovano nell'ambito dell'elemento padre dell'area dati che genera i feed di dati. , Immaginare un report che dispone di diverse tabelle e di un grafico. Le caselle di testo nel corpo del report forniscono il testo descrittivo di ogni area dati. Ogni voce di ciascun feed di dati generato dal report include il valore della casella di testo. Ad esempio se il testo è "Il grafico visualizza le medie delle vendite mensili per area di vendita", tutti e tre i feed di dati includono questo testo in ogni riga.  
+ Tutti i feed di dati generati dal report includono gli elementi del report che si trovano nell'ambito dell'elemento padre dell'area dati che genera i feed di dati. . Immaginare un report che dispone di diverse tabelle e di un grafico. Le caselle di testo nel corpo del report forniscono il testo descrittivo di ogni area dati. Ogni voce di ciascun feed di dati generato dal report include il valore della casella di testo. Ad esempio se il testo è "Il grafico visualizza le medie delle vendite mensili per area di vendita", tutti e tre i feed di dati includono questo testo in ogni riga.  
   
  Se il layout del report include le relazioni di dati gerarchiche, ad esempio le aree dati nidificate, tali relazioni sono incluse nel set di righe bidimensionale dei dati del report.  
   
@@ -120,7 +117,7 @@ ms.locfileid: "37202661"
   
  Quando l'estensione per il rendering Atom crea il documento di servizio Atom, viene generato un identificatore univoco per il feed di dati che può essere usato nell'URL per visualizzare il contenuto del feed di dati. Il documento di servizio Atom di esempio, illustrato in precedenza, include l'URL http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1". L'URL identifica il report (Product Sales Summary), il formato di rendering Atom (ATOM) e il nome del feed di dati (xAx0x1).  
   
- I nomi degli elementi del report vengono impostati in modo predefinito sui nomi degli elementi del linguaggio RDL degli elementi del report e, spesso, non sono intuitivi o facili da ricordare. Ad esempio, il nome predefinito della prima matrice presente in un report è Tablix 1. I feed di dati usano questi nomi.  
+ I nomi degli elementi del report vengono impostati in modo predefinito sui nomi degli elementi del linguaggio RDL degli elementi del report e, spesso, non sono intuitivi o facili da ricordare. Ad esempio, il nome predefinito della prima matrice presente in un report è Tablix 1. I feed di dati utilizzano questi nomi.  
   
  Per rendere più semplice l'uso del feed di dati, è possibile sfruttare la proprietà DataElementName dell'area dati per fornire nomi descrittivi. Se si specifica un valore per DataElementName sottoelemento del feed di dati <`d`> verrà utilizzare è invece il nome dell'area dati predefinito. Ad esempio, se il nome predefinito di un area dati è Tablix1 e DataElementName impostato SalesByTerritoryYear il <`d`> nei dati del feed userà SalesByTerritoryYear. Se le aree dati dispongono di due feed di dati come il report matrice descritto in precedenza, i nomi usati nei feed di dati sono SalesByTerritoryYear _Territory e SalesByTerritoryYear _Year.  
   
@@ -180,7 +177,7 @@ ms.locfileid: "37202661"
 |----------|------------------------|  
 |Tabella|Il rendering viene eseguito mediante l'espansione della tabella e la creazione di una riga e una colonna per ogni riga e colonna al livello di dettaglio inferiore. Per le righe e le colonne di subtotali non sono disponibili intestazioni. I report drill-through non sono supportati.|  
 |Matrice|Il rendering viene eseguito mediante l'espansione della matrice e la creazione di una riga e una colonna per ogni riga e colonna al livello di dettaglio inferiore. Per le righe e le colonne di subtotali non sono disponibili intestazioni.|  
-|Elenco|Viene eseguito il rendering di un record per ogni riga di dettagli o istanza nell'elenco.|  
+|List|Viene eseguito il rendering di un record per ogni riga di dettagli o istanza nell'elenco.|  
 |Sottoreport|L'elemento padre viene ripetuto per ogni istanza del contenuto.|  
 |Grafico|Viene eseguito il rendering di un record con tutte le etichette del grafico per ogni valore del grafico. Le etichette delle serie e delle categorie nelle gerarchie sono rese bidimensionali e incluse nella riga per un valore del grafico.|  
 |Barra dei dati|Viene eseguito il rendering come grafico. In genere, in una barra dei dati non sono incluse gerarchie o etichette.|  

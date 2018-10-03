@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AttributeAllMemberName Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AttributeAllMemberName element
 ms.assetid: 5ede46a7-d8b0-40be-98d7-b01047b27d2e
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 425e9c092dff8cc3c303672b6bfb1e2b3a8096ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c5d601864d3ceef1af243f819de8d7ef8466e91
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208051"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218771"
 ---
 # <a name="attributeallmembername-element-assl"></a>Elemento AttributeAllMemberName (ASSL)
   Contiene la didascalia, specificata nella lingua predefinita, del membro Totale della dimensione.  
@@ -51,7 +48,7 @@ ms.locfileid: "37208051"
 |Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String|  
-|Valore predefinito|None|  
+|Valore predefinito|Nessuno|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -59,7 +56,7 @@ ms.locfileid: "37208051"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[Dimension](../objects/dimension-element-assl.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Note  
  L'elemento che corrisponde al padre di `AttributeAllMemberName` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  

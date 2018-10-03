@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
-caps.latest.revision: 36
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54c66973a1cc0ca7f024a696902f694b45778a9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31c9372674ab439c3435515c13f1d76518771328
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182818"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219271"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>Mapping di SQL-DMO agli oggetti SMO
   SQL Distributed Management Objects (SQL-DMO) non è più incluso in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. È necessario convertire le applicazioni SQL-DMO per utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). Il modello a oggetti SMO è analogo a SQL-DMO e pertanto la maggior parte degli oggetti SQL-DMO esegue il mapping a un oggetto con lo stesso nome in SMO. Nel passaggio a SMO alcuni oggetti SQL-DMO sono stati tuttavia modificati o eliminati. In questa tabella vengono elencate le operazioni consigliate da eseguire per gli oggetti SQL-DMO non convertiti direttamente in SMO.  
@@ -34,7 +31,7 @@ ms.locfileid: "37182818"
 |Oggetto BackupDevice|Oggetti <xref:Microsoft.SqlServer.Management.Smo.BackupDevice>|  
 |Oggetto BulkCopy e oggetto BulkCopy2|Rimosso e sostituito dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Transfer>.|  
 |Oggetto Category|Spostato nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Smo.Agent>. Sostituito dagli oggetti <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCategory>, <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCategory>, <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCategory>.|  
-|Oggetto Check|<xref:Microsoft.SqlServer.Management.Smo.Check> oggetto|  
+|Oggetto Check|<xref:Microsoft.SqlServer.Management.Smo.Check> Oggetto|  
 |Oggetto Column e oggetto Column2|<xref:Microsoft.SqlServer.Management.Smo.Column> oggetto.|  
 |Oggetto Configuration|Oggetti <xref:Microsoft.SqlServer.Management.Smo.Configuration> e <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase>.|  
 |Oggetto ConfigValue|<xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> oggetto.|  
@@ -51,7 +48,7 @@ ms.locfileid: "37182818"
 |Oggetto DRIDefault|Spostato nell'oggetto <xref:Microsoft.SqlServer.Management.Smo.ScriptingOptions>.|  
 |Oggetto FileGroup e oggetto FileGroup2|<xref:Microsoft.SqlServer.Management.Smo.FileGroup> oggetto.|  
 |Oggetto FullTextCatalog e oggetto FullTextCatalog2|Oggetti <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> e <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex>.|  
-|Oggetto Index e oggetto Index2|<xref:Microsoft.SqlServer.Management.Smo.Index> oggetto|  
+|Oggetto Index e oggetto Index2|<xref:Microsoft.SqlServer.Management.Smo.Index> Oggetto|  
 |Oggetto IntegratedSecurity|Funzionalità spostata nell'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Common>.|  
 |Oggetto Job|<xref:Microsoft.SqlServer.Management.Smo.Agent.Job> oggetto. Spostato nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Smo.Agent>.|  
 |Oggetto JobFilter|<xref:Microsoft.SqlServer.Management.Smo.Agent.JobFilter> oggetto. Spostato nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Smo.Agent>.|  
@@ -87,7 +84,7 @@ ms.locfileid: "37182818"
 |Oggetto ReplicationStoredProcedure e oggetto ReplicationStoredProcedure2|<xref:Microsoft.SqlServer.Replication.ReplicationStoredProcedure> oggetto. Spostato nello spazio dei nomi <xref:Microsoft.SqlServer.Replication>.|  
 |Oggetto ReplicationTable e oggetto ReplicationTable2|<xref:Microsoft.SqlServer.Replication.ReplicationTable> oggetto. Spostato nello spazio dei nomi <xref:Microsoft.SqlServer.Replication>.|  
 |Oggetto Restore e oggetto Restore2|Oggetti <xref:Microsoft.SqlServer.Management.Smo.Restore> e <xref:Microsoft.SqlServer.Management.Smo.BackupRestoreBase>.|  
-|Oggetto Rule e oggetto Rule2|<xref:Microsoft.SqlServer.Management.Smo.Rule> oggetto|  
+|Oggetto Rule e oggetto Rule2|<xref:Microsoft.SqlServer.Management.Smo.Rule> Oggetto|  
 |Oggetto Schedule|Spostato nello spazio dei nomi <xref:Microsoft.SqlServer.Replication>.|  
 |Oggetto ServerGroup|Rimosso.|  
 |Oggetto ServerRole|<xref:Microsoft.SqlServer.Management.Smo.ServerRole> oggetto.|  

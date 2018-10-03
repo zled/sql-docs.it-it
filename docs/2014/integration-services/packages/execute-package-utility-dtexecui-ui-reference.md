@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtexecui.general.f1
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 215634d6a42c25870c4cac476905f19386df69ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45fe288818c6234b61226311226cdbc6a471146b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256847"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217431"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Riferimento all'interfaccia utente dell'utilità di esecuzione pacchetti (DtExecUI)
   Utilizzare l' **Utilità di esecuzione pacchetti** per eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tramite l'utilità è possibile eseguire i pacchetti archiviati in una delle tre posizioni seguenti: database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system. Questa interfaccia utente, che può essere aperto da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure digitando `dtexecui` un prompt dei comandi, è un'alternativa all'esecuzione di pacchetti tramite il **DTExec** strumento del prompt dei comandi.  
@@ -311,7 +308,7 @@ ms.locfileid: "37256847"
  **Percorso proprietà**  
  Consente di immettere il percorso della proprietà. La sintassi del percorso usa una barra rovesciata (\\) per indicare che l'elemento seguente è un contenitore, il punto (.) per indicare che l'elemento seguente è una proprietà e le parentesi per indicare un membro di una raccolta. Il membro può essere identificato tramite il relativo indice o nome. Ad esempio, il percorso della proprietà di una variabile di pacchetto è \Pacchetto.Variabili[Variabile].Valore.  
   
- **Value**  
+ **Valore**  
  Consente di immettere il valore della proprietà.  
   
  **Rimuovi**  

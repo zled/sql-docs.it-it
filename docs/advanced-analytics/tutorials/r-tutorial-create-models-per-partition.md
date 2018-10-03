@@ -1,20 +1,21 @@
 ---
 title: Esercitazione sulla creazione, training e valutazione dei modelli basati su partizioni in R (SQL Server Machine Learning Services) | Microsoft Docs
+description: Informazioni su come modellare, eseguire il training e utilizzare dati partizionati che viene creati in modo dinamico quando si usa la funzionalità di modellazione delle minacce basato sulla partizione di machine learning di SQL Server.
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51fd17b10ed2fde9d8412c6c47f868458edf7d5c
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 3289e9f7493b7e5a6377de3491bd5726d557fdf7
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715298"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232565"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Esercitazione: Creare modelli basati su partizioni in R in SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -29,7 +30,7 @@ Modellazione delle minacce basato sulla partizione viene abilitata tramite due n
 In questa esercitazione, illustrato modellazione basata sulla partizione usando il classici dati di esempio relativi ai taxi di NYC e lo script R. La colonna di partizione è il metodo di pagamento.
 
 > [!div class="checklist"]
-> * Partizione in base a una colonna payment_type. Valori in questi dati di segmento di colonna, una partizione per ogni tipo di pagamento.
+> * Le partizioni sono basate sui tipi di pagamento (5).
 > * Creare e il training dei modelli in ogni partizione e archiviare gli oggetti nel database.
 > * Stimare la probabilità di risultati di suggerimento su ogni modello di partizione, usando dati di esempio sono riservati a tale scopo.
 
@@ -37,21 +38,17 @@ In questa esercitazione, illustrato modellazione basata sulla partizione usando 
  
 Per completare questa esercitazione, è necessario quanto segue:
 
-+ Istanza del motore del database SQL Server 2019, con la funzionalità R e Machine Learning Services
-+ Dati di esempio
-+ Uno strumento per l'esecuzione di query T-SQL, ad esempio SQL Server Management Studio
++ Risorse di sistema sufficienti. Il set di dati è grande e operazioni di training sono a elevato utilizzo di risorse. Se possibile, usare un sistema con almeno 8 GB di RAM. In alternativa, è possibile usare set di dati più piccoli per ovviare i limiti di risorse. Le istruzioni per ridurre il set di dati sono inline. 
 
-### <a name="system-resources"></a>Risorse di sistema
++ Uno strumento per T-SQL, esecuzione della query, ad esempio [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Il set di dati è grande e operazioni di training sono a elevato utilizzo di risorse. Se possibile, usare un sistema con almeno 8 GB di RAM. In alternativa, è possibile usare set di dati più piccoli per ovviare i limiti di risorse. Le istruzioni per ridurre il set di dati sono inline. 
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), che è possibile [scaricare e ripristinare](sqldev-download-the-sample-data.md) all'istanza del motore di database locale. Dimensioni del file sono di circa 90 MB.
 
-### <a name="sql-server-database-engine-with-machine-learning-services"></a>Motore di database di SQL Server con servizi di Machine Learning
++ SQL Server 2019 anteprima istanza motore di database, con l'integrazione di servizi di Machine Learning e R.
 
-SQL Server 2019 CTP 2.0 o versione successiva, con servizi di Machine Learning installato e configurato, è necessario. Versione del server in Management Studio è possibile controllare eseguendo `SELECT @@Version` come una query T-SQL. Output deve essere "Microsoft SQL Server (CTP 2.0) - 2019 15.0.x".
+Controllo versione eseguendo **`SELECT @@Version`** come una query T-SQL in uno strumento di query. Output deve essere "Microsoft SQL Server (CTP 2.0) - 2019 15.0.x".
 
-### <a name="r-packages"></a>Pacchetti R
-
-Questa esercitazione Usa R installato con servizi di Machine Learning. È possibile verificare l'installazione di R, restituendo un elenco formattato in modo corretto di tutti i pacchetti R attualmente installato con l'istanza del motore di database:
+Controllo della disponibilità dei pacchetti di R, restituendo un elenco formattato in modo corretto di tutti i pacchetti R attualmente installato con l'istanza del motore di database:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -64,18 +61,6 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N''
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
-
-### <a name="tools-for-query-execution"></a>Strumenti per l'esecuzione di query
-
-È possibile [scaricare e installare SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), o usare qualsiasi strumento che si connette a un database relazionale e viene eseguito lo script T-SQL. Assicurarsi che sia possibile connettersi a un'istanza di motore di database che dispone di servizi di Machine Learning.
-
-### <a name="sample-data"></a>Dati di esempio
-
-I dati provengono dal [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) set di dati pubblico. 
-
-+ Scaricare il [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak ) file di backup del database e ripristinarlo nell'istanza del motore di database.
-
-Il nome di file di database deve essere **NYCTaxi_sample** se si desidera eseguire gli script seguenti senza modifiche.
 
 ## <a name="connect-to-the-database"></a>Connettersi al database
 

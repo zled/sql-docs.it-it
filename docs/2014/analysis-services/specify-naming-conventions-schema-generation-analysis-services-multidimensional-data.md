@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.namingconventions.f1
 ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a984b84c485c24302288eb16747cb3a964794156
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151532"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226251"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Impostazione convenzioni di denominazione (Generazione guidata schema) (Analysis Services - Dati multidimensionali)
   Utilizzare la pagina **Impostazione convenzioni di denominazione** per definire le convenzioni di denominazione utilizzate in Generazione guidata schema per la creazione di oggetti dello schema.  
@@ -40,7 +37,7 @@ ms.locfileid: "37151532"
 |**Suffisso proprietà rollup personalizzato**|Consente di specificare la stringa da aggiungere al nome di ogni colonna di proprietà rollup. Il valore predefinito è **CustomRollupProperties**.|  
 |**Suffisso operatore unario**|Consente di specificare la stringa da aggiungere al nome di ogni colonna di operatore unario. Il valore predefinito è **UnaryOperator**.|  
   
- **Value**  
+ **Valore**  
  Consente di indicare un valore per l'opzione specificata in **Opzione** da usare per la generazione dello schema.  
   
 ## <a name="see-also"></a>Vedere anche  

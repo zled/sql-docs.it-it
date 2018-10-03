@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - public keys [Reporting Services]
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 95ba14d23db8c606e66db48b5be5b865879de7c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16a1851a46b6602bc9d92d5c7e0111ece8701d43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187978"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222511"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>Configurare e gestire chiavi di crittografia (Gestione configurazione SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa le chiavi di crittografia per proteggere le credenziali e le informazioni di connessione archiviate in un database del server di report. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]supporta la crittografia tramite una combinazione di chiavi pubbliche, private e simmetriche utilizzate per proteggere dati sensibili. La chiave simmetrica viene creata durante l'inizializzazione del server di report al momento dell'installazione o della configurazione dello stesso e viene utilizzata dal server di report per crittografare dati sensibili archiviati in tale server. Le chiavi pubblica e privata vengono create dal sistema operativo e sono utilizzate per proteggere la chiave simmetrica. Per ogni istanza del server di report che contiene dati sensibili in un database del server di report viene creata una coppia di chiavi pubblica e privata.  

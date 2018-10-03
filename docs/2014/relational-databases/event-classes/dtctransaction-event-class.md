@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - DTCTransaction event class
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08472e53897bf28b872080cb596780b82216f514
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fcd118e2690414c868f105c50e1c4b92c3ef9af5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163052"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228544"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction - classe di evento
   Usare la classe di evento **DTCTransaction** per monitorare lo stato delle transazioni di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] coordinate con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (DTC). Sono incluse le transazioni che interessano due o più database nella stessa istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]e le transazioni distribuite che interessano due o più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

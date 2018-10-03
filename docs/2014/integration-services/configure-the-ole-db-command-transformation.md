@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Integration Services]
 - OLE DB Command transformation
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
-caps.latest.revision: 24
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a29642a667d4d22ecf5c7f6d3de0848b4725df91
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e6926eae9c92a80e271c786a325e94f58b6ab647
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254483"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229771"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>Configurazione della trasformazione Comando OLE DB
   È possibile aggiungere e configurare una trasformazione Comando OLE DB solo se il pacchetto include almeno un'attività Flusso di dati e un'origine, quale un'origine file flat o un'origine OLE DB. Questa trasformazione viene in genere utilizzata per l'esecuzione di query con parametri.  

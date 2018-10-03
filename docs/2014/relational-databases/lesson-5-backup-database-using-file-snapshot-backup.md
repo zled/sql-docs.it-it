@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0412dad97550d5a9aaf601488559ef7c91e1880a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78674b36b395aa50677e17fa4344690c988f5715
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207061"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215131"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lezione 6: Eseguire la migrazione di un database da un computer di origine locale a un computer di destinazione in Microsoft Azure
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lezione 6: eseguire la migrazione da un computer di origine locale a un computer di destinazione in Windows Azure
   In questa lezione si presuppone che si disponga già di un'altra istanza di SQL Server che potrebbe trovarsi in un altro computer locale o in una macchina virtuale in Windows Azure. Per informazioni su come creare una macchina virtuale SQL Server in Windows Azure, vedere la pagina relativa al [provisioning di una macchina virtuale SQL Server in Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Dopo aver eseguito il provisioning di una macchina virtuale SQL Server in Windows Azure, verificare che sia possibile connettersi a un'istanza di SQL Server in questa macchina virtuale tramite SQL Server Management Studio presente in un altro computer.  
   
  Per questa lezione si presuppone che l'utente abbia già completato i passaggi seguenti:  

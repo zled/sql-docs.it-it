@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], size
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - tempdb [SQL Server], size
 - autogrow [SQL Server]
 ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 33c94b0ac9145e5d36a9c744a3531155ae64b152
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4d247156e4e37786e5822ed0ce3397c1cad7e64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220501"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Verificare che l'aumento di dimensioni automatico sia attivato per tutti i file di dati e di log durante il processo di aggiornamento
   Sono stati rilevati file di dati o di log per cui non è impostato l'aumento automatico delle dimensioni. Funzionalità nuove e migliorate richiedono ulteriore spazio su disco per i database utente e la **tempdb** database di sistema. Per assicurare delle risorse possano aumentare le dimensioni durante l'aggiornamento e successive operazioni di produzione, è consigliabile impostare autogrow su ON per tutti i file di log e dati utente e la **tempdb** i file di dati e di log prima dell'aggiornamento.  
@@ -35,7 +32,7 @@ ms.locfileid: "37181468"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- **File di dati**  
+ **file di dati**  
   
  Nella tabella seguente sono elencate le modifiche apportate alle caratteristiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che comportano un aumento dei requisiti di spazio su disco per i file di dati definiti dall'utente.  
   

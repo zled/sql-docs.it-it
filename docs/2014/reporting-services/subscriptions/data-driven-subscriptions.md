@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 423a893fc3586334464d50357626c319d9a27ffe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f33cf9021864e141b51c10d357fd53f379b3f567
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270317"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217390"
 ---
-# <a name="data-driven-subscriptions"></a>sottoscrizioni guidate dai dati
+# <a name="data-driven-subscriptions"></a>Sottoscrizioni guidate dai dati
   Una sottoscrizione guidata dai dati consente di utilizzare i dati di sottoscrizione dinamici recuperati da un'origine dei dati esterna in fase di esecuzione. In una sottoscrizione guidata dai dati è inoltre possibile utilizzare testo statico e valori predefiniti specificati al momento della definizione della sottoscrizione. È possibile utilizzare le sottoscrizioni guidate dai dati per eseguire le operazioni seguenti:  
   
 -   Distribuire un report a un elenco dinamico di Sottoscrittori. È possibile, ad esempio, utilizzare sottoscrizioni guidate dai dati per distribuire un report in una grande organizzazione nella quale i sottoscrittori cambiano da un mese all'altro oppure utilizzare altri criteri per determinare l'appartenenza a un gruppo da un gruppo di utenti esistente.  
