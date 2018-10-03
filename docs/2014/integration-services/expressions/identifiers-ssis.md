@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - regular identifiers [Integration Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 322a91c77eaac5433cada0cfef056e1688020dc6
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bfcd429eeb6979fea8ba889212b5e56a7afee887
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154831"
 ---
 # <a name="identifiers-ssis"></a>Identificatori (SSIS)
   Nelle espressioni gli identificatori sono colonne e variabili disponibili per l'operazione. Le espressioni possono utilizzare identificatori regolari e qualificati.  
@@ -41,7 +38,7 @@ ms.locfileid: "39084003"
   
 -   Il primo carattere del nome deve essere una lettera, come definito dallo standard Unicode 2.0, o un carattere di sottolineatura (_).  
   
--   I caratteri successivi possono includere lettere o numeri, come definito dallo Standard Unicode 2.0, il carattere di sottolineatura (_), \@, $ e & caratteri.  
+-   I caratteri successivi possono includere lettere o numeri, come definito dallo standard Unicode 2.0, il carattere di sottolineatura (_) e i caratteri \@, $ e #.  
   
 > [!IMPORTANT]  
 >  Gli identificatori regolari non possono contenere spazi e caratteri speciali diversi da quelli indicati. Se si desidera includere spazi e caratteri speciali, sarà necessario utilizzare un identificatore qualificato anziché un identificatore regolare.  
@@ -89,15 +86,15 @@ ms.locfileid: "39084003"
 >  Se nella notazione con punto entrambi gli elementi sono racchiusi da una coppia di parentesi quadre, l'analizzatore di espressioni interpreta la coppia come un identificatore unico, non come combinazione origine-colonna.  
   
 ## <a name="variables-in-expressions"></a>Variabili nelle espressioni  
- Le variabili, quando viene fatto riferimento nelle espressioni, è necessario includere il \@ prefisso. Ad esempio, il **contatore** tramite cui viene fatto riferimento variabile \@contatore. Il \@ carattere non è parte del nome della variabile, identifica solo la variabile per l'analizzatore di espressioni. Se si compila espressioni in base a usando la finestra di dialogo e nelle caselle [!INCLUDE[ssIS](../../includes/ssis-md.md)] progettazione sono disponibili, il \@ carattere viene aggiunto automaticamente al nome della variabile. Non è consentito includere spazi tra il \@ carattere e il nome della variabile.  
+ Quando in un'espressione viene fatto riferimento a una variabile, è necessario anteporre il prefisso \@ al nome della variabile. Per fare riferimento alla variabile **Counter**, ad esempio, è necessario specificare \@Counter. Il carattere \@ non fa parte del nome della variabile, ma consente all'analizzatore di espressioni di identificarla come tale. Se per compilare le espressioni si usano le finestre di dialogo disponibili in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)], il carattere \@ verrà aggiunto automaticamente al nome della variabile. Non è consentito includere spazi tra il carattere \@ e il nome della variabile.  
   
  Per i nomi delle variabili valgono le stesse regole applicate agli altri identificatori regolari:  
   
 -   Il primo carattere del nome deve essere una lettera, come definito dallo standard Unicode 2.0, o un carattere di sottolineatura (_).  
   
--   I caratteri successivi possono includere lettere o numeri, come definito dallo Standard Unicode 2.0, il carattere di sottolineatura (_), \@, $ e & caratteri.  
+-   I caratteri successivi possono includere lettere o numeri, come definito dallo standard Unicode 2.0, il carattere di sottolineatura (_) e i caratteri \@, $ e #.  
   
- I nomi di variabile contenenti caratteri diversi da quelli elencati devono essere racchiusi tra parentesi quadre. È ad esempio necessario racchiudere tra parentesi quadre i nomi di variabili che includono spazi. Segue la parentesi di apertura di \@ carattere. Ad esempio, il **My Name** variabile viene fatto riferimento come \@[My Name]. Non è consentito includere spazi tra il nome della variabile e le parentesi quadre.  
+ I nomi di variabile contenenti caratteri diversi da quelli elencati devono essere racchiusi tra parentesi quadre. È ad esempio necessario racchiudere tra parentesi quadre i nomi di variabili che includono spazi. La parentesi quadra di apertura viene inserita dopo il carattere \@. Per fare riferimento alla variabile **My Name**, ad esempio, è necessario specificare \@[My Name]. Non è consentito includere spazi tra il nome della variabile e le parentesi quadre.  
   
 > [!NOTE]  
 >  I nomi delle variabili di sistema e delle variabili definite dall'utente devono essere specificati rispettando la distinzione tra maiuscole e minuscole.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], hierarchies
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-caps.latest.revision: 40
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 292ac985db70fc280185b6f240565857055a8b83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5be9eb21e12402f7463c7e79714ef93e7eccb455
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164132"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093142"
 ---
 # <a name="encryption-hierarchy"></a>Gerarchia di crittografia
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografa i dati in base ad una particolare gerarchia di crittografia e infrastruttura di gestione delle chiavi. Ciascun livello crittografa il livello sottostante utilizzando una combinazione di certificati, chiavi asimmetriche e chiavi simmetriche. Le chiavi asimmetriche e simmetriche possono essere archiviate al di fuori di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un modulo EKM (Extensible Key Management).  
   
  Nella figura seguente viene indicato come nella gerarchia di crittografia ogni livello crittografi il livello sottostante e vengono visualizzate le configurazioni di crittografia più comuni. L'accesso all'inizio della gerarchia è in genere protetto da una password.  
   
- ![Visualizza alcune combinazioni di crittografia in un diagramma in pila. ] (../../../database-engine/media/encryption-hierarchy-stack.gif "Visualizza alcune combinazioni di crittografia in un diagramma in pila.")  
+ ![Visualizza alcune combinazioni di crittografia in un diagramma in pila. ](../../../database-engine/media/encryption-hierarchy-stack.gif "Visualizza alcune combinazioni di crittografia in un diagramma in pila.")  
   
  Tenere presenti i concetti seguenti:  
   
@@ -49,7 +46,7 @@ ms.locfileid: "37164132"
   
  Le stesse informazioni vengono illustrate in modo diverso nella figura seguente.  
   
- ![Visualizza alcune combinazioni di crittografia in una ruota. ] (../../../database-engine/media/encryption-hierarchy-wheel.gif "Visualizza alcune combinazioni di crittografia in una ruota.")  
+ ![Visualizza alcune combinazioni di crittografia in una ruota. ](../../../database-engine/media/encryption-hierarchy-wheel.gif "Visualizza alcune combinazioni di crittografia in una ruota.")  
   
  In questo diagramma vengono illustrati i concetti aggiuntivi seguenti:  
   

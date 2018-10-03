@@ -1,30 +1,27 @@
 ---
-title: Salvare l'oggetto DOM XML | Documenti Microsoft
+title: Salvataggio dell'oggetto DOM XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML DOM object [ADO], saving to
 ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82c9c8a04669d360362f68d8c1b0a524d954efa0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6f47f3c40ed85cf0b38615176309f47bfb6ce542
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272530"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650559"
 ---
-# <a name="saving-to-the-xml-dom-object"></a>Salvataggio con l'oggetto DOM XML
-È possibile salvare un Recordset in formato XML in un'istanza di un oggetto DOM MSXML, come illustrato nel codice Visual Basic seguente:  
+# <a name="saving-to-the-xml-dom-object"></a>Salvataggio nell'oggetto DOM XML
+È possibile salvare un set di record in formato XML in un'istanza di un oggetto DOM MSXML, come illustrato nel codice Visual Basic seguente:  
   
 ```  
 Dim xDOM As New MSXML.DOMDocument  

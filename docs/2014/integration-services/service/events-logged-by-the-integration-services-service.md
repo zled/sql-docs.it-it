@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - service [Integration Services], events
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a784b1ae955d66db9cccae24b6ccaa543fa9597
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 52cb18c5828a2d72ef8a36082554425e7e3afb82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164852"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187091"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Eventi registrati dal servizio Integration Services
   Quando l'esecuzione del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene avviata, arrestata o quando si verificano determinati problemi, vengono registrati vari messaggi di evento nel registro eventi applicazioni di Windows.  
@@ -35,7 +32,7 @@ ms.locfileid: "37164852"
 ## <a name="messages-about-the-status-of-the-service"></a>Messaggi relativi allo stato del servizio  
  Quando si seleziona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per l'installazione, viene installato e avviato il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e l'opzione Tipo di avvio è impostata su Automatico.  
   
-|ID evento|Nome simbolico|Text|Note|  
+|ID evento|Nome simbolico|Testo|Note|  
 |--------------|-------------------|----------|-----------|  
 |256|DTS_MSG_SERVER_STARTING|È in corso l'avvio del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|Il servizio sta per essere avviato.|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Servizio   avviato.|Il servizio è stato avviato.|  
@@ -46,7 +43,7 @@ ms.locfileid: "37164852"
 ## <a name="messages-about-the-configuration-file"></a>Messaggi relativi al file di configurazione  
  Le impostazioni per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono archiviate in un file XML che è possibile modificare. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;SSIS&#41;](../configuring-the-integration-services-service-ssis-service.md).  
   
-|ID evento|Nome simbolico|Text|Note|  
+|ID evento|Nome simbolico|Testo|Note|  
 |--------------|-------------------|----------|-----------|  
 |274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Servizio Microsoft SSIS: %nL'impostazione del Registro di sistema che specifica il file di configurazione non esiste. %nVerrà eseguito un tentativo di caricamento del file di configurazione predefinito.|La voce del Registro di sistema che contiene il percorso del file di configurazione non esiste o è vuota.|  
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Il file di configurazione del servizio Microsoft SSIS non esiste.%nIl servizio verrà caricato con le impostazioni predefinite.|Il file di configurazione non esiste nel percorso specificato.|  
@@ -54,11 +51,11 @@ ms.locfileid: "37164852"
   
 ## <a name="other-messages"></a>Altri messaggi  
   
-|ID evento|Nome simbolico|Text|Note|  
+|ID evento|Nome simbolico|Testo|Note|  
 |--------------|-------------------|----------|-----------|  
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Servizio Microsoft SSIS: è in corso l'interruzione del pacchetto in esecuzione.%nID istanza pacchetto: %1%nID pacchetto: %2%nNome pacchetto: %3%nDescrizione pacchetto: %4%nPacchetto|Il servizio sta tentando di arrestare l'esecuzione di un pacchetto. È possibile monitorare e arrestare i pacchetti in esecuzione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni su come gestire i pacchetti in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vedere [Gestione dei pacchetti &#40;servizio SSIS&#41;](package-management-ssis-service.md).|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  Per informazioni su come visualizzare le voci di log, vedere [Visualizzazione delle voci di log nella finestra Registra eventi](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="see-also"></a>Vedere anche  

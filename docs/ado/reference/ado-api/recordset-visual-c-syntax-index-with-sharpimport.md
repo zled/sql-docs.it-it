@@ -1,13 +1,11 @@
 ---
-title: 'Recordset (indice sintassi Visual C++ con #import) | Documenti Microsoft'
+title: 'Recordset (indice sintassi Visual C++ con #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,16 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - 'Recordset collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e0497378a5d4a8af5450e31fc041792d2c6cc9a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6718825c2a7d98541a5fcbcb9a48036332c62f12
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281200"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731409"
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>Recordset (indice sintassi Visual C++ con #import)
 ## <a name="methods"></a>Metodi  

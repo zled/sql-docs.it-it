@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.dimensionintelligence.adddimensionintelligence.f1
 ms.assetid: 1089a788-763f-4c3e-80e3-b625e0728343
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 96f90e84bdd66d4b301193a4b3974964a6a7301e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2aaef74d9e94446022b8c0585749a4eb0bf05cd2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171722"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194251"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>Definizione funzionalità di Business Intelligence per le dimensioni (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la pagina **Definizione funzionalità di Business Intelligence per le dimensioni** per eseguire il mapping tra attributi delle dimensioni esistenti e tipi di attributi per il tipo di dimensione specificato.  
@@ -33,7 +30,7 @@ ms.locfileid: "37171722"
  **Attributi della dimensione**  
  Visualizza i tipi di attributi disponibili per il tipo di dimensione specificato e consente di indicare a quali attributi applicare i tipi.  
   
- **Includere**  
+ **includere**  
  Consente di includere il tipo di attributo corrispondente nella dimensione.  
   
  **Tipo di attributo**  

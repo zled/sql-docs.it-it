@@ -1,13 +1,11 @@
 ---
-title: Metodo CompareBookmarks (ADO) | Documenti Microsoft
+title: Esempio di metodo CompareBookmarks (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 592a1e06580aca5990bf5ec6b7d28a6a1ecc5abc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 85ca76678c0d3e75a106164626c4e3c3a81bd7e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276800"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649749"
 ---
 # <a name="comparebookmarks-method-ado"></a>Metodo CompareBookmarks (ADO)
 Confronta due segnalibri e restituisce un'indicazione dei relativi valori.  
@@ -39,25 +36,25 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce un [CompareEnum](../../../ado/reference/ado-api/compareenum.md) valore che indica la posizione di riga relativo di due record rappresentati dai relativi segnalibri.  
+ Restituisce un [CompareEnum](../../../ado/reference/ado-api/compareenum.md) valore che indica la posizione della riga relativo di due record rappresentati dai relativi segnalibri.  
   
 #### <a name="parameters"></a>Parametri  
- *Bookmark1*  
+ *Segnalibro1*  
  Il segnalibro della prima riga.  
   
  *Bookmark2*  
  Il segnalibro della seconda riga.  
   
-## <a name="remarks"></a>Remarks  
- I segnalibri devono applicare allo stesso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto, o un **Recordset** oggetto e il relativo [clone](../../../ado/reference/ado-api/clone-method-ado.md). Non è possibile confrontare in modo affidabile segnalibri da diversi **Recordset** oggetti, anche se sono stati creati dall'origine o comando stesso. Né è possibile confrontare i segnalibri per una **Recordset** oggetto il cui provider sottostante non supporta i confronti.  
+## <a name="remarks"></a>Note  
+ I segnalibri è necessario applicare allo stesso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto, o una **Recordset** oggetto e il relativo [clone](../../../ado/reference/ado-api/clone-method-ado.md). Non è possibile confrontare in modo affidabile i segnalibri da diversi **Recordset** oggetti, anche se sono stati creati dalla stessa origine o comando. Né è possibile confrontare i segnalibri per una **Recordset** oggetto a cui provider sottostante non supporta i confronti.  
   
- Un segnalibro che identifica in modo univoco una riga in un **Recordset** oggetto. Utilizzare il [segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md) proprietà della riga corrente per ottenere il segnalibro.  
+ Segnalibro che identifica in modo univoco una riga in una **Recordset** oggetto. Usare la [segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md) proprietà della riga corrente per ottenere il segnalibro.  
   
- Poiché il tipo di dati di un segnalibro è specifico di ogni provider, ADO espone come un **Variant**. Ad esempio, i segnalibri di SQL Server sono di tipo DBTYPE_R8 (**doppie**). ADO consente di esporre questo tipo come un **Variant** con un sottotipo di **Double**.  
+ Poiché il tipo di dati di un segnalibro è specifico per ogni provider, ADO lo espone come un **Variant**. Ad esempio, i segnalibri di SQL Server sono di tipo DBTYPE_R8 (**doppie**). ADO esporrà questo tipo come un **Variant** con un sottotipo **doppie**.  
   
- Quando si confrontano i segnalibri, ADO non tenta di qualsiasi tipo di coercizione. I valori vengono semplicemente passati al provider in cui si verifica il confronto. Se i segnalibri passato per il **CompareBookmarks** metodo sono archiviate in variabili di tipi diversi, è possibile generare il seguente errore di mancata corrispondenza di tipo: "argomenti sono di tipo errato, sono comprese nell'intervallo accettabile o sono in conflitto con l'altro."  
+ Quando si confrontano i segnalibri, ADO non tenta di coercizione qualsiasi tipo. I valori vengono semplicemente passati al provider in cui si verifica il confronto. Se i segnalibri passato per il **CompareBookmarks** metodo sono archiviate in variabili di tipi diversi, è possibile generare il seguente errore di mancata corrispondenza di tipo: "gli argomenti sono di tipo errato, è compreso nell'intervallo accettabile o sono in conflitto tra loro."  
   
- Un segnalibro a cui non è valido o non corretto verrà generato un errore.  
+ Segnalibro che non è valida o formato non corretto verrà generato un errore.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

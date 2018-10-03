@@ -1,32 +1,29 @@
 ---
-title: Esempio di proprietà SortOrder (VB) | Documenti Microsoft
+title: Esempio di proprietà SortOrder (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22dc816e9f4343d2873f169837d028babbfa111c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a324c96fcfb4f1e23157bf7a80506cdee209548a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286862"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770929"
 ---
-# <a name="sortorder-property-example-vb"></a>Esempio di proprietà SortOrder (VB)
-Questo esempio viene illustrato il [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md) che è stato accodato per il [colonne](../../../ado/reference/adox-api/columns-collection-adox.md) raccolta di un [indice](../../../ado/reference/adox-api/index-object-adox.md). Il codice aggiunge un indice crescente alla colonna paese di **dipendenti** tabella, quindi Visualizza i record. Quindi il codice aggiunge un indice decrescente alla colonna paese di **dipendenti** tabella e visualizza nuovamente i record. È illustrata la differenza tra crescente e decrescente gli indici.  
+# <a name="sortorder-property-example-vb"></a>Esempio della proprietà SortOrder (VB)
+Questo esempio viene illustrato il [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md) che è stato accodato per il [colonne](../../../ado/reference/adox-api/columns-collection-adox.md) raccolta di un [indice](../../../ado/reference/adox-api/index-object-adox.md). Il codice aggiunge un indice in ordine crescente per la colonna del paese nella **dipendenti** di tabella, quindi consente di visualizzare i record. Quindi il codice aggiunge un indice decrescente per la colonna del paese nella **dipendenti** di tabella e viene visualizzato nuovamente i record. Viene visualizzata la differenza tra crescente e decrescente gli indici.  
   
 ```  
 ' BeginSortOrderVB  

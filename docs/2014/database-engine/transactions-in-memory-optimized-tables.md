@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3712e3b2e602bd403f4c1d312603577a4045a95a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394488"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195621"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transazioni in tabelle con ottimizzazione per la memoria
   Il controllo delle versioni delle righe nelle tabelle basate su disco (tramite l'isolamento SNAPSHOT o READ_COMMITTED_SNAPSHOT) fornisce una forma di controllo della concorrenza ottimistica. Lettori e writer non si bloccano reciprocamente. Con le tabelle ottimizzate per la memoria i writer non bloccano writer. Nel caso di controllo delle versioni delle righe in tabelle basate su disco, una transazione blocca la riga e il tentativo di aggiornare la riga da parte di transazioni simultanee viene impedito. Per le tabelle ottimizzate per la memoria non vengono attivati blocchi. Al contrario, se due transazioni tentano di aggiornare la stessa riga, si verificherà un conflitto di scrittura/scrittura (errore 41302).  

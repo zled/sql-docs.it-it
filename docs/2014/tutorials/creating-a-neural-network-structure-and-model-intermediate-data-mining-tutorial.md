@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - DiscretizationMethod property
 - EQUAL_AREAS method
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 138f416d6dc7e1408bd65d10da0a8538906da3b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa474cfd298b5d482f8b1804159f085fca5f8c6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304751"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195561"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Creazione di una struttura e di un modello di rete neurale (Esercitazione intermedia sul data mining)
   Per creare un modello di data mining, è innanzitutto necessario utilizzare la Creazione guidata modello di data mining per creare una nuova struttura di data mining basata sulla nuova vista origine dati. In questa attività verrà utilizzata la procedura guidata per creare una struttura di data mining e, contemporaneamente, il modello di data mining associato basato sull'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network.  
@@ -100,15 +97,15 @@ ms.locfileid: "37304751"
     |AutomaticResponses|Continuo|Long|  
     |AverageTimePerIssue|Continuo|Long|  
     |Calls|Continuo|Long|  
-    |DayOfWeek|Discrete|Text|  
+    |DayOfWeek|Discrete|Testo|  
     |FactCallCenterID|Key|Long|  
     |IssuesRaised|Continuo|Long|  
     |LevelOneOperators|Continuo|Long|  
     |LevelTwoOperators|Continuo|Long|  
     |Orders|Continuo|Long|  
     |ServiceGrade|Continuo|Double|  
-    |Turno|Discrete|Text|  
-    |WageType|Discrete|Text|  
+    |Turno|Discrete|Testo|  
+    |WageType|Discrete|Testo|  
   
 13. Nel **Create Test set** pagina, deselezionare la casella di testo per l'opzione **percentuale dei dati per i test**. Scegliere **Avanti**.  
   

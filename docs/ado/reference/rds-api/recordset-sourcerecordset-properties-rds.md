@@ -1,36 +1,33 @@
 ---
-title: Proprietà Recordset e SourceRecordset (RDS) | Documenti Microsoft
+title: Proprietà Recordset e SourceRecordset (Servizi Desktop remoto) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Recordset property [ADO]
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5224892252ed6591345e5b2626b13919fcac1ec
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bc0b548015cc63117cff566a2c4507b266d5ab7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288256"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657509"
 ---
-# <a name="recordset-sourcerecordset-properties-rds"></a>Proprietà Recordset e SourceRecordset (RDS)
-Indica il **Recordset** oggetto restituito da un oggetto di business personalizzata.  
+# <a name="recordset-sourcerecordset-properties-rds"></a>Proprietà Recordset e SourceRecordset (Servizi Desktop remoto)
+Indica la **Recordset** oggetto restituito da un oggetto business personalizzato.  
   
- **Si applica a:** [oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ **Si applica a:** [oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,26 +39,26 @@ Recordset = DataControl.Recordset
   
 #### <a name="parameters"></a>Parametri  
  *DataControl*  
- Una variabile oggetto che rappresenta un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
+ Una variabile oggetto che rappresenta un [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
   
  *Recordset*  
  Una variabile oggetto che rappresenta un **Recordset** oggetto.  
   
-## <a name="remarks"></a>Remarks  
- È possibile impostare il **SourceRecordset** proprietà per un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) restituito da un oggetto di business personalizzata.  
+## <a name="remarks"></a>Note  
+ È possibile impostare il **SourceRecordset** proprietà di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) restituito da un oggetto business personalizzato.  
   
- Queste proprietà consentono a un'applicazione per gestire il processo di associazione tramite un processo personalizzato. Ricevono un set di righe inserito in un **Recordset** in modo che sia possibile interagire direttamente con il **Recordset**, eseguire azioni quali l'impostazione delle proprietà o l'iterazione di **Recordset** .  
+ Queste proprietà consentono a un'applicazione per gestire il processo di associazione tramite un processo personalizzato. Ricevono un set di righe inserito in una **Recordset** in modo che sia possibile interagire direttamente con il **Recordset**, eseguire azioni quali l'impostazione delle proprietà o l'iterazione attraverso la **Recordset** .  
   
- È possibile impostare il **SourceRecordset** proprietà o a leggere la **Recordset** proprietà in fase di esecuzione nel codice di script.  
+ È possibile impostare il **SourceRecordset** proprietà o lettura il **Recordset** proprietà in fase di esecuzione nel codice di script.  
   
- **SourceRecordset** è una proprietà di sola scrittura, in contrasto con il **Recordset** proprietà, che è una proprietà di sola lettura.  
+ **SourceRecordset** è una proprietà di sola scrittura, in contrasto con le **Recordset** proprietà, ovvero una proprietà di sola lettura.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà di SourceRecordset (VBScript) e Recordset](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
- [Metodo CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
+ [Recordset e SourceRecordset (esempio di proprietà (VBScript)](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
+ [Esempio di metodo CreateRecordset (Servizi Desktop remoto)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Metodo Query (Servizi Desktop remoto)](../../../ado/reference/rds-api/query-method-rds.md)
 
 

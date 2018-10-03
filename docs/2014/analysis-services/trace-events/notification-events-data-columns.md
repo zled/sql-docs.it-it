@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6a436f613b39f5beb18a7dea40349ce24ded1bf5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 012eed425161fdf6697fcddc5d1098f5069fcb39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204071"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178601"
 ---
 # <a name="notification-events-data-columns"></a>Colonne di dati degli eventi di notifica
   Gli eventi di notifica sono eventi non causati direttamente dagli utenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le notifiche, ad esempio, vengono generate in seguito all'aggiornamento da parte degli utenti di tabelle sottostanti per la memorizzazione nella cache attiva.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fd8afbe7-b57d-4b47-862d-eb7b2489c327
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b64e3124ba7a848921e1b0844b20d03e9aa82af4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ceee819fb887e2a45b3f366b261fba00df4776a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165242"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191381"
 ---
 # <a name="kpigoal-element-csdlbi"></a>Elemento KpiGoal (CSDLBI)
   L'elemento KpiGoal fornisce un riferimento alla colonna utilizzata per definire l'obiettivo di un indicatore di prestazioni di chiave.  
@@ -30,7 +27,7 @@ ms.locfileid: "37165242"
 ## <a name="elements-and-attributes"></a>Elementi e attributi  
  Nella tabella seguente vengono elencati gli attributi che definiscono l'elemento KpiGoal.  
   
-|nome|Obbligatorio|Description|  
+|Nome|Obbligatorio|Description|  
 |----------|-----------------|-----------------|  
 |PropertyRef|Sì|Riferimento alla colonna che contiene il valore obiettivo KPI.<br /><br /> L'elemento Kpigoal deve contenere un solo elemento PropertyRef.<br /><br /> Vedere [Elemento PropertyRef &#40;CSDLBI&#41;](propertyref-element-csdlbi.md).|  
   

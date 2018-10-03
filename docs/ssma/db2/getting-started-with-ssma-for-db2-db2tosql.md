@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7cd773d2d92190ece25ae2048773f2357454528e
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 86a931c9132a23d9ceb3d46b48fbdce23bf76f92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395884"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737349"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Introduzione a SSMA per DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per DB2 consente rapidamente gli schemi di database DB2 per convertire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi, caricare gli schemi risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire la migrazione dei dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -85,7 +79,7 @@ Progetto contenente pulsanti per l'utilizzo con i progetti, la connessione a DB2
 #### <a name="migration-toolbar"></a>Sulla barra degli strumenti di migrazione  
 La tabella seguente illustra la migrazione i comandi della barra degli strumenti:  
   
-|Pulsante|Funzione|  
+|Button|Funzione|  
 |------|--------|  
 |**Creazione di Report**|Converte gli oggetti selezionati di DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni sulla sintassi e quindi crea un report che mostra la conversione ha come esito positivo.<br /><br />Questo comando è disabilitato, a meno che gli oggetti selezionati in Visualizzatore metadati DB2.|  
 |**Converti Schema**|Converte gli oggetti selezionati di DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti.<br /><br />Questo comando è disabilitato, a meno che gli oggetti selezionati in Visualizzatore metadati DB2.|  
@@ -95,7 +89,7 @@ La tabella seguente illustra la migrazione i comandi della barra degli strumenti
 ### <a name="menus"></a>Menu  
 La tabella seguente mostra i menu SSMA.  
   
-|Menu di scelta|Description|  
+|Menu|Description|  
 |----|-----------|  
 |**File**|Comandi per l'uso dei progetti, la connessione a DB2 e la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Modifica**|Contiene i comandi per la ricerca e lavora sul testo nelle pagine di dettagli, ad esempio la copia [!INCLUDE[tsql](../../includes/tsql-md.md)] dal riquadro dei dettagli SQL. Contiene anche il **gestire i segnalibri** opzione, in cui sarà in grado di visualizzare un elenco dei propri segnalibri esistenti. È possibile usare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  

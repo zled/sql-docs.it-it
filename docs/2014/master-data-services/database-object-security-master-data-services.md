@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5195df44c591f4c605cfd33aa6bb9934c7d54908
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b2e4feb3f09b8012c17156e085e16dcf39df3088
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163502"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183521"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicurezza di oggetti di database (Master Data Services)
   Nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] i dati vengono archiviati in più tabelle di database e sono visibili tramite viste. Le informazioni eventualmente protette nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] sono visibili agli utenti che dispongono dell'accesso al database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -48,7 +45,7 @@ ms.locfileid: "37163502"
 ##  <a name="Staging"></a> Dati di gestione temporanea  
  Nella tabella seguente, in ogni entità a protezione diretta la parola 'name' fa parte del nome. Viene indicato il nome della tabella di staging specificato quando viene creata un'entità. Per altre informazioni, vedere [importazione di dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
-|Azione|Entità a protezione diretta|Autorizzazioni|  
+|Azione|Entità a protezione diretta|Permissions|  
 |------------|----------------|-----------------|  
 |Caricare membri foglia e i relativi attributi nella tabella di staging.|stg.name_Leaf|Obbligatoria: INSERT<br /><br /> Facoltative: SELECT e UPDATE|  
 |Caricare i dati dalla tabella di staging Foglia nelle tabelle di database MDS appropriate.|stg.udp_name_Leaf|EXECUTE|  
@@ -62,7 +59,7 @@ ms.locfileid: "37163502"
   
 ##  <a name="rules"></a> Convalida dei dati rispetto a regole business  
   
-|Azione|Entità a protezione diretta|Autorizzazioni|  
+|Azione|Entità a protezione diretta|Permissions|  
 |------------|---------------|-----------------|  
 |Convalidare una versione di dati rispetto a regole business|mdm.udpValidateModel|EXECUTE|  
   
@@ -70,7 +67,7 @@ ms.locfileid: "37163502"
   
 ##  <a name="Versions"></a> Eliminazione di versioni  
   
-|Azione|Entità a protezione diretta|Autorizzazioni|  
+|Azione|Entità a protezione diretta|Permissions|  
 |------------|----------------|-----------------|  
 |Determinare l'ID della versione che si desidera eliminare|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |Eliminare una versione di un modello|mdm.udpVersionDelete|EXECUTE|  
@@ -79,7 +76,7 @@ ms.locfileid: "37163502"
   
 ##  <a name="Hierarchy"></a> Applicazione immediata di autorizzazioni per membri della gerarchia  
   
-|Azione|Entità a protezione diretta|Autorizzazioni|  
+|Azione|Entità a protezione diretta|Permissions|  
 |------------|----------------|-----------------|  
 |Applicare immediatamente autorizzazioni per membri|mdm.udpSecurityMemberProcessRebuildModel|EXECUTE|  
   
@@ -87,7 +84,7 @@ ms.locfileid: "37163502"
   
 ##  <a name="SysAdmin"></a> Modifica dell'Account amministratore di sistema  
   
-|Azione|Entità a protezione diretta|Autorizzazioni|  
+|Azione|Entità a protezione diretta|Permissions|  
 |------------|----------------|-----------------|  
 |Determinare il SID del nuovo amministratore|mdm.tblUser|SELECT|  
 |Modificare l'account amministratore di sistema|mdm.udpSecuritySetAdministrator|EXECUTE|  

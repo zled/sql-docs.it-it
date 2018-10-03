@@ -1,32 +1,26 @@
 ---
-title: Utilizzo dei file di Script di esempio Console (MySQLToSQL) | Documenti Microsoft
+title: Lavorare con i file di Script di esempio Console (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Sample console script files
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 68d24dd530c6e987c26d3fecca6c0fd732cb9df0
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 809284aa24a1a549c5f3d2c349e5935d8ca5503d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776837"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805119"
 ---
-# <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Utilizzo dei file di Script di esempio Console (MySQLToSQL)
-Alcuni file di esempio sono stati forniti insieme al prodotto per l'utilizzo e un riferimento all'utente. Questa sezione descrive il modo per personalizzare facilmente questi script per soddisfare le esigenze dell'utente finale.  
+# <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Lavorare con i file di Script di esempio Console (MySQLToSQL)
+Alcuni file di esempio sono stati forniti insieme al prodotto per il riferimento all'utente e l'utilizzo. In questa sezione descrive il modo con facilità personalizzare questi script per soddisfare le esigenze degli utenti finali.  
   
 ## <a name="sample-console-script-files"></a>File di Script di esempio Console  
 I seguenti file script di esempio console relativi a diversi scenari sono stati forniti i riferimenti all'utente:  
@@ -43,42 +37,42 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
   
 -   **ServersConnectionFileSample.xml:**  
   
-    -   In questo esempio offre diverse modalità di connessione disponibili per il database di origine e di destinazione e l'utente può selezionare qualsiasi modalità in base al requisito. In questo esempio contiene le definizioni di Server.  
+    -   In questo esempio offre diverse modalità di connessione disponibili per il database di origine e destinazione e l'utente può selezionare qualsiasi modalità in base al requisito. In questo esempio contiene le definizioni di Server.  
   
-    -   L'utente può connettersi al database richiesto semplicemente modificando i valori all'origine richiesto e definizioni del server di destinazione. Nell'esempio fornito in tutti i valori sono stati forniti valori come variabili in cui sono disponibili nel **VariableValueFileSample.xml**.  Tutti gli altri parametri di connessione possono essere rimosso dal file di connessione server di lavoro dell'utente.  
+    -   L'utente può connettersi al database obbligatorio modificando semplicemente i valori per l'origine necessari e le definizioni dei server di destinazione. Nell'esempio fornito tutti i valori sono stati forniti valori come variabili che sono disponibili nel **VariableValueFileSample.xml**.  Tutti gli altri parametri di connessione possono essere rimosso dal file di connessione server di lavoro dell'utente.  
   
-    -   Per ulteriori informazioni sulla connessione al server di origine e di destinazione, vedere [creano i file di connessione del Server &#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) .  
+    -   Per altre informazioni sulla connessione al server di origine e di destinazione, vedere [creazione di file di connessione del Server &#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) .  
   
--   **VariableValueFileSample.xml:** tutte le variabili che sono state usate nella console di esempio i file di script e `ServersConnectionFileSample.xml` sono stati confrontati in questo file. Per eseguire gli script di esempio console che l'utente deve sostituire semplicemente la variabile di esempio i valori con l'utente definito quelli e passare il file come argomento della riga di comando aggiuntivo oltre al file di script.  
+-   **: VariableValueFileSample.xml** tutte le variabili che sono state utilizzate nella console di esempio i file di script e `ServersConnectionFileSample.xml` sono stati confrontati in questo file. Per eseguire gli script di esempio console che l'utente deve semplicemente sostituire la variabile di esempio i valori con l'utente definito quelle e passare questo file come un argomento della riga di comando aggiuntivi insieme al file di script.  
   
-    Per ulteriori informazioni sul File con valori variabili, vedere [creazione di file di valore variabile &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
+    Per altre informazioni sul File con valori variabili, vedere [creazione di file di valore variabile &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
   
--   **AssessmentReportGenerationSample.xml:** in questo esempio consente all'utente generare un report di valutazione xml che può essere usato dall'utente per l'analisi cominciare convertire e la migrazione dei dati.  
+-   **AssessmentReportGenerationSample.xml:** in questo esempio consente all'utente generare un report di valutazione di xml che può essere utilizzato dall'utente per l'analisi prima che inizi a convertire e la migrazione dei dati.  
   
-    Nel `generate-assessment-report` comando l'utente deve obbligatoriamente includere modificare il valore della variabile (vedere **VariableValueFileSample.xml**) nel `object-name` attributo al nome di database da in uso dall'utente. A seconda del tipo dell'oggetto specificato, il `object-type` valore dovrà anche essere modificato.  
+    Nel `generate-assessment-report` l'utente deve modificare obbligatoriamente includere il valore della variabile di comando (fare riferimento **VariableValueFileSample.xml**) nella `object-name` attributo al nome di database da in uso dall'utente. A seconda del tipo dell'oggetto specificato, il `object-type` valore dovrà inoltre essere modificato.  
   
-    Se l'utente deve valutare più oggetti / database è possibile specificare più `metabase-object` nodi, come illustrato nel `generate-assessment-report` di esempio 4 del comando del file di script della console di esempio.  
+    Se l'utente dispone valutare più oggetti / database è possibile specificare più `metabase-object` nodi come illustrato nella `generate-assessment-report` 4 di esempio del comando del file di script di esempio console.  
   
-    Per ulteriori informazioni sulla generazione di report, vedere [la generazione di report &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
+    Per altre informazioni sulla generazione di report, vedere [generazione di report &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
     **Note:**  
   
-    -   Verificare che l'argomento della riga di comando file valore della variabile viene passata all'applicazione console e VariableValueFileSample.xml viene aggiornato con l'utente specificato i valori.  
+    -   Assicurarsi che l'argomento della riga di comando file valore della variabile viene passato all'applicazione console e VariableValueFileSample.xml viene aggiornato con l'utente specificato i valori.  
   
-    -   Verificare che l'argomento della riga di comando server connessione file viene passato all'applicazione console e il ServersConnectionFileSample.xml viene aggiornata con i valori dei parametri server corretto.  
+    -   Assicurarsi che l'argomento della riga di comando file connessione server viene passato all'applicazione console e il ServersConnectionFileSample.xml viene aggiornata con i valori dei parametri server corretto.  
   
 -   **SqlStatementConversionSample.xml:**  
-    In questo esempio consente di generare corrispondente `t-sql` script per il database di origine `sql` comando fornito come input.  
+    In questo esempio consente all'utente genera il corrispondente `t-sql` script per database di origine `sql` comando fornito come input.  
   
-    Nel `convert-sql-statement` comando l'utente deve obbligatoriamente includere modificare il valore della variabile (vedere **VariableValueFileSample.xml**) nel `context` attributo al nome del database che viene utilizzato dall'utente. L'utente sarà inoltre necessario modificare il `sql` valore dell'attributo per il database di origine `sql` comando che potrà richiedere da convertire.  
+    Nel `convert-sql-statement` l'utente deve modificare obbligatoriamente includere il valore della variabile di comando (fare riferimento **VariableValueFileSample.xml**) nel `context` attributo al nome del database che è in corso in uso dall'utente. L'utente sarà inoltre necessario modificare il `sql` valore dell'attributo per il database di origine `sql` comando che può richiedere da convertire.  
   
-    L'utente può anche fornire i file sql da convertire. Questa operazione è stata illustrata nel `convert-sql-statement` di esempio 4 del comando del file di script della console di esempio.  
+    L'utente può anche fornire i file sql da convertire. Questa operazione è stata illustrata nel `convert-sql-statement` 4 di esempio del comando del file di script di esempio console.  
   
     > [!NOTE]  
-    > Verificare che l'argomento della riga di comando file valore della variabile viene passata all'applicazione console e VariableValueFileSample.xml viene aggiornato con l'utente specificato i valori.  
+    > Assicurarsi che l'argomento della riga di comando file valore della variabile viene passato all'applicazione console e VariableValueFileSample.xml viene aggiornato con l'utente specificato i valori.  
   
 -   **ConversionAndDataMigrationSample.xml:**  
-     In questo esempio consente all'utente di eseguire una migrazione end-to-end dalla conversione per la migrazione dei dati. L'elenco dei valori di attributo obbligatorio che dovranno modificare elencata di seguito:  
+     In questo esempio consente all'utente di eseguire una migrazione end-to-end dalla conversione per la migrazione dei dati. L'elenco di valori di attributo obbligatorio che dovranno cambiare è elencato di seguito:  
   
     **Nome del comando**  
   
@@ -98,11 +92,11 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
   
     1.  Esegue la conversione dello schema di origine allo schema di destinazione.  
   
-    2.  Se l'utente deve valutare più oggetti / database è possibile specificare più `metabase-object` nodi, come illustrato nel `convert-schema` di esempio 4 del comando del file di script della console di esempio.  
+    2.  Se l'utente dispone valutare più oggetti / database è possibile specificare più `metabase-object` nodi come illustrato nella `convert-schema` 4 di esempio del comando del file di script di esempio console.  
   
     **Attribute**  
   
-    `object-name`: Specificare il database di origine / object name che richiede da convertire. Verificare che il corrispondente `object-type` viene modificato in base al tipo dell'oggetto specificato nella `object-name`  
+    `object-name`: Specificare il database di origine / nome che richiede la conversione dell'oggetto. Assicurarsi che la corrispondente `object-type` viene modificato in base al tipo di oggetto specificato di `object-name`  
   
     **Nome del comando**  
   
@@ -110,26 +104,26 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
   
     1.  Sincronizza gli oggetti di destinazione con il database di destinazione.  
   
-    2.  Se l'utente deve valutare più oggetti / database è possibile specificare più `metabase-object` nodi, come illustrato nel `synchronize-target` di esempio 3 del comando del file di script della console di esempio.  
+    2.  Se l'utente dispone valutare più oggetti / database è possibile specificare più `metabase-object` nodi come illustrato nella `synchronize-target` 3 di esempio del comando del file di script di esempio console.  
   
     **Attribute**  
   
-    `object-name:` Specificare il database di sql server / nome che richiede la creazione dell'oggetto. Verificare che il corrispondente `object-type` viene modificato in base al tipo dell'oggetto specificato nella `object-name`  
+    `object-name:` Specificare il database di sql server / nome che richiede la creazione dell'oggetto. Assicurarsi che la corrispondente `object-type` viene modificato in base al tipo di oggetto specificato di `object-name`  
   
     **Nome del comando**  
   
     `migrate-data`  
   
-    1.  Esegue la migrazione di dati di origine alla destinazione.  
+    1.  Esegue la migrazione dei dati di origine alla destinazione.  
   
-    2.  Se l'utente deve valutare più oggetti / database è possibile specificare più `metabase-object` nodi, come illustrato nel `migrate-data` di esempio 2 del comando del file di script della console di esempio.  
+    2.  Se l'utente dispone valutare più oggetti / database è possibile specificare più `metabase-object` nodi come illustrato nella `migrate-data` 2 di esempio del comando del file di script di esempio console.  
   
     **Attribute**  
   
-    `object-name:` Specifica il database di origine / nome che è necessario eseguire la migrazione di tabelle. Verificare che il corrispondente `object-type` viene modificato in base al tipo dell'oggetto specificato nella `object-name`  
+    `object-name:` Specifica il database di origine / nome che è necessario eseguire la migrazione di tabelle. Assicurarsi che la corrispondente `object-type` viene modificato in base al tipo di oggetto specificato di `object-name`  
   
 ## <a name="see-also"></a>Vedere anche  
 [Creazione di file di valore della variabile &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
-[La creazione dei file di connessione del Server &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
+[Creazione di file di connessione del Server &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
 [Generazione di report &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  
   

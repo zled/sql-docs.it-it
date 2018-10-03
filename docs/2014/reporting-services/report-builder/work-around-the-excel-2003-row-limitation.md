@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 041872122516c411e7b02b7dde85c248600904cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a62bcfa9958a19b9e0692caceaa455401d2677f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260467"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109771"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Soluzione alternativa per il limite di righe in Excel
   In questo argomento viene illustrato come risolvere il limite di righe di Excel 2003 quando si esportano i report in Excel. La soluzione alternativa consiste in un report contenente una sola tabella.  

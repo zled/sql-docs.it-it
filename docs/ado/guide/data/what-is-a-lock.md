@@ -1,43 +1,40 @@
 ---
-title: Che cos'è un blocco? | Microsoft Docs
+title: Informazioni sui blocchi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], locking
 - locks [ADO], about locking
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 396faecd122eef7ad6e40f790252a0902a508ba8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 981b2b5dc1f76d879b18e5569e7fb70dbece1538
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273290"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813079"
 ---
-# <a name="what-is-a-lock"></a>Che cos'è un blocco?
-Il blocco è il processo mediante il quale un DBMS limita l'accesso a una riga in un ambiente multiutente. Quando una riga o colonna è bloccata in modo esclusivo, altri utenti non sono consentiti per accedere ai dati bloccati finché il blocco viene rilasciato. In questo modo si garantisce che due utenti non è possibile aggiornare contemporaneamente la stessa colonna in una riga.  
+# <a name="what-is-a-lock"></a>Informazioni sui blocchi
+Il blocco è il processo mediante il quale un DBMS limita l'accesso a una riga in un ambiente multiutente. Quando una riga o colonna viene bloccato in modo esclusivo, altri utenti non sono consentiti per accedere ai dati bloccati fino a quando il blocco viene rilasciato. Ciò garantisce che due utenti non è possibile aggiornare contemporaneamente la stessa colonna in una riga.  
   
- Blocchi possono risultare molto costosi da una prospettiva della risorsa e devono essere utilizzati solo quando necessario per mantenere l'integrità dei dati. In un database in cui è Impossibile cercare centinaia o migliaia di utenti di accedere a un record di ogni secondo, ad esempio un database connesso a Internet, ovvero numero eccessivo di blocchi potrebbe compromettere rapidamente le prestazioni dell'applicazione.  
+ I blocchi possono essere molto onerosa dal punto di vista della risorsa e devono essere utilizzati solo quando necessario per mantenere l'integrità dei dati. In un database in cui è stato possibile cercare centinaia o migliaia di utenti per accedere a un record di ogni secondo, ad esempio un database connesso a Internet, ovvero numero eccessivo di blocchi è stato possibile generare rapidamente rallenterà le prestazioni dell'applicazione.  
   
  È possibile controllare come l'origine dati e la libreria di cursori di ADO gestire la concorrenza, scegliendo l'opzione di blocco appropriato.  
   
- Impostare il **LockType** proprietà prima di aprire un **Recordset** per specificare il tipo di blocco che il provider deve utilizzare durante l'apertura del file. Leggere la proprietà per restituire il tipo di blocco in uso su un oggetto aperto **Recordset** oggetto.  
+ Impostare il **LockType** proprietà prima di aprire un **Recordset** per specificare il tipo di blocco che il provider deve utilizzare all'apertura dell'oggetto. Leggere la proprietà per restituire il tipo di blocco in uso su un elemento aperto **Recordset** oggetto.  
   
- I provider potrebbero non supportare tutti i tipi di blocco. Se un provider non supporta la richiesta **LockType** impostazione sostituirà un altro tipo di blocco. Per determinare la funzionalità di blocco disponibile in un **Recordset** oggetto, usare il [supporta](../../../ado/reference/ado-api/supports-method.md) metodo con **valori adUpdate** e **adUpdateBatch**.  
+ I provider potrebbero non supportare tutti i tipi di blocco. Se un provider non supporta l'oggetto richiesto **LockType** impostazione, sostituirà un altro tipo di blocco. Per determinare la funzionalità di blocco disponibile in un **Recordset** dell'oggetto, utilizzare il [supporta](../../../ado/reference/ado-api/supports-method.md) metodo con **valori adUpdate** e **adUpdateBatch**.  
   
- Il **adLockPessimistic** impostazione non è supportata se il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) è impostata su **adUseClient.** Se è impostato un valore non supportato, verrà restituito alcun errore; è supportato il più vicino **LockType** verrà utilizzato.  
+ Il **adLockPessimistic** impostazione non è supportata se il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) viene impostata su **adUseClient.** Se è impostato un valore non supportato, non verrà generato alcun errore; è supportato il più vicino **LockType** verrà utilizzato.  
   
- Il **LockType** proprietà è di lettura/scrittura quando il **Recordset** è chiuso e di sola lettura quando è aperto.  
+ Il **LockType** è di lettura/scrittura quando il **Recordset** è chiuso e di sola lettura quando è aperto.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

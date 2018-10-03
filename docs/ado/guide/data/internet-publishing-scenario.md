@@ -1,32 +1,29 @@
 ---
-title: Scenario di pubblicazione Internet | Documenti Microsoft
+title: Scenario di Internet Publishing | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, Internet publishing
 - publishing to Internet [ADO]
 - Internet publishing [ADO]
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4fa78abc00e38c03b0d951e0b837bd4761c8edda
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6310afd5fb029a81da8751009297aa1ae76a26aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271720"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602999"
 ---
-# <a name="internet-publishing-scenario"></a>Scenario di pubblicazione su Internet
-Questo esempio di codice viene illustrato come utilizzare ADO con il Provider Microsoft OLE DB per Internet Publishing. In questo scenario, si creerà un'applicazione Visual Basic che utilizza **Recordset**, **Record**, e **flusso** pubblicati gli oggetti per visualizzare il contenuto delle risorse con Internet Publishing Provider.  
+# <a name="internet-publishing-scenario"></a>Scenario di Internet Publishing
+Questo esempio di codice viene illustrato come utilizzare ADO con il Provider Microsoft OLE DB per Internet Publishing. In questo scenario si creerà un'applicazione Visual Basic che utilizza **Recordset**, **Record**, e **Stream** pubblicati con gli oggetti per visualizzare il contenuto delle risorse Internet del Provider di pubblicazione.  
   
  I passaggi seguenti sono necessari per creare questo scenario:  
   
@@ -39,5 +36,5 @@ Questo esempio di codice viene illustrato come utilizzare ADO con il Provider Mi
 -   [Passaggio 4: Popolare la casella di riepilogo Details](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Provider Microsoft OLE DB per la pubblicazione su Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   
+ [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   
  [Provider OLE DB per Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)

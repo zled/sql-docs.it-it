@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syslockinfo_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - syslockinfo system table
 - sys.syslockinfo compatibility view
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e47eefe7a096664068d0762f43478881b532f815
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 29446f34777682ff98ef6ec7c438c72db58e7167
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222053"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780879"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +37,12 @@ ms.locfileid: "33222053"
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 > [!IMPORTANT]  
->  Questa funzionalità è stata modificata rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Questa funzionalità è stata modificata rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [le modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|Descrizione in formato testo di una risorsa di blocco. Include una parte del nome della risorsa.|  
-|**rsc_bin**|**binary(16)**|Risorsa di blocco binaria. Include l'effettiva risorsa di blocco presente in Gestione blocchi. Questa colonna viene inclusa per strumenti di conoscono il formato della risorsa di blocco per la generazione di propri formattato risorsa di blocco e per l'esecuzione di self join su **syslockinfo**.|  
+|**rsc_bin**|**binary(16)**|Risorsa di blocco binaria. Include l'effettiva risorsa di blocco presente in Gestione blocchi. Questa colonna è inclusa per gli strumenti disponibili sul formato del blocco di risorse per la generazione di propri formattato risorsa di blocco e per l'esecuzione di self join su **syslockinfo**.|  
 |**rsc_valblk**|**binary(16)**|Gruppo di valori del blocco. Alcuni tipi di risorsa possono includere dati aggiuntivi nella risorsa di blocco per cui non viene eseguito l'hashing da parte di Gestione blocchi al fine di determinare la proprietà di una determinata risorsa di blocco. Ad esempio, i blocchi a livello di pagina non appartengono a un ID di oggetto particolare. Per fini di escalation dei blocchi o altri fini. tuttavia, è possibile inserire nel gruppo di valori del blocco l'ID di oggetto di un blocco a livello di pagina.|  
 |**rsc_dbid**|**smallint**|ID di database associato alla risorsa.|  
 |**rsc_indid**|**smallint**|ID di indice associato alla risorsa, se appropriato.|  
@@ -58,13 +54,13 @@ ms.locfileid: "33222053"
 |**req_refcnt**|**smallint**|Numero dei riferimenti di blocco. Ogni volta che una transazione richiede un blocco su una determinata risorsa, il numero dei riferimenti viene incrementato. Il blocco può essere rilasciato solo quando il numero dei riferimenti è uguale a 0.|  
 |**req_cryrefcnt**|**smallint**|Riservata per utilizzi futuri. È sempre impostata su 0.|  
 |**req_lifetime**|**int**|Mappa di bit del ciclo di vita dei blocchi. Durante determinati processi di elaborazione delle query, è necessario mantenere i blocchi sulle risorse fino a quando in Query Processor non è stata completata una particolare fase della query. La mappa di bit del ciclo di vita dei blocchi viene utilizzata da Query Processor e dallo strumento di gestione delle transazioni per indicare i gruppi di blocchi che è possibile rilasciare quando una determinata fase di una query viene completata. Alcuni bit della mappa vengono utilizzati per indicare i blocchi che vengono mantenuti attivi fino al termine di una transazione, anche se il relativo numero di riferimenti è uguale a 0.|  
-|**req_spid**|**int**|Interno [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ID della sessione che richiede il blocco del processo.|  
+|**req_spid**|**int**|Interni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] elaborare l'ID della sessione che richiede il blocco.|  
 |**req_ecid**|**int**|ID del contesto di esecuzione (ECID). Viene utilizzato per indicare il thread di un'operazione parallela che è il proprietario di un determinato blocco.|  
 |**req_ownertype**|**smallint**|Tipo di oggetto associato al blocco:<br /><br /> 1 = Transazione<br /><br /> 2 = Cursore<br /><br /> 3 = Sessione<br /><br /> 4 = Sessione esclusiva<br /><br /> I tipi di oggetto 3 e 4 rappresentano versioni particolari di blocchi di sessione che consentono di tenere traccia rispettivamente di blocchi a livello di database e di filegroup.|  
-|**req_transactionID**|**bigint**|Transazione univoco utilizzato nell'ID **syslockinfo** e nell'evento di profiler|  
+|**req_transactionID**|**bigint**|Transazione univoco ID usato nel **syslockinfo** e nell'evento di profiler|  
 |**req_transactionUOW**|**uniqueidentifier**|Identifica l'ID di unità di lavoro (UOW, Unit Of Work) della transazione DTC. Per transazioni non MS DTC, l'unità UOW è impostata su 0.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  

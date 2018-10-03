@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], about
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
-caps.latest.revision: 51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3700a2e2d7b96a572fd8c72210a5d287ca56cf6e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23dd47489f2e0697a1bbb6a74e4187c93108afb6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237641"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112033"
 ---
 # <a name="getting-started-with-alwayson-availability-groups-sql-server"></a>Introduzione ai gruppi di disponibilità AlwaysOn (SQL Server)
   In questo argomento si illustra la procedura per la configurazione delle istanze di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] per supportare [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e per la creazione, la gestione e il monitoraggio di un gruppo di disponibilità.  

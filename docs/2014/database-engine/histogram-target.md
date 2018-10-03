@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bucketing target [SQL Server extended events]
 - event bucketing target
 - targets [SQL Server extended events], bucketing
 ms.assetid: 2ea39141-7eb0-4c74-abf8-114c2c106a19
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f524357956a2832b2eee50a2659e065e34d3e070
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8672fc9932dd18f73424f83a81299421186aec9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293121"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198141"
 ---
 # <a name="histogram-target"></a>Destinazione dell'istogramma
   La destinazione dell'istogramma raggruppa le occorrenze di un tipo di evento specifico in base ai dati relativi all'evento. I raggruppamenti di eventi sono conteggiati in base a una colonna di evento oppure a un'azione specificata. È possibile utilizzare la destinazione dell'istogramma dell'evento per risolvere i problemi relativi alle prestazioni. Grazie all'identificazione degli eventi che si verificano più di frequente, è infatti possibile individuare elementi specifici che indicano la causa potenziale di un problema relativo alle prestazioni.  

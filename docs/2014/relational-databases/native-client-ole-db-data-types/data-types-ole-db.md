@@ -1,12 +1,10 @@
 ---
-title: I tipi di dati (OLE DB) | Microsoft Docs
+title: I tipi di dati (OLE DB) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping data types [OLE DB]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - data types [OLE DB]
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31083fe39332d15afa357045103a39114f1b4f6d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412770"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193981"
 ---
 # <a name="data-types-ole-db"></a>Tipi di dati (OLE DB)
   Per eseguire [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni ed elaborare i risultati usando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client, è necessario conoscere il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue il mapping del provider OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati per i tipi di dati OLE DB durante l'associazione i parametri o colonne in un set di righe e quando si usa la **ITableDefinition** interfaccia per creare una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

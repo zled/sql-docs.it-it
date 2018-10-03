@@ -1,50 +1,44 @@
 ---
-title: Impostazioni (GUI) (DB2ToSQL) del progetto | Documenti Microsoft
+title: Impostazioni (GUI) (DB2ToSQL) del progetto | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: b2cdb71a-f301-45b3-878c-382356c93b4b
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7ae2bb7c816dbabb827ab9813792849bca25725e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 84a8c5aa7fa12ea0763dc47635c4c6fbbf772a42
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775097"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604223"
 ---
-# <a name="project-settings-gui-db2tosql"></a>Impostazioni del progetto (GUI) (DB2ToSQL)
-Le impostazioni di progetto GUI consentono di configurare l'aspetto dei dati nel **dati** scheda e se visualizzare il report di valutazione dopo la conversione o non.  
+# <a name="project-settings-gui-db2tosql"></a>Impostazioni progetto (GUI) (DB2ToSQL)
+Le impostazioni del progetto GUI consentono di configurare l'aspetto dei dati nel **dati** scheda e se visualizzare il report di valutazione dopo la conversione o No.  
   
-Il riquadro di interfaccia utente grafica è disponibile nel **impostazioni progetto** e **impostazioni di progetto predefinite** finestre di dialogo.  
+Nel riquadro interfaccia utente grafica è disponibile nel **impostazioni del progetto** e **impostazioni di progetto predefinite** finestre di dialogo.  
   
--   Utilizzare il **impostazioni progetto** la finestra di dialogo per impostare le opzioni di interfaccia utente per il progetto corrente. Per accedere alle impostazioni di interfaccia utente grafica, nel **strumenti** dal menu **impostazioni progetto**e quindi fare clic su **GUI** nella parte inferiore del riquadro a sinistra.  
+-   Usare la **impostazioni del progetto** finestra di dialogo per impostare opzioni dell'interfaccia utente per il progetto corrente. Per accedere alle impostazioni dell'interfaccia utente grafica, nelle **Tools** dal menu **le impostazioni del progetto**e quindi fare clic su **GUI** nella parte inferiore del riquadro di sinistra.  
   
--   Utilizzare il **impostazioni di progetto predefinite** la finestra di dialogo per impostare le opzioni di interfaccia utente per tutti i progetti. Per accedere alle impostazioni di interfaccia utente grafica, nel **strumenti** dal menu **impostazioni di progetto predefinite**, selezionare il tipo di progetto di migrazione per i quali impostazioni sono necessarie per essere visualizzati o modificati da **versione di destinazione della migrazione** elenco a discesa e quindi fare clic su **GUI** nella parte inferiore del riquadro a sinistra.  
+-   Usare la **impostazioni di progetto predefinite** finestra di dialogo per impostare opzioni dell'interfaccia utente per tutti i progetti. Per accedere alle impostazioni dell'interfaccia utente grafica, nel **degli strumenti** dal menu **impostazioni di progetto predefinite**, selezionare tipo di progetto di migrazione per i quali impostazioni sono necessarie per essere visualizzati o modificati da **migrazione Versione di destinazione** elenco a discesa e quindi fare clic su **GUI** nella parte inferiore del riquadro di sinistra.  
   
 ## <a name="options"></a>Opzioni  
 **Numero di riga massima consentita per l'origine**  
-Configura il numero di righe di dati visualizzati di **dati** scheda per la tabella di origine selezionato.  
+Configura il numero di righe di dati visualizzati nei **dati** scheda per la tabella di origine selezionato.  
   
-**Predefinito**: 100  
+**Default**: 100  
   
 **Numero di riga massima consentita per la destinazione**  
-Configura il numero di righe di dati visualizzati di **dati** scheda per la tabella di destinazione selezionati.  
+Configura il numero di righe di dati visualizzati nei **dati** scheda per la tabella di destinazione selezionati.  
   
-**Predefinito**: 100  
+**Default**: 100  
   
-**Visualizza report dopo la conversione**  
-Per visualizzare un report dopo la conversione di schemi, selezionare True. Il Report di conversione risultante contiene lo stesso layout e le stesse informazioni del Report di valutazione.  
+**Visualizzare report dopo la conversione**  
+Per visualizzare un report dopo la conversione di schemi, selezionare True. Il Report di conversione risultante contiene lo stesso layout e le informazioni come il Report di valutazione.  
   
-**Predefinito**: False  
+**Default**: False  
   

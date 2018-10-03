@@ -1,34 +1,31 @@
 ---
-title: Esempio di metodo CreateRecordset (VB) | Documenti Microsoft
+title: Esempio di metodo CreateRecordset (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CreateRecordset method [RDS], Visual Basic example
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ecaf020aaef33580142c7f6dde3fb6eba57b7cb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a924314c4de47a62e835708478e093a72f3b3c57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277270"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830109"
 ---
-# <a name="createrecordset-method-example-vb"></a>Esempio di metodo CreateRecordset (VB)
-È possibile creare un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e specificare le informazioni di colonna. È quindi possibile inserire dati nel **Recordset** oggetto; i buffer di set di righe gli inserimenti sottostante.  
+# <a name="createrecordset-method-example-vb"></a>Esempio del metodo CreateRecordset (VB)
+È possibile creare un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto e specificare le informazioni di colonna. È quindi possibile inserire i dati nel **Recordset** oggetto; i buffer sottostante di set di righe gli inserimenti.  
   
- Esempio di codice seguente viene illustrato come definire un **Recordset** utilizzando il [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto. È possibile farlo anche con il [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
+ Esempio di codice seguente viene illustrato come definire un **Recordset** tramite il [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto. È possibile farlo anche con il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
   
 ```  
 'BeginRsDefineShapeVB  

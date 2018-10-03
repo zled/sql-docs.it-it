@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4af6f6b3e80e05be05a4cb5aa5294edb8d2690f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ecc2c837001d5a05339ebe9b7eb3bdc9e6a7055
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213291"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188031"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventi registrati da un pacchetto di Integration Services
   Un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registra diversi messaggi di eventi nel registro eventi applicazioni di Windows. nel registro eventi applicazioni di Windows.  
@@ -39,7 +36,7 @@ ms.locfileid: "37213291"
 > [!NOTE]  
 >  I messaggi indicati nella tabella vengono registrati anche se non è stata abilitata la funzione di registrazione per il pacchetto.  
   
-|ID evento|Nome simbolico|Text|Note|  
+|ID evento|Nome simbolico|Testo|Note|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|Esecuzione del pacchetto "" avviata|L'esecuzione del pacchetto è stata avviata.|  
 |12289|DTS_MSG_PACKAGESUCCESS|Esecuzione del pacchetto "" completata.|Il pacchetto è stato eseguito correttamente e non è più in esecuzione.|  
@@ -59,7 +56,7 @@ ms.locfileid: "37213291"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>Messaggi relativi alle fasi di esecuzione del pacchetto  
   
-|ID evento|Nome simbolico|Text|Note|  
+|ID evento|Nome simbolico|Testo|Note|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|Nome evento: %1%r Messaggio: %9%r Operatore: %2%r Nome origine: %3%r ID origine: %4%r ID esecuzione: %5%r Ora inizio: %6%r Ora fine: %7%r Codice dati: %8|Quando si configura la funzione di registrazione per il pacchetto nel registro eventi applicazioni, vari messaggi utilizzano questo formato generico.|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|Nome evento: %1%r Messaggio: %9%r Operatore: %2%r Nome origine: %3%r ID origine: %4%r ID esecuzione: %5%r Ora inizio: %6%r Ora fine: %7%r Codice dati: %8|Il pacchetto è stato avviato.|  
@@ -72,14 +69,14 @@ ms.locfileid: "37213291"
 ### <a name="messages-about-events-that-occur"></a>Messaggi relativi agli eventi  
  Nella tabella seguente sono elencati solo alcuni dei messaggi restituiti in seguito a eventi. Per un elenco più completo dei messaggi di errore, di avviso e informativi usati da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Guida di riferimento ai messaggi e agli errori di Integration Services](../integration-services-error-and-message-reference.md).  
   
-|ID evento|Nome simbolico|Text|Note|  
+|ID evento|Nome simbolico|Testo|Note|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|Nome evento: %1%r Messaggio: %9%r Operatore: %2%r Nome origine: %3%r ID origine: %4%r ID esecuzione: %5%r Ora inizio: %6%r Ora fine: %7%r Codice dati: %8|Impossibile eseguire l'attività.|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|Nome evento: %1%r Messaggio: %9%r Operatore: %2%r Nome origine: %3%r ID origine: %4%r ID esecuzione: %5%r Ora inizio: %6%r Ora fine: %7%r Codice dati: %8|Questo messaggio segnala un errore.|  
 |12249|DTS_MSG_EVENTLOGENTRY_WARNING|Nome evento: %1%r Messaggio: %9%r Operatore: %2%r Nome origine: %3%r ID origine: %4%r ID esecuzione: %5%r Ora inizio: %6%r Ora fine: %7%r Codice dati: %8|Questo messaggio segnala un avviso.|  
 |12258|DTS_MSG_EVENTLOGENTRY_INFORMATION|Nome evento: %1%r Messaggio: %9%r Operatore: %2%r Nome origine: %3%r ID origine: %4%r ID esecuzione: %5%r Ora inizio: %6%r Ora fine: %7%r Codice dati: %8|Questo messaggio segnala informazioni non associate a un errore o a un avviso.|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  Per informazioni su come visualizzare le voci di log in tempo reale, vedere [Visualizzare le voci di log nella finestra Registra eventi](../view-log-entries-in-the-log-events-window.md).  
   
 ## <a name="see-also"></a>Vedere anche  

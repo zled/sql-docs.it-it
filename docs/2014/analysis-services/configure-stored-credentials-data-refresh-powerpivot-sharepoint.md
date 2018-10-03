@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e2e6287e4631a2179fdfcac6dfc28506b21ef9cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c12e62d3a74ca1112ac7983fa6480b49171c308
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161552"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149421"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Configurare le credenziali archiviate per l'aggiornamento dati PowerPivot (PowerPivot per SharePoint)
   I processi di aggiornamento dati PowerPivot possono essere eseguiti in qualsiasi account utente di Windows purché venga creata un'applicazione di destinazione nel servizio di archiviazione sicura per archiviare le credenziali che si desidera utilizzare. Analogamente, se si desidera fornire un account di accesso al database diverso da quello utilizzato per importare originariamente i dati in PowerPivot per Excel, è possibile eseguire il mapping di queste credenziali a un'applicazione di destinazione del servizio di archiviazione sicura, quindi specificare quell'applicazione di destinazione in una pianificazione dell'aggiornamento dati.  

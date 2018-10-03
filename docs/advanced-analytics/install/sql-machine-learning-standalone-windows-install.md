@@ -9,26 +9,32 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7cf5cf2d78900c5bbd7607666afecc64aa98267f
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 70fa652e876f1011bc2d74df56104671b33775b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118549"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187491"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installare R Server (Standalone) con il programma di installazione di SQL Server o Machine Learning Server (Standalone)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Installazione di SQL Server include un **funzionalità condivisa** opzione per l'installazione di un non specifici dell'istanza, server di formazione machine autonomo eseguito all'esterno di SQL Server. In SQL Server 2016, questa funzionalità è detta **R Server (Standalone)**. In SQL Server 2017, bensì **Machine Learning Server (Standalone)** e include R e Python. 
+Il programma di installazione di SQL Server include un **funzionalità condivisa** opzione per l'installazione di un non specifici dell'istanza, server di formazione machine autonomo eseguito all'esterno di SQL Server. In SQL Server 2016, questa funzionalità è detta **R Server (Standalone)**. In SQL Server 2017, bensì **Machine Learning Server (Standalone)** e include R e Python. 
 
-Un server autonomo come installato dal programma di installazione di SQL Server è funzionalmente equivalente alle versioni non SQL personalizzata di [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), lo stesso supporto di casi d'uso e scenari, tra cui l'esecuzione remota, servizi web e l'operazionalizzazione e la raccolta completa di funzioni RevoScaleR e revoscalepy.
+Un server autonomo come installato dal programma di installazione di SQL Server è funzionalmente equivalente alle versioni non SQL personalizzata di [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), lo stesso supporto di casi d'uso e scenari, tra cui:
+
++ Esecuzione remota, il passaggio tra le sessioni locali e remote nella stessa console
++ Operazionalizzazione con nodi web e i nodi di calcolo
++ Distribuzione del servizio Web: la possibilità di creare il pacchetto dello script R e Python nei servizi web
++ Completamento della raccolta di librerie di funzioni R e Python
 
 Come server indipendenti disaccoppiati da SQL Server, viene configurato l'ambiente R e Python, protetto e a cui si accede usando il sistema operativo sottostante e gli strumenti forniti nel server autonomo, non SQL Server.
 
-A complemento di SQL Server, un server autonomo è utile se è necessario sviluppare ad alte prestazioni machine learning soluzioni che possono usare remote contesti di calcolo, il passaggio in modo intercambiabile tra il server locale e remoto Machine Learning Server in Spark cluster o in un altro Server SQL dell'istanza.
-  
+A complemento di SQL Server, un server autonomo è utile se è necessario sviluppare soluzioni che possono usare contesti di calcolo remoto per l'intera gamma di piattaforme di dati supportati di apprendimento automatico ad alte prestazioni. È possibile spostare l'esecuzione dal server locale a una versione remota di Machine Learning Server in un cluster Spark o in un'altra istanza di SQL Server.
 
-## <a name="bkmk_prereqs"> </a> Elenco di controllo pre-installazione
+<a name="bkmk_prereqs"> </a>
+
+## <a name="pre-install-checklist"></a>Elenco di controllo pre-installazione
 
 Se è installata una versione precedente, ad esempio SQL Server 2016 R Server (Standalone) o Microsoft R Server, disinstallare l'installazione esistente prima di continuare.
 
@@ -37,7 +43,9 @@ Come regola generale, è consigliabile che si considera server autonomo e motore
 Può avere solo un server autonomo nel computer: SQL Server 2017 Machine Learning Server o SQL Server 2016 R Server (Standalone). Prima di installare una versione diversa, è necessario disinstallare manualmente una versione.
 
 ::: moniker range="=sql-server-2016"
- ###  <a name="bkmk_ga_instalpatch"></a> Requisito di installazione patch 
+<a name="bkmk_ga_instalpatch"></a> 
+
+ ###  <a name="install-patch-requirement"></a>Requisito di installazione patch 
 
 Per SQL Server 2016 solo: Microsoft ha identificato un problema con la versione specifica di file binari di Microsoft VC + + 2013 Runtime installati come prerequisito da SQL Server. Se l'aggiornamento dei file binari di VC++ Runtime non viene installato, potrebbero verificarsi problemi di stabilità di SQL Server in determinati scenari. Prima di installare SQL Server, seguire le istruzioni in [Note sulla versione di SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) per vedere se il computer richiede una patch per i file binari di VC++ Runtime.  
 ::: moniker-end
@@ -134,9 +142,52 @@ La tabella seguente elenca i percorsi per le distribuzioni R e Python create da 
 |R Server (Standalone) di SQL Server 2016 |  Installazione guidata di SQL Server 2016 |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |SQL Server 2016 R Services (In-Database) |Installazione guidata di SQL Server 2016|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
 
+<a name="apply-cu"></a>
+
+## <a name="apply-updates"></a>Applicare gli aggiornamenti
+
+È consigliabile applicare l'aggiornamento cumulativo più recente per il motore di database e i componenti di apprendimento automatico. Gli aggiornamenti cumulativi vengono installati tramite il programma di installazione. 
+
+Sui dispositivi connessi a internet, gli aggiornamenti cumulativi vengono in genere applicati tramite Windows Update, ma è anche possibile usare i passaggi seguenti per gli aggiornamenti controllati. Quando si applica l'aggiornamento del motore di database, il programma di installazione esegue il pull degli aggiornamenti cumulativi per le funzionalità di R o Python che è installato nel server autonomo. 
+
+Nei server disconnesso, sono necessarie operazioni aggiuntive. È necessario ottenere l'aggiornamento cumulativo per il motore di database, nonché i file CAB per funzionalità di machine learning. Tutti i file devono essere trasferiti al server di tipo isolato e applicati manualmente.
+
+1. Iniziare con un'istanza della linea di base. È possibile applicare gli aggiornamenti cumulativi solo per le installazioni esistenti:
+
+  + Machine Learning Server (Standalone) dalla versione iniziale di SQL Server 2017
+  + R Server (Standalone) dalla versione iniziale di SQL Server 2016, SQL Server 2016 Service Pack 1 o SQL Server 2016 Service Pack 2
+
+2. In un dispositivo connesso a internet e passare all'elenco di aggiornamento cumulativo per la versione di SQL Server.
+
+  + [Aggiornamenti di SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [Aggiornamenti di SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. Scaricare l'aggiornamento cumulativo più recente. È un file eseguibile.
+
+4. In un dispositivo connesso a internet, fare doppio clic sul file .exe per eseguire il programma di installazione e il passaggio tramite la procedura guidata accettare le condizioni di licenza, esaminare le funzionalità interessate e monitorare lo stato di avanzamento fino al completamento.
+
+5. In un server senza connettività internet:
+
+   + Ottenere i file CAB corrispondenti per R e Python. Per i collegamenti ai download, vedere [CAB download per gli aggiornamenti cumulativi in analitica nel database di SQL Server istanze](sql-ml-cab-downloads.md).
+
+   + Trasferimento di tutti i file, il file eseguibile principale e i file CAB, in una cartella nel computer offline.
+
+   + Fare doppio clic sul file .exe per eseguire l'installazione. Quando si installa un aggiornamento cumulativo in un server senza connettività internet, viene chiesto di selezionare il percorso dei file con estensione CAB per R e Python.
+
+6. Dopo l'installazione, su un server per cui sono stati abilitati operazionalizzazione con nodi web e i nodi di calcolo, modifica **appSettings. JSON**, aggiunta di una voce "MMLResourcePath", direttamente sotto "MMLNativePath":
+
+    ```json
+    "ScorerParameters": {
+        "MMLNativePath": "C:\Program Files\Microsoft SQL Server\140\R_SERVER\library\MicrosoftML\mxLibs\x64\",
+        "MMLResourcePath": "C:\Program Files\Microsoft SQL Server\140\R_SERVER\library\MicrosoftML\mxLibs\x64\"
+    }
+    ```
+
+7. [Eseguire l'utilità della riga di comando admin](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch) per riavviare il web e i nodi di calcolo. Per questa procedura e la sintassi, vedere [Monitor, avvia e arresta nodi di calcolo e web](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start).
+
 ## <a name="development-tools"></a>Strumenti di sviluppo
 
-Un IDE di sviluppo non è installato come parte del programma di installazione. Per altre informazioni su come configurare un ambiente di sviluppo, vedere [configurare gli strumenti R](../r/set-up-a-data-science-client.md) e [configurare gli strumenti Python](../python/setup-python-client-tools-sql.md).
+Un IDE di sviluppo non è installato come parte del programma di installazione. Per altre informazioni sulla configurazione di un ambiente di sviluppo, vedere [configurare gli strumenti R](../r/set-up-a-data-science-client.md) e [configurare gli strumenti Python](../python/setup-python-client-tools-sql.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

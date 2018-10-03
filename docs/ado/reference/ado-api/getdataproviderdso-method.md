@@ -1,27 +1,24 @@
 ---
-title: Metodo GetDataProviderDSO | Documenti Microsoft
+title: Metodo GetDataProviderDSO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - GetDataProviderDSO Method [ADO]
 ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40cf12ab80faf3c32da98c1fb97b7ec7d9ca373f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0c7d864d61d2782955a52ce6e20a7025379cc946
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278820"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744069"
 ---
 # <a name="getdataproviderdso-method"></a>Metodo GetDataProviderDSO
 Recupera l'oggetto origine dati OLE DB sottostante dal provider di forma.  
@@ -37,10 +34,10 @@ HRESULT GetDataProviderDSO(
   
 #### <a name="parameters"></a>Parametri  
  *ppDataProviderDSOIUnknown*  
- [out]  Un puntatore a un puntatore che restituisce l'interfaccia IUnknown dell'oggetto origine dati OLE DB sottostante.  
+ [out]  Un puntatore a un puntatore che restituisce l'IUnknown dell'oggetto origine dati OLE DB sottostante.  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo non non addref il puntatore di interfaccia. Se il chiamante prevede di posizionare il puntatore, il chiamante deve eseguire le necessarie addref e release.  
+## <a name="remarks"></a>Note  
+ Questo metodo non non addref il puntatore di interfaccia. Se il chiamante prevede di spostare il puntatore, il chiamante deve effettuare la necessaria addref e release.  
   
 ## <a name="applies-to"></a>Applicabile a  
  [Interfaccia IDSOShapeExtensions](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)
