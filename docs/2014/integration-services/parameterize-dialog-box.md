@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.parameter.f1
 ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e7e9e6a982dfc7645785ed04ef359e47b77f83a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 76a48abe8ab2fe8481b2944ed6b3c77258b4c855
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287627"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075605"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
   La finestra di dialogo **Imposta parametri** consente di associare un parametro nuovo o esistente a una proprietà di un'attività. È possibile aprire la finestra di dialogo facendo clic con il pulsante destro del mouse su un'attività o sulla scheda Flusso di controllo in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)], quindi selezionando **Imposta parametri**. Nell'elenco seguente vengono descritti gli elementi dell'interfaccia utente della finestra di dialogo. Per altre informazioni sui parametri, vedere [Parametri di Integration Services &#40;SSIS&#41;](integration-services-ssis-package-and-project-parameters.md).  
@@ -45,7 +42,7 @@ ms.locfileid: "37287627"
  **Descrizione**  
  Specificare la descrizione per il parametro.  
   
- **Value**  
+ **Valore**  
  Specificare il valore predefinito per il parametro. Definito anche valore predefinito per la progettazione, potrà essere sostituito in seguito in fase di distribuzione.  
   
  **Ambito**  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Tabs
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
-caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2843acbc8935d8bd9f505a9265c704a342ddee3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30842eec745c87848e4eb1c78c4806639da3ac0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324921"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050151"
 ---
-# <a name="options-text-editorxmltabs-page"></a>Opzioni (pagina XML:Tabs: Editor di testo)
+# <a name="options-text-editorxmltabs-page"></a>Opzioni (Editor di testo/XML - Pagina Schede)
   Questa finestra di dialogo consente di cambiare il comportamento di tabulazione dell'editor XML utilizzato per modificare i documenti XML. Per visualizzare queste impostazioni, scegliere **Opzioni** dal menu **Strumenti** , espandere la cartella **Editor di testo** , espandere la sottocartella **XML** e quindi fare clic su **Tabulazioni**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Opzioni di impostazione in più posizioni  

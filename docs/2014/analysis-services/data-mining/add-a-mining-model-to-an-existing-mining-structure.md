@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], adding
 - mining structures [Analysis Services], mining models
 - adding mining models
 ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5140aa597e6ed1fea65ba3358fb5c493ffdaa5c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f62a5fb194813f9fcab5fcdb5c9f2bfb70135d8c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295911"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075012"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Aggiungere un modello di data mining a una struttura di data mining esistente
   È possibile aggiungere più modelli di data mining a una struttura, dopo avere aggiunto il modello iniziale. Ogni modello deve contenere le colonne presenti nella struttura, ma è possibile definire l'utilizzo delle colonne in modo diverso per ogni modello di data mining. Per altre informazioni sulla definizione delle colonne dei modelli di data mining, vedere [Colonne del modello di data mining](mining-model-columns.md).  

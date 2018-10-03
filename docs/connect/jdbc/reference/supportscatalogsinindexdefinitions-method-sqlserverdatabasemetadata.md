@@ -1,13 +1,11 @@
 ---
-title: Metodo supportsCatalogsInIndexDefinitions | Documenti Microsoft
+title: Metodo supportsCatalogsInIndexDefinitions | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsCatalogsInIndexDefinitions
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a19423a0-e7b6-4f5c-94be-80ddf3fa4717
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b772bcd2aa0132d77003750d9492dc4c39025e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6b2a93f8692a7ee92525a106e01483b98fab1c21
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846976"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842779"
 ---
 # <a name="supportscatalogsinindexdefinitions-method-sqlserverdatabasemetadata"></a>Metodo supportsCatalogsInIndexDefinitions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +41,7 @@ public boolean supportsCatalogsInIndexDefinitions()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo supportsCatalogsInIndexDefinitions viene specificato dal metodo supportsCatalogsInIndexDefinitions nell'interfaccia DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  

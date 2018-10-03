@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07f4fd6beae68fc0d8a81f610beb56ff779ec25d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1edd498468296f8f89309f18772a1e0b6617d699
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159602"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061161"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Backup, ripristino e sincronizzazione di database (XMLA)
   In XML for Analysis sono disponibili i tre comandi seguenti per l'esecuzione del backup, del ripristino e della sincronizzazione dei database:  
@@ -148,7 +145,7 @@ ms.locfileid: "37159602"
 ### <a name="synchronizing-rolap-objects"></a>Sincronizzazione di oggetti ROLAP  
  Il comando `Synchronize` non è in grado di sincronizzare aggregazioni o dati per oggetti che utilizzano l'archiviazione ROLAP poiché tali informazioni vengono archiviate in tabelle in un'origine dati relazionale sottostante. È possibile tuttavia sincronizzare i metadati per gli oggetti ROLAP. Per eseguire questa operazione, il comando `Synchronize` ricrea la struttura della tabella in un'origine dati relazionale.  
   
- Per sincronizzare oggetti ROLAP, è possibile utilizzare l'elemento `Location` in un comando Synchronize. Per ognuno `Location` elemento utilizzato per rilocare un'origine dati, il `DataSourceType` proprietà deve essere impostata in modo esplicito *locale*. , È inoltre necessario impostare la proprietà `ConnectionString` dell'elemento `Location` sulla stringa di connessione del nuovo percorso. Durante la sincronizzazione, il comando `Synchronize` sostituirà la stringa di connessione per l'origine dati identificata dalla proprietà `DataSourceID` dell'elemento `Location` con il valore della proprietà `ConnectionString` dell'elemento `Location`.  
+ Per sincronizzare oggetti ROLAP, è possibile utilizzare l'elemento `Location` in un comando Synchronize. Per ognuno `Location` elemento utilizzato per rilocare un'origine dati, il `DataSourceType` proprietà deve essere impostata in modo esplicito *locale*. . È inoltre necessario impostare la proprietà `ConnectionString` dell'elemento `Location` sulla stringa di connessione del nuovo percorso. Durante la sincronizzazione, il comando `Synchronize` sostituirà la stringa di connessione per l'origine dati identificata dalla proprietà `DataSourceID` dell'elemento `Location` con il valore della proprietà `ConnectionString` dell'elemento `Location`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento di backup &#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   

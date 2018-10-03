@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server], passwords
@@ -20,12 +18,12 @@ ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bf9bac77913385c4cdf2d219fbacb5a380e5101b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 97b13e8ccf7ef331320d15254dde3480331c4bb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025928"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075731"
 ---
 # <a name="strong-passwords"></a>Password complesse
   Le password possono costituire il punto debole nell'ambito distribuzione della sicurezza in un server. È dunque necessario prestare grande attenzione alla scelta delle password. Una password complessa ha le caratteristiche seguenti:  
@@ -54,7 +52,7 @@ ms.locfileid: "43025928"
   
 -   Inizia con il carattere $ o \@.  
   
- Gli account di accesso e le password usati in una stringa di connessione OLE DB o ODBC non devono contenere i caratteri seguenti: [] {}() , ; ? * ! \@(Indici per tabelle con ottimizzazione per la memoria). Questi caratteri vengono utilizzati per inizializzare una connessione o per separare i relativi valori.  
+ Gli account di accesso e le password usati in una stringa di connessione OLE DB o ODBC non devono contenere i caratteri seguenti: [] {}() , ; ? * ! \@ (Indici per tabelle con ottimizzazione per la memoria). Questi caratteri vengono utilizzati per inizializzare una connessione o per separare i relativi valori.  
   
 ## <a name="related-content"></a>Contenuto correlato  
  [Criteri password](password-policy.md)  

@@ -1,13 +1,11 @@
 ---
-title: Gestione degli errori in JScript | Documenti Microsoft
+title: Gestione degli errori in JScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - errors [ADO], JScript
 - JScript error handling [ADO]
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcebaef8a36961a5c28af4eee80fca4d088b9ed5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7be00967d8d17731e4564a0a23aa245e609c6e8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838859"
 ---
-# <a name="handling-errors-in-jscript"></a>Gestione degli errori di JScript
-Il codice di Microsoft® JScript® deve verificare il **conteggio** proprietà del **connessione** dell'oggetto **errori** insieme. Se il valore è maggiore di 0, scorrere la raccolta e visualizzare i valori come si farebbe in qualsiasi altro linguaggio.  
+# <a name="handling-errors-in-jscript"></a>Gestione degli errori in JScript
+Your Microsoft® JScript® il codice deve verificare i **conteggio** proprietà delle **connessione** dell'oggetto **errori** raccolta. Se il valore è maggiore di 0, scorrere la raccolta e visualizzare i valori come si farebbe in una delle altre lingue.  
   
 ```  
 <!-- BeginErrorExampleJS -->  

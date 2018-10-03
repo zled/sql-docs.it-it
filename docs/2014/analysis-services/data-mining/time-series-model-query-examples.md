@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ec5161fab123b9a0b251cfc570318f58fd57ad3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 729f50c43b277b6456d834e7706c026b36cddfae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067991"
 ---
 # <a name="time-series-model-query-examples"></a>Time Series Model Query Examples
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che consente di fornire dettagli sui criteri individuati durante l'analisi, o una query di stima, che consente di utilizzare i criteri presenti nel modello di data mining per eseguire stime relative ai nuovi dati. Una query sul contenuto per un modello Time Series, ad esempio, potrebbe fornire dettagli aggiuntivi sulle strutture periodiche rilevate, mentre una query di stima potrebbe fornire stime per i 5-10 intervalli di tempo successivi. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  

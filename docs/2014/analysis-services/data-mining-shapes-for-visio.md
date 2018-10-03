@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining shapes
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Visio shapes
 - shapes, data mining
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6dae172d599b6da648962e50cb3d24fa2f36351d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3dab107fb57ab2e6d0abaa97bd76a1ce8082b726
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261807"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055231"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Forme di data mining per Visio
   Le forme di data mining per Visio forniscono il modelli personalizzati per la visualizzazione dei modelli di data mining. Tramite questi modelli, è possibile connettersi a un modello creato in precedenza e creare presentazioni interattive per illustrare i risultati del processo di data mining.  
@@ -48,7 +45,7 @@ ms.locfileid: "37261807"
   
 -   **Microsoft Data Mining Shape Studio.vss** questo file di stencil sono contenute le forme associate al modello.  
   
-## <a name="how-to-use-the-templates"></a>Come usare i modelli  
+## <a name="how-to-use-the-templates"></a>Utilizzo dei modelli  
  Per aprire i modelli, è possibile fare doppio clic sul file di forma o è possibile aprire Visio e quindi aprire il modello di forma.  
   
 1.  Rilasciare una delle forme di data mining di Visio dallo stencil in una nuova pagina.  

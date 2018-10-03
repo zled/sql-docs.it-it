@@ -1,54 +1,51 @@
 ---
-title: Record corrente e le dimensioni dell'oggetto Recordset | Documenti Microsoft
+title: Record corrente e le dimensioni del Recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 661201c1d62881d8b94f6e9815bc38c9442f69fe
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7a72bb27e95da931fac146fe6bc827b71cdb8460
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271026"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828619"
 ---
-# <a name="current-record-and-size-of-recordset"></a>Record corrente e le dimensioni di Recordset
-In questa sezione viene descritto come individuare la posizione corrente del cursore nell'esempio **Recordset** in [esempio di codice JScript per restituire un Recordset](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
+# <a name="current-record-and-size-of-recordset"></a>Record corrente e dimensioni del recordset
+In questa sezione viene descritto come individuare la posizione corrente del cursore nel campione **Recordset** nelle [esempio di codice JScript per restituire un Recordset](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
   
 ## <a name="current-record"></a>Record corrente  
- Il record corrente nel set di dati corrisponde a che la posizione del cursore di cui punta il **Recordset** oggetto. Quando un **Recordset** oggetto viene restituito dall'origine dati come risultato della chiamata **Open**, **Command. Execute**, o **Connection**  (inclusi **Connection.NamedCommand** e **Connection.StoredProcedure**), il cursore viene impostato in modo da indicare il primo record. Nel set di dati di esempio, il record corrente è "Frutta la organici pere" elemento.  
+ Il record corrente nel set di dati corrisponde a che la posizione del cursore di cui punta il **Recordset** oggetto. Quando un **Recordset** oggetto viene restituito dall'origine dati come risultato della chiamata al metodo **Open**, **Command. Execute**, o **Connection. Execute**  (tra cui **Connection.NamedCommand** e **Connection.StoredProcedure**), il cursore viene impostato in modo da puntare al primo record. Il set di dati di esempio, il record corrente iniziale è "Frutta polvere organica pere" elemento.  
   
-## <a name="size-of-recordset"></a>Dimensioni dell'oggetto Recordset  
- Per trovare la dimensione di un **Recordset** oggetto, ottenere il valore della **Recordset.RecordCount** proprietà. Questo valore è un valore long integer che indica il numero di record di **Recordset**. Se il set di dati viene restituita dal Provider OLE DB per Microsoft SQL Server, questo valore restituisce il numero di righe restituite. Lettura di **RecordCount** proprietà in una classe chiusa **Recordset** causa un errore.  
+## <a name="size-of-recordset"></a>Dimensioni del Recordset  
+ Per trovare la dimensione di un **Recordset** dell'oggetto, ottenere il valore della **Recordset.RecordCount** proprietà. Questo valore è un valore long integer che indica il numero di record nel **Recordset**. Se il set di dati viene restituito dal Provider OLE DB per Microsoft SQL Server, questo valore indica il numero di righe restituite. Leggere il **RecordCount** proprietà in una classe chiusa **Recordset** provoca un errore.  
   
  Se non è possibile determinare il numero di record, il valore della proprietà è -1.  
   
- Il valore di **RecordCount** proprietà dipende anche dalle funzionalità del provider e il tipo di cursore utilizzato. Per un cursore forward-only, il valore è -1. Per un cursore statico o keyset, il valore è il numero effettivo di record restituiti nella **Recordset** oggetto. Per un cursore dinamico, il valore è -1 o il numero effettivo di record, a seconda dell'origine dati.  
+ Il valore della **RecordCount** proprietà dipende anche dalle funzionalità del provider e il tipo di cursore utilizzato. Per un cursore forward-only, il valore è -1. Per un cursore keyset o statico, il valore è il numero effettivo di record restituiti nel **Recordset** oggetto. Per un cursore dinamico, il valore è -1 o il numero effettivo di record, a seconda dell'origine dati.  
   
- Un cursore che supporta **Recordcount** deve lavoro più complessa e pertanto richiede maggiore potenza di elaborazione, di un cursore non supporta **Recordcount**. Se è necessario conoscere il numero di record, utilizzando il tipo di cursore diverso potrebbe migliorare le prestazioni dell'applicazione, soprattutto se è necessario gestire un ampio set di dati.  
+ Un cursore che supporta **Recordcount** necessario lavoro più difficili e pertanto richiede più potenza di calcolo, rispetto a un cursore non supporta **Recordcount**. Se non occorre conoscere il numero di record, usando il tipo di cursore diverso potrebbe contribuire a migliorare le prestazioni dell'applicazione, soprattutto se devono gestire grandi set di dati.  
   
- In alcuni casi, un cursore o il provider non è in grado di determinare il **RecordCount** valore senza prima recuperare tutti i record dall'origine dati. Per garantire l'accuratezza del conteggio, chiamare il **Recordset**. **MoveLast** metodo prima di chiamare **Recordset.RecordCount**.  
+ In alcuni casi, un cursore o il provider non riesce a determinare il **RecordCount** valore senza prima recuperare tutti i record dall'origine dati. Per garantire l'accuratezza del conteggio, chiamare il **Recordset**. **MoveLast** metodo prima di chiamare **Recordset.RecordCount**.  
   
- L'esempio **Recordset** oggetto ottenuto utilizzando il [esempio di codice JScript](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) utilizza un cursore forward-only, pertanto la chiamata di **RecordCount** su questo oggetto comporta sempre -1. Se si modifica la riga di codice che chiama il **Recordset**. **Aprire** metodo come illustrato nell'esempio seguente, il **RecordCount** proprietà restituirà il numero effettivo di record recuperati.  
+ L'esempio **Recordset** ottenuto usando l'oggetto il [esempio di codice JScript](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) Usa un cursore forward-only, quindi la chiamata **RecordCount** tohoto objektu comporta sempre -1. Se si modifica la riga di codice che chiama il **Recordset**. **Aprire** metodo come illustrato nell'esempio seguente, il **RecordCount** proprietà restituirà il numero effettivo di record recuperati.  
   
 ```  
 oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText   
 ```  
   
- In questo modo statico cursori con il [il Provider Microsoft OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) supporta **RecordCount**. In questo esempio, sono disponibili cinque record e quindi **RecordCount** deve produrre il valore di 5.  
+ Infatti, statico cursori con il [Provider Microsoft OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) supportano **RecordCount**. In questo esempio sono presenti cinque record e di conseguenza **RecordCount** deve restituire il valore 5.  
   
- In questa sezione contiene l'argomento seguente.  
+ In questa sezione contiene gli argomenti seguenti.  
   
  [Limiti di un recordset](../../../ado/guide/data/boundaries-of-a-recordset.md)

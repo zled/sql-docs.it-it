@@ -1,13 +1,11 @@
 ---
-title: Comandi con i comandi di calcolo con parametri | Documenti Microsoft
+title: Comandi con i comandi di calcolo intermedi con parametri | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], parameterized commands
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 253f961c066932cc6d5913fab0fb8e649d9c80cd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f1675e80522feb0c0b2a46a89dfa6e3bba182198
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272300"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851641"
 ---
-# <a name="parameterized-commands-with-intervening-compute-commands"></a>I comandi con parametri con frapposti i comandi di calcolo
-Un tipico comando APPEND shape con parametri contiene una clausola che crea un elemento padre **Recordset** con un comando di query e un'altra clausola che crea un elemento figlio **Recordset** con un comando di query con parametri: vale a dire un comando che include un parametro di segnaposto (un punto interrogativo, "?"). Il data shaping risultante **Recordset** ha due livelli, in cui l'elemento padre occupa il livello superiore e il figlio del livello inferiore.  
+# <a name="parameterized-commands-with-intervening-compute-commands"></a>Comandi con parametri con comandi COMPUTE intermedi
+Una forma con parametri tipici comando APPEND disponga di una clausola che crea un elemento padre **Recordset** con un comando di query e un'altra clausola che crea un elemento figlio **Recordset** con un comando di query con parametri: vale a dire, un comando che contiene un segnaposto per il parametro (un punto interrogativo, "?"). Il data shaping risultante **Recordset** ha due livelli, in cui l'elemento padre occupa il livello superiore e l'elemento figlio occupa il livello inferiore.  
   
- La clausola che crea l'elemento figlio **Recordset** può ora essere un numero arbitrario di forma nidificata comandi COMPUTE, in cui il comando nidificato contiene la query con parametri. Il data shaping risultante **Recordset** dispone di più livelli, in cui l'elemento padre occupa il livello superiore, l'elemento figlio occupa il livello inferiore e un numero arbitrario di **Recordset**s generato per il comandi COMPUTE Shape occupano i livelli intermedi.  
+ La clausola che crea l'elemento figlio **Recordset** potrebbe ora essere un numero arbitrario di shape nidificati comandi COMPUTE, in cui il comando maggiormente annidato contiene la query con parametri. Il data shaping risultante **Recordset** dispone di più livelli, in cui l'elemento padre occupa il livello superiore, l'elemento figlio occupa il livello inferiore e un numero arbitrario di **Recordset**s generato dal comandi Shape calcolo occupano i livelli intermedi.  
   
- L'utilizzo tipico per questa funzionalità è possibile richiamare la funzione di aggregazione e le funzionalità di raggruppamento di shapeCOMPUTE i comandi per creare frapposti **Recordset** oggetti con informazioni analitiche relative figlio **Recordset** . Inoltre, poiché si tratta di un comando shape con parametri, ogni volta che una colonna a capitoli dell'elemento padre si accede, un nuovo elemento figlio **Recordset** possono essere recuperati. Poiché i livelli intermedi sono derivati dall'elemento figlio, vengono anche verrà ricalcolate.  
+ L'utilizzo tipico per questa funzionalità consiste nel richiamare la funzione di aggregazione e le funzionalità di raggruppamento di shapeCOMPUTE comandi per creare intermedi **Recordset** gli oggetti con le informazioni analitiche figlio **Recordset** . Inoltre, poiché si tratta di un comando di forma con parametri, ogni volta che una colonna a capitoli del padre si accede, un nuovo elemento figlio **Recordset** possono essere recuperati. Poiché i livelli intermedi sono derivati dall'elemento figlio, sono anche verrà ricalcolati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di data shaping](../../../ado/guide/data/data-shaping-example.md)

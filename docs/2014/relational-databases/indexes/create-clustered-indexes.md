@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index creation [SQL Server], clustered indexes
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - clustered indexes, UNIQUE constraint
 - indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b31e05c06e88e77596637572f5116692e3fa3bc0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0dda9622ec6b5faa753310861557961ca54b4971
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063161"
 ---
 # <a name="create-clustered-indexes"></a>Creare indici cluster
   È possibile creare indici cluster nelle tabelle di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A parte poche eccezioni, ogni tabella deve disporre di un indice cluster. Oltre a migliorare le prestazioni di esecuzione delle query, un indice può essere ricompilato o riorganizzato su richiesta per controllare la frammentazione della tabella. È inoltre possibile creare un indice cluster in una vista. Gli indici cluster sono descritti nell'argomento [Descrizione di indici cluster e non cluster](clustered-and-nonclustered-indexes-described.md).  

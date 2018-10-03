@@ -1,14 +1,12 @@
 ---
-title: Tipi di dati XPath (SQLXML 4.0) | Microsoft Docs
+title: Tipi di dati XPath (SQLXML 4.0) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping XDR types to XPath types [SQLXML]
@@ -28,24 +26,23 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0bd591ecb5c0e37acc4ffea7d7b22bf85636c585
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78c7890449a68770d6c6a14a100af061b1394040
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167142"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054751"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipi di dati XPath (SQLXML 4.0)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath e gli elementi XML Schema (XSD) utilizzano tipi di dati molto diversi. XPath, ad esempio, non include tipi di dati integer o di data, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e XSD ne includono diversi. XSD utilizza una precisione in nanosecondi per i valori di ora, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza al massimo una precisione di 1/300 secondi. Di conseguenza, il mapping di un tipo di dati a un altro non è sempre possibile. Per altre informazioni sul mapping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati ai tipi di dati XSD, vedere [coercizioni dei tipi di dati e annotazione SQL: DataType &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath e gli elementi XML Schema (XSD) utilizzano tipi di dati molto diversi. XPath, ad esempio, non include tipi di dati integer o di data, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e XSD ne includono diversi. XSD utilizza una precisione in nanosecondi per i valori di ora, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza al massimo una precisione di 1/300 secondi. Di conseguenza, il mapping di un tipo di dati a un altro non è sempre possibile. Per ulteriori informazioni sul mapping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati ai tipi di dati XSD, vedere [coercizioni di tipi di dati e l'annotazione SQL: DataType &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
  XPath utilizza tre tipi di dati: `string`, `number` e `boolean`. Il tipo di dati `number` corrisponde sempre a un valore IEEE 754 a virgola mobile con precisione doppia. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `float(53)` tipo di dati è il più vicino a XPath `number`. `float(53)`, tuttavia, non è esattamente un valore IEEE 754. Ad esempio, non viene utilizzato né un valore diverso da un numero (NaN, Not-a-Number) né un valore infinito. Eventuali tentativi di convertire una stringa non numerica in `number` e di dividere per zero restituiscono un errore.  
   
 ## <a name="xpath-conversions"></a>Conversioni XPath  
- Quando si utilizza una query XPath, ad esempio `OrderDetail[@UnitPrice > "10.0"]`, le conversioni dei tipi di dati implicite ed esplicite possono modificare impercettibilmente il significato della query. È pertanto importante comprendere le modalità di implementazione dei tipi di dati XPath. La specifica del linguaggio XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 October 1999, visitare il sito Web di W3C all'indirizzo http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ Quando si utilizza una query XPath, ad esempio `OrderDetail[@UnitPrice > "10.0"]`, le conversioni dei tipi di dati implicite ed esplicite possono modificare impercettibilmente il significato della query. È pertanto importante comprendere le modalità di implementazione dei tipi di dati XPath. La specifica del linguaggio XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 October 1999, visitare il sito Web W3C all'indirizzo http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Gli operatori XPath sono suddivisi in quattro categorie:  
   
@@ -155,7 +152,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Eseguire diverse conversioni dei tipi di dati in una query XPath  
  Considerare la seguente query XPath specificata su uno schema XSD con annotazioni: `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- Questa query XPath restituisce tutti i  **\<OrderDetail >** elementi che soddisfano il predicato `@UnitPrice * @OrderQty > 98`. Se il **UnitPrice** annotato con un `fixed14.4` tipo di dati nello schema con annotazione, questo predicato è equivalente all'espressione SQL:  
+ Questa query XPath restituisce tutti i  **\<OrderDetail >** gli elementi che soddisfano il predicato `@UnitPrice * @OrderQty > 98`. Se il **UnitPrice** annotato con un `fixed14.4` tipo di dati nello schema con annotazione, questo predicato è equivalente all'espressione SQL:  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   

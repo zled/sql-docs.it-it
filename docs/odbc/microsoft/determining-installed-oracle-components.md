@@ -1,33 +1,30 @@
 ---
-title: Determinazione installati componenti di Oracle | Documenti Microsoft
+title: Determinazione dei componenti Oracle installati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], determining installed components
 ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f4c2c85def4d413e9a3cca87e83b6f3b5e23780
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7de783ae116a61aaa4c8801ca132127352020161
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899356"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849715"
 ---
-# <a name="determining-installed-oracle-components"></a>Determinazione installati componenti di Oracle
+# <a name="determining-installed-oracle-components"></a>Determinazione dei componenti Oracle installati
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, utilizzare il driver ODBC fornito da Oracle.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare il driver ODBC fornito da Oracle.  
   
- Per determinare i componenti Oracle installati nel sistema (e le versioni), passare alla directory \Orainst nella home directory Oracle. Aprire uno dei seguenti file di testo: Nt.rgs, Win95.rgs o Win98.rgs.  
+ Per determinare i componenti Oracle installati nel sistema (e relative versioni), passare alla directory \Orainst nella home directory Oracle. Aprire uno dei file di testo seguente: Nt.rgs, Win95.rgs o Win98.rgs.  
   
  Il formato di file è simile al seguente:  
   

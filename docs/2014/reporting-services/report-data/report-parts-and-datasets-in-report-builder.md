@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d35860f1e220d3b4dca43e72ffbefb440eb16cdf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00094e630c9beaf7f5093d944f267a2884c22da7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303737"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059343"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Parti del report e set di dati in Generatore report
   In Generatore report il modo più semplice per includere dati in un report consiste nell'aggiungere parti del report esistenti dalla Raccolta parti del report. Nelle parti del report sono contenuti i set di dati dai quali dipendono, chiamati *set di dati dipendenti*. I set di dati dipendenti sono basati sulle origini dati condivise e possono essere set di dati incorporati o condivisi.  

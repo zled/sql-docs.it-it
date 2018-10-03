@@ -1,36 +1,30 @@
 ---
-title: Risoluzione dei problemi (AccessToSQL) | Documenti Microsoft
+title: Risoluzione dei problemi (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d017b56e358ab70360f216aa985e73392858f584
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8167857b3ee1653eac81067cc19efd198d7aa032
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774867"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848379"
 ---
 # <a name="troubleshooting-accesstosql"></a>Risoluzione dei problemi (AccessToSQL)
-Non è insolito per eseguire nella console script o comandi in esecuzione a metà problemi di migrazione.  
+Non è insolito per l'esecuzione in circa metà problemi di migrazione l'esecuzione di script di console o comandi.  
   
-Gli errori risolvibili possono essere correlati a:  
+Errori risolvibili possono essere correlati a:  
   
 1.  Funzione  
   
-2.  Procedura  
+2.  Routine  
   
 3.  Vista  
   
@@ -40,5 +34,5 @@ Gli errori risolvibili possono essere correlati a:
   
 6.  Modifica delle impostazioni di progetto  
   
-Possono essere risolto i problemi mediante l'interfaccia utente SSMA aprendo il File di progetto creato tramite la console.  
+I problemi possono essere risolti usando l'interfaccia utente SSMA aprendo il File di progetto creato tramite la console.  
   

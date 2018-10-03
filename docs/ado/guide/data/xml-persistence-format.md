@@ -1,34 +1,31 @@
 ---
-title: Formato di persistenza XML | Documenti Microsoft
+title: Formato di persistenza XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd0085f4fb632d4e5be4c4e64e1934b154108488
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7e70b7ab799ee0c1704c2fcd492edb434eb7c536
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273300"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842166"
 ---
 # <a name="xml-persistence-format"></a>Formato di persistenza XML
-ADO utilizza la codifica UTF-8 per il flusso XML che persiste.  
+ADO utilizza la codifica UTF-8 per il flusso XML che viene mantenuto.  
   
- Il formato XML ADO viene suddiviso in due sezioni, una sezione schema seguita da una sezione dati. Di seguito è riportato un file XML di esempio per la tabella Shippers dal database Northwind. Vengono descritte varie parti del codice XML di esempio seguente.  
+ Il formato XML ADO viene suddiviso in due sezioni, una sezione schema aggiungendo la sezione di dati. Di seguito è riportato un file XML di esempio per la tabella spedizionieri dal database Northwind. Vengono illustrate varie parti del codice XML di esempio seguente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   
@@ -70,9 +67,9 @@ xmlns:z="#RowsetSchema">
   
  Lo schema sono illustrate le dichiarazioni di spazi dei nomi, la sezione dello schema e la sezione di dati. La sezione dello schema contiene le definizioni per riga, ShipperID, CompanyName e telefono.  
   
- Definizioni dello schema conformi al [specifica W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/) e può essere completamente convalidato (ma non verrà eseguita la convalida in Internet Explorer 5). Dati XML sono attualmente il formato di schemi supportati solo per la persistenza del Recordset.  
+ Definizioni dello schema conformi per il [specifica W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/) e può essere convalidato completamente (anche se la convalida non verrà eseguita in Internet Explorer 5). XML-Data è attualmente il formato dello schema supportate solo per la persistenza di Recordset.  
   
- La sezione di dati include tre righe che contengono informazioni degli spedizionieri. Per un set di righe vuoto, la sezione di dati può essere vuota, ma la \<: dati di Reporting Services > tag devono essere presenti. Senza dati, è possibile scrivere la sintassi abbreviata tag semplicemente come \<: dati rs / >. Qualsiasi tag preceduti dal prefisso "rs" indica che si tratta dello spazio dei nomi definito dall'urn: schemas-microsoft-com: rowset.  
+ La sezione di dati sono presenti tre righe che contengono informazioni spedizionieri. Per un set di righe vuoto, la sezione di dati può essere vuota, ma il \<rs: dati > tag devono essere presenti. Senza dati, è possibile scrivere semplicemente la sintassi abbreviata tag \<rs: data / >. Qualsiasi tag il prefisso "rs" indica che si tratta dello spazio dei nomi definito dall'urn: schemas-microsoft-com: rowset.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Persistenza di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

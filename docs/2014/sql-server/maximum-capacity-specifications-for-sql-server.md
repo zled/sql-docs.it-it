@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 08997fa0dd4fe66b4e3c22fd6447105d11991c29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a766dcae2ac4e5fdba3fad3390c2a805177e1c17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296041"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077581"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Specifiche di capacità massima per SQL Server
   Nelle tabelle seguenti vengono indicati le dimensioni e i numeri massimi dei diversi oggetti definiti nei componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per passare alla tabella per una tecnologia [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , fare clic sul relativo collegamento:  
@@ -97,7 +94,7 @@ ms.locfileid: "37296041"
 |REFERENCES per ogni tabella|253|253|  
 |Righe per ogni tabella|Limitato dall'archiviazione disponibile|Limitato dall'archiviazione disponibile|  
 |Tabelle per ogni database<br /><br /> Nota: Gli oggetti di Database includono oggetti quali tabelle, viste, stored procedure, funzioni definite dall'utente, trigger, regole, valori predefiniti e vincoli. La somma del numero di tutti gli oggetti in un database non può essere maggiore di 2.147.483.647.|Limitato dal numero di oggetti di un database|Limitato dal numero di oggetti di un database|  
-|Partizioni per ogni tabella o indice partizionato|1.000<br /><br /> **\*\* Importanti \* \* ** creazione di una tabella o indice con più di 1000 partizioni è possibile in un sistema a 32 bit, ma non è supportata.|15.000|  
+|Partizioni per ogni tabella o indice partizionato|1.000<br /><br /> **\*\* Importanti \* \***  creazione di una tabella o indice con più di 1000 partizioni è possibile in un sistema a 32 bit, ma non è supportata.|15.000|  
 |Statistiche relative a colonne non indicizzate|30.000|30.000|  
 |Tabelle per ogni istruzione SELECT|Limitato solo dalle risorse disponibili|Limitato solo dalle risorse disponibili|  
 |Trigger per ogni tabella<br /><br /> Nota: Gli oggetti di Database includono oggetti quali tabelle, viste, stored procedure, funzioni definite dall'utente, trigger, regole, valori predefiniti e vincoli. La somma del numero di tutti gli oggetti in un database non può essere maggiore di 2.147.483.647.|Limitato dal numero di oggetti di un database|Limitato dal numero di oggetti di un database|  

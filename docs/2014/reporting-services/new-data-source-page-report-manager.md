@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 57c22c0f39b411510fb70c5a5068ce4930674555
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74a48d913a5222ee566843eff85d71aaec194bd9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280387"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073734"
 ---
 # <a name="new-data-source-page-report-manager"></a>Pagina Nuova origine dati (Gestione report)
   Utilizzare la pagina Nuova origine dati per creare un'origine dei dati condivisa. Un'origine dei dati condivisa definisce una connessione a un'origine dei dati esterna. Le origini dati condivise consentono di creare e gestire le impostazioni per la connessione all'origine dati separatamente rispetto ai report, ai modelli e alle sottoscrizioni guidate dai dati che utilizzano tale origine dati.  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 04a293e7377a92e36b96678859a132869b04fb4f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3471abb7a551de576dfdf01de2a5fcf980b60527
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396112"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061271"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria
   Se si crea una nuova tabella ottimizzata per la memoria [!INCLUDE[hek_2](../../includes/hek-2-md.md)] o si esegue la migrazione di una tabella basata su disco esistente a una tabella ottimizzata per la memoria, è importante disporre di un numero ragionevole di requisiti di memoria di ogni tabella in modo da poter fornire memoria sufficiente al server. In questa sezione viene descritto come stimare la quantità di memoria necessaria per contenere i dati di una tabella ottimizzata per la memoria.  
@@ -39,8 +36,7 @@ ms.locfileid: "40396112"
   
 -   [Memoria in caso di aumento delle dimensioni](#bkmk_MemoryForGrowth)  
   
-##  <a name="bkmk_ExampleTable">
-            </a> Esempio di tabella ottimizzata per la memoria  
+##  <a name="bkmk_ExampleTable"></a> Esempio di tabella ottimizzata per la memoria  
  Si consideri il seguente schema di tabella ottimizzata per la memoria:  
   
 ```tsql  

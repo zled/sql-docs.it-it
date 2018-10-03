@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - backing up databases [SQL Server], copying databases
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
-caps.latest.revision: 59
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 551677d78685c5e491d5f1c2dd347bc77f37a437
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b51404c994bd4a5029bc9e2d592db020747492fb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164892"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057191"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiare database tramite backup e ripristino
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è possibile creare un nuovo database ripristinando un backup di un database utente creato tramite [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versione successiva. Tuttavia, i backup di **master**, **model** e **msdb** creati con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere ripristinati da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Inoltre, i backup di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non possono essere ripristinati da una qualsiasi versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

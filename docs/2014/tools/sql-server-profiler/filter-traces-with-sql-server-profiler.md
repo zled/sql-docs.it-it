@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], filters
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - filters [SQL Server], traces
 - traces [SQL Server], filters
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82b24c2ce9324f0cddc917849f3158e8ae0bd62d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd92ee33f1b66fac4444142b83d9ed284b02bbec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247801"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071707"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>Filtrare le tracce tramite SQL Server Profiler
   È possibile definire filtri sulle colonne di dati per gli eventi di traccia di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in modo che le informazioni vengano acquisite solo per quegli eventi a cui si è interessati. I filtri di traccia consentono di ridurre l'impatto della traccia sulle prestazioni del sistema dal momento che vengono acquisiti meno eventi nella traccia. I filtri possono inoltre semplificare la lettura del risultato della traccia, in quanto è presente una quantità minore di eventi in cui eseguire la ricerca.  
