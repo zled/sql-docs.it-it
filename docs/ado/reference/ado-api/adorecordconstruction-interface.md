@@ -1,13 +1,11 @@
 ---
-title: Interfaccia ADORecordConstruction | Documenti Microsoft
+title: Interfaccia ADORecordConstruction | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cadacd2dae2b21ea03187721eaee79aac848432f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 21975fb2442aea97e362cd71b24c087f58addc0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275630"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686869"
 ---
 # <a name="adorecordconstruction-interface"></a>Interfaccia ADORecordConstruction
 Il **ADORecordConstruction**interfaccia viene utilizzata per costruire un oggetto ADO **Record** oggetto da OLE DB **riga** oggetto in un'applicazione C/C++.  
@@ -36,7 +33,7 @@ Il **ADORecordConstruction**interfaccia viene utilizzata per costruire un oggett
 |||  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Sola scrittura.<br />Imposta il contenitore di OLE DB **riga** oggetto questo ADO **Record** oggetto.|  
-|[Riga](../../../ado/reference/ado-api/row-property-ado.md)|Lettura/scrittura.<br />Ottiene o imposta il valore OLE DB **riga** oggetto da/su questo ADO **Record** oggetto.|  
+|[Riga](../../../ado/reference/ado-api/row-property-ado.md)|Lettura/scrittura.<br />Ottiene o imposta un DB OLE **riga** oggetto da/in questa ADO **Record** oggetto.|  
   
 ## <a name="methods"></a>Metodi  
  Nessuna.  
@@ -44,8 +41,8 @@ Il **ADORecordConstruction**interfaccia viene utilizzata per costruire un oggett
 ## <a name="events"></a>Eventi  
  Nessuna.  
   
-## <a name="remarks"></a>Remarks  
- Data OLE DB **riga** oggetto (`pRow`), la costruzione di un oggetto ADO **Record** oggetto (`adoR`), gli importi di tre operazioni di base seguenti:  
+## <a name="remarks"></a>Note  
+ Dato un OLE DB **riga** oggetto (`pRow`), la costruzione di un oggetto ADO **Record** oggetto (`adoR`), gli importi per le tre operazioni fondamentali seguenti:  
   
 1.  Creare un oggetto ADO **Record** oggetto:  
   
@@ -54,7 +51,7 @@ Il **ADORecordConstruction**interfaccia viene utilizzata per costruire un oggett
     adoRs.CreateInstance(__uuidof(_Record));  
     ```  
   
-2.  Query di **IADORecordConstruction** interfaccia il **Record** oggetto:  
+2.  Query di **IADORecordConstruction** interfaccia le **Record** oggetto:  
   
     ```  
     adoRecordConstructionPtr adoRConstruct=NULL;  
@@ -62,7 +59,7 @@ Il **ADORecordConstruction**interfaccia viene utilizzata per costruire un oggett
                         (void**)&adoRConstruct);  
     ```  
   
-3.  Chiamare il **IADORecordConstruction::** il metodo di proprietà per impostare OLE DB **riga** sull'oggetto ADO **Record** oggetto:  
+3.  Chiamare il **IADORecordConstruction::** metodo di proprietà da impostare OLE DB **riga** sull'oggetto ADO **Record** oggetto:  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -70,7 +67,7 @@ Il **ADORecordConstruction**interfaccia viene utilizzata per costruire un oggett
     adoRConstruct->put_Row(pUnk);  
     ```  
   
- I risultanti **adoR** oggetto rappresenta l'oggetto ADO **Record** oggetto costruito da OLE DB **riga** oggetto.  
+ I risultanti **adoR** oggetto rappresenta ora ADO **Record** oggetto costruito da OLE DB **riga** oggetto.  
   
  Un oggetto ADO **Record** oggetto può anche essere costruito dal contenitore di OLE DB **riga** oggetto.  
   

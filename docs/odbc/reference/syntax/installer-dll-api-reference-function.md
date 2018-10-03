@@ -1,32 +1,29 @@
 ---
-title: Programma di installazione nella DLL la funzione di riferimento all'API | Documenti Microsoft
+title: Funzione di riferimento API DLL di programma di installazione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installer DLL [ODBC]
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37828082300c387ac6a421171ca6fefaa0a2cad1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14a89c859e98a069106b79c9289187a64c310fa9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916916"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820379"
 ---
-# <a name="installer-dll-api-reference-function"></a>Programma di installazione nella DLL la funzione API Reference
-In questa sezione viene descritta la sintassi delle funzioni DLL API del programma di installazione. Il programma di installazione costituito da 20 funzioni API DLL. Tre di queste funzioni, **SQLGetTranslator**, **SQLRemoveDSNFromIni**, e **SQLWriteDSNToIni**, vengono chiamati solo da file DLL di installazione. Le altre funzioni vengono chiamate dai programmi di installazione e amministrazione.  
+# <a name="installer-dll-api-reference-function"></a>Informazioni di riferimento sulle funzioni dell'API DLL del programma di installazione
+In questa sezione viene descritta la sintassi delle funzioni nel programma di installazione API DLL. Il programma di installazione che DLL API è costituita da funzioni di 20. Tre di queste funzioni **SQLGetTranslator**, **SQLRemoveDSNFromIni**, e **SQLWriteDSNToIni**, vengono chiamati solo da file DLL di installazione. Le altre funzioni vengono chiamate dai programmi di installazione e amministrazione.  
   
- Ogni funzione è contrassegnata con la versione di ODBC in cui è stato introdotto.  
+ Ogni funzione viene etichettata con la versione di ODBC in cui è stato introdotto in.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

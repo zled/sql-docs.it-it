@@ -1,43 +1,40 @@
 ---
-title: Aggiuntive supportate grammatica SQL ODBC | Documenti Microsoft
+title: Aggiuntive supportate grammatica SQL ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6381f13176e34322db6c5d8649ea348ec1e73673
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32898926"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675489"
 ---
-# <a name="additional-supported-odbc-sql-grammar"></a>Grammatica SQL ODBC supportati aggiuntive
-Il driver ODBC supporta completamente la grammatica minimo ODBC versione 2.5 e le clausole seguenti nella grammatica Core ed estesa ODBC versione 2.5. Informazioni aggiuntive possono essere visualizzate da passare per il [istruzione ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), [i nomi di correlazione](../../odbc/microsoft/correlation-names.md), e [chiamata della stored Procedure](../../odbc/microsoft/procedure-invocation.md) argomenti.  
+# <a name="additional-supported-odbc-sql-grammar"></a>Grammatica SQL ODBC supportata aggiuntiva
+I driver ODBC supportano completamente la grammatica di almeno 2.5 di ODBC e le clausole seguenti nella grammatica Core ed estesa ODBC versione 2.5. Informazioni aggiuntive possono essere visualizzate dal momento del passaggio per la [istruzione ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), [i nomi di correlazione](../../odbc/microsoft/correlation-names.md), e [chiamata di procedura](../../odbc/microsoft/procedure-invocation.md) argomenti.  
   
--   Approssimativo valore letterale numerico (Core)  
+-   Valore letterale numerico approssimativo (Core)  
   
 -   [Istruzione ALTER TABLE](../../odbc/microsoft/alter-table-statement.md) (Core)  
   
--   Valori letterali binari (estesa)  
+-   Valori letterali binari (esteso)  
   
 -   [I nomi di correlazione](../../odbc/microsoft/correlation-names.md) (Core)  
   
--   [Chiamata della stored procedure](../../odbc/microsoft/procedure-invocation.md) (estesa)  
+-   [Chiamata di procedura](../../odbc/microsoft/procedure-invocation.md) (esteso)  
   
--   [TRA predicato](../../odbc/microsoft/between-predicate.md) (Core)  
+-   [Predicato BETWEEN](../../odbc/microsoft/between-predicate.md) (Core)  
   
 -   [Istruzione CREATE INDEX](../../odbc/microsoft/create-index-statement.md)  
   
@@ -59,9 +56,9 @@ Il driver ODBC supporta completamente la grammatica minimo ODBC versione 2.5 e l
   
 -   IN (*valuelist*) (Core)  
   
--   [Jet: Outer join](../../odbc/microsoft/jet-outer-joins.md) (estesa)  
+-   [Jet: Outer join](../../odbc/microsoft/jet-outer-joins.md) (esteso)  
   
--   Istruzione SELECT (Extended) (inclusi GROUP BY, HAVING e clausole di unione)  
+-   Istruzione SELECT (esteso) (tra cui GROUP BY, HAVING e clausole UNION)  
   
 -   Sottoquery (sub-SELECT) (Core)  
   

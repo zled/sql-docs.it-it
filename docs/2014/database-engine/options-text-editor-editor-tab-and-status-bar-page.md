@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
-caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 1fdef7c6b3a72b4c6556ec5d8e6354c837d6be04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267267"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055451"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opzioni (Editor di testo: pagina Scheda editor e barra di stato)
   Nella **pagina Scheda editor e barra di stato** è possibile personalizzare le informazioni visualizzate dagli editor di query di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . È possibile specificare il livello di informazioni da visualizzare nella scheda e sulla barra di stato della finestra dell'editor di query, nonché specificare se la barra di stato viene visualizzata nella parte superiore o inferiore della finestra dell'editor.  
@@ -74,7 +71,7 @@ ms.locfileid: "37267267"
  **Top**  
  La barra di stato viene visualizzata nella parte superiore della finestra dell'editor di query.  
   
- **Nella parte inferiore**  
+ **nella parte inferiore**  
  La barra di stato viene visualizzata nella parte inferiore della finestra dell'editor di query.  
   
 ## <a name="tab-text"></a>Testo scheda  

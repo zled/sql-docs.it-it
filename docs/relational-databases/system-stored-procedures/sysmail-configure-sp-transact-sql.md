@@ -1,14 +1,11 @@
 ---
-title: sysmail_configure_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_configure_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_configure_sp_TSQL
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0121f82f7ec06dabb3958e5f8407daa5979e89e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5e44edb404d21e3be482bf83cf6db37a522cfa36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259541"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594830"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifica le impostazioni di configurazione per Posta elettronica database. Le impostazioni di configurazione specificate con **sysmail_configure_sp** si applicano all'intero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza.  
+  Modifica le impostazioni di configurazione per Posta elettronica database. Le impostazioni di configurazione specificate con **sysmail_configure_sp** si applicano all'intera [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,12 +52,12 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
  Descrizione del parametro.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Posta elettronica database utilizza i parametri seguenti:  
   
 ||||  
@@ -72,13 +68,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 |*DatabaseMailExeMinimumLifeTime*|Periodo minimo di tempo, in secondi, durante il quale il processo di posta elettronica esterno resta attivo. Quando Posta elettronica database invia molti messaggi, aumentare questo valore per far restare Posta elettronica database attivo ed evitare l'overhead di avvii e arresti frequenti.|**600**|  
 |*DefaultAttachmentEncoding*|Codifica predefinita per gli allegati di posta elettronica.|MIME|  
 |*MaxFileSize*|Dimensioni massime di un allegato, in byte.|**1000000**|  
-|*ProhibitedExtensions*|Elenco delimitato da virgole delle estensioni che non possono essere inviate come allegato a un messaggio di posta elettronica.|**exe, dll, vbs e js**|  
+|*ProhibitedExtensions*|Elenco delimitato da virgole delle estensioni che non possono essere inviate come allegato a un messaggio di posta elettronica.|**file exe, dll, vbs e js**|  
 |*LoggingLevel*|Consente di specificare i messaggi registrati nel log di Posta elettronica database. Uno dei valori numerici seguenti:<br /><br /> 1 - Modalità normale. Solo registrazione degli errori.<br /><br /> 2 - Modalità estesa. Registrazione di messaggi di errore, di avviso e informativi.<br /><br /> 3 - Modalità dettagliata. Registrazione di messaggi di errore, di avviso, informativi, di riuscita, nonché di messaggi interni aggiuntivi. Utilizzare questa modalità per la risoluzione dei problemi.|**2**|  
   
  La stored procedure **sysmail_configure_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
  **A. Impostazione di posta elettronica Database per ritentare ogni account 10 volte**  
@@ -90,7 +86,7 @@ EXECUTE msdb.dbo.sysmail_configure_sp
     'AccountRetryAttempts', '10' ;  
 ```  
   
- **B. Impostazione delle dimensioni massime degli allegati su 2 MB**  
+ **B. Impostazione della dimensione massima degli allegati su 2 MB**  
   
  Nell'esempio seguente viene illustrato come impostare le dimensioni massime per gli allegati su 2 MB.  
   

@@ -1,14 +1,11 @@
 ---
-title: syscollector_collector_types (Transact-SQL) | Documenti Microsoft
+title: syscollector_collector_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collector_types
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collector_types view
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7951259911347457e4927cb9c3c0133d87cc9cf6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 41ae978e31db70f0cc49469d5ec14ae6f075ab7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221898"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650579"
 ---
 # <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,18 +45,18 @@ ms.locfileid: "33221898"
 |**upload_package_name**|**sysname**|Nome del pacchetto di caricamento. Non ammette i valori Null.|  
 |**is_system**|**bit**|Attivato (1) o disattivato (0) per indicare se il tipo di agente di raccolta dati è stato fornito con l'agente di raccolta dati o se è stato aggiunto in un secondo momento dal **dc_admin**. Potrebbe trattarsi di un tipo personalizzato sviluppato internamente o da terze parti. Non ammette i valori Null.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede SELECT per **dc_operator**, **dc_proxy**.  
   
 ## <a name="change-history"></a>Cronologia modifiche  
   
 |Contenuto aggiornato|  
 |---------------------|  
-|Aggiornato **collection_type_uid** nome della colonna **collector_type_uid**.|  
-|Correzione della descrizione per il **parameter_schema** colonna per indicare che sono ammessi valori null.|  
-|Aggiunta di **parameter_formatter** colonna.|  
-|Correzione del tipo di dati per il **collection_package_path** colonna e l'aggiornamento della descrizione per indicare che il valore è nullable.|  
-|Correzione del tipo di dati per il **upload_package_path** colonna e l'aggiornamento della descrizione per indicare che il valore è nullable.|  
+|Aggiornata **collection_type_uid** nome della colonna **collector_type_uid**.|  
+|Correzione della descrizione per il **parameter_schema** colonna per indicare che il valore è nullable.|  
+|Aggiungere il **parameter_formatter** colonna.|  
+|Correzione del tipo di dati per il **collection_package_path** colonna e aggiornamento della descrizione per indicare che il valore è nullable.|  
+|Correzione del tipo di dati per il **upload_package_path** colonna e aggiornamento della descrizione per indicare che il valore è nullable.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   

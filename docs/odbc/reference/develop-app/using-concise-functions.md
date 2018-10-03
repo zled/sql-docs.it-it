@@ -1,39 +1,36 @@
 ---
-title: Utilizzo di funzioni Concise | Documenti Microsoft
+title: Utilizzo di funzioni Concise | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - concise functions [ODBC]
 - functions [ODBC], concise functions
 - descriptors [ODBC], concise functions
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c53a628eaaa3ca8348ce8917ace36da35c33f653
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d70d3ca60a046a355549260406edba261f805e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722729"
 ---
-# <a name="using-concise-functions"></a>Utilizzo di funzioni Concise
-Alcune funzioni ODBC accedono in modo implicito a descrittori. Gli autori di applicazioni risultare molto più conveniente di chiamare il metodo **SQLSetDescField** o **SQLGetDescField**. Queste funzioni vengono chiamate *conciso* funzioni perché eseguono un numero di funzioni, inclusa l'impostazione o il recupero dei campi di descrizione. Alcune funzioni concisi consentono un'applicazione di impostare o recuperare diversi campi di descrizione correlati in una sola chiamata di funzione.  
+# <a name="using-concise-functions"></a>Uso di funzioni concise
+Alcune funzioni ODBC accedono in modo implicito a descrittori. Gli autori di applicazioni possono trovarle più conveniente rispetto alla chiamata **SQLSetDescField** oppure **SQLGetDescField**. Queste funzioni vengono chiamate *concisa* funzioni poiché eseguono una serie di funzioni, tra cui l'impostazione o recupero di campi di descrizione. Alcune funzioni concise modo un'applicazione può impostare o recuperare diversi campi di descrizione correlati in una singola chiamata di funzione.  
   
- Funzioni concise possono essere chiamate senza prima recuperare un handle di descrittore per l'utilizzo come argomento. Queste funzioni con campi di descrizione associati all'handle di istruzione che vengono chiamati in.  
+ Funzioni concise possono essere chiamate senza prima recuperare un handle descrittore per l'uso come argomento. Queste funzioni usano i campi di descrizione associati all'handle di istruzione che vengono chiamate su.  
   
- Le funzioni concise **SQLBindCol** e **SQLBindParameter** associare una colonna o parametro impostando i campi di descrizione corrispondenti per i relativi argomenti. Ognuna di queste funzioni vengono eseguite più attività rispetto all'impostazione descrittori. **SQLBindCol** e **SQLBindParameter** fornire una specifica completa dell'associazione di una colonna di dati o un parametro dinamico. Un'applicazione può, tuttavia, modificare i singoli dettagli di un'associazione chiamando **SQLSetDescField** o **SQLSetDescRec** e può associare completamente da una serie di chiamate adatte a una colonna o parametro Queste funzioni.  
+ Le funzioni concise **SQLBindCol** e **SQLBindParameter** associare una colonna o parametro, impostando i campi di descrizione che corrispondono ai relativi argomenti. Ognuna di queste funzioni esegue più attività rispetto all'impostazione descrittori. **SQLBindCol** e **SQLBindParameter** fornire una specifica completa dell'associazione di una colonna di dati o un parametro dinamico. Un'applicazione può, tuttavia, modificare i singoli dettagli di un'associazione chiamando **SQLSetDescField** oppure **SQLSetDescRec** e può associare completamente effettuando una serie di chiamate adatte per una colonna o parametro Queste funzioni.  
   
- Le funzioni concise **SQLColAttribute**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLNumParams**, e  **SQLNumResultCols** recuperare i valori in campi di descrizione.  
+ Le funzioni concise **SQLColAttribute**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLNumParams**, e  **SQLNumResultCols** recuperare i valori nei campi del descrittore.  
   
- **SQLSetDescRec** e **SQLGetDescRec** sono funzioni concise che, con un'unica chiamata, impostare o ottenere più campi di descrizione che influiscono sul tipo di dati e l'archiviazione dei dati di colonna o parametro. **SQLSetDescRec** è un metodo efficace per modificare l'associazione di dati di colonna o parametro in un unico passaggio.  
+ **SQLSetDescRec** e **SQLGetDescRec** sono funzioni concise che, con una sola chiamata, impostano oppure ottengono più campi di descrizione che determinano il tipo di dati e archiviazione dei dati di colonna o parametro. **SQLSetDescRec** è un metodo efficace per modificare l'associazione di dati di colonna o parametro in un unico passaggio.  
   
  **SQLSetStmtAttr** e **SQLGetStmtAttr** fungono da funzioni concise in alcuni casi. (Vedere [campi di descrizione](../../../odbc/reference/develop-app/descriptor-fields.md).)

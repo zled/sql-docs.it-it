@@ -6,24 +6,21 @@ ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: dma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
 ms.assetid: ''
-caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3143389d32e1cefcb925bde1b5a92ba2e83fb9fc
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 2fa770fad98918ab9e15231822b499787790a900
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240209"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745279"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Eseguire Data Migration Assistant dalla riga di comando
 La versione 2.1 e versioni successive, quando si installa Data Migration Assistant, viene installato anche in dmacmd.exe *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Usare dmacmd.exe per valutare i database in modalità automatica e restituire il risultato al file JSON o CSV. Questo metodo è particolarmente utile quando si valuta più database o database di grandi dimensioni. 
@@ -46,15 +43,15 @@ DmaCmd.exe /AssessmentName="string"
 |Argomento  |Description  | Obbligatorio (Y/N)
 |---------|---------|---------------|
 | `/help or /?`     | Come usare il testo della Guida dmacmd.exe        | N
-|`/AssessmentName`     |   Nome del progetto di valutazione   | S
-|`/AssessmentDatabases`     | Elenco delimitato da spazi delle stringhe di connessione. Nome del database (catalogo iniziale) è tra maiuscole e minuscole. | S
+|`/AssessmentName`     |   Nome del progetto di valutazione   | Y
+|`/AssessmentDatabases`     | Elenco delimitato da spazi delle stringhe di connessione. Nome del database (catalogo iniziale) è tra maiuscole e minuscole. | Y
 |`/AssessmentTargetPlatform`     | Piattaforma di destinazione per la valutazione, i valori supportati: SqlServer2012, SqlServer2014, SqlServer2016 e AzureSqlDatabaseV12. Il valore predefinito è SqlServer2016   | N
 |`/AssessmentEvaluateFeatureParity`  | Eseguire le regole di parità delle funzionalità  | N
-|`/AssessmentEvaluateCompatibilityIssues`     | Eseguire le regole di compatibilità  | S <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations è obbligatorio.)
-|`/AssessmentEvaluateRecommendations`     | Eseguire funzionalità consigliate        | S <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendationsis obbligati)
+|`/AssessmentEvaluateCompatibilityIssues`     | Eseguire le regole di compatibilità  | Y <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations è obbligatorio.)
+|`/AssessmentEvaluateRecommendations`     | Eseguire funzionalità consigliate        | Y <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendationsis obbligati)
 |`/AssessmentOverwriteResult`     | Sovrascrivere il file dei risultati    | N
-|`/AssessmentResultJson`     | Percorso completo del file di risultati JSON     | S <br> (È necessario AssessmentResultJson o AssessmentResultCsv)
-|`/AssessmentResultCsv`    | Percorso completo del file di risultati CSV   | S <br>(È necessario AssessmentResultJson o AssessmentResultCsv)
+|`/AssessmentResultJson`     | Percorso completo del file di risultati JSON     | Y <br> (È necessario AssessmentResultJson o AssessmentResultCsv)
+|`/AssessmentResultCsv`    | Percorso completo del file di risultati CSV   | Y <br>(È necessario AssessmentResultJson o AssessmentResultCsv)
 
 
 ## <a name="examples-of-assessments-using-the-cli"></a>Esempi di valutazioni usando l'interfaccia della riga di comando
@@ -155,22 +152,22 @@ Catalog=DatabaseName3;Integrated Security=true"***
 
 |Argomento  |Description  | Obbligatorio (Y/N)
 |---------|---------|---------------|
-|`/Action=SkuRecommendation` | Eseguire la valutazione dello SKU utilizzando la riga di comando DMA | S
-|`/SkuRecommendationInputDataFilePath`  | Percorso completo del file del contatore delle prestazioni raccolti dai computer che ospita i database |    S
-|`/SkuRecommendationTsvOutputResultsFilePath`   | Percorso completo del file dei risultati TSV |    S <br>(Percorso del file TSV o JSON o HTML è obbligatorio)
-|`/SkuRecommendationJsonOutputResultsFilePath`  | Percorso completo del file di risultati JSON |   S <br>(Percorso del file TSV o JSON o HTML è obbligatorio)
-|`/SkuRecommendationHtmlResultsFilePath` |  Percorso completo del file di risultati HTML | S <br>(Percorso del file TSV o JSON o HTML è obbligatorio)
-|`/SkuRecommendationPreventPriceRefresh` |  Impedisce l'aggiornamento di prezzo. Utilizzare se è in esecuzione in modalità offline. |    S <br>(Questo argomento è selezionato per i prezzi statici o tutti gli argomenti seguenti devono essere selezionati per il recupero di prezzi più recenti)
-|`/SkuRecommendationCurrencyCode` | La valuta in cui visualizzare i prezzi (ad esempio "USD") | S <br>(Se si desidera ottenere i prezzi più recenti)
-|`/SkuRecommendationOfferName` |    L'offerta assegnare un nome (ad esempio "MS-AZR - 0003P"). Per altre informazioni, vedere la [dettagli dell'offerta Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) pagina. |   S <br>(Se si desidera ottenere i prezzi più recenti)
-|`/SkuRecommendationRegionName` |   L'area assegnare un nome (ad esempio "Stati Uniti occidentali") |   S <br>(Se si desidera ottenere i prezzi più recenti)
-|`/SkuRecommendationSubscriptionId` | ID della sottoscrizione. |    S <br>(Se si desidera ottenere i prezzi più recenti)
-|`/AzureAuthenticationTenantId` | Il tenant di autenticazione. |  S <br>(Se si desidera ottenere i prezzi più recenti)
-|`/AzureAuthenticationClientId` | L'ID client dell'app AAD usato per l'autenticazione. | S <br>(Se si desidera ottenere i prezzi più recenti)
-|`/AzureAuthenticationInteractiveAuthentication`    | Impostare su true per le finestre popup. |   S <br>(Se si desidera ottenere i prezzi più recenti) <br>(Selezionare una delle opzioni di 3 autenticazione - opzione 1)
-|`/AzureAuthenticationCertificateStoreLocation` | Impostare il percorso dell'archivio certificati (ad esempio "CurrentUser"). | S <br>(Se si desidera ottenere i prezzi più recenti) <br>(Selezionare una delle opzioni di 3 autenticazione - opzione 2)
-|`/AzureAuthenticationCertificateThumbprint`    | Impostare l'identificazione personale del certificato. | S <br>(Se si desidera ottenere i prezzi più recenti) <br>(Selezionare una delle opzioni di 3 autenticazione - opzione 2)
-|`/AzureAuthenticationToken` |  Impostare per il token di certificato. | S <br>(Se si desidera ottenere i prezzi più recenti) <br>(Selezionare una delle opzioni di 3 autenticazione - opzione 3)
+|`/Action=SkuRecommendation` | Eseguire la valutazione dello SKU utilizzando la riga di comando DMA | Y
+|`/SkuRecommendationInputDataFilePath`  | Percorso completo del file del contatore delle prestazioni raccolti dai computer che ospita i database |    Y
+|`/SkuRecommendationTsvOutputResultsFilePath`   | Percorso completo del file dei risultati TSV |    Y <br>(Percorso del file TSV o JSON o HTML è obbligatorio)
+|`/SkuRecommendationJsonOutputResultsFilePath`  | Percorso completo del file di risultati JSON |   Y <br>(Percorso del file TSV o JSON o HTML è obbligatorio)
+|`/SkuRecommendationHtmlResultsFilePath` |  Percorso completo del file di risultati HTML | Y <br>(Percorso del file TSV o JSON o HTML è obbligatorio)
+|`/SkuRecommendationPreventPriceRefresh` |  Impedisce l'aggiornamento di prezzo. Utilizzare se è in esecuzione in modalità offline. |    Y <br>(Questo argomento è selezionato per i prezzi statici o tutti gli argomenti seguenti devono essere selezionati per il recupero di prezzi più recenti)
+|`/SkuRecommendationCurrencyCode` | La valuta in cui visualizzare i prezzi (ad esempio "USD") | Y <br>(Se si desidera ottenere i prezzi più recenti)
+|`/SkuRecommendationOfferName` |    L'offerta assegnare un nome (ad esempio "MS-AZR - 0003P"). Per altre informazioni, vedere la [dettagli dell'offerta Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) pagina. |   Y <br>(Se si desidera ottenere i prezzi più recenti)
+|`/SkuRecommendationRegionName` |   L'area assegnare un nome (ad esempio "Stati Uniti occidentali") |   Y <br>(Se si desidera ottenere i prezzi più recenti)
+|`/SkuRecommendationSubscriptionId` | ID della sottoscrizione. |    Y <br>(Se si desidera ottenere i prezzi più recenti)
+|`/AzureAuthenticationTenantId` | Il tenant di autenticazione. |  Y <br>(Se si desidera ottenere i prezzi più recenti)
+|`/AzureAuthenticationClientId` | L'ID client dell'app AAD usato per l'autenticazione. | Y <br>(Se si desidera ottenere i prezzi più recenti)
+|`/AzureAuthenticationInteractiveAuthentication`    | Impostare su true per le finestre popup. |   Y <br>(Se si desidera ottenere i prezzi più recenti) <br>(Selezionare una delle opzioni di 3 autenticazione - opzione 1)
+|`/AzureAuthenticationCertificateStoreLocation` | Impostare il percorso dell'archivio certificati (ad esempio "CurrentUser"). | Y <br>(Se si desidera ottenere i prezzi più recenti) <br>(Selezionare una delle opzioni di 3 autenticazione - opzione 2)
+|`/AzureAuthenticationCertificateThumbprint`    | Impostare l'identificazione personale del certificato. | Y <br>(Se si desidera ottenere i prezzi più recenti) <br>(Selezionare una delle opzioni di 3 autenticazione - opzione 2)
+|`/AzureAuthenticationToken` |  Impostare per il token di certificato. | Y <br>(Se si desidera ottenere i prezzi più recenti) <br>(Selezionare una delle opzioni di 3 autenticazione - opzione 3)
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>Esempi di valutazioni della SKU usando l'interfaccia della riga di comando
 

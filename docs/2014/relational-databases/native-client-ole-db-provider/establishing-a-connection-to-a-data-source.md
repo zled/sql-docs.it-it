@@ -1,12 +1,10 @@
 ---
-title: Stabilire una connessione a un'origine dei dati | Microsoft Docs
+title: Stabilire una connessione a un'origine dei dati | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [SQL Server Native Client]
@@ -15,25 +13,24 @@ helpviewer_keywords:
 - CoCreateInstance method
 - OLE DB data sources [SQL Server Native Client]
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b07fd8c9710c591806721d019f7dc776298fbab
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 263728218fd032c0814d73197cde56fc2d661e9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425290"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137553"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Avvio di una connessione a un'origine dati
   Per l'accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client, il consumer deve prima creare un'istanza di un oggetto origine dati chiamando il **CoCreateInstance** (metodo). Un identificatore univoco di classe (CLSID) identifica ogni provider OLE DB. Per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client, l'identificatore di classe è CLSID_SQLNCLI10. È anche possibile usare il simbolo SQLNCLI_CLSID che verrà risolta nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client utilizzato nel SQLNCLI. h che si fa riferimento.  
   
- I dati di origine oggetto espone le **IDBProperties** interfaccia, utilizzata dal consumer per fornire informazioni di autenticazione di base, ad esempio nome del server, nome del database, ID utente e password. Il **IDBProperties:: SetProperties** viene chiamato per impostare queste proprietà.  
+ L'oggetto origine dati espone l'interfaccia **IDBProperties** usata dal consumer per fornire informazioni di base sull'autenticazione, ad esempio il nome del server, il nome del database, l'ID utente e la password. Per impostare queste proprietà, viene chiamato il metodo **IDBProperties::SetProperties**.  
   
  Se nel computer sono in esecuzione più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il nome del server viene specificato come NomeServer\NomeIstanza.  
   
- L'oggetto origine dati espone anche il **IDBInitialize** interfaccia. Una volta impostate le proprietà, viene stabilita connessione all'origine dati chiamando il **IDBInitialize:: Initialize** (metodo). Esempio:  
+ L'oggetto origine dati espone anche l'interfaccia **IDBInitialize**. Dopo aver impostato le proprietà, la connessione all'origine dati viene stabilita chiamando il metodo **IDBInitialize::Initialize**. Esempio:  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   
@@ -43,7 +40,7 @@ CoCreateInstance(CLSID_SQLNCLI10,
                  (void **) &pIDBInitialize)  
 ```  
   
- Questa chiamata a **CoCreateInstance** crea un singolo oggetto della classe associato a CLSID_SQLNCLI10 (CSLID associato a dati e al codice che verrà utilizzato per creare l'oggetto). IID_IDBInitialize è un riferimento all'identificatore dell'interfaccia (**IDBInitialize**) da utilizzare per comunicare con l'oggetto.  
+ Questa chiamata a **CoCreateInstance** crea un singolo oggetto della classe associato a CLSID_SQLNCLI10 (CSLID associato a dati e al codice che verrà utilizzato per creare l'oggetto). IID_IDBInitialize è un riferimento all'identificatore dell'interfaccia (**IDBInitialize**) da usare per comunicare con l'oggetto.  
   
  Di seguito è riportata una funzione di esempio che inizializza e stabilisce una connessione all'origine dati.  
   

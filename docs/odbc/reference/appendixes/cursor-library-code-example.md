@@ -1,34 +1,31 @@
 ---
-title: Esempio di codice di libreria di cursori | Documenti Microsoft
+title: Esempio di codice della libreria di cursori | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], examples
 - cursor library [ODBC], examples
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 054cd6d20ff72e69e01defbba3834602fdf2bf47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5dd87cbf93ff2acd7c2c3753e85b1d6f7d110cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907046"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691700"
 ---
-# <a name="cursor-library-code-example"></a>Esempio di codice di libreria di cursori
+# <a name="cursor-library-code-example"></a>Esempio di codice della libreria di cursori
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Si consiglia di utilizzare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
   
- L'esempio seguente usa la libreria di cursori per recuperare l'ID, data aperta e stato di ogni ordine dalla tabella ORDERS. Vengono quindi visualizzate 20 righe di dati. Se l'utente aggiorna i dati, il codice aggiorna il buffer di set di righe e viene eseguita un'istruzione di aggiornamento posizionato. Infine, viene richiesto all'utente per la direzione di scorrimento e si ripete il processo.  
+ L'esempio seguente usa la libreria di cursori per recuperare l'ID, open data e lo stato di ogni ordine dalla tabella ORDERS. Vengono quindi visualizzate 20 righe di dati. Se l'utente non aggiorna i dati, il codice aggiorna il buffer di righe e viene eseguita un'istruzione di aggiornamento posizionato. Infine, viene richiesto all'utente per la direzione di scorrimento e ripete il processo.  
   
 ```  
 #define ROWS 20  

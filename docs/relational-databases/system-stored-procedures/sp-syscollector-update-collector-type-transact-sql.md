@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_update_collector_type (Transact-SQL) | Documenti Microsoft
+title: sp_syscollector_update_collector_type (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collector_type_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_update_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9013eb0eccd260c2f90d8f2858ab9ae2871a6c6f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed8c11a7d5f333a086482d2882a6aef7a97370e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252313"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830069"
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +52,19 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
  Nome del tipo di agente di raccolta. *nome* viene **sysname** e deve essere specificato.  
   
  [  **@parameter_schema =** ] **'***parameter_schema***'**  
- XML Schema per questo tipo di agente di raccolta. *parameter_schema* viene **xml** e può essere richiesto da determinati tipi di agente di raccolta. Se non è obbligatorio, questo argomento può essere NULL.  
+ XML Schema per questo tipo di agente di raccolta. *parameter_schema* viene **xml** e può essere richiesto da determinati tipi agente di raccolta. Se non è obbligatorio, questo argomento può essere NULL.  
   
  [  **@collection_package_id =** ] *collection_package_id*  
- È un identificatore univoco locale che punta al pacchetto di raccolta [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *collection_package_id* viene **uniqueidentifier** ed è obbligatorio. Per ottenere il valore per *collection_package_id*, query sulla vista di sistema syscollector_collector_types nel database msdb.  
+ È un identificatore univoco locale che punta al pacchetto di raccolta [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *collection_package_id* viene **uniqueidentifier** ed è obbligatorio. Per ottenere il valore per *collection_package_id*, eseguire query sulla vista di sistema syscollector_collector_types nel database msdb.  
   
  [  **@upload_package_id =** ] *upload_package_id*  
- Identificatore univoco locale che punta al pacchetto di caricamento di [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *upload_package_id* viene **uniqueidentifier** ed è obbligatorio. Per ottenere il valore per *upload_package_id*, query sulla vista di sistema syscollector_collector_types nel database msdb.  
+ Identificatore univoco locale che punta al pacchetto di caricamento di [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *upload_package_id* viene **uniqueidentifier** ed è obbligatorio. Per ottenere il valore per *upload_package_id*, eseguire query sulla vista di sistema syscollector_collector_types nel database msdb.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **dc_admin** (con autorizzazione EXECUTE) ruolo predefinito del database.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **dc_admin** (con autorizzazione EXECUTE) ruolo predefinito del database.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene aggiornato il tipo agente di raccolta query T-SQL generico. Nell'esempio viene utilizzato lo schema predefinito per il tipo agente di raccolta query T-SQL generico.  

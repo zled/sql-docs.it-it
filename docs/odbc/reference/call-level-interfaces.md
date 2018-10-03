@@ -1,13 +1,11 @@
 ---
-title: Chiamata a livello di interfacce | Documenti Microsoft
+title: A livello di chiamata interfacce | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], CLI
@@ -16,30 +14,29 @@ helpviewer_keywords:
 - SQL [ODBC], CLI
 - call-level interface [ODBC], using call-level interface
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6094e97d73dc11ec4c6507b6d5018353e2e345e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 99ec2d9a1995502a4bfd96dad02157ccc6574f6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907476"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821101"
 ---
-# <a name="call-level-interfaces"></a>Interfacce a livello di chiamata
-La tecnica finale per l'invio di istruzioni SQL per il sistema DBMS è tramite un'interfaccia a livello di chiamata (CLI). Un'interfaccia a livello di chiamata fornisce una libreria di funzioni di sistema DBMS che può essere chiamato dall'applicazione. Pertanto, anziché tentare di blend SQL con un altro linguaggio di programmazione, un'interfaccia a livello di chiamata è simile alle routine librerie che la maggior parte dei programmatori sono abituati a usare, ad esempio la stringa, i/o o librerie matematiche in C. Notare che DBMS che supportano SQL incorporato dispone già di un'interfaccia a livello di chiamata, le chiamate a cui vengono generate dallo strumento di precompilazione. Tuttavia, queste chiamate sono non documentato e soggetto a modifiche senza preavviso.  
+# <a name="call-level-interfaces"></a>Call Level Interface
+La tecnica finale per l'invio di istruzioni SQL per il sistema DBMS è tramite un'interfaccia a livello di chiamata (comando). Un'interfaccia a livello di chiamata fornisce una libreria di funzioni di sistema DBMS che può essere chiamato dal programma dell'applicazione. In questo modo, invece di tentare di blend SQL con un altro linguaggio di programmazione, un'interfaccia a livello di chiamata è simile alle librerie di routine maggior parte dei programmatori sono abituati a usare, ad esempio la stringa, i/o o delle librerie matematiche in C. si noti che DBMS che supportano SQL incorporato esiste già un'interfaccia a livello di chiamata, le chiamate a cui vengono generate dallo strumento di precompilazione. Tuttavia, queste chiamate sono soggette a modifiche senza preavviso e non documentate.  
   
- Interfacce a livello di chiamata vengono comunemente utilizzate nelle architetture client/server, in cui si trova il programma di applicazione (client) in un computer e il sistema DBMS (server) risiede in un computer diverso. L'applicazione chiama le funzioni CLI nel sistema locale, e tali chiamate vengono inviate attraverso la rete per il sistema DBMS per l'elaborazione.  
+ Call-level Interface vengono comunemente usati nelle architetture client/server, in cui il programma dell'applicazione (client) si trova in un unico computer e il sistema DBMS (server) si trova in un computer diverso. L'applicazione chiama le funzioni dell'interfaccia della riga nel sistema locale, e tali chiamate vengono inviate attraverso la rete per il sistema DBMS per l'elaborazione.  
   
- Un'interfaccia a livello di chiamata è simile a codice SQL dinamico, in istruzioni SQL vengono passate al DBMS per l'elaborazione in fase di esecuzione, ma differisce da embedded SQL nel suo complesso che non sono presenti istruzioni SQL incorporate e non precompilatore è obbligatorio.  
+ Un'interfaccia a livello di chiamata è simile a istruzioni SQL dinamiche, in quanto le istruzioni SQL vengono passate al sistema DBMS per l'elaborazione in fase di esecuzione, ma differisce da SQL incorporate nel suo complesso in quanto sono presenti istruzioni SQL incorporate e nessun precompilatore è obbligatorio.  
   
- Utilizzo di un'interfaccia a livello di chiamata in genere prevede i passaggi seguenti:  
+ Usa in genere un'interfaccia a livello di chiamata prevede i passaggi seguenti:  
   
-1.  L'applicazione chiama una funzione CLI a cui connettersi nel sistema DBMS.  
+1.  L'applicazione chiama una funzione della riga di comando per la connessione per il sistema DBMS.  
   
-2.  L'applicazione genera un'istruzione SQL e lo inserisce in un buffer. Chiama quindi uno o più funzioni CLI per inviare l'istruzione del sistema DBMS per la preparazione e l'esecuzione.  
+2.  L'applicazione si basa un'istruzione SQL e lo inserisce in un buffer. Chiama quindi uno o più funzioni dell'interfaccia della riga per inviare l'istruzione per il sistema DBMS per la preparazione e l'esecuzione.  
   
-3.  Se l'istruzione è un'istruzione SELECT, l'applicazione chiama una funzione CLI per restituire i risultati nel buffer dell'applicazione. In genere, questa funzione restituisce una riga o una colonna di dati alla volta.  
+3.  Se l'istruzione è un'istruzione SELECT, l'applicazione chiama una funzione della riga di comando per restituire i risultati nel buffer dell'applicazione. In genere, questa funzione restituisce una riga o una colonna di dati alla volta.  
   
-4.  L'applicazione chiama una funzione CLI per disconnettersi dal sistema DBMS.
+4.  L'applicazione chiama una funzione della riga di comando per disconnettersi dal sistema DBMS.

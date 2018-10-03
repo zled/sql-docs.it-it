@@ -1,45 +1,42 @@
 ---
-title: Esempio di proprietà Version (VC + +) | Documenti Microsoft
+title: Esempio di proprietà Version (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Version property [ADO], VC++ example
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83abd1361cad72644f948316bc24c704e0437c35
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a89f017bba11b5c0ae42df49e54be3ea6b2f14ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282820"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613249"
 ---
-# <a name="version-property-example-vc"></a>Esempio di proprietà Version (VC + +)
-Questo esempio viene utilizzato il [versione](../../../ado/reference/ado-api/version-property-ado.md) proprietà di un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto per visualizzare la versione corrente di ADO. Utilizza inoltre diverse proprietà dinamiche per mostrare:  
+# <a name="version-property-example-vc"></a>Esempio della proprietà Version (VC++)
+Questo esempio Usa la [versione](../../../ado/reference/ado-api/version-property-ado.md) proprietà di un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) dell'oggetto per visualizzare la versione corrente di ADO. Utilizza anche diverse proprietà dinamica da visualizzare:  
   
--   Il nome DBMS corrente e la versione.  
+-   Nome del DBMS corrente e la versione.  
   
--   Versione di OLE DB.  
+-   Versione OLE DB.  
   
--   nome del provider e versione.  
+-   nome del provider e la versione.  
   
 -   Versione ODBC.  
   
--   Nome del driver ODBC e versione.  
+-   Nome del driver ODBC e la versione.  
   
 > [!NOTE]
->  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = yes** o **Integrated Security = SSPI** anziché l'ID utente e password informazioni nella stringa di connessione.  
+>  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = yes** oppure **Integrated Security = SSPI** anziché un ID utente e password informazioni nella stringa di connessione.  
   
 ```  
 // BeginVersionCpp.cpp  
@@ -139,5 +136,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto di connessione (ADO.NET)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Proprietà Version (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

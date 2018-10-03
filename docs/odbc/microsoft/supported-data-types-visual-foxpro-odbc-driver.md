@@ -1,35 +1,32 @@
 ---
-title: Tipi di dati (Driver ODBC di Visual FoxPro) supportati | Documenti Microsoft
+title: Tipi di dati (Driver ODBC Visual FoxPro) supportati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], data types
 - FoxPro ODBC driver [ODBC], data types
 - data types [ODBC], Visual FoxPro ODBC driver
 ms.assetid: ab529cc6-d157-4b35-b6f9-6ffd09af098c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 030bcc12bb8790f133af3e265cf26ffba2d23573
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7cb48c5a763162685060a95e8d352ebddd8b0032
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914446"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853969"
 ---
-# <a name="supported-data-types-visual-foxpro-odbc-driver"></a>Tipi di dati supportati (Driver ODBC di Visual FoxPro)
-L'elenco di tipi di dati supportati dal driver sono presentati tramite l'API ODBC e nella Query di Microsoft.  
+# <a name="supported-data-types-visual-foxpro-odbc-driver"></a>Tipi di dati supportati (driver ODBC Visual FoxPro)
+L'elenco di tipi di dati supportati dal driver vengono presentati tramite l'API ODBC e query di Microsoft.  
   
 ## <a name="data-types-in-c-applications"></a>Tipi di dati nelle applicazioni C  
- È possibile ottenere un elenco di tipi di dati supportati dal Driver ODBC Visual FoxPro utilizzando il [SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) funzione nelle applicazioni C o C++.  
+ È possibile ottenere un elenco di tipi di dati supportati dal Driver ODBC Visual FoxPro con il [SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) funzione nelle applicazioni C o C++.  
   
-## <a name="data-types-in-applications-using-microsoft-query"></a>Tipi di dati nelle applicazioni che utilizzano Microsoft Query  
- Se l'applicazione utilizza Microsoft Query per creare una nuova tabella in un'origine dati di Visual FoxPro, Microsoft Query consente di visualizzare il **nuova definizione di tabella** la finestra di dialogo. In **campo Descrizione**, **tipo** casella elenchi [tipi di dati di campo di Visual FoxPro](../../odbc/microsoft/visual-foxpro-field-data-types.md), rappresentato dai singoli caratteri.
+## <a name="data-types-in-applications-using-microsoft-query"></a>Tipi di dati nelle applicazioni con Query di Microsoft  
+ Se l'applicazione Usa Query di Microsoft per creare una nuova tabella in un'origine dati Visual FoxPro, Microsoft Query consente di visualizzare il **nuova definizione di tabella** nella finestra di dialogo. Sotto **descrizione del campo**, il **tipo** casella elenchi [tipi di dati Visual FoxPro campo](../../odbc/microsoft/visual-foxpro-field-data-types.md), rappresentato dai caratteri singoli.

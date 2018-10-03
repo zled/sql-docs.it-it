@@ -1,30 +1,27 @@
 ---
-title: Comando ANSI SET | Documenti Microsoft
+title: SET ANSI (comando) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - set ANSI command [ODBC]
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5946efa397fa6bde8c52ad69925a96f2e33f7dd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5af98bd8f16d7278b932ad89f1c81c58ddb1fb54
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904326"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612208"
 ---
-# <a name="set-ansi-command"></a>Comando ANSI SET
-Determina come i confronti tra stringhe di lunghezza diversa vengono apportati con l'operatore = nei comandi di Visual FoxPro SQL.  
+# <a name="set-ansi-command"></a>SET ANSI (comando)
+Determina come i confronti tra stringhe di lunghezza diversa vengono apportati con l'operatore = di comandi di Visual FoxPro SQL.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,31 +32,31 @@ SET ANSI ON | OFF
   
 ## <a name="arguments"></a>Argomenti  
  ON  
- (Impostazione predefinita per il driver; il valore predefinito di Visual FoxPro è impostata su OFF). Riempie che la stringa più corta con gli spazi vuoti è necessario rendono lunghezza uguale o maggiore della stringa. Le due stringhe vengono quindi confrontati carattere per carattere per l'intera lunghezza. Si consideri questo confronto:  
+ (Valore predefinito per il driver, il valore predefinito di Visual FoxPro è impostata su OFF). La stringa più breve con i campi vuoti necessari per i riquadri rendono lunghezza della stringa uguale a più tempo. Le due stringhe vengono successivamente confrontate carattere per carattere per l'intera lunghezza. Prendere in considerazione questo confronto:  
   
 ```  
 'Tommy' = 'Tom'  
 ```  
   
- Il risultato è False (. F.) se il SET ANSI, infatti, quando l'operazione di riempimento, 'Tom' diventa 'Tom' e le stringhe 'Tom' e 'Tommaso' non corrispondono carattere per carattere.  
+ Il risultato è False (. F.) se SET ANSI è attivato, perché quando riempiti, 'Tom' diventa 'Tom' e le stringhe 'Tom' e 'Tommaso' non corrispondono a carattere per carattere.  
   
- I = = (operatore) viene utilizzato questo metodo per i confronti di comandi di Visual FoxPro SQL.  
+ I = = operatore Usa questo metodo per i confronti nei comandi di Visual FoxPro SQL.  
   
  OFF  
- Specifica che la stringa più corta non vengano riempiti con spazi vuoti. Le due stringhe vengono confrontate carattere per carattere fino a quando non viene raggiunta la fine della stringa più corta. Si consideri questo confronto:  
+ Specifica che la stringa più corta non vengano riempiti con spazi vuoti. Le due stringhe vengono confrontate carattere per carattere fino a quando non viene raggiunta la fine della stringa più breve. Prendere in considerazione questo confronto:  
   
 ```  
 'Tommy' = 'Tom'  
 ```  
   
- Il risultato è True (. Quando SET ANSI è off, in quanto T.) il confronto si arresta dopo 'Tom'.  
+ Il risultato è True (. T.) quando SET ANSI è off, in quanto il confronto si arresta dopo 'Tom'.  
   
-## <a name="remarks"></a>Osservazioni  
- SET ANSI determina se il valore inferiore tra due stringhe viene riempito con spazi vuoti quando viene effettuato un confronto tra stringhe SQL. SET ANSI non ha alcun effetto = = (operatore); Quando si utilizza l'operatore = =, la stringa più corta sempre viene riempita con spazi vuoti per il confronto.  
+## <a name="remarks"></a>Note  
+ SET ANSI determina se il valore inferiore tra due stringhe viene riempito con spazi vuoti quando viene effettuato un confronto tra stringhe SQL. SET ANSI non ha alcun effetto sui = = operator; Quando si usa l'operatore = =, la stringa più breve sempre viene riempita con spazi vuoti per il confronto.  
   
 ## <a name="string-order"></a>Ordine di stringa  
- Nei comandi SQL, l'ordine da sinistra a destra di due stringhe in un confronto è irrelevantswitching una stringa da un lato della = o = = (operatore) a altra non influisce sul risultato del confronto.  
+ Nei comandi SQL, l'ordine da sinistra a destra delle due stringhe in un confronto è irrelevantswitching una stringa da un lato dell'operatore = o = = operatore a altro non influisce sul risultato del confronto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Selezionare - comando SQL](../../odbc/microsoft/select-sql-command.md)   
+ [SELECT - comando SQL](../../odbc/microsoft/select-sql-command.md)   
  [SET EXACT (comando)](../../odbc/microsoft/set-exact-command.md)

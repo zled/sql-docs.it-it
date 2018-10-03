@@ -1,32 +1,29 @@
 ---
-title: Raccolta di parametri, esempio di comando di proprietà (VB) | Documenti Microsoft
+title: Raccolta di parametri, esempio di proprietà Command (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Command property [ADOX], Visual Basic example
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a38b389c04a6f9c4842c700aac0d87e14299ed31
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 84091a0d01f23fe870f6f0dbfb01bced2bff3e0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286620"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826786"
 ---
-# <a name="parameters-collection-command-property-example-vb"></a>Raccolta di parametri, esempio di proprietà di comando (Visual Basic)
-Il codice seguente viene illustrato come utilizzare il [comando](../../../ado/reference/adox-api/command-property-adox.md) proprietà con il [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto per recuperare informazioni sui parametri per la procedura.  
+# <a name="parameters-collection-command-property-example-vb"></a>Raccolta Parameters: esempio della proprietà Command (VB)
+Il codice seguente illustra come usare il [comandi](../../../ado/reference/adox-api/command-property-adox.md) proprietà con il [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto per recuperare informazioni sui parametri per la procedura.  
   
 ```  
 ' BeginParametersVB  
@@ -81,7 +78,7 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Oggetto del catalogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Proprietà dei comandi (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
+ [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Proprietà Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [Oggetto procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Raccolta di oggetti Procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

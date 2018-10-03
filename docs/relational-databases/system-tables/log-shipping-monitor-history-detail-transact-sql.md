@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_monitor_history_detail_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_history_detail system table
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b57136a4f8378c25892fa32c29956d89f7da9868
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f8968661442adabe4c04608ca5a5bb5362341c4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258272"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804109"
 ---
 # <a name="logshippingmonitorhistorydetail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +43,13 @@ ms.locfileid: "33258272"
 |**log_time_utc**|**datetime**|Data e ora UTC (Coordinated Universal Time o ora di Greenwich) di creazione del record.|  
 |**message**|**nvarchar(max)**|Testo del messaggio.|  
   
-## <a name="remarks"></a>Osservazioni  
- Questa tabella contiene i dettagli della cronologia per gli agenti per il log shipping. Per identificare una sessione di agente, utilizzare colonne **agent_id**, **agent_type**, e **session_id**. Per visualizzare i dettagli della cronologia per la sessione dell'agente, ordinamento **log_time**.  
+## <a name="remarks"></a>Note  
+ Questa tabella contiene i dettagli della cronologia per gli agenti per il log shipping. Per identificare una sessione di agente, utilizzare le colonne **agent_id**, **agent_type**, e **session_id**. Per visualizzare i dettagli della cronologia per la sessione dell'agente, per ordinare **log_time**.  
   
- Oltre a essere archiviate sul server di monitoraggio remoto, le informazioni relative al server primario vengono archiviate nel server primario nel relativo **log_shipping_monitor_history_detail** tabella e le informazioni relative a un database secondario Server verrà memorizzato anche sul server secondario nella relativa **log_shipping_monitor_history_detail** tabella.  
+ Oltre a essere archiviate sul server di monitoraggio remoto, le informazioni correlate al server primario vengono archiviate nel server primario nel relativo **log_shipping_monitor_history_detail** tabella e informazioni relative a un database secondario Server verrà archiviato anche nel server secondario nel relativo **log_shipping_monitor_history_detail** tabella.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   

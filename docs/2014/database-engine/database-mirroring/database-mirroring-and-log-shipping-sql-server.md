@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - log shipping [SQL Server], database mirroring
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 97b618470bbf5fb95ed4817f17f48890a70a5990
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269587"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112111"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Mirroring del database e log shipping (SQL Server)
   Per un database specifico è possibile eseguire il mirroring o il log shipping oppure eseguire le due operazioni simultaneamente. Per scegliere l'approccio da utilizzare, considerare gli aspetti seguenti:  
@@ -68,7 +65,7 @@ ms.locfileid: "37269587"
   
  ![Log shipping e mirroring del database](../media/logshipping-and-dbm-automatic-failover.gif "Log shipping e mirroring del database")  
   
- In seguito a un failover del mirroring, il nome del server primario definito nel server secondario risulta inalterato ,  
+ In seguito a un failover del mirroring, il nome del server primario definito nel server secondario risulta inalterato .  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>Impatto del mirroring del database su un'istanza di monitoraggio remota  
  Quando il log shipping viene utilizzato con un'istanza di monitoraggio remota, la combinazione della sessione di log shipping e del mirroring del database influisce sulle informazioni incluse nelle tabelle di monitoraggio. Le informazioni sul server primario rappresentano una combinazione di quelle configurate nel server principale/primario e del server di monitoraggio configurato in ogni server secondario.  

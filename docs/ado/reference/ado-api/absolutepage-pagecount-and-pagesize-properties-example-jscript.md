@@ -1,13 +1,11 @@
 ---
-title: Esempio di proprietà PageSize (JScript) AbsolutePage e PageCount | Documenti Microsoft
+title: AbsolutePage, PageCount, PageSize esempio di proprietà e (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - AbsolutePage property [ADO], JScript example
 - PageSize property [ADO], JScript example
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f165a920b1703d75792da45100eaf848bdb7e08
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e9ad6da47838b28583bcec3d5c6501d60d317f74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274783"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705089"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage, PageCount ed esempio di proprietà PageSize (JScript)
-Questo esempio illustra le proprietà AbsolutePage, PageCount e PageSize. Tagliare e incollare il codice seguente in blocco note o un altro editor di testo e salvarlo come **AbsolutePageJS**.  
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage, PageCount, PageSize esempio di proprietà e (JScript)
+Questo esempio illustra le proprietà AbsolutePage, PageCount e PageSize. Tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **AbsolutePageJS**.  
   
 ```  
 <!-- BeginAbsolutePageJS -->  

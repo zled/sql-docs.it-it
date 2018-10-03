@@ -1,13 +1,11 @@
 ---
-title: Utilizzare le applicazioni a 16 Bit e a 32 Bit con driver a 32 Bit | Documenti Microsoft
+title: Uso delle applicazioni a 16 bit e a 32 bit con driver a 32 Bit | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], 16-bit applications
@@ -15,35 +13,34 @@ helpviewer_keywords:
 - 32-bit applications with 32-bit drivers [ODBC]
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: fc65c988-b31f-4cc9-851f-30d2119604fd
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97f4224967cd0c54b134d118533ed66f6043762c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8540983b84d4d39fe5a02b92a1e3a3606350d36d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908916"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714449"
 ---
-# <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>Utilizzare le applicazioni a 16 Bit e a 32 Bit con driver a 32 Bit
+# <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>Uso delle applicazioni a 16 e 32 bit con driver a 32 bit
 > [!IMPORTANT]  
->  supporto di applicazioni a 16 bit verrà rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Sviluppare invece le applicazioni a 32 bit o 64 bit.  
+>  supporto di applicazioni a 16 bit verrà rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa possibile sviluppare applicazioni a 32 o 64 bit.  
   
- Con il componente di accesso ai dati ODBC, è possibile utilizzare le applicazioni a 16 bit e a 32 bit con driver a 32 bit. Sistemi operativi Microsoft® Windows® 95/98 e Microsoft Windows e Windows 2000 supportano le seguenti combinazioni di applicazioni e driver:  
+ Con il componente di accesso ai dati ODBC, è possibile usare le applicazioni a 16 bit e a 32 bit con driver a 32 bit. Sistemi operativi Microsoft® Windows® 95 o 98 e 2000 di Microsoft Windows/Windows supportano le combinazioni seguenti di applicazioni e driver:  
   
 -   applicazioni a 16 bit con driver a 32 bit  
   
 -   applicazioni a 32 bit con driver a 32 bit  
   
- Non è supportato l'utilizzo di un'applicazione a 32 bit con driver a 16 bit.  
+ Usando un'applicazione a 32 bit con driver a 16 bit non è supportato.  
   
 > [!NOTE]  
->  A partire dalla versione di ODBC versione 3.0, Windows NT 4.0 è supportata.  
+>  Iniziare con la versione di ODBC versione 3.0, Windows NT 4.0 è supportata.  
   
- ODBC include i componenti ODBC necessari per supportare le configurazioni precedenti "thunk" librerie a collegamento dinamico (DLL) per convertire gli indirizzi di 16 bit in indirizzi a 32 bit e viceversa. Il programma di installazione determina il sistema operativo, si utilizza e installa i componenti ODBC richiesti da tale sistema. È anche possibile scegliere di installare i componenti ODBC utilizzati da tutti i sistemi.  
+ ODBC include i componenti ODBC necessari per supportare le configurazioni sopra "thunk" librerie a collegamento dinamico (DLL) per convertire gli indirizzi di 16 bit in indirizzi a 32 bit e viceversa. Il programma di installazione determina quale sistema operativo si utilizza e installa i componenti ODBC richiesti da tale sistema. È anche possibile scegliere di installare i componenti ODBC utilizzati da tutti i sistemi.  
   
- Nella maggior parte dei casi, il porting di un'applicazione o il driver a 16 bit a 32 bit prevede cinque tipi di modifiche:  
+ Nella maggior parte dei casi, il porting di un'applicazione o driver da 16 bit a 32 bit prevede cinque tipi di modifiche:  
   
 -   Modifiche al codice di gestione dei messaggi  
   
@@ -55,7 +52,7 @@ ms.locfileid: "32908916"
   
 -   Modifiche ai componenti ODBC  
   
- Da un'applicazione o il driver programmazione punto di vista, la differenza principale tra i componenti ODBC a 16 bit e a 32 bit è che hanno nomi di file diversi. Dal punto di vista di sistema, l'architettura di ogni connessione di applicazione o il driver è diversa e gli strumenti utilizzati per gestire le origini dati sono diversi.  
+ Da un'applicazione o il driver programmazione punto di vista, la differenza principale tra i componenti ODBC 16 bit e a 32 bit sia che abbiano nomi di file diverso. Dal punto di vista di sistema, l'architettura di ogni connessione dell'applicazione o il driver è diversa e gli strumenti utilizzati per gestire le origini dati sono diversi.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

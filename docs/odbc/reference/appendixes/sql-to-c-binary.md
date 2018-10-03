@@ -1,13 +1,11 @@
 ---
-title: 'SQL in formato binario c: | Documenti Microsoft'
+title: 'SQL a c: dati binari | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data from SQL to c types [ODBC], binary
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], binary
 - binary data transfers [ODBC]
 ms.assetid: 8c519072-ae4c-4d32-9d4e-775e3d3d6389
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b18b421173945869d5ff57fea8a7716aa0459fb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 16112ca3b66e0218efd54d3bf385e04cb654e3e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907506"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622589"
 ---
-# <a name="sql-to-c-binary"></a>SQL in formato binario c:
+# <a name="sql-to-c-binary"></a>Da SQL a C: dati binari
 Gli identificatori per i tipi di dati SQL ODBC binari sono:  
   
  SQL_BINARY  
@@ -35,17 +32,17 @@ Gli identificatori per i tipi di dati SQL ODBC binari sono:
   
  SQL_LONGVARBINARY  
   
- Nella tabella seguente viene illustrato ODBC C a tipi di dati a cui possono essere convertiti i dati binari di SQL. Per una spiegazione delle colonne e delle condizioni nella tabella, vedere [la conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+ Nella tabella seguente mostra i dati ODBC C i tipi di dati a cui possono essere convertiti i dati binari di SQL. Per una spiegazione delle colonne e le condizioni nella tabella, vedere [conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
   
 |Identificatore di tipo C|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
 |SQL_C_CHAR|(Lunghezza in byte dei dati) \* 2 < *BufferLength*<br /><br /> (Lunghezza in byte dei dati) \* 2 > = *BufferLength*|data<br /><br /> Dati troncati|Lunghezza in byte dei dati<br /><br /> Lunghezza in byte dei dati|n/d<br /><br /> 01004|  
 |SQL_C_WCHAR|(Lunghezza in caratteri di dati) \* 2 < *BufferLength*<br /><br /> (Lunghezza in caratteri di dati) \* 2 > = *BufferLength*|data<br /><br /> Dati troncati|Lunghezza dei dati in caratteri<br /><br /> Lunghezza dei dati in caratteri|n/d<br /><br /> 01004|  
-|SQL_C_BINARY|Lunghezza in byte dei dati < = *BufferLength*<br /><br /> Lunghezza in byte dei dati > *BufferLength*|data<br /><br /> Dati troncati|Lunghezza in byte dei dati<br /><br /> Lunghezza in byte dei dati|n/d<br /><br /> 01004|  
+|SQL_C_BINARY|Lunghezza in byte dei dati < = *BufferLength*<br /><br /> Lunghezza in byte di dati > *BufferLength*|data<br /><br /> Dati troncati|Lunghezza in byte dei dati<br /><br /> Lunghezza in byte dei dati|n/d<br /><br /> 01004|  
   
  Quando i dati binari di SQL viene convertiti in dati di tipo carattere C, ogni byte (8 bit) dei dati di origine è rappresentata come due caratteri ASCII. Questi caratteri sono la rappresentazione di caratteri ASCII del numero in formato esadecimale. Ad esempio, un 00000001 binario viene convertito in "01" e un binario 11111111 viene convertito in "FF".  
   
- Il driver sempre converte i byte singoli in coppie di cifre esadecimali e termina la stringa di caratteri con un byte null. Per questo motivo, se *BufferLength* è pari ed è minore della lunghezza dei dati convertiti, l'ultimo byte del **TargetValuePtr* buffer non viene utilizzato. (I dati convertiti richiedono un numero pari di byte, il byte al penultimo è un byte null e non può essere utilizzato l'ultimo byte.)  
+ Il driver converte singoli byte alle coppie di cifre esadecimali sempre e termina la stringa di caratteri con un byte null. Per questo motivo, se *BufferLength* è pari ed è minore della lunghezza dei dati convertiti, l'ultimo byte del **TargetValuePtr* buffer non viene utilizzato. (I dati convertiti richiedono un numero pari di byte, il byte successivo all'ultima è un byte null e non può essere utilizzato l'ultimo byte.)  
   
 > [!NOTE]  
->  Gli sviluppatori di applicazioni sono sconsigliati dall'associazione di dati binari SQL a un tipo di dati carattere C. In genere, questa conversione è lenta e poco efficiente.
+>  Gli sviluppatori di applicazioni sono sconsigliati dall'associazione di dati binari SQL a un tipo di dati C di carattere. Questa conversione è in genere lenti e poco efficiente.

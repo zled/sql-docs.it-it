@@ -1,13 +1,11 @@
 ---
-title: Mapping di funzioni deprecate | Documenti Microsoft
+title: Mapping di funzioni deprecate | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
@@ -17,29 +15,28 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b61a53eed35919f3ecd0422b376e029ee7ab232
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914106"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818367"
 ---
 # <a name="mapping-deprecated-functions"></a>Mapping di funzioni deprecate
-Questa sezione vengono descritte le funzioni deprecate come viene eseguito il mapping da ODBC 3*x* gestione Driver per garantire la compatibilità con le versioni precedenti di ODBC 3*x* driver che vengono utilizzati con ODBC 2. *x* applicazioni. Gestione Driver esegue il mapping indipendentemente dalla versione dell'applicazione. Poiché ogni ODBC 2. *x* funzioni nell'elenco seguente viene eseguito il mapping per il corrispondente di ODBC 3*x* funzione quando viene chiamato in un'applicazione ODBC 3*x* driver ODBC 3*x*driver non è necessario implementare ODBC 2. *x* funzioni.  
+Questa sezione vengono descritte le funzioni come deprecate per ODBC 3 vengono mappati *. x* gestione Driver per garantire la compatibilità con le versioni precedenti di ODBC 3 *. x* driver che vengono usati con l'API ODBC 2. *x* applicazioni. Gestione Driver esegue il mapping indipendentemente dalla versione dell'applicazione. Poiché ciascuno di ODBC 2. *x* funzioni nell'elenco seguente viene eseguito il mapping per il corrispondente di ODBC 3 *. x* funzione quando viene chiamato in un'applicazione ODBC 3*x* driver ODBC 3 *. x*driver non deve implementare l'API ODBC 2. *x* funzioni.  
   
- Il mapping nell'elenco viene generato quando il driver è un'applicazione ODBC 3*x* e il driver non supporta la funzione che viene eseguito il mapping.  
+ Il mapping nell'elenco viene attivato quando il driver è un'applicazione ODBC 3*x* e il driver non supporta la funzione che viene eseguito il mapping.  
   
- Nella tabella seguente sono elencate le funzionalità di tutti i duplicati che è stata introdotta in ODBC 3*x*.  
+ Nella tabella seguente sono elencate le funzionalità di tutti i duplicati che è stato introdotto in ODBC 3*x*.  
   
 |ODBC 2. *x* (funzione)|ODBC 3*x* (funzione)|  
 |-------------------------|-------------------------|  
-|**SQLAllocConnect**|**SQLAllocHandle**|  
-|**SQLAllocEnv**|**SQLAllocHandle**|  
-|**SQLAllocStmt**|**SQLAllocHandle**|  
+|**SQLAllocConnect**|**Funzione SQLAllocHandle**|  
+|**SQLAllocEnv**|**Funzione SQLAllocHandle**|  
+|**SQLAllocStmt**|**Funzione SQLAllocHandle**|  
 |**SQLBindParam**[1]|**SQLBindParameter**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
 |**SQLError**|**SQLGetDiagRec**|  
@@ -48,16 +45,16 @@ Questa sezione vengono descritte le funzioni deprecate come viene eseguito il ma
 |**SQLFreeStmt** con un *opzione* di SQL_DROP|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
-|**SQLParamOptions**|**Funzione SQLSetStmtAttr**|  
-|**SQLSetConnectOption**|**Funzione SQLSetConnectAttr**|  
+|**SQLParamOptions**|**SQLSetStmtAttr**|  
+|**SQLSetConnectOption**|**SQLSetConnectAttr**|  
 |**SQLSetParam**[2]|**SQLBindParameter**|  
-|**SQLSetScrollOption**|**Funzione SQLSetStmtAttr**|  
-|**SQLSetStmtOption**|**Funzione SQLSetStmtAttr**|  
+|**SQLSetScrollOption**|**SQLSetStmtAttr**|  
+|**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] anche se questa funzione non esisteva in ODBC 2*x*, è lo standard Open Group e ISO.  
+ [1] anche se questa funzione non esisteva in ODBC 2*x*, si trova negli standard Open Group e ISO.  
   
- [2] è una funzione ODBC 1.0.  
+ [2] si tratta di una funzione ODBC 1.0.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

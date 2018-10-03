@@ -1,33 +1,30 @@
 ---
-title: Passaggio di parametri a un comando denominato | Documenti Microsoft
+title: Passaggio di parametri a un comando denominato | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO], passing parameters to a named command
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51243e0b57bf9cfe4619368e1abf49c048a19fd7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272360"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773389"
 ---
-# <a name="passing-parameters-to-a-named-command"></a>Passaggio di parametri a un comando denominato
-Analogamente a come il risultato del comando viene passato come un *out* variabili del comando denominato, parametri per un comando con parametri è stato passato come *in* variabili per il comando specificato.  
+# <a name="passing-parameters-to-a-named-command"></a>Passaggio di parametri a un comando con nome
+Così come il risultato del comando viene passato come un *out* variabile di comando denominato, parametri per un comando con parametri è stato passato come *in* variabili per il comando specificato.  
   
- Nell'esempio di codice riportato di seguito viene eseguito un tentativo di recuperare tutti gli ordini effettuati dal cliente il cui **CustomerID** è "Base al ALKFI" dal database Northwind. Il valore di **CustomerID** viene fornito al momento quando viene chiamato il comando specificato.  
+ Nell'esempio di codice riportato di seguito viene tentato il recupero di tutti gli ordini effettuati dal cliente la cui proprietà **CustomerID** è "Base al ALKFI" dal database Northwind. Il valore di **CustomerID** viene fornito al momento quando viene chiamato il comando specificato.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -86,7 +83,7 @@ Set objComm = Nothing
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- -verrà generato un errore di tipi di dati non corrispondenti, perché il parametro di input obbligatorio è di un **stringa** tipo, non di un **intero** tipo.  
+ -verrà generato un errore di tipi di dati non corrispondenti, perché il parametro di input obbligatorio è di un **stringa** tipo, non di un **Integer** tipo.  
   
  La chiamata seguente:  
   
@@ -94,7 +91,7 @@ objConn.GetOrdersOf 12345, objRs
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- -è valido, ma verrà restituito un risultato vuoto impostato perché tale record non esiste nel database.  
+ ovvero è valido, ma verrà restituito un risultato vuoto impostato perché tale record non esiste nel database.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

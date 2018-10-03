@@ -5,10 +5,7 @@ ms.date: 10/13/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - dm_geo_replication_link_status
@@ -19,19 +16,18 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ac416ef7d48655e25002646b6e364d04982688b2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 57212bc80087e3f2227f90ab6fa16678df37517e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046049"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809079"
 ---
-# <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>DM geo_replication_link_status (Database SQL di Azure)
+# <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni collegamento di replica tra i database primari e secondari in una relazione di replica geografica. Sono inclusi i database primari e secondari. Se esiste più di un collegamento di replica continua per un determinato database primario, questa tabella contiene una riga per ogni relazione. La vista viene creata in tutti i database, incluso il database master logico. Tuttavia, se si esegue una query su questa vista nel database master logico viene restituito un set vuoto.  
@@ -54,7 +50,7 @@ ms.locfileid: "38046049"
 > [!NOTE]  
 >  Se la relazione di replica viene terminata rimuovendo il database secondario (sezione 4.2), la riga per il database nel **DM geo_replication_link_status** visualizzazione scomparirà.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Eseguire una query qualsiasi account con autorizzazione view_database_state **DM geo_replication_link_status**.  
   
 ## <a name="example"></a>Esempio  

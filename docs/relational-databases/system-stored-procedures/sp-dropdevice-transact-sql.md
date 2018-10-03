@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropdevice_TSQL
@@ -19,21 +16,20 @@ helpviewer_keywords:
 - backup devices [SQL Server], deleting
 - sp_dropdevice
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42e95c504a5480438b746608e2c6b80fef628847
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 10b3eb7107af97e8c67491117a8e5542118ef00b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247288"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598269"
 ---
 # <a name="spdropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Elimina un database o del dispositivo di backup da un'istanza di [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)], eliminando la voce da **master.dbo**.  
+  Elimina un database o del dispositivo di backup da un'istanza di [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)], l'eliminazione della voce da **sysdevices**.  
    
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +43,7 @@ sp_dropdevice [ @logicalname = ] 'device'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@logicalname=** ] **'***dispositivo***'**  
- È il nome logico del database o del dispositivo di backup, come indicato nella **master.dbo.sysdevices.name**. *dispositivo* viene **sysname**, non prevede alcun valore predefinito.  
+ È il nome logico del database o del dispositivo di backup, come indicato nella **master.dbo.sysdevices.name**. *periferica* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@delfile=** ] **'***delfile***'**  
  Viene specificato se eliminare il file fisico del dispositivo di backup. *delfile* viene **varchar(7)**. Se specificato come **DELFILE**, il file di disco di dispositivo di backup fisico viene eliminato.  
@@ -56,12 +52,12 @@ sp_dropdevice [ @logicalname = ] 'device'
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_dropdevice** non può essere utilizzata in una transazione.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo predefinito del server **diskadmin** .  
   
 ## <a name="examples"></a>Esempi  

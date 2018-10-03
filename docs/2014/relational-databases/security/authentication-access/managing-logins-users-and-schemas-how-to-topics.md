@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server], logins and users
@@ -14,12 +12,12 @@ ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f01de0ee3f0e0d36660cb047ff4b21d55baf3d8e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103001"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>Procedure per la gestione di account di accesso, utenti e schemi
   In questa pagina vengono forniti i collegamenti agli argomenti che mostrano come gestire gli schemi di database, gli utenti di database e gli account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , nonché come creare un join per un ruolo e concedere le autorizzazioni a un'entità.  

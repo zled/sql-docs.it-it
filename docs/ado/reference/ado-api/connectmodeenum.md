@@ -1,13 +1,11 @@
 ---
-title: ConnectModeEnum | Documenti Microsoft
+title: ConnectModeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,25 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectModeEnum enumeration [ADO]
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94b89e379d85002fc58deb36a1b95d1b7457d4c8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2a5ab00cc6e01b97639ae3f7d353fa2462ef3fd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277090"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637859"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
-Specifica le autorizzazioni disponibili per la modifica dei dati in un [connessione](../../../ado/reference/ado-api/connection-object-ado.md), aprire un [Record](../../../ado/reference/ado-api/record-object-ado.md), o specificando i valori per il [modalità](../../../ado/reference/ado-api/mode-property-ado.md) proprietà del  **Record** e [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetti.  
+Specifica le autorizzazioni disponibili per la modifica dei dati in un [Connection](../../../ado/reference/ado-api/connection-object-ado.md), aprire un [Record](../../../ado/reference/ado-api/record-object-ado.md), o specificando i valori per il [modalità](../../../ado/reference/ado-api/mode-property-ado.md) proprietà del  **Record** e [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetti.  
   
 |Costante|valore|Description|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|Indica le autorizzazioni di sola lettura.|  
 |**adModeReadWrite**|3|Indica le autorizzazioni di lettura/scrittura.|  
-|**adModeRecursive**|0x400000|Usato in combinazione con le altre *\*ShareDeny\** valori (**adModeShareDenyNone**, **adModeShareDenyWrite**, o **adModeShareDenyRead**) per propagare le limitazioni di condivisione per tutti i corrente **Record**. Non produce alcun effetto se la **Record** non dispone di alcun elemento figlio. Viene generato un errore di run-time se utilizzato con **adModeShareDenyNone** solo. Tuttavia, può essere utilizzato con **adModeShareDenyNone** quando combinato con altri valori. Ad esempio, è possibile utilizzare "**adModeRead** o **adModeShareDenyNone** o **adModeRecursive**".|  
+|**adModeRecursive**|0x400000|Usato in combinazione con l'altra *\*ShareDeny\** valori (**adModeShareDenyNone**, **adModeShareDenyWrite**, o **adModeShareDenyRead**) per propagare le restrizioni della condivisione dell'istanza corrente a tutti i **Record**. Non produce alcun effetto se il **Record** non ha elementi figlio. Viene generato un errore di run-time se viene usato con **adModeShareDenyNone** solo. Tuttavia, può essere utilizzato con **adModeShareDenyNone** quando combinato con altri valori. Ad esempio, è possibile usare "**adModeRead** oppure **adModeShareDenyNone** oppure **adModeRecursive**".|  
 |**adModeShareDenyNone**|16|Consente ad altri utenti di aprire una connessione con le autorizzazioni. Impossibile negare l'accesso in lettura e in scrittura ad altri.|  
 |**adModeShareDenyRead**|4|Impedisce ad altri l'apertura di una connessione con autorizzazioni di lettura.|  
 |**adModeShareDenyWrite**|8|Impedisce ad altri l'apertura di una connessione con autorizzazioni di scrittura.|  
@@ -41,7 +38,7 @@ Specifica le autorizzazioni disponibili per la modifica dei dati in un [connessi
 |**adModeUnknown**|0|Valore predefinito. Indica che le autorizzazioni non sono ancora state impostate o non possono essere determinate.|  
 |**adModeWrite**|2|Indica le autorizzazioni di sola scrittura.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
  Package: **com.ms.wfc.data**  
   
 |Costante|  

@@ -1,31 +1,28 @@
 ---
-title: 'SQL a c: carattere | Documenti Microsoft'
+title: 'SQL a c: carattere | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], character
 - character data type [ODBC]
 - data conversions from SQL to C types [ODBC], character
 ms.assetid: 7fdb7f38-b64d-48f2-bcb4-1ca96b2bbdb6
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db139b1307fa1817e0b9ed709be5ee5db2086756
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d6ce8e1f961851f74f3ae5b6bdad30904bd18d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913946"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646035"
 ---
-# <a name="sql-to-c-character"></a>SQL carattere c:
+# <a name="sql-to-c-character"></a>Da SQL a C: carattere
 Gli identificatori per i tipi di dati carattere SQL ODBC sono:  
   
  SQL_CHAR  
@@ -40,33 +37,33 @@ Gli identificatori per i tipi di dati carattere SQL ODBC sono:
   
  SQL_WLONGVARCHAR  
   
- Nella tabella seguente viene illustrato come ODBC C i tipi di dati a cui possono essere convertiti i dati SQL di tipo carattere. Per una spiegazione delle colonne e delle condizioni nella tabella, vedere [la conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+ Nella tabella seguente mostra i dati ODBC C i tipi di dati a cui possono essere convertiti i dati SQL di tipo carattere. Per una spiegazione delle colonne e le condizioni nella tabella, vedere [conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
   
 |Identificatore di tipo C|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|Lunghezza in byte dei dati < *BufferLength*<br /><br /> Lunghezza in byte dei dati > = *BufferLength*|data<br /><br /> Dati troncati|Lunghezza in byte dei dati<br /><br /> Lunghezza in byte dei dati|n/d<br /><br /> 01004|  
+|SQL_C_CHAR|Lunghezza in byte dei dati < *BufferLength*<br /><br /> Lunghezza in byte di dati > = *BufferLength*|data<br /><br /> Dati troncati|Lunghezza in byte dei dati<br /><br /> Lunghezza in byte dei dati|n/d<br /><br /> 01004|  
 |SQL_C_WCHAR|Lunghezza dei dati in caratteri < *BufferLength*<br /><br /> Lunghezza dei dati in caratteri > = *BufferLength*|data<br /><br /> Dati troncati|Lunghezza dei dati in caratteri<br /><br /> Lunghezza dei dati in caratteri|n/d<br /><br /> 01004|  
-|SQL_C_STINYINT SQL_C_UTINYINT SQL_C_TINYINT SQL_C_SBIGINT SQL_C_UBIGINT SQL_C_SSHORT SQL_C_USHORT SQL_C_SHORT SQL_C_SLONG SQL_C_ULONG SQL_C_LONG SQL_C_NUMERIC|I dati convertiti senza troncamento [b]<br /><br /> Convertire dati con il troncamento delle cifre frazionarie [a]<br /><br /> La conversione dei dati comporta la perdita di cifre intero (in contrapposizione frazionari) [a]<br /><br /> Dati non sono un *valore letterale numerico*[b].|data<br /><br /> Dati troncati<br /><br /> Non definito<br /><br /> Non definito|Numero di byte del tipo di dati C<br /><br /> Numero di byte del tipo di dati C<br /><br /> Non definito<br /><br /> Non definito|n/d<br /><br /> 01S07<br /><br /> 22003<br /><br /> 22018|  
-|SQL_C_FLOAT SQL_C_DOUBLE|Dati sono compreso nell'intervallo del tipo di dati a cui il numero viene convertito [a]<br /><br /> Dati non rientra nell'intervallo del tipo di dati a cui il numero viene convertito [a]<br /><br /> Dati non sono un *valore letterale numerico*[b].|data<br /><br /> Non definito<br /><br /> Non definito|Dimensioni del tipo di dati C<br /><br /> Non definito<br /><br /> Non definito|n/d<br /><br /> 22003<br /><br /> 22018|  
-_C_BIT|I dati sono 0 o 1<br /><br /> Dati sono maggiori di 0, minore di 2 e non è uguale a 1<br /><br /> Dati sono minore di 0 o maggiore di o uguale a 2<br /><br /> Dati non sono un *valore letterale numerico*|data<br /><br /> Dati troncati<br /><br /> Non definito<br /><br /> Non definito|1 [b]<br /><br /> 1 [b]<br /><br /> Non definito<br /><br /> Non definito|n/d<br /><br /> 01S07<br /><br /> 22003<br /><br /> 22018|  
-|SQL_C_BINARY|Lunghezza in byte dei dati < = *BufferLength*<br /><br /> Lunghezza in byte dei dati > *BufferLength*|data<br /><br /> Dati troncati|Lunghezza in byte dei dati<br /><br /> Lunghezza dei dati|n/d<br /><br /> 01004|  
-|SQL_C_TYPE_DATE|Valore di dati è un valore valido *valore di data*[a]<br /><br /> Valore di dati è un valore valido *valore timestamp*; la parte dell'ora è uguale a zero [a]<br /><br /> Valore di dati è un valore valido *valore timestamp*; la parte dell'ora è diverso da zero [a], [c]<br /><br /> Valore di dati non è un valido *valore di data* o *valore timestamp*[a]|data<br /><br /> data<br /><br /> Dati troncati<br /><br /> Non definito|6 [b]<br /><br /> 6 [b]<br /><br /> 6 [b]<br /><br /> Non definito|n/d<br /><br /> n/d<br /><br /> 01S07<br /><br /> 22018|  
-|SQL_C_TYPE_TIME|Valore di dati è un valore valido *valore di ora e i secondi frazionari, il valore è 0*[a]<br /><br /> Valore di dati è un valore valido *valore timestamp o un valore di ora valido*; frazionari parte relativa ai secondi è pari a zero [a], [d]<br /><br /> Valore di dati è un valore valido *valore timestamp*; frazionari parte relativa ai secondi è diverso da zero [a], [d], [e]<br /><br /> Valore di dati non è un valido *valore di ora* o *valore timestamp*[a]|data<br /><br /> data<br /><br /> Dati troncati<br /><br /> Non definito|6 [b]<br /><br /> 6 [b]<br /><br /> 6 [b]<br /><br /> Non definito|n/d<br /><br /> n/d<br /><br /> 01S07<br /><br /> 22018|  
-_C_TYPE_TIMESTAMP|Valore di dati è un valore valido *valore timestamp o un valore di ora valido*; frazionari parte relativa ai secondi non troncato [a]<br /><br /> Valore di dati è un valore valido *valore timestamp o un valore di ora valido*; frazionari parte relativa ai secondi troncato [a]<br /><br /> Valore di dati è un valore valido *valore di data*[a]<br /><br /> Valore di dati è un valore valido *valore di ora*[a]<br /><br /> Valore di dati non è un valido *valore di data*, *valore di ora*, o *valore timestamp*[a]|data<br /><br /> Dati troncati<br /><br /> Dati [f]<br /><br /> Dati [c]<br /><br /> Non definito|16 [b]<br /><br /> 16 [b]<br /><br /> 16 [b]<br /><br /> 16 [b]<br /><br /> Non definito|n/d<br /><br /> 01S07<br /><br /> n/d<br /><br /> n/d<br /><br /> 22018|  
-|Tutti i tipi di intervallo C|Valore di dati è un valore valido *il valore dell'intervallo*; nessun troncamento<br /><br /> Valore di dati è un valore valido *il valore dell'intervallo*; troncamento di uno o più campi finali<br /><br /> Dati sono l'intervallo valido. campo significativo precisione iniziale viene perso<br /><br /> Il valore di dati non è un valore di intervallo valido|data<br /><br /> Dati troncati<br /><br /> Non definito<br /><br /> Non definito|Lunghezza in byte dei dati<br /><br /> Lunghezza in byte dei dati<br /><br /> Non definito<br /><br /> Non definito|n/d<br /><br /> 01S07<br /><br /> 22015<br /><br /> 22018|  
+|SQL_C_STINYINT SQL_C_UTINYINT SQL_C_TINYINT SQL_C_SBIGINT SQL_C_UBIGINT SQL_C_SSHORT SQL_C_USHORT SQL_C_SHORT SQL_C_SLONG SQL_C_ULONG SQL_C_LONG SQL_C_NUMERIC|I dati convertiti senza troncamento [b]<br /><br /> I dati convertiti con troncamento delle cifre frazionarie [a]<br /><br /> La conversione dei dati potrebbe comportare la perdita di cifre [a] intero (in contrapposizione frazionari)<br /><br /> I dati non sono un *letterali numerici*[b].|data<br /><br /> Dati troncati<br /><br /> Non definito<br /><br /> Non definito|Numero di byte del tipo di dati C<br /><br /> Numero di byte del tipo di dati C<br /><br /> Non definito<br /><br /> Non definito|n/d<br /><br /> 01S07<br /><br /> 22003<br /><br /> 22018|  
+|SQL_C_FLOAT SQL_C_DOUBLE|Data è compreso nell'intervallo del tipo di dati a cui il numero viene convertito [a]<br /><br /> I dati non rientra nell'intervallo del tipo di dati a cui il numero viene convertito [a]<br /><br /> I dati non sono un *letterali numerici*[b].|data<br /><br /> Non definito<br /><br /> Non definito|Dimensione del tipo di dati C<br /><br /> Non definito<br /><br /> Non definito|n/d<br /><br /> 22003<br /><br /> 22018|  
+_C_BIT|I dati sono 0 o 1<br /><br /> I dati sono maggiori di 0, inferiore a 2 e non è uguale a 1<br /><br /> I dati sono minore di 0 oppure maggiore o uguale a 2<br /><br /> I dati non sono un *letterali numerici*|data<br /><br /> Dati troncati<br /><br /> Non definito<br /><br /> Non definito|1 [b]<br /><br /> 1 [b]<br /><br /> Non definito<br /><br /> Non definito|n/d<br /><br /> 01S07<br /><br /> 22003<br /><br /> 22018|  
+|SQL_C_BINARY|Lunghezza in byte dei dati < = *BufferLength*<br /><br /> Lunghezza in byte di dati > *BufferLength*|data<br /><br /> Dati troncati|Lunghezza in byte dei dati<br /><br /> Lunghezza dei dati|n/d<br /><br /> 01004|  
+|SQL_C_TYPE_DATE|Valore dei dati è un valido *valore di data*[a]<br /><br /> Valore dei dati è un valido *valore di timestamp*; la parte dell'ora è uguale a zero [a]<br /><br /> Valore dei dati è un valido *valore di timestamp*; la parte dell'ora è diverso da zero [a], [c]<br /><br /> Valore di dati non valido *valore di data* oppure *valore timestamp*[a]|data<br /><br /> data<br /><br /> Dati troncati<br /><br /> Non definito|6 [b]<br /><br /> 6 [b]<br /><br /> 6 [b]<br /><br /> Non definito|n/d<br /><br /> n/d<br /><br /> 01S07<br /><br /> 22018|  
+|SQL_C_TYPE_TIME|Valore dei dati è un valido *valore di ora e i valore è 0 i secondi frazionari*[a]<br /><br /> Valore dei dati è un valido *valore di timestamp o un valore di ora valido*; frazionari parte relativa ai secondi è pari a zero [a], [d]<br /><br /> Valore dei dati è un valido *valore di timestamp*; frazionari parte relativa ai secondi è diverso da zero [a], [d], [e]<br /><br /> Valore di dati non valido *valore di ora* oppure *valore timestamp*[a]|data<br /><br /> data<br /><br /> Dati troncati<br /><br /> Non definito|6 [b]<br /><br /> 6 [b]<br /><br /> 6 [b]<br /><br /> Non definito|n/d<br /><br /> n/d<br /><br /> 01S07<br /><br /> 22018|  
+_C_TYPE_TIMESTAMP|Valore dei dati è un valido *valore di timestamp o un valore di ora valido*; frazionari parte relativa ai secondi non troncato [a]<br /><br /> Valore dei dati è un valido *valore di timestamp o un valore di ora valido*; frazionari parte relativa ai secondi troncato [a]<br /><br /> Valore dei dati è un valido *valore di data*[a]<br /><br /> Valore dei dati è un valido *valore di ora*[a]<br /><br /> Valore di dati non valido *valore di data*, *valore di ora*, o *valore timestamp*[a]|data<br /><br /> Dati troncati<br /><br /> Dati [f]<br /><br /> Dati [g]<br /><br /> Non definito|16 [b]<br /><br /> 16 [b]<br /><br /> 16 [b]<br /><br /> 16 [b]<br /><br /> Non definito|n/d<br /><br /> 01S07<br /><br /> n/d<br /><br /> n/d<br /><br /> 22018|  
+|Tutti i tipi di intervallo C|Valore dei dati è un valido *valore dell'intervallo*; nessun troncamento<br /><br /> Valore dei dati è un valido *valore dell'intervallo*; il troncamento di uno o più campi finali<br /><br /> I dati sono intervallo valido. campo significativi precisione iniziale viene persa<br /><br /> Il valore dei dati non è un valore di intervallo valido|data<br /><br /> Dati troncati<br /><br /> Non definito<br /><br /> Non definito|Lunghezza in byte dei dati<br /><br /> Lunghezza in byte dei dati<br /><br /> Non definito<br /><br /> Non definito|n/d<br /><br /> 01S07<br /><br /> 22015<br /><br /> 22018|  
   
- [a] il valore di *BufferLength* viene ignorata per la conversione. Il driver presuppone che le dimensioni di **TargetValuePtr* è la dimensione del tipo di dati C.  
+ [a] hodnotou *BufferLength* viene ignorata per questa conversione. Il driver presuppone che le dimensioni di **TargetValuePtr* è la dimensione del tipo di dati C.  
   
- [b] è la dimensione del tipo di dati C corrispondente.  
+ [b] questa è la dimensione del tipo di dati C corrispondente.  
   
- [c] la porzione dell'ora di *valore timestamp* viene troncato.  
+ [c] la porzione dell'ora il *valore di timestamp* viene troncato.  
   
- [d] la parte relativa alla data del *valore timestamp* viene ignorato.  
+ [d] la parte relativa alla data del *valore di timestamp* viene ignorato.  
   
  [e] la parte frazionaria dei secondi del timestamp viene troncata.  
   
- [f] i campi di tempo della struttura di timestamp vengono impostati su zero.  
+ [f] i campi di tempo della struttura di timestamp sono impostati su zero.  
   
- [g] i campi data della struttura di timestamp vengono impostati sulla data corrente.  
+ [g] i campi data della struttura di timestamp sono impostati sulla data corrente.  
   
- Quando i dati SQL carattere vengono convertiti in numerico, data, ora, timestamp o dati di intervallo C, spazi iniziali e finali vengono ignorati.
+ Quando i dati SQL carattere viene convertiti in numerico, data, ora, timestamp o i dati di intervallo C, spazi iniziali e finali vengono ignorati.

@@ -1,36 +1,33 @@
 ---
-title: SQLExtendedFetch (libreria di cursori) | Documenti Microsoft
+title: SQLExtendedFetch (libreria di cursori) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLExtendedFetch function [ODBC], Cursor Library
 ms.assetid: 06fbf06f-127b-475c-b636-7b784918475d
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7b84c5dd3c39d31b94cfb12e6b116dd44963a0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 600d90c14ae8b08a4860f3cff49c1615a9587063
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907376"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798219"
 ---
 # <a name="sqlextendedfetch-cursor-library"></a>SQLExtendedFetch (libreria di cursori)
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Si consiglia di utilizzare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
   
- In questo argomento viene illustrato l'utilizzo del **SQLExtendedFetch** funzione nella libreria di cursori. Per informazioni generali su **SQLExtendedFetch**, vedere [funzione SQLExtendedFetch](../../../odbc/reference/syntax/sqlextendedfetch-function.md).  
+ In questo argomento viene illustrato l'utilizzo dei **SQLExtendedFetch** funzione nella libreria di cursori. Per informazioni generali sul **SQLExtendedFetch**, vedere [funzione SQLExtendedFetch](../../../odbc/reference/syntax/sqlextendedfetch-function.md).  
   
  La libreria di cursori implementa **SQLExtendedFetch** chiamando ripetutamente **SQLFetch** nel driver.  
   
  La libreria di cursori supporta la chiamata **SQLExtendedFetch** con un *FetchOrientation* impostato su sql_fetch_bookmark.  
   
- Quando si utilizza la libreria di cursori, le chiamate a **SQLExtendedFetch** ReadContentAsBinHex con chiamate a **SQLFetchScroll** o **SQLFetch**.
+ Quando viene usata la libreria di cursori, le chiamate a **SQLExtendedFetch** ReadContentAsBase64 e ReadContentAsBinHex con chiamate a uno **SQLFetchScroll** oppure **SQLFetch**.

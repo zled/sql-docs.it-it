@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.translations.translationspane.translationdetails.f1
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 401c69274fad3e88b29d06bcb3446dd0c1e3bf59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a48ac22eb47eca8e265958289fdb461d4dd7f032
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185278"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118751"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Dettagli traduzione (scheda Traduzioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Dettagli della transizione** della scheda **Transazioni** di Progettazione cubi per definire e gestire le traduzioni per il cubo attualmente selezionato.  
@@ -35,7 +32,7 @@ ms.locfileid: "37185278"
   
 -   Gruppo di misure  
   
-     `Caption` Proprietà  
+     Proprietà`Caption`   
   
 -   Misura  
   
@@ -43,11 +40,11 @@ ms.locfileid: "37185278"
   
 -   Dimension  
   
-     `Caption` Proprietà  
+     Proprietà`Caption`   
   
 -   Perspective  
   
-     `Caption` Proprietà  
+     Proprietà`Caption`   
   
 -   Indicatore di prestazioni chiave (KPI)  
   
@@ -55,15 +52,15 @@ ms.locfileid: "37185278"
   
 -   Azione  
   
-     `Caption` Proprietà  
+     Proprietà`Caption`   
   
 -   Set denominato  
   
-     `Caption` Proprietà  
+     Proprietà`Caption`   
   
 -   membro calcolato  
   
-     `Caption` Proprietà  
+     Proprietà`Caption`   
   
  **\<Lingua >**  
  Consente di digitare il valore della proprietà relativa all'oggetto del cubo nella lingua selezionata.  

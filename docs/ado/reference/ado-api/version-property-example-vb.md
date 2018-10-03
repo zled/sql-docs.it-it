@@ -1,42 +1,39 @@
 ---
-title: Esempio di proprietà Version (VB) | Documenti Microsoft
+title: Esempio di proprietà Version (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Version property [ADO], Visual Basic example
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 686168abddee50063db7f1150120302dea76c08e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f256597bca47a6453dbefa21c528cf57fd245bdf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282900"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645679"
 ---
-# <a name="version-property-example-vb"></a>Esempio di proprietà Version (VB)
-Questo esempio viene utilizzato il [versione](../../../ado/reference/ado-api/version-property-ado.md) proprietà di un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto per visualizzare la versione corrente di ADO. Utilizza inoltre diverse proprietà dinamiche per mostrare:  
+# <a name="version-property-example-vb"></a>Esempio della proprietà Version (VB)
+Questo esempio Usa la [versione](../../../ado/reference/ado-api/version-property-ado.md) proprietà di un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) dell'oggetto per visualizzare la versione corrente di ADO. Utilizza anche diverse proprietà dinamica da visualizzare:  
   
--   il nome DBMS corrente e la versione.  
+-   il nome del DBMS corrente e la versione.  
   
--   Versione di OLE DB.  
+-   Versione OLE DB.  
   
--   nome del provider e versione.  
+-   nome del provider e la versione.  
   
 -   Versione ODBC.  
   
--   Nome del driver ODBC e versione.  
+-   Nome del driver ODBC e la versione.  
   
 ```  
 'BeginVersionVB  
@@ -82,5 +79,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto di connessione (ADO.NET)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Proprietà Version (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

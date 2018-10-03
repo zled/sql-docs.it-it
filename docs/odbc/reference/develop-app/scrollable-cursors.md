@@ -1,41 +1,38 @@
 ---
-title: I cursori scorrevoli | Documenti Microsoft
+title: Cursori scorrevoli | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7e5c31c1c7629d0c339735b8777b42a15f9d880b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70d02b933104a3106d95f6760cbdcf0abb347716
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913466"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791555"
 ---
 # <a name="scrollable-cursors"></a>Cursori scorrevoli
-Nelle applicazioni moderne basate su schermo, l'utente scorre avanti e indietro i dati. Per tali applicazioni, la restituzione di una riga recuperata in precedenza è un problema. Una possibilità consiste nel chiudere e riaprire il cursore e quindi recuperare le righe finché il cursore raggiunge la riga necessaria. Un'altra possibilità consiste nel leggere il set di risultati, memorizzarlo nella cache in locale e implementare lo scorrimento nell'applicazione. Entrambe le possibilità funzionano bene solo con set di risultati di piccole dimensioni e la possibilità di quest'ultima è difficile da implementare. Una soluzione migliore consiste nell'utilizzare un *con cursori scorrevoli,* che può spostarsi avanti e indietro nel set di risultati.  
+Nelle moderne applicazioni basate su schermo, l'utente scorre avanti e indietro tra i dati. Per tali applicazioni, tornare a una riga recuperata in precedenza è un problema. Una possibilità consiste nel chiudere e riaprire il cursore e quindi recuperare le righe finché il cursore raggiunge la riga necessaria. Un'altra possibilità consiste nel leggere il set di risultati, memorizzarlo nella cache in locale e implementare lo scorrimento nell'applicazione. Entrambe le possibilità funzionano bene solo con set di risultati di piccole dimensioni e la possibilità di quest'ultima è difficile da implementare. Una soluzione migliore consiste nell'usare un *cursori scorrevoli,* che può spostarsi avanti e indietro nel set di risultati.  
   
- Oggetto *cursore scorrevole* viene in genere utilizzato nelle applicazioni moderne basate su schermo in cui l'utente scorre avanti e indietro i dati. Tuttavia, le applicazioni utilizzino i cursori scorrevoli solo quando i cursori forward-only non eseguirà il processo, come i cursori scorrevoli risultano in genere è più costosi di cursori forward-only.  
+ Oggetto *cursore scorrevole* viene comunemente usato nelle moderne applicazioni basate su schermo in cui l'utente scorre avanti e indietro tra i dati. Tuttavia, le applicazioni utilizzino i cursori scorrevoli solo quando i cursori forward-only non eseguirà il processo, come i cursori scorrevoli risultano in genere più costosi di cursori forward-only.  
   
- La possibilità di spostarsi all'indietro genera una domanda non applicabile per i cursori forward-only: deve un cursore scorrevole rilevare le modifiche apportate alle righe precedentemente recuperate? Vale a dire, deve rilevare le righe aggiornate, eliminate e appena inserite?  
+ La possibilità di spostarsi all'indietro, pone una questione non applicabile per i cursori forward-only: un cursore scorrevole rileverà le modifiche apportate alle righe recuperate in precedenza? Vale a dire lo rileverà righe aggiornate, eliminate e appena inserite?  
   
- Questa domanda si verifica perché la definizione di un risultato impostata, il set di righe che soddisfa determinati criteri, non indicano quando le righe vengono controllate per verificare se corrispondono ai criteri di tale né stato se righe devono contenere gli stessi dati ogni volta che vengono richiamate. L'omissione precedente rende possibile per i cursori scorrevoli rilevare se le righe sono state inserite o eliminate, mentre quest'ultimo consente di rilevare i dati aggiornati.  
+ Questa domanda si verifica perché la definizione di un risultato impostata, il set di righe che soddisfa determinati criteri, ovvero non indica quando le righe vengono controllate per vedere se che corrisponde a tali criteri, né è stato fatto righe devono contenere gli stessi dati ogni volta che vengono richiamate. L'omissione precedente rende possibile per i cursori scorrevoli rilevare se righe viene inserite o eliminate, mentre quest'ultimo consente di rilevare i dati aggiornati.  
   
- La possibilità di rilevare le modifiche è talvolta utile, in alcuni casi non. Ad esempio, un'applicazione di contabilità richiede un cursore che ignora tutte le modifiche; documentazione di bilanciamento del carico è possibile eseguire se il cursore mostra le modifiche più recenti. D'altra parte, un sistema di prenotazione airline necessita di un cursore che visualizza le ultime modifiche apportate ai dati; senza un cursore, è necessario requery continuamente il database per visualizzare la disponibilità di volo più aggiornata.  
+ La possibilità di rilevare le modifiche è talvolta utile, in alcuni casi non. Ad esempio, un'applicazione di contabilità richiede un cursore che consente di ignorare tutte le modifiche; documentazione di bilanciamento del carico è possibile se il cursore mostra le modifiche più recenti. D'altra parte, un sistema di prenotazione compagnia aerea deve un cursore che visualizza le modifiche più recenti per i dati. senza un cursore, continuamente necessario rieseguire la query del database per visualizzare la disponibilità più aggiornata di volo.  
   
- Per soddisfare le esigenze delle diverse applicazioni, ODBC definisce quattro diversi tipi di cursori scorrevoli. Questi cursori variano entrambe in costi e impostato per la capacità di rilevare le modifiche apportate al risultato. Si noti che se un cursore scorrevole può rilevare le modifiche alle righe, è possibile solo in grado di rilevarli durante il tentativo di recupero di tali righe. non è possibile per l'origine dati per notificare al cursore le modifiche apportate alle righe attualmente recuperate. Si noti inoltre che la visibilità delle modifiche è controllata anche dal livello di isolamento delle transazioni; Per ulteriori informazioni, vedere [isolamento delle transazioni](../../../odbc/reference/develop-app/transaction-isolation.md).  
+ Per coprire le esigenze delle diverse applicazioni, ODBC definisce quattro diversi tipi di cursori scorrevoli. I cursori variano entrambe spese e la capacità di rilevare le modifiche apportate al risultato del set. Si noti che se un cursore scorrevole può rilevare le modifiche alle righe, può solo rilevare li durante il tentativo di recupero di tali righe; non è possibile per l'origine dati notificare al cursore le modifiche apportate alle righe attualmente recuperate. Si noti anche che la visibilità delle modifiche viene controllata anche dal livello di isolamento delle transazioni; per altre informazioni, vedere [isolamento delle transazioni](../../../odbc/reference/develop-app/transaction-isolation.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, step out
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 331dca27a98a9493478ff294a21e5c52e1a1ba97
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b46deb42a6729cbf122aca0fcb4618143bc786a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331281"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144411"
 ---
 # <a name="step-through-transact-sql-code"></a>Esecuzione istruzione per istruzione del codice Transact-SQL
   Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] consente di controllare quali istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono eseguite in una finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . È possibile sospendere l'esecuzione del debugger in corrispondenza di singole istruzioni e successivamente visualizzare lo stato degli elementi di codice in quei punti.  
@@ -53,7 +50,7 @@ ms.locfileid: "37331281"
   
  Nella tabella seguente sono elencate le varie procedure che consentono di controllare il modo in cui le istruzioni sono eseguite nel debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-|Azione|Procedura|  
+|Azione|Routine|  
 |------------|---------------|  
 |Eseguire tutte le istruzioni dall'istruzione corrente al successivo punto di interruzione|Nel **Debug** menu, fare clic su **continua**.<br /><br /> Nel **Debug** sulla barra degli strumenti, fare clic sui **continua** pulsante.|  
 |Eseguire la successiva istruzione o il successivo modulo.|Nel **Debug** menu, fare clic su **Esegui istruzione**.<br /><br /> Nel **Debug** sulla barra degli strumenti, fare clic sui **Esegui istruzione** pulsante.<br /><br /> Premere F11.|  

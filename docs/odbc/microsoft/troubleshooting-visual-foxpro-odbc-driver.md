@@ -1,13 +1,11 @@
 ---
-title: Risoluzione dei problemi, Driver ODBC di Visual FoxPro | Documenti Microsoft
+title: Risoluzione dei problemi (Driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - set ANSI [ODBC]
@@ -19,52 +17,51 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - background fetching [ODBC]
 ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23bab07c1f00abc9fb0d2c353603a21b58975933
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f0576d017068b8ab0694da798c5be458f115e56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905372"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667969"
 ---
-# <a name="troubleshooting-visual-foxpro-odbc-driver"></a>Risoluzione dei problemi (Driver ODBC di Visual FoxPro)
-Le sezioni seguenti illustrano come migliorare le prestazioni e risolvere i problemi che possono verificarsi quando si utilizza il Driver ODBC di Visual FoxPro.  
+# <a name="troubleshooting-visual-foxpro-odbc-driver"></a>Risoluzione dei problemi (driver ODBC Visual FoxPro)
+Le sezioni seguenti illustrano come migliorare le prestazioni e risolvere i problemi che possono verificarsi quando si usa il Driver ODBC Visual FoxPro.  
   
 ## <a name="accessing-parameterized-views"></a>L'accesso a viste con parametri  
- È possibile accedere alle viste con parametri in un database di Visual FoxPro usando il driver. Una vista con parametri consente di creare una clausola WHERE della vista SQL **selezionare** scaricato istruzione che limita i record a quei record che soddisfano le condizioni della clausola WHERE creata usando il valore fornito per il parametro. Poiché il driver non supporta i parametri di passaggio alla visualizzazione, i tentativi di accedere a una vista con parametri utilizzando il driver avrà esito negativo.  
+ Le viste con parametri in un database di Visual FoxPro usando il driver non è possibile accedere. Una vista con parametri crea una clausola WHERE in SQL della vista **seleziona** istruzione che limita i record scaricati a quei record che soddisfano le condizioni della clausola WHERE creata usando il valore specificato per il parametro. Poiché il driver non supporta il passaggio di parametri per la visualizzazione, i tentativi di accesso di una vista con parametri utilizzando il driver avrà esito negativo.  
   
  Il valore del parametro può essere fornito in fase di esecuzione o a livello di codice passato alla visualizzazione.  
   
-## <a name="accessing-remote-views"></a>L'accesso Remote viste  
- È possibile accedere alle viste remote in un database di Visual FoxPro usando il driver. Visualizzazioni remote sono che accedono a dati non FoxPro o una combinazione di FoxPro e dati non FoxPro. Per accedere alle viste remote, utilizzare Visual FoxPro.  
+## <a name="accessing-remote-views"></a>Accesso alle visualizzazioni Remote  
+ Non è possibile accedere visualizzazioni remote in un database di Visual FoxPro usando il driver. Visualizzazioni remote sono che accedono a dati non FoxPro o una combinazione di FoxPro e i dati non FoxPro. Per accedere alle viste remote, utilizzare Visual FoxPro.  
   
-## <a name="deleting-records"></a>Eliminazione di record  
- È possibile contrassegnare i record per l'eliminazione tramite il driver, ma non è possibile rimuovere definitivamente i record dal database. Per rimuovere definitivamente i record da una tabella, utilizzare Visual FoxPro.  
+## <a name="deleting-records"></a>L'eliminazione di record  
+ È possibile contrassegnare i record per l'eliminazione tramite il driver, ma non è possibile rimuovere in modo permanente i record dal database. Per rimuovere definitivamente i record da una tabella, usare Visual FoxPro.  
   
 ## <a name="increasing-performance-using-background-fetching"></a>Miglioramento delle prestazioni tramite il recupero in Background  
- È possibile migliorare le prestazioni in recuperi di grandi dimensioni tramite lo sfondo del recupero di funzionalità del driver. Recupero in background utilizza un thread separato per recuperare i dati richiesti da un'origine dati specifica.  
+ È possibile migliorare le prestazioni in recuperi di grandi dimensioni tramite lo sfondo il recupero di funzionalità del driver. Il recupero in background Usa un thread separato per recuperare i dati richiesti da un'origine dati specifica.  
   
- È possibile applicare background recupero per un'origine dati in uno dei modi seguenti:  
+ È possibile impiegare in background il recupero per un'origine dati in uno dei modi seguenti:  
   
--   Controllare il **recuperare i dati in background** casella di controllo di [la finestra di dialogo di installazione di ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md).  
+-   Verificare i **recuperare i dati in background** casella di controllo la [nella finestra di dialogo programma di installazione di ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md).  
   
--   Utilizzare la parola chiave attributo BackgroundFetch nella stringa di connessione.  
+-   Usare la parola chiave attributi BackgroundFetch nella stringa di connessione.  
   
- Per informazioni sulle parole chiave di attributo stringa di connessione, vedere [utilizzando le stringhe di connessione](../../odbc/microsoft/using-connection-strings.md).  
+ Per informazioni sulle parole chiave attributo di stringa di connessione, vedere [uso di stringhe di connessione](../../odbc/microsoft/using-connection-strings.md).  
   
-## <a name="updating-multitiered-views"></a>Aggiornamento delle visualizzazioni a più livelli  
- Una vista più livelli è una vista basata su una o più visualizzazioni anziché su una tabella di base. Quando si aggiornano i dati in una visualizzazione di più livelli, gli aggiornamenti anche un solo livello, la vista su cui è basata la vista di primo livello; tabelle di base non vengono aggiornate.  
+## <a name="updating-multitiered-views"></a>L'aggiornamento delle viste a più livelli  
+ Una vista a più livelli è una vista basata su una o più visualizzazioni anziché su una tabella di base. Quando si esegue l'aggiornamento dati in una vista a più livelli, aggiornamenti scendere di un solo livello, per la visualizzazione su cui si basa la visualizzazione di primo livello; tabelle di base non vengono aggiornate.  
   
-## <a name="using-data-definition-language-ddl-in-stored-procedures"></a>Utilizzo di Data Definition Language (DDL) in Stored procedure  
- DDL, ad esempio CREATE TABLE o ALTER TABLE, è possibile utilizzare nelle routine di Visual FoxPro archiviati.  
+## <a name="using-data-definition-language-ddl-in-stored-procedures"></a>Uso di Data Definition Language (DDL) nelle Stored procedure  
+ DDL, ad esempio CREATE TABLE o ALTER TABLE, è possibile usare nelle procedure di Visual FoxPro archiviati.  
   
- Per informazioni sul linguaggio, è possibile utilizzare nelle stored procedure, vedere [il supporto per le regole, valori predefiniti, trigger e Stored procedure](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md).  
+ Per informazioni sul linguaggio, è possibile utilizzare in stored procedure, vedere [supporto per la Stored procedure, trigger, valori predefiniti e regole](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md).  
   
 ## <a name="using-positioned-updates"></a>Usando gli aggiornamenti posizionati  
- Il driver non supporta gli aggiornamenti posizionati. Utilizzare la clausola SQL WHERE per identificare le righe che si desidera aggiornare.  
+ Il driver non supporta gli aggiornamenti posizionati. Utilizzare la clausola SQL WHERE per identificare le righe da aggiornare.  
   
 ## <a name="using-the-set-ansi-command"></a>Il comando SET ANSI  
- Se si è uno sviluppatore di Visual FoxPro, è necessario tenere presente che l'impostazione predefinita per SET ANSI è impostata su ON per il driver, a differenza di un'impostazione OFF per Visual FoxPro. Il valore predefinito di impostazione per SET ANSI consente origini dati di Visual FoxPro da un comportamento coerente con altre origini dati ODBC che in genere eseguono confronti esatto. È possibile modificare l'impostazione predefinita. Per ulteriori informazioni, vedere [SET ANSI](../../odbc/microsoft/set-ansi-command.md).
+ Se sei uno sviluppatore di Visual FoxPro, è necessario essere consapevoli che l'impostazione predefinita per SET ANSI è ON per il driver, a differenza di un'impostazione predefinita di OFF di Visual FoxPro. L'impostazione predefinita in impostazione per il SET ANSI consente a origini dati Visual FoxPro da un comportamento coerente con altre origini dati ODBC che in genere eseguono confronti esatti. È possibile modificare l'impostazione predefinita. Per altre informazioni, vedere [SET ANSI](../../odbc/microsoft/set-ansi-command.md).

@@ -1,13 +1,11 @@
 ---
-title: Gli indici di raccolta (ADOX) | Documenti Microsoft
+title: Gli indici di raccolta (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,39 +14,38 @@ f1_keywords:
 helpviewer_keywords:
 - Indexes collection [ADOX]
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7bddbeacadb3bac0b2f408502e6aacb30184dfe
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e1ef6a456a6a1903364c996e87c54cebee1fedb2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756659"
 ---
-# <a name="indexes-collection-adox"></a>Raccolta di indici (ADOX)
-Contiene tutti [indice](../../../ado/reference/adox-api/index-object-adox.md) oggetti di una tabella.  
+# <a name="indexes-collection-adox"></a>Raccolta Indexes (ADOX)
+Contiene tutti [indice](../../../ado/reference/adox-api/index-object-adox.md) gli oggetti di una tabella.  
   
-## <a name="remarks"></a>Remarks  
- Il [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) metodo per un **indici** insieme è univoco in ADOX. È possibile effettuare le operazioni seguenti:  
+## <a name="remarks"></a>Note  
+ Il [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) metodo per un' **indici** raccolta sia univoca per ADOX. È possibile effettuare le operazioni seguenti:  
   
--   Aggiungere un nuovo indice nella raccolta con il **Append** metodo.  
+-   Aggiungere un nuovo indice per la raccolta con il **Append** (metodo).  
   
- Le proprietà e i metodi rimanenti sono standard per le raccolte di ADO. È possibile effettuare le operazioni seguenti:  
+ Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile effettuare le operazioni seguenti:  
   
 -   Accedere a un indice nella raccolta con il [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
   
--   Restituire il numero di indici contenuti nella raccolta con il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà.  
+-   Restituisce il numero di indici contenuti nella raccolta con il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà.  
   
--   Rimuovere un indice dalla raccolta con il [eliminare](../../../ado/reference/adox-api/delete-method-adox-collections.md) metodo.  
+-   Rimuovere un indice dalla raccolta con il [eliminare](../../../ado/reference/adox-api/delete-method-adox-collections.md) (metodo).  
   
--   Aggiornare gli oggetti nella raccolta in modo da riflettere lo schema del database corrente con il [aggiornamento](../../../ado/reference/ado-api/refresh-method-ado.md) metodo.  
+-   Aggiornare gli oggetti nella raccolta in modo da riflettere lo schema del database corrente con il [Aggiorna](../../../ado/reference/ado-api/refresh-method-ado.md) (metodo).  
   
- In questa sezione contiene l'argomento seguente.  
+ In questa sezione contiene gli argomenti seguenti.  
   
 -   [Proprietà, metodi ed eventi della raccolta di oggetti Index](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Indici di esempio del metodo Append (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
+ [Esempio di metodo (VB) Append](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Oggetto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

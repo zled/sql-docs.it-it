@@ -1,13 +1,11 @@
 ---
-title: Codici di errore ODBC (Driver ODBC di Visual FoxPro) | Documenti Microsoft
+title: Codici di errore ODBC (Driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], error codes
@@ -16,23 +14,22 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error codes
 ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9ba3a447912b61b38fc8742cf9ac876c01f4197
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af6fb682e6179f99096a86d93e3f02c7b59cb91f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904286"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605109"
 ---
-# <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>Codici di errore ODBC (Driver ODBC di Visual FoxPro)
-Nella tabella seguente sono elencati i codici di errore di Visual FoxPro mappati ai valori SQLSTATE codice di errore ODBC. I valori SQLSTATE mappati derivano da [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) e [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). Vengono eseguito il mapping perché non esistono altri valori da un'altra API ODBC SQLSTATE **SQLExecDirect** e **SQLPrepare** sono le uniche funzioni che accedono al motore di Visual FoxPro.  
+# <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>Codici errore ODBC (driver ODBC Visual FoxPro)
+La tabella seguente elenca i codici di errore di Visual FoxPro con mappati ai valori SQLSTATE codice di errore ODBC. I valori SQLSTATE mappati provengono [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) e [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). Non vengono eseguito il mapping perché nessun altro valore da un'altra API ODBC SQLSTATE **SQLExecDirect** e **SQLPrepare** sono le uniche funzioni che accedere al motore di Visual FoxPro.  
   
- Per ulteriori informazioni sui codici di errore ODBC, vedere [codici di errore ODBC appendice a:](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)nella *riferimento per programmatori ODBC*.  
+ Per altre informazioni sui codici di errore ODBC, vedere [appendice a: codici di errore ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md), nella *riferimento per programmatori ODBC*.  
   
-|SQLSTATE|Codice di errore di Visual FoxPro|  
+|SQLSTATE|Codice di errore in Visual FoxPro|  
 |--------------|------------------------------|  
 |S1001|149<br /><br /> 150<br /><br /> 182<br /><br /> 202<br /><br /> 308|  
 |1004|159|  

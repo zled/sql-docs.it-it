@@ -1,41 +1,35 @@
 ---
-title: La connessione a MySQL (MySQLToSQL) | Documenti Microsoft
+title: Connettersi a MySQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3e4de2590221535410b5095494dd6f1801460f73
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 2a68b60a954e6cd89698d4e906f8272f08d6b11e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775697"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673159"
 ---
-# <a name="connect-to-mysql-mysqltosql"></a>La connessione a MySQL (MySQLToSQL)
-Utilizzare il **connessione a MySQL** la finestra di dialogo per la connessione al database di MySQL che si desidera eseguire la migrazione.  
+# <a name="connect-to-mysql-mysqltosql"></a>Connettersi a MySQL (MySQLToSQL)
+Usare la **connettersi a MySQL** finestra di dialogo per la connessione al database MySQL che si desidera eseguire la migrazione.  
   
-Per accedere a questa finestra di dialogo, scegliere il **File** dal menu **connessione a MySQL**. Se in precedenza si è connessi, il comando è **Riconnetti a MySQL**.  
+Per accedere a questa finestra di dialogo, scegliere il **File** dal menu **connettersi a MySQL**. Se si è già connessa, il comando viene **Riconnetti a MySQL**.  
   
 ## <a name="options"></a>Opzioni  
 **Provider**  
   
-Provider MySQL disponibile è MySQL 5.1 provider ODBC (attendibile).  
+Provider MySQL disponibile è MySQL 5.1 provider ODBC (attendibili).  
   
 **Mode**  
   
-La modalità predefinita è la modalità Standard. In modalità Standard immettere o selezionare i valori per MySQL, nome del server, porta del server, nome utente e password.  
+La modalità predefinita è la modalità Standard. In modalità Standard immettere o selezionare i valori per il MySQL, nome del server, porta del server, nome utente e password.  
   
 **Nome server**  
   
@@ -47,7 +41,7 @@ Immettere la porta del Server. La porta del server predefinita è 3306. Questa �
   
 **Nome utente**  
   
-Immettere il nome utente utilizzato per connettersi al database MySQL SSMA.  
+Immettere il nome utente che SSMA userà per connettersi al database MySQL.  
   
 **Password**  
   
@@ -55,24 +49,24 @@ Immettere la password associata al nome utente.
   
 **SSL**  
   
-Se si desidera stabilire una connessione sicura a MySQL, avvalersi di Secure Socket Layer (SSL) controllando il **SSL** casella di controllo.  
+Se si desidera connettersi in modo sicuro a MySQL, assicurarsi di usare di Secure Socket Layer (SSL), controllare la **SSL** casella di controllo.  
   
 **Configurare**  
   
 Fornisce un'opzione per configurare la connessione a MySQL tramite Secure Socket Layer (SSL).  
   
 > [!NOTE]  
-> Per abilitare **configura**, SSL deve essere impostato su **True**.  
+> Per abilitare **Configure**, SSL deve essere impostata su **True**.  
   
-Se si sceglie il pulsante "Configura", viene visualizzata una finestra di dialogo. Utilizzare la crittografia durante la connessione al MySQL Database, percorso file tre certificato seguenti presente nella finestra di dialogo deve essere definito [Privacy avanzata posta certificati (PEM)]:  
+Facendo clic sul pulsante "Configura", viene visualizzata una finestra di dialogo. Utilizzare la crittografia durante la connessione al MySQL Database, percorso file tre certificato seguenti presente nella finestra di dialogo deve essere definito [Privacy avanzata posta certificati (PEM)]:  
   
--   **Autorità di certificazione SSL:** specifica il percorso in un file con un elenco di attendibilità le autorità di certificazione SSL.  
+-   **Autorità di certificazione SSL:** specifica il percorso di un file con un elenco di attendibilità SSL CA.  
   
--   **Certificato SSL:** specifica il nome del file di certificato SSL da utilizzare per stabilire una connessione sicura.  
+-   **Certificato SSL:** specifica il nome del file del certificato SSL da utilizzare per stabilire una connessione sicura.  
   
--   **CHIAVE di SSL:** specifica il nome del file di chiave SSL da utilizzare per stabilire una connessione sicura.  
+-   **CHIAVE SSL:** specifica il nome del file di chiave SSL da utilizzare per stabilire una connessione sicura.  
   
 > [!NOTE]  
-> -   Il **OK** pulsante viene abilitato quando sono state fornite le informazioni necessarie. Se non sono validi tutti i percorsi di file, il pulsante "OK" rimarrà disabilitato.  
-> -   Il **Annulla** pulsante consente di chiudere la finestra di dialogo e **disattiva** all'opzione SSL dal modulo di connessione principale.  
+> -   Il **OK** pulsante viene abilitato quando sono state fornite le informazioni necessarie. Se sono presenti i percorsi dei file non validi, il pulsante "OK" rimarrà disabilitato.  
+> -   Il **annullare** pulsante chiude la finestra di dialogo e **disattiva** l'opzione SSL dal Form di connessione principale.  
   

@@ -3,29 +3,35 @@ title: Aggiornare i componenti di R e Python in istanze di SQL Server (servizi d
 description: Eseguire l'aggiornamento di R e Python in servizi di SQL Server 2016 o SQL Server 2017 Machine Learning Services usare sqlbindr.exe da associare a Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/19/2018
+ms.date: 09/30/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9cc0fbddb5d1ccb6716b31a945162070aa4cf2e3
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: c2677885719c0b9a54a39b1609a0c2652728820f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563747"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078891"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Aggiornamento di machine learning (R e Python) componenti nelle istanze di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Integrazione di R e Python in SQL Server include pacchetti open source e proprietaria Microsoft. Sotto la manutenzione standard di SQL Server, i pacchetti R e Python vengono aggiornati in base al ciclo di rilascio di SQL Server, con correzioni di bug per i pacchetti esistenti in corrispondenza della versione corrente. 
+Integrazione di R e Python in SQL Server include pacchetti open source e proprietaria Microsoft. Sotto la manutenzione standard di SQL Server, i pacchetti vengono aggiornati in base al ciclo di rilascio di SQL Server, con correzioni di bug per i pacchetti esistenti alla versione corrente, ma non gli aggiornamenti di versione principale. 
 
-La maggior parte dei data Scientist sono abituati a lavorare con i pacchetti più recenti appena diventano disponibili. Per SQL Server 2017 Machine Learning Services (In-Database) e SQL Server 2016 R Services (In-Database), è possibile ottenere le versioni più recenti di R e Python modificando la *associazione* dalla manutenzione di SQL Server [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index) e il [dei criteri di supporto del ciclo di vita moderni](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+Tuttavia, molti data Scientist sono abituati a lavorare con i pacchetti più recenti appena diventano disponibili. Per SQL Server 2017 Machine Learning Services (In-Database) e SQL Server 2016 R Services (In-Database), è possibile ottenere [le versioni più recenti di R e Python](#version-map) dal *associazione* a **Microsoft Machine Learning Server**. 
 
-Associazione non modifica le nozioni di base dell'installazione: integrazione di R e Python è ancora parte di un'istanza di motore di database, gestione delle licenze non è stata modificata (nessun costo aggiuntivo associato all'associazione) e i criteri di supporto di SQL Server mantiene per il database motore. Ma la riassociazione modificare modo in cui vengono serviti i pacchetti R e Python. La parte restante di questo articolo illustra il meccanismo di associazione e sul relativo funzionamento per ogni versione di SQL Server.
+## <a name="what-is-binding"></a>Definizione di associazione?
+
+L'associazione è un processo di installazione che scambia il contenuto delle cartelle /Site e PYTHON_SERVICES R_SERVICES con gli eseguibili più recenti, librerie e gli strumenti dalla [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
+
+Insieme a componenti aggiornati viene fornito un commutatore in modelli di manutenzione. Anziché il [ciclo di vita del prodotto SQL Server](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017), con [gli aggiornamenti cumulativi di SQL Server](https://support.microsoft.com/help/4047329/sql-server-2017-build-versions), gli aggiornamenti del servizio è ora conforme al [sequenza temporale del supporto per Microsoft R Server co & mputer Server di apprendimento](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) nella [ciclo di vita moderni](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+
+Ad eccezione delle versioni dei componenti e gli aggiornamenti dei servizi, binding non modifica le nozioni di base dell'installazione: integrazione di R e Python è ancora parte di un'istanza di motore di database, gestione delle licenze non è stata modificata (alcun costo aggiuntivo associato all'associazione) e SQL I criteri di supporto di server mantiene il motore di database. La parte restante di questo articolo illustra il meccanismo di associazione e sul relativo funzionamento per ogni versione di SQL Server.
 
 > [!NOTE]
-> Binding si applica alle istanze (In-Database) solo. Associazione non è rilevante per l'installazione (autonomo).
+> Binding si applica alle istanze (In-Database) solo che sono associate a istanze di SQL Server. Associazione non è rilevante per l'installazione (autonomo).
 
 **Considerazioni sull'associazione di SQL Server 2017**
 
@@ -33,7 +39,9 @@ Per i servizi di SQL Server 2017 Machine Learning, si potrebbe prendere in consi
 
 **Considerazioni sull'associazione di SQL Server 2016**
 
-Per i clienti di SQL Server 2016 R Services, associazione fornisce i pacchetti aggiornati R, nuovi pacchetti non fa parte dell'installazione originale ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)), e [pretrained modelli](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models), ognuno dei quali può essere ulteriormente aggiornati a ogni nuova versione principale e secondario di Microsoft Machine Learning Server. Associazione non fornisce supporto per Python, che è una funzionalità di SQL Server 2017. 
+Per i clienti di SQL Server 2016 R Services, associazione fornisce i pacchetti aggiornati R, nuovi pacchetti non fa parte dell'installazione originale ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)), e [pretrained modelli](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models), ognuno dei quali può essere ulteriormente aggiornato a ogni nuova versione principale e secondaria di [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index). Associazione non fornisce supporto per Python, che è una funzionalità di SQL Server 2017. 
+
+<a name="version-map"></a>
 
 ## <a name="version-map"></a>Mapping della versione
 
@@ -67,16 +75,16 @@ Anaconda 4.2 su Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
  [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
 [modelli con training preliminare](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
 
-## <a name="how-component-upgrade-works"></a>Funzionamento dell'aggiornamento di componenti
+## <a name="how-component-upgrade-works"></a>Funzionamento dell'aggiornamento di componenti 
 
-Aggiornamento del componente si verifica quando si *associare* un'istanza di SQL Server 2016 R Services (o un'istanza di SQL Server 2017 Machine Learning Services) per [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index). In pratica, questo processo sovrascrive il contenuto di C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES installati dal programma di installazione di SQL Server con il contenuto di c:\programmi\microsoft\ml Server\R_SERVER. 
+File eseguibili e librerie di R e Python vengono aggiornati quando si associa un'installazione esistente di R e Python di Machine Learning Server. Associazione viene eseguita per il [programma di installazione di Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) quando si esegue il programma di installazione in un'esistente del database del motore istanza di SQL Server 2016 o 2017, con integrazione di R o Python. Il programma di installazione rileva le funzionalità esistenti e viene richiesto di associare di nuovo a Machine Learning Server. 
 
-Microsoft Machine Learning Server è un prodotto di server in locale separati da SQL Server, ma con lo stesso interpreti e dei pacchetti. Associazione scambi out il meccanismo di aggiornamento del servizio SQL Server in modo che è possibile usare i pacchetti R e Python con Microsoft Machine Learning Server, che sono spesso più recenti rispetto a quelle installate da SQL Server. Cambio di criteri di supporto è un'opzione interessante per i team di analisi scientifica dei dati che richiedono la generazione più recente di R e i moduli di Python per le proprie soluzioni. 
+Durante l'associazione, il contenuto di C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES e \PYTHON_SERVICES viene sovrascritto con i file eseguibili e librerie di c:\programmi\microsoft\ml Server\R_SERVER e \PYTHON_SERVER più recente.
 
-Associazione viene eseguita per il [programma di installazione di servizio per inserzioni multiple](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install). Il programma di installazione aggiorna pacchetti specifici di R e Python, ma non sostituisce l'istanza nel database di SQL Server con un autonomo, installazione server disconnessa.
+Allo stesso tempo, il modello di manutenzione viene capovolto anche dai meccanismi di aggiornamento di SQL Server, al ciclo di rilascio principale e secondario più frequente di Microsoft Machine Learning Server. Cambio di criteri di supporto è un'opzione interessante per i team di analisi scientifica dei dati che richiedono la generazione più recente di R e i moduli di Python per le proprie soluzioni. 
 
 + Senza l'associazione, pacchetti R e Python sono applicate patch per le correzioni di bug quando si installa un SQL Server service pack o aggiornamento cumulativo (CU). 
-+ Con l'associazione, le versioni più recenti del pacchetto è applicabile per l'istanza, indipendentemente dalla pianificazione della versione aggiornamento Cumulativo, sotto il [criteri del ciclo di vita moderni](https://support.microsoft.com/help/30881/modern-lifecycle-policy) e versioni successive di Microsoft Machine Learning Server. I criteri di supporto del ciclo di vita moderno offre aggiornamenti più frequenti su una durata più breve, un anno. Post-associazione, si continuerà a usare il programma di installazione di servizio per inserzioni multiple per gli aggiornamenti futuri di R e Python man mano che diventano disponibili in Microsoft Machine Learning Server.
++ Con l'associazione, le versioni più recenti del pacchetto è applicabile per l'istanza, indipendentemente dalla pianificazione della versione aggiornamento Cumulativo, sotto il [criteri del ciclo di vita moderni](https://support.microsoft.com/help/30881/modern-lifecycle-policy) e versioni successive di Microsoft Machine Learning Server. I criteri di supporto del ciclo di vita moderno offre aggiornamenti più frequenti su una durata più breve, un anno. Post-associazione, si continuerà a usare il programma di installazione di servizio per inserzioni multiple per gli aggiornamenti futuri di R e Python appena diventano disponibili nei siti di download Microsoft.
 
 Binding si applica alle funzionalità R e Python. Vale a dire, i pacchetti open source per le funzionalità di R e Python (Microsoft R Open, Anaconda) e i proprietari dei pacchetti RevoScaleR e revoscalepy così via. Associazione non modifica il modello di supporto per l'istanza del motore di database e non cambia la versione di SQL Server.
 

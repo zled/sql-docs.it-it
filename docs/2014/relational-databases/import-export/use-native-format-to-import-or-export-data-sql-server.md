@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f71b4d7955c874fcff2efdd69ed14c12745dea3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2dee0f6a337cab7713862e662e06bb94a0b34a5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300411"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124301"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato nativo per importare o esportare dati (SQL Server)
   L'utilizzo del formato nativo è consigliabile per il trasferimento bulk dei dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un file di dati in cui non sono inclusi caratteri estesi o DBCS (Double Byte Character Set).  
@@ -65,7 +62,7 @@ ms.locfileid: "37300411"
     > [!IMPORTANT]  
     >  Quando si usa la modalità nativa, per impostazione predefinita, il **bcp** utilità converte i caratteri di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in caratteri OEM prima di copiarli in un file di dati. Il **bcp** utilità converte i caratteri di un file di dati in caratteri ANSI prima di importazione bulk in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella. Durante queste conversioni può verificarsi la perdita dei dati con caratteri estesi. Per i caratteri estesi, è necessario utilizzare il formato nativo Unicode o specificare una tabella codici.  
   
--   `sql_variant` dati  
+-   `sql_variant` Dati  
   
      Se `sql_variant` dati vengono archiviati come SQLVARIANT in un file di dati in formato nativo, i dati verranno mantenute tutte le relative caratteristiche. I metadati che registrano il tipo di dati di ogni valore vengono archiviati insieme al valore stesso. Questi metadati vengano utilizzato per ricreare il valore dei dati con lo stesso tipo di dati in una destinazione `sql_variant` colonna.  
   

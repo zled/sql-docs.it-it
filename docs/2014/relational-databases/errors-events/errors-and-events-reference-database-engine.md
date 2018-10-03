@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server Database Engine]
 - Database Engine [SQL Server], errors
 - events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dfdd9b62c4ccdf782de88b24082306d8850e188a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 798660cb396ca34f856653a7e65fda13d4d023a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410660"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093961"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Guida di riferimento a errori ed eventi (Motore di database)
   Il [Centro eventi ed errori messaggi](http://go.microsoft.com/fwlink/?LinkId=47660) su TechNet è la fonte principale di informazioni sui messaggi di errore per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tale strumento semplifica la ricerca di informazioni sui messaggi di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di altri prodotti Microsoft consentendo di eseguire ricerche full-text e di filtrare i risultati in base al prodotto, alla versione, all'origine e a un identificatore numerico o simbolico. Inoltre, è disponibile una nuova interfaccia che fornisce supporto in più lingue. Il Centro verrà continuamente aggiornato con nuove informazioni sulla risoluzione dei problemi relativi agli errori più comuni.  

@@ -1,32 +1,29 @@
 ---
-title: Embedded SQL riportato di seguito | Documenti Microsoft
+title: Embedded SQL riportato di seguito | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d8983bcabb791c99974055fa718bdd89057e2d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eef8c87a152795d4756d05ba8a279a0d12cbc38c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916356"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750481"
 ---
-# <a name="embedded-sql-example"></a>Esempio di Embedded SQL
-Il codice seguente è un programma SQL incorporato semplice, scritto in C. Il programma illustra molte, ma non l'intero incorporato tecniche di SQL. Il programma richiede l'immissione di un numero di ordine, recupera il numero cliente, venditore e lo stato dell'ordine e visualizza le informazioni recuperate sullo schermo.  
+# <a name="embedded-sql-example"></a>Esempio di SQL incorporato
+Il codice seguente è un programma SQL incorporato semplice, scritto in C. Il programma illustra le tecniche SQL molte, ma non tutti, l'oggetto incorporato. Il programma richiede l'immissione di un numero di ordine, recupera il numero di cliente, venditore e lo stato dell'ordine e visualizza le informazioni recuperate sullo schermo.  
   
 ```  
 int main() {  
@@ -68,12 +65,12 @@ bad_number:
 }  
 ```  
   
- Si noti quanto segue su questo programma:  
+ Tenere presente quanto segue su questo programma:  
   
--   **Ospitare variabili** vengono dichiarate le variabili di host in una sezione racchiusa tra il **iniziare sezione dichiarare** e **sezioni finali dichiarare** parole chiave. Ogni nome di variabile host è preceduto dai due punti (:) quando viene visualizzato in un'istruzione SQL. I due punti consente precompilati distinguere tra le variabili di host e oggetti di database quali tabelle e colonne, che hanno lo stesso nome.  
+-   **Ospitare variabili** vengono dichiarate le variabili di host in una sezione racchiusa tra il **BEGIN sezione dichiarare** e **sezioni finali dichiarare** parole chiave. Ogni nome di variabile host è preceduto da due punti (:) quando viene visualizzata in un'istruzione SQL. I due punti consente precompilatore distinguere tra le variabili di host e gli oggetti di database, ad esempio tabelle e colonne, che hanno lo stesso nome.  
   
--   **Tipi di dati** i tipi di dati supportati da un sistema DBMS e un linguaggio host possono essere piuttosto diversi. Ciò influisce su variabili host perché si svolgono un ruolo doppio. Una parte, le variabili di host sono variabili di programma, dichiarato e modificati da istruzioni del linguaggio host. D'altra parte, vengono utilizzati nelle istruzioni SQL incorporate per recuperare i dati di database. Se è presente alcun tipo di linguaggio host che corrisponde a un tipo di dati DBMS, DBMS converte automaticamente i dati. Tuttavia, poiché ogni sistema DBMS ha regole e peculiarità associata al processo di conversione, i tipi di variabile host devono essere scelti attentamente.  
+-   **Tipi di dati** possono essere piuttosto diversi tipi di dati supportati da un sistema DBMS e un linguaggio host. Questo influisce sulle variabili host poiché essi svolgono un duplice ruolo. Un lato, le variabili di host sono variabili di programma, dichiarato e manipolato dalla istruzioni del linguaggio host. D'altra parte, vengono utilizzati in istruzioni SQL incorporate per recuperare i dati del database. Se è disponibile alcun tipo di linguaggio host che corrisponde a un tipo di dati DBMS, il sistema DBMS converte automaticamente i dati. Tuttavia, poiché ogni DBMS presenta regole e peculiarità associata al processo di conversione, i tipi di variabili host devono essere scelta attentamente.  
   
--   **Gestione degli errori** DBMS il report errori di run-time per il programma di applicazioni tramite un SQL Communications Area o SQLCA. Nell'esempio di codice precedente, la prima istruzione SQL incorporata è SQLCA INCLUDONO. In questo modo il precompilatore per includere la struttura SQLCA nel programma. Ciò è necessario ogni volta che il programma elaborerà gli errori restituiti dal sistema DBMS. Il WHENEVER... Istruzione GOTO indica precompilati per generare il codice di gestione degli errori che si verifica rami da un'etichetta specifica quando un errore.  
+-   **Gestione degli errori** il sistema DBMS segnala errori di run-time per il programma di applicazioni tramite un'Area di comunicazioni SQL, o SQLCA. Nell'esempio di codice precedente, la prima istruzione SQL incorporata è SQLCA INCLUDONO. In questo modo il precompilatore per includere la struttura SQLCA nel programma. Ciò è necessario ogni volta che il programma elaborerà gli errori restituiti dal sistema DBMS. WHENEVER... Istruzione GOTO indica precompilatore per generare il codice di gestione degli errori che si verifica un'etichetta specifica quando un errore dei rami.  
   
--   **Singleton selezionare** l'istruzione utilizzata per restituire i dati è un'istruzione SELECT singleton; vale a dire, viene restituita solo una singola riga di dati. L'esempio di codice, pertanto, non dichiarare o utilizzare i cursori.
+-   **Singleton selezionare** l'istruzione utilizzata per restituire i dati è un'istruzione SELECT singleton; ovvero, restituisce solo una singola riga di dati. Di conseguenza, l'esempio di codice non dichiara o utilizzare i cursori.

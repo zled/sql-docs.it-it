@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319271"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052354"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE e FORMAT_STRING in FORMATED_VALUE
   La proprietà FORMATTED_VALUE è compilata in base alle interazioni delle proprietà VALUE, FORMAT_STRING e LANGUAGE della cella. In questo argomento viene illustrato come interagiscono queste proprietà per compilare la proprietà FORMATTED_VALUE.  
@@ -82,7 +79,7 @@ ms.locfileid: "37319271"
   
 |Membro|FORMATTED_VALUE|Spiegazione|  
 |------------|----------------------|-----------------|  
-|Un|$5,040.00|La proprietà FORMAT_STRING è impostata su `Currency` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema|  
+|A|$5,040.00|La proprietà FORMAT_STRING è impostata su `Currency` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema|  
 |B|€ 5.040,00|La proprietà FORMAT_STRING è impostata su `Currency` (valore ereditato da A) e la proprietà LANGUAGE è impostata in modo esplicito su `1034` (Spagna), da qui il simbolo dell'euro e i separatori decimale e delle migliaia diversi.|  
 |c|$5.040,00|La proprietà FORMAT_STRING è impostata su `$#,##0.00` un override di Currency, da A, e la proprietà LANGUAGE è impostata in modo esplicito su `1034` (Spagna). Poiché la proprietà FORMAT_STRING ha impostato in modo esplicito il simbolo di valuta su $, la proprietà FORMATTED_VALUE viene presentata con il simbolo $. Tuttavia, poiché `.` (punto) e `,` (virgola) sono rispettivamente segnaposto per il separatore decimale e il separatore delle migliaia, la specifica della lingua influisce su di essi generando un output localizzato per i separatori decimali e delle migliaia.|  
 |D|5.04E+03|La proprietà FORMAT_STRING è impostata su `Scientific` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema, da qui il punto ( `.` ) come separatore decimale.|  

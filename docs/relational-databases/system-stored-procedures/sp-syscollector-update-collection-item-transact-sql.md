@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_update_collection_item (Transact-SQL) | Documenti Microsoft
+title: sp_syscollector_update_collection_item (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_item
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d94ce7762facb878e0e6d8deb60647ee2d05482e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260594"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717119"
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,26 +48,26 @@ sp_syscollector_update_collection_item
   
 ## <a name="arguments"></a>Argomenti  
  [ @collection_item_id =] *collection_item_id*  
- Identificatore univoco che identifica l'elemento della raccolta. *collection_item_id* viene **int** con valore predefinito è NULL. *collection_item_id* deve avere un valore se *nome* è NULL.  
+ Identificatore univoco che identifica l'elemento della raccolta. *collection_item_id* viene **int** con un valore predefinito NULL. *collection_item_id* deve avere un valore se *nome* è NULL.  
   
  [ @name =] '*nome*'  
- Nome dell'elemento della raccolta. *nome* viene **sysname** con valore predefinito è NULL. *nome* deve avere un valore se *collection_item_id* è NULL.  
+ Nome dell'elemento della raccolta. *nome* viene **sysname** con un valore predefinito NULL. *nome* deve avere un valore se *collection_item_id* è NULL.  
   
- [ @new_name =] '*nuovo_nome*'  
- Nuovo nome per l'elemento della raccolta. *nuovo_nome* viene **sysname**, e se utilizzato, non può essere una stringa vuota.  
+ [ @new_name =] '*new_name*'  
+ Nuovo nome per l'elemento della raccolta. *new_name* viene **sysname**, e se utilizzato, non può essere una stringa vuota.  
   
- *nuovo_nome* devono essere univoci. Per un elenco dei nomi degli elementi della raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_items.  
+ *new_name* devono essere univoci. Per un elenco dei nomi degli elementi della raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_items.  
   
  [ @frequency =] *frequenza*  
  Frequenza, espressa in secondi, con cui vengono raccolti i dati da questo elemento della raccolta. *frequenza* viene **int**, con un valore predefinito è 5, il valore minimo che può essere specificato.  
   
  [ @parameters =] '*parametri*'  
- Parametri di input per l'elemento della raccolta. *i parametri* viene **xml** con un valore predefinito è NULL. Il *parametri* schema deve corrispondere allo schema di parametri di tipo agente di raccolta.  
+ Parametri di input per l'elemento della raccolta. *i parametri* viene **xml** con valore predefinito è NULL. Il *parametri* dello schema deve corrispondere allo schema di parametri del tipo di agente di raccolta.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se il set di raccolta è impostato sulla modalità non in cache, la modifica della frequenza viene ignorata in quanto in questa modalità la raccolta e il caricamento dei dati vengono eseguiti in base alla pianificazione specificata per il set di raccolta. Per visualizzare lo stato del set di raccolta, eseguire la query seguente. Sostituire `<collection_item_id>` con l'ID dell'elemento della raccolta da aggiornare.  
   
 ```  
@@ -86,7 +82,7 @@ ON ci.collection_set_id = cs.collection_set_id
 WHERE collection_item_id = <collection_item_id>;  
 ```  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire questa procedura, è necessaria l'appartenenza al ruolo predefinito del database dc_admin o dc_operator (con autorizzazione EXECUTE). Anche se dc_operator è in grado di eseguire questa stored procedure, i membri di questo ruolo possono modificare solo determinate proprietà. Le proprietà seguenti possono essere modificate solo da dc_admin:  
   
 -   @new_name  
@@ -94,7 +90,7 @@ WHERE collection_item_id = <collection_item_id>;
 -   @parameters  
   
 ## <a name="examples"></a>Esempi  
- Negli esempi seguenti si basano sull'elemento della raccolta creato nell'esempio definito in [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
+ Gli esempi seguenti sono basati sull'elemento della raccolta creata nell'esempio definito in [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
 ### <a name="a-changing-the-collection-frequency"></a>A. Modifica della frequenza di raccolta  
  Nell'esempio seguente viene modificata la frequenza di raccolta per l'elemento della raccolta specificato.  

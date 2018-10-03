@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_notification_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc08790ad08ce6bb4e94e61a8c3bdfc58615edf9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260204"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817543"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,9 +51,9 @@ sp_update_notification
  Operatore a cui inviare una notifica quando viene generato l'avviso. *operatore* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@notification_method =**] *notifica*  
- Metodo adottato per l'invio della notifica all'operatore. *notifica*viene **tinyint**e non prevede alcun valore predefinito può essere uno o più dei valori seguenti.  
+ Metodo adottato per l'invio della notifica all'operatore. *notifica*viene **tinyint**e non prevede alcun valore predefinito e può essere uno o più dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
@@ -65,18 +61,18 @@ sp_update_notification
 |**7**|Tutti i metodi|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_update_notification** deve essere eseguita la **msdb** database.  
   
- È possibile aggiornare una notifica per un operatore che non dispone di informazioni necessarie sull'indirizzo utilizzando l'oggetto specificato *notification_method*. Gli eventuali errori che si verificano durante l'invio di un messaggio di posta elettronica o di una notifica su cercapersone vengono registrati nel log degli errori di Microsoft SQL Server Agent.  
+ È possibile aggiornare una notifica per un operatore che non ha le informazioni necessarie sull'indirizzo utilizzando l'oggetto specificato *notification_method*. Gli eventuali errori che si verificano durante l'invio di un messaggio di posta elettronica o di una notifica su cercapersone vengono registrati nel log degli errori di Microsoft SQL Server Agent.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Per eseguire questa stored procedure, è necessario consentire agli utenti di **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Per eseguire questa stored procedure, gli utenti devono disporre i **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente modifica il metodo di notifica per le notifiche inviate al `François Ajenstat`per l'avviso `Test Alert`.  
+ L'esempio seguente modifica il metodo di notifica per notifiche inviate al `François Ajenstat`per l'avviso `Test Alert`.  
   
 ```  
 USE msdb ;  

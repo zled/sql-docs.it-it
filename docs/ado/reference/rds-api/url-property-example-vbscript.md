@@ -1,35 +1,32 @@
 ---
-title: Nell'esempio di proprietà URL (VBScript) | Documenti Microsoft
+title: Esempio di proprietà URL (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - URL property [ADO], VBScript example
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 233d7ab118a25725deca1cb5c6d90396b4dd0dea
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 57e7899753f2574ed62c644fcdb0c2fecc99b232
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288860"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697201"
 ---
-# <a name="url-property-example-vbscript"></a>Nell'esempio di proprietà URL (VBScript)
+# <a name="url-property-example-vbscript"></a>Esempio della proprietà URL (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Il codice seguente viene illustrato come impostare il **URL** proprietà sul lato client per specificare un file. ASP che a sua volta gestisce l'invio di modifiche all'origine dati.  
+ Il codice seguente viene illustrato come impostare il **URL** proprietà sul lato client per specificare un file. ASP che a sua volta gestisce l'invio delle modifiche apportate all'origine dati.  
   
 ```  
 <!-- BeginURLClientVBS -->  
@@ -104,7 +101,7 @@ End Sub
 <!-- EndURLClientVBS -->  
 ```  
   
- Il codice lato server esistente in **file URLServerVBS. asp** invia aggiornato **Recordset** all'origine dati.  
+ Il codice lato server presente in **file URLServerVBS. asp** invia aggiornato **Recordset** all'origine dati.  
   
 ```  
 <!-- BeginURLServerVBS -->  

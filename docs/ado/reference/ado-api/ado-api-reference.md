@@ -1,32 +1,29 @@
 ---
-title: Riferimento all'API ADO | Documenti Microsoft
+title: Riferimento API ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, reference
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2270fec7766396ea846726fc8098e06bbef81809
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2b2f91a0b2ded038e89be6dfee29bea344ed010f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275310"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707409"
 ---
-# <a name="ado-api-reference"></a>Riferimento all'API ADO
-In questa sezione della documentazione di ADO contiene argomenti per ogni ADO oggetto, insieme, proprietà, proprietà dinamiche, metodo, evento e dell'enumerazione. Inoltre, contiene un elenco di indici di ADO sintassi da utilizzare con Microsoft Visual C++ e di Windows Foundation Classes (WFC).  
+# <a name="ado-api-reference"></a>Informazioni di riferimento sull'API ADO
+In questa sezione della documentazione ADO contiene gli argomenti per ogni ADO oggetto, insieme, proprietà, proprietà dinamica, metodo, eventi e dell'enumerazione. Inoltre, contiene un elenco di indici di sintassi ADO per l'uso con Microsoft Visual C++ e Windows Foundation Classes (WFC).  
   
- Per ulteriori informazioni, cercare un argomento specifico in corrispondenza dell'indice o fare riferimento ai seguenti argomenti:  
+ Per altre informazioni, cercare un argomento specifico in corrispondenza dell'indice oppure vedere gli argomenti seguenti:  
   
 -   [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)  
   
@@ -49,7 +46,7 @@ In questa sezione della documentazione di ADO contiene argomenti per ogni ADO og
 -   [Esempi di codice ADO](../../../ado/reference/ado-api/ado-code-examples.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Appendice d: esempi di ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
+ [Appendice d: esempi ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Appendice c: programmazione con ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [Appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md)   

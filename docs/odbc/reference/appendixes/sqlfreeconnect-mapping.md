@@ -1,28 +1,25 @@
 ---
-title: Mapping SQLFreeConnect | Documenti Microsoft
+title: Mapping di SQLFreeConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLFreeConnect
 - SQLFreeConnect function [ODBC], mapping
 ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d646cc5af246925d89b571734eb967ddc7195676
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef90025a129bc624377bfe7891f122a838180a51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906286"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695659"
 ---
 # <a name="sqlfreeconnect-mapping"></a>Mapping di SQLFreeConnect
 Quando un'applicazione chiama **SQLFreeConnect** tramite un'applicazione ODBC 3*x* driver, la chiamata a  
@@ -31,10 +28,10 @@ Quando un'applicazione chiama **SQLFreeConnect** tramite un'applicazione ODBC 3*
 SQLFreeConnect(hdbc)   
 ```  
   
- è stato eseguito il mapping a  
+ viene eseguito il mapping a  
   
 ```  
 SQLFreeHandle(SQL_HANDLE_DBC,Handle)  
 ```  
   
- con il *gestire* argomento impostato sul valore *hdbc*.
+ con il *gestiscono* impostata sul valore nell'argomento *hdbc*.

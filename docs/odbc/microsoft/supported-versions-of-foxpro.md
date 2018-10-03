@@ -1,13 +1,11 @@
 ---
-title: Le versioni supportate di FoxPro | Documenti Microsoft
+title: Le versioni di FoxPro supportate | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], supported versions
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], supported versions
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fad5e57b2b56bf43aa418693e04c0c8d32fde4a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6ae3aa39d21ea59b169ffd1ed7a5d9f4cb056fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905476"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651949"
 ---
-# <a name="supported-versions-of-foxpro"></a>Versioni supportate di FoxPro
-È possibile utilizzare il Driver ODBC Microsoft® Visual FoxPro® di accedere ai dati archiviati in FoxPro tabelle. Sono supportate le seguenti versioni di dati FoxPro:  
+# <a name="supported-versions-of-foxpro"></a>Versioni di FoxPro supportate
+È possibile usare il Driver ODBC Microsoft® Visual FoxPro® per accedere ai dati archiviati in tabelle FoxPro. Le versioni seguenti di dati di FoxPro supportate:  
   
 -   2.0  
   
@@ -36,10 +33,10 @@ ms.locfileid: "32905476"
   
 -   2.6  
   
--   Visual FoxPro (tutte le versioni)  
+-   (Tutte le versioni) di Visual FoxPro  
   
- Quando si accede a dati archiviati in Visual FoxPro, è possibile scegliere di connettersi a un [database](../../odbc/microsoft/visual-foxpro-terminology.md) che contiene zero o più [tabelle](../../odbc/microsoft/visual-foxpro-terminology.md) o a una directory di [libero tabelle](../../odbc/microsoft/visual-foxpro-terminology.md).  
+ Quando si accede ai dati archiviati in Visual FoxPro, è possibile scegliere di connettersi a un [database](../../odbc/microsoft/visual-foxpro-terminology.md) che contiene zero o più [tabelle](../../odbc/microsoft/visual-foxpro-terminology.md) o in una directory [libero tabelle](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
- Per ulteriori informazioni su come connettersi a un'origine dati, vedere [aggiunta di un'origine di dati Visual FoxPro](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md).  
+ Per altre informazioni su come connettersi a un'origine dati, vedere [aggiunta di un'origine dati Visual FoxPro](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md).  
   
- Per scaricare il driver, vedere [il sito di download del Driver ODBC Visual FoxPro](http://go.microsoft.com/fwlink/?LinkId=121318).
+ Per scaricare il driver, vedere [sito di download di Driver ODBC Visual FoxPro](http://go.microsoft.com/fwlink/?LinkId=121318).

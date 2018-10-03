@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69522d087dffcebf88b011f27797cafc6c0f947e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88f72c98977fae3e99f917de8a1b82198779b1ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247371"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083281"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Modellazione tabulare (esercitazione di AdventureWorks)
   In questa esercitazione sono incluse lezioni sulla creazione di un [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]modello tabulare di Analysis Services tramite [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -60,7 +57,7 @@ ms.locfileid: "37247371"
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Istanza di Analysis Services in esecuzione nella modalità tabulare.  
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)](Indici per tabelle con ottimizzazione per la memoria).  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] (Indici per tabelle con ottimizzazione per la memoria).  
   
 -   Database di esempio AdventureWorksDW. Questo database di esempio include i dati necessari per completare questa esercitazione. Per scaricare il database di esempio, vedere [ http://go.microsoft.com/fwlink/?LinkID=335807 ](http://go.microsoft.com/fwlink/?LinkID=335807).  
   

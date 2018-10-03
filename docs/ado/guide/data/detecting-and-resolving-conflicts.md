@@ -1,42 +1,39 @@
 ---
-title: Rilevamento e risoluzione dei conflitti | Documenti Microsoft
+title: Rilevamento e risoluzione dei conflitti | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bca0eb3d528c1f7572745e1b6f8d8e59e9749f36
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a27a8ff70a995ab24dcf762d0ada731e0de6fa92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270610"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625285"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Rilevamento e risoluzione di conflitti
-Se si utilizzano il Recordset in modalità immediata, è meno probabile per problemi di concorrenza si verifichi. D'altra parte, se l'applicazione utilizza la modalità batch di aggiornamento, potrebbe esserci una buona possibilità che un utente modifichi un record prima che vengano salvate le modifiche apportate da un altro utente modifica lo stesso record. In tal caso, è possibile utilizzare l'applicazione di gestire correttamente il conflitto. Potrebbe essere desideri che l'ultima persona di inviare un aggiornamento al server "wins". Oppure è possibile consentire all'utente più recente per decidere quali update deve avere la precedenza fornendo a quest'ultimo una scelta tra i due valori in conflitto.  
+Se è necessario gestire in modalità immediata del Recordset, vi è molto meno possibilità di problemi di concorrenza si verifichi. D'altra parte, se l'applicazione usa l'aggiornamento in modalità batch, potrebbe esserci un'ottima possibilità che un utente modifichi un record prima che vengano salvate le modifiche apportate da un altro utente modifica il record stesso. In tal caso, è consigliabile l'applicazione per gestire normalmente il conflitto. Potrebbe essere ogni vostro desiderio che ultima persona che ha inviato un aggiornamento nel server "wins". In alternativa, è possibile consentire all'utente più recente per decidere quali update deve avere la precedenza fornendo quest'ultimo con una scelta tra i due valori in conflitto.  
   
- In ogni caso, ADO fornisce le proprietà UnderlyingValue e OriginalValue dell'oggetto campo per gestire questi tipi di conflitti. Utilizzare queste proprietà in combinazione con il metodo Resync e la proprietà Filter del Recordset.  
+ In entrambi i casi, ADO fornisce le proprietà di esempio di OriginalValue e UnderlyingValue dell'oggetto campo per gestire questi tipi di conflitti. Usare queste proprietà in combinazione con il metodo Resync e la proprietà di filtro del set di record.  
   
-## <a name="remarks"></a>Remarks  
- Se ADO rileva un conflitto durante un aggiornamento batch, un messaggio di avviso verrà aggiunto alla raccolta di errori. Pertanto, deve sempre cercare errori immediatamente dopo aver chiamato il metodo BatchUpdate e se vengono individuati, iniziare il test si presuppone che si è verificato un conflitto. Il primo passaggio è impostare la proprietà Filter per Recordset uguale a adFilterConflictingRecords. Consente di limitare la visualizzazione in Recordset ai record in conflitto. Se la proprietà RecordCount è uguale a zero dopo questo passaggio, si conosce che l'errore è stato generato da un valore diverso da un conflitto.  
+## <a name="remarks"></a>Note  
+ Quando ADO rileva un conflitto durante un aggiornamento batch, un avviso verrà aggiunto alla raccolta di errori. Pertanto, è consigliabile sempre ricercare gli errori immediatamente dopo aver chiamato il metodo BatchUpdate e se si trova, iniziare il test si presuppone che si è verificato un conflitto. Il primo passaggio consiste nell'impostare la proprietà di filtro nel Recordset uguale a adFilterConflictingRecords. Questo limita la vista sul Recordset in modo che solo i record in conflitto. Se la proprietà RecordCount è uguale a zero dopo questo passaggio, si conosce che l'errore è stato generato da un valore diverso da un conflitto.  
   
- Quando si chiama il metodo BatchUpdate, ADO e il provider generano istruzioni SQL per eseguire aggiornamenti sull'origine dati. Tenere presente che determinate origini dati presentano limitazioni in cui è possono utilizzare i tipi di colonne in una clausola WHERE.  
+ Quando si chiama il metodo BatchUpdate, ADO e il provider generano istruzioni SQL per eseguire aggiornamenti sull'origine dati. Tenere presente che determinate origini dati presentano limitazioni in cui i tipi di colonne possono essere utilizzati in una clausola WHERE.  
   
- Successivamente, chiamare il metodo di risincronizzazione nel Recordset con l'argomento AffectRecords impostato su adAffectGroup e l'argomento ResyncValues impostato su adResyncUnderlyingValues. Il metodo Resync aggiorna i dati nell'oggetto Recordset corrente dal database sottostante. Utilizzando adAffectGroup, si garantisce che solo i record visibili con il filtro corrente l'impostazione, vale a dire, solo i record in conflitto, vengono sincronizzati con il database. Se si sta utilizzando un Recordset di grandi dimensioni, questo potrebbe rendere una differenza significativa. Impostazione dell'argomento ResyncValues su adResyncUnderlyingValues durante la chiamata di risincronizzazione, consente di garantire che la proprietà conterrà il valore (conflitto) dal database, che la proprietà Value manterrà il valore immesso dall'utente, e che la proprietà OriginalValue conterrà il valore originale per il campo (il valore della prima che venga effettuata l'ultima chiamata UpdateBatch ha esito positivo). È quindi possibile utilizzare questi valori per risolvere il conflitto a livello di codice o richiedere all'utente di selezionare un valore che verrà utilizzato.  
+ Successivamente, chiamare il metodo di risincronizzazione sul set di record con l'argomento AffectRecords impostato su adAffectGroup e l'argomento ResyncValues impostato su adResyncUnderlyingValues. Il metodo Resync aggiorna i dati nell'oggetto Recordset corrente dal database sottostante. Usando adAffectGroup, si garantisce che solo i record visibili con il filtro corrente l'impostazione, vale a dire, solo i record in conflitto, vengono sincronizzati con il database. Questo potrebbe rendere una differenza significativa se è necessario gestire un set di record di grandi dimensioni. Se si imposta l'argomento ResyncValues adResyncUnderlyingValues durante la chiamata di risincronizzazione, assicurarsi che la proprietà UnderlyingValue conterrà il valore (in conflitto) dal database, che la proprietà Value manterrà il valore immesso dall'utente, e che la proprietà OriginalValue conterrà il valore originale del campo (il valore che aveva prima è stato effettuato l'ultima chiamata riuscita UpdateBatch). È quindi possibile usare questi valori per risolvere il conflitto a livello di codice o richiedere all'utente di selezionare il valore che verrà utilizzato.  
   
- Questa tecnica è illustrata nell'esempio di codice seguente. Nell'esempio viene creato in modo artificiale un conflitto utilizzando un oggetto Recordset distinto per modificare un valore nella tabella sottostante prima di chiamare UpdateBatch.  
+ Questa tecnica è illustrata nell'esempio di codice seguente. L'esempio artificially crea un conflitto con un set di record separato per modificare un valore nella tabella sottostante prima che venga chiamato UpdateBatch.  
   
 ```  
 'BeginConflicts  
@@ -115,7 +112,7 @@ Se si utilizzano il Recordset in modalità immediata, è meno probabile per prob
 'EndConflicts  
 ```  
   
- È possibile utilizzare la proprietà Status del Record corrente o di un campo specifico per determinare il tipo di un conflitto si è verificato.  
+ È possibile usare la proprietà Status del Record corrente o di un campo specifico per determinare il tipo di un conflitto si è verificato.  
   
  Per informazioni dettagliate sulla gestione degli errori, vedere [Error Handling](../../../ado/guide/data/error-handling.md).  
   

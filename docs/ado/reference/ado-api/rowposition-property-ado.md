@@ -1,13 +1,11 @@
 ---
-title: Proprietà RowPosition (ADO) | Documenti Microsoft
+title: Proprietà RowPosition (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - RowPosition property [ADO]
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0b852ff5fab54e11f3fd39c2ca92266c95587987
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0e2e8bab73bfe93e8a78e013572a376b608ca9a3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281340"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616439"
 ---
 # <a name="rowposition-property-ado"></a>Proprietà RowPosition (ADO)
-Ottiene o imposta OLE DB **RowPosition** oggetto da/su un **ADORecordsetConstruction** oggetto. Quando si utilizza **put_RowPosition** per impostare il **RowPosition** oggetto, il valore risultante **Recordset** viene utilizzata da object il **RowPosition** oggetto determinare la riga corrente.  
+Ottiene o imposta un DB OLE **RowPosition** oggetto da/in un **ADORecordsetConstruction** oggetto. Quando si usa **put_RowPosition** per impostare il **RowPosition** oggetto, risultante **Recordset** oggetto utilizza il **RowPosition** dell'oggetto a determinare la riga corrente.  
   
  Proprietà di lettura/scrittura.  
   
@@ -50,10 +47,10 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
  OLE DB **RowPosition** oggetto.  
   
 ## <a name="return-values"></a>Valori restituiti  
- Metodo di questa proprietà restituisce i valori HRESULT standard, inclusi S_OK ed E_FAIL.  
+ Metodo di questa proprietà restituisce i valori HRESULT standard, tra cui S_OK ed E_FAIL.  
   
-## <a name="remarks"></a>Remarks  
- Quando questa proprietà è impostata, se il **set di righe** oggetto di **RowPosition** oggetto è diverso dal **set di righe** oggetto di **Recordset**dell'oggetto, il primo sostituisce quest'ultimo. Lo stesso comportamento si applica all'oggetto corrente **capitolo** del **RowPosition** anche.  
+## <a name="remarks"></a>Note  
+ Quando questa proprietà è impostata, se il **set di righe** dell'oggetto nel **RowPosition** oggetto è diverso dal **set di righe** dell'oggetto nel **Recordset**dell'oggetto, il primo esegue l'override di quest'ultimo. Lo stesso comportamento si applica all'oggetto corrente **capitolo** delle **RowPosition** anche.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Interfaccia ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

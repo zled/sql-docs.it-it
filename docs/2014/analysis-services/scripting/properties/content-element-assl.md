@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Content Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Content element
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd9e3c237d8009ac153e8c69033ce9cce958aba3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b27152b0c181061e25727270fd89bd423728a5a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267477"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097861"
 ---
 # <a name="content-element-assl"></a>Elemento Content (ASSL)
   Viene descritto il contenuto della colonna di [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
@@ -69,7 +66,7 @@ ms.locfileid: "37267477"
 |valore|Description|  
 |-----------|-----------------|  
 |*Discreta*|La colonna contiene valori discreti.|  
-|*Continua*|I valori per la colonna definiscono un set continuo di dati numerici.|  
+|*continua*|I valori per la colonna definiscono un set continuo di dati numerici.|  
 |*DISCRETIZED*|I valori nella colonna rappresentano gruppi, o bucket, di valori derivati da una colonna continua.|  
 |*Ordinati*|I valori per la colonna definiscono un set ordinato.|  
 |*Cyclical*|I valori per la colonna definiscono un set ordinato ciclico.|  
@@ -78,7 +75,7 @@ ms.locfileid: "37267477"
 |*StdDev*|I valori per la colonna specificano una deviazione standard per le colonne contenute nell'elemento `ClassifiedColumns` dell'elemento padre `ScalarMiningStructureColumn`.|  
 |*ProbabilityVariance*|I valori per la colonna specificano una varianza della probabilità per le colonne contenute nell'elemento `ClassifiedColumns` dell'elemento padre `ScalarMiningStructureColumn`.|  
 |*ProbabilityStdDev*|I valori per la colonna specificano una deviazione standard della probabilità per le colonne contenute nell'elemento `ClassifiedColumns` dell'elemento padre `ScalarMiningStructureColumn`.|  
-|*Supporto*|I valori per la colonna specificano informazioni di supporto per la colonna contenuta nell'elemento `ClassifiedColumns` dell'elemento padre `ScalarMiningStructureColumn`. **Nota:** questa colonna viene fornita come parte dello standard per provider di algoritmi di data mining di terze parti. **Nota:** Microsoft fornito algoritmi non sono in genere utili per questa colonna. <br /><br /> ,|  
+|*Supporto*|I valori per la colonna specificano informazioni di supporto per la colonna contenuta nell'elemento `ClassifiedColumns` dell'elemento padre `ScalarMiningStructureColumn`. **Nota:** questa colonna viene fornita come parte dello standard per provider di algoritmi di data mining di terze parti. **Nota:** Microsoft fornito algoritmi non sono in genere utili per questa colonna. <br /><br /> .|  
 |*Key*|La colonna è una colonna chiave. **Nota:** questo tipo di contenuto è applicabile solo alle colonne chiave, in cui la `IsKey` elemento è impostato su `True`.|  
   
  Oltre a questi valori standard, inclusi con i provider di algoritmi di data mining [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supportano i valori elencati nella tabella seguente.  

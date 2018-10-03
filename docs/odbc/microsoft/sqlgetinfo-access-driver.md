@@ -1,47 +1,44 @@
 ---
-title: SQLGetInfo (Driver di accesso) | Documenti Microsoft
+title: SQLGetInfo (Driver Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Access Driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a761fe38b7d162d7e43ae2f9148626dadff57e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e559bcf9f66980c6c4ecd7a753e49e21819da54d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904851"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696279"
 ---
-# <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Driver di accesso)
+# <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (driver Access)
 > [!NOTE]  
->  In questo argomento fornisce informazioni di accesso specifici del Driver. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento vengono fornite informazioni di accesso specifici del Driver. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** supporta il tipo di informazioni SQL_FILE_USAGE. Il valore restituito è un valore integer a 16 bit che indica il modo in cui il driver considera direttamente i file in un'origine dati:  
+ **SQLGetInfo** supporta il tipo di informazioni SQL_FILE_USAGE. Il valore restituito è un numero intero a 16 bit che indica il modo in cui il driver considera direttamente i file in un'origine dati:  
   
 -   SQL_FILE_NOT_SUPPORTED, Il driver non è un driver a un solo livello.  
   
--   SQL_FILE_TABLE, ovvero Un driver a un solo livello considera i file in un'origine dati come tabelle.  
+-   SQL_FILE_TABLE, ovvero Un driver a un solo livello di gestione dei file in un'origine dati come tabelle.  
   
--   SQL_FILE_QUALIFIER, I file in un'origine dati un driver a un solo livello vengono considerati un qualificatore.  
+-   SQL_FILE_QUALIFIER, ovvero Un driver a un solo livello considera i file in un'origine dati come un qualificatore.  
   
- Il driver ODBC restituisce SQL_FILE_QUALIFIER poiché ogni file è un database completo.  
+ Il driver ODBC restituisce SQL_FILE_QUALIFIER perché ogni file è un database completo.  
   
 ## <a name="sqlbookmarkpersistence"></a>SQL_BOOKMARK_PERSISTENCE  
  SQL_BP_SCROLL &AMP;#124; SQL_BP_UPDATE [1]  
   
- [1] segnalibri vengono mantenute dopo un'operazione di commit, ma non vengono mantenute dopo un'operazione di rollback.  
+ [1] segnalibri mantenute dopo un'operazione di commit, ma non vengono mantenute dopo un'operazione di rollback.  
   
 ## <a name="sqlconvertbinary"></a>SQL_CONVERT_BINARY  
  SQL_CVT_DOUBLE &AMP;#124; SQL_CVT_FLOAT &AMP;#124; SQL_CVT_INTEGER &AMP;#124; SQL_CVT_NUMERIC &AMP;#124; SQL_CVT_REAL &AMP;#124; SQL_CVT_SMALLINT &AMP;#124; SQL_CVT_VARCHAR &AMP;#124; SQL_CVT_WVARCHAR  
@@ -104,7 +101,7 @@ ms.locfileid: "32904851"
 ||4.0|04.00.0000|  
   
 > [!NOTE]  
->  Non sono supportate nelle versioni 1.0 e 1.1. Inoltre, non vi è alcuna differenza nel formato di dati in Microsoft Access versioni 3.0, 7.0 e 97.  
+>  Le versioni 1.0 e 1.1 non sono supportate. Inoltre, non vi è alcuna differenza nel formato di dati nelle versioni di Microsoft Access 97, 7.0 e 3.0.  
   
 ## <a name="sqlddlindex"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  
@@ -181,7 +178,7 @@ ms.locfileid: "32904851"
   
  NUMBER  
   
- OLEOBJECT  
+ CLASSI OLEOBJECT  
   
  OWNERACCESS  
   

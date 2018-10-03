@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_batch_params
@@ -21,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac3b42956cacbd10718ca716e7b00b67e0afb949
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 00efe39e8ab60df83ddd267269461f6a6ff61ee0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033541"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594630"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**SCALABILITÀ**|**smallint**|Numero di cifre a destra del separatore decimale. Questo valore è NULL.|  
 |**RADIX**|**smallint**|Base per i tipi di dati numerici. Questo valore è NULL.|  
 |**AMMETTE VALORI NULL**|**smallint**|Specifica se i valori Null sono supportati o meno:<br /><br /> 1 = Per il parametro è possibile creare il tipo di dati con supporto per valori Null.<br /><br /> 0 = I valori Null non sono supportati.<br /><br /> Questo valore è NULL.|  
-|**SQL_DATA_TYPE**|**smallint**|Valore del tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizzato nel campo TYPE del descrittore. Questa colonna corrisponde al **DATA_TYPE** colonna, tranne che per il **datetime** e ISO **intervallo** i tipi di dati. In questa colonna viene sempre restituito un valore. Questo valore è NULL.|  
+|**SQL_DATA_TYPE**|**smallint**|Valore del tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizzato nel campo TYPE del descrittore. Questa colonna corrisponde alla colonna **DATA_TYPE**, tranne che per i tipi di dati **datetime** e ISO **interval**. In questa colonna viene sempre restituito un valore. Questo valore è NULL.|  
 |**SQL_DATETIME_SUB**|**smallint**|Il **data/ora** o ISO **intervallo** sottocodice se il valore di **SQL_DATA_TYPE** è SQL_DATETIME o SQL_INTERVAL. Per i dati di tipi diversi da **data/ora** e ISO **intervallo**, questa colonna è NULL. Questo valore è NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Lunghezza massima in byte di un **carattere** oppure **binario** parametro di tipo di dati. Per gli tutti gli altri tipi di dati, il valore di questa colonna è NULL. Il valore è sempre NULL.|  
 |**ORDINAL_POSITION**|**int**|Posizione ordinale del parametro nel batch. Se il nome del parametro viene ripetuto più volte, questa colonna include il numero ordinale della prima occorrenza. Il primo parametro è associato al numero ordinale 1. In questa colonna viene sempre restituito un valore.|  

@@ -1,14 +1,11 @@
 ---
-title: sp_apply_job_to_targets (Transact-SQL) | Documenti Microsoft
+title: sp_apply_job_to_targets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_apply_job_to_targets
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_apply_job_to_targets
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e7ec6285f807dd51b0a67ad55ab2e53634584e5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 192747d920f92681617d0dc19cc562e52e9c310e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238152"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641716"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +47,10 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  Numero di identificazione del processo da applicare ai server o ai gruppi di server di destinazione specificati. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name =**] **'***job_name***'**  
- Nome del processo da applicare ai server o ai gruppi di server di destinazione specificati. *job_name* viene **sysname**, con un valore predefinito è NULL.  
+ Nome del processo da applicare ai server o ai gruppi di server di destinazione specificati. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+>  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [  **@target_server_groups =**] **'***target_server_groups***'**  
  Elenco delimitato da virgole dei gruppi di server di destinazione ai quali si desidera applicare il processo specificato. *target_server_groups* viene **nvarchar(2048)**, con un valore predefinito è NULL.  
@@ -63,15 +59,15 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  Elenco delimitato da virgole dei server di destinazione ai quali si desidera applicare il processo specificato. *target_servers*viene **nvarchar(2048)**, con un valore predefinito è NULL.  
   
  [  **@operation=** ] **'***operazione***'**  
- Indica se il processo specificato deve essere applicato o rimosso dai server o dai gruppi di server di destinazione specificati. *operazione*viene **varchar(7)**, con un valore predefinito è APPLY. Le operazioni valide sono **applica** e **rimuovere**.  
+ Indica se il processo specificato deve essere applicato o rimosso dai server o dai gruppi di server di destinazione specificati. *operazione*viene **varchar(7)**, con un valore predefinito è APPLY. Operazioni valide sono **APPLY** e **rimuovere**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_apply_job_to_targets** fornisce un modo semplice per applicare (o rimuovere) un processo da più server di destinazione, senza che sia un'alternativa alla chiamata **sp_add_jobserver** (o **sp_delete_jobserver**) una volta per ogni server di destinazione.  
+## <a name="remarks"></a>Note  
+ **sp_apply_job_to_targets** fornisce un modo semplice per applicare (o rimuovere) un processo da più server di destinazione ed è un'alternativa alla chiamata **sp_add_jobserver** (oppure **sp_delete_jobserver**) una volta per ogni server di destinazione.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
   
 ## <a name="examples"></a>Esempi  

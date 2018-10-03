@@ -1,14 +1,11 @@
 ---
-title: Sys. syscacheobjects (Transact-SQL) | Documenti Microsoft
+title: Sys. syscacheobjects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syscacheobjects_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - syscacheobjects system table
 - sys.syscacheobjects compatibility view
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de76f70e43c7b8d4cc043be069c2b412bb03f69b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ba5cd0f3ec426e52da602098be0968569bf7c31a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221982"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831539"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +40,10 @@ ms.locfileid: "33221982"
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|ID bucket. I valori sono compresi tra 0 e le dimensioni della directory -1. Le dimensioni della directory corrispondono a quelle della tabella hash.|  
 |**cacheobjtype**|**nvarchar(17)**|Tipo di oggetto nella cache:<br /><br /> Piano compilato<br /><br /> Piano eseguibile<br /><br /> Albero di analisi<br /><br /> Cursore<br /><br /> Stored procedure estesa|  
-|**objtype**|**nvarchar(8)**|Tipo di oggetto:<br /><br /> Stored procedure<br /><br /> Istruzione preparata<br /><br /> Query ad hoc ([!INCLUDE[tsql](../../includes/tsql-md.md)] inviate come eventi del linguaggio dal **sqlcmd** o **osql** utilità, invece di chiamate di procedura remota)<br /><br /> ReplProc (procedura della replica)<br /><br /> Trigger<br /><br /> Visualizza<br /><br /> Valore predefinito<br /><br /> Tabella utente<br /><br /> Tabella di sistema<br /><br /> Controlla<br /><br /> Rule|  
-|**objid**|**int**|Una delle chiavi principali utilizzate per la ricerca di un oggetto nella cache. Questo è l'ID di oggetto archiviato in **sysobjects** per gli oggetti di database (procedure, viste, trigger e così via). Per gli oggetti della cache, ad esempio SQL ad hoc o preparati, **objid** è un valore generato internamente.|  
+|**objtype**|**nvarchar(8)**|Tipo di oggetto:<br /><br /> Stored procedure<br /><br /> Istruzione preparata<br /><br /> Query ad hoc ([!INCLUDE[tsql](../../includes/tsql-md.md)] inviate come eventi di linguaggio dal **sqlcmd** oppure **osql** utilità, invece di chiamate di procedura remota)<br /><br /> ReplProc (procedura della replica)<br /><br /> Trigger<br /><br /> Vista<br /><br /> Default<br /><br /> Tabella utente<br /><br /> Tabella di sistema<br /><br /> Controlla<br /><br /> Regola|  
+|**objid**|**int**|Una delle chiavi principali utilizzate per la ricerca di un oggetto nella cache. Questo è l'ID di oggetto archiviato in **sysobjects** per oggetti di database (procedure, viste, trigger e così via). Per gli oggetti della cache, ad esempio SQL ad hoc o preparati, **objid** è un valore generato internamente.|  
 |**dbid**|**smallint**|ID del database in cui è stato compilato l'oggetto della cache.|  
-|**dbidexec**|**smallint**|ID del database da cui viene eseguita la query.<br /><br /> Per la maggior parte degli oggetti, **dbidexec** ha lo stesso valore di **dbid**.<br /><br /> Per le viste di sistema, **dbidexec** è l'ID di database da cui viene eseguita la query.<br /><br /> Per le query ad hoc, **dbidexec** è 0. Ciò significa **dbidexec** ha lo stesso valore di **dbid**.|  
+|**dbidexec**|**smallint**|ID del database da cui viene eseguita la query.<br /><br /> Per la maggior parte degli oggetti, **dbidexec** ha lo stesso valore come **dbid**.<br /><br /> Per le viste di sistema, **dbidexec** è l'ID di database da cui viene eseguita la query.<br /><br /> Per le query ad hoc **dbidexec** è 0. Ciò significa **dbidexec** ha lo stesso valore come **dbid**.|  
 |**uid**|**smallint**|Indica il creatore dei piani per le query ad hoc e dei piani preparati.<br /><br /> -2 = Il batch inviato non dipende dalla risoluzione implicita del nome e può essere condiviso da diversi utenti. Questo è il metodo consigliato. Qualsiasi altro valore rappresenta l'ID dell'utente che invia la query al database.<br /><br /> Causa un errore di overflow o restituisce NULL se il numero di utenti e ruoli è maggiore di 32.767.|  
 |**refCounts**|**int**|Numero degli altri oggetti della cache che fanno riferimento a questo oggetto della cache. Il valore di base è 1.|  
 |**usecounts**|**int**|Numero di utilizzi dell'oggetto della cache dall'inizio.|  

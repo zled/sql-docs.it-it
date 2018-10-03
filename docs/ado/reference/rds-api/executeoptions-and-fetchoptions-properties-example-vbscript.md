@@ -1,13 +1,11 @@
 ---
-title: Esempio di proprietà di FetchOptions (VBScript) ed ExecuteOptions | Documenti Microsoft
+title: Esempio di proprietà FetchOptions (VBScript) e la proprietà ExecuteOptions | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - FetchOptions property [ADO], VBScript example
 - ExecuteOptions property [ADO]
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14defde3a35bcccd35c741f7f9b681e9197a8a23
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3cc7b120f41613a5797105695c415eea85d08fdd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288220"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695209"
 ---
-# <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions e FetchOptions proprietà esempio (VBScript)
+# <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>Esempio delle proprietà ExecuteOptions e FetchOptions (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Il codice seguente viene illustrato come impostare il [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) e [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) proprietà in fase di progettazione. Se non impostato, **ExecuteOptions** per impostazione predefinita **adcExecSync**. Questa impostazione indica che quando il **RDS. Aggiorna** metodo viene chiamato, verrà eseguito sul thread chiamante corrente, vale a dire, in modo sincrono. Tagliare e incollare il codice seguente in blocco note o un altro editor di testo e salvarlo come **ExecuteOptionsDesignVBS**.  
+ Il codice seguente viene illustrato come impostare il [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) e [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) proprietà in fase di progettazione. Se lasciata non impostata **ExecuteOptions** per impostazione predefinita **adcExecSync**. Questa impostazione indica che quando il **Servizi Desktop remoto. Aggiorna** viene chiamato il metodo, verrà eseguito sul thread chiamante corrente, vale a dire, in modo sincrono. Tagliare e incollare il codice seguente nel blocco note o un altro editor di testo e salvarlo come **ExecuteOptionsDesignVBS**.  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  
@@ -98,7 +95,7 @@ body {
 <!-- EndExecuteOptionsDesignVBS -->  
 ```  
   
- Nell'esempio seguente viene illustrato come impostare il **ExecuteOptions** e **FetchOptions** proprietà in fase di esecuzione nel codice VBScript. Vedere il [aggiornamento](../../../ado/reference/rds-api/refresh-method-rds.md) metodo per un esempio funzionante di queste proprietà. Tagliare e incollare il codice seguente in blocco note o un altro editor di testo e salvarlo come **ExecuteOptionsRuntimeVBS**.  
+ Nell'esempio seguente viene illustrato come impostare il **ExecuteOptions** e **FetchOptions** proprietà in fase di esecuzione di codice VBScript. Vedere le [Aggiorna](../../../ado/reference/rds-api/refresh-method-rds.md) metodo per un esempio pratico di queste proprietà. Tagliare e incollare il codice seguente nel blocco note o un altro editor di testo e salvarlo come **ExecuteOptionsRuntimeVBS**.  
   
 ```  
 <!-- BeginExecuteOptionsRuntimeVBS -->  
@@ -174,7 +171,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
+ [Proprietà ExecuteOptions (Servizi Desktop remoto)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
  [Proprietà FetchOptions (Servizi Desktop remoto)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)
 
 

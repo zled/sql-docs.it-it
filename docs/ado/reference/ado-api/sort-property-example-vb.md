@@ -1,32 +1,29 @@
 ---
-title: Ordinare l'esempio di proprietà (VB) | Documenti Microsoft
+title: Ordinare l'esempio di proprietà (Visual Basic) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Sort property [ADO], Visual Basic example
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29251f351302fc94c9f55c0ada9c4028408cbe44
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ac218d0f95e16931f359bd183d4fe8a032f8c6cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770089"
 ---
-# <a name="sort-property-example-vb"></a>Esempio di proprietà Sort (VB)
-Questo esempio viene utilizzato il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [ordinamento](../../../ado/reference/ado-api/sort-property.md) proprietà per riordinare le righe di un **Recordset** derivato dal ***autori*** tabella di il ***Pubs*** database. Una routine dell'utilità secondaria stampa ogni riga.  
+# <a name="sort-property-example-vb"></a>Esempio della proprietà Sort (VB)
+Questo esempio Usa il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [ordinamento](../../../ado/reference/ado-api/sort-property.md) proprietà per riordinare le righe di una **Recordset** derivato dal ***autori*** tabella di il ***Pubs*** database. Una routine di utilità secondario consente di stampare ogni riga.  
   
 ```  
 'BeginSortVB  
@@ -107,12 +104,12 @@ End Sub
 'EndSortVB  
 ```  
   
- Questa è la routine dell'utilità secondaria che stampa il titolo e il contenuto dell'oggetto specificato **Recordset**.  
+ Questa è la routine di utilità secondario che visualizza il titolo specificato e il contenuto dell'oggetto specificato **Recordset**.  
   
 ```  
 Attribute VB_Name = "Sort"  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Proprietà Sort](../../../ado/reference/ado-api/sort-property.md)

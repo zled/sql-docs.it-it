@@ -1,14 +1,11 @@
 ---
-title: fn_syscollector_get_execution_stats (Transact-SQL) | Documenti Microsoft
+title: fn_syscollector_get_execution_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_stats
@@ -18,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - fn_syscollector_get_execution_stats function
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1a80d59325234108f16a75c081f94d4102c44154
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 91227f3f5d1ef6238b18064b4c978d238f85e4b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811205"
 ---
 # <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ fn_syscollector_get_execution_stats ( log_id )
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|avg_row_count_in|**int**|Numero medio di righe passate nelle attività del flusso di dati del pacchetto.<br /><br /> Nota: Un'attività flusso di dati è un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] componente che elabora i dati. I dati sono in formato relazionale, pertanto è presente un set di dati di input costituito da righe. Si tratta del numero di righe immesse nell'attività. Dopo la trasformazione dei dati, viene restituito l'output rappresentato da un set di risultati costituito da righe. L'attività Flusso di dati trasforma i dati e restituisce un set di risultati costituito da righe. L'output è costituito dal numero di righe restituite dall'attività.|  
+|avg_row_count_in|**int**|Numero medio di righe passate nelle attività del flusso di dati del pacchetto.<br /><br /> Nota: È un'attività flusso di dati un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] componente che elabora i dati. I dati sono in formato relazionale, pertanto è presente un set di dati di input costituito da righe. Si tratta del numero di righe immesse nell'attività. Dopo la trasformazione dei dati, viene restituito l'output rappresentato da un set di risultati costituito da righe. L'attività Flusso di dati trasforma i dati e restituisce un set di risultati costituito da righe. L'output è costituito dal numero di righe restituite dall'attività.|  
 |min_row_count_in|**int**|Numero minimo di righe passate nelle attività del flusso di dati del pacchetto.|  
 |max_row_count_in|**int**|Numero massimo di righe passate nelle attività del flusso di dati del pacchetto.|  
 |avg_row_count_out|**int**|Numero medio di righe uscite dalle attività del flusso di dati del pacchetto.|  
@@ -62,7 +59,7 @@ fn_syscollector_get_execution_stats ( log_id )
 |min_duration|**int**|Tempo minimo, in millisecondi, impiegato nel componente flusso di dati del pacchetto.|  
 |max_duration|**int**|Tempo massimo, in millisecondi, impiegato nel componente flusso di dati del pacchetto.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede SELECT per **dc_operator**.  
   
 ## <a name="see-also"></a>Vedere anche  
