@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, steps
 - relational schema [Analysis Services], Schema Generation Wizard
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac0560032be47e1934eb111a13511cf579d63fe1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da833d9c71b93405369a1fee1d7947784d2a09e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237671"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210171"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Utilizzare la Generazione guidata schema (Analysis Services)
   Durante la fase di generazione con Generazione guidata schema è necessario disporre di una quantità ridotta di informazioni. La maggior parte delle informazioni richieste dalla Generazione guidata schema per la generazione di schemi relazionali vengono estratte dai cubi e dalle dimensioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] già creati nel progetto. Inoltre, è possibile personalizzare come viene generato lo schema del database dell'area di interesse, nonché come vengono denominati gli oggetti nello schema.  

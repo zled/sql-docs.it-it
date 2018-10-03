@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spoofing attacks
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2ed63bd9188dc25b6edfea09f8378d4243776b9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 156fa271582673d93cf2f76e92e447ea63b846c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323231"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200831"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Connessione al motore di database mediante la protezione estesa
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il supporto per la **protezione estesa** è disponibile a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protezione estesa per l'autenticazione** è una funzionalità dei componenti di rete implementata dal sistema operativo. La**protezione estesa** è supportata in Windows 7 e in Windows Server 2008 R2 La**protezione estesa** è inclusa nei Service Pack per i sistemi operativi [!INCLUDE[msCoName](../../includes/msconame-md.md)] meno recenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è più sicuro quando le connessioni vengono effettuate tramite **protezione estesa**.  
@@ -45,10 +42,10 @@ ms.locfileid: "37323231"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'associazione al servizio e l'associazione di canale per ridurre tali attacchi sulle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="service-binding"></a>associazione al servizio  
+### <a name="service-binding"></a>Associazione al servizio  
  L'associazione al servizio risolve il problema degli attacchi luring richiedendo a un client di inviare un nome SPN firmato del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al quale il client intende connettersi. Come parte della risposta di autenticazione, il servizio verifica che il nome SPN ricevuto nel pacchetto corrisponda al proprio nome SPN. Se viene adescato per connettersi all'autore di un attacco, il client includerà il nome SPN firmato di tale autore. L'autore dell'attacco non può inoltrare il pacchetto per l'autenticazione del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reale come client, in quanto includerebbe il nome SPN dell'autore dell'attacco. L'associazione al servizio comporta un costo trascurabile una tantum, ma non neutralizza gli attacchi di spoofing. Si verifica l'associazione al servizio quando un'applicazione client non utilizza la crittografia per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="channel-binding"></a>associazione di canale  
+### <a name="channel-binding"></a>Associazione di canale  
  L'associazione di canale stabilisce un canale sicuro (Schannel) tra un client e un'istanza del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il servizio verifica l'autenticità del client confrontando il token CBT (Channel Binding Token) del client specifico di tale canale con il proprio CBT. L'associazione di canale neutralizza sia gli attacchi luring che di spoofing. Comporta tuttavia costi di runtime maggiori in quanto richiede la crittografia TLS (Transport Layer Security) di tutto il traffico della sessione. Si verifica l'associazione di canale quando un'applicazione client utilizza la crittografia per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], indipendentemente dal fatto che la crittografia venga imposta dal client o dal server.  
   
 > [!WARNING]  

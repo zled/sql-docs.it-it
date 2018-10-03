@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - services [SQL Server], security
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: 59
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2d51f7278957cd4246700cbcb872c9ec6ff51d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f20880fada5c6e6c12c3df42e051baf5afb3eab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204811"
 ---
-# <a name="sql-server-browser-service"></a>SQL Server Browser Service
+# <a name="sql-server-browser-service"></a>Servizio SQL Server Browser
   Il programma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser viene eseguito come servizio Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser rimane in attesa delle richieste in entrata di risorse di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornisce informazioni sulle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installate nel computer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser consente di eseguire le azioni seguenti:  
   
 -   Esplorazione di un elenco di server disponibili  
@@ -99,7 +96,7 @@ ms.locfileid: "37255813"
 <drive>\<path>\sqlbrowser.exe -c  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="account-privileges"></a>Privilegi dell'account  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser rimane in attesa su una porta UDP e accetta le richieste non autenticate tramite il protocollo SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser deve essere eseguito nel contesto di sicurezza di un utente con pochi privilegi per ridurre l'esposizione agli attacchi da parte di utenti malintenzionati. È possibile modificare l'account di accesso usando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Di seguito vengono indicati i diritti utente minimi per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser:  

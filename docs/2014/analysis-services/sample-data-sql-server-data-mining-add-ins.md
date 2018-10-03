@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - partitioning data [data mining]
 - mining models, testing
 ms.assetid: 35907ae6-887f-4cb3-a750-cff3d7683d90
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5984bbbaa3dc2bb55ce8f20a59dd5132de0ca72a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 72579d679b0ced1fd3c260098bc68237f2980a3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209891"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>Dati di esempio (componenti aggiuntivi Data mining di SQL Server)
   ![Creazione guidata dei dati di partizione nella barra multifunzione Data Mining](media/dmc-partition.gif "Creazione guidata partizione dati sulla barra multifunzione Data Mining")  
@@ -36,7 +33,7 @@ ms.locfileid: "37178968"
  La creazione del tipo appropriato di dati per il training e il testing dei modelli costituisce una parte importante del data mining, ma senza gli strumenti appropriati può rivelarsi un'operazione noiosa. La procedura guidata esegue il campionamento stratificato per assicurare che i set di training e di testing siano ben equilibrati.  
   
 ## <a name="random-sampling-and-oversampling"></a>Campionamento casuale e sovracampionamento  
- , Il campionamento casuale è il metodo migliore per garantire che i dati usati per il testing di un modello rappresentino fedelmente i dati usati per creare il modello. È possibile campionare in modo casuale i dati archiviati in Excel o in un'origine dati esterna  
+ . Il campionamento casuale è il metodo migliore per garantire che i dati usati per il testing di un modello rappresentino fedelmente i dati usati per creare il modello. È possibile campionare in modo casuale i dati archiviati in Excel o in un'origine dati esterna  
   
  Se si usa l'opzione di campionamento casuale, il **dati di esempio** guidata automaticamente Crea set di dati di training e di test e vengono inseriti in fogli di lavoro di Excel separate per riferimento futuro.  
   

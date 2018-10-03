@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bdcfdc34d61b38992c44a220b7b58041cd496200
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5008096ef5c10dbd3f14198194cec4e7795d9f4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274327"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202311"
 ---
 # <a name="instance-configuration"></a>Configurazione dell'istanza
   Utilizzare la pagina **Configurazione dell'istanza** dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per specificare se creare un'istanza predefinita oppure un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è già installata, verrà creata un'istanza predefinita a meno che non si specifichi un'istanza denominata.  
@@ -80,7 +77,7 @@ ms.locfileid: "37274327"
  **Istanze e funzionalità rilevate**  
  È possibile visualizzare un elenco dei componenti e delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installati sul computer su cui viene eseguito il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **ID istanza** : per impostazione predefinita, come ID istanza viene usato il nome dell'istanza. Tale nome viene utilizzato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Per un'istanza predefinita, il nome di istanza e l'ID istanza sono MSSQLSERVER. Per usare un ID istanza non predefinito, specificarlo nel campo **ID istanza** .  
+ **ID istanza** : per impostazione predefinita, come ID istanza viene usato il nome dell'istanza. Tale nome viene utilizzato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Per un'istanza predefinita, il nome dell'istanza e l'ID istanza sono MSSQLSERVER. Per usare un ID istanza non predefinito, specificarlo nel campo **ID istanza** .  
   
 > [!IMPORTANT]  
 >  Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, l'ID istanza visualizzato in questa pagina è quello specificato durante il passaggio relativo alla preparazione dell'immagine del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep. Non sarà possibile specificare un ID istanza diverso durante il passaggio relativo al completamento dell'immagine.  

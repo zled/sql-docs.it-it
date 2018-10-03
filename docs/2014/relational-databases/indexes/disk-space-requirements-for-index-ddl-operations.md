@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - indexes [SQL Server], disk space requirements
 - temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c072db7fc8fc282c53ff177a63bdfa0e1f208105
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7dbb3fafd32ead6587d9c64eb6ccf2294ed4918b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248541"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209671"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Requisiti di spazio su disco per operazioni DLL sugli indici
   Lo spazio su disco è un fattore che richiede particolare considerazione in fase di creazione, ricompilazione o eliminazione di indici. Uno spazio su disco non adeguato può comportare una riduzione delle prestazioni o provocare un errore dell'operazione sull'indice. In questo argomento vengono fornite informazioni generali utili per determinare la quantità di spazio su disco necessaria per operazioni DLL (Data Definition Language) sugli indici.  
@@ -80,7 +77,7 @@ ms.locfileid: "37248541"
   
  Nelle operazioni sugli indici online viene utilizzato il controllo delle versioni delle righe per isolare le operazioni dagli effetti delle modifiche apportate da altre transazioni. In questo modo, non è necessario richiedere blocchi di condivisione sulle righe lette. Le operazioni utente simultanee di aggiornamento ed eliminazione durante le operazioni sugli indici online richiedono spazio per i record di versione in **tempdb**. Per altre informazioni, vedere [Eseguire operazioni online sugli indici](perform-index-operations-online.md) .  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Esempio di spazio su disco per gli indici](index-disk-space-example.md)  
   
  [Spazio su disco per il log delle transazioni per operazioni sugli indici](transaction-log-disk-space-for-index-operations.md)  

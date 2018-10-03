@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 57f839d6c50208828de3441ec6e3c5f5f77c67c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88e423e248293e537dba5d90e8d688b826cb5244
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297241"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199042"
 ---
 # <a name="discovercalcdependency-rowset"></a>Set di righe DISCOVER_CALC_DEPENDENCY
   Crea report sulle dipendenze tra i calcoli e sugli oggetti a cui si fa riferimento in tali calcoli. Tali informazioni possono essere utilizzate in un'applicazione client per segnalare problemi con formule complesse o per visualizzare avvisi quando gli oggetti correlati vengono eliminati o modificati. È inoltre possibile utilizzare il set di righe per estrarre le espressioni DAX utilizzate nelle misure o nelle colonne calcolate.  

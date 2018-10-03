@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SINGLE_NCLOB option
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - large data, bulk imports
 - SINGLE_BLOB option
 ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d48b0af070e67ff1c77b8e5e2b0d32ce6e3aba4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 441c13a725b69d70b4267ec90d7eaeeace2b3070
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223431"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202701"
 ---
 # <a name="bulk-import-large-object-data-by-using-the-openrowset-bulk-rowset-provider-sql-server"></a>Importazione bulk di dati di tipo LOB tramite il provider di set di righe con lettura bulk OPENROWSET (SQL Server)
   Il provider di set di righe con lettura bulk OPENROWSET di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di eseguire un'importazione bulk di un file di dati come dati di grandi dimensioni (LOB, Large Object).  

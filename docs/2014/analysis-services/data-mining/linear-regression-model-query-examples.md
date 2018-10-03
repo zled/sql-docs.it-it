@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 481774670258050b111820e88333a8354cfb14ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: facd7ddd9f41d214485ea9a062c67cee2b920758
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303181"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201011"
 ---
 # <a name="linear-regression-model-query-examples"></a>Esempi di query sul modello di regressione lineare
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, oppure una query di stima, che utilizza i criteri presenti nel modello di data mining per eseguire stime relative a nuovi dati. Una query sul contenuto potrebbe ad esempio fornire dettagli aggiuntivi sulla formula di regressione, mentre una query di stima potrebbe indicare se un nuovo punto dati si adatta al modello. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
@@ -87,12 +84,12 @@ FROM LR_PredictIncome.CONTENT
   
  Risultati previsti:  
   
-|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
 |Yearly Income|Missing|0|0,000457142857142857|0|1|  
 |Yearly Income|57220,8876687257|17484|0,999542857142857|1041275619,52776|3|  
-|Age|471.687717702463|0|0|126,969442359327|7|  
-|Age|234.680904692439|0|0|0|8|  
+|Age|471,687717702463|0|0|126,969442359327|7|  
+|Age|234,680904692439|0|0|0|8|  
 |Age|45,4269617936399|0|0|126,969442359327|9|  
 ||35793,5477381267|0|0|1012968919,28372|11|  
   

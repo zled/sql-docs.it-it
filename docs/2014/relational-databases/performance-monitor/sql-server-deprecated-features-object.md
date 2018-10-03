@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 257d8c38f4fd87751eaa448504ed16a80ed17d31
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8296657608d2633cc57ed4b3e30a532b7a24e2b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817077"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211851"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Oggetto SQL Server:Deprecated Features
   L'oggetto SQLServer:Caratteristiche deprecate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un contatore per monitorare le caratteristiche definite deprecate. In ognuno dei casi il contatore fornisce un conteggio dell'utilizzo indicante il numero di volte in cui è stata rilevata la funzionalità deprecata dall'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -254,7 +251,7 @@ ms.locfileid: "43817077"
 |Opzione di tabella text in row|Sono stati rilevati riferimenti all'opzione di tabella 'text in row'. Utilizzare sp_tableoption 'large value types out of row'. Si verifica una volta per ogni query.|  
 |TEXTPTR|Sono stati rilevati riferimenti alla funzione TEXTPTR. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimosso `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
 |TEXTVALID|Sono stati rilevati riferimenti alla funzione TEXTVALID. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimosso `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
-|timestamp|Numero totale di esecuzioni deprecate `timestamp` è stato rilevato il tipo di dati in un'istruzione DDL. Usare il `rowversion` invece del tipo di dati.|  
+|TIMESTAMP|Numero totale di esecuzioni deprecate `timestamp` è stato rilevato il tipo di dati in un'istruzione DDL. Usare il `rowversion` invece del tipo di dati.|  
 |UPDATETEXT o WRITETEXT|È stata rilevata l'istruzione UPDATETEXT o WRITETEXT. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimosso `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
 |USER_ID|Sono stati rilevati riferimenti alla funzione USER_ID. Usare la funzione DATABASE_PRINCIPAL_ID. Si verifica una volta per ogni compilazione.|  
 |Utilizzo di OLEDB per server collegati||  

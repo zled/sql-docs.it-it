@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: 92
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 482b72fac9416918bdee38b74fbc483027b4b345
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 59067479ebd57b8a26cf3de6ef243e0eb7072bce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200951"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connessione di client a una sessione di mirroring del database (SQL Server)
   Per connettersi a una sessione di mirroring del database un client può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se configurati per un database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , questi provider di accesso ai dati supportano entrambi completamente il mirroring del database. Per informazioni relative alle considerazioni di programmazione per l'utilizzo di un database con mirroring, vedere [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). È inoltre necessario che l'istanza del server principale corrente sia disponibile e che l'account di accesso del client sia stato creato nell'istanza del server. Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Le connessioni client a una sessione di mirroring del database non richiedono l'istanza del server di controllo del mirroring, se ne esiste una.  

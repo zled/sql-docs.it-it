@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3d4be0ba5a6b24174134fbef6f5dc2e87fa3af9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5ed900eae974eb768223d534e6ac43025e9718c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158572"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202871"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Definizione della lunghezza di campo tramite bcp (SQL Server)
   La lunghezza del campo indica il numero massimo di caratteri necessari per rappresentare i dati in formato carattere. Se i dati sono archiviati in formato nativo, la lunghezza di campo è già nota. Ad esempio, il tipo di dati `int` accetta 4 byte. Se si è indicato 0 come lunghezza del prefisso, il **bcp** prompt dei comandi è per la lunghezza del campo, le lunghezze di campo predefinite e l'impatto della lunghezza del campo sull'archiviazione dei dati nei file di dati che contengono `char` dei dati.  

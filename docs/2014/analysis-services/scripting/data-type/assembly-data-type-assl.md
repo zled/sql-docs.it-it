@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Assembly Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Assembly data type
 ms.assetid: 0a381322-9509-4579-a754-c6cdd0a70cc9
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 40cafd0d8ef11feaebce5161e97ef3717a9fb943
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb02963baa8a7fca296abe89801d89c1f7ea19fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233831"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209646"
 ---
 # <a name="assembly-data-type-assl"></a>Tipo di dati Assembly (ASSL)
   Definisce un tipo di dati primitivo astratto che rappresenta un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly o libreria a collegamento dinamico (DLL) un COM associata a un [Server](../objects/server-element-assl.md) oppure [Database](../objects/database-element-assl.md) elemento.  

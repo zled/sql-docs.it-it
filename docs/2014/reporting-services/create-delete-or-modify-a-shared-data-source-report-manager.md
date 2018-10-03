@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - deleting shared data sources
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
-caps.latest.revision: 47
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ace3f33f02be295fbaf22fcd8f0e9d82480db2d
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d11fc38c9e1729ae4651f632d2755bfbbe2f0e2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202887"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Creare, eliminare o modificare un'origine dei dati condivisa (Gestione report)
   Un'origine dati condivisa consente di specificare le proprietà di connessione per un'origine dati. Se si dispone di un'origine dati utilizzata da un numero elevato di report, modelli o sottoscrizioni guidate dai dati, creare un'origine dati condivisa per eliminare l'overhead provocato dalla necessità di gestire le stesse informazioni sulla connessione in più posizioni.  

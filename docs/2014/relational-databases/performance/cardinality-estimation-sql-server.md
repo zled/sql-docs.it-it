@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81f9d8c849622a622631bc8153dc7d4cffc7d258
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 393c4f88f9ab60f3a25ddaab5bb091fb298e1e02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251883"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200611"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
   La logica di stima della cardinalità, denominata strumento di stima della cardinalità, è stata riprogettata in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] per migliorare la qualità dei piani di query e pertanto migliorare le prestazioni delle query. Nel nuovo strumento di stima della cardinalità sono incorporati presupposti e algoritmi maggiormente adatti ai i carichi di lavoro di data warehouse e alle soluzioni OLTP più recenti. Lo strumento è basato sulla ricerca approfondita della stima della cardinalità sui carichi di lavoro più recenti e sulle conoscenze relative al miglioramento della stima della cardinalità di SQL Server acquisite nel corso degli ultimi 15 anni. I commenti e i suggerimenti dei clienti indicano che sebbene la maggior parte delle query registrerà un miglioramento o rimarrà invariata a seguito della modifica, una percentuale minima potrebbe registrare una regressione rispetto allo strumento di stima della cardinalità precedente.  

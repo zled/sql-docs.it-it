@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], getting assistance
 - F1 Help [SQL Server Database Engine]
 ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
-caps.latest.revision: 12
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: fce976d0d770cbbd0c1bc56883440c93992db005
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197751"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206671"
 ---
 # <a name="feature-reference-database-engine"></a>Guida di riferimento alle funzionalità (Motore di database)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] include numerosi strumenti e applicazioni che è possibile utilizzare per la creazione, la gestione e la visualizzazione di oggetti e dati di database. Ci sono inoltre strumenti che è possibile utilizzare per controllare e risolvere i problemi relativi alle prestazioni del server e del database e per abilitare e disabilitare funzionalità, servizi e protocolli di rete. In questa sezione sono disponibili argomenti specifici che descrivono le finestre di dialogo di tali strumenti e applicazioni.  

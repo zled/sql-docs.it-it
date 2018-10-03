@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 64045eb4a87794e3d4b870ddb3ede28e48af2ce2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3940f7c214ab3f9d5d48e83acef5ed2237ceeac3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267967"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206531"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Creazione di stime (Esercitazione di base sul data mining)
   Dopo aver testato l'accuratezza dei modelli di data mining e ha deciso che si è soddisfatti dei risultati, è quindi possibile generare stime tramite il generatore di Query di stima nel **stima modello di Data Mining** scheda modelli di Data Mining Finestra di progettazione.  

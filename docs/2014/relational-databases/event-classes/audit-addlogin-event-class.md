@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Addlogin event class
 ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d41dc017f9b412f944f218e55821f25b8b8c5889
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3022d760e5c55fe7ca2f3b857a090c06f3a461f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305661"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205381"
 ---
-# <a name="audit-addlogin-event-class"></a>Audit Addlogin - classe di evento
+# <a name="audit-addlogin-event-class"></a>Classe di evento Audit Addlogin
   La classe di evento **Audit Addlogin** viene generata quando viene aggiunto o rimosso un account di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Se si impostano altre proprietà, ad esempio il database predefinito, mentre si aggiunge l'account di accesso le informazioni relative a queste proprietà saranno disponibili nella colonna **TextData** dell'evento. Se le proprietà vengono impostate mentre si aggiunge un account di accesso, l'evento **Audit Login Change Property** non si verificherà.  

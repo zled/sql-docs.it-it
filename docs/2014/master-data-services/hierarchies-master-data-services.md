@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Master Data Services]
 - hierarchies [Master Data Services], about hierarchies
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 45dcd47ff6804bc83e4f1c97c5aefa72ea5e8da8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92aeef62aef03d0e80f1bc4486ff04fa600fcf09
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259027"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206631"
 ---
 # <a name="hierarchies-master-data-services"></a>Gerarchie (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]una gerarchia è una struttura ad albero che consente di effettuare le operazioni seguenti:  
@@ -56,7 +53,7 @@ ms.locfileid: "37259027"
   
  ![Esempio di gerarchia raggruppata per sottocategoria](../../2014/master-data-services/media/mds-conc-hierarchy.gif "Esempio di gerarchia raggruppata per sottocategoria")  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
