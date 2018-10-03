@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3aef5a22131fd26d72ccbe569a2adb73d045dfa3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 481a75c420ece410f4b7489013c6297dc7b84869
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200031"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211281"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installazione di SQL Server con l'opzione di archiviazione su condivisione file SMB
   A partire [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], i database di sistema (Master, Model, MSDB e TempDB) e [!INCLUDE[ssDE](../../includes/ssde-md.md)] con server di file Server Message Block (SMB) come opzione di archiviazione è possibile installare i database utente. Questa condizione è valida per le installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome e per le installazioni del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

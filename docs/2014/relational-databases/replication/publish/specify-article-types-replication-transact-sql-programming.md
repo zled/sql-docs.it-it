@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], merge replication options
 - stored procedures [SQL Server replication], publishing
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c3fbc6aec57fc1b18ecbb8b5c1e5246a4fe0cc24
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca43600ff55bad24bc607eeeb30eadcd6f3c087e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324231"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226141"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Impostazione dei tipi di articolo (programmazione Transact-SQL della replica)
   I tipi di articolo predefiniti per la replica sono gli articoli di tabella, ma è possibile pubblicare altri oggetti di database come articoli, tra cui viste, stored procedure, funzioni definite dall'utente ed esecuzione di stored procedure. È possibile utilizzare le stored procedure di replica per specificare a livello di programmazione un tipo di articolo mentre viene definito. Le stored procedure utilizzate dipendono dal tipo di replica e dal tipo di articolo.  

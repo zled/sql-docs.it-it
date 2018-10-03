@@ -1,14 +1,12 @@
 ---
-title: 'Filtrare valori tramite SQL: limit-field e SQL: limit-value (SQLXML 4.0) | Microsoft Docs'
+title: 'Filtrare valori tramite SQL: limit-field e SQL: limit-value (SQLXML 4.0) | Documenti di Microsoft'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, filtering values
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2ae0fe5a6bc85a9c2535b65f1989a8d5cd72904
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 37e724d36094ceac2cb05b059a83de2a415e9476
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260557"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224163"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrare valori tramite sql:limit-field e sql:limit-value (SQLXML 4.0)
   È possibile limitare le righe restituite da una query di database in base a un valore di limitazione. Le annotazioni `sql:limit-field` e `sql:limit-value` vengono utilizzate per identificare la colonna di database che contiene valori di limitazione e per specificare un valore di limitazione specifico da utilizzare per filtrare i dati restituiti.  

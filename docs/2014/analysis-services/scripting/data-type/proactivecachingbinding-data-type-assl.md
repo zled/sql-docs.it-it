@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProactiveCachingBinding Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProactiveCachingBinding data type
 ms.assetid: 02e6ff2f-2f18-4607-9198-bb46f113f9ac
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d440911eefa33981ef435240c4e440378da34a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a8d34019463453b52df520d1c0153420903a0f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209761"
 ---
 # <a name="proactivecachingbinding-data-type-assl"></a>Tipo di dati ProactiveCachingBinding (ASSL)
   Definisce un tipo di dati derivato astratto che rappresenta le informazioni per il [ProactiveCaching](../objects/proactivecaching-element-assl.md) elemento sulle modifiche dell'origine dati che richiedono la ricompilazione della cache o sullo stato del processo di ricompilazione.  
@@ -46,7 +43,7 @@ ms.locfileid: "37189098"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipi di dati di base|[Associazione](binding-data-type-assl.md)|  
+|Tipi di dati di base|[associazione](binding-data-type-assl.md)|  
 |Tipi di dati derivati|[ProactiveCachingIncrementalProcessingBinding](proactivecachingincrementalprocessingbinding-data-type-assl.md), [ProactiveCachingObjectNotificationBinding](proactivecachingobjectnotificationbinding-data-type-assl.md), [ProactiveCachingQueryBinding](querybinding-data-type-assl.md)|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  

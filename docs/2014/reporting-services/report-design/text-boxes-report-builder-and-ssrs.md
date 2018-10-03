@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10134"
@@ -15,16 +13,15 @@ f1_keywords:
 - "10120"
 - sql12.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ec2d4d435145a86e5f14e8110e40ef03d4c4a1cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19c2f599a00548ed85853720c0aad86d38950c74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238531"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222521"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caselle di testo (Generatore report e SSRS)
   In genere si pensa a una casella di testo come a una casella autonoma contenente testo in un'area quale [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. In Generatore report, alcune caselle di testo sono di questo tipo e consentono di visualizzare un testo letterale per titoli, descrizioni ed etichette o un testo dinamico basato sulle espressioni. Tuttavia anche in tutte le celle di una tabella o di una matrice (area dati Tablix) è contenuta una casella di testo che può essere formattata esattamente come le caselle di testo autonome di un report.  
@@ -38,7 +35,7 @@ ms.locfileid: "37238531"
   
  Le espressioni in una casella di testo possono contenere testo letterale, puntare a un campo del database o calcolare dati. Tutte le espressioni vengono visualizzate come testo segnaposto per consentire la formattazione di numeri, colori e altre proprietà relative all'aspetto. È inoltre possibile combinare segnaposti e testo letterale nella stessa casella di testo.  
   
- È possibile formattare il testo in qualsiasi casella di testo con più tipi di carattere, colori, stili e azioni. Per altre informazioni, vedere [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
+ È possibile formattare il testo in qualsiasi casella di testo con più tipi di carattere, colori, stili e azioni. Per altre informazioni, vedere [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

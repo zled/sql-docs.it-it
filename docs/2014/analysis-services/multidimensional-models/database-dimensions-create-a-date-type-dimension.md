@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1e38812dbdff6ecf36bd0c1398ce733d29af6e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1b842c891f69672511450ccaa389ca6ada01675
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315089"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218681"
 ---
 # <a name="create-a-date-type-dimension"></a>Creare una dimensioni di tipo Date
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] una dimensione temporale è un tipo di dimensione i cui attributi rappresentano periodi di tempo, ovvero anni, semestri, trimestri, mesi e giorni. Questi periodi in una dimensione temporale offrono livelli di granularità basati sul tempo per l'analisi e la generazione di report. Gli attributi sono organizzati in gerarchie e la granularità della dimensione temporale è determinata principalmente dalle necessità aziendali e di generazione di report per i dati cronologici. Per la maggior parte dei dati finanziari e sulle vendite, ad esempio, nelle applicazioni di Business Intelligence viene utilizzata una granularità mensile o trimestrale.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - memory [SQL Server], buffers
 - ft crawl bandwidth option
 ms.assetid: e5864ad9-92f5-43b5-95de-46d68ded8694
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8f4242b94699831815709196fa76d6291ff04597
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 34ae9ddc8f9b2626ecf51f917a4f6cd345f6bb06
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159202"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214439"
 ---
 # <a name="ft-crawl-bandwidth-server-configuration-option"></a>Opzione di configurazione del server ft crawl bandwidth
   L'opzione **ft crawl bandwidth** consente di specificare la dimensione massima consentita per il pool di buffer di memoria di grandi dimensioni, ovvero dei buffer di memoria di 4 MB. Il valore del parametro **max** specifica il numero massimo di buffer che deve essere gestito in un pool di buffer di grandi dimensioni tramite lo strumento di gestione della memoria del servizio full-text. Se il valore **max** è uguale a zero, non esiste alcuna limitazione per il numero massimo di buffer consentito in un pool di buffer di grandi dimensioni.  
