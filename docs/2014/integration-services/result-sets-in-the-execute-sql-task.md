@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
-caps.latest.revision: 30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1ff4dd56ea104d32a2821bc826ad8919712aea1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25f917dc3831f0915b87c4a93dbb4197a3d25df0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217561"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053367"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Set di risultati nell’attività Esegui SQL
   La restituzione di un set di risultati all'attività Esegui SQL in un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dipende dal tipo di comando SQL utilizzato dall'attività. Se si utilizzano ad esempio le istruzioni SELECT, viene in genere restituito un set di risultati, mentre questo non avviene per le istruzioni INSERT.  
@@ -93,7 +90,7 @@ ms.locfileid: "37217561"
   
 -   [Impostare le proprietà di un'attività o di un contenitore](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Mapping di set di risultati a variabili in un'attività Esegui SQL](control-flow/execute-sql-task.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  

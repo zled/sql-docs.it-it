@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
-caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4e0a3cc0ce4cb29b34ac67d3becfc966217dfb1d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b5865ecbca2ea5577fccf0c28faeabf27b9573d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196741"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053141"
 ---
 # <a name="report-history-page-report-manager"></a>Pagina Cronologia report (Gestione report)
   La pagina Cronologia report consente di visualizzare gli snapshot del report generati e archiviati nel corso del tempo. A seconda delle opzioni impostate nel server di report, è possibile che la cronologia del report includa solo gli snapshot più recenti.  

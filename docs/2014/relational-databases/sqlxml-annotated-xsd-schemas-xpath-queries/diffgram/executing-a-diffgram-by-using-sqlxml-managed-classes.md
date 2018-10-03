@@ -1,14 +1,12 @@
 ---
-title: Esecuzione di un DiffGram con SQLXML classi gestite | Microsoft Docs
+title: Esecuzione di un DiffGram con SQLXML classi gestite | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DiffGrams [SQLXML], Managed Classes
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Managed Classes [SQLXML], DiffGrams
 - SQLXML, Managed Classes
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79b8446bb09dafdf7eff01380b20b21fdbb9b80e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 238d4871c8c738dbb7038b182800ea7eee645d65
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266269"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057121"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Esecuzione di un DiffGram mediante classi gestite SQLXML
   In questo esempio viene illustrato come eseguire un file DiffGram nel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ambiente .NET Framework per applicare i dati degli aggiornamenti per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabelle usando le classi gestite SQLXML (Microsoft.Data.SqlXml).  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e056baf1edf447b0ed321406af12f9260dfcdd12
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48442ba8e5d17a652f60aaebb24040345bda474f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055391"
 ---
 # <a name="property-element-csdlbi"></a>Elemento Property (CSDLBI)
   L'elemento Property in CSDLBI è un tipo complesso che fornisce le aggiunte all'elemento Property di CSDL, a supporto dei modelli di dati di Business Intelligence.  
