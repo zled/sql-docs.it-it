@@ -4,23 +4,19 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- integration-services
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c96d380d5168a936dc5f4db51f2b52f68e30f49d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eadcee634436016626d6096544035e29c0d9c27e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599449"
 ---
 # <a name="user-roles"></a>Ruoli utente
   In questa sezione sono descritti i ruoli utente per il servizio Change Data Capture per Oracle di Attunity. I ruoli descritti sono ruoli del database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ruoli di Windows o ruoli del database Oracle.  

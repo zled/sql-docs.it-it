@@ -1,13 +1,11 @@
 ---
-title: Conversioni di tipi di dati | Documenti Microsoft
+title: Conversioni di tipi di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], conversions
@@ -16,24 +14,23 @@ helpviewer_keywords:
 - converting data types [ODBC]
 - C data types [ODBC], conversions
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0501e4bf627d8dafddfbf5020345d43135af9d6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 84710ffd69ea377c979adf94af1394d8436ef10b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911936"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786339"
 ---
-# <a name="data-type-conversions"></a>Conversioni di tipi di dati
-Dati possono essere convertiti da un tipo a altro in uno dei quattro volte: quando dati viene trasferiti dalla variabile di un'applicazione a un altro (C per C), all'invio dei dati in una variabile di applicazione a un parametro di istruzione C a SQL, quando i dati in una colonna del set di risultati viene restituiti una variabile di applicazione (SQL per C) e quando i dati vengono trasferiti dall'origine dati di una colonna a un altro (SQL to SQL).  
+# <a name="data-type-conversions"></a>Conversioni dei tipi di dati
+I dati possono essere convertiti da un tipo a altro in uno dei quattro volte: quando i dati vengono trasferiti dalla variabile di un'applicazione a un altro (C per C), quando i dati in una variabile di applicazione viene inviati a un parametro dell'istruzione C a SQL, quando i dati in una colonna del set di risultati vengono restituiti una variabile di applicazione (da SQL a C) e quando i dati vengono trasferiti dall'origine una dati colonna a un altro (SQL per SQL).  
   
- Qualsiasi conversione che si verifica quando i dati vengono trasferiti dalla variabile di un'applicazione a un altro è all'esterno dell'ambito di questo documento.  
+ Qualsiasi conversione che si verifica quando i dati vengono trasferiti dalla variabile di un'applicazione a un altro non rientra nell'ambito di questo documento.  
   
- Quando un'applicazione associa una variabile a un parametro di colonna o l'istruzione set di risultati, l'applicazione specifica in modo implicito una conversione del tipo di dati per la scelta del tipo di dati della variabile di applicazione. Si supponga, ad esempio, che una colonna contiene dati di tipo integer. Se l'applicazione associa una variabile integer per la colonna, specifica che non venga eseguita alcuna conversione; Se l'applicazione associa una variabile di caratteri per la colonna, specifica che i dati di essere convertita da integer in carattere.  
+ Quando un'applicazione si associa una variabile a un parametro di colonna o l'istruzione set di risultati, l'applicazione specifica in modo implicito una conversione del tipo di dati di sua scelta del tipo di dati della variabile dell'applicazione. Si supponga, ad esempio, che una colonna contiene dati di tipo integer. Se l'applicazione associa una variabile integer per la colonna, specifica che non venga eseguita alcuna conversione; Se l'applicazione associa una variabile di caratteri nella colonna, specifica che i dati di essere convertita da integer in carattere.  
   
- ODBC definisce la modalità di conversione dei dati tra i diversi tipi di dati SQL e C. In pratica, ODBC supporta tutte le conversioni ragionevole, ad esempio carattere da integer e integer in float e non supporta le conversioni in modo non corretto, ad esempio float alla data. I driver devono supportare tutte le conversioni per ogni tipo di dati SQL che supportano. Per un elenco completo delle conversioni tra tipi di dati SQL e C, vedere [la conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) e [la conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) appendice d: tipo di dati.  
+ ODBC definisce la modalità di conversione dei dati tra i diversi tipi di dati SQL e C. In sostanza, ODBC supporta tutte le conversioni ragionevole, ad esempio carattere da integer e integer in float e non supporta conversioni in modo non corretto, ad esempio float a oggi. I driver devono supportare tutte le conversioni per ogni tipo di dati SQL che supportano. Per un elenco completo delle conversioni tra tipi di dati SQL e C, vedere [conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) e [convertendo i dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) nell'appendice d: i tipi di dati.  
   
- ODBC definisce anche una funzione scalare per la conversione dei dati da un tipo di dati SQL a un altro. Il **CONVERTIRE** viene eseguito il mapping di funzione scalare dal driver per la funzione scalare sottostante o funzioni definite per eseguire conversioni nell'origine dati. Poiché viene eseguito il mapping di questa funzione per funzioni specifiche del sistema DBMS, ODBC non definisce il funzionamento di queste conversioni o quali conversioni devono essere supportate. Un'applicazione consente di individuare quali conversioni sono supportate da un particolare driver e l'origine dati tramite le opzioni SQL_CONVERT **SQLGetInfo**. Per ulteriori informazioni sul **CONVERTIRE** funzione scalare, vedere [sequenze di Escape ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) e [esplicita funzione di conversione di tipi di dati](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md).
+ ODBC definisce anche una funzione scalare di convertire i dati da un tipo di dati SQL a un altro. Il **CONVERTIRE** viene eseguito il mapping di funzione scalare dal driver per la funzione scalare sottostante o le funzioni definite per eseguire conversioni nell'origine dati. Poiché questa funzione viene mappata a funzioni specifiche del sistema DBMS, ODBC non definisce come funzionano queste conversioni o quali le conversioni devono essere supportate. Un'applicazione consente di individuare quali conversioni vengono supportate da una determinata origine dati e driver tramite le opzioni SQL_CONVERT **SQLGetInfo**. Per altre informazioni sul **CONVERTIRE** funzione scalare, vedere [sequenze di Escape in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) e [funzione di conversione tipo di dati esplicita](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md).

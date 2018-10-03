@@ -1,14 +1,11 @@
 ---
-title: sysmail_event_log (Transact-SQL) | Documenti Microsoft
+title: sysmail_event_log (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_event_log
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_event_log database mail view
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b6c43f41415f97d87cddaf2c7b57e1e8250aa65f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221072"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781099"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni messaggio di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito dal sistema di Posta elettronica database. Il termine messaggio in questo contesto indica un messaggio ad esempio di errore, non un messaggio di posta elettronica. Configura il **livello di registrazione** parametro utilizzando il **configurazione parametri di sistema** la finestra di dialogo di configurazione guidata posta elettronica Database o [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)stored procedure per determinare i messaggi restituiti.  
+  Contiene una riga per ogni messaggio di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito dal sistema di Posta elettronica database. Il termine messaggio in questo contesto indica un messaggio ad esempio di errore, non un messaggio di posta elettronica. Configura il **a livello di registrazione** parametro usando la **configurazione parametri di sistema** la finestra di dialogo di configurazione guidata posta elettronica Database, o il [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)stored procedure per determinare quali messaggi vengono restituiti.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,13 +42,13 @@ ms.locfileid: "33221072"
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  
 |**last_mod_user**|**sysname**|Autore dell'ultima modifica della riga. Per i messaggi di posta elettronica corrisponde all'utente che ha inviato il messaggio. Per i messaggi generati dal programma esterno Posta elettronica database corrisponde al contesto utente del programma.|  
   
-## <a name="remarks"></a>Osservazioni  
- Quando la risoluzione dei problemi di posta elettronica Database, eseguire la ricerca di **sysmail_event_log** visualizzazione per gli eventi correlati a errori di posta elettronica. Alcuni messaggi, ad esempio quelli relativi agli errori del programma esterno Posta elettronica database, non sono associati a messaggi di posta elettronica specifici. Per cercare gli errori correlati a messaggi di posta elettronica specifici, cercare il **mailitem_id** della posta elettronica non riuscita nel **sysmail_faileditems** consente di visualizzare e quindi cercare la **sysmail_event_log**per i messaggi correlati a tale **mailitem_id**. Quando viene restituito un errore da **sp_send_dbmail**, messaggio di posta elettronica non viene inviato al sistema di posta elettronica Database e l'errore non viene visualizzato in questa vista.  
+## <a name="remarks"></a>Note  
+ La risoluzione dei problemi di posta elettronica Database, eseguire la ricerca di **sysmail_event_log** vista per gli eventi correlati a errori di posta elettronica. Alcuni messaggi, ad esempio quelli relativi agli errori del programma esterno Posta elettronica database, non sono associati a messaggi di posta elettronica specifici. Per cercare gli errori correlati a specifici messaggi di posta elettronica, cercare il **mailitem_id** del messaggio in questione il **sysmail_faileditems** visualizzare e quindi cercare il **sysmail_event_log**per i messaggi relativi a quella **mailitem_id**. Quando viene restituito un errore dal **sp_send_dbmail**, messaggio di posta elettronica non viene inviato al sistema di posta elettronica Database e non verrà visualizzato l'errore in questa visualizzazione.  
   
- Quando i tentativi di recapito con singoli account hanno esito negativo, i messaggi di errore rimangono visualizzati durante i successivi tentativi di invio fino a quando il recapito dell'elemento di posta non ha definitivamente esito positivo o negativo. In caso di esito positivo finale, tutti gli errori accumulati vengono registrati come avvisi separati tra cui la **account_id**. Pertanto, è possibile che vengano visualizzati messaggi di avviso anche se il messaggio di posta elettronica è stato inviato. In caso di errore di recapito finale, tutti gli avvisi precedenti vengono registrati come messaggio di errore senza un **account_id**, dal momento che tutti gli account non sono riuscita.  
+ Quando i tentativi di recapito con singoli account hanno esito negativo, i messaggi di errore rimangono visualizzati durante i successivi tentativi di invio fino a quando il recapito dell'elemento di posta non ha definitivamente esito positivo o negativo. In caso di esito positivo finale, tutti gli errori accumulati registrati come avvisi separati tra cui il **account_id**. Pertanto, è possibile che vengano visualizzati messaggi di avviso anche se il messaggio di posta elettronica è stato inviato. In caso di errore finale del recapito, tutti gli avvisi precedenti registrati come messaggio di errore senza un' **account_id**, dal momento che tutti gli account hanno avuto esito negativo.  
   
-## <a name="permissions"></a>Autorizzazioni  
- È necessario essere un membro del **sysadmin** ruolo predefinito del server o **DatabaseMailUserRole** ruolo del database per accedere a questa vista. I membri di **DatabaseMailUserRole** che non sono membri del **sysadmin** ruolo, è possibile visualizzare solo gli eventi per i messaggi di posta elettronica che hanno inviato personalmente.  
+## <a name="permissions"></a>Permissions  
+ È necessario essere un membro del **sysadmin** ruolo predefinito del server o il **DatabaseMailUserRole** ruolo del database per accedere a questa visualizzazione. I membri del **DatabaseMailUserRole** che non fanno parte di **sysadmin** ruolo, possono visualizzare solo gli eventi di posta elettronica che hanno inviato personalmente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   

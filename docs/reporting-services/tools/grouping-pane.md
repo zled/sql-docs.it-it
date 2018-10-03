@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10033"
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7f3fdd3f0050a5ab8261706d5cc0f74b5920f28d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3609d778973a5813790378c0595b3d51b55be013
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770879"
 ---
 # <a name="grouping-pane"></a>Riquadro di raggruppamento
 Durante la progettazione di report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , nel riquadro Raggruppamento vengono visualizzati i gruppi di righe e di colonne dell'area dati Tablix selezionata. Il riquadro Raggruppamento non è disponibile per le aree dati Grafico e Misuratore. Il riquadro di raggruppamento è costituito da un riquadro Gruppi di righe e da un riquadro Gruppi di colonne e include due modalità: predefinita e avanzata. Nella modalità predefinita è riportata una visualizzazione gerarchica dei membri dinamici dei gruppi di righe e di colonne. Nella modalità avanzata vengono visualizzati sia i membri dinamici che quelli statici dei gruppi di righe e di colonne. Un gruppo è un set di dati denominato che deriva da un set di dati del report visualizzato in un'area dati. I gruppi sono organizzati in gerarchie che includono membri statici e dinamici. Per altre informazioni, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  

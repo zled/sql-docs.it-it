@@ -1,31 +1,28 @@
 ---
-title: Funzione SQLGetPoolID | Documenti Microsoft
+title: Funzione SQLGetPoolID | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetPoolID function [ODBC]
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09e2b9b8176c333b893c5cf7ce9157516b2b368d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 39b3d3d1ecdc21acee8b238f56cede0a59146bd2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917446"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740059"
 ---
-# <a name="sqlgetpoolid-function"></a>SQLGetPoolID (funzione)
+# <a name="sqlgetpoolid-function"></a>Funzione SQLGetPoolID
 **Conformità**  
- Introdotta: versione ODBC standard 3,81 conformità: ODBC  
+ Versione introdotta: Conformità 3,81 standard ODBC: ODBC  
   
  **Riepilogo**  
  **SQLGetPoolID** recupera l'ID del pool.  
@@ -43,20 +40,20 @@ SQLRETURN  SQLGetPoolID (
  [Input] Handle del token che contiene tutte le informazioni di connessione.  
   
  *pPoolID*  
- [Output] L'ID del pool, viene utilizzato per identificare un set di connessioni che possono essere usati indifferentemente (possibilmente che richiedono una reimpostazione aggiuntiva).  
+ [Output] L'ID del pool, che viene usato per identificare un set di connessioni che possono essere usati indifferentemente (l'operazione può richiedere una reimpostazione aggiuntiva).  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLGetPoolID** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, gestione Driver utilizzerà un **HandleType** di SQL_HANDLE_DBC_INFO_TOKEN e **gestire** di *hDbcInfoToken*.  
+ Quando **SQLGetPoolID** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, gestione Driver userà una **HandleType** di SQL_HANDLE_DBC_INFO_TOKEN e un **gestire** del *hDbcInfoToken*.  
   
-## <a name="remarks"></a>Osservazioni  
- **SQLGetPoolID** viene utilizzata per ottenere l'ID del pool dato un set di informazioni di connessione (da **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**, e  **SQLSetConnectInfo**). Questo pool di ID viene utilizzato per identificare un set di connessioni che possono essere usati indifferentemente (possibilmente che richiedono una reimpostazione aggiuntiva). L'ID del pool da utilizzare per identificare il pool di connessioni per il gruppo di connessioni.  
+## <a name="remarks"></a>Note  
+ **SQLGetPoolID** viene usato per ottenere l'ID del pool in base a un insieme di informazioni di connessione (da **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**, e  **SQLSetConnectInfo**). Questo pool di ID viene usato per identificare un set di connessioni che possono essere usati indifferentemente (l'operazione può richiedere una reimpostazione aggiuntiva). L'ID del pool da utilizzare per identificare il pool di connessioni per il gruppo di connessioni.  
   
- Ogni volta che un driver restituisce SQL_ERROR o SQL_INVALID_HANDLE, gestione Driver restituisce l'errore all'applicazione (in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
+ Ogni volta che un driver restituisce SQL_ERROR o SQL_INVALID_HANDLE, gestione Driver restituisce l'errore all'applicazione (in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) oppure [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Ogni volta che un driver restituisce SQL_SUCCESS_WITH_INFO, gestione Driver otterrà le informazioni di diagnostica da *hDbcInfoToken*e restituisce SQL_SUCCESS_WITH_INFO all'applicazione in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)e [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Ottiene le informazioni di diagnostica da ogni volta che un driver restituisce SQL_SUCCESS_WITH_INFO, gestione Driver *hDbcInfoToken*e restituiscono SQL_SUCCESS_WITH_INFO all'applicazione in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)e [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
  Le applicazioni non devono chiamare direttamente questa funzione. Un driver ODBC che supporta il pool di connessioni compatibile con il driver deve implementare questa funzione.  
   

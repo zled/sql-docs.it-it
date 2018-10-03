@@ -1,32 +1,29 @@
 ---
-title: Esempio di metodo (VC + +) Resync | Documenti Microsoft
+title: Risincronizzare l'esempio di metodo (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Resync method [ADO], VC++ example
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80a5e39daa31bd781fbeba0f2a3814fca05f5041
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: abd354021f589260304681ebc45634e7406e538d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281300"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649809"
 ---
-# <a name="resync-method-example-vc"></a>Metodo esempio Resync (VC + +)
-In questo esempio viene illustrato l'utilizzo di [Resync](../../../ado/reference/ado-api/resync-method.md) metodo per aggiornare i dati in un recordset statico.  
+# <a name="resync-method-example-vc"></a>Esempio del metodo Resync (VC++)
+In questo esempio viene illustrato come utilizzare il [Risincronizza](../../../ado/reference/ado-api/resync-method.md) metodo per aggiornare i dati in un recordset statico.  
   
 ```  
 // Resync_Method_Sample.cpp  

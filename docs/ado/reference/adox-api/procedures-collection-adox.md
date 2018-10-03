@@ -1,13 +1,11 @@
 ---
-title: Raccolta di procedure (ADOX) | Documenti Microsoft
+title: Raccolta di oggetti procedure (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,45 +14,44 @@ f1_keywords:
 helpviewer_keywords:
 - Procedures collection [ADOX]
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2690c2911fbd4824937c7153ba681cd5d77b703c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 60d967c6ace03180ae596a3e7f45c830d4bec54b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286660"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718099"
 ---
-# <a name="procedures-collection-adox"></a>Raccolta di procedure (ADOX)
-Contiene tutti [procedura](../../../ado/reference/adox-api/procedure-object-adox.md) gli oggetti di un catalogo.  
+# <a name="procedures-collection-adox"></a>Raccolta Procedures (ADOX)
+Contiene tutti [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md) gli oggetti di un catalogo.  
   
-## <a name="remarks"></a>Remarks  
- Il [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) metodo per un **procedure** è univoco in ADOX insieme. È possibile effettuare le operazioni seguenti:  
+## <a name="remarks"></a>Note  
+ Il [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) metodo per un **procedure** raccolta sia univoca per ADOX. È possibile effettuare le operazioni seguenti:  
   
--   Aggiungere una nuova stored procedure alla raccolta con il **Append** metodo.  
+-   Aggiungere una nuova stored procedure alla raccolta con il **Append** (metodo).  
   
- Le proprietà e i metodi rimanenti sono standard per le raccolte di ADO. È possibile effettuare le operazioni seguenti:  
+ Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile effettuare le operazioni seguenti:  
   
--   Accedere a una routine nella raccolta con il [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
+-   Accedere a una routine nell'insieme con il [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
   
--   Restituire il numero di procedure contenuti nella raccolta con il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà.  
+-   Restituisce il numero di procedure contenute nella raccolta con il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà.  
   
--   Rimuovere una stored procedure dalla raccolta con il [eliminare](../../../ado/reference/adox-api/delete-method-adox-collections.md) metodo.  
+-   Rimuovere una procedura dalla raccolta con il [eliminare](../../../ado/reference/adox-api/delete-method-adox-collections.md) (metodo).  
   
--   Aggiornare gli oggetti nella raccolta in modo da riflettere lo schema del database corrente con il [aggiornamento](../../../ado/reference/ado-api/refresh-method-ado.md) metodo.  
+-   Aggiornare gli oggetti nella raccolta in modo da riflettere lo schema del database corrente con il [Aggiorna](../../../ado/reference/ado-api/refresh-method-ado.md) (metodo).  
   
- In questa sezione contiene l'argomento seguente.  
+ In questa sezione contiene gli argomenti seguenti.  
   
 -   [Proprietà, metodi ed eventi della raccolta di oggetti Index](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comando e l'esempio di proprietà CommandText (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Raccolta di parametri, esempio di proprietà di comando (Visual Basic)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
+ [Esempio di proprietà CommandText (VB) e comandi](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
+ [Raccolta di parametri, esempio di proprietà Command (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [Procedure di esempio del metodo Append (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
  [Procedure di esempio del metodo Delete (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Procedure di esempio del metodo Refresh (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
- [Proprietà di raccolta di procedure, metodi ed eventi](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
- [Oggetto del catalogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Gli eventi, metodi e proprietà dell'insieme di procedure](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
+ [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Oggetto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)

@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: cf2b724b-4ca7-470a-8dd7-fa95b1e060a4
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 60ad2e0967236d6d15e4de01abfdfa8b8aa5fa73
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: d7b6a8a48bedfc2ecd17660eb8743e89ee94e978
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394447"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607412"
 ---
 # <a name="installing-ssma-components-on-sql-server-db2tosql"></a>Installazione di componenti SSMA in SQL Server (DB2ToSQL)
 In questa versione di SSMA non è necessario per un'installazione separata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del pacchetto di estensioni di SSMA, che supporta la migrazione dei dati e i provider per abilitare la connettività da server a server DB2.  

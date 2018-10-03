@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Key Management
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-caps.latest.revision: 45
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: c0537173f3b3750c56ef7e4ef2b582df162f54df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a13deff4d15d38286c943ce080faf6bf7ce1ca55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288667"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111241"
 ---
 # <a name="extensible-key-management-ekm"></a>Extensible Key Management (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce funzionalità di crittografia dei dati insieme a *Extensible Key Management* (EKM), l'uso del provider di *API di crittografia Microsoft* (MSCAPI) per la crittografia e la generazione di chiavi. Le chiavi di crittografia per dati e la crittografia delle chiavi vengono create nei contenitori di chiave temporanei e devono essere esportate da un provider prima di essere archiviate nel database. Questo approccio consente la gestione delle chiavi che include una gerarchia delle chiavi di crittografia e un backup delle chiavi, che devono essere gestiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -135,7 +132,7 @@ DECRYPTION BY EKM_AKey1
 >   
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non supporta la firma di moduli con chiavi asimmetriche generate dal provider EKM.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Opzione di configurazione del server EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
  [Abilitare TDE usando EKM](enable-tde-on-sql-server-using-ekm.md)  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.finish.f1
 ms.assetid: 68a4dd5d-94d9-4a02-be31-949a6da0ef51
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 063863ec6ac25fcc698bbaa5514cf4c578235c66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 150007626cab59ab7905d369e8e50d7f1b001982
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102225"
 ---
 # <a name="completing-the-wizard-partition-wizard"></a>Completamento procedura guidata (Creazione guidata partizione)
   Usare la pagina **Completamento procedura guidata** per assegnare un nome alla partizione, definire la progettazione delle aggregazioni per la partizione ed eventualmente distribuire ed elaborare la partizione dopo aver completato la Creazione guidata partizione.  

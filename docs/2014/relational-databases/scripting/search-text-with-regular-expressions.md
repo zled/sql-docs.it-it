@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 000efcad2db89e05bbfac8e1471ccf4551bc1956
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2014aa68bee9e78477fb4ee9993053e13a33abe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298041"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077631"
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
   Le espressioni regolari costituiscono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile utilizzare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **di** .  
@@ -45,7 +42,7 @@ ms.locfileid: "37298041"
   
 |Espressione|Sintassi|Description|  
 |----------------|------------|-----------------|  
-|Qualsiasi carattere|,|Consente di ricercare un carattere qualsiasi, ad eccezione del carattere di interruzione riga.|  
+|Qualsiasi carattere|.|Consente di ricercare un carattere qualsiasi, ad eccezione del carattere di interruzione riga.|  
 |Zero o più|*|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il maggior numero di caratteri corrispondenti possibile.|  
 |Uno o più|+|Consente di ricercare almeno un'occorrenza dell'espressione precedente.|  
 |Inizio riga|^|Consente di vincolare la ricerca all'inizio di una riga.|  

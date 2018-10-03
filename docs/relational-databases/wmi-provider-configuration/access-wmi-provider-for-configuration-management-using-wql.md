@@ -1,14 +1,11 @@
 ---
-title: Provider WMI di accesso per la gestione della configurazione mediante WQL | Documenti Microsoft
+title: Accedere ai Provider WMI per Gestione configurazione usando WQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - query language [WMI]
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Configuration Management, WQL
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cece73ebb5402fe2f725fedbcdf7cdc833d08265
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e05bbb4a9d41f88c4c2981aff9a3565bbc14bb92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013178"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692829"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Accedere al provider WMI per la gestione della configurazione tramite WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +37,8 @@ ms.locfileid: "33013178"
   
 3.  Nel primo campo di testo digitare lo spazio dei nomi del provider WMI per Gestione computer: root\Microsoft\SqlServer\ComputerManagement11. Fare clic su **Connetti**.  
   
-4.  Fare clic su **Query**. Digitare una query che restituisca i servizi correnti in esecuzione nel computer locale: **selezionare \* da SqlService.** Fare clic su **Applica**.  
+4.  Fare clic su **Query**. Digitare una query che restituisca i servizi correnti in esecuzione nel computer locale: **seleziona \* da SqlService.** Fare clic su **Applica**.  
   
-5.  Ridefinire ulteriormente la query aggiungendo **dove ServiceName = "MSSQLSERVER"**.  
+5.  Ridefinire ulteriormente la query aggiungendo **in cui ServiceName = "MSSQLSERVER"**.  
   
   

@@ -1,28 +1,25 @@
 ---
-title: Connessione ai dati di un'origine o il Driver | Documenti Microsoft
+title: La connessione a una Data sorgente o il Driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03fbd4e94f47e300e309377ad28d933fc480c2a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8c468b71b4c4126386d75c02b368cba9965fe1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908566"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754609"
 ---
-# <a name="connecting-to-a-data-source-or-driver"></a>Connessione ai dati di un Driver o origine
-Un'applicazione può essere connesso a qualsiasi numero di driver e origini dati. Può trattarsi di un'ampia gamma di driver e origini dati, lo stesso driver e un'ampia gamma di origini dati o anche più connessioni allo stesso driver e origine dati.  
+# <a name="connecting-to-a-data-source-or-driver"></a>Connessione a un'origine dati o driver
+Un'applicazione può essere connesse a qualsiasi numero di driver e origini dati. Può trattarsi di un'ampia gamma di driver e origini dati, lo stesso driver e un'ampia gamma di origini dati o anche più connessioni allo stesso driver e origine dati.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

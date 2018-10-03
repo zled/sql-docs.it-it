@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], data sources
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - logins [Reporting Services]
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-caps.latest.revision: 112
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 021028f9c5039c04de522fe98b23f93a3b529eba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c162693777c7231b5c91a43f536b97c0b221f508
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292261"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060591"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Connessioni dati, origini dati e stringhe di connessione in Reporting Services
   Per includere i dati in un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report, è necessario innanzitutto creare *zdroje dat* e *i set di dati*. Questo argomento illustra il tipo di origini dati, come creare le origini dati e informazioni importanti relative alle credenziali delle origini dati. Un'origine dati include il tipo di origine dati, le informazioni di connessione e il tipo di credenziali da usare. Esistono due tipi di origini dati, ovvero incorporate e condivise. Un'origine dati incorporata viene definita nel report e viene utilizzata solo dal report specifico, mentre un'origine dati condivisa viene definita indipendentemente da un report e può essere utilizzata da più report. Per altre informazioni, vedere [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) e [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  

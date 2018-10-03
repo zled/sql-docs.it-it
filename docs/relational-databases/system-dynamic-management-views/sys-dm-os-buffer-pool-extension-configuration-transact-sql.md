@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_buffer_pool_extension_configuration
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_pool_extension_configuration dynamic management view
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecc569a1f112bba0ec49c46da77c1dbc29fcddab
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ef0eea139b491c565b8635daf69cefff61492688
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020019"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755839"
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +41,7 @@ ms.locfileid: "38020019"
 |state_description|**nvarchar**(60)|Descrive lo stato della funzionalità di estensione del pool di buffer. Ammette i valori Null.<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 1 = BUFFER POOL EXTENSION ENABLED|  
 |current_size_in_kb|**bigint**|Dimensione corrente del file di estensione del pool di buffer. Non ammette i valori Null.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="examples"></a>Esempi  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction marks [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - BEGIN TRAN...WITH MARK statement
 - two-phase commit
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3c7eef3ce7b20995297bab8a083ef4bcd59482fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 345584f406830689c4f0bec2a563314d798595a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313891"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073131"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>Utilizzare Transazioni contrassegnate per recuperare coerentemente i database correlati (Modello di recupero con registrazione completa)
   Le informazioni contenute in questo argomento sono rilevanti solo per i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che utilizzano i modelli di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  

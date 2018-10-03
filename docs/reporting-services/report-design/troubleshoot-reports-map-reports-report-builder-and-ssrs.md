@@ -4,17 +4,16 @@ ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c5626f940d091766f38d3e61faf79b2414e638a5
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9d68f689ebcf937acae4b1bf5579eb282c8e1932
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271296"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847509"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Risoluzione dei problemi relativi alle parti del report: report mappa (Generatore report e SSRS)
   È possibile che si verifichino problemi con le mappe in un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] quando si aggiunge una mappa o un livello mappa al report, quando si personalizza una mappa o un livello mappa esistente nel report, quando si visualizza in anteprima una mappa di un report o quando si pubblica un report con una mappa. Utilizzare le informazioni presenti in questo argomento per risolvere questi problemi.  

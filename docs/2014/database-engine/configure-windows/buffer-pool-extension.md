@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e143cbf9540aab467bd57a5c4f923df81d658fb0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21e055290abaf9edd4fffaa6b2179af70915086e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328416"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063301"
 ---
 # <a name="buffer-pool-extension"></a>Estensione pool di buffer
   Introdotta in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], l'estensione del pool di buffer offre l'integrazione diretta di una estensione di RAM non volatile (ossia, un'unità SSD) al pool di buffer del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per migliorare la velocità effettiva di I/O in maniera significativa. L'estensione del pool di buffer non è disponibile in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -96,7 +93,7 @@ ms.locfileid: "37328416"
 |sqlserver.buffer_pool_extension_pages_evicted|Viene attivato quando una pagina viene rimossa dal file di estensione del pool di buffer.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|  
 |sqlserver.buffer_pool_eviction_thresholds_recalculated|Viene attivato quando viene calcolata la soglia di eliminazione.|warm_threshold<br /><br /> cold_threshold<br /><br /> pages_bypassed_eviction<br /><br /> eviction_bypass_reason<br /><br /> eviction_bypass_reason_description|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |||  
 |-|-|  

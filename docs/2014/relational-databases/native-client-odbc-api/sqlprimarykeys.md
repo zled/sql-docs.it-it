@@ -1,28 +1,25 @@
 ---
-title: SQLPrimaryKeys | Microsoft Docs
+title: SQLPrimaryKeys | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLPrimaryKeys function
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e0e7ae6624bba3866796a3aa457e510abb26826
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 538b1a11962cf861aeaa1e95443f994b27feb87c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423740"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088661"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   Una tabella può includere una o più colonne possono essere usato come identificatori di riga univoci e le tabelle create senza un vincolo PRIMARY KEY restituiscono un set a SQLPrimaryKeys di risultati vuoto. La funzione ODBC [SQLSpecialColumns](sqlspecialcolumns.md) report possibili di identificatori per le tabelle senza chiavi primarie di riga.  

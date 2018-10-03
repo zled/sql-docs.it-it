@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.recordsetdest.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - destinations [Integration Services], Recordset
 - in-memory ADO recordsets [Integration Services]
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c42208733182a3347c243a0bf538b5b3e2f6d1c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dbfbf931bc28893b328ce4ac869278b012c6658c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304341"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063896"
 ---
 # <a name="recordset-destination"></a>recordset - destinazione
   La destinazione recordset crea e popola un recordset ADO in memoria. La forma del recordset è definita dall'input della destinazione recordset in fase di progettazione.  
@@ -48,7 +45,7 @@ ms.locfileid: "37304341"
   
  Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Usare una destinazione recordset](recordset-destination.md)  
   
   

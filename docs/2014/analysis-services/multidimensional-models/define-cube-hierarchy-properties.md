@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], multilevel
 - hierarchies [Analysis Services], cubes
 ms.assetid: 819d0a4e-7815-4332-a605-b07ca2ade6ac
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ebe3b4a45791a9e5a9e136fed4e228666c8e49e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b064db7ff0e496ea7a46085825afc202fced605
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289817"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087321"
 ---
 # <a name="define-cube-hierarchy-properties"></a>Definire le proprietà della gerarchia del cubo
   Le proprietà delle gerarchie dei cubi consentono di specificare impostazioni univoche per gerarchie definite dall'utente in dimensioni del cubo basate sulla stessa dimensione del database. Nella tabella seguente vengono descritte le proprietà della gerarchia di un cubo.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processprogress.f1
 ms.assetid: f3bd5278-3a83-4fd9-9903-e81bdd4b6892
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7ac5f499c857fda608fd9f6e66e9aa20f145312
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 056e29133faf174cadc790f71d999417e1eb4d84
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189228"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050651"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Stato elaborazione (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Stato elaborazione** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per monitorare l'elaborazione in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La finestra di dialogo **Stato elaborazione** viene visualizzata all'inizio dell'elaborazione in un oggetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

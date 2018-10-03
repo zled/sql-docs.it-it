@@ -5,22 +5,19 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ffe9b8d85b73797ace32b38059eb9129ac72d9a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: fbf7c8cdba74c9aa3aae158ec172f5a559384214
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309810"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773219"
 ---
 # <a name="building-a-knowledge-base"></a>Compilazione di una Knowledge Base
 
@@ -28,7 +25,7 @@ ms.locfileid: "35309810"
 
   Una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) è un repository di informazioni sui dati che consente di comprenderli e mantenerne l'integrità. Una Knowledge Base è costituita da domini ognuno dei quali rappresenta i dati in un campo dati. La Knowledge Base viene utilizzata da DQS per eseguire la pulizia dei dati e la deduplicazione su un database. Per preparare la Knowledge Base per la pulizia dei dati, è possibile eseguire un'analisi computerizzata di un campione di dati e gestire in modo interattivo i valori nei domini. DQS consente di importare informazioni, creare regole e relazioni, modificare direttamente valori di dati e sfruttare un database predefinito.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  In una Knowledge Base è possibile effettuare le operazioni seguenti:  
   
 |||  
@@ -39,7 +36,7 @@ ms.locfileid: "35309810"
 |Aggiungere informazioni a una Knowledge Base tramite l'individuazione delle informazioni, la gestione dei valori di dominio, l'aggiunta di criteri di corrispondenza, l'importazione di informazioni, di un dominio o di valori oppure l'utilizzo della Knowledge Base predefinita, Dati DQS.|[Aggiunta di informazioni a una Knowledge Base](../data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
 |Analizzare un campione di dati per i criteri di qualità dei dati.|[Eseguire l'individuazione di informazioni](../data-quality-services/perform-knowledge-discovery.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

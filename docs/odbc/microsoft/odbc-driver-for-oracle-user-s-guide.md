@@ -1,33 +1,30 @@
 ---
-title: Driver ODBC per Oracle utente&#39;Guida s | Documenti Microsoft
+title: Driver ODBC per Oracle utente&#39;Guida s | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8eeed38c323bb447d7d20b993898873448e3a8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2ba2ef38d52ff1f8152145ce8c1c3290b426209
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900806"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690999"
 ---
 # <a name="odbc-driver-for-oracle-user39s-guide"></a>Driver ODBC per Oracle utente&#39;Guida
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, utilizzare il driver ODBC fornito da Oracle.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare il driver ODBC fornito da Oracle.  
   
- Il Driver ODBC per la Guida dell'utente Oracle deve integrare la Guida del programma di installazione che è possibile accedere tramite il [Amministrazione origine dati ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
+ Il Driver ODBC per manuale dell'utente Oracle deve integrare la Guida all'installazione che è possibile accedere tramite il [Amministrazione origine dati ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
@@ -43,7 +40,7 @@ ms.locfileid: "32900806"
   
 -   [Configurazione del driver ODBC per Oracle](../../odbc/microsoft/configuring-the-odbc-driver-for-oracle.md)  
   
--   [Connessione a un'origine dati](../../odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md)  
+-   [La connessione a un'origine dati](../../odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md)  
   
 -   [Determinazione dei componenti Oracle installati](../../odbc/microsoft/determining-installed-oracle-components.md)  
   

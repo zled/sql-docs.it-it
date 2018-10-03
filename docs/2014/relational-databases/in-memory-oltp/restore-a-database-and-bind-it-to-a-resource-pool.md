@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: da39c50e33e894f4311fa4ab7472f60dfb626b8c
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: cb80b332b2da53a54547321ec8fd48e7d52e9b6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073161"
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>Ripristinare un database e associarlo a un pool di risorse
   Anche se si dispone di memoria sufficiente per ripristinare un database con tabelle ottimizzate per la memoria, è possibile seguire le procedure consigliate e associare il database a un pool di risorse denominato. Poiché il database deve essere già presente per poter essere associato al pool, il ripristino del database è un processo costituito da più passaggi. In questo argomento viene illustrato tale processo.  

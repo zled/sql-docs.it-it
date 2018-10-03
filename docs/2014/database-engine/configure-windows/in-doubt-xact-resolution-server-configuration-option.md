@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - distributed transactions [SQL Server], unresolved transactions
 - unresolved transactions
 - in-doubt xact resolution option
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 181b86ebbf41d95ade8928e47991f2183516961e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c30ca21d997d95058e034dbe36d601b601670a4f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225931"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058621"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>Opzione di configurazione del server in-doubt xact resolution
   L'opzione **in-doubt xact resolution** consente di controllare il risultato predefinito delle transazioni che non possono essere risolte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC). L'impossibilità di risolvere le transazioni potrebbe essere dovuta al tempo di inattività di MS DTC oppure a un risultato sconosciuto della transazione al momento del recupero.  

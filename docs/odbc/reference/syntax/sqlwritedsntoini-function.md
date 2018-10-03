@@ -1,13 +1,11 @@
 ---
-title: Funzione SQLWriteDSNToIni | Documenti Microsoft
+title: Funzione SQLWriteDSNToIni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLWriteDSNToIni
@@ -19,20 +17,19 @@ f1_keywords:
 helpviewer_keywords:
 - SQLWriteDSNToIni [ODBC]
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4a1ee3bdbdc14c01bf267c9dbb64ef10c93dfe1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f9eed345d3d6483cd1b47f8141e00d2a0164eb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918166"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680819"
 ---
-# <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni (funzione)
+# <a name="sqlwritedsntoini-function"></a>Funzione SQLWriteDSNToIni
 **Conformità**  
- Introdotta: versione ODBC 1.0  
+ Versione introdotta: ODBC 1.0  
   
  **Riepilogo**  
  **SQLWriteDSNToIni** aggiunge un'origine dati per le informazioni di sistema.  
@@ -51,28 +48,28 @@ BOOL SQLWriteDSNToIni(
  [Input] Nome dell'origine dati da aggiungere.  
   
  *lpszDriver*  
- [Input] Descrizione del driver (in genere il nome del DBMS associato) presentati agli utenti anziché il nome fisico del driver.  
+ [Input] Descrizione del driver (in genere il nome del sistema DBMS associati) presentato agli utenti anziché il nome del driver fisico.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di errore.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLWriteDSNToIni** restituisce FALSE, un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLWriteDSNToIni** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Si verificato un errore per cui si è verificato alcun errore di programma di installazione specifico.|  
-|ODBC_ERROR_INVALID_DSN|DSN non valido.|Il *lpszDSN* argomento contiene una stringa che non è valida per un DSN.|  
-|ODBC_ERROR_INVALID_NAME|Nome del driver o funzione di conversione non valido|Il *lpszDriver* argomento non valido.|  
-|ODBC_ERROR_REQUEST_FAILED|Richiesta non riuscita|Il programma di installazione non è stato possibile creare un DSN nel Registro di sistema.|  
-|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione: Impossibile eseguire la funzione a causa della mancanza di memoria.|  
+|ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
+|ODBC_ERROR_INVALID_DSN|DSN valido|Il *lpszDSN* argomento è contenuta una stringa che non è valida per un DSN.|  
+|ODBC_ERROR_INVALID_NAME|Nome del driver o traduttore non valido|Il *lpszDriver* argomento non è valido.|  
+|ODBC_ERROR_REQUEST_FAILED|Richiesta non è riuscita|Il programma di installazione non è stato possibile creare un DSN nel Registro di sistema.|  
+|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è stato possibile eseguire la funzione a causa della mancanza di memoria.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLWriteDSNToIni** aggiunge l'origine dati alla sezione [origini dati ODBC] le informazioni di sistema. Quindi crea una sezione specifica per l'origine dati e aggiunge una singola parola chiave (**Driver**) con il nome della DLL come valore del driver. Se la sezione specifica di origine dati esiste già, **SQLWriteDSNToIni** rimuove la sezione precedente prima di creare una nuova.  
+ **SQLWriteDSNToIni** aggiunge l'origine dati alla sezione [ODBC Zdroje dat] le informazioni di sistema. Quindi crea una sezione specifica per l'origine dati e aggiunge una singola parola chiave (**Driver**) con il nome della DLL come relativo valore del driver. Se la sezione specifica di origine dati esiste già, **SQLWriteDSNToIni** rimuove la precedente sezione prima di creare quella nuova.  
   
- Il chiamante di questa funzione è necessario aggiungere le parole chiave specifiche del driver e i valori per la sezione delle informazioni di sistema specifica all'origine dati.  
+ Il chiamante di questa funzione è necessario aggiungere tutte le parole chiave specifiche del driver e i valori per la sezione specifica origine dati le informazioni di sistema.  
   
- Se il nome dell'origine dati è l'impostazione predefinita, **SQLWriteDSNToIni** crea anche la sezione specifica di driver predefinito nelle informazioni di sistema.  
+ Se il nome dell'origine dati predefinita **SQLWriteDSNToIni** crea anche la sezione specifica di driver predefiniti nelle informazioni di sistema.  
   
  Questa funzione deve essere chiamata solo da una DLL di installazione.  
   
@@ -82,4 +79,4 @@ BOOL SQLWriteDSNToIni(
 |---------------------------|---------|  
 |Aggiunta, modifica o rimozione di un'origine dati|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)(nel programma di installazione DLL)|  
 |Aggiunta, modifica o rimozione di un'origine dati|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
-|Rimozione di un nome origine dati dalle informazioni di sistema|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|
+|Rimozione di un nome dell'origine dati dalle informazioni di sistema|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|

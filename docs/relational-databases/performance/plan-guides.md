@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - TEMPLATE plan guide
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - plan guides [SQL Server]
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
-caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2e63ff5a6aa32a8db7fb1e11aac6de7966e734a0
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 736ce0ea9cc700d9064a3fa5fc87a27f9b38e71a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34330122"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765760"
 ---
 # <a name="plan-guides"></a>Guide di piano
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +139,7 @@ sp_create_plan_guide
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>Effetto delle guide di piano sulla cache dei piani  
  La creazione di una guida di piano su un modulo rimuove il piano di query per il dato modulo dalla cache dei piani. La creazione di una guida di piano di tipo OBJECT o SQL su un batch rimuove il piano di query per un batch con lo stesso valore hash. La creazione di una guida di piano di tipo TEMPLATE rimuove tutti i batch a istruzione singola dalla cache dei piani all'interno del database.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Attività|Argomento|  
 |----------|-----------|  

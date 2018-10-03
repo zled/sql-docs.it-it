@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 59e63eac-8a7e-4d54-be1c-0633a9bf510d
-caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 6dc6a4e86435e2dffc7d681cedd78a3be6defa23
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a0d72eea63d104d4cd110df4a12a505675a41344
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392215"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732729"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>SQL Server Migration Assistant per Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per Sybase Adaptive Server Enterprise (ASE) è uno strumento per la migrazione di database ad ambiente del servizio app [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 o [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 oppure [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 o [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 oppure [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 oppure [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 in Windows e Linux (anteprima) o [!INCLUDE[msCoName](../../includes/msconame_md.md)] Azure SQL database. SSMA per Sybase converte gli oggetti di database ambiente del servizio App per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli oggetti di database, crea gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL di Azure, e quindi esegue la migrazione dei dati dall'ambiente del servizio app [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL di Azure.  

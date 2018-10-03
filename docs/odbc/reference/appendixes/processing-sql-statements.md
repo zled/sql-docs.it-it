@@ -1,43 +1,40 @@
 ---
-title: L'elaborazione delle istruzioni SQL | Documenti Microsoft
+title: L'elaborazione delle istruzioni SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], statement processing
 - SQL statements [ODBC], cursor library
 - cursor library [ODBC], statement processing
 ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 603cb680e2986d484074a43d14f56de210da0b4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d5aa94062f90154126fb18c3658adb39bb1d5c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909536"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689749"
 ---
-# <a name="processing-sql-statements"></a>L'elaborazione delle istruzioni SQL
+# <a name="processing-sql-statements"></a>Elaborazione di istruzioni SQL
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Si consiglia di utilizzare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
   
- La libreria di cursori ODBC passa tutte le istruzioni SQL direttamente al driver ad eccezione dei seguenti:  
+ La libreria di cursori ODBC restituisce tutte le istruzioni SQL direttamente al driver ad eccezione dei seguenti:  
   
--   Aggiornamento posizionato e istruzioni delete  
+-   Aggiornamento posizionato ed eliminare le istruzioni  
   
 -   **SELECT FOR UPDATE** istruzioni  
   
--   Istruzioni SQL in batch  
+-   Istruzioni SQL batch  
   
- Per eseguire l'aggiornamento posizionato e istruzioni delete e per posizionare il cursore su una riga per chiamare **SQLGetData** per tale riga, la libreria di cursori costruisce viene eseguita un'istruzione che identifica la riga.  
+ Per eseguire l'aggiornamento posizionato ed eliminare le istruzioni e posizionare il cursore su una riga per chiamare **SQLGetData** per quella riga, la libreria di cursori costruisce viene eseguita un'istruzione che identifica la riga.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

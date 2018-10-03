@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - role switching [SQL Server]
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2d489ef9df3d6b1d54e34ccfc3ec1a9d190f816b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0def160bcbff26bb41d6041a244e7be6b25461b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251393"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071081"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Gestione di account di accesso e di processi dopo un cambio di ruolo (SQL Server)
   Quando si distribuisce una soluzione di recupero di emergenza o a disponibilità elevata per un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è importante riprodurre le informazioni più significative archiviate per il database nei database **master** o **msdb** . In genere, tra queste informazioni sono inclusi i processi del database primario/principale e gli account di accesso di utenti o processi necessari per la connessione al database. È consigliabile duplicare queste informazioni in qualsiasi istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene ospitato un database secondario/mirror. Se possibile, dopo il cambio di ruolo, è opportuno riprodurre le informazioni a livello di programmazione nel nuovo database primario/principale.  

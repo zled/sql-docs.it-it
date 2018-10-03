@@ -4,29 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server]
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ba4b3db83dd88dfebf540fb85cdfdff20fabbf4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: bc14368f5fc6e2c9b168fd17f31a103a22f46b4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059310"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617889"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Creare, Costruire e Istanze geografiche di Query
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -181,13 +177,13 @@ ms.locfileid: "43059310"
  [STArea &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a> Vuoto  
- Un'istanza *empty***geography** non contiene punti. La lunghezza delle istanze **LineString, CircularString**, **CompoundCurve**e **MultiLineString** vuote è pari a 0. L'area delle istanze **Polygon, CurvePolygon** e **MultiPolygon** vuote è pari a 0.  
+ Un'istanza _vuota_ di tipo **geography** non contiene punti. La lunghezza delle istanze **LineString, CircularString**, **CompoundCurve**e **MultiLineString** vuote è pari a 0. L'area delle istanze **Polygon, CurvePolygon** e **MultiPolygon** vuote è pari a 0.  
   
  **Per determinare se un'istanza è vuota**  
  [STIsEmpty &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a> Chiusura  
- Un'istanza *closed***geography** è una figura i cui punti di inizio e di fine corrispondono. Le istanze**Polygon** sono considerate chiuse. Le istanze**Point** non sono considerate chiuse.  
+ Un'istanza **geography** _chiusa_ è una figura i cui punti di inizio e di fine corrispondono. Le istanze**Polygon** sono considerate chiuse. Le istanze**Point** non sono considerate chiuse.  
   
  Un anello è un'istanza **LineString** semplice chiusa.  
   

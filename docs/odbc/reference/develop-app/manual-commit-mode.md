@@ -1,13 +1,11 @@
 ---
-title: Modalità di Commit manuale | Documenti Microsoft
+title: Modalità di Commit manuale | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -17,18 +15,17 @@ helpviewer_keywords:
 - commit modes [ODBC]
 - transactions [ODBC], rolling back
 ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fde932df4d3eaa8e9ae3cceb2f28b6511dfb32d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1952d4185c80a3b49b7742a9dba1f3d8d41a6ca6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911686"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667919"
 ---
-# <a name="manual-commit-mode"></a>Modalità di Commit manuale
-*In modalità di commit manuale* le applicazioni in modo esplicito devono completare le transazioni chiamando **SQLEndTran** per eseguirne il commit o il rollback. Si tratta della modalità di transazione normale per la maggior parte dei database relazionali.  
+# <a name="manual-commit-mode"></a>Modalità di commit manuale
+*In modalità di commit manuale* applicazioni devono completare in modo esplicito le transazioni chiamando **SQLEndTran** per eseguirne il commit o il rollback. Si tratta della modalità di transazione normale per la maggior parte dei database relazionali.  
   
- Le transazioni in ODBC non debbano essere avviato in modo esplicito. In alternativa, in modo implicito inizia una transazione ogni volta che viene avviata l'applicazione funziona nel database. Se l'origine dati richiede può avviare le transazioni esplicite, il driver necessario fornirlo ogni volta che l'applicazione esegue un'istruzione che richiedono una transazione e non è presente alcuna transazione corrente.
+ Le transazioni in ODBC non sono necessario essere avviato in modo esplicito. Al contrario, viene avviata una transazione in modo implicito ogni volta che viene avviata l'applicazione opera nel database. Se l'origine dati è necessario avviare le transazioni esplicite, il driver necessario specificare ogni volta che l'applicazione esegue un'istruzione che richiedono una transazione e Nessuna transazione corrente.

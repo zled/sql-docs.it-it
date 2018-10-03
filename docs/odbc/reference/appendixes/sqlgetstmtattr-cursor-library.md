@@ -1,33 +1,30 @@
 ---
-title: SQLGetStmtAttr (libreria di cursori) | Documenti Microsoft
+title: SQLGetStmtAttr (libreria di cursori) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetStmtAttr function [ODBC], Cursor Library
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a19b39e238cf3ab2b0f2665f15e44d8f3916fc25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f9eef3ceba6fed1315d68038299640c772e92c9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750789"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr (libreria di cursori)
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Si consiglia di utilizzare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
   
- In questo argomento viene illustrato l'utilizzo del **SQLGetStmtAttr** funzione nella libreria di cursori. Per informazioni generali su **SQLGetStmtAttr**, vedere [funzione SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
+ In questo argomento viene illustrato l'utilizzo dei **SQLGetStmtAttr** funzione nella libreria di cursori. Per informazioni generali sul **SQLGetStmtAttr**, vedere [funzione SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
  La libreria di cursori supporta i seguenti attributi di istruzione con **SQLGetStmtAttr**:  
   

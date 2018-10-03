@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 90efc26ea3833722e730bb3d3f36bb1d55350d37
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6c3f7551c731dd8be32918f8c4fab2628f0204e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843921"
 ---
 # <a name="report-datasets-ssrs"></a>Set di dati del report (SSRS)
   Per aggiungere dati a un rapporto, è necessario creare set di dati. Ogni set di dati rappresenta il set di risultati dall'esecuzione di un comando di query su un'origine dati. Le colonne del set di risultati sono la raccolta di campi. Le righe del set di risultati sono i dati. Un set di dati non contiene i dati effettivi. Un set di dati contiene le informazioni necessarie per recuperare un set di dati specifico da un'origine dati.  

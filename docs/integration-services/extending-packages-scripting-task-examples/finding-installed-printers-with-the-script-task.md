@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -24,15 +19,15 @@ helpviewer_keywords:
 - finding printers [SQL Server]
 - Script task [Integration Services], printers
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc93afccb18193412047e30694ead989cdb666a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5124267732f3fadd70b29487194bb8d514c6f4c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699059"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>Ricerca di stampanti installate con l'attività Script
   La destinazione finale dei dati trasformati dai pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è spesso costituita da un report stampato. Lo spazio dei nomi **System.Drawing.Printing** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornisce le classi da usare con le stampanti.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Nell'esempio seguente vengono individuate le stampanti installate nel server che supportano carta in formato Legal (utilizzato negli Stati Uniti). Il codice per controllare i formati della carta supportati è incapsulato in una funzione privata. Per consentire di tenere traccia del proprio stato mentre controlla le impostazioni per ogni stampante, lo script utilizza il metodo <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> per generare un messaggio informativo per le stampanti con formato della carta Legal e un avviso per le stampanti senza questo formato. Questi messaggi vengono visualizzati nella finestra **Output** dell'IDE di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) quando si esegue il pacchetto nella finestra di progettazione.  
   
 #### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  

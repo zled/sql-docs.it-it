@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.columnchart.f1
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
-caps.latest.revision: 18
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 49d3ad4fbd21db0eaa7588cd54a03ee9c613077c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a6ce4cb57a7ee3329bb3eb123a23b740ba5b156c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308141"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085831"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>Configura visualizzatore dati (scheda Grafico a colonne)
   Utilizzare la scheda **Istogramma** della finestra di dialogo **Configura visualizzatore dati** per specificare una colonna da visualizzare in forma di barre in un grafico. Il numero di barre indica il numero di valori di dati discreti nella colonna, mentre l'altezza della barra indica il numero di occorrenze di ogni valore. Il grafico riflette il contenuto di un solo buffer.  

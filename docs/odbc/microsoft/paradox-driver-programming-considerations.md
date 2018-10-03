@@ -1,13 +1,11 @@
 ---
-title: Considerazioni sulla programmazione di Driver Paradox | Documenti Microsoft
+title: Considerazioni sulla programmazione dei Driver Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Paradox driver [ODBC]
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Paradox driver
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 327e952b-e7d5-4209-9423-f4b49cea272f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46712459f073ae27a2c14d67a41ea018a98b2823
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 574246d7587a15d5d13efcbc2f2cb48108907c75
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900746"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793719"
 ---
-# <a name="paradox-driver-programming-considerations"></a>Considerazioni sulla programmazione di Driver Paradox
+# <a name="paradox-driver-programming-considerations"></a>Considerazioni sulla programmazione dei driver Paradox
 Questa sezione contiene i seguenti argomenti:  
   
 -   [Impostazione delle opzioni a livello di codice per il driver Paradox](../../odbc/microsoft/setting-options-programmatically-for-the-paradox-driver.md)  
@@ -38,4 +35,4 @@ Questa sezione contiene i seguenti argomenti:
 -   [Altre informazioni sulla programmazione dei driver Paradox](../../odbc/microsoft/other-paradox-driver-programming-details.md)  
   
 > [!NOTE]  
->  L'accesso a file Paradox ISAM tramite driver di Database Desktop ODBC richiede l'installazione del motore di database Borland.
+>  L'accesso ai file ISAM Paradox tramite i driver di Database Desktop ODBC richiede l'installazione del motore di database Borland.

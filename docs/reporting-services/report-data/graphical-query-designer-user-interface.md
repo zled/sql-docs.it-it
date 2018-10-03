@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -18,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6aeff0f3d7f49a8f74da7fa5303b337cc34b5efc
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: eaa7c799c6897403b085eb55acf7de3e4247aa77
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272843"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844647"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interfaccia utente della finestra Progettazione query con interfaccia grafica
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dispone di due finestre Progettazione query, una con interfaccia grafica e una basata su testo, per la creazione di query che consentano di recuperare i dati da un database relazionale per un set di dati del report in Progettazione report. Usare la finestra Progettazione query con interfaccia grafica per compilare in modo interattivo una query e visualizzare i risultati per origine dati di tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB e ODBC. Usare la finestra Progettazione query basata su testo per specificare più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , la sintassi di una query complessa o del comando, nonché query basate su espressioni. Per altre informazioni, vedere [Interfaccia utente di Progettazione query basata su testo](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c). Per altre informazioni sull'uso di specifici tipi di origine dati, vedere [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  

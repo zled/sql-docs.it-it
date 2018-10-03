@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_update_collection_set (Transact-SQL) | Documenti Microsoft
+title: sp_syscollector_update_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62867f22c044a42c40499e0a1143557621931db8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f9e7ba855bde4caa04efea0411857705eb4bf976
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261427"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702739"
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,8 +62,8 @@ sp_syscollector_update_collection_set
  [  **@name =** ] '*nome*'  
  Nome del set di raccolta. *nome* viene **sysname** e deve avere un valore se *collection_set_id* è NULL.  
   
- [  **@new_name =** ] '*nuovo_nome*'  
- Nuovo nome per il set di raccolta. *nuovo_nome* viene **sysname**, e se utilizzato, non può essere una stringa vuota. *nuovo_nome* devono essere univoci. Per un elenco dei nomi dei set di raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_sets.  
+ [  **@new_name =** ] '*new_name*'  
+ Nuovo nome per il set di raccolta. *new_name* viene **sysname**, e se utilizzato, non può essere una stringa vuota. *new_name* devono essere univoci. Per un elenco dei nomi dei set di raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_sets.  
   
  [  **@target =** ] '*destinazione*'  
  Riservato per utilizzi futuri.  
@@ -79,7 +75,7 @@ sp_syscollector_update_collection_set
   
  1 - Modalità non in cache. La raccolta e il caricamento dei dati seguono la stessa pianificazione. Specificare la modalità non in cache per la raccolta ad hoc o snapshot.  
   
- Se si modifica dalla modalità non in cache alla modalità cache (0), è necessario anche specificare *valore schedule_uid* o *schedule_name*.  
+ Se si modificano dalla modalità non in cache alla modalità cache (0), è necessario specificare anche *valore schedule_uid* oppure *schedule_name*.  
   
  [  **@days_until_expiration=** ] *days_until_expiration*  
  Numero di giorni per cui i dati raccolti vengono salvati nel data warehouse di gestione. *days_until_expiration* viene **smallint**. *days_until_expiration* deve essere 0 o un numero intero positivo.  
@@ -95,7 +91,7 @@ sp_syscollector_update_collection_set
   
  Per ottenere *valore schedule_uid*, eseguire query sulla tabella di sistema sysschedules.  
   
- Quando *collection_mode* è impostato su 0, *valore schedule_uid* o *schedule_name* deve essere specificato. Quando *collection_mode* è impostato su 1, *valore schedule_uid* o *schedule_name* viene ignorato se specificato.  
+ Quando *collection_mode* è impostata su 0, *valore schedule_uid* oppure *schedule_name* deve essere specificato. Quando *collection_mode* è impostato su 1, *valore schedule_uid* oppure *schedule_name* viene ignorato se specificato.  
   
  [  **@schedule_name =** ] '*schedule_name*'  
  Nome della pianificazione. *schedule_name* viene **sysname** e ammette valori null. Se specificato, *valore schedule_uid* deve essere NULL. Per ottenere *schedule_name*, eseguire query sulla tabella di sistema sysschedules.  
@@ -124,19 +120,19 @@ sp_syscollector_update_collection_set
  Il valore predefinito per *logging_level* è 1.  
   
  [  **@description =** ] '*descrizione*'  
- Descrizione del set di raccolta. *Descrizione* viene **nvarchar(4000**.  
+ Descrizione del set di raccolta. *Descrizione* viene **nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syscollector_update_collection_set nel contesto del database di sistema msdb.  
   
- Entrambi *collection_set_id* o *nome* deve avere un valore, non possono essere entrambi NULL. Per ottenere questi valori, eseguire una query sulla vista di sistema syscollector_collection_sets.  
+ Entrambi *collection_set_id* oppure *nome* deve avere un valore, non possono essere entrambi NULL. Per ottenere questi valori, eseguire una query sulla vista di sistema syscollector_collection_sets.  
   
  Se il set di raccolta è in esecuzione, è possibile aggiornare solo *valore schedule_uid* e *descrizione*. Per arrestare il set di raccolta, usare [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire questa procedura, è necessaria l'appartenenza al ruolo predefinito del database dc_admin o dc_operator (con autorizzazione EXECUTE). Anche se dc_operator è in grado di eseguire questa stored procedure, i membri di questo ruolo possono modificare solo determinate proprietà. Le proprietà seguenti possono essere modificate solo da dc_admin:  
   
 -   @new_name  

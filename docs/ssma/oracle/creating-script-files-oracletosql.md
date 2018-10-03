@@ -1,56 +1,53 @@
 ---
-title: Creazione di file di Script (OracleToSQL) | Documenti Microsoft
+title: Creazione di file di Script (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Script File Creation, Configuring Oracle Console Settings
 - Script File Creation, Non-Configurable option
 - Script File Creation, Script File Validation
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
-caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: b0f6d6d82be4c548dc6c1a14a6e8a94c36f0261f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 879aaaf33365cb7453c1047c3f9b2408edee10f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777057"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846775"
 ---
-# <a name="creating-script-files-oracletosql"></a>Creazione di file di Script (OracleToSQL)
-Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e se è necessario creare il file di valore della variabile e il file di connessione del server.  
+# <a name="creating-script-files-oracletosql"></a>Creazione di file di script (OracleToSQL)
+Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se è necessario creare il file di valore della variabile e il file di connessione del server.  
   
-Il file di script può essere suddiviso in tre sezioni, dei quali..,:  
+Il file di script può essere suddivisi in tre sezioni, una visualizzazione dei..,:  
   
 1.  **configurazione:** consente all'utente di impostare i parametri di configurazione per l'applicazione console.  
   
-2.  **Server:** consente all'utente di impostare l'origine/destinazione le definizioni del server. Questo può essere anche in un file di connessione server separato.  
+2.  **Server:** consente all'utente di impostare le definizioni del server di origine/destinazione. Può essere anche in un file di connessione server separato.  
   
 3.  **i comandi script:** consente all'utente di eseguire i comandi del flusso di lavoro SSMA.  
   
-Ogni sezione viene descritta in dettaglio di seguito:  
+Ogni sezione viene descritto in dettaglio di seguito:  
   
-## <a name="configuring-oracle-console-settings"></a>Configurazione delle impostazioni della Console Oracle  
+## <a name="configuring-oracle-console-settings"></a>Configurazione delle impostazioni di Console Oracle  
 Le configurazioni di uno script vengono visualizzate nel file di script della console.  
   
-Se viene specificato uno degli elementi nel nodo configurazione, vengono impostate come l'impostazione globale, ovvero sono applicabili per tutti i comandi di script. Tali elementi di configurazione possono essere impostati anche all'interno di ogni comando della sezione del comando script se l'utente desidera eseguire l'override dell'impostazione globale.  
+Se viene specificato uno degli elementi nel nodo di configurazione, sono configurate come l'impostazione globale, ovvero sono applicabili per tutti i comandi di script. Questi elementi di configurazione anche possono essere impostati all'interno di ogni comando nella sezione del comando script se l'utente desidera eseguire l'override dell'impostazione globale.  
   
 Le opzioni configurabili dall'utente includono:  
   
-1.  **Provider di finestra di output:** se i messaggi esclusione di attributo è impostato su 'true', le specifiche del comando messaggi non viene visualizzati nella console. La descrizione degli attributi è indicata di seguito:  
+1.  **Provider di finestra di output:** se sopprimere-messages attributo è impostato su 'true', la specifica del comando messaggi non visualizzati nella console. Di seguito è riportata la descrizione degli attributi:  
   
-    -   destinazione: Specifica se l'output è necessario ottenere stampato in un file o stdout. Questo è false per impostazione predefinita.  
+    -   destinazione: Specifica se l'output deve ottenere stampato in un file o stdout. Questo è false per impostazione predefinita.  
   
     -   nome del file: il percorso del file (facoltativo).  
   
-    -   i messaggi di esclusione: Elimina i messaggi sulla console. Questo è 'false' per impostazione predefinita.  
+    -   eliminare-messages: evita la visualizzazione dei messaggi della console. Ciò è 'false' per impostazione predefinita.  
   
     **Esempio:**  
   
@@ -87,13 +84,13 @@ Le opzioni configurabili dall'utente includono:
     </…All commands…>  
     ```  
   
-2.  **Il Provider di connessione della migrazione di dati:** consente di specificare quali server di origine/destinazione viene considerato per la migrazione dei dati.  Origine utilizzare-ultimo usato indica l'ultimo server di origine utilizzato viene utilizzato per la migrazione dei dati. Allo stesso modo destinazione utilizzare-ultimo usato indica l'ultimo server di destinazione utilizzato viene utilizzato per la migrazione dei dati. L'utente può anche specificare il server (origine o destinazione) utilizzando il server di origine di attributi o i server di destinazione.  
+2.  **Provider di connessione dati della migrazione:** specifica che il server di origine/destinazione è da considerare per la migrazione dei dati.  Origine-usare-last-used indica che viene utilizzato l'ultimo server di origine usati per la migrazione dei dati. Allo stesso modo destinazione Usa-ultimo usato indica che viene utilizzato l'ultimo server di destinazione usata per la migrazione dei dati. L'utente può anche specificare il server (origine o destinazione) con il server di origine degli attributi o server di destinazione.  
   
-    Solo uno o l'altro attributo specificato può essere utilizzato ad esempio:  
+    Solo uno o l'altro attributo specificato può essere utilizzato, ad esempio:  
   
     -   origine utilizzare-ultimo usato = "true" (impostazione predefinita) o server di origine = "source_servername"  
   
-    -   destinazione utilizzare-ultimo usato = "true" (impostazione predefinita) o server di destinazione = "target_servername"  
+    -   destinazione Usa-ultimo usato = "true" (impostazione predefinita) o server di destinazione = "target_servername"  
   
     **Esempio:**  
   
@@ -118,11 +115,11 @@ Le opzioni configurabili dall'utente includono:
     </migrate-data>  
     ```  
   
-3.  **Popup di Input dell'utente:** in questo modo la gestione degli errori, quando gli oggetti vengono caricati dal database. L'utente fornisce le modalità di input e, in caso di errore, la console prosegue come se l'utente specifica.  
+3.  **Popup di Input utente:** in questo modo la gestione degli errori, quando gli oggetti vengono caricati dal database. L'utente fornisce le modalità di input e in caso di errore, la console prosegue come se l'utente specifica.  
   
-    Le modalità di includono:  
+    Le modalità comprendono:  
   
-    -   **chiedere-utente -** chiede di continue('yes') o generato un errore ('no').  
+    -   **chiedere-utente -** chiede all'utente continue('yes') o generato un errore ('no').  
   
     -   **errore -** la console viene visualizzato un errore e arresta l'esecuzione.  
   
@@ -151,15 +148,15 @@ Le opzioni configurabili dall'utente includono:
     </connect-target-database>  
     ```  
   
-4.  **Ristabilire la connessione del Provider:** in questo modo all'utente di impostare la riconnessione ignori le impostazioni degli errori di connessione. Può essere impostato per i server di origine e di destinazione.  
+4.  **Ristabilire la connessione del Provider:** ciò consente all'utente di impostare la riconnessione ignori le impostazioni degli errori di connessione. Può essere impostato per i server di origine e di destinazione.  
   
     Le modalità di riconnessione sono:  
   
-    -   riconnettersi-last-usato-server: se la connessione non è attiva, tenta di ristabilire la connessione e l'ultimo server utilizzato al massimo 5 volte.  
+    -   ristabilire la connessione-last-utilizzato-server: se la connessione non è attiva, tenta di riconnettersi all'ultimo server utilizzato al massimo 5 volte.  
   
     -   generare un errore: se la connessione non è attiva, viene generato un errore.  
   
-    La modalità predefinita è **genera un errore**.  
+    La modalità predefinita è **generare un errore**.  
   
     **Esempio:**  
   
@@ -203,7 +200,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   Errore: la console viene visualizzato un errore e arresta l'esecuzione.  
   
-    -   sovrascrivere: sovrascrive i valori dell'oggetto esistente. Questa azione viene eseguita per impostazione predefinita.  
+    -   sovrascrittura: sovrascrive i valori di oggetto esistente. Questa azione viene eseguita per impostazione predefinita.  
   
     -   ignorare: la console ignora gli oggetti che esistono già nel database  
   
@@ -228,7 +225,7 @@ Le opzioni configurabili dall'utente includono:
     </convert-schema>  
     ```  
   
-6.  **Provider di prerequisiti non riuscito:** in questo modo all'utente di gestire tutti i prerequisiti necessari per l'elaborazione di un comando. Per impostazione predefinita, la modalità strict è 'false'. Se è impostata su 'true', un'eccezione viene generato l'errore soddisfare i prerequisiti.  
+6.  **Provider di prerequisiti non riuscito:** ciò consente all'utente di gestire tutti i prerequisiti necessari per l'elaborazione di un comando. Per impostazione predefinita, la modalità strict è 'false'. Se è impostata su 'true', eccezione generato per la mancata soddisfino i prerequisiti.  
   
     **Esempio:**  
   
@@ -240,11 +237,11 @@ Le opzioni configurabili dall'utente includono:
     </output-providers>  
     ```  
   
-7.  **Operazione di arresto:** durante l'operazione intermedio, se l'utente desidera arrestare l'operazione, quindi **'Ctrl + C'** tasti di scelta rapida può essere utilizzato. SSMA per Oracle Console rimarrà in attesa di completamento dell'operazione e termina l'esecuzione della console.  
+7.  **Operazione di arresto:** durante l'operazione a metà, se l'utente desidera arrestare l'operazione, quindi **'Ctrl + C'** tasti di scelta rapida può essere utilizzato. SSMA per la Console Oracle attenderà il completamento dell'operazione e termina l'esecuzione della console.  
   
-    Se l'utente desidera arrestare l'esecuzione immediatamente, quindi, **'Ctrl + C'** tasti di scelta rapida è possibile premere nuovamente per la chiusura improvvisa di applicazione Console di SSMA.  
+    Se l'utente desidera arrestare l'esecuzione immediatamente, quindi **'Ctrl + C'** tasti di scelta rapida è possibile premere nuovamente per la chiusura improvvisa di applicazione Console SSMA.  
   
-8.  **Provider di stato di avanzamento:** segnala lo stato di avanzamento di ogni comando della console. Questo è disabilitato per impostazione predefinita. Gli attributi di creazione di rapporti di stato includono quanto segue:  
+8.  **Provider di stato di avanzamento:** segnala lo stato di avanzamento di ogni comando della console. Questo è disabilitato per impostazione predefinita. Gli attributi di report di stato includono quanto segue:  
   
     -   off  
   
@@ -287,22 +284,22 @@ Le opzioni configurabili dall'utente includono:
     </…All commands…>  
     ```  
   
-9. **Livello di dettaglio del logger:** set di accedere a livello di dettaglio. Questo corrisponde all'opzione di tutte le categorie nell'interfaccia utente. Per impostazione predefinita, il livello di dettaglio del log è "error".  
+9. **Livello di dettaglio del logger:** set log a livello di dettaglio. Questo corrisponde all'opzione di tutte le categorie nell'interfaccia utente. Per impostazione predefinita, il livello di dettaglio del log è "error".  
   
     Le opzioni a livello di logger includono:  
   
-    -   Errore irreversibile: vengono registrati i messaggi solo-errore irreversibile.  
+    -   Errore irreversibile: vengono registrati solo-errore irreversibile.  
   
     -   Errore: vengono registrati solo i messaggi di errore ed errore irreversibile.  
   
-    -   Avviso: tutti i livelli, ad eccezione dei messaggi di debug e le informazioni vengono registrati.  
+    -   Avviso: tutti i livelli ad eccezione dei messaggi di debug e le informazioni vengono registrati.  
   
-    -   Info: tutti i livelli, ad eccezione del fatto che vengono registrati i messaggi di debug.  
+    -   Info: tutti i livelli ad eccezione del fatto che vengono registrati i messaggi di debug.  
   
     -   eseguire il debug: tutti i livelli di messaggi registrati.  
   
     > [!NOTE]  
-    > Messaggi obbligatori vengono registrati in qualsiasi livello.  
+    > Obbligatori vengono registrati a qualsiasi livello.  
   
     **Esempio:**  
   
@@ -323,13 +320,13 @@ Le opzioni configurabili dall'utente includono:
     </…All commands…>  
     ```  
   
-10. **Password crittografata di sostituzione:** se 'true', la password come testo non crittografato specificato è nell'area di definizione di server dei file di connessione del server o nel file di script, le sostituzioni archiviata spazio di archiviazione protetto, se presente. Se non viene specificata in testo non crittografato, l'utente viene richiesto di immettere la password.  
+10. **Password crittografata di sostituzione:** se 'true', la password come testo non crittografato specificato nella sezione Definizione server dei file di connessione del server o nel file di script, gli override la password crittografata archiviata in archivio protetto se esiste. Se non viene specificata alcuna password in testo non crittografato, l'utente viene richiesto di immettere la password.  
   
-    In questo caso, si verificano due casi:  
+    Qui si verificano due casi:  
   
-    1.  Se ignorare l'opzione è **false**, l'ordine di ricerca sarà protetto archiviazione -&gt;File Script -&gt;File connessione Server -&gt; Chiedi conferma all'utente.  
+    1.  Se ignorare l'opzione viene **false**, l'ordine della ricerca sarà protetto archiviazione -&gt;Script di File -&gt;File Server di connessione -&gt; Chiedi conferma all'utente.  
   
-    2.  Se l'opzione di override è **true**, sarà l'ordine di ricerca di File di Script -&gt;File connessione Server -&gt;Chiedi conferma all'utente.  
+    2.  Se l'opzione di override è **true**, l'ordine della ricerca sarà File di Script -&gt;File Server di connessione -&gt;Chiedi conferma all'utente.  
   
     **Esempio:**  
   
@@ -341,19 +338,19 @@ Le opzioni configurabili dall'utente includono:
     </output-providers>  
     ```  
   
-È l'opzione non è configurabile.  
+L'opzione non configurabile è:  
   
--   **Numero massimo di tentativi di riconnessione:** quando una connessione stabilita verifica il timeout o interruzioni a causa di errori di rete, il server è necessario per essere riconnessa. I tentativi di riconnessione è consentiti un massimo di **5** tentativi dopo il quale, la console viene eseguita automaticamente la riconnessione. La funzionalità di riconnessione automatica consente di ridurre il lavoro richiesto nell'eseguire nuovamente lo script.  
+-   **Numero massimo di tentativi di riconnessione:** quando una connessione stabilita verifica il timeout o interruzioni a causa di errori di rete, il server è necessario la riconnessione. I tentativi di riconnessione sono consentiti al massimo **5** tentativi dopo questa operazione, la console esegue automaticamente la riconnessione. La funzionalità di riconnessione automatica riduce l'impegno nell'eseguire nuovamente lo script.  
   
 ## <a name="server-connection-parameters"></a>Parametri di connessione server  
-Parametri di connessione di server possono essere definiti nel file di script o nel file di connessione del server. Consultare il [creano i file di connessione del Server &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) sezione per ulteriori dettagli.  
+Parametri di connessione server possono essere definiti nel file di script o nel file di connessione del server. Consultare il [creazione di file di connessione del Server &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) sezione per altri dettagli.  
   
 ## <a name="script-commands"></a>Comandi script  
-Il file script contiene una sequenza di comandi del flusso di lavoro di migrazione in formato XML. L'applicazione console SSMA elabora la migrazione nell'ordine i comandi visualizzati nel file di script.  
+Il file script contiene una sequenza di comandi del flusso di lavoro migrazione in formato XML. L'applicazione console SSMA elabora la migrazione nell'ordine i comandi visualizzati nel file di script.  
   
-Ad esempio, di segue la gerarchia di una migrazione di dati tipici di una tabella specifica in un database Oracle: Schema -&gt; tabella.  
+Ad esempio, una migrazione tipica dei dati di una tabella specifica in un database Oracle segue la gerarchia dei: Schema -&gt; tabella.  
   
-Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file script è più o meno statica con le informazioni sulla variabile contenuti in un [creazione di file con valori di variabile &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md) oppure, in una sezione separata all'interno del file di script per i valori delle variabili.  
+Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file script è più o meno statico con informazioni sulle variabili contenute in un [creazione di file di valori di variabile &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md) oppure, in una sezione separata all'interno del file di script per i valori delle variabili.  
   
 **Esempio:**  
   
@@ -380,7 +377,7 @@ Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'appl
   
 </ssma-script-file>  
 ```  
-Modelli costituito da 3 file di script (per l'esecuzione di vari scenari di), file di valore della variabile e un file di connessione del server sono disponibili nella cartella Scripts Console di esempio di directory del prodotto:  
+Modelli costituito da 3 file script (per l'esecuzione di diversi scenari di), file di valore della variabile e un file di connessione del server sono disponibili nella cartella Scripts Console di esempio di directory del prodotto:  
   
 -   AssessmentReportGenerationSample.xml  
   
@@ -392,15 +389,15 @@ Modelli costituito da 3 file di script (per l'esecuzione di vari scenari di), fi
   
 -   ServersConnectionFileSample.xml  
   
-È possibile eseguire i modelli (file) dopo la modifica dei parametri visualizzati al suo interno per rilevanza.  
+È possibile eseguire i modelli (file) dopo la modifica dei parametri visualizzati al suo interno per pertinenza.  
   
-Elenco completo dei comandi di script è reperibile nella [in esecuzione la Console di SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+Elenco completo dei comandi di script è reperibile nel [esecuzione della Console SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
-## <a name="script-file-validation"></a>Convalida File di script  
-L'utente può facilmente convalidare il file di script nel file di definizione dello schema **'O2SSConsoleScriptSchema.xsd'** disponibile nella cartella 'Schemi'.  
+## <a name="script-file-validation"></a>Convalida del File script  
+L'utente può facilmente convalidare il file di script in base al file di definizione dello schema **'O2SSConsoleScriptSchema.xsd'** disponibile nella cartella "Schemi".  
   
 ## <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo nella console di gestione viene [creazione di file di valore variabile &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
+Il passaggio successivo in costi operativi console consiste [creazione di file di valore variabile &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Creazione di file di valore della variabile &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  

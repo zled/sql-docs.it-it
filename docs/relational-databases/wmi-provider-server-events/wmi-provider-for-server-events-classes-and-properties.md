@@ -1,30 +1,26 @@
 ---
-title: Provider WMI per eventi del Server classi e proprietà | Documenti Microsoft
+title: Provider WMI per eventi del Server classi e proprietà | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - event classes [WMI]
 - WMI Provider for Server Events, events listed
 - classes [WMI]
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3514bd676b6b84436141cdcf669cc6c8f33598e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b4c980a70772ed8e63065cc741326b8d497a29f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011318"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762059"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Classi e proprietà del provider WMI per eventi del server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,18 +30,18 @@ ms.locfileid: "33011318"
   
  In alternativa, è possibile fare riferimento allo schema dell'evento pubblicato [ http://schemas.microsoft.com/sqlserver ](http://go.microsoft.com/fwlink/?linkid=43100).  
   
- Ad esempio, facendo riferimento all'evento ALTER_DATABASE, si apprenderà che il relativo evento padre è DDL_SERVER_LEVEL_EVENTS e le relative proprietà sono **TSQLCommand** e **DatabaseName**. L'evento eredita inoltre le proprietà **SQLInstance**, **PostTime**, **ComputerName**, **SPID**, e **LoginName** . L'evento non dispone di eventi figli.  
+ Ad esempio, facendo riferimento all'evento ALTER_DATABASE, si apprenderà che il relativo evento padre è DDL_SERVER_LEVEL_EVENTS e le relative proprietà siano **TSQLCommand** e **DatabaseName**. L'evento eredita inoltre le proprietà **SQLInstance**, **PostTime**, **ComputerName**, **SPID**, e **LoginName** . L'evento non dispone di eventi figli.  
   
 > [!NOTE]  
->  Le stored procedure di sistema che eseguono operazioni di tipo DDL possono inoltre attivare le notifiche degli eventi. Testare le notifiche degli eventi per determinarne le risposte alle stored procedure di sistema eseguite. Ad esempio, l'istruzione CREATE TYPE e **sp_addtype** stored procedure consentono entrambe di attivare una notifica degli eventi creata in un evento CREATE_TYPE. Per ulteriori informazioni, vedere[eventi DDL](../../relational-databases/triggers/ddl-events.md).  
+>  Le stored procedure di sistema che eseguono operazioni di tipo DDL possono inoltre attivare le notifiche degli eventi. Testare le notifiche degli eventi per determinarne le risposte alle stored procedure di sistema eseguite. Ad esempio, l'istruzione CREATE TYPE e **sp_addtype** stored procedure attivano una notifica degli eventi creata in un evento CREATE_TYPE. Per altre informazioni, vedere[eventi DDL](../../relational-databases/triggers/ddl-events.md).  
   
  **Eventi Data Definition Language e gruppi di eventi**  
   
- ![Provider WMI per eventi evento albero](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "Provider WMI per la struttura di evento di eventi Server")  
+ ![Provider WMI per la struttura di eventi eventi di Server](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "Provider WMI per la struttura di eventi eventi di Server")  
   
- **Gli eventi di traccia e i gruppi di eventi**  
+ **Gli eventi di traccia e gruppi di eventi**  
   
- ![Gli eventi e gruppi di eventi di traccia](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "gli eventi e gruppi di eventi di traccia")  
+ ![Gli eventi e gruppi di eventi di traccia](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "traccia eventi e gruppi di eventi")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Provider WMI per concetti degli eventi Server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sequence number object, overview
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - sequence numbers [SQL Server]
 - sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 92a8365fe780da67a408ae1aa776ae97d0b4fa2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d0446aaf5508ad0d2655245f441d4da81a6c79c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162312"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106861"
 ---
 # <a name="sequence-numbers"></a>Numeri di sequenza
   Una sequenza è un oggetto associato a schema definito dall'utente che genera una sequenza di valori numerici in base alla specifica con la quale è stata creata la sequenza. La sequenza di valori numerici viene generata in ordine crescente o decrescente a un intervallo definito e può essere ripetuta (ciclicamente) in base alle esigenze. Le sequenze, a differenza delle colonne di identità, non sono associate a tabelle. In un'applicazione viene fatto riferimento a un oggetto sequenza per recuperare il relativo valore successivo. La relazione tra sequenze e tabelle è controllata dall'applicazione. È possibile che nelle applicazioni utente si faccia riferimento a un oggetto sequenza e vengano coordinate le chiavi dei valori di più righe e tabelle.  

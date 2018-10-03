@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - adding enumerations
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - repeating workflows
 - enumerations [Integration Services]
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
-caps.latest.revision: 38
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 039b9a1cd94b3baa207c5d738dc8ed2455bb9d74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39dea3ee955dea9a2d464d30a261993d7f72c827
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223730"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089571"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Aggiunta di un'enumerazione a un flusso di controllo
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include il contenitore Ciclo Foreach, un elemento del flusso di controllo che semplifica l'integrazione di un costrutto di ciclo per l'enumerazione di file e oggetti nel flusso di controllo di un pacchetto. Per altre informazioni, vedere [Contenitore Ciclo Foreach](control-flow/foreach-loop-container.md).  
@@ -37,10 +34,10 @@ ms.locfileid: "37223730"
 ### <a name="to-implement-a-foreach-loop-container-in-a-control-flow"></a>Per implementare un contenitore Ciclo Foreach in un flusso di controllo  
   
 1.  Aggiungere il contenitore Ciclo Foreach al pacchetto. Per altre informazioni, vedere [aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  ,  
+  .  
   
 2.  Aggiungere attività e contenitori al contenitore Ciclo Foreach. Per altre informazioni, vedere [aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  ,  
+  .  
   
 3.  Connettere le attività e i contenitori inclusi nel contenitore Ciclo Foreach tramite vincoli di precedenza. Per altre informazioni, vedere [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md).  
   

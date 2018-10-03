@@ -1,37 +1,34 @@
 ---
-title: 'Passaggio 5: DataControl è rendere utilizzabile (esercitazione su RDS) | Documenti Microsoft'
+title: 'Passaggio 5: DataControl viene reso utilizzabile (esercitazione su RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd2d73a97e8ba4b3e2c052bb5fa0e08fa7c2d941
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3f25c8276c6985e38f0beef46c8db7d60f6e16a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274570"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734509"
 ---
-# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Passaggio 5: DataControl è rendere utilizzabile (esercitazione di servizi desktop remoto)
-L'oggetto restituito **Recordset** l'oggetto è disponibile per l'utilizzo. È possibile esaminare, esplorare o modificarlo come qualsiasi altra **Recordset**. Cosa si può fare con il **Recordset** dipende dall'ambiente. Visual Basic e Visual C++ sono controlli visivi che è possono utilizzare un **Recordset** direttamente o indirettamente con l'aiuto di un controllo di dati di attivazione.  
+# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Passaggio 5: L'oggetto DataControl viene reso utilizzabile (esercitazione su RDS)
+L'oggetto restituito **Recordset** l'oggetto è disponibile per l'uso. È possibile esaminare, esplorare o modificarlo come qualsiasi altra **Recordset**. Operazioni eseguibili con il **Recordset** dipende dall'ambiente. Visual Basic e Visual C++ sono controlli visivi che è possono usare una **Recordset** direttamente o indirettamente con l'ausilio di un controllo dei dati di attivazione.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Ad esempio, se si visualizzano una pagina Web in Microsoft Internet Explorer, potrebbe essere desidera visualizzare il **Recordset** dati in un controllo visivo dell'oggetto. Controlli visivi in una pagina Web non possono accedere un **Recordset** direttamente l'oggetto. Tuttavia, possono accedere le **Recordset** mediante il [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md). Il **RDS. DataControl** diventa utilizzabile da un oggetto visivo controllare quando il relativo [SourceRecordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) è impostata sul **Recordset** oggetto.  
+ Ad esempio, se si visualizzano una pagina Web in Microsoft Internet Explorer, è possibile visualizzare il **Recordset** dati in un controllo visivo dell'oggetto. Non è possibile accedere ai controlli visivi in una pagina Web una **Recordset** direttamente l'oggetto. Tuttavia, essi possono accedere i **Recordset** dell'oggetto tramite il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md). Il **Servizi Desktop remoto. DataControl** diventa utilizzabile da un oggetto visivo controllare quando relativo [SourceRecordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) viene impostata il **Recordset** oggetto.  
   
- L'oggetto controllo visual deve avere il **DATASRC** parametro impostato sul **RDS. DataControl**e il relativo **DATAFLD** proprietà impostata su un **Recordset** campo (colonna) dell'oggetto.  
+ L'oggetto controllo visivo deve avere relativi **DATASRC** parametro impostato sul **Servizi Desktop remoto. DataControl**e la relativa **DATAFLD** impostata su un **Recordset** campo dell'oggetto (colonna).  
   
  In questa esercitazione, impostare il **SourceRecordset** proprietà:  
   
@@ -48,5 +45,5 @@ Sub RDSTutorial5()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Passaggio 6: Le modifiche vengono inviate al Server (esercitazione di servizi desktop remoto)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
+ [Passaggio 6: Le modifiche vengono inviate al Server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [Esercitazione su RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

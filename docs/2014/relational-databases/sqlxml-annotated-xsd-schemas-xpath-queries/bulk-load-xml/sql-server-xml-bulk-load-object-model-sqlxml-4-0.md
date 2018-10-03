@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk load [SQLXML], object model
@@ -32,16 +30,15 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1157095c31a62c86530f1e8ed669700357adf982
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fadb3edffa2d7e8030ecaaf95c6a5236aad67cd4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278887"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080531"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modello a oggetti per il caricamento bulk XML di SQL Server (SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modello a oggetti il caricamento Bulk XML è costituito da sqlxmlbulkload-oggetto. Questo oggetto supporta i metodi e le proprietà seguenti.  
@@ -144,7 +141,7 @@ ms.locfileid: "37278887"
  TempFilePath  
  Specifica il percorso del file in cui il caricamento bulk XML crea i file temporanei per un caricamento bulk in transazioni. Questa proprietà è utile solo quando la proprietà Transaction è impostata su TRUE. È necessario verificare che l'account di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzato per il caricamento bulk XML possa accedere a tale percorso. Se questa proprietà non è impostata, il caricamento bulk XML archivia i file temporanei nel percorso specificato nella variabile di ambiente TEMP.  
   
- Transazione  
+ Transaction  
  Specifica se il caricamento bulk deve essere eseguito come transazione. In questo caso, è garantito il rollback se il caricamento bulk ha esito negativo. Si tratta di una proprietà booleana. Se la proprietà è impostata su TRUE, il caricamento bulk viene eseguito in un contesto transazionale. La proprietà TempFilePath è utile solo quando transazione è impostata su TRUE.  
   
 > [!NOTE]  

@@ -1,13 +1,11 @@
 ---
-title: Proprietà CursorType (ADO) | Documenti Microsoft
+title: Proprietà CursorType (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,33 +13,32 @@ f1_keywords:
 helpviewer_keywords:
 - CursorType property [ADO]
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e516d185e1d143033003cd82d11273f2908ad12c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8fb037216c851a869cb19013a37fccd48145f284
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277360"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789679"
 ---
 # <a name="cursortype-property-ado"></a>Proprietà CursorType (ADO)
-Indica il tipo di cursore utilizzato in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
+Indica il tipo di cursore utilizzato una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
   
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Restituisce o imposta un [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) valore. Il valore predefinito è **adOpenForwardOnly**.  
+ Imposta o restituisce un [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) valore. Il valore predefinito è **adOpenForwardOnly**.  
   
-## <a name="remarks"></a>Remarks  
- Utilizzare il **CursorType** proprietà per specificare il tipo di cursore che deve essere utilizzato quando si apre il **Recordset** oggetto.  
+## <a name="remarks"></a>Note  
+ Usare la **CursorType** proprietà per specificare il tipo di cursore che deve essere utilizzato quando si apre il **Recordset** oggetto.  
   
- Solo l'impostazione **adOpenStatic** è supportato se il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) è impostata su **adUseClient**. Se è impostato un valore non supportato, verrà restituito alcun errore; è supportato il più vicino **CursorType** verrà utilizzato.  
+ Solo l'impostazione **adOpenStatic** è supportato se il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) viene impostata su **adUseClient**. Se è impostato un valore non supportato, non verrà generato alcun errore; è supportato il più vicino **CursorType** verrà utilizzato.  
   
- Se un provider non supporta il tipo di cursore richiesto, può restituire un altro tipo di cursore. Il **CursorType** proprietà verrà modificata per corrispondere al tipo di cursore effettivo in uso quando il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto è aperto. Per verificare le funzionalità specifiche del cursore restituito, utilizzare il [supporta](../../../ado/reference/ado-api/supports-method.md) metodo. Dopo aver chiuso la **Recordset**, **CursorType** proprietà viene ripristinata l'impostazione originale.  
+ Se un provider non supporta il tipo di cursore richiesto, può restituire un altro tipo di cursore. Il **CursorType** proprietà verrà modificato per corrispondere al tipo di cursore effettivo in uso quando il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto è aperto. Per verificare funzionalità specifiche del cursore restituito, usare il [supporta](../../../ado/reference/ado-api/supports-method.md) (metodo). Dopo aver chiuso il **Recordset**, il **CursorType** proprietà viene ripristinata l'impostazione originale.  
   
- Il grafico seguente illustra la funzionalità del provider (identificato da **supporta** costanti del metodo) necessaria per ogni tipo di cursore.  
+ Il grafico seguente mostra le funzionalità del provider (identificato da **supporta** costanti del metodo) richiesto per ogni tipo di cursore.  
   
-|Per un oggetto Recordset di questo CursorType|Il metodo supporta deve restituire True per tutte le costanti|  
+|Per un set di record di questo CursorType|Il metodo supporta deve restituire True per tutte le costanti|  
 |----------------------------------------|---------------------------------------------------------------------|  
 |**adOpenForwardOnly**|none|  
 |**adOpenKeyset**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
@@ -49,17 +46,17 @@ Indica il tipo di cursore utilizzato in un [Recordset](../../../ado/reference/ad
 |**adOpenStatic**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
   
 > [!NOTE]
->  Sebbene **supporta**(**adUpdateBatch**) può essere true per i cursori dinamici e forward-only, per gli aggiornamenti batch deve utilizzare un cursore statico o keyset. Impostare il [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) proprietà **adLockBatchOptimistic** e **CursorLocation** proprietà **adUseClient** per abilitare il cursore Servizio per OLE DB, che è necessario per gli aggiornamenti batch.  
+>  Sebbene **supporta**(**adUpdateBatch**) può essere true per i cursori dinamici e di tipo forward-only, per gli aggiornamenti di batch è necessario utilizzare un cursore statico o keyset. Impostare il [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) proprietà **adLockBatchOptimistic** e il **CursorLocation** proprietà **adUseClient** per abilitare il cursore Servizio per OLE DB, che è necessario per gli aggiornamenti in batch.  
   
- Il **CursorType** proprietà è di lettura/scrittura quando il **Recordset** è chiuso e di sola lettura quando è aperto.  
+ Il **CursorType** è di lettura/scrittura quando il **Recordset** viene chiuso e di sola lettura quando è aperta.  
   
 > [!NOTE]
->  **Utilizzo del servizio dati remoti** quando viene utilizzata su un lato client **Recordset** oggetto, il **CursorType** proprietà può essere impostata solo su **adOpenStatic**.  
+>  **Utilizzo del servizio dati remoto** quando viene usato in un client-side **Recordset** oggetto, il **CursorType** proprietà può essere impostata solo su **adOpenStatic**.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [CursorType, LockType ed esempio di proprietà EditMode (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
- [CursorType, LockType ed esempio di proprietà EditMode (VC + +)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
+ [CursorType, LockType ed EditMode esempio di proprietà (VC + +)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Metodo Supports](../../../ado/reference/ado-api/supports-method.md)

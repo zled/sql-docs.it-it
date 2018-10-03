@@ -4,28 +4,22 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c331f396f43534387803e71a22bd636c0d3d767c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c32d2f1bce255f9490bdb74d8f07a9ddbe7cc161
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984233"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681399"
 ---
-# <a name="data-migration-settings-sybasetosql"></a>Impostazioni di migrazione dati (SybaseToSQL)
+# <a name="data-migration-settings-sybasetosql"></a>Impostazioni di migrazione dei dati (SybaseToSQL)
   
-## <a name="data-migration-settings"></a>Impostazioni di migrazione dati  
+## <a name="data-migration-settings"></a>Impostazioni di migrazione dei dati  
 **Le impostazioni di migrazione dati** consente all'utente di scrivere query personalizzate per la migrazione dei dati.  
   
 -   Questa scheda è disponibile quando **opzioni di migrazione dati estese** è impostata su **mostrano** e viene nascosto quando l'impostazione è impostata su **nascondere** nelle impostazioni del progetto. Per altre informazioni sulle impostazioni di progetto di migrazione, vedere [impostazioni progetto (migrazione)](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924) .  

@@ -4,23 +4,19 @@ ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: installing-mds-in-an-alwayson-group-environment
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- master-data-services
-ms.tgt_pltfrm: ''
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7e3bd1f050b1f5652a12e74066345e8d20e8286f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d6625b72cadddb7c6f587f664ae5134730f9939
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692189"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Disponibilità elevata e ripristino di emergenza per Master Data Services
 

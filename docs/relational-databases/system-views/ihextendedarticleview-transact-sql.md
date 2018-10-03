@@ -1,18 +1,13 @@
 ---
-title: IHextendedArticleView (Transact-SQL) | Documenti Microsoft
+title: IHextendedArticleView (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - IHextendedArticleView_TSQL
 - IHextendedArticleView
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - IHextendedArticleView view
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2e0bcc294189f4902fd8d39de230166e6956dd53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ed3cb8ca49a22d9358941554cdef2030d584fb2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010378"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848959"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +46,10 @@ ms.locfileid: "33010378"
 |**filter_clause**|**ntext**|Clausola WHERE utilizzata per filtrare l'articolo in modo orizzontale.|  
 |**ins_cmd**|**nvarchar(255)**|Comando eseguito per un'operazione INSERT.|  
 |**pre_creation_cmd**|**tinyint**|Comando preliminare per l'istruzione DROP TABLE, DELETE TABLE o TRUNCATE:<br /><br /> **0** = none.<br /><br /> **1** = DROP.<br /><br /> **2** = DELETE.<br /><br /> **3** = TRONCAMENTO.|  
-|**status**|**tinyint**|Maschera di bit delle opzioni e dello stato dell'articolo, che può corrispondere al risultato dell'applicazione dell'operatore OR logico bit per bit a uno o più dei valori seguenti:<br /><br /> **1** = articolo è attivo.<br /><br /> **8** = Include il nome della colonna nelle istruzioni INSERT.<br /><br /> **16** = utilizza istruzioni con parametrizzata.<br /><br /> **24** = entrambi includono il nome della colonna nelle istruzioni INSERT e utilizza istruzioni con parametri.<br /><br /> Ad esempio, un articolo attivo che utilizza istruzioni con parametri avrebbe un valore di **17** in questa colonna. Il valore **0** significa che l'articolo è inattivo e proprietà aggiuntive non definite.|  
+|**status**|**tinyint**|Maschera di bit delle opzioni e dello stato dell'articolo, che può corrispondere al risultato dell'applicazione dell'operatore OR logico bit per bit a uno o più dei valori seguenti:<br /><br /> **1** = articolo è attivo.<br /><br /> **8** = Include il nome della colonna nelle istruzioni INSERT.<br /><br /> **16** = utilizza istruzioni con parametrizzata.<br /><br /> **24** = entrambi includono il nome della colonna nelle istruzioni INSERT e utilizza istruzioni con parametri.<br /><br /> Ad esempio, un articolo attivo che utilizza istruzioni con parametri potrebbe disporre di un valore **17** in questa colonna. Un valore pari **0** significa che l'articolo è inattivo e proprietà aggiuntive non definite.|  
 |**type**|**tinyint**|Tipo di articolo:<br /><br /> **1** = articolo basato su log.<br /><br /> **3** = articolo basato su log con filtro manuale.<br /><br /> **5** = articolo basato su log con vista manuale.<br /><br /> **7** = articolo basato su log con filtro manuale e vista manuale.|  
 |**upd_cmd**|**nvarchar(255)**|Comando eseguito per un'operazione UPDATE.|  
-|**schema_option**|**binary**|Specifica gli elementi da inserire nello script. Vedere [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) per un elenco delle opzioni dello schema supportate.|  
+|**schema_option**|**binary**|Specifica gli elementi da inserire nello script. Visualizzare [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) per un elenco delle opzioni dello schema supportate.|  
 |**dest_owner**|**sysname**|Proprietario dell'oggetto pubblicato nel database di destinazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
