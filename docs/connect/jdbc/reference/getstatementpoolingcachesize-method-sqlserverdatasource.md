@@ -1,30 +1,27 @@
 ---
-title: Metodo (SQLServerDataSource) getStatementPoolingCacheSize | Documenti Microsoft
+title: Metodo getStatementPoolingCacheSize (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ca786e4c902435b1d474c05f8947e3bc62424a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9b73cd6a660d5e03702a7b7aa2ed58d0e7817d6f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837691"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837989"
 ---
-# <a name="getstatementpoolingcachesize-method-sqlserverdatasource"></a>getStatementPoolingCacheSize metodo (SQLServerDataSource)
+# <a name="getstatementpoolingcachesize-method-sqlserverdatasource"></a>Metodo getStatementPoolingCacheSize (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Restituisce il valore di **statementPoolingCacheSize** proprietà di connessione. Restituisce le dimensioni della cache dell'istruzione preparata per la connessione. '0' indica che la memorizzazione nella cache non abilitata.
+  Restituisce il valore del **statementPoolingCacheSize** proprietà di connessione. Restituisce le dimensioni della cache dell'istruzione preparata per la connessione. '0' indica che la memorizzazione nella cache non abilitata.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,13 +30,13 @@ public boolean getStatementPoolingCacheSize();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Il **int** valore il **statementPoolingCacheSize** proprietà di connessione.  
+ Il **int** pari al **statementPoolingCacheSize** proprietà di connessione.  
 
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Osservazioni  
- Questo metodo è disponibile dal driver JDBC versione 6.4 e successivo.
+## <a name="remarks"></a>Remarks  
+ Questo metodo è disponibile dal driver JDBC versione 6.4 e progressiva.
  
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

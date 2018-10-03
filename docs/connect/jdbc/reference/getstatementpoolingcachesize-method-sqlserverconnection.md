@@ -1,13 +1,11 @@
 ---
-title: Metodo (SQLServerConnection) getStatementPoolingCacheSize | Documenti Microsoft
+title: Metodo getStatementPoolingCacheSize (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.getStatementPoolingCacheSize
@@ -15,18 +13,17 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5df19383c0de397e9fbedaae5a3346ca54f7fad2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 911137407c75d82164bf1ddd96eae91f618bb00b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838276"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841529"
 ---
-# <a name="getstatementpoolingcachesize-method-sqlserverconnection"></a>getStatementPoolingCacheSize metodo (SQLServerConnection)
+# <a name="getstatementpoolingcachesize-method-sqlserverconnection"></a>Metodo getStatementPoolingCacheSize (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
  Restituisce le dimensioni della cache dell'istruzione preparata per la connessione. '0' indica che la memorizzazione nella cache non abilitata.
@@ -39,13 +36,13 @@ public int getStatementPoolingCacheSize()
 ```  
 
 ## <a name="return-value"></a>Valore restituito
- Un **int** che contiene il valore di **statementPoolingCacheSize** proprietà di connessione.
+ Un' **int** che contiene il valore di **statementPoolingCacheSize** proprietà di connessione.
 
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Osservazioni  
- Questo metodo è disponibile dal driver JDBC versione 6.4 e successivo.
+## <a name="remarks"></a>Remarks  
+ Questo metodo è disponibile dal driver JDBC versione 6.4 e progressiva.
  
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

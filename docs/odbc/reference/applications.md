@@ -1,13 +1,11 @@
 ---
-title: Applicazioni | Documenti Microsoft
+title: Le applicazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - off-the-shelf applications [ODBC]
@@ -18,44 +16,43 @@ helpviewer_keywords:
 - virtual applications [ODBC]
 - generic applications [ODBC]
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ac9d98b3b7f6261333626d888c6a8b1d750f2d1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc655740701822d8c6ff9595327b906ee9a67026
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834779"
 ---
 # <a name="applications"></a>Applicazioni
-Un *applicazione* è un programma che chiama l'API ODBC per accedere ai dati. Anche se sono possibili diversi tipi di applicazioni, la maggior parte rientrano in tre categorie, che vengono utilizzate come esempi in questa Guida.  
+Un' *applicazione* è un programma che chiama l'API ODBC per accedere ai dati. Anche se sono possibili molti tipi di applicazioni, la maggior parte rientrano in tre categorie, che vengono usate come esempi in questa Guida.  
   
--   **Applicazioni generiche** questi sono anche denominati per le applicazioni con wrapping di riduzione o preconfigurati. Applicazioni generiche sono progettate per funzionare con un'ampia gamma di diversi DBMS. Ad esempio un foglio di calcolo o pacchetto di statistiche che utilizza ODBC per importare i dati per un'ulteriore analisi e un elaboratore di testo che utilizza ODBC per ottenere un elenco di indirizzi da un database.  
+-   **Applicazioni generiche** questi sono anche denominati per le applicazioni già pronti o disponibili sul mercato. Applicazioni generiche sono progettate per funzionare con un'ampia gamma di DBMS diverso. Ad esempio un foglio di calcolo o pacchetto di statistiche che usa ODBC per importare i dati per un'ulteriore analisi e un elaboratore di testo che usa ODBC per ottenere una lista di distribuzione da un database.  
   
-     Un'importante sottocategoria di applicazioni generiche è ambienti di sviluppo di applicazioni, ad esempio PowerBuilder o Microsoft® Visual Basic®. Sebbene le applicazioni costruite con questi ambienti probabilmente funzionerà solo con un singolo DBMS, ambiente stesso deve essere utilizzato con più DBMS.  
+     Un'importante sottocategoria di applicazioni generiche è ambienti di sviluppo dell'applicazione, ad esempio PowerBuilder o Microsoft® Visual Basic®. Anche se le applicazioni costruite con questi ambienti probabilmente funzionerà solo con un singolo DBMS, l'ambiente deve essere utilizzato con più DBMS.  
   
-     Cosa generiche tutte le applicazioni hanno in comune è che sono estremamente interoperativi tra DBMS e devono utilizzare ODBC in modo relativamente generico. Per ulteriori informazioni sull'interoperabilità, vedere [scelta di un livello di interoperabilità](../../odbc/reference/develop-app/choosing-a-level-of-interoperability.md).  
+     Ciò che tutte le applicazioni generiche hanno in comune è che sono estremamente interoperativi tra DBMS e che devono usare ODBC in modo relativamente generico. Per ulteriori informazioni sull'interoperabilità, vedere [scegliendo un livello di interoperabilità](../../odbc/reference/develop-app/choosing-a-level-of-interoperability.md).  
   
--   **Le applicazioni verticali** applicazioni verticali eseguire un singolo tipo di attività, ad esempio ordini o i dati di produzione, di rilevamento e di lavoro con uno schema di database che viene controllato dallo sviluppatore dell'applicazione. Per un determinato cliente, l'applicazione funziona con un singolo DBMS. Ad esempio, una piccola azienda potrebbe utilizzare l'applicazione con dBase, mentre un'azienda di grandi dimensioni potrebbe essere utilizzato con Oracle.  
+-   **Applicazioni verticali** applicazioni verticali eseguire un singolo tipo di attività, quali la registrazione degli ordini o i dati di produzione, di rilevamento e di lavoro con uno schema di database che viene controllato dallo sviluppatore dell'applicazione. Per un determinato cliente, l'applicazione funziona con un singolo DBMS. Ad esempio, una piccola azienda può usare l'applicazione con dBASE o FoxPro, mentre potrebbe essere usata da un'azienda di grandi dimensioni con Oracle.  
   
-     L'applicazione utilizza ODBC in modo che l'applicazione non è correlato a un qualsiasi DBMS, anche se potrebbero essere associato a un numero limitato di DBMS che offrono funzionalità simili. Di conseguenza, lo sviluppatore di applicazioni è possibile vendere l'applicazione indipendentemente da DBMS. Le applicazioni verticali sono interoperativi quando vengono sviluppati, ma in alcuni casi sono state modificate per includere codice noninteroperable dopo che il cliente avrà scelto un DBMS.  
+     L'applicazione utilizza ODBC in modo che l'applicazione non è associata a qualsiasi un DBMS, anche se potrebbe essere associato a un numero limitato di DBMS che offrono funzionalità simili. Di conseguenza, lo sviluppatore dell'applicazione può vendere l'applicazione in modo indipendente dal sistema DBMS. Applicazioni verticali sono interoperative quando vengono sviluppati, ma in alcuni casi vengono modificate per includere codice noninteroperable dopo che il cliente ha scelto un DBMS.  
   
--   **Applicazioni personalizzate** applicazioni personalizzate vengono utilizzate per eseguire un'attività specifica in un'unica società. Ad esempio, un'applicazione di una società di grandi dimensioni potrebbe raccogliere dati di vendita da diverse divisioni (ognuno dei quali utilizza diversi DBMS) e creare un singolo report. ODBC viene utilizzato perché è un'interfaccia comune e Salva i programmatori di dover imparare più interfacce. Tali applicazioni sono in genere interoperativi e vengono scritti i driver e DBMS specifici.  
+-   **Le applicazioni personalizzate** applicazioni personalizzate vengono usate per eseguire un'attività specifica in un'unica azienda. Ad esempio, un'applicazione in una grande azienda potrebbe essere raccogliere i dati di vendita da diverse divisioni (ognuno dei quali utilizza un sistema DBMS diverso) e creare un singolo report. ODBC viene utilizzato perché è un'interfaccia comune e Salva i programmatori di dover apprendere più interfacce. Tali applicazioni in genere non sono interoperabili e vengono scritti in specifici dei DBMS e i driver.  
   
- Un numero di attività è comune a tutte le applicazioni, indipendentemente dalla modalità di uso ODBC. Nel loro insieme, in gran parte definiscono il flusso di qualsiasi applicazione ODBC. Le attività sono:  
+ Un numero di attività è comune a tutte le applicazioni, indipendentemente dal modo in cui usano ODBC. Nel loro insieme, in gran parte definiscono il flusso di qualsiasi applicazione ODBC. Le attività sono:  
   
--   Selezionare un'origine dati e di una connessione.  
+-   Selezione un'origine dati e la connessione ad esso.  
   
 -   Invio di un'istruzione SQL per l'esecuzione.  
   
--   Il recupero dei risultati (se presente).  
+-   Recupero dei risultati (se presente).  
   
 -   Errori di elaborazione.  
   
--   Eseguire il commit o il rollback della transazione che racchiude l'istruzione SQL.  
+-   Eseguire il commit o rollback della transazione che racchiude l'istruzione SQL.  
   
 -   Disconnessione dall'origine dati.  
   
- Poiché la maggior parte delle operazioni di accesso di dati viene eseguita con SQL, l'attività principale per cui le applicazioni utilizzano ODBC è per inviare istruzioni SQL e recuperare i risultati generati da tali istruzioni (se presente). Altre attività per cui le applicazioni utilizzano ODBC includono stabilire e modifica alle funzionalità del driver e il catalogo del database di esplorazione.
+ Poiché la maggior parte delle operazioni di accesso ai dati viene eseguita con SQL, l'attività primaria per il quale le applicazioni usano ODBC è per inviare istruzioni SQL e recuperare i risultati (se presente) generati da tali istruzioni. Altre attività per cui le applicazioni usano ODBC includono determinazione e la regolazione per le funzionalità del driver e il catalogo del database di esplorazione.
