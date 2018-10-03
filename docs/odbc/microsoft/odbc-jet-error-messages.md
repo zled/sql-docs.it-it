@@ -1,40 +1,37 @@
 ---
-title: I messaggi di errore di Jet ODBC | Documenti Microsoft
+title: Messaggi di errore Jet ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error messages (ODBC driver for oracle)
 ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f487fce920dd82fc36e460467733393ffdbbc36
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ec549f256caeab598f6e49632b2a50cfa5841710
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901416"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620279"
 ---
-# <a name="odbc-jet-error-messages"></a>I messaggi di errore di Jet ODBC
-Per gli errori che si verificano nell'origine dati, il driver ODBC restituisce un messaggio di errore restituito dal File di libreria ODBC. Per gli errori che si verificano in Gestione Driver o il driver ODBC, il driver di restituisce un messaggio di errore in base al testo è associato il valore SQLSTATE.  
+# <a name="odbc-jet-error-messages"></a>Messaggi di errore Jet ODBC
+Per gli errori che si verificano nell'origine dati, il driver ODBC restituisce un messaggio di errore restituito da File di libreria ODBC. Per gli errori che si verificano nel driver ODBC o gestione Driver, driver restituisce un messaggio di errore in base al testo associati con il valore SQLSTATE.  
   
- Messaggi di errore presentano il formato seguente:  
+ I messaggi di errore hanno il formato seguente:  
   
 ```  
 [vendor][ODBC-component][data-source]message-text  
 ```  
   
- I prefissi tra parentesi quadre ([]) identificano la posizione dell'errore. Quando l'errore si verifica in Gestione Driver *origine dati* non è consentito. Quando si verifica l'errore nell'origine dati, il [*fornitore*] e [*componente ODBC*] i prefissi di identificano il fornitore e il nome del componente che ha ricevuto l'errore dall'origine dati ODBC.  
+ I prefissi tra parentesi quadre ([]) identificano la posizione dell'errore. Quando si verifica l'errore in Gestione Driver *origine dati* non è specificato. Quando si verifica l'errore nell'origine dati, il [*fornitore*] e [*ODBC-componente*] i prefissi di identificano il fornitore e il nome del componente che ha ricevuto l'errore dall'origine dati ODBC.  
   
- Nella tabella seguente mostra i messaggi di errore restituiti da Gestione Driver e driver ISAM:  
+ Nella tabella seguente mostra i messaggi di errore restituiti dal driver ISAM e gestione Driver:  
   
 |Messaggio di errore|Posizione dell'errore|  
 |-------------------|--------------------|  

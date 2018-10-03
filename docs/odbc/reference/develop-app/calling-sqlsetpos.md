@@ -1,13 +1,11 @@
 ---
-title: La funzione SQLSetPos | Documenti Microsoft
+title: Chiamata di SQLSetPos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSetPos
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SqlSetPos
 - application upgrades [ODBC], SQLSetPos
 ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9e7eeeaa8e2268256b103095ef0077329c52cc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70d574f867934af87ac7b5071b7f30bc9e89bccf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911816"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616059"
 ---
-# <a name="calling-sqlsetpos"></a>La funzione SQLSetPos
-In ODBC 2. *x*, il puntatore alla matrice di stato di riga è un argomento a **SQLExtendedFetch**. La matrice di stato di riga è stata aggiornata in un secondo momento da una chiamata a **SQLSetPos**. Alcuni driver si basavano sul fatto che questa matrice non viene modificato tra **SQLExtendedFetch** e **SQLSetPos**. In ODBC 3. *x*, il puntatore alla matrice di stato è un campo di descrizione e pertanto l'applicazione può facilmente modificarlo in modo che punti a un'altra matrice. Può trattarsi di un problema quando un'applicazione ODBC 3. *x* applicazione sta utilizzando un'API ODBC 2. *x* driver, ma viene eseguita la chiamata **SQLSetStmtAttr** per impostare il puntatore dello stato della matrice e chiama **SQLFetchScroll** per recuperare i dati. Gestione Driver ne esegue il mapping come una sequenza di chiamate a **SQLExtendedFetch**. Nel codice seguente, generato un errore verrebbe normalmente quando Gestione Driver viene eseguito il mapping del secondo **SQLSetStmtAttr** chiamare quando si lavora con un ODBC 2*x* driver:  
+# <a name="calling-sqlsetpos"></a>Chiamata di SQLSetPos
+In ODBC 2. *x*, il puntatore alla matrice di stato di riga è un argomento per **SQLExtendedFetch**. La matrice di stato di riga in un secondo momento è stata aggiornata da una chiamata a **SQLSetPos**. Alcuni driver sul fatto che questa matrice non viene modificato tra si basavano **SQLExtendedFetch** e **SQLSetPos**. In ODBC 3. *x*, il puntatore alla matrice di stato è un campo di descrizione e pertanto l'applicazione può modificare facilmente in modo che punti a un'altra matrice. Può trattarsi di un problema quando un'applicazione ODBC 3. *x* applicazione funziona con un'API ODBC 2. *x* driver, ma viene eseguita la chiamata **SQLSetStmtAttr** per impostare il puntatore dello stato della matrice e chiama **SQLFetchScroll** per recuperare i dati. Gestione Driver ne esegue il mapping come una sequenza di chiamate a **SQLExtendedFetch**. Nel codice seguente, generato un errore verrebbe normalmente quando viene eseguito il mapping del secondo gestione Driver **SQLSetStmtAttr** chiamare quando si lavora con un'API ODBC 2*x* driver:  
   
 ```  
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStatus, 0);  
@@ -37,7 +34,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStat1, 0);
 SQLSetPos(hstmt, iRow, fOption, fLock);  
 ```  
   
- Verrà generato l'errore se sono non stati è possibile modificare il puntatore dello stato della riga in ODBC 2. *x* tra le chiamate a **SQLExtendedFetch**. Al contrario, gestione Driver esegue la procedura seguente quando si lavora con un ODBC 2*x* driver:  
+ Viene generato l'errore se si sono verificati alcuna possibilità di modificare il puntatore dello stato della riga di ODBC 2. *x* tra le chiamate a **SQLExtendedFetch**. Al contrario, gestione Driver esegue i passaggi seguenti quando si lavora con un 2 ODBC*x* driver:  
   
 1.  Inizializza un flag interno di gestione Driver *fSetPosError* su TRUE.  
   
@@ -45,4 +42,4 @@ SQLSetPos(hstmt, iRow, fOption, fLock);
   
 3.  Quando l'applicazione chiama **SQLSetStmtAttr** per impostare SQL_ATTR_ROW_STATUS_PTR, gestione Driver imposta *fSetPosError* toTRUE uguale.  
   
-4.  Quando l'applicazione chiama **SQLSetPos**, con *fSetPosError* uguale a TRUE, il Driver Manager genera SQL_ERROR con SQLSTATE HY011 (Impossibile impostare l'attributo ora) per indicare che l'applicazione tentativo di chiamare **SQLSetPos** dopo aver modificato il puntatore dello stato della riga, ma prima di chiamare **SQLFetchScroll**.
+4.  Quando l'applicazione chiama **SQLSetPos**, con *fSetPosError* uguale a TRUE, gestione Driver genera SQL_ERROR con SQLSTATE HY011 (attributo non può essere impostato a questo punto) per indicare che l'applicazione tentativo di chiamare **SQLSetPos** dopo aver modificato l'indicatore di misura lo stato di riga, ma prima di chiamare **SQLFetchScroll**.

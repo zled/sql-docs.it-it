@@ -1,13 +1,11 @@
 ---
-title: Metodo MoveRecord (ADO) | Documenti Microsoft
+title: Metodo MoveRecord (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecord method [ADO]
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5171b0399614e266ff5ecfa974921f7bdef7646
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a2deba8c745b29b5bd69432060debad2c585e31b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279620"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616499"
 ---
 # <a name="moverecord-method-ado"></a>Metodo MoveRecord (ADO)
 Sposta l'entità rappresentata da un [Record](../../../ado/reference/ado-api/record-object-ado.md) in un'altra posizione.  
@@ -39,13 +36,13 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Parametri  
  *Origine*  
- Facoltativo. Oggetto **stringa** valore che contiene un URL che identifica il **Record** da spostare. Se *origine* viene omesso o specifica una stringa vuota, l'oggetto rappresentato da questo **Record** viene spostato. Ad esempio, se il **Record** rappresenta un file, il contenuto del file viene spostati nel percorso specificato da *destinazione*.  
+ Facoltativo. Oggetto **stringa** contenente un URL che identifica il **Record** da spostare. Se *origine* viene omesso oppure specifica una stringa vuota, l'oggetto rappresentato da questo **Record** viene spostato. Ad esempio, se il **Record** rappresenta un file, il contenuto del file viene spostati nel percorso specificato da *destinazione*.  
   
  *Destinazione*  
- Facoltativo. Oggetto **stringa** valore contenente un URL che specifica la posizione in cui *origine* verrà spostato.  
+ Facoltativo. Oggetto **stringa** contenente un URL che specifica la posizione in cui *origine* verranno spostati.  
   
  *UserName*  
- Facoltativo. Oggetto **stringa** valore che contiene l'ID utente, se necessario, si autorizza l'accesso a *destinazione*.  
+ Facoltativo. Oggetto **stringa** valore contenente l'ID utente, se necessario, autorizza l'accesso al *destinazione*.  
   
  *Password*  
  Facoltativo. Oggetto **stringa** che contiene la password che, se necessario, verifica *UserName*.  
@@ -54,30 +51,30 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  Facoltativo. Oggetto [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) valore il cui valore predefinito è **adMoveUnspecified**. Specifica il comportamento di questo metodo.  
   
  *Async*  
- Facoltativo. Oggetto **booleano** valore che, quando **True**, specifica l'operazione deve essere asincrona.  
+ Facoltativo. Oggetto **booleana** valore che, quando **True**, specifica l'operazione deve essere asincrona.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto **stringa** valore. In genere, il valore di *destinazione* viene restituito. Tuttavia, il valore esatto restituito è dipende dal provider.  
+ Valore **String**. In genere, il valore di *destinazione* viene restituito. Tuttavia, il valore esatto restituito è dipendente dal provider.  
   
-## <a name="remarks"></a>Remarks  
- I valori di *origine* e *destinazione* non deve essere identica; in caso contrario, si verifica un errore di run-time. Almeno i nomi di server, percorso e delle risorse devono essere diverso.  
+## <a name="remarks"></a>Note  
+ I valori della *origine* e *destinazione* non deve essere identica; in caso contrario, si verifica un errore di run-time. Almeno i nomi di server, percorso e di risorse devono essere diverso.  
   
- Per i file spostati utilizzando Internet Publishing Provider, questo metodo aggiorna tutti i collegamenti ipertestuali salvo diversamente specificato da *opzioni*. Questo metodo ha esito negativo se *destinazione* identifica un oggetto esistente (ad esempio, un file o una directory), a meno che non **adMoveOverWrite** specificato.  
-  
-> [!NOTE]
->  Utilizzare il **adMoveOverWrite** opzione con cautela. Ad esempio, specifica questa opzione durante lo spostamento di un file in una directory, verrà eliminare la directory e sostituirlo con il file.  
-  
- Alcuni attributi del **Record** dell'oggetto, ad esempio il [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) proprietà, non verrà aggiornato dopo il completamento dell'operazione. Aggiornare il **Record** proprietà dell'oggetto chiudendo il **Record**, quindi aprirlo nuovamente con l'URL della posizione in cui è stata spostata il file o directory.  
-  
- Se questo **Record** ottenuto da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), il nuovo percorso del file spostato o della directory non vengano riflesse immediatamente nel **Recordset**. Aggiornare il **Recordset** , chiudere e riaprire.  
+ Per i file spostati utilizzando il Provider di pubblicazione Internet, questo metodo aggiorna tutti i collegamenti ipertestuali nel file da spostare a meno che non specificato diversamente dal *opzioni*. Questo metodo ha esito negativo se *destinazione* identifica un oggetto esistente (ad esempio, un file o una directory), a meno che non **adMoveOverWrite** è specificato.  
   
 > [!NOTE]
->  Gli URL che utilizzano lo schema http richiamerà automaticamente il [il Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Usare la **adMoveOverWrite** opzione con cautela. Se si specifica questa opzione quando si sposta un file in una directory, ad esempio, verrà eliminare la directory e verrà sostituirlo con il file.  
+  
+ Alcuni attributi delle **Record** dell'oggetto, ad esempio le [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) proprietà, non verrà aggiornato una volta completata questa operazione. Aggiorna il **Record** delle proprietà dell'oggetto chiudendo il **Record**, quindi aprirlo nuovamente con l'URL della posizione in cui è stata spostata il file o directory.  
+  
+ Se l'oggetto **Record** ottenuto da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), il nuovo percorso del file spostato o della directory non verrà riflessa immediatamente nel **Recordset**. Aggiorna il **Recordset** chiudendo e aprirlo nuovamente.  
+  
+> [!NOTE]
+>  Gli URL che utilizzano lo schema http chiama automaticamente il [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per altre informazioni, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [MoveFirst, MoveLast, MoveNext e MovePrevious metodi (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious metodi (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (Servizi Desktop remoto)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

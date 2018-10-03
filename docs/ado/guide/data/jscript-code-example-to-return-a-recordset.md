@@ -1,31 +1,28 @@
 ---
-title: Esempio di codice JScript per restituire un Recordset | Documenti Microsoft
+title: Esempio di codice JScript per restituire un Recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b59cfb19d1d3ee3e8b603cbb897a8e55c2b74128
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2dc86d8f454b67c00073508a4ed6d7e8fc0d033e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271980"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707179"
 ---
-# <a name="jscript-code-example-to-return-a-recordset"></a>Esempio di codice JScript per restituire un Recordset
+# <a name="jscript-code-example-to-return-a-recordset"></a>Esempio di codice JScript per la restituzione di un recordset
 ## <a name="jscript-code-rsjs"></a>Codice JScript (rs.js)  
   
 ```  
@@ -85,8 +82,8 @@ function alert(str)
   
 #### <a name="try-it"></a>Provalo!  
   
-1.  Salvare il codice in un file di testo. Salvare il file come rs.js.  
+1.  Salvare il codice precedente in un file di testo. Salvare il file come rs.js.  
   
-2.  Aprire un prompt dei comandi e cd alla directory in cui il file di JScript (rs.js) è stato salvato.  
+2.  Aprire un prompt dei comandi e passare alla directory in cui il file JScript (rs.js) è stato salvato.  
   
 3.  Tipo `CScript rs.js` dal prompt dei comandi.
