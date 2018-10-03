@@ -1,14 +1,12 @@
 ---
-title: Introduzione agli updategram (SQLXML 4.0) | Microsoft Docs
+title: Introduzione alle Updategram (SQLXML 4.0) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - explicit schema mapping [SQLXML]
@@ -23,19 +21,18 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ad5fb71e83ed96c520980452748bfc268020ed1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74d53bd692371861e12ebbd323af2741da146bc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221001"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113331"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Introduzione sugli updategram (SQLXML 4.0)
-  È possibile modificare (inserire, aggiornare o eliminare) un database in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da esistenti documento XML mediante un updategram o l'istruzione OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] (funzione).  
+  È possibile modificare (insert, update e delete) in un database di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da esistenti documento XML utilizzando un updategram o l'istruzione OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] funzione.  
   
  La funzione OPENXML modifica un database suddividendo il documento XML esistente e fornendo un set di righe che può essere passato a un'istruzione INSERT, UPDATE o DELETE. Con OPENXML, le operazioni vengono eseguite direttamente sulle tabelle del database. OPENXML rappresenta pertanto la scelta più appropriata ogni volte che un provider di set di righe, ad esempio una tabella, può essere visualizzato come origine.  
   
@@ -48,7 +45,7 @@ ms.locfileid: "37221001"
  Le parole chiave in un updategram, ad esempio  **\<sincronizzazione >**,  **\<prima >**, e  **\<dopo >**, esiste la `urn:schemas-microsoft-com:xml-updategram`dello spazio dei nomi. Il prefisso dello spazio dei nomi utilizzato è arbitrario. In questa documentazione il prefisso `updg` indica lo spazio dei nomi `updategram`.  
   
 ## <a name="reviewing-syntax"></a>Esame della sintassi  
- Un updategram è un modello con  **\<sync >**,  **\<prima >**, e  **\<dopo >** blocchi che formano la sintassi del Updategram. Tale sintassi, nella sua forma più semplice, viene illustrata nel codice seguente:  
+ Un updategram è un modello con  **\<sincronizzazione >**,  **\<prima >**, e  **\<dopo >** blocchi che costituiscono la sintassi del Updategram. Tale sintassi, nella sua forma più semplice, viene illustrata nel codice seguente:  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -65,30 +62,30 @@ ms.locfileid: "37221001"
   
  Nelle definizioni seguenti viene descritto il ruolo di ogni blocco:  
   
- **\<prima >**  
+ **\<prima di >**  
  Identifica lo stato esistente, denominato anche "stato before", dell'istanza del record.  
   
  **\<after>**  
  Identifica il nuovo stato in cui devono essere modificati i dati.  
   
  **\<sync>**  
- Contiene il  **\<prima di >** e  **\<dopo >** blocchi. Oggetto  **\<sync >** blocco può contenere più di un set di  **\<prima >** e  **\<dopo >** blocchi. Se è presente più di un set di  **\<prima di >** e  **\<dopo >** blocchi, questi blocchi (anche se sono vuote) deve essere specificato sotto forma di coppie. Inoltre, un updategram può avere più di uno  **\<sync >** blocco. Ogni  **\<sincronizzazione >** blocco è un'unità di transazione (vale a dire che entrambi tutti gli elementi di  **\<sincronizzazione >** blocco viene eseguito o non viene eseguita alcuna operazione). Se si specificano più  **\<sync >** blocchi in un updategram, l'errore di uno  **\<sincronizzazione >** blocco influisce l'altro  **\<sincronizzazione >** blocchi.  
+ Contiene il  **\<prima >** e  **\<dopo >** blocchi. Un  **\<sincronizzazione >** blocco può contenere più di un set di  **\<prima >** e  **\<dopo >** blocchi. Se è presente più di un set di  **\<prima >** e  **\<dopo >** blocchi, questi blocchi (anche se vuote) deve essere specificato come coppie. Inoltre, un updategram può avere più di un  **\<sincronizzazione >** blocco. Ogni  **\<sincronizzazione >** blocco è un'unità di transazione (vale a dire che l'intero contenuto di  **\<sincronizzazione >** blocco viene eseguita o non viene eseguita). Se si specificano più  **\<sincronizzazione >** blocchi in un updategram, il guasto di uno  **\<sincronizzazione >** non influenzano l'altro blocco  **\<sincronizzazione >** blocchi.  
   
- Indica se un updategram Elimina, inserisce o aggiorna l'istanza di un record dipende dal contenuto del  **\<prima di >** e  **\<dopo >** blocchi:  
+ Se un updategram Elimina, inserisce o aggiorna un'istanza del record dipende dal contenuto di  **\<prima >** e  **\<dopo >** blocchi:  
   
--   Se l'istanza di un record viene visualizzato solo nella  **\<prima di >** senza alcuna istanza corrispondente nel blocco la  **\<dopo >** blocco, l'updategram esegue un'operazione di eliminazione.  
+-   Se un'istanza del record viene visualizzata solo nel  **\<prima >** blocco con alcuna istanza corrispondente nel  **\<dopo >** blocco, updategram esegue un'operazione di eliminazione.  
   
--   Se l'istanza di un record viene visualizzato solo nella  **\<dopo >** senza alcuna istanza corrispondente nel blocco la  **\<prima >** blocco, è un'operazione di inserimento.  
+-   Se un'istanza del record viene visualizzata solo nella  **\<dopo >** blocco con alcuna istanza corrispondente nel  **\<prima >** blocco, è un'operazione di inserimento.  
   
--   Se un'istanza di record viene visualizzato nei  **\<prima di >** block e ha un'istanza corrispondente nel  **\<dopo >** blocco, è un'operazione di aggiornamento. In questo caso, l'updategram Aggiorna l'istanza del record ai valori specificati nel  **\<dopo >** blocco.  
+-   Se è presente un'istanza di record di  **\<prima >** blocco e non è un'istanza corrispondente il  **\<dopo >** blocco, è un'operazione di aggiornamento. In questo caso, updategram Aggiorna l'istanza del record per i valori specificati nella  **\<dopo >** blocco.  
   
 ## <a name="specifying-a-mapping-schema-in-the-updategram"></a>Definizione di uno schema di mapping nell'updategram  
- In un updategram l'astrazione XML fornita da uno schema di mapping (sono supportati gli schemi XSD e XDR) può essere implicita o esplicita, ovvero un updategram può essere utilizzato con o senza uno schema di mapping specificato. Se non si specifica uno schema di mapping, l'updategram presuppone un mapping implicito (il mapping predefinito), dove ogni elemento di  **\<prima di >** blocco o  **\<dopo >** blocco viene eseguito il mapping a una tabella e ogni del figlio dell'elemento elemento o attributo esegue il mapping a una colonna nel database. Se si specifica in modo esplicito uno schema di mapping, gli elementi e gli attributi nell'updategram deve corrispondere agli elementi e agli attributi nello schema di mapping.  
+ In un updategram l'astrazione XML fornita da uno schema di mapping (sono supportati gli schemi XSD e XDR) può essere implicita o esplicita, ovvero un updategram può essere utilizzato con o senza uno schema di mapping specificato. Se non si specifica uno schema di mapping, updategram presuppone un mapping implicito (il mapping predefinito), dove ogni elemento di  **\<prima >** blocco o  **\<dopo >** blocco associato a una tabella e l'elemento figlio di ciascun elemento o attributo associato a una colonna del database. Se si specifica in modo esplicito uno schema di mapping, gli elementi e gli attributi nell'updategram deve corrispondere agli elementi e agli attributi nello schema di mapping.  
   
 ### <a name="implicit-default-mapping"></a>Mapping implicito (predefinito)  
  Nella maggior parte dei casi, un updategram che esegue aggiornamenti semplici può non richiedere uno schema di mapping. In questo caso, l'updategram si basa sullo schema di mapping predefinito.  
   
- Nell'updategram seguente viene illustrato il mapping implicito. In questo esempio l'updategram inserisce un nuovo cliente nella tabella Sales.Customer. Poiché questo updategram utilizza il mapping implicito, la \<Sales. Customer > elemento viene mappato alla tabella Sales. Customer e gli attributi CustomerID e salespersonid sono associati alle colonne corrispondenti nella tabella Sales. Customer.  
+ Nell'updategram seguente viene illustrato il mapping implicito. In questo esempio l'updategram inserisce un nuovo cliente nella tabella Sales.Customer. Poiché questo updategram utilizza mapping implicito, la \<Sales. Customer > elemento viene associato alla tabella Sales. Customer e gli attributi CustomerID e SalesPersonID il mapping alle colonne corrispondenti della tabella Sales. Customer.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -107,15 +104,15 @@ ms.locfileid: "37221001"
   
  Se l'updategram esegue un aggiornamento complesso, ad esempio l'inserimento di record in più tabelle sulla base della relazione padre-figlio specificata nello schema di mapping, è necessario fornire in modo esplicito lo schema di mapping tramite l'attributo `mapping-schema` sui cui viene eseguito l'updategram.  
   
- Poiché un updategram è un modello, il percorso specificato per lo schema di mapping nell'updategram è relativo al percorso del file di modello (relativo alla posizione di archiviazione dell'updategram). Per altre informazioni, vedere [specifica uno Schema di Mapping con annotazioni in un Updategram &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Poiché un updategram è un modello, il percorso specificato per lo schema di mapping nell'updategram è relativo al percorso del file di modello (relativo alla posizione di archiviazione dell'updategram). Per ulteriori informazioni, vedere [l'impostazione di uno Schema di Mapping annotati in un Updategram &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ## <a name="element-centric-and-attribute-centric-mapping-in-updategrams"></a>Mapping incentrato sugli elementi e mapping incentrato sugli attributi negli updategram  
  Utilizzando il mapping predefinito, quando lo schema di mapping non viene specificato nell'updategram, gli elementi dell'updategram vengono mappati a tabelle, mentre gli elementi figlio (nel caso di mapping incentrato sugli elementi) e gli attributi (nel caso di mapping incentrato sugli attributi) vengono mappati a colonne.  
   
 ### <a name="element-centric-mapping"></a>Mapping incentrato sugli elementi  
- In un updategram incentrato sugli elementi, un elemento contiene elementi figlio che indicano le proprietà dell'elemento. Si consideri, ad esempio, l'updategram seguente. Il  **\<Person. Contact >** elemento contiene il  **\<FirstName >** e  **\<LastName >** gli elementi figlio. Tali elementi figlio sono proprietà del  **\<Person. Contact >** elemento.  
+ In un updategram incentrato sugli elementi, un elemento contiene elementi figlio che indicano le proprietà dell'elemento. Si consideri, ad esempio, l'updategram seguente. Il  **\<Person. Contact >** elemento contiene il  **\<nome >** e  **\<LastName >** gli elementi figlio. Gli elementi figlio sono proprietà del  **\<Person. Contact >** elemento.  
   
- Poiché questo updategram non specifica uno schema di mapping, l'updategram utilizza il mapping implicito, in cui il  **\<Person. Contact >** elemento viene mappato alla tabella Person. Contact ed eseguire il mapping dei relativi elementi figlio per il FirstName e Colonne LastName.  
+ Poiché questo updategram non viene specificato uno schema di mapping, updategram utilizza mapping implicito, dove il  **\<Person. Contact >** elemento associa la tabella Person. Contact e relativi elementi figlio della mappa per nome e Colonne LastName.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -131,7 +128,7 @@ ms.locfileid: "37221001"
 ```  
   
 ### <a name="attribute-centric-mapping"></a>mapping incentrato sugli attributi  
- In un mapping incentrato sugli attributi, gli elementi includono attributi. Nell'updategram seguente viene utilizzato il mapping incentrato sugli attributi. In questo esempio, il  **\<Person. Contact >** elemento è costituito il **FirstName** e **LastName** attributi. Questi attributi sono le proprietà del  **\<Person. Contact >** elemento. Come nell'esempio precedente, l'updategram specifica alcuno schema di mapping, pertanto si basa sul mapping implicito per eseguire il mapping di  **\<Person. Contact >** elemento alla tabella Person. Contact e degli attributi dell'elemento per il rispettive colonne nella tabella.  
+ In un mapping incentrato sugli attributi, gli elementi includono attributi. Nell'updategram seguente viene utilizzato il mapping incentrato sugli attributi. In questo esempio, il  **\<Person. Contact >** elemento costituito il **FirstName** e **LastName** gli attributi. Questi attributi sono proprietà del  **\<Person. Contact >** elemento. Come nell'esempio precedente, questa updategram specifica nessuno schema di mapping, in modo da cui dipende la mappatura implicita per eseguire il mapping di  **\<Person. Contact >** elemento per la tabella Person. Contact e gli attributi dell'elemento per il rispettive colonne della tabella.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -146,7 +143,7 @@ ms.locfileid: "37221001"
 ```  
   
 ### <a name="using-both-element-centric-and-attribute-centric-mapping"></a>Utilizzo di una combinazione di mapping incentrato sugli elementi e mapping incentrato sugli attributi  
- È possibile specificare una combinazione di mapping incentrato sugli elementi e mapping incentrato sugli attributi, come illustrato nell'updategram seguente. Si noti che il  **\<Person. Contact >** elemento contiene un attributo sia un elemento figlio. L'updategram si basa inoltre su un mapping implicito. Di conseguenza, il **FirstName** attributo e il  **\<LastName >** mappa degli elementi figlio alle colonne corrispondenti nella tabella Person. Contact.  
+ È possibile specificare una combinazione di mapping incentrato sugli elementi e mapping incentrato sugli attributi, come illustrato nell'updategram seguente. Si noti che il  **\<Person. Contact >** elemento contiene sia un attributo e un elemento figlio. L'updategram si basa inoltre su un mapping implicito. In questo modo, il **FirstName** attributo e il  **\<LastName >** mapping alle colonne corrispondenti della tabella Person. Contact dell'elemento figlio.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

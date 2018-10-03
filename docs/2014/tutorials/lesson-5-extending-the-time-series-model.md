@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7aad4946-c903-4e25-88b9-b087c20cb67d
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aab77b225eeef6844dc74deb272430b0434de71e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b67d295f79188cf83994225125886142c961e3b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194391"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138231"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>Lezione 5: Estensione del modello Time Series
   In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise è possibile aggiungere nuovi dati a un modello Time Series e incorporarli automaticamente nel modello. I nuovi dati possono essere aggiunti a un modello di data mining Time Series in uno dei due modi indicati di seguito:  

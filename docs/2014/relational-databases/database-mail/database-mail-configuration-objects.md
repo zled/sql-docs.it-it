@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlimail.manageexistingaccount.f1
@@ -32,16 +30,15 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8e6b3e16590eee0eafc805fbc719cc436ca5352
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a42886a0477c6844b2e59d439cd9748adcaa4b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217401"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089671"
 ---
 # <a name="database-mail-configuration-objects"></a>Oggetti di configurazione di Posta elettronica database
   Posta elettronica database dispone di due oggetti di configurazione: gli oggetti di configurazione del database forniscono una modalità per configurare le impostazioni che Posta elettronica database deve utilizzare per l'invio di messaggi posta elettronica dall'applicazione di database o da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -151,7 +148,7 @@ ms.locfileid: "37217401"
 |[sysmail_update_profile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-update-profile-sp-transact-sql)|Modifica la descrizione o il nome di un profilo di Posta elettronica database.|  
 |[sysmail_update_profileaccount_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql)|Aggiorna il numero di sequenza di un account in un profilo di Posta elettronica database.|  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicurezza  
   
 |nome|Description|  
 |----------|-----------------|  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 642d9a0f80f0efb0bc9d26b9a08ab7a6dbd521e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a599a1ad2b4a2da7b3078b42b87f859b0f6bdfd4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208191"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110431"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definizione ed esplorazione delle prospettive
   Una prospettiva può semplificare la visualizzazione di un cubo a scopi specifici. Per impostazione predefinita, gli utenti possono vedere tutti gli elementi di un cubo per i quali dispongono di autorizzazioni. Quando si visualizza un intero cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , viene visualizzata la prospettiva predefinita del cubo. La navigazione all'interno di una visualizzazione dell'intero cubo può essere molto complessa per gli utenti, soprattutto per coloro che devono solo interagire con una piccola parte del cubo per soddisfare i requisiti di Business Intelligence e di report.  
@@ -56,7 +53,7 @@ ms.locfileid: "37208191"
   
 5.  Deselezionare le caselle di controllo corrispondenti agli oggetti seguenti:  
   
-    -   `Reseller Sales` gruppo di misure  
+    -   `Reseller Sales` Gruppo di misure  
   
     -   Gruppo di misure**Sales Quotas**   
   
@@ -105,7 +102,7 @@ ms.locfileid: "37208191"
   
 4.  Deselezionare le caselle di controllo corrispondenti agli oggetti seguenti:  
   
-    -   `Internet Sales` gruppo di misure  
+    -   `Internet Sales` Gruppo di misure  
   
     -   Gruppo di misure**Internet Sales Reason**   
   
@@ -142,9 +139,9 @@ ms.locfileid: "37208191"
   
 3.  Deselezionare le caselle di controllo corrispondenti agli oggetti seguenti:  
   
-    -   `Internet Sales` gruppo di misure  
+    -   `Internet Sales` Gruppo di misure  
   
-    -   `Reseller Sales` gruppo di misure  
+    -   `Reseller Sales` Gruppo di misure  
   
     -   Gruppo di misure**Internet Sales Reason**   
   

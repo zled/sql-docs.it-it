@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7046891c252bba57ff91c43ce9d3d3cf0b69f07e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265345"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129461"
 ---
 # <a name="integration-services-data-types"></a>Tipi di dati di Integration Services
   Quando i dati entrano in un flusso di dati di un pacchetto, l'origine che estrae i dati li converte in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ai dati numerici viene assegnato un tipo di dati numeric, ai dati stringa viene assegnato un tipo di dati character e alle date viene assegnato un tipo di dati date. Agli altri dati, ad esempio GUID e BLOB (Binary Large Object), vengono assegnati i tipi dai dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] appropriati. Se i dati sono di un tipo non convertibile in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , verrà generato un errore.  
@@ -64,7 +61,7 @@ ms.locfileid: "37265345"
 |DT_UI4|Intero senza segno a 4 byte.|  
 |DT_UI8|Intero senza segno a 8 byte.|  
 |DT_WSTR|Stringa di caratteri Unicode con terminazione Null e lunghezza massima di 4000 caratteri. Se un valore di una colonna contiene ulteriori terminatori Null, la stringa verrà troncata in corrispondenza del primo carattere Null.|  
-|DT_IMAGE|Un valore binario con dimensioni massime di 2<sup>31</sup>-1 (2.147.483.647) byte. ,|  
+|DT_IMAGE|Un valore binario con dimensioni massime di 2<sup>31</sup>-1 (2.147.483.647) byte. .|  
 |DT_NTEXT|Stringa di caratteri Unicode con lunghezza massima di 2<sup>30</sup> - 1 (1.073.741.823) caratteri.|  
 |DT_TEXT|Un' [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS carattere stringa con lunghezza massima pari a 2<sup>31</sup>-1 (2.147.483.647) caratteri.|  
   

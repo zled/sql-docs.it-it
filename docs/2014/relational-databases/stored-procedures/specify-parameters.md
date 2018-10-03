@@ -5,8 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], stored procedures
@@ -17,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc633915c27d2e604db110b3c118c0b1c287029f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 87180b692a613289fa8bbd22f6d605b0aa25cf6c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096391"
 ---
 # <a name="specify-parameters"></a>Specificare i parametri
   Se si specificano parametri di procedura, i programmi chiamanti sono in grado di passare i valori nel corpo della procedura. Tali valori possono essere utilizzati per diversi scopi durante l'esecuzione della procedura. Inoltre, i parametri di procedura possono restituire valori al programma chiamante se il parametro è contrassegnato come parametro OUTPUT.  
@@ -32,7 +30,7 @@ ms.locfileid: "39084053"
  Nella sezione seguente vengono fornite informazioni sul passaggio dei valori nei parametri e sulla modalità di utilizzo di ognuno degli attributi di parametro durante una chiamata alla procedura.  
   
 ## <a name="passing-values-into-parameters"></a>Passaggio dei valori nei parametri  
- I valori dei parametri forniti con una chiamata alla procedura devono essere costanti o una variabile. Non è possibile utilizzare un nome di funzione come valore di parametro. Le variabili possono essere definite dall'utente o le variabili di sistema, ad esempio \@ \@spid.  
+ I valori dei parametri forniti con una chiamata alla procedura devono essere costanti o una variabile. Non è possibile utilizzare un nome di funzione come valore di parametro. Le variabili possono essere definite dall'utente oppure di sistema, ad esempio \@\@spid.  
   
  Negli esempi seguenti viene illustrato il passaggio dei valori dei parametri alla procedura `uspGetWhereUsedProductID`. Viene illustrato come passare i parametri come costanti e variabili e utilizzare una variabile per passare il valore di una funzione.  
   
@@ -60,15 +58,15 @@ GO
 ```  
   
 ## <a name="specifying-parameter-names"></a>Specifica dei nomi di parametri  
- Quando una procedura di creazione e la dichiarazione di un nome di parametro, il nome del parametro deve iniziare con un singolo \@ di caratteri e deve essere univoco nell'ambito della procedura.  
+ Quando si crea una procedura e si dichiara un nome di parametro, tale nome deve iniziare con un singolo carattere \@ e deve essere univoco nell'ambito della procedura.  
   
- La denominazione dei parametri e l'assegnazione dei valori appropriati in modo esplicito a ogni parametro in una chiamata alla procedura consentono ai parametri di essere forniti in qualsiasi ordine. Ad esempio, se la procedura **my_proc** prevede tre parametri denominati  **\@primo**,  **\@secondo**, e  **\@terzo**, i valori passati alla procedura possono essere assegnati ai nomi di parametro, ad esempio: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ La denominazione dei parametri e l'assegnazione dei valori appropriati in modo esplicito a ogni parametro in una chiamata alla procedura consentono ai parametri di essere forniti in qualsiasi ordine. Se ad esempio per la procedura **my_proc** sono previsti tre parametri denominati **\@first**, **\@second** e **\@third**, i valori passati alla procedura possono essere assegnati ai nomi dei parametri, ad esempio: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  Se un valore del parametro viene specificato nel formato **/@parameter =***valore*, tutti i parametri successivi devono essere specificati in questo modo. Se i valori dei parametri non vengono passati nel formato **\@parametro = * * * valore*, devono essere specificati nello stesso ordine (da sinistra a destra), i parametri elencati nell'istruzione CREATE PROCEDURE.  
+>  Se un valore del parametro viene specificato nel formato **/@parameter =***valore*, tutti i parametri successivi devono essere specificati in questo modo. Se i valori dei parametri non vengono passati nel formato **\@parameter =***valore*, devono essere specificati nello stesso ordine, da sinistra a destra, dei parametri elencati nell'istruzione CREATE PROCEDURE.  
   
 > [!WARNING]  
->  Qualsiasi parametro passato nel formato **\@parametro = * * * valore* con il parametro di ortografia causerà [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per generare un errore e impedirà l'esecuzione della procedura.  
+>  Qualsiasi parametro passato nel formato **\@parameter =***valore* contenente un errore di ortografia causerà la generazione di un errore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e impedirà l'esecuzione della procedura.  
   
 ## <a name="specifying-parameter-data-types"></a>Specifica dei tipi di dati per i parametri  
  I parametri devono essere definiti con un tipo di dati quando vengono dichiarati in un'istruzione CREATE PROCEDURE. Il tipo di dati di un parametro consente di determinare il tipo e l'intervallo di valori accettati per il parametro quando viene chiamata la procedura. Se, ad esempio, si definisce un parametro con un tipo di dati `tinyint`, verranno accettati soltanto i valori numerici nell'intervallo compreso tra 0 e 255 quando passati in tale parametro. Se una procedura viene eseguita con un valore incompatibile con il tipo di dati, verrà restituito un errore.  
@@ -128,7 +126,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Sebbene sia possibile omettere i parametri per cui sono stati forniti valori predefiniti, è possibile troncare soltanto l'elenco di parametri. Ad esempio, se una procedura dispone di cinque parametri, è possibile omettere sia il quarto sia il quinto parametro. Tuttavia il quarto parametro non è possibile ignorare, purché il quinto parametro è incluso, a meno che non sono specificati i parametri nel formato **\@parametro = * * * valore*.  
+ Sebbene sia possibile omettere i parametri per cui sono stati forniti valori predefiniti, è possibile troncare soltanto l'elenco di parametri. Ad esempio, se una procedura dispone di cinque parametri, è possibile omettere sia il quarto sia il quinto parametro. Non è tuttavia possibile ignorare il quarto parametro finché è incluso il quinto, a meno che i parametri non vengano specificati nel formato **\@parameter =***value*.  
   
 ## <a name="specifying-parameter-direction"></a>Specifica della direzione di un parametro  
  La direzione di un parametro può essere input, cioè un valore viene passato nel corpo della procedura, o output, vale a dire che tramite la procedura viene restituito un valore al programma chiamante. Il parametro di input è l'impostazione predefinita.  
@@ -166,10 +164,10 @@ GO
   
 ```  
   
- Eseguire `usp_GetList` per restituire un elenco dei prodotti di [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (biciclette) con un prezzo inferiore a 700 dollari. I parametri di OUTPUT  **\@costo** e  **\@compareprices** vengono utilizzati con il linguaggio di controllo di flusso per restituire un messaggio nel **messaggi** finestra.  
+ Eseguire `usp_GetList` per restituire un elenco dei prodotti di [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (biciclette) con un prezzo inferiore a 700 dollari. I parametri OUTPUT **\@cost** e **\@compareprices** vengono usati con elementi del linguaggio per il controllo di flusso per restituire un messaggio nella finestra **Messaggi**.  
   
 > [!NOTE]  
->  La variabile OUTPUT deve essere definita durante la creazione della procedura e durante l'utilizzo della variabile. Il nome di parametro e quello della variabile non devono corrispondere. Devono tuttavia corrispondere il tipo di dati e la posizione del parametro (a meno che  **\@listprice =** *variabile* viene usato).  
+>  La variabile OUTPUT deve essere definita durante la creazione della procedura e durante l'utilizzo della variabile. Il nome di parametro e quello della variabile non devono corrispondere. Il tipo di dati e la posizione del parametro devono tuttavia corrispondere, a meno che non si usi **\@listprice=** *variabile*.  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

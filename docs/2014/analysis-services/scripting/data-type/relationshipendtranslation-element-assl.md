@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 04e09370-fdfe-4051-9998-4a6859ce8c54
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 62c779e29ce721289b364599063e1a1de747eb1c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e36c3f114f70c17022e4fe0c11494f5e9c38748
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153022"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131521"
 ---
 # <a name="relationshipendtranslation-element-assl"></a>Elemento RelationshipEndTranslation (ASSL)
   Definisce un tipo di dati primitivo che rappresenta una traduzione localizzata per una [RelationshipEnd](relationshipend-data-type-assl.md) elemento.  

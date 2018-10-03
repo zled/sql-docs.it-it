@@ -1,29 +1,26 @@
 ---
-title: SQL_C_TCHAR | Documenti Microsoft
+title: SQL_C_TCHAR | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sql_c_tchar [ODBC]
 - pseudo-type identifiers [ODBC], SQL_C_TCHAR
 - data types [ODBC], pseudo-type identifiers
 ms.assetid: 9e27c8bd-ee15-4ce9-b70a-34cf1bf16f4c
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cce7467dd03210d60fad060e25885baf0df38399
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42afb911dda26cbda53f9cd14c883abb3775b94b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909166"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792345"
 ---
 # <a name="sqlctchar"></a>SQL_C_TCHAR
-L'identificatore del tipo SQL_C_TCHAR non identificare effettivamente un tipo di dati. è una macro che esiste all'interno del file di intestazione per la conversione Unicode. Viene sostituito con SQL_C_CHAR o SQL_C_WCHAR a seconda dell'impostazione di UNICODE **#define**. È utile per un'applicazione di trasferimento dei dati di tipo carattere che viene compilati come un'applicazione Unicode e ANSI.
+L'identificatore del tipo SQL_C_TCHAR non identificare effettivamente un tipo di dati. è una macro che esiste all'interno del file di intestazione per la conversione Unicode. A seconda dell'impostazione di UNICODE viene sostituito con SQL_C_CHAR o SQL_C_WCHAR **#define**. È utile per un'applicazione di trasferimento dei dati di tipo carattere che viene compilati come un'applicazione Unicode e ANSI.
