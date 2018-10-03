@@ -1,13 +1,11 @@
 ---
-title: Execute, Requery e deselezionare l'esempio di metodi (VC + +) | Documenti Microsoft
+title: Eseguire, rieseguire una query ed eliminare i metodi esempio (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Clear method [ADO], VC++ example
 - Execute method [ADO], VC++ example
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef62e7ad551b0e94642348c09b743eeb0bec8925
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 013df1f64ab3d19869f5ca18121610fc0e960e89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278090"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655414"
 ---
-# <a name="execute-requery-and-clear-methods-example-vc"></a>Execute, Requery e deselezionare l'esempio di metodi (VC + +)
-Questo esempio viene illustrato il **Execute** metodo quando eseguito sia da un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto e un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Utilizza inoltre il [Requery](../../../ado/reference/ado-api/requery-method.md) metodo per recuperare dati correnti in un [recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e [deselezionare](../../../ado/reference/ado-api/clear-method-ado.md) metodo per cancellare il contenuto del [errori](../../../ado/reference/ado-api/errors-collection-ado.md)insieme. Le funzioni ExecuteCommand e PrintOutput sono necessari per eseguire questo esempio.  
+# <a name="execute-requery-and-clear-methods-example-vc"></a>Eseguire, rieseguire una query ed eliminare i metodi esempio (VC + +)
+Questo esempio viene illustrato il **Execute** metodo quando viene eseguito dallo entrambi una [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto e un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Usa anche il [Requery](../../../ado/reference/ado-api/requery-method.md) metodo per recuperare i dati correnti in un [recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e il [cancellare](../../../ado/reference/ado-api/clear-method-ado.md) metodo per cancellare il contenuto del [errori](../../../ado/reference/ado-api/errors-collection-ado.md)collection. Le funzioni ExecuteCommand e PrintOutput sono necessari per eseguire questo esempio.  
   
 ```  
 // Execute_Requery_Clear_Method_Sample.cpp  
@@ -192,10 +189,10 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Clear (metodo) (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
+ [Metodo Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Oggetto di connessione (ADO.NET)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Raccolta di errori (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Eseguire il metodo (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute (metodo) (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Eseguire il metodo (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Metodo Requery](../../../ado/reference/ado-api/requery-method.md)

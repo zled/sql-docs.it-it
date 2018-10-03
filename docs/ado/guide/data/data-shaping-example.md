@@ -1,30 +1,27 @@
 ---
-title: Data Shaping esempio | Documenti Microsoft
+title: Esempio di Data Shaping | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], about data shaping
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32001c7f0a9ceff2fdccdf6d0bd0902b345f2a68
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 92e34de1b9fd675570527f9a28f8476a51597f10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271390"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696429"
 ---
-# <a name="data-shaping-example"></a>Data Shaping di esempio
-I seguenti dati di data shaping di comando di seguito viene illustrato come compilare un modello gerarchico **Recordset** dal **clienti** e **ordini** tabelle nel database Northwind.  
+# <a name="data-shaping-example"></a>Esempio di data shaping
+I seguenti dati di data shaping comando illustra come compilare un modello gerarchico **Recordset** dalle **clienti** e **ordini** tabelle nel database Northwind.  
   
 ```  
 SHAPE {SELECT CustomerID, ContactName FROM Customers}   
@@ -32,22 +29,22 @@ APPEND ({SELECT OrderID, OrderDate, CustomerID FROM Orders} AS chapOrders
 RELATE customerID TO customerID)   
 ```  
   
- Quando questo comando viene utilizzato per aprire un **Recordset** oggetto (come illustrato nella [Visual Basic esempio di Data Shaping](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)), viene creato un capitolo (**chapOrders**) per ogni record restituito dal **clienti** tabella. In questo capitolo è costituito da un subset del **Recordset** restituito dal **ordini** tabella. Il **chapOrders** capitolo contiene tutte le informazioni richieste relative agli ordini effettuati dal cliente specificato. In questo esempio, il capitolo è costituito da tre colonne: **OrderID**, **OrderDate**, e **CustomerID**.  
+ Quando questo comando consente di aprire una **Recordset** oggetto (come illustrato [Visual Basic riportato di Data Shaping](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)), viene creato un capitolo (**chapOrders**) per ogni record restituito dal **clienti** tabella. In questo capitolo è costituito da un subset del **Recordset** restituiti dal **ordini** tabella. Il **chapOrders** capitolo contiene tutte le informazioni richieste relative agli ordini effettuati dal cliente specificato. In questo esempio, il capitolo è costituito da tre colonne: **OrderID**, **OrderDate**, e **CustomerID**.  
   
- Le prime due voci di risultante a forma di **Recordset** sono i seguenti:  
+ Le prime due voci di risultante data shaping **Recordset** sono i seguenti:  
   
 |CustomerID|ContactName|OrderID|OrderDate|CustomerID|  
 |----------------|-----------------|-------------|---------------|----------------|  
 |ALFKI|Maria inferiore|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
 |ANATR|Ana Trujillo|10308<br /><br /> 10625<br /><br /> 10759<br /><br /> 10926|1996-09-18<br /><br /> 1997-08-08<br /><br /> 1997-11-28<br /><br /> 1998-03-04|ANATR<br /><br /> ANATR<br /><br /> ANATR<br /><br /> ANATR|  
   
- In un comando SHAPE, Accodamento viene utilizzato per creare un elemento figlio **Recordset** correlate all'elemento padre **Recordset** (come restituito dal comando specifico del provider subito dopo la parola chiave forma descritta precedente) dalla clausola RELATE. L'elemento padre e figlio in genere hanno almeno una colonna in comune: il valore della colonna in una riga dell'elemento padre è identico al valore della colonna in tutte le righe dell'elemento figlio.  
+ In un comando SHAPE, Accodamento consente di creare un elemento figlio **Recordset** correlato al padre **Recordset** (come restituito dal comando specifico del provider immediatamente dopo la parola chiave forma cui avevo precedente) dalla clausola RELATE. Il padre e figlio hanno in genere almeno una colonna in comune: il valore della colonna in una riga dell'elemento padre è identico al valore della colonna in tutte le righe dell'elemento figlio.  
   
- È possibile utilizzare i comandi di forma secondo: in particolare, per generare un elemento padre **Recordset** da un elemento figlio **Recordset**. I record figlio **Recordset** vengono raggruppati, in genere utilizzando la clausola BY e una riga viene aggiunto all'elemento padre **Recordset** per ogni gruppo risultante l'elemento figlio. Se la clausola BY viene omessa, l'elemento figlio **Recordset** verrà modulo padre e un singolo gruppo **Recordset** conterrà esattamente una riga. Ciò è utile per il calcolo di aggregazioni "totale complessivo" sull'intero figlio **Recordset**.  
+ È possibile usare i comandi di forma secondo: vale a dire, per generare un elemento padre **Recordset** da un elemento figlio **Recordset**. I record nell'elemento figlio **Recordset** sono raggruppati, in genere con la clausola BY e una riga viene aggiunta all'elemento padre **Recordset** per ogni gruppo di nell'elemento figlio risulta. Se la clausola BY viene omessa, l'elemento figlio **Recordset** verranno form un singolo gruppo e l'elemento padre **Recordset** conterranno esattamente una riga. Ciò è utile per il calcolo di aggregazioni "totale complessivo" sull'intero figlio **Recordset**.  
   
- Il costrutto di comando forma consente inoltre di creare una forma a livello di programmazione **Recordset**. È quindi possibile accedere ai componenti del **Recordset** a livello di codice o tramite un controllo visual appropriato. Viene eseguito un comando di forma come qualsiasi testo comando ADO. Per ulteriori informazioni, vedere [forma comandi in genere](../../../ado/guide/data/shape-commands-in-general.md).  
+ Il costrutto di comandi di forma consente inoltre di creare a livello di codice una data shaping **Recordset**. È quindi possibile accedere ai componenti del **Recordset** a livello di codice o tramite un controllo visuale appropriato. Viene eseguito un comando di forma come qualsiasi altro testo comando ADO. Per altre informazioni, vedere [forma comandi in genere](../../../ado/guide/data/shape-commands-in-general.md).  
   
- Indipendentemente dalla modalità padre **Recordset** è valido, sarà presente una colonna capitolo che viene utilizzata per essere correlata a un elemento figlio **Recordset**. Se si desidera, l'elemento padre **Recordset** può anche avere colonne che contengono funzioni di aggregazione (SUM, MIN, MAX e così via) sulle righe figlio. Sia l'elemento padre e figlio **Recordset** può includere colonne che contengono un'espressione sulla riga di **Recordset**, nonché le colonne che sono nuovi sia inizialmente vuota.  
+ Indipendentemente dalla modalità padre **Recordset** è un formato, conterrà una colonna a capitoli che viene utilizzata per metterlo a un elemento figlio **Recordset**. Se si desidera, l'elemento padre **Recordset** può anche avere colonne che contengono funzioni di aggregazione (SUM, MIN, MAX e così via) nelle righe figlio. L'elemento padre sia l'elemento figlio **Recordset** può includere colonne che contengono un'espressione nella riga nel **Recordset**, nonché le colonne che sono nuovi e inizialmente vuota.  
   
  In questa sezione continua con l'argomento seguente.  
   

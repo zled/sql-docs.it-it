@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
@@ -16,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 788e8d922fb3727404428f501f1550cf4acef73f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4387cee85465bce957622e6d12c596c8aceb6b6e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064342"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712409"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportamento dei tipi di data e ora migliorati con le versioni di SQL Server precedenti (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +38,7 @@ ms.locfileid: "43064342"
   
 |Tipo di SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versioni successive) Tipo|Tipo del client ODBC|Conversione risultati (da SQL a C)|Conversione parametri (da C a SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DATETIME|date|SQL_C_TYPE_DATE|OK|OK (1)|  
+|Datetime|Data|SQL_C_TYPE_DATE|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Campi dell'ora impostati su zero.|OK (2)<br /><br /> Esito negativo se il campo dell'ora è diverso da zero. Compatibile con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Campi della data impostati sulla data corrente.|OK (2)<br /><br /> La data viene ignorata. Esito negativo se i secondi frazionari sono diversi da zero. Compatibile con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -48,7 +46,7 @@ ms.locfileid: "43064342"
 |||SQL_C_TYPE_TIMESTAMP|Esito negativo: valore letterale di ora non valido.|OK (1)|  
 ||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|OK|OK (1)|  
 ||datetime2(7)|SQL_C_TYPE_TIMESTAMP|OK|Il valore viene arrotondato a 1/300 di secondo dalla conversione client.|  
-|Smalldatetime|date|SQL_C_TYPE_DATE|OK|OK|  
+|Smalldatetime|Data|SQL_C_TYPE_DATE|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|Campi dell'ora impostati su zero.|OK (2)<br /><br /> Esito negativo se il campo dell'ora è diverso da zero. Compatibile con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|Campi della data impostati sulla data corrente.|OK (2)<br /><br /> La data viene ignorata. Esito negativo se i secondi frazionari sono diversi da zero.<br /><br /> Compatibile con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -72,10 +70,10 @@ ms.locfileid: "43064342"
 ### <a name="column-metadata-returned-by-sqlcolumns-sqlprocedurecolumns-and-sqlspecialcolumns"></a>Metadati di colonna restituiti da SQLColumns, SQLProcedureColumns e SQLSpecialColumns  
  Per i tipi di data/ora vengono restituiti i valori di colonna seguenti:  
   
-|Tipo di colonna|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Tipo di colonna|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
-|TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|20|16, 20..32|16|16|38, 42..54|52, 56..68|  
 |DECIMAL_DIGITS|NULL|NULL|0|3|NULL|NULL|  
@@ -89,9 +87,9 @@ ms.locfileid: "43064342"
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>Metadati del tipo di dati restituiti da SQLGetTypeInfo  
  Per i tipi di data/ora vengono restituiti i valori di colonna seguenti:  
   
-|Tipo di colonna|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Tipo di colonna|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
@@ -103,7 +101,7 @@ ms.locfileid: "43064342"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  

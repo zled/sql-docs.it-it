@@ -1,13 +1,11 @@
 ---
-title: Interfaccia ADORecordsetConstruction | Documenti Microsoft
+title: Interfaccia ADORecordsetConstruction | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c781a5b1db2d501488d609454ee67e240ee35a55
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 078b48c36d0ee2a1b3f368b8e6baf7346ed343fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275620"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634389"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interfaccia ADORecordsetConstruction
 Il **ADORecordsetConstruction** interfaccia viene utilizzata per costruire un oggetto ADO **Recordset** oggetto da OLE DB **set di righe** oggetto in un'applicazione C/C++.  
@@ -35,18 +32,18 @@ Il **ADORecordsetConstruction** interfaccia viene utilizzata per costruire un og
   
 |||  
 |-|-|  
-|[capitolo](../../../ado/reference/ado-api/chapter-property-ado.md)|Lettura/scrittura.<br />Ottiene o imposta il valore OLE DB **capitolo** oggetto da/su questo ADO **Recordset** oggetto.|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Lettura/scrittura.<br />Ottiene o imposta il valore OLE DB **RowPosition** oggetto da/su questo ADO **Recordset** oggetto.|  
-|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Lettura/scrittura.<br />Ottiene o imposta il valore OLE DB **set di righe** oggetto da/su questo ADO **Recordset** oggetto.|  
+|[Capitolo](../../../ado/reference/ado-api/chapter-property-ado.md)|Lettura/scrittura.<br />Ottiene o imposta un DB OLE **capitolo** oggetto da/in questa ADO **Recordset** oggetto.|  
+|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Lettura/scrittura.<br />Ottiene o imposta un DB OLE **RowPosition** oggetto da/in questa ADO **Recordset** oggetto.|  
+|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Lettura/scrittura.<br />Ottiene o imposta un DB OLE **Rowset** oggetto da/in questa ADO **Recordset** oggetto.|  
   
 ## <a name="methods"></a>Metodi  
- Nessuna.  
+ Nessuno  
   
 ## <a name="events"></a>Eventi  
- Nessuna.  
+ Nessuno  
   
-## <a name="remarks"></a>Remarks  
- Data OLE DB **set di righe** oggetto (`pRowset`), la costruzione di un oggetto ADO **Recordset** oggetto (`adoRs`) gli importi di tre operazioni di base seguenti:  
+## <a name="remarks"></a>Note  
+ Dato un OLE DB **Rowset** oggetto (`pRowset`), la costruzione di un oggetto ADO **Recordset** oggetto (`adoRs`) gli importi per le tre operazioni fondamentali seguenti:  
   
 1.  Creare un oggetto ADO **Recordset** oggetto:  
   
@@ -55,7 +52,7 @@ Il **ADORecordsetConstruction** interfaccia viene utilizzata per costruire un og
     adoRs.CreateInstance(__uuidof(Recordset));  
     ```  
   
-2.  Query di **IADORecordsetConstruction** interfaccia il **Recordset** oggetto:  
+2.  Query di **IADORecordsetConstruction** interfaccia le **Recordset** oggetto:  
   
     ```  
     adoRecordsetConstructionPtr adoRsConstruct=NULL;  
@@ -63,7 +60,7 @@ Il **ADORecordsetConstruction** interfaccia viene utilizzata per costruire un og
                          (void**)&adoRsConstruct);  
     ```  
   
-3.  Chiamare il `IADORecordsetConstruction::put_Rowset` il metodo di proprietà per impostare OLE DB `Rowset` sull'oggetto ADO `Recordset` oggetto:  
+3.  Chiamare il `IADORecordsetConstruction::put_Rowset` metodo di proprietà da impostare OLE DB `Rowset` sull'oggetto ADO `Recordset` oggetto:  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -71,9 +68,9 @@ Il **ADORecordsetConstruction** interfaccia viene utilizzata per costruire un og
     adoRsConstruct->put_Rowset(pUnk);  
     ```  
   
- I risultanti `adoRs` oggetto rappresenta l'oggetto ADO **Recordset** oggetto costruito da OLE DB **set di righe** oggetto.  
+ I risultanti `adoRs` oggetto rappresenta ora ADO **Recordset** oggetto costruito da OLE DB **Rowset** oggetto.  
   
- È inoltre possibile costruire un oggetto ADO **Recordset** oggetto da OLE DB **capitolo** o **RowPosition** oggetto.  
+ È inoltre possibile costruire un oggetto ADO **Recordset** oggetto da OLE DB **capitolo** oppure **RowPosition** oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
  **Versione:** ADO 2.0 e versioni successiva  
@@ -83,5 +80,5 @@ Il **ADORecordsetConstruction** interfaccia viene utilizzata per costruire un og
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Proprietà Rowset (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)

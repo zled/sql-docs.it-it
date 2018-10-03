@@ -1,13 +1,11 @@
 ---
-title: Funzione SQLTables | Documenti Microsoft
+title: Funzione SQLTables | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLTables
@@ -19,23 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLTables function [ODBC]
 ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f98db327f8d764c5f4fdd8a862505c23c99e8893
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0930f61ea43fb77e93b9b3ebcb9d20073f1950d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708359"
 ---
 # <a name="sqltables-function"></a>Funzione SQLTables
 **Conformità**  
- Versione è stato introdotto: Conformità di 1.0 standard ODBC: Open Group  
+ Versione introdotta: Conformità agli standard 1.0 di ODBC: Open Group  
   
  **Riepilogo**  
- **SQLTables** restituisce l'elenco di nomi di tabella, del catalogo o schema e i tipi di tabella, archiviati in un'origine dati specifica. Il driver restituisce le informazioni come set di risultati.  
+ **SQLTables** restituisce l'elenco di nomi di tabella, catalogo o schema e tipi di tabella, archiviati in un'origine dati specifica. Il driver restituisce le informazioni come set di risultati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,112 +55,112 @@ SQLRETURN SQLTables(
  [Input] Handle di istruzione per recuperata i risultati.  
   
  *CatalogName*  
- [Input] Nome del catalogo. Il *CatalogName* argomento accetta i criteri di ricerca se l'attributo di ambiente SQL_ODBC_VERSION SQL_OV_ODBC3; non accetta modelli di ricerca se SQL_OV_ODBC2 è impostata. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando un driver recupera i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi.  
+ [Input] Nome del catalogo. Il *CatalogName* argomento accetta i criteri di ricerca se l'attributo di ambiente SQL_ODBC_VERSION SQL_OV_ODBC3; criteri di ricerca non vengono accettate se SQL_OV_ODBC2 è impostata. Se un driver supporta i cataloghi per alcune tabelle ma non per altri, ad esempio quando un driver recupera i dati da diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi.  
   
- Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *CatalogName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *CatalogName* è un argomento di valore modello; viene considerato letteralmente e il relativo case è significativa. Per ulteriori informazioni, vedere [argomenti delle funzioni di catalogo in](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+ Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *CatalogName* viene considerato come un identificatore e il caso non è significativo. Se si tratta, SQL_FALSE *CatalogName* è un argomento di valore modello; viene considerato letteralmente e relativi case è significativa. Per altre informazioni, vedere [argomenti nelle funzioni di catalogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
  *NameLength1*  
- [Input] Lunghezza in caratteri del **CatalogName*.  
+ [Input] Lunghezza in caratteri della **CatalogName*.  
   
  *NomeSchema*  
- [Input] Stringa criterio di ricerca per i nomi degli schemi. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi.  
+ [Input] Criterio di ricerca di stringa per i nomi degli schemi. Se un driver supporta gli schemi per alcune tabelle ma non per altri, ad esempio quando il driver recupera i dati da diversi DBMS, una stringa vuota ("") indica le tabelle che non hanno schemi.  
   
- Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *SchemaName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *SchemaName* è un argomento di valore modello; viene considerato letteralmente e il relativo case è significativa.  
+ Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *SchemaName* viene considerato come un identificatore e il caso non è significativo. Se si tratta, SQL_FALSE *SchemaName* è un argomento di valore modello; viene considerato letteralmente e relativi case è significativa.  
   
  *NameLength2*  
- [Input] Lunghezza in caratteri del **SchemaName*.  
+ [Input] Lunghezza in caratteri della **SchemaName*.  
   
  *TableName*  
  [Input] Criterio di ricerca per i nomi delle tabelle di stringhe.  
   
- Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *TableName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *TableName* è un argomento di valore modello; viene considerato letteralmente e il relativo case è significativa.  
+ Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *TableName* viene considerato come un identificatore e il caso non è significativo. Se si tratta, SQL_FALSE *TableName* è un argomento di valore modello; viene considerato letteralmente e relativi case è significativa.  
   
  *NameLength3*  
- [Input] Lunghezza in caratteri del **TableName*.  
+ [Input] Lunghezza in caratteri della **TableName*.  
   
  *TableType*  
- [Input] Elenco dei tipi di tabella per trovare la corrispondenza.  
+ [Input] Elenco dei tipi di tabella in modo che corrispondano.  
   
- Si noti che l'attributo di istruzione SQL_ATTR_METADATA_ID non ha alcun effetto durante il *TableType* argomento. *TableType* è un argomento di elenco di valore, indipendentemente dall'impostazione di SQL_ATTR_METADATA_ID.  
+ Si noti che l'attributo di istruzione SQL_ATTR_METADATA_ID non ha alcun effetto durante la *TableType* argomento. *TableType* è un argomento di elenco di valore, indipendentemente dall'impostazione di SQL_ATTR_METADATA_ID.  
   
  *NameLength4*  
- [Input] Lunghezza in caratteri del **TableType*.  
+ [Input] Lunghezza in caratteri della **TableType*.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLTables** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _ HANDLE_STMT e *gestire* di *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLTables** e illustra ognuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, se non diversamente specificato.  
+ Quando **SQLTables** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _ HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLTables** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
 |SQLSTATE|Errore|Description|  
 |--------------|-----------|-----------------|  
-|01000|Avviso generico.|Messaggio informativo specifici del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
-|08S01|Errore del collegamento di comunicazione|Collegamento di comunicazione tra il driver e l'origine dati a cui era connesso il driver non è stato possibile prima dell'elaborazione della funzione è stata completata.|  
-|24000|Stato del cursore non valido|Un cursore è stato aperto nel *StatementHandle*, e **SQLFetch** o **SQLFetchScroll** fosse stata chiamata. Questo errore viene restituito da Gestione Driver se **SQLFetch** o **SQLFetchScroll** non è stato restituito SQL_NO_DATA e viene restituito dal driver se **SQLFetch** o **SQLFetchScroll** ha restituito SQL_NO_DATA.<br /><br /> Un cursore è stato aperto nel *StatementHandle*, ma **SQLFetch** o **SQLFetchScroll** non è stato chiamato.|  
-|40001|Errore di serializzazione.|La transazione viene annullata a causa di un deadlock delle risorse con un'altra transazione.|  
-|40003|Completamento delle istruzioni sconosciuto|Impossibile stabilire la connessione associata durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
+|01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
+|08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  
+|24000|Stato del cursore non valido|Il cursore è stato aperto scegliere il *StatementHandle*, e **SQLFetch** oppure **SQLFetchScroll** fosse stata chiamata. Questo errore viene restituito da Gestione Driver, se **SQLFetch** oppure **SQLFetchScroll** non restituisce SQL_NO_DATA e viene restituito dal driver se **SQLFetch** oppure **SQLFetchScroll** è stato restituito SQL_NO_DATA.<br /><br /> Un cursore è stato aperto nel *StatementHandle*, ma **SQLFetch** oppure **SQLFetchScroll** non fosse stata chiamata.|  
+|40001|Errore di serializzazione.|Il rollback della transazione a causa di un deadlock delle risorse con un'altra transazione.|  
+|40003|Completamento dell'istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
 |HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver non è riuscito ad allocare memoria che è necessario per supportare l'esecuzione o il completamento della funzione.|  
-|HY008|Operazione annullata|L'elaborazione asincrona è stata abilitata per il *StatementHandle*. La funzione è stata chiamata e prima ha completato l'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato sul *StatementHandle*. Quindi la funzione è stata chiamata nuovamente sul *StatementHandle*.<br /><br /> La funzione è stata chiamata e prima ha completato l'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato sul *StatementHandle* da un thread diverso in un applicazioni multithread.|  
-|HY009|Utilizzo non valido del puntatore null|L'attributo di istruzione SQL_ATTR_METADATA_ID è stato impostato su SQL_TRUE, il *CatalogName* argomento è un puntatore null e il SQL_CATALOG_NAME *InfoType* restituisce i nomi di catalogo sono supportati.<br /><br /> (DM) a cui è stato impostato su SQL_TRUE, l'attributo di istruzione SQL_ATTR_METADATA_ID e *SchemaName* o *TableName* argomento è un puntatore null.|  
-|HY010|Errore nella sequenza (funzione)|(DM) a cui è stata chiamata per l'handle di connessione associata a una funzione in modo asincrono in esecuzione il *StatementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stato chiamato SQLTables.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** è stato chiamato per il *StatementHandle* e restituito SQL_PARAM_DATA_ È DISPONIBILE. Questa funzione è stata chiamata prima che i dati sono stati recuperati per tutti i parametri con flusso.<br /><br /> (DM) a cui è stata chiamata per una funzione in modo asincrono in esecuzione (non è presente uno) di *StatementHandle* ed era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos** è stato chiamato per il  *StatementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima che sono stati inviati dati per tutti i parametri data-at-execution o colonne.|  
-|HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché gli oggetti di memoria sottostante non è accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
-|HY090|Lunghezza di stringa o di buffer non valida|(DM) il valore di uno degli argomenti di lunghezza è minore di 0 ma non uguale a SQL_NTS.<br /><br /> Il valore di uno degli argomenti nome di lunghezza maggiore del valore di lunghezza massima per il nome corrispondente.|  
-|HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettersi e sono consentite funzioni di sola lettura.|(DM) per ulteriori informazioni sullo stato sospeso, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Funzionalità facoltativa non implementata.|È stato specificato un catalogo e del driver o l'origine dati non supporta i cataloghi.<br /><br /> È stato specificato uno schema e del driver o l'origine dati non supporta schemi.<br /><br /> Un criterio di ricerca della stringa è stato specificato per il nome del catalogo, schema della tabella o il nome di tabella e l'origine dati non supporta i criteri di ricerca per uno o più di questi argomenti.<br /><br /> La combinazione delle impostazioni correnti degli attributi di istruzione SQL_ATTR_CONCURRENCY e SQL_ATTR_CURSOR_TYPE non era supportata dall'origine dati o driver.<br /><br /> L'attributo di istruzione SQL_ATTR_USE_BOOKMARKS è stato impostato su SQL_UB_VARIABLE e l'attributo SQL_ATTR_CURSOR_TYPE di istruzione è stato impostato su un tipo di cursore per i quali il driver non supporta i segnalibri.|  
-|HYT00|Timeout|Il periodo di timeout della query è scaduto prima origine dati ha restituito il set di risultati richiesti. Il periodo di timeout viene impostato tramite **SQLSetStmtAttr**, SQL_ATTR_QUERY_TIMEOUT.|  
-|HYT01|Timeout di connessione scaduto|Il periodo di timeout di connessione scaduto prima che l'origine dati ha risposto alla richiesta. Il periodo di timeout di connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|HY008|Operazione annullata|L'elaborazione asincrona è stata abilitata per il *StatementHandle*. La funzione è stata chiamata e prima esecuzione, completata **SQLCancel** oppure **SQLCancelHandle** è stato chiamato sul *StatementHandle*. Quindi la funzione è stata chiamata nuovamente sul *StatementHandle*.<br /><br /> La funzione è stata chiamata e prima esecuzione, completata **SQLCancel** o **SQLCancelHandle** è stato chiamato sul *StatementHandle* da un thread diverso in un applicazioni multithread.|  
+|HY009|Utilizzo non valido del puntatore null|L'attributo di istruzione SQL_ATTR_METADATA_ID è stato impostato su SQL_TRUE, il *CatalogName* argomento era un puntatore null e il SQL_CATALOG_NAME *InfoType* restituisce che i nomi di catalogo sono supportati.<br /><br /> (DM) l'attributo di istruzione SQL_ATTR_METADATA_ID è stato impostato su SQL_TRUE e il *SchemaName* oppure *NomeTabella* argomento era un puntatore null.|  
+|HY010|Errore nella sequenza della funzione|(DM) a cui è stata chiamata per l'handle di connessione che è associata una funzione in modo asincrono in esecuzione la *StatementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stato chiamato SQLTables.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** è stato chiamato per il *StatementHandle* e restituito SQL_PARAM_DATA_ È DISPONIBILE. Questa funzione è stata chiamata prima per tutti i parametri trasmessi sono stati recuperati i dati.<br /><br /> (DM) a cui è stata chiamata per una funzione in modo asincrono in esecuzione, non è presente uno, il *StatementHandle* ed era ancora in esecuzione quando è stata chiamata questa funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oppure **SQLSetPos** è stato chiamato per il  *StatementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dei dati è stati inviati per tutti i parametri data-at-execution o più colonne.|  
+|HY013|Errore di gestione della memoria|La chiamata di funzione non è stato possibile elaborare perché gli oggetti di memoria sottostante non sono accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
+|HY090|Lunghezza della stringa o buffer non valido|(DM) il valore di uno degli argomenti di lunghezza è minore di 0 ma non uguali a SQL_NTS.<br /><br /> Il valore di uno degli argomenti di lunghezza nome superato il valore di lunghezza massima consentita per il nome corrispondente.|  
+|HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettere e le funzioni di sola lettura sono consentite.|(DM) per altre informazioni sullo stato sospeso, vedere [SQLEndTran-funzione](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Funzionalità opzionale non implementata|È stato specificato un catalogo e del driver o origine dati non supporta cataloghi.<br /><br /> È stato specificato uno schema e del driver o origine dati non supporta gli schemi.<br /><br /> È stato specificato un criterio di ricerca di stringa per il nome del catalogo, lo schema della tabella o nome della tabella e l'origine dati non supporta criteri di ricerca per uno o più di questi argomenti.<br /><br /> La combinazione delle impostazioni correnti degli attributi di istruzione SQL_ATTR_CURSOR_TYPE e SQL_ATTR_CONCURRENCY non era supportata dall'origine dati o driver.<br /><br /> L'attributo di istruzione SQL_ATTR_USE_BOOKMARKS è stata impostata su SQL_UB_VARIABLE e l'attributo SQL_ATTR_CURSOR_TYPE di istruzione è stata impostata su un tipo di cursore per i quali il driver non supporta i segnalibri.|  
+|HYT00|Timeout|Il periodo di timeout query scaduto prima l'origine dati ha restituito il set di risultati richiesti. Il periodo di timeout viene impostato tramite **SQLSetStmtAttr**, SQL_ATTR_QUERY_TIMEOUT.|  
+|HYT01|Timeout di connessione scaduto|Il periodo di timeout di connessione è scaduto prima che l'origine dati ha risposto alla richiesta. Il periodo di timeout di connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Driver non supporta questa funzione|Il driver (DM) associato il *StatementHandle* non supporta la funzione.|  
-|IM017|Polling è disabilitato in modalità di notifica asincrona|Ogni volta che viene utilizzato il modello di notifica, il polling è disabilitato.|  
-|IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente dell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, **SQLCompleteAsync** deve essere chiamato per l'handle per eseguire la post-elaborazione e completare l'operazione.|  
+|IM017|Polling è disabilitato in modalità di notifica asincrona|Ogni volta che viene usato il modello di notifica, viene disabilitato il polling.|  
+|IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente in questo handle.|Se la chiamata di funzione precedente dell'handle di restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, **SQLCompleteAsync** deve essere chiamato su handle per eseguire operazioni di post-elaborazione e completare l'operazione.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLTables** Elenca tutte le tabelle nell'intervallo richiesto. Un utente può o che non disponga delle autorizzazioni SELECT per una di queste tabelle. Per controllare l'accesso facilitato, un'applicazione è possibile:  
+ **SQLTables** Elenca tutte le tabelle nell'intervallo richiesto. Un utente può o non abbia privilegi selezionati da una di queste tabelle. Per verificare l'accessibilità, un'applicazione può:  
   
 -   Chiamare **SQLGetInfo** e controllare il tipo di informazioni SQL_ACCESSIBLE_TABLES.  
   
--   Chiamare **SQLTablePrivileges** per controllare i privilegi per ogni tabella.  
+-   Chiamare **SQLTablePrivileges** per verificare i privilegi per ogni tabella.  
   
- In caso contrario, l'applicazione deve essere in grado di gestire una situazione in cui l'utente seleziona una tabella per cui **selezionare** non vengono concessi privilegi.  
+ In caso contrario, l'applicazione deve essere in grado di gestire una situazione in cui l'utente seleziona una tabella per cui **seleziona** non vengono concessi i privilegi.  
   
- Il *SchemaName* e *TableName* argomenti accettano i criteri di ricerca. Il *CatalogName* argomento accetta i criteri di ricerca se l'attributo di ambiente SQL_ODBC_VERSION SQL_OV_ODBC3; non accetta modelli di ricerca se SQL_OV_ODBC2 è impostata. Se è impostato SQL_OV_ODBC3, un'applicazione ODBC 3 *. x* driver richiederà di caratteri che con caratteri jolly di *CatalogName* argomento usare caratteri di escape per essere considerate letteralmente. Per ulteriori informazioni sui pattern di ricerca validi, vedere [argomenti di modello valore](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
+ Il *SchemaName* e *NomeTabella* argomenti accettano criteri di ricerca. Il *CatalogName* argomento accetta i criteri di ricerca se l'attributo di ambiente SQL_ODBC_VERSION SQL_OV_ODBC3; criteri di ricerca non vengono accettate se SQL_OV_ODBC2 è impostata. Se è impostata SQL_OV_ODBC3, un'applicazione ODBC 3 *. x* driver richiederà i caratteri che con caratteri jolly nel *CatalogName* argomento usare caratteri di escape per essere considerato letteralmente. Per altre informazioni sui pattern di ricerca validi, vedere [argomenti del valore criterio](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   
 > [!NOTE]  
->  Per ulteriori informazioni sull'utilizzo generale, gli argomenti e i dati restituiti delle funzioni di catalogo ODBC, vedere [funzioni di catalogo](../../../odbc/reference/develop-app/catalog-functions.md).  
+>  Per altre informazioni su uso generale, gli argomenti e i dati restituiti di funzioni di catalogo ODBC, vedere [funzioni di catalogo](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- Per supportare l'enumerazione dei cataloghi, schemi e tipi di tabella, la semantica di speciale seguente venga definita per il *CatalogName*, *SchemaName*, *TableName*e  *TableType* gli argomenti di **SQLTables**:  
+ Per supportare l'enumerazione dei cataloghi, schemi e tipi di tabella, la semantica di speciale seguente venga definita per il *CatalogName*, *SchemaName*, *TableName*e  *TableType* argomenti del **SQLTables**:  
   
--   Se *CatalogName* è SQL_ALL_CATALOGS e *SchemaName* e *TableName* sono stringhe vuote, il set di risultati contiene un elenco dei cataloghi validi per l'origine dati. (Tutte le colonne ad eccezione della colonna TABLE_CAT contengono valori null).  
+-   Se *CatalogName* è SQL_ALL_CATALOGS e *SchemaName* e *TableName* sono stringhe vuote, il set di risultati contiene un elenco di cataloghi validi per l'origine dati. (Tutte le colonne ad eccezione della colonna TABLE_CAT contengono valori null).  
   
 -   Se *SchemaName* è SQL_ALL_SCHEMAS e *CatalogName* e *TableName* sono stringhe vuote, il set di risultati contiene un elenco di schemi validi per l'origine dati. (Tutte le colonne ad eccezione della colonna TABLE_SCHEM contengono valori null).  
   
--   Se *TableType* è SQL_ALL_TABLE_TYPES e *CatalogName*, *SchemaName*, e *TableName* sono stringhe vuote, il set di risultati contiene un elenco dei tipi di tabella valido per l'origine dati. (Tutte le colonne ad eccezione della colonna TABLE_TYPE contengono valori null).  
+-   Se *TableType* è SQL_ALL_TABLE_TYPES e *CatalogName*, *SchemaName*, e *TableName* sono stringhe vuote, il set di risultati contiene un elenco dei tipi di tabella validi per l'origine dati. (Tutte le colonne ad eccezione della colonna TABLE_TYPE contengono valori null).  
   
- Se *TableType* non è una stringa vuota, deve contenere un elenco di valori delimitati da virgole per i tipi di interesse, ogni valore possono essere racchiusi tra virgolette singole (') o non racchiusi tra virgolette, ad esempio 'TABLE', 'Visualizza' o tabella, visualizzare. Un'applicazione deve specificare sempre il tipo di tabella in maiuscole. il driver deve convertire il tipo di tabella in qualsiasi caso è necessario per l'origine dati. Se l'origine dati non supporta un tipo di tabella specificata, **SQLTables** non restituirà alcun risultato per quel tipo.  
+ Se *TableType* non è una stringa vuota, deve contenere un elenco con valori delimitati da virgole per i tipi di interesse, ogni valore può essere racchiuso tra virgolette singole (') o senza virgolette, ad esempio 'TABLE', 'VIEW' o tabella, visualizzare. Un'applicazione deve specificare sempre il tipo di tabella in maiuscole. il driver deve convertire il tipo di tabella in qualsiasi caso è necessario per l'origine dati. Se l'origine dati non supporta un tipo di tabella specificato **SQLTables** non restituisce alcun risultato per quel tipo.  
   
- **SQLTables** restituisce i risultati come set di risultati standard, ordinati in base TABLE_TYPE, TABLE_CAT, TABLE_SCHEM e TABLE_NAME. Per informazioni sulla modalità di utilizzo queste informazioni, vedere [utilizza dei dati del catalogo](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
+ **SQLTables** restituisce i risultati come un set di risultati standard, ordinato in base TABLE_TYPE, TABLE_CAT, TABLE_SCHEM e TABLE_NAME. Per informazioni su come è possibile usare queste informazioni, vedere [Usa i dati del catalogo](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
   
- Per determinare la lunghezza effettiva delle colonne di TABLE_NAME TABLE_CAT e TABLE_SCHEM, un'applicazione può chiamare **SQLGetInfo** con le informazioni SQL_MAX_CATALOG_NAME_LEN SQL_MAX_SCHEMA_NAME_LEN e SQL_MAX_TABLE_NAME_LEN tipi.  
+ Per determinare le lunghezze delle colonne TABLE_CAT TABLE_SCHEM e TABLE_NAME effettive, un'applicazione può chiamare **SQLGetInfo** con le informazioni SQL_MAX_CATALOG_NAME_LEN SQL_MAX_SCHEMA_NAME_LEN e SQL_MAX_TABLE_NAME_LEN tipi.  
   
- Le colonne seguenti sono state rinominate per ODBC 3*x*. Le modifiche ai nomi di colonna non influiscono sulla compatibilità con le versioni precedenti poiché nelle applicazioni associati dal numero di colonna.  
+ Le colonne seguenti sono state rinominate per ODBC 3*x*. Le modifiche ai nomi di colonna non influenzano la compatibilità con le versioni precedenti poiché nelle applicazioni associati dal numero di colonna.  
   
 |Colonna ODBC 2.0|ODBC 3*x* colonna|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  
   
- Nella tabella seguente elenca le colonne nel set di risultati. È possibile definire le colonne aggiuntive oltre colonna 5 (note) dal driver. Un'applicazione deve accedere a colonne specifiche del driver contando dalla fine del gruppo di risultati anziché specificare una posizione ordinale esplicita verso il basso. Per ulteriori informazioni, vedere [dati restituiti dalle funzioni di catalogo](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
+ Nella tabella seguente elenca le colonne nel set di risultati. Le colonne aggiuntive oltre colonna 5 (note) possono essere definite dal driver. Un'applicazione deve accedere a colonne specifiche del driver contando dalla fine del gruppo di risultati anziché che specifica la posizione ordinale esplicita verso il basso. Per altre informazioni, vedere [i dati restituiti dalle funzioni catalogo](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
 |Nome colonna|Numero colonna|Tipo di dati|Commenti|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|1|Varchar|Nome di catalogo. NULL se non è applicabile all'origine dati. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando il driver recupera i dati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non dispone di cataloghi.|  
-|TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nome dello schema. NULL se non è applicabile all'origine dati. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando il driver recupera i dati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non dispone di schemi.|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|Nome del catalogo; NULL se non applicabile all'origine dati. Se un driver supporta i cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non dispone di cataloghi.|  
+|TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nome dello schema; NULL se non applicabile all'origine dati. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non hanno schemi.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar|Nome della tabella.|  
-|TABLE_TYPE (ODBC 1.0)|4|Varchar|Nome tipo di tabella. uno dei seguenti: "TABLE", "VIEW", "Tabella di sistema", "Temporanee globali", "TEMPORANEO locale", "ALIAS", "SINONIMO" o un nome di tipo specifici dell'origine dati.<br /><br /> Il significato di "ALIAS" e "SINONIMO" è specifici del driver.|  
+|TABLE_TYPE (ODBC 1.0)|4|Varchar|Nome tipo di tabella. uno dei seguenti: "TABLE", "Visualizzazione", "Tabella di sistema", "Temporanei globali", "Locale temporanea", "ALIAS", "SINONIMI" o un nome di tipo specifico dell'origine dati.<br /><br /> Il significato di "ALIAS" e "SINONIMI" è specifici del driver.|  
 |SEZIONE OSSERVAZIONI (ODBC 1.0)|5|Varchar|Descrizione della tabella.|  
   
 ## <a name="example"></a>Esempio  
- Esempio di codice seguente non libera l'handle e delle connessioni. Vedere [SQLFreeHandle-funzione](../../../odbc/reference/syntax/sqlfreehandle-function.md) e [SQLFreeStmt-funzione](../../../odbc/reference/syntax/sqlfreestmt-function.md) per esempi di codice liberare l'handle e istruzioni.  
+ Esempio di codice seguente non libera gli handle e le connessioni. Visualizzare [funzione SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md) e [SQLFreeStmt-funzione](../../../odbc/reference/syntax/sqlfreestmt-function.md) per esempi di codice liberare l'handle e le istruzioni.  
   
 ```  
 // SQLTables.cpp  
@@ -242,13 +239,13 @@ int main() {
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
 |Associazione di un buffer a una colonna in un set di risultati|[Funzione SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|L'elaborazione di istruzione di annullamento|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Restituzione di privilegi per una o più colonne|[Funzione SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
-|Restituzione delle colonne in una o più tabelle|[Funzione SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)|  
-|Recupero di una singola riga o un blocco di dati in una direzione forward-only|[Funzione SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|Recupero di un blocco di dati o di scorrimento di un risultato impostato|[Funzione SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Annullare l'elaborazione di istruzione|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Restituzione dei privilegi per una o più colonne|[Funzione SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
+|Restituzione di colonne in una o più tabelle|[Funzione SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)|  
+|Il recupero di una singola riga o un blocco di dati in una direzione di tipo forward-only|[Funzione SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|Imposta il recupero di un blocco di dati o lo scorrimento di un risultato|[Funzione SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |Restituzione delle statistiche delle tabelle e indici|[Funzione SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
-|Restituzione di privilegi per una o più tabelle|[Funzione SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
+|Restituzione dei privilegi per una o più tabelle|[Funzione SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

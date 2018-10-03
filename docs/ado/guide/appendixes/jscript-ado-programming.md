@@ -1,13 +1,11 @@
 ---
-title: Programmazione ADO JScript | Documenti Microsoft
+title: Programmazione ADO JScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,35 +13,34 @@ helpviewer_keywords:
 - JScript programming in ADO
 - ADO, JScript programming
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ddf5486305d0d0e19de266e12a35987899846e6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 63559af64241be111ed99c9996b63c1978b3d649
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270303"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655629"
 ---
 # <a name="jscript-ado-programming"></a>Programmazione ADO JScript
-## <a name="creating-an-ado-project"></a>Creazione di un progetto ADO  
- Microsoft JScript non supporta le librerie dei tipi, in modo non è necessario fare riferimento ad ADO nel progetto. Di conseguenza, è supportata alcuna funzionalità associati, ad esempio il completamento della riga di comando. Inoltre, per impostazione predefinita, le costanti enumerate ADO non sono definite in JScript.  
+## <a name="creating-an-ado-project"></a>Creazione di un progetto di ADO  
+ Microsoft JScript non supporta le librerie dei tipi, quindi non è necessario fare riferimento ad ADO nel progetto. Di conseguenza, è supportata alcuna funzionalità associata come il completamento della riga di comando. Inoltre, per impostazione predefinita, le costanti enumerate ADO non sono definite in JScript.  
   
- ADO, tuttavia, fornisce che con due simboli di includere i file che contiene le definizioni seguenti da utilizzare con JScript:  
+ ADO fornisce, tuttavia, che è con due simboli di includere i file che contiene le definizioni seguenti da usare con JScript:  
   
 -   Per la creazione di script sul lato server utilizzare Adojavas. Inc, che viene installato nella cartella libreria ADO.  
   
 -   Per la creazione di script sul lato client utilizzare Adcjavas. Inc, che viene installato nella cartella libreria ADO.  
   
- È possibile copiare e incollare le definizioni di costanti da questi file in pagine ASP o, se si eseguono gli script sul lato server, copiare i file Adojavas. inc in una cartella nel sito Web e farvi riferimento dalla pagina ASP simile al seguente:  
+ È possibile copiare e incollare le definizioni di costanti da questi file nelle pagine ASP oppure, se si sta eseguendo lo scripting lato server, copiare Adojavas. Inc file in una cartella sul sito Web e farvi riferimento dalla pagina ASP simile al seguente:  
   
 ```  
 <!--#include File="adojavas.inc"-->  
 ```  
   
-## <a name="creating-ado-objects-in-jscript"></a>Creazione di oggetti ADO in JScript  
- È invece necessario utilizzare il **CreateObject** chiamata di funzione:  
+## <a name="creating-ado-objects-in-jscript"></a>Creazione di oggetti ADO JScript  
+ È invece necessario usare il **CreateObject** chiamata di funzione:  
   
 ```  
 var Rs1;  
@@ -51,7 +48,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ```  
   
 ## <a name="jscript-example"></a>Esempio di JScript  
- Il codice seguente è un esempio generico di programmazione sul lato server JScript in un file della pagina ASP (Active Server) che apre un **Recordset** oggetto:  
+ Il codice seguente è un esempio generico di programmazione sul lato server JScript in un file di pagina ASP (Active Server) che consente di aprire una **Recordset** oggetto:  
   
 ```  
 <%  @LANGUAGE="JScript" %>  

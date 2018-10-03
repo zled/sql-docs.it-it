@@ -1,13 +1,11 @@
 ---
-title: Dichiarare l'applicazione&#39;s ODBC versione | Documenti Microsoft
+title: La dichiarazione dell'applicazione&#39;versione ODBC s | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - declaring ODBC version [ODBC]
@@ -17,23 +15,22 @@ helpviewer_keywords:
 - connecting to data source [ODBC], declaring ODBC version
 - version declaration [ODBC]
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b68c0d0fc233cbe41d38846048643f7e02f6013b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd212f45e02ddce4c64a8b4a7d664ddaedf8090a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912186"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666829"
 ---
-# <a name="declaring-the-application39s-odbc-version"></a>Dichiarare l'applicazione&#39;s versione ODBC
-Prima di un'applicazione alloca una connessione, è necessario impostare l'attributo di ambiente SQL_ATTR_ODBC_VERSION. Questo attributo indica che l'applicazione seguente ODBC 2. *x* o ODBC 3. *x* specifica quando si utilizzano gli elementi seguenti:  
+# <a name="declaring-the-application39s-odbc-version"></a>La dichiarazione dell'applicazione&#39;s versione ODBC
+Prima di un'applicazione alloca una connessione, è necessario impostare l'attributo di ambiente SQL_ATTR_ODBC_VERSION. Questo attributo indica che l'applicazione segue di ODBC 2. *x* o ODBC 3. *x* specifica quando si usano gli elementi seguenti:  
   
--   **SQLSTATE**. Numero di valori SQLSTATE è diversi in ODBC 2. *x* e ODBC 3. *x*.  
+-   **SQLSTATE**. Numero di valori SQLSTATE è diverse in ODBC 2. *x* e ODBC 3. *x*.  
   
--   **Date, Time e gli identificatori di tipo Timestamp**. La tabella seguente illustra gli identificatori di tipo per date, time e dati di tipo timestamp ODBC 2. *x* e ODBC 3. *x*.  
+-   **Date, Time e gli identificatori di tipo Timestamp**. Nella tabella seguente mostra gli identificatori di tipo per data, ora e timestamp di ODBC 2. *x* e ODBC 3. *x*.  
   
     |ODBC 2. *x*|ODBC 3. *x*|  
     |----------------|----------------|  
@@ -46,9 +43,9 @@ Prima di un'applicazione alloca una connessione, è necessario impostare l'attri
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *CatalogName***argomento nella SQLTables**. In ODBC 2. *x*, i caratteri jolly ("%" e "_") nei *CatalogName* argomento vengono trattati letteralmente. In ODBC 3. *x*, vengono considerate come caratteri jolly. Di conseguenza, un'applicazione che segue l'API ODBC 2. *x* specifica non è possibile utilizzarle come escape non li quando vengono utilizzati come valori letterali e caratteri jolly. Un'applicazione che segue ODBC 3. *x* specifica è possibile utilizzare queste informazioni come caratteri jolly o utilizzare caratteri di escape e li utilizzi come valori letterali. Per ulteriori informazioni, vedere [argomenti delle funzioni di catalogo in](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+-   *CatalogName***argomento nella SQLTables**.   In ODBC 2. *x*, i caratteri jolly ("%" e "_") nel *CatalogName* argomento vengono trattati in modo letterale. In ODBC 3. *x*, essi vengono trattati come caratteri jolly. Di conseguenza, un'applicazione che segue di ODBC 2. *x* specifica non è possibile usarle come i caratteri jolly e non utilizzare caratteri di escape quando vengono utilizzati come valori letterali. Un'applicazione che segue il ODBC 3. *x* specifica può usare queste chiavi come caratteri jolly o utilizzare caratteri di escape e usarle come valori letterali. Per altre informazioni, vedere [argomenti nelle funzioni di catalogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
- ODBC 3*x* gestione Driver e ODBC 3*x* driver controllare la versione della specifica di ODBC in cui viene scritta un'applicazione e rispondere di conseguenza. Ad esempio, se è seguito dall'applicazione ODBC 2. *x* specifica e chiama **SQLExecute** prima di chiamare **SQLPrepare**, ODBC 3*x* gestione Driver restituisce SQLSTATE S1010 ( Errore nella sequenza funzione). Se l'applicazione segue ODBC 3*x* specifica, gestione Driver restituisce SQLSTATE HY010 (funzione di errore nella sequenza). Per ulteriori informazioni, vedere [compatibilità e conformità agli standard](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
+ ODBC 3 *. x* gestione Driver mentre ODBC 3*x* i driver di controllare la versione della specifica di ODBC in cui verrà scritta un'applicazione e rispondere di conseguenza. Ad esempio, se l'applicazione segue di ODBC 2. *x* specification e le chiamate **SQLExecute** prima di chiamare **SQLPrepare**, ODBC 3*x* gestione Driver restituisce SQLSTATE S1010 ( Errore nella sequenza (funzione)). Se l'applicazione segue ODBC 3*x* specifica, gestione Driver restituisce SQLSTATE HY010 (funzione di errore nella sequenza). Per altre informazioni, vedere [garantire la compatibilità e conformità agli standard](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
 > [!IMPORTANT]  
->  Applicazioni che seguono ODBC 3. *x* specifica è necessario utilizzare il codice condizionale per evitare di utilizzare funzionalità nuove per ODBC 3. *x* quando si lavora con ODBC 2. *x* driver. ODBC 2. *x* driver non supportano la funzionalità nuova in ODBC 3. *x* solo perché l'applicazione dichiara che segue ODBC 3. *x* specifica. Inoltre, ODBC 3. *x* driver non cessano supportare la funzionalità nuova in ODBC 3. *x* solo perché l'applicazione dichiara che segue l'API ODBC 2. *x* specifica.
+>  Applicazioni che osservano ODBC 3. *x* specifica debba usare codice condizionale per evitare di utilizzare funzionalità nuove in ODBC 3. *x* quando si lavora con ODBC 2. *x* driver. ODBC 2. *x* driver non supportano funzionalità nuove in ODBC 3. *x* solo perché l'applicazione dichiara che segue il ODBC 3. *x* specifica. Inoltre, ODBC 3. *x* i driver non scade supportare la funzionalità nuova a ODBC 3. *x* solo perché l'applicazione dichiara che segue di ODBC 2. *x* specifica.

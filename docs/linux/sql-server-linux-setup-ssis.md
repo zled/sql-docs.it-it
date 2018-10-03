@@ -8,16 +8,14 @@ manager: craigg
 ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: bac0933cc8b27159a95a9b99014a43e9fab966b5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c9d18e948a415a1d549c21a7c78e0117c6ab819c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086043"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602499"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installare SQL Server Integration Services (SSIS) in Linux
 
@@ -138,7 +136,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | Variabile di ambiente | Description |
 |---|---|
 | **ACCEPT_EULA** | Accetta il contratto di licenza di SQL Server quando è impostato su qualsiasi valore (ad esempio, `Y`).|
-| **SSIS_PID** | Imposta la chiave di prodotto o edizione di SQL Server. Di seguito sono i valori possibili:<br/>Copia di valutazione<br/>Developer<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>Un codice product key<br/><br/>Se si specifica un codice product key, il codice product key deve essere nel formato `#####-#####-#####-#####-#####`, dove `#` è una lettera o un numero.  |
+| **SSIS_PID** | Imposta la chiave di prodotto o edizione di SQL Server. Di seguito sono i valori possibili:<br/>Copia di valutazione<br/>Sviluppatore<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>Un codice product key<br/><br/>Se si specifica un codice product key, il codice product key deve essere nel formato `#####-#####-#####-#####-#####`, dove `#` è una lettera o un numero.  |
 | | |
 
 ## <a name="next-steps"></a>Passaggi successivi

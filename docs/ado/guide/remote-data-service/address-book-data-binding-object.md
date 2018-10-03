@@ -1,40 +1,37 @@
 ---
-title: Oggetto di associazione di dati della Rubrica indirizzi | Documenti Microsoft
+title: Oggetto di associazione dati manuale di indirizzi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7002d3755d213eebd61efab40aa51d8988f311a3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 95e948a80d4749a92ef1c8e299b47272d72c333f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273640"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659259"
 ---
-# <a name="address-book-data-binding-object"></a>Oggetto di associazione di dati della Rubrica
-L'applicazione Address Book utilizza il [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto per associare i dati dal database di SQL Server a un oggetto visivo (in questo caso, una tabella DHTML) la pagina dell'applicazione client HTML. Usa la logica di programma VBScript basati sugli eventi di [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) per:  
+# <a name="address-book-data-binding-object"></a>Oggetto di data binding di Address Book
+L'applicazione Address Book utilizza il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto a cui associare i dati dal database di SQL Server a un oggetto visivo (in questo caso, una tabella DHTML) nella pagina dell'applicazione client HTML. La logica di programma VBScript guidato dagli eventi Usa le [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) per:  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
--   Eseguire query sul database, inviare aggiornamenti al database e aggiornare la griglia dati.  
+-   Eseguire query sul database, inviare gli aggiornamenti al database e aggiornare la griglia dei dati.  
   
--   Consentire agli utenti di spostarsi al primo, successivo, precedente, o l'ultimo record nella griglia dei dati.  
+-   Consentire agli utenti di spostarsi al primo, successivamente, precedente, o l'ultimo record nella griglia dei dati.  
   
- Il codice seguente definisce il **RDS. DataControl** componente:  
+ Il codice seguente definisce il **Servizi Desktop remoto. DataControl** componente:  
   
 ```  
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"  
@@ -45,28 +42,28 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 </OBJECT>  
 ```  
   
- Il tag OBJECT definisce il **RDS. DataControl** componente nel programma. Il tag include due tipi di parametri:  
+ Definisce il tag OBJECT di **Servizi Desktop remoto. DataControl** componente nel programma. Il tag include due tipi di parametri:  
   
--   Quelli associati con il tag OBJECT generico.  
+-   Quelle associate al tag di oggetti generico.  
   
--   Parametri specifici per il **RDS. DataControl** oggetto.  
+-   Quelle specifiche per il **Servizi Desktop remoto. DataControl** oggetto.  
   
-## <a name="generic-object-tag-parameters"></a>Parametri del Tag OBJECT generico  
+## <a name="generic-object-tag-parameters"></a>Parametri del Tag OBJECT generica  
  Nella tabella seguente vengono descritti i parametri associati con il tag OBJECT.  
   
 |Parametro|Description|  
 |---------------|-----------------|  
-|***CLASSID***|Numero univoco a 128 bit che identifica il tipo di oggetto incorporato al sistema. Questo identificatore viene mantenuto nel Registro di sistema del computer locale. (Per l'ID di classe di **RDS. DataControl** , vedere [RDS. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)|  
-|***ID***|Definisce un identificatore a livello di documento per l'oggetto incorporato che viene utilizzato per identificarlo nel codice.|  
+|***CLASSID***|Numero univoco a 128 bit che identifica il tipo di oggetto incorporato nel sistema. Questo identificatore viene mantenuto nel Registro di sistema del computer locale. (Per gli ID di classe del **Servizi Desktop remoto. DataControl** oggetti, vedere [Servizi Desktop remoto. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)|  
+|***ID***|Definisce un identificatore a livello di documento per l'oggetto incorporato che consente di identificare l'oggetto nel codice.|  
   
-## <a name="rdsdatacontrol-tag-parameters"></a>RDS. Parametri DataControl Tag  
- Nella tabella seguente vengono descritti i parametri specifici per il **RDS. DataControl** oggetto. (Per un elenco completo del **RDS. DataControl** oggetto parametri e all'implementazione, vedere [RDS. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)  
+## <a name="rdsdatacontrol-tag-parameters"></a>SERVIZI DESKTOP REMOTO. Parametri DataControl Tag  
+ Nella tabella seguente vengono descritti i parametri specifici per il **Servizi Desktop remoto. DataControl** oggetto. (Per un elenco completo del **Servizi Desktop remoto. DataControl** dell'oggetto parametri e quando relativa implementazione, vedere [Servizi Desktop remoto. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)  
   
 |Parametro|Description|  
 |---------------|-----------------|  
-|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|Se si sta utilizzando HTTP, il valore è il nome del computer server preceduto da `http://`.|  
-|[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Fornisce le informazioni di connessione necessarie per il **RDS. DataControl** per connettersi a SQL Server.|  
-|[SQL](../../../ado/reference/rds-api/sql-property.md)|Imposta o restituisce la stringa di query utilizzata per recuperare il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
+|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|Se si Usa HTTP, il valore è il nome del computer del server preceduto da `http://`.|  
+|[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Fornisce le informazioni di connessione necessarie per il **Servizi Desktop remoto. DataControl** per connettersi a SQL Server.|  
+|[SQL](../../../ado/reference/rds-api/sql-property.md)|Imposta o restituisce la stringa di query usata per recuperare il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pulsanti di comando di Address Book](../../../ado/guide/remote-data-service/address-book-command-buttons.md)

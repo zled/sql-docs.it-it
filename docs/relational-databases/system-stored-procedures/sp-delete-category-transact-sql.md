@@ -1,14 +1,11 @@
 ---
-title: sp_delete_category (Transact-SQL) | Documenti Microsoft
+title: sp_delete_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_category_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb4cdd9f5e3104ac2673bce0f60a6653defde5ca
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 28a1b42780b57fb5807e0ff8f900bfe7b1fc7559
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249198"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670459"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,30 +42,30 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@class =**] **'***classe***'**  
- Classe della categoria. *classe* viene **varchar (8)** e non prevede alcun valore predefinito, è inoltre necessario avere uno dei valori seguenti.  
+ Classe della categoria. *classe* viene **varchar (8)**, non prevede alcun valore predefinito deve avere uno dei valori seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**JOB**|Elimina una categoria di processi.|  
 |**AVVISO**|Elimina una categoria di avvisi.|  
-|**(OPERATORE)**|Elimina una categoria di operatori.|  
+|**OPERATORE**|Elimina una categoria di operatori.|  
   
  [  **@name =**] **'***nome***'**  
  Nome della categoria da rimuovere. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_delete_category** deve essere eseguita la **msdb** database.  
   
  Quando si elimina una categoria, tutti i processi, gli avvisi o gli operatori di tale categoria vengono riclassificati nella categoria predefinita per la classe.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene eliminata la categoria di processi `AdminJobs`.  

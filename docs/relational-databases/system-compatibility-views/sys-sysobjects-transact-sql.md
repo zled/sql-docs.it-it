@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysobjects_TSQL
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - sys.sysobjects compatibility view
 - sysobjects system table
 ms.assetid: 44fdc387-67b0-4139-8bf5-ed26cf640cd1
-caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ab119a6e98bcf7065ec7cf5dd2cd39d6bb57a1b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e822f034ff4af30fc2d8c6992544b65aaea865e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43089041"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672589"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -43,7 +39,7 @@ ms.locfileid: "43089041"
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|Nome oggetto|  
+|name|**sysname**|Nome oggetto|  
 |id|**int**|Numero di identificazione dell'oggetto|  
 |xtype|**char(2)**|Tipo di oggetto. Può trattarsi di uno dei tipi di oggetti seguenti:<br /><br /> AF = funzione di aggregazione (CLR)<br /><br /> C = vincolo CHECK<br /><br /> D = vincolo predefinito o DEFAULT<br /><br /> F = vincolo FOREIGN KEY<br /><br /> L = Log<br /><br /> FN = funzione scalare<br /><br /> FS = funzione scalare di assembly (CLR)<br /><br /> FT = funzione valutata a livello di tabella assembly (CLR)<br /><br /> IF = funzione della tabella inline<br /><br /> IT = tabella interna<br /><br /> P = stored procedure<br /><br /> PC = stored procedure di assembly (CLR)<br /><br /> PK = vincolo PRIMARY KEY (il tipo è K)<br /><br /> RF = stored procedure del filtro di replica<br /><br /> S = tabella di sistema<br /><br /> SN = sinonimo<br /><br /> SQ = coda di servizio<br /><br /> TA = trigger DML assembly (CLR)<br /><br /> TF = funzione tabella<br /><br /> TR = trigger DML SQL<br /><br /> TT = tipo tabella<br /><br /> U = tabella utente<br /><br /> UQ = vincolo UNIQUE (il tipo è K)<br /><br /> V = vista<br /><br /> X = stored procedure estesa|  
 |uid|**smallint**|ID dello schema del proprietario dell'oggetto. Per i database aggiornati da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'ID dello schema corrisponde all'ID utente del proprietario. Causa un errore di overflow o restituisce NULL se il numero di utenti e ruoli è maggiore di 32.767.<br /><br /> **\*\* Importanti \* \***  se si usa uno dei seguenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istruzioni DDL, è necessario usare il [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) anziché Sys. sysobjects vista del catalogo.<br /><br /> CREARE &AMP;#124; ALTER &AMP;#124; DROP USER<br /><br /> CREARE &AMP;#124; ALTER &AMP;#124; DROP ROLE<br /><br /> CREARE &AMP;#124; ALTER &AMP;#124; DROP APPLICATION ROLE<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  

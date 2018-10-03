@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_helpmergepullsubscription
 - sp_helpmergepullsubscription_TSQL
 helpviewer_keywords:
 - sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65c0ab3d3b5766c2e4cf4878fe81707295c01120
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: adbb39c32f09898e6d521b0ecff3c06c1a6494f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639979"
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +81,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**distributor_password**|**sysname**|Password per il server di distribuzione.|  
 |**distributor_security_mode**|**int**|Modalità di sicurezza del server di distribuzione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows|  
 |**ftp_address**|**sysname**|Disponibile per compatibilità con le versioni precedenti. Indirizzo di rete del servizio FTP per il server di distribuzione.|  
-|**ftp_port**|**int**|Disponibile per compatibilità con le versioni precedenti. Numero di porta del servizio FTP per il database di distribuzione.|  
+|**ftp_port**|**int**|Disponibile per compatibilità con le versioni precedenti. Numero di porta del servizio FTP per il server di distribuzione.|  
 |**ftp_login**|**sysname**|Disponibile per compatibilità con le versioni precedenti. Nome utente utilizzato per la connessione al servizio FTP.|  
 |**ftp_password**|**sysname**|Disponibile per compatibilità con le versioni precedenti. Password utente utilizzata per la connessione al servizio FTP.|  
 |**alt_snapshot_folder**|**nvarchar(255)**|Percorso di archiviazione della cartella snapshot, se diverso o aggiuntivo rispetto a quello predefinito.|  

@@ -1,34 +1,31 @@
 ---
-title: Esempio di metodo CompareBookmarks (VC + +) | Documenti Microsoft
+title: Esempio di metodo CompareBookmarks (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CompareBookmarks method [ADO], VC++ example
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ff4ae1e6314f1ed72dd73ec25eef0b3261906f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02ae773493258afa7c1e3b8e3074347ce08ff4cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276910"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639279"
 ---
-# <a name="comparebookmarks-method-example-vc"></a>Esempio di metodo CompareBookmarks (VC + +)
-Questo esempio viene illustrato il [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) metodo. Il valore relativo di segnalibri è raramente necessario a meno che un segnalibro particolare è in qualche modo particolare.  
+# <a name="comparebookmarks-method-example-vc"></a>Esempio del metodo CompareBookmarks (VC++)
+Questo esempio viene illustrato il [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) (metodo). Il valore relativo di segnalibri è raramente necessaria, a meno che un determinato segnalibro è in qualche modo particolare.  
   
- Definire una riga casuale di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) derivato dal ***autori*** tabella come destinazione di una ricerca. Quindi visualizzare la posizione di ogni riga che hanno come destinazione.  
+ Definire una riga casuale di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) derivato dalle ***autori*** tabella come destinazione di una ricerca. Quindi visualizzare la posizione di ogni riga rispetto alla che hanno come destinazione.  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  
@@ -174,5 +171,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
+ [Esempio di metodo CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursoroption_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b3bb6500d4d1bc29859c428820d28ec48d6aa72
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 1e043fd2ea37b9ff790a519311e8db78fa443422
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659049"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ sp_cursoroption cursor, code, value
  *Codice*  
  Consente di specificare i vari fattori dei valori restituiti del cursore. *codice* richiede uno dei seguenti **int** valori di input:  
   
-|valore|nome|Description|  
+|valore|Nome|Description|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|Restituisce il puntatore di testo, anziché i dati effettivi, per determinate colonne di tipo text o image designate.<br /><br /> TEXTPTR_ONLY consente i puntatori di testo da utilizzare come *handle* agli oggetti blob che possono essere recuperati in seguito in modo selettivo o l'aggiornamento usando [!INCLUDE[tsql](../../includes/tsql-md.md)] o funzionalità DBLIB (ad esempio, [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT o DBLIB DBWRITETEXT).<br /><br /> Se viene assegnato il valore "0", tutte le colonne di tipo text e image nell'elenco di selezione restituiranno puntatori di testo anziché dati.|  
 |0x0002|CURSOR_NAME|Assegna il nome specificato nel *valore* fino al cursore. A sua volta, consente a ODBC di utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] posizionate le istruzioni di aggiornamento ed eliminazione sui cursori aperti mediante sp_cursoropen.<br /><br /> La stringa può essere specificata come qualsiasi tipo di dati Unicode o character.<br /><br /> Poiché [!INCLUDE[tsql](../../includes/tsql-md.md)] le istruzioni UPDATE/DELETE posizionate operano, per impostazione predefinita, nella prima riga in un cursore con sp_cursor SETPOSITION deve essere usato per posizionare il cursore prima di eseguire l'istruzione UPDATE/DELETE posizionata.|  

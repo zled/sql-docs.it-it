@@ -1,43 +1,40 @@
 ---
-title: Marcatori di parametro di associazione | Documenti Microsoft
+title: Marcatori di parametro di associazione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameter markers [ODBC]
 - binding parameter markers [ODBC]
 ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29f7f37bb67a20d994e3e82e383332b2b35197bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913326"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645989"
 ---
-# <a name="binding-parameter-markers"></a>Marcatori di parametro di associazione
-L'applicazione associa parametri chiamando **SQLBindParameter**. **SQLBindParameter** associa un parametro alla volta. Con questa soluzione, l'applicazione specifica quanto segue:  
+# <a name="binding-parameter-markers"></a>Associazione di marcatori di parametro
+L'applicazione associa parametri chiamando **SQLBindParameter**. **SQLBindParameter** associa un parametro alla volta. In tal modo l'applicazione specifica quanto segue:  
   
--   Il numero di parametro. I parametri sono numerati in ordine crescente di parametro nell'istruzione SQL, a partire dal numero 1. Mentre è consentito specificare un numero di parametro che è superiore rispetto al numero di parametri nell'istruzione SQL, il valore del parametro sarà ignorato durante l'esecuzione dell'istruzione.  
+-   Il numero di parametro. I parametri sono numerati in ordine crescente dei parametri nell'istruzione SQL, a partire dal numero 1. Anche se è consentito specificare un numero di parametro in posizione più elevato rispetto al numero di parametri nell'istruzione SQL, il valore del parametro verrà ignorato quando viene eseguita l'istruzione.  
   
--   Il tipo di parametro (input, input/output o di output). Ad eccezione di parametri nelle chiamate di procedura, tutti i parametri sono parametri di input. Per ulteriori informazioni, vedere [parametri di procedura](../../../odbc/reference/develop-app/procedure-parameters.md), più avanti in questa sezione.  
+-   Il tipo di parametro (input, input/output o di output). Tranne che per i parametri nelle chiamate a procedure, tutti i parametri sono parametri di input. Per altre informazioni, vedere [parametri delle Procedure](../../../odbc/reference/develop-app/procedure-parameters.md), più avanti in questa sezione.  
   
--   La C byte, l'indirizzo e tipo lunghezza dei dati della variabile è associato al parametro. Il driver deve essere in grado di convertire i dati dal tipo di dati C per il tipo di dati SQL o viene restituito un errore. Per un elenco delle conversioni supportate, vedere [la conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) appendice d: tipo di dati.  
+-   La C lunghezza dei dati byte, l'indirizzo e tipo della variabile associato al parametro. Il driver deve essere in grado di convertire i dati dal tipo di dati C per il tipo di dati SQL o viene restituito un errore. Per un elenco delle conversioni supportate, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) nell'appendice d: i tipi di dati.  
   
 -   Il tipo di dati SQL, precisione e scala del parametro stesso.  
   
--   L'indirizzo di un buffer di lunghezza/indicatore. Fornisce la lunghezza in byte di dati binari o character, specifica che i dati sono NULL o specifica che i dati verranno inviati con **SQLPutData**. Per ulteriori informazioni, vedere [tramite valori di lunghezza/indicatore](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+-   L'indirizzo di un buffer di lunghezza/indicatore. Fornisce la lunghezza in byte di dati carattere o binario, specifica che i dati sono NULL o specifica che i dati verranno inviati con **SQLPutData**. Per altre informazioni, vedere [usando i valori di lunghezza/indicatore](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   
- Ad esempio, il codice seguente viene associato *venditore* e *CustID* ai parametri per le colonne venditore e CustID. Poiché *venditore* contiene i dati di tipo carattere, sono a lunghezza variabile, il codice specifica la lunghezza in byte di *venditore* (11) e associa *SalesPersonLenOrInd* per contiene la lunghezza in byte dei dati in *venditore*. Queste informazioni non sono necessarie per *CustID* perché contiene dati integer, che è di lunghezza fissa.  
+ Ad esempio, il codice seguente associa *SalesPerson* e *CustID* ai parametri per le colonne CustomerID e venditore. Poiché *SalesPerson* contiene dati di tipo carattere, che è di lunghezza variabile, il codice specifica la lunghezza in byte dei *SalesPerson* (11) e associa *SalesPersonLenOrInd* a contiene la lunghezza in byte dei dati in *venditore*. Queste informazioni non sono necessarie per *CustID* perché contiene dati integer, che è di lunghezza fissa.  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -62,7 +59,7 @@ CustIDInd = 0;
 SQLExecDirect(hstmt1,"SELECT * FROM Orders WHERE SalesPerson=? AND CustID=?",SQL_NTS);  
 ```  
   
- Quando **SQLBindParameter** viene chiamato, il driver queste informazioni vengono memorizzate nella struttura per l'istruzione. Quando viene eseguita l'istruzione, Usa le informazioni per recuperare i dati del parametro e inviarlo all'origine dati.  
+ Quando **SQLBindParameter** viene chiamato, il driver di queste informazioni vengono memorizzate nella struttura per l'istruzione. Quando viene eseguita l'istruzione, Usa le informazioni per recuperare i dati del parametro e inviarlo all'origine dati.  
   
 > [!NOTE]  
->  In ODBC 1.0, sono stati associati parametri **SQLSetParam**. Gestione Driver viene eseguito il mapping tra le chiamate **SQLSetParam** e **SQLBindParameter**, a seconda delle versioni di ODBC utilizzata dall'applicazione e del driver.
+>  In ODBC 1.0, sono stati associati parametri **SQLSetParam**. Gestione Driver viene eseguito il mapping tra le chiamate **SQLSetParam** e **SQLBindParameter**, a seconda le versioni di ODBC utilizzata dalle applicazioni e driver.

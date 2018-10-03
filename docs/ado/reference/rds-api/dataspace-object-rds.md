@@ -1,53 +1,50 @@
 ---
-title: Oggetto DataSpace (RDS) | Documenti Microsoft
+title: Oggetto DataSpace (Servizi Desktop remoto) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - DataSpace object [RDS]
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ccaa8f0999e54dce15cc40d5ef773dd16473658
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 078799f90a0241dc29f30693adce95ea2e795ff8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288232"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654269"
 ---
-# <a name="dataspace-object-rds"></a>Oggetto DataSpace (RDS)
+# <a name="dataspace-object-rds"></a>Oggetto DataSpace (Servizi Desktop remoto)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Crea proxy sul lato client per oggetti di business personalizzata che si trovano nel livello intermedio.  
+ Crea proxy lato client di oggetti business personalizzata che si trova nel livello intermedio.  
   
- Remote Data Service deve proxy degli oggetti business in modo che i componenti lato client possono comunicare con gli oggetti business che si trova nel livello intermedio. I proxy semplificano la creazione di pacchetti, disassemblaggio e di trasporto (marshalling) dell'applicazione [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dati oltre i limiti di processo o del computer.  
+ Servizio dati remoto deve proxy degli oggetti business in modo che i componenti lato client possono comunicare con oggetti business che si trova nel livello intermedio. I proxy semplificano la creazione di pacchetti, disassemblaggio e di trasporto (marshalling) dell'applicazione [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dati attraverso i limiti di processo o al computer.  
   
- Remote Data Service utilizza la **RDS. DataSpace** dell'oggetto [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) metodo per creare i proxy degli oggetti business. Il proxy dell'oggetto business viene creato dinamicamente ogni volta che viene creata un'istanza della relativa controparte oggetto business di livello intermedio. Remote Data Service supporta i seguenti protocolli: HTTP, HTTPS (HTTP Secure Sockets), DCOM e in-process (componenti client e l'oggetto business si trovano nello stesso computer).  
-  
-> [!NOTE]
->  Servizi Desktop remoto si comporta in modo "senza stato" quando il **RDS. DataSpace** oggetto utilizza il protocollo HTTP o HTTPS. Vale a dire le informazioni relative a una richiesta client interne viene eliminate dopo che il server ha restituito una risposta.  
+ Il servizio dati remoto Usa il **Servizi Desktop remoto. DataSpace** dell'oggetto [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) metodo per creare i proxy di oggetti business. Il proxy di oggetti business in modo dinamico viene creato ogni volta che viene creata un'istanza della relativa controparte di oggetti business di livello intermedio. Servizio dati remoto supporta i protocolli seguenti: HTTP, HTTPS (HTTP Secure Socket), DCOM e in-process (componenti client e l'oggetto business si trovano nello stesso computer).  
   
 > [!NOTE]
->  Anche se l'oggetto business sembra esiste per la durata del proxy dell'oggetto business, l'oggetto business esista effettivamente solo fino a quando non viene inviata una risposta a una richiesta. Quando viene emessa una richiesta (vale a dire, viene richiamato un metodo per l'oggetto business), il proxy apre una nuova connessione al server e il server crea una nuova istanza dell'oggetto business. Dopo l'oggetto business risponde alla richiesta, il server Elimina definitivamente l'oggetto business e chiude la connessione.  
+>  Servizi Desktop remoto si comporta in modo "senza stato" quando il **Servizi Desktop remoto. DataSpace** oggetto utilizza il protocollo HTTP o HTTPS. Eventuali informazioni interne su una richiesta client, ovvero vengono eliminati dopo che il server restituisce una risposta.  
   
 > [!NOTE]
->  Questo comportamento significa che non è possibile passare i dati da una richiesta a un altro utilizzando una proprietà dell'oggetto business o una variabile. È necessario utilizzare un altro meccanismo, ad esempio un file o un argomento del metodo, per rendere persistenti i dati.  
+>  Anche se l'oggetto business sembra esistere per la durata del proxy dell'oggetto business, l'oggetto business è presente effettivamente solo fino a quando non viene inviata una risposta a una richiesta. Quando viene emessa una richiesta (vale a dire, viene richiamato un metodo sull'oggetto business), il proxy consente di aprire una nuova connessione al server e il server crea una nuova istanza dell'oggetto business. Dopo che l'oggetto business risponde alla richiesta, il server distrugge l'oggetto business e chiude la connessione.  
   
- L'ID di classe per il **RDS. DataSpace** oggetto è 0-983A-00C04FC29E36 BD96C556 65A3 - 11 D.  
+> [!NOTE]
+>  Questo comportamento significa che è possibile passare i dati da una richiesta a un altro utilizzando una proprietà dell'oggetto business o una variabile. È necessario impiegare un altro meccanismo, ad esempio un file o un argomento del metodo, per rendere persistenti i dati.  
   
- Il **DataSpace** oggetto è sicuro per lo script.  
+ L'ID della classe per il **Servizi Desktop remoto. DataSpace** oggetto è BD96C556-65A3 - 11d 0-983A-00C04FC29E36.  
   
- In questa sezione contiene l'argomento seguente.  
+ Il **DataSpace** oggetto è sicuro per lo scripting.  
+  
+ In questa sezione contiene gli argomenti seguenti.  
   
 -   [Proprietà, metodi ed eventi dell'oggetto DataSpace (Servizi Desktop remoto)](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
   

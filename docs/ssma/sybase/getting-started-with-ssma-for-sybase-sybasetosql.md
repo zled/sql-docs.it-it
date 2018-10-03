@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4bd22dfc6c514b472ec806b4ce7c8de695bd7b28
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 7e308589ab565b5702bbf2cba939835a50c08d8e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392305"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678369"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Introduzione a SSMA per SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per SAP ASE consente rapidamente gli schemi di database SAP Adaptive Server Enterprise (ASE) per convertire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o gli schemi di Database SQL di Azure, caricare gli schemi risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Database SQL di Azure ed eseguire la migrazione dei dati da SAP ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Database SQL di Azure.  
@@ -89,7 +83,7 @@ Progetto contenente pulsanti per l'utilizzo con i progetti, la connessione a SAP
 #### <a name="the-migration-toolbar"></a>Barra degli strumenti di migrazione  
 Barra degli strumenti di migrazione include i comandi seguenti:  
   
-|Pulsante|Funzione|  
+|Button|Funzione|  
 |----------|------------|  
 |**Creazione di Report**|Converte gli oggetti selezionati SAP ASE in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni sulla sintassi e quindi crea un report che mostra la conversione ha come esito positivo.<br /><br />Questo comando è disponibile solo quando gli oggetti selezionati in Visualizzatore metadati Sybase.|  
 |**Converti Schema**|Converte gli oggetti selezionati SAP ASE in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o gli oggetti di Database SQL di Azure.<br /><br />Questo comando è disponibile solo quando gli oggetti selezionati in Visualizzatore metadati Sybase.|  
@@ -99,7 +93,7 @@ Barra degli strumenti di migrazione include i comandi seguenti:
 ### <a name="menus"></a>Menu  
 SSMA contiene i menu seguenti:  
   
-|Menu di scelta|Description|  
+|Menu|Description|  
 |--------|---------------|  
 |**File**|Comandi per l'uso dei progetti, la connessione a SAP ASE e ci si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Database SQL di Azure.|  
 |**Modifica**|Contiene i comandi per la ricerca e lavora sul testo nelle pagine di dettagli, ad esempio la copia [!INCLUDE[tsql](../../includes/tsql-md.md)] dal riquadro dei dettagli SQL. Contiene anche il **gestire i segnalibri** opzione, in cui è possibile visualizzare un elenco dei propri segnalibri esistenti. È possibile usare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  

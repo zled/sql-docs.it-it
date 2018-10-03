@@ -1,30 +1,24 @@
 ---
-title: Creazione dei file di connessione del Server (AccessToSQL) | Documenti Microsoft
+title: Creazione di file di connessione del Server (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c6e46ab77966f6f6f392de64c076c4560c7885ab
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f083b38d64927ded898366434def4505cd3f67c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773627"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672659"
 ---
-# <a name="creating-the-server-connection-files-accesstosql"></a>La creazione di file di connessione (AccessToSQL) del server
-Informazioni sul server può essere specificato nella sezione del file di script server. Inoltre possibile specificare le informazioni sul server in un file di connessione server separato. Il parametro della riga di comando per il file di connessione del server è `-c <serverconnectionfile>`. Se lo stesso id di server è presente nel file di connessione sia lo script e il server, è considerata la definizione del server nel file di script.  
+# <a name="creating-the-server-connection-files-accesstosql"></a>Creazione del server di file di connessione (AccessToSQL)
+Informazioni sul server può essere specificato nella sezione dei server del file di script. Informazioni sul server può anche essere specificati in un file di connessione server separato. Il parametro della riga di comando per il file di connessione del server è `-c <serverconnectionfile>`. Se lo stesso id di server è presente nel file di connessione dello script sia nel server, viene considerata la definizione del server nel file di script.  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -67,12 +61,12 @@ Informazioni sul server può essere specificato nella sezione del file di script
 </sql-azure>  
 ```  
   
-## <a name="server-connection-file-validation"></a>Convalida del file di connessione di server  
-L'utente può facilmente convalidare il file di connessione del server nel file di definizione dello schema **'A2SSConsoleScriptServersSchema.xsd'** disponibile nella cartella 'Schemi'.  
+## <a name="server-connection-file-validation"></a>Convalida del file di connessione server  
+L'utente può facilmente convalidare il file di connessione del server in base al file di definizione dello schema **'A2SSConsoleScriptServersSchema.xsd'** disponibile nella cartella "Schemi".  
   
 ## <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo nella console di gestione viene [in esecuzione la Console di SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+Il passaggio successivo in costi operativi console consiste [esecuzione della Console SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[L'esecuzione la Console SSMA (Access)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[Esecuzione della Console SSMA (accesso)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

@@ -1,14 +1,11 @@
 ---
-title: Classe SqlServerAlias | Documenti Microsoft
+title: Classe SqlServerAlias | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SqlServerAlias Class
@@ -18,16 +15,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SqlServerAlias class
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fb5c8262739f89518ad92d8f09819c810167a659
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75ca27fc8c035a2b62cc70bbf740dd746f341d45
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010228"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603529"
 ---
 # <a name="sqlserveralias-class"></a>Classe SqlServerAlias
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,6 +38,6 @@ ms.locfileid: "33010228"
  **Nota:** La [classe SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) eredita il metodo **Put** dalla classe Provider. Tuttavia, non viene restituito alcun risultato come indicato dal metodo **Provider::Put** . Per ulteriori informazioni, vedere la documentazione di WMI.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare i protocolli client](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurazione di protocolli client](http://technet.microsoft.com/library/ms181035.aspx)  
   
   

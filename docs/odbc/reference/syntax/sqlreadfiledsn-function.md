@@ -1,13 +1,11 @@
 ---
-title: Funzione SQLReadFileDSN | Documenti Microsoft
+title: Funzione SQLReadFileDSN | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLReadFileDSN
@@ -19,20 +17,19 @@ f1_keywords:
 helpviewer_keywords:
 - SQLReadFileDSN function [ODBC]
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32804ed9657a4438c3509fc57b266eb97af9db5b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd56404bfedece75d78ebaabd670cf25f19cbb0d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919826"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680229"
 ---
-# <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN (funzione)
+# <a name="sqlreadfiledsn-function"></a>Funzione SQLReadFileDSN
 **Conformità**  
- Introdotta: versione ODBC 3.0  
+ Versione introdotta: ODBC 3.0  
   
  **Riepilogo**  
  **SQLReadFileDSN** legge le informazioni da un DSN su File.  
@@ -52,48 +49,48 @@ BOOL SQLReadFileDSN(
   
 ## <a name="arguments"></a>Argomenti  
  *lpszFileName*  
- [Input] Puntatore al buffer di dati che contiene il nome del file DSN. Un'estensione per il DSN viene aggiunto a tutti i nomi di file che non dispongono già di un'estensione per il DSN. Il valore in  *\*lpszFileName* deve essere una stringa con terminazione null.  
+ [Input] Puntatore al buffer di dati che contiene il nome del file DSN. Un'estensione di DSN viene aggiunto a tutti i nomi di file che non dispongono già di un'estensione di DSN. Il valore in  *\*lpszFileName* deve essere una stringa con terminazione null.  
   
  *lpszAppName*  
  [Input] Puntatore al buffer di dati che contiene il nome dell'applicazione. Questo è "ODBC" per la sezione ODBC. Il valore in  *\*lpszAppName* deve essere una stringa con terminazione null.  
   
- *lpszkeyname stringa*  
- [Input] Puntatore al buffer di dati che contiene il nome della chiave da leggere. Per parole chiave riservate, vedere "Commenti". Il valore in  *\*lpszAppName* deve essere una stringa con terminazione null.  
+ *lpszKeyName*  
+ [Input] Puntatore al buffer di dati che contiene il nome della chiave da leggere. Per le parole chiave riservate, vedere "Commenti". Il valore in  *\*lpszAppName* deve essere una stringa con terminazione null.  
   
  *lpszString*  
- [Output] Puntatore al buffer di dati che contiene la stringa associata alla chiave per la lettura.  
+ [Output] Puntatore al buffer di dati che contiene la stringa associata alla chiave da leggere.  
   
- Se  *\*lpszFileName* è un nome DSN valido, ma il *lpszAppName* argomento è un puntatore null e *lpszkeyname stringa* argomento è un puntatore null, il  *\*lpszString* contiene un elenco di applicazioni valide. Se  *\*lpszFileName* è un nome di file valido. DSN e  *\*lpszAppName* è un nome di applicazione valido, ma la *lpszkeyname stringa* argomento è un valore null puntatore, quindi  *\*lpszString* contiene un elenco di parole chiave riservate valide nella sezione appropriata del file DSN, delimitata da punti e virgola. Se  *\*lpszFileName* è un nome DSN valido ma  *\*lpszAppName* è un puntatore null e *lpszkeyname stringa* argomento è un puntatore null, quindi  *\*lpszString* contiene un elenco di sezioni nel file DSN, delimitate da punti e virgola.  
+ Se  *\*lpszFileName* è un nome di file DSN valido, ma il *lpszAppName* argomento è un puntatore null e la *lpszKeyName* argomento è un puntatore null, quindi  *\*lpszString* contiene un elenco di applicazioni valide. Se  *\*lpszFileName* è un nome di file DSN valido e  *\*lpszAppName* è un nome di applicazione valido, ma il *lpszKeyName* argomento è un valore null puntatore, quindi  *\*lpszString* contiene un elenco di parole chiave riservate valide nella sezione appropriata del file DSN, delimitata da punti e virgola. Se  *\*lpszFileName* è un nome di file DSN valido ma  *\*lpszAppName* è un puntatore null e il *lpszKeyName* argomento è un puntatore null, quindi  *\*lpszString* contiene un elenco delle sezioni nel file DSN, delimitate da punti e virgola.  
   
  *cbString*  
- [Input] Lunghezza di  *\*lpszString* buffer.  
+ [Input] Lunghezza del  *\*lpszString* buffer.  
   
  *pcbString*  
- [Output] Numero totale di byte disponibili per restituire  *\*lpszString*. Se il numero di byte disponibili da restituire è maggiore o uguale a *cbString*, la stringa di output in  *\*lpszString* viene troncato a *cbString* meno il carattere di terminazione null. Il *pcbString* argomento può essere un puntatore null.  
+ [Output] Numero totale di byte disponibili per restituire  *\*lpszString*. Se il numero di byte disponibili da restituire è maggiore o uguale a *cbString*, la stringa di output in  *\*lpszString* verranno troncati alla *cbString* meno il carattere di terminazione null. Il *pcbString* argomento può essere un puntatore null.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di errore.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLReadFileDSN** restituisce FALSE, un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLReadFileDSN** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Si verificato un errore per cui si è verificato alcun errore di programma di installazione specifico.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Lunghezza del buffer non valido|Il *lpszString* argomento è NULL.<br /><br /> Il *cbString* argomento è minore o uguale a 0.|  
-|ODBC_ERROR_INVALID_PATH|Percorso di installazione non valido.|Il percorso del nome file specificato nella *lpszFileName* argomento non valido.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo di richiesta non valido|Il *lpszAppName* argomento è NULL, mentre il *lpszkeyname stringa* argomento è valido.|  
-|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione: Impossibile eseguire la funzione a causa della mancanza di memoria.|  
-|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|Stringa di output troncato|La stringa restituita  *\*lpszString* è stato troncato perché il valore in *cbString* è minore o uguale al valore di stato  *\*pcbString*.|  
-|ODBC_ERROR_REQUEST_FAILED|Richiesta non riuscita|La parola chiave non esiste nel file DSN.|  
+|ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Lunghezza del buffer non valido|Il *lpszString* argomento era NULL.<br /><br /> Il *cbString* argomento era minore o uguale a 0.|  
+|ODBC_ERROR_INVALID_PATH|Percorso di installazione non è valido|Il percorso del nome file specificato nella *lpszFileName* argomento non è valido.|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo di richiesta non valido|Il *lpszAppName* l'argomento è NULL, mentre le *lpszKeyName* argomento è valido.|  
+|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è stato possibile eseguire la funzione a causa della mancanza di memoria.|  
+|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|Stringa di output troncato|La stringa restituita nel  *\*lpszString* è stato troncato perché il valore nella *cbString* era minore o uguale al valore nella  *\*pcbString*.|  
+|ODBC_ERROR_REQUEST_FAILED|Richiesta non è riuscita|La parola chiave non esiste nel file DSN.|  
   
 ## <a name="comments"></a>Commenti  
- ODBC si riserva il nome della sezione [ODBC] in cui archiviare le informazioni di connessione. Le parole chiave riservate di questa sezione sono gli stessi quelli riservati per una stringa di connessione in **SQLDriverConnect**. (Per ulteriori informazioni, vedere il [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descrizione della funzione.)  
+ ODBC si riserva il nome della sezione [ODBC] in cui archiviare le informazioni di connessione. Le parole chiave riservate di questa sezione corrispondono a quelli riservati per una stringa di connessione in **SQLDriverConnect**. (Per altre informazioni, vedere la [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descrizione della funzione.)  
   
- Le applicazioni è possono utilizzare queste parole chiave riservate per leggere le informazioni in un DSN su File. Se un'applicazione desidera scoprire la stringa di connessione senza DSN associata a un DSN su File, è possibile chiamare **SQLReadFileDSN** per le parole chiave della stringa di connessione riservate nella sezione [ODBC]. La stringa di connessione completa passata in una connessione senza DSN è una combinazione di tutte le parole chiave (riservate e specifici del driver) nella sezione [ODBC].  
+ Le applicazioni possono usare queste parole chiave riservate per leggere le informazioni contenute in un DSN su File. Se un'applicazione deve trovare la stringa di connessione senza DSN associata a un DSN su File, può chiamare **SQLReadFileDSN** per una delle parole chiave della stringa di connessione riservate nella sezione [ODBC]. La stringa di connessione completa passata in una connessione senza DSN è una combinazione di tutte le parole chiave (riservate e specifici del driver) nella sezione [ODBC].  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Scrittura di informazioni in un DSN su File|[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|
+|La scrittura di informazioni in un DSN su File|[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|

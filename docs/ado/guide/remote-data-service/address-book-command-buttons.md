@@ -1,52 +1,49 @@
 ---
-title: Comando pulsanti di Address Book | Documenti Microsoft
+title: Comando pulsanti di Address Book | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - address book application scenario [ADO], command buttons
 - RDS scenarios [ADO], command buttons
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eaaa41038b741b71be069fb5db2bb921a2a576f9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 64570b9a6f2052fdc3f9e5544a442853110587b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273630"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613149"
 ---
-# <a name="address-book-command-buttons"></a>Pulsanti di Address Book comando
+# <a name="address-book-command-buttons"></a>Pulsanti di comando di Address Book
 L'applicazione Address Book include i pulsanti di comando seguenti:  
   
 -   Oggetto **trovare** pulsante per inviare una query al database.  
   
--   Oggetto **deselezionare** pulsante per deselezionare le caselle di testo prima di avviare una nuova ricerca.  
+-   Oggetto **cancellare** pulsante per deselezionare le caselle di testo prima di avviare una nuova ricerca.  
   
--   Un **Update Profile** pulsante per salvare le modifiche a un record dipendente.  
+-   Un' **aggiornare il profilo** consente di salvare le modifiche apportate a un record dipendente.  
   
 -   Oggetto **Cancel Changes** pulsante per annullare le modifiche.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="find-button"></a>Pulsante Trova  
- Fare clic su di **trovare** pulsante Attiva Find_OnClick routine Sub di VBScript, che crea e invia la query SQL. Fare clic su questo pulsante consente di popolare la griglia dei dati.  
+ Facendo clic sui **trovare** pulsante Attiva Find_OnClick routine Sub di VBScript, che crea e invia la query SQL. Facendo clic su questo pulsante consente di popolare la griglia dei dati.  
   
 ## <a name="building-the-sql-query"></a>La creazione della Query SQL  
- La prima parte della routine Sub Find_OnClick compila la query SQL, una frase contemporaneamente, mediante l'aggiunta di stringhe di testo a un'istruzione SQL SELECT globale. Impostando la variabile `myQuery` a un'istruzione SQL SELECT che richiede tutte le righe di dati dalla tabella di origine dati. Successivamente, la routine Sub analizza ognuna delle quattro caselle di input nella pagina.  
+ La prima parte della routine Sub Find_OnClick compila la query SQL, una frase alla volta, aggiungendo le stringhe di testo a un'istruzione SQL SELECT globale. Inizia impostando la variabile `myQuery` a un'istruzione SQL SELECT che richiede tutte le righe di dati dalla tabella di origine dati. Successivamente, la routine Sub analizza ognuno dei quattro caselle di input nella pagina.  
   
- Poiché il programma utilizza la parola `like` nella creazione delle istruzioni SQL, le query sono ricerche delle sottostringhe piuttosto che corrispondenze esatte.  
+ Poiché il programma Usa la parola `like` nella creazione di istruzioni SQL, le query sono ricerche delle sottostringhe anziché corrispondenze esatte.  
   
- Ad esempio, se il **cognome** casella conteneva la voce "Berge" e **titolo** casella conteneva la voce "Program Manager", l'istruzione SQL (valore di `myQuery`) leggerà:  
+ Ad esempio, se il **Last Name** casella conteneva la voce "Berge" e il **titolo** casella conteneva la voce "Program Manager", l'istruzione SQL (valore di `myQuery`) leggerebbe:  
   
 ```  
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
@@ -55,7 +52,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
  Se la query ha esito positivo, tutte le persone con un cognome che contiene il testo "Berge" (ad esempio Berge e Berger) e con un titolo che includono le parole "Program Manager" (ad esempio, Program Manager, le tecnologie avanzate) vengono visualizzate nella griglia dei dati HTML.  
   
 ## <a name="preparing-and-sending-the-query"></a>La preparazione e l'invio di Query  
- L'ultima parte della routine Sub Find_OnClick è costituita da due istruzioni. La prima istruzione assegna il [SQL](../../../ado/reference/rds-api/sql-property.md) proprietà del [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto uguale alla query di SQL compilata in modo dinamico. La seconda istruzione determina la **RDS. DataControl** oggetto (`DC1`) per eseguire query sul database e quindi visualizzare i nuovi risultati della query nella griglia.  
+ L'ultima parte della routine Sub Find_OnClick è costituito da due istruzioni. L'istruzione prima assegna il [SQL](../../../ado/reference/rds-api/sql-property.md) proprietà del [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto uguale alla query SQL compilata in modo dinamico. La seconda istruzione fa sì che il **Servizi Desktop remoto. DataControl** oggetto (`DC1`) per eseguire query sul database e quindi visualizzare i nuovi risultati della query nella griglia.  
   
 ```  
 Sub Find_OnClick  
@@ -65,8 +62,8 @@ Sub Find_OnClick
 End Sub  
 ```  
   
-## <a name="update-profile-button"></a>Pulsante di aggiornamento del profilo  
- Fare clic su di **Update Profile** pulsante Attiva Update_OnClick routine Sub di VBScript, che esegue il [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) e [aggiornamento](../../../ado/reference/rds-api/refresh-method-rds.md) metodi.  
+## <a name="update-profile-button"></a>Pulsante Aggiorna profilo  
+ Facendo clic sui **aggiornare il profilo** pulsante Attiva la routine Sub Update_OnClick VBScript, che esegue il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) e [Aggiorna](../../../ado/reference/rds-api/refresh-method-rds.md) metodi.  
   
 ```  
 Sub Update_OnClick  
@@ -75,10 +72,10 @@ Sub Update_OnClick
 End Sub  
 ```  
   
- Quando `DC1.SubmitChanges` viene eseguito, il servizio dati remoto tutte le informazioni sull'aggiornamento dei pacchetti e lo invia al server tramite HTTP. L'aggiornamento è radicale; Se una parte dell'aggiornamento ha esito negativo, nessuna delle modifiche viene eseguita e viene restituito un messaggio di stato. `DC1.Refresh` non è necessario dopo avere apportato **SubmitChanges** con Remote Data Service, ma garantisce dati aggiornati.  
+ Quando si `DC1.SubmitChanges` viene eseguito, il servizio dati remoto tutte le informazioni sull'aggiornamento di pacchetti e lo invia al server tramite HTTP. L'aggiornamento è esclusiva; Se una parte dell'aggiornamento ha esito negativo, nessuna modifica viene eseguita e viene restituito un messaggio di stato. `DC1.Refresh` non è necessario dopo avere apportato **SubmitChanges** con il servizio dati remoto, ma garantisce dati aggiornati.  
   
-## <a name="cancel-changes-button"></a>Pulsante di annullamento delle modifiche  
- Fare clic su **Cancel Changes** di VBScript routine Sub Cancel_OnClick, che esegue il [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) metodo.  
+## <a name="cancel-changes-button"></a>Pulsante Annulla modifiche  
+ Facendo clic **Cancel Changes** di VBScript routine Sub Cancel_OnClick, che viene eseguito il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) (metodo).  
   
 ```  
 Sub Cancel_OnClick  
@@ -86,10 +83,10 @@ Sub Cancel_OnClick
 End Sub  
 ```  
   
- Quando `DC1.CancelUpdate` esegue, Elimina tutte le modifiche apportate dall'utente a un record dipendente nella griglia di dati dall'ultima query o aggiornamento. Ripristina i valori originali.  
+ Quando si `DC1.CancelUpdate` viene eseguito, vengono rimossi eventuali modifiche che un utente ha apportato a un record dipendente nella griglia dei dati dall'ultima query o aggiornamento. Ripristina i valori originali.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pulsanti di spostamento della Rubrica di indirizzi](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
+ [Navigazione pulsanti di Address Book](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
  [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 
 

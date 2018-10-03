@@ -1,39 +1,36 @@
 ---
-title: COME sequenza di Escape | Documenti Microsoft
+title: Sequenza di Escape LIKE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC escape sequences [ODBC], LIKE
 - LIKE escape sequence [ODBC]
 - escape sequences [ODBC], LIKE
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37733aadb069cd161427fc8f186647cfba030b6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65447904f32b7e0457ed807f18e942b334ddc236
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906506"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626619"
 ---
-# <a name="like-escape-sequence"></a>COME sequenza di Escape
-ODBC utilizza le sequenze di escape per la clausola LIKE. La sintassi di questa sequenza di escape è come segue:  
+# <a name="like-escape-sequence"></a>Sequenza di escape LIKE
+ODBC Usa sequenze di escape per la clausola LIKE. La sintassi di questa sequenza di escape è come segue:  
   
 ```  
 {'escape-character'}  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Nella notazione BNF, la sintassi è:  
+## <a name="remarks"></a>Note  
+ Nella notazione BNF, la sintassi è come segue:  
   
  *ODBC-like-escape* :: =  
   

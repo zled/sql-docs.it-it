@@ -1,14 +1,11 @@
 ---
-title: Sys. server_assembly_modules (Transact-SQL) | Documenti Microsoft
+title: Sys. server_assembly_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - server_assembly_modules_TSQL
@@ -20,21 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_assembly_modules catalog view
 ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2e2c5b1c5efe4909688eb3a4f55c8c1f5e376db8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a257f63328fe0abcf121b82b619bc58b70b7c6f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222142"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711702"
 ---
 # <a name="sysserverassemblymodules-transact-sql"></a>sys.server_assembly_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni modulo in assembly per i trigger a livello di server di tipo TA. Questa vista esegue il mapping tra trigger di assembly e l'implementazione CLR sottostante. È possibile aggiungere questa relazione a **server_triggers**. L'assembly deve essere caricato il **master** database. La tuple (object_id) è la chiave della relazione.  
+  Contiene una riga per ogni modulo in assembly per i trigger a livello di server di tipo TA. Questa vista esegue il mapping tra trigger di assembly e l'implementazione CLR sottostante. È possibile unire in join questa relazione per **Sys. server_triggers**. L'assembly deve essere caricato nel **master** database. La tuple (object_id) è la chiave della relazione.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -42,9 +38,9 @@ ms.locfileid: "33222142"
 |**assembly_id**|**int**|ID dell'assembly da cui è stato creato questo modulo. L'assembly deve essere caricato nel database master.|  
 |**assembly_class**|**sysname**|Nome della classe all'interno dell'assembly che definisce questo modulo.|  
 |**assembly_method**|**sysname**|Nome del metodo all'interno della classe che definisce questo modulo. Questo valore è NULL per le funzioni di aggregazione.|  
-|**execute_as_principal_id**|**int**|ID dell'entità server EXECUTE AS.<br /><br /> Questo valore è NULL per impostazione predefinita e se viene utilizzato EXECUTE AS CALLER.<br /><br /> ID dell'entità specificata se EXECUTE AS SELF eseguire AS \<principale >.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**int**|ID dell'entità server EXECUTE AS.<br /><br /> Questo valore è NULL per impostazione predefinita e se viene utilizzato EXECUTE AS CALLER.<br /><br /> ID dell'entità specificata se EXECUTE AS SELF EXECUTE AS \<principale >.<br /><br /> -2 = EXECUTE AS OWNER.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

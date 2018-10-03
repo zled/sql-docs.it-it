@@ -1,31 +1,28 @@
 ---
-title: I comandi denominato | Documenti Microsoft
+title: Denominato comandi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aababf292a838f801e48a9649b9efac12b04f88f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272001"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670597"
 ---
-# <a name="named-commands"></a>Comandi denominati
-[Per creare ed eseguire un comando semplice](../../../ado/guide/data/creating-and-executing-a-simple-command.md) viene illustrato un modo per eseguire un comando. È possibile: è possibile renderlo un comando denominato e quindi chiamare il comando direttamente sulla denominato il **connessione** oggetto (assegnato per il **ActiveConnection** proprietà del **comando** oggetto). Denominazione di un comando significa assegnare un nome per il **nome** proprietà di un **comando** oggetto. Ad esempio,  
+# <a name="named-commands"></a>Comandi con nome
+[Creazione ed esecuzione di un semplice comando](../../../ado/guide/data/creating-and-executing-a-simple-command.md) illustra un modo per eseguire un comando. Non vi è un altro modo: è possibile renderlo un comando con nome e quindi chiamare il comando direttamente sulla denominato il **connessione** oggetto (assegnato al **ActiveConnection** proprietà del **comando** oggetto). Denominazione di un comando indica che l'assegnazione di un nome per il **Name** proprietà di un **comando** oggetto. Ad esempio,  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -33,7 +30,7 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- Il comando denominato agisce come se fosse un metodo"personalizzato" sui **connessione** oggetto. Il risultato del comando viene restituito come parametro out di questo metodo"personalizzato".  
+ Il comando denominato agisce come se fosse un metodo"personalizzato" sul **connessione** oggetto. Il risultato del comando viene restituito come parametro out di questo metodo"personalizzato".  
   
  Nell'esempio seguente viene illustrata questa funzionalità.  
   

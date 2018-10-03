@@ -1,14 +1,11 @@
 ---
-title: sysmail_delete_principalprofile_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_delete_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_principalprofile_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_principalprofile_sp
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f1f7fc964f5be9e045614f7a49c7f5fec194537
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c292ba89a3b79dc19ca038672cf5cc587a55ed4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257155"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673179"
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,32 +42,32 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
   
 ## <a name="arguments"></a>Argomenti  
  [ **@principal_id** =] *principal_id*  
- È l'ID dell'utente del database o del ruolo nel **msdb** database per l'associazione da eliminare. *principal_id* viene **int**, con un valore predefinito è NULL. Per rendere un profilo pubblico in profilo privato, fornire l'ID dell'entità **0** o il nome dell'entità **'public'**. Entrambi *principal_id* o *principal_name* deve essere specificato.  
+ È l'ID dell'utente del database o del ruolo nel **msdb** database per l'associazione da eliminare. *principal_id* viene **int**, con un valore predefinito è NULL. Per rendere un profilo pubblico in profilo privato, fornire l'ID dell'entità **0** o il nome dell'entità **'public'**. Entrambi *principal_id* oppure *principal_name* deve essere specificato.  
   
  [ **@principal_name** =] **'***principal_name***'**  
- È il nome dell'utente del database o del ruolo nel **msdb** database per l'associazione da eliminare. *principal_name* viene **sysname**, con un valore predefinito è NULL. Per rendere un profilo pubblico in profilo privato, fornire l'ID dell'entità **0** o il nome dell'entità **'public'**. Entrambi *principal_id* o *principal_name* deve essere specificato.  
+ È il nome dell'utente del database o del ruolo nel **msdb** database per l'associazione da eliminare. *principal_name* viene **sysname**, con un valore predefinito è NULL. Per rendere un profilo pubblico in profilo privato, fornire l'ID dell'entità **0** o il nome dell'entità **'public'**. Entrambi *principal_id* oppure *principal_name* deve essere specificato.  
   
  [ **@profile_id** = ] *profile_id*  
- ID del profilo per l'associazione da eliminare. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* o *profile_name* deve essere specificato.  
+ ID del profilo per l'associazione da eliminare. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- Nome del profilo per l'associazione da eliminare. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* o *profile_name* deve essere specificato.  
+ Nome del profilo per l'associazione da eliminare. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- Per trasformare un profilo pubblico in profilo privato, immettere **'public'** per il nome dell'entità o **0** per l'id dell'entità.  
+## <a name="remarks"></a>Note  
+ Per trasformare un profilo pubblico in profilo privato, immettere **'public'** per il nome dell'entità oppure **0** per l'id dell'entità.  
   
  Prestare attenzione quando si rimuovono le autorizzazioni per il profilo privato predefinito di un utente o per il profilo pubblico predefinito. Quando non è disponibile alcun profilo predefinito **sp_send_dbmail** richiede il nome di un profilo come argomento. Rimozione di un profilo predefinito potrebbe pertanto provocare chiamate a **sp_send_dbmail** esito negativo. Per altre informazioni, vedere [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
   
  La stored procedure **sysmail_delete_principalprofile_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrata l'eliminazione dell'associazione tra il profilo **AdventureWorks Administrator** e l'account di accesso **ApplicationUser** nel **msdb** database.  
+ L'esempio seguente illustra l'eliminazione dell'associazione tra il profilo **AdventureWorks Administrator** e l'account di accesso **ApplicationUser** nel **msdb** database.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_delete_principalprofile_sp  

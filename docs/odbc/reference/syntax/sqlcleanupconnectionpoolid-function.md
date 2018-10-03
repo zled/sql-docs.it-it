@@ -1,34 +1,31 @@
 ---
-title: Funzione SQLCleanupConnectionPoolID | Documenti Microsoft
+title: Funzione SQLCleanupConnectionPoolID | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLCleanupConnectionPoolID function [ODBC]
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b417ddc7b2aedcf2c23e2f607ceb53ee7ffb4c6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1dc2552c848b691346c57a0191f9c9200bad4523
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916516"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666169"
 ---
-# <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID (funzione)
+# <a name="sqlcleanupconnectionpoolid-function"></a>Funzione SQLCleanupConnectionPoolID
 **Conformità**  
- Introdotta: versione ODBC standard 3,81 conformità: ODBC  
+ Versione introdotta: Conformità 3,81 standard ODBC: ODBC  
   
  **Riepilogo**  
- **SQLCleanupConnectionPoolID** indica un driver che un ID del pool è stato verificato il timeout. Timeout di un pool di ID possibile timeout ogni volta che sono state tutte le connessioni in un pool associata a tale ID pool di applicazioni. Vedere [pool in Microsoft Data Access Components](http://msdn.microsoft.com/library/ms810829.aspx) per ulteriori informazioni sui timeout di connessione.  
+ **SQLCleanupConnectionPoolID** informa un driver che è stato verificato il timeout di un ID del pool. Timeout di un pool di ID possibile timeout ogni volta che sono state tutte le connessioni in un pool associato a tale ID del pool. Visualizzare [limitazione delle richieste in Microsoft Data Access Components](http://msdn.microsoft.com/library/ms810829.aspx) per altre informazioni sul timeout di connessione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +40,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
  [Input] L'handle di ambiente del pool.  
   
  *PoolID*  
- [Input] Il pool associato l'ID del pool che è stato verificato il timeout.  
+ [Input] Il pool associato all'ID del pool che è stato verificato il timeout.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -53,10 +50,10 @@ SQLRETURN  SQLCleanupConnectionPoolID (
   
  Un'applicazione non può ricevere il messaggio di errore restituito dal driver.  
   
-## <a name="remarks"></a>Osservazioni  
- **SQLCleanupConnectionPoolID** può essere chiamato in qualsiasi momento, ma gestione Driver garantisce che nessun altro thread consiste nel chiamare contemporaneamente **SQLGetPoolID** e nessun altro thread viene eseguita la chiamata contemporaneamente  **SQLRateConnection** e **SQLPoolConnect** con un token di informazioni di connessione assegnato con tale ID del pool. Pertanto, il driver deve assicurarsi che questa funzione è thread-safe.  
+## <a name="remarks"></a>Note  
+ **SQLCleanupConnectionPoolID** può essere chiamato in qualsiasi momento, ma la gestione di Driver garantisce che nessun altro thread consiste nel chiamare contemporaneamente **SQLGetPoolID** e nessun altro thread consiste nel chiamare contemporaneamente  **SQLRateConnection** e **SQLPoolConnect** con un token di informazioni di connessione assegnato con tale ID del pool. Pertanto, il driver deve assicurarsi che questa funzione è thread-safe.  
   
- Un driver possibile pulire le risorse associate all'ID del pool.  
+ Un driver possibile pulire le risorse associate con l'ID del pool.  
   
  Le applicazioni non devono chiamare direttamente questa funzione. Un driver ODBC che supporta il pool di connessioni compatibile con il driver deve implementare questa funzione.  
   

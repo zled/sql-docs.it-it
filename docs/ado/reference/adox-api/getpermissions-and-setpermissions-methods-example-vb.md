@@ -1,13 +1,11 @@
 ---
-title: GetPermissions e metodi SetPermissions (VB) | Documenti Microsoft
+title: GetPermissions e SetPermissions metodi (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - SetPermissions method [ADOX], Visual Basic example
 - GetPermissions method [ADOX], Visual Basic example
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 015600eae66b8a1dfb95451e1e7cfb02244b3738
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ad89f93569a9df0c14630506a3cea3d9091e8bf7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286060"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675469"
 ---
-# <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions e metodi SetPermissions (VB)
-Questo esempio viene illustrato il [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) metodi. Il codice seguente offre un accesso completo per la tabella Orders per l'utente amministratore.  
+# <a name="getpermissions-and-setpermissions-methods-example-vb"></a>Esempio dei metodi GetPermissions e SetPermissions (VB)
+Questo esempio viene illustrato il [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) metodi. Il codice seguente offre accesso completo per la tabella Orders per l'utente amministratore.  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -99,8 +96,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto del catalogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Metodo GetPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [Metodo SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
- [Oggetto utente (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
+ [Oggetto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
  [Raccolta di oggetti User (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

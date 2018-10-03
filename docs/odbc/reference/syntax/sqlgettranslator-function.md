@@ -1,13 +1,11 @@
 ---
-title: Funzione SQLGetTranslator | Documenti Microsoft
+title: Funzione SQLGetTranslator | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLGetTranslator
@@ -19,20 +17,19 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetTranslator function [ODBC]
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 803e823de76deba750dc188c2f01e69b0a2f84db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6aabd945e25211f969ceac17c4d56baff98edd1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692839"
 ---
-# <a name="sqlgettranslator-function"></a>SQLGetTranslator (funzione)
+# <a name="sqlgettranslator-function"></a>Funzione SQLGetTranslator
 **Conformità**  
- Introdotta: versione ODBC 2.0  
+ Versione introdotta: ODBC 2.0  
   
  **Riepilogo**  
  **SQLGetTranslator** Visualizza una finestra di dialogo da cui un utente può selezionare una funzione di conversione.  
@@ -57,13 +54,13 @@ BOOL SQLGetTranslator(
  [Input] Handle della finestra padre.  
   
  *lpszName*  
- [Input/Output] Nome della funzione di conversione dalle informazioni di sistema.  
+ [Input/Output] Nome del convertitore dalle informazioni di sistema.  
   
  *cbNameMax*  
  [Input] Lunghezza massima del *lpszName* buffer.  
   
  *pcbNameOut*  
- [Input/Output] Numero totale di byte (escluso il byte di terminazione null) passate o restituite *lpszName*. Se il numero di byte disponibili da restituire è maggiore o uguale a *cbNameMax*, il nome della funzione di conversione in *lpszName* viene troncato a *cbNameMax* meno il carattere di terminazione null. Il *pcbNameOut* argomento può essere un puntatore null.  
+ [Input/Output] Numero totale di byte (escluso il byte di terminazione null) passata o restituita nel *lpszName*. Se il numero di byte disponibili da restituire è maggiore o uguale a *cbNameMax*, il nome di funzione di conversione nella *lpszName* verrà troncato *cbNameMax* meno il carattere di terminazione null. Il *pcbNameOut* argomento può essere un puntatore null.  
   
  *lpszPath*  
  [Output] Percorso completo della DLL di conversione.  
@@ -72,7 +69,7 @@ BOOL SQLGetTranslator(
  [Input] Lunghezza massima del *lpszPath* buffer.  
   
  *pcbPathOut*  
- [Output] Numero totale di byte (escluso il byte di terminazione null) restituito in *lpszPath*. Se il numero di byte disponibili da restituire è maggiore o uguale a *cbPathMax*, il percorso della DLL di conversione in *lpszPath* viene troncato a *cbPathMax* meno il carattere di terminazione null. Il *pcbPathOut* argomento può essere un puntatore null.  
+ [Output] Numero totale di byte (escluso il byte di terminazione null) restituito in *lpszPath*. Se il numero di byte disponibili da restituire è maggiore o uguale a *cbPathMax*, il percorso della DLL nella traduzione *lpszPath* viene troncato a *cbPathMax* meno il carattere di terminazione null. Il *pcbPathOut* argomento può essere un puntatore null.  
   
  *pvOption*  
  Opzione di conversione a 32 bit [output].  
@@ -81,33 +78,33 @@ BOOL SQLGetTranslator(
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di errore o se l'utente annulla la finestra di dialogo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLGetTranslator** restituisce FALSE, un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLGetTranslator** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Si verificato un errore per cui si è verificato alcun errore di programma di installazione specifico.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Lunghezza del buffer non valido|Il *cbNameMax* o *cbPathMax* argomento è minore o uguale a 0.|  
-|ODBC_ERROR_INVALID_HWND|Handle di finestra non valido.|Il *hwndParent* argomento non valido o NULL.|  
-|ODBC_ERROR_INVALID_NAME|Nome del driver o funzione di conversione non valido|Il *lpszName* argomento non valido. Non è stato possibile trovarlo nel Registro di sistema.|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|Non è stato possibile caricare la libreria dell'installazione del driver o funzione di conversione|Impossibile caricare la libreria di conversione.|  
-|ODBC_ERROR_INVALID_OPTION|Opzione di transazione non valido|Il *pvOption* argomento è contenuto un valore non valido.|  
-|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione: Impossibile eseguire la funzione a causa della mancanza di memoria.|  
+|ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Lunghezza del buffer non valido|Il *cbNameMax* oppure *cbPathMax* argomento era minore o uguale a 0.|  
+|ODBC_ERROR_INVALID_HWND|Handle della finestra valida|Il *hwndParent* argomento era NULL o non valido.|  
+|ODBC_ERROR_INVALID_NAME|Nome del driver o traduttore non valido|Il *lpszName* argomento non è valido. Non trovato nel Registro di sistema.|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|Non è riuscito a caricare la libreria di programma di installazione driver o del convertitore.|Non è stato possibile caricare la libreria di Microsoft translator.|  
+|ODBC_ERROR_INVALID_OPTION|Opzione di transazione non valido|Il *pvOption* argomento è presente un valore non valido.|  
+|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è stato possibile eseguire la funzione a causa della mancanza di memoria.|  
   
 ## <a name="comments"></a>Commenti  
- Se *hwndParent* è null o se *lpszName*, *lpszPath*, o *pvOption* è un puntatore null, **SQLGetTranslator** restituisce FALSE. In caso contrario, viene visualizzato l'elenco di funzioni di conversione installati nella finestra di dialogo seguente.  
+ Se *hwndParent* è null o se *lpszName*, *lpszPath*, oppure *pvOption* è un puntatore null, **SQLGetTranslator** restituisce FALSE. In caso contrario, viene visualizzato l'elenco di traduttori installati nella finestra di dialogo seguente.  
   
- ![Finestra di dialogo Seleziona convertitore](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
+ ![Selezionare la casella di dialogo Microsoft Translator](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
   
- Se *lpszName* contiene un nome valido di funzione di conversione, questa opzione è selezionata. In caso contrario, \<Nessun convertitore > sia selezionata.  
+ Se *lpszName* contiene un nome di funzione di conversione valido, questa opzione è selezionata. In caso contrario, \<Translator n > sia selezionata.  
   
- Se l'utente sceglie \<Nessun convertitore >, il contenuto di *lpszName*, *lpszPath*, e *pvOption* non sono interessate. **SQLGetTranslator** imposta *pcbNameOut* e *pcbPathOut* a 0 e restituisce TRUE.  
+ Se l'utente sceglie \<traduttore n >, il contenuto del *lpszName*, *lpszPath*, e *pvOption* non sono interessate. **SQLGetTranslator** imposta *pcbNameOut* e *pcbPathOut* su 0 e restituisce TRUE.  
   
- Se l'utente sceglie una funzione di conversione, **SQLGetTranslator** chiamate **ConfigTranslator del** nel programma di installazione del convertitore. DLL. Se **ConfigTranslator del** restituisce FALSE, **SQLGetTranslator** restituisce per la finestra di dialogo. Se **ConfigTranslator del** restituisce TRUE, **SQLGetTranslator** restituisce TRUE, insieme all'opzione di conversione, il percorso e nome traduttore selezionato.  
+ Se l'utente sceglie un traduttore **SQLGetTranslator** chiamate **ConfigTranslator** nella DLL di installazione di Microsoft translator. Se **ConfigTranslator** FALSO, restituisce **SQLGetTranslator** restituisce alla relativa finestra di dialogo. Se **ConfigTranslator** restituisce TRUE, **SQLGetTranslator** restituisce TRUE, insieme all'opzione di nome, percorso e traduzione Microsoft translator selezionato.  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Configurazione di una funzione di conversione|[ConfigTranslator del](../../../odbc/reference/syntax/configtranslator-function.md)|  
+|Configurazione di una funzione di conversione|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |Recupero di un attributo di traduzione|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|L'impostazione di un attributo di traduzione|[Funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
+|L'impostazione di un attributo di traduzione|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|

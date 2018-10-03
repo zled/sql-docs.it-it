@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobhistory (Transact-SQL) | Documenti Microsoft
+title: dbo.sysjobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobhistory_TSQL
@@ -20,23 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ab9fbfb6a574f8f6c91ee15789c67cac204d5f3
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 1797fb6183863bb0249bd0cda6024d0e95914e82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334272"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658809"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene informazioni sull'esecuzione di processi pianificati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questa tabella è archiviata nel **msdb** database.  
   
-> **Nota:** dati vengono aggiornati solo dopo il completamento di jobstep.  
+> **Nota:** i dati vengono aggiornati solo dopo il completamento di jobstep.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -50,7 +46,7 @@ ms.locfileid: "34334272"
 |**run_status**|**int**|Stato di esecuzione del processo:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **2** = nuovo tentativo<br /><br /> **3** = annullato<br /><br /> **4** = in corso|  
 |**run_date**|**int**|Data di avvio dell'esecuzione del processo o del passaggio. Per una cronologia dei processi o dei passaggi in corso, rappresenta la data/ora di scrittura della cronologia.|  
 |**run_time**|**int**|Ora di inizio dell'esecuzione del processo o del passaggio.|  
-|**run_duration**|**int**|Tempo trascorso nell'esecuzione del processo o passaggio **HHMMSS** formato.|  
+|**run_duration**|**int**|Tempo trascorso per l'esecuzione del processo o passaggio **HHMMSS** formato.|  
 |**operator_id_emailed**|**int**|ID dell'operatore che ha ricevuto una notifica tramite posta elettronica al termine dell'esecuzione del processo.|  
 |**operator_id_netsent**|**int**|ID dell'operatore che ha ricevuto un messaggio al termine dell'esecuzione del processo.|  
 |**operator_id_paged**|**int**|ID dell'operatore che ha ricevuto una notifica tramite cercapersone al termine dell'esecuzione del processo.|  
@@ -58,7 +54,7 @@ ms.locfileid: "34334272"
 |**server**|**sysname**|Nome del server in cui è stato eseguito il processo.|  
   
   ## <a name="example"></a>Esempio
- Nell'esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] query convertirà il **fase di esecuzione** e **durata** le colonne in un formato più intuitivo.  Eseguire lo script in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+ Quanto segue [!INCLUDE[tsql](../../includes/tsql-md.md)] query convertirà il **fase di esecuzione** e **Durata esecuzione** colonne in un formato più intuitivo.  Eseguire lo script in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
  
  ```sql
  SET NOCOUNT ON;

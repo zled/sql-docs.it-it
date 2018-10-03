@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_my_permissions_TSQL
@@ -21,21 +18,20 @@ helpviewer_keywords:
 - fn_my_permissions function
 - sys.fn_my_permissions function
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b837943f16a7c8882b4e35aef3f769a3d731cd38
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239811"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659249"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce un elenco delle autorizzazioni valide concesse all'entità per un'entità a protezione diretta. Una funzione correlata è [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
+  Restituisce un elenco delle autorizzazioni valide concesse all'entità per un'entità a protezione diretta. È una funzione correlata [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,8 +46,8 @@ fn_my_permissions ( securable , 'securable_class' )
  *securable*  
  Nome dell'entità a protezione diretta. Se l'entità a sicurezza diretta è il server o un database, questo valore deve essere impostato su NULL. *securable* è un'espressione scalare di tipo **sysname**. *entità a protezione diretta* può essere un nome in più parti.  
   
- '*securable_class*'  
- Nome della classe dell'entità a sicurezza diretta per cui vengono elencate le autorizzazioni. *securable_class* è un **sysname**. *securable_class* deve essere uno dei seguenti: APPLICATION ROLE, ASSEMBLY, chiave asimmetrica, certificato, contratto, DATABASE, ENDPOINT, FULLTEXT CATALOG, account di accesso, tipo di messaggio, oggetto, REMOTE SERVICE BINDING, ruolo, ROUTE, SCHEMA, SERVER, servizio , CHIAVE SIMMETRICA, TIPO, UTENTE, RACCOLTA DI XML SCHEMA.  
+ «*securable Class*»  
+ Nome della classe dell'entità a sicurezza diretta per cui vengono elencate le autorizzazioni. *securable_class* è un **sysname**. *securable_class* deve essere uno dei seguenti: APPLICATION ROLE, ASSEMBLY, chiave asimmetrica, certificato, contratto, DATABASE, ENDPOINT, FULLTEXT CATALOG, account di accesso, il tipo di messaggio, oggetto, REMOTE SERVICE BINDING, ruolo, ROUTE, SCHEMA, SERVER, servizio , CHIAVE SIMMETRICA, TIPO, UTENTE, RACCOLTA DI XML SCHEMA.  
   
 ## <a name="columns-returned"></a>Colonne restituite  
  Nella tabella seguente vengono elencate le colonne che **fn_my_permissions** restituisce. Ogni riga restituita descrive un'autorizzazione assegnata al contesto di sicurezza corrente per l'entità a protezione diretta. Restituisce NULL se la query non viene eseguita correttamente.  
@@ -62,7 +58,7 @@ fn_my_permissions ( securable , 'securable_class' )
 |subentity_name|**sysname**|Nome della colonna nel caso in cui l'entità a sicurezza diretta contenga colonne. In caso contrario, NULL.|  
 |permission_name|**nvarchar**|Nome dell'autorizzazione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Questa funzione con valori di tabella restituisce un elenco delle autorizzazioni valide assegnate all'entità di protezione chiamante per un'entità a sicurezza diretta specificata. Per autorizzazione valida si intende una qualsiasi delle autorizzazioni seguenti:  
   
 -   Autorizzazione concessa direttamente all'entità di protezione e non negata.  
@@ -75,7 +71,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
  La valutazione dell'autorizzazione viene sempre eseguita nel contesto di sicurezza del chiamante. Per determinare se è stata assegnata un'autorizzazione valida a un'altra entità di protezione, il chiamante deve disporre dell'autorizzazione IMPERSONATE per tale entità.  
   
- Per le entità a livello di schema, sono accettati i nomi non Null composti da una, due o tre parti. Per le entità a livello di database, viene accettato un nome di una sola parte, con un valore null indica "*database corrente*". Per il server stesso, è richiesto un valore Null, ad indicare il server corrente. **fn_my_permissions** non controlla le autorizzazioni in un server collegato.  
+ Per le entità a livello di schema, sono accettati i nomi non Null composti da una, due o tre parti. Per le entità a livello di database, viene accettato un nome di una sola parte, con valore null indica "*database corrente*". Per il server stesso, è richiesto un valore Null, ad indicare il server corrente. **fn_my_permissions** non controlla le autorizzazioni in un server collegato.  
   
  La query seguente restituirà un elenco di classi di entità a protezione diretta predefinite:  
   
@@ -85,7 +81,7 @@ SELECT DISTINCT class_desc FROM fn_builtin_permissions(default)
 GO  
 ```  
   
- Se l'impostazione predefinita viene fornito come valore di *entità a protezione diretta* o *securable_class*, il valore verrà interpretato come NULL.  
+ Se l'impostazione predefinita viene fornito come valore di *entità a protezione diretta* oppure *securable_class*, il valore verrà interpretato come NULL.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -136,7 +132,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. Elenco delle autorizzazioni valide per una raccolta di XML Schema  
- L'esempio seguente restituisce un elenco delle autorizzazioni valide del chiamante in una raccolta di XML Schema denominato `ProductDescriptionSchemaCollection` nel [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+ L'esempio seguente restituisce un elenco delle autorizzazioni valide di cui il chiamante dispone per una raccolta di XML Schema denominato `ProductDescriptionSchemaCollection` nella [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
 USE AdventureWorks2012;  
