@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - importing reports
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-caps.latest.revision: 43
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2beb25cee62fda3e3f71290d0f91a0a8954feed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268477"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180611"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Caratteristiche supportate dei report di Access (SSRS)
   Quando si importa un report in Progettazione report, il processo di importazione converte il report di Access [!INCLUDE[msCoName](../includes/msconame-md.md)] in un file RDL (Report Definition Language) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta molte caratteristiche di Access; tuttavia, a causa delle differenze tra Access e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], alcuni elementi vengono modificati leggermente o non sono supportati. In questo argomento vengono descritte le modalità di conversione delle caratteristiche dei report di Access in file RDL.  
@@ -60,7 +57,7 @@ ms.locfileid: "37268477"
   
 |||||  
 |-|-|-|-|  
-|image|Etichetta|Riga|Rectangle|  
+|Image|Etichetta|Riga|Rectangle|  
 |SubForm|SubReport<br /><br /> **Nota** controllo mentre SubReport viene convertito nel report principale, il sottoreport vero e proprio viene convertito separatamente.|TextBox||  
   
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non sono supportati i seguenti controlli:  

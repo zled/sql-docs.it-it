@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - multiple precedence constraints
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], multiple
 - constrained executables [Integration Services]
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
-caps.latest.revision: 44
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60cd55a656849f3cb5eee9cac879a88d8d85ad4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 368d8faf917094ce1dd306cc4ffd385eb3254363
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231461"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084861"
 ---
 # <a name="multiple-precedence-constraints"></a>Più vincoli di precedenza
   Un vincolo di precedenza consente di connettere due eseguibili, ad esempio due attività, due contenitori o un'attività e un contenitore. Gli elementi connessi sono noti come eseguibile con precedenza ed eseguibile soggetto al vincolo. A un eseguibile soggetto a vincolo possono essere applicati più vincoli di precedenza. Per altre informazioni, vedere [Vincoli di precedenza](control-flow/precedence-constraints.md).  
@@ -38,7 +35,7 @@ ms.locfileid: "37231461"
   
  È possibile impostare il `LogicalAnd` proprietà usando la **Editor vincoli di precedenza** in [!INCLUDE[ssIS](../includes/ssis-md.md)] finestra di progettazione o nella finestra delle proprietà che [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fornisce.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Impostazione delle proprietà di un vincolo di precedenza](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  
   
   

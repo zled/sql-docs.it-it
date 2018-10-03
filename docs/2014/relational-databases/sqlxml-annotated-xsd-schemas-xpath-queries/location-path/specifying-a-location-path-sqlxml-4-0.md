@@ -1,14 +1,12 @@
 ---
-title: Specificare un percorso (SQLXML 4.0) | Microsoft Docs
+title: Specificare un percorso (SQLXML 4.0) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - absolute location path
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 86ff805cb06248cb0348d44b137affa3b4563444
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 699f40750ef8f444de6b7115d34cfc33f834468a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107381"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Definizione di un percorso (SQLXML 4.0)
   Le query XPath vengono specificate sotto forma di espressione. Sono disponibili diversi tipi di espressioni. Un percorso è un'espressione che seleziona un set di nodi relativo al nodo di contesto. Il risultato della valutazione di un percorso è un set di nodi.  
@@ -52,7 +49,7 @@ ms.locfileid: "37286903"
   
      L'asse specifica la relazione all'interno dell'albero tra i nodi selezionati dal passo e dal nodo di contesto. Sono supportati gli assi `parent`, `child`, `attribute` e `self`. Se nel percorso viene specificato un asse `child`, tutti i nodi selezionati dalla query sono figli del nodo di contesto. Se viene specificato un asse `parent`, il nodo selezionato è il nodo padre del nodo di contesto. Se viene specificato un asse `attribute`, i nodi selezionati sono gli attributi del nodo di contesto.  
   
--   **Test di nodo**  
+-   **test di nodo**  
   
      Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse, `child`, `parent`, `attribute` e `self`, è associato a un tipo di nodo principale. Per il `attribute` asse, il tipo di nodo principale viene  **\<attributo >**. Per il `parent`, `child`, e `self` assi, il tipo di nodo principale viene  **\<elemento >**.  
   

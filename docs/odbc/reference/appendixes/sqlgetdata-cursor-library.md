@@ -1,45 +1,42 @@
 ---
-title: SQLGetData (libreria di cursori) | Documenti Microsoft
+title: SQLGetData (libreria di cursori) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetData function [ODBC], Cursor Library
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96ffa184247c4fd7d05300952133c19127f979af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e3009b4e3bed6fc871ecfd1aab4e2af2f1f1c86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909916"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853999"
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData (libreria di cursori)
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Si consiglia di utilizzare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
   
- In questo argomento viene illustrato l'utilizzo del **SQLGetData** funzione nella libreria di cursori. Per informazioni generali su **SQLGetData**, vedere [funzione SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).  
+ In questo argomento viene illustrato l'utilizzo dei **SQLGetData** funzione nella libreria di cursori. Per informazioni generali sul **SQLGetData**, vedere [funzione SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).  
   
- La libreria di cursori implementa **SQLGetData** costruendo prima un **selezionare** istruzione con un **dove** clausola che enumera i valori memorizzati nella cache per ogni associazione colonna nella riga corrente. Viene quindi eseguita la **selezionare** selezionare di nuovo la riga e chiama l'istruzione **SQLGetData** nel driver per recuperare i dati dall'origine dati (a differenza della cache).  
+ La libreria di cursori implementa **SQLGetData** costruendo prima un **seleziona** istruzione con una **dove** clausola che enumera i valori memorizzati nella cache per ogni limite colonna nella riga corrente. Ed esegue la **selezionate** istruzione per selezionare nuovamente la riga e chiama **SQLGetData** nel driver per recuperare i dati dall'origine dati (anziché la cache).  
   
 > [!CAUTION]  
->  Il **dove** clausola costruito dalla libreria di cursori per identificare la riga corrente può avere esito negativo identificare le righe, identificare una riga diversa o più di una riga. Per ulteriori informazioni, vedere [la costruzione di istruzioni di ricerca](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
+>  Il **in cui** clausola costruito dalla libreria di cursori per identificare la riga corrente può non riuscire a identificare tutte le righe, identificare una riga diversa o per identificare più di una riga. Per altre informazioni, vedere [costruzione di istruzioni di eseguire la ricerca](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
   
- Se l'attributo di istruzione SQL_ATTR_USE_BOOKMARKS è impostato su SQL_UB_VARIABLE, **SQLGetData** può essere chiamato su una colonna 0 per restituire i dati di segnalibro.  
+ Se l'attributo di istruzione SQL_ATTR_USE_BOOKMARKS è impostata su, SQL_UB_VARIABLE **SQLGetData** può essere chiamato sulla colonna 0 per restituire i dati di segnalibro.  
   
  Le chiamate a **SQLGetData** sono soggetti alle restrizioni seguenti:  
   
 -   **SQLGetData** non può essere chiamato per i cursori forward-only.  
   
--   **SQLGetData** può essere chiamato solo quando vengono soddisfatte le condizioni seguenti: un **selezionare** istruzione ha generato il set di risultati; il **selezionare** istruzione non contiene un join, un  **UNIONE** clausola, o un **GROUP BY** clausola; e tutte le colonne che utilizzato un alias o un'espressione nell'elenco di selezione non sono associate con **SQLBindCol**.  
+-   **SQLGetData** può essere chiamato solo quando vengono soddisfatte le condizioni seguenti: una **seleziona** istruzione ha generato il set di risultati; il **seleziona** istruzione non contiene un join, un  **UNION** clausola, o un **GROUP BY** clausola; e tutte le colonne utilizzate di un'espressione o un alias nell'elenco di selezione non sono associate con **SQLBindCol**.  
   
--   Se il driver supporta solo un'istruzione attiva, la libreria di cursori recupera il resto del gruppo di risultati prima di eseguire il **selezionare** istruzione e la chiamata **SQLGetData**.
+-   Se il driver supporta solo un'istruzione attiva, la libreria di cursori recupera il resto del gruppo di risultati prima di eseguire la **selezionate** istruzione e chiamando il metodo **SQLGetData**.

@@ -1,12 +1,10 @@
 ---
-title: 'Issasynchstatus:: Abort (OLE DB) | Microsoft Docs'
+title: 'Issasynchstatus:: Abort (OLE DB) | Documenti di Microsoft'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSAsynchStatus::Abort (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - Abort method
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5711cdcdcedb409330ae1b70591d9fe08db961e1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3d161786019750aae9740ce42ab0a15464b0dfc2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414152"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160871"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
   Annulla un'operazione di esecuzione asincrona.  
@@ -49,7 +46,7 @@ HRESULT Abort(
   
 ## <a name="return-code-values"></a>Valori restituiti  
  S_OK  
- La richiesta di annullare l'operazione asincrona è stata elaborata. Questo non garantisce che l'operazione stessa sia stata annullata. Per determinare se l'operazione è stata annullata, il consumer deve chiamare [issasynchstatus:: GetStatus](issasynchstatus-getstatus-ole-db.md) e verificare DB_E_CANCELED; tuttavia, potrebbe non essere restituito nella chiamata successiva.  
+ La richiesta di annullare l'operazione asincrona è stata elaborata. Questo non garantisce che l'operazione stessa sia stata annullata. Per determinare se è stata effettivamente annullata, il consumer deve chiamare [ISSAsynchStatus::GetStatus](issasynchstatus-getstatus-ole-db.md) e verificare DB_E_CANCELED. È tuttavia possibile che non venga restituito nella chiamata successiva.  
   
  DB_E_CANTCANCEL  
  Non è stato possibile annullare l'operazione asincrona.  
@@ -66,16 +63,16 @@ HRESULT Abort(
  E_UNEXPECTED  
  **Issasynchstatus:: Abort** è stato chiamato su un oggetto origine dati in cui **IDBInitialize:: Initialize** non è stato chiamato, o non è stata completata.  
   
- **Issasynchstatus:: Abort** è stato chiamato su un oggetto origine dati in cui **IDBInitialize:: Initialize** è stato chiamato ma successivamente annullato prima dell'inizializzazione o è scaduta. L'oggetto origine dati è ancora non inizializzato.  
+ **ISSAsynchStatus::Abort** è stato chiamato su un oggetto origine dati su cui **IDBInitialize::Initialize** è stato chiamato ma successivamente annullato prima dell'inizializzazione o ha raggiunto il timeout. L'oggetto origine dati è ancora non inizializzato.  
   
  **Issasynchstatus:: Abort** è stato chiamato su un set di righe in cui **ITransaction:: commit** oppure **ITransaction:: Abort** è stato chiamato in precedenza, e il set di righe non vengono conservati dopo il commit o interrompere ed è in uno stato non valido.  
   
- **Issasynchstatus:: Abort** è stato chiamato su un set di righe annullato in modo asincrono nella fase di inizializzazione. Il set di righe si trova in uno stato non valido.  
+ **ISSAsynchStatus::Abort** è stato chiamato su un set di righe annullato in modo asincrono nella fase di inizializzazione. Il set di righe si trova in uno stato non valido.  
   
 ## <a name="remarks"></a>Note  
- L'interruzione dell'inizializzazione di un oggetto di origine dati o set di righe abbia lasciato l'oggetto origine dati o set di righe in uno stato non valido, in modo che tutti i metodi diverso da **IUnknown** metodi restituiscono E_UNEXPECTED. Quando ciò accade, l'unica azione possibile per il consumer consiste nel rilasciare il set di righe o l'oggetto origine dati.  
+ L'interruzione dell'inizializzazione di un set di righe o di un oggetto origine dati potrebbe lasciare il set di righe o l'oggetto origine dati in uno stato non valido e determinare la restituzione di E_UNEXPECTED da parte di tutti i metodi ad eccezione di **IUnknown**. Quando ciò accade, l'unica azione possibile per il consumer consiste nel rilasciare il set di righe o l'oggetto origine dati.  
   
- La chiamata **issasynchstatus:: Abort** e passando un valore *eOperation* diverso da DBASYNCHOP_OPEN restituisce S_OK. Questo non implica che l'operazione sia stata completata o annullata.  
+ Se si chiama **ISSAsynchStatus::Abort** e si passa un valore per *eOperation* diverso da DBASYNCHOP_OPEN, viene restituito S_OK. Questo non implica che l'operazione sia stata completata o annullata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di operazioni asincrone](../native-client/features/performing-asynchronous-operations.md)  

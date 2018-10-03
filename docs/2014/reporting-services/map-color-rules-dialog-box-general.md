@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10541"
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
-caps.latest.revision: 7
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2de58631464b4d96ebde5cac82778f6b365e5b3c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6557db236aba57db2c6f06a29faee1f05bdc30cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238521"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179291"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Finestra di dialogo Proprietà regole colori mappa, Generale
   Selezionare **Generale** nella finestra di dialogo **Proprietà regole colori mappa** per definire le opzioni relative ai colori per gli elementi mappa di questo livello. Gli elementi della mappa includono poligoni, linee e punti. Le regole colore possono essere applicate quando è stata creata una relazione tra gli elementi della mappa in base ai dati spaziali e analitici di un campo del set di dati o di un campo dell'origine dati spaziali.  

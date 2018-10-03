@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f1094375d1c911934255878b0e8af6eb7174a761
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbae778b06c90f1e18cb5e45119a09e25d634738
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157802"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165311"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>Report in modalità locale e Report in modalità locale nel visualizzatore di report (Reporting Services in modalità SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] i report possono essere configurati per l'esecuzione in *modalità locale* oppure *modalità connessa*, che usa un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report. In alternativa, è possibile utilizzare il visualizzatore di report per eseguire il rendering dei report direttamente da SharePoint quando l'estensione per i dati supporta la creazione di report in modalità locale. Questo approccio è definito *modalità locale*. Nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la farm di SharePoint è necessaria essere connessi a un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server è configurato in modalità SharePoint così il controllo Visualizzatore Report è stato possibile eseguire il rendering di report. Questo approccio è definito *modalità remota* o *modalità con connessione*.  

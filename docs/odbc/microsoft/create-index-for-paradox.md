@@ -1,33 +1,30 @@
 ---
-title: CREARE l'indice per Paradox | Documenti Microsoft
+title: CREATE INDEX per Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - Paradox driver [ODBC], create index
 ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 473c8d73e33504e7cc22d3b02aaca789d9c7a620
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15e16fb311bf3c9acb2823772247e0fc16eabeef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902036"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649049"
 ---
-# <a name="create-index-for-paradox"></a>CREARE l'indice per Paradox
-La sintassi dell'istruzione CREATE INDEX per il driver ODBC Paradox è:  
+# <a name="create-index-for-paradox"></a>CREATE INDEX per Paradox
+La sintassi dell'istruzione CREATE INDEX per il driver Paradox ODBC è:  
   
- **CREARE** [**UNIQUE**] **indice** *nome indice*  
+ **CREARE** [**UNIQUE**] **indice** *-nome dell'indice*  
   
  **VIA** *-nome della tabella*  
   
@@ -35,45 +32,45 @@ La sintassi dell'istruzione CREATE INDEX per il driver ODBC Paradox è:
   
  [**,** *colonna identificatore* [**ASC**]...] **)**  
   
- Il driver ODBC Paradox non supporta il **DESC** parola chiave nella grammatica SQL ODBC per l'istruzione CREATE INDEX. Il *-nome della tabella* argomento può specificare il percorso completo della tabella.  
+ Il driver Paradox ODBC non supporta il **DESC** parola chiave nella grammatica SQL ODBC per l'istruzione CREATE INDEX. Il *-nome della tabella* argomento può specificare il percorso completo della tabella.  
   
- Se la parola chiave **UNIQUE** viene specificato, il driver ODBC Paradox verrà creato un indice univoco. Il primo indice univoco viene creato come indice primario. Si tratta di un file chiave primario Paradox denominato *-nome della tabella*. PX. Indici primari sono soggetti alle restrizioni seguenti:  
+ Se la parola chiave **UNIQUE** viene specificato, il driver ODBC Paradox verrà creato un indice univoco. Il primo indice univoco viene creato come indice primario. Si tratta di un file chiave primario Paradox denominato *-nome della tabella*. PX. Indici primari sono soggette alle restrizioni seguenti:  
   
--   Prima di tutte le righe vengono aggiunte alla tabella, è necessario creare l'indice primario.  
+-   L'indice primario deve essere creato prima tutte le righe vengono aggiunte alla tabella.  
   
--   Un indice primario deve essere definito al momento le prime colonne di "n" in una tabella.  
+-   Un indice primario deve essere definito al momento le prime colonne in una tabella "n".  
   
--   Per ogni tabella, è consentito un solo indice primario.  
+-   Per ogni tabella è consentito un solo indice primario.  
   
--   Impossibile aggiornare una tabella dal driver Paradox se un indice primario non è definito nella tabella. Si noti che ciò non è possibile per una tabella vuota, che può essere aggiornata anche se non è definito un indice univoco nella tabella.  
+-   Impossibile aggiornare una tabella dal driver Paradox se un indice primario non è definito sulla tabella. Si noti che ciò non vale per una tabella vuota, che può essere aggiornata anche se un indice univoco non è definito sulla tabella.  
   
--   Il *nome indice* argomento per un indice primario deve essere lo stesso nome base della tabella, come richiesto dal Paradox.  
+-   Il *-nome dell'indice* argomento per un indice primario deve essere lo stesso come il nome di base della tabella, come richiesto da Paradox.  
   
- Se la parola chiave **UNIQUE** viene omesso, il driver ODBC Paradox verrà creato un indice non univoco. Si tratta di due file di indice secondario Paradox denominati *-nome della tabella*. X*nn* e *-nome della tabella*. Y*nn*, dove *nn* è il numero della colonna nella tabella. Gli indici non univoci sono soggetti alle restrizioni seguenti:  
+ Se la parola chiave **UNIQUE** viene omesso, il driver ODBC Paradox verrà creato un indice non univoco. Questo è costituito da due file di indice secondario Paradox denominati *-nome della tabella*. X*nn* e *nome-tabella*. Y*nn*, dove *nn* è il numero della colonna nella tabella. Indici non univoci sono soggette alle restrizioni seguenti:  
   
 -   Prima di poter creare un indice non univoco per una tabella, deve esistere un indice primario per la tabella.  
   
--   Per Paradox 3. *x*, *nome indice* argomento per un indice diverso da un indice primario (univoco o non univoco) deve essere identico al nome di colonna. Per Paradox 4. *x* e 5. *x*, il nome di tale indice è possibile, ma non deve essere identico al nome di colonna.  
+-   Per Paradox 3. *x*, il *-nome dell'indice* argomento per qualsiasi indice diverso da un indice primario (univoco o non univoco) deve essere identico al nome di colonna. Per Paradox 4. *x* e 5. *x*, può essere il nome di tale indice, ma non deve essere identico al nome di colonna.  
   
 -   Per un indice non univoco, è possibile specificare una sola colonna.  
   
- Impossibile aggiungere colonne di una volta definito un indice in una tabella. Se la prima colonna dell'elenco di argomenti di un'istruzione CREATE TABLE crea un indice, una seconda colonna non può essere inclusa nell'elenco di argomenti.  
+ Impossibile aggiungere le colonne dopo aver definito un indice su una tabella. Se la prima colonna dell'elenco di argomenti di un'istruzione CREATE TABLE consente di creare un indice, una seconda colonna non può essere incluso nell'elenco di argomenti.  
   
- Ad esempio, per utilizzare il numero di ordine di vendita e le colonne di numeri di riga dell'indice univoco nella tabella SO_LINES, utilizzare l'istruzione:  
+ Ad esempio, per usare il numero di ordine di vendita e le colonne di numeri di riga dell'indice univoco nella tabella SO_LINES, utilizzare l'istruzione:  
   
 ```  
 CREATE UNIQUE INDEX SO_LINES  
  ON SO_LINES (SONum, LineNum)  
 ```  
   
- Per utilizzare la colonna dei numeri parte come un indice non univoco nella tabella SO_LINES, utilizzare l'istruzione:  
+ Per usare la colonna dei numeri di parte come un indice non univoco nella tabella SO_LINES, utilizzare l'istruzione:  
   
 ```  
 CREATE INDEX PartNum  
  ON SO_LINES (PartNum)  
 ```  
   
- Si noti che quando vengono eseguite due istruzioni CREATE INDEX, la prima istruzione crea sempre un indice primario con lo stesso nome della tabella e la seconda istruzione crea sempre un indice non univoco con lo stesso nome della colonna. Questi indici verranno denominati in questo modo anche se i nomi diversi vengono immessi nelle istruzioni CREATE INDEX e anche se l'indice è univoco nella seconda istruzione CREATE INDEX.  
+ Si noti che quando vengono eseguite due istruzioni CREATE INDEX, la prima istruzione creerà sempre un indice primario con lo stesso nome della tabella e la seconda istruzione creerà sempre un indice non univoci con lo stesso nome di colonna. Questi indici verranno denominati in questo modo anche se vengono immessi diversi nomi nelle istruzioni CREATE INDEX e anche se l'indice viene etichettato UNIQUE nella seconda istruzione CREATE INDEX.  
   
 > [!NOTE]  
 >  Quando si usa il driver Paradox senza implementare Borland motore di Database di sola lettura e aggiungere le istruzioni sono consentite.

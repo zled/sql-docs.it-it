@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cca12397250ad12e4f892d00271b9afdbb81ca2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25d79370893dc2d3bfef06890baf5ffd88f0da53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319471"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171261"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Proprietà delle stringhe di connessione (Analysis Services)
   In questo argomento vengono illustrate le proprietà delle stringhe di connessione che è possibile impostare in uno degli strumenti di progettazione o di amministrazione o trovare nelle stringhe di connessione create dalle applicazioni client che si connettono ai dati di Analysis Services ed eseguono query su di essi. Viene pertanto preso in considerazione solo un subset delle proprietà disponibili. L'elenco completo include numerose proprietà del server e del database attraverso cui è possibile personalizzare una connessione per un'applicazione specifica indipendentemente dal tipo di configurazione dell'istanza o del database nel server.  
@@ -73,7 +70,7 @@ ms.locfileid: "37319471"
 |`Integrated Security`|Per la connessione ad Analysis Services viene usata l'identità di Windows del chiamante. I valori validi sono vuoto, SSPI e BASIC.<br /><br /> `Integrated Security`=`SSPI` è il valore predefinito per le connessioni TCP, consente l'autenticazione anonima, NTLM o Kerberos. Il valore vuoto è quello predefinito per le connessioni HTTP.<br /><br /> Quando si usa `SSPI`, `ProtectionLevel` deve essere impostata su uno dei seguenti: `Connect`, `PktIntegrity`, `PktPrivacy`.|  
 |`Persist Encrypted`|Impostare questa proprietà se l'applicazione client richiede l'oggetto origine dati per rendere persistenti le informazioni di autenticazione riservate, ad esempio una password, in formato crittografato. Per impostazione predefinita, le informazioni non sono persistenti.|  
 |`Persist Security Info`|I valori validi sono True e False. Se impostata su True, le informazioni di sicurezza quali l'identità dell'utente o la password precedentemente specificate nella stringa di connessione possono essere ottenute dalla connessione dopo che quest'ultima è stata stabilita. Il valore predefinito è False.|  
-|`ProtectionLevel`|Determina il livello di sicurezza usato per la connessione. I valori validi sono:<br /><br /> `None`(Indici per tabelle con ottimizzazione per la memoria). Connessioni non autenticate o anonime. Non viene eseguita alcuna autenticazione per i dati inviati al server.<br /><br /> `Connect`(Indici per tabelle con ottimizzazione per la memoria). Connessioni autenticate. L'autenticazione viene eseguita solo quando il client stabilisce una relazione con un server.<br /><br /> `PktIntegrity`(Indici per tabelle con ottimizzazione per la memoria). Connessioni crittografate Viene verificato che tutti i dati inviati dal client siano stati ricevuti e che durante il transito non siano state apportate modifiche.<br /><br /> `PktPrivacy`(Indici per tabelle con ottimizzazione per la memoria). Crittografia con firma, supportata solo per XMLA. Viene verificato che tutti i dati inviati dal client siano stati ricevuti senza modifiche apportate durante il transito e viene assicurata la protezione della privacy dei dati mediante crittografia.<br /><br /> <br /><br /> Per altre informazioni, vedere [Establishing Secure Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)|  
+|`ProtectionLevel`|Determina il livello di sicurezza usato per la connessione. I valori validi sono:<br /><br /> `None` (Indici per tabelle con ottimizzazione per la memoria). Connessioni non autenticate o anonime. Non viene eseguita alcuna autenticazione per i dati inviati al server.<br /><br /> `Connect` (Indici per tabelle con ottimizzazione per la memoria). Connessioni autenticate. L'autenticazione viene eseguita solo quando il client stabilisce una relazione con un server.<br /><br /> `PktIntegrity` (Indici per tabelle con ottimizzazione per la memoria). Connessioni crittografate Viene verificato che tutti i dati inviati dal client siano stati ricevuti e che durante il transito non siano state apportate modifiche.<br /><br /> `PktPrivacy` (Indici per tabelle con ottimizzazione per la memoria). Crittografia con firma, supportata solo per XMLA. Viene verificato che tutti i dati inviati dal client siano stati ricevuti senza modifiche apportate durante il transito e viene assicurata la protezione della privacy dei dati mediante crittografia.<br /><br /> <br /><br /> Per altre informazioni, vedere [Establishing Secure Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)|  
 |`Roles`|Specificare un elenco con valori delimitati da virgole dei ruoli predefiniti per la connessione a un server o a un database mediante le autorizzazioni trasmesse dal ruolo in questione. Se questa proprietà viene omessa, vengono usati tutti i ruoli e le autorizzazioni valide derivano da una combinazione di tutti i ruoli. Se si imposta la proprietà su un valore vuoto (ad esempio, Roles=' '), la connessione client non presenta appartenenza a ruoli.<br /><br /> Un amministratore che usano questa proprietà si connette con le autorizzazioni trasmesse dal ruolo. Alcuni comandi potrebbero avere esito negativo se il ruolo non fornisce autorizzazioni sufficienti.|  
 |`SSPI`|Specifica in modo esplicito il pacchetto di sicurezza da usare per l'autenticazione client quando `Integrated Security` è impostato su `SSPI`. SSPI supporta più pacchetti, tuttavia è possibile usare questa proprietà per specificare un pacchetto particolare. I valori validi sono Negotiate, Kerberos, NTLM e Anonymous User. Se questa proprietà non è impostata, per la connessione saranno disponibili tutti i pacchetti.|  
 |`Use Encryption for Data`|Crittografa le trasmissioni di dati. I valori validi sono True e False.|  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e39e1bd9772ea1e05e4e2c0dbb951cba721caaa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28ce36cbd728787e69fcf00963aa024896d60750
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214831"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116886"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilità rskeymgmt (SSRS)
   Questa utilità consente di estrarre, ripristinare, creare ed eliminare la chiave simmetrica utilizzata per proteggere i dati riservati del server di report dall'accesso non autorizzato. Questa utilità viene inoltre utilizzata per unire in join istanze del server di report in un'implementazione basata sulla scalabilità orizzontale. La *distribuzione con scalabilità orizzontale di un server di report* fa riferimento a più istanze del server di report che condividono lo stesso database del server di report.  
@@ -82,7 +79,7 @@ ms.locfileid: "37214831"
  **-r**  *installationID*  
  Consente di rimuovere le informazioni relative alla chiave simmetrica per un'istanza specifica del server di report, quindi di rimuovere il server di report da un'implementazione basata sulla scalabilità orizzontale. *installationID* è un valore GUID disponibile nel file RSReportserver.config.  
   
- `-f`  *file*  
+ `-f`  *File*  
  Consente di specificare il percorso completo del file in cui è archiviata una copia di backup delle chiavi simmetriche.  
   
  Per l'argomento **rskeymgmt -e**, la chiave simmetrica viene scritta nel file specificato.  
@@ -110,7 +107,7 @@ ms.locfileid: "37214831"
  **-t**  *trace*  
  Crea l'output dei messaggi di errore nel log di traccia. Questo argomento non accetta un valore. Per altre informazioni, vedere [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire lo strumento è necessario essere un amministratore locale ed eseguirlo a livello locale nel computer in cui risiede il server di report. L'utilità rskeymgmt interagisce con l'istanza locale del servizio Windows ReportServer. L'utilità non è infatti in grado di connettersi alle istanze remote del servizio Windows ReportServer e pertanto non può essere utilizzata per gestire le chiavi di crittografia di un'istanza remota del server di report.  
   
 > [!NOTE]  

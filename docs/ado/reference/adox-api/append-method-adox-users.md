@@ -1,13 +1,11 @@
 ---
-title: Append (metodo) (ADOX utenti) | Documenti Microsoft
+title: Append (metodo) (User ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a3c8bc74cf91e07fcac3bc9b58a7633a7083090
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e56391357e7a11c47efdf0ffaf3c9ae9704d5db3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285396"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787205"
 ---
-# <a name="append-method-adox-users"></a>Append (metodo) (ADOX utenti)
-Aggiunge un nuovo [utente](../../../ado/reference/adox-api/user-object-adox.md) dell'oggetto per il [utenti](../../../ado/reference/adox-api/users-collection-adox.md) insieme.  
+# <a name="append-method-adox-users"></a>Metodo Append (raccolta Users ADOX)
+Aggiunge un nuovo [utente](../../../ado/reference/adox-api/user-object-adox.md) dell'oggetto per il [utenti](../../../ado/reference/adox-api/users-collection-adox.md) raccolta.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,23 +41,23 @@ Users.Append User[,Password]
  *Password*  
  Facoltativo. Oggetto **stringa** valore contenente la password per l'utente. Il *Password* parametro corrisponde al valore specificato per il [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) metodo di un **utente** oggetto.  
   
-## <a name="remarks"></a>Remarks  
- Il **utenti** raccolta di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta gli utenti del catalogo. Il **utenti** raccolta per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) rappresenta solo gli utenti appartenenti al gruppo specifico.  
+## <a name="remarks"></a>Note  
+ Il **gli utenti** raccolta di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta gli utenti del catalogo. Il **gli utenti** raccolta per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) rappresenta solo gli utenti che hanno l'appartenenza a un gruppo specifico.  
   
  Se il provider non supporta la creazione di utenti, si verificherà un errore.  
   
 > [!NOTE]
->  Prima di accodare un **utente** dell'oggetto per il **utenti** raccolta di un **gruppo** oggetto, un **utente** oggetto con lo stesso [nome ](../../../ado/reference/adox-api/name-property-adox.md) dell'oggetto da aggiungere deve già esistere nel **utenti** insieme il **catalogo**.  
+>  Prima di accodare un **utente** dell'oggetto per il **utenti** raccolta di un **gruppo** oggetto, un **utente** oggetto con lo stesso [nome ](../../../ado/reference/adox-api/name-property-adox.md) dell'oggetto da aggiungere deve già esistere nel **gli utenti** insieme del **catalogo**.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Raccolta di oggetti User (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utenti e gruppi, ChangePassword metodi esempio Append (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
- [Append (metodo) (ADOX colonne)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append (metodo) (ADOX gruppi)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append (metodo) (ADOX indici)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append (metodo) (ADOX chiavi)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append (metodo) (ADOX procedure)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append (metodo) (ADOX tabelle)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Aggiungere utenti e gruppi, esempio di metodi ChangePassword (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
+ [Append (metodo) (oggetti Column ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append (metodo) (oggetti Group ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Append (metodo) (oggetti Index ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Append (metodo) (oggetti Key ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Append (metodo) (oggetti procedure ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Append (metodo) (oggetti Table ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Metodo Append (oggetti View ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2244f9c73d48946628c063d22a1f0645182a73ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 166689f175485af66ca140f82fa968512baf8519
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244051"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086341"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Crea struttura di data mining (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante Crea struttura di Data Mining, barra multifunzione Data Mining](media/dmc-createstruct.gif "pulsante Crea struttura di Data Mining, barra multifunzione Data Mining")  
@@ -98,7 +95,7 @@ ms.locfileid: "37244051"
   
 |Valori|Description|  
 |------------|-----------------|  
-|**Includere**|Consente di specificare che la colonna contiene dati utilizzabili per l'analisi o per la stima.|  
+|**includere**|Consente di specificare che la colonna contiene dati utilizzabili per l'analisi o per la stima.|  
 |**Key**|Consente di specificare che nella colonna è contenuto un ID transazione, un ID serie o un'altra chiave necessaria per l'elaborazione.<br /><br /> Tutti gli algoritmi richiedono una colonna Chiave. Con alcuni algoritmi è tuttavia consentita una sola chiave, mentre con altri sono consentite più chiavi.<br /><br /> Se la colonna contiene una chiave ma non è necessaria per l'elaborazione, selezionare **non si usano**.|  
 |**Chiave temporale**|Consente di specificare che la colonna contiene una data o un altro valore numerico utilizzabile per identificare in modo univoco gli elementi di una serie temporale.|  
 |**Non usare**|Consente di specificare che la colonna deve essere ignorata. I dati contenuti nella colonna non verranno elaborati.|  
@@ -113,7 +110,7 @@ ms.locfileid: "37244051"
   
      Se non si è certi di utilizzare la colonna, è sempre possibile includerla nella struttura di data mining e quindi creare un modello di data mining in cui non viene utilizzata. È ad esempio possibile includere nei dati una colonna per il numero di telefono per riferimento futuro, ma creare un modello di clustering in cui i numeri di telefono vengono ignorati. Dopo aver creato i cluster, è possibile creare una query che restituisce i numeri di telefono delle persone appartenenti a un cluster specifico.  
   
--   Tutti gli algoritmi richiedono una **chiave** colonna. I valori della colonna Chiave devono essere univoci. Oggetto **Key Time** colonna è rappresentata dai modelli necessaria solo per la previsione o time series. ,  
+-   Tutti gli algoritmi richiedono una **chiave** colonna. I valori della colonna Chiave devono essere univoci. Oggetto **Key Time** colonna è rappresentata dai modelli necessaria solo per la previsione o time series. .  
   
 ### <a name="requirements"></a>Requisiti  
  Per creare una struttura di data mining, è necessario disporre di una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. È necessaria una connessione anche se si utilizzano strutture temporanee. Per altre informazioni su come creare o modificare una connessione, vedere [Connetti ai dati di origine &#40;Client di Data Mining per Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04630120106816c4018af0fc23cfdf30f26b15cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272607"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060170"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Finestra di dialogo Filtro (Grafico accuratezza modello di data mining)
   La finestra di dialogo **Filtro** consente di compilare condizioni che è possibile applicare a un set di dati. Il set di dati può essere rappresentato da un set di dati esterno utilizzato per eseguire il test oppure da dati del case utilizzati per eseguire il training di un modello di data mining. Questa finestra di dialogo consente di compilare criteri che è possibile salvare come parte di criteri di filtro più complessi nella finestra di dialogo **Filtro dei set di dati** o in **Filtro modello** .  
@@ -47,7 +44,7 @@ ms.locfileid: "37272607"
 |**And/Or**|Fare clic per specificare se applicare l'operatore AND o l'operatore OR alla condizione nella riga. Questi valori sono disponibili solo dopo aver selezionato una colonna dall'elenco **Colonna struttura di data mining** .|  
 |**Colonna della struttura di data mining**|Fare clic per selezionare una colonna dall'elenco delle colonne contenute nella tabella selezionata dall'origine dati nella finestra di dialogo **Filtro dei set di dati** .|  
 |**Operatore**|Selezionare un operatore dall'elenco. Gli operatori disponibili dipendono dal tipo di dati della colonna.<br /><br /> Se la colonna contiene valori discreti, sono disponibili solo gli operatori seguenti:<br /><br /> = (uguale a), <> (diverso da), IS NOT NULL, IS NULL.<br /><br /> Se la colonna contiene valori continui, sono supportati anche gli operatori per le operazioni maggiore di e minore di.|  
-|**Value**|Digitare un valore da utilizzare come condizione.|  
+|**Valore**|Digitare un valore da utilizzare come condizione.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Test e convalida le attività e procedure relative alla &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   

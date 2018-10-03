@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], deleting
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - deleting columns
 - queries [SQL Server], results
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14070558242ca59336b097664c5510729d85a840
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 01671a809854ce7f023779dca28e198a02ce5926
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814357"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115741"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Rimuovere colonne dai risultati di una query (Visual Database Tools)
   Se si utilizza una colonna nella query di selezione ma si preferisce escluderla dal set di risultati che verranno visualizzati (vale a dire, escluderla dall'elenco di campi selezionati nella query), sarà possibile rimuoverla dall'output. Dopo avere rimosso la colonna dall'output della query, sarà comunque possibile utilizzarla nelle condizioni di ricerca o come campo di ordinamento.  

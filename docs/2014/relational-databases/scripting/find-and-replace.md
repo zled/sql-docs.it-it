@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.quickfind
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87780d4f33a3e7674778880423f66ac6369ead5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5a21201ee3a3e12e4f091b545b8bd812a20a0505
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324311"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152521"
 ---
 # <a name="find-and-replace"></a>Trova e sostituisci
   Usare la finestra di dialogo **Trova e sostituisci** per trovare testo all'interno di un file e facoltativamente sostituirlo con altro testo. Possono essere visualizzate versioni della finestra **Trova e sostituisci** con opzioni leggermente diverse, a seconda di come è stata aperta la finestra di dialogo. Scegliere **Trova e sostituisci** dal menu **Modifica**e quindi fare clic su **Ricerca veloce** per aprire la finestra di dialogo con le opzioni di ricerca ma senza le opzioni di sostituzione. Scegliere **Trova e sostituisci** dal menu **Modifica**e quindi fare clic su **Sostituzione veloce** per aprire la finestra di dialogo con le opzioni di ricerca e sostituzione.  

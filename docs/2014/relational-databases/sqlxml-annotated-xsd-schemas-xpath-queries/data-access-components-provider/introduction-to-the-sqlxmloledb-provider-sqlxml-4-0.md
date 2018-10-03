@@ -1,35 +1,32 @@
 ---
-title: Introduzione al Provider SQLXMLOLEDB (SQLXML 4.0) | Microsoft Docs
+title: Introduzione a SQLXMLOLEDB Provider (SQLXML 4.0) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, properties
 - adExecuteStream flag
 - SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce38c5505c5fbad0d122bdbc78086f6011b83eec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63badb45984b754e8f586e30f2d659a840db5d43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301821"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134723"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Introduzione al provider SQLXMLOLEDB (SQLXML 4.0)
-  Il provider SQLXMLOLEDB è un provider OLE DB che espone la funzionalità [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML tramite gli oggetti ADO (ActiveX Data Objects). Il provider può tuttavia eseguire i comandi solo nella modalità di scrittura in un flusso di output di ADO. Il provider SQLXMLOLEDB non è un provider di set di righe. Quando si esegue un comando, è necessario specificare il flag adExecuteStream, che indica ad ADO di utilizzare il flusso di output specificato.  
+  Il provider SQLXMLOLEDB è un provider OLE DB che espone la funzionalità [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML tramite gli oggetti ADO (ActiveX Data Objects). Il provider può tuttavia eseguire i comandi solo nella modalità di scrittura in un flusso di output di ADO. Il provider SQLXMLOLEDB non è un provider di set di righe. Quando si esegue un comando, è necessario specificare il flag adExecuteStream, che indica ad ADO di utilizzare il flusso di output che è stato specificato.  
   
- Nell'esempio seguente mostra la sintassi per il comando Execute in cui viene specificato il flag adExecuteStream:  
+ Nell'esempio seguente viene illustrata la sintassi per il comando di esecuzione in cui viene specificato il flag di adExecuteStream:  
   
 ```  
 Dim oTestCommand As New ADODB.Command  
@@ -50,16 +47,16 @@ oTestCommand.Execute , , adExecuteStream
   
 |Comando<br /><br /> proprietà|Default<br /><br /> (se disponibile)|Description|  
 |--------------------------|----------------------------|-----------------|  
-|Percorso di base|""|Specifica il percorso file di base. Tale percorso viene utilizzato per specificare la posizione dei file XSL (XML Stylesheet Language) o dei file dello schema di mapping. Il percorso di file di base viene anche utilizzato per risolvere i percorsi relativi di XSL o il mapping dei file dello schema che sono stati specificati nelle proprietà Schema di Mapping o XSL.<br /><br /> Per un esempio in cui viene utilizzata questa proprietà, vedere [l'esecuzione di query XPath &#40;Provider SQLXMLOLEDB&#41;](executing-xpath-queries-sqlxmloledb-provider.md).|  
-|ClientSideXML|False|Impostare questa proprietà su False se si desidera che il processo di conversione del set di righe in XML venga eseguito sul client anziché sul server. Questa operazione si rivela utile quando si desidera spostare il carico delle prestazioni al livello intermedio.<br /><br /> Per un esempio in cui viene utilizzata questa proprietà, vedere [l'esecuzione di query SQL &#40;Provider SQLXMLOLEDB&#41; ](executing-sql-queries-sqlxmloledb-provider.md) oppure [l'esecuzione di modelli che contengono query SQL &#40;Provider SQLXMLOLEDB&#41; ](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
-|Tipo di contenuto||Restituisce il tipo di contenuto di output. Si tratta di una proprietà READ ONLY.<br /><br /> Questa proprietà fornisce informazioni al browser sul tipo di contenuto, ad esempio TEXT/XML, TEXT/HTML, image/jpeg e così via. Il valore di questa proprietà diventa il **tipo di contenuto** campo che viene inviato al browser come parte dell'intestazione HTTP, che contiene il tipo MIME (Multipurpose Internet Mail Extensions) del documento inviato come corpo.|  
-|Schema di mapping|NULL|Se un'applicazione client esegue una query XPath su uno schema di mapping (XDR o XSD), questa proprietà viene utilizzata per specificare il nome dello schema di mapping.<br /><br /> Il percorso specificato può essere relativo (xyz/abc/Schema.xml) o assoluto (C:\Cartella\abc\Schema.xml).<br /><br /> Se viene specificato un percorso relativo, il percorso di base specificato dalla proprietà percorso di Base viene usato per risolvere il percorso relativo. Se non è stato specificato alcun percorso nella proprietà del percorso di Base, il percorso relativo è relativo alla directory corrente.<br /><br /> Quando si specifica un valore per la proprietà dello Schema di Mapping, è possibile specificare un percorso della directory locale o un URL (http://...). Se si specifica un URL, è necessario configurare WinHTTP per l'accesso ai server HTTP e HTTPS tramite un server proxy. A tale scopo, eseguire l'utilità Proxycfg.exe. Per ulteriori informazioni, vedere l'argomento relativo all'utilizzo dell'utilità di configurazione proxy WinHTTP in MSDN Library.<br /><br /> Per un esempio in cui viene utilizzata questa proprietà, vedere [l'esecuzione di query XPath &#40;Provider SQLXMLOLEDB&#41;](executing-xpath-queries-sqlxmloledb-provider.md).|  
-|spazi dei nomi||Questa proprietà consente l'esecuzione delle query XPath che utilizzano gli spazi dei nomi. Per un esempio in cui viene utilizzata questa proprietà, vedere [l'esecuzione di query XPath con spazi dei nomi &#40;Provider SQLXMLOLEDB&#41;](executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md).|  
+|Percorso di base|""|Specifica il percorso file di base. Tale percorso viene utilizzato per specificare la posizione dei file XSL (XML Stylesheet Language) o dei file dello schema di mapping. Il percorso del file di base viene utilizzato anche per risolvere i percorsi relativi di XSL o il mapping di file di schema che sono stati specificati nella proprietà XSL o Schema di Mapping.<br /><br /> Per un esempio in cui viene utilizzata questa proprietà, vedere [esecuzione di query XPath &#40;SQLXMLOLEDB Provider&#41;](executing-xpath-queries-sqlxmloledb-provider.md).|  
+|ClientSideXML|False|Impostare questa proprietà su False se si desidera che il processo di conversione del set di righe in XML venga eseguito sul client anziché sul server. Questa operazione si rivela utile quando si desidera spostare il carico delle prestazioni al livello intermedio.<br /><br /> Per un esempio in cui viene utilizzata questa proprietà, vedere [esecuzione di query SQL &#40;SQLXMLOLEDB Provider&#41; ](executing-sql-queries-sqlxmloledb-provider.md) o [modelli che contengono SQL le query con esecuzione &#40;SQLXMLOLEDB Provider&#41; ](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
+|Tipo di contenuto||Restituisce il tipo di contenuto di output. Si tratta di una proprietà READ ONLY.<br /><br /> Questa proprietà fornisce informazioni al browser sul tipo di contenuto, ad esempio TEXT/XML, TEXT/HTML, image/jpeg e così via. Il valore di questa proprietà diventa il **tipo di contenuto** campo che viene inviato al browser come parte dell'intestazione HTTP, che contiene il tipo MIME (Multipurpose Internet Mail Extensions) del documento da inviare come corpo.|  
+|Schema di mapping|NULL|Se un'applicazione client esegue una query XPath su uno schema di mapping (XDR o XSD), questa proprietà viene utilizzata per specificare il nome dello schema di mapping.<br /><br /> Il percorso specificato può essere relativo (xyz/abc/Schema.xml) o assoluto (C:\Cartella\abc\Schema.xml).<br /><br /> Se viene specificato un percorso relativo, il percorso di base specificato dalla proprietà percorso di Base viene utilizzato per risolvere il percorso relativo. Se è stato specificato alcun percorso nella proprietà percorso di Base, il percorso relativo è relativo alla directory corrente.<br /><br /> Quando si specifica un valore per la proprietà dello Schema di Mapping, è possibile specificare un percorso di directory locale o un URL (http://). Se si specifica un URL, è necessario configurare WinHTTP per l'accesso ai server HTTP e HTTPS tramite un server proxy. A tale scopo, eseguire l'utilità Proxycfg.exe. Per ulteriori informazioni, vedere l'argomento relativo all'utilizzo dell'utilità di configurazione proxy WinHTTP in MSDN Library.<br /><br /> Per un esempio in cui viene utilizzata questa proprietà, vedere [esecuzione di query XPath &#40;SQLXMLOLEDB Provider&#41;](executing-xpath-queries-sqlxmloledb-provider.md).|  
+|spazi dei nomi||Questa proprietà consente l'esecuzione delle query XPath che utilizzano gli spazi dei nomi. Per un esempio in cui viene utilizzata questa proprietà, vedere [esecuzione di query XPath con spazi dei nomi &#40;SQLXMLOLEDB Provider&#41;](executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md).|  
 |ss Stream Flags||Questa proprietà viene utilizzata per specificare tipi particolari di restrizioni di sicurezza. È ad esempio possibile che non si desideri consentire la specifica di riferimenti URL a file o di percorsi assoluti di file, ad esempio siti esterni, o che non si desideri consentire l'inserimento di query nei modelli.<br /><br /> È possibile assegnare alla proprietà i valori seguenti:<br /><br /> 1 = STREAM_FLAGS_DISALLOW_URL 2 = STREAM_FLAGS_DISALLOW_ABSOLUTE_PATH 4 = STREAM_FLAGS_DISALLOW_QUERY 8 = STREAM_FLAGS_ DONTCACHEMAPPINGSCHEMA 16 = STREAM_FLAGS_DONTCACHETEMPLATE 32 = STREAM_FLAGS_DONTCACHEXSL<br /><br /> Nella tabella che segue sono contenute informazioni aggiuntive su tali valori.|  
-|xml root||Questa proprietà viene utilizzata per definire un tag radice per il codice XML risultante. Se, ad esempio, si eseguono query SQL sul database e il documento XML risultante non contiene un singolo elemento radice, il valore della proprietà viene utilizzato per aggiungere tale elemento al documento.<br /><br /> Per un esempio in cui viene utilizzata questa proprietà, vedere [l'esecuzione di query SQL &#40;Provider SQLXMLOLEDB&#41;](executing-sql-queries-sqlxmloledb-provider.md).|  
-|xsl||Questa proprietà viene utilizzata per specificare il nome file XSL quando si desidera applicare la trasformazione XSL al documento XML restituito dalla query.<br /><br /> Il percorso specificato può essere relativo (xyz/abc/XSL.xsl) o assoluto (C:\Cartella\abc\XSL.xsl).<br /><br /> Se viene specificato un percorso relativo, il percorso di base specificato dalla proprietà percorso di Base viene usato per risolvere il percorso relativo. Se non è stato specificato alcun percorso nella proprietà del percorso di Base, il percorso relativo è relativo alla directory corrente.<br /><br /> Per un esempio in cui viene utilizzata questa proprietà, vedere applicazione di una trasformazione XSL (Provider SQLXMLOLEDB).|  
+|xml root||Questa proprietà viene utilizzata per definire un tag radice per il codice XML risultante. Se, ad esempio, si eseguono query SQL sul database e il documento XML risultante non contiene un singolo elemento radice, il valore della proprietà viene utilizzato per aggiungere tale elemento al documento.<br /><br /> Per un esempio in cui viene utilizzata questa proprietà, vedere [esecuzione di query SQL &#40;SQLXMLOLEDB Provider&#41;](executing-sql-queries-sqlxmloledb-provider.md).|  
+|xsl||Questa proprietà viene utilizzata per specificare il nome file XSL quando si desidera applicare la trasformazione XSL al documento XML restituito dalla query.<br /><br /> Il percorso specificato può essere relativo (xyz/abc/XSL.xsl) o assoluto (C:\Cartella\abc\XSL.xsl).<br /><br /> Se viene specificato un percorso relativo, il percorso di base specificato dalla proprietà percorso di Base viene utilizzato per risolvere il percorso relativo. Se è stato specificato alcun percorso nella proprietà percorso di Base, il percorso relativo è relativo alla directory corrente.<br /><br /> Per un esempio in cui viene utilizzata questa proprietà, vedere applicazione di una trasformazione XSL (SQLXMLOLEDB Provider).|  
   
- Nella tabella seguente vengono descritti i valori delle proprietà Stream flag ss.  
+ Nella tabella seguente contiene descrizioni di ss valori di proprietà Flags di flusso.  
   
 |Valore proprietà|Description|  
 |--------------------|-----------------|  

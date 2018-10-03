@@ -1,32 +1,29 @@
 ---
-title: Le conversioni eseguite da Client a Server | Microsoft Docs
+title: Le conversioni eseguite da Client a Server | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33aa66968fe93944172356a9be55d12fa459ddc3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 887ca3e11fba803c59e44b5846e251957edd0287
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427900"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176701"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversioni eseguite da client a server
   In questo argomento vengono illustrate le conversioni di data/ora eseguite tra un'applicazione client scritta con OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versione successiva).  
   
 ## <a name="conversions"></a>Conversioni  
- In questo argomento vengono descritte le conversioni eseguite sul client. Se il client specifica una precisione frazionaria dei secondi per un parametro che differisce da quella definita nel server, la conversione client potrebbe comportare un errore nei casi in cui il server consentirebbe l'esecuzione dell'operazione. In particolare, il client considera qualsiasi troncamento dei secondi frazionari come un errore, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Arrotonda valori al secondo intero più vicino.  
+ In questo argomento vengono descritte le conversioni eseguite sul client. Se il client specifica una precisione frazionaria dei secondi per un parametro che differisce da quella definita nel server, la conversione client potrebbe comportare un errore nei casi in cui il server consentirebbe l'esecuzione dell'operazione. In particolare, il client tratta come errore qualsiasi troncamento dei secondi frazionari, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arrotonda valori al secondo intero più vicino.  
   
  Se non viene chiamato ICommandWithParameters:: SetParameterInfo, le associazioni DBTYPE_DBTIMESTAMP vengono convertite come se fossero `datetime2`.  
   
@@ -63,8 +60,8 @@ ms.locfileid: "37427900"
 |9|La stringa viene analizzata come valore letterale ISO e convertita nel tipo di destinazione. Se l'operazione non riesce, la stringa viene analizzata come valore letterale data OLE (che presenta anche componenti di ora) e convertita da data OLE (DBTYPE_DATE) nel tipo di destinazione.<br /><br /> Se il tipo di destinazione è DBTIMESTAMP, `smalldatetime`, `datetime` o `datetime2`, la stringa deve essere conforme alla sintassi per i valori letterali data, ora o `datetime2` o alla sintassi riconosciuta da OLE. Se la stringa è un valore letterale data, tutti i componenti di ora vengono impostati su zero. Se la stringa è un valore letterale ora, la data viene impostata sul valore corrente.<br /><br /> Per tutti gli altri tipi di destinazione, la stringa deve essere conforme alla sintassi per i valori letterali del tipo di destinazione.|  
 |10|In caso di troncamento dei secondi frazionari con perdita di dati, viene impostato DBSTATUS_E_DATAOVERFLOW. Per le conversioni di stringhe, il controllo dell'overflow è possibile solo quando la stringa è conforme alla sintassi ISO. Se la stringa è un valore letterale data OLE, i secondi frazionari vengono arrotondati.<br /><br /> Per la conversione di tipo DBTIMESTAMP (datetime) in smalldatetime [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client viene troncato automaticamente il valore dei secondi anziché generare l'errore DBSTATUS_E_DATAOVERFLOW.|  
 |11|Il numero di cifre per i secondi frazionari (scala) è determinato dalla dimensione della colonna di destinazione in base alla tabella seguente: Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala 9. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito da OLE DB.<br /><br /> Se tuttavia il tipo di origine è DBTIMESTAMP e i secondi frazionari corrispondono a zero, non vengono generati alcuna cifra per i secondi frazionari né il separatore decimale. Questo comportamento assicura la compatibilità con le versioni precedenti per le applicazioni sviluppate utilizzando provider OLE DB meno recenti.<br /><br /> Una dimensione di colonna pari a ~ 0 implica una dimensione illimitata in OLE DB (9 cifre, a meno che non si applichi la regola delle 3 cifre per DBTIMESTAMP).<br /><br /> **DBTIME2** - 8, 10..18 (lunghezza in caratteri); 0, 1..9 (scala)<br /><br /> **DBTIMESTAMP** - 19, 21..29 (lunghezza in caratteri); 0, 1..9 (scala)<br /><br /> **DBTIMESTAMPOFFSET** - 26, 28..36 (lunghezza in caratteri); 0, 1..9 (scala)|  
-|12|La semantica di conversione precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per DBTYPE_DATE vengono mantenute. I secondi frazionari vengono troncati in corrispondenza di zero.|  
-|13|La semantica di conversione precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per DBTYPE_FILETIME vengono mantenute. Se si usa l'API di FileTimeToSystemTime Windows, la precisione frazionaria dei secondi è limitata a 1 millisecondo.|  
+|12|Viene mantenuta la semantica di conversione precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per DBTYPE_DATE. I secondi frazionari vengono troncati in corrispondenza di zero.|  
+|13|Viene mantenuta la semantica di conversione precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per DBTYPE_FILETIME. Se si usa l'API FileTimeToSystemTime di Windows, la precisione frazionaria dei secondi è limitata a 1 millisecondo.|  
 |14|Viene mantenuta la semantica di conversione precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per `smalldatetime`. I secondi vengono impostati su 0.|  
 |15|Viene mantenuta la semantica di conversione precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per `datetime`. I secondi vengono arrotondati al 300° di secondo più prossimo.|  
 |16|Il comportamento di conversione di un valore (di un tipo specificato) incorporato in una struttura client SSVARIANT corrisponde al comportamento dello stesso valore e tipo quando non è incorporato in una struttura client SSVARIANT.|  

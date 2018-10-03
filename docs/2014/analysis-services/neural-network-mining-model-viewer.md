@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.neuralnet.f1
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7cb93ac76fb6213817dcef3530387772e099e0e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 014dfb18c0ca2b54486e5bf61420aec903b4a258
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297411"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169711"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Rete neurale (Visualizzatore modello di data mining)
   Utilizzare il visualizzatore **Microsoft Neural Network** per esplorare i modelli di data mining basati sull'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network o [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression.  
@@ -44,7 +41,7 @@ ms.locfileid: "37297411"
 |valore|Description|  
 |-----------|-----------------|  
 |**Attribute**|Consente di scegliere un attributo di input dall'elenco. Se si lascia l'impostazione predefinita,  **\<tutto >**, il grafico mostra un elenco di tutti gli attributi di input classificati in base alla relativa influenza sull'attributo stimabile.|  
-|**Value**|Consente di scegliere un valore per l'attributo di input.|  
+|**Valore**|Consente di scegliere un valore per l'attributo di input.|  
   
  **Output**  
  Utilizzare questi controlli per scegliere un attributo e un valore stimabili da analizzare e confrontare nel grafico a barre. Se non si modificano le selezioni, il grafico a barre consente di confrontare i due primi stati del risultato.  
@@ -61,7 +58,7 @@ ms.locfileid: "37297411"
 |valore|Description|  
 |-----------|-----------------|  
 |**Attribute**|Consente di visualizzare il nome dell'attributo di input selezionato in **Attributo**.|  
-|**Value**|Consente di visualizzare il valore per l'attributo di input selezionato.|  
+|**Valore**|Consente di visualizzare il valore per l'attributo di input selezionato.|  
 |**Predilige \<valore 1 >**|Visualizza una barra che indica il livello di influenza di questa particolare combinazione attributo-valore sul risultato di destinazione scelto in **Valore 1**.|  
 |**Predilige \<valore 2 >**|Visualizza una barra che indica il livello di influenza di questa particolare combinazione attributo-valore sul risultato di destinazione scelto in **Valore 2**.|  
   

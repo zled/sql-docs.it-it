@@ -1,37 +1,34 @@
 ---
-title: I programmatori Visual FoxPro ODBC Driver&#39;riferimento s | Documenti Microsoft
+title: I programmatori del Driver ODBC Visual FoxPro&#39;riferimento s | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], technical reference
 - FoxPro ODBC driver [ODBC], technical reference
 ms.assetid: 00d722d4-ce99-4dbe-a503-1ab27cb6fe0a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64ea58ed7221f8d766adcf63d597eb861a25b782
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb5476902d36bd5761ebea6139bd1b7085da414b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907016"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855429"
 ---
-# <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>I programmatori Visual FoxPro ODBC Driver&#39;riferimento s
-In questa sezione della documentazione del Driver ODBC Visual FoxPro contiene gli argomenti seguenti:  
+# <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>I programmatori del Driver ODBC Visual FoxPro&#39;riferimento
+In questa sezione della documentazione di Driver ODBC Visual FoxPro contiene gli argomenti seguenti:  
   
--   [Supporto per segnalibro](../../odbc/microsoft/bookmark-support-visual-foxpro-odbc-driver.md)  
+-   [Supporto dei segnalibri](../../odbc/microsoft/bookmark-support-visual-foxpro-odbc-driver.md)  
   
--   [Modello di concorrenza è supportato](../../odbc/microsoft/supported-concurrency-model-visual-foxpro-odbc-driver.md)  
+-   [Modello di concorrenza supportato](../../odbc/microsoft/supported-concurrency-model-visual-foxpro-odbc-driver.md)  
   
--   [Modello di cursore è supportato](../../odbc/microsoft/supported-cursor-model-visual-foxpro-odbc-driver.md)  
+-   [Modello di cursore supportato](../../odbc/microsoft/supported-cursor-model-visual-foxpro-odbc-driver.md)  
   
 -   [Tipi di dati supportati](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)  
   
@@ -39,7 +36,7 @@ In questa sezione della documentazione del Driver ODBC Visual FoxPro contiene gl
   
 -   [Supporto per le regole, valori predefiniti, trigger e Stored procedure](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)  
   
--   [Grammatica SQL ODBC supportati](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md)  
+-   [Grammatica SQL ODBC supportata](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md)  
   
 -   [Voci del Registro di sistema](../../odbc/microsoft/registry-entries-visual-foxpro-odbc-driver.md)  
   
@@ -47,9 +44,9 @@ In questa sezione della documentazione del Driver ODBC Visual FoxPro contiene gl
   
 -   [SET di comandi supportati](../../odbc/microsoft/supported-set-commands-visual-foxpro-odbc-driver.md)  
   
--   [Supporto per i thread](../../odbc/microsoft/thread-support-visual-foxpro-odbc-driver.md)  
+-   [Supporto dei thread](../../odbc/microsoft/thread-support-visual-foxpro-odbc-driver.md)  
   
--   [Funzioni e ai comandi FoxPro non supportato](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md)  
+-   [Funzioni e i comandi di FoxPro non supportati](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md)  
   
 -   [Messaggi di errore](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md)  
   

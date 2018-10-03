@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], file storage types
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fff9084513f21333125eaee8995eebfd3e22e1a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 307cc94aff7fb1e5f8f9bad99aac1c99c08fc293
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048441"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Specifica del tipo di archiviazione di file tramite bcp (SQL Server)
   Il *tipo di archiviazione di file* indica la modalità con la quale vengono archiviati i dati in un file. Dati possono essere esportati in un file di dati come tipo di tabella di database (formato nativo), nella relativa rappresentazione di caratteri (formato carattere) o come qualsiasi tipo di dati in cui è supportata la conversione implicita; ad esempio, la copia una `smallint` come un `int`. I tipi di dati definiti dall'utente vengono esportati utilizzando il tipo di dati di base corrispondente.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d31f0d1eabe73a681b1932b2826ef38ad9b5456
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327841"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063011"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lezione 4: creare un database in Archiviazione di Windows Azure
   In questa lezione verrà illustrato come creare un database tramite la funzionalità relativa ai file di dati di SQL Server in Windows Azure. Si noti che prima di questa lezione, è necessario aver completato le lezioni 1, 2 e 3. La lezione 3 è un passaggio molto importante perché si archiviano le informazioni sul contenitore del servizio di archiviazione Windows Azure e il nome dei criteri e la chiave SAS associati nell'archivio delle credenziali di SQL Server, operazioni necessarie prima della lezione 4.  

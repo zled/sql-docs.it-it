@@ -1,28 +1,25 @@
 ---
-title: Gestione degli errori In altri linguaggi | Documenti Microsoft
+title: Gestione degli errori In altri linguaggi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/14/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8c57f35e-3c04-4f17-bf3e-3ad053951530
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d66aba3ea356cb5f59438e38d79aa3ff56a5b9e3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6e23f7b373eb0b1f089c2c38eb28027dedc48849
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270320"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772929"
 ---
-# <a name="handling-errors-in-other-languages"></a>Gestione degli errori In altri linguaggi
-Finora, in questa sezione è stati illustrati gli errori da un punto di vista di Microsoft® Visual Basic®. Nella parte restante di questa sezione offrono una panoramica di gestione degli errori in linguaggi diversi da Visual Basic.  
+# <a name="handling-errors-in-other-languages"></a>Gestione degli errori in altri linguaggi
+Finora, in questa sezione ha illustrato gli errori da un punto di vista di Microsoft® Visual Basic®. Il resto di questa sezione verrà fornita una panoramica della gestione degli errori in linguaggi diversi da Visual Basic.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
-caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1afd478583520bddb2f0990b282e3f96c851feb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269837"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147315"
 ---
 # <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Lezione 4: Esplorazione dei modelli di mailing diretto (Esercitazione di base sul data mining)
   Dopo avere elaborato i modelli nel progetto, è possibile esplorarli per individuare tendenze interessanti. Poiché l'analisi dei numeri dei modelli può risultare difficile e complessa, SQL Server Data Mining offre alcuni strumenti visivi che consentono di analizzare i dati e comprendere le regole e le relazioni che gli algoritmi hanno individuato all'interno dei dati. È inoltre possibile utilizzare vari test di accuratezza per convalidare il set di dati o per individuare il modello che garantisce le prestazioni migliori prima di distribuirlo.  

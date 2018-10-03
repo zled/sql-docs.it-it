@@ -1,30 +1,27 @@
 ---
-title: Insiemi ADO MD | Documenti Microsoft
+title: Raccolte ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD collections
 - collections [ADO MD]
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2419977d062292dc87c2c0096b825fa2b5a0f89
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 92218a21fc4047f20605ab3caff0d7700f7d7e8b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283250"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709110"
 ---
-# <a name="ado-md-collections"></a>Insiemi ADO MD
+# <a name="ado-md-collections"></a>Raccolte ADO MD
 |||  
 |-|-|  
 |[Assi](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|Contiene il **asse** oggetti che definiscono un set di celle.|  
@@ -32,7 +29,7 @@ ms.locfileid: "35283250"
 |[Dimensions](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Contiene il **dimensione** gli oggetti che costituiscono un cubo.|  
 |[Gerarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Contiene il set **gerarchia** oggetti da una dimensione.|  
 |[Levels](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contiene il **livello** gli oggetti che costituiscono una gerarchia.|  
-|[Membri](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Contiene il **membro** gli oggetti di un livello o una posizione lungo un asse.|  
+|[Membri](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Contiene il **membro** oggetti da un livello o una posizione lungo un asse.|  
 |[Posizioni](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|Contiene il **posizione** oggetti che definiscono un punto su un asse.|  
   
 ## <a name="see-also"></a>Vedere anche  

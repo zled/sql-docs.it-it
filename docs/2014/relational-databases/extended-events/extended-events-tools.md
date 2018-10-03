@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32d275fd784bac6d5c5ebefe36c640afe6e94726
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1e462ad252406c6841bdd4fefa66aa3ff4bb249
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203311"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108741"
 ---
 # <a name="extended-events-tools"></a>Strumenti degli eventi estesi
   È possibile utilizzare gli strumenti seguenti per creare e gestire sessioni Eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -35,7 +32,7 @@ ms.locfileid: "37203311"
   
 -   Provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo potente strumento consente di creare, modificare e gestire sessioni Eventi estesi. Per altre informazioni, vedere [Utilizzare il provider PowerShell per eventi estesi](use-the-powershell-provider-for-extended-events.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)](Indici per tabelle con ottimizzazione per la memoria). Questo strumento consente di creare ed eseguire gli esempi di codice forniti negli argomenti relativi agli eventi estesi. Per altre informazioni, vedere [Esplora oggetti](../../ssms/object/object-explorer.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (Indici per tabelle con ottimizzazione per la memoria). Questo strumento consente di creare ed eseguire gli esempi di codice forniti negli argomenti relativi agli eventi estesi. Per altre informazioni, vedere [Esplora oggetti](../../ssms/object/object-explorer.md).  
   
  Oltre alle sessioni create, nel server è presente una sessione di integrità di sistema predefinita. Tale sessione consente di raccogliere dati di sistema che è possibile utilizzare per risolvere i problemi relativi alle prestazioni. Per altre informazioni, vedere [Utilizzare la sessione system_health](use-the-ssms-xe-profiler.md).  
   

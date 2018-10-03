@@ -1,35 +1,32 @@
 ---
-title: Offset di associazione di parametro | Documenti Microsoft
+title: Offset di associazione di parametri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - offsets of parameters [ODBC]
 - binding offsets of parameters [ODBC]
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63284508fe2614a84eecb890545bbce2f8e0147b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f1fd069336a52b0a27ae927880f749c02d2c1d43
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913516"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765897"
 ---
 # <a name="parameter-binding-offsets"></a>Offset di associazione di parametri
-Un'applicazione può specificare che un offset viene aggiunto per associare gli indirizzi di buffer di parametro e l'indicatore di lunghezza corrispondente buffer indirizzi quando **SQLExecDirect** o **SQLExecute** viene chiamato. Il risultato di queste aggiunte determina gli indirizzi usati in queste operazioni.  
+Un'applicazione può specificare che un offset venga aggiunto all'associazione parametro buffer indirizzi e lunghezza/indicatore corrispondente buffer indirizzi quando **SQLExecDirect** oppure **SQLExecute** viene chiamato. Il risultato di queste aggiunte determina gli indirizzi usati in queste operazioni.  
   
- Offset di associazione consentono a un'applicazione modificare le associazioni senza chiamare **SQLBindParameter** per i parametri associati in precedenza. Una chiamata a **SQLBindParameter** per riassociare un parametro viene modificato l'indirizzo del buffer e il puntatore di lunghezza/indicatore. Riassociazione con un offset, d'altra parte, semplicemente aggiunge un offset all'indirizzo del buffer di parametri associati esistente e indirizzo del buffer di lunghezza/indicatore. Quando vengono utilizzati gli offset, le associazioni sono "modello" di disposizione i buffer dell'applicazione e l'applicazione può passare "modello" a diverse aree di memoria modificando l'offset. Un nuovo offset può essere specificato in qualsiasi momento e viene sempre aggiunta per i valori associati originariamente.  
+ Offset di associazione consentono a un'applicazione modificare le associazioni senza chiamare **SQLBindParameter** per parametri associati in precedenza. Una chiamata a **SQLBindParameter** per riassociare un parametro viene modificato l'indirizzo del buffer e il puntatore di lunghezza/indicatore. Riassociazione con un offset, d'altra parte, semplicemente aggiunge un offset per l'indirizzo del buffer parametri associati esistenti e indirizzo di buffer di lunghezza/indicatore. Quando vengono utilizzati gli offset, le associazioni sono un "modello" della modalità di disposizione i buffer dell'applicazione e l'applicazione può passare questa "modello" a diverse aree di memoria tramite la modifica dell'offset. Un nuovo offset può essere specificato in qualsiasi momento e viene sempre aggiunto ai valori originariamente associati.  
   
- Per specificare un offset di associazione, l'applicazione imposta l'attributo di istruzione SQL_ATTR_PARAM_BIND_OFFSET_PTR all'indirizzo di un buffer SQLINTEGER. Prima che l'applicazione chiama una funzione che utilizza le associazioni, viene inserito un offset in byte di questo buffer, fino a quando l'indirizzo del buffer parametro né l'indirizzo del buffer di lunghezza/indicatore è 0 e il parametro associato è presente l'istruzione SQL. La somma dell'indirizzo e l'offset deve essere un indirizzo valido. (Ciò significa che uno o entrambi l'offset e l'indirizzo a cui viene aggiunta l'offset può essere validi, come la somma è un indirizzo valido).  
+ Per specificare un offset di associazione, l'applicazione imposta l'attributo di istruzione SQL_ATTR_PARAM_BIND_OFFSET_PTR all'indirizzo di un buffer SQLINTEGER. Prima che l'applicazione chiama una funzione che usa le associazioni, posiziona un offset in byte di questo buffer, purché l'indirizzo del buffer parametro né l'indirizzo del buffer di lunghezza/indicatore è 0 e il parametro associato è presente l'istruzione SQL. La somma dell'indirizzo e l'offset deve essere un indirizzo valido. (Ciò significa che uno o entrambi l'offset e l'indirizzo a cui viene aggiunta l'offset può essere valide, purché la somma è un indirizzo valido).  
   
 > [!NOTE]  
->  Offset di associazione non sono supportate da ODBC 2. *x* driver.
+>  Offset di associazione non sono supportati da ODBC 2. *x* driver.

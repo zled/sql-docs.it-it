@@ -1,26 +1,23 @@
 ---
-title: Tipo SQL ODBC per parametri con valori di tabella | Microsoft Docs
+title: Tipo SQL ODBC per i parametri con valori di tabella | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL_SS_TABLE
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c113cb88cb6edeaccbf17dfc568eb3f83f72ad59
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 90857b24fb467df0292beeb88fb9751e68204d12
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408900"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103931"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>Tipo SQL ODBC per parametri con valori di tabella
   Il supporto per i parametri con valori di tabella viene fornito da un nuovo tipo ODBC SQL, SQL_SS_TABLE.  
@@ -30,11 +27,11 @@ ms.locfileid: "37408900"
   
  Se SQL_SS_TABLE viene utilizzato come un tipo di dati C il *ValueType* parametro di SQLBindParameter o di un tentativo è tentato di impostare SQL_DESC_TYPE in un record del descrittore (APD) del parametro dell'applicazione su SQL_SS_TABLE, viene restituito SQL_ERROR e un oggetto viene generato il record di diagnostica con SQLSTATE=hy003, "tipo di buffer dell'applicazione non valido".  
   
- Se SQL_DESC_TYPE è impostato su SQL_SS_TABLE in un record IPD e il record del descrittore del parametro dell'applicazione corrispondente non è SQL_C_DEFAULT, viene restituito SQL_ERROR e viene generato un record di diagnostica con SQLSTATE=HY003, "Tipo di buffer dall'applicazione non valido". Ciò può verificarsi con il *ParameterType* SQLSetDescField, SQLSetDescRec o SQLBindParameter.  
+ Se SQL_DESC_TYPE è impostato su SQL_SS_TABLE in un record IPD e il record del descrittore del parametro dell'applicazione corrispondente non è SQL_C_DEFAULT, viene restituito SQL_ERROR e viene generato un record di diagnostica con SQLSTATE=HY003, "Tipo di buffer dall'applicazione non valido". Questo problema può verificarsi con il *ParameterType* di SQLSetDescField, SQLSetDescRec o SQLBindParameter.  
   
  Se il *TargetType* durante la chiamata di SQLGetData, parametro è SQL_SS_TABLE, viene restituito SQL_ERROR e viene generato un record di diagnostica con SQLSTATE=hy003, "tipo di buffer dell'applicazione non valido".  
   
- Non è possibile associare una colonna di parametri con valori di tabella come tipo SQL_SS_TABLE. Se `SQLBindParameter` viene chiamato con *ParameterType* impostato su SQL_SS_TABLE, viene restituito SQL_ERROR e viene generato un record di diagnostica con SQLSTATE=hy004, "Tipo di dati SQL non valido". Ciò può verificarsi anche con SQLSetDescField and SQLSetDescRec.  
+ Non è possibile associare una colonna di parametri con valori di tabella come tipo SQL_SS_TABLE. Se `SQLBindParameter` viene chiamato con *ParameterType* impostato su SQL_SS_TABLE, viene restituito SQL_ERROR e viene generato un record di diagnostica con SQLSTATE=hy004, "Tipo di dati SQL non valido". Ciò può verificarsi anche con SQLSetDescField e SQLSetDescRec.  
   
  I valori della colonna di parametri con valori di tabella presentano le stesse opzioni di conversione dei dati dei parametri e delle colonne dei risultati.  
   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3156ef5a6d4d1af2298222b660e6483eb109cddd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8bdbab374f7f6fa182ea344f442b23e2dec2a15b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237959"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766470"
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +48,16 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
   
 ## <a name="arguments"></a>Argomenti  
  [ @collection_set_uid =] '*collection_set_uid*'  
- GUID per il set di raccolta. *collection_set_uid* viene **uniqueidentifier**, senza alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collection_sets nel database msdb.  
+ GUID per il set di raccolta. *collection_set_uid* viene **uniqueidentifier**, non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collection_sets nel database msdb.  
   
  [ @machine_name =] '*nome_computer*'  
- Nome del server in cui risiede l'insieme di raccolta. *nome_computer* viene **sysname** non prevede alcun valore predefinito.  
+ Nome del server in cui risiede l'insieme di raccolta. *machine_name* viene **sysname** non prevede alcun valore predefinito.  
   
  [ @named_instance =] '*named_instance*'  
- Nome dell'istanza per l'insieme di raccolta. *named_instance* viene **sysname**, senza alcun valore predefinito.  
+ Nome dell'istanza per l'insieme di raccolta. *named_instance* viene **sysname**, non prevede alcun valore predefinito.  
   
 > [!NOTE]  
->  *named_instance* deve essere il nome, nome completo dell'istanza che include il nome del computer e il nome dell'istanza nel formato *nomecomputer*\\*instancename*.  
+>  *named_instance* deve essere il nome, nome completo dell'istanza che include il nome del computer e il nome dell'istanza nel formato *nomecomputer*\\*NomeIstanza*.  
   
  [ @days_until_expiration =] *days_until_expiration*  
  Numero di giorni rimanenti del periodo di memorizzazione dei dati dello snapshot. *days_until_expiration* viene **smallint**.  
@@ -70,17 +66,17 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
  Identificatore univoco per l'origine dell'aggiornamento. *Source_ID* viene **int** e viene restituito come OUTPUT.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Ogni volta che un pacchetto di caricamento inizia a caricare i dati nel data warehouse di gestione, il componente di runtime dell'agente di raccolta dati chiama core.sp_update_data_source. La tabella core.source_info_internal viene aggiornata se dopo l'ultimo caricamento si è verificata una delle modifiche seguenti:  
   
 -   È stato aggiunto un nuovo set di raccolta.  
   
 -   È stato modificato il valore di days_until_expiration.  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **mdw_writer** (con autorizzazione EXECUTE) ruolo predefinito del database.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **mdw_writer** (con autorizzazione EXECUTE) ruolo predefinito del database.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene aggiornata l'origine dati (in questo caso il set di raccolta Utilizzo disco), viene impostato il numero di giorni che mancano alla scadenza e viene restituito l'identificatore per l'origine. In questo esempio viene utilizzata l'istanza predefinita.  

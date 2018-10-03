@@ -1,50 +1,47 @@
 ---
-title: L'aggiornamento delle righe nel set di righe con SQLSetPos | Documenti Microsoft
+title: Aggiornamento delle righe nel set di righe con SQLSetPos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], SQLSetPos
 - data updates [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], updating rows
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5e971d597178501ecc7107da4bbaeb6158f0c99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dfb57a6512245c9adb36a511ce48721dd901995c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916336"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715419"
 ---
-# <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>L'aggiornamento delle righe nel set di righe con SQLSetPos
-L'operazione di aggiornamento di **SQLSetPos** consente all'origine dati di aggiornare uno o più righe selezionate di una tabella, utilizzando i dati nei buffer di applicazione per ogni colonna associata (a meno che il valore nel buffer di lunghezza/indicatore SQL_COLUMN_IGNORE). Le colonne che non sono associate non verranno aggiornate.  
+# <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Aggiornamento delle righe nel set di righe con SQLSetPos
+L'operazione di aggiornamento dei **SQLSetPos** consente all'origine dati di aggiornare uno o più righe selezionate di una tabella, utilizzando i dati nei buffer dell'applicazione per ogni colonna associata (a meno che il valore nel buffer di lunghezza/indicatore SQL_COLUMN_IGNORE). Le colonne che non sono associate non verranno aggiornate.  
   
- Per aggiornare le righe con **SQLSetPos**, l'applicazione esegue le operazioni seguenti:  
+ Per aggiornare le righe contenenti **SQLSetPos**, l'applicazione esegue le operazioni seguenti:  
   
 1.  Inserisce i nuovi valori di dati nei buffer di set di righe. Per informazioni su come inviare dati di tipo long con **SQLSetPos**, vedere [dati di tipo Long e SQLSetPos e SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
-2.  Imposta il valore nel buffer di lunghezza/indicatore di ogni colonna in base alle esigenze. Questa è la lunghezza in byte dei dati o SQL_NTS delle colonne associate ai buffer di stringa, la lunghezza in byte dei dati delle colonne associate a un buffer binario e SQL_NULL_DATA per tutte le colonne da impostare su NULL.  
+2.  Imposta il valore nel buffer di lunghezza/indicatore di ogni colonna in base alle esigenze. Questa è la lunghezza in byte dei dati o SQL_NTS per le colonne associate ai buffer di stringa, la lunghezza in byte dei dati delle colonne associate a buffer binario e SQL_NULL_DATA per tutte le colonne da impostare su NULL.  
   
-3.  Imposta il valore nel buffer di lunghezza/indicatore di tali colonne che non devono essere aggiornati a SQL_COLUMN_IGNORE. Anche se l'applicazione è possibile ignorare questo passaggio e inviare nuovamente i dati esistenti, questo è inefficiente e rischi in termini di invio di valori all'origine dati che sono stati troncati quando sono stati letti.  
+3.  Imposta il valore nel buffer di lunghezza/indicatore di tali colonne che non devono essere aggiornate a SQL_COLUMN_IGNORE. Anche se l'applicazione è possibile ignorare questo passaggio e inviare nuovamente i dati esistenti, questo è inefficiente e rischi in termini di invio di valori all'origine dati che sono stati troncati quando essi sono stati letti.  
   
-4.  Chiamate **SQLSetPos** con *operazione* impostato su SQL_UPDATE e *RowNumber* impostato sul numero della riga da aggiornare. Se *RowNumber* è 0, vengono aggiornate tutte le righe nel set di righe.  
+4.  Le chiamate **SQLSetPos** con *operazione* impostato su SQL_UPDATE e *RowNumber* impostato sul numero della riga da aggiornare. Se *RowNumber* è 0, vengono aggiornate tutte le righe nel set di righe.  
   
- Dopo aver **SQLSetPos** restituisce, la riga corrente è impostata per la riga aggiornata.  
+ Dopo aver **SQLSetPos** viene restituito, la riga corrente è impostata sulla riga aggiornata.  
   
- Durante l'aggiornamento di tutte le righe del set di righe (*RowNumber* è uguale a 0), un'applicazione può disabilitare l'aggiornamento di alcune righe impostando gli elementi della matrice di operazione di riga (a cui fa riferimento il SQL_ATTR_ROW_OPERATION_PTR corrispondenti attributo di istruzione) a SQL_ROW_IGNORE. La matrice di operazione della riga corrispondente nella dimensione e il numero di elementi nella matrice di stato di riga (a cui puntata l'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR). Per aggiornare solo le righe nel set di risultati sono stati correttamente recuperate e non sono state eliminate dal set di righe, l'applicazione viene utilizzata la matrice di stato di riga dalla funzione di cui recuperata il set di righe della matrice di operazione riga a **SQLSetPos**.  
+ Quando si aggiornano tutte le righe del set di righe (*RowNumber* è uguale a 0), un'applicazione può disabilitare l'aggiornamento di alcune righe, impostando gli elementi corrispondenti della matrice operazione riga (a cui punta il SQL_ATTR_ROW_OPERATION_PTR attributo di istruzione) a SQL_ROW_IGNORE. La matrice di operazione riga corrispondente nella dimensione e il numero di elementi nella matrice di stato di riga (a cui fa riferimento l'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR). Per aggiornare solo le righe nel set di risultati che sono stati correttamente recuperate e non sono state eliminate dal set di righe, l'applicazione usa la matrice di stato di riga dalla funzione di cui recuperata il set di righe della matrice di operazione riga per **SQLSetPos**.  
   
- Per ogni riga che viene inviato all'origine dati come un aggiornamento, i buffer dell'applicazione devono disporre dei dati di riga valida. Se il buffer dell'applicazione sono state riempite mediante il recupero e se è stata mantenuta una matrice di stato di riga, è possibile che i valori in ognuna di queste posizioni delle righe non devono essere SQL_ROW_DELETED, SQL_ROW_ERROR o SQL_ROW_NOROW.  
+ Per ogni riga che viene inviata all'origine dati sotto forma di aggiornamento, i buffer dell'applicazione devono avere dei dati delle righe valido. Se sono stati compilati i buffer dell'applicazione mediante il recupero e se è stata mantenuta una matrice di stato di riga, i valori in ognuna di queste posizioni di riga non devono essere SQL_ROW_DELETED, SQL_ROW_ERROR o SQL_ROW_NOROW.  
   
- Ad esempio, il codice seguente consente di scorrere la tabella Customers e aggiornare, eliminare o aggiungere nuove righe. Inserisce i nuovi dati nei buffer di set di righe prima di chiamare **SQLSetPos** per aggiornare o aggiungere nuove righe. Viene allocata una riga aggiuntiva alla fine del buffer di set di righe per contenere nuove righe; Ciò impedisce di sovrascrittura l'inserimento di dati per una nuova riga nei buffer di dati esistenti.  
+ Ad esempio, il codice seguente consente all'utente di scorrere la tabella Customers e aggiornare, eliminare o aggiungere nuove righe. Inserisce i nuovi dati nei buffer di set di righe prima di chiamare **SQLSetPos** per aggiornare o aggiungere nuove righe. Una riga aggiuntiva viene allocata alla fine del buffer di set di righe per contenere nuove righe; Ciò impedisce che i dati esistenti verranno sovrascritte al momento i dati per una nuova riga viene inseriti nel buffer.  
   
 ```  
 #define UPDATE_ROW   100  

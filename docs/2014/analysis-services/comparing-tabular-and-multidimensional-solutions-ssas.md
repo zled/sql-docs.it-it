@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbd022ac0771fd862909761b1d4f1abd6e0acf90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36238b6cc481e58161b67442d8f5fdbf0e663e52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181058"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138481"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Confronto tra soluzioni tabulari e multidimensionali (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce due approcci distinti per la modellazione dei dati: tabulari e multidimensionali. Benché sia presente una sovrapposizione significativa dei due approcci, ci sono anche differenze importanti quali la decisione su come procedere. In questo argomento vengono confrontate le funzionalità e viene illustrato il modo in cui ogni approccio risolve i requisiti di progetto comuni. Ad esempio, se il supporto di un'origine dati specifica è di importanza fondamentale, la sezione sulle origini dati consente di facilitare la decisione su quale approccio di modellazione adottare.  

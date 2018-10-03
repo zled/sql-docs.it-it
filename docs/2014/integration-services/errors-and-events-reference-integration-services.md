@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - errors [Integration Services]
 - Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f5bf3e8bd5c7ebe56838ed9ebe8f8b91d7e87ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91edbee0aea90cb4248acc92606d01385abe0ff2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178398"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140618"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Guida di riferimento a errori ed eventi (Integration Services)
   In questa sezione della documentazione vengono fornite informazioni su diversi errori ed eventi correlati a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Sono inoltre incluse le informazioni sulle cause e la risoluzione dei messaggi di errore.  

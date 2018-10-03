@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], about role-based security
 - security [Reporting Services], role-based
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
-caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c9628b3e6393c6fe33bcff6b5bf14933b46c2dd2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0ea2e775edd95ec7a30dc6cbf9f9d04bc62a162
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260127"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161471"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Concessione di autorizzazioni in un server di report in modalità nativa
   In SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si utilizzano l'autorizzazione basata sui ruoli e un sottosistema di autenticazione per determinare gli utenti cui è consentito eseguire operazioni e accedere agli elementi in un server di report. L'autorizzazione basata sui ruoli consente di suddividere in ruoli il set di azioni che un utente può eseguire. L'autenticazione è basata sull'autenticazione di Windows incorporata o su un modulo di autenticazione personalizzato fornito dall'utente. È possibile utilizzare ruoli predefiniti o personalizzati con entrambi i tipi di autenticazione.  
@@ -61,7 +58,7 @@ ms.locfileid: "37260127"
   
  Poiché le autorizzazioni complete su un server di report includono autorizzazioni a livello di elemento e a livello di sistema, a un amministratore locale sono assegnati i ruoli seguenti:  
   
- Prima di poter amministrare un'istanza del server di report in un computer locale che esegue Windows Vista o Windows Server 2008, sarà necessario eseguire passaggi di configurazione aggiuntivi. Per altre informazioni, vedere [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ Prima di poter amministrare un'istanza del server di report in un computer locale che esegue Windows Vista o Windows Server 2008, sarà necessario eseguire passaggi di configurazione aggiuntivi. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="how-permissions-are-stored"></a>Archiviazione delle autorizzazioni  
  Le assegnazioni e le definizioni di ruolo vengono archiviate nel database del server di report. Se si utilizza una varietà di strumenti client o interfacce di programmazione, ogni accesso è soggetto alle autorizzazioni definite per l'istanza del server di report nell'insieme. Se si configurano più server di report in una distribuzione con scalabilità orizzontale, le assegnazioni di ruolo definite in un'istanza vengono archiviate in un database condiviso e utilizzate da tutte le altre istanze nella stessa distribuzione con scalabilità orizzontale. Poiché le assegnazioni di ruolo sono archiviate con gli elementi che proteggono, è possibile spostare il database in un'altra istanza del server di report senza perdere le autorizzazioni definite.  

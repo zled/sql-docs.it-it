@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.advancedrestoresettings.f1
 ms.assetid: a03bb7e1-efaf-47c8-b0ee-f3e4438311cb
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21550167b2850d8e76daa74c0fdb860ca4e98cc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7677776bb1adf21d3234f770a9e2941edfa70ed0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241661"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074931"
 ---
 # <a name="remote-partitions---advanced-settings-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Partizioni remote – Impostazioni avanzate (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Partizioni remote - Impostazioni avanzate** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per modificare le impostazioni avanzate, quali la stringa di connessione dell'origine dati che rappresenta il database remoto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che gestisce le partizioni remote, durante il ripristino di partizioni remote da un file di backup remoto in un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tramite la finestra di dialogo **Ripristina database**. Per visualizzare la finestra di dialogo **Partizioni remote - Impostazioni avanzate** dalla pagina **Partizioni** della finestra di dialogo **Ripristina database** , è possibile fare clic sul pulsante con i puntini di sospensione (**...**) per una partizione remota dopo aver selezionato l'opzione **Ripristina partizioni remote** .  
