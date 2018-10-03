@@ -1,13 +1,11 @@
 ---
-title: Si esegue l'override di scala e precisione predefinita per i tipi di dati numerici | Documenti Microsoft
+title: Override della precisione predefinita e la scalabilità per tipi di dati numerici | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - numeric data type [ODBC], precision and scale
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - numeric data type [ODBC]
 - numeric literals [ODBC]
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cfe7bcedb96f5a7ff311d90b5dcdc28fc77b79f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f071cf4391c760f7d269382537c3cd4f2b758c3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907006"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772069"
 ---
-# <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Si esegue l'override di scala e precisione predefinita per i tipi di dati numerici
-Quando il campo SQL_DESC_TYPE in un ARD è SQL_C_NUMERIC, con una chiamata a **SQLBindCol** o **SQLSetDescField**, il campo SQL_DESC_SCALE nel ARD è impostato su 0 e il campo SQL_DESC_PRECISION è impostato a una precisione predefiniti definiti dal driver. Ciò vale anche quando il campo SQL_DESC_TYPE in un APD è impostato su SQL_C_NUMERIC, con una chiamata a **SQLBindParameter** o **SQLSetDescField**. Questo vale per l'input, input/output o i parametri di output.  
+# <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Override della precisione predefinita e della scala per i tipi di dati numerici
+Quando il campo SQL_DESC_TYPE in un ARD è impostato per SQL_C_NUMERIC, tramite la chiamata a **SQLBindCol** oppure **SQLSetDescField**, il campo SQL_DESC_SCALE il ARD è impostato su 0 e viene impostato il campo SQL_DESC_PRECISION per una precisione predefinito definito dal driver. Questo vale anche quando il campo SQL_DESC_TYPE in un APD è impostato su SQL_C_NUMERIC, tramite la chiamata a **SQLBindParameter** oppure **SQLSetDescField**. Questo vale per l'input, input/output o i parametri di output.  
   
- Se uno dei valori predefiniti descritti in precedenza non sono consentito per un'applicazione, l'applicazione deve impostare il campo SQL_DESC_SCALE o SQL_DESC_PRECISION chiamando **SQLSetDescField** o **SQLSetDescRec**.  
+ Se uno dei valori predefiniti descritti in precedenza non sono accettabile per un'applicazione, l'applicazione deve impostare il campo SQL_DESC_PRECISION o SQL_DESC_SCALE chiamando **SQLSetDescField** o **SQLSetDescRec**.  
   
- Se l'applicazione chiama **SQLGetData** per restituire i dati in una struttura SQL_C_NUMERIC, vengono utilizzati i campi predefiniti, SQL_DESC_SCALE e SQL_DESC_PRECISION. Se le impostazioni predefinite non sono consentite, l'applicazione deve chiamare **SQLSetDescRec** o **SQLSetDescField** per impostare i campi e quindi chiamare **SQLGetData** con un *TargetType* di SQL_ARD_TYPE per utilizzare i valori nei campi del descrittore.  
+ Se l'applicazione chiama **SQLGetData** per restituire i dati in una struttura SQL_C_NUMERIC, vengono usati i campi SQL_DESC_PRECISION e SQL_DESC_SCALE predefiniti. Se le impostazioni predefinite non sono accettabili, l'applicazione deve chiamare **SQLSetDescRec** oppure **SQLSetDescField** per impostare i campi e quindi chiamare **SQLGetData** con un *TargetType* di SQL_ARD_TYPE per utilizzare i valori nei campi del descrittore.  
   
- Quando **SQLPutData** viene chiamato, la chiamata utilizza i campi SQL_DESC_SCALE e SQL_DESC_PRECISION di record del descrittore che corrisponde al parametro data-at-execution o colonna, che sono i campi per le chiamate a APD  **SQLExecute** o **SQLExecDirect**, o campi ARD per le chiamate a **SQLBulkOperations** o **SQLSetPos**.
+ Quando **SQLPutData** viene chiamato, la chiamata Usa i campi SQL_DESC_SCALE e SQL_DESC_PRECISION di record del descrittore che corrisponde al parametro data-at-execution o della colonna, che sono campi APD per le chiamate a  **SQLExecute** oppure **SQLExecDirect**, o ARD campi per le chiamate ai **SQLBulkOperations** oppure **SQLSetPos**.

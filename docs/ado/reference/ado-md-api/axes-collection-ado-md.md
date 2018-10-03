@@ -1,13 +1,11 @@
 ---
-title: Gli assi di raccolta (ADO MD) | Documenti Microsoft
+title: Raccolta (ADO MD) assi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,38 +14,37 @@ f1_keywords:
 helpviewer_keywords:
 - Axes collection [ADO MD]
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb59a31000f2ea393ceceaea28262a9935bc5c6d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bb700997165ceeb6d300f6332c9e758706c0fbc1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283310"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630905"
 ---
-# <a name="axes-collection-ado-md"></a>Raccolta assi (ADO MD)
+# <a name="axes-collection-ado-md"></a>Raccolta Axes (ADO MD)
 Contiene il [asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md) oggetti che definiscono un set di celle.  
   
-## <a name="remarks"></a>Remarks  
- Oggetto [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetto contiene un **assi** insieme. Una volta il **set di celle** è aperto, questa raccolta conterrà almeno **asse**. Vedere il [asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md) oggetto per una spiegazione più dettagliata di come utilizzare **asse** oggetti.  
+## <a name="remarks"></a>Note  
+ Oggetto [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetto contiene una **assi** raccolta. Una volta il **Cellset** è aperto, questa raccolta conterrà almeno uno **asse**. Vedere le [asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md) oggetto per una spiegazione più dettagliata di come usare **asse** oggetti.  
   
 > [!NOTE]
->  L'asse filtro di un **set di celle** non è inclusa nel **assi** insieme. Vedere il [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) proprietà per altre informazioni.  
+>  L'asse di filtro di un **Cellset** non è inclusa nel **assi** raccolta. Vedere le [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) proprietà per altre informazioni.  
   
  **Assi** è un insieme standard di ADO. Con le proprietà e metodi di una raccolta, è possibile eseguire le operazioni seguenti:  
   
 -   Ottenere il numero di oggetti nella raccolta con il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà.  
   
--   Restituire un oggetto dalla raccolta con il valore predefinito [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
+-   Restituisce un oggetto dalla raccolta con il valore predefinito [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
   
--   Aggiornare gli oggetti nella raccolta dal provider con il [aggiornamento](../../../ado/reference/ado-api/refresh-method-ado.md) metodo.  
+-   Aggiornare gli oggetti nella raccolta dal provider con il [Aggiorna](../../../ado/reference/ado-api/refresh-method-ado.md) (metodo).  
   
- In questa sezione contiene l'argomento seguente.  
+ In questa sezione contiene gli argomenti seguenti.  
   
 -   [Proprietà, metodi ed eventi](../../../ado/reference/ado-md-api/axes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di set di celle (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+ [Esempio di Cellset (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Oggetto Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)

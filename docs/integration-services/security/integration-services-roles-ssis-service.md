@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.dtsserver.packageroles.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d6570b3514a0accefb46648d0e1af0b21621abe7
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8fbc95fb105a5bfcb3eebc09a728d6487ffbf4bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409043"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793731"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Ruoli Integration Services (servizio SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornisce alcuni ruoli predefiniti a livello di database per consentire l'accesso sicuro ai pacchetti archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I ruoli disponibili sono diversi a seconda di dove si salvano i pacchetti, nel database del catalogo SSIS (SSISDB) o nel database msdb.  
@@ -67,7 +64,7 @@ ms.locfileid: "35409043"
   
 -   La colonna **ownersid** include l'ID di sicurezza (SID) univoco dell'utente che ha creato il pacchetto. Questa colonna definisce pertanto il proprietario del pacchetto.  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  Per impostazione predefinita, le autorizzazioni dei ruoli predefiniti a livello di database **db_ssisadmin** e **db_ssisoperator** e l'ID di sicurezza univoco dell'utente che ha creato il pacchetto si applicano al ruolo lettura per il pacchetto, mentre le autorizzazioni del ruolo **db_ssisadmin** e l'ID di sicurezza univoco dell'utente che ha creato il pacchetto si applicano al ruolo scrittura. Per disporre dell'accesso in lettura per il pacchetto, l'utente deve essere membro del ruolo **db_ssisadmin**, **db_ssisltduser**o **db_ssisoperator** . Per disporre dell'accesso in scrittura, l'utente deve essere membro del ruolo **db_ssisadmin** .  
   
 ### <a name="access-to-packages"></a>Accesso ai pacchetti  

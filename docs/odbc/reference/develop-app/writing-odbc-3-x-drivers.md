@@ -1,13 +1,11 @@
 ---
-title: Scrittura di driver di ODBC 3. x | Documenti Microsoft
+title: La scrittura di driver ODBC 3.x | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading drivers [ODBC]
@@ -15,25 +13,24 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9b926d45e6556b53957ecd2934d7068418f3101
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77a94c7505b5ab221fee4896e91f9b26850669df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921156"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795651"
 ---
-# <a name="writing-odbc-3x-drivers"></a>Driver di scrittura ODBC 3. x
-Nella tabella seguente viene illustrato il supporto di funzione in un'applicazione ODBC 3. *x* driver e un'applicazione ODBC e il mapping eseguita da Gestione Driver quando le funzioni vengono chiamate su un'applicazione ODBC 3. *x* driver.  
+# <a name="writing-odbc-3x-drivers"></a>Scrittura di driver ODBC 3.x
+La tabella seguente illustra il supporto di funzione in un'applicazione ODBC 3. *x* driver e un'applicazione ODBC e il mapping eseguito da Gestione Driver quando le funzioni vengono chiamate su un'applicazione ODBC 3. *x* driver.  
   
-|Funzione|Supported<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> driver?|Supported<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> applicazione?|Il mapping supportati<br /><br /> per ODBC 3. *x*<br /><br /> Gestione driver per<br /><br /> un'applicazione ODBC 3. *x* driver?|  
+|Funzione|Supportato<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> driver?|Supportato<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> applicazione?|Il mapping o supportate<br /><br /> da ODBC 3. *x*<br /><br /> Gestione driver per<br /><br /> un'applicazione ODBC 3. *x* driver?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|no|[1]|Sì|  
 |**SQLAllocEnv**|no|[1]|Sì|  
-|**SQLAllocHandle**|Sì|Sì|no|  
+|**Funzione SQLAllocHandle**|Sì|Sì|no|  
 |**SQLAllocStmt**|no|[1]|Sì|  
 |**SQLBindCol**|Sì|Sì|no|  
 |**SQLBindParam**|no|Sì [2]|Sì|  
@@ -58,7 +55,7 @@ Nella tabella seguente viene illustrato il supporto di funzione in un'applicazio
 |**SQLError**|no|[1]|Sì|  
 |**SQLExecDirect**|Sì|Sì|no|  
 |**SQLExecute**|Sì|Sì|no|  
-|**SQLExtendedFetch.**|Sì|No|no|  
+|**SQLExtendedFetch**|Sì|no|no|  
 |**SQLFetch**|Sì|Sì|no|  
 |**SQLFetchScroll**|Sì|Sì|no|  
 |**SQLForeignKeys**|Sì|Sì|no|  
@@ -85,23 +82,23 @@ Nella tabella seguente viene illustrato il supporto di funzione in un'applicazio
 |**SQLNumParams**|Sì|Sì|no|  
 |**SQLNumResultCols**|Sì|Sì|no|  
 |**SQLParamData**|Sì|Sì|no|  
-|**SQLParamOptions**|no|No|Sì|  
+|**SQLParamOptions**|no|no|Sì|  
 |**SQLPrepare**|Sì|Sì|no|  
 |**SQLPrimaryKeys**|Sì|Sì|no|  
 |**SQLProcedureColumns**|Sì|Sì|no|  
 |**SQLProcedures**|Sì|Sì|no|  
 |**SQLPutData**|Sì|Sì|no|  
 |**SQLRowCount**|Sì|Sì|no|  
-|**Funzione SQLSetConnectAttr**|Sì|Sì|no|  
+|**SQLSetConnectAttr**|Sì|Sì|no|  
 |**SQLSetConnectOption**|[5]|[1]|Sì|  
 |**SQLSetCursorName**|Sì|Sì|no|  
 |**SQLSetDescField**|Sì|Sì|no|  
 |**SQLSetDescRec**|Sì|Sì|no|  
 |**SQLSetEnvAttr**|Sì|Sì|no|  
 |**SQLSetPos**|Sì|Sì|no|  
-|**SQLSetParam**|no|No|Sì|  
+|**SQLSetParam**|no|no|Sì|  
 |**SQLSetScrollOption**|Sì|Sì|no|  
-|**Funzione SQLSetStmtAttr**|Sì|Sì|no|  
+|**SQLSetStmtAttr**|Sì|Sì|no|  
 |**SQLSetStmtOption**|[5]|[1]|Sì|  
 |**SQLSpecialColumns**|Sì|Sì|no|  
 |**SQLStatistics**|Sì|Sì|no|  
@@ -109,14 +106,14 @@ Nella tabella seguente viene illustrato il supporto di funzione in un'applicazio
 |**SQLTables**|Sì|Sì|no|  
 |**SQLTransact**|no|[1]|Sì|  
   
- [1] questa funzione è deprecata in ODBC 3. *x*. ODBC 3. *x* applicazioni non devono utilizzare questa funzione. Tuttavia, un'applicazione compatibile con ISO CLI o l'Open Group può chiamare questa funzione.  
+ [1] questa funzione è deprecata in ODBC 3. *x*. ODBC 3. *x* applicazioni non deve usare questa funzione. Tuttavia, un'applicazione compatibile con ISO CLI o Open Group può chiamare questa funzione.  
   
- [2] ODBC 3. *x* le applicazioni devono utilizzare **SQLBindParameter** anziché **SQLBindParam**. Tuttavia, un'applicazione compatibile con ISO CLI o l'Open Group può chiamare questa funzione.  
+ [2] ODBC 3. *x* le applicazioni devono utilizzare **SQLBindParameter** anziché **SQLBindParam**. Tuttavia, un'applicazione compatibile con ISO CLI o Open Group può chiamare questa funzione.  
   
- [3] gli sviluppatori di driver di è opportuno notare che l'API ODBC 2. *x* SQL_COLUMN_PRECISION SQL_COLUMN_SCALE e SQL_COLUMN_LENGTH devono essere supportate con gli attributi di colonna **SQLColAttribute**.  
+ [3] gli sviluppatori di driver di necessario notare che l'API ODBC 2. *x* SQL_COLUMN_PRECISION SQL_COLUMN_SCALE e SQL_COLUMN_LENGTH devono essere supportate con gli attributi di colonna **SQLColAttribute**.  
   
- [4] **SQLCopyDesc** viene implementato da Gestione Driver parzialmente quando vengono copiato un descrittore per le connessioni che appartengono a diversi driver. I driver necessari per supportare **SQLCopyDesc** tra due delle proprie connessioni. Le funzioni come **SQLDrivers**, che vengono implementati esclusivamente da Gestione Driver, non vengono visualizzati nell'elenco.  
+ [4] **SQLCopyDesc** viene implementato parzialmente da Gestione Driver quando un descrittore di vengono copiato tra le connessioni che appartengono a diversi driver. I driver necessari per supportare **SQLCopyDesc** tra due di loro connessioni. Le funzioni come **SQLDrivers**, che vengono implementate esclusivamente da Gestione Driver, non vengono visualizzati nell'elenco.  
   
- [5] in determinate circostanze, i driver potrebbe essere necessario supportare questa funzione. Per ulteriori informazioni, vedere la pagina di riferimento della funzione.  
+ [5] in determinate circostanze, i driver potrebbe essere necessario supportare questa funzione. Per altre informazioni, vedere la pagina di riferimento relativa a questa funzione.  
   
- [6] il driver può scegliere di supportare **SQLGetFunctions** se il set di funzioni supportate dal driver varia da una connessione per connessione.
+ [6] i driver possono scegliere di supportare **SQLGetFunctions** se il set di funzioni supportate dal driver varia da una connessione alla connessione.

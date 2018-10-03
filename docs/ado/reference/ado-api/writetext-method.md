@@ -1,13 +1,11 @@
 ---
-title: Metodo WriteText | Documenti Microsoft
+title: Metodo WriteText | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c38b1e8573e59d4446ff0a4dbfebf1cc627b3863
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a3b50db388151de1f5b99d8d9a3f48904e6d7c2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283190"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679889"
 ---
 # <a name="writetext-method"></a>Metodo WriteText
-Scrive una stringa di testo specificato in un [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
+Scrive una stringa di testo specificato in un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,20 +36,20 @@ Stream.WriteText Data, Options
   
 #### <a name="parameters"></a>Parametri  
  *Dati*  
- Oggetto **stringa** valore che contiene il testo in caratteri da scrivere.  
+ Oggetto **stringa** valore contenente il testo in caratteri da scrivere.  
   
  *Opzioni*  
- Facoltativo. Oggetto [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) valore che indica se un carattere separatore di riga deve essere scritto alla fine della stringa specificata.  
+ Facoltativo. Oggetto [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) valore che indica se deve essere scritto un carattere separatore di riga alla fine della stringa specificata.  
   
-## <a name="remarks"></a>Remarks  
- Stringhe specificate vengono scritti i **flusso** oggetto senza spazi intermedi o caratteri tra ogni stringa.  
+## <a name="remarks"></a>Note  
+ Stringhe specificate sono scritti per il **Stream** oggetto senza spazi o caratteri tra ogni stringa.  
   
- Corrente [posizione](../../../ado/reference/ado-api/position-property-ado.md) è impostata sul carattere che segue i dati scritti. Il **WriteText** metodo tronca il resto dei dati in un flusso. Se si desidera troncare questi caratteri, chiamare [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ L'oggetto corrente [posizione](../../../ado/reference/ado-api/position-property-ado.md) è impostato sul carattere che segue i dati scritti. Il **WriteText** metodo non tronca il resto dei dati in un flusso. Se si desidera troncare questi caratteri, chiamare [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   
- Se si scrivono corrente [fine del flusso](../../../ado/reference/ado-api/eos-property.md) posizione, la [dimensioni](../../../ado/reference/ado-api/size-property-ado-stream.md) del **flusso** verranno aumentate per contenere i caratteri di nuova, e **fine del flusso** spostare il nuovo ultimo byte di **flusso**.  
+ Se si scrivono corrente [EOS](../../../ado/reference/ado-api/eos-property.md) posizione, la [Size](../../../ado/reference/ado-api/size-property-ado-stream.md) del **Stream** aumenterà per includere eventuali nuovi caratteri, e **EOS** verrà pertanto spostato di nuovo ultimo byte i **Stream**.  
   
 > [!NOTE]
->  Il **WriteText** metodo viene utilizzato con flussi di testo ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) è **adTypeText**). Per i flussi binari (**tipo** è **adTypeBinary**), utilizzare [scrivere](../../../ado/reference/ado-api/write-method.md).  
+>  Il **WriteText** metodo viene utilizzato con i flussi di testo ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) viene **adTypeText**). Per i flussi binari (**tipo** viene **adTypeBinary**), utilizzare [scrivere](../../../ado/reference/ado-api/write-method.md).  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

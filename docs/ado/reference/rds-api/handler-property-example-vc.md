@@ -1,37 +1,34 @@
 ---
-title: Esempio di proprietà Handler (VC + +) | Documenti Microsoft
+title: Esempio di proprietà Handler (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Handler property [ADO], VC++ example
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75d23be448bc8e56e701756f159dba34382784b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e9c944535ead264b8ab65b59aa969d0fddf29f10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288359"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696530"
 ---
-# <a name="handler-property-example-vc"></a>Esempio di proprietà Handler (VC + +)
+# <a name="handler-property-example-vc"></a>Esempio della proprietà Handler (VC++)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Questo esempio viene illustrato il [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto [gestore](../../../ado/reference/rds-api/handler-property-rds.md) proprietà. (Vedere [DataFactory personalizzazione](../../../ado/guide/remote-data-service/datafactory-customization.md) per altri dettagli.)  
+ Questo esempio viene illustrato il [Servizi Desktop remoto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto [gestore](../../../ado/reference/rds-api/handler-property-rds.md) proprietà. (Vedere [personalizzazione di DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) per altri dettagli.)  
   
- Si supponga che le sezioni seguenti nel file di parametri, MSDFMAP, che si trova nel server:  
+ Si supponga che le sezioni seguenti nel file dei parametri, MSDFMAP. ini si trova nel server:  
   
 ```  
 [connect AuthorDataBase]  
@@ -41,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Il codice è simile al seguente. Il comando assegnato per il [SQL](../../../ado/reference/rds-api/sql-property.md) corrisponderà il ***AuthorById*** identificatore e permette di recuperare una riga per l'autore Michael O'Leary. Sebbene il [Connetti](../../../ado/reference/rds-api/connect-property-rds.md) proprietà nel codice consente di specificare l'origine dati di Northwind, che l'origine dati verrà sovrascritta dal MSDFMAP *connettersi* sezione. Il **DataControl** oggetto [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) proprietà viene assegnato a un disconnesso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) semplicemente per facilitare la codifica.  
+ Il codice è simile al seguente. Il comando assegnato al [SQL](../../../ado/reference/rds-api/sql-property.md) corrisponderà a proprietà di ***AuthorById*** identificatore e recupera una riga per autore Michael O'Leary. Anche se il [Connect](../../../ado/reference/rds-api/connect-property-rds.md) proprietà del codice specifica l'origine dati di Northwind, quell'origine dati verrà sovrascritto dal MSDFMAP *connettersi* sezione. Il **DataControl** oggetto [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) proprietà viene assegnato a un disconnesso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) semplicemente per comodità di codifica.  
   
 ```  
 // BeginHandlerCpp.cpp  
@@ -133,7 +130,7 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Proprietà Handler (Servizi Desktop remoto)](../../../ado/reference/rds-api/handler-property-rds.md)
 
 

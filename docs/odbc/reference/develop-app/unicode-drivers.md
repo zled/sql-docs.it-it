@@ -1,38 +1,35 @@
 ---
-title: I driver di Unicode | Documenti Microsoft
+title: Driver di Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], drivers
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 310ae2855099544181cfeec75352bfa0742f397e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e555ff4a3b33c4c827371dc1ad63546736d7189
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745859"
 ---
 # <a name="unicode-drivers"></a>Driver di Unicode
-Se un driver deve essere un driver Unicode o un driver ANSI dipende interamente la natura dell'origine dati. Se l'origine dati supporta dati Unicode, il driver deve essere un driver di Unicode. Se l'origine dati supporta solo i dati ANSI, il driver deve rimanere un driver ANSI.  
+Se un driver deve essere un driver di Unicode o un driver ANSI dipende interamente la natura dell'origine dati. Se l'origine dati supporta i dati Unicode, il driver deve essere un driver di Unicode. Se l'origine dati supporta solo i dati di ANSI, il driver deve rimanere un driver ANSI.  
   
- È necessario esportare un driver Unicode **SQLConnectW** venga riconosciuta come un driver Unicode da Gestione Driver.  
+ È necessario esportare un driver di Unicode **SQLConnectW** venga riconosciuta come un driver di Unicode da Gestione Driver.  
   
- Un driver Unicode è necessario accettare le funzioni Unicode (con il suffisso *W*) e archiviare i dati Unicode. È possibile utilizzare anche funzioni ANSI, ma non è necessario. (Gestione Driver non supera una chiamata di funzione ANSI con la *A* suffisso per il driver, ma converte in ANSI funzione senza il suffisso e quindi passa il al driver.)  
+ Un driver di Unicode è necessario accettare le funzioni Unicode (con suffisso *W*) e archiviare i dati Unicode. È possibile utilizzare anche funzioni ANSI, ma non è necessario. (Gestione Driver non supera una chiamata di funzione ANSI con la *oggetto* suffisso per il driver, ma converte a ANSI chiamata senza il suffisso e quindi passa alla funzione, del driver.)  
   
- Un driver Unicode deve essere in grado di restituire set di risultati in un valore Unicode o ANSI, a seconda dell'associazione dell'applicazione. Se un'applicazione associa a SQL_C_CHAR, il driver Unicode deve convertire i dati SQL_WCHAR SQL_CHAR. Gestione driver verrà eseguito il mapping SQL_C_WCHAR a SQL_C_CHAR per i driver ANSI ma non alcun mapping per i driver di Unicode.  
+ Un driver di Unicode deve essere in grado di restituire set di risultati in un valore Unicode o ANSI, a seconda dell'associazione dell'applicazione. Se un'applicazione si associa a SQL_C_CHAR, il driver di Unicode deve convertire dati SQL_WCHAR SQL_CHAR. Gestione driver assocerà SQL_C_WCHAR SQL_C_CHAR per i driver ANSI ma nessun mapping per i driver di Unicode non.  
   
 > [!NOTE]  
->  Per determinare il tipo di driver, Driver Manager chiamerà **SQLSetConnectAttr** e impostare l'attributo SQL_ATTR_ANSI_APP al momento della connessione. Se l'applicazione usa le API ANSI, SQL_ATTR_ANSI_APP verrà SQL_AA_TRUE e se viene utilizzato Unicode, verrà impostato su un valore di SQL_AA_FALSE. Questo attributo viene utilizzato in modo che il driver può presentare un comportamento diverso in base al tipo di applicazione. L'attributo non può essere impostato direttamente dall'applicazione e non è supportato da **SQLGetConnectAttr**. Se un driver presenta lo stesso comportamento per applicazioni ANSI e Unicode, per questo attributo deve restituire SQL_ERROR. Se il driver restituisce SQL_SUCCESS, gestione Driver verrà separare le connessioni di ANSI e Unicode quando viene utilizzato il pool di connessioni.
+>  Quando si determina il tipo di driver, Driver Manager chiamerà **SQLSetConnectAttr** e impostare l'attributo SQL_ATTR_ANSI_APP al momento della connessione. Se l'applicazione usa le API ANSI, SQL_ATTR_ANSI_APP verrà automaticamente impostato SQL_AA_TRUE e se Usa Unicode, verrà impostato sul valore SQL_AA_FALSE. Questo attributo viene usato in modo che il driver può presentare un comportamento diverso in base al tipo di applicazione. L'attributo non può essere impostato direttamente dall'applicazione e non è supportata dal **SQLGetConnectAttr**. Se un driver presenta lo stesso comportamento per applicazioni ANSI e Unicode, deve restituire SQL_ERROR per questo attributo. Se il driver restituisce SQL_SUCCESS, gestione Driver separa le connessioni agli standard ANSI e Unicode quando viene usato il pool di connessioni.

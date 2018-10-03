@@ -1,58 +1,52 @@
 ---
-title: Connettersi a Sybase (SybaseToSQL) | Documenti Microsoft
+title: Connettersi a Sybase (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e1302d7e57d7ef2559d107039648e813e1292efa
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778401"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738075"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Connettersi a Sybase (SybaseToSQL)
-Utilizzare il **Connetti Sybase** finestra di dialogo per connettersi all'istanza di Sybase Adaptive Server Enterprise (ASE) che si desidera eseguire la migrazione.  
+Usare la **connettersi a Sybase** finestra di dialogo per connettersi all'istanza di Sybase Adaptive Server Enterprise (ASE) che si desidera eseguire la migrazione.  
   
-Per accedere a questa finestra di dialogo, scegliere il **File** dal menu **Connetti Sybase**. Se in precedenza si è connessi, il comando è **riconnessione per Sybase**.  
+Per accedere a questa finestra di dialogo, scegliere il **File** dal menu **Connetti a Sybase**. Se si è già connessa, il comando viene **Riconnetti a Sybase**.  
   
 ## <a name="options"></a>Opzioni  
 **Provider**  
-Selezionare una qualsiasi del Provider installato nel computer per la connessione al Server di Sybase.  
+Selezionare una qualsiasi del Provider installato nel computer per la connessione al Sybase Server.  
   
 **Mode**  
 Selezionare entrambe le modalità di connessione standard o avanzata. In modalità standard, immettere o selezionare i valori per il nome del server, porta, nome utente e password. Nella modalità avanzata è fornire una stringa di connessione.  
   
 **Nome server**  
-Immettere o selezionare il nome o indirizzo IP del Server adattivo. Il nome del server predefinito è lo stesso nome del computer. Questa è un'opzione di modalità standard.  
+Immettere o selezionare il nome o indirizzo IP del Server adattivo. Il nome del server predefinita è lo stesso nome del computer. Questa è un'opzione di modalità standard.  
   
 **Porta server**  
-Se si utilizza una porta non predefinita per le connessioni a ASE, immettere il numero di porta. Il numero di porta predefinito è 5000. Questa è un'opzione di modalità standard.  
+Se si usa una porta non predefiniti per le connessioni ad ambiente del servizio App, immettere il numero di porta. Il numero di porta predefinito è 5000. Questa è un'opzione di modalità standard.  
   
 **Nome utente**  
-Immettere il nome utente utilizzato per connettersi a ASE. Questa è un'opzione di modalità standard.  
+Immettere il nome utente usato per connettersi all'ambiente del servizio app. Questa è un'opzione di modalità standard.  
   
 **Password**  
 Immettere la password associata al nome utente. Questa è un'opzione di modalità standard.  
   
 **Stringa di connessione**  
-Immettere la stringa di connessione completa per la connessione di base.  
+Immettere la stringa di connessione completa per la connessione per l'ambiente del servizio app.  
   
-Le stringhe di connessione è costituito da coppie nome / valore di parametro. I nomi dei parametri variano con il provider in uso.  
+Le stringhe di connessione sono costituiti da coppie nome / valore di parametro. I nomi dei parametri variano con il provider in uso.  
   
-**Parametri di connessione per diversi provider sono i seguenti:**  
+**Come indicato di seguito sono riportati i parametri di connessione per diversi provider:**  
   
 1.  Parametri di connessione per **Provider OLE DB**  
   
@@ -64,11 +58,11 @@ Le stringhe di connessione è costituito da coppie nome / valore di parametro. I
     |Password|Password|Password|  
     |Provider|Provider|Provider|  
   
-    Per Sybase ASE 12,5, una stringa di connessione di esempio è la seguente:  
+    Per Sybase ASE 12,5, una stringa di connessione di esempio è il seguente:  
   
     `Server Name=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=Sybase.ASEOLEDBProvider;`  
   
-    Per Sybase ASE 15, una stringa di connessione di esempio è la seguente:  
+    Per Sybase ASE 15, una stringa di connessione di esempio è il seguente:  
   
     `Server=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=ASEOLEDB;Port=5000;`  
   
@@ -82,7 +76,7 @@ Le stringhe di connessione è costituito da coppie nome / valore di parametro. I
     |Password|Pwd|  
     |Numero di porta|Port|  
   
-    Per Sybase ASE 12,5 o 15, una stringa di connessione di esempio è la seguente:  
+    Per Sybase ASE 12,5 o 15, una stringa di connessione di esempio è il seguente:  
   
     `driver=Adaptive Server Enterprise;Server=sybserver;uid=MyUserID;pwd=MyP@$$word;Port=5000;`  
   
@@ -95,11 +89,11 @@ Le stringhe di connessione è costituito da coppie nome / valore di parametro. I
     |Password|Pwd|  
     |Numero di porta|Port|  
   
-    Un esempio di stringa di connessione per il Provider ADO.NET è come segue:  
+    Un esempio della stringa di connessione per il Provider ADO.NET è i seguenti:  
   
     `Server=sybserver;Port=5000;uid=MyUserID;pwd=MyP@$$word;`  
   
-Per ulteriori informazioni, vedere la documentazione di base.  
+Per altre informazioni, vedere la documentazione di ambiente del servizio app.  
   
 Si tratta di un'opzione di modalità avanzata.  
   

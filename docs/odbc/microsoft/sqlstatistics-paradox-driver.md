@@ -1,41 +1,38 @@
 ---
-title: SQLStatistics (Driver Paradox) | Documenti Microsoft
+title: SQLStatistics (Driver Paradox) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Paradox driver [ODBC], SQLStatistics
 - SQLStatistics function [ODBC], Paradox Driver
 ms.assetid: 886cab83-d599-4fbc-9c88-e8cb833aac4b
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18e323ff059fdeb70fcadd256728de8050eea56a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 634fbcdbf78515e59295e679072ffa5fd08e4823
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903287"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642879"
 ---
-# <a name="sqlstatistics-paradox-driver"></a>SQLStatistics (Paradox Driver)
+# <a name="sqlstatistics-paradox-driver"></a>SQLStatistics (driver Paradox)
 > [!NOTE]  
->  In questo argomento fornisce informazioni specifiche del Driver Paradox. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento fornisce informazioni specifiche del Driver Paradox. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|Colonna|Commenti|  
+|colonna|Commenti|  
 |------------|--------------|  
-|TABLE_QUALIFIER|Il percorso di una directory.<br /><br /> Criteri di ricerca non sono supportato nel *szTableQualifier* argomento.|  
-|TABLE_OWNER|In questa colonna viene restituito NULL perché il nome del proprietario non è supportato.|  
-|TABLE_NAME|Nome della tabella non delimitato.<br /><br /> Criteri di ricerca non sono supportato nel *szTableName* argomento.|  
+|TABLE_QUALIFIER|Il percorso di una directory.<br /><br /> Criteri di ricerca non sono supportata nel *szTableQualifier* argomento.|  
+|TABLE_OWNER|Poiché il nome del proprietario non è supportato in questa colonna viene restituito NULL.|  
+|TABLE_NAME|Nome della tabella non delimitato.<br /><br /> Criteri di ricerca non sono supportata nel *szTableName* argomento.|  
 |INDEX_QUALIFIER|Viene sempre restituito NULL.|  
 |INDEX_NAME|Indice dipendente.|  
-|TYPE|Verrà restituito solo SQL_TABLE_STAT o SQL_INDEX_OTHER per tipo.|  
+|TYPE|Verranno restituiti solo SQL_TABLE_STAT o SQL_INDEX_OTHER per tipo.|  
 |SEQ_IN_INDEX|Indice dipendente.|  
 |COLUMN_NAME|Indice dipendente.|  
 |COLLATION|Indice dipendente.|  

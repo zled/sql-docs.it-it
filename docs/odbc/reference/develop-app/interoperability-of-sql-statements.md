@@ -1,32 +1,29 @@
 ---
-title: Interoperabilità di istruzioni SQL | Documenti Microsoft
+title: Interoperabilità delle istruzioni SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC]
 - interoperability of SQL statements [ODBC], about interoperability
 ms.assetid: 3b24c499-829c-4e65-90cf-a3a0f6d0a186
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 205fd667e8891ba0bab0283c1d112af9d608423b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4ead7cf96ada6d6055bc676ecf4610f2cf4c8f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622479"
 ---
-# <a name="interoperability-of-sql-statements"></a>Interoperabilità di istruzioni SQL
-Ad esempio il resto di un'applicazione, istruzioni SQL possono essere interoperabili o specifici del DBMS. E come gli altri componenti dell'applicazione, deve essere la scelta della modalità interoperativa istruzioni SQL dipende dal tipo di applicazione. Applicazioni personalizzate hanno meno probabile di utilizzare istruzioni SQL interoperative perché sono in genere progettati per sfruttare le funzionalità di uno o due probabilmente DBMS. Applicazioni generiche utilizzano istruzioni SQL interoperative perché progettate per funzionare con un'ampia gamma di DBMS. E applicazioni verticali in genere rientrano in un punto intermedio, richiedono un certo livello di funzionalità ma in caso contrario, utilizzare istruzioni SQL interoperative.  
+# <a name="interoperability-of-sql-statements"></a>Interoperabilità delle istruzioni SQL
+Come il resto di un'applicazione, le istruzioni SQL possono essere interoperabili o specifici del DBMS. E come gli altri componenti dell'applicazione, deve essere la scelta della modalità interoperative istruzioni SQL varia a seconda del tipo di applicazione. Le applicazioni personalizzate sono meno probabile che utilizzare istruzioni SQL interoperative perché sono in genere progettate per sfruttare le funzionalità di uno o probabilmente due DBMS. Applicazioni generiche utilizzano istruzioni SQL interoperative perché sono progettate per funzionare con un'ampia gamma di DBMS. E applicazioni verticali in genere rientrano in un punto intermedio, richiedono un certo livello di funzionalità, ma in caso contrario, tramite istruzioni SQL interoperative.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

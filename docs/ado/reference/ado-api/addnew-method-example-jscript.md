@@ -1,32 +1,29 @@
 ---
-title: Esempio del metodo AddNew (JScript) | Documenti Microsoft
+title: Esempio di metodo AddNew (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - AddNew method [ADO], JScript example
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc30b40f64dac9ff3cb06d51d420eb787803070b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 13e0fc40945e6cd8c68591a8f94cd9a052cda76e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275300"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631252"
 ---
 # <a name="addnew-method-example-jscript"></a>Esempio del metodo AddNew (JScript)
-Questo esempio viene utilizzato il [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) metodo per creare un nuovo record con il nome specificato. Tagliare e incollare il codice seguente in blocco note o un altro editor di testo e salvarlo come **AddNewJS**.  
+Questo esempio Usa la [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) metodo per creare un nuovo record con il nome specificato. Tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **AddNewJS**.  
   
 ```  
 <!-- BeginAddNewJS -->  
@@ -139,5 +136,5 @@ body {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [AddNew (metodo) (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
+ [Metodo AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

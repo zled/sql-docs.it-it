@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_translate_permissions
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - sys.fn_translate_permissions function
 - fn_translate_permissions function
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 56fe5c1054bdf41af5708981e6377ae7175e4210
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b098dafc5764db96bdf3dc9e604f3e69a687ab94
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233069"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700499"
 ---
 # <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,14 +53,14 @@ sys.fn_translate_permissions ( level , perms )
 ## <a name="returns"></a>Valori di codice restituiti  
  **table**  
   
-## <a name="remarks"></a>Osservazioni  
- Il valore restituito nel **autorizzazioni** colonna di traccia SQL è una rappresentazione di integer di una maschera di bit utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per calcolare le autorizzazioni valide. Tutti i 25 tipi di entità a protezione diretta dispongono di un proprio set di autorizzazioni con valori numerici corrispondenti. **Sys. fn_translate_permissions** Converte questa maschera di bit in una tabella di nomi di autorizzazioni.  
+## <a name="remarks"></a>Note  
+ Il valore restituito nel **le autorizzazioni** colonna di traccia SQL è una rappresentazione di valori interi di una maschera di bit usato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per calcolare le autorizzazioni valide. Tutti i 25 tipi di entità a protezione diretta dispongono di un proprio set di autorizzazioni con valori numerici corrispondenti. **Sys. fn_translate_permissions** Converte questa maschera di bit in una tabella di nomi di autorizzazioni.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="example"></a>Esempio  
- La query seguente utilizza `sys.fn_builtin_permissions` per visualizzare le autorizzazioni che si applicano ai certificati e quindi utilizza `sys.fn_translate_permissions` per restituire i risultati della maschera di bit delle autorizzazioni.  
+ La query seguente utilizza `sys.fn_builtin_permissions` per visualizzare le autorizzazioni che si applicano ai certificati e quindi Usa `sys.fn_translate_permissions` per restituire i risultati della maschera di bit delle autorizzazioni.  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  

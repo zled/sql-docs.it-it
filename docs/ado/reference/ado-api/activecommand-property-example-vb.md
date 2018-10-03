@@ -1,34 +1,31 @@
 ---
-title: Esempio di proprietà ActiveCommand (VB) | Documenti Microsoft
+title: Esempio di proprietà ActiveCommand (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ActiveCommand property [ADO], Visual Basic example
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30e70c09826344db57ea9152447d2d197bb33ef7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275140"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617149"
 ---
-# <a name="activecommand-property-example-vb"></a>Esempio di proprietà ActiveCommand (VB)
+# <a name="activecommand-property-example-vb"></a>Esempio della proprietà ActiveCommand (VB)
 Questo esempio viene illustrato il [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) proprietà.  
   
- Una subroutine viene passato un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) i cui **ActiveCommand** proprietà viene utilizzata per visualizzare il testo del comando e parametro che ha creato il **Recordset**.  
+ Una subroutine viene assegnata un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) il cui **ActiveCommand** proprietà viene utilizzata per visualizzare il testo del comando e parametro che ha creato il **Recordset**.  
   
 ```  
 'BeginActiveCommandVB  
@@ -94,11 +91,11 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- Il **ActiveCommandXprint** routine viene assegnata solo un **Recordset** dell'oggetto, deve visualizzare il testo del comando e parametro che ha creato il **Recordset**. Questa operazione può essere eseguita perché la **Recordset** dell'oggetto **ActiveCommand** proprietà produce associato [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto.  
+ Il **ActiveCommandXprint** routine viene assegnata solo un **Recordset** dell'oggetto, deve visualizzare il testo del comando e parametro che ha creato il **Recordset**. Questa operazione può essere eseguita perché il **Recordset** dell'oggetto **ActiveCommand** proprietà restituisce l'oggetto associato [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto.  
   
- Il **comando** dell'oggetto [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) proprietà restituisce il comando con parametri che ha creato il **Recordset**. Il **comando** dell'oggetto [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) insieme restituisce il valore che è stata sostituita con segnaposto per il parametro del comando ("**?**").  
+ Il **comandi** dell'oggetto [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) proprietà produce il comando con parametri che ha creato il **Recordset**. Il **comandi** dell'oggetto [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta produce il valore che è stato sostituito con segnaposto per il parametro del comando ("**?**").  
   
- Infine, vengono stampati un messaggio di errore o il nome dell'autore e ID.  
+ Infine, un nome e ID messaggio di errore o dell'autore vengono stampati.  
   
 ```  
 'BeginActiveCommandPrintVB  
@@ -125,6 +122,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [Esempio di proprietà ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

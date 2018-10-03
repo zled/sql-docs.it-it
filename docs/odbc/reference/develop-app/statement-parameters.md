@@ -1,58 +1,55 @@
 ---
-title: Parametri dell'istruzione | Documenti Microsoft
+title: Parametri dell'istruzione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statement parameters [ODBC]
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e3c7aa5880c80dff412a69d51cda42d24824e01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b366ddd7a665112e6b40b814b13037a517d623a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913956"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648869"
 ---
-# <a name="statement-parameters"></a>Parametri dell'istruzione
-Oggetto *parametro* è una variabile in un'istruzione SQL. Si supponga, ad esempio, che in una tabella include colonne denominate PartID, la descrizione e prezzo. Per aggiungere una parte senza parametri richiederebbe la costruzione di un'istruzione SQL, ad esempio:  
+# <a name="statement-parameters"></a>Parametri delle istruzioni
+Oggetto *parametro* è una variabile in un'istruzione SQL. Si supponga, ad esempio, che in una tabella con colonne denominate PartID, la descrizione e prezzo. Per aggiungere una parte senza parametri richiederebbe la costruzione di un'istruzione SQL, ad esempio:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
 ```  
   
- Sebbene questa istruzione consente di inserire un nuovo ordine, non è un'ottima soluzione per un'applicazione di immissione ordini perché i valori da inserire non possono essere hardcoded nell'applicazione. In alternativa è possibile creare l'istruzione SQL in fase di esecuzione utilizzando i valori da inserire. Questo non è una buona soluzione a causa della complessità di costruzione di istruzioni in fase di esecuzione. La soluzione migliore consiste nel sostituire gli elementi del **valori** clausola con punti interrogativi (?), o *marcatori di parametro*:  
+ Sebbene questa istruzione consente di inserire un nuovo ordine, non è un'ottima soluzione per un'applicazione di immissione dell'ordine perché i valori da inserire non possono essere impostate come hardcoded nell'applicazione. In alternativa è possibile costruire l'istruzione SQL in fase di esecuzione usando i valori da inserire. Non si tratta inoltre una buona soluzione, a causa della complessità di costruzione di istruzioni in fase di esecuzione. La soluzione migliore consiste nel sostituire gli elementi del **i valori** clausola dai punti interrogativi (?), o *marcatori di parametro*:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- Gli indicatori di parametro vengono quindi associati a variabili dell'applicazione. Per aggiungere una nuova riga, l'applicazione deve solo impostare i valori delle variabili ed eseguire l'istruzione. Il driver recupera quindi i valori correnti delle variabili e li invia all'origine dati. Se l'istruzione viene eseguita più volte, l'applicazione può rendere ancora più efficiente il processo preparando l'istruzione.  
+ Gli indicatori di parametro vengono quindi associati a variabili dell'applicazione. Per aggiungere una nuova riga, l'applicazione deve solo impostare i valori delle variabili ed eseguire l'istruzione. Il driver recupera quindi i valori correnti delle variabili e li invia all'origine dati. Se l'istruzione verrà eseguita più volte, l'applicazione può rendere ancora più efficiente il processo preparando l'istruzione.  
   
- L'istruzione riportata solo potrebbe essere a livello di codice in un'applicazione di immissione ordini per inserire una nuova riga. Tuttavia, i marcatori di parametro non sono limitati a applicazioni verticali. Per qualsiasi applicazione, consentono di semplificare le difficoltà di costruzione di istruzioni SQL in fase di esecuzione, evitando di conversioni da e verso il testo. Ad esempio, l'ID di parte riportata solo è probabilmente archiviati nell'applicazione come un numero intero. Se l'istruzione SQL viene creata senza i marcatori di parametro, l'applicazione deve convertire l'ID di parte di testo e l'origine dati deve convertire i dati in un numero intero. Un marcatore di parametro, l'applicazione può inviare l'ID di parte del driver come valore intero che in genere possibile inviarlo all'origine dati come un numero intero. In questo modo due conversioni. Per i valori di dati di tipo long, questo è molto importante, poiché i formati di testo di tali valori spesso superano la lunghezza consentita di un'istruzione SQL.  
+ L'istruzione appena illustrato potrebbe essere hardcoded in un'applicazione di immissione dell'ordine per inserire una nuova riga. Tuttavia, i marcatori di parametro non esistono applicazioni verticali. Per qualsiasi applicazione, consentono di semplificare le difficoltà di costruzione di istruzioni SQL in fase di esecuzione, evitando le conversioni da e verso il testo. Ad esempio, l'ID di parte appena illustrato è probabilmente archiviati nell'applicazione come integer. Se l'istruzione SQL viene costruita senza i marcatori di parametro, l'applicazione deve convertire l'ID di parte al testo e l'origine dati deve convertire i dati in un numero intero. Utilizzando un marcatore di parametro, l'applicazione può inviare l'ID di parte del driver come integer, che in genere possibile inviarlo all'origine dati come integer. In questo modo due conversioni. Per i valori di dati long, ciò è molto importante, perché le forme di testo di tali valori spesso superano la lunghezza consentita di un'istruzione SQL.  
   
- I parametri sono validi solo in determinate posizioni nelle istruzioni SQL. Ad esempio, non sono consentite nell'elenco di selezione (l'elenco di colonne deve essere restituito da un **selezionare** istruzione), né sono consentiti come entrambi gli operandi dell'operatore binario, ad esempio il segno di uguale (=), perché sarebbe impossibile per determinare il tipo di parametro. In genere, i parametri sono validi solo nelle istruzioni Data Manipulation Language (DML) e non in istruzioni Data Definition Language (DDL). Per ulteriori informazioni, vedere [marcatori di parametro](../../../odbc/reference/appendixes/parameter-markers.md) nella grammatica SQL di appendice c:.  
+ I parametri sono validi solo in determinate posizioni nelle istruzioni SQL. Ad esempio, non sono consentiti nell'elenco di selezione (l'elenco di colonne deve essere restituito da un **selezionare** istruzione), né sono consentiti come entrambi gli operandi dell'operatore binario, ad esempio il segno di uguale (=), poiché sarebbe impossibile ritestare per determinare il tipo di parametro. In generale, i parametri sono validi solo in istruzioni Data Manipulation Language (DML) e non nelle istruzioni Data Definition Language (DDL). Per altre informazioni, vedere [marcatori di parametro](../../../odbc/reference/appendixes/parameter-markers.md) nell'appendice c: SQL grammatica.  
   
- Può essere utilizzato quando l'istruzione SQL richiama una stored procedure, i parametri denominata. I parametri denominati sono identificati dai relativi nomi, non in base alla posizione nell'istruzione SQL. Possono essere associate da una chiamata a **SQLBindParameter**, ma il parametro è identificato dal campo SQL_DESC_NAME di IPD (descrizione del parametro di implementazione), non dal *ParameterNumber* argomento di **SQLBindParameter**. Può inoltre essere associati chiamando **SQLSetDescField** o **SQLSetDescRec**. Per ulteriori informazioni sui parametri denominati, vedere [Binding Parameters by Name (Named Parameters)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md), più avanti in questa sezione. Per ulteriori informazioni sui descrittori, vedere [descrittori](../../../odbc/reference/develop-app/descriptors.md).  
+ Può essere usato quando l'istruzione SQL richiama una stored procedure, parametri denominata. I parametri denominati sono identificati dai relativi nomi, non in base alla posizione dell'istruzione SQL. Possono essere associate mediante una chiamata a **SQLBindParameter**, ma il parametro è identificato dal campo SQL_DESC_NAME del Descrittore (implementazione parametri), non dal *ParameterNumber* argomento di **SQLBindParameter**. Possono anche essere associate chiamando **SQLSetDescField** oppure **SQLSetDescRec**. Per altre informazioni sui parametri denominati, vedere [Binding Parameters by Name (Named Parameters)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md), più avanti in questa sezione. Per altre informazioni sui descrittori, vedere [descrittori](../../../odbc/reference/develop-app/descriptors.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Parametri di associazione](../../../odbc/reference/develop-app/binding-parameters-odbc.md)  
+-   [Associazione di parametri](../../../odbc/reference/develop-app/binding-parameters-odbc.md)  
   
 -   [Configurazione dei valori dei parametri](../../../odbc/reference/develop-app/setting-parameter-values.md)  
   
 -   [Invio di dati Long](../../../odbc/reference/develop-app/sending-long-data.md)  
   
--   [Il recupero dei parametri di Output da SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)  
+-   [Recupero di parametri di Output da SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)  
   
 -   [Parametri di procedure](../../../odbc/reference/develop-app/procedure-parameters.md)  
   

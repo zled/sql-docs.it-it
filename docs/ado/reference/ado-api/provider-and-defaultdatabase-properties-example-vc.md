@@ -1,13 +1,11 @@
 ---
-title: Esempio di proprietà DefaultDatabase (VC + +) e provider | Documenti Microsoft
+title: Esempio di proprietà DefaultDatabase (VC + +) e provider | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - provider property [ADO], VC++ example
 - DefaultDatabase property [ADO], VC++ example
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6efcd2a571902cedaf065982490e2d593bd22ab6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1cae1cc5e15bd945a28e5c36008faeade43b54b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280860"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709229"
 ---
-# <a name="provider-and-defaultdatabase-properties-example-vc"></a>Esempio di proprietà DefaultDatabase (VC + +) e di provider
-Questo esempio viene illustrato il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà aprendo tre [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetti con provider diversi. Utilizza inoltre il [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) proprietà per impostare il database predefinito per il Provider ODBC di Microsoft.  
+# <a name="provider-and-defaultdatabase-properties-example-vc"></a>Esempio delle proprietà Provider e DefaultDatabase (VC++)
+Questo esempio viene illustrato il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà aprendo tre [connessione](../../../ado/reference/ado-api/connection-object-ado.md) di oggetti usando diversi provider. Viene inoltre utilizzata la [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) proprietà da impostare il database predefinito per il Provider ODBC di Microsoft.  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  
@@ -138,6 +135,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto di connessione (ADO.NET)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Proprietà DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Proprietà Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

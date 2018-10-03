@@ -1,39 +1,36 @@
 ---
-title: Utilizzi dei dati del catalogo | Documenti Microsoft
+title: Utilizzi del catalogo dati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - catalog data [ODBC]
 - functions [ODBC], catalog functions
 - catalog functions [ODBC], using catalog data
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4d510a0f7e0d0c401e0f8ea8a8c346a917f05c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9b75d59d8fc28e364f5826d95e7fc50cb6afda7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915246"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622309"
 ---
 # <a name="uses-of-catalog-data"></a>Utilizzi dei dati del catalogo
-Le applicazioni utilizzano dati del catalogo in diversi modi. Ecco alcuni usi comuni:  
+Le applicazioni utilizzano i dati del catalogo in diversi modi. Ecco alcuni usi comuni:  
   
--   **Costruzione di istruzioni SQL in fase di esecuzione.** Applicazioni verticali, ad esempio un'applicazione di immissione dell'ordine, contengono le istruzioni SQL hard-coded. Le tabelle e colonne utilizzate dall'applicazione vengono corretti anticipatamente, sono istruzioni che accedono a tali tabelle. Ad esempio, un'applicazione di immissione ordini contiene in genere un singolo, con parametri **inserire** istruzione per l'aggiunta di nuovi ordini per il sistema.  
+-   **Costruzione di istruzioni SQL in fase di esecuzione.** Applicazioni verticali, ad esempio un'applicazione di immissione dell'ordine, contengono le istruzioni SQL hard-coded. Le tabelle e colonne utilizzate dall'applicazione sono fisse anticipatamente, perché sono istruzioni che accedono a tali tabelle. Ad esempio, un'applicazione di immissione dell'ordine contiene in genere un singolo, con parametri **Inserisci** istruzione per l'aggiunta di nuovi ordini nel sistema.  
   
-     Spesso, le applicazioni generiche, ad esempio un foglio di calcolo che utilizza ODBC per recuperare i dati, creare istruzioni SQL in fase di esecuzione in base all'input dell'utente. Tale applicazione potrebbe richiedere all'utente di digitare i nomi delle tabelle e colonne da utilizzare. Tuttavia, sarebbe più facile per l'utente se l'applicazione visualizzata elenchi di tabelle e colonne da cui l'utente può effettuare selezioni. Per compilare questi elenchi, l'applicazione chiama il **SQLTables** e **SQLColumns** funzioni di catalogo.  
+     Applicazioni generiche, ad esempio un foglio di calcolo che usa ODBC per recuperare i dati, spesso costruire istruzioni SQL in fase di esecuzione in base all'input dell'utente. Tale applicazione potrebbe richiedere all'utente di digitare i nomi delle tabelle e colonne da utilizzare. Tuttavia, sarebbe più semplice per l'utente se l'applicazione visualizzata gli elenchi di tabelle e colonne da cui l'utente è stato possibile effettuare le selezioni. Per compilare questi elenchi, l'applicazione chiama il **SQLTables** e **SQLColumns** funzioni di catalogo.  
   
--   **Costruzione di istruzioni SQL durante lo sviluppo.** In genere, gli ambienti di sviluppo di applicazioni consentono ai programmatori di creare query di database durante lo sviluppo di un programma. Le query sono quindi hardcoded nell'applicazione da compilare.  
+-   **Costruzione di istruzioni SQL durante lo sviluppo.** Gli ambienti di sviluppo di applicazioni in genere consentono al programmatore di creare query sul database durante lo sviluppo di un programma. Le query vengono quindi impostate come hardcoded nell'applicazione in fase di compilazione.  
   
-     Inoltre è possibile utilizzare tali ambienti **SQLTables** e **SQLColumns** per creare elenchi da cui il programmatore può effettuare selezioni. Questi ambienti possono essere utilizzate anche **SQLPrimaryKeys** e **SQLForeignKeys** per determinare automaticamente e mostrare le relazioni tra le tabelle selezionate e utilizzare **SQLStatistics** per determinare ed evidenziare i campi indicizzati per consentire al programmatore di creare query efficienti.  
+     Inoltre è possibile utilizzare tali ambienti **SQLTables** e **SQLColumns** per creare elenchi da cui il programmatore è stato possibile effettuare selezioni. Questi ambienti possono essere utilizzate anche **SQLPrimaryKeys** e **SQLForeignKeys** per determinare automaticamente e mostrare le relazioni tra le tabelle selezionate e usare **SQLStatistics** per determinare ed evidenziare i campi indicizzati per consentire al programmatore di creare query efficienti.  
   
--   **La creazione di cursori.** Impossibile utilizzare un'applicazione, un driver o un middleware che fornisce un motore del cursore scorrevole **SQLSpecialColumns** per determinare quale colonna o quali colonne identificano una riga. Impossibile compilare il programma un *keyset* contenente i valori di queste colonne per ogni riga che è stata recuperata. Quando si scorre l'applicazione torna alla riga, utilizzerebbe quindi questi valori per recuperare i dati più recenti per la riga. Per ulteriori informazioni sui cursori scorrevoli e keyset, vedere [cursori scorrevoli](../../../odbc/reference/develop-app/scrollable-cursors.md).
+-   **Costruzione di cursori.** Impossibile utilizzare un'applicazione, driver o middleware che offre un motore con cursori scorrevoli **SQLSpecialColumns** per determinare quale colonna o colonne di identificano in modo univoco una riga. Il programma è stato possibile creare un *keyset* contenente i valori di queste colonne per ogni riga che è stata recuperata. Quando si scorre verso l'applicazione torna alla riga, utilizzerebbe quindi questi valori per recuperare i dati più recenti per la riga. Per altre informazioni sui cursori scorrevoli e keyset, vedere [cursori scorrevoli](../../../odbc/reference/develop-app/scrollable-cursors.md).

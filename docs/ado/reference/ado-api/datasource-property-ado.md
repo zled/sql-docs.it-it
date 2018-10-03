@@ -1,13 +1,11 @@
 ---
-title: Proprietà origine dati (ADO) | Documenti Microsoft
+title: Proprietà DataSource (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - DataSource property [ADO]
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fa4df4252d9970d4ec8ec36500dc5782466c675
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ad42ea14e58e28bf5eee0e5aac66c5a8fc309f2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801279"
 ---
-# <a name="datasource-property-ado"></a>Proprietà origine dati (ADO)
+# <a name="datasource-property-ado"></a>Proprietà DataSource (ADO)
 Indica un oggetto che contiene i dati per essere rappresentato come un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
   
-## <a name="remarks"></a>Remarks  
- Questa proprietà viene utilizzata per creare controlli associati a dati con l'ambiente di dati. L'ambiente di dati gestisce le raccolte di dati (origini dati) che contiene oggetti denominati (membri di dati) che saranno rappresentati come un **Recordset** oggetto *.*  
+## <a name="remarks"></a>Note  
+ Questa proprietà viene utilizzata per creare controlli associati a dati con l'ambiente dei dati. Gestisce l'ambiente dei dati raccolte di dati (origini dati) che contiene oggetti denominati (membri dati) che verranno rappresentati come una **Recordset** oggetto *.*  
   
- Il [DataMember](../../../ado/reference/ado-api/datamember-property.md) e **DataSource** proprietà devono essere utilizzate insieme.  
+ Il [DataMember](../../../ado/reference/ado-api/datamember-property.md) e **DataSource** proprietà devono essere usate in combinazione.  
   
- L'oggetto a cui fa riferimento deve implementare il **IDataSource** l'interfaccia e deve contenere un **IRowset** interfaccia.  
+ L'oggetto di riferimento deve implementare il **IDataSource** l'interfaccia e deve contenere un' **IRowset** interfaccia.  
   
 ## <a name="usage"></a>Utilizzo  
   

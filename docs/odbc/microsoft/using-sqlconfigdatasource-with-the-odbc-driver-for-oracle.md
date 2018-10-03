@@ -1,59 +1,56 @@
 ---
-title: Utilizzo SQLConfigDatasource con il Driver ODBC per Oracle | Documenti Microsoft
+title: Uso di SQLConfigDatasource con il Driver ODBC per Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], ODBC driver for Oracle
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5859b6cc446e74c12b2fb09436246d693a3beea3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9edd9ae15e66a39abd84a8a6d8e50a83ed4a39ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909066"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779009"
 ---
-# <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Utilizzo SQLConfigDatasource con il Driver ODBC per Oracle
+# <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Uso di SQLConfigDatasource con il driver ODBC per Oracle
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, utilizzare il driver ODBC fornito da Oracle.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare il driver ODBC fornito da Oracle.  
   
- La tabella seguente elenca valido **SQLConfigDatasource** le impostazioni per il Driver ODBC di Microsoft per Oracle, versione 1.0 (Msorcl10.dll) e il Driver ODBC di Microsoft per Oracle, versione 2.0 (msorcl32. dll).  
+ La tabella seguente elenca validi **SQLConfigDatasource** le impostazioni per il Driver ODBC di Microsoft per Oracle, versione 1.0 (Msorcl10.dll) e il Driver ODBC di Microsoft per Oracle, versione 2.0 (msorcl32. dll).  
   
 > [!NOTE]  
 >  Il driver Msorcl10.dll (versione 1.0) supporta tutte le opzioni eccetto **Server**. Il driver msorcl32. dll (versione 2.0 e versioni successive) supporta tutte le impostazioni.  
   
- Alcune impostazioni vengono ignorate dal driver, ma vengono accettate da **SQLConfigDatasource**. Tra queste impostazioni nella stringa di connessione ODBC è l'unico modo che sono accettati in fase di esecuzione. Un'impostazione ignorata non verrà archiviata nel Registro di sistema quando **SQLConfigDatasource** crea l'origine dati.  
+ Alcune impostazioni vengono ignorate dal driver, ma vengono accettate dallo **SQLConfigDatasource**. Tra cui queste impostazioni nella stringa di connessione ODBC è l'unico modo che verranno accettate in fase di esecuzione. Un'impostazione ignorata non verrà archiviata nel Registro di sistema quando **SQLConfigDatasource** crea l'origine dati.  
   
- Nella tabella seguente, *A/N* significa che qualsiasi stringa alfanumerica valida fino alla lunghezza massima consentita. *Max Len* (lunghezza massima) è la lunghezza massima consentita della stringa accettata dalla configurazione dell'impostazione, incluso il carattere di terminazione di stringa.  
+ Nella tabella riportata di seguito *N/A* corrisponde a qualsiasi stringa di caratteri alfanumerico valido fino alla lunghezza massima consentita. *Max Len* (lunghezza massima) è la lunghezza massima consentita di stringa accettata dall'impostazione, incluso il carattere di terminazione di stringa.  
   
 |Impostazione|Lunghezza massima|Valore predefinito|Valori validi|Description|  
 |-------------|-------------|-------------------|------------------|-----------------|  
-|BufferSize|7|65535|1000|Buffer di recupero minima dimensione fino a 65535 byte|  
+|BufferSize|7|65535|1000|Dimensioni del buffer di recupero minima fino a 65535 byte|  
 |CatalogCap|2|1|0 o 1|Se è 1, gli identificatori nonquoted sarà convertito in lettere maiuscole nel catalogo di funzioni.|  
-|ConnectString|128|""|A/N|Stringa di connessione. Metodo richiesto di specificare il nome del server con il driver Msorcl10.dll.|  
-|Description|256|""|A/N|Descrizione|  
-|DSN|33|""|A/N|Nome dell'origine dati.|  
-|GuessTheColDef|4|0|A/N|Restituisce un valore diverso da zero per le colonne senza la scala definita Oracle.|  
-|NumberFloat|2|""|0 o 1|Se è 0, le colonne FLOAT sono considerate come SQL_FLOAT. Se è 1, le colonne FLOAT sono considerate come SQL_DOUBLE.|  
-|PWD|30|""|A/N|Password.|  
+|ConnectString|128|""|OGGETTO/N|Stringa di connessione. Metodo richiesto di specificare il nome del server con il driver Msorcl10.dll.|  
+|Description|256|""|OGGETTO/N|Descrizione|  
+|DSN|33|""|OGGETTO/N|Nome dell'origine dati.|  
+|GuessTheColDef|4|0|OGGETTO/N|Restituisce un valore diverso da zero per colonne senza scalabilità definito Oracle.|  
+|NumberFloat|2|""|0 o 1|Se è 0, FLOAT colonne vengono considerate come SQL_FLOAT. Se è 1, FLOAT colonne vengono considerate come SQL_DOUBLE.|  
+|PWD|30|""|OGGETTO/N|Password.|  
 |RDOSupport|2|""|0 o 1|Consente di RDO chiamare le routine di Oracle.|  
-|Osservazioni|2|0|0 o 1|Includere la sezione Osservazioni in funzioni di catalogo.|  
-|RowLimit|4|""|0 e 99|Numero massimo di righe restituite da un'istruzione SELECT. Una stringa di lunghezza zero indica che viene applicato alcun limite.|  
-|Server|128|""|A/N|Nome del server Oracle.|  
-|SynonymColumns|2|1|0 o 1|Includere i sinonimi nel SQLColumns.|  
+|Note|2|0|0 o 1|Includere la sezione Osservazioni in funzioni di catalogo.|  
+|RowLimit|4|""|tra 0 e 99|Numero massimo di righe restituite da un'istruzione SELECT. Una stringa di lunghezza zero indica che viene applicato alcun limite.|  
+|Server|128|""|OGGETTO/N|Nome del server Oracle.|  
+|SynonymColumns|2|1|0 o 1|Includere i sinonimi in SQLColumns.|  
 |SystemTable|2|""|0 o 1|Se è 0, non verranno visualizzate tabelle di sistema. Se è 1, verranno visualizzate tabelle di sistema.|  
-|TranslationDLL|33|""|A/N|Nome di DLL di conversione.|  
-|TranslationName|33|""|A/N|Nome della traduzione.|  
-|TranslationOption|33|""|A/N|Opzione di conversione.|  
-|TxnCap|2|""|A/N|Transazione in grado di supportare. Se è 0, il driver segnala che non supporta le transazioni. Se è 1, il driver segnala che è in grado di eseguire transazioni.|  
-|UID|30|""|A/N|Nome utente.|
+|TranslationDLL|33|""|OGGETTO/N|Nome del file DLL traduzione.|  
+|TranslationName|33|""|OGGETTO/N|Nome della traduzione.|  
+|TranslationOption|33|""|OGGETTO/N|Opzione di conversione.|  
+|TxnCap|2|""|OGGETTO/N|Transazione in grado di supportare. Se è 0, il driver segnala che non supporta le transazioni. Se è 1, il driver segnala che è in grado di eseguire le transazioni.|  
+|UID|30|""|OGGETTO/N|Nome utente.|

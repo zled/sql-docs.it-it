@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_targetserver_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_targetserver
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 236a10fd52508781e503cc2844a49315fe57422e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: aacb30e4c809f965635b9d8640d8fcd690cd340f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252221"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747429"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,26 +45,26 @@ sp_help_targetserver
  Nome della colonna per cui restituire informazioni. *nome_server* viene **nvarchar(30)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Se *nome_server* non viene specificato, **sp_help_targetserver** restituisce il set di risultati.  
+ Se *nome_server* non viene specificato, **sp_help_targetserver** restituisce questo set di risultati.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Numero di identificazione del server.|  
 |**server_name**|**nvarchar(30)**|Nome del server.|  
-|**Percorso**|**nvarchar(200)**|Posizione del server specificato.|  
+|**Posizione**|**nvarchar(200)**|Posizione del server specificato.|  
 |**time_zone_adjustment**|**int**|Regolazione del fuso orario, in ore, rispetto all'ora di Greenwich (GMT).|  
 |**enlist_date**|**datetime**|Data di integrazione del server specificato.|  
 |**last_poll_date**|**datetime**|Data dell'ultimo polling del server per l'individuazione dei processi.|  
 |**status**|**int**|Stato del server specificato.|  
-|**unread_instructions**|**int**|Indica se il server include istruzioni non lette. Se tutte le righe sono state scaricate, questa colonna è **0**.|  
+|**unread_instructions**|**int**|Indica se il server include istruzioni non lette. Se tutte le righe sono state scaricate, questa colonna viene **0**.|  
 |**local_time**|**datetime**|Data e ora locali del server di destinazione, basata sull'ora locale del server di destinazione rilevata durante l'ultimo polling del server master.|  
-|**enlisted_by_nt_user**|**Nvarchar (100)**|Utente di Microsoft Windows che ha eseguito l'integrazione del server di destinazione.|  
+|**enlisted_by_nt_user**|**Nvarchar(100)**|Utente di Microsoft Windows che ha eseguito l'integrazione del server di destinazione.|  
 |**poll_interval**|**int**|Frequenza espressa in secondi con cui il server di destinazione esegue il polling del servizio SQLServerAgent principale per il download dei processi e il caricamento dello stato dei processi.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire questa stored procedure, è necessario che gli utenti siano membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  

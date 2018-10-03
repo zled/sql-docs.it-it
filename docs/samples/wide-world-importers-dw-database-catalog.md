@@ -6,19 +6,17 @@ ms.technology: samples
 ms.custom: ''
 ms.date: 08/04/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: cbdcbe160e585fc1d5dfc30c51f511f32d4a0be9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3c329594ad6349f58c4ed910bdb1b86b040a07c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43104665"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627113"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catalogo del database WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -51,11 +49,11 @@ WideWorldImportersDW ha le seguenti tabelle delle dimensioni. La descrizione inc
 |Città|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |date|Nuova tabella con le informazioni sulle date, inclusi anno fiscale (in base 1 ° novembre avviare per anno fiscale).|
-|Employee|`Application.People`(Indici per tabelle con ottimizzazione per la memoria).|
+|Employee|`Application.People` (Indici per tabelle con ottimizzazione per la memoria).|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Fornitore|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`(Indici per tabelle con ottimizzazione per la memoria).|
-|TransactionType|`Application.TransactionTypes`(Indici per tabelle con ottimizzazione per la memoria).|
+|PaymentMethod|`Application.PaymentMethods` (Indici per tabelle con ottimizzazione per la memoria).|
+|TransactionType|`Application.TransactionTypes` (Indici per tabelle con ottimizzazione per la memoria).|
 
 ### <a name="fact-tables"></a>Tabelle dei fatti
 
@@ -80,7 +78,7 @@ Tutte le estensioni dell'esempio sono invitate a usare il `Reports` dello schema
 
 Queste procedure vengono utilizzate per configurare l'esempio. Vengono utilizzati per applicare le funzionalità dell'edizione enterprise alla versione standard edition dell'esempio, aggiungere PolyBase e reseed ETL.
 
-|Procedura|Scopo|
+|Routine|Scopo|
 |-----------------------------|---------------------|
 |Configuration_ApplyPartitionedColumnstoreIndexing|Si applica sia il partizionamento e gli indici columnstore per le tabelle dei fatti.|
 |Configuration_ConfigureForEnterpriseEdition|Si applica il partizionamento, columnstore in memoria e indicizzazione.|
@@ -100,7 +98,7 @@ Le procedure utilizzate nel processo ETL rientrano nelle categorie seguenti:
 
 Procedure per configurare le sequenze nel database.
 
-|Procedura|Scopo|
+|Routine|Scopo|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Chiama la routine `ReseedSequenceBeyondTableValue` per tutte le sequenze.|
 |ReseedSequenceBeyondTableValue|Usato per riposizionare il valore di sequenza successivo oltre il valore in qualsiasi tabella che utilizza la stessa sequenza. (Ad esempio un `DBCC CHECKIDENT` per equivalente a colonne identity per le sequenze ma tra potenzialmente più tabelle.)|

@@ -1,40 +1,34 @@
 ---
-title: Aggiornamento dal Database (AccessToSQL) | Documenti Microsoft
+title: Aggiornare dal Database (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6d38b1bdb437ed553648d9f93c0b09edfc7ca463
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 29dd391a094f37334008e98af60bcdc2396a997a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774097"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676289"
 ---
-# <a name="refresh-from-database-accesstosql"></a>Aggiornamento dal Database (AccessToSQL)
-Il **aggiornamento dal Database** la finestra di dialogo consente di selezionare gli oggetti da aggiornare dal database di Access. Le righe nella finestra di dialogo sono codificate con colori in base allo stato dei metadati:  
+# <a name="refresh-from-database-accesstosql"></a>Aggiornare dal Database (AccessToSQL)
+Il **aggiornare dal Database** nella finestra di dialogo consente di selezionare gli oggetti da aggiornare dal database di Access. Le righe nella finestra di dialogo sono contraddistinte dal colore basato sullo stato dei metadati:  
   
--   Se i metadati dell'oggetto sono stato modificato in locale e nel database di Access, la riga blu.  
+-   Se i metadati dell'oggetto sono stato modificato in locale e nel database di Access, la riga è blu.  
   
 -   Se i metadati dell'oggetto sono stato modificato nel database di Access, ma non in SSMA, la riga è gialla.  
   
 -   Se i metadati dell'oggetto sono stato modificato in locale, ma non nel database di Access, la riga è verde.  
   
--   Se l'oggetto è nuovo nel database di Access, la riga è rosa.  
+-   Se l'oggetto è una novità di database di Access, la riga è di colore rosa.  
   
-È possibile specificare le impostazioni di aggiornamento oggetto predefinite nel **impostazioni progetto** la finestra di dialogo. Per altre informazioni, vedere [impostazioni del progetto di &#40;durante il caricamento di oggetti&#41; &#40;AccessToSQL&#41;](../../ssma/access/project-settings-loading-objects-accesstosql.md)  
+È possibile specificare le impostazioni di aggiornamento di oggetti predefiniti in di **impostazioni del progetto** nella finestra di dialogo. Per altre informazioni, vedere [impostazioni del progetto &#40;il caricamento di oggetti&#41; &#40;AccessToSQL&#41;](../../ssma/access/project-settings-loading-objects-accesstosql.md)  
   
-Per l'accesso di **aggiornamento dal Database** finestra di dialogo casella destro del mouse su qualsiasi **database** nodo nel Visualizzatore metadati di accesso e fare clic su **aggiornamento dal Database**.  
+Per l'accesso di **aggiornare dal Database** finestra di dialogo casella destro del mouse su qualsiasi **database** nodo nel Visualizzatore metadati di accesso e fare clic su **aggiornare dal Database**.  
   

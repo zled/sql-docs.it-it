@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobactivity (Transact-SQL) | Documenti Microsoft
+title: dbo.sysjobactivity (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobactivity_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1d9e79856ac767d231993165b0c6d565d791464
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 77b434a20f408aa79e8d75b03ea9bce0a9f2e6b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258473"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690769"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +34,7 @@ ms.locfileid: "33258473"
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|ID della sessione archiviata nel **syssessions** tabella il **msdb** database.|  
+|**session_id**|**int**|ID della sessione archiviata nel **syssessions** nella tabella di **msdb** database.|  
 |**job_id**|**uniqueidentifier**|ID del processo.|  
 |**run_requested_date**|**datetime**|Data e ora della richiesta di esecuzione del processo.|  
 |**run_requested_source**|**sysname(nvarchar(128))**|Autore della richiesta di esecuzione del processo.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
@@ -47,11 +43,11 @@ ms.locfileid: "33258473"
 |**last_executed_step_id**|**int**|ID dell'ultimo passaggio del processo eseguito.|  
 |**last_executed_step_**<br /><br /> **data**|**datetime**|Data e ora di inizio dell'esecuzione dell'ultimo passaggio del processo.|  
 |**stop_execution_date**|**datetime**|Data e ora in cui l'esecuzione del processo è stata completata.|  
-|**job_history_id**|**int**|Utilizzato per identificare una riga di **sysjobhistory** tabella.|  
+|**job_history_id**|**int**|Utilizzato per identificare una riga nel **sysjobhistory** tabella.|  
 |**next_scheduled_run_date**|**datetime**|Data e ora in cui è stata pianificata l'esecuzione successiva del processo.|  
 
 ## <a name="example"></a>Esempio
-In questo esempio verrà restituito lo stato di runtime per tutti i processi di SQL Server Agent.  Eseguire il seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+In questo esempio restituisce lo stato di runtime per tutti i processi di SQL Server Agent.  Eseguire il seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 ```sql
 SELECT sj.Name, 
     CASE

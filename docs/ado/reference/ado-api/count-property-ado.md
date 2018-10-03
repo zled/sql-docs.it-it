@@ -1,13 +1,11 @@
 ---
-title: La proprietà Count (ADO) | Documenti Microsoft
+title: La proprietà Count (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Count property [ADO]
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bccb2760b124040973baa7ba889d2110ec5efe95
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 988ee3dc6cb4b394ee1da170cb902b88fcb0f1ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277230"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759329"
 ---
 # <a name="count-property-ado"></a>Proprietà Count (ADO)
 Indica il numero di oggetti in una raccolta.  
@@ -32,10 +29,10 @@ Indica il numero di oggetti in una raccolta.
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un **lungo** valore.  
   
-## <a name="remarks"></a>Remarks  
- Utilizzare il **conteggio** proprietà per determinare il numero di oggetti presenti in una raccolta specificata.  
+## <a name="remarks"></a>Note  
+ Usare la **conteggio** proprietà per determinare il numero di oggetti inclusi in una raccolta specificata.  
   
- Poiché la numerazione dei membri di una raccolta inizia da zero, è consigliabile codificare sempre i cicli a partire dal membro zero e terminando con il valore di **conteggio** proprietà meno 1. Se si utilizza Microsoft Visual Basic e si desidera per scorrere in ciclo i membri di una raccolta senza il controllo il **conteggio** proprietà, utilizzare il **For Each... Avanti** comando.  
+ Poiché per i membri di una raccolta di numerazione inizia da zero, è consigliabile codificare sempre i cicli a partire dal membro zero e terminando con il valore della **conteggio** proprietà meno 1. Se si utilizza Microsoft Visual Basic e si desidera eseguire un ciclo attraverso i membri di una raccolta senza il controllo il **conteggio** proprietà, utilizzare il **For Each... Avanti** comando.  
   
  Se il **conteggio** proprietà è zero, non sono presenti oggetti nella raccolta.  
   

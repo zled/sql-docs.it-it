@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_xe_object_columns
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_object_columns dynamic management view
 - extended events [SQL Server], views
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24b7123f557674afe6016138f05803a8d13753c6
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 0a00c2aea93b77f65455024d15af13b153d7ebef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732175"
 ---
 # <a name="sysdmxeobjectcolumns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,19 +37,19 @@ ms.lasthandoff: 05/23/2018
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|Nome della colonna. nome è univoco all'interno dell'oggetto. Non ammette i valori Null.|  
-|column_id|**int**|Identificatore della colonna. column_id è univoco all'interno dell'oggetto utilizzato con column_type. Non ammette i valori Null.|  
+|NAME|**nvarchar(60)**|Nome della colonna. nome è univoco all'interno dell'oggetto. Non ammette i valori Null.|  
+|column_id|**int**|Identificatore della colonna. il valore column_id è univoco all'interno dell'oggetto quando utilizzato con column_type. Non ammette i valori Null.|  
 |object_name|**nvarchar(60)**|Nome dell'oggetto a cui appartiene la colonna. Esiste una relazione molti-a-uno con sys.dm_xe_objects.id. Non ammette i valori Null.|  
 |object_package_guid|**uniqueidentifier**|GUID del pacchetto che contiene l'oggetto. Non ammette i valori Null.|  
 |type_name|**nvarchar(60)**|Nome del tipo per questa colonna. Non ammette i valori Null.|  
 |type_package_guid|**uniqueidentifier**|GUID del pacchetto che contiene il tipo di dati della colonna. Non ammette i valori Null.|  
-|column_type|**nvarchar(60)**|Indica il modo in cui viene utilizzata la colonna. Non ammette i valori Null. COLUMN_TYPE può essere uno dei valori seguenti:<br /><br /> readonly. La colonna contiene un valore statico che non può essere modificato.<br /><br /> data. La colonna contiene dati runtime esposti dall'oggetto.<br /><br /> customizable. La colonna contiene un valore che può essere modificato.<br /><br /> Nota: Se si modifica questo valore può modificare il comportamento dell'oggetto.|  
+|column_type|**nvarchar(60)**|Indica il modo in cui viene utilizzata la colonna. Non ammette i valori Null. COLUMN_TYPE può essere uno dei seguenti:<br /><br /> readonly. La colonna contiene un valore statico che non può essere modificato.<br /><br /> data. La colonna contiene dati runtime esposti dall'oggetto.<br /><br /> customizable. La colonna contiene un valore che può essere modificato.<br /><br /> Nota: Se si modifica questo valore può modificare il comportamento dell'oggetto.|  
 |column_value|**nvarchar(256)**|Visualizza valori statici associati alla colonna dell'oggetto. Ammette i valori Null.|  
 |capabilities|**int**|Bitmap che descrive le funzionalità della colonna. Ammette i valori Null.|  
 |capabilities_desc|**nvarchar(256)**|Descrizione delle funzionalità della colonna dell'oggetto. I valori validi sono i seguenti:<br /><br /> Mandatory. Il valore deve essere impostato in caso di associazione dell'oggetto padre a una sessione dell'evento.<br /><br /> NULL|  
 |description|**nvarchar(256)**|Descrizione della colonna dell'oggetto. Ammette i valori Null.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  

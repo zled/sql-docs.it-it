@@ -1,13 +1,11 @@
 ---
-title: Importazione di dati di Visual FoxPro in Microsoft Access | Documenti Microsoft
+title: Importazione di dati Visual FoxPro in Microsoft Access | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - importing data [ODBC]
@@ -16,32 +14,31 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], Access
 - Visual FoxPro data [ODBC], importing
 ms.assetid: a3591295-0a76-4e3c-b4fa-8bd4f1cde705
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83114ad3231b007b288994c884fe998d3fb1529b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f19b58ba93c94088c4cae19f1093d89c8decb843
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905106"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685709"
 ---
-# <a name="importing-visual-foxpro-data-into-microsoft-access"></a>Importazione di dati di Visual FoxPro in Microsoft Access
-È possibile importare i dati archiviati in un database di Visual FoxPro in un database di Microsoft Access utilizzando l'opzione di importazione.  
+# <a name="importing-visual-foxpro-data-into-microsoft-access"></a>Importazione di dati Visual FoxPro in Microsoft Access
+È possibile importare i dati archiviati in un database di Visual FoxPro in un database Microsoft Access utilizzando l'opzione di importazione.  
   
-### <a name="to-import-visual-foxpro-data-into-a-microsoft-access-database"></a>Per importare i dati di Visual FoxPro in un database Microsoft Access  
+### <a name="to-import-visual-foxpro-data-into-a-microsoft-access-database"></a>Per importare dati Visual FoxPro in un database Microsoft Access  
   
 1.  Aprire un database Microsoft Access.  
   
 2.  Dal menu File, scegliere che quindi importare dati esterni.  
   
-3.  Nella finestra di dialogo Importa, selezionare i file dell'elenco dei tipi di database ODBC.  
+3.  Nella finestra di dialogo di importazione, selezionare i database ODBC nei file dell'elenco dei tipi.  
   
-4.  Nella finestra di dialogo origini dati SQL, selezionare l'origine dati di Visual FoxPro che si connette ai dati FoxPro che si desidera eseguire una query e fare clic su OK.  
+4.  Nella finestra di dialogo origini dei dati SQL, selezionare l'origine dati Visual FoxPro che si connette ai dati di FoxPro che si desidera eseguire una query e fare clic su OK.  
   
-5.  Nella finestra di dialogo Importa oggetti, selezionare uno o più tabelle che si desidera importare e fare clic su OK. I nomi delle tabelle di Visual FoxPro importati vengono visualizzati nella scheda tabelle del database di Microsoft Access.  
+5.  Nella finestra di dialogo Importa oggetti, selezionare uno o più tabelle che si desidera importare e fare clic su OK. I nomi delle tabelle di Visual FoxPro importati vengono visualizzati nella scheda delle tabelle del database Microsoft Access.  
   
- È ora possibile utilizzare Microsoft Access per modificare i dati nelle tabelle di Visual FoxPro importati. I dati che si importano sono uno snapshot dei dati archiviati in Visual FoxPro; le modifiche apportate ai dati importati non vengono inviate fino all'origine dati di Visual FoxPro.  
+ È ora possibile usare Microsoft Access per manipolare i dati nelle tabelle di Visual FoxPro importati. I dati che si importano sono uno snapshot dei dati archiviati in Visual FoxPro; le modifiche apportate ai dati importati non vengono inviate nuovamente all'origine dati Visual FoxPro.  
   
- Se si desidera che le modifiche apportate in Microsoft Access per modificare i dati nell'origine dei dati di Visual FoxPro, vedere [esecuzione di query e l'aggiornamento di Visual FoxPro dati da Microsoft Access](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md).
+ Se si desidera che le modifiche apportate in Microsoft Access per modificare i dati nell'origine dati Visual FoxPro, vedere [esecuzione di query e aggiornamento dei dati Visual FoxPro da Microsoft Access](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md).

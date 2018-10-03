@@ -1,13 +1,11 @@
 ---
-title: I cursori mista | Documenti Microsoft
+title: Cursori misti | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mixed cursors [ODBC]
@@ -17,24 +15,23 @@ helpviewer_keywords:
 - cursors [ODBC], key-set driven
 - cursors [ODBC], mixed
 ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52018d329255d05df03e1dc9e070225a84dbd97d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1905bc30afff4af0ffc74363b93f95732f4760f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911046"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631759"
 ---
 # <a name="mixed-cursors"></a>Cursori misti
-Un cursore misto è una combinazione di un cursore gestito da keyset e un cursore dinamico. Viene utilizzato quando il set di risultati è troppo grande per ragionevolmente Salva le chiavi per l'intero set di risultati. Mista i cursori vengono implementati mediante la creazione di un keyset minore l'intero set di risultati ma maggiore di set di righe.  
+Un cursore misto è una combinazione di un cursore gestito da keyset e un cursore dinamico. Viene usato quando il set di risultati è troppo grande per essere ragionevolmente salvato chiavi per l'intero set di risultati. Cursori misti vengono implementati mediante la creazione di un set di chiavi che è maggiore di set di righe, ma minore l'intero set di risultati.  
   
- Fino a quando l'applicazione consente di scorrere all'interno del keyset, il comportamento è basati su keyset. Quando l'applicazione scorre all'esterno di keyset, il comportamento è dinamico: il cursore recupera le righe richieste e crea un nuovo keyset. Dopo aver creato il nuovo keyset, il comportamento viene ripristinata la basati su keyset all'interno di tale keyset.  
+ Fino a quando l'applicazione scorre all'interno del keyset, il comportamento è gestito da keyset. Quando l'applicazione scorre fuori il keyset, il comportamento è dinamico: il cursore recupera le righe richieste e crea un nuovo set di chiavi. Dopo aver creato il nuovo set di chiavi, viene ripristinato il comportamento gestito da keyset all'interno di tale set di chiavi.  
   
- Si supponga, ad esempio, un set di risultati include 1.000 righe e utilizza un cursore misto con una dimensione del keyset pari a 100 e un set di righe pari a 10. Quando vengono recuperati il primo set di righe, il cursore viene creato un keyset costituito dalle chiavi per le prime 100 righe. Restituisce quindi le prime 10 righe, come richiesto.  
+ Si supponga, ad esempio, un set di risultati include 1.000 righe e Usa un cursore misto con una dimensione del keyset pari a 100 e una dimensione di set di righe pari a 10. Quando il primo set di righe viene recuperato, il cursore viene creato un keyset costituito dalle chiavi per le prime 100 righe. Restituisce quindi le prime 10 righe, come richiesto.  
   
- Si supponga ora che un'altra applicazione elimina le righe 11 101. Se il cursore tenta di recuperare la riga 11, verificherà un foro perché ha una chiave per questa riga, ma non esiste alcuna riga. si tratta di comportamento basati su keyset. Se il cursore tenta di recuperare la riga 101, il cursore non rileverà che la riga non è disponibile perché non è una chiave per la riga. In alternativa, consente di recuperare che in precedenza era riga 102. Si tratta del comportamento del cursore dinamico.  
+ Ora si supponga che un'altra applicazione Elimina righe 11 e 101. Se il cursore tenta di recuperare la riga 11, che si verificherà un problema perché ha una chiave per questa riga, ma non esiste alcuna riga. Questo è gestito da keyset comportamento. Se il cursore tenta di recuperare la riga 101, il cursore non rileverà che la riga è manca perché non dispone di una chiave per la riga. In alternativa, consente di recuperare che in precedenza era riga 102. Si tratta del comportamento del cursore dinamico.  
   
  Un cursore misto è equivalente a un cursore gestito da keyset quando la dimensione del keyset è uguale alla dimensione del set di risultati. Un cursore misto è equivalente a un cursore dinamico quando la dimensione del keyset è uguale a 1.

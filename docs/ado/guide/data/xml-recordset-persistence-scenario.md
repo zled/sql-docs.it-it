@@ -1,35 +1,32 @@
 ---
-title: Scenario di persistenza Recordset XML | Documenti Microsoft
+title: Scenario di persistenza Recordset XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence scenario
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c16d37a0ded8b8a4a24666a426e123505eeff8f0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 252df4b5133861b6ff9892600bfe1c53206fefec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273410"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789219"
 ---
-# <a name="xml-recordset-persistence-scenario"></a>Scenario di persistenza Recordset XML
-In questo scenario, si creerà un'applicazione di pagine ASP (Active Server) che consente di salvare il contenuto di un oggetto Recordset direttamente all'oggetto ASP Response.  
+# <a name="xml-recordset-persistence-scenario"></a>Scenario di persistenza di recordset XML
+In questo scenario si creerà un'applicazione Active Server Pages (ASP) che consente di salvare il contenuto di un oggetto Recordset direttamente per l'oggetto risposta ASP.  
   
 > [!NOTE]
->  Questo scenario richiede che il server Internet Information Server 5.0 (IIS) o versione successiva.  
+>  Questo scenario richiede che il server installato Internet Information Server 5.0 (IIS) o versione successiva.  
   
- L'oggetto Recordset restituito viene visualizzato in Internet Explorer utilizzando un [oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md).  
+ Il set di record restituito viene visualizzato in Internet Explorer tramite una [oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md).  
   
  I passaggi seguenti sono necessari per creare questo scenario:  
   
@@ -42,10 +39,10 @@ In questo scenario, si creerà un'applicazione di pagine ASP (Active Server) che
 -   Ricevere e visualizzare i dati  
   
 ## <a name="step-1-set-up-the-application"></a>Passaggio 1: Configurare l'applicazione  
- Creare una directory virtuale IIS denominata "XMLPersist" con le autorizzazioni script. Creare due nuovi file di testo nella cartella a cui punta la directory virtuale, denominati "XMLResponse," l'altra denominata "Default.htm."  
+ Creare una directory virtuale IIS denominata "XMLPersist" con script per autorizzazioni. Creare due nuovi file di testo nella cartella a cui punta la directory virtuale, denominati "XMLResponse," l'altra denominata "default. htm."  
   
 ## <a name="step-2-get-the-data"></a>Passaggio 2: Ottenere i dati  
- In questo passaggio si scriverà il codice per aprire un Recordset ADO e preparare inviare al client. Aprire il file XMLResponse con un editor di testo, ad esempio Blocco note e inserire il codice seguente.  
+ In questo passaggio si scriverà il codice per aprire un Recordset ADO e preparazione per l'invio al client. Aprire il file XMLResponse con un editor di testo, ad esempio Blocco note e inserire il codice seguente.  
   
 ```  
 <%@ language="VBScript" %>  
@@ -69,12 +66,12 @@ In questo scenario, si creerà un'applicazione di pagine ASP (Active Server) che
   adoRec.Open strSQL, adoCon, adOpenStatic, adLockOptimistic, adCmdText  
 ```  
   
- Assicurarsi di modificare il valore della `Data Source` parametro `strCon` per il nome del computer di Microsoft SQL Server.  
+ Assicurarsi di modificare il valore della `Data Source` parametro in `strCon` sul nome del computer di Microsoft SQL Server.  
   
  Mantenere il file aperto e procedere al passaggio successivo.  
   
 ## <a name="step-3-send-the-data"></a>Passaggio 3: Inviare i dati  
- Dopo aver creato un oggetto Recordset, è necessario inviare al client mediante il salvataggio in formato XML nell'oggetto ASP Response. Aggiungere il codice seguente alla fine della XMLResponse.  
+ Dopo aver creato un set di record, è necessario inviare al client tramite il salvataggio in formato XML per l'oggetto risposta ASP. Aggiungere il codice seguente alla fine della XMLResponse.  
   
 ```  
   Response.ContentType = "text/xml"  
@@ -88,12 +85,12 @@ In questo scenario, si creerà un'applicazione di pagine ASP (Active Server) che
 %>  
 ```  
   
- Si noti che l'oggetto risposta ASP viene specificato come destinazione per il Recordset [metodo Save](../../../ado/reference/ado-api/save-method.md). La destinazione del metodo Save può essere qualsiasi oggetto che supporta l'interfaccia IStream, ad esempio un oggetto ADO [flusso ADO (Object)](../../../ado/reference/ado-api/stream-object-ado.md), o un nome di file che include il percorso completo al quale viene salvato il Recordset.  
+ Si noti che l'oggetto risposta ASP è specificato come destinazione per il Recordset [metodo Save](../../../ado/reference/ado-api/save-method.md). La destinazione del metodo Save può essere qualsiasi oggetto che supporta l'interfaccia IStream, ad esempio un oggetto ADO [oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md), o un nome di file che include il percorso completo al quale viene salvato il Recordset.  
   
- Salvare e chiudere XMLResponse prima di procedere al passaggio successivo. Inoltre è possibile copiare il file Adovbs dalla cartella di installazione predefinito ADO libreria nella stessa cartella in cui è stato salvato il file XMLResponse.  
+ Salvare e chiudere XMLResponse prima di procedere al passaggio successivo. Copiare anche il file Adovbs dalla cartella di installazione della libreria ADO predefinito nella stessa cartella in cui è stato salvato il file XMLResponse.  
   
 ## <a name="step-4-receive-and-display-the-data"></a>Passaggio 4: Ricevere e visualizzare i dati  
- In questo passaggio si creerà un file HTML con incorporato [oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto che punta al file XMLResponse per ottenere l'oggetto Recordset. Aprire default.htm con un editor di testo, ad esempio Blocco note e aggiungere il codice seguente. Sostituire "sqlserver" nell'URL con il nome del server.  
+ In questo passaggio si creerà un file HTML con un embedded [oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto che punta al file XMLResponse per ottenere il Recordset. Aprire Default. htm con un editor di testo, ad esempio Blocco note e aggiungere il codice seguente. Sostituire "sqlserver" nell'URL con il nome del server.  
   
 ```  
 <HTML>  
@@ -114,8 +111,8 @@ In questo scenario, si creerà un'applicazione di pagine ASP (Active Server) che
 </HTML>  
 ```  
   
- Chiudere il file default.htm e salvarlo nella stessa cartella in cui è stato salvato XMLResponse. Utilizzare Internet Explorer 4.0 o versioni successive, aprire l'URL http://*sqlserver*/XMLPersist/default.htm e osservare i risultati. I dati vengono visualizzati in una tabella DHTML associata. Aprire l'URL http:// *sqlserver* /XMLPersist/XMLResponse.asp e osservare i risultati. Viene visualizzato il codice XML.  
+ Chiudere il file default. htm e salvarlo nella stessa cartella in cui è stato salvato XMLResponse. Usando Internet Explorer 4.0 o versioni successive, aprire l'URL http://*sqlserver*/XMLPersist/default.htm e osservare i risultati. I dati vengono visualizzati in una tabella DHTML associata. A questo punto aprire l'URL http:// *sqlserver* /XMLPersist/XMLResponse.asp e osservare i risultati. Viene visualizzato il codice XML.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Save (metodo)](../../../ado/reference/ado-api/save-method.md)   
+ [Metodo Save](../../../ado/reference/ado-api/save-method.md)   
  [Persistenza di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

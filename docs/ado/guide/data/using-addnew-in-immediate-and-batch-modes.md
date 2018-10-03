@@ -1,13 +1,11 @@
 ---
-title: Utilizzo di AddNew nell'immediato e la modalità Batch | Documenti Microsoft
+title: Uso dei metodi AddNew nell'immediato e modalità Batch | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AddNew method [ADO]
@@ -15,20 +13,19 @@ helpviewer_keywords:
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54a57f3ae4d5c7ffb7ec1a8de47567ec904cadc4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6295e4499a6f6f25f9111497012f2e9f1d6dc421
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273280"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616650"
 ---
-# <a name="using-addnew-in-immediate-and-batch-modes"></a>Utilizzo di AddNew nell'immediato e la modalità Batch
-Il comportamento del **AddNew** metodo dipende dalla modalità di aggiornamento del **Recordset** oggetto e se si passa il *elenco campi* e *valori*argomenti.  
+# <a name="using-addnew-in-immediate-and-batch-modes"></a>Uso di AddNew in modalità batch e immediata
+Il comportamento dei **AddNew** metodo dipende dalla modalità di aggiornamento del **Recordset** oggetto e se si passa il *FieldList* e *valori*argomenti.  
   
- In modalità di aggiornamento immediato (in cui il provider scrive le modifiche all'origine dati sottostante dopo aver chiamato il **aggiornare** metodo), la chiamata il **AddNew** metodo senza argomenti imposta il  **EditMode** proprietà **adEditAdd.** Il provider memorizza nella cache qualsiasi valore di campo modificato in locale. Chiamata di **aggiornamento** metodo invia il nuovo record nel database e reimposta il **EditMode** proprietà **adEditNone.** Se si passa il *elenco campi* e *valori* argomenti, ADO invia immediatamente il nuovo record per il database (non **aggiornamento** è necessario chiamare); il **EditMode**  valore proprietà non viene modificato (**adEditNone**).  
+ In modalità di aggiornamento immediato (in cui il provider scrive le modifiche all'origine dati sottostante non appena viene chiamato il **aggiornare** metodo), la chiamata il **AddNew** metodo senza argomenti imposta il  **Proprietà EditMode** proprietà **adEditAdd.** Il provider di memorizza nella cache qualsiasi valore di campo modificato in locale. Chiama il **Update** metodo invia il nuovo record nel database e reimposta il **EditMode** proprietà **adEditNone.** Se si passa il *FieldList* e *valori* argomenti, ADO genera immediatamente il nuovo record nel database (nessun **Update** è necessario chiamare); il **EditMode**  non modifica il valore di proprietà (**adEditNone**).  
   
- In modalità di aggiornamento batch, la chiamata di **AddNew** metodo senza argomenti imposta la **EditMode** proprietà **adEditAdd**. Il provider memorizza nella cache qualsiasi valore di campo modificato in locale. La chiamata di **aggiornamento** metodo aggiunge il nuovo record corrente **Recordset** e reimposta il **EditMode** proprietà **adEditNone**, ma il provider invia le modifiche al database sottostante fino a quando non si chiama il **UpdateBatch** metodo. Se si passa il *elenco campi* e *valori* argomenti, ADO invia il nuovo record per il provider di archiviazione in una cache, è necessario chiamare il **UpdateBatch** per registrare il nuovo (metodo) registrare il database sottostante. Per ulteriori informazioni su **aggiornamento** e **UpdateBatch**, vedere [aggiornamento e il mantenimento dati](../../../ado/guide/data/updating-and-persisting-data.md).
+ In modalità di aggiornamento batch, chiama il **AddNew** metodo senza argomenti imposta il **EditMode** proprietà **adEditAdd**. Il provider di memorizza nella cache qualsiasi valore di campo modificato in locale. Chiama il **Update** metodo aggiunge il nuovo record corrente **Recordset** e reimposta il **EditMode** proprietà **adEditNone**, ma il provider invia le modifiche al database sottostante fino a quando non si chiama il **UpdateBatch** (metodo). Se si passa il *FieldList* e *valori* argomenti, ADO invia il nuovo record per il provider per l'archiviazione in una cache, è necessario chiamare il **UpdateBatch** per registrare il nuovo metodo registrare il database sottostante. Per altre informazioni sulle **Update** e **UpdateBatch**, vedere [aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).
