@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.drillthrough.f1
 ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 331ab6da3e2e244f3a0413d80006ceeb907704f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d26fcb3d26570adafe340f190e7a91c82fd2ef3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151472"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066955"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Finestra di dialogo Drill-through (Visualizzatore modello di data mining)
   Quando si visualizza un modello di data mining tramite la scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining, è possibile eseguire il drill through ai dettagli dei dati del case, purché nel modello sia abilitato il drill-through. Inoltre se nella struttura di data mining sottostante è abilitato il drill-through, è anche possibile visualizzare colonne non incluse nel modello di data mining. Nell'elenco delle colonne, le colonne della struttura sono precedute dall'etichetta "Structure." etichetta.  

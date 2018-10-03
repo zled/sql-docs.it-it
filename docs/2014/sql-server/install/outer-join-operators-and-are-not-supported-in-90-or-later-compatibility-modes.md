@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - outer joins
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - '*= join'
 - joins [SQL Server]
 ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 579565320855694166f57039402e3fbef14183d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc4cab3fac4a49535b2178332b6e355ed95647b7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255443"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064901"
 ---
-# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Operatori outer join *= e =* non sono supportati nella modalità di compatibilità 90 o successiva
+# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Gli operatori di outer join *= e =* non sono supportati in modalità di compatibilità 90 o successiva
   Preparazione aggiornamento è stato rilevato l'utilizzo di operatori outer join * = e =\*. Tali operatori non sono supportati nella modalità di compatibilità 90 o successiva Quando si esegue l'aggiornamento, la modalità di compatibilità dei database utente non cambia. Le istruzioni in cui sono utilizzati questi operatori non riusciranno.  
   
 ## <a name="component"></a>Componente  

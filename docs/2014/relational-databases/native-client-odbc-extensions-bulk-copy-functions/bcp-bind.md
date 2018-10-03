@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_bind
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 118b0a076a4a3f1cc377fc0407f83d1fe23d766c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ff7fe566c7547dc4e0755762d37764cd8b5bc50b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416330"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069731"
 ---
 # <a name="bcpbind"></a>bcp_bind
   Vengono associati dati provenienti da una variabile di programma a una colonna di tabella per eseguire la copia bulk in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -70,7 +67,7 @@ idxServerCol
  *pData*  
  Puntatore ai dati copiati. Se *eDataType* è SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR o SQLIMAGE, *pData* può essere NULL. Un valore NULL *pData* indica che i valori di dati long verranno inviati al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in blocchi mediante [bcp_moretext](bcp-moretext.md). L'utente deve solo impostare *pData* su NULL se la colonna che corrisponde al campo associato dell'utente è una colonna BLOB in caso contrario **bcp_bind** avrà esito negativo.  
   
- Se presenti nei dati, gli indicatori vengono visualizzati in memoria direttamente prima dei dati. Il *pData* parametro fa riferimento alla variabile dell'indicatore in questo caso e la larghezza dell'indicatore, il *cbIndicator* parametro, viene usato dalla copia bulk indirizzare i dati utente in modo corretto.  
+ Se presenti nei dati, gli indicatori vengono visualizzati in memoria direttamente prima dei dati. Il *pData* parametro fa riferimento alla variabile indicatore in questo caso e la larghezza dell'indicatore, il *cbIndicator* parametro, viene utilizzato correttamente da copia di massa di dati di indirizzo dell'utente.  
   
  *cbIndicator*  
  Lunghezza, espressa in byte, di un indicatore di lunghezza o Null per i dati della colonna. Valori di lunghezza di indicatore validi sono 0 (nel caso in cui non venga utilizzato un indicatore), 1, 2, 4 o 8. Gli indicatori vengono visualizzati in memoria direttamente prima di qualsiasi dato. La definizione del tipo di struttura seguente, ad esempio, potrebbe essere utilizzata per inserire valori integer in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la copia bulk:  
@@ -83,7 +80,7 @@ typedef struct tagBCPBOUNDINT
     } BCPBOUNDINT;  
 ```  
   
- Nel caso di esempio, il *pData* parametro verrà impostato per l'indirizzo di un'istanza dichiarata della struttura, l'indirizzo del BCPBOUNDINT *iIndicator* membro della struttura. Il *cbIndicator* parametro verrà impostato per la dimensione di un numero intero (sizeof e il *cbData* parametro verrebbe impostato nuovamente alle dimensioni di un numero intero (sizeof. Per la copia bulk il valore di una riga nel server che contiene un valore NULL per la colonna associata, il valore dell'istanza *iIndicator* membro deve essere impostato su SQL_NULL_DATA.  
+ Nel caso di esempio, il *pData* parametro verrà impostato per l'indirizzo di un'istanza della struttura, l'indirizzo dei BCPBOUNDINT dichiarata *iIndicator* membro della struttura. Il *cbIndicator* parametro verrà impostato per la dimensione di un numero intero (sizeof(int)) e la *cbData* nuovo parametro viene impostato sulla dimensione di un intero (sizeof(int)). Per la copia bulk il valore di una riga nel server che contiene un valore NULL per la colonna associata, il valore dell'istanza *iIndicator* membro deve essere impostato su SQL_NULL_DATA.  
   
  *cbData*  
  Numero di byte dei dati nella variabile di programma che non include la lunghezza di un carattere di terminazione o di un indicatore di lunghezza o Null.  
@@ -96,16 +93,16 @@ typedef struct tagBCPBOUNDINT
   
  Per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caratteri e tipi di dati binari *cbData* può essere SQL_VARLEN_DATA, SQL_NULL_DATA, un valore positivo o 0. Se *cbData* è SQL_VARLEN_DATA, il sistema utilizza un indicatore di lunghezza o null (se presente) o una sequenza di caratteri di terminazione per determinare la lunghezza dei dati. Se vengono forniti entrambi, il sistema utilizza quello che comporta la copia del minori numero di dati. Se *cbData* è SQL_VARLEN_DATA, il tipo di dati della colonna è una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carattere o binario e né un indicatore di lunghezza né una sequenza di caratteri di terminazione è specificata, il sistema restituisce un messaggio di errore.  
   
- Se *cbData* è 0 o un valore positivo, il sistema Usa *cbData* come la lunghezza dei dati. Tuttavia, se, oltre a un numero positivo *cbData* valore, una sequenza di carattere di terminazione o di un indicatore di lunghezza viene specificata, il sistema determina la lunghezza dei dati tramite il metodo che restituisce la quantità minima di dati da copiare.  
+ Se *cbData* è 0 o un valore positivo, il sistema utilizza *cbData* come la lunghezza dei dati. Tuttavia, se, oltre a un numero positivo *cbData* valore, viene fornita una sequenza di lunghezza indicatore o terminazione, il sistema determina la lunghezza dei dati utilizzando il metodo che determina la quantità minima di dati da copiare.  
   
- Il *cbData* valore del parametro rappresenta il numero di byte di dati. Se i dati di tipo carattere vengono rappresentati come caratteri wide Unicode, un numero positivo *cbData* parametro value rappresenta il numero di caratteri moltiplicato per la dimensione in byte di ogni carattere.  
+ Il *cbData* il valore del parametro rappresenta il numero di byte di dati. Se i dati di carattere sono rappresentati da caratteri "wide" Unicode, quindi un valore positivo *cbData* il valore del parametro rappresenta il numero di caratteri moltiplicato per la dimensione in byte di ogni carattere.  
   
  *pTerm*  
  Puntatore al modello di byte, se presente, che contrassegna la fine di questa variabile di programma. Le stringhe ANSI e MBCS C, ad esempio, presentano generalmente un carattere di terminazione di 1 byte (\0).  
   
- Se non è presente alcun carattere di terminazione per la variabile, impostare *pTerm* su NULL.  
+ Se non c'è nessun carattere di terminazione per la variabile, impostare *pTerm* su NULL.  
   
- È possibile utilizzare una stringa vuota ("") per definire il carattere di terminazione Null C come carattere di terminazione della variabile di programma. Poiché la stringa vuota con terminazione null costituisce un solo byte (il byte di terminazione stesso), impostare *cbTerm* su 1. Ad esempio, per indicare che la stringa nel *szName* è con terminazione null e che il carattere di terminazione deve essere utilizzato per indicare la lunghezza:  
+ È possibile utilizzare una stringa vuota ("") per definire il carattere di terminazione Null C come carattere di terminazione della variabile di programma. Poiché la stringa con terminazione null costituisce un singolo byte (il terminatore stesso), impostare *cbTerm* su 1. Ad esempio, per indicare che la stringa in *szName* è con terminazione null e che il carattere di terminazione deve essere utilizzato per indicare la lunghezza:  
   
 ```  
 bcp_bind(hdbc, szName, 0,  
@@ -113,7 +110,7 @@ bcp_bind(hdbc, szName, 0,
    SQLCHARACTER, 2)  
 ```  
   
- Una forma nonterminated di questo esempio potrebbe indicare che 15 caratteri essere copiate dal *szName* variabile nella seconda colonna della tabella associata:  
+ Un modulo nonterminated di questo esempio potrebbe indicare che copiare da 15 caratteri il *szName* variabile alla seconda colonna della tabella associata:  
   
 ```  
 bcp_bind(hdbc, szName, 0, 15,   
@@ -163,7 +160,7 @@ bcp_bind(hdbc, szName, 0,
   
  Per i nuovi tipi di valori di grandi dimensioni, ad esempio `varchar(max)`, `varbinary(max)`, o `nvarchar(max)`, è possibile utilizzare SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY e SQLNCHAR come indicatori di tipo nel *eDataType* parametro.  
   
- Se *cbTerm* è diverso da 0, qualsiasi valore (1, 2, 4 o 8) non è valido per il prefisso (*cbIndicator*). In questa situazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verrà ricercare il carattere di terminazione, calcolare la lunghezza dei dati rispetto al carattere di terminazione del (*ho*) e impostare il *cbData* sul valore più piccolo di i e il valore di prefisso.  
+ Se *cbTerm* è diverso da 0, qualsiasi valore (1, 2, 4 o 8) non è valido per il prefisso (*cbIndicator*). In questo caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verrà Cerca il carattere di terminazione, calcolare la lunghezza dei dati per il carattere di terminazione (*i*) e impostare il *cbData* al valore più piccolo di i e il valore di prefisso.  
   
  Se *cbTerm* è 0 e *cbIndicator* (il prefisso) non è 0, *cbIndicator* deve essere 8. Al prefisso a 8 byte possono essere assegnati i valori seguenti:  
   
@@ -184,7 +181,7 @@ bcp_bind(hdbc, szName, 0,
  La chiamata [bcp_columns](bcp-columns.md) quando si usa **bcp_bind** provoca un errore.  
   
 ## <a name="bcpbind-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_bind per le caratteristiche avanzate di data e ora  
- Per informazioni sui tipi utilizzati con il *eDataType* parametro per i tipi data/ora, vedere [modifiche apportate alla copia Bulk per avanzate di data e ora tipi &#40;OLE DB e ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Per informazioni sui tipi utilizzati con il *eDataType* parametro per i tipi di data/ora, vedere [modifiche di copia di massa per i tipi di tempo ed Enhanced Data &#40;OLE DB e ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
  Per altre informazioni, vedere [data e miglioramenti per la fase &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

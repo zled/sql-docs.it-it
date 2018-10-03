@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae026e24210385a24b53f9ddf0cf1533a0e27e40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e7a40b0cbcab787b6aa29abaa828aedcce8f5c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178928"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069632"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilità di configurazione del server (componenti aggiuntivi data mining per Excel)
   Quando si installano i componenti aggiuntivi Data Mining per Excel, viene installata anche l'utilità di configurazione del server che viene eseguita quando si aprono per la prima volta i componenti aggiuntivi. In questo argomento viene descritto come utilizzare l'utilità per connettersi a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e impostare un database per l'utilizzo dei modelli di data mining.  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 566d202fcc38fd3bba6c75e40bb01062e760fd09
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4df9c58eb7832438253fc39bf6c68e8268ff2671
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395714"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067407"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Risolvere i problemi di memoria insufficiente
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] usa più memoria e in modi diversi rispetto a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile che la quantità di memoria installata e allocata per [!INCLUDE[hek_2](../../includes/hek-2-md.md)] diventi inadeguata con l'aumentare delle esigenze. In tal caso, è possibile che la memoria risulti insufficiente. In questo argomento viene descritto come risolvere una situazione di memoria insufficiente. Per le linee guida che consentono di evitare molte situazioni di memoria insufficiente, vedere [Monitorare e risolvere i problemi relativi all'utilizzo della memoria](monitor-and-troubleshoot-memory-usage.md) .  
@@ -87,7 +84,7 @@ ms.locfileid: "40395714"
 #### <a name="free-up-existing-memory"></a>Liberare memoria esistente  
   
 ##### <a name="delete-non-essential-memory-optimized-table-rows-and-wait-for-garbage-collection"></a>Eliminare le righe non essenziali delle tabelle con ottimizzazione per la memoria e attendere la procedura di Garbage Collection  
- È possibile rimuovere le righe non essenziali da una tabella con ottimizzazione per la memoria. Il Garbage Collector restituisce la memoria usata da queste righe alla memoria disponibile. , Il motore OLTP in memoria raccoglie rapidamente le righe di Garbage Collection. Tuttavia, una transazione con esecuzione prolungata può impedire il processo di Garbage Collection. Ad esempio, se si dispone di una transazione che viene eseguita per 5 minuti, tutte le versioni di riga create a causa delle operazioni di aggiornamento/eliminazione mentre la transazione è attiva non possono essere sottoposte al processo di Garbage Collection.  
+ È possibile rimuovere le righe non essenziali da una tabella con ottimizzazione per la memoria. Il Garbage Collector restituisce la memoria usata da queste righe alla memoria disponibile. . Il motore OLTP in memoria raccoglie rapidamente le righe di Garbage Collection. Tuttavia, una transazione con esecuzione prolungata può impedire il processo di Garbage Collection. Ad esempio, se si dispone di una transazione che viene eseguita per 5 minuti, tutte le versioni di riga create a causa delle operazioni di aggiornamento/eliminazione mentre la transazione è attiva non possono essere sottoposte al processo di Garbage Collection.  
   
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>Spostare una o più righe in una tabella basata su disco  
  Gli articoli di Technet riportati di seguito offrono istruzioni sullo spostamento di righe da una tabella ottimizzata per la memoria a una tabella basata su disco.  

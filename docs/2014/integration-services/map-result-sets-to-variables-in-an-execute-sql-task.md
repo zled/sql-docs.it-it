@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cdd76b3f0b1665fa6336e82536ca474c0b5e1fab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a166c760ecb3dafabbfaa8e131f1a8948429dc61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277377"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069657"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Mapping di set di risultati a variabili in un'attività Esegui SQL
   Questo argomento descrive la procedura per il mapping di un set di risultati a una variabile in un'attività Esegui SQL. Se su un set di risultati viene eseguito il mapping a una variabile, sarà disponibile anche per altri elementi nel pacchetto. Si consideri ad esempio un'attività Script contenente uno script in grado di leggere la variabile e quindi utilizzare i valori del set di risultati oppure un'origine XML in grado di utilizzare il set di risultati archiviato in una variabile. Se viene generato da un pacchetto padre, il set di risultati potrà essere reso disponibile a un pacchetto figlio chiamato da un'attività Esegui pacchetto mappando tale set di risultati a una variabile nel pacchetto padre e quindi creando nel pacchetto figlio una configurazione Variabile pacchetto padre, per l'archiviazione del valore della variabile padre.  
@@ -39,7 +36,7 @@ ms.locfileid: "37277377"
 3.  Fare clic sulla scheda **Flusso di controllo** .  
   
 4.  Se il pacchetto non include già un'attività Esegui SQL, aggiungerne una al flusso di controllo del pacchetto. Per altre informazioni, vedere [aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  ,  
+  .  
   
 5.  Fare doppio clic sull'attività Esegui SQL.  
   
