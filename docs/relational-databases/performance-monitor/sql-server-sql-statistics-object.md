@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:SQL Statistics
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 32a3d6216f05f8cb02d50a932a5c14f0fc91e442
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 963e5ab6343b7baaef1b2c02b00dc48f7c12347e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952826"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657549"
 ---
 # <a name="sql-server-sql-statistics-object"></a>Oggetto SQL Statistics di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ ms.locfileid: "32952826"
   
  Nella tabella seguente sono elencati i contatori dell'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **di** .  
   
-|Contatori dell'oggetto SQL Statistics|Description|  
+|Contatori dell'oggetto SQL Statistics|Descrizione|  
 |----------------------------------------|-----------------|  
 |**Tentativi parametrizzazioni automatiche/sec**|Numero di tentativi di parametrizzazione automatica al secondo. Il totale deve corrispondere alla somma delle parametrizzazioni automatiche non riuscite, sicure e non sicure. Una parametrizzazione automatica si verifica quando in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito un tentativo di parametrizzazione di una richiesta [!INCLUDE[tsql](../../includes/tsql-md.md)] tramite la sostituzione di alcuni valori letterali con parametri in modo da consentire il riutilizzo del piano di esecuzione memorizzato nella cache risultante in più richieste con struttura simile. Si noti che nelle versioni più recenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le parametrizzazioni automatiche sono note anche come parametrizzazioni semplici. Sono escluse le parametrizzazioni forzate.|  
 |**Richieste batch/sec**|Numero di batch di comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] ricevuti al secondo. Il valore dipende da tutti i vincoli (I/O, numero di utenti, dimensioni della cache, complessità delle richieste e così via). Un valore elevato indica una velocità effettiva ottimale.|  
