@@ -1,13 +1,11 @@
 ---
-title: Oggetto asse (ADO MD) | Documenti Microsoft
+title: Oggetto Axis (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,39 +13,38 @@ f1_keywords:
 helpviewer_keywords:
 - Axis object [ADO MD]
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66dfcb418d7a440b260956d411ae87b9601d4274
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cccbbd4d87c930ac38aadd1ec9f58dab26bcce1a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283370"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701685"
 ---
-# <a name="axis-object-ado-md"></a>Oggetto asse (ADO MD)
-Rappresenta una posizione o l'asse filtro di un set di celle contenente i membri selezionati di una o più dimensioni.  
+# <a name="axis-object-ado-md"></a>Oggetto Axis (ADO MD)
+Rappresenta un posizionali o asse di filtro di un set di celle, che contiene i membri selezionati di una o più dimensioni.  
   
-## <a name="remarks"></a>Remarks  
- Un **asse** oggetto può essere contenuto da un [assi](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) insieme, o restituiti dal [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) proprietà di un [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
+## <a name="remarks"></a>Note  
+ Un **asse** oggetto può essere contenuto da un [assi](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) raccolta, o restituiti dai [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) proprietà di un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
- Raccolte e le proprietà di un **asse** dell'oggetto, è possibile eseguire le operazioni seguenti:  
+ Con le raccolte e le proprietà di un **asse** dell'oggetto, è possibile eseguire le operazioni seguenti:  
   
--   Identificare il **asse** con il [nome](../../../ado/reference/ado-md-api/name-property-ado-md.md) proprietà.  
+-   Identificare le **asse** con il [nome](../../../ado/reference/ado-md-api/name-property-ado-md.md) proprietà.  
   
--   Scorrere ogni posizione lungo un **asse** utilizzando il [posizioni](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) insieme.  
+-   Eseguire un'iterazione in ogni posizione lungo un **asse** usando la [posizioni](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) raccolta.  
   
--   Ottenere il numero di dimensioni nel **asse** con il [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) proprietà.  
+-   Ottenere il numero di dimensioni nei **asse** con il [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) proprietà.  
   
--   Attributi specifici del provider di ottenere il **asse** con ADO standard [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) insieme.  
+-   Ottenere gli attributi specifici del provider del **asse** con l'oggetto ADO standard [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta.  
   
- In questa sezione contiene l'argomento seguente.  
+ In questa sezione contiene gli argomenti seguenti.  
   
 -   [Proprietà, metodi ed eventi](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di asse (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Raccolta assi (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
- [Raccolta di posizioni (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
+ [Esempio di Axis (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [Raccolta Axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
+ [Raccolta Positions (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
  [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

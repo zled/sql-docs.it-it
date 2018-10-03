@@ -1,13 +1,11 @@
 ---
-title: Metodo supportsCatalogsInDataManipulation | Documenti Microsoft
+title: Metodo supportsCatalogsInDataManipulation | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsCatalogsInDataManipulation
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ee1af47a-4c04-4391-83a5-54ced80218c8
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8cad553df9e993c7e2d4cdc700c9d90c0812ace3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c35d0f312dde450f33c9c295e092d9bc594b87f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847306"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826919"
 ---
 # <a name="supportscatalogsindatamanipulation-method-sqlserverdatabasemetadata"></a>Metodo supportsCatalogsInDataManipulation (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,8 +41,8 @@ public boolean supportsCatalogsInDataManipulation()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo supportsCatalogInDataManipulation viene specificato dal metodo nell'interfaccia DatabaseMetaData supportsCatalogInDataManipulation.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo supportsCatalogInDataManipulation viene specificato dal metodo supportsCatalogInDataManipulation nell'interfaccia DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

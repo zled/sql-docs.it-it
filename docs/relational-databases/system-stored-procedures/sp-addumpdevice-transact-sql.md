@@ -1,14 +1,11 @@
 ---
-title: sp_addumpdevice (Transact-SQL) | Documenti Microsoft
+title: sp_addumpdevice (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
@@ -19,21 +16,20 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbf23913e95b53e490d55099cde44b5ab60d3141
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f5d8fe09af9133bd0a4f4a2c6a11824f16963698
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240131"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649859"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Viene aggiunto un dispositivo di backup a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -53,9 +49,9 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@devtype=** ] **'***device_type***'**  
- Tipo di dispositivo di backup. *device_type* viene **varchar (20)** e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
+ Tipo di dispositivo di backup. *device_type* viene **varchar (20)** e non prevede alcun valore predefinito e può essere uno dei valori seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**disk**|File del disco rigido impostato come dispositivo di backup.|  
 |**tape**|Qualsiasi dispositivo nastro supportato da [!INCLUDE[msCoName](../../includes/msconame-md.md)].<br /><br /> Nota: il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
@@ -64,11 +60,11 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  Nome logico del dispositivo di backup utilizzato nelle istruzioni BACKUP e RESTORE. *nome_logico* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
   
  [  **@physicalname =** ] **'***physical_name***'**  
- Nome fisico del dispositivo di backup. I nomi fisici devono essere conformi alle regole per i nomi di file del sistema operativo o alle convenzioni di denominazione universali per i dispositivi di rete e devono includere un percorso completo. *physical_name* viene **nvarchar(260)**, non prevede alcun valore predefinito, il valore e non può essere NULL.  
+ Nome fisico del dispositivo di backup. I nomi fisici devono essere conformi alle regole per i nomi di file del sistema operativo o alle convenzioni di denominazione universali per i dispositivi di rete e devono includere un percorso completo. *physical_name* viene **nvarchar(260)**, non prevede alcun valore predefinito valore e non può essere NULL.  
   
  Quando si crea un dispositivo di backup in un percorso di rete remoto, assicurarsi che all'account specificato per l'avvio di [!INCLUDE[ssDE](../../includes/ssde-md.md)] siano associate le autorizzazioni di scrittura necessarie nel computer remoto.  
   
- Se si aggiunge un dispositivo nastro, questo parametro deve essere il nome fisico assegnato al dispositivo nastro locale in Windows. ad esempio,  **\\ \\. \TAPE0** per il primo dispositivo nastro nel computer. Il dispositivo nastro deve essere collegato al computer server. Non può pertanto essere utilizzato in remoto. I nomi contenenti caratteri non alfanumerici devono essere racchiusi tra virgolette.  
+ Se si aggiunge un dispositivo nastro, questo parametro deve essere il nome fisico assegnato al dispositivo nastro locale da Windows; ad esempio,  **\\ \\. \TAPE0** per il primo dispositivo nastro nel computer. Il dispositivo nastro deve essere collegato al computer server. Non può pertanto essere utilizzato in remoto. I nomi contenenti caratteri non alfanumerici devono essere racchiusi tra virgolette.  
   
 > [!NOTE]  
 >  Questa procedura consente di immettere nel catalogo il nome fisico specificato ma non di accedere o creare il dispositivo.  
@@ -83,9 +79,9 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_addumpdevice** aggiunge un dispositivo di backup per il **Sys. backup_devices** vista del catalogo. È possibile includere riferimenti logici al dispositivo nelle istruzioni BACKUP e RESTORE. **sp_addumpdevice** non esegue alcun accesso al dispositivo fisico. L'accesso al dispositivo specificato avviene solo quando viene eseguita un'istruzione BACKUP o RESTORE. La creazione di un dispositivo di backup logico consente di semplificare le istruzioni BACKUP e RESTORE. L'indicazione del nome di dispositivo costituisce infatti un'alternativa all'utilizzo della clausola "TAPE =" o "DISK =" per specificare il percorso del dispositivo.  
   
  Eventuali problemi correlati alla proprietà e alle autorizzazioni possono interferire con l'utilizzo di dispositivi di backup su disco o su file. Assicurarsi che all'account di Windows utilizzato per l'avvio di [!INCLUDE[ssDE](../../includes/ssde-md.md)] siano associate le autorizzazioni per i file appropriate.  
@@ -96,9 +92,9 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  **sp_addumpdevice** non può essere eseguita all'interno di una transazione.  
   
- Per eliminare un dispositivo, usare [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) o[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md).  
+ Per eliminare un dispositivo, usare [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) oppure[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo predefinito del server **diskadmin** .  
   
  Richiede l'autorizzazione di scrittura sul disco.  
@@ -151,7 +147,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [Definizione di un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [Definire un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
  [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   

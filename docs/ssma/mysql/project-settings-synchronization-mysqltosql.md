@@ -1,113 +1,107 @@
 ---
-title: Impostazioni (sincronizzazione) (MySQLToSQL) del progetto | Documenti Microsoft
+title: Impostazioni (sincronizzazione) (MySQLToSQL) del progetto | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 16ddb4db77140eb57c893d68d954b538db2f418a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 630700b4541bf804ca9dd5b1b6c6ca705412643c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776197"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792559"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>Impostazioni del progetto (sincronizzazione) (MySQLToSQL)
-La sincronizzazione **le impostazioni del progetto** consentono di configurare la modalità di sincronizzazione degli oggetti di database MySQL con gli oggetti di database di SQL Server.  
+La sincronizzazione **impostazioni del progetto** consentono di configurare la modalità di sincronizzazione degli oggetti di database MySQL con gli oggetti di database di SQL Server.  
   
-Le azioni predefinite specificano le impostazioni predefinite per l'aggiornamento di oggetti dal database di MySQL e per la sincronizzazione degli oggetti con il database di SQL Server. Per altre informazioni, vedere [aggiornamento dal database di &#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)  
+Le azioni predefinite specificano le impostazioni predefinite per l'aggiornamento di oggetti dal database di MySQL e per la sincronizzazione degli oggetti con il database di SQL Server. Per altre informazioni, vedere [aggiornare dal database &#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)  
   
 È possibile accedere a due diverse pagine di sincronizzazione che contengono le stesse impostazioni:  
   
--   Per specificare impostazioni per tutti i progetti futuri di SSMA, il **strumenti** menu, fare clic su **DefaultProject impostazioni**e quindi fare clic su **sincronizzazione** nella parte inferiore del riquadro a sinistra.  
+-   Per specificare le impostazioni per tutti i progetti SSMA futuri, nelle **degli strumenti** menu, fare clic su **DefaultProject impostazioni**e quindi fare clic su **sincronizzazione** nella parte inferiore del riquadro di sinistra.  
   
--   Per specificare le impostazioni per il progetto corrente, il **strumenti** menu, fare clic su **impostazioni progetto**e quindi fare clic su **sincronizzazione** nella parte inferiore del riquadro a sinistra.  
+-   Per specificare le impostazioni per il progetto corrente, il **strumenti** dal menu fare clic su **le impostazioni del progetto**e quindi fare clic su **sincronizzazione** nella parte inferiore del riquadro di sinistra.  
   
 ## <a name="options"></a>Opzioni  
   
 ##### <a name="misc"></a>Varie  
   
 ##### <a name="attempts"></a>Tentativi  
-Fornisce le informazioni sul numero di passaggi di rendere gli oggetti da caricare in SQL Server. Caricamento degli oggetti in SQL Server viene in genere eseguito in più passaggi. Gli oggetti che non riescono a caricare il primo passaggio, ad esempio le chiavi esterne, potrebbero caricare correttamente il passaggio successivo.  
+Fornisce le informazioni sul numero di passaggi necessarie per caricare in SQL Server. Caricamento degli oggetti in SQL Server viene in genere eseguito in più passaggi. Gli oggetti che non è possibile caricare il primo passaggio, ad esempio le chiavi esterne, potrebbero essere caricato correttamente durante il passaggio successivo.  
   
-Per impostazione predefinita il valore è 2.  
+Il valore predefinito è 2.  
   
 ## <a name="synchronization-for-mysql"></a>Sincronizzazione per MySQL  
   
-##### <a name="action-on-local-and-remote-object-change"></a>Azione di modifica di oggetti locali e remoti  
-Specifica l'impostazione predefinita nella finestra di dialogo sincronizzazione quando la definizione dell'oggetto cambia in SSMA e nel server di database.  
+##### <a name="action-on-local-and-remote-object-change"></a>Azione in caso di modifica di oggetti locali e remoti  
+Specifica l'impostazione predefinita nella finestra di dialogo sincronizzazione quando la definizione dell'oggetto viene modificato in SSMA e nel server di database.  
   
--   Se si seleziona l'aggiornamento dal Database, SSMA caricare le definizioni di database nei metadati quando viene soddisfatta la condizione.  
+-   Se si seleziona l'aggiornamento dal Database, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
   
--   Se si seleziona Ignora, SSMA non eseguirà alcuna azione di aggiornamento.  
+-   Se si seleziona Skip, SSMA non eseguirà alcuna azione di aggiornamento.  
   
-##### <a name="action-on-local-object-change"></a>Azione di modifica di un oggetto locale  
+##### <a name="action-on-local-object-change"></a>Azione in caso di modifica oggetto locale  
 Specifica l'impostazione predefinita nella finestra di dialogo sincronizzazione quando l'oggetto viene modificato in SSMA.  
   
--   Se si seleziona **aggiornamento dal Database**, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
+-   Se si seleziona **aggiornare dal Database**, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
   
--   Se si seleziona **Skip**, SSMA non verrà eseguita un'azione di aggiornamento.  
+-   Se si seleziona **Skip**, SSMA non eseguirà alcuna azione di aggiornamento.  
   
-##### <a name="action-on-remote-object-change"></a>Azione di modifica di un oggetto remoto  
-Specifica l'impostazione predefinita nella finestra di dialogo sincronizzazione quando gli oggetti modificati nel server di database.  
+##### <a name="action-on-remote-object-change"></a>Azione in caso di modifica di oggetti remoti  
+Specifica l'impostazione predefinita nella finestra di dialogo sincronizzazione quando modificare gli oggetti nel server di database.  
   
--   Se si seleziona **aggiornamento dal Database**, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
+-   Se si seleziona **aggiornare dal Database**, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
   
--   Se si seleziona **Skip**, SSMA non verrà eseguita un'azione di aggiornamento.  
+-   Se si seleziona **Skip**, SSMA non eseguirà alcuna azione di aggiornamento.  
   
-##### <a name="action-when-local-object-metadata-is-missing"></a>Azione quando i metadati dell'oggetto locale sono mancanti  
+##### <a name="action-when-local-object-metadata-is-missing"></a>Azione quando i metadati degli oggetti locali sono mancanti  
 Specifica l'impostazione predefinita nella finestra di dialogo sincronizzazione quando i metadati locali sono mancanti.  
   
--   Se si seleziona **aggiornamento dal Database**, SSMA SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
+-   Se si seleziona **aggiornare dal Database**, SSMA SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
   
--   Se si seleziona **Skip**, SSMA non verrà eseguita un'azione di aggiornamento  
+-   Se si seleziona **Skip**, SSMA non eseguirà alcuna azione di aggiornamento  
   
 ## <a name="synchronization-for-sql-server"></a>Sincronizzazione per SQL Server  
   
-##### <a name="action-on-local-and-remote-object-change"></a>Azione in locale e remoto Modifica oggetto  
-Specifica l'impostazione predefinita nella finestra di dialogo sincronizzazione quando la definizione dell'oggetto cambia in SSMA e nel server di database.  
+##### <a name="action-on-local-and-remote-object-change"></a>Azione in caso di modifica oggetto locale e remota  
+Specifica l'impostazione predefinita nella finestra di dialogo sincronizzazione quando la definizione dell'oggetto viene modificato in SSMA e nel server di database.  
   
--   Se si seleziona **aggiornamento dal Database**, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
+-   Se si seleziona **aggiornare dal Database**, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
   
--   Se si seleziona **scrivere nel Database**, SSMA aggiornerà gli oggetti del database in base al contenuto dei metadati SSMA quando viene soddisfatta la condizione.  
+-   Se si seleziona **scrivere Database**, SSMA aggiornerà gli oggetti del database in base al contenuto dei metadati SSMA quando viene soddisfatta la condizione.  
   
--   Se si seleziona **Skip**, SSMA non verrà eseguita un'azione di aggiornamento.  
+-   Se si seleziona **Skip**, SSMA non eseguirà alcuna azione di aggiornamento.  
   
-##### <a name="action-on-local-object-change"></a>Azione di modifica di un oggetto locale  
+##### <a name="action-on-local-object-change"></a>Azione in caso di modifica oggetto locale  
 Specifica l'impostazione predefinita nella finestra di dialogo sincronizzazione quando l'oggetto viene modificato in SSMA.  
   
--   Se si seleziona **aggiornamento dal Database**, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
+-   Se si seleziona **aggiornare dal Database**, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
   
--   Se si seleziona **scrivere nel Database**, SSMA aggiornerà l'oggetto nel database in base al contenuto dei metadati SSMA quando viene soddisfatta la condizione.  
+-   Se si seleziona **scrivere Database**, SSMA aggiornerà l'oggetto nel database in base al contenuto dei metadati SSMA quando viene soddisfatta la condizione.  
   
--   Se si seleziona **Skip**, SSMA non verrà eseguita un'azione di aggiornamento.  
+-   Se si seleziona **Skip**, SSMA non eseguirà alcuna azione di aggiornamento.  
   
-##### <a name="action-on-remote-object-change"></a>Azione di modifica di un oggetto remoto  
-Specifica l'impostazione predefinita nella finestra di dialogo sincronizzazione quando gli oggetti modificati nel server di database.  
+##### <a name="action-on-remote-object-change"></a>Azione in caso di modifica di oggetti remoti  
+Specifica l'impostazione predefinita nella finestra di dialogo sincronizzazione quando modificare gli oggetti nel server di database.  
   
--   Se si seleziona **aggiornamento dal Database**, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
+-   Se si seleziona **aggiornare dal Database**, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
   
--   Se si seleziona **scrivere nel Database**, SSMA aggiornerà l'oggetto nel database in base al contenuto dei metadati SSMA quando viene soddisfatta la condizione.  
+-   Se si seleziona **scrivere Database**, SSMA aggiornerà l'oggetto nel database in base al contenuto dei metadati SSMA quando viene soddisfatta la condizione.  
   
--   Se si seleziona **Skip**, SSMA non verrà eseguita un'azione di aggiornamento.  
+-   Se si seleziona **Skip**, SSMA non eseguirà alcuna azione di aggiornamento.  
   
-##### <a name="action-when-local-object-metadata-is-missing"></a>Azione quando i metadati dell'oggetto locale sono mancanti  
+##### <a name="action-when-local-object-metadata-is-missing"></a>Azione quando i metadati degli oggetti locali sono mancanti  
 Specifica l'impostazione predefinita nella finestra di dialogo sincronizzazione quando mancano i metadati locali.  
   
--   Se si seleziona **aggiornamento dal Database**, SSMA consente di selezionare l'aggiornamento dall'opzione di Database quando viene soddisfatta la condizione.  
+-   Se si seleziona **aggiornare dal Database**, SSMA consente di selezionare l'aggiornamento dall'opzione di Database quando viene soddisfatta la condizione.  
   
--   Se si seleziona **scrivere nel Database**, SSMA eliminerà l'oggetto dal database quando viene soddisfatta la condizione.  
+-   Se si seleziona **scrivere Database**, SSMA eliminerà l'oggetto dal database quando viene soddisfatta la condizione.  
   
--   Se si seleziona **Skip**, SSMA non verrà eseguita un'azione di aggiornamento.  
+-   Se si seleziona **Skip**, SSMA non eseguirà alcuna azione di aggiornamento.  
   

@@ -1,13 +1,11 @@
 ---
-title: Execute, Requery e Clear metodi esempio (VBScript) | Documenti Microsoft
+title: Eseguire, rieseguire una query ed eliminare i metodi esempio (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,23 +14,22 @@ helpviewer_keywords:
 - Clear method [ADO], VBScript example
 - Requery method [ADO], VBScript example
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 900bacb5c71a5a3ba7d55fa6d3e2d84d6e1c0e60
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 48028d073c7ab3d730a0af5c433d1a8f0c8f2de8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727129"
 ---
-# <a name="execute-requery-and-clear-methods-example-vbscript"></a>Execute, Requery e Clear metodi esempio (VBScript)
-Questo esempio viene illustrato il **Execute** metodo quando eseguito sia da un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto e un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Utilizza inoltre il [Requery](../../../ado/reference/ado-api/requery-method.md) metodo per recuperare dati correnti in un [recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e [deselezionare](../../../ado/reference/ado-api/clear-method-ado.md) metodo per cancellare il contenuto del [errori](../../../ado/reference/ado-api/errors-collection-ado.md)insieme. Le procedure ExecuteCommand e PrintOutput sono necessarie per eseguire questa procedura.  
+# <a name="execute-requery-and-clear-methods-example-vbscript"></a>Eseguire, rieseguire una query ed eliminare i metodi esempio (VBScript)
+Questo esempio viene illustrato il **Execute** metodo quando viene eseguito dallo entrambi una [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto e un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Usa anche il [Requery](../../../ado/reference/ado-api/requery-method.md) metodo per recuperare i dati correnti in un [recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e il [cancellare](../../../ado/reference/ado-api/clear-method-ado.md) metodo per cancellare il contenuto del [errori](../../../ado/reference/ado-api/errors-collection-ado.md)collection. Le procedure ExecuteCommand e PrintOutput sono necessari per eseguire questa procedura.  
   
- Usare l'esempio seguente in una pagina ASP (Active Server). Per visualizzare in questo esempio completamente funzionale, è necessario disporre i dati di origine si trova in C:\Program Files\Microsoft piattaforma SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb AdvWorks.mdb (installato con gli esempi SDK) o modificare il percorso del codice di esempio per riflettere il percorso effettivo del file. Si tratta di un file di database Microsoft Access.  
+ Usare l'esempio seguente in una pagina ASP (Active Server). Per visualizzare in questo esempio completamente funzionale, è necessario disporre di dati che si trova in C:\Program Files\Microsoft piattaforma SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb AdvWorks.mdb (installato con gli esempi SDK) di origine o modificare il percorso nel codice di esempio per riflettono l'effettiva posizione di questo file. Si tratta di un file di database Microsoft Access.  
   
- Utilizzare **trovare** per individuare il file Adovbs. inc e inserirlo nella directory di cui si intende utilizzare. Tagliare e incollare il codice seguente nel blocco note o un altro editor di testo e salvarlo come **ExecuteVBS**. È possibile visualizzare il risultato in qualsiasi browser client.  
+ Usare **trovare** per individuare il file Adovbs. inc e inserirlo nella directory di cui si intende usare. Tagliare e incollare il codice seguente nel blocco note o un altro editor di testo e salvarlo come **ExecuteVBS**. È possibile visualizzare il risultato in qualsiasi browser client.  
   
 ```  
 <!-- BeginExecuteVBS -->  
@@ -182,12 +179,12 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Clear (metodo) (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
+ [Metodo Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Oggetto di connessione (ADO.NET)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Oggetto Error](../../../ado/reference/ado-api/error-object.md)   
  [Raccolta di errori (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Eseguire il metodo (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute (metodo) (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Eseguire il metodo (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Metodo Requery](../../../ado/reference/ado-api/requery-method.md)

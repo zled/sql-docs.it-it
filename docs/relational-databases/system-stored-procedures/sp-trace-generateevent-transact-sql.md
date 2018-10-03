@@ -1,14 +1,11 @@
 ---
-title: sp_trace_generateevent (Transact-SQL) | Documenti Microsoft
+title: sp_trace_generateevent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_generateevent_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 398fb058ae7be57cf0c26b26e77d6e82aafd0df3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cce91def9566105550788a8a46ea6c2b6bb959aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260657"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826549"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +46,13 @@ sp_trace_generateevent [ @eventid = ] event_id
   
 ## <a name="arguments"></a>Argomenti  
  [  **@eventid=**] *event_id*  
- ID dell'evento da abilitare. *event_id* viene **int**, non prevede alcun valore predefinito. L'ID deve essere uno dei numeri di evento da 82 e 91, che rappresentano gli eventi definiti dall'utente come set con [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+ ID dell'evento da abilitare. *event_id* viene **int**, non prevede alcun valore predefinito. L'ID deve essere uno dei numeri di evento compreso tra 82 e 91, che rappresentano eventi definiti dall'utente come set con [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  [ **@userinfo**= ] **'***user_info***'**  
  Stringa facoltativa definita dall'utente che identifica la causa dell'evento. *user_info* viene **nvarchar (128)**, con un valore predefinito è NULL.  
   
  [ **@userdata**=] *user_data*  
- Dati facoltativi per l'evento specificati dall'utente. *user_data* viene **varbinary(8000)**, con un valore predefinito è NULL.  
+ Dati facoltativi per l'evento specificati dall'utente. *user_data* viene **varbinary(8000**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  Nella tabella seguente vengono descritti i possibili valori di codice visualizzati al completamento della stored procedure.  
@@ -68,14 +64,14 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**3**|L'evento specificato non è valido, in quanto non esiste oppure non è appropriato per la stored procedure.|  
 |**13**|Memoria esaurita. Restituito quando la quantità di memoria disponibile non è sufficiente per eseguire l'azione specificata.|  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_trace_generateevent** esegue molte delle azioni eseguite in precedenza tramite il **xp_trace _\***  stored procedure estese. Utilizzare **sp_trace_generateevent** anziché **xp_trace_generate_event**.  
+## <a name="remarks"></a>Note  
+ **sp_trace_generateevent** esegue molte delle azioni eseguite in precedenza tramite il **xp_trace _\***  stored procedure estese. Uso **sp_trace_generateevent** invece di **xp_trace_generate_event**.  
   
- Solo i numeri di ID di eventi definiti dall'utente possono essere utilizzati con **sp_trace_generateevent**. Se si utilizzano altri ID di evento, in[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà generato un errore.  
+ Solo i numeri ID degli eventi definiti dall'utente possono essere utilizzati con **sp_trace_generateevent**. Se si utilizzano altri ID di evento, in[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà generato un errore.  
   
  I parametri di traccia SQL tutte le stored procedure (**sp_trace_xx**) sono fortemente tipizzati. Se questi parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituirà un errore.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'utente deve disporre delle autorizzazioni ALTER TRACE.  
   
 ## <a name="examples"></a>Esempi  

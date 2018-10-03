@@ -1,13 +1,11 @@
 ---
-title: Aggiornamento e l'esempio di metodi CancelUpdate (VB) | Documenti Microsoft
+title: Aggiornamento metodi e CancelUpdate (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], Visual Basic example
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb0ba0f097bb0885478360f4ea2cc34b2d829f54
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 506d35b93cd873aed344ebb5dd5b019d6cbf3867
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282750"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662295"
 ---
-# <a name="update-and-cancelupdate-methods-example-vb"></a>Esempio di metodi CancelUpdate (VB) e di aggiornamento
-Questo esempio viene illustrato il [aggiornamento](../../../ado/reference/ado-api/update-method.md) metodo in combinazione con il [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) metodo.  
+# <a name="update-and-cancelupdate-methods-example-vb"></a>Esempio dei metodi Update e CancelUpdate (VB)
+Questo esempio viene illustrato il [Update](../../../ado/reference/ado-api/update-method.md) metodo in combinazione con la [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) (metodo).  
   
 ```  
 'BeginUpdateVB  
@@ -118,7 +115,7 @@ End Sub
 ' EndUpdateVB  
 ```  
   
- Questo esempio viene illustrato il **aggiornamento** metodo in combinazione con il [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) metodo.  
+ Questo esempio viene illustrato il **Update** metodo in combinazione con la [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) (metodo).  
   
 ```  
 Attribute VB_Name = "Update"  
@@ -126,5 +123,5 @@ Attribute VB_Name = "Update"
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Metodo Update](../../../ado/reference/ado-api/update-method.md)

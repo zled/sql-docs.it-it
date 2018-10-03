@@ -1,13 +1,11 @@
 ---
-title: Execute, Requery e deselezionare l'esempio di metodi (VB) | Documenti Microsoft
+title: Eseguire, rieseguire una query ed eliminare i metodi esempio (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Clear method [ADO], Visual Basic example
 - Execute method [ADO], Visual Basic example
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9f877a63f05fd6fd8d31623b8e79aa1bac4464c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 11fe5ef40e06772c38390096363903113a28bd46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684509"
 ---
-# <a name="execute-requery-and-clear-methods-example-vb"></a>Execute, Requery e deselezionare l'esempio di metodi (VB)
-Questo esempio viene illustrato il **Execute** metodo quando eseguito sia da un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto e un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Utilizza inoltre il [Requery](../../../ado/reference/ado-api/requery-method.md) metodo per recuperare dati correnti in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e [deselezionare](../../../ado/reference/ado-api/clear-method-ado.md) metodo per cancellare il contenuto del [errori](../../../ado/reference/ado-api/errors-collection-ado.md)insieme. (Il **errori** raccolta è accessibile tramite il **connessione** oggetto del [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) proprietà del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Le procedure ExecuteCommand e PrintOutput sono necessarie per eseguire questa procedura.  
+# <a name="execute-requery-and-clear-methods-example-vb"></a>Eseguire, rieseguire una query ed eliminare i metodi esempio (VB)
+Questo esempio viene illustrato il **Execute** metodo quando viene eseguito dallo entrambi una [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto e un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Usa anche il [Requery](../../../ado/reference/ado-api/requery-method.md) metodo per recuperare i dati correnti in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e il [cancellare](../../../ado/reference/ado-api/clear-method-ado.md) metodo per cancellare il contenuto del [errori](../../../ado/reference/ado-api/errors-collection-ado.md)collection. (Il **errori** raccolta è accessibile tramite il **connessione** oggetto del [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) proprietà del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Le procedure ExecuteCommand e PrintOutput sono necessari per eseguire questa procedura.  
   
 ```  
 'BeginExecuteVB  
@@ -172,11 +169,11 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Clear (metodo) (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
+ [Metodo Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Oggetto di connessione (ADO.NET)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Oggetto Error](../../../ado/reference/ado-api/error-object.md)   
  [Eseguire il metodo (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute (metodo) (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Eseguire il metodo (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Metodo Requery](../../../ado/reference/ado-api/requery-method.md)

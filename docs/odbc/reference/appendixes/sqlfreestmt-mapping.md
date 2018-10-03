@@ -1,40 +1,37 @@
 ---
-title: Mapping SQLFreeStmt | Documenti Microsoft
+title: Mapping di SQLFreeStmt | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeStmt function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLFreeStmt
 ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb7ad5a362b7b193f1e6e6f8fae7cfb493131cc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1872806265470327f3e7bff468be2ba6d9011421
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906396"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792769"
 ---
-# <a name="sqlfreestmt-mapping"></a>Mapping SQLFreeStmt
+# <a name="sqlfreestmt-mapping"></a>Mapping di SQLFreeStmt
 Quando un'applicazione chiama **SQLFreeStmt** con un *opzione* argomento di SQL_DROP tramite un'applicazione ODBC 3*x* driver, la chiamata a  
   
 ```  
 SQLFreeStmt(hstmt, SQL_DROP)   
 ```  
   
- è stato eseguito il mapping a  
+ viene eseguito il mapping a  
   
 ```  
 SQLFreeHandle(SQL_HANDLE_STMT,Handle)  
 ```  
   
- con il *gestire* argomento impostato sul valore *hstmt*.
+ con il *gestiscono* impostata sul valore nell'argomento *hstmt*.

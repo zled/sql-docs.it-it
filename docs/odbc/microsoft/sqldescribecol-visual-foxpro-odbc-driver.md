@@ -1,36 +1,33 @@
 ---
-title: SQLDescribeCol (Driver ODBC di Visual FoxPro) | Documenti Microsoft
+title: SQLDescribeCol (Driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLDescribeCol function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: a8d06507-8376-42b5-b09f-338a77cea131
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbf88b7c5df30babbddb6c52b635ce1681f0e127
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45d823defd67d4b9cb95d01e3ffdf0cad7c2c6b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905066"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706389"
 ---
-# <a name="sqldescribecol-visual-foxpro-odbc-driver"></a>SQLDescribeCol (Driver ODBC di Visual FoxPro)
+# <a name="sqldescribecol-visual-foxpro-odbc-driver"></a>SQLDescribeCol (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Supporto: completo  
   
- Conformità di API ODBC: Il livello di base  
+ Della conformità API ODBC: A livello centrale  
   
  Restituisce il nome, tipo, precisione, scala e supporto di valori null della colonna di risultati specificato.  
   
- Per ulteriori informazioni, vedere [SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md) nel *riferimento per programmatori ODBC*.
+ Per altre informazioni, vedere [SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md) nel *riferimento per programmatori ODBC*.

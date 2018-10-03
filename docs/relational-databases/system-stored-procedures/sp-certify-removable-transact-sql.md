@@ -1,14 +1,11 @@
 ---
-title: sp_certify_removable (Transact-SQL) | Documenti Microsoft
+title: sp_certify_removable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_certify_removable_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba9ff14bc26b18eaf80dff000f141502a01fcc7b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238731"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691409"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +53,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se il database è configurato correttamente, **sp_certify_removable** esegue le operazioni seguenti:  
   
 -   Imposta il database offline per consentire la copia dei file.  
@@ -66,9 +62,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   Contrassegna i filegroup di dati come filegroup di sola lettura per consentire la copia dei file su supporti di sola lettura.  
   
- L'amministratore di sistema deve essere il proprietario del database e di tutti i relativi oggetti. L'amministratore di sistema è un utente noto che esista in tutti i server che eseguono [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può essere necessario che esista quando il database è distribuito e installato in un secondo momento.  
+ L'amministratore di sistema deve essere il proprietario del database e di tutti i relativi oggetti. L'amministratore di sistema è un utente noto presente in tutti i server che eseguono [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può essere necessario che esista quando il database viene distribuito e installato in un secondo momento.  
   
- Se si esegue **sp_certify_removable** senza il **auto** valore e restituisce informazioni su una qualsiasi delle condizioni seguenti:  
+ Se si esegue **sp_certify_removable** senza il **automatico** valore e restituisce informazioni su una delle condizioni seguenti:  
   
 -   L'amministratore di sistema non è il proprietario del database.  
   
@@ -80,13 +76,13 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  È possibile correggere queste condizioni come indicato di seguito:  
   
--   Utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumenti e procedure, quindi eseguire **sp_certify_removable** nuovamente.  
+-   Uso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli strumenti e le procedure e quindi eseguire **sp_certify_removable** nuovamente.  
   
--   Eseguire semplicemente **sp_certify_removable** con il **auto** valore.  
+-   Eseguire semplicemente **sp_certify_removable** con il **automatico** valore.  
   
  Si noti che questa stored procedure controlla solo gli utenti e le autorizzazioni degli utenti. È consentito aggiungere gruppi al database e concedere autorizzazioni a tali gruppi. Per altre informazioni, vedere [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Eseguire le autorizzazioni sono limitate ai membri del **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  

@@ -1,47 +1,44 @@
 ---
-title: Sequenza di Escape di outer Join | Documenti Microsoft
+title: Sequenza di Escape Outer Join | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - outer join escape sequence [ODBC]
 - escape sequences [ODBC], outer join
 - ODBC escape sequences [ODBC], outer join
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af6a98b3e1a7848fa242dfceb890c472e1d16f74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907526"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817653"
 ---
-# <a name="outer-join-escape-sequence"></a>Sequenza di Escape di outer Join
-ODBC utilizza le sequenze di escape per gli outer join. La sintassi di questa sequenza di escape è come segue:  
+# <a name="outer-join-escape-sequence"></a>Sequenza di escape outer join
+ODBC Usa sequenze di escape per gli outer join. La sintassi di questa sequenza di escape è come segue:  
   
 ```  
 {oj outer-join}  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Nella notazione BNF, la sintassi è:  
+## <a name="remarks"></a>Note  
+ Nella notazione BNF, la sintassi è come segue:  
   
  *ODBC-outer-join-escape* :: =  
   
  *ODBC-esc-iniziatore* GU *outer join ODBC esc-carattere di terminazione*  
   
- *outer join* :: = *-nome della tabella* [*nome di correlazione*] {sinistra &#124; a destra &#124; completo}  
+ *outer join* :: = *nome tabella* [*correlazione-name*] {sinistra &#124; a destra &#124; completo}  
   
- OUTER JOIN {*-nome della tabella* [*nome di correlazione*] &#124; *outer join*} ON  
+ OUTER JOIN {*-nome della tabella* [*nome di correlazione*] &#124; *outer join*} via  
   
  *ricerca-*  
   

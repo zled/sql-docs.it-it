@@ -1,13 +1,11 @@
 ---
-title: Elemento proprietà (ADO) | Documenti Microsoft
+title: Elemento proprietà (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -45,18 +43,17 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81c6ebc6b7dc0346a2d703c2969f1b114dd72039
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 776a74422941118e2091c9240d14edbf8c1f0fec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279250"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655651"
 ---
-# <a name="item-property-ado"></a>Proprietà dell'elemento (ADO)
+# <a name="item-property-ado"></a>Proprietà Item (ADO)
 Indica un membro specifico di una raccolta, per nome o numero ordinale.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -70,12 +67,12 @@ Set object = collection.Item ( Index )
   
 ## <a name="parameters"></a>Parametri  
  *Index*  
- Oggetto **Variant** espressione che restituisce il nome o il numero ordinale di un oggetto in una raccolta.  
+ Oggetto **Variant** espressione che restituisce il nome o al numero ordinale di un oggetto in una raccolta.  
   
-## <a name="remarks"></a>Remarks  
- Utilizzare il **elemento** proprietà per restituire un oggetto specifico in una raccolta. Se **elemento** Impossibile trovare un oggetto nella raccolta corrispondente di *indice* si verifica un errore di argomento. Inoltre, alcuni insiemi non supportano gli oggetti denominati. Per queste raccolte, è necessario utilizzare riferimenti di un numero ordinale.  
+## <a name="remarks"></a>Note  
+ Usare la **elemento** proprietà per restituire un oggetto specifico in una raccolta. Se **elemento** non è possibile trovare un oggetto nella raccolta corrispondente per il *indice* si verifica un errore di argomento. Inoltre, alcune raccolte non supportano gli oggetti denominati. Per queste raccolte, è necessario usare riferimenti di un numero ordinale.  
   
- Il **elemento** proprietà è la proprietà predefinita per tutte le raccolte, di conseguenza, le forme di sintassi seguenti sono intercambiabili:  
+ Il **elemento** proprietà la proprietà predefinita per tutte le raccolte; pertanto, sono intercambiabili le forme di sintassi seguente:  
   
 ```  
 collection.Item (Index)  

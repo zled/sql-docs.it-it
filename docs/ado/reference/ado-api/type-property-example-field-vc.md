@@ -1,32 +1,29 @@
 ---
-title: Tipo di esempio di proprietà (campo) (VC + +) | Documenti Microsoft
+title: Tipo di esempio di proprietà (campo) (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb420e129d36c9172837a9d68e631c9bc26086e7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282660"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666235"
 ---
-# <a name="type-property-example-field-vc"></a>Esempio di proprietà Type (campo) (VC + +)
-Questo esempio viene illustrato il [tipo](../../../ado/reference/ado-api/type-property-ado.md) proprietà visualizzando il nome della costante che corrisponde al valore del **tipo** proprietà di tutti i [campo](../../../ado/reference/ado-api/field-object.md) gli oggetti nel ***Dipendenti*** tabella. La funzione FieldType è necessaria per eseguire questa procedura.  
+# <a name="type-property-example-field-vc"></a>Esempio della proprietà Type (Field) (VC++)
+Questo esempio viene illustrato il [tipo](../../../ado/reference/ado-api/type-property-ado.md) visualizzando il nome della costante che corrisponde al valore della proprietà il **tipo** proprietà di tutti i i [campo](../../../ado/reference/ado-api/field-object.md) gli oggetti nel ***Dipendenti*** tabella. La funzione FieldType è necessaria per eseguire questa procedura.  
   
 ## <a name="example"></a>Esempio  
   

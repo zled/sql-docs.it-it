@@ -1,37 +1,34 @@
 ---
-title: Recupero dei set di risultati in flussi | Documenti Microsoft
+title: Recupero dei set di risultati in flussi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - streams [ADO], retrieving query results
 - query results into stream [ADO]
 - retrieving results into stream [ADO]
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eff683085882bd56b60ed7eee2a14cd2efbc8b86
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 45ba231b1523a74ac8b2c09f55e19c3dc287ef20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272550"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734959"
 ---
-# <a name="retrieving-resultsets-into-streams"></a>Recupero dei set di risultati in flussi
-Invece di ricezione dei risultati in tradizionale **Recordset** oggetto ADO può invece di recuperare i risultati di query in un flusso. ADO **flusso** oggetto (o altri oggetti che supportano il modello COM **IStream** interfaccia, ad esempio ASP **richiesta** e **risposta** oggetti ) può essere usato per contenere questi risultati. È possibile utilizzare questa funzionalità consiste nel recuperare i risultati in formato XML. Con SQL Server, ad esempio, i risultati XML possono essere restituiti in più modi, ad esempio utilizzando la clausola FOR XML con una query SQL SELECT o una query XPath.  
+# <a name="retrieving-resultsets-into-streams"></a>Recupero di set di risultati nei flussi
+Invece di ricevere i risultati in tradizionale **Recordset** ADO possa invece di recuperare i risultati della query in un flusso oggetto. L'oggetto ADO **Stream** oggetto (o altri oggetti che supportano il modello COM **IStream** interfaccia, ad esempio ASP **richiesta** e **risposta** oggetti ) può essere utilizzato per contenere questi risultati. È possibile utilizzare questa funzionalità consiste nel recuperare i risultati in formato XML. Con SQL Server, ad esempio, i risultati XML possono essere restituiti in diversi modi, ad esempio usando la clausola FOR XML con una query SQL SELECT o una query XPath.  
   
- Per ricevere i risultati della query in formato di flusso anziché in un **Recordset**, è necessario specificare il **adExecuteStream** costante da **ExecuteOptionEnum** come parametro del **Execute** metodo di un **comando** oggetto. Se il provider supporta questa funzionalità, verranno restituiti i risultati in un flusso al termine dell'esecuzione. Potrebbe essere necessario specificare proprietà specifiche del provider aggiuntive prima che il codice viene eseguito. Ad esempio, con il Provider Microsoft OLE DB per SQL Server, le proprietà, ad esempio **flusso di Output** nel **proprietà** insieme del **comando** l'oggetto deve essere specificato. Per ulteriori informazioni sulle proprietà dinamiche di specifiche di SQL Server correlati a questa funzionalità, vedere la proprietà XML-Related nella documentazione Online di SQL Server.  
+ Per ricevere i risultati della query in formato flusso anziché in un **Recordset**, è necessario specificare il **adExecuteStream** costante dal **ExecuteOptionEnum** come parametro del **Execute** metodo di un **comando** oggetto. Se il provider supporta questa funzionalità, i risultati verranno restituiti in un flusso al termine dell'esecuzione. Potrebbe essere necessario specificare proprietà aggiuntive specifiche del provider prima che l'esecuzione del codice. Ad esempio, con il Provider Microsoft OLE DB per SQL Server, le proprietà come **Output Stream** nel **proprietà** raccolta del **comando** oggetto deve essere specificato. Per altre informazioni sulle proprietà dinamiche specifiche di SQL Server correlate a questa funzionalità, vedere le proprietà XML-Related nella documentazione Online di SQL Server.  
   
 ## <a name="for-xml-query-example"></a>AD esempio di Query XML  
- Nell'esempio seguente verrà scritti in VBScript il database Northwind:  
+ Nell'esempio seguente viene scritto in VBScript al database Northwind:  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -146,13 +143,13 @@ Invece di ricezione dei risultati in tradizionale **Recordset** oggetto ADO può
   
  La clausola FOR XML indica a SQL Server per restituire i dati sotto forma di un documento XML.  
   
-### <a name="for-xml-syntax"></a>PER la sintassi XML  
+### <a name="for-xml-syntax"></a>Per informazioni sulla sintassi XML  
   
 ```  
 FOR XML [RAW|AUTO|EXPLICIT]  
 ```  
   
- PER XML non ELABORATO genera gli elementi di riga generico che hanno valori delle colonne come attributi. FOR XML AUTO utilizza l'euristica per generare una struttura gerarchica con i nomi degli elementi in base ai nomi di tabella. FOR XML EXPLICIT genera una tabella universale con relazioni completamente descritte dai metadati.  
+ PER XML RAW genera elementi riga generico con valori di colonna come attributi. FOR XML AUTO utilizza l'euristica per generare una struttura gerarchica con i nomi di elementi in base ai nomi di tabella. FOR XML EXPLICIT genera una tabella universale con relazioni completamente descritte dai metadati.  
   
  L'istruzione SQL SELECT FOR XML di esempio seguente:  
   
@@ -160,7 +157,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
- Il comando può essere specificato in una stringa come illustrato in precedenza, assegnato a **CommandText**, o sotto forma di una query del modello XML assegnata a **CommandStream**. Per ulteriori informazioni sulle query modello XML, vedere [comando flussi](../../../ado/guide/data/command-streams.md) in ADO o flussi di utilizzo per l'Input di comando nella documentazione Online di SQL Server.  
+ Il comando può essere specificato in una stringa come illustrato in precedenza, assegnato a **CommandText**, o sotto forma di una query del modello XML assegnata a **CommandStream**. Per altre informazioni sulle query modello XML, vedere [comando flussi](../../../ado/guide/data/command-streams.md) in ADO o flussi di utilizzo per l'Input di comando nella documentazione Online di SQL Server.  
   
  Come una query del modello XML, la query FOR XML viene visualizzato come segue:  
   
@@ -168,13 +165,13 @@ SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
- In questo esempio specifica ASP **risposta** dell'oggetto per il **flusso di Output** proprietà:  
+ Questo esempio viene specificato l'ASP **risposta** dell'oggetto per il **Output Stream** proprietà:  
   
 ```  
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
- Successivamente, specificare **adExecuteStream** parametro di **Execute**. In questo esempio esegue il wrapping di un flusso di tag XML per creare un'isola di dati XML:  
+ A questo punto, specificare **adExecuteStream** del parametro **Execute**. In questo esempio esegue il wrapping di flusso nei tag XML per creare un'isola di dati XML:  
   
 ```  
 Response.write "<XML ID=MyDataIsle>"  
@@ -182,5 +179,5 @@ adoCmd.Execute , , adExecuteStream
 Response.write "</XML>"  
 ```  
   
-### <a name="remarks"></a>Remarks  
- A questo punto, è stata trasmessa XML nel browser client ed è pronto per essere visualizzato. Questa operazione viene eseguita utilizzando VBScript sul lato client per associare il documento XML a un'istanza del DOM e scorrimento in ciclo tra ogni nodo figlio per compilare un elenco di prodotti in formato HTML.
+### <a name="remarks"></a>Note  
+ A questo punto, XML è stato trasmesso al browser del client ed è pronto per essere visualizzato. Questa operazione viene eseguita utilizzando VBScript lato client per associare il documento XML a un'istanza del DOM e scorrimento in ciclo tra ogni nodo figlio per creare un elenco di prodotti in formato HTML.

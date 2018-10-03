@@ -1,28 +1,24 @@
 ---
-title: SQL Server Express LocalDB intestazione e le informazioni sulla versione | Documenti Microsoft
+title: SQL Server Express LocalDB intestazione e le informazioni sulla versione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - sqluserinstance.dll
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ec6642e7f975041b3aa8f279eeee80a867fe9f43
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 86135a4d93ddb8f08318a9ce2be8a6f5c4f57f9f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936506"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677569"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>Informazioni sulla versione e intestazione del database locale di SQL Server Express
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +27,7 @@ ms.locfileid: "32936506"
 ## <a name="localdb-versioning"></a>Controllo delle versioni del database locale  
  Per l'installazione del database locale viene utilizzato un solo set di file binari per la versione di SQL Server principale. Queste versioni del database locale sono gestite e installate con patch in modo indipendente. Pertanto, l'utente deve specificare quale versione di base (ovvero, versione di SQL Server principale) del database locale utilizzerà. La versione specificata nel formato della versione standard definito da .NET Framework **Version** classe:  
   
- *revisione]]*  
+ *Revision]]*  
   
  I primi due numeri nella stringa di versione (*principali* e *secondaria*) sono obbligatori. Gli ultimi due numeri nella stringa di versione (*compilare* e *revisione*) sono facoltativi e predefinito su zero se l'utente li esclude. Pertanto, se l'utente specifica solo "12.2" come numero di versione del database locale, tale numero verrà considerato come se l'utente avesse specificato "12.2.0.0".  
   
@@ -41,16 +37,16 @@ ms.locfileid: "32936506"
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSSQLServer\CurrentVersion: "CurrentVersion"="12.0.2531.0"  
 ```  
   
- È supportata la modalità side-by-side di più versioni del database locale sulla stessa workstation. Tuttavia, il codice utente utilizza sempre la versione più recente disponibile **SQLUserInstance** DLL nel computer locale per connettersi alle istanze del database locale.  
+ È supportata la modalità side-by-side di più versioni del database locale sulla stessa workstation. Tuttavia, il codice utente Usa sempre la versione più recente disponibile **SQLUserInstance** DLL nel computer locale per connettersi alle istanze di Local DB.  
   
 ## <a name="locating-the-sqluserinstance-dll"></a>Individuazione della DLL SQLUserInstance  
- Per individuare il **SQLUserInstance** DLL, il provider client utilizza la chiave del Registro di sistema seguente:  
+ Per individuare il **SQLUserInstance** DLL, il provider client usa la chiave del Registro di sistema seguente:  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- In questa chiave è disponibile un elenco di chiavi, una per ogni versione del database locale installata nel computer. Ognuna di queste chiavi è denominata con il numero di versione del database locale nel formato  *\<versione principale >*. *\<della versione secondaria >* (ad esempio, la chiave per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] denominato 13.0). In ogni chiave della versione è disponibile una coppia nome/valore di `InstanceAPIPath` che consente di definire il percorso completo al file SQLUserInstance.dll installato con tale versione. Nell'esempio seguente mostra le voci del Registro di sistema per un computer che sono installate le versioni 11.0 e 13.0 installato:  
+ In questa chiave è disponibile un elenco di chiavi, una per ogni versione del database locale installata nel computer. Ognuna di queste chiavi è denominata con il numero di versione di Local DB nel formato  *\<major-version >*. *\<minor-version >* (ad esempio, la chiave per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] denominato 13.0). In ogni chiave della versione è disponibile una coppia nome/valore di `InstanceAPIPath` che consente di definire il percorso completo al file SQLUserInstance.dll installato con tale versione. Nell'esempio seguente mostra le voci del Registro di sistema per un computer dotato di Local DB versioni 11.0 e 13.0 installato:  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\13.0]  
@@ -59,7 +55,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 "InstanceAPIPath"="C:\\Program Files\\Microsoft SQL Server\\130\\LocalDB\\Binn\\SqlUserInstance.dll"]  
 ```  
   
- Il provider client deve trovare la versione più recente tra tutte le versioni installate e il carico di **SQLUserInstance** file DLL da associato `InstanceAPIPath` valore.  
+ Il provider client deve trovare la versione più recente fra tutte le versioni installate e carico il **SQLUserInstance** file DLL da associato `InstanceAPIPath` valore.  
   
 ### <a name="wow64-mode-on-64-bit-windows"></a>Modalità WOW64 in Windows a 64 bit  
  Le installazioni a 64 bit del database locale disporranno di un set aggiuntivo di chiavi del Registro di sistema per consentire applicazioni a 32 bit in esecuzione in modalità WOW64 (Windows-32-on-Windows-64) per l'utilizzo del database locale. In particolare, in Windows a 64 bit il file MSI del database locale consentirà la creazione delle chiavi del Registro di sistema seguenti:  
@@ -72,12 +68,12 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
   
 ```  
   
- programmi a 64 bit che leggono il `Installed Versions` chiave verrà visualizzati valori che puntano alle versioni a 64 bit del **SQLUserInstance** DLL, mentre programmi a 32 bit (in esecuzione in Windows a 64 bit in modalità WOW64) verranno reindirizzati automaticamente a un `Installed Versions` chiave si trova sotto il `Wow6432Node` hive. Questa chiave contiene valori che puntano alle versioni a 32 bit del **SQLUserInstance** DLL.  
+ programmi a 64 bit che leggono il `Installed Versions` chiave verrà visualizzati valori che puntano alle versioni a 64 bit del **SQLUserInstance** DLL, mentre programmi a 32 bit (in esecuzione su Windows a 64 bit in modalità WOW64) verranno reindirizzati automaticamente a un `Installed Versions` chiave che si trova sotto il `Wow6432Node` hive. Questa chiave contiene valori che puntano alle versioni a 32 bit del **SQLUserInstance** DLL.  
   
 ## <a name="using-localdbdefineproxyfunctions"></a>Utilizzo di LOCALDB_DEFINE_PROXY_FUNCTIONS  
- L'API dell'istanza di LocalDB definisce una costante denominata LOCALDB_DEFINE_PROXY_FUNCTIONS che consente di automatizzare l'individuazione e il caricamento del **SqlUserInstance** DLL.  
+ L'API dell'istanza di Local DB definisce una costante denominata LOCALDB_DEFINE_PROXY_FUNCTIONS che consente di automatizzare l'individuazione e il caricamento del **SqlUserInstance** DLL.  
   
- La sezione di codice abilitata da questa costante fornisce un'implementazione di proxy per ognuna delle API del database locale. Le implementazioni di proxy usano una funzione comune da associare ai punti di ingresso nella versione più recente installata **SqlUserInstance** DLL e quindi inoltrare le richieste.  
+ La sezione di codice abilitata da questa costante fornisce un'implementazione di proxy per ognuna delle API del database locale. Le implementazioni di proxy usano una funzione comune da associare ai punti di ingresso in quella più recente installata **SqlUserInstance** DLL e quindi di inoltrare le richieste.  
   
  Le funzioni del proxy sono abilitate solo se la costante LOCALDB_DEFINE_PROXY_FUNCTIONS è definita nel codice utente prima di includere il file sqlncli.h. La costante deve essere definita in un unico modulo di origine (file con estensione cpp) in quanto consente di definire nomi di funzioni esterni per tutti i punti di ingresso dell'API. Inoltre, tale costante fornisce un'implementazione di proxy per ognuna delle API del database locale.  
   

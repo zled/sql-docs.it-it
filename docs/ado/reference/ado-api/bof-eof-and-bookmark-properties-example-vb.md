@@ -1,13 +1,11 @@
 ---
-title: Esempio di proprietà di segnalibro (VB), EOF e BOF | Documenti Microsoft
+title: Proprietà BOF, EOF e segnalibro (esempio di proprietà (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Bookmark property [ADO], Visual Basic example
 - EOF property [ADO], Visual Basic example
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 439bba8dd4eae06a388060c905cbff45539f8b69
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ef1ab4199de6b0249173f13c607e6cb1816ccbc5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276000"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698219"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vb"></a>Esempio di proprietà di segnalibro (VB), EOF e BOF
-Questo esempio viene utilizzato il [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) proprietà per visualizzare un messaggio se un utente tenta di superare il primo o ultimo record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa il [segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md) proprietà per consentire all'utente di contrassegnare un record in un **Recordset** e si torna in un secondo momento.  
+# <a name="bof-eof-and-bookmark-properties-example-vb"></a>Esempio delle proprietà BOF, EOF e Bookmark (VB)
+Questo esempio Usa la [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) delle proprietà per visualizzare un messaggio se un utente tenta di spostarsi oltre il primo o ultimo record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa il [segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md) proprietà per consentire all'utente di contrassegnare un record in un **Recordset** e tornarvi in un secondo momento.  
   
 ```  
 'BeginBOFVB  
@@ -133,13 +130,13 @@ End Sub
 'EndBOFVB  
 ```  
   
- Questo esempio viene utilizzato il **segnalibro** e [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà per creare una vista limitata del **Recordset**. Solo i record a cui fa riferimento la matrice di segnalibri sono accessibili.  
+ Questo esempio Usa la **segnalibro** e [filtro](../../../ado/reference/ado-api/filter-property.md) delle proprietà per creare una visualizzazione limitata della **Recordset**. Solo i record fa riferimento la matrice dei segnalibri sono accessibili.  
   
 ```  
 Attribute VB_Name = "BOF"  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [BOF, proprietà EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [Proprietà BOF, EOF proprietà (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Proprietà Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

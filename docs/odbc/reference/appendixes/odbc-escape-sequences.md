@@ -1,28 +1,25 @@
 ---
-title: Sequenze di Escape ODBC | Documenti Microsoft
+title: Le sequenze di Escape ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a5f06ba64901e666fba94409bf43aef52903cc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b809aff14e75f41089f01345607f63f8c2dd9166
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758969"
 ---
-# <a name="odbc-escape-sequences"></a>Sequenze di Escape ODBC
-Le sequenze di escape seguenti vengono utilizzate in ODBC. La grammatica in questa sezione utilizza alcuni elementi definiti in [elementi utilizzati nelle istruzioni SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  
+# <a name="odbc-escape-sequences"></a>Sequenze di escape ODBC
+Le sequenze di escape seguenti vengono usate in ODBC. La grammatica in questa sezione Usa alcuni elementi definiti nello [gli elementi usati nelle istruzioni SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

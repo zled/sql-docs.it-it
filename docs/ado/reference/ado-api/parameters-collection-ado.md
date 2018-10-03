@@ -1,13 +1,11 @@
 ---
-title: Raccolta di parametri (ADO) | Documenti Microsoft
+title: Raccolta di parametri (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,36 +15,35 @@ f1_keywords:
 helpviewer_keywords:
 - Parameters collection [ADO]
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7c59411e1aeeaa32e2b1904e2503b26a92c829b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 28832f7e96ddbb149db5561654d55ef0003551cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280657"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657849"
 ---
-# <a name="parameters-collection-ado"></a>Raccolta di parametri (ADO)
-Contiene tutti i [parametro](../../../ado/reference/ado-api/parameter-object.md) gli oggetti di un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto.  
+# <a name="parameters-collection-ado"></a>Raccolta Parameters (ADO)
+Contiene tutti i [parametri](../../../ado/reference/ado-api/parameter-object.md) gli oggetti di un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto.  
   
-## <a name="remarks"></a>Remarks  
- Oggetto **comando** oggetto ha un **parametri** raccolta costituita da **parametro** oggetti.  
+## <a name="remarks"></a>Note  
+ Oggetto **comandi** oggetto dispone di un **parametri** raccolta costituita da **parametro** oggetti.  
   
- Utilizzando il [aggiornamento](../../../ado/reference/ado-api/refresh-method-ado.md) metodo su un **comando** dell'oggetto **parametri** insieme recupera informazioni sui parametri di provider per la stored procedure o query con parametri specificato nella **comando** oggetto. Alcuni provider non supporta chiamate di stored procedure o query con parametri. chiamata di **aggiornare** metodo il **parametri** raccolta quando si utilizza un provider di questo tipo verrà restituito un errore.  
+ Usando il [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) metodo su un **comando** dell'oggetto **parametri** raccolta recupera le informazioni sui parametri di provider per la stored procedure o query con parametri specificato nella **comando** oggetto. Alcuni provider di servizi non supportano chiamate a stored procedure o le query con parametri. chiama il **aggiornare** metodo sul **parametri** raccolta quando si usa un provider di questo tipo verrà restituito un errore.  
   
- Se non è stata definita la propria **parametro** oggetti e si accede di **parametri** raccolta prima di chiamare il **aggiornare** metodo, verrà automaticamente chiamato il metodo e popolare la raccolta per l'utente.  
+ Se non è stato definito il proprio **parametro** gli oggetti e si accede il **parametri** raccolta prima di chiamare il **Aggiorna** metodo ADO chiama automaticamente il metodo e popolare la raccolta per l'utente.  
   
- È possibile ridurre le chiamate al provider per migliorare le prestazioni se si conosce le proprietà dei parametri associati con la stored procedure o query con parametri che si desidera chiamare. Utilizzare il [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) metodo per creare **parametro** oggetti con le impostazioni di proprietà appropriato e l'utilizzo di [Append](../../../ado/reference/ado-api/append-method-ado.md) metodo per aggiungerli al  **I parametri** insieme. Consente di impostare e restituire i valori dei parametri senza la necessità di chiamare il provider per le informazioni sui parametri. Se si sta scrivendo su un provider che non fornisce informazioni sui parametri, è necessario popolare manualmente le **parametri** insieme utilizzando questo metodo per essere in grado di utilizzare i parametri. Utilizzare il [eliminare](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) metodo per rimuovere **parametro** oggetti dal **parametri** raccolta, se necessario.  
+ È possibile ridurre al minimo le chiamate al provider per migliorare le prestazioni se si conoscono le proprietà dei parametri associati con la stored procedure o query con parametri che si desidera chiamare. Usare la [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) metodo per creare **parametro** oggetti con le impostazioni di proprietà appropriata e usare il [Append](../../../ado/reference/ado-api/append-method-ado.md) metodo a cui aggiungere i il  **Parametri** raccolta. Ciò consente di impostare e restituire i valori dei parametri senza la necessità di chiamare il provider per le informazioni sui parametri. Se si scrive in un provider che non fornisce informazioni sui parametri, è necessario popolare manualmente le **parametri** insieme utilizzando questo metodo per essere in grado di utilizzare i parametri. Usare la [eliminare](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) metodo per rimuovere **parametro** oggetti dal **parametri** insieme, se necessario.  
   
- Gli oggetti il **parametri** raccolta di un **Recordset** andare fuori ambito (pertanto diventi non disponibile) quando il **Recordset** viene chiuso.  
+ Gli oggetti nel **parametri** raccolta di un **Recordset** passare dall'ambito (pertanto diventi non disponibile) quando il **Recordset** viene chiuso.  
   
  Quando si chiama una stored procedure con **comando**, il parametro di valore restituito/output di una stored procedure viene recuperato come indicato di seguito:  
   
-1.  Quando si chiama una stored procedure che non ha alcun parametro, il **aggiornare** metodo il **parametri** raccolta deve essere chiamata prima di chiamare il **Execute** metodo il **Comando** oggetto.  
+1.  Quando si chiama una stored procedure che non ha parametri, il **aggiornare** metodo sulle **parametri** raccolta deve essere chiamata prima di chiamare il **Execute** metodo sul **Comando** oggetto.  
   
-2.  Quando si chiama una stored procedure con parametri e l'aggiunta in modo esplicito un parametro per il **parametri** insieme con **Append**, il parametro di valore restituito/output deve essere aggiunti al **Parametri** insieme. Il valore restituito deve essere aggiunto prima per il **parametri** insieme. Utilizzare **Append** per aggiungere gli altri parametri in di **parametri** insieme nell'ordine di definizione. Ad esempio, la stored procedure SPWithParam include due parametri. Il primo parametro, *InParam*, è un parametro di input definiti come adVarChar (20) e il secondo parametro, *OutParam*, è un parametro di output definito come adVarChar (20). È possibile recuperare il parametro di valore restituito/output con il codice seguente.  
+2.  Quando si chiama una stored procedure con parametri e l'aggiunta in modo esplicito un parametro per il **parametri** raccolta con **Append**, deve essere aggiunto il parametro di valore restituito/output per il **Parametri** raccolta. Il valore restituito deve essere aggiunto prima di tutto per il **parametri** raccolta. Uso **Append** per aggiungere gli altri parametri nel **parametri** insieme nell'ordine di definizione. Ad esempio, la stored procedure SPWithParam include due parametri. Il primo parametro, *InParam*, è un parametro di input definiti come adVarChar (20) e il secondo parametro *OutParam*, è un parametro di output definito come adVarChar (20). È possibile recuperare il parametro di valore restituito/output con il codice seguente.  
   
     ```  
     ' Open Connection Conn  
@@ -67,7 +64,7 @@ Contiene tutti i [parametro](../../../ado/reference/ado-api/parameter-object.md)
   
     ```  
   
-3.  Quando si chiama una stored procedure con parametri e i parametri di configurazione tramite la chiamata di **elemento** metodo il **parametri** raccolta, il parametro di valore restituito/output della stored procedure può essere recuperati i **parametri** insieme. Ad esempio, la stored procedure SPWithParam include due parametri. Il primo parametro, *InParam*, è un parametro di input definiti come adVarChar (20) e il secondo parametro, *OutParam*, è un parametro di output definito come adVarChar (20). È possibile recuperare il parametro di valore restituito/output con il codice seguente.  
+3.  Quando si chiama una stored procedure con parametri e configurazione dei parametri chiamando il **elemento** metodo sulle **parametri** raccolta, il parametro di valore restituito/output della stored procedure può possibile recuperarne il **parametri** raccolta. Ad esempio, la stored procedure SPWithParam include due parametri. Il primo parametro, *InParam*, è un parametro di input definiti come adVarChar (20) e il secondo parametro *OutParam*, è un parametro di output definito come adVarChar (20). È possibile recuperare il parametro di valore restituito/output con il codice seguente.  
   
     ```  
     ' Open Connection Conn  
@@ -84,11 +81,11 @@ Contiene tutti i [parametro](../../../ado/reference/ado-api/parameter-object.md)
     ' Access ccmd.parameters(2) or ccmd.parameters("OutParam") as the output parameter.  
     ```  
   
- In questa sezione contiene l'argomento seguente.  
+ In questa sezione contiene gli argomenti seguenti.  
   
 -   [Proprietà di raccolta dei parametri, metodi ed eventi](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Append (metodo) (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
+ [Metodo Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Metodo CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)

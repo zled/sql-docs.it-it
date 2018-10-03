@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_recovery_status_TSQL
@@ -20,23 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_recovery_status catalog view
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2cdefec3d2f5ffd6a8ce326c4d3afd78df47de44
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 72a292724a08917b18baedd6a3adbb8dfd00f739
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181267"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707349"
 ---
 # <a name="sysdatabaserecoverystatus-transact-sql"></a>sys.database_recovery_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Include una riga per database. Se il database non è aperto, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] tenta di avviarlo.  
   
- Per visualizzare la riga per un database diverso da **master** o **tempdb**, applica uno dei seguenti:  
+ Per visualizzare la riga per un database diverso da **master** oppure **tempdb**, è necessario applicare uno dei seguenti:  
   
 -   Essere proprietario del database.  
   
@@ -49,12 +45,12 @@ ms.locfileid: "33181267"
 |**database_id**|**int**|ID del database, univoco all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**database_guid**|**uniqueidentifier**|Utilizzato per mettere il relazione tra loro tutti i file di un database. È necessario che tutti i file includano questo GUID nella pagina di intestazione per essere avviati come previsto. Solo un database dovrebbe includere questo GUID, ma è possibile creare duplicati copiando o collegando i database. RESTORE genera sempre un nuovo GUID quando si ripristina un database non ancora esistente.<br /><br /> NULL= Il database è offline o non può essere avviato.|  
 |**family_guid**|**uniqueidentifier**|Identificatore del "gruppo di backup" del database per l'individuazione di stati di ripristino corrispondenti.<br /><br /> NULL= Il database è offline o non può essere avviato.|  
-|**last_log_backup_lsn**|**numeric(25,0)**|Il numero di sequenza del log iniziale del backup del log successivo.<br /><br /> Se NULL, un log delle transazioni indietro fino Impossibile eseguire perché il database è di recupero con registrazione minima o Nessun backup di database corrente.|  
+|**last_log_backup_lsn**|**numeric(25,0)**|Il numero di sequenza del log iniziale del backup del log successivo.<br /><br /> Se NULL, nuovamente un log delle transazioni fino non può essere eseguito perché il database è di recupero con registrazione minima o non vi è alcun backup del database corrente.|  
 |**recovery_fork_guid**|**uniqueidentifier**|Identifica il fork di recupero corrente nel quale il database è attualmente attivo.<br /><br /> NULL= Il database è offline o non può essere avviato.|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|Identificatore del fork di recupero di inizio.<br /><br /> NULL= Il database è offline o non può essere avviato.|  
-|**fork_point_lsn**|**numeric(25,0)**|Se **first_recovery_fork_guid** è diverso (! =) per **recovery_fork_guid**, **fork_point_lsn** è il numero di sequenza del log del punto di fork corrente. Negli altri casi il valore è NULL.|  
+|**fork_point_lsn**|**numeric(25,0)**|Se **first_recovery_fork_guid** non è uguale (! =) per **recovery_fork_guid**, **fork_point_lsn** è il numero di sequenza del log del punto di fork corrente. Negli altri casi il valore è NULL.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

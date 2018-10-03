@@ -1,13 +1,11 @@
 ---
-title: MoveFirst, MoveLast, MoveNext e MovePrevious metodi (ADO) | Documenti Microsoft
+title: Metodi MoveFirst, MoveLast, MoveNext e MovePrevious metodi (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -25,19 +23,18 @@ helpviewer_keywords:
 - MoveFirst method [ADO]
 - MovePrevious method [ADO]
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1cd50b23dbe8fb73b327db7f75ee25b062ee447c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 905fc532057a827f30735efe067464f488f51dc0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279610"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727289"
 ---
-# <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst, MoveLast, MoveNext e MovePrevious metodi (ADO)
-Sposta il primo, ultimo, successivo o precedente record in un oggetto specificato [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto e imposta tale record come record corrente.  
+# <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>Metodi MoveFirst, MoveLast, MoveNext e MovePrevious metodi (ADO)
+Sposta il primo, ultimo, successivo o precedente record in un oggetto specificato [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) specificato e ne fanno il record corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,28 +43,28 @@ Sposta il primo, ultimo, successivo o precedente record in un oggetto specificat
 recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-## <a name="remarks"></a>Remarks  
- Utilizzare il **MoveFirst** metodo per spostare la posizione corrente del primo record di **Recordset**.  
+## <a name="remarks"></a>Note  
+ Usare la **MoveFirst** metodo per spostare la posizione corrente del primo record la **Recordset**.  
   
- Utilizzare il **MoveLast** per spostare la posizione corrente all'ultimo record nel **Recordset**. Il **Recordset** oggetto deve supportare lo spostamento del cursore con le versioni precedenti o i segnalibri; in caso contrario, la chiamata al metodo genererà un errore.  
+ Usare la **MoveLast** metodo per spostare la posizione corrente all'ultimo record nelle **Recordset**. Il **Recordset** oggetto deve supportare lo spostamento del cursore con le versioni precedenti o i segnalibri; in caso contrario, la chiamata al metodo genererà un errore.  
   
- Una chiamata a **MoveFirst** o **MoveLast** quando il **Recordset** è vuoto (entrambi **BOF** e **EOF** sono True) genera un errore.  
+ Una chiamata a uno **MoveFirst** oppure **MoveLast** quando la **Recordset** è vuota (entrambi **BOF** e **EOF** sussistono) genera un errore.  
   
- Utilizzare il **MoveNext** per spostare il record corrente posizionare un record di inoltro (nella parte inferiore del **Recordset**). Se l'ultimo record è il record corrente e si chiama il **MoveNext** (metodo), ADO imposta il record corrente alla posizione successiva all'ultimo record nel **Recordset** ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) è **True**). Tentativo di spostare in avanti quando il **EOF** proprietà è già **True** genera un errore.  
+ Usare la **MoveNext** metodo per spostare il record corrente posizionare un record di inoltro (verso il basso il **Recordset**). Se l'ultimo record corrisponde al record corrente e si chiama il **MoveNext** metodo, ADO imposta il record corrente alla posizione successiva all'ultimo record nelle **Recordset** ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) è **True**). Tenta di spostarsi in avanti quando le **EOF** proprietà è già **True** genera un errore.  
   
- In ADO 2.5 e versioni successiva, quando il **Recordset** sono stati filtrati o ordinati e i dati del record corrente viene modificati, la chiamata di **MoveNext** metodo sposta i record di cursore due inoltrare dal record corrente . Infatti, quando viene modificato il record corrente, il record successivo diventa il nuovo record corrente. La chiamata **MoveNext** dopo la modifica si sposta il cursore al record successivo da nuovo record corrente. Ciò è diverso da quello in ADO 2.1 e versioni precedenti. In queste versioni precedenti, la modifica dei dati di un record corrente nella ordinata o filtrata **Recordset** non modifica la posizione del record corrente, e **MoveNext** sposta il cursore al record successivo immediatamente dopo il record corrente.  
+ In ADO 2.5 e versioni successiva, quando il **Recordset** è stato filtrato o ordinato e i dati del record corrente viene modificati, la chiamata il **MoveNext** metodo sposta i record di cursore due inoltrare del record corrente . Questo avviene perché quando viene modificato il record corrente, il record successivo diventa il nuovo record corrente. La chiamata **MoveNext** dopo la modifica si sposta il cursore al record successivo dal nuovo record corrente. Ciò è diverso da quello in ADO 2.1 e versioni precedenti. Nelle versioni precedenti, la modifica dei dati di un record corrente nella ordinata o filtrata **Recordset** non modifica la posizione del record corrente, e **MoveNext** sposta il cursore sul record successivo immediatamente dopo il record corrente.  
   
- Utilizzare il **MovePrevious** per spostare il record corrente posizionare un record con le versioni precedenti (verso l'alto il **Recordset**). Il **Recordset** oggetto deve supportare lo spostamento del cursore con le versioni precedenti o i segnalibri; in caso contrario, la chiamata al metodo genererà un errore. Se il primo record è il record corrente e si chiama il **MovePrevious** (metodo), ADO imposta il record corrente nella posizione precedente al primo record di **Recordset** ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)è **True**). Tenta di spostarsi con le versioni precedenti quando il **BOF** proprietà è già **True** genera un errore. Se il **Recordset** oggetto non supporta i segnalibri o lo spostamento del cursore con le versioni precedenti, il **MovePrevious** metodo genererà un errore.  
+ Usare la **MovePrevious** metodo per spostare il record corrente posizionare un record con le versioni precedenti (verso l'alto il **Recordset**). Il **Recordset** oggetto deve supportare lo spostamento del cursore con le versioni precedenti o i segnalibri; in caso contrario, la chiamata al metodo genererà un errore. Se il primo record corrisponde al record corrente e si chiama il **MovePrevious** metodo, ADO imposta il record corrente alla posizione prima del primo record la **Recordset** ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)viene **True**). Tenta di spostarsi con le versioni precedenti quando le **BOF** proprietà è già **True** genera un errore. Se il **Recordset** objekt nepodporuje segnalibri o uno spostamento del cursore con le versioni precedenti, il **MovePrevious** metodo genererà un errore.  
   
- Se il **Recordset** è solo in avanti e si desidera supportare lo scorrimento in avanti e indietro, è possibile utilizzare il [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) proprietà per creare una cache di record che supporterà lo spostamento del cursore con le versioni precedenti tramite il [spostare](../../../ado/reference/ado-api/move-method-ado.md) metodo. Poiché i record memorizzati nella cache vengono caricati in memoria, è consigliabile evitare la memorizzazione nella cache più record del necessario. È possibile chiamare il **MoveFirst** metodo forward-only **Recordset** oggetto; tale operazione può causare il provider eseguire nuovamente il comando che ha generato il **Recordset** oggetto .  
+ Se il **Recordset** è forward-only e si desidera supportare lo scorrimento in avanti e indietro, è possibile utilizzare il [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) proprietà per creare una cache di record che supporta lo spostamento del cursore con le versioni precedenti tramite il [spostare](../../../ado/reference/ado-api/move-method-ado.md) (metodo). Poiché i record memorizzati nella cache vengono caricati in memoria, è consigliabile evitare la memorizzazione nella cache più record del necessario. È possibile chiamare il **MoveFirst** metodo in un tipo forward-only **Recordset** oggetto; questa operazione può causare il provider eseguire nuovamente il comando che ha generato il **Recordset** oggetto .  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [MoveFirst, MoveLast, MoveNext e MovePrevious metodi esempio (VB)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
- [MoveFirst, MoveLast, MoveNext e MovePrevious metodi esempio (VBScript)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)   
- [MoveFirst, MoveLast, MoveNext e MovePrevious metodi esempio (VC + +)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   
+ [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (esempio di metodi (VB)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
+ [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (esempio di metodi (VBScript)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)   
+ [MoveFirst, MoveLast, MoveNext e MovePrevious esempio di metodi (VC + +)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   
  [Metodo Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [MoveFirst, MoveLast, MoveNext e MovePrevious metodi (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
+ [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious metodi (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
  [Metodo MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

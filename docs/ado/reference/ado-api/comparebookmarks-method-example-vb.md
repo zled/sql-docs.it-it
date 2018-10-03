@@ -1,34 +1,31 @@
 ---
-title: Esempio di metodo CompareBookmarks (VB) | Documenti Microsoft
+title: Esempio di metodo CompareBookmarks (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CompareBookmarks method [ADO], Visual Basic example
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff4e2c8c1e66ac7240e188e06ede5bb1295814de
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 99aadf2d532c6e42b2638aab34d19289617e7d38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276960"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705174"
 ---
-# <a name="comparebookmarks-method-example-vb"></a>Esempio di metodo CompareBookmarks (VB)
-Questo esempio viene illustrato il [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) metodo. Il valore relativo di segnalibri è raramente necessario a meno che un segnalibro particolare è in qualche modo particolare.  
+# <a name="comparebookmarks-method-example-vb"></a>Esempio del metodo CompareBookmarks (VB)
+Questo esempio viene illustrato il [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) (metodo). Il valore relativo di segnalibri è raramente necessaria, a meno che un determinato segnalibro è in qualche modo particolare.  
   
- Definire una riga casuale di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) derivato dal ***autori*** tabella come destinazione di una ricerca. Quindi visualizzare la posizione di ogni riga che hanno come destinazione.  
+ Definire una riga casuale di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) derivato dalle ***autori*** tabella come destinazione di una ricerca. Quindi visualizzare la posizione di ogni riga rispetto alla che hanno come destinazione.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -137,6 +134,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
+ [Esempio di metodo CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [CompareEnum](../../../ado/reference/ado-api/compareenum.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

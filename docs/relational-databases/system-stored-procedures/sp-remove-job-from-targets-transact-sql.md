@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_remove_job_from_targets_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_remove_job_from_targets
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b74ba0fee691ba80ac62181b108c8d1047479817
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5223c0d48d1baacdd8660a4fcc006d13115f1f4c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255041"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732219"
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +44,10 @@ sp_remove_job_from_targets [ @job_id = ] job_id
   
 ## <a name="arguments"></a>Argomenti  
  [ **@job_id =**] *job_id*  
- Numero di identificazione del processo da cui rimuovere i server di destinazione o i gruppi di server di destinazioni specificati. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
+ Numero di identificazione del processo da cui rimuovere i server di destinazione o i gruppi di server di destinazioni specificati. Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name =**] **'***job_name***'**  
- Nome del processo da cui rimuovere i server di destinazione o i gruppi di server di destinazione specificati. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *job_name* viene **sysname**, con un valore predefinito è NULL.  
+ Nome del processo da cui rimuovere i server di destinazione o i gruppi di server di destinazione specificati. Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@target_server_groups =**] **'***target_server_groups***'**  
  Elenco delimitato da virgole dei gruppi di server di destinazione da rimuovere dal processo specificato. *target_server_groups* viene **nvarchar(1024)**, con un valore predefinito è NULL.  
@@ -60,9 +56,9 @@ sp_remove_job_from_targets [ @job_id = ] job_id
  Elenco delimitato da virgole dei server di destinazione da rimuovere dal processo specificato. *target_servers* viene **nvarchar(1024)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  

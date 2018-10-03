@@ -1,14 +1,11 @@
 ---
-title: sp_dbmmonitorupdate (Transact-SQL) | Documenti Microsoft
+title: sp_dbmmonitorupdate (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorupdate
@@ -19,24 +16,23 @@ helpviewer_keywords:
 - sp_dbmmonitorupdate
 - database mirroring [SQL Server], monitoring
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0882644bb3cef95694cee44e308b21fc627cd489
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f8ee54383074e624d082d2ab782d6b038fd03d06
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242485"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817061"
 ---
 # <a name="spdbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Aggiorna la tabella di stato di Monitoraggio mirroring del database inserendo una nuova riga di tabella per ogni database con mirroring e tronca le righe precedenti al periodo di memorizzazione corrente. Il periodo di memorizzazione predefinito è 7 giorni (168 ore). Quando si aggiorna la tabella, **sp_dbmmonitorupdate** restituisce le metriche delle prestazioni.  
+  Aggiorna la tabella di stato di Monitoraggio mirroring del database inserendo una nuova riga di tabella per ogni database con mirroring e tronca le righe precedenti al periodo di memorizzazione corrente. Il periodo di memorizzazione predefinito è 7 giorni (168 ore). Quando si aggiorna la tabella **sp_dbmmonitorupdate** restituisce le metriche delle prestazioni.  
   
 > [!NOTE]  
->  La prima volta **sp_dbmmonitorupdate** viene eseguita, crea la tabella dello stato di mirroring del database e **dbm_monitor** ruolo predefinito del database nel **msdb** database.  
+>  La prima volta **sp_dbmmonitorupdate** viene eseguita, crea la tabella dello stato di mirroring del database e il **dbm_monitor** ruolo predefinito del database nel **msdb** database.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,21 +48,21 @@ sp_dbmmonitorupdate [ database_name ]
  Nome del database per cui aggiornare lo stato di mirroring. Se *database_name* non viene specificato, la procedura Aggiorna la tabella dello stato per ogni database con mirroring nell'istanza del server.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- Nessuno  
+ None  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_dbmmonitorupdate** può essere eseguito solo nel contesto del **msdb** database.  
+## <a name="remarks"></a>Note  
+ **sp_dbmmonitorupdate** possono essere eseguite solo nel contesto del **msdb** database.  
   
  Se una colonna della tabella di stato non è valida per il ruolo di un partner, il valore è NULL per tale partner. Una colonna include inoltre valori NULL se le informazioni rilevanti non sono disponibili, ad esempio durante il failover o il riavvio del server.  
   
- Dopo aver **sp_dbmmonitorupdate** crea il **dbm_monitor** ruolo predefinito del database nel **msdb** database, i membri del **sysadmin** ruolo predefinito del server può aggiungere qualsiasi utente per il **dbm_monitor** ruolo predefinito del database. Il **dbm_monitor** ruolo consente ai membri di visualizzare lo stato di mirroring del database, ma non l'aggiornamento, ma non visualizzare o configurare gli eventi di mirroring del database.  
+ Dopo aver **sp_dbmmonitorupdate** crea il **dbm_monitor** ruolo predefinito del database nel **msdb** del database, i membri del **sysadmin** ruolo predefinito del server può aggiungere qualsiasi utente per il **dbm_monitor** ruolo predefinito del database. Il **dbm_monitor** ruolo consente ai membri di visualizzare lo stato di mirroring del database, ma non eseguirne l'aggiornamento, ma non visualizzare o configurare gli eventi di mirroring del database.  
   
- Quando si aggiorna lo stato di mirroring di un database, **sp_dbmmonitorupdate** verifica l'ultimo valore le metriche delle prestazioni del mirroring per il quale è stata specificata una soglia di avviso. Se il valore supera la soglia, la procedura aggiunge un evento informativo al log eventi. Tutti valori sono medie eseguite dopo l'ultimo aggiornamento. Per altre informazioni, vedere [Usare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Quando si aggiorna lo stato di mirroring di un database, **sp_dbmmonitorupdate** verifica l'ultimo valore di qualsiasi metrica delle prestazioni del mirroring per cui è stata specificata una soglia di avviso. Se il valore supera la soglia, la procedura aggiunge un evento informativo al log eventi. Tutti valori sono medie eseguite dopo l'ultimo aggiornamento. Per altre informazioni, vedere [Usare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  

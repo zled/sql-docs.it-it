@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profileaccount_sp
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_profileaccount_sp
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 776cabb53664a82bbd767301af0c62f4d86887dc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d5f307fca906d138428fe9852752d3f718633181
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260637"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729859"
 ---
 # <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Aggiunge un account di Posta elettronica database a un profilo di Posta elettronica database. Eseguire **sysmail_add_profileaccount_sp** dopo la creazione di un Account di Database mediante [sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md), e un profilo di Database viene creato con [sysmail_add_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md).  
+  Aggiunge un account di Posta elettronica database a un profilo di Posta elettronica database. Eseguire **sysmail_add_profileaccount_sp** dopo aver creato un Account di Database con [sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md), e viene creato un profilo di Database con [sysmail_add_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,27 +43,27 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
   
 ## <a name="arguments"></a>Argomenti  
  [ **@profile_id** = ] *profile_id*  
- ID del profilo a cui aggiungere l'account. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi i *profile_id* o *profile_name* deve essere specificato.  
+ ID del profilo a cui aggiungere l'account. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi i *profile_id* o nella *profile_name* deve essere specificato.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- Nome del profilo a cui aggiungere l'account. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *profile_id* o *profile_name* deve essere specificato.  
+ Nome del profilo a cui aggiungere l'account. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *profile_id* o nella *profile_name* deve essere specificato.  
   
  [ **@account_id** = ] *account_id*  
- ID dell'account da aggiungere al profilo. *account_id* viene **int**, con un valore predefinito è NULL. Entrambi i *account_id* o *account_name* deve essere specificato.  
+ ID dell'account da aggiungere al profilo. *account_id* viene **int**, con un valore predefinito è NULL. Entrambi i *account_id* o nella *account_name* deve essere specificato.  
   
  [ **@account_name** =] **'***account_name***'**  
- Nome dell'account da aggiungere al profilo. *account_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *account_id* o *account_name* deve essere specificato.  
+ Nome dell'account da aggiungere al profilo. *account_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *account_id* o nella *account_name* deve essere specificato.  
   
  [ **@sequence_number** =] *sequence_number*  
  Numero di sequenza dell'account all'interno del profilo. *sequence_number* viene **int**, non prevede alcun valore predefinito. Il numero di sequenza determina l'ordine in cui gli account sono utilizzati nel profilo.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Sia il profilo che l'account devono esistere. In caso contrario, la stored procedure restituisce un errore.  
   
- Questa stored procedure non modifica il numero di sequenza di un account che è già associato al profilo specificato. Per ulteriori informazioni su come aggiornare il numero di sequenza di un account, vedere [sysmail_update_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md).  
+ Questa stored procedure non modifica il numero di sequenza di un account che è già associato al profilo specificato. Per altre informazioni sull'aggiornamento del numero di sequenza di un account, vedere [sysmail_update_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md).  
   
  Il numero di sequenza determina l'ordine in cui Posta elettronica database utilizza gli account nel profilo. Per un nuovo messaggio di posta elettronica, Posta elettronica database inizia con l'account che ha il numero di sequenza più basso. Se l'invio del messaggio con tale account ha esito negativo, Posta elettronica database prova con l'account con il numero di sequenza successivo e così via, finché il messaggio non viene inviato o finché anche l'invio con l'account con il numero di sequenza più alto non ha esito negativo. Se l'invio del messaggio con l'account con il numero di sequenza più alto non riesce, Posta elettronica database sospende i tentativi di invio del messaggio per il periodo di tempo specificato nel parametro *AccountRetryDelay* di **sysmail_configure_sp**. Trascorso questo periodo di tempo, Posta elettronica database prova di nuovo a inviare il messaggio, iniziando con l'account con il numero di sequenza più basso. Usare il parametro *AccountRetryAttempts* di **sysmail_configure_sp**per specificare quante volte il processo di posta elettronica esterno deve tentare di inviare il messaggio di posta elettronica usando ogni account indicato del profilo specificato.  
   
@@ -75,8 +71,8 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
   
  La stored procedure **sysmail_add_profileaccount_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente il profilo `AdventureWorks Administrator` viene associato all'account `Audit Account`. Il numero di sequenza dell'account è 1.  

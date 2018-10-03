@@ -1,36 +1,33 @@
 ---
-title: Proprietà URL (RDS) | Documenti Microsoft
+title: Proprietà URL (Servizi Desktop remoto) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - URL property [ADO]
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb07f83de6f08202b80da6a56bcf781510eb237f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d331d5584274328506acd39b811e789f657640f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288810"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613369"
 ---
-# <a name="url-property-rds"></a>Proprietà URL (RDS)
-Indica una stringa contenente un URL relativo o assoluto.  
+# <a name="url-property-rds"></a>Proprietà URL (Servizi Desktop remoto)
+Indica una stringa che contiene un URL relativo o assoluto.  
   
- È possibile impostare il **URL** proprietà in fase di progettazione nel [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto tag o in fase di esecuzione nel codice di script.  
+ È possibile impostare il **URL** proprietà in fase di progettazione nel [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto di tag, o in fase di esecuzione nel codice di script.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,8 +44,8 @@ Run time: DataControl.URL="Server"
  *DataControl*  
  Una variabile oggetto che rappresenta un **DataControl** oggetto.  
   
-## <a name="remarks"></a>Remarks  
- In genere, l'URL identifica un file Active Server Page (ASP) che può generare e restituire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Pertanto, l'utente può ottenere un **Recordset** senza dover richiamare il lato server [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) dell'oggetto o un oggetto di business personalizzata del programma.  
+## <a name="remarks"></a>Note  
+ In genere, l'URL identifica un file Active Server Page (ASP) che può generare e restituire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Di conseguenza, l'utente può ottenere un **Recordset** senza dover richiamare il server-side [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) dell'oggetto oppure programmare un oggetto business personalizzato.  
   
  Se il **URL** proprietà è stata impostata, [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) invierà le modifiche nel percorso specificato dall'URL.  
   

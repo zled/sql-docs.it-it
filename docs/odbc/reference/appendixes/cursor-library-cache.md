@@ -1,35 +1,32 @@
 ---
-title: Cursore libreria Cache | Documenti Microsoft
+title: Cache della libreria di cursori | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], cache
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: d6a91cd6-3905-4e3a-98ab-37fce893dbe1
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 003b9497177aa0bf2da1c58ad01644ea014b5b14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95a8e01b42f8bdc2036457b5c8a9e0e4088c16fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906906"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821059"
 ---
-# <a name="cursor-library-cache"></a>Cache di libreria di cursori
+# <a name="cursor-library-cache"></a>Cache della libreria di cursori
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Si consiglia di utilizzare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
   
- Per ogni riga di dati nel set di risultati, la libreria di cursori memorizza nella cache i dati per ogni colonna associata, la lunghezza dei dati in ogni colonna associata e lo stato della riga. La libreria di cursori utilizza i valori della cache restituita attraverso **SQLFetch** e **SQLFetchScroll** e per creare istruzioni di ricerca per operazioni posizionate. Per ulteriori informazioni, vedere [la costruzione di istruzioni di ricerca](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
+ Per ogni riga di dati nel set di risultati, la libreria di cursori memorizza nella cache i dati per ogni colonna associata, la lunghezza dei dati in ogni colonna associata e lo stato della riga. La libreria di cursori utilizza i valori nella cache sia restituita attraverso **SQLFetch** e **SQLFetchScroll** e per costruire istruzioni ricercate per operazioni posizionate. Per altre informazioni, vedere [costruzione di istruzioni di eseguire la ricerca](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

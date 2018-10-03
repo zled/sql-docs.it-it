@@ -1,44 +1,41 @@
 ---
-title: Scrittura di un gestore personalizzato | Documenti Microsoft
+title: La scrittura di un gestore personalizzato | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b9cb903d276357e46489dbdcd316d4f3974087a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ced8796278ffab61b5f4e45b687e8059bb34255f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274700"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680199"
 ---
 # <a name="writing-your-own-customized-handler"></a>Scrittura di un gestore personalizzato
-Si consiglia di scrivere un gestore personalizzato se si è un amministratore di server IIS che richiede il supporto RDS predefinito, ma maggiore controllo sulle richieste degli utenti e diritti di accesso.  
+È possibile scrivere un gestore personalizzato se sei un amministratore di server IIS che richiede l'impostazione predefinita il supporto di servizi desktop remoto, ma un maggior controllo sulle richieste degli utenti e diritti di accesso.  
   
- Il MSDFMAP. Gestore implementa il **IDataFactoryHandler** interfaccia.  
+ MSDFMAP. Gestore implementa il **IDataFactoryHandler** interfaccia.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="idatafactoryhandler-interface"></a>Interfaccia IDataFactoryHandler  
- Questa interfaccia dispone di due metodi, **GetRecordset** e **Riconnetti**. Entrambi i metodi richiedono che il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) impostata su **adUseClient**.  
+ Questa interfaccia dispone di due metodi **GetRecordset** e **Riconnetti**. Entrambi i metodi richiedono che il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) impostata su **adUseClient**.  
   
  Entrambi i metodi accettano gli argomenti visualizzati dopo la prima virgola nel "**gestore =**" parola chiave. Ad esempio, `"Handler=progid,arg1,arg2;"` passerà una stringa dell'argomento `"arg1,arg2"`, e `"Handler=progid"` passa un argomento null.  
   
 ## <a name="getrecordset-method"></a>Metodo GetRecordset  
- Questo metodo esegue una query origine dati e crea un nuovo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto utilizzando gli argomenti forniti. Il **Recordset** deve essere aperto con **adLockBatchOptimistic** e non deve essere aperto in modo asincrono.  
+ Questo metodo esegue query sull'origine dati e crea un nuovo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) utilizzando gli argomenti specificati. Il **Recordset** deve essere aperta con **adLockBatchOptimistic** e non deve essere aperto in modo asincrono.  
   
 ### <a name="arguments"></a>Argomenti  
  ***Conn*** la stringa di connessione.  
@@ -47,20 +44,20 @@ Si consiglia di scrivere un gestore personalizzato se si è un amministratore di
   
  ***query*** il testo del comando per eseguire una query.  
   
- ***ppRS*** l'indicatore di misura in cui la **Recordset** devono essere restituiti.  
+ ***ppRS*** il puntatore in cui la **Recordset** devono essere restituiti.  
   
-## <a name="reconnect-method"></a>Riconnettersi (metodo)  
- Questo metodo aggiorna l'origine dati. Viene creato un nuovo [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto e associa il determinato **Recordset**.  
+## <a name="reconnect-method"></a>Ristabilire la connessione (metodo)  
+ Questo metodo aggiorna l'origine dati. Crea una nuova [Connection](../../../ado/reference/ado-api/connection-object-ado.md) oggetto e consente di collegare il determinato **Recordset**.  
   
 ### <a name="arguments"></a>Argomenti  
  ***Conn*** la stringa di connessione.  
   
  ***args*** gli argomenti per il gestore.  
   
- ***le prenotazioni permanenti*** A **Recordset** oggetto.  
+ ***le richieste pull*** un' **Recordset** oggetto.  
   
 ## <a name="msdfhdlidl"></a>msdfhdl.idl  
- Questa è la definizione di interfaccia per **IDataFactoryHandler** che compare nella **msdfhdl** file.  
+ Si tratta della definizione di interfaccia per **IDataFactoryHandler** che viene visualizzato nella **msdfhdl** file.  
   
 ```  
 [  
@@ -104,10 +101,10 @@ HRESULT _stdcall GetRecordset(
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Collegare il File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Sezione sulla connessione del File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Sezione Log File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Sezione relativa alla personalizzazione File SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Sezione UserList File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Sezione SQL del File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [Sezione UserList del File personalizzazione](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [Personalizzazione di DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Impostazioni Client richieste](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Informazioni sul file di personalizzazione](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)

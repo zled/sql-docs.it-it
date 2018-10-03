@@ -1,27 +1,23 @@
 ---
-title: Riprodurre dati di traccia | Documenti Microsoft
+title: Riprodurre dati di traccia | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc1bf91650cd45f3bdc3c7a17a6e907205c7c258
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bc31568ba3dfc603f2abe850d2388729fc25813
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33073148"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746269"
 ---
 # <a name="replay-trace-data"></a>Riproduzione di dati di traccia
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +25,7 @@ ms.locfileid: "33073148"
   
  Usare l'opzione **replay** dello strumento di amministrazione per avviare la fase di riproduzione dell'evento della riesecuzione distribuita. Questa fase è costituita da due parti: il recapito dei dati di traccia e l'avvio e la sincronizzazione della riproduzione distribuita.  
   
- ![Evento riesecuzione distribuita](../../tools/distributed-replay/media/eventreplay.gif "evento riesecuzione distribuita")  
+ ![Distributed Replay di eventi](../../tools/distributed-replay/media/eventreplay.gif "della funzionalità Distributed Replay di evento")  
   
  È possibile riprodurre i dati di traccia in una delle due modalità di sequenza disponibili, ovvero la modalità di stress o la modalità di sincronizzazione. Il comportamento predefinito consiste nel riprodurre i dati di traccia in modalità di stress. Per altre informazioni sulla fase di riproduzione dell'evento e sulle modalità di sequenza, vedere [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   

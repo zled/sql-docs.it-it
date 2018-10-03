@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_registry_TSQL
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_registry dynamic management view
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4207ee898acec0d0f5f2f00594835ffcef40e9d1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: e4e0b1069977c14216952e537d4bd12b28190529
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788619"
 ---
 # <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +34,12 @@ ms.lasthandoff: 05/23/2018
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|Nome della chiave del Registro di sistema Ammette i valori Null.|  
-|value_name|**nvarchar(256)**|Nome del valore della chiave. Si tratta dell'elemento mostrato nella **nome** colonna dell'Editor del Registro di sistema. Ammette i valori Null.|  
-|value_data|**sql_variant**|Valore dei dati della chiave. Questo è il valore mostrato nel **dati** dell'Editor del Registro di sistema per una voce specifica di colonna. Ammette i valori Null.|  
+|value_name|**nvarchar(256)**|Nome del valore della chiave. Si tratta dell'elemento visualizzato nei **nome** colonna dell'Editor del Registro di sistema. Ammette i valori Null.|  
+|value_data|**sql_variant**|Valore dei dati della chiave. Si tratta del valore visualizzato nei **dati** colonna dell'Editor del Registro di sistema per una voce specificata. Ammette i valori Null.|  
   
 ## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="examples"></a>Esempi  

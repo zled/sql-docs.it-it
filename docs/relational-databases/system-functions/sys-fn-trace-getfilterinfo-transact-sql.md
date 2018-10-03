@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_getfilterinfo
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - filters [SQL Server], traces
 - fn_trace_getfilterinfo function
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
-caps.latest.revision: 36
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1f55c02dfd91edbb964b87e74e2d413f9066501d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce54144c3f7f367248cdb9d92484874deaaf78fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690649"
 ---
 # <a name="sysfntracegetfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +63,7 @@ fn_trace_getfilterinfo ( trace_id )
 ## <a name="remarks"></a>Note  
  L'utente imposta *trace_id* valore da identificare, modificare e controllare la traccia. Se viene passato l'ID di una traccia specifica, **fn_trace_getfilterinfo** restituisce informazioni su eventuali filtri su tale traccia. Se alla traccia specificata non è associato un filtro, questa funzione restituisce un set di righe vuoto. Se viene passato un ID non valido, questa funzione restituisce un set di righe vuoto. Per informazioni analoghe sulle tracce, vedere [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessario disporre dell'autorizzazione ALTER TRACE nel server.  
   
 ## <a name="examples"></a>Esempi  

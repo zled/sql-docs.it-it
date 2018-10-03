@@ -1,13 +1,11 @@
 ---
-title: Proprietà CommandText (ADO) | Documenti Microsoft
+title: Proprietà CommandText (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,40 +13,39 @@ f1_keywords:
 helpviewer_keywords:
 - CommandText property [ADO]
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c333cd961ea8b4b3f37f78c682ebe65c7ac9001
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e9593b45e8b336fe777b8e240061e82c23543c1d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276860"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691179"
 ---
 # <a name="commandtext-property-ado"></a>Proprietà CommandText (ADO)
-Indica il testo di un comando per essere eseguito in base a un provider.  
+Indica il testo di un comando per essere eseguita su un provider.  
   
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Ottiene o imposta un **stringa** valore che contiene un comando del provider, ad esempio un'istruzione SQL, un nome di tabella, un URL relativo o chiamata di stored procedure. Il valore predefinito è una stringa vuota ("").  
+ Ottiene o imposta una **stringa** valore che contiene un comando del provider, ad esempio un'istruzione SQL, un nome di tabella, un URL relativo o una chiamata alla stored procedure. Il valore predefinito è una stringa vuota ("").  
   
-## <a name="remarks"></a>Remarks  
- Utilizzare il **CommandText** proprietà per impostare o restituire il testo di un comando rappresentato da un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto. In genere questo sarà un'istruzione SQL, ma può anche essere di qualsiasi altro tipo di istruzione di comando riconosciuto dal provider, ad esempio una chiamata di stored procedure. Un'istruzione SQL deve essere del sottolinguaggio specifico o una versione supportata dal processore di query del provider.  
+## <a name="remarks"></a>Note  
+ Usare la **CommandText** proprietà per impostare o restituire il testo di un comando rappresentato da un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto. Ciò in genere sarà un'istruzione SQL, ma può anche essere di qualsiasi altro tipo di istruzione del comando riconosciuto dal provider, ad esempio una chiamata alla stored procedure. Un'istruzione SQL deve avere il sottolinguaggio specifico o una versione supportata dal processore di query del provider.  
   
- Se il [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) proprietà del **comando** oggetto è impostato su **True** e **comando** oggetto è associato a una connessione aperta quando si imposta il **CommandText** proprietà ADO prepara la query (ovvero, un modulo compilato della query che vengono archiviati dal provider) quando si chiama il [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) o [aprire](../../../ado/reference/ado-api/open-method-ado-connection.md)metodi.  
+ Se il [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) proprietà delle **comando** è impostata su **True** e il **comando** oggetto è associato a una connessione aperta quando si imposta il **CommandText** proprietà ADO prepara la query (vale a dire, un modulo compilato di query archiviato dal provider) quando si chiama il [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) o [aprire](../../../ado/reference/ado-api/open-method-ado-connection.md)metodi.  
   
- A seconda di [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) , impostazione della proprietà ADO può modificare il **CommandText** proprietà. È possibile leggere il **CommandText** proprietà in qualsiasi momento per visualizzare il testo del comando effettivo che ADO verrà utilizzata durante l'esecuzione.  
+ In base il [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) possono essere modificati, impostazione della proprietà ADO le **CommandText** proprietà. È possibile leggere il **CommandText** proprietà in qualsiasi momento per visualizzare il testo del comando effettivo ADO che verrà utilizzato durante l'esecuzione.  
   
- Utilizzare il **CommandText** proprietà per impostare o restituire un URL relativo che specifica una risorsa, ad esempio un file o directory. La risorsa è relativo alla posizione specificata in modo esplicito da un URL assoluto o in modo implicito da open [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.  
+ Usare la **CommandText** proprietà per impostare o restituire un URL relativo che specifica una risorsa, ad esempio un file o directory. La risorsa è relativo alla posizione specificata in modo esplicito da un URL assoluto, o in modo implicito da un'apertura [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.  
   
 > [!NOTE]
->  Gli URL che utilizzano lo schema http richiamerà automaticamente il [il Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Gli URL che utilizzano lo schema http chiama automaticamente il [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per altre informazioni, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà direzione (VB), CommandText, CommandTimeout, CommandType, dimensioni e ActiveConnection](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [Esempio di proprietà direzione (VC + +), CommandText, CommandTimeout, CommandType, dimensioni e ActiveConnection](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, dimensioni e direzione (esempio di proprietà (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, dimensioni ed esempio di proprietà direzione (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [Requery (metodo)](../../../ado/reference/ado-api/requery-method.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, dimensioni e direzione proprietà esempio (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, dimensioni e direzione (esempio di proprietà (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)

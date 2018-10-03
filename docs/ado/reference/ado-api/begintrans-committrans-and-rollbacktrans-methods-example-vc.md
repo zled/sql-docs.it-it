@@ -1,13 +1,11 @@
 ---
-title: BeginTrans, CommitTrans e RollbackTrans metodi esempio (VC + +) | Documenti Microsoft
+title: BeginTrans, CommitTrans e RollbackTrans esempio di metodi (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - RollbackTrans method [ADO], VC++ example
 - CommitTrans method [ADO], VC++ example
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d229daf8838d5b749217b6b8ae680985757185a3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cffd1524ce12d53be41ea5a060c04ff32f43542e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276030"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822182"
 ---
-# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans, CommitTrans e RollbackTrans metodi esempio (VC + +)
-Questo esempio viene modificato il tipo di libro di tutti i libri di psicologia nella ***titoli*** tabella del database. Dopo il [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) metodo avvia una transazione che isola tutte le modifiche apportate al ***titoli*** tabella, la [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) metodo salva le modifiche. È possibile utilizzare il [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) metodo per annullare le modifiche salvate tramite il [aggiornamento](../../../ado/reference/ado-api/update-method.md) metodo.  
+# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans, CommitTrans e RollbackTrans esempio di metodi (VC + +)
+Questo esempio viene modificato il tipo di libro di tutti i libri di psicologia nella ***titoli*** tabella del database. Dopo il [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) metodo avvia una transazione che consente di isolare tutte le modifiche apportate al ***titoli*** tabella, il [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) metodo salva le modifiche apportate. È possibile usare la [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) metodo per annullare le modifiche salvate tramite il [Update](../../../ado/reference/ado-api/update-method.md) (metodo).  
   
 ## <a name="example"></a>Esempio  
   
@@ -271,5 +268,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [BeginTrans, CommitTrans e RollbackTrans metodi (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [BeginTrans, CommitTrans e RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Metodo Update](../../../ado/reference/ado-api/update-method.md)

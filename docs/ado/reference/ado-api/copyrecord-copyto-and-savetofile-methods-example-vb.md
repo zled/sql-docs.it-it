@@ -1,13 +1,11 @@
 ---
-title: CopyRecord, CopyTo e SaveToFile metodi esempio (VB) | Documenti Microsoft
+title: CopyRecord, CopyTo e SaveToFile (esempio di metodi (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - SaveToFile method [ADO], Visual Basic example
 - CopyTo method [ADO], Visual Basic example
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64a1367298c3d5c78e95112802732aa10ef75141
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 213a9aaa3556700bbbe0f88200796a524c65f5e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277130"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601679"
 ---
-# <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord, CopyTo e SaveToFile metodi esempio (VB)
-In questo esempio viene illustrato come creare copie di un file utilizzando [flusso](../../../ado/reference/ado-api/stream-object-ado.md) o [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetti. Una copia viene eseguita in una cartella Web per la pubblicazione su Internet. Altre proprietà e metodi illustrati includono [tipo di flusso](../../../ado/reference/ado-api/type-property-ado-stream.md), **aprire**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), e [Record Open](../../../ado/reference/ado-api/open-method-ado-record.md).  
+# <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord, CopyTo e SaveToFile (esempio di metodi (VB)
+In questo esempio viene illustrato come creare copie di un file usando [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oppure [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetti. Viene creata una copia in una cartella Web per Internet publishing. Includono altre proprietà e metodi illustrati [tipo Stream](../../../ado/reference/ado-api/type-property-ado-stream.md), **Open**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), e [Record Open](../../../ado/reference/ado-api/open-method-ado-record.md).  
   
 ```  
 'BeginCopyRecordVB  
@@ -130,11 +127,11 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo CopyRecord (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
- [CopyTo (metodo) (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
+ [Metodo CopyTo (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
  [Metodo LoadFromFile (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
- [Open (metodo) (Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open (metodo) (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Oggetto di record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Metodo Open (Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
+ [Metodo Open (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Oggetto record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Metodo SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)   
- [Oggetto di flusso (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
+ [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Proprietà Type (flusso ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

@@ -1,13 +1,11 @@
 ---
-title: updateRow (metodo) (SQLServerResultSet) | Documenti Microsoft
+title: Metodo updateRow (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - MSQLServerResultSet.updateRow
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cfced0ca-a281-40dc-8d2f-370d5f0bf12b
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b337738e4cb251c52b33a75dce3c0920024d721b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2d0a88a70cc6ed4b6bf1df83eb00806714324b0e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850766"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783019"
 ---
-# <a name="updaterow-method-sqlserverresultset"></a>updateRow (metodo) (SQLServerResultSet)
+# <a name="updaterow-method-sqlserverresultset"></a>Metodo updateRow (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Aggiorna il database sottostante con il nuovo contenuto della riga corrente di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+  Aggiorna il database sottostante con il nuovo contenuto della riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,8 +38,8 @@ public void updateRow()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo updateRow viene specificato dal metodo updateRow nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo updateRow viene specificato dal metodo updateRow nell'interfaccia ResultSet.  
   
  Non è possibile chiamare questo metodo quando il cursore si trova sulla riga di inserimento.  
   

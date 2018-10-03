@@ -1,13 +1,11 @@
 ---
-title: Gestione driver&#39;s ruolo nel processo di connessione | Documenti Microsoft
+title: Gestione driver&#39;s ruolo nel processo di connessione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - driver manager [ODBC], role in connection process
@@ -15,32 +13,31 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ba98332eb196811b71f0cc755f92c84cc9d4091
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f69ae2b8c00f062d3650606de071a4d07eefab4e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911776"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607249"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>Gestione driver&#39;s ruolo nel processo di connessione
-Tenere presente che le applicazioni non chiamare direttamente le funzioni di driver. Invece che chiamano le funzioni di gestione Driver con lo stesso nome e di gestione Driver chiama le funzioni di driver. In genere, ciò si verifica quasi immediatamente. Ad esempio, l'applicazione chiama **SQLExecute** dopo alcuni controlli degli errori e gestione Driver, Driver Manager chiama **SQLExecute** nel driver.  
+Tenere presente che le applicazioni non chiamano direttamente le funzioni di driver. Invece che chiamano le funzioni di gestione Driver con lo stesso nome e la gestione di Driver chiama le funzioni di driver. In genere, ciò accade quasi immediatamente. Ad esempio, l'applicazione chiama **SQLExecute** in Gestione Driver e dopo alcuni controlli degli errori, gestione Driver chiama **SQLExecute** nel driver.  
   
- Il processo di connessione è diverso. Quando l'applicazione chiama **SQLAllocHandle** con le opzioni impostato su SQL_HANDLE_ENV e impostato su SQL_HANDLE_DBC, la funzione esegue l'allocazione di handle solo in Gestione Driver. Gestione Driver non chiama questa funzione nel driver perché non conoscere il driver da chiamare. Analogamente, se l'applicazione passa l'handle di una connessione non è connessa al **SQLSetConnectAttr** o **SQLGetConnectAttr**, solo il Driver Manager esegue la funzione. Archivia o ottiene il valore dell'attributo dalla connessione gestisce e restituisce SQLSTATE 08003 (connessione non aperta) durante il recupero di un valore per un attributo non è stato impostato e per quale ODBC non definisce un valore predefinito.  
+ Il processo di connessione è diverso. Quando l'applicazione chiama **SQLAllocHandle** con le opzioni su SQL_HANDLE_ENV e SQL_HANDLE_DBC, la funzione consente di allocare gli handle solo in Gestione Driver. Gestione Driver non chiama questa funzione nel driver perché non conoscere il driver da chiamare. Analogamente, se l'applicazione passa l'handle di una connessione non è connessa al **SQLSetConnectAttr** oppure **SQLGetConnectAttr**only the Driver Manager esegue la funzione. Archivia o ottiene il valore dell'attributo dalla connessione all'handle e restituisce SQLSTATE 08003 (connessione non aperta) durante il recupero di un valore per un attributo non è stato impostato e per quale ODBC non definisce un valore predefinito.  
   
- Quando l'applicazione chiama **SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect**, gestione Driver determina innanzitutto i driver da utilizzare. Quindi una verifica per determinare se un driver è attualmente caricato per la connessione:  
+ Quando l'applicazione chiama **SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect**, gestione Driver determina innanzitutto quali driver da usare. Quindi una verifica per determinare se un driver è attualmente caricato per la connessione:  
   
--   Se per la connessione non viene caricato alcun driver, Driver Manager controlla se viene caricato il driver specificato in un'altra connessione nello stesso ambiente. Se non, gestione Driver carica il driver in cui la connessione e chiama **SQLAllocHandle** nel driver con l'opzione impostato su SQL_HANDLE_ENV.  
+-   Se nessun driver viene caricato per la connessione, gestione Driver controlla se il driver specificato viene caricato in un'altra connessione nello stesso ambiente. Se non, gestione Driver viene caricato il driver per la connessione mentre le chiamate **SQLAllocHandle** nel driver con l'opzione SQL_HANDLE_ENV.  
   
-     Gestione Driver chiama quindi **SQLAllocHandle** nel driver con l'opzione impostato su SQL_HANDLE_DBC o meno è stato appena caricato. Se l'applicazione di impostare gli attributi di connessione, gestione Driver chiama **SQLSetConnectAttr** nel driver; se si verifica un errore, la funzione di connessione di gestione Driver restituisce SQLSTATE IM006 (patente  **La funzione SQLSetConnectAttr** non riuscita). Infine, gestione Driver chiama la funzione di connessione nel driver.  
+     The Driver Manager chiamerà **SQLAllocHandle** nel driver con l'opzione SQL_HANDLE_DBC o meno è stato appena caricato. Se l'applicazione impostare gli attributi di connessione, the Driver Manager chiamerà **SQLSetConnectAttr** nel driver; se si verifica un errore, la funzione di connessione di gestione Driver restituisce SQLSTATE IM006 (patente  **SQLSetConnectAttr** non riuscita). Infine, gestione Driver chiama la funzione di connessione nel driver.  
   
--   Se il driver specificato viene caricato per la connessione, gestione Driver chiama la funzione di connessione nel driver. In questo caso, il driver deve assicurarsi che tutti gli attributi di connessione per la connessione mantengono le impostazioni correnti.  
+-   Se viene caricato il driver specificato nella connessione, gestione Driver chiama la funzione di connessione nel driver. In questo caso, il driver deve assicurarsi che tutti gli attributi di connessione per la connessione mantiene le impostazioni correnti.  
   
--   Se un altro driver viene caricato per la connessione, gestione Driver chiama **SQLFreeHandle** nel driver per liberare la connessione. Se non sono presenti altre connessioni che utilizzano il driver, Driver Manager chiamerà **SQLFreeHandle** nel driver per liberare l'ambiente e consente di scaricare il driver. Gestione Driver esegue quindi le stesse operazioni quando non viene caricato un driver per la connessione.  
+-   Se viene caricato un driver diverso per la connessione, the Driver Manager chiamerà **SQLFreeHandle** nel driver per liberare la connessione. Se non sono presenti altre connessioni che usano il driver, Driver Manager chiamerà **SQLFreeHandle** nel driver per liberare l'ambiente e scarica il driver. Gestione Driver esegue quindi le stesse operazioni come quando non viene caricato un driver per la connessione.  
   
- Gestione Driver bloccherà l'handle di ambiente (*henv*) prima di chiamare un driver **SQLAllocHandle** e **SQLFreeHandle** quando *HandleType* è impostato su **impostato su SQL_HANDLE_DBC**.  
+ Gestione Driver bloccherà l'handle di ambiente (*henv*) prima di chiamare un driver **SQLAllocHandle** e **SQLFreeHandle** quando *HandleType* è impostata su **SQL_HANDLE_DBC**.  
   
- Quando l'applicazione chiama **SQLDisconnect**, le chiamate di gestione Driver **SQLDisconnect** nel driver. Tuttavia, lascia il driver caricato nel caso in cui l'applicazione si riconnette al driver. Quando l'applicazione chiama **SQLFreeHandle** con l'opzione impostato su SQL_HANDLE_DBC, gestione Driver chiama **SQLFreeHandle** nel driver. Se il driver non viene utilizzato da altre connessioni, gestione Driver chiama **SQLFreeHandle** nel driver con l'impostato su SQL_HANDLE_ENV opzione e scarica il driver.
+ Quando l'applicazione chiama **SQLDisconnect**, le chiamate di gestione Driver **SQLDisconnect** nel driver. Tuttavia, lascia il driver caricato nel caso in cui l'applicazione si riconnette al driver. Quando l'applicazione chiama **SQLFreeHandle** con l'opzione SQL_HANDLE_DBC, gestione Driver chiama **SQLFreeHandle** nel driver. Se il driver non viene utilizzato da altre connessioni, the Driver Manager chiamerà **SQLFreeHandle** nel driver con il SQL_HANDLE_ENV opzione e scarica il driver.

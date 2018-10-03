@@ -1,25 +1,22 @@
 ---
-title: Metodo getFunctions (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getFunctions (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bf039e2104a7ac2fbbcce8a5a9fbd8bade8589d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d6032cd14cf93d75714d46bfc825d53ecc68d39b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836026"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622439"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>Metodo getFunctions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,23 +35,23 @@ public ResultSet getFunctions(java.lang.String catalog,
 #### <a name="parameters"></a>Parametri  
  *catalog*  
   
- Nome di un catalogo del database. Se è una stringa vuota (""), il risultato include le funzioni senza un catalogo. Se è **null**, il nome del catalogo non viene utilizzato per la ricerca.  
+ Nome di un catalogo del database. Se è una stringa vuota (""), il risultato include le funzioni senza un catalogo. Se è **null**, il nome del catalogo non viene usato per la ricerca.  
   
  *schemaPattern*  
   
- Nome di uno schema. Se è una stringa vuota (""), il risultato include le funzioni senza uno schema. Se è **null**, il nome dello schema non viene utilizzato per la ricerca.  
+ Nome di uno schema. Se è una stringa vuota (""), il risultato include le funzioni senza uno schema. Se è **null**, il nome dello schema non viene usato per la ricerca.  
   
  *functionNamePattern*  
   
  Nome di una funzione.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getFunctions viene specificato dal metodo getFunctions nell'interfaccia DatabaseMetaData.  
   
  Restituisce solo le funzioni utente e di sistema che corrispondono ai nomi di schema e funzione specificati.  
@@ -64,7 +61,7 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  La descrizione di ogni funzione include le colonne seguenti:  
   
-|Nome|Tipo|Description|  
+|nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|Nome del database contenente la funzione.|  
 |FUNCTION_SCHEM|**String**|Nome dello schema contenente la funzione.|  

@@ -1,32 +1,29 @@
 ---
-title: Supporta l'esempio di metodo (VC + +) | Documenti Microsoft
+title: Supporta l'esempio di metodo (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Supports method [ADO], VC++ example
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f92a96be897f8cf89a8355d6aaab22b65e1398f4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 98ccc6dfdc904c2789f1ee8a68c0097d5ec6f817
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282650"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828369"
 ---
-# <a name="supports-method-example-vc"></a>Esempio di metodo di supporto (VC + +)
-Questo esempio viene utilizzato il [supporta](../../../ado/reference/ado-api/supports-method.md) metodo per visualizzare le opzioni supportate da un oggetto recordset è aperto con diversi tipi di cursore. La funzione DisplaySupport è necessaria per eseguire questo esempio.  
+# <a name="supports-method-example-vc"></a>Esempio del metodo Supports (VC++)
+Questo esempio Usa la [supporta](../../../ado/reference/ado-api/supports-method.md) metodo per visualizzare le opzioni supportate da un recordset aperta con diversi tipi di cursore. La funzione DisplaySupport è necessaria per eseguire questo esempio.  
   
 ```  
 // SupportsMethodExample.cpp  
@@ -230,5 +227,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Metodo Supports](../../../ado/reference/ado-api/supports-method.md)

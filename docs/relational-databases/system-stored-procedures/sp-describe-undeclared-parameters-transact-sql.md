@@ -1,14 +1,11 @@
 ---
 title: sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/15/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -18,20 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b6b17565a12cde0148982f82cf4b84bd1fd8db1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099865"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679635"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Restituisce un set di risultati che contiene metadati sui parametri non dichiarati in un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considera ogni parametro che viene utilizzata per la  **\@tsql** batch, ma non dichiarato in  **\@params**. Viene restituito un set di risultati che contiene una riga per ognuno di questi parametri, con le informazioni sul tipo dedotte per quel parametro. La procedura restituisce un risultato vuoto se impostare il  **\@tsql** batch di input non ha alcun parametro, ad eccezione di quelli dichiarati in  **\@params**.  
   
@@ -47,11 +43,11 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **\@tsql =** ] **'***Transact SQL_batch***'**  
- Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* può essere **nvarchar (***n***)** oppure **nvarchar (max)**.  
+ [  **\@tsql =** ] **'**_Transact-SQL\_batch_**'**  
+ Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* può essere **nvarchar (**_n_**)** oppure **nvarchar (max)**.  
   
- [  **\@params =** ] **N'***parametri***'**  
- \@params fornisce una stringa di dichiarazione per i parametri per il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, in modo simile a sp_executesql modo funziona. *I parametri* può essere **nvarchar (***n***)** oppure **nvarchar (max)**.  
+ [  **\@params =** ] **N'**_parametri_**'**  
+ \@params fornisce una stringa di dichiarazione per i parametri per il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, in modo simile a sp_executesql modo funziona. *I parametri* può essere **nvarchar (**_n_**)** oppure **nvarchar (max)**.  
   
  Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati negli *Transact-SQL_batch*. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. n è un segnaposto che indica definizioni di parametro aggiuntive. Se l'istruzione Transact-SQL o il batch nell'istruzione non contiene parametri, \@params non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
   
@@ -106,7 +102,7 @@ sp_describe_undeclared_parameters
   
 -   Se l'input [!INCLUDE[tsql](../../includes/tsql-md.md)] batch dichiara una variabile locale con lo stesso nome come un parametro dichiarato in \@params.  
   
--   Se l'istruzione fa riferimento a tabelle temporanee.  
+- Se l'istruzione fa riferimento a tabelle temporanee.
   
  Se \@tsql non contiene parametri, diversi da quelli dichiarati in \@params, la procedura restituisce un set di risultati vuoto.  
   

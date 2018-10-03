@@ -1,32 +1,29 @@
 ---
-title: Chiamare una Stored Procedure con un comando | Documenti Microsoft
+title: Chiama una Stored Procedure con un comando | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - calling stored procedures [ADO]
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63e2b0c1958f680b85bfe8b1df99442cc588b291
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9a05ec85e3fd22a6190df0e840bd69ca40fcde5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695739"
 ---
-# <a name="calling-a-stored-procedure-with-a-command"></a>Chiamare una Stored Procedure con un comando
-È possibile utilizzare un comando per chiamare una stored procedure. L'esempio di codice alla fine di questo argomento si riferisce a una stored procedure nel database di esempio Northwind, chiamato CustOrdersOrders, che viene definito come segue.  
+# <a name="calling-a-stored-procedure-with-a-command"></a>Chiamata di una stored procedure con Command
+È possibile utilizzare un comando per chiamare una stored procedure. Nell'esempio di codice alla fine di questo argomento si riferisce a una stored procedure nel database di esempio Northwind, chiamato CustOrdersOrders, che viene definito come segue.  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -36,15 +33,15 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- Vedere la documentazione di SQL Server per ulteriori informazioni su come definire e chiamare stored procedure.  
+ Vedere la documentazione di SQL Server per altre informazioni su come definire e chiamare le stored procedure.  
   
- Questa stored procedure è simile al comando utilizzato [parametri dell'oggetto Command](../../../ado/guide/data/command-object-parameters.md). Accetta il parametro ID di un cliente e restituisce informazioni sugli ordini del cliente. Esempio di codice seguente usa questa stored procedure come origine per un oggetto ADO **Recordset**.  
+ È simile al comando usato questa stored procedure [parametri dell'oggetto Command](../../../ado/guide/data/command-object-parameters.md). Accetta il parametro ID cliente e restituisce informazioni sugli ordini del cliente. Esempio di codice seguente usa questa stored procedure come origine per un oggetto ADO **Recordset**.  
   
- Utilizzando la stored procedure consente di accedere a un'altra funzionalità di ADO: il **parametri** raccolta **aggiornamento** metodo. Tramite questo metodo, verranno automaticamente inserite in tutte le informazioni sui parametri necessari per il comando in fase di esecuzione. Si verifica una riduzione delle prestazioni utilizzando questa tecnica, poiché ADO deve eseguire una query origine dati per le informazioni sui parametri.  
+ Utilizzando la stored procedure consente di accedere a un'altra funzionalità di ADO: il **parametri** collection **aggiornare** (metodo). Mediante questo metodo, ADO possa popolare automaticamente in tutte le informazioni sui parametri richiesti dal comando in fase di esecuzione. Si verifica una riduzione delle prestazioni usando questa tecnica, poiché ADO debba eseguire query sull'origine dati per le informazioni sui parametri.  
   
- Esistono altre differenze sostanziali tra l'esempio di codice seguente e il codice in [parametri dell'oggetto Command](../../../ado/guide/data/command-object-parameters.md), dove i parametri sono stati immessi manualmente. In questo codice viene innanzitutto impostata la **Prepared** proprietà **True** perché è una stored procedure SQL Server e per definizione è precompilata. In secondo luogo, il **CommandType** proprietà del **comando** oggetto modificato in **adCmdStoredProc** nel secondo esempio per informare ADO che il comando è una stored procedure.  
+ Esistono altre differenze sostanziali tra l'esempio di codice seguente e il codice nel [parametri dell'oggetto Command](../../../ado/guide/data/command-object-parameters.md), in cui i parametri sono stati immessi manualmente. In questo codice viene innanzitutto impostata la **Prepared** proprietà **True** perché è una stored procedure SQL Server e viene precompilata dalla definizione. Secondo, il **CommandType** proprietà delle **comando** oggetto modificato in **adCmdStoredProc** nel secondo esempio per informare ADO che il comando è una stored procedure.  
   
- Infine, nel secondo esempio il parametro deve fare riferimento a indice quando si imposta il valore, perché si potrebbe non conosce il nome del parametro in fase di progettazione. Se si conosce il nome del parametro, è possibile impostare il nuovo [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) proprietà del **comando** dell'oggetto su True e si riferiscono al nome della proprietà. Ci si potrebbe chiedere perché la posizione del primo parametro indicato nella stored procedure (@CustomerID) 1 anziché 0 (`objCmd(1) = "ALFKI"`). Questo avviene perché il parametro 0 contiene un valore restituito dalla stored procedure SQL Server.  
+ Infine, nel secondo esempio il parametro deve farvi riferimento.{0}{0}i indice quando si imposta il valore, perché si potrebbe non conosce il nome del parametro in fase di progettazione. Se si conosce il nome del parametro, è possibile impostare il nuovo [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) proprietà delle **comando** dell'oggetto su True e fare riferimento al nome della proprietà. Ci si potrebbe chiedere perché la posizione del primo parametro indicato nella stored procedure (@CustomerID) è 1 anziché 0 (`objCmd(1) = "ALFKI"`). Questo avviene perché il parametro 0 contiene un valore restituito dalla procedura di SQL Server archiviati.  
   
 ```  
 'BeginAutoParamCmd  

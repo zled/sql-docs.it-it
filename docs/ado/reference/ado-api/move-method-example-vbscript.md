@@ -1,38 +1,35 @@
 ---
-title: Esempio del metodo Move (VBScript) | Documenti Microsoft
+title: Esempio del metodo Move (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Move method, VBScript example
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93f06ddfa78d0054ec08882b30f16047a842c833
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6054953ba980be5c8c2c12b6a309f64ddaae4e01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279460"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602519"
 ---
 # <a name="move-method-example-vbscript"></a>Esempio del metodo Move (VBScript)
-Questo esempio viene utilizzato il [spostare](../../../ado/reference/ado-api/move-method-ado.md) metodo per posizionare il puntatore di record, in base all'input utente.  
+Questo esempio Usa la [spostare](../../../ado/reference/ado-api/move-method-ado.md) metodo per posizionare il puntatore di record, basato sull'input dell'utente.  
   
- Usare l'esempio seguente in una pagina ASP (Active Server). Per visualizzare in questo esempio completamente funzionale, è necessario disporre i dati di origine si trova in C:\Program Files\Microsoft piattaforma SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb AdvWorks.mdb (installato con il SDK) o modificare il percorso nell'esempio di codice in modo da riflettere la posizione effettiva del file. Si tratta di un file di database Microsoft Access.  
+ Usare l'esempio seguente in una pagina ASP (Active Server). Per visualizzare in questo esempio completamente funzionale, è necessario disporre di dati che si trova in C:\Program Files\Microsoft piattaforma SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb AdvWorks.mdb (installato con il SDK) di origine o modificare il percorso nel codice di esempio in modo da riflettere il percorso effettivo dei file. Si tratta di un file di database Microsoft Access.  
   
- Utilizzare **trovare** per individuare il file Adovbs. inc e inserirlo nella directory di cui si intende utilizzare. Tagliare e incollare il codice seguente in blocco note o un altro editor di testo e salvarlo come **MoveVBS**. È possibile visualizzare il risultato in qualsiasi browser.  
+ Usare **trovare** per individuare il file Adovbs. inc e inserirlo nella directory di cui si intende usare. Tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **MoveVBS**. È possibile visualizzare il risultato in qualsiasi browser.  
   
- Provare a immettere una lettera o un non integer per visualizzare il lavoro di gestione degli errori.  
+ Provare a immettere una lettera o un noninteger per visualizzare il lavoro di gestione degli errori.  
   
 ```  
 <!-- BeginMoveVBS -->  

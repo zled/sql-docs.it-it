@@ -1,13 +1,11 @@
 ---
-title: Diagnostica di gestione delle regole | Documenti Microsoft
+title: Diagnostica di gestione delle regole | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -15,50 +13,49 @@ helpviewer_keywords:
 - SQLGetDiagRec function [ODBC], diagnostic handling rules
 - diagnostic information [ODBC], SqlGetDiagRec
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dea78f0cc67c7eeeb4f18cbdee4fcb9e4ac757f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f59953dee77453bb8b453a40a36d17e865a1fe5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792259"
 ---
 # <a name="diagnostic-handling-rules"></a>Regole di gestione di diagnostica
-Le regole seguenti determinano la gestione di diagnostica in **SQLGetDiagRec** e **SQLGetDiagField**.  
+Le regole seguenti determinano nella gestione di diagnostica **SQLGetDiagRec** e **SQLGetDiagField**.  
   
  Per tutti i componenti ODBC:  
   
 -   È necessario non sostituire, modificare o mascherare gli errori o avvisi ricevuti da un altro componente ODBC.  
   
--   Può aggiungere un record di stato aggiuntivi quando ricevono un messaggio di diagnostica da un altro componente ODBC. Il record aggiunto è necessario aggiungere il valore reale informazioni al messaggio originale.  
+-   Può aggiungere un record di stato aggiuntivi quando ricevono un messaggio di diagnostica da un altro componente ODBC. Il record aggiunto deve aggiungere valore informazione reale al messaggio originale.  
   
  Per ODBC componente interfacce che direttamente un'origine dati:  
   
--   Necessario anteporre il relativo identificatore fornitore, il relativo identificatore del componente e identificatore dell'origine dati per il messaggio di diagnostica che riceve dall'origine dati.  
+-   Necessario anteporre il relativo identificatore fornitore e il relativo identificatore componente identificatore dell'origine dati per il messaggio ricevuto dall'origine dati di diagnostica.  
   
 -   È necessario mantenere il codice di errore nativo dell'origine dati.  
   
 -   È necessario mantenere messaggio di diagnostica dell'origine dati.  
   
- Per qualsiasi componente ODBC che genera un errore o avviso indipendentemente dal fatto che l'origine dati:  
+ Per qualsiasi componente ODBC che genera un errore o avviso indipendente dell'origine dati:  
   
 -   Specificare il valore SQLSTATE corretto per l'errore o avviso.  
   
 -   È necessario generare il testo del messaggio di diagnostica.  
   
--   È necessario anteporre il relativo identificatore fornitore e il relativo identificatore del componente per il messaggio di diagnostica.  
+-   È necessario anteporre il relativo identificatore fornitore e il relativo identificatore componente per il messaggio di diagnostica.  
   
--   Deve restituire un codice di errore nativo, se disponibile e significativo.  
+-   Deve restituire un codice di errore nativo, se uno è disponibile e significativo.  
   
  Per il componente ODBC che si interfaccia con gestione Driver:  
   
--   È necessario inizializzare gli argomenti di output **SQLGetDiagRec** e **SQLGetDiagField**.  
+-   Argomenti di output deve essere inizializzato **SQLGetDiagRec** e **SQLGetDiagField**.  
   
 -   È necessario formattare e restituire le informazioni di diagnostica come argomenti di output **SQLGetDiagRec** e **SQLGetDiagField** quando viene chiamata tale funzione.  
   
  Per un componente ODBC diverso da Gestione Driver:  
   
--   Impostare il valore SQLSTATE in base all'errore nativo. Per i driver basati su file e driver basati su DBMS che non utilizzano un gateway, il driver deve impostare il valore SQLSTATE. Per i driver basati su DBMS che usano un gateway, il driver o un gateway che supporti ODBC può impostare il valore SQLSTATE.
+-   È necessario impostare il valore SQLSTATE errori nativi in base. Per i driver basati su file e i driver basati su DBMS che non usano un gateway, il driver deve impostare il valore SQLSTATE. Per i driver basati su DBMS che usano un gateway, il driver o un gateway che supporti ODBC possa impostare il valore SQLSTATE.

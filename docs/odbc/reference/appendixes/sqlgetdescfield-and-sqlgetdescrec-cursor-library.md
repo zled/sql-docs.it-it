@@ -1,39 +1,36 @@
 ---
-title: SQLGetDescField e SQLGetDescRec (libreria di cursori) | Documenti Microsoft
+title: SQLGetDescField e SQLGetDescRec (libreria di cursori) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetDescField function [ODBC], Cursor Library
 - SQLGetDescRec function [ODBC], Cursor Library
 ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da57c5fb9f0ddb8d9e45651f9404d7825497d425
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66361572427c3264a1b25fe1c851685a07b2e029
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908806"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765019"
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>SQLGetDescField e SQLGetDescRec (libreria di cursori)
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Si consiglia di utilizzare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
   
- In questo argomento viene illustrato l'utilizzo del **SQLGetDescField** e **SQLGetDescRec** funzioni della libreria di cursori. Per informazioni generali su queste funzioni, vedere [funzione SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md) e [funzione SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md).  
+ In questo argomento viene illustrato l'utilizzo dei **SQLGetDescField** e **SQLGetDescRec** funzioni della libreria di cursori. Per informazioni generali su queste funzioni, vedere [funzione SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md) e [funzione SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md).  
   
- La libreria di cursori esegue **SQLGetDescRec** per restituire i metadati per le colonne di segnalibro. La libreria di cursori esegue **SQLGetDescField** per restituire gli stessi campi restituiti da **SQLGetDescRec**, che sono SQL_DESC_NAME, SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_ LUNGHEZZA, SQL_DESC_PRECISION, SQL_DESC_SCALE e SQL_DESC_NULLABLE. Per coerenza, **SQLGetDescField** restituisce inoltre SQL_DESC_UNNAMED.  
+ Esegue la libreria di cursori **SQLGetDescRec** per restituire i metadati per colonne di segnalibri. Esegue la libreria di cursori **SQLGetDescField** da restituire gli stessi campi restituiti da **SQLGetDescRec**, che sono SQL_DESC_NAME, SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_ LUNGHEZZA, SQL_DESC_PRECISION, SQL_DESC_SCALE e SQL_DESC_NULLABLE. Per coerenza, **SQLGetDescField** restituisce inoltre SQL_DESC_UNNAMED.  
   
- La libreria di cursori esegue **SQLGetDescField** quando viene chiamato per restituire il valore dei seguenti campi che vengono impostate per l'associazione delle colonne segnalibri: SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR, e SQL_DESC_LENGTH.  
+ Esegue la libreria di cursori **SQLGetDescField** quando viene chiamato per restituire il valore dei seguenti campi che vengono impostate per l'associazione di colonne di segnalibri: SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR, e SQL_DESC_LENGTH.  
   
- La libreria di cursori esegue **SQLGetDescField** quando viene chiamato per restituire il valore del campo SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE o SQL_DESC_ROW_STATUS_PTR. Questi campi possono essere restituiti per ogni riga, non solo la riga del segnalibro.  
+ Esegue la libreria di cursori **SQLGetDescField** quando viene chiamato per restituire il valore del campo SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE o SQL_DESC_ROW_STATUS_PTR. Questi campi possono essere restituiti per ogni riga, non solo la riga di segnalibro.  
   
- Se un'applicazione chiama **SQLGetDescField** per restituire il valore di qualsiasi campo diverse da quelle indicate in precedenza, la libreria di cursori passa la chiamata al driver.
+ Se un'applicazione chiama **SQLGetDescField** per restituire il valore di qualsiasi campo diverse da quelle indicate in precedenza, la libreria di cursori passa la chiamata del driver.

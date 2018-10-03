@@ -5,10 +5,7 @@ ms.date: 10/18/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - dm_geo_replication_links_TSQL
@@ -19,19 +16,18 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5e59dcd6550c006b5a1e0f3e3be6440669e05021
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b37ca384c2d3402a3b9ec01a4b9d6ccbfb7d402
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997743"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610110"
 ---
-# <a name="sysgeoreplicationlinks-azure-sql-database"></a>Sys. geo_replication_links (Database SQL di Azure)
+# <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni collegamento di replica tra i database primari e secondari in una relazione di replica geografica. La vista risiede nel database master logico.  
@@ -40,7 +36,7 @@ ms.locfileid: "37997743"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID del database corrente nella vista sys. Databases.|  
 |start_date|**datetimeoffset**|Ora UTC in un Data Center a livello di area del Database SQL quando è stata avviata la replica di database|  
-|modify_date|**datetimeoffset**|Ora UTC in Database di SQL Data Center regionale di quando è stata completata la replica geografica del database. Il nuovo database è sincronizzato con il database primario a partire da questo momento. ,|  
+|modify_date|**datetimeoffset**|Ora UTC in Database di SQL Data Center regionale di quando è stata completata la replica geografica del database. Il nuovo database è sincronizzato con il database primario a partire da questo momento. .|  
 |link_guid|**uniqueidentifier**|ID univoco del collegamento di replica geografica.|  
 |partner_server|**sysname**|Nome del server logico contenente il database con replica geografica.|  
 |partner_database|**sysname**|Nome del database con replica geografica nel server logico collegato.|  
@@ -51,7 +47,7 @@ ms.locfileid: "37997743"
 |secondary_allow_connections|**tinyint**|Tipo secondario, uno di:<br /><br /> 0 = No. Il database secondario non accessibile fino al failover.<br /><br /> 1 = sola lettura. Il database secondario è accessibile solo per le connessioni client con ApplicationIntent = ReadOnly.<br /><br /> 2 = Tutte. Il database secondario è accessibile da qualsiasi connessione client.|  
 |DESC secondary_allow_connections|**nvarchar(256)**|no<br /><br /> All<br /><br /> Sola lettura|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  In questa vista è disponibile solo nel **master** database all'account di accesso dell'entità a livello di server.  
   
 ## <a name="example"></a>Esempio  

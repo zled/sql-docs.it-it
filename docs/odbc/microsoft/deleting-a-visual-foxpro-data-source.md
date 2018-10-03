@@ -1,42 +1,39 @@
 ---
-title: Eliminazione di un'origine dati di Visual FoxPro | Documenti Microsoft
+title: L'eliminazione di un'origine dati Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing data sources [ODBC], Visual FoxPro
 - Visual FoxPro data source [ODBC], deleting
 - deleting data sources [ODBC], Visual FoxPro
 ms.assetid: 8468957a-632a-4d7b-a3e1-66b34e7df639
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23ac02ffbe3f241f3abdd5b785bd53b4d33e2d4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9578e5a1b894078b3dfdd33b81893780afc804b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899422"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606129"
 ---
-# <a name="deleting-a-visual-foxpro-data-source"></a>Eliminazione di un'origine dati di Visual FoxPro
-### <a name="to-delete-a-visual-foxpro-data-source"></a>Per eliminare un'origine dati di Visual FoxPro  
+# <a name="deleting-a-visual-foxpro-data-source"></a>Eliminazione di un'origine dati Visual FoxPro
+### <a name="to-delete-a-visual-foxpro-data-source"></a>Per eliminare un'origine dati Visual FoxPro  
   
 1.  Nei computer che eseguono Windows 2000, aprire il pannello di controllo di Windows e fare doppio clic su strumenti di amministrazione.  
   
-2.  Fare doppio clic su origini dati (ODBC) per aprire la finestra di dialogo Amministratore origine dati ODBC. Questa icona è disponibile dopo aver installato il Driver ODBC di Visual FoxPro o qualsiasi software dei driver ODBC.  
+2.  Fare doppio clic su origini dati (ODBC) per aprire la finestra di dialogo Amministrazione origine dati ODBC. Questa icona è disponibile dopo aver installato il Driver ODBC Visual FoxPro o qualsiasi software dei driver ODBC.  
   
     > [!NOTE]  
-    >  Se si esegue una versione precedente di Windows, aprire il pannello di controllo di Windows e fare doppio clic su 32 bit ODBC o ODBC per aprire la finestra di dialogo Amministratore origine dati ODBC.  
+    >  Se si esegue una versione precedente di Windows, aprire il pannello di controllo di Windows e fare doppio clic su 32 bit ODBC o ODBC per aprire la finestra di dialogo Amministrazione origine dati ODBC.  
   
 3.  Nella scheda DSN utente o DSN di sistema, selezionare il nome dell'origine dati che si desidera eliminare.  
   
 4.  Fare clic su Rimuovi.  
   
-5.  Fare clic su OK per salvare le modifiche e chiudere la finestra di dialogo Amministratore origine dati ODBC.
+5.  Fare clic su OK per salvare le modifiche e chiudere la finestra di dialogo Amministrazione origine dati ODBC.

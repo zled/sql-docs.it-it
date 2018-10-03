@@ -1,32 +1,29 @@
 ---
-title: 'La creazione di istanze di evento ADO: Visual C++ | Documenti Microsoft'
+title: 'Creazione di istanze evento ADO: Visual C++ | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 699432fff2c849f4f89e7cadebe8dd4afabdd8ec
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d3760cedb077bfde9f0972ad5e5544ae7b01d9a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605989"
 ---
-# <a name="ado-event-instantiation-visual-c"></a>La creazione di istanze di evento ADO: Visual C++
-Si tratta di una descrizione schematica di come creare un'istanza degli eventi ADO in Microsoft® Visual C++. Vedere [esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) per una descrizione completa.  
+# <a name="ado-event-instantiation-visual-c"></a>Creazione di istanze di eventi ADO: Visual C++
+Si tratta di una descrizione di come creare un'istanza degli eventi ADO in Microsoft® Visual C++® schematica. Visualizzare [esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) per una descrizione completa.  
   
- Creare classi derivate dal **ConnectionEventsVt** e **RecordsetEventsVt** interfacce trovato in adoint il file.  
+ Creare classi derivate dal **ConnectionEventsVt** e **RecordsetEventsVt** interfacce disponibili in adoint il file.  
   
 ```  
 // BeginEventExampleVC01  
@@ -53,7 +50,7 @@ class CRstEvent : public RecordsetEventsVt
 // EndEventExampleVC01  
 ```  
   
- Implementare ciascuno dei metodi del gestore eventi in entrambe le classi. È sufficiente che ogni metodo restituisca un valore HRESULT S_OK. Tuttavia, quando si rende pubblico che i gestori di eventi sono disponibili, verrà chiamati in modo continuo per impostazione predefinita. Al contrario, si consiglia di non richiedere ulteriori notifiche dopo la prima volta impostando **adStatus** a **adStatusUnwantedEvent**.  
+ Implementare ogni metodo del gestore eventi in entrambe le classi. È sufficiente che ogni metodo restituisce semplicemente un HRESULT S_OK. Tuttavia, quando si rende noto che i gestori di eventi sono disponibili, verrà chiamati in modo continuativo per impostazione predefinita. Al contrario, si potrebbe voler non richiedere alcuna ulteriore notifica la prima volta impostando **adStatus** al **adStatusUnwantedEvent**.  
   
 ```  
 // BeginEventExampleVC02  
@@ -69,11 +66,11 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- Le classi di evento ereditano **IUnknown**, pertanto è necessario implementare anche il **QueryInterface**, **AddRef**, e **versione** metodi. Anche implementare costruttori di classe e i distruttori. Scegliere gli strumenti di Visual C++ con cui si ha maggiore familiarità semplificare questa parte dell'attività.  
+ Le classi di evento ereditano **IUnknown**, pertanto è necessario implementare anche il **QueryInterface**, **AddRef**, e **versione** metodi. Anche implementare costruttori di classi e i distruttori. Scegliere gli strumenti di Visual C++ con cui si ha maggiore familiarità semplificare questa parte dell'attività.  
   
- Rendere pubblico che i gestori eventi sono disponibili mediante l'emissione di **QueryInterface** sul [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e [connessione](../../../ado/reference/ado-api/connection-object-ado.md) gli oggetti per il  **IConnectionPointContainer** e **IConnectionPoint** interfacce. Eseguire quindi **IConnectionPoint::** per ogni classe.  
+ Marca si noti che i gestori eventi sono disponibili tramite l'emissione **QueryInterface** nel [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e [connessione](../../../ado/reference/ado-api/connection-object-ado.md) gli oggetti per il  **IConnectionPointContainer** e **IConnectionPoint** interfacce. Quindi eseguire **IConnectionPoint::** per ciascuna classe.  
   
- Si supponga ad esempio si utilizza una funzione booleana che restituisce **True** se comunica correttamente un **Recordset** dell'oggetto che si dispone di gestori di eventi disponibili.  
+ Si supponga ad esempio si usa una funzione booleana che restituisce **True** se comunica correttamente un **Recordset** dell'oggetto che si dispone di gestori di eventi disponibili.  
   
 ```  
 // BeginEventExampleVC03  
@@ -102,9 +99,9 @@ return TRUE;
 // EndEventExampleVC03  
 ```  
   
- A questo punto, gli eventi per il **RecordsetEvent** famiglia sono abilitati e i metodi vengono chiamati come **Recordset** gli eventi si verificano.  
+ A questo punto, gli eventi per il **RecordsetEvent** famiglia sono abilitati e verranno chiamati i metodi come **Recordset** si verificano eventi.  
   
- In un secondo momento, quando si desidera rendere disponibili i gestori eventi, recuperare nuovamente il punto di connessione ed emettere il **IConnectionPoint:: Unadvise** metodo.  
+ In un secondo momento, quando si desidera rendere disponibili i gestori eventi, ottenere nuovamente il punto di connessione ed emettere il **IConnectionPoint:: Unadvise** (metodo).  
   
 ```  
 // BeginEventExampleVC04  
@@ -116,9 +113,9 @@ if (FAILED(hr)) return FALSE;
 // EndEventExampleVC04  
 ```  
   
- È necessario rilasciare le interfacce e distruggere oggetti della classe come appropriato.  
+ È necessario rilasciare le interfacce ed Elimina definitivamente gli oggetti di classe come appropriato.  
   
- Nel codice seguente viene illustrato un esempio completo di un **Recordset** classe sink di evento.  
+ Il codice seguente illustra un esempio completo di un **Recordset** classe sink di evento.  
   
 ```  
 // BeginEventExampleVC05.cpp  

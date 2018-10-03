@@ -1,13 +1,11 @@
 ---
-title: Filtro e l'esempio di proprietà RecordCount (VB) | Documenti Microsoft
+title: Esempio di proprietà RecordCount (VB) e filtro | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d467ae897108f248991bc8eb8ac21461c22065c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9038609907c7649755a46002927ccafb71090754
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278673"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675419"
 ---
-# <a name="filter-and-recordcount-properties-example-vb"></a>Esempio di proprietà RecordCount (VB) e di filtro
-In questo esempio viene aperto un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) nella tabella Publishers il ***Pubs*** database. Viene quindi utilizzato il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà per limitare il numero di record visibili da tali server di pubblicazione in un determinato paese/regione. Il **RecordCount** proprietà viene utilizzata per mostrare la differenza tra i recordset non filtrate e filtrate.  
+# <a name="filter-and-recordcount-properties-example-vb"></a>Esempio delle proprietà Filter e RecordCount (VB)
+In questo esempio viene aperto un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sulla tabella nel server di pubblicazione le ***Pubs*** database. Quindi, utilizza il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà per limitare il numero di record visibili da tali server di pubblicazione in un determinato paese/area geografica. Il **RecordCount** proprietà viene utilizzata per mostrare la differenza tra i set di record non filtrate e filtrate.  
   
 ```  
 'BeginFilterVB  
@@ -112,7 +109,7 @@ End Sub
 ```  
   
 > [!NOTE]
->  Quando si conoscono i dati che si desidera selezionare, è in genere più efficiente per aprire un **Recordset** con un'istruzione SQL. Questo esempio viene illustrato come è possibile creare solo una **Recordset** e ottenere i record di un determinato paese.  
+>  Quando si conoscono i dati da selezionare, è in genere più efficiente per aprire una **Recordset** con un'istruzione SQL. Questo esempio viene illustrato come è possibile creare solo uno **Recordset** e ottenere i record da un paese specifico.  
   
 ```  
 Attribute VB_Name = "Filter"  

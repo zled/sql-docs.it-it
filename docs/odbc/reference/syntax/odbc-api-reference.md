@@ -1,35 +1,32 @@
 ---
-title: Riferimento all'API ODBC | Documenti Microsoft
+title: Riferimento all'API ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3920299ded492ef40bee8bd181e5ea60aaa9960
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6553984255843cf940b48d745d4494522b357159
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921946"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680829"
 ---
-# <a name="odbc-api-reference"></a>Riferimento all'API ODBC
-Gli argomenti in questa sezione descrivono ogni funzione ODBC in ordine alfabetico. Ogni funzione è definita come funzione del linguaggio di programmazione C. Di seguito sono riportate le descrizioni:  
+# <a name="odbc-api-reference"></a>Informazioni di riferimento sull'API ODBC
+Gli argomenti in questa sezione descrivono ogni funzione ODBC in ordine alfabetico. Ogni funzione viene definita come funzione del linguaggio di programmazione C. Le descrizioni seguenti:  
   
 -   Scopo  
   
 -   Versione ODBC  
   
--   Livello di conformità standard CLI  
+-   Livello di conformità della riga di comando standard  
   
 -   Sintassi  
   
@@ -39,20 +36,20 @@ Gli argomenti in questa sezione descrivono ogni funzione ODBC in ordine alfabeti
   
 -   Diagnostica  
   
--   Commenti sull'utilizzo e sull'implementazione  
+-   Commenti sull'utilizzo e implementazione  
   
 -   Esempio di codice  
   
--   Riferimenti a funzioni correlate  
+-   Riferimenti alle funzioni correlate  
   
- Il livello di conformità standard CLI può essere uno dei seguenti: 92 ISO, Open Group, ODBC o obsoleto. Una funzione contrassegnata come conforme allo standard ISO 92 viene visualizzato anche nella versione 1 di Open Group perché Open Group è un superset puro di ISO 92. Una funzione contrassegnata come conforme a Open gruppo viene visualizzato anche in ODBC 3. *x*, in quanto ODBC 3. *x* è un superset puro di Open Group versione 1. Una funzione contrassegnata come conforme a ODBC viene visualizzato in nessuna delle due standard. Una funzione contrassegnata come deprecata è stata deprecata in ODBC 3. *x*.  
+ Il livello di conformità della riga di comando standard può essere uno dei seguenti: 92 ISO, Open Group, ODBC o obsoleto. Una funzione contrassegnata come conforme allo standard ISO 92 visualizzato anche nell'Open Group versione 1, poiché Open Group è un superset pure del 92 ISO. Una funzione contrassegnata come conforme a Open gruppo viene visualizzato anche in ODBC 3. *x*, in quanto ODBC 3. *x* è un superset puro di Open Group versione 1. Una funzione contrassegnata come conforme a ODBC viene visualizzato in nessuna delle due standard. Una funzione contrassegnata come deprecata è stata deprecata in ODBC 3. *x*.  
   
- Gestione delle informazioni di diagnostica è descritta nel [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descrizione della funzione. Il testo associato ai valori SQLSTATE è incluso per fornire una descrizione della condizione, ma non è destinato a prescrivere un testo specifico.  
+ La gestione delle informazioni di diagnostica è descritta nel [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descrizione della funzione. Il testo associato ai valori SQLSTATE verrà fornite una descrizione della condizione, ma non deve prevedere un testo specifico.  
   
 > [!NOTE]  
->  Per informazioni specifiche del driver su funzioni ODBC, vedere la sezione per il driver.  
+>  Per informazioni specifiche del driver su funzioni di ODBC, vedere la sezione per il driver.  
   
- In questa sezione contiene argomenti per le funzioni seguenti:  
+ In questa sezione contiene gli argomenti per le funzioni seguenti:  
   
 -   [Funzione SQLAllocConnect](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   

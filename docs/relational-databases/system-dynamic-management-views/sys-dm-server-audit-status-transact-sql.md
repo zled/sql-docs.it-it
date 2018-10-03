@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_audit_status_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_audit_status dynamic management view
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4797a4e81a0fabd169111e979d661d17517ce3f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3f2be7711a7e495608d2a35d42e617663e11bc3c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467468"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712511"
 ---
 # <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,17 +33,17 @@ ms.locfileid: "34467468"
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**int**|ID del controllo. Esegue il mapping al **audit_id** campo il **sys.audits** vista del catalogo.|  
-|**name**|**sysname**|Nome del controllo. Stesso come il **nome** campo il **server_audits** vista del catalogo.|  
+|**audit_id**|**int**|ID del controllo. Esegue il mapping per il **audit_id** campo il **sys.audits** vista del catalogo.|  
+|**name**|**sysname**|Nome del controllo. Stesso come il **name** campo il **Sys. server_audits** vista del catalogo.|  
 |**status**|**smallint**|Stato numerico del controllo del server:<br /><br /> 0 = non avviata<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      Errore di runtime<br /><br /> 3 = destinazione creare hanno esito negativo<br /><br /> 4 = in corso l'arresto|  
 |**status_desc**|**nvarchar(256)**|Stringa che visualizza lo stato del controllo del server:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Timestamp in UTC dell'ultima modifica dello stato per il controllo.|  
-|**event_session_address**|**varbinary(8)**|Indirizzo della sessione degli eventi estesi associata al controllo. Correlazione di **sys.db_xe_sessions.address** vista del catalogo.|  
+|**event_session_address**|**varbinary(8)**|Indirizzo della sessione degli eventi estesi associata al controllo. Correlato per il **sys.db_xe_sessions.address** vista del catalogo.|  
 |**audit_file_path**|**nvarchar(256)**|Percorso e nome file completo della destinazione del file di controllo attualmente utilizzato. Definito solo per i controlli dei file.|  
 |**audit_file_size**|**bigint**|Dimensioni approssimate in byte del file di controllo. Definito solo per i controlli dei file.|  
   
-## <a name="permissions"></a>Autorizzazioni  
- Le entità devono disporre **VIEW SERVER STATE** e **selezionare** autorizzazioni.  
+## <a name="permissions"></a>Permissions  
+ Le entità devono disporre **VIEW SERVER STATE** e **seleziona** autorizzazioni.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

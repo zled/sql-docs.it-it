@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33ba9d69763a9d07cc9907aef60397b6c5b37eee
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 271c8baf01825baa9ee88e7c8ee365019b6bca66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33238568"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780969"
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,21 +55,21 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  GUID per un tipo agente di raccolta. *collector_type_uid* viene **uniqueidentifier** non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collector_types nel database msdb.  
   
  [ @machine_name=] '*nome_computer*'  
- Nome del server in cui risiede l'insieme di raccolta. *nome_computer* viene **sysname**, senza alcun valore predefinito.  
+ Nome del server in cui risiede l'insieme di raccolta. *machine_name* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ @named_instance=] '*named_instance*'  
- Nome dell'istanza per l'insieme di raccolta. *named_instance* viene **sysname**, senza alcun valore predefinito.  
+ Nome dell'istanza per l'insieme di raccolta. *named_instance* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ @log_id = ] *log_id*  
- Identificatore univoco tramite cui viene eseguito il mapping al registro eventi del set di raccolta nel server da cui sono stati raccolti i dati. *log_id* viene **bigint** non prevede alcun valore predefinito. Per ottenere il valore per *log_id*, query sulla vista syscollector_execution_log nel database msdb.  
+ Identificatore univoco tramite cui viene eseguito il mapping al registro eventi del set di raccolta nel server da cui sono stati raccolti i dati. *log_id* viene **bigint** non prevede alcun valore predefinito. Per ottenere il valore per *log_id*, eseguire query sulla visualizzazione syscollector_execution_log nel database msdb.  
   
  [ @snapshot_id = ] *snapshot_id*  
  Identificatore univoco per una riga inserita nella vista snapshots. *snapshot_id* viene **int** e viene restituito come OUTPUT.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Ogni volta che un pacchetto di caricamento inizia a caricare i dati nel data warehouse di gestione, il componente runtime dell'agente di raccolta dati chiama core.sp_create_snapshot.  
   
  Tramite questa procedura viene verificato quanto segue:  
@@ -84,8 +80,8 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
  Se una delle due precedenti verifiche non ha esito positivo, la procedura ha esito negativo e viene restituito un errore.  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **mdw_writer** (con autorizzazione EXECUTE) ruolo predefinito del database.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **mdw_writer** (con autorizzazione EXECUTE) ruolo predefinito del database.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creato uno snapshot per il set di raccolta Utilizzo disco, lo snapshot viene aggiunto al data warehouse di gestione e viene restituito l'identificatore dello snapshot. In questo esempio viene utilizzata l'istanza predefinita.  

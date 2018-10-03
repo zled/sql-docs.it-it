@@ -1,13 +1,11 @@
 ---
-title: Analisi dei dati | Documenti Microsoft
+title: Analisi dei dati | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data [ADO]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - data retrieval [ADO]
 - ADO, examining data
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14753bac9e8004c77984b00ff490047c62e2c489
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9382835ffc0a92ee572df07aee8cabb8fa762182
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270946"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645485"
 ---
-# <a name="examining-data"></a>Analisi dei dati
-Il [acquisizione dei dati](../../../ado/guide/data/getting-data.md) sezione viene spiegato come recuperare dati da un'origine dati come uno o più **Recordset** oggetti. In questa sezione verrà illustrate **Recordset** in modo più dettagliato, ad esempio come spostarsi tra le **Recordset** e visualizzarne i dati.  
+# <a name="examining-data"></a>Esame dei dati
+Il [recupero di dati](../../../ado/guide/data/getting-data.md) sezione illustrato come recuperare i dati da un'origine dati come uno o più **Recordset** oggetti. In questa sezione verrà illustrate **Recordset** in modo più dettagliato, incluse le procedure per spostarsi tra le **Recordset** e visualizzarne i dati.  
   
- **Recordset** supporta diverse [proprietà e metodi](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) per poter esplorare ed esaminare i dati contenuti all'interno. Queste funzionalità sono dipende dal provider. Alcuni provider potrebbero non supportare alcune proprietà o metodi.  
+ **Recordset** supporta vari [delle proprietà e metodi](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) per poter esplorare ed esaminare i dati contenuti all'interno. Queste funzionalità sono dipendenti dal provider. Alcuni provider potrebbero non supportare alcune proprietà o metodi.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
