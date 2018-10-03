@@ -1,13 +1,11 @@
 ---
-title: Esempio di proprietà di RecordCount (JScript) e filtro | Documenti Microsoft
+title: Esempio di proprietà RecordCount (JScript) e filtro | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], JScript example
 - Filter property [ADO], JScript example
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 656c981dd242ad7f11768aac0bb79c7214845c06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 45e3a53bd006302d368b97304a1f6e8eeab438f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278610"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623979"
 ---
-# <a name="filter-and-recordcount-properties-example-jscript"></a>Esempio di proprietà RecordCount (JScript) e di filtro
-Questo esempio viene aperto un **Recordset** nella tabella delle società del database Northwind e quindi utilizza il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà per limitare i record visibili a quelli in cui inizia il campo CompanyName con la lettera D. tagliare e incollare il codice seguente in blocco note o un altro editor di testo e salvarlo come **FilterJS**.  
+# <a name="filter-and-recordcount-properties-example-jscript"></a>Esempio di proprietà RecordCount (JScript) e filtro
+Questo esempio viene aperto un **Recordset** sulla tabella del database Northwind, quindi Usa le aziende il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà per limitare i record visibili a quelle in cui il campo di CompanyName inizia con la lettera D. tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **FilterJS**.  
   
 ```  
 <!-- BeginFilterJS -->  

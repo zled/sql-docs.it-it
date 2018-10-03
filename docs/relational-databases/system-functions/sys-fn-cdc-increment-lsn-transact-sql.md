@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - fn_cdc_increment_lsn_TSQL
 - sys.fn_cdc_increment_lsn_TSQL
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_cdc_increment_lsn
 - sys.fn_cdc_increment_lsn
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9202afab2c6b0fca9c230a60b1448a3069232d58
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 84f343ebda18e65217b18446707373a743b6a9d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234362"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648929"
 ---
 # <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,12 +49,12 @@ sys.fn_cdc_increment_lsn ( lsn_value )
 ## <a name="return-type"></a>Tipo restituito  
  **binary(10)**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Il valore LSN restituito dalla funzione è sempre maggiore del valore specificato e non esiste alcun valore LSN tra i due valori.  
   
  Per eseguire sistematicamente query su un flusso di dati delle modifiche, è possibile ripetere periodicamente la chiamata della funzione di query, specificando ogni volta un nuovo intervallo di query per delimitare le modifiche restituite nella query. Per assicurarsi che non si verifichino perdite di dati, il limite superiore della query precedente viene spesso utilizzato per generare il limite inferiore della query successiva. Poiché l'intervallo di query è un intervallo chiuso, il nuovo limite inferiore deve essere più grande del limite superiore precedente, ma piccolo abbastanza da garantire che nessuna modifica abbia valori LSN compresi tra questo valore e il limite superiore precedente. La funzione sys.fn_cdc_increment_lsn viene utilizzata per ottenere questo valore.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo del database public.  
   
 ## <a name="examples"></a>Esempi  

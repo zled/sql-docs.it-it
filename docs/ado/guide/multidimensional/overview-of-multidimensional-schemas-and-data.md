@@ -1,46 +1,43 @@
 ---
-title: Panoramica di schemi e dati multidimensionali | Documenti Microsoft
+title: Panoramica di schemi e dati multidimensionali | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2d17b02ff9f340a432e2d096a07a6cf5328c5de
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 70bd6f1867d48a9c96f5759d95c2a08a22714d8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273536"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811159"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Panoramica di schemi e dati multidimensionali
-## <a name="understanding-multidimensional-schemas"></a>Informazioni sugli schemi multidimensionali  
+## <a name="understanding-multidimensional-schemas"></a>Informazioni sugli schemi multidimensionale  
  L'oggetto di metadati centrali in ADO MD è il *cubo*, che è costituito da un set strutturato di dimensioni correlate, gerarchie, livelli e membri.  
   
- Oggetto *dimensione* è una categoria di dati dal database multidimensionale, derivato da entità aziendali indipendente. In genere, una dimensione contiene gli elementi da utilizzare come criteri di query per le misure del database.  
+ Oggetto *dimensione* è una categoria indipendente dei dati dal database multidimensionale, derivato dalle entità aziendali. Una dimensione contiene in genere gli elementi da utilizzare come criteri di query per le misure del database.  
   
- Oggetto *gerarchia* è un percorso di aggregazione di una dimensione. Una dimensione può avere più livelli di granularità, che hanno relazioni padre-figlio. Una gerarchia definisce la correlazione di questi livelli.  
+ Oggetto *gerarchia* è un percorso di aggregazione di una dimensione. Una dimensione può avere più livelli di granularità, che hanno relazioni padre-figlio. Una gerarchia definisce come sono correlati questi livelli.  
   
  Oggetto *livello* è un passaggio di aggregazione in una gerarchia. Per le dimensioni con più livelli di informazioni, ogni livello è un livello.  
   
- Oggetto *membro* è un elemento di dati in una dimensione. In genere, si crea una didascalia o si descritta una misura del database utilizzando i membri.  
+ Oggetto *membro* è un elemento di dati in una dimensione. In genere, si crea una didascalia o descritta una misura del database utilizzando i membri.  
   
- I cubi sono rappresentati da [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) gli oggetti ADO MD. Dimensioni, gerarchie, livelli e membri sono inoltre rappresentati da oggetti ADO MD corrispondenti: [dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [gerarchia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md), e [ Membro](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+ I cubi sono rappresentati da [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) gli oggetti ADO MD. Le dimensioni, gerarchie, livelli e membri sono rappresentati anche agli oggetti ADO MD corrispondenti: [dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [gerarchia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md), e [ Membro](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
   
 ### <a name="dimensions"></a>Dimensioni  
- Le dimensioni di un cubo dipendono dalle entità aziendali e i tipi di dati da creare nel database. In genere, ogni dimensione è un punto di ingresso indipendenti o di un meccanismo per la selezione di dati.  
+ Le dimensioni di un cubo dipendono dalle entità aziendali e i tipi di dati da modellare nel database. In genere, ogni dimensione è un punto di ingresso indipendente o un meccanismo per la selezione dei dati.  
   
- Ad esempio, un cubo contenente i dati di vendita ha le cinque dimensioni seguenti: agente, Geography, ora, i prodotti e le misure. La dimensione Measures contiene valori di dati di vendita effettivi, mentre le altre dimensioni rappresentano modi per classificare e raggruppare i valori di dati di vendita.  
+ Ad esempio, un cubo contenente i dati di vendita ha le cinque dimensioni seguenti: venditore, Geography, ora, i prodotti e le misure. La dimensione delle misure contiene valori di dati di vendita effettivi, mentre le altre dimensioni rappresentano modi per classificare e raggruppare i valori di dati di vendita.  
   
  La dimensione Geography è il seguente set di membri:  
   
@@ -55,7 +52,7 @@ Hamburg, Munich, Stuttgart}
 ```  
   
 ### <a name="hierarchies"></a>Gerarchie  
- Gerarchie definiscono il modo in cui i livelli di una dimensione possono essere "raggruppati" o raggruppati. Una dimensione può avere più di una gerarchia. È presente una gerarchia naturale della dimensione Geography:  
+ Gerarchie definiscono i modi in cui i livelli di una dimensione possono essere "raggruppati" o raggruppati. Una dimensione può avere più di una gerarchia. Esiste una gerarchia naturale nella dimensione Geography:  
   
 ### <a name="levels"></a>Levels  
  Nella dimensione Geography riportato di seguito viene illustrata nella figura precedente, ogni casella rappresenta un livello nella gerarchia.  
@@ -73,7 +70,7 @@ Hamburg, Munich, Stuttgart}
 -   Città `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
 ### <a name="members"></a>Membri  
- I membri al livello foglia di una gerarchia non hanno elementi figlio e i membri al livello radice non dispongono di alcun elemento padre. Tutti gli altri membri hanno almeno un elemento padre e almeno un elemento figlio. Ad esempio, un attraversamento dell'albero gerarchico nella dimensione Geography parziale restituisce le relazioni padre-figlio seguenti:  
+ I membri al livello foglia di una gerarchia non hanno elementi figlio e i membri al livello radice non hanno elementi padre. Tutti gli altri membri hanno almeno un elemento padre e almeno un elemento figlio. Ad esempio, un attraversamento dell'albero gerarchico nella dimensione Geography parziale genera le relazioni padre-figlio seguenti:  
   
 -   `{All} (parent of) {Europe, North America}`  
   
@@ -83,13 +80,13 @@ Hamburg, Munich, Stuttgart}
   
 -   `{USA-NW} (parent of) {Boise, Seattle}`  
   
- I membri possono essere consolidati per uno o più gerarchie per ogni dimensione. Si consideri una dimensione temporale in cui sono disponibili due modi di eseguire il rollup a livello di anno dal livello di giorni:  
+ I membri possono essere consolidati uno o più gerarchie per ogni dimensione. Prendere in considerazione una dimensione temporale in cui sono presenti due modi che esegue il rollup a livello di anno dal livello di giorni:  
   
- Questo esempio viene inoltre illustrata un'altra caratteristica: alcuni membri del livello settimana della gerarchia anno settimana non vengono visualizzati in qualsiasi livello della gerarchia di un trimestre dell'anno. Di conseguenza, una gerarchia non deve includere tutti i membri di una dimensione.  
+ In questo esempio illustra anche un'altra caratteristica: alcuni membri del livello settimana della gerarchia dell'anno settimana non sono presenti in qualsiasi livello della gerarchia di un trimestre dell'anno. Di conseguenza, una gerarchia non deve includere tutti i membri di una dimensione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modello a oggetti ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (multidimensionale) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Programmazione con ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Utilizzo di ADO con ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
+ [Uso di ADO con ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [Utilizzo dei dati multidimensionali](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

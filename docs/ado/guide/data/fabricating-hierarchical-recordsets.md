@@ -1,13 +1,11 @@
 ---
-title: Creazione di recordset gerarchici | Documenti Microsoft
+title: Creazione di recordset gerarchici | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset fabrication [ADO]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37e2ffd58c7dbf9e142c2525b7348cbc88cc6823
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 17cf661e092e253e206b595dec5d807a35b895fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271530"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770889"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Creazione di recordset gerarchici
-Nell'esempio seguente viene illustrato come creare un oggetto Recordset gerarchico senza un'origine dati sottostante utilizzando i dati di data shaping grammatica per definire le colonne padre, figlio e nipote **recordset**.  
+Nell'esempio seguente viene illustrato come creare un oggetto Recordset gerarchico senza un'origine dati sottostante utilizzando i dati di data shaping grammatica per definire le colonne per l'elemento padre, figlio e nipote **recordset**.  
   
- Per creare un modello gerarchico **Recordset**, è necessario specificare il [Microsoft Data shaping per OLE DB (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape), ed è possibile specificare il valore NONE nel Provider di dati di parametro della stringa di connessione di [aprire](../../../ado/reference/ado-api/open-method-ado-connection.md) metodo il [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Per ulteriori informazioni, vedere [provider obbligatori per il Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md).  
+ Per creare un modello gerarchico **Recordset**, è necessario specificare il [Microsoft Data shaping per OLE DB (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape), ed è possibile specificare un valore NONE in Provider di dati di parametro di stringa di connessione del [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) metodo per il [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Per altre informazioni, vedere [provider obbligatori per il Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -56,11 +53,11 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- Non appena il **Recordset** è stato creato, può essere popolata, modificato o salvarla in un file.  
+ Non appena il **Recordset** è stato creato, può essere popolato, modificato o salvarla in un file.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Accesso alle righe in un Recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Grammatica formale forma](../../../ado/guide/data/formal-shape-grammar.md)   
- [Provider desiderati per il Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Clausola APPEND forma](../../../ado/guide/data/shape-append-clause.md)   
+ [Grammatica formale per Shape](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Provider necessari per il Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Clausola APPEND per Shape](../../../ado/guide/data/shape-append-clause.md)   
  [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)

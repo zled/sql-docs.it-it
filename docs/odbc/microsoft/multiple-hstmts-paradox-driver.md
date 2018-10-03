@@ -1,28 +1,25 @@
 ---
-title: Più hstmts (Driver Paradox) | Documenti Microsoft
+title: HStmt multipli (Driver Paradox) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - multiple hstmts [ODBC]
 - Paradox driver [ODBC], multiple hstmts
 ms.assetid: 66aecd94-092d-43d4-9583-74f5e2990eac
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 244df409b4706d60c78d37318d3c0fd21a716e10
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2dc086f25ca4da2a64a5edde2422f1fe33fcc444
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899523"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626409"
 ---
-# <a name="multiple-hstmts-paradox-driver"></a>Più hstmts (Paradox Driver)
-Quando viene utilizzato il driver ODBC Paradox, se si desidera usare più *hstmt* per eseguire query su una tabella, la tabella deve includere un indice univoco (chiave primaria).
+# <a name="multiple-hstmts-paradox-driver"></a>hstmt multipli (driver Paradox)
+Quando viene utilizzato il driver ODBC Paradox, se si desidera utilizzare più di uno *hstmt* per eseguire query su una tabella, la tabella deve avere un indice univoco (chiave primaria Paradox).

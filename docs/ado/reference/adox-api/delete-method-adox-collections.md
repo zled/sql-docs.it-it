@@ -1,13 +1,11 @@
 ---
-title: Delete (metodo) (insiemi ADOX) | Documenti Microsoft
+title: Metodo (raccolte ADOX) Delete | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -30,18 +28,17 @@ f1_keywords:
 helpviewer_keywords:
 - delete method [ADOX]
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8704e69c777c9426af158b9866ca89e70de054b5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 90f9aa6a788296ff5fef05e96b7f46b56729ded9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811081"
 ---
-# <a name="delete-method-adox-collections"></a>Delete (metodo) (ADOX raccolte)
+# <a name="delete-method-adox-collections"></a>Metodo Delete (raccolte ADOX)
 Rimuove un oggetto da una raccolta.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -53,12 +50,12 @@ Collection.Delete Name
   
 #### <a name="parameters"></a>Parametri  
  *Nome*  
- Oggetto **Variant** che specifica il nome o la posizione ordinale (indice) dell'oggetto da eliminare.  
+ Oggetto **Variant** che specifica il nome o la posizione (indice) dell'oggetto da eliminare.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Si verifica un errore se il *nome* non esiste nella raccolta.  
   
- Per [tabelle](../../../ado/reference/adox-api/tables-collection-adox.md) e [utenti](../../../ado/reference/adox-api/users-collection-adox.md) raccolte, si verifica un errore se il provider non supporta l'eliminazione di tabelle o gli utenti, rispettivamente. Per [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) e [viste](../../../ado/reference/adox-api/views-collection-adox.md) raccolte, **eliminare** avrà esito negativo se il provider non supporta i comandi di persistenza.  
+ Per la [tabelle](../../../ado/reference/adox-api/tables-collection-adox.md) e [utenti](../../../ado/reference/adox-api/users-collection-adox.md) raccolte, viene visualizzato un errore se il provider non supporta l'eliminazione di tabelle o gli utenti, rispettivamente. Per [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) e [viste](../../../ado/reference/adox-api/views-collection-adox.md) raccolte **Elimina** avrà esito negativo se il provider non supporta comandi di persistenza.  
   
 ## <a name="applies-to"></a>Si applica a  
   

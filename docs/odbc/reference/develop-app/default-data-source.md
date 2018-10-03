@@ -1,13 +1,11 @@
 ---
-title: Origine dati predefinito | Documenti Microsoft
+title: Origine dati predefinita | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -21,22 +19,21 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b756f9b553c622028266d1fc591596bf58ddf45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 909f9b3e7c8087add8eb66ca2f5c15253026304c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908136"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619569"
 ---
 # <a name="default-data-source"></a>Origine dati predefinita
-Il driver può selezionare un'origine dati, l'origine dati predefinita, in alcuni casi in cui l'applicazione non specificare in modo esplicito una chiamata:  
+Il driver può selezionare un'origine dati, l'origine dati predefinita, in alcuni casi in cui l'applicazione non specificano esplicitamente una chiamata:  
   
--   In una chiamata a **SQLConnect** in cui il *ServerName* argomento è una stringa di lunghezza zero, un puntatore null o DEFAULT.  
+-   In una chiamata a **SQLConnect** in cui le *ServerName* argomento è una stringa di lunghezza zero, un puntatore null o DEFAULT.  
   
--   In una chiamata a **SQLDriverConnect** in *InConnectionString* una specifica **DSN**= DEFAULT o specifica con la **DSN** (parola chiave) un origine dati che non è contenuto nelle informazioni di sistema.  
+-   In una chiamata a **SQLDriverConnect** in cui *InConnectionString* una specifica **DSN**= DEFAULT o specifica con la **DSN** parola chiave un origine dati che non è contenuta nelle informazioni di sistema.  
   
- È definito dal driver come specificare l'origine dati predefinita. Questo può comportare un'azione amministrativa e può variare a seconda dell'utente.
+ È definito dal driver come viene specificata l'origine dati predefinita. Questa operazione potrebbe comportare un'azione amministrativa e può dipendere l'utente.

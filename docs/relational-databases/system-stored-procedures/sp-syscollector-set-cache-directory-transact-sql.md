@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_set_cache_directory (Transact-SQL) | Documenti Microsoft
+title: sp_syscollector_set_cache_directory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_cache_directory_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_cache_directory stored procedure
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fec21ffdac0ee58f6927935942fedadda563f0f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 825291445c0d31df8230793c3a5d6a1b7f272082
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260887"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726769"
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,21 +42,21 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@cache_directory =** ] **'***cache_directory***'**  
- Directory nel file system in cui i dati raccolti vengono archiviati temporaneamente. *cache_directory* viene **nvarchar(255**, con valore predefinito è NULL. Se non viene specificato alcun valore, viene utilizzata la directory temporanea predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Directory nel file system in cui i dati raccolti vengono archiviati temporaneamente. *cache_directory* viene **nvarchar(255**, con un valore predefinito NULL. Se non viene specificato alcun valore, viene utilizzata la directory temporanea predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- È necessario disabilitare l'agente di raccolta dati prima di modificare la configurazione della directory della cache. La stored procedure ha esito negativo se l'agente di raccolta dati è abilitato. Per ulteriori informazioni, vedere [abilitare o disabilitare la raccolta dei dati](../../relational-databases/data-collection/enable-or-disable-data-collection.md), e [gestire raccolta dati](../../relational-databases/data-collection/manage-data-collection.md).  
+## <a name="remarks"></a>Note  
+ È necessario disabilitare l'agente di raccolta dati prima di modificare la configurazione della directory della cache. La stored procedure ha esito negativo se l'agente di raccolta dati è abilitato. Per altre informazioni, vedere [Abilita o disabilita raccolta dati](../../relational-databases/data-collection/enable-or-disable-data-collection.md), e [gestire raccolta dati](../../relational-databases/data-collection/manage-data-collection.md).  
   
  Nel momento in cui sp_syscollector_set_cache_directory viene eseguita la directory specificata non deve essere esistere. I dati tuttavia non possono essere memorizzati nella cache né caricati in modo corretto fino a quando la directory non viene creata. È consigliabile pertanto creare la directory prima di eseguire questa stored procedure.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene disabilitato l'agente di raccolta dati, imposta la directory della cache per l'agente di raccolta dati per `D:\tempdata`e quindi Abilita l'agente di raccolta dati.  
+ L'esempio seguente disabilita l'agente di raccolta dati, imposta la directory della cache per l'agente di raccolta `D:\tempdata`e quindi Abilita l'agente di raccolta dati.  
   
 ```sql  
 USE msdb;  

@@ -1,85 +1,79 @@
 ---
-title: Modalità SQL (MySQLToSQL) | Documenti Microsoft
+title: Modalità SQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: af1e93d5626a6f0453dd3c7b97ac34093c82850a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 46d91efa1451749d8d1cce2b1a8cf361cc30986a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776587"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737309"
 ---
 # <a name="sql-modes-mysqltosql"></a>Modalità SQL (MySQLToSQL)
-SSMA per MySQL può operare in modalità diverse di SQL che è possibile applicare queste modalità in modo diverso per diversi client.  
+SSMA per MySQL può funzionare in modalità diverse di SQL che è possibile applicare queste modalità in modo diverso per diversi client.  
   
-Modalità di definire la sintassi SQL che devono supportare MySQL e il tipo di convalida dei dati controlla che l'esecuzione di. Questo rende più semplice per utilizzare MySQL in ambienti diversi e utilizzare MySQL con SQL Server.  
+Modalità di definizione della sintassi SQL che devono supportare MySQL e controlla il tipo di convalida dei dati che deve eseguire. Questo rende più semplice per usare MySQL in ambienti diversi e usare MySQL con SQL Server.  
   
-## <a name="sql-modes-grid"></a>SQL modalità griglia:  
+## <a name="sql-modes-grid"></a>Griglia di modalità SQL:  
   
--   SQL modalità griglia a livello di radice contiene le colonne seguenti: **nome modalità SQL**, **caricati modalità SQL**, e **efficace modalità SQL**.  
+-   SQL modalità griglia a livello di radice contiene le colonne seguenti: **nome modalità SQL**, **caricato SQL modalità**, e **efficace modalità SQL**.  
   
--   Griglia di modalità SQL al database categorie, Database, tabella categoria, le istruzioni, categoria di viste, tabella, vista, funzioni, procedure, funzione definita dall'utente e il livello di oggetto evento contiene le colonne seguenti: **nome modalità SQL**, **ereditata modalità SQL**, e **efficace modalità SQL**.  
+-   Griglia di modalità SQL al database categoria, Database, tabella categoria, categoria di istruzioni, categoria di viste, tabella, vista, funzioni, procedure, funzione definita dall'utente e a livello di oggetto evento contiene le colonne seguenti: **nome della modalità SQL**,  **Ereditata SQL modalità**, e **modalità SQL efficace**.  
   
--   SQL modalità griglia a livello di Stored Procedure, una funzione archiviata e Trigger contiene le colonne seguenti: **nome modalità SQL**, **modalità originale di SQL**, e **efficace modalità SQL**.  
+-   SQL modalità griglia a livello di Stored Procedure, funzione archiviati e Trigger contiene le colonne seguenti: **nome della modalità SQL**, **modalità SQL originale**, e **efficace modalità SQL**.  
   
 > [!NOTE]  
-> Modalità gruppo verrà visualizzata grassetto, sotto la colonna 'SQL modalità Name'.  
+> Modalità gruppo verrà visualizzata in grassetto, sotto la colonna 'SQL modalità Name'.  
   
-## <a name="loaded-sql-modes"></a>Modalità di caricamento di SQL  
-Queste sono le modalità di SQL, che possono essere IMPOSTATI a livello di sessione o radice. Impossibile modificare o modificare le modalità SQL una volta caricati nel database di destinazione.  
+## <a name="loaded-sql-modes"></a>Modalità SQL caricato  
+Queste sono le modalità di SQL, che vengono IMPOSTATE a livello di sessione o radice. Le modalità SQL una volta caricate nel database di destinazione non può essere modificate o modificate.  
   
-## <a name="inherited-sql-modes"></a>Modalità ereditato SQL  
-Queste sono le modalità di SQL, vengono ereditati dal nodo padre corrispondente.  
+## <a name="inherited-sql-modes"></a>Modalità SQL ereditati  
+Queste sono le modalità di SQL, che vengono ereditate dal nodo padre corrispondente.  
   
-Ad eccezione delle categorie di funzioni, procedure, categoria di eventi e trigger, tali modalità SQL sono presenti tutti i livelli (oggetto di database, tabella categorie, categoria di istruzioni, viste, tabella, vista, funzioni, procedure, funzione definita dall'utente ed evento).  
+Ad eccezione di categorie di funzioni, procedure, categoria di eventi e trigger, tali modalità SQL sono presenti tutti i livelli (oggetto di database, tabella categoria, categoria di istruzioni, viste categoria, tabella, vista, funzioni, procedure, funzione definita dall'utente ed evento).  
   
 > [!NOTE]  
 > Selezionando il **eredita da padre** casella di controllo ereditate modalità SQL può essere ereditata dal nodo padre. Per impostazione predefinita, questa casella di controllo rimanga selezionata.  
   
-## <a name="original-sql-modes"></a>Modalità originale di SQL  
-Queste sono le modalità di SQL presenti solo livelli di funzione, Stored Procedure e Trigger.  
+## <a name="original-sql-modes"></a>Modalità SQL originale  
+Queste sono le modalità di SQL presenti solo i livelli funzioni, Procedure e Trigger.  
   
 > [!NOTE]  
-> Selezionando il **Usa originale** controllare, le modalità di SQL che sono stati originariamente utilizzata nella funzione corrispondente o è possibile utilizzare stored procedure o trigger. Per impostazione predefinita, questa casella di controllo rimanga selezionata.  
+> Selezionando il **Usa originale** controllare, le modalità di SQL che sono stati utilizzati originariamente nella funzione corrispondente o è possibile utilizzare procedure o trigger. Per impostazione predefinita, questa casella di controllo rimanga selezionata.  
   
-## <a name="effective-sql-modes"></a>Modalità efficace SQL  
+## <a name="effective-sql-modes"></a>Modalità SQL efficace  
 Modalità SQL effettivo può essere definita a vari livelli nel modo seguente:  
   
 -   **A livello di sessione:**  
   
-    1.  Tutte le modalità di SQL caricati possono essere chiamate, "Modalità valide di SQL".  
+    1.  Tutte le modalità di SQL caricato può essere chiamate, "Modalità efficace di SQL".  
   
-    2.  A questo livello, le modalità valide di SQL possono essere direttamente e in modo esplicito modificate.  
+    2.  A questo livello, le modalità SQL effettive possono essere direttamente e in modo esplicito modificate.  
   
-    3.  La modalità di SQL effettivo che è impostato in modo esplicito non vengono riportata come caricato in modalità SQL e infine viene applicata all'oggetto.  
+    3.  La modalità SQL effettivo che viene impostata in modo esplicito non vengono riportata come modalità di caricamento di SQL e infine viene applicata all'oggetto.  
   
--   **A livello di funzione o stored procedure o trigger:**  
+-   **A livello di funzione o procedura o del trigger:**  
   
-    1.  Tutte le modalità di SQL originale può essere chiamato, "Modalità valide di SQL".  
+    1.  Tutte le modalità SQL originale può essere chiamato, "Modalità efficace di SQL".  
   
-    2.  A questo livello, la modalità effettiva di SQL in modo esplicito modificabili solo quando il **Usa originale** casella di controllo è deselezionata.  
+    2.  A questo livello, la modalità SQL effettiva può essere esplicitamente modificata solo quando la **Usa originale** casella di controllo è deselezionata.  
   
-    3.  La modalità di SQL effettivo che è impostato in modo esplicito non vengono riportata come modalità SQL originale e infine viene applicata all'oggetto.  
+    3.  La modalità SQL effettivo che viene impostata in modo esplicito non vengono riportata come modalità SQL originale e infine viene applicata all'oggetto.  
   
--   **In nodi diversi da quelli a livello di funzione o stored procedure o trigger:**  
+-   **In nodi diversi da quelli a livello di funzione o procedura o del trigger:**  
   
-    1.  Tutte le modalità di SQL ereditato può essere chiamate, "Modalità valide di SQL".  
+    1.  Tutte le modalità di SQL ereditata può essere chiamate, "Modalità efficace di SQL".  
   
-    2.  A questo livello, la modalità effettiva di SQL in modo esplicito modificabili solo quando il **eredita da padre** casella di controllo è deselezionata.  
+    2.  A questo livello, la modalità SQL effettiva può essere esplicitamente modificata solo quando la **eredita da padre** casella di controllo è deselezionata.  
   
-    3.  La modalità di SQL effettivo che è impostato in modo esplicito non vengono riportata come ereditata modalità SQL e infine viene applicata all'oggetto.  
+    3.  La modalità di SQL effettivo che viene impostata in modo esplicito non vengono riportata come modalità SQL ereditata e infine viene applicata all'oggetto.  
   

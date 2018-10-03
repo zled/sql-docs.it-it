@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_validate_plan_guide
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - fn_validate_plan_guide function
 - sys.fn_validate_plan_guide function
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b941fabfd4ebbd3ca41375622bf682f12b0fc26
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 844a6de4bd0ee770cd8406d3024a6a7f3bec3e4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236195"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798309"
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>Argomenti  
  *plan_guide_id*  
- È l'ID della Guida di piano come riportato nel [plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) vista del catalogo. *plan_guide_id* viene **int** non prevede alcun valore predefinito.  
+ È l'ID della Guida di piano come riportato nella [Sys. plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) vista del catalogo. *plan_guide_id* viene **int** non prevede alcun valore predefinito.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -60,7 +56,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |state|**smallint**|Numero di contesto dell'errore indicante il punto nel codice in cui si è verificato l'errore.|  
 |message|**nvarchar(2048)**|Testo del messaggio di errore.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Le guide di piano definite a livello di ambito di OBJECT richiedono l'autorizzazione VIEW DEFINITION o ALTER nell'oggetto a cui si fa riferimento e autorizzazioni per compilare la query o il batch forniti nella guida di piano. Ad esempio, se un batch contiene istruzioni SELECT, sono richieste autorizzazioni SELECT per gli oggetti a cui si fa riferimento.  
   
  Le guide di piano definite a livello di ambito di SQL o TEMPLATE richiedono l'autorizzazione ALTER per il database e autorizzazioni per compilare la query o il batch forniti nella guida di piano. Ad esempio, se un batch contiene istruzioni SELECT, sono richieste autorizzazioni SELECT per gli oggetti a cui si fa riferimento.  
@@ -80,7 +76,7 @@ GO
 ```  
   
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. Test della convalida della guida di piano prima di implementare una modifica nel database  
- Nell'esempio seguente viene utilizzata una transazione esplicita per eliminare un indice. Il `sys.fn_validate_plan_guide` funzione viene eseguita per determinare se l'azione invaliderà tutte le guide di piano nel database. In base ai risultati della funzione, viene eseguito il commit dell'istruzione `DROP INDEX` o il rollback della transazione, l'indice non viene eliminato.  
+ Nell'esempio seguente viene utilizzata una transazione esplicita per eliminare un indice. Il `sys.fn_validate_plan_guide` funzione viene eseguita per determinare se l'azione invaliderà ogni guida di piano nel database. In base ai risultati della funzione, viene eseguito il commit dell'istruzione `DROP INDEX` o il rollback della transazione, l'indice non viene eliminato.  
   
 ```sql  
 USE AdventureWorks2012;  

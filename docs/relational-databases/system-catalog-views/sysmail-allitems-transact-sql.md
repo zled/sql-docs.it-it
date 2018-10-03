@@ -1,14 +1,11 @@
 ---
-title: sysmail_allitems (Transact-SQL) | Documenti Microsoft
+title: sysmail_allitems (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_allitems_TSQL
@@ -18,23 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5884cc5731c7b4e88ec9d2332a4fbf500fc7fc6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 65c96ade0964146e1d8ff9cfa52f99938d290712
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221962"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824849"
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni messaggio elaborato da Posta elettronica database. Utilizzare questa vista quando si desidera controllare lo stato di tutti i messaggi.  
   
- Per visualizzare solo i messaggi con lo stato non riuscito, utilizzare [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Per visualizzare solo i messaggi non inviati, utilizzare [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Per visualizzare solo i messaggi che sono stati inviati, utilizzare [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
+ Per visualizzare solo i messaggi con lo stato non riuscito, usare [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Per visualizzare solo i messaggi non inviati, utilizzare [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Per visualizzare solo i messaggi che sono stati inviati, utilizzare [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,11 +42,11 @@ ms.locfileid: "33221962"
 |**subject**|**nvarchar(510)**|Oggetto del messaggio.|  
 |**Corpo**|**ntext**|Corpo del messaggio.|  
 |**body_format**|**varchar(20)**|Formato del corpo del messaggio. I possibili valori sono TEXT e HTML.|  
-|**Importanza**|**varchar(6)**|Il **importanza** parametro del messaggio.|  
+|**importanza**|**varchar(6)**|Il **importanza** parametro del messaggio.|  
 |**Sensibilità**|**varchar(12)**|Il **sensibilità** parametro del messaggio.|  
 |**file_attachments**|**ntext**|Elenco delimitato da punti e virgola dei nomi dei file allegati al messaggio di posta elettronica.|  
 |**attachment_encoding**|**varchar(20)**|Tipo di allegato del messaggio di posta elettronica.|  
-|**query**|**ntext**|Query eseguita dal programma di posta elettronica.|  
+|**Query**|**ntext**|Query eseguita dal programma di posta elettronica.|  
 |**execute_query_database**|**sysname**|Contesto di database all'interno del quale il programma di posta elettronica ha eseguito la query.|  
 |**attach_query_result_as_file**|**bit**|Quando il valore è 0, i risultati della query sono inclusi nel corpo del messaggio di posta elettronica, dopo il contenuto del corpo. Quando il valore è 1, i risultati sono restituiti come file allegato.|  
 |**query_result_header**|**bit**|Quando il valore è 1, i risultati della query includono le intestazioni di colonna. Quando il valore è 0, i risultati della query non includono le intestazioni di colonna.|  
@@ -61,17 +57,17 @@ ms.locfileid: "33221962"
 |**send_request_date**|**datetime**|Data e ora di inserimento del messaggio nella coda della posta.|  
 |**send_request_user**|**sysname**|Utente che ha inviato il messaggio. Corrisponde al contesto utente della procedura di Posta elettronica database e non al campo Da del messaggio.|  
 |**sent_account_id**|**int**|Identificatore dell'account di Posta elettronica database utilizzato per l'invio del messaggio.|  
-|**sent_status**|**varchar(8)**|Stato del messaggio. I valori possibili sono:<br /><br /> **inviato** -è stata inviata la posta elettronica.<br /><br /> **non inviato** -posta elettronica Database sta ancora tentando di inviare il messaggio.<br /><br /> **nuovo tentativo in corso** -non è riuscito a inviare il messaggio di posta elettronica Database, ma sta tentando di inviare di nuovo.<br /><br /> **non è stato possibile** -Impossibile inviare il messaggio di posta elettronica Database.|  
+|**sent_status**|**varchar(8)**|Stato del messaggio. I valori possibili sono:<br /><br /> **inviato** -è stata inviata la posta elettronica.<br /><br /> **non inviata** -posta elettronica Database sta ancora tentando di inviare il messaggio.<br /><br /> **nuovo tentativo** -non è riuscito a inviare il messaggio di posta elettronica Database, ma sta provando a inviare di nuovo.<br /><br /> **non è stato possibile** -non è riuscito a inviare il messaggio di posta elettronica Database.|  
 |**sent_date**|**datetime**|Data e ora di invio del messaggio.|  
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  
 |**last_mod_user**|**sysname**|Autore dell'ultima modifica della riga.|  
   
-## <a name="remarks"></a>Osservazioni  
- Utilizzare il **sysmail_allitems** visualizzazione per visualizzare lo stato di tutti i messaggi elaborati da posta elettronica Database. Quando si risolvono i problemi relativi a Posta elettronica database, questa vista può consentire di identificare la natura del problema in quanto indica gli attributi dei messaggi che sono stati inviati e gli attributi dei messaggi che non sono stati inviati.  
+## <a name="remarks"></a>Note  
+ Usare la **sysmail_allitems** vista per visualizzare lo stato di tutti i messaggi elaborati da posta elettronica Database. Quando si risolvono i problemi relativi a Posta elettronica database, questa vista può consentire di identificare la natura del problema in quanto indica gli attributi dei messaggi che sono stati inviati e gli attributi dei messaggi che non sono stati inviati.  
   
- Le tabelle di sistema esposte da questa vista contengono tutti i messaggi e può causare il **msdb** crescita del database. Eliminare periodicamente i messaggi meno recenti da questa vista al fine di limitare le dimensioni delle tabelle. Per ulteriori informazioni, vedere [creare un processo di SQL Server Agent per archiviare i messaggi di posta elettronica Database e i registri eventi](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  
+ Le tabelle di sistema esposte da questa vista contengono tutti i messaggi e può causare il **msdb** crescita del database. Eliminare periodicamente i messaggi meno recenti da questa vista al fine di limitare le dimensioni delle tabelle. Per altre informazioni, vedere [creare un processo di SQL Server Agent per archivio messaggi di posta elettronica Database e log eventi](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
- Concesso a **sysadmin** ruolo predefinito del server e **DatabaseMailUserRole** ruolo del database. Quando viene utilizzata da un membro del **sysadmin** ruolo predefinito del server, questa vista mostra tutti i messaggi. Tutti gli altri utenti vedono semplicemente i messaggi che hanno cercato di inviare personalmente.  
+## <a name="permissions"></a>Permissions  
+ Concedere **sysadmin** ruolo predefinito del server e **DatabaseMailUserRole** ruolo predefinito del database. Quando viene utilizzata da un membro del **sysadmin** ruolo predefinito del server, questa visualizzazione Mostra tutti i messaggi. Tutti gli altri utenti vedono semplicemente i messaggi che hanno cercato di inviare personalmente.  
   
   

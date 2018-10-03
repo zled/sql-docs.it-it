@@ -1,49 +1,46 @@
 ---
-title: Utilizzando la libreria di cursori ODBC | Documenti Microsoft
+title: Usando la libreria di cursori ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], using cursor library
 - cursor library [ODBC], using cursor library
 ms.assetid: 9653f2f8-ccfc-4220-99ef-601dc0fa641c
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9a5e1a11b5e8ba12308aaed342d6cf30e688e56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fe19efb2d39e875cdafec76f2c50164f3a66f03
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912016"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818429"
 ---
-# <a name="using-the-odbc-cursor-library"></a>Utilizzando la libreria di cursori ODBC
+# <a name="using-the-odbc-cursor-library"></a>Uso della libreria di cursori ODBC
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Si consiglia di utilizzare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
   
- Per utilizzare la libreria di cursori ODBC, un'applicazione:  
+ Per usare la libreria di cursori ODBC, un'applicazione:  
   
-1.  Chiamate **SQLSetConnectAttr** con un *attributo* di SQL_ATTR_ODBC_CURSORS per specificare come la libreria di cursori deve essere utilizzata con una determinata connessione. La libreria di cursori possa essere sempre utilizzato (SQL_CUR_USE_ODBC), utilizzata solo se il driver non supporta i cursori scorrevoli (SQL_CUR_USE_IF_NEEDED) o mai (SQL_CUR_USE_DRIVER).  
+1.  Le chiamate **SQLSetConnectAttr** con un *attributo* di SQL_ATTR_ODBC_CURSORS per specificare come usare la libreria di cursori con una determinata connessione. La libreria di cursori può essere sempre usati (SQL_CUR_USE_ODBC), utilizzata solo se il driver non supporta i cursori scorrevoli (SQL_CUR_USE_IF_NEEDED) o mai utilizzato (a SQL_CUR_USE_DRIVER).  
   
-2.  Chiamate **SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect** per la connessione all'origine dati.  
+2.  Le chiamate **SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect** per la connessione all'origine dati.  
   
-3.  Chiamate **SQLSetStmtAttr** per specificare il tipo di cursore (SQL_ATTR_CURSOR_TYPE), concorrenza (SQL_ATTR_CONCURRENCY) e dimensioni del set di righe (SQL_ATTR_ROW_ARRAY_SIZE). La libreria di cursori supporta i cursori forward-only e statici. I cursori forward-only devono essere di sola lettura, mentre i cursori statici possono essere di sola lettura oppure utilizzano il controllo della concorrenza ottimistica il confronto di valori.  
+3.  Le chiamate **SQLSetStmtAttr** per specificare il tipo di cursore (SQL_ATTR_CURSOR_TYPE), concorrenza (SQL_ATTR_CONCURRENCY) e dimensioni del set di righe (SQL_ATTR_ROW_ARRAY_SIZE). La libreria di cursori supporta i cursori forward-only e statici. I cursori forward-only devono essere di sola lettura, mentre i cursori statici possono essere di sola lettura o possono usare il controllo della concorrenza ottimistica il confronto dei valori.  
   
-4.  Alloca uno o più set di righe buffer e chiama **SQLBindCol** una o più volte per associare questi buffer come risultato un set di colonne.  
+4.  Alloca uno o più set di righe buffer e chiama **SQLBindCol** una o più volte per associare tali buffer per le colonne del set di risultati.  
   
-5.  Genera un set di risultati, l'esecuzione di un **selezionare** istruzione o una stored procedure o chiamando una funzione di catalogo. Se l'applicazione verrà eseguite le istruzioni di aggiornamento posizionato, è necessario eseguire un **selezionare per aggiornare** istruzione per generare il set di risultati.  
+5.  Genera un set di risultati, l'esecuzione di un **seleziona** istruzione o una stored procedure o chiamando una funzione di catalogo. Se l'applicazione verrà eseguite le istruzioni di aggiornamento posizionato, è necessario eseguire un' **selezionare per aggiornare** istruzione per generare il set di risultati.  
   
-6.  Chiamate **SQLFetch** o **SQLFetchScroll** una o più volte per scorrere il set di risultati.  
+6.  Le chiamate **SQLFetch** oppure **SQLFetchScroll** una o più volte per scorrere il set di risultati.  
   
- L'applicazione può modificare i valori dei dati nei buffer di set di righe. Per aggiornare i buffer di set di righe con i dati dalla cache della libreria di cursori, un'applicazione chiama **SQLFetchScroll** con il *FetchOrientation* argomento impostato su SQL_FETCH_RELATIVE e  *FetchOffset* argomento impostato su 0.  
+ L'applicazione può modificare i valori dei dati nei buffer di set di righe. Per aggiornare i buffer di righe con i dati dalla cache della libreria di cursori, un'applicazione chiama **SQLFetchScroll** con il *FetchOrientation* argomento impostato su SQL_FETCH_RELATIVE e  *FetchOffset* argomento impostato su 0.  
   
- Per recuperare dati da una colonna non associata, l'applicazione chiama **SQLSetPos** per posizionare il cursore sulla riga desiderata. Chiama quindi **SQLGetData** per recuperare i dati.  
+ Per recuperare dati da una colonna non associata, l'applicazione chiama **SQLSetPos** per posizionare il cursore nella riga desiderata. Chiama poi **SQLGetData** per recuperare i dati.  
   
  Per determinare il numero di righe che sono stati recuperati dall'origine dati, l'applicazione chiama **SQLRowCount**.

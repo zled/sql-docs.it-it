@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - function_order_columns
@@ -20,31 +17,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.function_order_columns catalog view
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e62ab7e719200f22cf90496c12fbf62af8f56d39
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 43ce8d82bc286e7005d57d5a829e09814ffdd240
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180027"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643520"
 ---
 # <a name="sysfunctionordercolumns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni colonna che fa parte di un **ordine** espressione di una funzione con valori di tabella di consideriamo language runtime (CLR).  
+  Restituisce una riga per ogni colonna che fa parte di un' **ordine** expression di una funzione con valori di tabella di commmon language runtime (CLR).  
 
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto (funzione CLR con valori di tabella) nel quale è definito l'ordinamento.|  
-|**order_column_id**|**int**|ID della colonna di ordinamento. **valore di order_column_id** è univoco solo nell'ambito **object_id**.<br /><br /> **valore di order_column_id** rappresenta la posizione della colonna nell'ordinamento.|  
-|**column_id**|**int**|ID della colonna in **object_id**.<br /><br /> **column_id** è univoco solo nell'ambito **object_id**.|  
+|**order_column_id**|**int**|ID della colonna di ordinamento. **valore di order_column_id** è univoco solo all'interno **object_id**.<br /><br /> **valore di order_column_id** rappresenta la posizione della colonna nell'ordinamento.|  
+|**column_id**|**int**|ID della colonna nella **object_id**.<br /><br /> **column_id** è univoco solo all'interno **object_id**.|  
 |**is_descending**|**bit**|1 = Direzione di ordinamento decrescente per la colonna di ordinamento.<br /><br /> 0 = Direzione di ordinamento crescente per la colonna di ordinamento.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

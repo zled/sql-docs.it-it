@@ -1,13 +1,11 @@
 ---
-title: Lo stato delle proprietà (ADO MD) | Documenti Microsoft
+title: Stato proprietà (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,25 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - State property [ADO MD]
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 975a9354734e0f6e5d0a2502b89b43c886be5fa3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 812863395c2980f341ed2419eee1d9d661f19dd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284560"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822164"
 ---
-# <a name="state-property-ado-md"></a>Proprietà state (ADO MD)
+# <a name="state-property-ado-md"></a>Proprietà State (ADO MD)
 Indica lo stato corrente del set di celle.  
   
 ## <a name="return-values"></a>Valori restituiti  
- Restituisce un **lungo** intero che indica la condizione corrente del [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetto ed è di sola lettura. I seguenti valori validi sono: **adStateClosed** (0) e **adStateOpen** (1).  
+ Restituisce un **lungo** valore intero che indica la condizione corrente del [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetto ed è di sola lettura. I valori seguenti sono validi: **adStateClosed** (0) e **adStateOpen** (1).  
   
-## <a name="remarks"></a>Remarks  
- Utilizzare il [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) i nomi delle costanti, è necessario disporre della libreria dei tipi ADO a cui fa riferimento nel progetto. Vedere [utilizzo di ADO con ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md) per ulteriori informazioni.  
+## <a name="remarks"></a>Note  
+ Usare la [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) i nomi delle costanti, è necessario disporre la raccolta di tipo ADO cui viene fatto riferimento nel progetto. Visualizzare [utilizzo di ADO con ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md) per altre informazioni.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  

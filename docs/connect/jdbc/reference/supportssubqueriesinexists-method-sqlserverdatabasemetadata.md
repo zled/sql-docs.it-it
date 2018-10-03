@@ -1,13 +1,11 @@
 ---
-title: Metodo supportsSubqueriesInExists (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo supportsSubqueriesInExists (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsSubqueriesInExists
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 14c08c7f-5c1e-4e21-8373-ae32c22e47d4
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b0915fb3b1f18cb976277e7b162f8de0e5c2357
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a924d4aa813f86d24579d918072b13ec3521ee57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848336"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737059"
 ---
 # <a name="supportssubqueriesinexists-method-sqlserverdatabasemetadata"></a>Metodo supportsSubqueriesInExists (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +41,7 @@ public boolean supportsSubqueriesInExists()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo supportsSubqueriesInExists viene specificato dal metodo supportsSubqueriesInExists nell'interfaccia DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  

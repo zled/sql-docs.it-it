@@ -1,13 +1,11 @@
 ---
-title: Funzioni di ora e data (Driver ODBC di Visual FoxPro) | Documenti Microsoft
+title: Funzioni di ora e data (Driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC date functions [ODBC]
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f795e12cb2a88bfa1b7e17371745a841a3e6f854
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7752c1c1d5184ddb1beea26d7c35e29ea5769796
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908706"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644329"
 ---
-# <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Funzioni di ora e data (Driver ODBC di Visual FoxPro)
-Nella tabella seguente sono elencate le funzioni di data e ora ODBC supportate dal Driver ODBC di Visual FoxPro; Quando la grammatica di Visual FoxPro per la stessa funzione differisce dalla sintassi ODBC, viene elencata l'equivalente di Visual FoxPro.  
+# <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Funzioni data e ora (driver ODBC Visual FoxPro)
+La tabella seguente elenca le funzioni di data e ora ODBC supportate per il Driver ODBC Visual FoxPro; Quando la grammatica di Visual FoxPro per la stessa funzione differisce dalla sintassi ODBC, viene elencato l'equivalente di Visual FoxPro.  
   
 |Grammatica ODBC|Grammatica di Visual FoxPro|  
 |------------------|---------------------------|  
@@ -46,32 +43,32 @@ Nella tabella seguente sono elencate le funzioni di data e ora ODBC supportate d
 |SETTIMANA *(date_exp)*||  
 |ANNO *(date_exp)*||  
   
- Le funzioni di data e ora seguenti non sono supportate:  
+ Non sono supportate le funzioni di data e ora seguenti:  
   
  DAYOFYEAR *(date_exp)*  
   
  TRIMESTRE *(date_exp)*  
   
- TIMESTAMPADD *(intervallo di testo, integer_exp timestamp_exp)*  
+ Timestampadd non *(intervallo, integer_exp, timestamp_exp)*  
   
- TIMESTAMPDIFF *(intervallo di testo, timestamp_exp1 timestamp_exp2)*  
+ Timestampdiff non *(intervallo, timestamp_exp1, timestamp_exp2)*  
   
-## <a name="odbc-escape-sequences"></a>Sequenze di Escape ODBC  
- Il driver supporta anche la sequenza di escape ODBC per i dati di data e timestamp. La sintassi della clausola escape è la seguente:  
+## <a name="odbc-escape-sequences"></a>Sequenze di escape ODBC  
+ Il driver supporta anche la sequenza di escape ODBC per i dati di data e timestamp. La sintassi della clausola di escape è come segue:  
   
 ```  
 --(*vendor(Microsoft),product(ODBC) d 'value' *)—  
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- In questa sintassi, **d** indica che *valore* è una data di *aaaa-mm-gg* formato e **Servizi terminal** indica che *valore*  è un timestamp di *aaaa-mm-gg hh: mm:*[.*f...*] formato. La sintassi abbreviata per i dati di data e il timestamp è come segue:  
+ In questa sintassi **1!d** indica che *valore* data nel *aaaa-mm-gg* formato e **ts** indica che *valore*  è un timestamp nel *aaaa-mm-gg hh.mm.ss*[.*f...*] formato. La sintassi abbreviata per i dati di data e timestamp è come segue:  
   
 ```  
 {d 'value'}  
 {ts 'value'}  
 ```  
   
- Ad esempio, ognuna delle istruzioni seguenti Aggiorna la tabella ALLTYPES utilizzando la sintassi abbreviata di data e il timestamp in un comando SQL UPDATE supportato:  
+ Ad esempio, ognuna delle seguenti affermazioni Aggiorna la tabella ALLTYPES usando la sintassi abbreviata di data e timestamp in un comando SQL UPDATE supportato:  
   
 ```  
 UPDATE alltypes  
@@ -83,5 +80,5 @@ UPDATE alltypes
    WHERE KEY=111  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Per ulteriori informazioni sulle sequenze di escape, vedere [sequenze di Escape ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) nel *riferimento per programmatori ODBC*.
+## <a name="remarks"></a>Note  
+ Per altre informazioni sulle sequenze di escape, vedere [sequenze di Escape in ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) nel *riferimento per programmatori ODBC*.

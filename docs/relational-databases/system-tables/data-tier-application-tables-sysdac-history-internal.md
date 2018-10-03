@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdac_history_internal
@@ -18,34 +15,33 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 930a8a16a41af91a3e57a0f4c7e3053ef40bb794
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261970"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810388"
 ---
-# <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tabelle di applicazione livello dati - sysdac_history_internal
+# <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tabelle applicazioni livello dati - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene informazioni sulle azioni eseguite per gestire le applicazioni livello dati. Questa tabella è archiviata nel **dbo** dello schema del **msdb** database.  
+  Contiene informazioni sulle azioni eseguite per gestire le applicazioni livello dati. Questa tabella è archiviata nel **dbo** dello schema delle **msdb** database.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|Identificatore dell'azione|  
 |**sequence_id**|**int**|Consente di identificare un passaggio all'interno di un'azione.|  
-|**instance_id**|**uniqueidentifier**|Identificatore dell'istanza di applicazione livello dati. Questa colonna può essere associata il **instance_id** colonna [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
-|**action_type**|**tinyint**|Identificatore del tipo di azione:<br /><br /> **0** = distribuire<br /><br /> **1** = creazione<br /><br /> **2** = ridenominazione<br /><br /> **3** = scollegamento<br /><br /> **4** = eliminazione|  
-|**action_type_name**|**varchar(19)**|Nome del tipo di azione:<br /><br /> **Distribuire**<br /><br /> **Creare**<br /><br /> **Rinominare**<br /><br /> **detach**<br /><br /> **delete**|  
-|**dac_object_type**|**tinyint**|Identificatore del tipo di oggetto interessato dall'azione:<br /><br /> **0** = dacpac<br /><br /> **1** = account di accesso<br /><br /> **2** = database|  
-|**dac_object_type_name**|**varchar(8)**|Nome del tipo di oggetto interessato dall'azione:<br /><br /> **dacpac** = istanza di applicazione livello dati<br /><br /> **login**<br /><br /> **database**|  
+|**instance_id**|**uniqueidentifier**|Identificatore dell'istanza di applicazione livello dati. Questa colonna può essere unita la **instance_id** colonna nelle [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
+|**action_type**|**tinyint**|Identificatore del tipo di azione:<br /><br /> **0** = distribuzione<br /><br /> **1** = creazione<br /><br /> **2** = ridenominazione<br /><br /> **3** = scollegamento<br /><br /> **4** = delete|  
+|**action_type_name**|**varchar(19)**|Nome del tipo di azione:<br /><br /> **Distribuire**<br /><br /> **creare**<br /><br /> **Rinomina**<br /><br /> **detach**<br /><br /> **delete**|  
+|**dac_object_type**|**tinyint**|Identificatore del tipo di oggetto interessato dall'azione:<br /><br /> **0** = file dacpac<br /><br /> **1** = account di accesso<br /><br /> **2** = database|  
+|**dac_object_type_name**|**varchar(8)**|Nome del tipo di oggetto interessato dall'azione:<br /><br /> **file dacpac** = istanza di applicazione livello dati<br /><br /> **login**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Codice di identificazione dello stato corrente dell'azione:<br /><br /> **0** = in sospeso<br /><br /> **1** = esito positivo<br /><br /> **2** = esito negativo|  
 |**action_status_name**|**varchar (11)**|Stato corrente dell'azione:<br /><br /> **pending**<br /><br /> **Operazione riuscita**<br /><br /> **fail**|  
-|**Required**|**bit**|Utilizzato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per il rollback di un'operazione dell'applicazione livello dati.|  
+|**Obbligatorio**|**bit**|Utilizzato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per il rollback di un'operazione dell'applicazione livello dati.|  
 |**dac_object_name_pretran**|**sysname**|Nome dell'oggetto prima dell'esecuzione del commit della transazione contenente l'azione. Utilizzato solo per database e account di accesso.|  
 |**dac_object_name_posttran**|**sysname**|Nome dell'oggetto dopo l'esecuzione del commit della transazione contenente l'azione. Utilizzato solo per database e account di accesso.|  
 |**sqlscript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] che implementa un'azione in un database o account di accesso.|  
@@ -56,18 +52,18 @@ ms.locfileid: "33261970"
 |**date_created**|**datetime**|Data e ora di creazione della voce.|  
 |**date_modified**|**datetime**|Data e ora dell'ultima modifica della voce.|  
   
-## <a name="remarks"></a>Osservazioni  
- Le azioni di gestione di applicazione livello dati, quali ad esempio la distribuzione o l'eliminazione di un'applicazione livello dati, generano più passaggi. A ogni azione viene assegnato un identificatore dell'azione. Ogni passaggio viene assegnato un numero di sequenza e una riga **sysdac_history_internal**, in cui viene registrato lo stato del passaggio. Ogni riga viene creata all'avvio del passaggio dell'azione e aggiornata in base alle necessità per riflettere lo stato dell'operazione. Ad esempio, un'operazione di distribuzione dell'applicazione livello dati può essere assegnata **action_id** 12 e quattro righe **sysdac_history_internal**:  
+## <a name="remarks"></a>Note  
+ Le azioni di gestione di applicazione livello dati, quali ad esempio la distribuzione o l'eliminazione di un'applicazione livello dati, generano più passaggi. A ogni azione viene assegnato un identificatore dell'azione. Ogni passaggio viene assegnato un numero di sequenza e una riga in **sysdac_history_internal**, in cui viene registrato lo stato del passaggio. Ogni riga viene creata all'avvio del passaggio dell'azione e aggiornata in base alle necessità per riflettere lo stato dell'operazione. Ad esempio, un'operazione di distribuzione dell'applicazione livello dati è stato possibile assegnare **action_id** 12 e quattro righe nel **sysdac_history_internal**:  
   
 |||||  
 |-|-|-|-|  
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|create|dacpac|  
 |12|1|create|login|  
-|12|2|create|database|  
-|12|3|ridenominazione|database|  
+|12|2|create|Database|  
+|12|3|ridenominazione|Database|  
   
- Operazioni di applicazione livello dati, ad esempio elimina, non rimuovono le righe da **sysdac_history_internal**. È possibile utilizzare la query seguente per eliminare manualmente le righe per le applicazioni livello dati non più distribuite su un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
+ Operazioni di applicazione livello dati, ad esempio delete, non rimuovono righe dalla **sysdac_history_internal**. È possibile utilizzare la query seguente per eliminare manualmente le righe per le applicazioni livello dati non più distribuite su un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   
 ```sql  
 DELETE FROM msdb.dbo.sysdac_history_internal  
@@ -79,10 +75,10 @@ WHERE instance_id NOT IN
  L'eliminazione delle righe per le applicazioni livello dati attive non influisce sulle operazioni di applicazione livello dati; l'unico effetto è che non sarà possibile registrare la cronologia completa dell'applicazione livello dati.  
   
 > [!NOTE]  
->  Attualmente non è disponibile alcun meccanismo per l'eliminazione di **sysdac_history_internal** le righe sul [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+>  Attualmente non è disponibile alcun meccanismo per l'eliminazione **sysdac_history_internal** righe su [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza al ruolo predefinito del server sysadmin. Accesso in sola lettura a questa vista è disponibile per tutti gli utenti con autorizzazioni per connettersi al database master.  
+## <a name="permissions"></a>Permissions  
+ È richiesta l'appartenenza al ruolo predefinito del server sysadmin. Accesso in lettura a questa vista è disponibile per tutti gli utenti con autorizzazioni sufficienti per connettersi al database master.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)   

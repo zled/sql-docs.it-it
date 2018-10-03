@@ -1,13 +1,11 @@
 ---
-title: Posizionato istruzioni Update e Delete | Documenti Microsoft
+title: Istruzioni di eliminazione e aggiornamento posizionato | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - positioned deletes [ODBC]
@@ -15,33 +13,32 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1f01ea9009e516d3962c1fbb175dff4f90f5d10
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913126"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777741"
 ---
-# <a name="positioned-update-and-delete-statements"></a>Le istruzioni di eliminazione e aggiornamento posizionato
-Le applicazioni possono aggiornare o eliminare la riga corrente in un set di risultati con un aggiornamento posizionato o istruzione delete. Posizionato update e delete sono supportate le istruzioni per alcune origini dati, ma non tutte. Per determinare se un'origine dati supporta posizionato istruzioni update e delete, un'applicazione chiama **SQLGetInfo** con SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ Oggetti ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (a seconda del tipo di cursore). Si noti che la libreria di cursori ODBC simula posizionato istruzioni update e delete.  
+# <a name="positioned-update-and-delete-statements"></a>Istruzioni di eliminazione e aggiornamento posizionato
+Le applicazioni possono aggiornare o eliminare la riga corrente in un set di risultati con un aggiornamento posizionato o istruzione delete. Posizionato update e delete sono supportate le istruzioni da alcune origini dati, ma non tutte. Per determinare se un'origine dati supporta posizionato istruzioni update e delete, un'applicazione chiama **SQLGetInfo** con SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ Cursore1 o SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (a seconda del tipo di cursore). Si noti che la libreria di cursori ODBC simula posizionato istruzioni update e delete.  
   
- Per utilizzare un aggiornamento posizionato o istruzione delete, l'applicazione deve creare un set di risultati con una **selezionare per aggiornare** istruzione. La sintassi di questa istruzione è:  
+ Per usare un aggiornamento posizionato o istruzione delete, l'applicazione deve creare un set di risultati con un **selezionare per aggiornare** istruzione. La sintassi di questa istruzione è:  
   
- **Selezionare** [**tutte** &#124; **DISTINCT**] *elenco select*  
+ **Selezionare** [**tutto** &#124; **DISTINCT**] *elenco select*  
   
- **DA** *elenco di riferimento di tabella*  
+ **DAL** *tabella--elenco dei riferimenti*  
   
- [**In** *condizione di ricerca*]  
+ [**In cui** *condizione di ricerca*]  
   
- **PER l'aggiornamento di** [*-nome della colonna* [**,** *-nome della colonna*]...]  
+ **PER UPDATE OF** [*nome-colonna* [**,** *nome-colonna*]...]  
   
- L'applicazione quindi posiziona il cursore sulla riga deve essere aggiornato o eliminato. Questo scopo, è possibile chiamare **SQLFetchScroll** per recuperare un set di righe contenente la riga necessari e la chiamata **SQLSetPos** per posizionare il cursore del set di righe in tale riga. Quindi, l'applicazione esegue l'aggiornamento posizionato o l'istruzione delete in un'istruzione diversa rispetto all'istruzione viene utilizzato dal set di risultati. La sintassi di queste istruzioni è:  
+ L'applicazione quindi posiziona il cursore sulla riga deve essere aggiornato o eliminato. È possibile eseguire questa operazione chiamando **SQLFetchScroll** per recuperare un set di righe contenente la riga necessaria e chiamare **SQLSetPos** per posizionare il cursore del set di righe in una determinata riga. L'applicazione esegue quindi l'istruzione di eliminazione o aggiornamento posizionato su un'istruzione diversa rispetto all'istruzione viene utilizzato dal set di risultati. La sintassi di tali istruzioni è:  
   
- **AGGIORNAMENTO** *-nome della tabella*  
+ **UPDATE** *-nome della tabella*  
   
  **IMPOSTARE** *colonna identificatore* **=** {*espressione* &#124; **NULL**}  
   
@@ -49,11 +46,11 @@ Le applicazioni possono aggiornare o eliminare la riga corrente in un set di ris
   
  **WHERE CURRENT OF** *-nome del cursore*  
   
- **DELETE FROM** *-nome della tabella* **WHERE CURRENT OF** *-nome del cursore*  
+ **DELETE FROM** *nome tabella* **WHERE CURRENT OF** *-nome del cursore*  
   
- Si noti che queste istruzioni richiedono un nome di cursore. L'applicazione può specificare un nome di cursore con **SQLSetCursorName** prima di eseguire l'istruzione che crea il risultato di impostare o può consentire automaticamente l'origine dati genera un nome di cursore quando viene creato un cursore. Nel secondo caso, l'applicazione recupera il nome di cursore per l'utilizzo in istruzioni delete e di aggiornamento posizionato chiamando **SQLGetCursorName**.  
+ Si noti che queste istruzioni richiedono un nome di cursore. L'applicazione può specificare un nome di cursore **SQLSetCursorName** prima di eseguire l'istruzione che crea il risultato impostato o può consentire automaticamente l'origine dati genera un nome di cursore quando viene creato un cursore. Nel secondo caso, l'applicazione recupera il nome del cursore per l'utilizzo in istruzioni di eliminazione e aggiornamento posizionato tramite la chiamata **SQLGetCursorName**.  
   
- Ad esempio, il codice seguente consente di scorrere la tabella Customers e di eliminare i record dei clienti o aggiornare gli indirizzi e i numeri di telefono. Chiama **SQLSetCursorName** per specificare un nome di cursore prima crea il set di risultati di clienti e tre gli handle di istruzione Usa: *hstmtCust* per il set di risultati, *hstmtUpdate* per un'istruzione di aggiornamento posizionato, e *hstmtDelete* per posizionata in un'istruzione delete. Anche se il codice può associare variabili separate per i parametri nell'istruzione di aggiornamento posizionato, aggiorna i buffer di set di righe e associa gli elementi dei buffer. In questo modo, i buffer di set di righe sincronizzati con i dati aggiornati.  
+ Ad esempio, il codice seguente consente all'utente di scorrere la tabella Customers ed eliminare i record cliente o aggiornare gli indirizzi e numeri di telefono. Viene chiamato **SQLSetCursorName** per specificare un nome di cursore prima crea il set di risultati di clienti e Usa tre gli handle di istruzione: *hstmtCust* per il set di risultati, *hstmtUpdate* per un'istruzione di aggiornamento posizionato, e *hstmtDelete* per posizionata un'istruzione delete. Anche se il codice è stato possibile associare variabili separate per i parametri dell'istruzione di aggiornamento posizionato, aggiorna i buffer di righe e associa gli elementi di tali buffer. Ciò consente di mantenere i buffer di set di righe sincronizzati con i dati aggiornati.  
   
 ```  
 #define POSITIONED_UPDATE 100  

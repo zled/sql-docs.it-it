@@ -1,14 +1,11 @@
 ---
-title: sysmail_delete_account_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_delete_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_account_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_account_sp
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3bb092716aabf68be10b70e22e798d862fd6f84a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cb4ffde27fb1b0362debfc4809a79de05e4e966d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259221"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815811"
 ---
 # <a name="sysmaildeleteaccountsp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,24 +41,24 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
   
 ## <a name="arguments"></a>Argomenti  
  [ **@account_id** = ] *account_id*  
- Numero di ID dell'account da eliminare. *account_id* viene **int**, non prevede alcun valore predefinito. Entrambi *account_id* o *account_name* deve essere specificato.  
+ Numero di ID dell'account da eliminare. *account_id* viene **int**, non prevede alcun valore predefinito. Entrambi *account_id* oppure *account_name* deve essere specificato.  
   
  [ **@account_name** =] **'***account_name***'**  
- Nome dell'account da eliminare. *account_name* viene **sysname**, non prevede alcun valore predefinito. Entrambi *account_id* o *account_name* deve essere specificato.  
+ Nome dell'account da eliminare. *account_name* viene **sysname**, non prevede alcun valore predefinito. Entrambi *account_id* oppure *account_name* deve essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Questa procedura elimina l'account specificato anche se è utilizzato da un profilo. Un profilo che non include account non è in grado di inviare correttamente messaggi di posta elettronica.  
   
  La stored procedure **sysmail_delete_account_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrata un'operazione di eliminazione dell'account di Posta elettronica database denominato `AdventureWorks Administrator`.  

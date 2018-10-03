@@ -1,13 +1,11 @@
 ---
-title: Attributo di conformità | Documenti Microsoft
+title: Attributo della conformità | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], conformance levels
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - conformance levels [ODBC], attribute
 - attribute conformance levels [ODBC]
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c765982a35fd41fc36fdc82ddbd3434b2d90c07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913736"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818840"
 ---
-# <a name="attribute-conformance"></a>Attributo conformità
-Nella tabella seguente indica il livello di conformità di ogni attributo di ambiente ODBC, in cui questo è ben definito.  
+# <a name="attribute-conformance"></a>Conformità dell'attributo
+Nella tabella seguente indica il livello di conformità di ogni attributo di ambiente ODBC, in cui si è ben definito.  
   
 |Funzione|Livello di conformità|  
 |--------------|-----------------------|  
@@ -36,14 +33,14 @@ Nella tabella seguente indica il livello di conformità di ogni attributo di amb
 |SQL_ATTR_ODBC_VER|Core|  
 |SQL_ATTR_OUTPUT_NTS|--[1]|  
   
- [1] è una funzionalità facoltativa e di conseguenza non fa parte dei livelli di conformità.  
+ [1]. questo è una funzionalità facoltativa e di conseguenza non fa parte di livelli di conformità.  
   
- Nella tabella seguente indica il livello di conformità di ogni attributo di connessione ODBC, in cui questo è ben definito.  
+ Nella tabella seguente indica il livello di conformità di ogni attributo di connessione ODBC, in cui si è ben definito.  
   
 |Funzione|Livello di conformità|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|Core|  
-|SQL_ATTR_ASYNC_ENABLE|Livello 1/livello 2 [1]|  
+|SQL_ATTR_ASYNC_ENABLE|Livello 1/livello 2 di [1]|  
 |SQL_ATTR_AUTO_IPD|Livello 2|  
 |SQL_ATTR_AUTOCOMMIT|Livello 1|  
 |SQL_ATTR_CONNECTION_DEAD|Livello 1|  
@@ -59,21 +56,21 @@ Nella tabella seguente indica il livello di conformità di ogni attributo di amb
 |SQL_ATTR_TRANSLATE_OPTION|Core|  
 |SQL_ATTR_TXN_ISOLATION|Livello 1/livello 2 di [2]|  
   
- [1] le applicazioni che supportano la modalità asincrona a livello di connessione (per livello 1) devono supportare l'impostazione di questo attributo su SQL_TRUE chiamando **SQLSetConnectAttr**; l'attributo non deve essere impostato su un valore diverso da quello predefinito valore tramite **SQLSetStmtAttr**. Le applicazioni che supportano la modalità asincrona a livello di istruzione (obbligatorio per il livello 2) devono supportare l'impostazione di questo attributo su SQL_TRUE utilizzando una funzione.  
+ [1] applicazioni che supportano la modalità asincrona a livello di connessione (obbligatoria per livello 1) devono supportare l'impostazione di questo attributo su SQL_TRUE chiamando **SQLSetConnectAttr**; l'attributo non è necessario essere impostato su un valore diverso da predefinito valore attraverso **SQLSetStmtAttr**. Le applicazioni che supportano la modalità asincrona a livello di istruzione (obbligatoria per il livello 2) devono supportare l'impostazione di questo attributo su SQL_TRUE usando una funzione.  
   
- [2] per la conformità di interfaccia di livello 1, il driver deve supportare un valore oltre il valore predefinito definito dal driver (disponibile chiamando **SQLGetInfo** con l'opzione SQL_DEFAULT_TXN_ISOLATION). La conformità di interfaccia di livello 2, il driver deve supportare anche SQL_TXN_SERIALIZABLE.  
+ [2] per la conformità di interfaccia di livello 1, il driver deve supportare un valore oltre il valore predefinito definito dal driver (disponibile tramite una chiamata **SQLGetInfo** con l'opzione SQL_DEFAULT_TXN_ISOLATION). Per la conformità di interfaccia di livello 2, il driver deve anche supportare SQL_TXN_SERIALIZABLE.  
   
- Nella tabella seguente indica il livello di conformità di ogni attributo di istruzione ODBC, in cui questo è ben definito.  
+ Nella tabella seguente indica il livello di conformità di ogni attributo di istruzione ODBC, in cui si è ben definito.  
   
 |Funzione|Livello di conformità|  
 |--------------|-----------------------|  
 |SQL_ATTR_APP_PARAM_DESC|Core|  
 |SQL_ATTR_APP_ROW_DESC|Core|  
-|SQL_ATTR_ASYNC_ENABLE|Livello 1/livello 2 [1]|  
+|SQL_ATTR_ASYNC_ENABLE|Livello 1/livello 2 di [1]|  
 |SQL_ATTR_CONCURRENCY|Livello 1/livello 2 di [2]|  
 |SQL_ATTR_CURSOR_SCROLLABLE|Livello 1|  
 |SQL_ATTR_CURSOR_SENSITIVITY|Livello 2|  
-|SQL_ATTR_CURSOR_TYPE|Componenti di base o del livello 2 di [3]|  
+|SQL_ATTR_CURSOR_TYPE|Core/livello 2 [3]|  
 |SQL_ATTR_ENABLE_AUTO_IPD|Livello 2|  
 |SQL_ATTR_FETCH_BOOKMARK_PTR|Livello 2|  
 |SQL_ATTR_IMP_PARAM_DESC|Core|  
@@ -101,8 +98,8 @@ Nella tabella seguente indica il livello di conformità di ogni attributo di amb
 |SQL_ATTR_SIMULATE_CURSOR|Livello 2|  
 |SQL_ATTR_USE_BOOKMARKS|Livello 2|  
   
- [1] le applicazioni che supportano la modalità asincrona a livello di connessione (per livello 1) devono supportare l'impostazione di questo attributo su SQL_TRUE chiamando **SQLSetConnectAttr**; l'attributo non deve essere impostato su un valore diverso da quello predefinito valore tramite **SQLSetStmtAttr**. Le applicazioni che supportano la modalità asincrona a livello di istruzione (obbligatorio per il livello 2) devono supportare l'impostazione di questo attributo su SQL_TRUE utilizzando una funzione.  
+ [1] applicazioni che supportano la modalità asincrona a livello di connessione (obbligatoria per livello 1) devono supportare l'impostazione di questo attributo su SQL_TRUE chiamando **SQLSetConnectAttr**; l'attributo non è necessario essere impostato su un valore diverso da predefinito valore attraverso **SQLSetStmtAttr**. Le applicazioni che supportano la modalità asincrona a livello di istruzione (obbligatoria per il livello 2) devono supportare l'impostazione di questo attributo su SQL_TRUE usando una funzione.  
   
  [2] per la conformità di interfaccia di livello 2, il driver deve supportare SQL_CONCUR_READ_ONLY e almeno un altro valore.  
   
- [3] per la conformità di interfaccia di livello 1, il driver deve supportare SQL_CURSOR_FORWARD_ONLY e almeno un altro valore. La conformità di interfaccia di livello 2, il driver deve supportare tutti i valori definiti in questo documento.
+ [3] per la conformità di interfaccia di livello 1, il driver deve supportare SQL_CURSOR_FORWARD_ONLY e almeno un altro valore. Per la conformità di interfaccia di livello 2, il driver deve supportare tutti i valori definiti in questo documento.
