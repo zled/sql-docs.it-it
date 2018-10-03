@@ -1,71 +1,65 @@
 ---
-title: Completamento della preparazione del Test Case (SybaseToSQL) | Documenti Microsoft
+title: Completamento della preparazione del Test Case (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester Component,Test Case Settings
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1df39866e511664027f5a4991360ef2eabf085a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b31739bb4db23ccd2159ec8146ef857d7a5d66e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778587"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837361"
 ---
-# <a name="finishing-test-case-preparation-sybasetosql"></a>Completamento della preparazione del Test Case (SybaseToSQL)
-Pagina finale della procedura guidata consente di visualizzare la descrizione di Test Case e informazioni sugli oggetti coinvolti nel test. Inoltre, in questa pagina è possibile impostare il test di opzioni di esecuzione.  
+# <a name="finishing-test-case-preparation-sybasetosql"></a>Completamento della preparazione del test case (SybaseToSQL)
+Pagina finale della procedura guidata visualizza la descrizione del Test Case e le informazioni sugli oggetti coinvolti nel test. Inoltre, in questa pagina è possibile impostare il test di opzioni di esecuzione.  
   
-Il **informazioni di Test Case** sezione mostra il nome del Test Case e la descrizione.  
+Il **le informazioni di Test Case** sezione mostra il nome del Test Case e la descrizione.  
   
 Il **oggetti Test** sezione contiene l'elenco di oggetti testati raggruppati per tipo di oggetto denominato.  
   
-Il **oggetti interessati da analizzare** sezione consente di visualizzare l'elenco di oggetti quali le modifiche dei dati devono essere confrontate dopo l'esecuzione di oggetti testati denominato.  
+Il **Affected Objects da analizzare** sezione consente di visualizzare l'elenco di oggetti quali modifiche di dati devono essere confrontati dopo l'esecuzione di oggetti testati denominato.  
   
 ## <a name="test-case-settings"></a>Impostazioni di test Case  
-Nel **le impostazioni di Test Case** sezione è possibile impostare le opzioni di test l'esecuzione seguente:  
+Nel **delle impostazioni di Test Case** sezione è possibile impostare le opzioni di test l'esecuzione della seguente:  
   
 ### <a name="stop-test-execution-after-first-failure"></a>Arrestare l'esecuzione di test dopo il primo errore  
-Specifica per interrompere il test se si verifica un errore durante l'esecuzione di test.  
+Specifica per interrompere l'esecuzione del test se si verifica un errore durante l'esecuzione di test.  
   
--   Se si sceglie **Sì**, verificare l'esecuzione di interrompe se si verifica un errore.  
+-   Se si sceglie **Sì**, l'esecuzione di interrompe di test se si verifica un errore.  
   
--   Se si sceglie **n**, l'esecuzione dei test continua dopo un errore.  
+-   Se si sceglie **No**, l'esecuzione di test continua dopo un errore.  
   
 ### <a name="perform-data-rollback"></a>Eseguire il rollback di dati  
 Abilitare il rollback automatico dei dati dopo l'esecuzione di test.  
   
--   Se si sceglie **Sì**, le modifiche ai dati andranno perduti dopo l'esecuzione dei test.  
+-   Se si sceglie **Sì**, le modifiche ai dati andranno persi dopo l'esecuzione di test.  
   
--   Se si sceglie **n**, tutti i test verranno salvate le modifiche ai dati di esecuzione.  
+-   Se si sceglie **No**, tutti i test verranno salvate le modifiche ai dati di esecuzione.  
   
-### <a name="auxiliary-tables-saving-mode"></a>Modalità di salvataggio di tabelle ausiliarie  
-Definisce la modalità di salvataggio delle tabelle ausiliarie creato durante l'esecuzione di test. Vedere la descrizione delle tabelle ausiliarie il [che esegue Test case &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) argomento.  
+### <a name="auxiliary-tables-saving-mode"></a>Tabelle ausiliarie modalità risparmio  
+Definisce la modalità di salvataggio delle tabelle ausiliarie creato durante l'esecuzione di test. Vedere la descrizione delle tabelle ausiliarie nel [esecuzione di Test case &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) argomento.  
   
--   Se si seleziona **Salva sempre**, dati di tabelle ausiliari verranno sempre archiviati per un uso successivo.  
+-   Se si seleziona **salvare sempre**, verranno sempre archiviati dati di tabelle ausiliari per un uso successivo.  
   
--   Se si seleziona **se il confronto tra le tabelle non è stato possibile salvare**, verranno archiviati i dati di tabelle ausiliari solo se si verifica un errore.  
+-   Se si seleziona **se il confronto di tabella non è stato possibile salvare**, verranno archiviati i dati di tabelle ausiliari solo se si verifica un errore.  
   
--   Se si seleziona **Elimina sempre**, tabelle ausiliarie sempre eliminati dopo l'esecuzione dei test.  
+-   Se si seleziona **sempre eliminare**, tabelle ausiliarie sempre eliminato dopo l'esecuzione di test.  
   
--   Se si seleziona **utente chiedere se non è riuscita confronto tra le tabelle**, l'utente può selezionare le azioni necessarie se si verifica un errore.  
+-   Se si seleziona **porre utente se non è stato possibile confronto tra le tabelle**, l'utente può selezionare le azioni necessarie se si verifica un errore.  
   
-Fare clic sui **fine** consente di salvare il Test Case preparata in [repository Test utilizzando &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
+Fare clic sui **Finish** consente di salvare il Test Case preparata in [usando i repository di Test &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Utilizzando Test repository &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
+[Uso di repository Test &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
 [Esecuzione di Test case &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Test di eseguire la migrazione di oggetti di Database &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Test di oggetti di Database migrati &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

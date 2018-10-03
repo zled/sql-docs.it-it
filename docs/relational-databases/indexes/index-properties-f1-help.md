@@ -5,9 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.indexproperties.filter.f1
@@ -18,17 +16,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99d72a5466996d39cf69da8b153dba0ef050b499
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 089a97d4a2f6476719a3570d4d59bea664b71690
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084421"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846371"
 ---
 # <a name="index-properties-f1-help"></a>Guida sensibile al contesto di Proprietà indice
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -187,7 +184,7 @@ ms.locfileid: "43084421"
 ### <a name="bounding-box"></a>Riquadro  
  Si definisce *riquadro* il perimetro della griglia di livello principale di un piano geometrico. I parametri del riquadro sono presenti solo nello schema a mosaico griglia geometrica. Questi parametri non sono disponibili se **Schema a mosaico** è impostato su **Griglia geografica**.  
   
- Nel pannello sono visualizzate le coordinate **(***X-min***,***Y-min***)** e **(***X-max***,***Y-max***)** del rettangolo di selezione. Non esistono valori predefiniti, Quando si crea un indice spaziale nuovo su una colonna di tipo **geometry** , è quindi necessario specificare i valori delle coordinate.  
+ Nel pannello sono visualizzate le coordinate **(**_X-min_**,**_Y-min_**)** e **(**_X-max_**,**_Y-max_**)** del rettangolo di selezione. Non esistono valori predefiniti, Quando si crea un indice spaziale nuovo su una colonna di tipo **geometry** , è quindi necessario specificare i valori delle coordinate.  
   
  **X-min**  
  La coordinata X dell'angolo inferiore sinistro del riquadro.  

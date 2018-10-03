@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_profile_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_help_profile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profile_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profile_sp
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa2e8bb227da4fdb3305c96de0be04cd4a877ea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3b953f619ab422eba81a925375d9ae8b0cd60e82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258212"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836459"
 ---
 # <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,16 +59,16 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |**name**|**sysname**|Nome del profilo.|  
 |**description**|**nvarchar(256)**|Descrizione del profilo.|  
   
-## <a name="remarks"></a>Osservazioni  
- Quando viene specificato un nome del profilo o l'id del profilo, **sysmail_help_profile_sp** restituisce informazioni relative al profilo. In caso contrario, **sysmail_help_profile_sp** restituisce informazioni su tutti i profili di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza.  
+## <a name="remarks"></a>Note  
+ Quando viene specificato un nome del profilo o l'id del profilo, **sysmail_help_profile_sp** restituisce informazioni relative al profilo. In caso contrario, **sysmail_help_profile_sp** restituisce informazioni su tutti i profili nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza.  
   
  La stored procedure **sysmail_help_profile_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
- **A. Tutti i profili**  
+ **A. Elencare tutti i profili**  
   
  Nell'esempio seguente vengono visualizzati tutti i profili disponibili nell'istanza.  
   
@@ -89,7 +85,7 @@ profile_id  name                          description
 57          AdventureWorks Operator       Operator mail profile.          
 ```  
   
- **B. Elenco di un profilo specifico**  
+ **B. Elenco un profilo specifico**  
   
  Nell'esempio seguente vengono visualizzate le informazioni relative al profilo `AdventureWorks Administrator`.  
   

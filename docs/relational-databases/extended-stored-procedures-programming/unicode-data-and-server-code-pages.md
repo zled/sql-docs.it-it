@@ -1,30 +1,26 @@
 ---
-title: Dati Unicode e il Server di tabelle codici | Documenti Microsoft
+title: Dati Unicode e il Server le tabelle codici | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [SQL Server], stored procedures
 - Unicode [SQL Server], extended stored procedures
 - extended stored procedures [SQL Server], metadata
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d38bf13ae6f80de24e9595d79042b8e3e40ef310
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbf78cf6c3ed1b04dd0a282c016db83837bf0a0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32934906"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846139"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Dati Unicode e tabelle codici del server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,20 +30,20 @@ ms.locfileid: "32934906"
   
  L'API Stored procedure estesa è abilitata per i dati Unicode ma non lo è per i metadati Unicode. La direttiva Unicode #define non produce alcun effetto sull'API Stored procedure estesa.  
   
- Si suppone che per tutti i metadati restituiti o forniti all'API Stored procedure estesa dall'applicazione delle stored procedure estese in uso venga utilizzata la tabella codici multibyte del server. La tabella codici predefinita di un'applicazione server API Stored Procedure estesa è la tabella codici ANSI del computer in cui è in esecuzione l'applicazione, che può essere ottenuto chiamando **srv_pfield** con il parametro di campo impostato su SRV_ SPROC_CODEPAGE.  
+ Si suppone che per tutti i metadati restituiti o forniti all'API Stored procedure estesa dall'applicazione delle stored procedure estese in uso venga utilizzata la tabella codici multibyte del server. La tabella codici predefinita di un'applicazione server API Stored Procedure estesa è la tabella codici ANSI del computer in cui è in esecuzione l'applicazione, che può essere ottenuto chiamando **srv_pfield** con il parametro di campo impostato su SRV _ SPROC_CODEPAGE.  
   
  Se l'applicazione dell'API Stored procedure estesa è abilitata per l'utilizzo di Unicode, è necessario convertire i nomi delle colonne di metadati Unicode, i messaggi di errore e così via, in dati multibyte prima di passare tali dati all'API Stored procedure estesa.  
   
 ## <a name="example"></a>Esempio  
  Nella stored procedure estesa seguente è fornito un esempio delle conversioni Unicode descritte. Tenere presente quanto segue:  
   
--   Dati di colonna vengono passati come dati Unicode a **srv_describe** perché la colonna è descritta come srvnvarchar.  
+-   Dati della colonna viene passati come dati Unicode **srv_describe** perché la colonna è descritta come srvnvarchar.  
   
--   I metadati della colonna nome sono passato a **srv_describe** come dati multibyte.  
+-   I metadati della colonna nome viene passato a **srv_describe** come dati multibyte.  
   
-     Estesa chiamate di stored procedure **srv_pfield** con il parametro di campo impostato su SRV_SPROC_CODEPAGE per ottenere la tabella codici multibyte del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Estesa chiamate alle stored procedure **srv_pfield** con il parametro di campo impostato su SRV_SPROC_CODEPAGE per ottenere la tabella codici multibyte del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   I messaggi di errore vengono passati a **srv_sendmsg** come dati multibyte.  
+-   I messaggi di errore vengono passati al **srv_sendmsg** come dati multibyte.  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -20,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f49cf4c10ccd16fe229b1d6a5f4089b8d9094f67
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 4421ac28e3ee8914cf016f5df23e5f163bacfd9b
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712844"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864399"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -102,8 +98,8 @@ sp_execute_external_script
  Specifica il nome della variabile nello script esterno che contiene i dati da restituire al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dopo il completamento della chiamata alla stored procedure. Il tipo di dati della variabile nello script esterno dipende dalla lingua. Per R, l'output deve essere un frame di dati. Per Python, l'output deve essere un frame di dati pandas. *output_data_1_name* viene **sysname**.  Valore predefinito è *OutputDataSet*.  
 
  [ **@parallel** = 0 | 1]  
- Abilitare l'esecuzione parallela di script R, impostando il `@parallel` parametro 1. Il valore predefinito per questo parametro è 0 (nessun parallelism). Se `@parallel = 1` e l'output come flusso direttamente al computer client, il `WITH RESULTS SETS` clausola è obbligatoria e deve essere specificato uno schema di output.  
-  
+ Abilitare l'esecuzione parallela di script R, impostando il `@parallel` parametro 1. Il valore predefinito per questo parametro è 0 (nessun parallelism). Se `@parallel = 1` e l'output come flusso direttamente al computer client, il `WITH RESULT SETS` clausola è obbligatoria e deve essere specificato uno schema di output.  
+
  + Per gli script R che non usano funzioni RevoScaleR, usando il `@parallel` parametro può essere utile per l'elaborazione di grandi set di dati, presupponendo che lo script può essere facilmente parallelizzato. Ad esempio, quando si usa R `predict` funzione con un modello per generare nuove stime, impostare `@parallel = 1` come hint per il motore di query. Se la query può essere parallelizzata, le righe vengono distribuite in base al **MAXDOP** impostazione.  
   
  + Per gli script R che usano funzioni RevoScaleR, l'elaborazione parallela viene gestita automaticamente e non è necessario specificare `@parallel = 1` per il **sp_execute_external_script** chiamare.  
@@ -121,7 +117,7 @@ sp_execute_external_script
 
 Uso **sp_execute_external_script** per eseguire script scritti in una lingua supportata. Lingue supportate sono attualmente R per SQL Server 2016 R Services e Python e R per Machine Learning Services di SQL Server 2017. 
 
-Per impostazione predefinita, i set di risultati restituiti dalla stored procedure vengono restituiti con le colonne senza nome. Nomi di colonna usati in uno script sono locali per l'ambiente di scripting e non vengono riflesse nel set di risultati output. Per denominare le colonne del set di risultati, usare il `WITH RESULTS SET` della clausola [ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md).
+Per impostazione predefinita, i set di risultati restituiti dalla stored procedure vengono restituiti con le colonne senza nome. Nomi di colonna usati in uno script sono locali per l'ambiente di scripting e non vengono riflesse nel set di risultati output. Per denominare le colonne del set di risultati, usare il `WITH RESULT SET` della clausola [ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md).
   
  Oltre a restituire un set di risultati, è possibile restituire valori scalari per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando i parametri di OUTPUT. Nell'esempio seguente viene illustrato l'utilizzo del parametro di OUTPUT per restituire il modello R serializzato che è stato usato come input allo script:  
   
@@ -281,7 +277,7 @@ END;
 GO
 ```
 
-Le intestazioni di colonna usate nel codice Python non vengono trasmesse a SQL Server. Usare quindi l'istruzione WITH RESULTS per specificare i nomi di colonna e i tipi di dati che SQL deve usare.
+Le intestazioni di colonna usate nel codice Python non vengono trasmesse a SQL Server. Pertanto, utilizzare l'istruzione con risultati per specificare i nomi di colonna e tipi di dati SQL deve usare.
 
 Per il punteggio, è anche possibile usare la funzione nativa [PREDICT](../../t-sql/queries/predict-transact-sql.md), che è in genere più veloce, perché consente di evitare la chiamata al runtime di Python o R.
 

@@ -1,14 +1,11 @@
 ---
-title: backupfile (Transact-SQL) | Documenti Microsoft
+title: backupfile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupfile
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a667986dbf546672c368179a1e23e6b82b7373c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262010"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842979"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,12 +33,12 @@ ms.locfileid: "33262010"
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**int**|Numero di identificazione univoco del file che include il set di backup. Riferimenti **backupset (backup_set_id)**.|  
+|**backup_set_id**|**int**|Numero di identificazione univoco del file che include il set di backup. I riferimenti **backupset (backup_set_id)**.|  
 |**first_family_number**|**tinyint**|Numero di gruppo del primo supporto che include il file di backup. Può essere NULL.|  
 |**first_media_number**|**smallint**|Numero del primo supporto che include il file di backup. Può essere NULL.|  
 |**filegroup_name**|**nvarchar(128)**|Nome del filegroup che include un file di database di backup. Può essere NULL.|  
 |**page_size**|**int**|Dimensioni della pagina in byte.|  
-|**file_number**|**Numeric(10,0)**|Numero di identificazione del file univoco all'interno di un database (corrisponde a **Sys. database_files**. **file_id**).|  
+|**file_number**|**Numeric(10,0)**|Numero di identificazione del file univoco all'interno di un database (corrisponde al **Sys. database_files**. **file_id**).|  
 |**backed_up_page_count**|**Numeric(10,0)**|Numero di pagine di cui è stato eseguito il backup. Può essere NULL.|  
 |**file_type**|**char(1)**|File di cui è stato eseguito il backup. I valori possibili sono:<br /><br /> D = file di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L = file di log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> F = catalogo full-text.<br /><br /> Può essere NULL.|  
 |**source_file_block_size**|**Numeric(10,0)**|Dispositivo in cui si trova il file di dati o di log originale quando viene eseguito il backup. Può essere NULL.|  
@@ -57,20 +53,20 @@ ms.locfileid: "33262010"
 |**file_guid**|**uniqueidentifier**|Identificatore univoco del file.|  
 |**read_only_lsn**|**numeric(25,0)**|Numero di sequenza del file di log in corrispondenza del quale la modalità del filegroup contenente il file è passata da lettura/scrittura a sola lettura (la modifica più recente). Può essere NULL.|  
 |**read_write_lsn**|**numeric(25,0)**|Numero di sequenza del file di log in corrispondenza del quale la modalità del filegroup contenente il file è passata da sola lettura a lettura/scrittura (la modifica più recente). Può essere NULL.|  
-|**differential_base_lsn**|**numeric(25,0)**|Numero di sequenza del file di log (LSN) di base per i backup differenziali. Un backup differenziale include solo gli extent dati con una sequenza del log del numero maggiore o uguale a **differential_base_lsn**.<br /><br /> Per gli altri tipi di backup il valore è NULL.|  
+|**differential_base_lsn**|**numeric(25,0)**|Numero di sequenza del file di log (LSN) di base per i backup differenziali. Un backup differenziale include solo gli extent dati con una sequenza di registro numero maggiore o uguale a **differential_base_lsn**.<br /><br /> Per gli altri tipi di backup il valore è NULL.|  
 |**differential_base_guid**|**uniqueidentifier**|Per un backup differenziale, identificatore univoco del backup di dati più recente che costituisce la base differenziale del file. Se il valore è NULL, il file è stato incluso nel backup differenziale ma è stato aggiunto dopo la creazione della base.<br /><br /> Per gli altri tipi di backup il valore è NULL.|  
 |**backup_size**|**numeric(20,0)**|Dimensioni in byte del backup di questo file.|  
-|**filegroup_guid**|**uniqueidentifier**|ID del filegroup. Per individuare informazioni sui filegroup nella tabella backupfilegroup, utilizzare **filegroup_guid** con **backup_set_id**.|  
+|**filegroup_guid**|**uniqueidentifier**|ID del filegroup. Per individuare le informazioni del filegroup nella tabella backupfilegroup, utilizzare **filegroup_guid** con **backup_set_id**.|  
 |**is_readonly**|**bit**|1 = il file è di sola lettura.|  
 |**is_present**|**bit**|1 = il file è incluso nel set di backup.|  
   
-## <a name="remarks"></a>Osservazioni  
- RESTORE VERIFYONLY FROM *dispositivo_backup* WITH LOADHISTORY popola le colonne di **backupmediaset** tabella con i valori appropriati dall'intestazione del set di supporti.  
+## <a name="remarks"></a>Note  
+ RESTORE VERIFYONLY FROM *dispositivo_backup* WITH LOADHISTORY popola le colonne delle **backupmediaset** tabella con i valori appropriati dall'intestazione del set di supporti.  
   
- Per ridurre il numero di righe in questa tabella e in altre tabelle di cronologia e di backup, eseguire il [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  
+ Per ridurre il numero di righe in questa tabella e in altre tabelle della cronologia e backup, eseguire la [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Backup e ripristino di tabelle &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Eseguire il backup e ripristino di tabelle &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   

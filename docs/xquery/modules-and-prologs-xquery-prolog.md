@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -21,18 +16,17 @@ helpviewer_keywords:
 - namespaces [XQuery]
 - default namespace declarations
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: debf4aac70b13c5bb5cbb37db2b71687f33a3df1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d496a846c49c002e77f0f8bc3bde13fad24755a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974554"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854759"
 ---
-# <a name="modules-and-prologs---xquery-prolog"></a>Moduli e prologhi - prologo XQuery
+# <a name="modules-and-prologs---xquery-prolog"></a>Moduli e prologhi - Prologo XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Una query XQuery è composta da un prologo e da un corpo. Il prologo include una serie di dichiarazioni e di definizioni che contribuiscono a creare l'ambiente necessario per l'elaborazione della query. In SQL Server, il prologo della query XQuery può contenere dichiarazioni dello spazio dei nomi. Il corpo della query XQuery è composto da una sequenza di espressioni che specificano il risultato della query desiderato.  

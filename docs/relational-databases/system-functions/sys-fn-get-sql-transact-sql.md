@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_sql
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5051b76490bc27a5e16aedf16be2bdff2dab8c95
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: db1c1d36bb3cb831a2f744a77529939894fff27a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236163"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842059"
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,22 +64,22 @@ sys.fn_get_sql ( SqlHandle )
 |encrypted|**bit**|Specifica se l'oggetto è crittografato.<br /><br /> 0 = Non crittografato<br /><br /> 1 = Crittografato|  
 |text|**text**|Testo dell'istruzione SQL. Per gli oggetti crittografati viene restituito NULL.|  
   
-## <a name="remarks"></a>Osservazioni  
- È possibile ottenere un handle SQL valido dalla colonna sql_handle della [DM exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) vista a gestione dinamica.  
+## <a name="remarks"></a>Note  
+ È possibile ottenere un handle SQL valido dalla colonna sql_handle della [exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) vista a gestione dinamica.  
   
  Se non si passa un handle che non è più presente nella cache, fn_get_sq**l** restituisce un set di risultati vuoto. Se si passa un handle non valido, il batch viene arrestato e viene visualizzato un messaggio di errore.  
   
- Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] non è possibile memorizzare nella cache alcune [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni, ad esempio istruzioni per la copia bulk e istruzioni con valori letterali stringa con dimensioni maggiori di 8 KB. Gli handle relativi a tali istruzioni non possono essere recuperati tramite fn_get_sql.  
+ Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] non è possibile memorizzare nella cache alcuni [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni, ad esempio istruzioni per la copia bulk e istruzioni con valori letterali di stringa superiori a 8 KB. Gli handle relativi a tali istruzioni non possono essere recuperati tramite fn_get_sql.  
   
- Il **testo** colonna del set di risultati viene filtrata per il testo che potrebbe contenere password. Per ulteriori informazioni sulla sicurezza relative stored procedure che non vengono monitorate, vedere [filtrare una traccia](../../relational-databases/sql-trace/filter-a-trace.md).  
+ Il **testo** colonna del set di risultati viene filtrata per il testo che potrebbe includere password. Per altre informazioni sulla sicurezza relativa stored procedure che non vengono monitorate, vedere [filtrare una traccia](../../relational-databases/sql-trace/filter-a-trace.md).  
   
- La funzione fn_get_sql restituisce informazioni è simile a quella di [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) comando. Di seguito sono riportati due esempi di situazioni in cui è possibile utilizzare fn_get_sql e non DBCC INPUTBUFFER:  
+ La funzione fn_get_sql restituisce informazioni simili per il [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) comando. Di seguito sono riportati due esempi di situazioni in cui è possibile utilizzare fn_get_sql e non DBCC INPUTBUFFER:  
   
 -   Quando gli eventi includono più di 255 caratteri.  
   
 -   Quando è necessario ottenere il livello di nidificazione massimo corrente di una stored procedure. Si supponga, ad esempio, che esistano due stored procedure denominate sp_1 e sp_2. Se sp_1 chiama sp_2 e si ottiene l'handle dalla vista a gestione dinamica sys.dm_exec_requests mentre sp_2 è in esecuzione, la funzione fn_get_sql restituirà informazioni su sp_2. Inoltre, la funzione fn_get_sql restituisce il testo completo della stored procedure al livello di nidificazione massimo corrente.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'utente deve disporre dell'autorizzazione VIEW SERVER STATE nel server.  
   
 ## <a name="examples"></a>Esempi  

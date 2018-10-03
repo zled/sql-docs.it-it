@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -36,16 +33,15 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e67b8ad7112be79d34a1bfa790d5e05fde67377b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405303"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840989"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gestire i metadati quando si rende disponibile un database in un altro server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +132,7 @@ ms.locfileid: "40405303"
   
  Per abilitare la decrittografia automatica della chiave master del database in un'istanza del server, viene crittografata una copia di questa chiave utilizzando la chiave master del servizio. Questa copia crittografata viene archiviata sia nel database che nel database **master**. La copia archiviata nel database **master** viene generalmente aggiornata in modo automatico in seguito a ogni modifica della chiave master. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta innanzitutto di decrittografare la chiave master del database con la chiave master del servizio dell'istanza. Se il tentativo non riesce, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si esegue una ricerca nell'archivio delle credenziali per individuare le credenziali di chiave master con lo stesso GUID del database per cui è richiesta la chiave master. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta quindi di decrittografare la chiave master del database con ogni credenziale corrispondente fino a quando non si riesce a completare l'operazione o non sono disponibili altre credenziali da provare. Per aprire una chiave master non crittografata con la chiave master del servizio, è necessario utilizzare l'istruzione OPEN MASTER KEY e una password.  
   
- Quando viene copiato, ripristinato o collegato un database crittografato in una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia della chiave master del database crittografata dalla chiave master del servizio non viene archiviata nel database **master** nell'istanza del server di destinazione. Nell'istanza del server di destinazione, è necessario aprire la chiave master del database. Per aprire la chiave master eseguire l'istruzione OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**. È quindi consigliabile abilitare la decrittografia automatica della chiave master del database eseguendo l'istruzione ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. L'istruzione ALTER MASTER KEY fornisce all'istanza del server una copia della chiave master del database crittografata con la chiave master del servizio. Per altre informazioni, vedere [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ Quando viene copiato, ripristinato o collegato un database crittografato in una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia della chiave master del database crittografata dalla chiave master del servizio non viene archiviata nel database **master** nell'istanza del server di destinazione. Nell'istanza del server di destinazione, è necessario aprire la chiave master del database. Per aprire la chiave master, eseguire l'istruzione OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'**. È quindi consigliabile abilitare la decrittografia automatica della chiave master del database eseguendo l'istruzione ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. L'istruzione ALTER MASTER KEY fornisce all'istanza del server una copia della chiave master del database crittografata con la chiave master del servizio. Per altre informazioni, vedere [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Per informazioni sull'abilitazione della decrittografia automatica della chiave master del database di un database mirror, vedere [Impostare un database mirror crittografato](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   

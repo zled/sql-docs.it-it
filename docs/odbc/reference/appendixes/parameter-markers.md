@@ -1,47 +1,44 @@
 ---
-title: Marcatori di parametro | Documenti Microsoft
+title: Marcatori di parametro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 - parameter markers [ODBC]
 ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df895c9e9956c1fde178824d1e14030246710946
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ac59cddb24d5e08e3b620c178f40e206460eb7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907106"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835419"
 ---
 # <a name="parameter-markers"></a>Marcatori di parametro
-Conforme alla specifica di SQL-92, un'applicazione non è possibile posizionare gli indicatori di parametro nei percorsi seguenti. Per un elenco più completo, vedere la specifica di SQL-92.  
+Conforme alla specifica di SQL-92, un'applicazione non è possibile posizionare gli indicatori di parametro nelle posizioni seguenti. Per un elenco più completo, vedere la specifica di SQL-92.  
   
--   In un **selezionare** elenco  
+-   In un **seleziona** elenco  
   
--   Sia come *espressioni* in un *predicato di confronto*  
+-   Come entrambe *expressions* in un *predicato di confronto*  
   
--   In entrambi gli operandi dell'operatore binario  
+-   Come entrambi gli operandi dell'operatore binario  
   
--   Come entrambi gli operandi primo e secondo di un **BETWEEN** operazione  
+-   Come entrambi gli operandi primi e la secondo di una **BETWEEN** operazione  
   
--   Come il primo e il terzo operandi di un **BETWEEN** operazione  
+-   Come operandi del primo e del terzo di una **BETWEEN** operazione  
   
--   L'espressione sia il primo valore di come un **IN** operazione  
+-   Come l'espressione sia il primo valore di un' **India** operazione  
   
 -   Come operando di unario + o -operazione  
   
--   Come argomento di un *riferimento alle funzioni set*  
+-   Come argomento di un *set-funzione-reference*  
   
- Per ulteriori informazioni su marcatori di parametro, vedere la specifica di SQL-92. Per ulteriori informazioni sui parametri, vedere [parametri dell'istruzione](../../../odbc/reference/develop-app/statement-parameters.md).
+ Per altre informazioni sui marcatori di parametro, vedere la specifica di SQL-92. Per altre informazioni sui parametri, vedere [parametri delle istruzioni](../../../odbc/reference/develop-app/statement-parameters.md).
