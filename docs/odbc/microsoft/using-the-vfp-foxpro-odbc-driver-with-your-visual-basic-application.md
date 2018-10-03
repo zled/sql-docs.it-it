@@ -1,13 +1,11 @@
 ---
-title: Utilizzare il Driver ODBC di FoxPro VFP con l'applicazione Visual Basic | Documenti Microsoft
+title: Usare il Driver ODBC VFP FoxPro con l'applicazione Visual Basic | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], visual basic applications
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], visual basic applications
 - Visual FoxPro data [ODBC], visual basic applications
 ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96107d42ae4923cd1b9f7ad1c16bd492d0203c99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b77fdee70ff73772710c9758eeb2bf2594f365d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907606"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697881"
 ---
-# <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Utilizza il Driver ODBC di FoxPro VFP con l'applicazione Visual Basic
-Applicazione di Microsoft® Visual Basic® può comunicare con i dati di Visual FoxPro mediante la creazione di un controllo dati che si connette a un'origine dati di Visual FoxPro.  
+# <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Uso del driver ODBC VFP FoxPro con l'applicazione Visual Basic
+Applicazione di Microsoft® Visual Basic® può comunicare con i dati Visual FoxPro mediante la creazione di un controllo dati che si connette a un'origine dati Visual FoxPro.  
   
-#### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>Per connettersi ai dati di Visual FoxPro utilizzando il controllo dei dati in Visual Basic  
+#### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>Per connettersi ai dati Visual FoxPro mediante il controllo dei dati in Visual Basic  
   
-1.  Creare un'origine dati denominata "test" che si connette al database di esempio TasTrade incluso in Visual FoxPro. L'installazione di Visual FoxPro predefinita, il database di esempio TasTrade nel percorso:  
+1.  Creare un'origine dati denominata "test" che si connette al database di esempio TasTrade incluso in Visual FoxPro. L'installazione di Visual FoxPro predefinita attiva del database di esempio TasTrade nel percorso:  
   
     ```  
     c:\vfp\samples\mainsamp\data\tastrade.dbc  
@@ -39,13 +36,13 @@ Applicazione di Microsoft® Visual Basic® può comunicare con i dati di Visual 
   
 2.  In Visual Basic, creare un nuovo modulo e inserire una casella di testo e un controllo dati su di esso.  
   
-3.  Modifica proprietà di connessione del controllo dati come segue:  
+3.  Modifica proprietà di connessione del controllo dei dati come segue:  
   
     ```  
     ODBC;DATABASE=tastrade;DSN=test  
     ```  
   
-4.  Modificare la proprietà RecordsetType nel modo seguente:  
+4.  Modificare la proprietà RecordsetType come segue:  
   
     ```  
     2 - Snapshot  
@@ -57,16 +54,16 @@ Applicazione di Microsoft® Visual Basic® può comunicare con i dati di Visual 
     customer  
     ```  
   
-6.  Modificare la proprietà DataSource per la casella di testo per il nome predefinito per il controllo di dati per le operazioni seguenti:  
+6.  Modificare la proprietà dell'origine dati per la casella di testo per il nome predefinito per il controllo dei dati al seguente:  
   
     ```  
     data1  
     ```  
   
-7.  Modificare proprietà DataField della casella di testo nel modo seguente:  
+7.  Modificare proprietà di DataField della casella di testo come segue:  
   
     ```  
     customer_id  
     ```  
   
-8.  Eseguire il modulo e usare il controllo dei dati per scorrere i campi id cliente dal database di esempio di Visual FoxPro TasTrade.
+8.  Eseguire il modulo e usare il controllo dei dati da ignorare attraverso i campi di id cliente dal database di esempio Visual FoxPro TasTrade.

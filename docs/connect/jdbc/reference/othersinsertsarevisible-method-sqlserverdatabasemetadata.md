@@ -1,13 +1,11 @@
 ---
-title: Metodo othersInsertsAreVisible (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo othersInsertsAreVisible (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.othersInsertsAreVisible
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: aa32f059-bb59-47f8-bac1-292f314df730
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87076f10ba9944197f5bd87c020740c6992d408a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b124003525af7f461057d3183b5ed185f54410c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840686"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690309"
 ---
 # <a name="othersinsertsarevisible-method-sqlserverdatabasemetadata"></a>Metodo othersInsertsAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +38,7 @@ public boolean othersInsertsAreVisible(int type)
 #### <a name="parameters"></a>Parametri  
  *type*  
   
- Un **int** che indica il set di risultati tipo, che può essere uno dei valori seguenti come definito in Java.SQL. ResultSet o SQLServerResultSet:  
+ Valore **int** che indica il tipo di set di risultati, che può essere uno dei valori seguenti, in base a quanto definito in java.sql.ResultSet o SQLServerResultSet:  
   
 ## <a name="javasqlresultset-types"></a>Tipi java.sql.ResultSet  
  TYPE_FORWARD_ONLY  
@@ -62,12 +59,12 @@ public boolean othersInsertsAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se le operazioni di inserimento sono visibili. In caso contrario, **false**.  
+ **true** se sono visibili le operazioni di inserimento. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo othersInsertsAreVisible viene specificato dal metodo othersInsertsAreVisible nell'interfaccia DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  

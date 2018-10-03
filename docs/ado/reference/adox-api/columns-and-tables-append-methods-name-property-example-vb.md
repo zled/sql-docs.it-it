@@ -1,13 +1,11 @@
 ---
-title: Tabelle e colonne aggiungere metodi di esempio della proprietà Name (VB) | Documenti Microsoft
+title: Tabelle e colonne metodi Append oggetti esempio della proprietà Name (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - Name property [ADOX], Visual Basic example
 - Append method [ADOX], Visual Basic example
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9e3f480ab34c22a720f4ed8b0d51870f209fb7f6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2bdd2643fdeb0f317e47c4d54b8b1ca62dec4109
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285340"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681525"
 ---
-# <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Le colonne e tabelle aggiungere metodi, esempio di proprietà Name (VB)
+# <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Esempio dei metodi Append di Columns e Tables e della proprietà Name (VB)
 Il codice seguente viene illustrato come creare una nuova tabella.  
   
 ```  
@@ -71,10 +68,10 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Append (metodo) (ADOX colonne)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append (metodo) (ADOX tabelle)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Append (metodo) (oggetti Column ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append (metodo) (oggetti Table ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Raccolta di colonne (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Nome proprietà (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
+ [Proprietà Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [Oggetto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [Raccolta di oggetti Table (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

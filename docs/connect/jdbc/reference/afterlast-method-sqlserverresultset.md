@@ -1,13 +1,11 @@
 ---
-title: Metodo (SQLServerResultSet) afterLast | Documenti Microsoft
+title: Metodo afterLast (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.afterLast
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cecaaa96-b07e-4038-a760-33164b283e42
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 88fd6957aa06b67f18e95f0876d235f3baa3aed1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c3041b9e70c34d25fde4f8c0b461b864c572f6af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828316"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830799"
 ---
-# <a name="afterlast-method-sqlserverresultset"></a>afterLast (metodo) (SQLServerResultSet)
+# <a name="afterlast-method-sqlserverresultset"></a>Metodo afterLast (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Sposta il cursore dopo l'ultima riga di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+  Sposta il cursore nella posizione successiva all'ultima riga di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,8 +38,8 @@ public void afterLast()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo afterLast viene specificato dal metodo afterLast nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo afterLast viene specificato dal metodo afterLast nell'interfaccia ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

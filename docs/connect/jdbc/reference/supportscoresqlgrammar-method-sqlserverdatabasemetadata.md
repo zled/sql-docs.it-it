@@ -1,13 +1,11 @@
 ---
-title: Metodo supportsCoreSQLGrammar (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo supportsCoreSQLGrammar (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsCoreSQLGrammar
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6b82f300-f906-4d11-b810-525bda4a88ee
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d11092811dd72812d84c4551aabb2e69da9efb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4606e2574e0c1fd058c9ae075c75f1670ef2fc80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847616"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804879"
 ---
 # <a name="supportscoresqlgrammar-method-sqlserverdatabasemetadata"></a>Metodo supportsCoreSQLGrammar (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,8 +41,8 @@ public boolean supportsCoreSQLGrammar()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo supportsCoreSQLGrammer viene specificato dal metodo nell'interfaccia DatabaseMetaData supportsCoreSQLGrammer.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo supportsCoreSQLGrammer viene specificato dal metodo supportsCoreSQLGrammer nell'interfaccia DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

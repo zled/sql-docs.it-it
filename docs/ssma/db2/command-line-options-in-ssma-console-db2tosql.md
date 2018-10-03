@@ -4,29 +4,23 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 172b0f927f7ca25173b86c3b0efb87cef6bcc271
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 8419990abe0870d248ad403fc4d802b1775fe3f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678959"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Opzioni della riga di comando nella Console SSMA (DB2ToSQL)
 Microsoft offre un solido set opzioni riga di comando per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso.  
   
-## <a name="command-line-options-in-ssma-console"></a>Opzioni della riga di comando nella Console SSMA  
+## <a name="command-line-options-in-ssma-console"></a>Opzioni della riga di comando nella console SSMA  
 È qui descritti la console di opzioni del comando.  
   
 Ai fini di questa sezione, il termine 'option' è detta anche 'switch'.  

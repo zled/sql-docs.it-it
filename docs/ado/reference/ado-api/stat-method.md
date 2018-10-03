@@ -1,13 +1,11 @@
 ---
-title: Metodo Stat | Documenti Microsoft
+title: Metodo Stat | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - Stat method [ADO]
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b900386c1890d54ec61d3bfd2328f3d173c9300
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 127aab5e00247ce5550f25e2a281e190472b0186
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828229"
 ---
 # <a name="stat-method"></a>Metodo Stat
-Recupera le informazioni su un [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
+Recupera le informazioni su un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,35 +38,35 @@ Long stream.Stat(StatStg, StatFlag)
   
 #### <a name="parameters"></a>Parametri  
  *StatStg*  
- Struttura STATSTG che verrà compilata con informazioni sul flusso. L'implementazione del **Stat** metodo utilizzata dall'oggetto flusso ADO non inserire tutti i campi della struttura.  
+ Struttura STATSTG che verrà compilata con informazioni sul flusso. L'implementazione del **Stat** metodo utilizzata dall'oggetto Stream ADO non inserire tutti i campi della struttura.  
   
  *StatFlag*  
- Specifica che questo metodo non restituisce alcuni dei membri nella struttura STATSTG, risparmiando un'operazione di allocazione di memoria. I valori provengono dall'enumerazione STATFLAG. L'enumerazione STATFLAG include due valori  
+ Specifica che questo metodo non restituisce alcuni dei membri nella struttura STATSTG, risparmiando un'operazione di allocazione di memoria. I valori sono ricavati dall'enumerazione STATFLAG. L'enumerazione STATFLAG presenta due valori  
   
 |Costante|valore|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>Remarks  
- La versione del metodo Stat implementato per l'oggetto flusso ADO vengono compilati i seguenti campi della struttura STATSTG:  
+## <a name="remarks"></a>Note  
+ La versione del metodo Stat implementata per l'oggetto Stream ADO vengono compilati i seguenti campi della struttura STATSTG:  
   
  *pwcsName*  
- Stringa contenente il nome del flusso, se disponibile e il valore di StatFlag non è stata specificata.  
+ Stringa contenente il nome del flusso, se disponibile e il valore StatFlag non è stata specificata.  
   
  *cbSize*  
- Specifica le dimensioni in byte del flusso o byte della matrice.  
+ Specifica la dimensione in byte del flusso o matrice di byte.  
   
  *mtime*  
- Indica l'ora dell'ultima modifica per l'archiviazione, flusso o matrice di byte.  
+ Indica l'ora dell'ultima modifica per questo archivio, flusso o matrice di byte.  
   
  *ctime*  
- Indica l'ora di creazione di questa archiviazione, flusso o matrice di byte.  
+ Indica l'ora di creazione per questa archiviazione, flusso o matrice di byte.  
   
- *per volta*  
- Indica l'ora dell'ultimo accesso per l'archiviazione, flusso o matrice di byte.  
+ *atime*  
+ Indica l'ora dell'ultimo accesso per questo archivio, flusso o matrice di byte.  
   
- Se viene specificato nel parametro StatFlag, il nome del flusso non viene restituito.  
+ Se viene specificato nel parametro StatFlag, non viene restituito il nome del flusso.  
   
  Se non viene specificato nel parametro StatFlag e nessun nome è disponibile per il flusso corrente, questo valore sarà E_NOTIMPL.  
   

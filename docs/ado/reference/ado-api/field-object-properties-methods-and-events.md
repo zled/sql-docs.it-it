@@ -1,33 +1,30 @@
 ---
-title: Campo di proprietà, metodi ed eventi | Documenti Microsoft
+title: Campo di proprietà degli oggetti, metodi ed eventi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO], members
 ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1fe0bef5b38cf9fdb384cc19605206e9479f4170
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 50344cc7152e1d91208e6bc2aa9f92d6d8895568
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278400"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822099"
 ---
-# <a name="field-object-properties-methods-and-events"></a>Le proprietà dell'oggetto campo, metodi ed eventi
-## <a name="propertiescollections"></a>Raccolte di proprietà /  
+# <a name="field-object-properties-methods-and-events"></a>Campo oggetto proprietà, metodi ed eventi
+## <a name="propertiescollections"></a>Le proprietà e le raccolte  
  [Proprietà ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)  
   
- [Proprietà attributi](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Attributi proprietà](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [Proprietà DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)  
   
@@ -47,7 +44,7 @@ ms.locfileid: "35278400"
   
  [Proprietà UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)  
   
- [Value (proprietà)](../../../ado/reference/ado-api/value-property-ado.md)  
+ [Proprietà Value](../../../ado/reference/ado-api/value-property-ado.md)  
   
 ## <a name="methods"></a>Metodi  
  [Metodo AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)  

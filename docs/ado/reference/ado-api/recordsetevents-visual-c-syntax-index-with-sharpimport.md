@@ -1,13 +1,11 @@
 ---
-title: 'Oggetti RecordsetEvent (indice sintassi Visual C++ con #import) | Documenti Microsoft'
+title: 'RecordsetEvents (indice sintassi Visual C++ con #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,18 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - RecordsetEvents collection [ADO]
 ms.assetid: b7021f11-8242-4e9f-92e9-1a4472673fb1
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17e3b604eac24fb1fa1393aed338703931a0ad6f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8c13d577dbe818038af51a9b736595eb83328b6b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281280"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744129"
 ---
-# <a name="recordsetevents-visual-c-syntax-index-with-import"></a>Oggetti RecordsetEvent (indice sintassi Visual C++ con #import)
+# <a name="recordsetevents-visual-c-syntax-index-with-import"></a>RecordsetEvents (indice sintassi Visual C++ con #import)
 ## <a name="events"></a>Eventi  
   
 ```  

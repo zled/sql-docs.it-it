@@ -1,14 +1,11 @@
 ---
-title: FileTableRootPath (Transact-SQL) | Documenti Microsoft
+title: FileTableRootPath (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FileTableRootPath_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 637653dc75154f00c14cb248703aec3645f313bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c74a17d9a3781948727f0eb28f4729967728e033
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230511"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732929"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +39,12 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
   
 ## <a name="arguments"></a>Argomenti  
  *FileTable_name*  
- Nome dell'oggetto FileTable. *FileTable_name* è di tipo **nvarchar**. Questo parametro è facoltativo. Il valore predefinito corrisponde al database corrente. Specifica di *schema_name* anche è facoltativa. È possibile passare NULL *FileTable_name* per utilizzare il valore di parametro predefinito  
+ Nome dell'oggetto FileTable. *FileTable_name* JE typu **nvarchar**. Questo parametro è facoltativo. Il valore predefinito corrisponde al database corrente. Che specifica *schema_name* è facoltativa. È possibile passare NULL *FileTable_name* usare il valore del parametro predefinito  
   
  *@option*  
  Espressione Integer che definisce la formattazione del componente server del percorso. *@option* Può avere uno dei valori seguenti:  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**0**|Restituisce il nome del server convertito in formato NetBIOS, ad esempio:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Si tratta del valore predefinito.|  
 |**1**|Restituisce il nome del server senza conversione, ad esempio:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -66,12 +62,12 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
   
 -   Il chiamante non dispone delle autorizzazioni sufficienti per fare riferimento alla tabella specificata o al database corrente.  
   
--   L'opzione FILESTREAM di *database_directory* non è impostata per il database corrente.  
+-   L'opzione FILESTREAM di *database_directory* non è impostato per il database corrente.  
   
  Per altre informazioni, vedere [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 ## <a name="best-practices"></a>Procedure consigliate  
- Per mantenere il codice e le applicazioni indipendenti dal database e dal computer correnti, evitare di scrivere codice basato su percorsi di file assoluti. Ottenere invece il percorso completo di un file in fase di esecuzione utilizzando il **FileTableRootPath** e **GetFileNamespacePath** funzioni insieme, come illustrato nell'esempio seguente. Per impostazione predefinita, la funzione **GetFileNamespacePath** restituisce il percorso relativo del file all'interno del percorso radice per il database.  
+ Per mantenere il codice e le applicazioni indipendenti dal database e dal computer correnti, evitare di scrivere codice basato su percorsi di file assoluti. Ottenere invece il percorso completo di un file in fase di esecuzione usando il **FileTableRootPath** e **GetFileNamespacePath** funzioni insieme, come illustrato nell'esempio seguente. Per impostazione predefinita, la funzione **GetFileNamespacePath** restituisce il percorso relativo del file all'interno del percorso radice per il database.  
   
 ```sql  
 USE MyDocumentDatabase;  
@@ -87,7 +83,7 @@ WHERE Name = N’document.docx’;
   
 ## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  Il **FileTableRootPath** funzione richiede:  
   
 -   Autorizzazione SELECT per la tabella FileTable per ottenere il percorso radice di una tabella FileTable specifica.  
@@ -95,7 +91,7 @@ WHERE Name = N’document.docx’;
 -   **db_datareader** o autorizzazione superiore per ottenere il percorso radice per il database corrente.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrato come chiamare il **FileTableRootPath** (funzione).  
+ Gli esempi seguenti illustrano come chiamare le **FileTableRootPath** (funzione).  
   
 ```  
 USE MyDocumentDatabase;  
@@ -110,6 +106,6 @@ SELECT FileTableRootPath(N'MyFileTable');
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [Usare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

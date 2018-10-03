@@ -1,13 +1,11 @@
 ---
-title: Metodo isWritable (SQLServerResultSetMetaData) | Documenti Microsoft
+title: Metodo isWritable (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSetMetaData.isWritable
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 50846aa8-e4e5-4fc3-a638-0e5fa8b597be
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66e73db30af3e4daa334d82e49f977267dd65351
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0ce75807bce727c94a6cd43bb9f7248a82a2e8b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841256"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724089"
 ---
 # <a name="iswritable-method-sqlserverresultsetmetadata"></a>Metodo isWritable (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,16 +38,16 @@ public boolean isWritable(int column)
 #### <a name="parameters"></a>Parametri  
  *column*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se scrittura viene completata nella colonna. In caso contrario, **false**.  
+ **true** se operazioni di scrittura avranno esito positivo sulla colonna. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo isWritable viene specificato dal metodo isWritable nell'interfaccia Java.SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo isWritable viene specificato dal metodo isWritable nell'interfaccia ResultSetMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

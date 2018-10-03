@@ -1,38 +1,35 @@
 ---
-title: Gli argomenti della funzione Unicode | Documenti Microsoft
+title: Argomenti funzione Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab660a9af95d6232f22c98a868da8fed9ebb0cae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0e67f437cd629411230daed17f6a39f24b7103d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917956"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669459"
 ---
-# <a name="unicode-function-arguments"></a>Argomenti della funzione Unicode
-La gestione Driver ODBC 3.5 (o versioni successive) supporta sia ANSI e Unicode versioni di tutte le funzioni che accettano puntatori alle stringhe di caratteri o SQLPOINTER nei relativi argomenti. Le funzioni Unicode vengono implementate come funzioni (con il suffisso *W*), non come macro. Le funzioni ANSI (che può essere chiamato con o senza un suffisso di *A*) sono identiche per le funzioni API ODBC corrente.  
+# <a name="unicode-function-arguments"></a>Argomenti funzione Unicode
+La gestione Driver ODBC 3.5 (o versioni successive) supporta ANSI sia Unicode versioni di tutte le funzioni che accettano puntatori alle stringhe di caratteri o SQLPOINTER nei relativi argomenti. Le funzioni Unicode vengono implementate come funzioni (con suffisso *W*), non come macro. Le funzioni ANSI (che può essere chiamato con o senza un suffisso *oggetto*) sono identiche alle funzioni API ODBC corrente.  
   
-## <a name="remarks"></a>Osservazioni  
- Le funzioni Unicode che restituiscono sempre o richiedere stringhe o gli argomenti di lunghezza vengono passate come numero di caratteri. Per le funzioni che restituiscono informazioni sulla lunghezza dei dati di server, sono descritte le dimensioni di visualizzazione e la precisione in numero di caratteri. Quando una lunghezza (dimensioni di trasferimento dei dati) potrebbe fare riferimento ai dati stringa o non di tipo stringa, la lunghezza è descritto in lunghezze ottetto. Ad esempio, **SQLGetInfoW** richiederà comunque la lunghezza come numero di byte, ma **SQLExecDirectW** utilizzerà conteggio di caratteri.  
+## <a name="remarks"></a>Note  
+ Le funzioni Unicode che restituiscono sempre o accettano stringhe o gli argomenti di lunghezza vengono passate come conteggio di caratteri. Per le funzioni che restituiscono informazioni sulla lunghezza per i dati del server, le dimensioni di visualizzazione e la precisione sono descritte nel numero di caratteri. Quando una lunghezza (dimensione di trasferimento dei dati) potrebbe fare riferimento ai dati stringa o non di tipo stringa, la lunghezza è descritta in lunghezze ottetto. Ad esempio, **SQLGetInfoW** richiederà comunque la lunghezza come conteggio di byte, ma **SQLExecDirectW** userà conteggio di caratteri.  
   
- Numero di caratteri si intende il numero di byte (in ottetti) per le funzioni ANSI e il numero di WCHAR (parole a 16 bit) per le funzioni UNICODE. In particolare, una sequenza di caratteri a byte doppio (DBCS) o una sequenza di caratteri multibyte (MBCS) possa essere composti da più byte. Una sequenza di caratteri UTF-16 Unicode può essere costituita da più WCHAR.  
+ Numero di caratteri si intende il numero di byte (in ottetti) per le funzioni ANSI e il numero di WCHAR (parole a 16 bit) per le funzioni UNICODE. In particolare, una sequenza di caratteri a byte doppio (DBCS) o una sequenza di caratteri multibyte (MBCS) può essere composte di più byte. Una sequenza di caratteri UTF-16 Unicode può essere costituita da più WCHAR.  
   
- Di seguito è riportato un elenco di funzioni API ODBC che supportano versioni sia Unicode (W) e ANSI (A):  
+ Di seguito è riportato un elenco delle funzioni API ODBC che supportano le versioni sia Unicode (W) e ANSI (A):  
   
 |||  
 |-|-|  
@@ -45,17 +42,17 @@ La gestione Driver ODBC 3.5 (o versioni successive) supporta sia ANSI e Unicode 
 |**SQLDataSources**|**SQLPrimaryKeys**|  
 |**SQLDescribeCol**|**SQLProcedureColumns**|  
 |**SQLDriverConnect**|**SQLProcedures**|  
-|**SQLDrivers**|**Funzione SQLSetConnectAttr**|  
+|**SQLDrivers**|**SQLSetConnectAttr**|  
 |**SQLError**|**SQLSetConnectOption**|  
 |**SQLExecDirect**|**SQLSetCursorName**|  
 |**SQLForeignKeys**|**SQLSetDescField**|  
-|**SQLGetConnectAttr**|**Funzione SQLSetStmtAttr**|  
+|**SQLGetConnectAttr**|**SQLSetStmtAttr**|  
 |**SQLGetConnectOption**|**SQLSpecialColumns**|  
 |**SQLGetCursorName**|**SQLStatistics**|  
 |**SQLGetDescField**|**SQLTablePrivileges**|  
 |**SQLGetDescRec**|**SQLTables**|  
   
- Di seguito è riportato un elenco di funzioni il programma di installazione ODBC e funzione di conversione ODBC che supportano versioni sia Unicode (W) e ANSI (A):  
+ Di seguito è riportato un elenco delle funzioni di programma di installazione ODBC e funzione di conversione ODBC che supportano le versioni sia Unicode (W) e ANSI (A):  
   
 |||  
 |-|-|  
@@ -69,7 +66,7 @@ La gestione Driver ODBC 3.5 (o versioni successive) supporta sia ANSI e Unicode 
 |**Funzione SQLInstallDriver**||  
   
 > [!NOTE]  
->  Funzioni obsolete sono di supporto di mapping Unicode-to-ANSI poiché ODBC 3*x* gestione Driver supporta la ricompilazione di ODBC 2. *x* applicazioni con UNICODE **#define**.  
+>  Funzioni deprecate dispongono di supporto di mapping Unicode-to-ANSI poiché ODBC 3 *. x* Driver Manager supporta la ricompilazione di ODBC 2. *x* le applicazioni con la versione UNICODE **#define**.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

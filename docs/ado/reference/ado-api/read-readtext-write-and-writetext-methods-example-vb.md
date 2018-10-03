@@ -1,13 +1,11 @@
 ---
-title: Lettura, ReadText, scrittura ed esempio di metodi WriteText (VB) | Documenti Microsoft
+title: Read, ReadText, Write e WriteText metodi esempio (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - Read method [ADO], Visual Basic example
 - WriteText method [ADO], Visual Basic example
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4c4f2c4ed48a8a388f770e41d12488594124353
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7cf21d0f932708b23978bb36db5c800358a6fa90
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280790"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731001"
 ---
-# <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Esempio di metodi WriteText (VB), ReadText, scrittura e lettura
-In questo esempio viene illustrato come leggere il contenuto di una casella di testo in un testo di entrambi [flusso](../../../ado/reference/ado-api/stream-object-ado.md) e un file binario **flusso**. Altre proprietà e metodi illustrati includono [posizione](../../../ado/reference/ado-api/position-property-ado.md), [dimensioni](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), e [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+# <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Read, ReadText, Write e WriteText metodi esempio (VB)
+In questo esempio viene illustrato come leggere il contenuto di una casella di testo in un testo entrambe [Stream](../../../ado/reference/ado-api/stream-object-ado.md) e un file binario **Stream**. Includono altre proprietà e metodi illustrati [posizione](../../../ado/reference/ado-api/position-property-ado.md), [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), e [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   
 ```  
 'BeginReadVB  
@@ -115,12 +112,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà set di caratteri (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
+ [Proprietà Charset (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
  [Proprietà Position (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
- [Read, metodo](../../../ado/reference/ado-api/read-method.md)   
+ [Metodo Read](../../../ado/reference/ado-api/read-method.md)   
  [Metodo ReadText](../../../ado/reference/ado-api/readtext-method.md)   
  [Metodo SetEOS](../../../ado/reference/ado-api/seteos-method.md)   
- [Proprietà Size (flusso ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
- [Oggetto di flusso (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [Write, metodo](../../../ado/reference/ado-api/write-method.md)   
+ [Proprietà Size (Stream ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
+ [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
+ [Write (metodo)](../../../ado/reference/ado-api/write-method.md)   
  [Metodo WriteText](../../../ado/reference/ado-api/writetext-method.md)

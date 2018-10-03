@@ -1,14 +1,11 @@
 ---
-title: sp_cleanup_log_shipping_history (Transact-SQL) | Documenti Microsoft
+title: sp_cleanup_log_shipping_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cleanup_log_shipping_history_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cleanup_log_shipping_history
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 993fc3ef57226d136a37728958b869b6a14c9bf1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b6a0d2c93c5ce00897136fc1c40611a1ef94e0fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238761"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717539"
 ---
 # <a name="spcleanuplogshippinghistory-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +52,16 @@ sp_cleanup_log_shipping_history
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ Nessuna.  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_cleanup_log_shipping_history** deve essere eseguita la **master** database su qualsiasi server di log shipping. Questa stored procedure pulisce copie locali e remote di **log_shipping_monitor_history_detail** e **log_shipping_monitor_error_detail** in base al periodo di memorizzazione della cronologia.  
+## <a name="remarks"></a>Note  
+ **sp_cleanup_log_shipping_history** deve essere eseguita la **master** database in qualsiasi server di log shipping. Questa stored procedure elimina le copie locali e remote di **log_shipping_monitor_history_detail** e **log_shipping_monitor_error_detail** basata sul periodo di conservazione della cronologia.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

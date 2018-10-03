@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f60d8849c32aa52ac2dba616a17d0e1e6fc4734b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d1b4ddf913d0de1f93d6b440c0fe861bdeaf1ecf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038482"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745319"
 ---
 # <a name="configure-distributed-replay"></a>Configurare Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,7 +165,23 @@ ms.locfileid: "38038482"
     </OutputOptions>  
 </Options>  
 ```  
-  
+
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Possibile problema durante l'esecuzione con la sequenziazione di modalità di sincronizzazione
+ È possibile riscontrare un problema in cui la funzionalità di riproduzione sembra "Auto", o eventi riproduzioni molto lentamente. Questo fenomeno può verificarsi se la traccia riprodotta si basa su dati e/o gli eventi che non esistono nel database di destinazione ripristinato. 
+ 
+ Un esempio è un carico di lavoro acquisita che utilizza l'istruzione WAITFOR, come nell'istruzione WAITFOR di ricezione di Service Broker. Quando si usa la modalità di sequenza di sincronizzazione, batch vengono riprodotte in modo seriale. Se si verifica un inserimento nel database di origine dopo il backup del database, ma prima dell'acquisizione di riproduzione traccia viene avviata, la ricezione di WAITFOR emesso durante la riproduzione potrebbe essere necessario attendere l'intera durata dell'istruzione WAITFOR. Eventi impostati da riprodurre dopo la ricezione di WAITFOR verrà bloccata. Ciò può comportare il contatore richieste Batch/sec performance monitor per il rilascio di destinazione database riproduzione su zero fino al completamento l'istruzione WAITFOR. 
+ 
+ Se è necessario usare la modalità di sincronizzazione e desideri per evitare questo comportamento, è necessario eseguire quanto segue:
+ 
+1.  Disattivare i database che verrà usato come destinazioni di riproduzione.
+
+2.  Consenti tutte le attività in sospeso da completare.
+
+3.  Il backup dei database e consentire i backup per il completamento.
+
+4.  Avviare l'acquisizione di traccia di riproduzione distribuita e riprendere il normale carico di lavoro. 
+ 
+ 
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni della riga di comando dello strumento di amministrazione &#40;Utilità Riesecuzione distribuita&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   

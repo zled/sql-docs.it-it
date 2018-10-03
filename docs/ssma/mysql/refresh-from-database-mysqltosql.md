@@ -1,52 +1,46 @@
 ---
-title: Aggiornamento dal database (MySQLToSQL) | Documenti Microsoft
+title: Aggiornare dal database (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e7641b8cdfa10aae263371291b66d56e5e4296ba
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 690d12a2f5f397256760c1c0cf5e2ee954d90843
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776247"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746439"
 ---
-# <a name="refresh-from-database-mysqltosql"></a>Aggiornamento dal database (MySQLToSQL)
-Il **aggiornamento dal Database** la finestra di dialogo consente di selezionare gli oggetti da aggiornare dal database di MySQL. Le righe nella finestra di dialogo sono codificate con colori in base allo stato dei metadati:  
+# <a name="refresh-from-database-mysqltosql"></a>Eseguire l'aggiornamento dal database (MySQLToSQL)
+Il **aggiornare dal Database** nella finestra di dialogo consente di selezionare gli oggetti da aggiornare dal database di MySQL. Le righe nella finestra di dialogo sono contraddistinte dal colore basato sullo stato dei metadati:  
   
--   Se i metadati dell'oggetto sono stato modificato in locale e nel database di MySQL, la riga blu.  
+-   Se i metadati dell'oggetto sono stato modificato in locale e nel database MySQL, la riga è blu.  
   
--   Se i metadati dell'oggetto sono stato modificato nel database di MySQL, ma non in SSMA, la riga è gialla.  
+-   Se i metadati dell'oggetto sono stato modificato nel database MySQL, ma non in SSMA, la riga è gialla.  
   
 -   Se i metadati dell'oggetto sono stato modificato in locale, ma non nel database di MySQL, la riga è verde.  
   
--   Se l'oggetto è nuovo nel database di MySQL, la riga è rosa.  
+-   Se l'oggetto è una novità di database MySQL, la riga è di colore rosa.  
   
-È possibile specificare le impostazioni di aggiornamento oggetto predefinite nel **impostazioni progetto** la finestra di dialogo. Per altre informazioni, vedere [impostazioni del progetto di &#40;sincronizzazione&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+È possibile specificare le impostazioni di aggiornamento di oggetti predefiniti in di **impostazioni del progetto** nella finestra di dialogo. Per altre informazioni, vedere [impostazioni del progetto &#40;sincronizzazione&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
-Per l'accesso di **aggiornamento dal Database** nella finestra di dialogo scelta di un oggetto in Visualizzatore metadati MySQL e fare clic su **aggiornamento dal Database**.  
+Per l'accesso di **aggiornare dal Database** della finestra di dialogo scelta di un oggetto nel Visualizzatore metadati MySQL e fare clic su **aggiornare dal Database**.  
   
 ## <a name="options"></a>Opzioni  
   
 |||  
 |-|-|  
 |**Nome**|**Definizione**|  
-|**Comprimi (-)**|Comprimere tutti i gruppi di oggetti per nascondere singoli oggetti.|  
-|**Espansione (+)**|Espandere tutti i gruppi di oggetti per visualizzare i singoli oggetti.|  
-|**Mostra/Nascondi oggetti uguali**|Nasconde gli oggetti nell'elenco se l'oggetto di metadati sono lo stesso del database MySQL in SSMA.|  
-|**Aggiornamento dal Database (clic sul pulsante freccia)**|Utilizzare il pulsante freccia per specificare che i metadati per gli oggetti selezionati devono essere aggiornati in SSMA.|  
+|**Comprimi (-)**|Comprimi tutti i gruppi di oggetti per nascondere i singoli oggetti.|  
+|**Espansione (+)**|Espandere tutti i gruppi di oggetti per mostrare i singoli oggetti.|  
+|**Mostra/Nascondi oggetti uguali**|Gli oggetti nell'elenco viene nascosto se i metadati degli oggetti sono lo stesso nel database MySQL in SSMA.|  
+|**Aggiornare dal Database (freccia)**|Utilizzare il pulsante freccia per specificare che i metadati per gli oggetti selezionati devono essere aggiornato in SSMA.|  
 |**Eseguire l'operazione non aggiornato dal Database (pulsante) X**|Utilizzare il pulsante X per specificare che i metadati per gli oggetti selezionati non devono essere aggiornati in SSMA.|  
-|**Legenda**|Consente di visualizzare un **legenda** la finestra di dialogo. La legenda contiene il mapping tra i colori di riga e gli stati di metadati.<br /><br />Per mantenere il **legenda** la finestra di dialogo in cima il **aggiornamento dal Database** la finestra di dialogo, seleziona il **visualizzare in primo piano** casella di controllo.|  
+|**Legenda**|Consente di visualizzare una **legenda** nella finestra di dialogo. La legenda contiene il mapping tra i colori di riga e gli stati dei metadati.<br /><br />Per mantenere il **legenda** nella parte superiore della finestra di dialogo il **aggiornare dal Database** della finestra di dialogo Seleziona il **visualizzare nella parte superiore** casella di controllo.|  
   

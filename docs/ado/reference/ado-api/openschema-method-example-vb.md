@@ -1,32 +1,29 @@
 ---
-title: Esempio di metodo OpenSchema (VB) | Documenti Microsoft
+title: Esempio di metodo OpenSchema (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - OpenSchema method [ADO], Visual Basic example
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2ebcb40cc91f93c7810223304e0dde2ed45a21a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b8889cf8cf24ddc9befd356af98d8c982eb562ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279946"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778989"
 ---
-# <a name="openschema-method-example-vb"></a>Esempio di metodo OpenSchema (VB)
-Questo esempio viene utilizzato il [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) metodo per visualizzare il nome e il tipo di ogni tabella di ***Pubs*** database.  
+# <a name="openschema-method-example-vb"></a>Esempio del metodo OpenSchema (VB)
+Questo esempio Usa la [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) metodo per visualizzare il nome e il tipo di ogni tabella nella ***Pubs*** database.  
   
 ```  
 'BeginOpenSchemaVB  
@@ -82,12 +79,12 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- Questo esempio viene specificato un vincolo di query TABLE_TYPE nel **OpenSchema** metodo ***criteri*** argomento. Di conseguenza, solo le informazioni sullo schema per le viste specificate nel ***Pubs*** database vengono restituiti. Nell'esempio viene quindi visualizzato il nome e i tipi di ogni tabella.  
+ Questo esempio viene specificato un vincolo di query TABLE_TYPE nel **OpenSchema** metodo ***criteri*** argomento. Di conseguenza, solo le informazioni sullo schema per le viste specificate nel ***Pubs*** database vengono restituite. Nell'esempio viene quindi Visualizza i nomi e i tipi di ogni tabella.  
   
 ```  
 Attribute VB_Name = "OpenSchema"  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
+ [Esempio di metodo OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

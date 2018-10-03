@@ -1,32 +1,29 @@
 ---
-title: Viste di esempio del metodo Refresh (VB) | Documenti Microsoft
+title: Viste di esempio del metodo Refresh (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Refresh method [ADOX]
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e85e27ad969b46e08ec980227b5fa939ee894907
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 123d7abe3248868295e8433d75d9e2a935cdc58d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287330"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830639"
 ---
-# <a name="views-refresh-method-example-vb"></a>Viste di esempio del metodo Refresh (VB)
-Il codice seguente viene illustrato come aggiornare il [viste](../../../ado/reference/adox-api/views-collection-adox.md) raccolta di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md). Questa operazione è necessaria prima [vista](../../../ado/reference/adox-api/view-object-adox.md) oggetti dal **catalogo** accessibili.  
+# <a name="views-refresh-method-example-vb"></a>Esempio del metodo Refresh di Views (VB)
+Il codice seguente viene illustrato come aggiornare il [viste](../../../ado/reference/adox-api/views-collection-adox.md) raccolta di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md). Questa operazione è necessaria prima [View](../../../ado/reference/adox-api/view-object-adox.md) oggetti dalle **catalogo** sono accessibili.  
   
 ```  
 ' BeginViewsRefreshVB  
