@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b923b9b27fd7b67d61b25956f3d44102f1a5f79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ef3beb381aa9cb5f6638920826d92bf01624e96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158022"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144191"
 ---
 # <a name="full-text-search"></a>Ricerca full-text
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] la ricerca full-text consente a utenti e applicazioni di eseguire query full-text su dati di tipo carattere in tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Affinché le query full-text possano essere eseguite in una determinata tabella, l'amministratore del database deve prima creare un indice full-text nella tabella in questione. L'indice full-text include una o più colonne basate su caratteri nella tabella. Tali colonne possono presentare uno qualsiasi dei tipi di dati seguenti: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, o `varbinary(max)` e FILESTREAM. Ogni indice full-text consente di indicizzare una o più colonne della tabella e ciascuna colonna può essere utilizzata con una lingua specifica.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - data flow components [Integration Services]
 - data flow components [Integration Services], developing
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5662a410ef85dc5df64abfd5d84c13bc7a37264c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4f227f32fd270a2c84b1bd0c2b0c244f9637457
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331841"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169181"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>Creazione di un componente flusso di dati personalizzato
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] l'attività Flusso di dati espone un modello a oggetti che consente agli sviluppatori di creare componenti flusso di dati personalizzati, ovvero origini, trasformazioni e destinazioni, tramite [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] e codice gestito.  

@@ -1,12 +1,10 @@
 ---
-title: Sys.dm xe_packages (Transact-SQL) | Documenti Microsoft
+title: xe_packages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_packages_TSQL
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_packages dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9901245681412017736e26c79b000e7f5c845365
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: cab25279fe7842d21b3657d34edef8234ae058cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738861"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 05/23/2018
  
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|Nome del pacchetto. La descrizione viene esposta dal pacchetto stesso. Non ammette i valori Null.|  
+|NAME|**nvarchar(60)**|Nome del pacchetto. La descrizione viene esposta dal pacchetto stesso. Non ammette i valori Null.|  
 |guid|**uniqueidentifier**|GUID che identifica il pacchetto. Non ammette i valori Null.|  
 |description|**nvarchar(256)**|Descrizione del pacchetto. descriptionis impostata dall'autore del pacchetto e non ammette valori null.|  
 |capabilities|**int**|Bitmap che descrive le funzionalità di questo pacchetto. Ammette i valori Null.|  
@@ -45,10 +43,10 @@ ms.lasthandoff: 05/23/2018
 |module_guid|**uniqueidentifier**|GUID del modulo che espone questo pacchetto. Non ammette i valori Null.|  
 |module_address|**varbinary(8)**|Indirizzo di base in cui viene caricato il modulo contenente il pacchetto. Un solo modulo può esporre molti pacchetti. Non ammette i valori Null.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  I pacchetti registrati con il motore degli eventi estesi espongono gli eventi, le azioni che possono essere eseguite al momento della generazione dell'evento e le destinazioni per l'elaborazione sincrona e asincrona di dati degli eventi.  
   
  Questi pacchetti possono essere caricati dinamicamente in uno spazio di indirizzi di processo. Al momento del caricamento del pacchetto vengono registrati tutti gli oggetti esposti con il motore degli eventi esteso.  

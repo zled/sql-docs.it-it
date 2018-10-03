@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.indexproperties.fragmentation.f1
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - LOB data [SQL Server], defragmenting
 - clustered indexes, defragmenting
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
-caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 739d358cf237ea2158c20951255476680a799d4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 159dd55d8573af5b23dcb71c3393539fa8a0ac37
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168742"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160131"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Riorganizzare e ricompilare gli indici
   In questo argomento viene descritto come riorganizzare o ricompilare un indice frammentato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tramite il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] la manutenzione degli indici viene automaticamente eseguita dopo ogni operazione di modifica, inserimento o eliminazione dei dati sottostanti. Nel tempo, queste modifiche possono provocare la frammentazione dell'indice nel database. La frammentazione si verifica quando negli indici sono presenti pagine in cui l'ordinamento logico, basato sul valore chiave, non corrisponde all'ordinamento fisico all'interno del file di dati. Gli indici con un alto grado di frammentazione possono essere causa del calo delle prestazioni delle query e rallentare l'applicazione.  

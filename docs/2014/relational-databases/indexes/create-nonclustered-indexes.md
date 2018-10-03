@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index creation [SQL Server], nonclustered indexes
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - indexes [SQL Server], nonclustered
 - nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
-caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c3c0d0c0d21bbc2b6bfc77cac481310af1cb30c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e806bc2997826aa8a44be94e79d1a0b428cee3d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300371"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124591"
 ---
 # <a name="create-nonclustered-indexes"></a>Creare indici non cluster
   È possibile creare indici non cluster in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un indice non cluster è una struttura di indice separata dai dati archiviati in una tabella che riordina una o più colonne selezionate. Spesso gli indici non cluster consentono di trovare i dati più rapidamente rispetto alla ricerca nella tabella sottostante. Le query talvolta possono ottenere risposta unicamente mediante i dati presenti nell'indice non cluster oppure l'indice non cluster può puntare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] alle righe nella tabella sottostante. Gli indici non cluster vengono creati generalmente per migliorare le prestazioni delle query di utilizzo frequente non coperte dall'indice cluster oppure per individuare le righe in una tabella senza un indice cluster (denominato heap). In una vista tabella o indicizzata è possibile creare più indici non cluster.  

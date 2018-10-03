@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - bytes [CLR integration]
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7f7e8d895737f2bb8e7b446d2f02109757b9c65e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350043"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101921"
 ---
 # <a name="retrieving-udt-data"></a>Recupero di dati UDT
   Per creare un tipo definito dall'utente (UDT) nel client, l'assembly registrato come tipo definito dall'utente in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere disponibile per l'applicazione client. L'assembly UDT può essere posizionato nella stessa directory dell'applicazione oppure nella Global Assembly Cache (GAC). È inoltre possibile impostare un riferimento all'assembly nel progetto.  

@@ -1,13 +1,11 @@
 ---
-title: Proprietà DeleteRule (ADOX) | Documenti Microsoft
+title: Proprietà DeleteRule (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,25 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - DeleteRule property [ADOX]
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd8b687c742aea02cc43af49e06351d313bb86aa
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a5aefd37b70df88ada887e173dc1cc1f7d8ec4d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285940"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713749"
 ---
 # <a name="deleterule-property-adox"></a>Proprietà DeleteRule (ADOX)
 Indica l'azione eseguita quando viene eliminata una chiave primaria.  
   
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta e restituisce un **lungo** valore che può essere uno del [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) costanti. Il valore predefinito è **adRINone**.  
+ Imposta e restituisce un **lungo** valore che può essere uno delle [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) costanti. Il valore predefinito è **adRINone**.  
   
-## <a name="remarks"></a>Remarks  
- Questa proprietà è di sola lettura su [chiave](../../../ado/reference/adox-api/key-object-adox.md) già aggiunti a una raccolta di oggetti.  
+## <a name="remarks"></a>Note  
+ Questa proprietà è di sola lettura sul [chiave](../../../ado/reference/adox-api/key-object-adox.md) già aggiunti a una raccolta di oggetti.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  

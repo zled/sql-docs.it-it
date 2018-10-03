@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a67b2c268aa269356e1620b8bf3fd5f5998810a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9791e381b9233137055c680efb8bdfcad62929a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199151"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110701"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Apertura di un editor (SQL Server Management Studio)
   In questo argomento viene descritto come aprire gli editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , MDX, DMX o XML/A in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ogni finestra dell'editor quando viene aperta viene visualizzata come una scheda nel riquadro centrale di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -30,7 +27,7 @@ ms.locfileid: "37199151"
 ### <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Se i file vengono condivisi con utenti in altri siti che utilizzano tabelle codici diverse, è necessario salvare il file con la tabella codici Unicode appropriata per evitare errori di lettura del file. Per il salvataggio dei file per gli ambienti UNIX o Macintosh è inoltre necessario assicurarsi di utilizzare il formato di documento appropriato. Nel menu **File** fare clic su **Salva con nome**, **Salva con codifica** dalla freccia a discesa accanto al pulsante **Salva** e quindi scegliere **Unix** o **Macintosh** in **Terminazioni riga**.  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  Le operazioni eseguite in un editor del codice sono soggette alle autorizzazioni concesse all'account di autenticazione utilizzato per l'accesso. Se ad esempio si apre una finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzando l'autenticazione di Windows, non sarà possibile eseguire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che fanno riferimento a oggetti per i quali l'account di Windows non dispone delle autorizzazioni di accesso.  
   
 ## <a name="how-to-open-editors"></a>Procedura: Apertura degli editor  

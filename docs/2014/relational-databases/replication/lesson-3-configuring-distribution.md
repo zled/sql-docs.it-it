@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
-caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 633e71fd1755746a37c258500d4f98c93db28b4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7fbfb6d659aa8bc96ebc13ad0a3b89df750c5f95
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322221"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167471"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lezione 3: Configurazione della distribuzione
   In questa lezione verrà configurata la distribuzione nel server di pubblicazione e verranno impostate le autorizzazioni necessarie per i database di pubblicazione e di distribuzione. Se il server di distribuzione è già stato configurato, è necessario disabilitare la pubblicazione e la distribuzione prima di iniziare questa lezione. Non eseguire questa operazione se è necessario mantenere la topologia di replica esistente.  

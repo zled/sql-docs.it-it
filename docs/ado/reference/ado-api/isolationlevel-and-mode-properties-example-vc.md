@@ -1,13 +1,11 @@
 ---
-title: Esempio di proprietà di modalità (VC + +) e IsolationLevel | Documenti Microsoft
+title: Esempio di proprietà modalità (VC + +) e IsolationLevel | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8da159d640ea08adf64c89f195ac0c5603fc3e5e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279173"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688559"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vc"></a>Esempio IsolationLevel e Mode proprietà (VC + +)
-Questo esempio viene utilizzato il [modalità](../../../ado/reference/ado-api/mode-property-ado.md) proprietà per aprire una connessione esclusiva e [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) proprietà per aprire una transazione eseguita in isolamento dalle altre transazioni.  
+# <a name="isolationlevel-and-mode-properties-example-vc"></a>Esempio IsolationLevel e modalità proprietà (VC + +)
+Questo esempio Usa il [modalità](../../../ado/reference/ado-api/mode-property-ado.md) per aprire una connessione esclusiva e il [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) proprietà per aprire una transazione di cui viene eseguita in isolamento di altre transazioni.  
   
 ## <a name="example"></a>Esempio  
   
@@ -229,24 +226,24 @@ void PrintComError(_com_error &e) {
   
  **Modalità di connessione è esclusiva**  
 **Transazione è isolata**  
-**Guida della disponibilità Executive di Database - business**  
-**Cucina con computer: clandestina conti patrimoniali - business**  
+**Guida per dell'occupato Executive Database - business**  
+**Cucina con i computer: patrimoniale clandestina - business**  
 **È possibile contrastare Stress Computer! -business**  
-**Retta Talk sui computer - business**  
+**Parlare direttamente sui computer - business**  
 **Considera Gastronomic Silicon Valley - libro mod_cook non includono**  
-**Microonde specialità - libro mod_cook non includono**  
-**Psicologia di Computer Cooking - trasformazione**  
+**Il forno a microonde gastronomiche - libro mod_cook non includono**  
+**Aver compreso la psicologia di cucina Computer - trasformazione**  
 **Ma è facile? -popular_comp**  
 **Segreti di Silicon Valley - popular_comp**  
-**Utilizzo della rete - popular_comp**  
-**Un computer e Non un individui: Comportamento variazioni - self_help**  
-**Is Anger the Enemy? -self_help**  
-**Vita senza timore - self_help**  
-**Prolungato dati privative: Quattro Case study - self_help**  
-**Sicurezza affettivi: Un nuovo algoritmo - self_help**  
-**Cipolle Leeks e il pane all'aglio: Cooking segreti del Mediterraneo - trad_cook**  
-**50 anni in Buckingham Palace cucine - trad_cook**  
-**Sushi, tutti gli utenti? -trad_cook**   
+**Sul Galateo NET - popular_comp**  
+**Un computer e utenti singoli Non spaventati: Variazioni di comportamento - self_help**  
+**È il vostro nemico rabbia? -self_help**  
+**Ciclo di vita senza timore - self_help**  
+**Prolungato dati privative: Quattro casi di Studio - self_help**  
+**Sicurezza emotivo: Un nuovo algoritmo - self_help**  
+**Cipolle Leeks e aglio: cucina segreti di Mar - trad_cook**  
+**Cinquanta gli anni in Buckingham Palace cucine - trad_cook**  
+**Sushi tutti gli utenti? -trad_cook**   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Proprietà Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

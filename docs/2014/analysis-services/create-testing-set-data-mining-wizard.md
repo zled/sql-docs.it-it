@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.holdout.f1
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f9f671a0980d979436e4780579d99122cb9e669
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb970a24faf35b269af2c9972e4d604be57d0f88
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326881"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096351"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Crea set di testing (Creazione guidata modello di data mining)
   Usare la pagina **Crea set di testing** per specificare la quantità di dati da usare per il training e la quantità di dati da riservare per l'uso come set di test. La separazione dei dati in set di training e set di testing durante la creazione di una struttura di data mining rende molto più facile la determinazione dell'accuratezza dei modelli di data mining che vengono creati successivamente.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ae29372fbed6f61e81c975dfd397a9190354eafc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdd9d9bc6ba4e6a71c0fa3a25424230e88b0b3c5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313151"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109621"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>Gestire tutti gli avvisi dati in un sito di SharePoint
   Gli amministratori di avvisi di SharePoint possono visualizzare un elenco degli avvisi dati creati da qualsiasi utente del sito e le informazioni sugli avvisi. Gli amministratori di avvisi possono inoltre eliminare avvisi. Nella figura seguente sono illustrate le funzionalità disponibili per gli amministratori di avvisi in Gestione avvisi dati.  

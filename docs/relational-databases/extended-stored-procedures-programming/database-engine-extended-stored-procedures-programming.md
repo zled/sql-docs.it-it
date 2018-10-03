@@ -1,14 +1,11 @@
 ---
-title: Programmazione di Stored procedure estese | Documenti Microsoft
+title: Programmazione di Stored procedure estese | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - gateway applications [SQL Server]
@@ -16,18 +13,17 @@ helpviewer_keywords:
 - Open Data Services [SQL Server]
 - ODS [SQL Server]
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
-caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c80abd97dc5a371f6df37c3df1a474998b080493
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a2f25356cfc035fa2185fabe4dae4d9a6d3443f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935436"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688569"
 ---
-# <a name="database-engine-extended-stored-procedures---programming"></a>Motore di database di programmazione di Stored procedure - estese
+# <a name="database-engine-extended-stored-procedures---programming"></a>Stored procedure estese del motore di database - Programmazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -45,6 +41,6 @@ ms.locfileid: "32935436"
   
 ## <a name="see-also"></a>Vedere anche  
  [Common Language Runtime &#40;CLR&#41; panoramica dell'integrazione](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)   
- [Funzioni con valori di tabella CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)  
+ [Funzioni CLR con valori di tabella](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)  
   
   

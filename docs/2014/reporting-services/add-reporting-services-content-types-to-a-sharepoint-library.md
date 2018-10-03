@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: da7ee6e652442bdd2773a8c669b0d134f1fadc37
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96b7c2c1c3f603a7b71c823a61f4e2e31cc44b70
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155451"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Aggiungere tipi di contenuto del server di report a una raccolta (Reporting Services in modalità integrata SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Fornisce tipi del contenuto SharePoint predefiniti usati per gestire i file di origine (con estensione rsds) dei dati condivise, modelli di report (con estensione SMDL) e file di definizione (con estensione rdl) di report di Generatore Report. Se si aggiungono i tipi di contenuto **Report di Generatore report**, **Modello di report**e **Origine dati report** a una raccolta, sarà possibile utilizzare il comando **Nuovo** per creare nuovi documenti del tipo desiderato.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - scripts [Reporting Services], command prompt
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9889c2a14d48a7c2bccd7087c96567e92e1e4112
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ebd18967f892d0f40e5d5b0e3b15e1196935af8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141841"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   L'utilità rs.exe elabora lo script fornito in un file di input. Utilizzare questa utilità per automatizzare le attività di amministrazione e distribuzione dei server di report.  

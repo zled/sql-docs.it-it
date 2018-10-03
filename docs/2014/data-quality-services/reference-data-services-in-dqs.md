@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ab94654466cf739f1ee4db7d842223b1f3a31aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a8aa68ed49127f73aeb2244ab2dcb999c65c4b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302791"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149761"
 ---
 # <a name="reference-data-services-in-dqs"></a>Servizi dati di riferimento in DQS
   I dati di riferimento sono un set accurato e completo di dati globali correlati o categorizzati (oltre i limiti di un'impresa) disponibile presso domini pubblici attendibili o da provider premium di contenuti commerciali.  
@@ -69,7 +66,7 @@ ms.locfileid: "37302791"
   
 3.  **Utilizzare i domini con mapping per l'attività Pulizia in un progetto Data Quality**: durante la creazione di un progetto Data Quality per l'attività **Pulizia** , selezionare la Knowledge Base che contiene i domini/domini compositi di cui è stato eseguito il mapping ai servizi dati di riferimento nel passaggio 2 ed eseguire l'attività di pulizia.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

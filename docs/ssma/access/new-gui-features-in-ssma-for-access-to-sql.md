@@ -1,105 +1,99 @@
 ---
-title: Nuove funzionalità di interfaccia utente grafica di SSMA per l'accesso a SQL | Documenti Microsoft
+title: Nuove funzionalità GUI in SSMA per Access to SQL | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c85cd4e2cade37e20549aeaf76e94efd3224fad1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: e33c149f270f499921824e70ca18c58118409cd1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774747"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664399"
 ---
-# <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Nuove funzionalità di interfaccia utente grafica di SSMA per l'accesso a SQL
-In questo capitolo descrive nuove funzionalità dell'interfaccia utente di SSMA  
+# <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Nuove funzionalità GUI in SSMA per Access to SQL
+In questo capitolo vengono descritte nuove funzionalità dell'interfaccia utente di SSMA  
   
 ## <a name="layouts"></a>Layout  
-Questa funzionalità consente di scegliere uno dei due finestre predefiniti disposizione o creare un layout personalizzato. Per accedere a sottomenu layout, scegliere dal menu Visualizza dal layout. Non esiste è possibile scegliere uno dei layout esistente, aggiungere layout corrente o gestire layout.  
+Questa funzionalità consente di scegliere uno dei layout due finestre predefiniti o creare un proprio layout. Per accedere a sottomenu di layout, puntare ai layout del menu Visualizza. Che consente di scegliere uno dei layout esistente, aggiungere layout corrente o gestire i layout.  
   
-### <a name="add-current-layout"></a>Aggiungere il Layout corrente  
-Per salvare i layout di windows corrente, dal menu Visualizza di layout, quindi aggiungere Layout corrente.  
+### <a name="add-current-layout"></a>Aggiungi Layout corrente  
+Per salvare i layout di windows corrente, nel menu Visualizza layout, quindi aggiungere Layout corrente.  
   
 ### <a name="choose-predefined-layout"></a>Scegliere il layout predefinito  
-Per scegliere uno dei layout predefinito, dal menu Visualizza di layout, quindi Layout predefinito o senza le finestre di esplorazione. È inoltre possibile utilizzare tasti di scelta rapida Ctrl + Alt + 1 o Ctrl + Alt + 2 per il layout predefinito rispettivamente.  
+Per scegliere uno dei layout predefinito, nel menu Visualizza layout, quindi il Layout predefinito o senza finestre di esplorazione. È inoltre possibile utilizzare tasti di scelta rapida Ctrl + Alt + 1 o Ctrl + Alt + 2 per il layout predefinito rispettivamente.  
   
-### <a name="choose-user-defined-layout"></a>Scegliere il layout definite dall'utente  
-Per scegliere layout definite dall'utente, scegliere Layout dal menu Visualizza, quindi fare clic su uno dei layout definite dall'utente. È anche possibile utilizzare i collegamenti definiti per il layout.  
+### <a name="choose-user-defined-layout"></a>Scegliere il layout definito dall'utente  
+Per scegliere il layout definito dall'utente, puntare ai layout del menu Visualizza, quindi fare clic su uno dei layout definite dall'utente. È anche possibile usare tasti di scelta rapida definiti per il layout.  
   
-### <a name="manage-layouts"></a>Gestire layout  
-Per aprire una finestra di dialogo Gestisci layout, scegliere Layout dal menu Visualizza e fare clic su Gestisci layout. Nella finestra di dialogo Gestisci layout si troverà un elenco dei layout esistente sul lato sinistro della finestra di dialogo. Non esiste è possibile selezionare il layout per modificare le impostazioni. È inoltre possibile modificare l'ordine di layout nell'elenco o eliminare il layout utilizzando i pulsanti nella parte superiore nell'elenco. Sul lato destro della finestra di dialogo è possibile modificare le impostazioni di layout seguenti:  
+### <a name="manage-layouts"></a>Gestisci layout  
+Per aprire Gestisci layout finestra di dialogo, dal menu Visualizza puntare a layout e fare clic su Gestisci layout. Nella finestra di dialogo Gestisci layout troverai un elenco dei layout esistente sul lato sinistro della finestra di dialogo. Non esiste è possibile selezionare il layout per modificare le relative impostazioni. È anche possibile modificare l'ordine di layout nell'elenco o eliminare il layout usando i pulsanti nella parte superiore nell'elenco. Sul lato destro della finestra di dialogo è possibile modificare le impostazioni di layout seguenti:  
   
--   Nome di layout  
+-   Nome layout  
   
--   Sincronizzazione delle finestre di esplorazione dei metadati  
+-   Sincronizzazione degli strumenti di esplorazione di metadati  
   
--   Visibilità e la larghezza delle finestre di esplorazione dei metadati origine e di destinazione  
+-   Visibilità e la larghezza delle utilità di origine e destinazione metadati esplorazione  
   
--   Visibilità di finestre di origine o destinazione e le relative dimensioni  
+-   Visibilità delle finestre di origine o destinazione e le relative dimensioni  
   
--   Visibilità e l'altezza di finestre supplementari  
+-   Visibilità e l'altezza di windows ausiliario  
   
 ## <a name="bookmarks"></a>Segnalibri  
-Questa funzionalità consente di impostare uno o più segnalibri nell'origine o codice di destinazione, rapido trovato un segnalibro utilizzando i tasti di scelta rapida, gestire i segnalibri con una finestra di dialogo descrittivo.  
+Questa funzionalità consente di impostare uno o più segnalibri nell'origine o codice di destinazione, veloce trovare un segnalibro utilizzando i tasti di scelta rapida, gestire i segnalibri con una finestra di dialogo descrittivo.  
   
 ### <a name="toggle-bookmark"></a>Attiva/Disattiva segnalibro  
-È possibile Imposta/Rimuovi un segnalibro nei modi seguenti:  
+È possibile impostare/rimuovere un segnalibro nei modi seguenti:  
   
--   Utilizzare il pulsante Attiva/Disattiva segnalibro sopra finestra SQL di origine o di destinazione  
+-   Usare pulsante Attiva/Disattiva segnalibro in primo piano finestra SQL di origine o destinazione  
   
--   Scegliere l'area grigia a sinistra della finestra di SQL  
+-   Fare clic sull'area grigia a sinistra della finestra di SQL  
   
--   Utilizzare Ctrl + Maiusc +&lt;0..9&gt; per impostare un segnalibro numerato  
+-   Usare Ctrl + Maiusc +&lt;0..9&gt; per impostare un segnalibro numerato  
   
 ### <a name="bookmark-navigation"></a>Spostamento di segnalibro  
-È possibile scorrere attraverso i segnalibri nei modi seguenti:  
+È possibile eseguire attraverso i segnalibri nei modi seguenti:  
   
--   Utilizzare i pulsanti segnalibro successivo segnalibro precedente nella parte superiore della finestra SQL  
+-   Usare i pulsanti segnalibro successivo segnalibro precedente nella parte superiore della finestra di SQL  
   
--   Utilizzare Ctrl +&lt;0..9&gt; per trovare il segnalibro numerato  
+-   Usare Ctrl +&lt;0..9&gt; trovare segnalibro numerato  
   
--   Utilizzare i pulsanti Vai a visualizzazione origine o nella finestra di dialogo Gestisci segnalibri  
+-   Usare i pulsanti Vai a visualizzazione origine o nella finestra di dialogo di gestire i segnalibri  
   
 ### <a name="removing-bookmark"></a>Rimozione di segnalibro  
 È possibile rimuovere un segnalibro nei modi seguenti:  
   
--   Pulsante Cancella nella parte superiore della finestra SQL per rimuovere tutti i segnalibri nel documento corrente  
+-   Utilizzare pulsante chiaro nella parte superiore della finestra di SQL per rimuovere tutti i segnalibri nel documento corrente  
   
--   Utilizzare i pulsanti Rimuovi o Rimuovi tutto nella finestra di dialogo Gestisci segnalibri  
+-   Usare i pulsanti Rimuovi oppure su Rimuovi tutto nella finestra di dialogo di gestire i segnalibri  
   
-### <a name="manage-bookmarks"></a>Gestione di segnalibri  
-Per aprire una finestra di dialogo Gestisci segnalibri, fare clic su Gestisci segnalibri dal menu Modifica. Nella finestra di dialogo verrà visualizzato un elenco di segnalibri. È possibile utilizzare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.  
+### <a name="manage-bookmarks"></a>Gestire i segnalibri  
+Per aprire la finestra di gestire i segnalibri, dal menu Modifica fare clic su Gestisci segnalibri. Nella finestra di dialogo verrà visualizzato un elenco dei propri segnalibri esistenti. È possibile usare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.  
   
 ## <a name="object-history"></a>Cronologia dell'oggetto  
-Quando si passa gli oggetti, cronologia dell'interfaccia utente grafica di oggetto consente i vantaggi seguenti:  
+La cronologia dell'oggetto interfaccia utente grafica consente i seguenti vantaggi quando si passa gli oggetti:  
   
--   È possibile utilizzare i pulsanti Indietro e Avanti per spostarsi tra gli oggetti che sono già selezionati  
+-   È possibile utilizzare i pulsanti Indietro e Avanti per spostarsi tra gli oggetti che già visitato  
   
--   Quando esegue il backup per l'oggetto, eseguire la stessa scheda che hai  
+-   Quando esegue il backup per l'oggetto, si esegue il stessa scheda che rimasta  
   
--   Quando si torna all'oggetto e la scheda è SQL, eseguire la stessa posizione del cursore che hai  
+-   Quando si torna all'oggetto e la scheda è SQL, eseguire il backup nella stessa posizione del cursore che hanno lasciato  
   
 ## <a name="advanced-search-capabilities"></a>Funzionalità di ricerca avanzate  
-Funzionalità di ricerca avanzate forniscono le funzionalità di ricerca potenti e flessibili e consentono di trovare una dichiarazione dell'oggetto, ottenere informazioni sull'oggetto, eseguire una ricerca rapida, eseguire la ricerca in categorie in base a modelli e così via avanzata di oggetti.  
+Funzionalità di ricerca avanzate forniscono le funzionalità di ricerca potente e flessibile e consentono di trovare dichiarazione dell'oggetto, ottenere le informazioni sull'oggetto, eseguire una ricerca rapida, eseguire la ricerca in categorie in base a modelli e così via avanzata di oggetti.  
   
 ### <a name="get-quick-information"></a>Ottenere informazioni rapide  
-È possibile ottenere informazioni rapide per l'oggetto in corrispondenza della posizione del cursore nei modi seguenti:  
+È possibile ottenere informazioni rapide dell'oggetto in corrispondenza della posizione del cursore nei modi seguenti:  
   
--   Fare clic sul pulsante informazioni rapide nella parte superiore di finestra SQL  
+-   Fare clic sul pulsante informazioni rapide nella parte superiore della finestra di SQL  
   
--   Seleziona informazioni rapide del menu a comparsa del pulsante destro del mouse  
+-   Selezionare le informazioni rapide del menu a comparsa del pulsante destro del mouse  
   
 -   Premere Ctrl + Maiusc + barra spaziatrice  
   
@@ -108,18 +102,18 @@ Funzionalità di ricerca avanzate forniscono le funzionalità di ricerca potenti
   
 -   Fare clic sul pulsante Vai a dichiarazione sopra la finestra SQL  
   
--   Selezionare Vai a dichiarazione nel menu a comparsa pulsante destro del mouse  
+-   Selezionare il menu di scelta rapida Vai a dichiarazione  
   
 -   Premere F12  
   
 ### <a name="quick-search"></a>Ricerca rapida  
-È possibile eseguire la ricerca rapida utilizzando le funzionalità seguenti:  
+È possibile eseguire la ricerca veloce usando le funzionalità seguenti:  
   
--   È possibile avviare la ricerca tramite la scelta rapida Ctrl + F  
+-   È possibile avviare la ricerca tramite Ctrl + F scelta rapida  
   
--   È possibile ripetere l'ultima ricerca in avanti utilizzando F3  
+-   È possibile ripetere l'ultima ricerca in avanti usando F3  
   
--   È possibile ripetere l'ultima ricerca all'indietro con MAIUSC + F3  
+-   È possibile ripetere l'ultima ricerca con le versioni precedenti tramite MAIUSC+F3  
   
 -   È possibile trovare l'occorrenza successiva della parola nella posizione del cursore utilizzando Ctrl + F3  
   
@@ -128,5 +122,5 @@ Funzionalità di ricerca avanzate forniscono le funzionalità di ricerca potenti
 -   È anche possibile eseguire tutte queste azioni con voci di menu.  
   
 ### <a name="advanced-search"></a>Ricerca avanzata  
-Per aprire ricerca avanzata della finestra di dialogo Trova il punto dal menu Modifica, quindi fare clic su ricerca avanzata. Nella finestra di dialogo sarà in grado di trovare qualsiasi oggetto con modello. Nella parte superiore la finestra di dialogo è possibile scegliere le categorie di area e dell'oggetto di ricerca.  
+Per aprire ricerca avanzata della finestra di dialogo Trova punto menu Modifica, quindi fare clic su ricerca avanzata. Nella finestra di dialogo sarà in grado di trovare qualsiasi oggetto tramite modello. Nella parte superiore della finestra di dialogo è possibile scegliere le categorie di area e l'oggetto di ricerca.  
   

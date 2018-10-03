@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e627b0cec731afa34d12397c90d13fe0ddabdd33
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ac6813542099b955b7430309fe6629f6a5648af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211001"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156071"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visualizzatore conflitti di replica Microsoft (Merge repliche)
   Il Visualizzatore conflitti di replica consente di visualizzare tutti i conflitti verificatisi durante la sincronizzazione di repliche. Si verifica una situazione di conflitto quando gli stessi dati vengono modificati in due server distinti, ad esempio in un server di pubblicazione e in un Sottoscrittore oppure in due Sottoscrittori distinti. La replica risolve i conflitti automaticamente tramite il sistema di risoluzione dei conflitti selezionato al momento della creazione dell'articolo. Il Visualizzatore conflitti di replica consente tuttavia di scegliere una risoluzione dei conflitti diversa, se necessario. È possibile che si verifichino i conflitti seguenti:  

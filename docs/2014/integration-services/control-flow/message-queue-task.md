@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.messagequeuetask.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 176e1798f453771f17aa197e122521bb3852bbc4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31175748ef4f7998eae15dcd2a2c03e878abe071
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269667"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165151"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   L'attività Message Queue consente di usare Microsoft Message Queuing (noto anche come MSMQ) per scambiare messaggi tra pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o per inviare messaggi a una coda di applicazione elaborata da un'applicazione personalizzata. I messaggi possono essere in forma di testo semplice, di file o di variabili con i rispettivi valori.  
@@ -102,7 +99,7 @@ ms.locfileid: "37269667"
   
  Per informazioni sull'impostazione a livello di programmazione di queste proprietà, vedere la documentazione per la classe **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** nella Guida per gli sviluppatori.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  Per altre informazioni su come impostare queste proprietà nella finestra di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md).  
   
 ## <a name="see-also"></a>Vedere anche  

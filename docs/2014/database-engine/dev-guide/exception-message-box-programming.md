@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ExceptionMessageBox class, about ExceptionMessageBox class
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - exceptions [SQL Server]
 - messages [SQL Server], exception message box
 ms.assetid: 0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 21882b1f6bb6233723a0ee7b60c7c7682abd5fa7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e2417978fa053d2d6cb030149993a54013faa75
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148372"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148669"
 ---
 # <a name="exception-message-box-programming"></a>Programmazione della finestra di messaggio eccezione
   La finestra di messaggio eccezione è un'interfaccia programmatica installata con e utilizzata da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti grafici. La finestra di messaggio eccezione è un assembly gestito supportato che è possibile utilizzare nelle applicazioni per fornire un controllo significativamente maggiore sulla messaggistica e per offrire agli utenti la possibilità di salvare il contenuto dei messaggi di errore per riferimento futuro, nonché per ottenere informazioni sui messaggi. Poiché la finestra di messaggio eccezione viene installata in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eccetto [!INCLUDE[ssEW](../../includes/ssew-md.md)], è possibile usarlo senza alcuna configurazione aggiuntiva in qualsiasi computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono stati installati i componenti client.  

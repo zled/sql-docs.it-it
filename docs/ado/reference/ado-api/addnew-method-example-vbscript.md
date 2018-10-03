@@ -1,36 +1,33 @@
 ---
-title: Esempio del metodo AddNew (VBScript) | Documenti Microsoft
+title: Esempio di metodo AddNew (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - AddNew method [ADO], VBScript
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a67a9dd7ba9e280da6b361d7473ae8c6f6d2cac
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e5d6db633a5c718ea38d2b8959fa54305ec02883
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275250"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701619"
 ---
 # <a name="addnew-method-example-vbscript"></a>Esempio del metodo AddNew (VBScript)
-Questo esempio viene utilizzato il [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) metodo per creare un nuovo record con il nome specificato.  
+Questo esempio Usa la [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) metodo per creare un nuovo record con il nome specificato.  
   
- Usare l'esempio seguente in una pagina ASP (Active Server). Utilizzare **trovare** per individuare il file Adovbs. inc e inserirlo nella directory di cui si intende utilizzare. Tagliare e incollare il codice seguente in blocco note o un altro editor di testo e salvarlo come **AddNewVBS**. È possibile visualizzare il risultato in qualsiasi browser client.  
+ Usare l'esempio seguente in una pagina ASP (Active Server). Usare **trovare** per individuare il file Adovbs. inc e inserirlo nella directory di cui si intende usare. Tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **AddNewVBS**. È possibile visualizzare il risultato in qualsiasi browser client.  
   
- Per utilizzare l'esempio, aggiungere un nuovo record in formato HTML. Fare clic su **aggiungere nuovi**. Vedere il [esempio del metodo Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md) per rimuovere i record indesiderati.  
+ Per usare l'esempio, aggiungere un nuovo record in formato HTML. Fare clic su **Aggiungi nuovo**. Vedere le [esempio di metodo Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md) per rimuovere i record non desiderati.  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -217,5 +214,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [AddNew (metodo) (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
+ [Metodo AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

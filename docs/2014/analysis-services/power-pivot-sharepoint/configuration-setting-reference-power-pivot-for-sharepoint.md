@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c819c7bfee1d028d9eb2795620ec9aa4bdf02150
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3ee6babe5048398f62cd335e0a121f32f4734ff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173562"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147521"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Riferimento all'impostazione della configurazione (PowerPivot per SharePoint)
   In questo argomento viene fornita la documentazione di riferimento per le impostazioni di configurazione utilizzate dalle applicazioni di servizio PowerPivot in una farm SharePoint. Nelle informazioni incluse in questo argomento vengono fornite descrizioni dettagliate per gli utenti che utilizzano uno script di PowerShell per configurare un server o che desiderano cercare informazioni per un'impostazione specifica.  

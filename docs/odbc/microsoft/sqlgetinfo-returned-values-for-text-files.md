@@ -1,13 +1,11 @@
 ---
-title: SQLGetInfo i valori restituiti per i file di testo | Documenti Microsoft
+title: Valori restituiti da SQLGetInfo per file di testo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], text file driver
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 564fd49a12263671eddec0e0729a555a22897bc0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bbeceddb135649223be29956d0796e76fd5d57f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904506"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676699"
 ---
-# <a name="sqlgetinfo-returned-values-for-text-files"></a>SQLGetInfo i valori restituiti per i file di testo
-La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento e i corrispondenti valori restituiti da **SQLGetInfo**. Queste informazioni possono essere recuperate passando il linguaggio C elencato #defines a **SQLGetInfo** nel *fInfoType* argomento. Per ulteriori informazioni sui valori restituiti da **SQLGetInfo**, vedere il [riferimento per programmatori ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
+# <a name="sqlgetinfo-returned-values-for-text-files"></a>Valori restituiti da SQLGetInfo per file di testo
+La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento e i corrispondenti valori restituiti dal **SQLGetInfo**. Queste informazioni possono essere recuperate passando il linguaggio C elencato #defines **SQLGetInfo** nel *fInfoType* argomento. Per altre informazioni sui valori restituiti da **SQLGetInfo**, vedere la [riferimento per programmatori ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
   
 > [!NOTE]  
->  In cui **SQLGetInfo** restituisce una maschera a 32 bit, una barra verticale (&#124;) rappresenta un'operazione OR.  
+>  In cui **SQLGetInfo** restituisce una maschera di bit a 32 bit, una barra verticale (&#124;) rappresenta un'operazione OR.  
   
 |InfoType|Valore restituito|  
 |--------------|--------------------|  
@@ -85,12 +82,12 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|DSN da ODBC, o "" Se viene utilizzata la parola chiave DRIVER in ODBC|  
+|SQL_DATA_SOURCE_NAME|Il DSN di ODBC. ini, o "" se parola chiave DRIVER viene usato in ODBC. ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
-|SQL_DATABASE_NAME|Directory del database corrente|  
+|SQL_DATABASE_NAME|Directory database corrente|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|"TEXT"|  
-|SQL_DBMS_VER|ISAM: testo<br /><br /> Versione: 1.0<br /><br /> Formato del numero di versione: 01.00.0000|  
+|SQL_DBMS_VER|ISAM: testo<br /><br /> versione: 1,0<br /><br /> Formato del numero di versione: 01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  

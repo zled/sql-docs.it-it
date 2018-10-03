@@ -1,13 +1,11 @@
 ---
-title: Elemento proprietà (ADO MD Cellset) | Documenti Microsoft
+title: Elemento proprietà (Cellset-ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO MD]
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64de692b36cd2abda06402e5c0d55c250b9632f5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4583337cf9908f266fe1a85510d4beaae5a5af65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714373"
 ---
-# <a name="item-property-ado-md-cellset"></a>Proprietà dell'elemento (ADO MD Cellset)
-Recupera una cella da un [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) utilizzando le coordinate.  
+# <a name="item-property-ado-md-cellset"></a>Proprietà Item (Cellset - ADO MD)
+Recupera una cella da un [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) utilizzando le coordinate.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,33 +37,33 @@ Cell = Cellset.Item ( Positions)
   
 ## <a name="parameters"></a>Parametri  
  *Posizioni*  
- Oggetto **VariantArray** di valori che specificano in modo univoco una cella. *Posizioni* può essere uno dei seguenti:  
+ Oggetto **VariantArray** di valori che specificano in modo univoco una cella. *Le posizioni* può essere uno dei seguenti:  
   
--   Matrice di numeri di posizione  
+-   Una matrice di numeri di posizione  
   
 -   Una matrice di nomi di membro  
   
 -   La posizione ordinale  
   
-## <a name="remarks"></a>Remarks  
- Utilizzare il **elemento** proprietà per restituire un [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md) oggetto all'interno di un [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetto. Se il **elemento** proprietà non è possibile trovare la cella corrispondente il *posizioni* si verifica un errore di argomento.  
+## <a name="remarks"></a>Note  
+ Usare il **elemento** proprietà da restituire una [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md) dell'oggetto all'interno di un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetto. Se il **elemento** proprietà non è possibile trovare la cella corrispondente il *posizioni* si verifica un errore di argomento.  
   
- Il **elemento** proprietà è la proprietà predefinita per il **set di celle** oggetto. Le forme di sintassi seguenti sono intercambiabili:  
+ Il **elemento** proprietà è la proprietà predefinita per il **Cellset** oggetto. Le seguenti forme di sintassi sono intercambiabili tramite:  
   
 ```  
   
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il *posizioni* argomento specifica la cella da restituire. È possibile specificare la cella in base alla posizione ordinale o dalla posizione lungo ogni asse. Quando si specifica la cella in base alla posizione lungo ogni asse, è possibile specificare il valore numerico della posizione o i nomi dei membri per ogni posizione.  
   
- La posizione ordinale è un numero che identifica in modo univoco una cella all'interno di **set di celle**. Concettualmente, le celle sono numerate in un **set di celle** come se il **set di celle** sono stati un *p*-matrice dimensionale, dove *p* è il numero di assi. Le celle sono indirizzate in ordine di riga. Di seguito è la formula per calcolare il numero ordinale di una cella:  
+ La posizione ordinale è un numero che identifica in modo univoco una cella all'interno di **Cellset**. Concettualmente, le celle sono numerate in un **Cellset** come se il **Cellset** sono stati un *p*-matrice dimensionale, dove *p* è il numero di assi. Le celle sono indirizzate in ordine di riga. Di seguito è la formula per calcolare il numero ordinale di una cella:  
   
- Se i nomi dei membri vengono passati come stringhe a **elemento**, i membri devono essere elencati in ordine crescente di identificatori numerici dell'asse. All'interno di un asse, i membri devono essere elencati in ordine crescente di nidificazione di dimensione, vale a dire, il membro della dimensione più esterna viene considerato per primo, seguiti dai membri delle dimensioni interne. Ogni dimensione deve essere rappresentato da una stringa distinta e l'elenco di stringhe di membro deve essere separato da virgole.  
+ Se i nomi dei membri vengono passati come stringhe a **elemento**, i membri devono essere elencati in ordine crescente di identificatori numerici dell'asse. All'interno di un asse, i membri devono essere elencati in ordine crescente di nidificazione di dimensione, vale a dire, membro della dimensione più esterna viene raggiunto per primo, seguiti dai membri delle dimensioni interne. Ogni dimensione deve essere rappresentato da una stringa distinta, e l'elenco di stringhe di membro deve essere separato da virgole.  
   
 > [!NOTE]
->  Il recupero di celle in base al nome di membro potrebbe non essere supportato da provider di dati. Vedere la documentazione del provider per ulteriori informazioni.  
+>  Il recupero di celle in base al nome di membro non può essere supportato da provider di dati. Vedere la documentazione per il provider per altre informazioni.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  

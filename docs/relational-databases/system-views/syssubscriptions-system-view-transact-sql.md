@@ -1,18 +1,13 @@
 ---
-title: syssubscriptions (vista di sistema) (Transact-SQL) | Documenti Microsoft
+title: syssubscriptions (vista di sistema) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - syssubscriptions_TSQL
 - syssubscriptions
@@ -21,28 +16,27 @@ dev_langs:
 helpviewer_keywords:
 - syssubscriptions view
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58792451ce8183265f2885b43b22dfba926f9a42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a9646993a789924488f0b31cfae6cff838691f38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33008859"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705520"
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions (vista di sistema) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **syssubscriptions** Vista espone informazioni sulla sottoscrizione. Questa vista è archiviata nel database di distribuzione.  
+  Il **syssubscriptions** Vista espone le informazioni sulla sottoscrizione. Questa vista è archiviata nel database di distribuzione.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|ID univoco di un articolo sottoscritto.|  
 |**srvid**|**smallint**|ID del Sottoscrittore.|  
 |**dest_db**|**sysname**|Nome del database di sottoscrizione.|  
-|**status**|**tinyint**|Stato della sottoscrizione:<br /><br /> **0** = inattivo.<br /><br /> **1** = sottoscritta.<br /><br /> **2** = attivo.|  
+|**status**|**tinyint**|Stato della sottoscrizione:<br /><br /> **0** = inattiva.<br /><br /> **1** = sottoscritta.<br /><br /> **2** = attivo.|  
 |**sync_type**|**tinyint**|Tipo di sincronizzazione iniziale:<br /><br /> **1** = automatic.<br /><br /> **2** = none.|  
 |**login_name**|**sysname**|Nome dell'account di accesso utilizzato per la connessione al server di pubblicazione per l'aggiunta della sottoscrizione.|  
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push: l'agente di distribuzione viene eseguito nel server di distribuzione.<br /><br /> **1** = pull: l'agente di distribuzione viene eseguito nel Sottoscrittore.|  
@@ -50,8 +44,8 @@ ms.locfileid: "33008859"
 |**timestmap**|**timestamp**|Data e ora di creazione della sottoscrizione.|  
 |**update_mode**|**tinyint**|Modalità di aggiornamento:<br /><br /> **0** = sola lettura.<br /><br /> **1** = aggiornamento immediato.|  
 |**loopback_detection**|**bit**|Si applica alle sottoscrizioni che fanno parte di una topologia di replica transazionale bidirezionale. Il rilevamento di loopback determina se l'agente di distribuzione deve inviare nuovamente al Sottoscrittore le transazioni provenienti dal Sottoscrittore:<br /><br /> **0** = restituisce le transazioni.<br /><br /> **1** = non restituisce le transazioni.|  
-|**queued_reinit**|**bit**|Specifica se l'articolo è contrassegnato per l'inizializzazione o la reinizializzazione. Il valore **1** specifica che l'articolo sottoscritto è contrassegnato per l'inizializzazione o la reinizializzazione.|  
-|**nosync_type**|**tinyint**|Tipo di inizializzazione della sottoscrizione:<br /><br /> **0** = automatica (snapshot)<br /><br /> **1** = solo supporto replica<br /><br /> **2** = inizializzazione con backup<br /><br /> **3** = inizializzazione dal numero di sequenza del log (LSN)<br /><br /> Per ulteriori informazioni, vedere il **@sync_type** parametro di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).<br /><br /> **3** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**queued_reinit**|**bit**|Specifica se l'articolo è contrassegnato per l'inizializzazione o la reinizializzazione. Un valore pari **1** specifica che l'articolo sottoscritto è contrassegnato per l'inizializzazione o la reinizializzazione.|  
+|**nosync_type**|**tinyint**|Tipo di inizializzazione della sottoscrizione:<br /><br /> **0** = automatica (snapshot)<br /><br /> **1** = solo supporto replica<br /><br /> **2** = inizializzazione con backup<br /><br /> **3** = inizializzazione dal numero di sequenza del log (LSN)<br /><br /> Per altre informazioni, vedere la **@sync_type** parametro [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).<br /><br /> **3** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**srvname**|**sysname**|Nome del Sottoscrittore.|  
   
 ## <a name="see-also"></a>Vedere anche  

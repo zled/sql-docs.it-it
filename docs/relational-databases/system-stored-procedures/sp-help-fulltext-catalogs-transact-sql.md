@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_catalogs_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalogs
 ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5490c7e8d8658ddc8048e63d082d48ea92249c08
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 89e46b81abfc50f8d793d55da850cf0ce9ee12c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989353"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681003"
 ---
 # <a name="sphelpfulltextcatalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +60,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 |**STATO**|**int**|Stato di popolamento dell'indice full-text del catalogo:<br /><br /> 0 = inattivo<br /><br /> 1 = popolamento completo in corso<br /><br /> 2 = sospeso<br /><br /> 3 = rallentato<br /><br /> 4 = Recupero in corso<br /><br /> 5 = Chiusura<br /><br /> 6= popolamento incrementale in corso<br /><br /> 7 = compilazione dell'indice in corso<br /><br /> 8 = disco pieno Paused<br /><br /> 9 = rilevamento modifiche<br /><br /> NULL = l'utente non dispone dell'autorizzazione VIEW per il catalogo full-text, il database non è abilitato per la funzionalità full-text oppure il componente full-text non è installato.|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|Numero di tabelle indicizzate full-text associate al catalogo|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Le autorizzazioni di esecuzione vengono assegnate per impostazione predefinita ai membri del ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  

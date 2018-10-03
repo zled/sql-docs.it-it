@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b9dfb573605f8e859f8db4b991e2eb19a73d4606
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f48846f1cb78a8ea8a21be5a7114bf11017f5ca5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319951"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147921"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
   I tipi di dati rappresentano tipologie di dati diversi che possono essere archiviati ed elaborati in modo efficiente. I tipi di dati standard includono testo, noto anche come stringhe, numeri con e senza posizioni decimali, date e ore e immagini. I valori in un report devono essere costituiti da un tipo di dati RDL (Report Definition Language). È possibile formattare un valore in base alle proprie preferenze quando si lo visualizza in un report. Un campo che rappresenta la valuta, ad esempio, viene archiviato nella definizione del report come numero a virgola mobile, ma può essere visualizzato in diversi formati a seconda della proprietà di formattazione scelta.  
@@ -36,7 +33,7 @@ ms.locfileid: "37319951"
 |--------------|---------------|  
 |String|Valore predefinito: String<br /><br /> Chart, GUID, Timespan|  
 |Boolean|Valore predefinito: Boolean|  
-|Valore intero|Valore predefinito: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|Integer|Valore predefinito: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
 |DateTime|Valore predefinito: DateTime<br /><br /> DateTimeOffset|  
 |Float|Valore predefinito: Double<br /><br /> Single, Decimal|  
 |Binario|Valore predefinito: Byte []|  
@@ -60,7 +57,7 @@ ms.locfileid: "37319951"
 -   Conversione da un tipo di dati a un altro tipo di dati di un valore recuperato dall'origine dati.  
   
 ## <a name="determining-the-data-type-of-report-data"></a>Determinazione del tipo di dati del report  
- Per determinare il tipo di dati di un elemento del report è possibile scrivere un'espressione. Ad esempio, per visualizzare il tipo di dati del campo `MyField`, aggiungere l'espressione `=Fields!MyField.Value.GetType().ToString()`a una cella della tabella. Il risultato indica il tipo di dati CLR utilizzato per rappresentare `MyField`, ad esempio `System.String` o `System.DateTime`.  
+ Per determinare il tipo di dati di un elemento del report è possibile scrivere un'espressione. Ad esempio, per visualizzare il tipo di dati del campo `MyField`, aggiungere l'espressione `=Fields!MyField.Value.GetType().ToString()` a una cella della tabella. Il risultato indica il tipo di dati CLR utilizzato per rappresentare `MyField`, ad esempio `System.String` o `System.DateTime`.  
   
 ## <a name="converting-dataset-fields-to-a-different-data-type"></a>Conversione dei campi del set di dati in un altro tipo di dati  
  È inoltre possibile convertire i campi del set di dati prima di utilizzarli in un report. Nell'elenco seguente vengono descritte le modalità di conversione di un campo del set di dati esistente:  

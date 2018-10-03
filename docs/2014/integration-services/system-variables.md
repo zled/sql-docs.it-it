@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - event handlers [Integration Services], variables
 - variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2c5f708afa4ce172807c1e0fd0697f6f7a29542d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c77ca84cd844b5c49f704d44f2eca3ba34c4269
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311971"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163471"
 ---
 # <a name="system-variables"></a>Variabili di sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include un set di variabili di sistema in cui vengono archiviate informazioni sui pacchetti in esecuzione e sui relativi oggetti. Tali variabili possono essere utilizzate nelle espressioni e nelle espressioni di proprietà per personalizzare pacchetti, contenitori, attività e gestori di eventi.  
@@ -107,7 +104,7 @@ ms.locfileid: "37311971"
   
  Questa regola vale anche per le variabili definite dall'utente ma, mentre i tipi di dati delle variabili di sistema non possono essere modificati ed è necessario adattare l'utilizzo di tali variabili in base ai relativi tipi di dati, le variabili definite dall'utente sono molto più flessibili. Le variabili definite dall'utente utilizzate nelle associazioni di parametro vengono in genere definite con tipi di dati compatibili con quelli dei parametri a cui è stato eseguito il mapping.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Mapping di parametri di query a variabili in un'attività Esegui SQL](control-flow/execute-sql-task.md)  
   
   

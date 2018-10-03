@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 868c814c1031f9ffb499f80da2d7e9314d80e3bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50997645272c5ec900a8a89a8da41a1da421ac5c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105431"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definizione di una relazione molti-a-molti
   Quando si definisce una dimensione, generalmente ogni fatto viene unito in join a un solo membro della dimensione, mentre un singolo membro della dimensione può essere associato a molti fatti. A ogni cliente possono essere ad esempio associati più ordini, ma ogni ordine appartiene a un unico cliente. Nella terminologia dei database relazionali, questa viene definita una *relazione uno-a-molti*. A volte, tuttavia, è possibile che un singolo fatto venga unito in join a più membri della dimensione. Nella terminologia dei database relazionali, questa viene definita una *relazione molti-a-molti*. Ad esempio, i motivi che determinano un acquisto da parte di un cliente possono essere diversi e un motivo per l'acquisto può essere associato a più acquisti. Una tabella di join viene utilizzata per definire i motivi di vendita correlati a ogni acquisto. Una dimensione Sales Reason creata a partire da relazioni di questo tipo può disporre quindi di più membri che corrispondono a una singola transazione di vendita. Le dimensioni molti-a-molti consentono di espandere la modellazione dimensionale oltre lo schema star classico e supportano analisi complesse quando le dimensioni non sono direttamente associate a una tabella dei fatti.  

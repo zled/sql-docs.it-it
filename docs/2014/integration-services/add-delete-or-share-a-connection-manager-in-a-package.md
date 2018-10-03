@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-caps.latest.revision: 56
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f726306b53f896176de23726fc17cdc3a6b2d53
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fba1fff373ad7d9ea4371715bcc2ca2b72a38477
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277407"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148311"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>Aggiunta, eliminazione o condivisione di una gestione connessione in un pacchetto
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include una vasta gamma di gestioni connessioni per la connessione a origini dati diverse, ad esempio database relazionali, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database e file in formato CSV e XML. Una gestione connessione può essere creata al livello del pacchetto o al livello del progetto. La gestione connessione creata al livello del progetto è disponibile per tutti i pacchetti nel progetto. La gestione connessione creata al livello del pacchetto è invece disponibile per quel pacchetto specifico.  
@@ -50,7 +47,7 @@ ms.locfileid: "37277407"
   
 ##  <a name="wizard"></a> Per aggiungere una gestione connessione durante la creazione di un pacchetto  
   
--   Utilizzare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+-   Utilizzare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
      Oltre a creare e configurare una gestione connessione, tramite la procedura guidata è anche possibile creare e configurare le origini e le destinazioni in cui è utilizzata la gestione connessione. Per altre informazioni, vedere [Creare pacchetti in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md).  
   

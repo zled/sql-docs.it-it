@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - accessing data, query designer
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cbcbb6c64ef5a11db341d1a49c5d966991661a84
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41736a7de5469650d1d2e13b6b78d8a9c2e92573
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181868"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152821"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query relazionale (Generatore report)
   Generatore report fornisce una finestra di Progettazione query con interfaccia grafica e una finestra Progettazione query basata su testo per la creazione di una query che specifica i dati da recuperare da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database relazionali e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] per un set di dati di report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
@@ -108,7 +105,7 @@ ms.locfileid: "37181868"
 |Max|Restituisce il valore massimo in un gruppo. Implementa l'aggregazione SQL MAX.|  
 |StDev|Restituisce la deviazione statistica standard di tutti i valori di un gruppo. Implementa l'aggregazione SQL STDEV.|  
 |StDevP|Restituisce la deviazione statistica standard relativa al popolamento di tutti i valori nell'espressione specificata di un gruppo. Implementa l'aggregazione SQL STDEVP.|  
-|SUM|Restituisce la somma di tutti i valori del gruppo. Implementa l'aggregazione SQL SUM.|  
+|Sum|Restituisce la somma di tutti i valori del gruppo. Implementa l'aggregazione SQL SUM.|  
 |Var|Restituisce la varianza statistica di tutti i valori del gruppo. Implementa l'aggregazione SQL VAR.|  
 |VarP|Restituisce la varianza statistica del popolamento per tutti i valori del gruppo. Implementa l'aggregazione SQL VARP.|  
 |Avg Distinct|Restituisce medie univoche. Implementa una combinazione dell'aggregazione AVG e della parola chiave DISTINCT.|  
@@ -188,7 +185,7 @@ ms.locfileid: "37181868"
 ### <a name="graphical-query-designer-toolbar"></a>Barra degli strumenti della finestra Progettazione query con interfaccia grafica  
  Nella barra degli strumenti di Progettazione query relazionale sono disponibili i pulsanti seguenti, che consentono di specificare o visualizzare i risultati di una query.  
   
-|Pulsante|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare alla finestra Progettazione query basata su testo per visualizzare la query generata automaticamente o per modificare la query.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati i tipi di file con estensione sql e rdl.|  

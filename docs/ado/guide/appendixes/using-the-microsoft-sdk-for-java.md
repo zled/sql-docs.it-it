@@ -1,57 +1,54 @@
 ---
-title: Utilizzo di Microsoft SDK per Java | Documenti Microsoft
+title: Uso di Microsoft SDK per Java | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Java (Microsoft SDK for)
 - Microsoft SDK for Java [ADO]
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76fb8068cfc1640642292932923db084818dbb9c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: edab19ee8b3ae4eee186835d25220ee638c41149
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786919"
 ---
-# <a name="using-the-microsoft-sdk-for-java"></a>Utilizzo di Microsoft SDK per Java
+# <a name="using-the-microsoft-sdk-for-java"></a>Uso di Microsoft SDK per Java
 
 > [!IMPORTANT]
 > Microsoft non è più supportata di Visual J++ nel gennaio 2004.
 
-Microsoft SDK per Java è il kit per sviluppatori per l'ambiente di Microsoft Internet Explorer. Strumenti, informazioni ed esempi vengono forniti per lo sviluppo di applicazioni Java e applet Java in base a JDK 1.1 e la macchina virtuale di Microsoft Win32 (Microsoft VM). Microsoft SDK per Java non è collegato a Microsoft Visual J++. Per scaricare questo SDK, fare clic qui.  
+Microsoft SDK per Java è kit per sviluppatori per l'ambiente di Microsoft Internet Explorer. Strumenti, informazioni ed esempi vengono forniti per lo sviluppo di applicazioni Java e applet basata 1.1 JDK e la macchina virtuale di Microsoft Win32 (Microsoft VM). Microsoft SDK per Java non è associato a Microsoft Visual J++. Per scaricare questo SDK, fare clic qui.  
   
- L'utilità Jactivex.exe genera classi da una libreria dei tipi, ma può essere richiamato solo sulla riga di comando. Questa funzionalità non è integrata con l'ambiente di sviluppo Visual J++. A differenza delle classi generate dalla procedura guidata libreria tipo Java, è possibile eseguirne il wrapper della classe creato dal SDK. Ciò è utile per il debug come il codice utilizza le classi wrapper di ADO.  
+ L'utilità Jactivex.exe genera classi da una libreria dei tipi, ma può essere richiamato solo sulla riga di comando. Questa funzionalità non è integrata con l'ambiente di sviluppo Visual J++. A differenza delle classi generate dalla procedura guidata libreria di tipo Java, è possibile eseguirne il wrapper della classe creato dal SDK. Ciò è utile per eseguire il debug come il codice utilizza le classi wrapper ADO.  
   
- Questo meccanismo legge la libreria dei tipi ADO e genera le classi che è possibile creare un'istanza all'interno dell'applicazione. Genera le classi nel percorso seguente: \\< directory di windows\>\Java\trustlib\msado15.  
+ Questo meccanismo legge la libreria dei tipi ADO e genera classi che è possibile creare un'istanza all'interno dell'applicazione. Genera le classi nel percorso seguente: \\< directory di windows\>\Java\trustlib\msado15.  
   
- Creazione di un'applicazione ADO in Java utilizzando Microsoft SDK per Java è essenzialmente identica, dalla prospettiva del codice sorgente, per la creazione guidata raccolta tipo Java. Per esempio di codice, vedere [wrapper di classe Java ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md). L'unica differenza concreta è nella modalità di generazione di classi wrapper in primo luogo, come illustrato nei passaggi seguenti.  
+ Creazione di un'applicazione ADO in Java usando Microsoft SDK per Java è fondamentalmente identica, dalla prospettiva del codice sorgente, all'utilizzo della procedura guidata libreria di tipo Java. Per esempi di codice, vedere [wrapper di classe Java ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md). L'unica vera differenza è nella modalità di generazione di classi wrapper in primo luogo, come illustrato nei passaggi seguenti.  
   
 ### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>Per creare un progetto di ADO con Microsoft SDK per Java  
   
-1.  Eseguire il comando seguente a un prompt dei comandi. È necessario impostare il percorso per includere Microsoft SDK per la directory Bin di Java o eseguire il comando da quel percorso. In genere, Microsoft SDK per Java è installato nello stesso percorso di Visual Studio. Si tratta di un'istruzione singolo comando.  
+1.  Eseguire il comando seguente al prompt dei comandi. È necessario impostare il percorso per includere il SDK di Microsoft per la directory Bin di Java o eseguire il comando da quel percorso. In genere, Microsoft SDK per Java è installato nello stesso percorso di Visual Studio. Si tratta di un'istruzione singolo comando.  
   
     ```  
     \<path to DevStudio>\<path to Java SDK>\bin\JactiveX.exe /javatlb "C:\program files\common files\system\ado\msado15.dll"  
     ```  
   
-2.  Eseguire il comando seguente per compilare le classi generate. Il parametro /g: t attiva la generazione di simboli di debug in modo che sia possibile tenere traccia di. Simboli di Java. Rimuovere la build di rilascio.  
+2.  Eseguire il comando seguente per compilare le classi generate. Il commutatore /g: t attiva la generazione di simboli di debug in modo che sia possibile tenere traccia di. Simboli di Java. Rimuoverlo per le build di rilascio.  
   
     ```  
     jvc /g:t c:\<windows>\Java\trustlib\msado15\*.Java  
     ```  
   
-3.  Per utilizzare questi file, aprire il progetto in Visual J++. Dal **progetto** menu, scegliere **Aggiungi a progetto**. Selezionare **file**e aggiungere tutti i. File JAVA generati nella directory trustlib\msado15 al progetto.  
+3.  Per usare questi file, aprire il progetto in Visual J++. Dal **Project** menu, scegliere **Aggiungi a progetto**. Selezionare **file**e aggiungere tutte le. File JAVA generati nella directory trustlib\msado15 al progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Wrapper di classe Java ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   

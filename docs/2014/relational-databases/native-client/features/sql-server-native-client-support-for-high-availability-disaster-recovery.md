@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 2016-08-31
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 71966f354dee7259273b24adf149045b009deb10
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3ce83a5fae673d32fd86523fa13ef8b67b74b780
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396327"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137608"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata
   In questo argomento viene illustrato il supporto in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (aggiunto in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni su [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Listener del gruppo di disponibilità, connettività client e failover dell’applicazione &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering di failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) e [Repliche secondarie attive: Repliche secondarie leggibili (Gruppi di disponibilità AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  

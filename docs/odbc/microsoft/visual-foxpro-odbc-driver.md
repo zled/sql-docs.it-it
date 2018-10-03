@@ -1,13 +1,11 @@
 ---
-title: Driver ODBC di Visual FoxPro | Documenti Microsoft
+title: Driver ODBC Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC]
@@ -15,37 +13,36 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC]
 - FoxPro ODBC driver [ODBC], about FoxPro ODBC driver
 ms.assetid: 27359133-dd41-478f-8902-996022deb845
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a81de046b2beea99f7ae0005d3308354119e70de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ebaffdc7404730a059b38186d55209033c8847c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914476"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788439"
 ---
-# <a name="visual-foxpro-odbc-driver"></a>Driver ODBC di Visual FoxPro
-Microsoft Visual FoxPro è un potente ambiente orientata agli oggetti per lo sviluppo di creazione e applicazione di database. Il Driver ODBC Microsoft Visual FoxPro consente alle applicazioni di aprire, query e aggiornare i dati in Visual FoxPro e versioni precedenti di FoxPro tramite l'interfaccia aprire Database Connectivity (ODBC).  
+# <a name="visual-foxpro-odbc-driver"></a>Driver ODBC Visual FoxPro
+Microsoft Visual FoxPro è un ambiente potente orientate a oggetti per lo sviluppo di costruzione e l'applicazione di database. Il Driver ODBC Microsoft Visual FoxPro consente alle applicazioni di aprire, query e aggiornare i dati in Visual FoxPro e versioni precedenti di FoxPro tramite l'interfaccia aprire Database Connectivity (ODBC).  
   
- Ad esempio, il Driver ODBC Microsoft Visual FoxPro è possibile eseguire le operazioni seguenti:  
+ Ad esempio, con il Driver ODBC Microsoft Visual FoxPro è possibile eseguire le operazioni seguenti:  
   
--   Utilizzare Microsoft Query a query e aggiornare i dati di Visual FoxPro dai fogli di lavoro di Microsoft Excel.  
+-   Usare Query di Microsoft per eseguire query e aggiornare i dati Visual FoxPro da fogli di lavoro di Microsoft Excel.  
   
--   Creare le lettere di unione utilizzando i dati di Visual FoxPro con Microsoft Word.  
+-   Creare le lettere di merge della posta elettronica usando i dati Visual FoxPro con Microsoft Word.  
   
--   Eseguire una query e aggiornare tabelle da Microsoft Access e le visualizzazioni di Visual FoxPro.  
+-   Eseguire query e aggiornamenti di Visual FoxPro viste e tabelle da Microsoft Access.  
   
--   Utilizzo di Visual FoxPro come archivio dati per le applicazioni di Microsoft Visual Basic, Microsoft Visual C++ e C.  
+-   Uso di Visual FoxPro come archivio dati per le applicazioni di Microsoft Visual Basic, Microsoft Visual C++ e C.  
   
- È possibile utilizzare il driver per eseguire molte altre attività. Nella tabella seguente sono elencati alcuni argomenti che consentono di iniziare.  
+ È possibile usare il driver per eseguire molte altre attività. Nella tabella seguente sono elencati alcuni argomenti che consentono di iniziare.  
   
 |Per|Vedere|  
 |--------|---------|  
-|Ulteriori informazioni sull'utilizzo di dati Visual FoxPro con Microsoft Office|[Accesso ai dati Visual FoxPro da Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
-|Informazioni sull'utilizzo di dati Visual FoxPro nelle applicazioni Visual Basic|[Utilizza il Driver ODBC di Visual FoxPro con l'applicazione Visual Basic](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|  
-|Visualizzare un semplice esempio di utilizzo di Visual C++ per accedere ai dati di Visual FoxPro|[Tramite il Driver ODBC di Visual FoxPro con il C o C++ applicazione](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)|  
-|Visualizzare un elenco di software e hardware supportati|[System Requirements](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
+|Altre informazioni sull'uso di dati Visual FoxPro con Microsoft Office|[Accesso ai dati Visual FoxPro da Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
+|Informazioni su come usare i dati Visual FoxPro nelle applicazioni Visual Basic|[Uso del Driver ODBC Visual FoxPro con l'applicazione Visual Basic](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|  
+|Visualizzare un semplice esempio di uso di Visual C++ per accedere ai dati Visual FoxPro|[Uso del Driver ODBC Visual FoxPro con l'applicazione di C++ o C](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)|  
+|Visualizzare un elenco di hardware e software supportati|[System Requirements](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
- Per informazioni sul download e installazione del driver ODBC Visual FoxPro, vedere [Driver ODBC Visual FoxPro](http://go.microsoft.com/fwlink/?LinkId=121318) nel download su MSDN.
+ Per informazioni su come scaricare e installare il driver ODBC Visual FoxPro, vedere [Driver ODBC Visual FoxPro](http://go.microsoft.com/fwlink/?LinkId=121318) sul download di MSDN.

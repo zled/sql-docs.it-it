@@ -1,14 +1,12 @@
 ---
-title: Programma di formattazione XML sul lato client (SQLXML 4.0) | Microsoft Docs
+title: Formattazione in XML lato client (SQLXML 4.0) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - FOR XML clause, formatting
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - client-side XML formatting
 - client-side-xml attribute
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c02ee420f5ccb676e4cb7708d1550755e4a2c241
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a87eccb5395b5aea68185f82fff8c9247792f38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266287"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147131"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Formattazione XML sul lato client (SQLXML 4.0)
   Questo argomento fornisce informazioni sulla formattazione XML sul lato client. Per formattazione sul lato client si intende la formattazione di dati XML nel livello intermedio.  
   
 > [!NOTE]  
->  In questo argomento vengono fornite informazioni aggiuntive sull'utilizzo della clausola FOR XML sul lato client, con cui si suppone che l'utente disponga già di una certa familiarità. Per altre informazioni su FOR XML, vedere [costruzione XML utilizzando FOR XML](../../xml/for-xml-sql-server.md).  
+>  In questo argomento vengono fornite informazioni aggiuntive sull'utilizzo della clausola FOR XML sul lato client, con cui si suppone che l'utente disponga già di una certa familiarità. Per ulteriori informazioni su FOR XML, vedere [la creazione di XML tramite FOR XML](../../xml/for-xml-sql-server.md).  
   
  **Importanti** per utilizzare la funzionalità FOR XML sul lato client con il nuovo `xml` tipo di dati, i client devono utilizzare sempre il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di dati di Native Client (SQLNCLI11) anziché il provider SQLOLEDB. SQLNCLI11 rappresenta la versione più recente del provider di SQL Server ed è in grado di riconoscere completamente i tipi di dati introdotti in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Il comportamento per FOR XML sul lato client con il provider SQLOLEDB prevede la gestione dei tipi di dati `xml` come stringhe.  
   
@@ -51,7 +48,7 @@ SELECT FirstName, LastName
 FROM   Person.Contact  
 ```  
   
- Il server esegue la query e restituisce un set di righe (che include FirstName e LastNamecolumns) al client. Il livello intermedio applica quindi la trasformazione FOR XML al set di righe e restituisce la formattazione XML al client.  
+ Il server esegue la query e restituisce un set di righe, che contiene nome e LastNamecolumns, al client. Il livello intermedio applica quindi la trasformazione FOR XML al set di righe e restituisce la formattazione XML al client.  
   
  Analogamente, quando si esegue una query XPath il server restituisce il set di righe al client e la trasformazione FOR XML EXPLICIT viene applicata al set di righe nel client, generando la formattazione XML desiderata.  
   
@@ -93,7 +90,7 @@ AS
 </ROOT>  
 ```  
   
- Poiché il **client-side-xml** attributo è impostato su 1 (true) nel modello, la stored procedure viene eseguita nel server e il set di righe di due colonne restituito dal server viene trasformato in XML nel livello intermedio e restituito al il client. Di seguito viene fornito solo un risultato parziale.  
+ Poiché la **xml del client** attributo è impostato su 1 (true) nel modello, la stored procedure viene eseguita sul server e il set di righe di due colonne restituito dal server viene trasformato in XML nel livello intermedio e restituito il client. Di seguito viene fornito solo un risultato parziale.  
   
 ```  
  <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -122,10 +119,10 @@ AS
      È possibile specificare formattazione sul lato client impostando su true questa proprietà per le classi gestite SQLXML.  
   
 ## <a name="enhanced-xml-template-support"></a>Supporto avanzato per modelli XML  
- A partire [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], il modello XML in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è stata migliorata con l'aggiunta delle **client-side-xml** attributo. Se questo attributo è impostato su true, i dati XML vengono formattati nel client. Si noti che questo attributo del modello ha funzionalità identico alla proprietà ClientSideXML specifiche del Provider SQLXMLOLEDB.  
+ A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], il modello XML in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è stato migliorato con l'aggiunta di **xml del client** attributo. Se questo attributo è impostato su true, i dati XML vengono formattati nel client. Si noti che questo attributo modello funzionalità identico alla proprietà specifiche del Provider SQLXMLOLEDB ClientSideXML.  
   
 > [!NOTE]  
->  Se si esegue un modello XML in un'applicazione ADO che utilizza il Provider SQLXMLOLEDB e si specifica sia la **client-side-xml** attributo nel modello e il provider di proprietà ClientSideXML, il valore specificato di modello ha la precedenza.  
+>  Se si esegue un modello XML in un'applicazione ADO che utilizza il Provider SQLXMLOLEDB e si specificano sia il **xml del client** il modello e il provider di proprietà di ClientSideXML, il valore specificato nell'attributo di modello ha la precedenza.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Architettura della formattazione XML sul lato Client e lato Server &#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)   

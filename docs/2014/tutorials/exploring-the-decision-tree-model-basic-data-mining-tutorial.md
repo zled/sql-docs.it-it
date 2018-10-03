@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: acc02a144a507ee90fb311cb44445816097b1c16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0a8d8a5238caa09d9b4a3d85d014b2891c3f427e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204447"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145911"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Esplorazione del modello Decision Trees (Esercitazione di base sul data mining)
   L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees consente di stimare quali colonne influiscono sulla decisione di acquistare una bicicletta in base alle colonne restanti nel set di training.  
@@ -93,7 +90,7 @@ ms.locfileid: "37204447"
   
      Quando si trascina il dispositivo di scorrimento verso il basso, gli attributi che hanno solo un effetto debole nella colonna [Bike Buyer] vengono rimossi dal grafico. Se si sposta il dispositivo di scorrimento è possibile verificare che l'età e l'area di residenza costituiscono i fattori principali per stimare se una persona è un acquirente di biciclette.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  Per esplorare i dati utilizzando gli altri tipi di modelli, vedere gli argomenti seguenti.  
   
 -   [Esplorazione del modello di Clustering &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  

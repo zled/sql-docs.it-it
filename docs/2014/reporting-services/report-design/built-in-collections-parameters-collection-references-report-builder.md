@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a33777cd395bf461f85a93ba6cb625acc1436866
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7f84157b46b7e6490da1c524b0be314dc69325b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210881"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167746"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Riferimenti alla raccolta dei parametri (Generatore report e SSRS)
   I parametri di un report sono una delle raccolte predefinite a cui è possibile fare riferimento da un'espressione. Includendo parametri in un'espressione, è possibile personalizzare i dati e l'aspetto dei report in base alle opzioni scelte da un utente. È possibile usare le espressioni per qualsiasi proprietà degli elementi del report o delle caselle di testo che includa l'opzione (*Fx*) o \<**Espressione**>. Le espressioni vengono anche utilizzate per controllare il contenuto e l'aspetto dei report in altri modi. Per altre informazioni, vedere [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  

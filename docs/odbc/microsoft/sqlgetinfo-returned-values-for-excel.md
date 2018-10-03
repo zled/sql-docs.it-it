@@ -1,13 +1,11 @@
 ---
-title: SQLGetInfo i valori restituiti per Excel | Documenti Microsoft
+title: Valori restituiti da SQLGetInfo per Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d8987a1e6c171ccc4154e71cb4e6a80c964cd5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71eec87e4cdf325a20e6ad213dd8f591a094f825
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686580"
 ---
-# <a name="sqlgetinfo-returned-values-for-excel"></a>SQLGetInfo i valori restituiti per Excel
-La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento e i corrispondenti valori restituiti da **SQLGetInfo**. Queste informazioni possono essere recuperate passando il linguaggio C elencato #defines a **SQLGetInfo** nel *fInfoType* argomento. Per ulteriori informazioni sui valori restituiti da **SQLGetInfo**, vedere il *riferimento per programmatori ODBC*.  
+# <a name="sqlgetinfo-returned-values-for-excel"></a>Valori restituiti da SQLGetInfo per Excel
+La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento e i corrispondenti valori restituiti dal **SQLGetInfo**. Queste informazioni possono essere recuperate passando il linguaggio C elencato #defines **SQLGetInfo** nel *fInfoType* argomento. Per altre informazioni sui valori restituiti da **SQLGetInfo**, vedere la *riferimento per programmatori ODBC*.  
   
 > [!NOTE]  
->  In cui **SQLGetInfo** restituisce una maschera a 32 bit, una barra verticale (&#124;) rappresenta un'operazione OR.  
+>  In cui **SQLGetInfo** restituisce una maschera di bit a 32 bit, una barra verticale (&#124;) rappresenta un'operazione OR.  
   
 |InfoType|Valore restituito|  
 |--------------|--------------------|  
@@ -85,9 +82,9 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|DSN da ODBC, o "" Se viene utilizzata la parola chiave DRIVER in ODBC|  
+|SQL_DATA_SOURCE_NAME|Il DSN di ODBC. ini, o "" se parola chiave DRIVER viene usato in ODBC. ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
-|SQL_DATABASE_NAME|Directory del database corrente|  
+|SQL_DATABASE_NAME|Directory database corrente|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|"EXCEL"|  
 |SQL_DBMS_VER|Più valori|  
@@ -126,7 +123,7 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_MAX_COLUMNS_IN_INDEX|0|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
-|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Quando si utilizza il Driver per Microsoft Excel, un'istruzione CREATE TABLE potrebbe consentire 256 colonne, ma il limite di 255 colonne è ancora valido e un inserimento nella colonna 256 avrà esito negativo.|  
+|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Quando si usa il Driver di Microsoft Excel, un'istruzione CREATE TABLE potrebbe consentire 256 colonne, ma il limite di 255 colonne sia ancora valido e un'operazione di inserimento nella colonna 256 avrà esito negativo.|  
 |SQL_MAX_CONCURRENT_ACTIVITIES|0|  
 |SQL_MAX_CURSOR_NAME_LEN|64|  
 |SQL_MAX_DRIVER_CONNECTIONS|64|  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d917af219e045e4beda25452407e6c265a142b2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 363c3c86c9c98c17d937b1ea766fd2015f985218
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300557"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147141"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>Passaggio 1: Creazione di un nuovo progetto di Integration Services
   Il primo passaggio nella creazione di un pacchetto in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste nel creare un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Questo progetto include i modelli per gli oggetti (origini dati, viste origini dati e pacchetti) utilizzati in una soluzione di trasformazione dei dati.  

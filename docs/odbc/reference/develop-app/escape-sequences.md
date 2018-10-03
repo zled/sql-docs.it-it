@@ -1,33 +1,30 @@
 ---
-title: Sequenze di escape | Documenti Microsoft
+title: Le sequenze di escape | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - escape sequences [ODBC], determining if supported
 - interoperability of SQL statements [ODBC], escape sequences
 ms.assetid: 5913abfa-d280-43e4-a2f1-05a924388bf9
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2e9dc60d4cb598c777527aa6825ef2ee3a35b2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1423d7bcc0f0b943b490fdcf8f931efb6b533c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910426"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775889"
 ---
-# <a name="escape-sequences"></a>Sequenze di escape
-ODBC definisce sequenze di escape contenente grammatica standard per le date, time, timestamp e valori letterali intervallo datetime, chiamate di funzione scalare, **come** predicato caratteri di escape, outer join e le chiamate di procedura. Le applicazioni interoperabili devono utilizzare le sequenze di ogni volta che è possibile.  
+# <a name="escape-sequences"></a>Sequenza di escape
+ODBC definisce sequenze di escape contenente grammatica standard per data, ora, timestamp e i valori letterali intervallo datetime, chiamate di funzioni scalari, **, ad esempio** predicato caratteri di escape outer join e le chiamate di procedura. Applicazioni interoperative utilizzino queste sequenze laddove possibile.  
   
- Per determinare se un driver supporta le sequenze di escape per data, ora, timestamp o valori letterali intervallo datetime, un'applicazione chiama **SQLGetTypeInfo**. Se l'origine dati supporta una data, ora, timestamp o tipo di dati di intervallo datetime, deve supportare anche la sequenza di escape corrispondente. Per determinare se sono supportate altre sequenze di escape, un'applicazione chiama **SQLGetInfo**.  
+ Per determinare se un driver supporta le sequenze di escape per data, ora, timestamp o valori letterali intervallo data/ora, un'applicazione chiama **SQLGetTypeInfo**. Se l'origine dati supporta una data, ora, timestamp o tipo di dati di intervallo datetime, deve anche supportare la sequenza di escape corrispondente. Per determinare se sono supportate le altre sequenze di escape, un'applicazione chiama **SQLGetInfo**.  
   
- Per ulteriori informazioni, vedere [sequenze di Escape ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md), più avanti in questa sezione.
+ Per altre informazioni, vedere [sequenze di Escape in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md), più avanti in questa sezione.

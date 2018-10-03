@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Message Queue task [Integration Services]
 - Script task [Integration Services], examples
 ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8cdc433812f5ed4f7b591ac31cdf80ed1e72dff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e595c437df054bfff996c864fe687818ea9d467
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310111"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156811"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>Invio di messaggi a una coda privata remota tramite l'attività Script
   Accodamento messaggi (noto anche come MSMQ) consente agli sviluppatori di applicazioni di comunicare in modo rapido, semplice e affidabile con i programmi applicativi mediante l'invio e la ricezione di messaggi. Una coda di messaggi può trovarsi nel computer locale o in un computer remoto e può essere pubblica o privata. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la gestione connessione MSMQ e l'attività Message Queue non supportano l'invio a una coda privata su un computer remoto. Tuttavia, utilizzando l'attività Script, è possibile inviare facilmente un messaggio a una coda privata remota.  
@@ -107,7 +104,7 @@ public class ScriptMain
 }  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services  **<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività Message Queue](../control-flow/message-queue-task.md)  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - control flow [Integration Services], elements
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10b125c2dccff68b95ce5bd7578cb052d83d5311
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 300dbf1bc32d6113349eab5fbc1fad4511a92d4c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295131"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092821"
 ---
 # <a name="control-flow"></a>Flusso di controllo
   Un pacchetto è costituito da un flusso di controllo e, facoltativamente, da uno o più flussi di dati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre tre diversi tipi di elementi del flusso di controllo: contenitori, che definiscono le strutture nei pacchetti, attività, che forniscono le funzionalità, e vincoli di precedenza, che connettono eseguibili, contenitori e attività in un flusso di controllo ordinato.  
@@ -65,7 +62,7 @@ ms.locfileid: "37295131"
   
  La finestra di progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] include inoltre molte funzionalità della modalità progettazione che è possibile usare per gestire l'area di progettazione e creare un flusso di controllo autodocumentato.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 -   [Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

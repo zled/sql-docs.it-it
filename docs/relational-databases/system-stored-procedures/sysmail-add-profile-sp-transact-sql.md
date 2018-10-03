@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profile_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_profile_sp
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16091d14ba4971ae8e07633dd111dd5f5a2facde
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e62a0452a5e7e31591d368cbbcb2050272df5da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260224"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734729"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +52,10 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
  Restituisce l'ID del nuovo profilo. *new_profile_id* viene **int**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- Un profilo di Posta elettronica database include qualsiasi numero di account di Posta elettronica database. Le stored procedure di Posta elettronica database possono far riferimento a un profilo attraverso il nome del profilo o l'ID del profilo generato da questa procedura. Per ulteriori informazioni sull'aggiunta di un account a un profilo, vedere [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
+## <a name="remarks"></a>Note  
+ Un profilo di Posta elettronica database include qualsiasi numero di account di Posta elettronica database. Le stored procedure di Posta elettronica database possono far riferimento a un profilo attraverso il nome del profilo o l'ID del profilo generato da questa procedura. Per altre informazioni sull'aggiunta di un account a un profilo, vedere [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
   
  Il nome del profilo e la descrizione può essere modificati con la stored procedure **sysmail_update_profile_sp**, mentre l'id del profilo rimane costante per tutta la durata del profilo.  
   
@@ -67,8 +63,8 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
   
  La stored procedure **sysmail_add_profile_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
  **A. Creazione di un nuovo profilo**  

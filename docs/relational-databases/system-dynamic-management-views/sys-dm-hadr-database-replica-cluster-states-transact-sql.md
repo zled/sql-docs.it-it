@@ -1,12 +1,10 @@
 ---
-title: Sys.dm hadr_database_replica_cluster_states (Transact-SQL) | Documenti Microsoft
+title: DM hadr_database_replica_cluster_states (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_database_replica_cluster_states
@@ -20,20 +18,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_database_replica_cluster_states dynamic management view
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
-caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c47ab1243a4493fb49b47247233ed478e3cd70ca
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 253959175db3519c00874db43466fa21c31cf5e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636679"
 ---
 # <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce una riga contenente informazioni relative a consentono all'integrità dei database di disponibilità nei gruppi di disponibilità AlwaysOn in ogni gruppo di disponibilità Always On nel cluster di Windows Server Failover Clustering (WSFC). Query **Sys.dm hadr_database_replica_states** per rispondere alle domande seguenti:  
+  Restituisce una riga contenente informazioni destinato a fornire informazioni dettagliate sull'integrità dei database di disponibilità nei gruppi di disponibilità Always On in ogni gruppo di disponibilità Always On nel cluster di Windows Server Failover Clustering (WSFC). Query **DM hadr_database_replica_states** per rispondere alle domande seguenti:  
   
 -   Tutti i database di un gruppo di disponibilità sono pronti per un failover?  
   
@@ -41,7 +39,7 @@ ms.lasthandoff: 05/23/2018
   
 -   Se la replica primaria non è attualmente disponibile, quale replica secondaria limiterebbe la perdita di dati se diventasse la replica primaria?  
   
--   Quando il valore di [Sys. Databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** colonna è "AVAILABILITY_REPLICA", quale replica secondaria in un gruppo di disponibilità trattiene il troncamento del log su un determinato database primario ?  
+-   Quando il valore della [Sys. Databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** colonna è "AVAILABILITY_REPLICA", quale replica secondaria in un gruppo di disponibilità trattiene il troncamento del log in un determinato database primario ?     
    
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -56,14 +54,14 @@ ms.lasthandoff: 05/23/2018
   
 ## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e DMV di Gruppi di disponibilità AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Viste del catalogo dei gruppi di disponibilità AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Monitorare gruppi di disponibilità & #40; Transact-SQL & #41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Sys.dm hadr_database_replica_states & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
+ [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
   

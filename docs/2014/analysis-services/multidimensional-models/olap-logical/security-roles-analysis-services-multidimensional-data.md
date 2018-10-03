@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], roles
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - storing data [Analysis Services], roles
 - access rights [Analysis Services], roles
 ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 979f6302d3b03a06187d3ed1860b3c167ff66828
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4400755b5a117b16f56fe191cf0e2c80da03261c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165522"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164651"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Ruoli di sicurezza (Analysis Services - Dati multidimensionali)
   I ruoli vengono utilizzati nelle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] per gestire la sicurezza per [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oggetti e dati. In termini semplici, un ruolo associa gli identificatori di sicurezza (SID) di Microsoft Windows utenti e gruppi che dispongono di diritti di accesso specifico e autorizzazioni definite per gli oggetti gestiti da un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Due tipi di ruoli sono incluse nei [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  

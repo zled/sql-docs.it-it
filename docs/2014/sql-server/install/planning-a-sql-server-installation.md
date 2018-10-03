@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e6b68b7cee6f530a8c5f24d54732654da4f89f8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bf9656564422d76e8d18795fc72e48856eca7e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151782"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161631"
 ---
 # <a name="planning-a-sql-server-installation"></a>Pianificazione di un'installazione di SQL Server
   Per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], effettuare le operazioni seguenti:  
@@ -50,7 +47,7 @@ ms.locfileid: "37151782"
  Questo argomento illustra alcune procedure consigliate per la sicurezza, da prendere in considerazione prima dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
- Nel presente argomento viene fornita la descrizione della configurazione predefinita dei servizi disponibili in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e delle opzioni di configurazione per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile impostare durante e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Nel presente argomento viene fornita la descrizione della configurazione predefinita dei servizi disponibili in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e delle opzioni di configurazione per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]che è possibile impostare durante e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Protocolli e librerie di rete](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)  
  In questo argomento viene fornita la descrizione della configurazione predefinita dei protocolli di rete disponibili questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e delle opzioni di configurazione disponibili.  
@@ -75,7 +72,7 @@ ms.locfileid: "37151782"
  Fare riferimento a questa sezione per disinstallare completamente un'istanza esistente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e preparare il sistema in modo che sia possibile reinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Installazione del cluster di failover di SQL Server](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
- In questa sezione della documentazione relativa al programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono descritte le modalità di installazione e configurazione del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ In questa sezione della documentazione relativa al programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono descritte le modalità di installazione e configurazione del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvio rapido di installazione di SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   

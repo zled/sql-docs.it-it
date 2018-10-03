@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ffb0804ab6edd3afbbf3a3e618ca7c417744b21
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 873b4cce7a2bd72c74bb7aff3147351b0062eb07
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226631"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124921"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lezione 1: Creare un nuovo modello di progetto tabulare
   In questa lezione verrà creato un nuovo progetto di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Una volta creato il nuovo progetto, è possibile iniziare ad aggiungere dati tramite l'Importazione guidata tabella. Oltre alla creazione di un nuovo progetto, questa lezione include anche una breve introduzione all'ambiente di creazione di modelli tabulari in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], data access
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - SqlClient provider
 - in-process data access providers [CLR integration]
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
-caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c49134c931bc9f27e7c4856ce23ccde70364000
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168551"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Accesso ai dati da oggetti di database CLR
   Una routine di common language runtime (CLR) possa accedere facilmente a dati archiviati nell'istanza di [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] in cui è in esecuzione, nonché ai dati archiviati in istanze remote. I dati specifici cui può accedere la routine sono determinati dal contesto utente in cui viene eseguito il codice. Accedere ai dati da un oggetto di database CLR utilizzando il Provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dati da applicazioni di livello intermedio e client gestito. Per questo motivo, è possibile sfruttare la propria esperienza in ADO.NET e `SqlClient` in applicazioni client e di livello intermedio.  

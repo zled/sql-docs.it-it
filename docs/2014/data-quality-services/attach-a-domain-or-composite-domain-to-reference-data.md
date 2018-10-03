@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.refdata.f1
 - sql12.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-caps.latest.revision: 16
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d22efa3a5f3c62915527fd4acc756217fe6556f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51f76ea70542dd354c414f660259fbe4afcf90f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202481"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150001"
 ---
-# <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Collegare un dominio o un dominio composito ai dati di riferimento
+# <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Associare un dominio o un dominio composito a dati di riferimento
   In questo argomento viene descritto come collegare domini/domini compositi in una Knowledge Base Data Quality a un servizio dati di riferimento in Windows Azure Marketplace per compilare le informazioni rispetto ai dati di alta qualità nei dati di riferimento. Ogni servizio dati di riferimento contiene uno schema (colonne di dati). Dopo aver collegato un dominio o un dominio composito a un servizio dati di riferimento, è necessario eseguire il mapping del dominio collegato o i singoli domini all'interno del dominio composito collegato alle colonne appropriate in uno schema del servizio dati di riferimento. Il collegamento di un dominio composito a un servizio dati di riferimento consente di collegare solo un dominio a un servizio dati di riferimento e quindi di eseguire il mapping dei singoli domini all'interno del dominio composito alle colonne appropriate nello schema del servizio dati di riferimento.  
   
 > [!WARNING]  
@@ -41,7 +38,7 @@ ms.locfileid: "37202481"
   
 ###  <a name="Security"></a> Sicurezza  
   
-#### <a name="permissions"></a>Autorizzazioni  
+#### <a name="permissions"></a>Permissions  
  Per eseguire il mapping dei domini ai dati di riferimento, è necessario disporre del ruolo dqs_kb_editor nel database DQS_MAIN.  
   
 ##  <a name="Map"></a> Eseguire il mapping dei domini ai dati di riferimento da Melissa Data  

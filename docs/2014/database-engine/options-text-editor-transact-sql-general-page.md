@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
 dev_langs:
 - TSQL
 ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
-caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: c3732baa8de28448b578673ead90e9cbfa62abba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28559b6037fa6b0e95bb6748f85d3d0cecd2df8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257207"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155201"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Opzioni (Editor di testo - pagina Transact-SQL-generale)
   Utilizzare la finestra di dialogo delle opzioni **Generale** per cambiare il comportamento di modifica generale dell'editor di query del [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizzato per modificare gli script [!INCLUDE[tsql](../includes/tsql-md.md)] . Per visualizzare le impostazioni scegliere **Opzioni** dal menu **Strumenti**, espandere la sottocartella **Transact-SQL** e quindi fare clic su **Generale**.  

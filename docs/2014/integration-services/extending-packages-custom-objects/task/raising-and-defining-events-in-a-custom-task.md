@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - SSIS events, runtime
 - IDTSEvents interface
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8424a0c38144dd26fadf0c0437064d541a3b5b3c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6de41e51b171e57b020309df80c84bdda77fe074
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155102"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155412"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Generazione e definizione di eventi in un'attività personalizzata
   Il motore di runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include una raccolta di eventi che forniscono lo stato di avanzamento durante la convalida e l'esecuzione di un'attività. L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> definisce questi eventi e viene fornita alle attività come parametro per i metodi <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>.  
@@ -194,7 +191,7 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestori eventi di Integration Services &#40;SSIS&#41;](../../integration-services-ssis-event-handlers.md)   

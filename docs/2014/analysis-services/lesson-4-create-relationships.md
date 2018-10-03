@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f0c32363cd3af495ef17d689bbf8c704e8ba21d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 935957ce0934e6b57bd7abd27bcf74fd14ee8cd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113241"
 ---
 # <a name="lesson-5-create-relationships"></a>Lezione 5: Creare relazioni
   In questa lezione verranno verificate le relazioni create automaticamente al momento dell'importazione dei dati e verranno aggiunte nuove relazioni tra tabelle diverse. Una relazione è una connessione tra due tabelle che stabilisce in che modo devono essere correlati i dati nelle due tabelle. Tra la tabella Product e la tabella Product Subcategory vi è ad esempio una relazione basata sul fatto che ogni prodotto appartiene a una sottocategoria. Per altre informazioni, vedere [Relazioni &#40;SSAS tabulare&#41;](tabular-models/relationships-ssas-tabular.md).  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - personalization extensions [Multidimensional Databases]
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ff8ef3d5455693d19ec82b0a5905939671c03037
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90b8f11b303c72eedbf116ae4154ce9d611a401c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164861"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services Personalization Extensions
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] le estensioni della personalizzazione sono alla base di base dell'implementazione di un'architettura plug-in. In un'architettura plug-in è possibile sviluppare dinamicamente nuovi oggetti cubo e funzionalità e condividerli facilmente con gli altri sviluppatori. Di conseguenza, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] estensioni della personalizzazione forniscono le funzionalità che rende possibile raggiungere i seguenti obiettivi:  

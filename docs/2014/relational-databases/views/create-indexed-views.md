@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 77
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d56783347d9c5aaf59a1b45b24e2003a35df96df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 056675637b181340dc27e7f09698a0ac439dfb6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150422"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164601"
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
   In questo argomento si illustra come creare una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il primo indice creato per una vista deve essere un indice cluster univoco. Dopo aver creato l'indice cluster univoco, è possibile creare più indici non cluster. La creazione di un indice cluster univoco per una vista consente un miglioramento delle prestazioni delle query, in quanto la vista viene archiviata nel database in modo analogo a una tabella con un indice cluster. Le viste indicizzate possono essere usate da Query Optimizer per velocizzare l'esecuzione delle query. Non è necessario fare riferimento alla vista nella query affinché venga usata da Query Optimizer per una sostituzione.  

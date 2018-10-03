@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c25ed051cfa061cbe402f6da797e360bae97eee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55ac9eaaaa2313536c27df4c96723e96b70fada5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060861"
 ---
 # <a name="request-log"></a>Log richieste
   Usare la finestra di dialogo **Log richieste** per visualizzare gli eventi registrati durante la richiesta fatta al sistema SAP Netweaver BW per i dati di esempio. Queste informazioni possono essere utili se è necessario risolvere i problemi relativi alla configurazione dell'origine SAP BW.  
@@ -58,7 +55,7 @@ ms.locfileid: "37289414"
 |E|Messaggio di errore|  
 |W|Messaggio di avviso.|  
 |I|Messaggio informativo.|  
-|Un|L'operazione è stata interrotta.|  
+|A|L'operazione è stata interrotta.|  
   
  **Message**  
  Visualizza il testo del messaggio associato all'evento registrato.  

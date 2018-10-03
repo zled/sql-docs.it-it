@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], subscriptions
 - subscriptions [SQL Server replication], synchronizing
 - replication [SQL Server], synchronization
 ms.assetid: cbe13120-8dd9-4309-88dd-07a801c68f5f
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c24eee2e720e9a2a7098875f6255e08817cdabc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5efa0a0e46362fa94805a1eb9487fbe186d3176d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319881"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123761"
 ---
 # <a name="synchronize-subscriptions-replication"></a>Sincronizzazione delle sottoscrizioni (replica)
   Le sottoscrizioni vengono sincronizzate dagli agenti di replica. L'agente di distribuzione sincronizza le sottoscrizioni di pubblicazioni transazionali e snapshot, mentre l'agente di merge sincronizza le sottoscrizioni di pubblicazioni di tipo merge. Per sincronizzare le sottoscrizioni e controllare il comportamento della sincronizzazione, è possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], le stored procedure di replica e gli oggetti RMO (Replication Management Objects). Negli argomenti seguenti viene descritto come sincronizzare le sottoscrizioni e specificare le opzioni di sincronizzazione.  

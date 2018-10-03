@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 14558568086141ee23721e99d1180361638041ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02ccefb30a91b8e57cd393a9a75b42f840b06918
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159992"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127961"
 ---
 # <a name="cache-a-shared-dataset"></a>Memorizzare nella cache un set di dati condiviso
   Per ottimizzare le prestazioni, è possibile configurare le proprietà relative alla memorizzazione nella cache per un set di dati condiviso. Quando un set di dati condiviso viene memorizzato nella cache, una copia dei risultati di query viene salvata per un determinato periodo di tempo. Il primo utente che richiede un report che utilizza il set di dati condiviso deve attendere il completamento dei risultati di query e di tutte le elaborazioni prima di visualizzare il report. Gli utenti successivi che richiedono il report all'interno del periodo di memorizzazione nella cache otterranno prestazioni migliori perché la query e l'elaborazione sono già state eseguite. È inoltre possibile specificare un piano di aggiornamento della cache per eseguire la query e memorizzare nella cache i risultati fino alla scadenza della cache specificata.  

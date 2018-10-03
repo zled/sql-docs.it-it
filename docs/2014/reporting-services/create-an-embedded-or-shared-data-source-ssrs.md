@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
-caps.latest.revision: 40
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cd820de9b6710e4524b39323bcc9837fad820b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ec59d1259cfde65ca31e47c636109bd165c9e91
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230731"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109441"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>Creare un'origine dati incorporata o condivisa (SSRS)
   Un'origine dati del report consente di specificare un nome e le informazioni di connessione. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta due tipi di origini dati, ovvero incorporate e condivise. Un'origine dati incorporata viene definita in una definizione del report e viene utilizzata solo dal report specifico, mentre un'origine dati condivisa viene definita come elemento separato e può essere utilizzata da più report. Per altre informazioni, vedere [incorporate e condivise le connessioni dati o origini dati &#40;Generatore Report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  

@@ -1,13 +1,11 @@
 ---
-title: Valori restituiti SQLGetInfo per dBASE | Documenti Microsoft
+title: Valori restituiti da SQLGetInfo per dBASE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], DBasedriver
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLGetInfo
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b1d662dd351f8b5a0d0d178b1ed24d2fdd645da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7440c46a8dea10096efc66b4680a2b6c8536695a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904946"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616679"
 ---
-# <a name="sqlgetinfo-returned-values-for-dbase"></a>Valori restituiti SQLGetInfo per dBASE
-La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento e i corrispondenti valori restituiti da **SQLGetInfo**. Queste informazioni possono essere recuperate passando il linguaggio C elencato #defines a **SQLGetInfo** nel *fInfoType* argomento. Per ulteriori informazioni sui valori restituiti da **SQLGetInfo**, vedere il *riferimento per programmatori ODBC*.  
+# <a name="sqlgetinfo-returned-values-for-dbase"></a>Valori restituiti da SQLGetInfo per dBASE
+La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento e i corrispondenti valori restituiti dal **SQLGetInfo**. Queste informazioni possono essere recuperate passando il linguaggio C elencato #defines **SQLGetInfo** nel *fInfoType* argomento. Per altre informazioni sui valori restituiti da **SQLGetInfo**, vedere la *riferimento per programmatori ODBC*.  
   
 > [!NOTE]  
->  In cui **SQLGetInfo** restituisce una maschera a 32 bit, una barra verticale (&#124;) rappresenta un'operazione OR.  
+>  In cui **SQLGetInfo** restituisce una maschera di bit a 32 bit, una barra verticale (&#124;) rappresenta un'operazione OR.  
   
 |InfoType|Valore restituito|  
 |--------------|--------------------|  
@@ -85,9 +82,9 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|DSN da ODBC, o "" Se viene utilizzata la parola chiave DRIVER in ODBC|  
+|SQL_DATA_SOURCE_NAME|Il DSN di ODBC. ini, o "" se parola chiave DRIVER viene usato in ODBC. ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"N" (seconda sull'origine dati).|  
-|SQL_DATABASE_NAME|Directory del database corrente|  
+|SQL_DATABASE_NAME|Directory database corrente|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|"DBASE"|  
 |SQL_DBMS_VER|Più valori|  
@@ -114,7 +111,7 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT|  
 |SQL_GETDATA_EXTENSIONS|Più valori|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (il qualificatore viene restituito in caratteri maiuscoli e minuscoli in modo che Windows NT può individuare la directory.)|  
+|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (il qualificatore viene restituito in minuscolo e maiuscolo in modo che Windows NT possono individuare la directory.)|  
 |SQL_IDENTIFIER_QUOTE_CHAR|"'" (virgolette inverse)|  
 |SQL_KEYWORDS|Più valori|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
@@ -123,7 +120,7 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_MAX_CHAR_LITERAL_LEN|254|  
 |SQL_MAX_COLUMN_NAME_LEN|10|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
-|SQL_MAX_COLUMNS_IN_INDEX|0 (limite sconosciuto o non applicabile)|  
+|SQL_MAX_COLUMNS_IN_INDEX|0 (limitare sconosciuto o non applicabile)|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
 |SQL_MAX_COLUMNS_IN_TABLE|255|  

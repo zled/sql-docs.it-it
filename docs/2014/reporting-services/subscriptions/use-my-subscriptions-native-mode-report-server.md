@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], My Subscriptions page
 - My Subscriptions page [Reporting Services]
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4d06913da04eebdaa249e424fa7b4d66c8e8aaa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a45edaedce83d741d24ee085ccf962854303a68
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153792"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129351"
 ---
 # <a name="use-my-subscriptions"></a>Utilizzare Sottoscrizioni personali
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Gestione report è disponibile un' **sottoscrizioni personali** pagina che consente di organizzare tutte le sottoscrizioni in un'unica posizione. La pagina Sottoscrizioni personali consente infatti di visualizzare, modificare ed eliminare le sottoscrizioni esistenti. Non è tuttavia possibile utilizzarla per creare sottoscrizioni.  

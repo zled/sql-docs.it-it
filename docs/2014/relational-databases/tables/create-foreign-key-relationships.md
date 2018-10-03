@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: baf89a41a42a1ea84e37d103890c3c8ea1ed22db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1b52e98fe47049640a2ee5a3240d9ad43961bae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274557"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128776"
 ---
 # <a name="create-foreign-key-relationships"></a>Creare relazioni di chiave esterna
   In questo argomento si illustra come creare relazioni di chiave esterna in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Una relazione tra due tabelle consente di stabilire un'associazione tra le righe di una tabella e le righe di un'altra tabella.  

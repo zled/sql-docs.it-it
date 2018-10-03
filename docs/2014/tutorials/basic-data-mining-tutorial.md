@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
 - tutorials [Data Mining]
 ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5711bc105432b0d23f5fd2fd2b429449c2549258
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db5b4fcded48a711fc1c8e8c8ffdebdd36562282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314971"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150301"
 ---
 # <a name="basic-data-mining-tutorial"></a>Esercitazione di base sul data mining
   Ecco il [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esercitazione di base di Data Mining. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce un ambiente integrato per la creazione di modelli di data mining e l'esecuzione di stime. In questa esercitazione, si verrà completato uno scenario per una campagna di mailing diretto in cui si usa machine learning per analizzare e identificare il comportamento di acquisto dei clienti. Verrà illustrato come utilizzare tre degli algoritmi di data mining più importanti: clustering, alberi delle decisioni e Naive Bayes. Si apprenderà anche come analizzare i risultati ottenuti utilizzando i visualizzatori modelli di data mining e creare stime e grafici di accuratezza utilizzando gli strumenti di data mining inclusi in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] verrà utilizzata per tutti gli esempi.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytrans.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 295b615c859fa3524e07fa83f4142396cdf6e4c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1be2f23cbcf39b1b3775ef0a8de592ed71240a45
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192151"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058601"
 ---
 # <a name="data-mining-query-transformation"></a>Query di data mining - trasformazione
   La trasformazione Query di data mining esegue query di stima basate su modelli di data mining. Questa trasformazione contiene un generatore di query per la creazione di query DMX (Data Mining Extensions). Il generatore di query consente di creare istruzioni personalizzate per la valutazione dei dati di input della trasformazione in base a un modello di data mining esistente, utilizzando il linguaggio DMX. Per altre informazioni, vedere [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference).  

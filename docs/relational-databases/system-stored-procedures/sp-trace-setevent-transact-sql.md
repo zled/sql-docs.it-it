@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setevent_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 352d406b2c8735cb09787e9cd1554a4df7dd1bc0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005773"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739909"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -361,7 +357,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Per un esempio dell'uso di stored procedure relative alla traccia, vedere [Creare una traccia &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'utente deve disporre delle autorizzazioni ALTER TRACE.  
   
 ## <a name="see-also"></a>Vedere anche  

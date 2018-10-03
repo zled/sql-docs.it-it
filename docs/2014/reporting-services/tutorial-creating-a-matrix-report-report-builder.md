@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a4bb95d4280b2bd411ffdadcddcf3ff58274c69b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 659afc2b2d1536abcf34dad5a40a48efe0f17169
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268167"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159501"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Esercitazione: Creazione di un report matrice (Generatore report)
   In questa esercitazione viene illustrato come creare un report matrice semplice basato su dati di vendita di esempio. La matrice presenta gruppi di righe e di colonne annidati, nonché un gruppo di colonne adiacente. Verrà inoltre illustrato come formattare le colonne e ruotare il testo. Nell'immagine seguente viene illustrato un report simile a quello che verrà creato.  

@@ -1,13 +1,11 @@
 ---
-title: Le funzioni di Visual Basic | Documenti Microsoft
+title: Funzioni di applicazioni Visual Basic | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2849bd9164ca145b38aa05aa0357cbc42f2719f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 15ac62cd4c379d51bc537f0cdf83942bc334fdbb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273230"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611599"
 ---
-# <a name="visual-basic-for-applications-functions"></a>Le funzioni di Visual Basic
-Data shaping espressioni di calcolo, è possibile utilizzare Visual Basic per le funzioni seguenti:  
+# <a name="visual-basic-for-applications-functions"></a>Funzioni di Visual Basic, Applications Edition
+Nell'esempio Visual Basic per le funzioni di applicazioni è utilizzabile nelle espressioni di calcolo di shaping dei dati:  
   
 |||||||  
 |-|-|-|-|-|-|  
@@ -53,9 +50,9 @@ Data shaping espressioni di calcolo, è possibile utilizzare Visual Basic per le
   
 ## <a name="see-also"></a>Vedere anche  
  [Accesso alle righe in un Recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Data Shaping Panoramica](../../../ado/guide/data/data-shaping-overview.md)   
- [Grammatica formale forma](../../../ado/guide/data/formal-shape-grammar.md)   
- [Provider desiderati per il Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Clausola APPEND forma](../../../ado/guide/data/shape-append-clause.md)   
+ [Panoramica del Data Shaping](../../../ado/guide/data/data-shaping-overview.md)   
+ [Grammatica formale per Shape](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Provider necessari per il Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Clausola APPEND per Shape](../../../ado/guide/data/shape-append-clause.md)   
  [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)   
  [Clausola COMPUTE di Shape](../../../ado/guide/data/shape-compute-clause.md)

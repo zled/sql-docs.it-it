@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -25,18 +24,17 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 50343b871322c373b297e5b1a062df844621ba2d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 10eaa071ed8fa57bb648e5ece87dc91bb4cb62e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352813"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779189"
 ---
-# <a name="clr-integration-architecture---clr-hosted-environment"></a>Architettura di integrazione CLR - ambiente ospitato in CLR
+# <a name="clr-integration-architecture---clr-hosted-environment"></a>Architettura di integrazione CLR - Ambiente ospitato in CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L'integrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con CLR (Common Language Runtime) di .NET Framework consente ai programmatori di database di utilizzare linguaggi come Visual C#, Visual Basic .NET e Visual C++. Tra i tipi di logica di business che i programmatori possono scrivere con tali linguaggi figurano le funzioni, le stored procedure, i trigger, i tipi di dati e le aggregazioni.  
   
@@ -67,7 +65,7 @@ ms.locfileid: "37352813"
   
  I modelli diversi per threading, pianificazione e gestione della memoria presentano una sfida di integrazione per un sistema di gestione di database relazionali (RDBMS) con scalabilità in grado di supportare migliaia di sessioni utente simultanee. L'architettura deve garantire che la scalabilità del sistema non venga danneggiata dal codice utente che chiama direttamente le API per le primitive di threading, memoria e sincronizzazione.  
   
-###### <a name="security"></a>Security  
+###### <a name="security"></a>Sicurezza  
  Il codice utente in esecuzione nel database deve essere conforme alle regole di autenticazione e autorizzazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in caso di accesso a oggetti di database, quali tabelle e colonne. Gli amministratori del database, inoltre, devono essere in grado di controllare l'accesso alle risorse del sistema operativo, ad esempio file e accesso di rete, dal codice utente in esecuzione nel database. Questo aspetto è importante in quanto i linguaggi di programmazione gestita, diversamente dai linguaggi non gestiti come Transact-SQL, forniscono API per accedere a tali risorse. Il sistema deve fornire un metodo protetto che consenta al codice utente di accedere alle risorse del computer al di fuori dell'elaborazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per altre informazioni, vedere [Sicurezza per l'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
 ###### <a name="performance"></a>restazioni  

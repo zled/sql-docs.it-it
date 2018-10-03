@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - aggregate functions [SQL Server], user-defined
@@ -15,12 +13,12 @@ ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f1d6b1383f6f7a26f56217feda38892f1e972fe1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 23d5180928f4f3335aa17dff61b50e6fdd19549f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413190"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157141"
 ---
 # <a name="create-user-defined-aggregates"></a>Creazione di funzioni di aggregazione definite dall'utente
   È possibile creare un oggetto di database all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmato in un assembly CLR. Gli oggetti di database che possono sfruttare il complesso modello di programmazione fornito da CLR includono trigger, stored procedure, funzioni, funzioni di aggregazione e tipi.  

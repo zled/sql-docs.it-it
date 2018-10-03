@@ -1,40 +1,37 @@
 ---
-title: Esecuzione di oggetti Business in Servizi componenti | Documenti Microsoft
+title: Esecuzione di oggetti Business in Servizi componenti | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - component services in RDS [ADO]
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0c83442d248d7427ece0837f4ab449e37a9f3d9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f4e59138b4594a6af741f4e73bb07df4e5a1178b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274380"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634735"
 ---
-# <a name="running-business-objects-in-component-services"></a>Esecuzione di oggetti Business in Servizi componenti
+# <a name="running-business-objects-in-component-services"></a>Esecuzione di oggetti business nei Servizi componenti
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Gli oggetti business possono essere file eseguibili (.exe) o librerie a collegamento dinamico (DLL). La configurazione utilizzata per eseguire l'oggetto business dipende se l'oggetto è un file con estensione dll o .exe:  
+ Gli oggetti business possono essere file eseguibili (.exe) o librerie a collegamento dinamico (DLL). La configurazione utilizzata per eseguire l'oggetto business dipende dal fatto che l'oggetto è un file con estensione dll o .exe:  
   
--   Gli oggetti business creati come file .exe possono essere chiamati tramite DCOM. Se vengono utilizzati tramite Internet Information Services (IIS), sono soggette a ulteriori marshalling dei dati, che può rallentare le prestazioni di client.  
+-   Gli oggetti business creati come file .exe possono essere chiamati tramite DCOM. Se vengono utilizzati tramite Internet Information Services (IIS), sono soggetti a marshalling aggiuntiva dei dati, con conseguente rallentano delle prestazioni dei client.  
   
--   Gli oggetti business creati come file con estensione DLL possono essere utilizzati tramite IIS e, pertanto anche tramite HTTP. Possono inoltre essere utilizzati su DCOM solo tramite Servizi componenti o tramite Microsoft Transaction Server, se si utilizza Windows NT. Oggetto business dll dovrà essere registrato nel computer del server IIS di accedervi tramite IIS. Per informazioni su come configurare una DLL per l'esecuzione su DCOM, vedere la sezione [attivazione di una DLL per l'esecuzione su DCOM](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md).  
+-   Gli oggetti business creati come file con estensione DLL possono essere usati tramite IIS e pertanto anche tramite HTTP. Possono inoltre essere utilizzati su DCOM solo tramite Servizi componenti o tramite Microsoft Transaction Server, se si utilizza Windows NT. Oggetto business dll dovrà essere registrata nel computer del server IIS per accedere a essi tramite IIS. Per informazioni su come configurare un file DLL per l'esecuzione su DCOM, vedere la sezione [attivazione di una DLL per l'esecuzione su DCOM](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md).  
   
 > [!NOTE]
->  Quando gli oggetti di business nel livello intermedio vengono implementati come componenti di Servizi componenti utilizzando **GetObjectContext**, **SetComplete**, e **SetAbort**, il business gli oggetti possono utilizzare Servizi componenti (o MTS, se si utilizza Windows NT) gli oggetti di contesto per mantenere il proprio stato tra più chiamate del client. Questo scenario è possibile con DCOM, che viene in genere implementato tra client e server in una rete intranet attendibili. In questo caso, il [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oggetto e [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) metodo sul lato client vengono sostituiti da oggetto contesto di transazione e **CreateInstance** (metodo), che sono fornite dal **ITransactionContext** l'interfaccia e implementati da Servizi componenti.  
+>  Quando gli oggetti business nel livello intermedio vengono implementati come componenti di Servizi componenti usando **GetObjectContext**, **SetComplete**, e **SetAbort**, l'azienda gli oggetti possono utilizzare Servizi componenti (o MTS, se si utilizza Windows NT) gli oggetti di contesto per mantenere il proprio stato tra più chiamate del client. Questo scenario è possibile eseguire con DCOM, che viene in genere implementata tra client e server in una rete intranet attendibili. In questo caso, il [Servizi Desktop remoto. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oggetto e [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) metodo sul lato client vengono sostituiti dall'oggetto di contesto di transazione e **CreateInstance** (metodo), che vengono forniti dal **ITransactionContext** interfaccia e implementati da Servizi componenti.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)

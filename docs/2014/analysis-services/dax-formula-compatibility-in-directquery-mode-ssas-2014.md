@@ -4,25 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
-caps.latest.revision: 3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68a73fd64b9bba02a917c8538f79062ff85afbdb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4b355fccd5366ec287e19ab0fb9c45d904494eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189478"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113694"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilità delle formule DAX in modalità DirectQuery (SSAS 2014)
 Il linguaggio Data Analysis Expression (DAX) può essere utilizzato per creare misure e altre formule personalizzate per l'uso nei modelli tabulari di Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelli di dati nelle cartelle di lavoro di Excel e modelli di dati di Power BI Desktop. Nella maggior parte dei casi, i modelli creati in questi ambienti sono identici ed è possibile usare le stesse misure, relazioni e gli indicatori KPI, e così via. Tuttavia, se si crea un modello tabulare di Analysis Services e distribuirlo nella modalità DirectQuery, esistono alcune restrizioni riguardanti le formule che è possibile usare. In questo argomento viene fornita una panoramica di tali differenze, elenca le funzioni che non sono supportate in SQL Server 2014 Analysis Services tabulars modello a livello di compatibilità 1100 o 1103 e nella modalità DirectQuery e sono elencate le funzioni che sono supportate ma potrebbe essere restituire risultati diversi.  

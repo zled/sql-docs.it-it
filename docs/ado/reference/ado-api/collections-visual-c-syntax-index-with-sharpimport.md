@@ -1,13 +1,11 @@
 ---
-title: 'Raccolte (indice sintassi Visual C++ con #import) | Documenti Microsoft'
+title: 'Raccolte (indice sintassi Visual C++ con #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -18,21 +16,20 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3378f8e44d8d667933fe41a7164ba4c56acc20ce
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1fa18eeacad58195c42d03b12f03332c332b0a35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276530"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662659"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Raccolte (indice sintassi Visual C++ con #import)
-È utile per gli insiemi ereditano determinati metodi e proprietà comuni.  
+È utile sapere che le raccolte ereditano alcuni metodi e proprietà comuni.  
   
- Ereditano tutte le raccolte di **conteggio** proprietà e **aggiornare** (metodo) e tutte le raccolte di aggiungono il **elemento** proprietà. Il **errori** insieme aggiunge il **deselezionare** metodo. Il **parametri** raccolta eredita le **Append** e **eliminare** metodi, mentre il **campi** insieme aggiunge il **Append**, **eliminare**, e **aggiornamento** metodi.  
+ Ereditano tutte le raccolte il **conteggio** proprietà e **aggiornare** metodo e tutte le raccolte di aggiungono il **elemento** proprietà. Il **errori** raccolta aggiunge le **Clear** (metodo). Il **parametri** raccolta eredita le **Append** e **Elimina** metodi, mentre il **campi** raccolta aggiunge le **Append**, **eliminare**, e **Update** metodi.  
   
 ## <a name="properties-collection"></a>Raccolta delle proprietà  
   
@@ -102,6 +99,6 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta di errori (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Raccolta di campi (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections
 ms.assetid: 548672ce-e403-4aca-b67a-c2c797f053dd
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5e750ec50aff2d4d69b90a974b28ddb77c54b068
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78c60832ea6111b0682e8a6d2b5ab3540a19cfb1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163602"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159741"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Connessione ai dati di origine (client di data mining per Excel)
   In questo argomento viene descritto come creare e utilizzare le connessioni utilizzate per archiviare i modelli di data mining e per accedere a dati esterni archiviati in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -164,7 +161,7 @@ ms.locfileid: "37163602"
   
 -   ntext  
   
--   BINARY  
+-   binary  
   
 ## <a name="see-also"></a>Vedere anche  
  [Traccia &#40;Client di Data Mining per Excel&#41;](trace-data-mining-client-for-excel.md)  

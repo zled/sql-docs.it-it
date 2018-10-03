@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Distribution Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Distribution element
 ms.assetid: a1309b90-8ad8-431b-a918-67f0cdd4fd20
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea3422fead59b45957ebdb15735736fba89ddff2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f71addc3c9c793a19e88e52bb0b82519b5f33f1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163542"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166451"
 ---
 # <a name="distribution-element-assl"></a>Elemento Distribution (ASSL)
   Contiene un valore specifico del provider che descrive i valori come scalari vengono distribuiti in una colonna di una [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
@@ -51,7 +48,7 @@ ms.locfileid: "37163542"
 |Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
-|Valore predefinito|None|  
+|Valore predefinito|Nessuno|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -59,7 +56,7 @@ ms.locfileid: "37163542"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Note  
  I valori disponibili per il `Distribution` elemento, ad esempio *normale* o *uniforme,* specifiche per ogni provider di algoritmi di data mining. Per ulteriori informazioni sui valori validi `Distribution`, vedere la documentazione riguardante il provider dell’algoritmo di data mining.  

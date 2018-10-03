@@ -1,13 +1,11 @@
 ---
-title: Gruppi di raccolta (ADOX) | Documenti Microsoft
+title: Gruppi di raccolta (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,44 +15,43 @@ f1_keywords:
 helpviewer_keywords:
 - Groups collection [ADOX]
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 253cf76adf8f32734b4bd878cb2f623e79489ccb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6b8aea077af67c882830220da9ce24b802e25e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285970"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801431"
 ---
-# <a name="groups-collection-adox"></a>Raccolta di gruppi (ADOX)
+# <a name="groups-collection-adox"></a>Raccolta di Groups (ADOX)
 Contiene tutti archiviati [gruppo](../../../ado/reference/adox-api/group-object-adox.md) gli oggetti di un catalogo o un utente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il **gruppi** raccolta di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta tutti gli account di gruppo del catalogo. Il **gruppi** raccolta per un [utente](../../../ado/reference/adox-api/user-object-adox.md) rappresenta solo il gruppo a cui appartiene l'utente.  
   
- Il [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) metodo per un **gruppi** insieme è univoco in ADOX. È possibile effettuare le operazioni seguenti:  
+ Il [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) metodo per un **gruppi** raccolta sia univoca per ADOX. È possibile effettuare le operazioni seguenti:  
   
--   Aggiungere un nuovo gruppo di sicurezza alla raccolta con il **Append** metodo.  
+-   Aggiungere un nuovo gruppo di sicurezza alla raccolta con il **Append** (metodo).  
   
- Le proprietà e i metodi rimanenti sono standard per le raccolte di ADO. È possibile effettuare le operazioni seguenti:  
+ Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile effettuare le operazioni seguenti:  
   
--   Accedere a un gruppo nella raccolta con il [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
+-   Accedere a un gruppo di nell'insieme con il [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
   
--   Restituire il numero di gruppi contenuti nella raccolta con il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà.  
+-   Restituisce il numero di gruppi contenuti nella raccolta con il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà.  
   
--   Rimuovere un gruppo dalla raccolta con il [eliminare](../../../ado/reference/adox-api/delete-method-adox-collections.md) metodo.  
+-   Rimuovere un gruppo dalla raccolta con il [eliminare](../../../ado/reference/adox-api/delete-method-adox-collections.md) (metodo).  
   
--   Aggiornare gli oggetti nella raccolta in modo da riflettere lo schema del database corrente con il [aggiornamento](../../../ado/reference/ado-api/refresh-method-ado.md) metodo.  
+-   Aggiornare gli oggetti nella raccolta in modo da riflettere lo schema del database corrente con il [Aggiorna](../../../ado/reference/ado-api/refresh-method-ado.md) (metodo).  
   
 > [!NOTE]
->  Prima di accodare un **gruppo** dell'oggetto per il **gruppi** raccolta di un **utente** oggetto, un **gruppo** oggetto con lo stesso [ Nome](../../../ado/reference/adox-api/name-property-adox.md) dell'oggetto da aggiungere deve già esistere nel **gruppi** insieme il **catalogo**.  
+>  Prima di accodare un **gruppo** dell'oggetto per il **gruppi** raccolta di un **utente** oggetto, un **gruppo** oggetto con lo stesso [ Nome](../../../ado/reference/adox-api/name-property-adox.md) dell'oggetto da aggiungere deve già esistere nel **gruppi** insieme del **catalogo**.  
   
- In questa sezione contiene l'argomento seguente.  
+ In questa sezione contiene gli argomenti seguenti.  
   
 -   [Proprietà, metodi ed eventi della raccolta di oggetti Group](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto del catalogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Oggetto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataconversiontrans.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b9bc5c7e4845adbc15d2e73d45ea85ff851084d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 29a88369b1764a9cd4d11cc476affbebca79dabb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207541"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073491"
 ---
 # <a name="data-conversion-transformation"></a>Conversione dati - trasformazione
   La trasformazione Conversione dati converte i dati in una colonna di input in un tipo di dati diverso e quindi li copia in una nuova colonna di output. Un pacchetto può ad esempio estrarre dati da più origini e quindi utilizzare questa trasformazione per convertire le colonne nel tipo di dati richiesto dall'archivio dati di destinazione. È possibile applicare più conversioni a una singola colonna di input.  
@@ -48,7 +45,7 @@ ms.locfileid: "37207541"
   
  Questa trasformazione include un input, un output e un output degli errori.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice. Per informazioni sull'utilizzo della trasformazione Conversione dati in Progettazione SSIS, vedere [Conversione di dati in un tipo di dati diverso utilizzando la trasformazione Conversione dati](data-conversion-transformation.md) e [Editor trasformazione Conversione dati](../../data-conversion-transformation-editor.md). Per informazioni sull'impostazione delle proprietà di questa trasformazione a livello di programmazione, vedere [Proprietà comuni](../../common-properties.md) e [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md).  
   
 ## <a name="related-content"></a>Contenuto correlato  

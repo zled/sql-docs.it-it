@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -21,18 +19,17 @@ helpviewer_keywords:
 - user-defined types [CLR integration], indexes
 - indexes [CLR integration]
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
-caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0225bb7be9cc100e05f3c5119a0b87db6b2d7be7
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: bf8c7dd55130026c54cc4e7b8aa24e1c99e96ada
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358183"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855049"
 ---
-# <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>Utilizzo di tipi definiti dall'utente - definizione di tabelle e colonne UDT
+# <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>Uso di tipi definiti dall'utente - Definizione di tabelle e colonne UDT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Una volta che l'assembly contenente il tipo definito dall'utente (UDT) è stata registrata definizione una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, può essere utilizzato in una definizione di colonna.  
   

@@ -1,13 +1,11 @@
 ---
-title: Attributi di connessione | Documenti Microsoft
+title: Gli attributi di connessione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection attributes
@@ -16,28 +14,27 @@ helpviewer_keywords:
 - connection attributes [ODBC]
 - connecting to driver [ODBC], connection attributes
 ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90119e72be2ea64da85fc6790b4e28b9e679a8f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0fad1db10e40c71d22dd75417420c54cefa7803
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909816"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750379"
 ---
 # <a name="connection-attributes"></a>Attributi di connessione
-Attributi di connessione sono riportate le caratteristiche della connessione. Poiché ad esempio le transazioni si verificano al livello della connessione, il livello di isolamento delle transazioni è un attributo di connessione. Analogamente, il timeout di accesso o il numero di secondi di attesa durante il tentativo di connessione prima del timeout, è un attributo di connessione.  
+Gli attributi di connessione sono illustrate le caratteristiche della connessione. Poiché ad esempio le transazioni si verificano al livello della connessione, il livello di isolamento delle transazioni è un attributo di connessione. Analogamente, il timeout di accesso o il numero di secondi di attesa durante il tentativo di connessione prima del timeout, è un attributo di connessione.  
   
- Gli attributi di connessione sono impostati con **SQLSetConnectAttr** e le relative impostazioni correnti recuperati con **SQLGetConnectAttr**. Se **SQLSetConnectAttr** viene chiamato prima che il driver viene caricato, gli archivi di gestione Driver gli attributi nella relativa struttura della connessione e li imposta nel driver come parte del processo di connessione. Non è necessario che un'applicazione impostare eventuali attributi di connessione. tutti gli attributi di connessione hanno impostazioni predefinite, alcune delle quali sono specifici del driver.  
+ Gli attributi di connessione sono impostati con **SQLSetConnectAttr** e le relative impostazioni correnti recuperati con **SQLGetConnectAttr**. Se **SQLSetConnectAttr** viene chiamato prima che il driver viene caricato, il Driver Manager archivia gli attributi nella relativa struttura di connessione e li imposta nel driver come parte del processo di connessione. Non è necessario che un'applicazione impostare eventuali attributi di connessione. tutti gli attributi di connessione hanno impostazioni predefinite, alcune delle quali sono specifici del driver.  
   
- Un attributo di connessione può essere impostato prima o dopo la connessione, o entrambi, a seconda dell'attributo e il driver. Il timeout di accesso (SQL_ATTR_LOGIN_TIMEOUT) valido per il processo di connessione ed è efficace solo se è impostato prima della connessione. Gli attributi che specificano se usare la libreria di cursori ODBC (SQL_ATTR_ODBC_CURSORS) e le dimensioni del pacchetto di rete (SQL_ATTR_PACKET_SIZE) devono essere impostati prima della connessione, perché la libreria di cursori ODBC si trova tra gestione Driver e il driver e è pertanto necessario caricare prima il driver.  
+ Un attributo di connessione può essere impostato prima o dopo la connessione, o entrambi, a seconda dell'attributo e il driver. Il timeout di accesso (SQL_ATTR_LOGIN_TIMEOUT) si applica al processo di connessione ed è efficace solo se è impostato prima della connessione. Gli attributi che specificano se usare la libreria di cursori ODBC (SQL_ATTR_ODBC_CURSORS) e le dimensioni del pacchetto di rete (SQL_ATTR_PACKET_SIZE) devono essere impostati prima della connessione, poiché la libreria di cursori ODBC si trova tra la gestione di Driver e il driver e di conseguenza deve essere caricato prima del driver.  
   
- Gli attributi per specificare se un'origine dati è di sola lettura o lettura / scrittura (SQL_ATTR_ACCESS_MODE) e il catalogo corrente (SQL_ATTR_CURRENT_CATALOG) può essere impostate prima o dopo la connessione, a seconda del driver. Tuttavia, applicazioni interoperative impostarle prima della connessione poiché alcuni driver non supporta la modifica di questi dopo la connessione.  
+ Gli attributi per specificare se un'origine dati è di sola lettura o lettura / scrittura (SQL_ATTR_ACCESS_MODE) e il catalogo corrente (SQL_ATTR_CURRENT_CATALOG) possono essere impostati prima o dopo la connessione, a seconda del driver. Tuttavia, applicazioni interoperative impostarli prima della connessione in quanto alcuni driver non supportano la modifica di questi dopo la connessione.  
   
- Alcuni attributi di connessione è un valore predefinito prima di stabilire la connessione, mentre altri non. Quelli che sono SQL_ATTR_ACCESS_MODE SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE e SQL_ATTR_TRACEFILE.  
+ Alcuni attributi di connessione prevedono un valore predefinito prima che venga effettuata la connessione, mentre altre no. Quelli che si sono SQL_ATTR_ACCESS_MODE SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE e SQL_ATTR_TRACEFILE.  
   
- Dopo la connessione, è necessario impostare gli attributi di connessione di conversione (SQL_ATTR_TRANSLATE_DLL e SQL_ATTR_TRANSLATE_OPTION).  
+ Gli attributi di connessione di traduzione (SQL_ATTR_TRANSLATE_DLL e SQL_ATTR_TRANSLATE_OPTION) devono essere impostati dopo la connessione.  
   
- In qualsiasi momento, è possono impostare tutti gli altri attributi di connessione. Per ulteriori informazioni, vedere il [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) descrizione della funzione. (Gli attributi di connessione non possono essere impostati a livello di ambiente da una chiamata a **SQLSetEnvAttr**.)
+ Tutti gli altri attributi di connessione possono essere impostate in qualsiasi momento. Per altre informazioni, vedere la [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) descrizione della funzione. (Gli attributi di connessione nelze nastavit il livello di ambiente da una chiamata a **SQLSetEnvAttr**.)

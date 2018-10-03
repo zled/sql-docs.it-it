@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSourceViewBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataSourceViewBinding data type
 ms.assetid: 1f08e2d8-b279-4181-9257-e56f9fcbd9bf
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d97c0c08a686ef364f321dc466c95cc5da3a4f54
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 33a8c49ca844fa98d41feab4161ed2c3b144712b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332691"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054491"
 ---
 # <a name="datasourceviewbinding-data-type-assl"></a>Tipo di dati DataSourceViewBinding (ASSL)
   Definisce un tipo di dati derivato che rappresenta un'associazione tra una vista origine dati e un elemento padre.  
@@ -49,7 +46,7 @@ ms.locfileid: "37332691"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipi di dati di base|[Associazione](binding-data-type-assl.md)|  
+|Tipi di dati di base|[associazione](binding-data-type-assl.md)|  
 |Tipi di dati derivati|None|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  

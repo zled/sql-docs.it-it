@@ -1,13 +1,11 @@
 ---
-title: FieldAttributeEnum | Documenti Microsoft
+title: FieldAttributeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,41 +13,40 @@ f1_keywords:
 helpviewer_keywords:
 - FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36f972b9fb1f9592c6a9809b415e5570990a9057
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 80fb27aa51d6e0a44f8f006711708e24cd04bef3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278630"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632319"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Specifica uno o più attributi di un [campo](../../../ado/reference/ado-api/field-object.md) oggetto.  
   
 |Costante|valore|Description|  
 |--------------|-----------|-----------------|  
-|**adFldCacheDeferred**|0x1000|Indica che il provider memorizza nella cache i valori dei campi e che le letture successive vengono eseguite dalla cache.|  
-|**adFldFixed**|0x10|Indica che il campo dati a lunghezza fissa.|  
-|**adFldIsChapter**|0x2000|Indica che il campo contiene un valore di capitolo, che specifica un recordset figlio specifico correlato al campo padre. Campi dei capitoli vengono generalmente utilizzati con il data shaping o filtri.|  
-|**adFldIsCollection**|0x40000|Indica che il campo specifica che la risorsa rappresentata dal record è una raccolta di altre risorse, ad esempio una cartella, anziché a una risorsa semplice, ad esempio un file di testo.|  
-|**adFldKeyColumn**|0x8000|Indica che il campo specificato in tutto o parte di chiave primaria della colonna.|  
-|**adFldIsDefaultStream**|0x20000|Indica che il campo contiene il flusso predefinito per la risorsa rappresentata dal record. Ad esempio, il flusso predefinito può essere contenuto HTML di una cartella radice in un sito Web, che viene pubblicato automaticamente quando viene specificato l'URL radice.|  
-|**adFldIsNullable**|0x20|Indica che il campo ammette valori null.|  
-|**adFldIsRowURL**|0x10000|Indica che il campo contiene l'URL che corrisponde al nome della risorsa dall'archivio dati rappresentato dall'oggetto record.|  
-|**adFldLong**|0x80|Indica che il campo è un campo binario lungo. Indica inoltre che è possibile utilizzare il [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) e [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) metodi.|  
-|**adFldMayBeNull**|0x40|Indica che è possibile leggere i valori null dal campo.|  
-|**adFldMayDefer**|0x2|Indica che il campo viene posticipato, vale a dire i valori dei campi non vengono recuperati dall'origine dati con il record completo, ma solo quando si accede in modo esplicito.|  
-|**adFldNegativeScale**|0x4000|Indica che il campo rappresenta un valore numerico da una colonna che supporta valori di scala negativa. La scala viene specificata per il [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) proprietà.|  
-|**adFldRowID**|0x100|Indica che il campo contiene un identificatore di riga persistente che non può essere scritta senza alcun valore significativo, ad eccezione per identificare la riga (ad esempio un numero di record, l'identificatore univoco e così via).|  
-|**adFldRowVersion**|0x200|Indica che il campo contiene un tipo di indicatore di data e ora utilizzato per tenere traccia degli aggiornamenti.|  
-|**adFldUnknownUpdatable**|0x8|Indica che il provider non è possibile determinare se è possibile scrivere nel campo.|  
+|**adFldCacheDeferred**|0x1000|Indica che il provider vengono memorizzati nella cache i valori dei campi e che le letture successive vengono eseguite dalla cache.|  
+|**adFldFixed**|0x10|Indica che il campo contiene dati a lunghezza fissa.|  
+|**adFldIsChapter**|0x2000|Indica che il campo contiene un valore del capitolo, che specifica un set di record figlio specifici correlati al campo padre. In genere capitolo campi vengono usati con il data shaping o filtri.|  
+|**adFldIsCollection**|0x40000|Indica che il campo di specifica che la risorsa rappresentata dal record è una raccolta di altre risorse, ad esempio una cartella, invece di una risorsa semplice, ad esempio un file di testo.|  
+|**adFldKeyColumn**|0x8000|Indica che il campo di specifica di tutta o parte di chiave primaria della colonna.|  
+|**adFldIsDefaultStream**|0x20000|Indica che il campo contiene il flusso predefinito per la risorsa rappresentata dal record. Ad esempio, il flusso predefinito può essere il contenuto HTML di una cartella radice in un sito Web, che vengono automaticamente resi disponibili quando viene specificato l'URL radice.|  
+|**adFldIsNullable**|0x20|Indica che il campo ammette i valori null.|  
+|**adFldIsRowURL**|0x10000|Indica che il campo contiene l'URL che denomina la risorsa dall'archivio dati rappresentato dal record.|  
+|**adFldLong**|0x80|Indica che il campo è un campo binario long. Indica inoltre che è possibile usare la [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) e [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) metodi.|  
+|**adFldMayBeNull**|0x40|Indica che è possibile leggere i valori null nel campo.|  
+|**adFldMayDefer**|0x2|Indica che il campo viene rinviato, vale a dire, i valori dei campi non vengono recuperati dall'origine dati con il record completo, ma solo quando si accede in modo esplicito.|  
+|**adFldNegativeScale**|0x4000|Indica che il campo rappresenta un valore numerico da una colonna che supporta valori di scala negativo. La scala è specificata per il [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) proprietà.|  
+|**adFldRowID**|0x100|Indica che il campo contiene un identificatore di riga persistente che non può essere scritte e non ha alcun valore significativo, ad eccezione per identificare la riga (ad esempio un numero di record, un identificatore univoco e così via).|  
+|**adFldRowVersion**|0x200|Indica che il campo contiene un tipo di indicatore di data e ora usato per tenere traccia degli aggiornamenti.|  
+|**adFldUnknownUpdatable**|0x8|Indica che il provider non è possibile determinare se è possibile scrivere al campo.|  
 |**adFldUnspecified**|-1 0xFFFFFFFF|Indica che il provider non siano specificati gli attributi di campo.|  
-|**adFldUpdatable**|0x4|Indica che è possibile scrivere nel campo.|  
+|**adFldUpdatable**|0x4|Indica che è possibile scrivere al campo.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
  Package: **com.ms.wfc.data**  
   
 |Costante|  

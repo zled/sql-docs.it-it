@@ -1,52 +1,49 @@
 ---
-title: Quando utilizzare le procedure | Documenti Microsoft
+title: Quando usare le procedure | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], about procedures
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dbc53507bf2cdf3333e0d36763ad7ecf7d359155
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82e71e6849902eb2f02423560c534056112a139a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917376"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854519"
 ---
-# <a name="when-to-use-procedures"></a>Quando utilizzare le procedure
-Esistono diversi vantaggi rispetto all'utilizzo delle procedure, tutte basata sul fatto che tramite le procedure Sposta istruzioni SQL dall'applicazione per l'origine dati. Ciò che resta nell'applicazione è una chiamata di procedura interoperativa. Tali vantaggi includono:  
+# <a name="when-to-use-procedures"></a>Quando usare le procedure
+Esistono numerosi vantaggi rispetto all'utilizzo delle procedure; tutti basata sul fatto che tramite le procedure passa istruzioni SQL dall'applicazione per l'origine dati. Ciò che resta nell'applicazione è una chiamata di procedura interoperativa. Tali vantaggi includono:  
   
--   **Prestazioni** procedure vengono in genere il modo più rapido per eseguire istruzioni SQL. Ad esempio preparata esecuzione, l'istruzione viene compilato ed eseguito in due fasi distinte. A differenza di esecuzione preparata, procedure vengono eseguite solo in fase di esecuzione. Vengono compilati in un altro momento.  
+-   **Prestazioni** procedure vengono in genere il modo più rapido per eseguire istruzioni SQL. Come preparare l'esecuzione, l'istruzione viene compilato ed eseguito in due passaggi distinti. A differenza di esecuzione preparata, procedure vengono eseguite solo in fase di esecuzione. Vengono compilati in un momento diverso.  
   
--   **Le regole business** A *regola business* è una regola sul modo in cui una società di business. Ad esempio, solo un utente con il titolo del venditore potrebbe essere consentito per aggiungere nuovi ordini di vendita. Immissione di queste regole nelle procedure consente alle aziende di singoli personalizzare le applicazioni verticali riscrivendo le procedure per l'applicazione chiamate senza dover modificare il codice dell'applicazione. Ad esempio, un'applicazione di immissione ordini potrebbe chiamare la routine **InsertOrder** con un numero fisso di parametri; esattamente come **InsertOrder** viene implementato può variare da una società a.  
+-   **Le regole di business** un' *regola business* è una regola sul modo in cui un'azienda intrattiene relazioni commerciali. Ad esempio, solo gli utenti con il titolo del venditore potrebbe essere consentito aggiungere nuovi ordini di vendita. L'inserimento di queste regole nelle procedure consente alle aziende singoli personalizzare le applicazioni verticali riscrivendo le procedure chiamate dall'applicazione senza dover modificare il codice dell'applicazione. Ad esempio, un'applicazione di immissione dell'ordine potrebbe chiamare la routine **InsertOrder** con un numero fisso di parametri; esattamente come **InsertOrder** viene implementato possono variare dalla società.  
   
--   **Replaceability** strettamente correlate per il posizionamento delle regole di business nelle procedure è il fatto che le procedure possono essere sostituite senza ricompilare l'applicazione. Se una regola business viene modificata dopo che una società ha acquistato e installata un'applicazione, la società può sostituire la routine contenente tale regola. Dal punto di vista dell'applicazione, non è stata modificata; comunque, chiama una particolare procedura per completare un'attività particolare.  
+-   **Replaceability** strettamente correlati all'inserimento di regole di business nelle procedure è dovuto al fatto che le procedure possono essere sostituite senza ricompilare l'applicazione. Se una regola business viene modificata dopo che una società ha acquistato e ha installato un'applicazione, la società può sostituire la routine contenente tale regola. Dal punto di vista dell'applicazione, è cambiato nulla; viene chiamato comunque una particolare procedura per portare a termine una determinata attività.  
   
--   **SQL DBMS specifici** procedure forniscono un modo per le applicazioni di sfruttare SQL DBMS specifici e sono tuttora disponibili interoperativa. Ad esempio, una procedura in un sistema DBMS che supporta le istruzioni di controllo di flusso in SQL potrebbe intercettare e correggere gli errori, mentre una procedura in un sistema DBMS che non supportano le istruzioni di controllo di flusso può semplicemente restituire un errore.  
+-   **SQL specifici del DBMS** procedure forniscono un modo per le applicazioni dagli exploit specifici del DBMS SQL e sono tuttora disponibili interoperativa. Ad esempio, una procedura in un sistema DBMS che supporta le istruzioni di controllo di flusso in SQL potrebbe intercettare e correggere gli errori, mentre una procedura in un sistema DBMS che non supporta le istruzioni di controllo di flusso può semplicemente restituire un errore.  
   
--   **Procedure di restare attiva quando le transazioni** in alcune origini dati, i piani di accesso per le istruzioni preparate tutti su una connessione vengono eliminati quando una transazione viene eseguito il commit o rollback. Inserire le istruzioni SQL in procedure, che sono archiviate in modo permanente nell'origine dati, le istruzioni di superare la transazione. Se le procedure sopravvivono un preparata parzialmente preparata, o non preparato lo stato è specifico del DBMS.  
+-   **Le procedure sopravvivono transazioni** alcune origini dati, i piani di accesso per le istruzioni preparate tutti su una connessione verranno eliminati quando una transazione viene eseguito il commit o rollback. Inserendo istruzioni SQL in procedure che sono archiviate in modo permanente nell'origine dati, le istruzioni di sopravvivono alla transazione. Se le procedure di sopravvivono in un preparata, parzialmente preparata, o non preparato lo stato è specifici del DBMS.  
   
--   **Separare sviluppo** procedure possono essere sviluppate separatamente dal resto dell'applicazione. In grandi aziende, questo potrebbe fornire un modo per sfruttare ulteriormente le competenze di programmatori altamente specializzate. In altre parole, i programmatori di applicazioni è possono scrivere codice dell'interfaccia utente e ai programmatori di database è possono scrivere routine.  
+-   **Separare sviluppo** procedure possono essere sviluppate separatamente dal resto dell'applicazione. In grandi aziende, questo potrebbe fornire un modo per sfruttare ulteriormente le competenze degli sviluppatori altamente specializzati. In altre parole, i programmatori di applicazioni possono scrivere il codice dell'interfaccia utente e ai programmatori di database possono scrivere procedure.  
   
- Procedure vengono utilizzate in genere da applicazioni personalizzate e verticale. Queste applicazioni tendono a eseguire attività fissa, ed è possibile per le chiamate di procedura a livello di codice in essi contenuti. Ad esempio, un'applicazione di immissione dell'ordine può chiamare le procedure **InsertOrder**, **DeleteOrder**, **UpdateOrder**, e **GetOrders** .  
+ Procedure vengono in genere usate da applicazioni personalizzate e verticale. Queste applicazioni tendono a eseguire attività fissa, ed è possibile per le chiamate di procedura a livello di codice in essi contenuti. Ad esempio, un'applicazione di immissione dell'ordine può chiamare le procedure descritte **InsertOrder**, **DeleteOrder**, **UpdateOrder**, e **GetOrders** .  
   
- È necessario chiamare procedure dalle applicazioni generiche. Le procedure sono scritte in genere per eseguire un'attività nel contesto di una determinata applicazione e quindi non avere alcuna utilità per applicazioni generiche. Ad esempio, un foglio di calcolo non è alcun motivo per chiamare il **InsertOrder** procedure in precedenza. Inoltre, le applicazioni generiche non devono costruire procedure in fase di esecuzione casuali fornendo i tempi di esecuzione istruzione; non solo è questo potrebbe essere più lenta rispetto all'esecuzione diretta o preparata, richiede anche le istruzioni SQL DBMS specifici.  
+ Non si ha a chiamare le procedure da applicazioni generiche. Le procedure vengono in genere scritti per eseguire un'attività nel contesto di una determinata applicazione e pertanto non sono utili per applicazioni generiche. Ad esempio, un foglio di calcolo non ha motivo di chiamare il **InsertOrder** procedure descritti in precedenza. Inoltre, le applicazioni generiche non devono costruire le procedure in fase di esecuzione nella speranza di lasciare che fornisce un'esecuzione più rapida istruzione; non solo è probabilmente da risultare più lenta dell'esecuzione diretta o preparata, richiede anche le istruzioni SQL specifici del DBMS.  
   
- Un'eccezione il caso gli ambienti di sviluppo di applicazioni, che offrono spesso un modo per i programmatori possono generare istruzioni SQL che può eseguono le procedure e possono costituire un modo per i programmatori di verificare le procedure. Chiamata di questo tipo ambienti **SQLProcedures** alle procedure disponibili elenco e **SQLProcedureColumns** per visualizzare un elenco di parametri di input, input/output e output, la procedura di valore restituito e le colonne di qualsiasi set di risultati creati dalla stored procedure. Tuttavia, tali procedure devono essere sviluppate in anticipo su ogni origine dati. Questa operazione richiede le istruzioni SQL DBMS specifici.  
+ Un'eccezione è ambienti di sviluppo delle applicazioni, che offrono spesso un modo per i programmatori di creare istruzioni SQL che eseguono le procedure e possono fornire un modo per i programmatori a procedure di test. Chiamata di questo tipo ambienti **SQLProcedures** per le procedure disponibili di elenco e **SQLProcedureColumns** per elencare i parametri di input, input/output e output, la procedura di valore restituito e le colonne di qualsiasi set di risultati creati da una procedura. Tuttavia, tali procedure devono essere sviluppate in anticipo su ogni origine dati. Questa operazione richiede le istruzioni SQL specifici del DBMS.  
   
- Esistono tre principali svantaggi all'utilizzo delle procedure. Il primo è che procedure devono essere scritte e compilate per ogni sistema DBMS con cui l'applicazione deve essere eseguita. Sebbene non sia un problema per le applicazioni personalizzate, aumenta notevolmente lo sviluppo e l'ora di manutenzione per le applicazioni verticali progettato per l'esecuzione con un numero di DBMS.  
+ Esistono tre principali svantaggi all'utilizzo delle procedure. Il primo è che le procedure devono essere scritte e compilate per ogni sistema DBMS con cui l'applicazione deve essere eseguita. Anche se ciò non costituisce un problema per le applicazioni personalizzate, è possibile aumentare significativamente lo sviluppo e l'ora di manutenzione per applicazioni verticali progettato per essere eseguito con un numero di DBMS.  
   
- Il secondo svantaggio è che molti DBMS non supportano le procedure. Anche questo è più probabile che un problema per le applicazioni verticali progettato per l'esecuzione con un numero di DBMS. Per determinare se le procedure sono supportate, un'applicazione chiama **SQLGetInfo** con l'opzione SQL_PROCEDURES.  
+ Il secondo svantaggio è che maggior parte dei DBMS non supportano le procedure. Anche in questo caso, la più probabile è un problema per le applicazioni verticali progettato per essere eseguito con un numero di DBMS. Per determinare se le procedure sono supportate, un'applicazione chiama **SQLGetInfo** con l'opzione SQL_PROCEDURES.  
   
- Lo svantaggio di terzo, che è applicabile in particolare in ambienti di sviluppo di applicazioni, è che ODBC non viene definita una grammatica standard per la creazione di procedure. Ovvero, sebbene le applicazioni possono chiamare procedure interoperably, non possono creare li interoperably.
+ Lo svantaggio di terzo, che è applicabile in particolar modo per gli ambienti di sviluppo dell'applicazione, è che ODBC non viene definita una grammatica di standard per la creazione di procedure. Vale a dire, anche se le applicazioni possono chiamare interoperably procedure, essi non può crearli interoperably.

@@ -1,27 +1,24 @@
 ---
-title: Parametri con valori di tabella (OLE DB) | Microsoft Docs
+title: Parametri con valori di tabella (OLE DB) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, table-valued parameters
 - table-valued parameters (OLE DB)
 ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebc5cdc62ba75183fcfc074fb0fd5fec5202709f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e9c58b1837eb017a3cc51652ff404b37690b3849
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432570"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158931"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Parametri con valori di tabella (OLE DB)
   In questa sezione viene illustrato il supporto per i parametri con valori di tabella nel provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per informazioni generali aggiuntive, vedere [parametri con valori di tabella &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md). Per un esempio, vedere [usare parametri &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md).  

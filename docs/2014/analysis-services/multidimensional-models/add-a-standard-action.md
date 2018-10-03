@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 47b13520762bd1ffc23f9bc466b82090fa60d8ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 408f92b86cdfdd148ea11ca49b6ba540b0f4cf86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165532"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161091"
 ---
 # <a name="add-a-standard-action"></a>Aggiungere un'azione standard
   Utilizzando la visualizzazione Azioni in Progettazione cubi è possibile aggiungere un'azione a un database. L'accesso a tale visualizzazione può essere effettuato da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Una volta creata, un'azione diventa disponibile agli utenti dopo aver rielaborato il cubo attinente. Per altre informazioni, vedere [Elaborazione di oggetti di Analysis Services](processing-analysis-services-objects.md).  

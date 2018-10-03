@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d26329d11885061b01e6147f145ce42a2a8855b
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395894"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142231"
 ---
 # <a name="metadata-discovery"></a>Individuazione dei metadati
   I miglioramenti apportati all'individuazione dei metadati nelle [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le applicazioni Client Native per assicurare che i metadati alla colonna o parametro restituito dall'esecuzione di una query compatibile con i metadati o identico al formato specificato prima di è stata eseguita la query. Se i metadati restituiti dopo l'esecuzione di una query non sono compatibili con il formato dei metadati specificato prima dell'esecuzione della query, viene generato un errore.  

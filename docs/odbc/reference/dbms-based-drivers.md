@@ -1,37 +1,34 @@
 ---
-title: Driver basati su DBMS | Documenti Microsoft
+title: Driver basati su DBMS | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - drivers [ODBC], DBMS-based drivers
 - DBMS-based drivers [ODBC]
 - ODBC architecture [ODBC], drivers
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb73a903d1e286e018c326b675a6bd914db0e367
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc35f7bceff2d9e92b70448040bb602117b76c84
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908526"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629639"
 ---
 # <a name="dbms-based-drivers"></a>Driver basati su DBMS
-Driver basati su DBMS vengono utilizzati con origini dati, ad esempio Oracle o SQL Server che forniscono un motore di database autonomo per il driver da utilizzare. Questi driver accedere ai dati fisici tramite il motore autonomo; ovvero sono inviare istruzioni SQL e recuperare i risultati dal motore.  
+Driver basati su DBMS vengono utilizzati con origini dati, ad esempio Oracle o SQL Server che forniscono un motore di database autonomo per il driver da usare. Questi driver accedere ai dati fisici tramite il motore autonomo; vale a dire, che invia istruzioni SQL per e recuperare i risultati dal motore.  
   
- Driver basati su DBMS di utilizzare un motore di database esistente, sono in genere più semplice da scrivere rispetto a driver basati su file. Anche se un driver basati su DBMS può essere facilmente implementato traducendo chiamate ODBC in chiamate API native, ciò comporta un driver più lento. Un modo migliore per implementare un driver basati su DBMS è utilizzare il protocollo di flusso dei dati sottostante, che viene in genere eseguita l'API nativa. Ad esempio, un driver di SQL Server deve utilizzare TDS (i dati di protocollo del flusso per SQL Server) anziché DB Library (l'API nativa per SQL Server). Un'eccezione a questa regola è quando ODBC è l'API nativa. Ad esempio, Watcom SQL è un motore autonomo che si trova nello stesso computer dell'applicazione e viene caricato direttamente perché il driver.  
+ Poiché i driver basati su DBMS usano un motore di database esistente, sono in genere la scrittura di driver basati su file. Anche se un driver basati su DBMS può essere implementato facilmente traducendo chiamate ODBC alle chiamate API native, ciò comporta un driver più lento. Un modo migliore per implementare un driver basati su DBMS è usare il protocollo di flusso dei dati sottostante, che avviene in genere l'API nativa. Ad esempio, un driver di SQL Server deve usare TDS (i dati di protocollo del flusso per SQL Server) anziché DB Library (API nativo per SQL Server). Un'eccezione a questa regola è quando ODBC è l'API nativa. Ad esempio, Watcom SQL è un motore autonomo che risiede nello stesso computer dell'applicazione e viene caricato direttamente perché il driver.  
   
- Driver basati su DBMS fungere da client in una configurazione client/server in cui l'origine dati funge da server. Nella maggior parte dei casi, il client (driver) e il server (origine dati) si trovano in computer diversi, anche se potrebbe risiedono nello stesso computer che eseguono un sistema operativo multitasking. Una terza possibilità è un *gateway,* che si trova tra il driver e l'origine dati. Un gateway è un componente software che causa un DBMS simile a un altro. Ad esempio, le applicazioni scritte per l'utilizzo di SQL Server accessibile anche dati DB2 tramite il Gateway di DB2 Decisionware Micro; Questo prodotto provoca DB2 simile a SQL Server.  
+ Driver basati su DBMS fungere da client a una configurazione del client/server in cui l'origine dati funge da server. Nella maggior parte dei casi, il client (driver) e il server (origine dati) si trovano in computer diversi, anche se entrambi possono risiedere nello stesso computer che eseguono un sistema operativo multitasking. Una terza possibilità è una *gateway,* che risiede tra i driver e l'origine dati. Un gateway è un componente software che provoca un DBMS simile a un altro. Ad esempio, le applicazioni scritte per utilizzare SQL Server possono anche accedere dati DB2 attraverso il Gateway di DB2 Decisionware Micro; Questo prodotto provoca DB2 simile a SQL Server.  
   
- Nella figura seguente mostra tre diverse configurazioni di driver basati su DBMS. Nella configurazione del primo, il driver e l'origine dati si trovano nello stesso computer. Nel secondo, il driver e l'origine dati si trovano in computer diversi. Nel terzo, il driver e l'origine dati si trovano in computer diversi e un gateway si trova tra di essi, che si trovano in un altro computer.  
+ La figura seguente mostra tre diverse configurazioni di driver basati su DBMS. Nella configurazione del primo, il driver e l'origine dati si trovano nello stesso computer. Nella seconda, il driver e l'origine dati si trovano in computer diversi. Nel terzo, i driver e l'origine dati si trovano in computer diversi e un gateway si trova tra di essi, che si trovano in un altro computer.  
   
- ![Tre configurazioni per DBMS&#45;basato su driver](../../odbc/reference/media/pr07.gif "pr07")
+ ![Tre configurazioni di DBMS&#45;basato su driver](../../odbc/reference/media/pr07.gif "pr07")

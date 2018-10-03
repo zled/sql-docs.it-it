@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - point of failure [SQL Server]
 - restoring databases [SQL Server], point of failure
 - database restores [SQL Server], point of failure
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ad1916a80b7e209773eacbafa4ec390e63be880b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 83319e8eb1fe692bc55b764445ac155d9e1ad38d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271577"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155748"
 ---
 # <a name="restore-a-database-to-the-point-of-failure-under-the-full-recovery-model-transact-sql"></a>Ripristinare un database al punto di errore nel modello di recupero con registrazione completa (Transact-SQL)
   In questo argomento vengono fornite informazioni su come eseguire il ripristino fino al punto di errore. L'argomento è rilevante solo per i database che utilizzano i modelli di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  

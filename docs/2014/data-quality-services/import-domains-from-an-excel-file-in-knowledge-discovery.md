@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70a5c80424f9260a1e6f6f69554b7f25e00789f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 479021af7c7e15b8f9d0a82a45b4f644f7a7c29b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293171"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051351"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importare i domini da un file di Excel in Individuazione informazioni
   In questo argomento viene descritto come importare uno o più domini da un file di Excel nell'attività di individuazione delle informazioni di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Il processo di importazione semplifica il processo di generazione delle informazioni, risparmiando tempo e fatica. In questo modo è possibile creare una Knowledge Base con i dati presenti in un file di Excel o in un file di testo. Per altre informazioni sull'importazione di valori in un dominio di una Knowledge Base esistente, vedere [Importare i valori da un file di Excel in un dominio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md). L'esportazione in un file di Excel non è supportata.  

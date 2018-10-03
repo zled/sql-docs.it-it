@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a56fdc024d15a24463fb0a7cf593ad23ca85aa34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1cfb1dcfb635bbd7c70babcbd5a157c919c36892
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162252"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110041"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizzare la web part Visualizzatore report
   È possibile utilizzare la web part Visualizzatore report per visualizzare report eseguiti in un server di report configurato per l'integrazione con SharePoint. I report che è possibile visualizzare includo file di definizione dei report, con estensione rdl, e report di Generatore report. I report vengono automaticamente aperti nella web part Visualizzatore report in una nuova pagina, tuttavia è possibile aggiungere la web part Visualizzatore report a una pagina Web o a un sito esistente se si desidera che il report risulti sempre visibile all'interno della pagina.  

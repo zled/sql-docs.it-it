@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.cubedefinition.f1
 ms.assetid: 985d3b5b-7891-465b-862d-f7e75431b342
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3a623381738e4d2f96222aaa193cf09ec619889
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48a6ef3849e91f606cb94ae7fa1f7c67817bfff7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259427"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152807"
 ---
 # <a name="select-creation-method-cube-wizard"></a>Seleziona metodo di creazione (Creazione guidata cubo)
   Utilizzare la pagina **Seleziona metodo di creazione** per specificare la modalità di creazione del cubo.  
@@ -34,7 +31,7 @@ ms.locfileid: "37259427"
  Selezionare per creare un cubo vuoto. Questa opzione è utile per creare tutto manualmente o quando tutti i gruppi di misure nel cubo sono gruppi di misure collegati.  
   
 > [!NOTE]  
->  Questa opzione è disponibile solo quando si lavora a un progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e non quando si è connessi direttamente a un database [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+>  Questa opzione è disponibile solo quando si lavora a un progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e non quando si è connessi direttamente a un database [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  **Genera tabelle nell'origine dati**  
  Selezionare per creare prima un cubo e quindi generare tabelle nuove nell'origine dati in base alla definizione del cubo.  

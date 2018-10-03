@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - verifying packages
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 111
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e565c0750db83191273c66978ae1b1816d1c1d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d21a944b037affb71700bf49cf665331acb60e1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219711"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149171"
 ---
 # <a name="dtutil-utility"></a>utilità dtutil
   Il **dtutil** utilità p1ompt comando viene usato per gestire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pacchetti. Utilizzare questa utility per copiare, spostare, eliminare un pacchetto oppure per verificarne l'esistenza. È possibile eseguire queste azioni in qualsiasi pacchetto di [!INCLUDE[ssIS](../includes/ssis-md.md)] archiviato in un database [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , nell'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] e nel file system. Se l'utilità accede a un pacchetto archiviato in **msdb**, al prompt dei comandi può essere necessario specificare nome utente e password. Se l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], al prompt dei comandi sarà necessario specificare nome utente e password. Se non viene specificato il nome utente, **dtutil[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tenta di accedere a**  usando l'autenticazione di Windows. Il tipo di archiviazione del pacchetto è definito dalle opzioni `/SQL`, `/FILE` e `/DTS`.  

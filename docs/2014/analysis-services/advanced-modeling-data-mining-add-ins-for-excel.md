@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
 ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8fb21806baca20f1705f08065f0ec8e0b7a92fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bad97bf517bee9f8c2545d5a48acc02830dc5f58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255233"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134101"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Modellazione avanzata (componenti aggiuntivi Data mining per Excel)
   È possibile usare la **avanzate** opzioni per creare diversi da quelli creati tramite le procedure guidate modelli e strutture di data mining dei dati personalizzate con i parametri di modellazione dati. Le due procedure guidate descritte in questa sezione consentono di creare una struttura di data mining completamente nuova e un nuovo modello di data mining da applicare a una struttura di data mining esistente.  

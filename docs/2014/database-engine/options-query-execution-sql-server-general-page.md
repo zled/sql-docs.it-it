@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
-caps.latest.revision: 33
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2c08ee6ab08fe90ffc075ef3f1ee0fe638d1da4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 947412d7a4d0fe27af7975919bddb3107007e801
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167152"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152987"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>Opzioni (Query esecuzione SQL Server pagina generale)
   Utilizzare questa pagina per specificare le opzioni per l'esecuzione di query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Le modifiche apportate a queste opzioni si applicano soltanto alle nuove query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni per una query corrente, scegliere **Opzioni query** dal menu **Query** oppure fare clic con il pulsante destro del mouse nella finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e scegliere **Opzioni query**.  
@@ -39,7 +36,7 @@ ms.locfileid: "37167152"
  **Separatore di batch**  
  Consente di digitare una parola che verrà utilizzata per separare le istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] in batch. Il valore predefinito è GO.  
   
- **Per impostazione predefinita, Apri le nuove query in modalità SQLCMD**  
+ **Per impostazione predefinita, apri le nuove query in modalità SQLCMD**  
  Selezionare questa casella di controllo per aprire le nuove query in modalità SQLCMD. Per altre informazioni sulla modalità SQLCMD, vedere [Modifica di script SQLCMD con l'editor di query](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
   
  Quando si seleziona questa opzione, tenere presente le limitazioni seguenti:  

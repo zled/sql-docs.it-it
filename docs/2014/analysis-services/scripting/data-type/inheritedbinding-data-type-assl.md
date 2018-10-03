@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - InheritedBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - InheritedBinding data type
 ms.assetid: a61f58c5-62d6-44e8-a02f-db2b17d1f256
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fb5895ab8435ed92717df8b2e016bc7458efa84
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3859b2efa2f4847d9b45f124b1f8177b4e16dc68
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151832"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168041"
 ---
 # <a name="inheritedbinding-data-type-assl"></a>Tipo di dati InheritedBinding (ASSL)
   Definisce un tipo di dati derivato che indica che un [MeasureGroupAttribute](measuregroupattribute-data-type-assl.md) elemento eredita le associazioni dall'attributo.  
@@ -46,15 +43,15 @@ ms.locfileid: "37151832"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipi di dati di base|[Associazione](binding-data-type-assl.md)|  
-|Tipi di dati derivati|None|  
+|Tipi di dati di base|[associazione](binding-data-type-assl.md)|  
+|Tipi di dati derivati|Nessuno|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|None|  
-|Elementi figlio|None|  
+|Elementi padre|Nessuno|  
+|Elementi figlio|Nessuno|  
 |Elementi derivati|Vedere [associazione](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Note  

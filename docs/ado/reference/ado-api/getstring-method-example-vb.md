@@ -1,34 +1,31 @@
 ---
-title: Esempio di metodo GetString (VB) | Documenti Microsoft
+title: Esempio di metodo GetString (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - GetString method [ADO], Visual Basic example
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a5a2ac54d8a177669d94613a2b612f6ce65f8d9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9a7210c3680202a0e08e3096f7f58d32e876e1ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278860"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623139"
 ---
-# <a name="getstring-method-example-vb"></a>Esempio di metodo GetString (VB)
-Questo esempio viene illustrato il [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) metodo.  
+# <a name="getstring-method-example-vb"></a>Esempio del metodo GetString (VB)
+Questo esempio viene illustrato il [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) (metodo).  
   
- Si supponga che si sta eseguendo il debug di un problema di accesso ai dati e si desidera un modo rapido e semplice di stampa del contenuto corrente di una piccola [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Si supponga si sta eseguendo il debug di un problema di accesso dati e si desidera un modo semplice e veloce di stampa del contenuto corrente di un piccolo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ```  
 'BeginGetStringVB  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aaa06d612dc3ed28c442076c96ff4782003a333e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9169fbb442302461bb7b987e6f43919947bc109e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202541"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053131"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Utilizzo di un set di dati esterno con Reporting Services
   L'oggetto **DataSet** è fondamentale per il supporto di scenari di dati disconnessi e distribuiti con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. L'oggetto **DataSet** è una rappresentazione di dati residente in memoria che offre un modello di programmazione relazionale coerente indipendentemente dall'origine dati. Questo oggetto può essere utilizzato con più origini dati diverse, con dati XML o per gestire i dati locali dell'applicazione. L'oggetto **DataSet** rappresenta un set di dati completo, che include tabelle correlate, vincoli e relazioni tra le tabelle. Grazie alla versatilità dell'oggetto **DataSet** nell'archiviazione e nell'esposizione dei dati, i dati possono spesso essere elaborati e trasformati in un oggetto **DataSet** prima della creazione di qualsiasi report con tali dati.  

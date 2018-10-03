@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e9d6e3ae9596ff87a5d07f4b60dfcc2e7b658ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63e7f96905f6862b24867fb98ecff82a6c92ce30
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175425"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143461"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Percorsi dei file per le istanze predefinite e denominate di SQL Server
   Un'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è costituita da una o più istanze separate. Un'istanza, predefinita o denominata, contiene un proprio set di file di programma e di dati, oltre a un set di file comuni condivisi tra tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presenti nel computer.  
@@ -96,11 +93,11 @@ ms.locfileid: "37175425"
 |Componente|Percorso predefinito<sup>1, 2</sup>|Configurabile<sup>3</sup> o percorso corretto|  
 |---------------|---------------------------------|--------------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] componenti server|File \Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< ID istanza >\|configurabile|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] file di dati|File \Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< ID istanza >\|configurabile|  
+|File di dati di [!INCLUDE[ssDE](../../includes/ssde-md.md)]|File \Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< ID istanza >\|configurabile|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server|File \Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< ID istanza >\|configurabile|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] file di dati|File \Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< ID istanza >\|configurabile|  
+|File di dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|File \Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< ID istanza >\|configurabile|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server di report|File \Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12.\< ID istanza > \Reporting\|configurabile|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Gestione report|File \Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12.\< ID istanza > Services\ReportManager.\|fissa del percorso|  
+|Gestione report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|File \Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12.\< ID istanza > Services\ReportManager.\|fissa del percorso|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Directory di installazione > \120\DTS\|configurabile<sup>4</sup>|  
 |Componenti client (ad eccezione di bcp.exe e sqlcmd.exe)|\<Directory di installazione > \120\Tools\|configurabile<sup>4</sup>|  
 |Componenti client (bcp.exe e sqlcmd.exe)|\<Directory di installazione>\Client SDK\ODBC\110\Tools\Binn|Percorso fisso|  
@@ -126,7 +123,7 @@ ms.locfileid: "37175425"
   
  Se durante l'installazione si specifica un percorso di installazione per i componenti server o i file di dati, oltre al percorso specificato per i file di dati e di programma, verrà utilizzato l'ID istanza. L'ID istanza non viene utilizzato per gli strumenti e altri file condivisi, né per i file di dati e di programma di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ma solo per il repository di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- Se si imposta un percorso di installazione per la caratteristica [!INCLUDE[ssDE](../../includes/ssde-md.md)] , nell'istallazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tale percorso verrà utilizzato come directory radice di tutte le cartelle specifiche dell'istanza per l'installazione, inclusi i file di dati SQL. In questo caso, se si imposta la radice su "C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< NomeIstanza > \MSSQL\\", le directory specifiche dell'istanza verranno aggiunte alla fine del percorso.  
+ Se si imposta un percorso di installazione per la caratteristica [!INCLUDE[ssDE](../../includes/ssde-md.md)], nell'istallazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tale percorso verrà utilizzato come directory radice di tutte le cartelle specifiche dell'istanza per l'installazione, inclusi i file di dati SQL. In questo caso, se si imposta la radice su "C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< NomeIstanza > \MSSQL\\", le directory specifiche dell'istanza verranno aggiunte alla fine del percorso.  
   
  Se si utilizza la funzionalità di aggiornamento USESYSDB nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (modalità interfaccia utente del programma di installazione), è probabile che si verifichino le condizioni per un'installazione del prodotto in una struttura di cartelle ricorsiva, Ad esempio, \< *Programmisql*> \MSSQL12\MSSQL\MSSQL10_50\MSSQL\Data\\. Per utilizzare la funzionalità USESYSDB, impostare invece un percorso di installazione per la funzionalità dei file di dati SQL anziché per la funzionalità [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   

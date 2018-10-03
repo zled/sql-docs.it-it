@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.celldata.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - cells [Analysis Services]
 - custom cell data access [Analysis Services]
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4932341742a0760b1bfb1ccab502cbf960aa01d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c45471990d3eac42c8805fc9c6ba820a9762627
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317111"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105171"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Concedere l'accesso personalizzato ai dati delle celle (Analysis Services)
   La sicurezza della cella viene usata per consentire o negare l'accesso ai dati di misura all'interno di un cubo. La figura seguente mostra una combinazione di misure consentite e negate in una tabella pivot quando il ruolo dell'utente connesso consente l'accesso a determinate misure. In questo esempio, **Reseller Sales Amount** e **Reseller Total Product Cost** sono le uniche misure disponibili tramite questo ruolo. Tutte le altre misure vengono negate in modo implicito. I passaggi usati per ottenere tale risultato vengono forniti nella sezione "Consentire l'accesso a misure specifiche" riportata di seguito.  

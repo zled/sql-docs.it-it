@@ -1,34 +1,31 @@
 ---
-title: La chiamata di una Stored Procedure come metodo in un oggetto di connessione | Documenti Microsoft
+title: Chiamata di una Stored Procedure come metodo in un oggetto Connection | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - calling stored procedures [ADO]
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2445ce0a213f4e36ec775cf804ee69b43c2f9dc8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3202b607f3971dd1fcad2c3ae5e0ed83a667e923
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270400"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758819"
 ---
-# <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>La chiamata di una Stored Procedure come metodo in un oggetto di connessione
-È possibile chiamare una stored procedure come se fosse un metodo nativo all'apertura associato **connessione** oggetto. Questa operazione è simile alla chiamata di un comando denominato sul **connessione** oggetto.  
+# <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Chiamata di una stored procedure come metodo in un oggetto Connection
+È possibile chiamare una stored procedure come se fosse un metodo nativo all'apertura associato **connessione** oggetto. È simile alla chiamata di un comando denominato nel **connessione** oggetto.  
   
- Esempio di codice Visual Basic seguente chiama una stored procedure nel database di esempio Northwind, chiamato CustOrdersOrders, viene elencato qui per comodità.  
+ Esempio di codice Visual Basic seguente chiama una stored procedure nel database di esempio Northwind, chiamato CustOrdersOrders, che è elencati di nuovo per comodità.  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -38,7 +35,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- Esempio di codice riportato di seguito viene illustrato come chiamare una stored procedure come se fosse un metodo nativo in un oggetto aperto associato **connessione** oggetto.  
+ Esempio di codice seguente viene illustrato come chiamare una stored procedure come se fosse un metodo nativo su un elemento aperto associato **connessione** oggetto.  
   
 ```  
 Const DS = "MySQLServer"  

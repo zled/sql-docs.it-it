@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calculations [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - calculations [Analysis Services], about calculations
 - cubes [Analysis Services], calculations
 ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ef953f375269917a7cab7d00a15def6acfb375e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 587aad74e5a29810d645aad401243cceb9ca6193
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222191"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051321"
 ---
 # <a name="calculations"></a>Calcoli
   Un calcolo è un'espressione MDX (Multidimensional Expressions) o uno script che viene usato per definire un membro calcolato, un set denominato o un'assegnazione di ambito in un cubo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. I calcoli consentono di aggiungere oggetti definiti non dai dati del cubo, ma da espressioni che possono fare riferimento ad altre parti del cubo, ad altri cubi o persino a informazioni esterne al database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. I calcoli consentono di estendere le funzionalità di un cubo, aggiungendo flessibilità e potenza alle applicazioni di Business Intelligence. Per altre informazioni sui calcoli di scripting, vedere [Introduzione alla creazione di script MDX in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Per altre informazioni sui problemi di prestazioni correlati a query e calcoli MDX, vedere la [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621).  

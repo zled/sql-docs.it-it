@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7
-caps.latest.revision: 5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: baf4de1df4bdd64b32182e6fbb72fbbd0ed110b6
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: eaf7057130cc3d13c0025b92b207efbace339e74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392174"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151311"
 ---
 # <a name="natively-compiled-stored-procedures-and-execution-set-options"></a>Stored procedure compilate in modo nativo e opzioni SET di esecuzione
   Le opzioni di sessione sono fisse nei blocchi atomici. L'esecuzione di una stored procedure non è interessata dalle opzioni SET di una sessione. Tuttavia, alcune opzioni SET quali SET NOEXEC e SET SHOWPLAN_XML impediscono l'esecuzione delle stored procedure, incluse quelle compilate in modo nativo.  

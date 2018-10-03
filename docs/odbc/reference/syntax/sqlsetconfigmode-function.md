@@ -1,13 +1,11 @@
 ---
-title: Funzione SQLSetConfigMode | Documenti Microsoft
+title: Funzione SQLSetConfigMode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLSetConfigMode
@@ -19,23 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetConfigMode function [ODBC]
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58cb5aabecfbccb3d8a2133f2d48e198e0fba0ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d520a84d45e3552f5e260778b5cacf2ac91f05a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917796"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654379"
 ---
-# <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode (funzione)
+# <a name="sqlsetconfigmode-function"></a>Funzione SQLSetConfigMode
 **Conformità**  
- Introdotta: versione ODBC 3.0  
+ Versione introdotta: ODBC 3.0  
   
  **Riepilogo**  
- **SQLSetConfigMode** imposta la modalità di configurazione che indica la voce ini Elenca i valori DSN in cui si trova le informazioni di sistema.  
+ **SQLSetConfigMode** imposta la modalità di configurazione che indica se la voce ini Elenca i valori DSN è nelle informazioni di sistema.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,19 +56,19 @@ BOOL SQLSetConfigMode(
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di errore.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLSetConfigMode** restituisce FALSE, un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* valori che possono essere restituiti da **SQLInstallerError** e illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLSetConfigMode** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_PARAM_SEQUENCE|Sequenza di parametri non validi|Il *wConfigMode* argomento non conteneva ODBC_USER_DSN, ODBC_SYSTEM_DSN o ODBC_BOTH_DSN.|  
   
 ## <a name="comments"></a>Commenti  
- Questa funzione viene utilizzata per impostare in cui la voce di ODBC elenco valori DSN è nelle informazioni di sistema. Se *wConfigMode* ODBC_USER_DSN, il DSN è un DSN utente e la funzione legge dalla voce di ODBC in HKEY_CURRENT_USER. Se è ODBC_SYSTEM_DSN, il DSN è un DSN di sistema e la funzione legge dalla voce di ODBC in HKEY_LOCAL_MACHINE. Se è ODBC_BOTH_DSN, viene eseguito un tentativo di HKEY_CURRENT_USER e in caso contrario, viene utilizzato HKEY_LOCAL_MACHINE.  
+ Questa funzione viene utilizzata per impostare in cui la voce ini Elenca i valori DSN è nelle informazioni di sistema. Se *wConfigMode* è ODBC_USER_DSN, il DSN è un DSN utente e la funzione legge dalla voce ini in HKEY_CURRENT_USER. Se si tratta ODBC_SYSTEM_DSN, il DSN è un DSN di sistema e la funzione legge dalla voce ini in HKEY_LOCAL_MACHINE. Se si tratta ODBC_BOTH_DSN, viene eseguito un tentativo di HKEY_CURRENT_USER e in caso contrario, viene utilizzato HKEY_LOCAL_MACHINE.  
   
- Questa funzione non influisce sulla **SQLCreateDataSource** e **SQLDriverConnect**. La modalità di configurazione deve essere impostata durante la lettura dal Registro di sistema chiamando un driver **SQLGetPrivateProfileString** o scrive nel Registro di sistema chiamando **SQLWritePrivateProfileString**. Le chiamate a **SQLGetPrivateProfileString** e **SQLWritePrivateProfileString** per sapere quale parte del Registro di sistema su cui operare, usare la modalità di configurazione.  
+ Questa funzione non influisce **SQLCreateDataSource** e **SQLDriverConnect**. La modalità di configurazione deve essere impostata quando un driver legge il Registro di sistema chiamando **SQLGetPrivateProfileString** o la scrittura nel Registro di sistema chiamando **SQLWritePrivateProfileString**. Le chiamate a **SQLGetPrivateProfileString** e **SQLWritePrivateProfileString** usare la modalità di configurazione per sapere quale parte del Registro di sistema su cui operare.  
   
 > [!CAUTION]  
->  **SQLSetConfigMode** deve essere chiamato solo quando necessario; se la modalità è impostata in modo non corretto, il programma di installazione di ODBC potrebbero non funzionare correttamente.  
+>  **SQLSetConfigMode** deve essere chiamato solo quando necessario; se la modalità è impostata in modo non corretto, il programma di installazione ODBC potrebbe non riuscire funzionare correttamente.  
   
  **SQLSetConfigMode** apporta una modifica diretta del Registro di sistema della modalità di configurazione. Si tratta di oltre il processo di modifica la modalità di configurazione da una chiamata a **SQLConfigDataSource**. Una chiamata a **SQLConfigDataSource** imposta la modalità di configurazione per distinguere i DSN di sistema e utente quando si modifica un DSN. Prima della restituzione, **SQLConfigDataSource** BOTHDSN Reimposta la modalità di configurazione.  
   
@@ -80,5 +77,5 @@ BOOL SQLSetConfigMode(
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
 |Creazione di un'origine dati|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|  
-|Connessione a un'origine dati tramite una connessione stringa o una finestra di dialogo|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|La connessione a un'origine dati tramite una finestra di dialogo o stringa di connessione|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Recuperare la modalità di configurazione|[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d5eafcfacf8aa39cd100ed767232becd474bacd0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 561a62b81e36ea5de39eda52a2ea70e04ea5a50c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210251"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162941"
 ---
-# <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 Installation
+# <a name="powerpivot-for-sharepoint-2013-installation"></a>Installazione di PowerPivot per SharePoint 2013
   Le procedure descritte in questo argomento consentono di eseguire un'installazione server singolo di una [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in modalità di distribuzione di SharePoint. Nei passaggi è inclusa l'esecuzione dell'Installazione guidata di SQL Server, nonché di attività di configurazione in cui viene utilizzata Amministrazione centrale SharePoint 2013.  
   
  **[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 201  
@@ -87,7 +84,7 @@ ms.locfileid: "37210251"
   
 3.  Fare clic su **Nuova installazione autonoma di SQL Server o aggiunta di funzionalità a un'installazione esistente**.  
   
-4.  Se viene visualizzata la pagina **Codice Product Key** specificare la versione di valutazione o immettere un codice Product Key per una copia concessa in licenza dell'edizione Enterprise. Scegliere **Avanti**. Per altre informazioni sulle edizioni, vedere [edizioni e componenti di SQL Server 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
+4.  Se viene visualizzata la pagina **Codice Product Key** specificare la versione di valutazione o immettere un codice Product Key per una copia concessa in licenza dell'edizione Enterprise. Fare clic su **Avanti**. Per altre informazioni sulle edizioni, vedere [edizioni e componenti di SQL Server 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 5.  Leggere e accettare le condizioni di licenza software Microsoft, quindi scegliere **Avanti**.  
   
@@ -107,13 +104,13 @@ ms.locfileid: "37210251"
   
      Se si aggiunge il motore di database, viene installato come un'istanza denominata di **PowerPivot** . Ogni volta che si specifica una connessione a questa istanza, immettere il nome del database nel formato: [`servername`] \PowerPivot.  
   
-     Scegliere **Avanti**.  
+     Fare clic su **Avanti**.  
   
      ![Impostazione ruolo](../../../sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "impostazione ruolo")  
   
-11. In Selezione funzionalità viene visualizzato, a scopo informativo, un elenco in sola lettura delle funzionalità. Non è possibile aggiungere o rimuovere gli elementi preselezionati per questo ruolo. Scegliere **Avanti**.  
+11. In Selezione funzionalità viene visualizzato, a scopo informativo, un elenco in sola lettura delle funzionalità. Non è possibile aggiungere o rimuovere gli elementi preselezionati per questo ruolo. Fare clic su **Avanti**.  
   
-12. Nella pagina **Configurazione dell'istanza** un nome dell'istanza in sola lettura di "PowerPivot" viene visualizzato a scopo informativo. Questo nome dell'istanza è obbligatorio e non può essere modificato. È tuttavia possibile immettere un ID istanza univoco per specificare un nome di directory descrittivo e chiavi del Registro di sistema. Scegliere **Avanti**.  
+12. Nella pagina **Configurazione dell'istanza** un nome dell'istanza in sola lettura di "PowerPivot" viene visualizzato a scopo informativo. Questo nome dell'istanza è obbligatorio e non può essere modificato. È tuttavia possibile immettere un ID istanza univoco per specificare un nome di directory descrittivo e chiavi del Registro di sistema. Fare clic su **Avanti**.  
   
 13. Nella pagina **Configurazione server** configurare tutti i servizi per **Tipo di avvio**automatico. Specificare l'account di dominio e la password desiderati per **SQL Server Analysis Services**, **(1)** nel diagramma seguente.  
   
@@ -123,13 +120,13 @@ ms.locfileid: "37210251"
   
     -   Non eseguire mai il provisioning degli account di servizio con il proprio account utente di dominio. Con questa operazione si concedono al server le stesse autorizzazioni di cui l'utente dispone per le risorse disponibili nella rete. Se un utente malintenzionato compromette il server, l'utente in questione viene connesso con le proprie credenziali di dominio, pertanto, potrà scaricare o utilizzare gli stessi dati e le stesse applicazioni.  
   
-     Scegliere **Avanti**.  
+     Fare clic su **Avanti**.  
   
      ![Configurazione del Server SSAS](../../../sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "configurazione del Server SSAS")  
   
 14. Se si sta installando il [!INCLUDE[ssDE](../../../includes/ssde-md.md)], viene visualizzata la pagina **Configurazione del motore di database** . Nelle [!INCLUDE[ssDE](../../../includes/ssde-md.md)] la configurazione, fare clic su **Aggiungi utente corrente** per concedere all'utente le autorizzazioni di amministratore account per l'istanza del motore di Database.  
   
-     Scegliere **Avanti**.  
+     Fare clic su **Avanti**.  
   
 15. Nella pagina **Configurazione di Analysis Services** fare clic su **Aggiungi utente corrente** per concedere le autorizzazioni amministrative dell'account utente. Saranno necessarie autorizzazioni amministrative per configurare il server dopo che è stata completata l'installazione.  
   
@@ -138,7 +135,7 @@ ms.locfileid: "37210251"
     -   > [!NOTE]  
         >  A tutte le applicazioni del servizio per cui è richiesto l'accesso all'istanza del server Analysis Services devono essere associate autorizzazioni amministrative di Analysis Services. Ad esempio, aggiungere gli account di servizio per Excel Services, Power View e Performance Point Services. Inoltre, aggiungere l'account della farm di SharePoint che viene utilizzato come identità dell'applicazione Web in cui è ospitata Amministrazione centrale.  
   
-     Scegliere **Avanti**.  
+     Fare clic su **Avanti**.  
   
 16. Nella pagina **Segnalazione errori** fare clic su **Avanti**.  
   

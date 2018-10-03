@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportdata.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Report Data pane
 ms.assetid: aa9614a3-12e7-4e17-9de2-fafccd1f5f9d
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 464bdb206986b01de68b018b8b6128956aee7036
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 910f7f6d67b7e31922ed45006008d292e6f2a1c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270567"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162781"
 ---
 # <a name="report-data-pane"></a>Riquadro dei dati del report
   Usare il riquadro **Dati report** per visualizzare i parametri, le origini dati, i set di dati, le raccolte di campi e le immagini attualmente definiti nel report. Nel riquadro dei dati del report è riportata una visualizzazione gerarchica degli elementi che rappresentano i dati del report. I nodi di livello superiore rappresentano campi, parametri, immagini e riferimenti a origini dati predefiniti. Espandere ogni nodo per visualizzare gli elementi dei dati. Ad esempio, quando si espande il nodo di un'origine dati, verranno visualizzati i set di dati definiti per tale origine dati. Quando si espande un set di dati, verrà visualizzata la relativa raccolta di campi. Trascinare gli elementi nell'area di progettazione del report per collegare i dati a elementi del report nella pagina.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44d086a00d2e18bfd87410848a5acd73461fac6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1e4c878004f3cdcc492637d338e8ff6c8d92937
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287917"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104172"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Criteri Always On per problemi operativi con gruppi di disponibilità Always On (SQL Server)
   Il modello di integrità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] consente di valutare un set di criteri di gestione basata su criteri (PBM, Policy Based Management) predefiniti. Questi criteri possono essere utilizzati per la visualizzazione dell'integrità di un gruppo di disponibilità, nonché delle repliche e dei database di disponibilità relativi in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  

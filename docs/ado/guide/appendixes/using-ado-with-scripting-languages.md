@@ -1,69 +1,66 @@
 ---
-title: Utilizzo di ADO con linguaggi di Scripting | Documenti Microsoft
+title: Uso di ADO con linguaggi di Scripting | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa90243680a59676f64f00cc4fd2b0c182c3d674
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fda0fb6446609a04178b533173a82bacc34c8cb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271210"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600389"
 ---
-# <a name="using-ado-with-scripting-languages"></a>Utilizzo di ADO con linguaggi di Scripting
-All'interno di un ambiente di scripting, ADO consente di esporre i dati tramite gli script sul lato server. In questo scenario, ADO, il provider OLE DB sottostante che viene utilizzato e vengono installati i componenti necessari per fare riferimento a un archivio dati specificato in un server che esegue Internet Information Services (IIS). Utilizzando le pagine ASP (Active Server), ADO è un componente a cui fa riferimento in uno script che può generare HTML, ad esempio. Questo contenuto HTML può essere passato tramite HTTP a un Web browser client. Usando gli script, la pagina Web per inviare le azioni allo script sul lato server, che consente di aggiornare, attraversare o visualizzare i dati specifici.  
+# <a name="using-ado-with-scripting-languages"></a>Uso di ADO con i linguaggi di scripting
+All'interno di un ambiente di scripting, ADO consente di esporre i dati tramite gli script lato server. In questo scenario, ADO, il provider OLE DB sottostante che viene utilizzato e vengono installati altri componenti necessari per fare riferimento a un archivio dati specificato in un server che esegue Internet Information Services (IIS). Usando le pagine ASP (Active Server), ADO è un componente di cui viene fatto riferimento in uno script che può generare codice HTML, ad esempio. Il contenuto HTML può essere passato tramite HTTP in un Web browser client. Tramite la creazione di script, la pagina Web può inviare azioni torna allo script sul lato server, in modo da aggiornare, attraversare o visualizzare i dati specifici.  
   
- Prima di utilizzare un oggetto ActiveX in una pagina Web, è importante sapere se l'oggetto sicuro per lo script. Quando un oggetto è considerato sicuro per lo scripting, significa che il controllo non è possibile eseguire le azioni dannose nel computer dell'utente e pertanto può essere eseguito senza richiedere l'approvazione dell'utente. Nella tabella seguente sono elencati gli oggetti ADO e indica se sono sicuri per lo script.  
+ Prima di usare un oggetto ActiveX in una pagina Web, è importante sapere se l'oggetto è sicuro per lo scripting. Quando un oggetto è considerato sicuro per lo scripting, significa che il controllo non può intraprendere alcuna azione dannoso nel computer dell'utente e pertanto può essere eseguito senza richiedere l'approvazione dell'utente. Nella tabella seguente sono elencati gli oggetti ADO e indica se sono sicuri per lo script.  
   
-|Object|Per lo Scripting è sicuro?|  
+|Object|È sicuro per lo Scripting?|  
 |------------|-------------------------|  
-|Connessione ADO|Sì|  
+|Connessione di ADO|Sì|  
 |Comando ADO|no|  
 |Parametro ADO|no|  
 |Recordset ADO|Sì|  
 |Record ADO|Sì|  
-|Flusso ADO|Sì|  
+|Stream ADO|Sì|  
 |Errore ADO|no|  
 |Catalogo ADOX|no|  
 |Set di celle ADOX|no|  
-|DataControl di servizi desktop remoto|Sì|  
-|DataSpace di servizi desktop remoto|Sì|  
+|Servizi Desktop remoto DataControl|Sì|  
+|DataSpace Servizi Desktop remoto|Sì|  
 |Data factory di servizi desktop remoto|no|  
   
  Nella tabella seguente sono elencati i provider inclusi con Windows DAC o MDAC e indica se sono sicuri per lo script.  
   
-|Provider|Per lo Scripting è sicuro?|  
+|Provider|È sicuro per lo Scripting?|  
 |--------------|-------------------------|  
 |Con forme|Sì|  
-|Rendere persistenti|Sì|  
+|Salvare in modo permanente|Sì|  
 |Remote|Sì|  
 |Provider OLE DB per SQL Server (SQLOLEDB)|no|  
 |Provider OLE DB per ODBC (MSDASQL)|no|  
   
 ## <a name="odbc-data-sources"></a>Origini dei dati ODBC  
- Una differenza rilevante tra codice ADO scripting e di script non è l'origine dati ODBC, se utilizzato. Per le applicazioni non di script, è possibile creare un DSN utente in Amministratore origine dati ODBC. Per gli script in esecuzione in IIS, è necessario creare un DSN di sistema. in caso contrario gli script non riconosce l'origine dati creata. Questo vale per qualsiasi applicazione ADO di script utilizzando il Provider Microsoft OLE DB per ODBC tramite Microsoft IIS.  
+ Una differenza rilevante tra il codice ADO di scripting e non di script è l'origine dati ODBC, se utilizzato. Per le applicazioni non di script, è possibile creare un DSN utente in Amministrazione origine dati ODBC. Per gli script in esecuzione in IIS, è necessario creare un DSN di sistema. in caso contrario, gli script non riconoscerà l'origine dati creata. Questo vale per qualsiasi applicazione di scripting di ADO con il Provider Microsoft OLE DB per ODBC tramite Microsoft IIS.  
   
 ## <a name="referencing-the-ado-library"></a>Riferimento alla libreria ADO  
- Non è applicabile con linguaggi di scripting.  
+ Non applicabile con linguaggi di scripting.  
   
 ## <a name="handling-events"></a>Gestione degli eventi  
- Non è applicabile con linguaggi di scripting.  
+ Non applicabile con linguaggi di scripting.  
   
- Gli argomenti seguenti contengono informazioni più specifiche sull'utilizzo di ADO con linguaggi di scripting:  
+ Gli argomenti seguenti contengono informazioni più specifiche sull'uso di ADO con linguaggi di scripting:  
   
 -   [Programmazione ADO VBScript](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
   
@@ -71,5 +68,5 @@ All'interno di un ambiente di scripting, ADO consente di esporre i dati tramite 
   
 ## <a name="see-also"></a>Vedere anche  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Utilizzo di ADO con Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
+ [Uso di ADO con Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Uso di ADO con Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

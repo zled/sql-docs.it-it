@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_control
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_control function
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
-caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46e834874b35e81791f027b380ab2f905bc8fbde
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1e20a7ebdffc8972a1c3d1449fd65d2560a1d71b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426420"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145241"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   Modifica le impostazioni predefinite per vari parametri di controllo per una copia bulk tra un file e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -66,7 +63,7 @@ iValue
   
  Un errore nella sequenza verificherà anche se si chiama `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` dopo aver chiamato `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` e bcp_writefmt.  
   
- Per altre informazioni, vedere [individuazione dei metadati](../native-client/features/metadata-discovery.md).  
+ Per altre informazioni, vedere [Metadata Discovery](../native-client/features/metadata-discovery.md).  
   
  BCPFILECP  
  *iValue* contiene il numero della tabella codici del file di dati. È possibile specificare il numero della tabella codici, ad esempio 1252 o 850, o uno dei valori indicati di seguito:  

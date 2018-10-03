@@ -1,30 +1,27 @@
 ---
-title: 'Appendice c: la grammatica SQL | Documenti Microsoft'
+title: 'Appendice c: grammatica SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL grammar [ODBC], about SQL grammar
 ms.assetid: 0ee36f09-59e7-4b94-88ca-7ebc0952a3be
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a03e442ffa5bb5dc584c3d1f02517173bbaedbc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1de83d96e8116ee1ab9991a0a2fe78bed165c2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660619"
 ---
-# <a name="appendix-c-sql-grammar"></a>Appendice c: la grammatica SQL
-Questa appendice contiene gli argomenti seguenti.  
+# <a name="appendix-c-sql-grammar"></a>Appendice C: Grammatica SQL
+In questa appendice contiene gli argomenti seguenti.  
   
 -   [Grammatica SQL di base](../../../odbc/reference/appendixes/sql-minimum-grammar.md)  
   

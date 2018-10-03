@@ -1,37 +1,34 @@
 ---
-title: Posticipata buffer | Documenti Microsoft
+title: Buffer posticipati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - buffers [ODBC], deferred
 - deferred buffers [ODBC]
 ms.assetid: 02c9a75c-2103-4f68-a1db-e31f7e0f1f03
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14c1514759765699826c48a0cfb68e0eeba7a583
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b071494697d21a37f4420889a8f60cc35fe3d8b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910036"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797199"
 ---
-# <a name="deferred-buffers"></a>Buffer posticipato
-Oggetto *buffer posticipata* uno cui valore è utilizzato in un momento *dopo* è specificato in una chiamata di funzione. Ad esempio, **SQLBindParameter** viene utilizzato per associare, o *associare,* un buffer di dati con un parametro in un'istruzione SQL. L'applicazione specifica il numero del parametro e passa l'indirizzo, lunghezza in byte e il tipo di buffer. Il driver queste informazioni vengono salvate ma non esamina il contenuto del buffer. In un secondo momento, quando l'applicazione viene eseguita l'istruzione, il driver recupera le informazioni e viene utilizzato per recuperare i dati del parametro e inviarlo all'origine dati. Pertanto, l'input di dati nel buffer viene posticipata. Poiché posticipata i buffer sono specificati in una funzione e usati in un altro, è un'applicazione di un errore di programmazione per liberare un buffer posticipato, mentre il driver ancora prevede che altri utenti. Per ulteriori informazioni, vedere [allocazione e liberando buffer](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md), più avanti in questa sezione.  
+# <a name="deferred-buffers"></a>Buffer posticipati
+Oggetto *buffer posticipati* è quello il cui valore viene utilizzato in un momento *dopo* è specificato in una chiamata di funzione. Ad esempio, **SQLBindParameter** viene usato per associare, o *associare,* un buffer di dati con un parametro in un'istruzione SQL. L'applicazione specifica il numero del parametro e passa l'indirizzo, lunghezza in byte e il tipo di buffer. Il driver di queste informazioni vengono salvate ma non esamina il contenuto del buffer. In un secondo momento, quando l'applicazione viene eseguita l'istruzione, il driver recupera le informazioni e lo usa per recuperare i dati del parametro e inviarlo all'origine dati. Pertanto, l'input di dati nel buffer viene rinviata. Poiché buffer posticipati sono specificati in una funzione e usato in un altro, è un'applicazione di un errore di programmazione per liberare un buffer posticipato mentre il driver ancora prevede che altri utenti. per altre informazioni, vedere [allocazione e liberazione di buffer](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md), più avanti in questa sezione.  
   
- È possibile rinviare i buffer di input e di output. Nella tabella seguente sono riepilogati gli utilizzi di buffer posticipato. Si noti che posticipato buffer associato a un set di colonne vengono specificati con **SQLBindCol**, e posticipata i buffer associati a parametri di istruzioni SQL vengono specificati con **SQLBindParameter**.  
+ È possibile rinviare i buffer di input e di output. Nella tabella seguente sono riepilogati gli utilizzi del buffer posticipati. Si noti che i buffer posticipati associato per le colonne del set di risultati vengono specificati con **SQLBindCol**, e specificati in posticipate i buffer associati ai parametri di istruzione SQL con **SQLBindParameter**.  
   
-|Utilizzo di buffer|Tipo|Specificato con|Usato da|  
+|Uso di buffer|Tipo|Specificato con|Usato da|  
 |----------------|----------|--------------------|-------------|  
 |L'invio dei dati per i parametri di input|Input posticipata|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
 |Imposta l'invio dei dati per aggiornare o inserire una riga in un risultato|Input posticipata|**SQLBindCol**|**SQLSetPos**|  
 |Restituzione di dati per i parametri di input/output e output|Output posticipato|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
-|Restituzione di risultati set di dati|Output posticipato|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|
+|Restituzione di risultati di impostare i dati|Output posticipato|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|

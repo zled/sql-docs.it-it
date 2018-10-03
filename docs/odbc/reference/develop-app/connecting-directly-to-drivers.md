@@ -1,13 +1,11 @@
 ---
-title: Connettersi direttamente al driver | Documenti Microsoft
+title: Connessione diretta ai driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to driver [ODBC], SQLDriverConnect
@@ -15,25 +13,24 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], connecting directly to drivers
 - connecting to driver [ODBC], drivers
 ms.assetid: f86e198f-a088-4401-9106-aa62a0eb8f6e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 431269b9a9ddad5f31500d025aa6122cc2c1e5a4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3f5818d67659769ae104b3e98248c26f5b9fe8a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909796"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803419"
 ---
-# <a name="connecting-directly-to-drivers"></a>Connettersi direttamente al driver
-Come è stato illustrato in [scelta di un'origine dati o il Driver](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md), più indietro in questa sezione, alcune applicazioni non si desidera utilizzare un'origine dati in tutti. In alternativa, desiderano connettersi direttamente a un driver. **SQLDriverConnect** fornisce un modo per le applicazioni possono connettersi direttamente a un driver senza specificare un'origine dati. Concettualmente, un'origine dati temporaneo viene creata in fase di esecuzione.  
+# <a name="connecting-directly-to-drivers"></a>Connessione diretta ai driver
+Come illustrato [scelta di un'origine dati o Driver](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md), più indietro in questa sezione, alcune applicazioni non si desidera utilizzare un'origine dati affatto. Si vuole invece di connettersi direttamente a un driver. **SQLDriverConnect** fornisce un modo per l'applicazione per connettersi direttamente a un driver senza specificare un'origine dati. Concettualmente, viene creata un'origine dei dati temporanei in fase di esecuzione.  
   
- Per connettersi direttamente a un driver, l'applicazione specifica di **DRIVER** parola chiave nella stringa di connessione anziché il **DSN** (parola chiave). Il valore di **DRIVER** (parola chiave) è la descrizione del driver restituito da **SQLDrivers**. Si supponga, ad esempio, un driver con la descrizione del Driver Paradox e richiede il nome di una directory contenente i file di dati. Per connettersi a questo driver, l'applicazione potrebbe utilizzare una delle stringhe di connessione seguenti:  
+ Per connettersi direttamente a un driver, l'applicazione specifica la **DRIVER** parola chiave nella stringa di connessione anziché la **DSN** (parola chiave). Il valore della **DRIVER** parola chiave che rappresenta la descrizione del driver restituito da **SQLDrivers**. Si supponga, ad esempio, un driver con la descrizione del Driver Paradox e richiede il nome di una directory contenente i file di dati. Per connettersi a questo driver, l'applicazione potrebbe usare una delle stringhe di connessione seguenti:  
   
 ```  
 DRIVER={Paradox Driver};Directory=C:\PARADOX;  
 DRIVER={Paradox Driver};  
 ```  
   
- Con la prima stringa, il driver non è necessario eventuali informazioni aggiuntive. Con la seconda stringa, il driver necessario richiedere il nome della directory contenente i file di dati.
+ Con la prima stringa, il driver non necessario eventuali informazioni aggiuntive. Con la seconda stringa, il driver necessario per la richiesta per il nome della directory contenente i file di dati.

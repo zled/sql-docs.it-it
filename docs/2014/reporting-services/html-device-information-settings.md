@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bb0063ac9887d12b8ebeaf329c044f4974e49607
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a415a5f735e731efe3f3ae8b282f8ce2a1ad2eba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155843"
 ---
 # <a name="html-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo HTML
   Nella tabella seguente si elencano le impostazioni relative alle informazioni sul dispositivo per il rendering nel formato HTML.  
@@ -54,7 +51,7 @@ ms.locfileid: "37177223"
 |**StyleStream**|Indica se stili e script vengono creati come flusso separato anziché nel documento. Il valore predefinito è `false`.|  
 |`Toolbar`|Indica se mostrare o nascondere la barra degli strumenti. Il valore predefinito di questo parametro è `true`. Se il valore di questo parametro è `false`, tutte le opzioni rimanenti (ad eccezione della mappa documento) vengono ignorate. Se si omette questo parametro, la barra degli strumenti viene visualizzata automaticamente nei formati di rendering che la supportano.<br /><br /> Il rendering della barra degli strumenti del Visualizzatore report viene eseguito quando si usano l'accesso con URL per il rendering di un report, ma non quando si usano l'API SOAP. Tuttavia, il `Toolbar` le informazioni sul dispositivo impostazione influisce sulle modalità che il report viene visualizzato quando si utilizza SOAP `Render` (metodo). Se il valore di questo parametro è `true` quando si usano SOAP per eseguire il rendering in formato HTML, viene eseguito il rendering solo della prima sezione del report. Se il valore è `false`, viene eseguito il rendering dell'intero report HTML come singola pagina HTML.|  
 |`UserAgent`|Il `user-agent` stringa del browser che effettua la richiesta, situata nella richiesta HTTP.|  
-|**Zoom (\*)**|Valore di zoom del report come percentuale di un valore intero o come costante stringa. I valori stringa standard comprendono `Page Width` e `Whole Page`. Questo parametro viene ignorato dalle versioni di [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer precedenti a Internet Explorer 5.0 e da tutti i browser non[!INCLUDE[msCoName](../includes/msconame-md.md)] . Il valore predefinito di questo parametro è `100`.|  
+|**Zoom (\*)**|Valore di zoom del report come percentuale di un valore intero o come costante stringa. I valori stringa standard comprendono `Page Width` e `Whole Page`. Questo parametro viene ignorato dalle versioni di [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer precedenti a Internet Explorer 5.0 e da tutti i browser non [!INCLUDE[msCoName](../includes/msconame-md.md)]. Il valore predefinito di questo parametro è `100`.|  
 |**DataVisualizationFitSizing**|Indica il comportamento di adattamento della visualizzazione dei dati all'interno di una tablix. Sono inclusi grafici, misuratori e mappe.<br /><br /> I valori possibili sono **Approssimato** ed **Esatto**.<br /><br /> Il valore predefinito è **Approssimato**. Se l'impostazione viene rimossa dal file **rsreportserver.config** il comportamento predefinito è **Esatto**.<br /><br /> L'abilitazione del ridimensionamento **Esatto** può avere impatto sulle prestazioni perché l'elaborazione per determinare la dimensione esatta potrebbe impiegare più molto tempo di un adattamento approssimativo.|  
   
 ## <a name="see-also"></a>Vedere anche  

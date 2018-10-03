@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - orphaned users [SQL Server]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], metadata
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ac7577269daca9d8d5974c3a98ade1a681d6d79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317851"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167641"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Risolvere i problemi relativi agli utenti isolati (SQL Server)
   Per accedere a un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario che un'entità disponga di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido. Tale account di accesso viene utilizzato nel processo di autenticazione che verifica se l'entità è autorizzata a connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli account di accesso in un'istanza del server sono visibili nel **Sys. server_principals** vista del catalogo e il **Sys. syslogins** visualizzazione compatibilità.  

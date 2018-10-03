@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4bffa7a08382c025c3150287d1b09044d72047cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7021ff628c0b5da5b95c0eacf141596ecf63e41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285407"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143321"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Finestra di dialogo Crea sito Web (Gestione configurazione Master Data Services)
   Usare la finestra di dialogo **Crea sito Web** per creare un nuovo sito Web nel computer locale. Quando si crea un sito Web in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], il sito viene aggiunto a Internet Information Services (IIS) nel computer locale con un'applicazione radice configurata come applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Viene inoltre creato un nuovo pool di applicazioni in cui viene inserita l'applicazione Web.  

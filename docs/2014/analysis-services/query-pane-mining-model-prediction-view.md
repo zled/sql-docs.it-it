@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.query.f1
 ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ede17228e9dc21a170815ecc46900fd38ab7d978
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 316b82f15c28a13a2a04bdd81683d2fdf83707bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211781"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133231"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Riquadro Query (visualizzazione Stima modello di data mining)
   Nel riquadro **Query** vengono visualizzate le istruzioni DMX (Data Mining Extensions) create dal generatore delle query di stima. È possibile modificare le istruzioni e quindi fare clic sul pulsante **Passa alla visualizzazione dei risultati della query** per visualizzare i risultati restituiti. Se si torna alla visualizzazione **Progettazione**, tutte le modifiche apportate all'istruzione andranno perdute.  

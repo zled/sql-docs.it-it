@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.matchingproject.matching.f1
 - sql12.dqs.matchingproject.export.f1
 - sql12.dqs.matchingproject.map.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79bba6ab7f6823d27dd396413d45aedf788a3d72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27a77ac21cf9ffacf2c4d5dd52759479668152f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263277"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091751"
 ---
 # <a name="run-a-matching-project"></a>Eseguire un progetto corrispondente
   In questo argomento viene descritto come eseguire la corrispondenza dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Il processo di corrispondenza identifica i cluster di record corrispondenti in base alle regole di corrispondenza nei criteri di corrispondenza, definisce un record da ogni cluster come superstite in base a una regola di sopravvivenza ed esporta i risultati. In DQS il processo di corrispondenza, definito anche deduplicazione, è computerizzato ma è possibile creare alcune regole di corrispondenza in modo interattivo e selezionare la regola di sopravvivenza tra diverse opzioni, in modo da controllare comunque il processo.  

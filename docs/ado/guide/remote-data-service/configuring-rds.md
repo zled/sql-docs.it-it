@@ -1,33 +1,30 @@
 ---
-title: Configurazione di servizi desktop remoto | Documenti Microsoft
+title: Configurazione di servizi desktop remoto | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS configuration [ADO]
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7275d87bc314223231392bd67f9752e29a4c41be
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 547588d79d52f81d6f12c8b733829f7e38a6da70
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273785"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630679"
 ---
-# <a name="configuring-rds"></a>Configurazione di servizi desktop remoto
+# <a name="configuring-rds"></a>Configurazione di RDS
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Per implementare in modo efficiente i servizi desktop remoto, assicurarsi che si ha familiarità con le varie configurazioni disponibili per l'utente. In questa sezione include informazioni importanti sulla sicurezza e la scalabilità nell'implementazione di RDS. Vedere gli argomenti seguenti per informazioni sulla configurazione dei computer per l'utilizzo di RDS.  
+ Per implementare Servizi Desktop remoto in modo efficiente, assicurarsi che si ha familiarità con le varie configurazioni disponibili per l'utente. In questa sezione include informazioni importanti sulla sicurezza e scalabilità nell'implementazione di servizi desktop remoto. Vedere gli argomenti seguenti per informazioni sulla configurazione dei computer per l'uso di servizi desktop remoto.  
   
 -   [Concessione dei privilegi Guest a un computer server Web](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
   
@@ -48,7 +45,7 @@ ms.locfileid: "35273785"
 -   [Configurazione di DataFactory per la modalità sicura o senza restrizioni](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di tecnologie correlate con Servizi Desktop remoto](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
+ [Uso di tecnologie correlate con RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
  [Personalizzazione di DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Risoluzione dei problemi di RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)
 

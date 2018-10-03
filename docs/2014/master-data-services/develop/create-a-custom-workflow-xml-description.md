@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a153070edf64c6dd8ef796a25309949c67abe558
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e8edbfcc8637b1c7246f4a06470eeafcd0d67724
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149601"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>Descrizione XML del flusso di lavoro personalizzato (Master Data Services)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] il metodo <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> viene chiamato da SQL Server MDS Workflow Integration Service all'avvio di un flusso di lavoro. Questo metodo riceve i metadati e i dati sull'elemento che ha attivato la regola business del flusso di lavoro come blocco di XML. Per un esempio di codice che implementa un gestore del flusso di lavoro, vedere [Creare un flusso di lavoro personalizzato - Esempio &#40;Master Data Services&#41;](create-a-custom-workflow-example.md).  

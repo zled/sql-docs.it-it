@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rendering extensions [Reporting Services], custom extensions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], custom extensions
 - delivery extensions [Reporting Services]
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 213113dedeed3e5401081ff8ff7345b5d2fb09f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86c0aa75e73c59980e8de6456556087201d949d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220841"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153101"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Estensioni personalizzate rilevate nel server di report (Upgrade Advisor)
   Nei file di configurazione sono state rilevate impostazioni di estensioni personalizzate, indicanti che l'installazione include una o più estensioni personalizzate per l'elaborazione dati, il recapito, il rendering, la sicurezza o l'autenticazione. In seguito all'aggiornamento le impostazioni di configurazione delle estensioni verranno spostate con il server di report aggiornato. Tuttavia, se le estensioni personalizzate sono installate nella cartella di installazione del server di report esistente, i file di assembly per tali estensioni non verranno spostate nella nuova cartella di installazione durante il processo di aggiornamento. Dopo che l'aggiornamento è stato completato, è necessario spostare i file di assembly nella nuova cartella di installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

@@ -1,13 +1,11 @@
 ---
-title: Gruppo di oggetti (ADOX) | Documenti Microsoft
+title: Oggetto (ADOX) gruppo | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,34 +13,33 @@ f1_keywords:
 helpviewer_keywords:
 - group object [ADOX]
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36c26ab9fd3fc92f0636adaff725ef37b181a081
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 537e0d3b1408a3cb159a79ad4e256fc8b5cf720f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286030"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635189"
 ---
-# <a name="group-object-adox"></a>Oggetto di gruppo (ADOX)
+# <a name="group-object-adox"></a>Oggetto Group (ADOX)
 Rappresenta un account di gruppo che dispone delle autorizzazioni di accesso all'interno di un database protetto.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il [gruppi](../../../ado/reference/adox-api/groups-collection-adox.md) raccolta di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta gli account di gruppo del catalogo. Il **gruppi** raccolta per un [utente](../../../ado/reference/adox-api/user-object-adox.md) rappresenta solo il gruppo a cui appartiene l'utente.  
   
- Con la proprietà, raccolte e i metodi di un **gruppo** dell'oggetto, è possibile:  
+ Con la proprietà, le raccolte e i metodi di una **gruppo** dell'oggetto, è possibile:  
   
 -   Identificare il gruppo con il [nome](../../../ado/reference/adox-api/name-property-adox.md) proprietà.  
   
--   Determinare se un gruppo dispone di lettura, scrittura o eliminazione di autorizzazioni con il [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) metodi.  
+-   Determinare se un gruppo dispone di lettura, scrittura o eliminazione delle autorizzazioni con il [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) metodi.  
   
--   Accesso agli account utente che dispongono di appartenenze nel gruppo con il [utenti](../../../ado/reference/adox-api/users-collection-adox.md) insieme.  
+-   Accesso agli account utente con le appartenenze nel gruppo con il [utenti](../../../ado/reference/adox-api/users-collection-adox.md) raccolta.  
   
--   Accedere a proprietà specifiche del provider con il [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) insieme.  
+-   Accedere alle proprietà specifiche del provider con il [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta.  
   
- In questa sezione contiene l'argomento seguente.  
+ In questa sezione contiene gli argomenti seguenti.  
   
 -   [Proprietà, metodi ed eventi dell'oggetto Group](../../../ado/reference/adox-api/group-object-properties-methods-and-events.md)  
   
