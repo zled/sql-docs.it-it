@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_status_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_help_status_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_status_sp
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_status_sp
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8205d9350dba7a2cec7079a0197420e920eaa612
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c08985b4fe50a657c08de40f112776cf064b2846
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251768"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614257"
 ---
 # <a name="sysmailhelpstatussp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Visualizza lo stato delle code di Posta elettronica database. Utilizzare **sysmail_start_sp** per avviare le code di posta elettronica Database e **sysmail_stop_sp** per arrestare le code di posta elettronica Database.  
+  Visualizza lo stato delle code di Posta elettronica database. Uso **sysmail_start_sp** per avviare le code di posta elettronica Database e **sysmail_stop_sp** per arrestare le code di posta elettronica Database.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,15 +40,15 @@ sysmail_help_status_sp
 ```  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-set"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**Stato**|**nvarchar(7)**|Stato di Posta elettronica database. I valori possibili sono **STARTED** e **arrestato**.|  
+|**Stato**|**nvarchar(7)**|Stato di Posta elettronica database. I valori possibili sono **avviato** e **STOPPED**.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, solo i membri del **sysadmin** ruolo predefinito del server può accedere a questa procedura.  
   
 ## <a name="examples"></a>Esempi  

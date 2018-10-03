@@ -1,56 +1,53 @@
 ---
-title: Esempio (VC + +) del modello di eventi ADO | Documenti Microsoft
+title: Eventi ADO modello di esempio (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20df675bbbee8b513f7e1008da0cb4772255701c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614449"
 ---
-# <a name="ado-events-model-example-vc"></a>Esempio di modello di eventi ADO (VC + +)
-La sezione di Visual C++ di [la creazione di istanze di ADO evento dal linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md) viene fornita una descrizione generale di creazione di un'istanza del modello di evento ADO. Ecco un esempio specifico di un'istanza del modello di evento all'interno dell'ambiente creato tramite il **#import** direttiva.  
+# <a name="ado-events-model-example-vc"></a>Esempio del modello di eventi ADO (VC++)
+La sezione di Visual C++ di [creazione di istanze evento ADO per linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md) viene fornita una descrizione generale di come creare un'istanza del modello di eventi ADO. Di seguito è riportato un esempio specifico su un'istanza del modello di evento all'interno dell'ambiente creato dal **#import** direttiva.  
   
- Descrizione generale utilizza **adoint** come riferimento per le firme del metodo. Tuttavia, alcuni dettagli della descrizione generale variano leggermente in seguito all'utilizzo di **#import** direttiva:  
+ Descrizione generale viene utilizzata **adoint** come riferimento per le firme del metodo. Tuttavia, alcuni dettagli della descrizione generale variano leggermente in seguito all'utilizzo di **#import** direttiva:  
   
--   Il **#import** direttiva risolve **typedef**del, tipi di dati della firma di metodo, ai modificatori e ai moduli fondamentali.  
+-   Il **#import** direttiva risolve **typedef**del, tipi di dati della firma di metodo e i modificatori di propri moduli fondamentali.  
   
--   I metodi virtuali puri che devono essere sovrascritti sono preceduti da "**raw _**".  
+-   I metodi virtuali puri che devono essere sovrascritti sono precedute tutte dal prefisso da "**raw _**".  
   
- Parte del codice semplicemente riflette dello stile di codifica.  
+ Parte del codice semplicemente riflette stile di codifica.  
   
--   Puntatore a **IUnknown** utilizzato il **Advise** metodo ottenuto in modo esplicito con una chiamata a **QueryInterface**.  
+-   Il puntatore alla **IUnknown** usata dal **Advise** metodo si ottiene in modo esplicito con una chiamata a **QueryInterface**.  
   
 -   Non è necessario codificare in modo esplicito un distruttore nelle definizioni di classe.  
   
--   Si consiglia di codice più affidabile implementazioni di QueryInterface, AddRef e Release.  
+-   È possibile codificare più solide implementazioni di QueryInterface, AddRef e Release.  
   
 -   Il **__uuidof()** direttiva è ampiamente utilizzata per ottenere gli ID di interfaccia.  
   
  Infine, l'esempio contiene codice funzionante.  
   
--   Nell'esempio viene scritta come un'applicazione console.  
+-   Nell'esempio viene scritto come un'applicazione console.  
   
 -   È necessario inserire il proprio codice sotto il commento "`// Do some work`".  
   
--   Tutte le evento gestori predefiniti eseguire alcuna operazione e annullano eventuali notifiche. Inserire il codice appropriato per l'applicazione e consente le notifiche, se necessario.  
+-   Tutti i evento gestori predefinito viene eseguita alcuna operazione e annullare ulteriormente le notifiche. È consigliabile inserire il codice appropriato per l'applicazione e consentire le notifiche, se necessario.  
   
 ```  
 // ADO_Events_Model_Example.cpp  

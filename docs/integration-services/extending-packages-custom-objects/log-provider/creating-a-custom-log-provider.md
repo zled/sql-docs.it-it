@@ -5,28 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
 helpviewer_keywords:
 - custom log providers [Integration Services], creating
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
-caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 282746aa33ccdc7477740089cfac1f62ff266efc
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2c507ae71459c20abb86f3e3ee3bb69f4d990e37
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402053"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606632"
 ---
 # <a name="creating-a-custom-log-provider"></a>Creazione di un provider di log personalizzato
   L'ambiente di runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include funzionalità estese di registrazione. Un log consente di acquisire gli eventi che si verificano durante l'esecuzione di pacchetti. In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] è inclusa una varietà di provider di log che consentono di creare e archiviare log in più formati quali XML, testo, database o nel registro eventi di Windows. Se uno di questi provider o formati di output non soddisfano specifiche esigenze, è possibile creare un provider di log personalizzato.  

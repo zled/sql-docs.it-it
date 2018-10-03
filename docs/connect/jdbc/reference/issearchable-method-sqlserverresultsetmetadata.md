@@ -1,13 +1,11 @@
 ---
-title: Metodo isSearchable (SQLServerResultSetMetaData) | Documenti Microsoft
+title: Metodo isSearchable (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSetMetaData.isSearchable
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 10cf54f9-ef42-475e-8397-790306934573
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d11c732b5b75b79c7016f6affebab0a8db49e774
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: eccee93632d466d5799ddda6b19aebc462a68743
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843666"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597895"
 ---
 # <a name="issearchable-method-sqlserverresultsetmetadata"></a>Metodo isSearchable (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,16 +38,16 @@ public boolean isSearchable(int column)
 #### <a name="parameters"></a>Parametri  
  *column*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se la colonna può essere utilizzata in una clausola WHERE. In caso contrario, **false**.  
+ **true** se la colonna della colonna può essere utilizzata in una clausola WHERE. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo isSearchable viene specificato dal metodo isSearchable nell'interfaccia Java.SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo isSearchable è specificato dal metodo isSearchable nell'interfaccia ResultSetMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.aggregatetrans.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2328032345bfac2575afacc8764ba1265cb94ac
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 11ba7ca730a99631270911f6b6f3e66a4ab5b14e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331195"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607339"
 ---
 # <a name="aggregate-transformation"></a>Trasformazione Aggregazione
   La trasformazione Aggregazione applica funzioni di aggregazione, ad esempio Media, ai valori delle colonne e copia i risultati nell'output della trasformazione. Oltre alle funzioni di aggregazione, per questa trasformazione è disponibile la clausola GROUP BY, che consente di specificare i gruppi su cui eseguire l'aggregazione.  
@@ -130,7 +127,7 @@ ms.locfileid: "35331195"
   
 -   [Ordinare i dati per le trasformazioni Unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Aggregare valori in un set di dati tramite la trasformazione Aggregazione](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor trasformazione Aggregazione (scheda Aggregazioni)

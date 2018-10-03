@@ -4,19 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5110a38c7e32597bd708f97baef0d25ebec7b63
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 656cf55483947a17696fdaf4c09f7ebe08124d20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266491"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654320"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
 In questa esercitazione verrà illustrato come creare due tipi di report impaginati in [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un report drill-through e un report principale. I dati di vendita di esempio utilizzati in questi report vengono recuperati da un cubo di Analysis Services. 

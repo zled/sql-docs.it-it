@@ -4,17 +4,16 @@ ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a02761dd1c583c3e58a69cf67709412c4757f2ed
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e8a9c698135555e370d6379dd636288635fce181
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281690"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631179"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Risolvere i problemi di recupero dei dati con i report di Reporting Services
 Il primo passaggio dell'elaborazione del report consiste nel recuperare i dati del report per ogni set di dati tramite la query del set di dati. Quando si visualizza in anteprima un report in locale, è necessario che le connessioni all'origine dati e le credenziali dispongano delle autorizzazioni sufficienti per recuperare i dati nel computer. Quando si esegue un report nel server di report, è necessario che le connessioni all'origine dati e le credenziali dispongano delle autorizzazioni sufficienti per recuperare i dati nel server di report. Utilizzare questo argomento per risolvere i problemi relativi al recupero dei dati del report.   

@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43fccc172756b8e7afdb4522c53693915be0f23c
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 2f0197ed97f8d03784cd89d2bede5a4e7744e80f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613419"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Domande frequenti sul driver JDBC
 
@@ -41,14 +38,14 @@ File del driver JDBC disponibili nel repository di GitHub per Microsoft JDBC dri
 **Quali informazioni sono necessarie prima di aggiornare il driver?**  
  Microsoft JDBC Driver 7.0 supporta 4.3 specifiche (parzialmente) e JDBC 4.2 e include due librerie di classi JAR nel pacchetto di installazione, come indicato di seguito:
 
-| JAR                        | Specifica JDBC            | Versione di JDK |
+| JAR                        | Specifica JDBC            | Versione JDK |
 | -------------------------- | ----------------------------- | ----------- |
 | mssql-jdbc-7.0.0.jre10.jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 10.0    |
 | mssql-jdbc-7.0.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 
 Microsoft JDBC Driver 6.4 supporta JDBC 4.1, 4.2 e 4.3 (parzialmente) specifiche e include tre librerie di classi JAR nel pacchetto di installazione, come indicato di seguito:
 
-| JAR                       | Specifica JDBC                 | Versione di JDK |
+| JAR                       | Specifica JDBC                 | Versione JDK |
 | ------------------------- | ---------------------------------- | ----------- |
 | mssql-jdbc-6.4.0.jre9.jar | JDBC 4.3 (parzialmente), 4.2 e 4.1 | JDK 9.0     |
 | mssql-jdbc-6.4.0.jre8.jar | JDBC 4.2 e 4.1                  | JDK 8.0     |
@@ -56,7 +53,7 @@ Microsoft JDBC Driver 6.4 supporta JDBC 4.1, 4.2 e 4.3 (parzialmente) specifiche
 
 Microsoft JDBC Driver 6.2 supporta le specifiche JDBC 4.2, 4.1 e 4.0 e include due librerie di classi JAR nel pacchetto di installazione, come indicato di seguito:
 
-| JAR                       | Specifica JDBC     | Versione di JDK |
+| JAR                       | Specifica JDBC     | Versione JDK |
 | ------------------------- | ---------------------- | ----------- |
 | MSSQL-jdbc-6.2.2.jre8.jar | JDBC 4.2, 4.1 e 4.0 | JDK 8.0     |
 | MSSQL-jdbc-6.2.2.jre7.jar | JDBC 4.1 e 4.0       | JDK 7.0     |
@@ -70,7 +67,7 @@ Microsoft JDBC driver 6.0 e 4.2 per SQL Server supporta le specifiche JDBC 4.0, 
 
 Microsoft JDBC Driver 4.1 per SQL Server supporta la specifica JDBC 4.0 e include una libreria di classi JAR nel pacchetto di installazione, come indicato di seguito:
 
-| JAR           | Specifica JDBC | Versione di JDK     |
+| JAR           | Specifica JDBC | Versione JDK     |
 | ------------- | ------------------ | --------------- |
 | sqljdbc41.jar | JDBC 4.0           | JDK 7.0 e 6.0 |
 
