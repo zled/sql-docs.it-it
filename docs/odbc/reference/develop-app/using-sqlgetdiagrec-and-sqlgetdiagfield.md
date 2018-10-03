@@ -1,13 +1,11 @@
 ---
-title: Utilizzando SQLGetDiagRec e SQLGetDiagField | Documenti Microsoft
+title: Utilizzo di SQLGetDiagRec e SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -16,25 +14,24 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 555bc3ba25ba895b54384acb8772a4b4293e61c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37fb095579fd173fd24a5df933e3e1a65edbeada
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916036"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626039"
 ---
-# <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Utilizzando SQLGetDiagRec e SQLGetDiagField
-Le applicazioni chiamano **SQLGetDiagRec** o **SQLGetDiagField** per recuperare le informazioni di diagnostica. Queste funzioni accettano un handle di ambiente, connessione, istruzione o descrittore e torna diagnostica dalla funzione l'handle dell'ultimo utilizzo. La diagnostica registrata su un handle specifico viene rimossi quando viene chiamata utilizzando l'handle di una nuova funzione. Se la funzione ha restituito più record di diagnostica, l'applicazione chiama queste funzioni più volte. il numero totale di record di stato viene recuperato chiamando **SQLGetDiagField** per il record di intestazione (record 0) con l'opzione SQL_DIAG_NUMBER.  
+# <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Uso di SQLGetDiagRec e SQLGetDiagField
+Le applicazioni chiamano **SQLGetDiagRec** oppure **SQLGetDiagField** per recuperare le informazioni di diagnostica. Queste funzioni accettano un handle di ambiente, connessione, istruzione o descrittore e restituiscono diagnostica dalla funzione che infine utilizzato tale handle. I dati di diagnostica registrati su un handle specifico vengono rimossi quando viene chiamata una funzione di nuovo utilizzando l'handle. Se la funzione ha restituito più record di diagnostica, l'applicazione chiama le funzioni più volte; il numero totale di record di stato viene recuperato chiamando **SQLGetDiagField** per il record di intestazione (record 0) con l'opzione SQL_DIAG_NUMBER.  
   
- Applicazioni di recuperano i singoli campi di diagnostica chiamando **SQLGetDiagField** e specificando il campo da recuperare. Alcuni campi di diagnostica non ha alcun significato per determinati tipi di handle. Per un elenco di campi di diagnostica e i relativi significati, vedere il [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descrizione della funzione.  
+ Applicazioni di recuperano i singoli campi di diagnostica chiamando **SQLGetDiagField** e specificando il campo da recuperare. Determinati campi di diagnostica non hanno alcun significato per determinati tipi di handle. Per un elenco di campi di diagnostica e i relativi significati, vedere la [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descrizione della funzione.  
   
- Le applicazioni di recuperare il valore SQLSTATE, codice di errore nativo e messaggio di diagnostica in una singola chiamata chiamando **SQLGetDiagRec**; **SQLGetDiagRec** non può essere utilizzato per recuperare informazioni dal record di intestazione.  
+ Le applicazioni di recuperare il valore SQLSTATE, codice di errore nativo e messaggio di diagnostica in una singola chiamata chiamando **SQLGetDiagRec**; **SQLGetDiagRec** non può essere usato per recuperare informazioni dal record di intestazione.  
   
- Ad esempio, il codice seguente richiede l'immissione di un'istruzione SQL e viene eseguito. Se le informazioni di diagnostica è state restituite, chiama **SQLGetDiagField** per ottenere il numero di record di stato e **SQLGetDiagRec** per ottenere la SQLSTATE, un codice di errore nativo e un messaggio di diagnostica da quelli record.  
+ Ad esempio, il codice seguente richiede l'immissione di un'istruzione SQL e lo esegue. Se le informazioni di diagnostica è state restituite, chiama il metodo **SQLGetDiagField** per ottenere il numero di record di stato e **SQLGetDiagRec** per ottenere il valore SQLSTATE, codice di errore nativo e messaggio di diagnostica da quelli record.  
   
 ```  
 SQLCHAR       SqlState[6], SQLStmt[100], Msg[SQL_MAX_MESSAGE_LENGTH];  

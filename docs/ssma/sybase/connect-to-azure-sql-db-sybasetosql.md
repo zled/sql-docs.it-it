@@ -1,30 +1,24 @@
 ---
-title: Connettersi al database SQL di Azure (SybaseToSQL) | Documenti Microsoft
+title: Connettersi al database SQL di Azure (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bb6a49072e16f00ba12dd32f1ccd4b6cab8a3620
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 057a39fd393be6cce9232d787b0d110a4be2035a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778837"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640910"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Connettersi al database SQL di Azure (SybaseToSQL)
-Utilizzare la connessione a database SQL di Azure, finestra di dialogo per connettersi al database che si desidera eseguire la migrazione di database SQL di Azure.  
+Usare la connessione alla finestra di dialogo di database SQL di Azure per la connessione al database che si desidera eseguire la migrazione di database SQL di Azure.  
   
 Per accedere a questa finestra di dialogo, scegliere il **File** dal menu **Connetti al database SQL di Azure**. Se si è già connessa, il comando è **riconnessione al database SQL di Azure.**  
   
@@ -35,35 +29,35 @@ Selezionare o immettere il nome del Server per la connessione al database SQL di
   
 **Database**  
   
-Selezionare, inserire o **Sfoglia** il nome del Database.  
+Selezionare, inserire o **esplorare** il nome del Database.  
   
 > [!IMPORTANT]  
-> SSMA per Sybase non supporta la connessione al database master nel database di SQL Azure.  
+> SSMA per Sybase non supporta la connessione al database master nel database SQL di Azure.  
   
 **Nome utente**  
   
-Immettere il nome utente utilizzato per connettersi al database del database SQL di Azure SSMA  
+Immettere il nome utente utilizzato per connettersi al database di Azure SQL DB SSMA  
   
 **Password**  
   
 Immettere la password associata al nome utente.  
   
-**Crittografare**  
+**Encrypt**  
   
-SSMA consiglia una connessione crittografata al database SQL di Azure.  
+SSMA consiglia connessione crittografata al database SQL di Azure.  
   
 ## <a name="create-azure-database"></a>Creare il Database di Azure  
 Se non sono disponibili database nell'account di database SQL di Azure, è possibile creare il primo database.  
   
-Per creare un nuovo database per la prima volta, seguire i passaggi seguenti  
+Per creare un nuovo database per la prima volta, seguire la procedura seguente  
   
-1.  Fare clic sul pulsante Sfoglia che è presente nella finestra Connetti a database SQL di Azure, finestra di dialogo  
+1.  Fare clic sul pulsante Sfoglia, che è presente nella finestra Connetti alla finestra di dialogo di database SQL di Azure  
   
-2.  Se non sono disponibili database, vengono visualizzati i seguenti due voci di menu.  
+2.  Se non sono presenti database, vengono visualizzati i seguenti due voci di menu.  
   
-    1.  **(Nessun database trovato)**  che è disabilitata e costantemente in grigio  
+    1.  **(Nessun database trovato)**  che è disabilitata e continuamente in grigio  
   
-    2.  **Crea nuovo database** cui è abilitata solo se non sono disponibili database nell'account di database SQL di Azure. Facendo clic su questa voce di menu nella finestra di dialogo Crea Database di Azure è presente con dimensioni e il nome di database.  
+    2.  **Crea nuovo database** che è abilitato solo quando non sono presenti database nell'account di database SQL di Azure. Facendo clic su questa voce di menu, finestra di dialogo Crea Database di Azure è presente con dimensioni e il nome del database.  
   
 3.  Al momento della creazione del database, i due parametri seguenti vengono forniti come input:  
   

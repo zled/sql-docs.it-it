@@ -1,30 +1,27 @@
 ---
-title: Controllo delle transazioni (ADO) | Documenti Microsoft
+title: Controllo delle transazioni (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ADO]
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b036998fba22c19e47e9e5ced581aabeec9b07b8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8059df4275a336d084144a73910cdef99abf9467
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270980"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603620"
 ---
 # <a name="controlling-transactions-ado"></a>Controllo delle transazioni (ADO)
-ADO supporta l'elaborazione all'interno di una connessione con l'aiuto di transazione di **BeginTrans**, **CommitTrans**, e **RollbackTrans** metodi su un  **Connessione** oggetto. L'idea generale dell'implementazione in ADO di elaborazione delle transazioni è illustrata nel seguente frammento di codice semplice.  
+ADO supporta l'elaborazione all'interno di una connessione con l'aiuto di transazioni di **BeginTrans**, **CommitTrans**, e **RollbackTrans** metodi su un  **Connessione** oggetto. L'idea generale dell'implementazione di elaborazione delle transazioni nel ADO è illustrato nel seguente frammento di codice semplice.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -81,6 +78,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- Nell'esempio viene utilizzato l'elaborazione delle transazioni per garantire che i due record vengono aggiornati come un'unità di operazione e che i nomi di prodotto di due INTERSCAMBIATI o non apportare alcuna modifica.  
+ In questo caso l'elaborazione delle transazioni viene usata per assicurarsi che i due record vengono aggiornati come singola unità di operazione e che i nomi dei due prodotti INTERSCAMBIATI o non apportare alcuna modifica.  
   
- Per le discussioni dettagliate dell'elaborazione delle transazioni, vedere [aggiornamento e il mantenimento dati](../../../ado/guide/data/updating-and-persisting-data.md).
+ Per le discussioni dettagliate dell'elaborazione delle transazioni, vedere [aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).

@@ -1,13 +1,11 @@
 ---
-title: Tipi di driver | Documenti Microsoft
+title: Tipi di driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
@@ -15,48 +13,47 @@ helpviewer_keywords:
 - backward compatibility [ODBC], application and driver compatibility
 - compatibility [ODBC], application and driver compatibility
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e75e5827becd5457d0e310ca5ec0cc2a13259be5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f619c519bd5ec6a3ebb3567fc39e73d63e8b68f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914686"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619689"
 ---
 # <a name="types-of-drivers"></a>Tipi di driver
-Driver ODBC possono essere classificati come segue:  
+Driver ODBC possono essere classificati come indicato di seguito:  
   
 -   **32 bit ODBC 2.**  
      ***x* Driver** driver A 32 bit che:  
   
-    -   Esporta solo 2 di ODBC*x* funzioni.  
+    -   Consente di esportare solo l'API ODBC 2*x* funzioni.  
   
-    -   Presenta ODBC 2. *x* comportamento per le modifiche di comportamento.  
+    -   Mostra ODBC 2. *x* comportamento per modifiche del comportamento.  
   
--   **ISO e aprire un Driver conforme con gruppo** driver A 32 bit che:  
+-   **ISO e aprire i Driver compatibili con gruppo** driver A 32 bit che:  
   
-    -   Esporta tutte le funzioni che sono documentate nei documenti Open Group o ISO CLI. Questo include alcune delle funzioni che sono deprecate in ODBC.  
+    -   Esporta tutte le funzioni che sono documentate nei documenti Open Group o ISO CLI. Ciò include alcune delle funzioni che sono deprecate in ODBC.  
   
-    -   Comportamento di ODBC 3.0 per modifiche del comportamento.  
+    -   Presenta un comportamento ODBC 3.0 per modifiche del comportamento.  
   
-    -   Non va necessariamente tramite Gestione Driver ODBC 3.0.  
+    -   Non necessariamente esamina la gestione dei Driver ODBC 3.0.  
   
 -   **Driver ODBC 3.0** driver A 32 bit che:  
   
-    -   Esporta le funzioni sole in ODBC 3.0 meno funzioni deprecate.  
+    -   Esporta solo le funzioni che sono nella versione 3.0 di ODBC meno funzioni deprecate.  
   
-    -   È in grado di presenta ODBC 2. *x* comportamento o ODBC 3.0 rispetto alle modifiche di comportamento, in base all'attributo di ambiente SQL_ATTR_APP_ODBC_VERSION.  
+    -   È in grado di che esibisce ODBC 2. *x* comportamento o il comportamento ODBC 3.0 rispetto alle modifiche di comportamento, basato sull'attributo SQL_ATTR_APP_ODBC_VERSION ambiente.  
   
--   **Driver ODBC 3.5 (o versione successiva) ANSI** driver A 32 bit che:  
+-   **Driver ODBC 3.5 (o versioni successive) ANSI** driver A 32 bit che:  
   
-    -   Esporta le funzioni sole in ODBC 3.5 meno funzioni deprecate.  
+    -   Esporta solo le funzioni che sono in ODBC 3.5 meno funzioni deprecate.  
   
-    -   È in grado di presenta ODBC 2. *x* comportamento o comportamento ODBC 3.0 o 3.5 ODBC comportamento rispetto alle modifiche di comportamento, in base all'attributo di ambiente SQL_ATTR_APP_ODBC_VERSION.  
+    -   È in grado di che esibisce ODBC 2. *x* comportamento o il comportamento ODBC 3.0 o comportamento ODBC 3.5 rispetto alle modifiche del comportamento, basato sull'attributo SQL_ATTR_APP_ODBC_VERSION ambiente.  
   
--   **Driver ODBC 3.5 (o versione successiva) Unicode** driver A 32 bit che:  
+-   **Driver ODBC 3.5 (o versioni successive) Unicode** driver A 32 bit che:  
   
     -   Supporta tutte le funzionalità di un driver ODBC 3.5 ANSI.  
   
@@ -65,4 +62,4 @@ Driver ODBC possono essere classificati come segue:
     -   Può archiviare ed elaborare i dati Unicode nell'origine dati.  
   
 > [!NOTE]  
->  driver ODBC a 16 bit non funzioneranno direttamente con ODBC 3. *x* gestione Driver. Tuttavia, è possibile per i driver a 16 bit a funzionare con il gestore di Driver ODBC 2.0, che successivamente thunk fino a 3. *x* gestione Driver.
+>  driver ODBC a 16 bit non funziona direttamente con ODBC 3. *x* gestione Driver. Tuttavia, è possibile che i driver a 16 bit lavorare con la gestione di Driver ODBC 2.0, che successivamente thunk fino a 3. *x* gestione Driver.

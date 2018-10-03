@@ -1,13 +1,11 @@
 ---
-title: Descrittore campo conformità | Documenti Microsoft
+title: Conformità del campo descrittore | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptor field conformance levels [ODBC]
@@ -15,31 +13,30 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b01b9da55da1fd3decb46e69dc073781427ccfab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911846"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642309"
 ---
-# <a name="descriptor-field-conformance"></a>Descrittore campo conformità
-Nella tabella seguente indica il livello di conformità di ogni campo di intestazione ODBC descrittore, in cui questo è ben definito.  
+# <a name="descriptor-field-conformance"></a>Conformità del campo descrittore
+Nella tabella seguente indica il livello di conformità di ogni campo di intestazione ODBC descrittore, in cui si è ben definito.  
   
 |Funzione|Livello di conformità|  
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|Core|  
 |SQL_DESC_ARRAY_SIZE|Core|  
-|SQL_DESC_ARRAY_STATUS_PTR|Core (per APD IPR e IRD); Livello 1 (per ARD)|  
+|SQL_DESC_ARRAY_STATUS_PTR|Core (per APD IPR rilasciate e IRD); Livello 1 (per ARD)|  
 |SQL_DESC_BIND_OFFSET_PTR|Core|  
 |SQL_DESC_BIND_TYPE|Core|  
 |SQL_DESC_COUNT|Core|  
 |SQL_DESC_ROWS_PROCESSED_PTR|Core|  
   
- Nella tabella seguente indica il livello di conformità di ogni campo di record del descrittore ODBC, in cui questo è ben definito.  
+ Nella tabella seguente indica il livello di conformità di ogni campo di record del descrittore ODBC, in cui si è ben definito.  
   
 |Funzione|Livello di conformità|  
 |--------------|-----------------------|  
@@ -50,8 +47,8 @@ Nella tabella seguente indica il livello di conformità di ogni campo di intesta
 |SQL_DESC_CATALOG_NAME|Livello 2|  
 |SQL_DESC_CONCISE_TYPE|Core|  
 |SQL_DESC_DATA_PTR|Core|  
-|CODICE SQL_DESC_DATETIME_INTERVAL_|Componenti di base [1]|  
-|PRECISIONE SQL_DESC_DATETIME_INTERVAL_|Componenti di base [1]|  
+|CODICE SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
+|PRECISIONE SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
 |SQL_DESC_DISPLAY_SIZE|Core|  
 |SQL_DESC_FIXED_PREC_SCALE|Core|  
 |SQL_DESC_INDICATOR_PTR|Core|  
@@ -64,7 +61,7 @@ Nella tabella seguente indica il livello di conformità di ogni campo di intesta
 |SQL_DESC_NULLABLE|Core|  
 |SQL_DESC_OCTET_LENGTH|Core|  
 |SQL_DESC_OCTET_LENGTH_PTR|Core|  
-|SQL_DESC_PARAMETER_TYPE|Componenti di base o del livello 2 di [2]|  
+|SQL_DESC_PARAMETER_TYPE|Core/livello 2 [2]|  
 |SQL_DESC_PRECISION|Core|  
 |SQL_DESC_ROWVER|Livello 1|  
 |SQL_DESC_SCALE|Core|  
@@ -77,6 +74,6 @@ Nella tabella seguente indica il livello di conformità di ogni campo di intesta
 |SQL_DESC_UNSIGNED|Core|  
 |SQL_DESC_UPDATABLE|Core|  
   
- [1] supporto per questi campi di record è obbligatorio solo se il driver supporta i tipi di dati applicabili.  
+ [1] supporto per questi campi di record è obbligatorio solo se il driver supporta i tipi di dati applicabile.  
   
- [2] per la conformità a livello di base, il driver deve supportare SQL_PARAM_INPUT. La conformità di interfaccia di livello 2, il driver deve supportare anche SQL_PARAM_INPUT_OUTPUT e SQL_PARAM_OUTPUT.
+ [2] per conformità al livello di base, il driver deve supportare SQL_PARAM_INPUT. Per la conformità di interfaccia di livello 2, il driver deve anche supportare SQL_PARAM_INPUT_OUTPUT e SQL_PARAM_OUTPUT.

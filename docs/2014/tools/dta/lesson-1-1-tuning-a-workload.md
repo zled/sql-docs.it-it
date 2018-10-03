@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - workloads [SQL Server], tuning
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02c10662607423a5dba423977572876f18394e22
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82d3b33b8c41885d3fa92d1363af6c98443c9deb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172092"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073781"
 ---
 # <a name="tuning-a-workload"></a>Ottimizzazione di un carico di lavoro
   Per individuare la migliore struttura fisica di database per l'esecuzione di query sulle tabelle e i database selezionati per l'ottimizzazione, è possibile utilizzare Ottimizzazione guidata motore di database.  
@@ -30,7 +27,7 @@ ms.locfileid: "37172092"
   
 ### <a name="tune-a-workload-transact-sql-script-file"></a>Per ottimizzare un file script Transact-SQL del carico di lavoro  
   
-1.  Copiare una o più istruzioni SELECT di esempio da "A. Utilizzo dell'istruzione SELECT per il recupero di righe e colonne" in [Esempi di istruzioni SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql) e incollare le istruzioni nell'Editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Salvare il file come **Myscript. SQL** in una directory in cui è possibile trovarlo facilmente.  
+1.  Copiare una o più istruzioni SELECT di esempio da "A. Utilizzo dell'istruzione SELECT per il recupero di righe e colonne" in [Esempi di istruzioni SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql) e incollare le istruzioni nell'Editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Salvare il file con il nome **MyScript.sql** in una directory in cui sia possibile individuarlo facilmente.  
   
 2.  Avviare Ottimizzazione guidata motore di database. Vedere [Avvio dello strumento Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   

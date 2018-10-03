@@ -1,53 +1,47 @@
 ---
-title: Creazione di Test case (SybaseToSQL) | Documenti Microsoft
+title: Creazione di Test case (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester component,Test Case Wizard
 ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 54eda3b9434d52e221c7223e87c1305adc3d125c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 95a6724ab836fb3dddb54fadc82821ad68f29e98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778417"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746359"
 ---
-# <a name="creating-test-cases-sybasetosql"></a>Creazione di Test case (SybaseToSQL)
-Utilizzare la procedura guidata di Test Case per creare un test. Questa procedura guidata consente di creare test case scegliendo testato e verificato gli oggetti e specificando i parametri di test.  
+# <a name="creating-test-cases-sybasetosql"></a>Creazione di test case (SybaseToSQL)
+Usare la procedura guidata di Test Case per creare un test. Questa procedura guidata consente di creare test case scegliendo testato e verificato gli oggetti e specificando i parametri di test.  
   
 ## <a name="starting-the-test-case-wizard"></a>Avvio della procedura guidata di Test Case  
 Per avviare Creazione guidata Test Case **nuovo Test Case...** dal **Tester** menu.  
   
-All'avvio, la procedura guidata Cerca database ssmatester2005db o ssmatester2008db (a seconda del tipo di progetto) nel server di Sybase di origine. È lo schema di estensione Tester utilizzato per archiviare gli oggetti ausiliari. Se la procedura guidata di Test Case non è possibile trovare ssmatester2005db o ssmatester2008db, verrà visualizzata una finestra di dialogo che si propone di creare il database di estensione Tester. (Questa situazione si verifica in genere durante la prima esecuzione di SSMA Tester)  
+All'avvio, la procedura guidata Cerca database ssmatester2005db o ssmatester2008db (a seconda del tipo di progetto) nel server di Sybase di origine. È lo schema di estensione Tester usato per l'archiviazione di oggetti ausiliari. Se la procedura guidata di Test Case non è possibile trovare ssmatester2005db o ssmatester2008db, visualizza una finestra di dialogo che si propone di creare il database di estensione Tester. (Questa situazione si verifica in genere durante la prima esecuzione di SSMA Tester)  
   
-Se si ottiene la finestra di dialogo, fare clic su **Sì** per creare i database di Sybase tester nel server di origine. Una nuova finestra di dialogo verrà quindi visualizzati in cui è necessario aggiungere uno o più dispositivi in cui individuare di nuovo database Tester. Fare clic su **Aggiungi** per aggiungere un dispositivo. Nel **spazio di allocazione per Database Tester** finestra di dialogo selezionare il dispositivo e specificare le dimensioni utilizzata dal database di tester. Inoltre, è possibile impostare il dispositivo separato per i log di database. Si noti che è necessario disporre di privilegi per creare i database di Sybase.  
+Se si ottiene la finestra di dialogo, fare clic su **Sì** per creare database di Sybase tester nel server di origine. Quindi, verrà visualizzata una finestra di dialogo Nuovo in cui è necessario aggiungere uno o più dispositivi in cui si desidera individuare nuovi Tester database. Fare clic su **Add** per aggiungere un dispositivo. Nel **allocazione dello spazio per il Database di Tester** finestra di dialogo scegliere il dispositivo e specificare la dimensione utilizzata dal database di tester. Inoltre, è possibile impostare il dispositivo separato per i log di database. Si noti che è necessario disporre dei privilegi di Sybase per creare i database.  
   
 ## <a name="overview-of-creating-test-cases-using-the-wizard"></a>Panoramica della creazione di Test case usando la procedura guidata  
-Il processo di creazione di un test case è costituita da cinque passaggi:  
+Il processo di creazione di un test case è costituito da cinque passaggi:  
   
-1.  [L'inizializzazione di Test case &#40;SybaseToSQL&#41;](../../ssma/sybase/initializing-test-cases-sybasetosql.md).  
+1.  [Inizializzazione di Test case &#40;SybaseToSQL&#41;](../../ssma/sybase/initializing-test-cases-sybasetosql.md).  
   
-2.  [La selezione e configurazione di oggetti di Test &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md).  
+2.  [Selezione e configurazione degli oggetti da testare &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md).  
   
-3.  [La selezione e la configurazione di oggetti interessati &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md).  
+3.  [Selezione e configurazione degli oggetti interessati &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md).  
   
 4.  [Personalizzazione dell'ordine delle chiamate &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md).  
   
 5.  [Completamento della preparazione del Test Case &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Test di eseguire la migrazione di oggetti di Database &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Test di oggetti di Database migrati &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

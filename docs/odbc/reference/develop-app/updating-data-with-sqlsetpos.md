@@ -1,42 +1,39 @@
 ---
-title: Aggiornamento dei dati con SQLSetPos | Documenti Microsoft
+title: Aggiornamento dei dati con SQLSetPos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], SQLSetPos
 - data updates [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], updating data
 ms.assetid: e9625b59-06a0-4883-b155-b932ba7528d9
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3fecebb38d9e34a2a06fb0e5b70131cc57d8deff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1c31ef622281b4f52f62ca3867c5afa7dcae8ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916206"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680789"
 ---
-# <a name="updating-data-with-sqlsetpos"></a>Aggiornamento dei dati con SQLSetPos
-Le applicazioni possono aggiornare o eliminare qualsiasi riga nel set di righe con **SQLSetPos**. La chiamata **SQLSetPos** rappresenta un'alternativa utile alla creazione ed esecuzione di un'istruzione SQL. Consente un driver ODBC supporta gli aggiornamenti posizionati anche quando l'origine dati non supporta le istruzioni SQL posizionate. È parte del paradigma di ottenere accesso completo del database tramite le chiamate di funzione.  
+# <a name="updating-data-with-sqlsetpos"></a>Aggiornamento dati con SQLSetPos
+Le applicazioni possono aggiornare o eliminare qualsiasi riga nel set di righe con **SQLSetPos**. La chiamata **SQLSetPos** rappresenta un'alternativa utile alla creazione ed esecuzione di un'istruzione SQL. In questo modo, un driver ODBC supportano gli aggiornamenti posizionati anche quando l'origine dati non supporta le istruzioni SQL posizionate. Fa parte del paradigma di ottenere accesso completo al database tramite le chiamate di funzione.  
   
- **SQLSetPos** opera su set di righe corrente e può essere usata solo dopo una chiamata a **SQLFetchScroll**. L'applicazione specifica il numero della riga da aggiornare, eliminare o inserire e vengono recuperati i nuovi dati per la riga dal buffer di set di righe. **SQLSetPos** può essere utilizzato anche per designare una riga specificata come riga corrente o per aggiornare una particolare riga nel set di righe dall'origine dati.  
+ **SQLSetPos** agisce sui set di righe corrente e può essere usato solo dopo una chiamata a **SQLFetchScroll**. L'applicazione specifica il numero di riga da aggiornare, eliminare o inserire i nuovi dati di tale riga vengono recuperati dai buffer di set di righe. **SQLSetPos** inoltre consente di designare una riga specificata come riga corrente o per aggiornare una determinata riga nel set di righe dall'origine dati.  
   
- Dimensioni del set di righe sono impostata da una chiamata a **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_ROW_ARRAY_SIZE. **SQLSetPos** utilizza nuove dimensioni del set di righe, tuttavia, solo dopo una chiamata a **SQLFetch** o **SQLFetchScroll**. Se le dimensioni del set di righe viene modificata, ad esempio **SQLSetPos** viene chiamato e quindi **SQLFetch** o **SQLFetchScroll** viene chiamato e la chiamata a **SQLSetPos** utilizza le dimensioni del set di righe precedenti durante **SQLFetch** o **SQLFetchScroll** utilizza le nuove dimensioni del set di righe.  
+ Dimensioni del set di righe vengono impostate tramite una chiamata a **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_ROW_ARRAY_SIZE. **SQLSetPos** Usa una nuova dimensione di set di righe, tuttavia, solo dopo una chiamata a **SQLFetch** oppure **SQLFetchScroll**. Se vengono modificate le dimensioni del set di righe, ad esempio **SQLSetPos** viene chiamato e quindi **SQLFetch** oppure **SQLFetchScroll** viene chiamato e la chiamata a **SQLSetPos** Usa le dimensioni del set di righe precedente durante **SQLFetch** oppure **SQLFetchScroll** Usa le nuove dimensioni del set di righe.  
   
- La prima riga nel set di righe è il numero di riga 1. Il *RowNumber* argomento in **SQLSetPos** deve identificare una riga nel set di righe, ovvero il valore deve essere compreso nell'intervallo compreso tra 1 e il numero di righe recuperate più di recente (che può essere minore di dimensione del set di righe). Se *RowNumber* è 0, l'operazione si applica a tutte le righe nel set di righe.  
+ La prima riga nel set di righe è il numero di riga 1. Il *RowNumber* argomento nella **SQLSetPos** deve identificare una riga nel set di righe; vale a dire, il valore deve essere compreso nell'intervallo compreso tra 1 e il numero di righe recuperate più di recente (che può essere minore di dimensioni del set di righe). Se *RowNumber* è 0, l'operazione viene applicata a ogni riga nel set di righe.  
   
- Poiché la maggior parte delle interazioni con i database relazionali vengono eseguite tramite SQL, **SQLSetPos** è ampiamente supportato. Tuttavia, un driver può facilmente emulare creazione ed esecuzione di un **aggiornamento** o **eliminare** istruzione.  
+ Poiché tramite SQL, viene eseguita la maggior parte delle interazioni con i database relazionali **SQLSetPos** non è supportato. Tuttavia, un driver può facilmente emulare, costruendo e l'esecuzione di un' **UPDATE** oppure **eliminare** istruzione.  
   
- Per determinare quali operazioni **SQLSetPos** supporta, un'applicazione chiama **SQLGetInfo** con SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ Oggetti ATTRIBUTES1, o l'opzione relativa alle informazioni SQL_STATIC_CURSOR_ATTRIBUTES1 (a seconda del tipo di cursore).  
+ Per determinare quali operazioni **SQLSetPos** supporta, un'applicazione chiama **SQLGetInfo** con SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ Cursore1 o l'opzione di informazioni SQL_STATIC_CURSOR_ATTRIBUTES1 (a seconda del tipo di cursore).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

@@ -1,33 +1,30 @@
 ---
-title: Il filtro per aggiornata i record | Documenti Microsoft
+title: Il filtro per aggiornati i record | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filtering for updated records [ADO]
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 529845297ff3c4264cc152c652b31c0bd12f5441
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 74ea4a208cad079933b27a7305a5ce0462e08515
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639199"
 ---
-# <a name="filtering-for-updated-records"></a>Il filtro per i record aggiornati
-Prima di chiamare UpdateBatch, è possibile utilizzare la proprietà filtro Recordset per visualizzare solo i record che sono stati modificati dopo l'apertura del Recordset o l'ultima chiamata al metodo UpdateBatch. A tale scopo, impostare la proprietà Filter su adFilterPendingRecords per determinare il numero di record verrà aggiornato, come illustrato nell'esempio di codice nella sezione successiva.  
+# <a name="filtering-for-updated-records"></a>Filtro per i record aggiornati
+Prima di chiamare UpdateBatch, è possibile usare la proprietà Recordset filtro per visualizzare solo i record che sono stati modificati dopo l'apertura del Recordset o l'ultima chiamata al metodo UpdateBatch. A tale scopo, impostare filtri su adFilterPendingRecords per determinare il numero di record verrà aggiornato, come illustrato nell'esempio di codice nella sezione successiva.  
   
-## <a name="remarks"></a>Remarks  
- In questo esempio estende l'esempio precedente UpdateBatch filtro Recordset appena prima della chiamata al metodo UpdateBatch, visualizzare i record che verranno modificato e consentendo di annullare l'aggiornamento (tramite il metodo CancelBatch).  
+## <a name="remarks"></a>Note  
+ In questo esempio estende l'esempio di UpdateBatch precedente filtrando il Recordset appena prima di chiamare il metodo UpdateBatch, che illustra un utente quali record verranno modificato e che consente di annullare l'aggiornamento (usando il metodo CancelBatch).  
   
 ```  
 'BeginFilterPend  

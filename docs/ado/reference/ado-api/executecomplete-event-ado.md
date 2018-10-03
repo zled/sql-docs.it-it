@@ -1,13 +1,11 @@
 ---
-title: Evento ExecuteComplete (ADO) | Documenti Microsoft
+title: Evento ExecuteComplete (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - ExecuteComplete event [ADO]
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f0af3666e4f5aecf897bdd6b93f756c2d251fa40
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ec656a49963eb02cb204d5be96d403726bba8c56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278170"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657729"
 ---
 # <a name="executecomplete-event-ado"></a>Evento ExecuteComplete (ADO)
 Il **ExecuteComplete** eventi viene chiamato dopo che un comando ha terminato l'esecuzione.  
@@ -42,24 +39,24 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  Oggetto **lungo** valore che indica il numero di record interessati dal comando.  
   
  *pError*  
- Un [errore](../../../ado/reference/ado-api/error-object.md) oggetto. Viene descritto l'errore che si è verificato se il valore di **adStatus** è **adStatusErrorsOccurred**; in caso contrario non è impostata.  
+ Un' [errore](../../../ado/reference/ado-api/error-object.md) oggetto. Viene descritto l'errore generato se il valore di **adStatus** viene **adStatusErrorsOccurred**; in caso contrario, non è impostata.  
   
  *adStatus*  
- Un [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valore di stato. Quando questo evento viene chiamato, questo parametro è impostato su **adStatusOK** se l'operazione che ha causato l'evento ha esito positivo o a **adStatusErrorsOccurred** se l'operazione non riuscita.  
+ Un' [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valore dello stato. Quando questo evento viene chiamato, questo parametro è impostato su **adStatusOK** se l'operazione che ha causato l'evento ha esito positivo o a **adStatusErrorsOccurred** se l'operazione non riuscita.  
   
- Prima di questo evento restituisce, impostare questo parametro su **adStatusUnwantedEvent** per impedire notifiche successive.  
+ Prima di questo evento viene restituito, questo parametro impostato su **adStatusUnwantedEvent** per evitare le notifiche successivi.  
   
  *pCommand*  
- Il [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto su cui è stato eseguito. Contiene un **comando** anche quando la chiamata dell'oggetto **Connection** o **Open** senza creare esplicitamente un **comando** , in quali casi la **comando** oggetto viene creato internamente da ADO.  
+ Il [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto sul quale è stato eseguito. Contiene un **comando** anche durante la chiamata dell'oggetto **Connection** oppure **Open** senza creare esplicitamente un **comando** , casi in cui il **comando** oggetto viene creato internamente da ADO.  
   
  *pRecordset*  
- Oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto che rappresenta il risultato del comando eseguito. Questo **Recordset** può essere vuoto. Non distruggere mai questo oggetto Recordset all'interno di questo gestore eventi. Questa operazione comporterà una violazione di accesso quando ADO tenta di accedere a un oggetto che non esiste più.  
+ Oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto che rappresenta il risultato del comando eseguito. Ciò **Recordset** può essere vuoto. Mai non è necessario eliminare definitivamente questo oggetto Recordset all'interno di questo gestore dell'evento. Questa operazione comporterà una violazione di accesso quando si tenta di ADO per accedere a un oggetto che non esiste più.  
   
  *pConnection*  
- Oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. La connessione su cui è stato eseguito l'operazione.  
+ Oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. La connessione su cui è stata eseguita l'operazione.  
   
-## <a name="remarks"></a>Remarks  
- Un **ExecuteComplete** evento può verificarsi a causa di **connessione.** [Eseguire](../../../ado/reference/ado-api/execute-method-ado-connection.md), **comando.** [Eseguire](../../../ado/reference/ado-api/execute-method-ado-command.md), **Recordset.** [Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md), **Recordset.** [Requery](../../../ado/reference/ado-api/requery-method.md), o **Recordset.** [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) metodi.  
+## <a name="remarks"></a>Note  
+ Un' **ExecuteComplete** evento può verificarsi a causa dell'errore il **connessione.** [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md), **comando.** [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md), **Recordset.** [Aperto](../../../ado/reference/ado-api/open-method-ado-recordset.md), **Recordset.** [Requery](../../../ado/reference/ado-api/requery-method.md), o **Recordset.** [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) metodi.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

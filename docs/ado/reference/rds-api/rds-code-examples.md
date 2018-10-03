@@ -1,38 +1,35 @@
 ---
-title: Esempi di codice RDS | Documenti Microsoft
+title: Esempi di codice Servizi Desktop remoto | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS samples [ADO]
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8807130156a9e7ff6a6bd8bd830078debca09794
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d727e31bfc26bf7c52043043c8c26dbaa19c6e21
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288180"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616509"
 ---
-# <a name="rds-code-examples"></a>Esempi di codice di servizi desktop remoto
+# <a name="rds-code-examples"></a>Esempi di codice di Servizi Desktop remoto
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Utilizzare gli esempi di codice seguente per informazioni sull'utilizzo di oggetti, metodi, proprietà ed eventi di servizi desktop remoto.  
+ Usare gli esempi di codice seguente per informazioni su come usare gli oggetti, metodi, proprietà ed eventi Servizi Desktop remoto.  
   
- **Nota** incollare l'esempio di tutto il codice contenuto nell'editor di codice. L'esempio potrebbe non essere eseguita correttamente se vengono utilizzati esempi parziali o se la formattazione di paragrafo.  
+ **Nota** incollare l'intero esempio di codice nell'editor di codice. L'esempio potrebbe non essere eseguita correttamente se vengono usati esempi parziali o se la formattazione di paragrafo.  
   
--   [Esempi di codice di servizi desktop remoto in Microsoft Visual Basic](../../../ado/reference/rds-api/rds-code-examples-in-visual-basic.md)  
+-   [Esempi di codice Servizi Desktop remoto in Microsoft Visual Basic](../../../ado/reference/rds-api/rds-code-examples-in-visual-basic.md)  
   
--   [Esempi di codice di servizi desktop remoto in Microsoft Visual Basic, Scripting Edition](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
+-   [Esempi di codice Servizi Desktop remoto in Microsoft Visual Basic, Scripting Edition](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
   
--   [Negli esempi di codice di servizi desktop remoto di Microsoft Visual C++](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  
+-   [Esempi di codice Servizi Desktop remoto in Microsoft Visual C++](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  

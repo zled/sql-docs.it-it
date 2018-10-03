@@ -1,13 +1,11 @@
 ---
-title: Evento WillConnect (ADO) | Documenti Microsoft
+title: Evento WillConnect (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,21 +14,20 @@ f1_keywords:
 helpviewer_keywords:
 - WillConnect event [ADO]
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a2ddca516e9c5141e0e874074660579e8144ba7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 22d30e389c61a66d417ad5baec99a8834a754047
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644789"
 ---
 # <a name="willconnect-event-ado"></a>Evento WillConnect (ADO)
-Il **WillConnect** eventi vengano chiamato prima dell'avvio di una connessione.  
+Il **WillConnect** eventi viene chiamato prima dell'avvio di una connessione.  
   
- **Si applica a:** [oggetto connessione (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **Si applica a:** [oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,8 +37,8 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *connectionString*  
- Oggetto **stringa** che contiene informazioni di connessione per la connessione in sospeso.  
+ *ConnectionString*  
+ Oggetto **stringa** che contiene le informazioni di connessione per la connessione in sospeso.  
   
  *ID utente*  
  Oggetto **stringa** che contiene un nome utente per la connessione in sospeso.  
@@ -50,22 +47,22 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  Oggetto **stringa** che contiene una password per la connessione in sospeso.  
   
  *Opzioni*  
- Oggetto **lungo** valore che indica la modalità con cui il provider deve valutare il *ConnectionString*. L'unica possibilità è **adAsyncOpen**.  
+ Oggetto **lungo** valore che indica come il provider deve valutare il *ConnectionString*. L'unica possibilità consiste **adAsyncOpen**.  
   
  *adStatus*  
- Un [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valore di stato.  
+ Un' [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valore dello stato.  
   
  Quando questo evento viene chiamato, questo parametro è impostato su **adStatusOK** per impostazione predefinita. È impostato su **adStatusCantDeny** se l'evento non è possibile richiedere l'annullamento dell'operazione in sospeso.  
   
- Prima di questo evento restituisce, impostare questo parametro su **adStatusUnwantedEvent** per impedire notifiche successive. Impostare questo parametro su **adStatusCancel** per richiedere l'operazione di connessione che ha causato l'annullamento di questa notifica.  
+ Prima di questo evento viene restituito, questo parametro impostato su **adStatusUnwantedEvent** per evitare le notifiche successivi. Questo parametro impostato su **adStatusCancel** per richiedere l'operazione di connessione che ha causato l'annullamento della notifica.  
   
  *pConnection*  
- Il [connessione](../../../ado/reference/ado-api/connection-object-ado.md) dell'oggetto per cui si applica questa notifica dell'evento. Modifiche ai parametri del **connessione** dal **WillConnect** gestore dell'evento non avrà alcun effetto **connessione**.  
+ Il [connessione](../../../ado/reference/ado-api/connection-object-ado.md) dell'oggetto per cui si applica questa notifica degli eventi. Modifiche ai parametri del **connessione** per il **WillConnect** gestore dell'evento non avrà alcun effetto **connessione**.  
   
-## <a name="remarks"></a>Remarks  
- Quando **WillConnect** viene chiamato, il *ConnectionString*, *UserID*, *Password*, e *opzioni* i parametri sono impostati sui valori definiti dall'operazione che ha causato l'evento (la connessione in sospeso) e può essere modificato prima della restituzione dell'evento. **WillConnect** può restituire una richiesta di annullamento che la connessione in sospeso.  
+## <a name="remarks"></a>Note  
+ Quando **WillConnect** viene chiamato, il *ConnectionString*, *UserID*, *Password*, e *opzioni* parametri vengono impostati sui valori definiti dall'operazione che ha causato questo evento (la connessione in sospeso) e può essere modificato prima della restituzione dell'evento. **WillConnect** può restituire una richiesta di annullamento che la connessione in sospeso.  
   
- Quando questo evento viene annullato, **ConnectComplete** verrà chiamato con il relativo *adStatus* parametro impostato su **adStatusErrorsOccurred**.  
+ Quando questo evento viene annullato, **ConnectComplete** utilizzato per la chiamata relativo *adStatus* parametro impostato su **adStatusErrorsOccurred**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

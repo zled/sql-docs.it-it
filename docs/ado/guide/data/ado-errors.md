@@ -1,30 +1,27 @@
 ---
-title: Gli errori di ADO | Documenti Microsoft
+title: Errori ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO]
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: adae5d5247a3d0966ad5685eacc1a6cdebdc5437
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4fadb19aac4700738f4c6ec43449b3de7d4a4a18
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270850"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776369"
 ---
-# <a name="ado-run-time-errors"></a>Errori di Run-Time ADO
-Gli errori di ADO sono segnalati come errori di run-time del programma. È possibile utilizzare il meccanismo di intercettazione degli errori del linguaggio di programmazione per intercettare e gestirli. Ad esempio, in Visual Basic, usare il **in caso di errore** istruzione. In Visual C++, dipende dal metodo utilizzato per accedere alle raccolte di ADO. Con #import, utilizzare un **try-catch** blocco. In caso contrario, i programmatori C++ è necessario recuperare in modo esplicito chiamando un oggetto errore **GetErrorInfo**. Routine sub Visual Basic seguente viene illustrato come intercettare un errore ADO:
+# <a name="ado-run-time-errors"></a>Errori di Run-Time di ADO
+Errori ADO vengono segnalati al programma come errori di run-time. È possibile utilizzare il meccanismo di intercettazione degli errori del linguaggio di programmazione per intercettare e gestirli. Ad esempio, in Visual Basic, usare il **in caso di errore** istruzione. In Visual C++, dipende dal metodo utilizzato per accedere alle librerie ADO. Con #import, usare una **try-catch** blocco. In caso contrario, i programmatori C++ necessari recuperare in modo esplicito un oggetto errore chiamando **GetErrorInfo**. Routine sub Visual Basic seguente viene illustrato come intercettare un errore ADO:
 
 ```
 ' BeginErrorHandlingVB01
@@ -82,7 +79,7 @@ End Sub
 ' EndErrorHandlingVB01
 ```
 
- Questo **Form_Load** routine evento crea intenzionalmente un errore durante il tentativo di aprire lo stesso **connessione** oggetto due volte. La seconda volta il **aprire** metodo viene chiamato, il gestore degli errori è attivato. In questo caso l'errore è di tipo **adErrObjectOpen**, in modo che il gestore degli errori viene visualizzato il messaggio seguente prima di riprendere l'esecuzione del programma:
+ Ciò **Form_Load** routine evento crea intenzionalmente un errore quando si tenta di aprire lo stesso **connessione** oggetto due volte. La seconda volta il **aperto** viene chiamato il metodo, il gestore degli errori è attivato. In questo caso l'errore è di tipo **adErrObjectOpen**, in modo che il gestore degli errori viene visualizzato il messaggio seguente prima di riprendere l'esecuzione del programma:
 
 ```
 Error #3705: Operation is not allowed when the object is open.
@@ -90,15 +87,15 @@ Error reported by: ADODB.Connection
 Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 ```
 
- Il messaggio di errore include le singole delle informazioni fornite da Visual Basic **Err** dell'oggetto, ad eccezione del **Err** valore, che non si applica qui. Il numero di errore indica si è verificato un errore. La descrizione è utile nei casi in cui si desidera gestire personalmente l'errore. È possibile semplicemente passare insieme all'utente. Anche se in genere si desidera utilizzare messaggi personalizzati per l'applicazione, non è possibile prevedere dell'errore. la descrizione fornisce alcune indicazione sulla causa dell'errore. Nell'esempio di codice, l'errore è stato segnalato per il **connessione** oggetto. Verrà visualizzato l'oggetto tipo o a livello di codice ID, ovvero non un nome di variabile.
+ Il messaggio di errore include ogni singola informazione fornita da Visual Basic **Err** dell'oggetto, ad eccezione delle **Err** valore, che non si applica qui. Il numero di errore indica si è verificato un errore. La descrizione è utile nei casi in cui non si desidera gestire personalmente l'errore. È possibile semplicemente passarlo insieme all'utente. Anche se in genere si desidera utilizzare messaggi personalizzati per l'applicazione, non è possibile prevedere ogni errore. la descrizione fornisce alcune informazioni sul mancato per quanto riguarda la causa dell'errore. Nell'esempio di codice, l'errore è stato segnalato per il **connessione** oggetto. Viene visualizzato qui ID a livello di codice o del tipo dell'oggetto, ovvero non un nome di variabile.
 
 > [!NOTE]
->  Visual Basic **Err** oggetto contiene solo informazioni relative all'errore più recente. ADO **errori** insieme il **connessione** oggetto contiene uno **errore** oggetto per ogni errore generato dall'operazione ADO più recente. Utilizzare il **errori** insieme anziché il **Err** oggetto per la gestione di più errori. Per ulteriori informazioni sul **errori** insieme, vedere [errori del Provider](../../../ado/guide/data/provider-errors.md). Tuttavia, se non è valido non **connessione** oggetto, il **Err** oggetto è l'unica origine per informazioni sugli errori di ADO.
+>  Visual Basic **Err** oggetto contiene solo informazioni relative all'errore più recente. ADO **errori** insieme delle **connessione** oggetto contiene uno **errore** oggetto per ogni errore generato dall'operazione più recente di ADO. Usare il **errori** raccolta anziché le **Err** oggetto per gestire gli errori più. Per altre informazioni sul **errori** raccolta, vedere [errori del Provider](../../../ado/guide/data/provider-errors.md). Tuttavia, se non è non valida **connessione** oggetto, il **Err** oggetto è l'unica fonte per informazioni sugli errori ADO.
 
- I tipi di operazioni possono causare errori di ADO? Gli errori più comuni di ADO possono implicare l'apertura di un oggetto, ad esempio un **connessione** o **Recordset**, il tentativo di aggiornare i dati o chiamare un metodo o una proprietà che non è supportato dal provider.
+ Quali tipi di operazioni possono causare errori ADO? Errori comuni di ADO possono implicare l'apertura di un oggetto, ad esempio un **connessione** o **Recordset**, tentativo di aggiornare i dati o chiamare un metodo o proprietà che non è supportato dal provider.
 
- Errori OLE DB possono anche essere passati all'applicazione come errori di run-time nel **errori** insieme.
+ Errori OLE DB possono anche essere passati all'applicazione come errori di run-time nel **errori** raccolta.
 
- L'argomento seguente fornisce ulteriori informazioni sugli errori di ADO.
+ L'argomento seguente fornisce altre informazioni sugli errori ADO.
 
 -   [Guida di riferimento degli errori ADO](../../../ado/guide/data/ado-error-reference.md)

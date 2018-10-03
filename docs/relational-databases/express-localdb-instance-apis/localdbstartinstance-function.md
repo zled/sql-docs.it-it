@@ -1,15 +1,12 @@
 ---
-title: Funzione LocalDBStartInstance | Documenti Microsoft
+title: Funzione LocalDBStartInstance | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBStartInstance
@@ -17,16 +14,15 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3d28685fa83098d6d5a743d06e99e21ffc8604c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e95a20d3984d6f32a4ba78155edb116e4cb9cc32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938076"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818619"
 ---
 # <a name="localdbstartinstance-function"></a>Funzione LocalDBStartInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +52,7 @@ HRESULT LocalDBStartInstance(
  [Output] Buffer per archiviare la stringa di connessione nell'istanza del database locale.  
   
  *lpcchSqlConnection*  
- [Input/Output] Contiene le dimensioni di input di *wszSqlConnection* buffer in caratteri, inclusi gli spazi vuoti finali. In fase di output, se le dimensioni del buffer specificate sono troppo piccole, nel parametro sono contenute le dimensioni del buffer richieste in caratteri, inclusi gli spazi vuoti finali.  
+ [Input/Output] Contiene la dimensione di input il *wszSqlConnection* buffer in caratteri, inclusi gli spazi vuoti finali. In fase di output, se le dimensioni del buffer specificate sono troppo piccole, nel parametro sono contenute le dimensioni del buffer richieste in caratteri, inclusi gli spazi vuoti finali.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  S_OK  
@@ -120,7 +116,7 @@ HRESULT LocalDBStartInstance(
 |Presente|NULL|Non consentito. Input non corretto.|Il risultato restituito è LOCALDB_ERROR_INVALID_PARAMETER.|  
 |Presente|Presente|L'utente desidera avviare l'istanza e necessita del nome della pipe per la connessione a quest'ultima dopo il relativo avvio.|Vengono controllate le dimensioni del buffer, viene avviata l'istanza e viene restituito il nome della pipe nel buffer. <br />Tramite l'argomento relativo alle dimensioni del buffer viene restituita la lunghezza della stringa "server=", senza includere valori Null di terminazione.|  
   
- Per un esempio di codice che usa l'API del database locale, vedere [riferimento di SQL Server Express LocalDB](../../relational-databases/sql-server-express-localdb-reference.md).  
+ Per un esempio di codice che utilizza l'API LocalDB, vedere [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

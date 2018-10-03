@@ -1,33 +1,30 @@
 ---
-title: I segnalibri (ODBC) | Documenti Microsoft
+title: I segnalibri (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], bookmarks
 - bookmarks [ODBC]
 ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63d4e9e7585cc9e85bb400b6ab369d0183a427f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9eecd202a17a0a08e8607ebec0caaa31b7b3ca9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854469"
 ---
 # <a name="bookmarks-odbc"></a>Segnalibri (ODBC)
-Un segnalibro è un valore utilizzato per identificare una riga di dati. Il significato del valore del segnalibro è noto solo al driver o all'origine dati. Un segnalibro, ad esempio, può essere tanto semplice quanto un numero di riga o tanto complesso quanto un indirizzo del disco. I segnalibri in ODBC sono leggermente diversi dai segnalibri nella documentazione reale. Un libro reale, il lettore inserisce un segnalibro in una pagina specifica e quindi cerca il segnalibro tornare alla pagina. In ODBC l'applicazione richiede un segnalibro per una determinata riga, lo archivia e lo passa nuovamente al cursore per tornare alla riga. Pertanto, i segnalibri in ODBC sono simili a un lettore di scrittura di un numero di pagina, ricordare e quindi cercare nuovamente la pagina.  
+Un segnalibro è un valore utilizzato per identificare una riga di dati. Il significato del valore del segnalibro è noto solo al driver o all'origine dati. Un segnalibro, ad esempio, può essere tanto semplice quanto un numero di riga o tanto complesso quanto un indirizzo del disco. I segnalibri in ODBC sono leggermente diversi dai segnalibri nella documentazione reali. In un vero libro, il lettore inserisce un segnalibro a una pagina specifica e quindi cerca il segnalibro tornare alla pagina. In ODBC l'applicazione richiede un segnalibro per una determinata riga, lo archivia e lo passa nuovamente al cursore per tornare alla riga. Di conseguenza, i segnalibri in ODBC sono simili a un lettore annotare un numero di pagina, ricordare e quindi cercare nuovamente la pagina.  
   
- Per determinare il supporto di un driver di segnalibri, un'applicazione chiama **SQLGetInfo** con l'opzione SQL_BOOKMARK_PERSISTENCE. Il bit di questo valore viene descritto cosa segnalibri operazioni sopravvivono, ad esempio se i segnalibri sono ancora validi dopo il cursore è chiuso.  
+ Per determinare il supporto del driver di segnalibri, un'applicazione chiama **SQLGetInfo** con l'opzione SQL_BOOKMARK_PERSISTENCE. I bit nel valore di descrivono cosa segnalibri operazioni sopravvivono, ad esempio se i segnalibri sono comunque validi dopo che il cursore è chiuso.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
