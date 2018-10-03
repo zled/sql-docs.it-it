@@ -6,22 +6,19 @@ ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 4179a458fd159248ffacb05feb60bc2834535e05
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 70ebcc5773d17f6f0f6fe714367f4bf487f3a0db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400863"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686269"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Eseguire pacchetti nel servizio Integration Services (SSIS) Scale Out
 Dopo aver distribuito i pacchetti nel server Integration Services, è possibile eseguirli in Scale Out usando uno dei metodi seguenti:
@@ -102,7 +99,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execution_id,  @retry_count=0
 GO
 ```
 
-### <a name="permissions"></a>Autorizzazioni
+### <a name="permissions"></a>Permissions
 Per eseguire i pacchetti in Scale Out, è necessario avere una delle autorizzazioni seguenti:
 
 -   Appartenenza al ruolo del database **ssis_admin**  
