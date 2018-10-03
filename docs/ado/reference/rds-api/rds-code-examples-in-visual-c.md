@@ -1,13 +1,11 @@
 ---
-title: Servizi Desktop remoto di codice negli esempi di Visual C++ | Documenti Microsoft
+title: Gli esempi in Visual C++ di codice Servizi Desktop remoto | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,28 +13,27 @@ helpviewer_keywords:
 - Visual C++ RDS examples [ADO]
 - RDS samples [ADO], Visual C++
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51795587d9cab1d9c221359f296378849e1380b0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: af47808a50475633614c28a0307d5e4fd49591b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288210"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752319"
 ---
-# <a name="rds-code-examples-in-visual-c"></a>Esempi di codice di servizi desktop remoto in Visual C++
-Utilizzare gli esempi di codice seguente per informazioni su come usare le proprietà di servizi desktop remoto durante la scrittura in Microsoft Visual C++.  
+# <a name="rds-code-examples-in-visual-c"></a>Esempi di codice di Servizi Desktop remoto in Visual C++
+Usare gli esempi di codice seguenti per informazioni su come usare le proprietà di servizi desktop remoto durante la scrittura in Microsoft Visual C++.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 > [!NOTE]
->  Incollare l'esempio di codice completo, dall'inizio alla fine, nell'editor di codice. L'esempio potrebbe non essere eseguita correttamente se vengono utilizzati esempi parziali o se la formattazione di paragrafo.  
+>  Incollare l'esempio di codice completo, dall'inizio alla fine, nell'editor di codice. L'esempio potrebbe non essere eseguita correttamente se vengono usati esempi parziali o se la formattazione di paragrafo.  
   
 -   [Esempio di proprietà Handler](../../../ado/reference/rds-api/handler-property-example-vc.md)  
   
--   [Proprietà InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)
+-   [Esempio di proprietà InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)
 
 

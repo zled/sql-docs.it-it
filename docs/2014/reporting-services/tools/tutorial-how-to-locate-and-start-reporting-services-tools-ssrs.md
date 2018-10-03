@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 1.0, locating and starting tool
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Manager [Reporting Services]
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-caps.latest.revision: 54
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6f76df07880af743623692ffcff924093e0ce9ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8c8c175eaaf84df788a9b7cbc90e637d51d5c07
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276939"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105502"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Esercitazione: Individuazione e avvio degli strumenti di Reporting Services (SSRS)
   In questa esercitazione vengono descritti gli strumenti utilizzati per configurare un server di report, gestire le operazioni e il contenuto del server di report, nonché creare e pubblicare report. In questa esercitazione vengono descritte le procedure per individuare e aprire ogni strumento. Se si ha già familiarità con gli strumenti, è possibile passare ad altre esercitazioni che consentono di acquisire capacità importanti per l'uso di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Per altre informazioni sulle altre esercitazioni, vedere [esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

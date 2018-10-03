@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], database projects
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], about projects
 - projects [SQL Server Management Studio]
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65bd646c92893b1766d4ee9b5e748b7f2f1149c5
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 953b2f790cfbe68fcd93458fa6d9cf2b2120ecb9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808327"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117081"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Compilazione di progetti di database utilizzando SQL Server Management Studio
   Un progetto di script del database è un set organizzato di script, informazioni di connessione e modelli tutti associati a un database o a una parte di un database. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] include [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per l'amministrazione e la progettazione di database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel contesto di un progetto script. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] include finestre di progettazione, editor, guide e procedure guidate per assistere gli utenti nello sviluppo, nella distribuzione e nella gestione di database.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 38ffd98216c7943f164ad633603fa51aa717a552
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90c42f4eaafac152305c50a855f1bce1388def3d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095881"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Log di esecuzione del server di report e la vista ExecutionLog3
   Nel log di esecuzione del server di report sono incluse informazioni sui report eseguiti in uno o più server in una distribuzione con scalabilità orizzontale in modalità nativa o in una farm di SharePoint. Il log consente di conoscere la frequenza con cui un report viene richiesto, i formati di output più usati e i millisecondi dedicati a ogni fase dell'elaborazione. Nel log, inoltre, sono contenute informazioni sul tempo impiegato per l'esecuzione di una query del set di dati di un report e su quello speso per l'elaborazione dei dati. Se si è un amministratore del server di report, è possibile esaminare le informazioni sul log, identificare le attività con esecuzione prolungata e inviare suggerimenti agli autori del report sulle aree del report, set di dati o elaborazione, che potrebbero essere migliorate.  

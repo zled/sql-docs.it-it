@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], OLAP
 - mining structures [Analysis Services], creating
 - OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc5138c448aa0f149916bc61be35a0ce5d75e8c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b41c5404ebd27b03ee044a69c987b0f484f62b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297441"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049481"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Creare una nuova struttura di data mining OLAP
   È possibile usare la Creazione guidata modello di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per creare una struttura di data mining che usa dati da un modello multidimensionale. I modelli di data mining basati su cubi OLAP possono utilizzare la colonna e i valori di tabelle dei fatti, dimensioni e gruppi di misure come attributi per l'analisi.  
@@ -46,13 +43,13 @@ ms.locfileid: "37297441"
   
      Se ad esempio si tenta di identificare i raggruppamenti del cliente, è possibile scegliere la dimensione Customer, se si tenta di analizzare gli acquisti nelle transazioni, è possibile scegliere la dimensione Dettagli ordine vendita Internet. Non si è limitati all'utilizzo dei soli dati di questa dimensione, tuttavia dovrebbe contenere attributi importanti per l'utilizzo nell'analisi.  
   
-     Scegliere **Avanti**.  
+     Fare clic su **Avanti**.  
   
 6.  Nella pagina **Selezione chiave del case** , in **Attributi**, selezionare l'attributo che costituirà la chiave della struttura di data mining, quindi fare clic su **Avanti**.  
   
      In genere, l'attributo utilizzato come chiave per la struttura di data mining è anche una chiave per la dimensione e risulterà pre-selezionata.  
   
-7.  Nella pagina **Selezione colonne livello case** , in **Attributi e misure correlati**, selezionare gli attributi e le misure che contengono i valori da aggiungere alla struttura di data mining come dati del case. Scegliere **Avanti**.  
+7.  Nella pagina **Selezione colonne livello case** , in **Attributi e misure correlati**, selezionare gli attributi e le misure che contengono i valori da aggiungere alla struttura di data mining come dati del case. Fare clic su **Avanti**.  
   
 8.  Nella pagina **Impostazione utilizzo colonne modello di data mining** , in **Struttura modello di data mining**, impostare la colonna stimabile, quindi scegliere le colonne da usare come input.  
   
@@ -64,7 +61,7 @@ ms.locfileid: "37297441"
   
      Si noti che colonne definite come chiavi non possono essere utilizzate per l'input o la stima.  
   
-     Scegliere **Avanti**.  
+     Fare clic su **Avanti**.  
   
 9. Nella pagina **Impostazione utilizzo colonne modello di data mining** è anche possibile aggiungere e rimuovere le tabelle annidate dalla struttura di data mining, usando **Aggiungi tabelle annidate** e **Tabelle annidate**.  
   
@@ -93,7 +90,7 @@ ms.locfileid: "37297441"
     > [!NOTE]  
     >  I modelli di data mining OLAP non supportano l'uso della caratteristica **Rileva** per rilevare automaticamente se una colonna contiene dati continui o discreti.  
   
-     Scegliere **Avanti**.  
+     Fare clic su **Avanti**.  
   
 11. Nella pagina **Sezionamento cubo di origine** è possibile filtrare i dati usati per creare la struttura di data mining.  
   
@@ -111,9 +108,9 @@ ms.locfileid: "37297441"
   
     -   **Parametri**: ignorare questa casella di controllo. Questa finestra di dialogo supporta più scenari di applicazione filtri del cubo e questa opzione non è attinente alla compilazione di una struttura di data mining.  
   
-     Scegliere **Avanti**.  
+     Fare clic su **Avanti**.  
   
-12. Nella pagina **Divisione dei dati in set di training e in set di testing** specificare la percentuale di dati della struttura di data mining da riservare al test oppure specificare il numero massimo di test case. Scegliere **Avanti**.  
+12. Nella pagina **Divisione dei dati in set di training e in set di testing** specificare la percentuale di dati della struttura di data mining da riservare al test oppure specificare il numero massimo di test case. Fare clic su **Avanti**.  
   
      Se si specificano entrambi valori, i limiti vengono combinati per utilizzare quello più basso.  
   

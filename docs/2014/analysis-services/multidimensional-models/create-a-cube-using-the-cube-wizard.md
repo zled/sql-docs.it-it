@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cubes [Analysis Services], creating
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a78d83d10559862ebd1ece25911552f8cc1161dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7545bc1e1ad37ff395f3e4c3f65b1cb4614e533e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179058"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087034"
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>Creare un cubo mediante la Creazione guidata cubo
   È possibile creare un nuovo cubo usando la Creazione guidata cubo in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -41,7 +38,7 @@ ms.locfileid: "37179058"
   
     2.  Nell'elenco **Tabelle del gruppo di misure** selezionare le tabelle che verranno usate per creare gruppi di misure.  
   
-    3.  Scegliere **Avanti**.  
+    3.  Fare clic su **Avanti**.  
   
 4.  Nella pagina **Selezione misure** selezionare le misure da includere nel cubo e quindi fare clic su **Avanti**.  
   

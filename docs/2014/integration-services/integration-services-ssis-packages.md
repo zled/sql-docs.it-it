@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 99a414e27b9fb470d8e7ee07589c42e0184b283e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c610f28e0b36e6dcf0ad34345c78868d09a4f1eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252383"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058881"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacchetti di Integration Services (SSIS)
   Un pacchetto è una raccolta organizzata di connessioni, elementi di flusso di controllo, elementi di flusso di dati, gestori eventi, variabili, parametri e configurazioni che possono essere assemblati usando gli strumenti di progettazione grafica disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], oppure compilati a livello di codice.  Salvare il pacchetto completo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nell'archivio pacchetti di [!INCLUDE[ssIS](../includes/ssis-md.md)] o nel file system oppure distribuire il progetto ssISnoversion nel server [!INCLUDE[ssIS](../includes/ssis-md.md)] . Il pacchetto è l'unità di lavoro che viene recuperata, eseguita e salvata.  
@@ -49,7 +46,7 @@ ms.locfileid: "37252383"
   
  Un flusso di dati è costituito da origini e destinazioni che estraggono e caricano dati, da trasformazioni che modificano ed estendono dati e da percorsi che collegano origini, trasformazioni e destinazioni. È possibile aggiungere un flusso di dati a un pacchetto solo se il flusso di controllo del pacchetto include un'attività Flusso di dati. L'attività Flusso di dati è un eseguibile, nell'ambito del pacchetto [!INCLUDE[ssIS](../includes/ssis-md.md)] , che crea, ordina ed esegue il flusso di dati. Per ogni attività Flusso di dati contenuta in un pacchetto, viene aperta un'istanza distinta del motore flusso di dati. Per altre informazioni, vedere [Attività Flusso di dati](control-flow/data-flow-task.md) e [Flusso di dati](data-flow/data-flow.md).  
   
- Un pacchetto include in genere almeno una gestione connessione. Una gestione connessione è un collegamento tra un pacchetto e un'origine dati che definisce la stringa di connessione per l'accesso ai dati utilizzata da attività, trasformazioni e gestori dell'evento nel pacchetto. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili tipi di connessione per origini dati quali file di testo e XML, database relazionali e progetti e database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
+ Un pacchetto include in genere almeno una gestione connessione. Una gestione connessione è un collegamento tra un pacchetto e un'origine dati che definisce la stringa di connessione per l'accesso ai dati utilizzata da attività, trasformazioni e gestori dell'evento nel pacchetto. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili tipi di connessione per origini dati quali file di testo e XML, database relazionali e progetti e database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
   
 ## <a name="package-templates"></a>Modelli di pacchetto  
  Molti pacchetti vengono utilizzati come modello per la compilazione di pacchetti con le stesse funzionalità di base. È possibile compilare il pacchetto di base e quindi copiarlo oppure impostare tale pacchetto come modello. Un pacchetto che scarica e copia file e quindi ne estrae i dati, ad esempio, può includere le attività FTP e File system in un ciclo Foreach che enumera i file presenti in una cartella. Può inoltre includere gestioni connessioni file flat per l'accesso ai dati e origini file flat per l'estrazione dei dati. Poiché la destinazione dei dati può variare, viene aggiunta a ogni nuovo pacchetto dopo la copia dal pacchetto di base. È anche possibile creare pacchetti e quindi usarli come modelli per i nuovi pacchetti da aggiungere a un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Creare pacchetti in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md).  
@@ -108,7 +105,7 @@ ms.locfileid: "37252383"
   
  Per informazioni sull'impostazione di queste proprietà a livello di codice, vedere <xref:Microsoft.SqlServer.Dts.Runtime.Package>.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili due strumenti grafici per la creazione di pacchetti, Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , oltre al modello a oggetti [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per informazioni dettagliate, vedere gli argomenti seguenti.  
   
 -   [Esecuzione dell'Importazione/Esportazione guidata SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md)  

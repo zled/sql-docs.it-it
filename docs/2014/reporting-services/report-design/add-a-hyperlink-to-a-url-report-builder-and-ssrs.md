@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d7a0d9abdf854cfd8e27b02fda8f633da2e9ea7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b29f10762f421c76dd7adbbd341038771f135a04
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086617"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Aggiungere un collegamento ipertestuale a un URL (Generatore report e SSRS)
-  È possibile aggiungere un collegamento ipertestuale a un elemento di report quando si desidera che gli utenti siano in grado di fare clic su un collegamento in un report e aprire una finestra del browser relativa all'URL specificato. Un collegamento ipertestuale può essere un URL statico o un'espressione che restituisce un URL. Se in un database è disponibile un campo contenente URL, sarà possibile usare tale campo nell'espressione per ottenere un elenco dinamico di collegamenti ipertestuali nel report. È possibile aggiungere collegamenti ipertestuali a caselle di testo, immagini, grafici e misuratori. È necessario garantire che l'utente acceda all'URL specificato.  
+  È possibile aggiungere un collegamento ipertestuale a un elemento di report quando si desidera che gli utenti siano in grado di fare clic su un collegamento in un report e aprire una finestra del browser relativa all'URL specificato. Un collegamento ipertestuale può essere un URL statico o un'espressione che restituisce un URL. Se in un database è disponibile un campo contenente URL, sarà possibile utilizzare tale campo nell'espressione per ottenere un elenco dinamico di collegamenti ipertestuali nel report. È possibile aggiungere collegamenti ipertestuali a caselle di testo, immagini, grafici e misuratori. È necessario garantire che l'utente acceda all'URL specificato.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

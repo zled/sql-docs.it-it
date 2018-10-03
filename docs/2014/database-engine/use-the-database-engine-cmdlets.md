@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cmdlets [SQL Server], Encode-Sqlname
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - PowerShell [SQL Server], Decode-Sqlname
 - Cmdlets [SQL Server], Decode-Sqlname
 ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e06c46020f0e3e04e81b3f46fada587ab55f7b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e2d11a6cb32759d32c95ddf5cd059071ea46eb6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267127"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052981"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Utilizzo di cmdlet del motore di database
   I cmdlet di Windows PowerShell sono comandi a una sola funzione che in genere presentano una convenzione di denominazione verbo-nome, ad esempio **Get-Help** o **Set-MachineName**. Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Windows PowerShell fornisce cmdlet specifici di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

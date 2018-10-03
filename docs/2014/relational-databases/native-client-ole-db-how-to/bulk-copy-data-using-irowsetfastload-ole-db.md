@@ -1,12 +1,10 @@
 ---
-title: Copia bulk di dati mediante IRowsetFastLoad (OLE DB) | Microsoft Docs
+title: Copiare i dati utilizzando IRowsetFastLoad (OLE DB) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], text data
@@ -14,25 +12,24 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1670129ba6955418797244c7e35f2daaff291780
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8bffd3776e04fa10cf6454d3200dac623835ac0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421310"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111769"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Eseguire una copia bulk di dati mediante IRowsetFastLoad (OLE DB)
   In questo esempio viene illustrato l'utilizzo di IRowsetFastLoad per la copia bulk di record in una tabella.  
   
  Tramite il consumer viene inviata una notifica a SQLOLEDB della necessità di eseguire una copia bulk impostando su VARIANT_TRUE la proprietà SSPROP_ENABLEFASTLOAD specifica del provider SQLOLEDB. Con la proprietà impostata sull'origine dati, il consumer crea una sessione di SQLOLEDB. La nuova sessione consente al consumer di accedere a `IRowsetFastLoad`.  
   
- In un esempio completo viene illustrato l'utilizzo di `IRowsetFastLoad` per eseguire una copia bulk dei record in una tabella. In questo esempio, vengono aggiunti 10 record alla tabella **IRFLTable**. È necessario creare la tabella **IRFLTable** nel database.  
+ In un esempio completo viene illustrato l'utilizzo di `IRowsetFastLoad` per eseguire una copia bulk dei record in una tabella. In questo esempio vengono aggiunti 10 record alla tabella **IRFLTable**. È necessario creare la tabella **IRFLTable** nel database.  
   
- In questo esempio richiede il database di esempio AdventureWorks, che è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page di.  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -58,7 +55,7 @@ ms.locfileid: "37421310"
   
  Eseguire il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per creare la tabella utilizzata dall'applicazione.  
   
- Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" a L"(local)\\\name", dove nome è un'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
+ Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
  Eseguire il terzo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per eliminare la tabella utilizzata dall'applicazione.  
   

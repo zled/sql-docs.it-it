@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - Hello World example [CLR integration]
 - library [CLR integration]
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
-caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12eb63552fea685ce9d1e453e99e785045839ac5
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089151"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introduzione all'integrazione con CLR
   In questo argomento viene fornita una panoramica delle librerie necessarie per compilare oggetti di database utilizzando gli spazi dei nomi e il [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] integrazione con common language runtime (CLR) di .NET Framework. In questo argomento viene inoltre illustrato come scrivere, compilare ed eseguire una stored procedure CLR semplice scritta in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  

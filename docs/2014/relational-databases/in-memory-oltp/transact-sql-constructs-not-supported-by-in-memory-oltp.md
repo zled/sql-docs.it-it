@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cdcf9d6be713b77c2fd7f3a43872026eebce5c50
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b5f05d5ccf1125544ddb59b77c2a6e542be852a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396004"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127891"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Costrutti Transact-SQL non supportati da OLTP in memoria
   Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non supportano la superficie di attacco totale di [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata dalle tabelle basate su disco e dalle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretate. Quando si tenta di usare una delle funzionalità non supportate, il server restituisce un errore.  

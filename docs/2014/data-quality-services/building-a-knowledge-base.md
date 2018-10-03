@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c63d5ad6f1d2c9bb666dc4b0b3789a12e2d0e182
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 08996b8f056c8a782831e728cb3601f3b0bbed65
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229611"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099431"
 ---
 # <a name="building-a-knowledge-base"></a>Compilazione di una Knowledge Base
   Una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) è un repository di informazioni sui dati che consente di comprenderli e mantenerne l'integrità. Una Knowledge Base è costituita da domini ognuno dei quali rappresenta i dati in un campo dati. La Knowledge Base viene utilizzata da DQS per eseguire la pulizia dei dati e la deduplicazione su un database. Per preparare la Knowledge Base per la pulizia dei dati, è possibile eseguire un'analisi computerizzata di un campione di dati e gestire in modo interattivo i valori nei domini. DQS consente di importare informazioni, creare regole e relazioni, modificare direttamente valori di dati e sfruttare un database predefinito.  
@@ -35,7 +32,7 @@ ms.locfileid: "37229611"
 |Aggiungere informazioni a una Knowledge Base tramite l'individuazione delle informazioni, la gestione dei valori di dominio, l'aggiunta di criteri di corrispondenza, l'importazione di informazioni, di un dominio o di valori oppure l'utilizzo della Knowledge Base predefinita, Dati DQS.|[Aggiunta di informazioni a una Knowledge Base](../../2014/data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
 |Analizzare un campione di dati per i criteri di qualità dei dati.|[Eseguire l'individuazione di informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

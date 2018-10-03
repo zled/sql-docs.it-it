@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connreportdatafeed.f1
 ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 726007e635a41295c682ebc929e909fda8f0b0a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a55f15074257ae19b026ef373ea0c7838a55081
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210291"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090211"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Connettersi a un report o a un feed di dati (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di connettersi a un feed di dati. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -59,7 +56,7 @@ ms.locfileid: "37210291"
  **Chiave dell'account**  
  Specificare la chiave di account utilizzata per accedere alle sottoscrizioni al set di dati di Windows Azure Marketplace.  
   
- **Trovare**  
+ **trovare**  
  Individuare una chiave di account associata a un account di Windows Live.  
   
  **Salva chiave account**  

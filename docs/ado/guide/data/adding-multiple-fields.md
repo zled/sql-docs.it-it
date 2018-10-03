@@ -1,13 +1,11 @@
 ---
-title: Aggiunta di più campi | Documenti Microsoft
+title: Aggiunta di più campi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AddNew method [ADO]
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - editing data [ADO], adding multiple fields
 - editing data [ADO], AddNew method
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23d13c750b3140090fa66efaec8aa57e2afe77db
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fb62318b9f8eb03fbd3c9732dc8ad0caa9127d17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271180"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742599"
 ---
 # <a name="adding-multiple-fields-and-values"></a>Aggiunta di più campi e valori
-In alcuni casi, potrebbe essere più efficiente passare una matrice di campi e i relativi valori per il **AddNew** metodo, piuttosto che impostare **valore** più volte per ogni nuovo campo. Se *elenco campi* è una matrice, *valori* deve essere una matrice con lo stesso numero di membri in caso contrario, si verifica un errore. L'ordine dei nomi di campo deve corrispondere all'ordine dei valori di campo in ogni matrice. Il codice seguente passa una matrice di campi e una matrice di valori per il **AddNew** metodo.
+In alcuni casi, potrebbe essere più efficiente per passare una matrice di campi e i relativi valori per il **AddNew** metodo, anziché l'impostazione **valore** più volte per ogni nuovo campo. Se *FieldList* è una matrice *valori* deve anche essere una matrice con lo stesso numero di membri; in caso contrario, si verifica un errore. L'ordine dei nomi di campo deve corrispondere all'ordine dei valori di campo in ogni matrice. Il codice seguente passa una matrice di campi e una matrice di valori per il **AddNew** (metodo).
 
 ```
 'BeginAddNew2

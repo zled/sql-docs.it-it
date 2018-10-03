@@ -1,32 +1,29 @@
 ---
-title: Esempio di proprietà (VC + +) preparato | Documenti Microsoft
+title: Esempio di proprietà (VC + +) preparato | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Prepared property [ADO], VC++ example
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4aeb945af1a75c28e4849f4736064fdb50d63d8f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cb7e726b506ab913d99d3024a4dc6f64a71bf543
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280770"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846489"
 ---
-# <a name="prepared-property-example-vc"></a>Esempio di proprietà Prepared (VC + +)
-Questo esempio viene illustrato il [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) proprietà aprendo due [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetti, ovvero uno preparato e uno non preparato.  
+# <a name="prepared-property-example-vc"></a>Esempio della proprietà Prepared (VC++)
+Questo esempio viene illustrato il [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) proprietà aprendo due [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetti, ovvero una preparazione e l'altra non preparato.  
   
 ## <a name="example"></a>Esempio  
   
@@ -146,7 +143,7 @@ void PrintComError(_com_error &e) {
   
  **Risultati delle prestazioni:**  
 **Non è preparata: 0.016 secondi**  
-**Preparata: secondi 0.016**   
+**Preparazione: 0.016 secondi**   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Esempio di proprietà Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

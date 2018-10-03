@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], timing out
 - time [SQL Server], query wait time
 - query wait option [SQL Server]
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e335012b7c25a5d72ec21f86970dfa5fcd364896
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fe68f68034c71708ba6f23ba7bdb79a218ed2bc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196141"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100757"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>Configurare l'opzione di configurazione del server query wait
   In questo argomento viene descritto come configurare l'opzione di configurazione del server **query wait** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le query che impegnano una notevole quantità di memoria, ad esempio quelle che eseguono operazioni di ordinamento e di hashing, vengono inserite in una coda se la memoria disponibile è insufficiente per la loro esecuzione. L'opzione **query wait** consente di specificare il tempo in secondi (da 0 a 2147483647) per l'attesa di risorse da parte della query, trascorso il quale si verifica il timeout della query. Il valore predefinito dell'opzione è -1. Vuole dire che il timeout viene calcolato come 25 volte il costo stimato della query.  

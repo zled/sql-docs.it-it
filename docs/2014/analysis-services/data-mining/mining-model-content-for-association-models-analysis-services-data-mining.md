@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - rules [Data Mining]
 - associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d65a79697d42d5d91168edfb211ecb57d1e3229
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4cdbacc27816464440fe57db7c7d727026754220
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267603"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135061"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di associazione (Analysis Services - Data mining)
   Questo argomento descrive il contenuto dei modelli di data mining specifico dei modelli che usano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  

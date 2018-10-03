@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96287b68f0d6610beab336bdb3ad3477e5d6ef66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41c79a6390c89c01a5ff7e5c7fe949cbebff6c6c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178328"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097571"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni per la **Richiesta profilo Criteri di ricerca colonna** selezionata nel riquadro delle richieste. Un profilo Criteri di ricerca colonna segnala un set di espressioni regolari che analizzano la percentuale specificata di valori in una colonna stringa. Questo profilo consente di identificare eventuali problemi nei dati, ad esempio le stringhe non valide, e può indicare le possibili espressioni regolari da utilizzare in futuro per convalidare nuovi valori. Un profilo di criteri di ricerca di una colonna contenente i codici postali ZIP (Stati Uniti), ad esempio, può produrre le espressioni regolari \d{5}-\d{4}, \d{5} e \d{9}. Se vengono visualizzate altre espressioni regolari, è probabile che i dati contengano valori non validi o in formato non corretto.  

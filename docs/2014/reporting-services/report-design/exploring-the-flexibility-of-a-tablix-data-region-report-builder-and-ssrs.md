@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
-caps.latest.revision: 4
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: d4dbdcedec7cf61b3de912bab3e3658c0267f134
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 673dcead751bf5db8da326de5cfe8e3aa18288a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323891"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114341"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Esplorazione della flessibilità di un'area dati Tablix (Generatore report e SSRS)
   Quando si aggiunge una tabella, una matrice o un'area dati elenco dalla scheda Inserisci sulla barra multifunzione, si può partire con un modello iniziale per un'area dati Tablix ma non si è limitati all'utilizzo di tale modello. Per continuare a sviluppare la modalità di visualizzazione dei dati è possibile aggiungere o rimuovere caratteristiche dell'area dati Tablix quali gruppi, righe e colonne.  

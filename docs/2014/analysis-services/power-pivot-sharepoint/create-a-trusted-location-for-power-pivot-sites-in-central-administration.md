@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5661842742c4f0f80b56186704a6b9ac967e8db8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e73468de8edd2497409c37acb2c00bfaf79ebd2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153332"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113521"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale
   Excel Services consente di specificare i percorsi che rappresentano repository validi per le cartelle di lavoro che vengono aperte in un server SharePoint. Questi percorsi vengono chiamati "percorsi attendibili" ed è possibile utilizzare impostazioni di configurazione diverse per ogni percorso attendibile creato. Per una distribuzione di PowerPivot per SharePoint, è necessario considerare la creazione di un percorso attendibile per i siti che contengono cartelle di lavoro di PowerPivot in modo che sia possibile applicare le impostazioni che funzionano meglio per l'accesso ai dati PowerPivot mantenendo le impostazioni predefinite per il resto della farm.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Save Tran Completed event class'
 ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f75c938cb70aec0bbc8017fc1b33fbdf7142c23
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb14b93ce3fd7cf4e04dd5ab47b3b6427dc9e57d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211301"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138111"
 ---
 # <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed - classe di evento
   La classe di evento TM: Save Tran Completed indica il completamento di una richiesta SAVE TRANSACTION. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni.  
@@ -51,7 +48,7 @@ ms.locfileid: "37211301"
 |SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |SPID|`int`|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |StartTime|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|Esito positivo|`int`|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|23|Sì|  
+|Operazione completata|`int`|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|23|Sì|  
 |TextData|`ntext`|Valore di testo che dipende dalla classe di evento acquisita nella traccia.|1|Sì|  
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  

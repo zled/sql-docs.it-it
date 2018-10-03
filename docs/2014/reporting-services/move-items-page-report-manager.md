@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5914bd0020a2d82e9f38ed4f5b60f0c880aaeb66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a6c4d822448b452cd66cbc59beffb8fe2d6f0fb5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290277"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082751"
 ---
 # <a name="move-items-page-report-manager"></a>Pagina Spostamento elementi (Gestione report)
   La pagina di spostamento degli elementi consente di spostare un report, una cartella o altri elementi in una nuova posizione nel server di report. È possibile digitare il percorso della nuova posizione oppure utilizzare una visualizzazione albero per selezionare una nuova posizione nello spazio dei nomi del server di report. Si possono spostare solo gli elementi per i quali si dispone delle autorizzazioni per lo spostamento e che sono archiviati nel server di report corrente.  

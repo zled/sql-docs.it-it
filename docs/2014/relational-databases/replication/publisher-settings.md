@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publishersettings.f1
 helpviewer_keywords:
 - Publisher Settings dialog box
 ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: abcedc479df197258b9ad836a3dd62430fb1c69b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 098eb9610a07531249246970ac9cca71e449209f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301841"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135991"
 ---
 # <a name="publisher-settings"></a>Impostazioni server di pubblicazione
   La finestra di dialogo **Impostazioni server di pubblicazione** consente di modificare le impostazioni per i server di pubblicazione aggiunti al riquadro sinistro di Monitoraggio replica.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9d0d6ceb-49b5-47c7-9ee6-464da43cc1f6
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6338ea7376e769a307d2a0101ee99dd0f32cfc53
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4dc87445828f446f9ba2cf066248d57eef260ce7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280647"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086469"
 ---
 # <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>Lezione 2: Compilazione di una struttura di mailing diretto (Esercitazione di base sul data mining)
   Il reparto Marketing di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] intende aumentare le vendite inviando messaggi promozionali a specifici clienti. Il database dell'azienda contiene un elenco dei clienti acquisiti e un elenco di potenziali nuovi clienti. Per l'esame delle tipologie dei clienti precedenti, la società spera di individuare modelli che siano applicabili alla clientela potenziale. Ad esempio, potrebbe utilizzare le passate tendenze per eseguire una stima dei potenziali clienti con maggiore probabili acquisteranno una bicicletta da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], oppure creare segmenti di clienti per le campagne di marketing future.  

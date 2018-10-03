@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02aa88c80200ece060204fc339e84560a069cc17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 703514e884ede08db13fbb70f5fa27247e75503b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260987"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133377"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Riavvio dei pacchetti tramite checkpoint
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] può riavviare i pacchetti non eseguiti correttamente a partire dal punto in cui si è verificato l'errore, invece di eseguire di nuovo l'intero pacchetto. Se un pacchetto è configurato per l'utilizzo di checkpoint, le informazioni sull'esecuzione del pacchetto vengono scritte in un file del checkpoint. Questo file viene quindi utilizzato per il riavvio di un pacchetto dal punto in cui si è verificato l'errore. Se il pacchetto viene eseguito correttamente, il file del checkpoint viene eliminato e quindi creato nuovamente alla successiva esecuzione del pacchetto.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeBinding Data Type (out-of-line)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeBinding data type
 ms.assetid: 5e1ee8ef-855c-4f3d-ae21-a33360d00d66
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c13cd736887569cfa5fd12bde73e1129e1fd046
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee354905f21670a143d8ec711bb45495086dbf05
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161252"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136652"
 ---
 # <a name="cubebinding-data-type-out-of-line-assl"></a>Tipo di dati CubeBinding (out-of-line) (ASSL)
   Definisce un tipo di dati primitivo che rappresenta la relazione tra un [cubo](../objects/cube-element-assl.md) elemento e un [DataSource](../objects/datasource-element-assl.md) elemento.  
@@ -51,14 +48,14 @@ ms.locfileid: "37161252"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipi di dati di base|None|  
-|Tipi di dati derivati|None|  
+|Tipi di dati di base|Nessuno|  
+|Tipi di dati derivati|Nessuno|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|None|  
+|Elementi padre|Nessuno|  
 |Elementi figlio|[DataSource](../objects/datasource-element-assl.md), [DataSourceID](../properties/id-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureGroup](../objects/group-element-assl.md)|  
 |Elementi derivati|[Binding](../../xmla/xml-elements-properties/binding-element-xmla.md) ([associazioni](../../xmla/xml-elements-properties/bindings-element-xmla.md) insieme di [processo](../../xmla/xml-elements-commands/process-element-xmla.md) oppure [Batch](../../xmla/xml-elements-commands/batch-element-xmla.md) comandi)|  
   

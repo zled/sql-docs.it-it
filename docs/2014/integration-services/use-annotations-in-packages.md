@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - self-documenting packages
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed656e80ae48fb77cbe6c48efe6a38b2810d3a91
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 948850ca0b7e0849b846f1f33fa00ab01d9e1c7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256707"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103641"
 ---
 # <a name="use-annotations-in-packages"></a>Utilizzo di annotazioni nei pacchetti
   In Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] sono disponibili annotazioni che è possibile utilizzare per ottenere pacchetti autodocumentati, più semplici da capire e gestire. È possibile aggiungere annotazioni alle aree di progettazione dei flussi di controllo, dei flussi di dati e dei gestori di eventi di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] . Nelle annotazioni può essere contenuto qualsiasi tipo di testo e possono essere utilizzate per aggiungere etichette, commenti e altre informazioni descrittive a un pacchetto. Le annotazioni sono disponibili solo in modalità progettazione. Non possono essere ad esempio scritte nei log.  

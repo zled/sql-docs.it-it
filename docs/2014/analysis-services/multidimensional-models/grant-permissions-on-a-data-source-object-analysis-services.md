@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.datasources.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - connection strings [Analysis Services]
 - data sources [Analysis Services], security
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dbe08e5e23b8c40ddeba9efa99c151314d499916
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 124795b07c79d0b2478bb91121d37783a48a1782
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243721"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126261"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Concedere le autorizzazioni per un oggetto origine dati (Analysis Services)
   In genere la maggior parte degli utenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non necessita dell'accesso alle origini dati sottostanti di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Gli utenti in genere eseguono query solo sui dati inclusi in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In un contesto di data mining, tuttavia, ad esempio per l'esecuzione di stime basate su un modello di data mining, un utente deve unire in join i dati risultanti di un modello di data mining e i dati specificati dall'utente. Per connettersi all'origine dati contenente i dati specificati dall'utente, l'utente usa una query DMX (Data Mining Extensions) che include le clausole [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery) e [OPENROWSET &#40;DMX&#41;](/sql/dmx/source-data-query-openrowset).  

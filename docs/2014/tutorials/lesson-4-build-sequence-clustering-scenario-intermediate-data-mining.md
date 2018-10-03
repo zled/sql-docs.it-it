@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], tutorials
 - sequence clustering algorithms [Analysis Services]
 - tutorials [Data Mining]
 ms.assetid: 63436bbd-0f73-4012-b6f1-358c81e4d92a
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e594e44dd3c8af8ade94c549d8b489f31623553
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5e276d4a2b44c8d0fdc6be6787f58e359e4c15d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251203"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122571"
 ---
 # <a name="lesson-4-building-a-sequence-clustering-scenario-intermediate-data-mining-tutorial"></a>Lezione 4: Compilazione di uno scenario di clustering delle sequenze (Esercitazione intermedia sul data mining)
   Il reparto marketing del [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] intende comprendere in modo i clienti visitano il [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] sito Web. L'azienda ritiene che esista un modello in base al quale i clienti inseriscono i prodotti nei rispettivi carrelli della spesa. Desidera quindi analizzare l'ordine delle sequenze di acquisto per sapere in che modo i clienti includono i prodotti tra gli acquisti. L'azienda può quindi utilizzare queste informazioni per rendere il sito Web più efficiente in modo da indurre i clienti ad acquistare altri prodotti.  

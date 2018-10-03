@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ClassifiedColumnID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ClassifiedColumnID element
 ms.assetid: c294b9c5-3ac2-4554-8ba8-d9f15d7e85c0
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc9938b44568e0641f97697216780ec4f31ad424
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb48844934cc5783d2e25210bc406e348e2a6b85
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316861"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129381"
 ---
 # <a name="classifiedcolumnid-element-assl"></a>Elemento ClassifiedColumnID (ASSL)
   Contiene l'identificatore (ID) di una colonna correlata che viene classificata per il [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) elemento.  
@@ -49,7 +46,7 @@ ms.locfileid: "37316861"
 |Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String|  
-|Valore predefinito|None|  
+|Valore predefinito|Nessuno|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -57,7 +54,7 @@ ms.locfileid: "37316861"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[ClassifiedColumns](../collections/columns-element-assl.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Note  
  L’elemento che corrisponde al padre della raccolta `ClassifiedColumns` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  

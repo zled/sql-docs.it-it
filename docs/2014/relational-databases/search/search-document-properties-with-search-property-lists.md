@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f107485b73df58e8d2da53f111cb522e1d3846bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90f0d34d522f27fd29c0c1103076632c3cb4bbee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292301"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086841"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca
-  In passato non era possibile distinguere il contenuto delle proprietà del documento dal contenuto del corpo del documento. Ciò limitava le query full-text a ricerche generiche in documenti interi. Attualmente, invece, è possibile configurare un indice full-text per supportare la ricerca con ambito proprietà di particolari proprietà, ad esempio Author e Title, per tipi di documenti supportati in una colonna di dati binari `varbinary`, `varbinary(max)` (incluso `FILESTREAM`) o `image`. Questa modalità di ricerca è nota come *ricerca basata su proprietà*.  
+  In passato non era possibile distinguere il contenuto delle proprietà del documento dal contenuto del corpo del documento. Ciò limitava le query full-text a ricerche generiche in documenti interi. Attualmente, invece, è possibile configurare un indice full-text per supportare la ricerca con ambito proprietà di particolari proprietà, ad esempio Author e Title, per tipi di documenti supportati in una colonna di dati binari `varbinary`, `varbinary(max)` (incluso `FILESTREAM`) o `image`. Questa modalità di ricerca è nota come *ricerca basata su proprietà*.  
   
  La possibilità di usare la ricerca basata su proprietà in un tipo specifico di documento è determinata dal [filtro](configure-and-manage-filters-for-search.md) (IFilter) associato. Per alcuni tipi di documento, il filtro IFilter associato estrae alcune o tutte le proprietà definite per quel tipo di documento, nonché il contenuto del corpo del documento. È possibile configurare un indice full-text per supportare la ricerca basata su proprietà solo in proprietà estratte da un filtro IFilter durante l'indicizzazione full-text. I filtri IFilter in grado di estrarre alcune proprietà del documento comprendono i filtri IFilter per tipi di documento di Microsoft Office, ad esempio docx, xlsx e pptx. D'altra parte, il filtro IFilter XML non genera proprietà.  
   

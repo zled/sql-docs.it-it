@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 099d9f8ccb24e2675f61c89f277d82984901cd4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b2d11854134eb7b83182b35b113b591687f2775
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168152"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095111"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>Riferimenti a raccolte DataSources e DataSets (Generatore report e SSRS)
   La raccolta `DataSources` rappresenta tutte le origini dati utilizzate in un report. Analogamente, il `DataSets` raccolta rappresenta tutti i set di dati per tutte le origini dati in un report. Usare il riquadro **Dati report** per ottenere una visualizzazione gerarchica dei set di dati del report organizzati sotto l'origine dati cui fanno riferimento. Se si includono riferimenti a queste raccolte, durante l'anteprima del report questi valori non verranno visualizzati. Le raccolte sono disponibili solo dopo la pubblicazione del report in un server di report.  
@@ -32,7 +29,7 @@ ms.locfileid: "37168152"
   
 |**Variabile**|`Type`|**Descrizione**|  
 |------------------|--------------|---------------------|  
-|`DataSourceReference`|`String`|Percorso completo della definizione dell'origine dati nel server di report. Ad esempio, è possibile includere un elenco di tutte le origini dati utilizzate da un report come parte di una cronologia di report. Nell'esempio seguente è illustrato il percorso completo per l'origine dati denominata AdventureWorks2012:<br /><br /> `/DataSources/AdventureWorks2012`(Indici per tabelle con ottimizzazione per la memoria).|  
+|`DataSourceReference`|`String`|Percorso completo della definizione dell'origine dati nel server di report. Ad esempio, è possibile includere un elenco di tutte le origini dati utilizzate da un report come parte di una cronologia di report. Nell'esempio seguente è illustrato il percorso completo per l'origine dati denominata AdventureWorks2012:<br /><br /> `/DataSources/AdventureWorks2012` (Indici per tabelle con ottimizzazione per la memoria).|  
 |`Type`|`String`|Tipo di provider di dati per l'origine dati. Ad esempio, `SQL`.|  
   
 ## <a name="datasets"></a>DataSets  

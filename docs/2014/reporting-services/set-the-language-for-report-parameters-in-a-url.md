@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - overriding report language settings
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - international considerations [Reporting Services]
 - global considerations [Reporting Services]
 ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7aefa58ba7e190df3656a13243a8133839c3b954
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3d855e911a20749b405179ebd31dfb10ac6ddc97
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306971"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122861"
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>Impostare la lingua per i parametri del report in un URL
   Il parametro di accesso con URL *rs:ParameterLanguage* consente di risolvere un problema di interpretazione dei parametri del report con distinzione delle impostazioni cultura, come date, ore, valuta e numeri, in base alla lingua del browser. Con *rs:ParameterLanguage*l'URL viene ora interpretato in modo indipendente dal browser. Se, ad esempio, per il server di report sono definite le impostazioni internazionali per il tedesco, ma un utente accede a un report tramite un URL utilizzando un browser che è impostato su Inglese (Stati Uniti), i valori dei parametri passati a un server di report vengono interpretati in modo errato.  

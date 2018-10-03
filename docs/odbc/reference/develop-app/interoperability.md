@@ -1,41 +1,38 @@
 ---
-title: Interoperabilità | Documenti Microsoft
+title: Interoperabilità | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC]
 - interoperability [ODBC], about interoperability
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 486bfc2b144e8b228197b7b813af7aaebfe5b837
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d5e4fbee458bec88461d3e2945a466c848d3345
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913046"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794121"
 ---
 # <a name="interoperability"></a>Interoperabilità
-*Interoperabilità* è la capacità di una singola applicazione funzionino con molti diversi DBMS. La necessità di scrivere applicazioni interoperabili generiche è uno dei fattori principali per lo sviluppo di ODBC. Tuttavia, interoperabilità non è un semplice percorso seguito da "non interoperabile" a "tutto intercambiabili". Il percorso dispone di molti branch, e ciascuna richiede compromessi tra le funzionalità, velocità, la complessità del codice e tempi di sviluppo.  
+*Interoperabilità* è la capacità di una singola applicazione di operare con maggior parte dei DBMS diversi. La necessità di scrivere applicazioni interoperative generiche è stato uno dei fattori principali iniziali allo sviluppo di ODBC. Tuttavia, l'interoperabilità non è un semplice percorso seguito da "non interoperabile" a "tutto intercambiabili." Il percorso contiene molti rami e ciascuna richiede compromessi tra funzionalità, velocità, la complessità del codice e in fase di sviluppo.  
   
- Diverse operazioni per il processo di scrittura di un'applicazione di interoperabilità:  
+ Il processo di scrittura di un'applicazione interoperativa segue passaggi diversi:  
   
 1.  Decidere se l'applicazione utilizzerà ODBC.  
   
-2.  Scelta di un livello di interoperabilità e decidere quali vantaggi e svantaggi sono necessari per raggiungere tale livello.  
+2.  Scelta di un livello di interoperabilità e decidere quali vantaggi e svantaggi sono necessari per raggiungere quel livello.  
   
-3.  Scrittura di codice di interoperabilità e il relativo test massima.  
+3.  La scrittura di codice interoperabili e testarla per quanto possibile complete.  
   
- Si noti che l'interoperabilità è principalmente il dominio del writer dell'applicazione. I driver sono progettati per funzionare con un singolo DBMS e, per definizione, non sono interoperativi. Essi svolgono un ruolo nell'interoperabilità implementando correttamente e l'esposizione di ODBC in un singolo DBMS.  
+ Tenere presente che l'interoperabilità è principalmente il dominio del writer dell'applicazione. I driver sono progettati per funzionare con un singolo DBMS e, per definizione, non sono interoperativi. Giocano un ruolo nell'interoperabilità correttamente implementando ed esposizione di ODBC in un singolo DBMS.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

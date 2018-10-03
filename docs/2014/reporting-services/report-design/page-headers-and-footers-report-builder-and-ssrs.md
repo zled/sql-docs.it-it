@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.fill.f1
@@ -23,16 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 863a4415bb75b5a5cd4fe017de4ebeca975e32a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18228ba7240b2d26462545463d8cf5fdf8636a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328897"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098441"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Intestazioni di pagina e piè di pagina (Generatore report e SSRS)
   Un report può contenere un'intestazione e un piè di pagina, posizionati rispettivamente nella parte superiore e inferiore di ogni pagina. Le intestazioni e i piè di pagina possono contenere testo statico, immagini, linee, rettangoli, bordi, colore di sfondo, immagini di sfondo ed espressioni. Le espressioni includono riferimenti ai campi del set di dati per i report contenenti un solo set di dati e chiamate di funzioni di aggregazione che includono il set di dati come ambito.  

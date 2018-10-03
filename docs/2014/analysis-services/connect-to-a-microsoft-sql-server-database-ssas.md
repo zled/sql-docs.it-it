@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlserverdb.f1
 ms.assetid: 6ebfe029-dbba-4f0d-a556-328e79ef629f
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50dcb1cfa930a6fd09ff1f25d91b4ad4e5b42acb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e3015f589f40dfc8bafc30da3a30316004f086a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189458"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117611"
 ---
 # <a name="connect-to-a-microsoft-sql-server-database-ssas"></a>Connessione a un database di Microsoft SQL Server (SSAS)
   Questa pagina dell'**Importazione guidata tabella** consente di specificare le impostazioni per connettersi a un database di Microsoft SQL Server. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  

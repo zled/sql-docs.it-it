@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [OLE DB], executing
 - OLE DB, stored procedures
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d1b2470c5d75a6a161459c615a093e0cfd83fc9
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0102fa66e65fa11f47eec9f49cd1fa90fb11f877
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425051"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110881"
 ---
 # <a name="running-stored-procedures-ole-db"></a>Esecuzione di stored procedure (OLE DB)
   Durante l'esecuzione di istruzioni, la chiamata a una stored procedure nell'origine dati, in alternativa all'esecuzione o alla preparazione diretta di un'istruzione nell'applicazione client, può offrire i vantaggi seguenti:  

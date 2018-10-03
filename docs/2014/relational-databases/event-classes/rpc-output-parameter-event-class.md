@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - RPC Output Parameter event class
 ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 425d99b10c80d29196abd94e19c37750a78994b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1b54f54f90467dd95c188e0bb8f237609c23b4ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211371"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137441"
 ---
-# <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter - classe di evento
+# <a name="rpc-output-parameter-event-class"></a>Classe di evento RPC Output Parameter
   La classe di evento RPC Output Parameter traccia i valori dei parametri di output di chiamate di procedura remota (RPC, Remote Procedure Call) dopo l'esecuzione.  
   
  Questa classe consente di esaminare i valori di output restituiti da stored procedure. Se, ad esempio, un'applicazione non genera i valori di output previsti dopo l'esecuzione di una chiamata di procedura remota, è possibile utilizzare questa classe di evento per isolare il problema tra il codice del client e il codice del server.  

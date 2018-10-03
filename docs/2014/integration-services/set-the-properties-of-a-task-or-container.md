@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], properties
 ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
-caps.latest.revision: 48
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4aa8b85c3b5c92b38f50bbfac850d4a69ed2d4c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1e8c6381aaf8afd848831c8599c4534a77b179e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264897"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084791"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>Impostazione delle proprietà di un'attività o di un contenitore
   È possibile impostare la maggior parte delle proprietà delle attività e dei contenitori usando la finestra **Proprietà**. Fanno eccezione le proprietà delle raccolte di attività e quelle troppo complesse per essere impostate nella finestra **Proprietà**. L'enumeratore usato dal contenitore Ciclo Foreach, ad esempio, non può essere configurato nella finestra **Proprietà**. Per impostare tali proprietà complesse, è necessario utilizzare un editor attività o contenitori. La maggior parte degli editor attività e contenitori include più nodi, ognuno dei quali contiene proprietà correlate. Il nome del nodo indica l'oggetto delle proprietà contenute.  

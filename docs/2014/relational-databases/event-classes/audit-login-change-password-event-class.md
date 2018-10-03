@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Login Change Password event class
 ms.assetid: c6dbe5e5-b523-4b7c-94f0-eb1dfbce2056
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 644cf995f8fe88dbdf054e95430d59cfa08e0321
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 265167b497b89befc87680270c2fd333f8fb4df6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236741"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056111"
 ---
-# <a name="audit-login-change-password-event-class"></a>Audit Login Change Password _- classe di evento
+# <a name="audit-login-change-password-event-class"></a>Classe di evento Audit Login Change Password
   La classe di evento **Audit Login Change Password** viene generata quando un utente modifica la password di accesso a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="audit-login-change-password-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Login Change Password  

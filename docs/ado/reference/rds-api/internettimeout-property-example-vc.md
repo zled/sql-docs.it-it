@@ -1,35 +1,32 @@
 ---
-title: Esempio di proprietà InternetTimeout (VC + +) | Documenti Microsoft
+title: Esempio di proprietà InternetTimeout (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - InternetTimeout property [ADO], VC++ example
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bfc664d024026447b83cf443002b4fe2642d06b5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: eb65234369e646c2dba4544b8729769ac3ebdcb2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789699"
 ---
-# <a name="internettimeout-property-example-vc"></a>Esempio di proprietà InternetTimeout (VC + +)
+# <a name="internettimeout-property-example-vc"></a>Esempio della proprietà InternetTimeout (VC++)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Questo esempio viene illustrato il [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) proprietà che esiste nel [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) e [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oggetti. In questo caso, il **InternetTimeout** proprietà il **DataControl** oggetto e il timeout è impostato su 20 secondi.  
+ Questo esempio viene illustrato il [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) proprietà, che sia disponibile la [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) e [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oggetti. In questo caso, il **InternetTimeout** proprietà di **DataControl** oggetto e il timeout è impostato su 20 secondi.  
   
 ```  
 // BeginInternetTimeoutCpp  

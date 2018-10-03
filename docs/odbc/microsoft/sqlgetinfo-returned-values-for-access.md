@@ -1,13 +1,11 @@
 ---
-title: SQLGetInfo i valori restituiti per l'accesso | Documenti Microsoft
+title: I valori restituiti da SQLGetInfo per Access | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Access driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbebc3569c35020b54f2d516d4fde99f14fbd69f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a79e97721f246d47f8fab413be8074836f753cbe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904646"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826259"
 ---
-# <a name="sqlgetinfo-returned-values-for-access"></a>I valori restituito per l'accesso SQLGetInfo
-La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento e i corrispondenti valori restituiti da **SQLGetInfo**. Queste informazioni possono essere recuperate passando il linguaggio C elencato #defines a **SQLGetInfo** nel *fInfoType* argomento. Per ulteriori informazioni sui valori restituiti da **SQLGetInfo**, vedere il *riferimento per programmatori ODBC*.  
+# <a name="sqlgetinfo-returned-values-for-access"></a>Valori restituiti da SQLGetInfo per Access
+La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento e i corrispondenti valori restituiti dal **SQLGetInfo**. Queste informazioni possono essere recuperate passando il linguaggio C elencato #defines **SQLGetInfo** nel *fInfoType* argomento. Per altre informazioni sui valori restituiti da **SQLGetInfo**, vedere la *riferimento per programmatori ODBC*.  
   
 > [!NOTE]  
->  In cui **SQLGetInfo** restituisce una maschera a 32 bit, una barra verticale (&#124;) rappresenta un'operazione OR.  
+>  In cui **SQLGetInfo** restituisce una maschera di bit a 32 bit, una barra verticale (&#124;) rappresenta un'operazione OR.  
   
 |InfoType|Valore restituito|  
 |--------------|--------------------|  
@@ -85,7 +82,7 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|DSN da ODBC, o "" Se viene utilizzata la parola chiave DRIVER in ODBC|  
+|SQL_DATA_SOURCE_NAME|Il DSN di ODBC. ini, o "" se parola chiave DRIVER viene usato in ODBC. ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
 |SQL_DATABASE_NAME|Nome file|  
 |SQL_DATETIME_LITERALS|0|  

@@ -1,53 +1,49 @@
 ---
-title: Proprietà dinamiche ADO | Documenti Microsoft
+title: Proprietà dinamiche ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.service: ''
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO]
 - properties [ADO], dynamic
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5aa6d237b16c6ac24c0e921d51f19a26c36e3bbe
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c940fbdc48d900da77d03dfb3b806080cff0c04e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726599"
 ---
 # <a name="ado-dynamic-properties"></a>Proprietà dinamiche ADO
-Possono essere aggiunte le proprietà dinamiche di [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) insiemi di [connessione](../../../ado/reference/ado-api/connection-object-ado.md), [comando](../../../ado/reference/ado-api/command-object-ado.md), o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti. L'origine per queste proprietà è di provider di dati, ad esempio il [il Provider OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), o un provider di servizi, ad esempio il [servizio cursore per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Consultare la documentazione di provider del servizio per ulteriori informazioni su una proprietà dinamica specifica o un provider di dati appropriato.  
+Proprietà dinamica possono essere aggiunte alle [le proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolte del [connessione](../../../ado/reference/ado-api/connection-object-ado.md), [comando](../../../ado/reference/ado-api/command-object-ado.md), o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti. L'origine per queste proprietà è di provider di dati, ad esempio la [il Provider OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), o un provider di servizi, ad esempio le [Microsoft Cursor Service per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Vedere la documentazione di provider di servizio per altre informazioni su una proprietà dinamica specifica o provider di dati appropriato.  
   
- Il [ADO Dynamic Property Index](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fornisce un riferimento incrociato tra i nomi ADO e OLE DB per ogni proprietà dinamica di provider OLE DB standard.  
+ Il [indice proprietà dinamica ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fornisce un riferimento incrociato tra i nomi ADO e OLE DB per ogni proprietà dinamica di provider OLE DB standard.  
   
- Le proprietà dinamiche seguenti sono particolarmente interessanti e sono documentate anche nelle origini indicate in precedenza. Funzionalità speciali con ADO è documentata negli argomenti della Guida ADO nell'elenco seguente.  
+ Le seguenti proprietà dinamiche sono particolarmente interessanti e sono documentate anche nelle origini indicate in precedenza. Funzionalità speciali con ADO è documentata negli argomenti della Guida ADO nell'elenco seguente.  
   
 |||  
 |-|-|  
 |[Ottimizzazione](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Specifica se è necessario creare un indice su questo campo.|  
-|[prompt dei comandi](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Specifica se il provider OLE DB deve richiedere all'utente le informazioni di inizializzazione.|  
-|[Modificare la forma di nome](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Specifica un nome per il **Recordset** oggetto.|  
-|[Risincronizzazione di comando](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Specifica una stringa di un comando fornito dall'utente di **Resync** i problemi dei metodi di aggiornamento dei dati nella tabella denominata nel **tabella univoca** proprietà dinamiche.|  
-|[Tabella univoca, univoco dello Schema, catalogo univoca](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Tabella univoca** specifica il nome della tabella di base su cui sono consentite gli aggiornamenti, inserimenti ed eliminazioni.<br /><br /> **Schema univoco** specifica lo schema, o nome del proprietario della tabella.<br /><br /> **Catalogo univoca** specifica il catalogo o il nome del database contenente la tabella.|  
-|[Risincronizzazione di aggiornamento](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|Specifica se il **UpdateBatch** metodo è seguito da implicita **Resync** operazione del metodo e in tal caso, l'ambito dell'operazione.|  
+|[Richiesta](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Specifica se il provider OLE DB deve richiedere all'utente le informazioni di inizializzazione.|  
+|[Proprietà dinamica Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Specifica un nome per il **Recordset** oggetto.|  
+|[La risincronizzazione di comando](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Specifica un comando fornito dall'utente di stringhe che il **Risincronizza** i problemi di metodi per aggiornare i dati nella tabella denominata nel **tabella univoca** proprietà dinamica.|  
+|[Tabella univoca, Schema univoco, catalogo univoco](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Tabella univoca** specifica il nome della tabella di base su cui sono consentite aggiornamenti, inserimenti ed eliminazioni.<br /><br /> **Schema univoco** specifica lo schema, o nome del proprietario della tabella.<br /><br /> **Catalogo univoco** specifica il catalogo, o il nome del database contenente la tabella.|  
+|[Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|Specifica se il **UpdateBatch** metodo è seguito da implicita **Risincronizza** operazione del metodo e in questo caso, l'ambito di tale operazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento all'API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
+ [Riferimento API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Raccolte di ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Costanti enumerate ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Appendice b: errori di ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Appendice b: errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Eventi ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Metodi ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)   
- [Le interfacce e gli oggetti ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
+ [Interfacce e oggetti ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Proprietà ADO](../../../ado/reference/ado-api/ado-properties.md)

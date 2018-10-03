@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_addmergepullsubscription_agent
 - sp_addmergepullsubscription_agent_TSQL
@@ -22,12 +17,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86af98d30aa9c892472b4226f30dafd63531cc21
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: da16887ff7debf09e69fc72cf464f5838cf6ddc7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43019606"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749741"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +158,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Account di accesso da utilizzare quando ci si connette a un server di distribuzione per la sincronizzazione. *distributor_login* è obbligatorio se *distributor_security_mode* è impostata su **0**. *distributor_login* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@distributor_password =** ] **'***distributor_password***'**  
- Password del database di distribuzione. *distributor_password* è obbligatorio se *distributor_security_mode* è impostata su **0**. *distributor_password* viene **sysname**, con un valore predefinito è NULL.  
+ Password del server di distribuzione. *distributor_password* è obbligatorio se *distributor_security_mode* è impostata su **0**. *distributor_password* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  

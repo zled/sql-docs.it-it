@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9745635b277a53f724b61ff4143e41af47775a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 722921015886e8aed687a8bf689dd7f7d8c592ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324011"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125041"
 ---
 # <a name="get-started-with-full-text-search"></a>Introduzione alla ricerca full-text
   Per impostazione predefinita, nei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è abilitata la funzionalità full-text. Per utilizzare un indice full-text in una tabella, è tuttavia necessario impostare la funzionalità di indicizzazione full-text nelle colonne delle tabelle a cui si desidera accedere mediante il motore di ricerca full-text.  
@@ -197,7 +194,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql)|Restituisce una riga per ogni catalogo full-text in riferimento all'indice full-text.|  
 |[sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)|Contiene una riga per ogni colonna che fa parte di un indice full-text.|  
-|[sys.fulltext_index_fragments &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql)|Un indice full-text utilizza tabelle interne denominate frammenti di indice full-text per archiviare i dati dell'indice invertito. Questa vista può essere utilizzata per eseguire una query sui metadati relativi a tali frammenti. Nella vista è contenuta una riga per ogni frammento di indice full-text presente in ogni tabella contenente un indice full-text.|  
+|[sys.fulltext_index_fragments &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql)|Un indice full-text utilizza tabelle interne denominate frammenti di indice full-text per archiviare i dati dell'indice invertito. Questa vista può essere utilizzata per eseguire una query sui metadati relativi a tali frammenti. Nella vista è contenuta una riga per ciascun frammento di indice full-text presente in ogni tabella che contiene un indice full-text.|  
 |[sys.fulltext_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql)|Contiene una riga per indice full-text di un oggetto in formato di tabella.|  
 |[sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql)|Restituisce informazioni sul contenuto di un indice full-text per la tabella specificata.|  
 |[sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql)|Restituisce informazioni sul contenuto a livello di documento di un indice full-text per la tabella specificata. Una determinata parola chiave può essere inclusa in diversi documenti.|  

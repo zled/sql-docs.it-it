@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95b4653b59ec9bce4b3efd9dc3f26eca9ecc0a0a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49471e25b85884f80c04260fa555441f67a98872
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325501"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053421"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Disinstallare e rimuovere Master Data Services
   Per disinstallare la funzionalità [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seguire i passaggi in [Disinstallare un'istanza esistente di SQL Server &#40;programma di installazione&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) e specificare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] come funzionalità da rimuovere nella pagina **Seleziona funzionalità**. Il processo di disinstallazione rimuove cartelle e file di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] e disinstalla [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] dal computer locale.  

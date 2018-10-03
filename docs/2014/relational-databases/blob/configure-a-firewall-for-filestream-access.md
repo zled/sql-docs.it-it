@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall [Database Engine], FILESTREAM
 - FILESTREAM [SQL Server], Windows Firewall
 ms.assetid: fc52007f-c26f-4f8e-b9d8-55a7978f4d56
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0002f03639cbc3f8892d3741a0829bfc87f052d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6be07fffa636a2cdc51197916d2bdf218cdea289
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172852"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073701"
 ---
 # <a name="configure-a-firewall-for-filestream-access"></a>Configurare un firewall per l'accesso FILESTREAM
   Per utilizzare FILESTREAM in un ambiente protetto da firewall, il client e il serve devono essere entrambi in grado di risolvere nomi DNS nel server in cui sono presenti i file FILESTREAM. Per FILESTREAM è necessario che le porte 139 e 445 di condivisione file di Windows siano aperte.  

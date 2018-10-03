@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - Snapshot Agent, about Snapshot Agent
 - Snapshot Agent
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4fe3b25fb570d305ba176d89f2f21413c19665e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 441bae8df8e15f5dd8df4ebf636bf5f879ab497c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270767"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081341"
 ---
 # <a name="replication-agents-overview"></a>Panoramica degli agenti di replica
   La replica utilizza alcuni programmi autonomi, denominati agenti, per eseguire le attività associate al rilevamento delle modifiche e alla distribuzione dei dati. Per impostazione predefinita, gli agenti di replica vengono eseguiti come processi pianificati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e, a tale scopo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent deve essere in funzione. Gli agenti di replica possono inoltre essere eseguiti dalla riga di comando e dalle applicazioni che utilizzano gli oggetti RMO (Replication Management Objects) e possono essere amministrati con Monitoraggio replica per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - page breaks [Reporting Services], expressions
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-caps.latest.revision: 97
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 97bfdd80fc183291f21042d11620d0a3e28e0b49
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e32c6ed01887fb47cb8051ba78fb92b6558a5abe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205041"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099447"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Esempi di espressioni (Generatore report e SSRS)
   Le espressioni vengono utilizzate di frequente nei report per controllare il contenuto e l'aspetto del report. Vengono scritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e possono includere funzioni predefinite, codice personalizzato, variabili di gruppo e di report e variabili definite dall'utente. Le espressioni iniziano con un segno di uguale (=). Per altre informazioni sull'editor espressioni e sui tipi di riferimenti che è possibile includere, vedere [Uso delle espressioni nei report &#40;Generatore report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) e [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - T-SQL Query collector type
 - collection sets [SQL Server], creating custom
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4b637d728cdbf380a6b3283134229dedb198693
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 454f5c9dad5872c84774e184813b221cdb99767a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817067"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132521"
 ---
 # <a name="create-a-custom-collection-set-that-uses-the-generic-t-sql-query-collector-type-transact-sql"></a>Creazione di un set di raccolta personalizzato che utilizza il tipo agente di raccolta Query T-SQL generico (Transact-SQL)
   È possibile creare un set di raccolta personalizzato con elementi della raccolta che utilizzano il tipo di agente di raccolta Query T-SQL generico tramite le stored procedure fornite con l'agente di raccolta dati. Il completamento di questa attività comporta l'utilizzo dell'Editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per eseguire le procedure descritte di seguito:  

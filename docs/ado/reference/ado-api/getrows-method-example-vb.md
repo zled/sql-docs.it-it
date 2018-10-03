@@ -1,32 +1,29 @@
 ---
-title: Esempio di metodo GetRows (VB) | Documenti Microsoft
+title: Esempio di metodo GetRows (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Getrows method [ADO], Visual Basic example
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1567342e31352b21b53fb03a769039a8e31d8e1f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 815fb6268fd55566ede8d7f6722f66d9be912a97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278840"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837049"
 ---
-# <a name="getrows-method-example-vb"></a>Esempio di metodo GetRows (VB)
-Questo esempio viene utilizzato il [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) metodo per recuperare un numero specificato di righe da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e per inserire una matrice con i dati risultanti. Il **GetRows** metodo restituirà inferiore al numero desiderato di righe in due casi: se [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) è stato raggiunto, oppure se **GetRows** ha tentato di recuperare un record eliminato da un altro utente. La funzione restituisce **False** solo se il secondo caso si verifica. La funzione GetRowsOK è necessaria per eseguire questa procedura.  
+# <a name="getrows-method-example-vb"></a>Esempio del metodo GetRows (VB)
+Questo esempio Usa la [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) metodo per recuperare un numero specificato di righe da una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e per inserire una matrice con i dati risultanti. Il **GetRows** metodo restituirà un valore più basso rispetto al numero desiderato di righe in due casi: entrambi if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) viene raggiunto, oppure se **GetRows** cercava di recuperare un record che è stato eliminato da un altro utente. La funzione restituisce **False** solo se si verifica il secondo caso. La funzione GetRowsOK è necessaria per eseguire questa procedura.  
   
 ```  
 'BeginGetRowsVB  
@@ -117,5 +114,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
+ [Esempio di metodo GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

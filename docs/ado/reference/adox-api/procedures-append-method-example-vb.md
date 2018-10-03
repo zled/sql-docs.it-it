@@ -1,32 +1,29 @@
 ---
-title: Procedure di esempio del metodo Append (VB) | Documenti Microsoft
+title: Procedure di esempio del metodo Append (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Append method [ADOX], Visual Basic example
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6cd39f90ccd8aef159cfd88c5dc921b802a54bae
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 14de33e27d184c4474aeb6eb601f7d34969c47a3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286630"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811601"
 ---
-# <a name="procedures-append-method-example-vb"></a>Procedure di esempio del metodo Append (VB)
-Il codice seguente viene illustrato come utilizzare un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto e [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) raccolta [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) metodo per creare una nuova stored procedure nell'origine dati sottostante.  
+# <a name="procedures-append-method-example-vb"></a>Esempio del metodo Append di Procedures (VB)
+Il codice seguente viene illustrato come utilizzare un [comandi](../../../ado/reference/ado-api/command-object-ado.md) oggetto e il [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) raccolta [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) metodo per creare una nuova stored procedure nell'origine dati sottostante.  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -79,7 +76,7 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append (metodo) (ADOX procedure)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Oggetto del catalogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Append (metodo) (oggetti procedure ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Oggetto procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Raccolta di oggetti Procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

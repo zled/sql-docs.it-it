@@ -1,38 +1,35 @@
 ---
-title: CREARE l'indice istruzione limitazioni | Documenti Microsoft
+title: Limitazioni dell'istruzione dell'indice CREATE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CREATE INDEX statement limitations [ODBC]
 - ODBC SQL grammar, CREATE INDEX statement limitations
 ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9501e07fcdb70984153a718eed22be4d5448ec9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ec6ba27197f7a6021aff90d30884129128cb3614
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32898936"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837039"
 ---
-# <a name="create-index-statement-limitations"></a>CREARE l'indice istruzione limitazioni
-L'istruzione CREATE INDEX non è supportata per i driver Microsoft Excel o testo.  
+# <a name="create-index-statement-limitations"></a>Limitazioni dell'istruzione CREATE INDEX
+L'istruzione CREATE INDEX non è supportata per i driver di Microsoft Excel o di testo.  
   
- Un indice può essere definito in un massimo di 10 colonne. Se più di 10 colonne sono inclusi in un'istruzione CREATE INDEX, l'indice non verrà riconosciuto e la tabella verrà considerata come se l'indice non sono stati creati.  
+ È possibile definire un indice su un massimo di 10 colonne. Se più di 10 colonne sono incluse in un'istruzione CREATE INDEX, l'indice non verrà riconosciuta e la tabella verrà considerata come se non include un indice sono stati creati.  
   
  Il driver dBASE non è possibile creare un indice su una colonna LOGICA.  
   
- Quando viene utilizzato il driver dBASE, tempo di risposta nel file di grandi dimensioni può essere migliorata creando un indice (con estensione MDX o ndx) nella colonna (campo) specificato nelle clausole WHERE di un'istruzione SELECT. Gli indici esistenti con estensione MDX verranno applicati automaticamente per =, >, \<, > =, = < e tra gli operatori in una clausola WHERE e predicati LIKE e in predicati di join.  
+ Quando viene usato il driver dBASE, tempo di risposta nel file di grandi dimensioni può essere migliorata creando un indice (con estensione MDX o ndx) nella colonna (campo) specificato nelle clausole WHERE di un'istruzione SELECT. Gli indici con estensione MDX esistenti verranno applicati automaticamente per =, >, \<, > =, = < e tra gli operatori in una clausola WHERE e predicati LIKE, nonché nei predicati di join.  
   
- Quando viene utilizzato il driver dBASE, l'indice creato da un'istruzione CREATE UNIQUE INDEX è in realtà non univoco e possono inserire valori duplicati nella colonna indicizzata. Un solo record da un set con gli stessi valori di chiave può essere aggiunto all'indice.  
+ Quando viene usato il driver dBASE, l'indice creato da un'istruzione CREATE UNIQUE INDEX è effettivamente non univoci e possono essere inseriti valori duplicati nella colonna indicizzata. Un solo record da un set con gli stessi valori di chiave può essere aggiunto all'indice.  
   
- Quando viene utilizzato il driver Paradox, è necessario definire un indice univoco su un subset delle colonne in una tabella, incluse la prima colonna contiguo. Impossibile aggiornare una tabella dal driver Paradox se non è definito un indice univoco nella tabella o quando il driver Paradox viene usato senza l'implementazione del motore di Database Borland.
+ Quando viene usato il driver Paradox, è necessario definire un indice univoco su un subset delle colonne in una tabella, incluse la prima colonna contiguo. Impossibile aggiornare una tabella dal driver Paradox se un indice univoco non è definito nella tabella o quando il driver Paradox viene usato senza l'implementazione del motore di Database Borland.

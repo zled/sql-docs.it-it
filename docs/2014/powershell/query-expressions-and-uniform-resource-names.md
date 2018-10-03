@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query expressions
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ed4731450111c49bfe3936ecda2e1400a09d173
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4cb5529ad750a72fa2572edd62b6b63c20867e7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135741"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Espressioni di query e Uniform Resource Name
   I modelli SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) e gli snap-in PowerShell per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usano due tipi di stringhe di espressione simili alle espressioni XPath. Le espressioni di query sono stringhe che specificano un set di criteri utilizzato per enumerare uno o più oggetti in una gerarchia del modello a oggetti. Un Unique Resource Name (URN) è un tipo specifico di stringa di espressione di query che identifica un singolo oggetto in modo univoco.  
@@ -68,7 +65,7 @@ ms.locfileid: "39083963"
  Ad esempio, specificare Server per la classe **ServerCollection** , Database per la classe **DatabaseCollection** .  
   
  \@*PropertyName*  
- Specifica il nome di una delle proprietà della classe associato all'oggetto specificato in *Object*. Il nome della proprietà deve essere preceduto il \@ carattere. Ad esempio, specificare \@database per il **Database** proprietà della classe **database**.  
+ Specifica il nome di una delle proprietà della classe associato all'oggetto specificato in *Object*. Il nome della proprietà deve essere preceduto dal carattere \@. Ad esempio, specificare \@IsAnsiNull per la proprietà **IsAnsiNull** della classe **Database**.  
   
  \@*BooleanPropertyName*=true()  
  Enumera tutti gli oggetti in cui la proprietà Boolean specificata è impostata su TRUE.  
@@ -76,7 +73,7 @@ ms.locfileid: "39083963"
  \@*BooleanPropertyName*=false()  
  Enumera tutti gli oggetti in cui la proprietà Boolean specificata è impostata su FALSE.  
   
- contiene (\@*StringPropertyName*, '*PatternString*')  
+ contains(\@*StringPropertyName*, '*PatternString*')  
  Enumera tutti gli oggetti in cui la proprietà della stringa specificata contiene almeno un'occorrenza del set di caratteri specificato in '*PatternString*'.  
   
  \@*StringPropertyName*='*PatternString*'  
@@ -88,7 +85,7 @@ ms.locfileid: "39083963"
 |||  
 |-|-|  
 |aaaa|Anno espresso a quattro cifre.|  
-|MM|Mese a due cifre (da 01 a 12)|  
+|mm|Mese a due cifre (da 01 a 12)|  
 |gg|Data a due cifre (da 01 a 31)|  
 |hh|Ora a 2 cifre nel formato a 24 ore (da 01 a 23)|  
 |mi|Minuti a due cifre (da 01 a 59)|  
@@ -97,11 +94,11 @@ ms.locfileid: "39083963"
   
  Le date specificate in questo formato possono essere valutate rispetto a qualsiasi formato della data archiviato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- is_Null (\@*NomeProprietà*)  
+ is_null(\@*PropertyName*)  
  Enumera tutti gli oggetti in cui la proprietà specificata è impostata su NULL.  
   
  not(\<*PropertyExpression*>)  
- Nega il valore della valutazione della *PropertyExpression*, enumerando tutti gli oggetti che non corrispondono alla condizione specificata nella *PropertyExpression*. Ad esempio, non (contiene (\@Name, 'xyz')) enumera tutti gli oggetti che non è la stringa xyz nei relativi nomi.  
+ Nega il valore della valutazione della *PropertyExpression*, enumerando tutti gli oggetti che non corrispondono alla condizione specificata nella *PropertyExpression*. Ad esempio, not(contains(\@Name, 'xyz')) enumera tutti gli oggetti i cui nomi non contengono la stringa xyz.  
   
 ## <a name="remarks"></a>Note  
  Le espressioni di query sono stringhe che enumerano i nodi in una gerarchia del modello SMO. Ciascun nodo dispone di un'espressione di filtro che specifica i criteri per determinare quali oggetti in corrispondenza di un dato nodo sono enumerati. Le espressioni di query vengono modellate sul linguaggio delle espressioni XPath. Le espressioni di query implementano un piccolo subset delle espressioni che sono supportate da XPath; inoltre dispongono di alcune estensioni che non si trovano in XPath. Le espressioni XPath sono stringhe che specificano un set di criteri che vengono utilizzati per enumerare uno o più tag in un documento XML. Per altre informazioni su XPath, vedere [W3C XPath Language](http://www.w3.org/TR/xpath20/).  

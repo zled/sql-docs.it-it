@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server replication], publication access list
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - PAL (publication access list)
 - logins [SQL Server replication], managing
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dca50043353ff003b1179777a2da119edf8fa2bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 799e1665ce620ec6f54932cbe1b6daac43cdc468
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150432"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093401"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Gestione degli account nell'elenco di accesso alla pubblicazione
   In questo argomento si illustra come gestire gli account di accesso nell'elenco di accesso alla pubblicazione in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'accesso a una pubblicazione viene controllato tramite l'elenco di accesso alla pubblicazione. Accessi e gruppi possono essere aggiunti e rimossi dell'elenco di accesso alla pubblicazione.  

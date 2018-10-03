@@ -1,12 +1,10 @@
 ---
-title: Sys.dm server_services (Transact-SQL) | Documenti Microsoft
+title: Sys.dm server_services (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_services
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_services dynamic management view
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 427dfc77aaf7178a9bd14a7243be4a44a9e1781c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ee801da96f6281e5bf1775df1233ee85712ff74a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468667"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856969"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,22 +34,22 @@ ms.locfileid: "34468667"
  
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|servicename|**nvarchar(256)**|Nome di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Full-text o il servizio Agente SQL Server. Non può essere null.|  
-|startup_type|**int**|Indica la modalità di avvio del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 0: altro<br />1: altro<br />2: automatico<br />3: manuale<br />4: disabilitato<br /><br /> Ammette i valori Null.|  
-|startup_desc|**nvarchar(256)**|Descrive la modalità di avvio del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> Altro: Loro (esecuzione avvio)<br />Altro: Altro (avvio del sistema)<br />Automatico: Avvio automatico<br />Manuale: Avvio su richiesta<br />Disabilitato: disabilitato<br /><br /> Non può essere null.|  
-|status|**int**|Indica lo stato corrente del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 1: arrestato<br />2: altro (avvio in sospeso)<br />3: altri (arresto in sospeso)<br />4: esecuzione<br />5: altro (in attesa della ripresa)<br />6: altre (sospensione in sospeso)<br />7: in pausa<br /><br /> Ammette i valori Null.|  
-|status_desc|**nvarchar(256)**|Descrive lo stato corrente del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> Arrestato: Il servizio viene arrestato.<br />Altra (operazione di avvio in sospeso): il servizio è in fase di avvio.<br />Altra (operazione di arresto in sospeso): il servizio è in corso di arresto.<br />Esecuzione: Il servizio è in esecuzione.<br />Altro (continuare le operazioni in sospeso): il servizio è in uno stato in sospeso.<br />Altra (in attesa della sospensione): il servizio è in corso la sospensione.<br />In pausa: Il servizio è sospeso.<br /><br /> Non può essere null.|  
-|process_id|**int**|ID di processo del servizio. Non può essere null.|  
+|servicename|**nvarchar(256)**|Nome del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Full-text, o un servizio di SQL Server Agent. Non può essere Null.|  
+|startup_type|**int**|Indica la modalità di avvio del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 0: altro<br />1: altro<br />2: automatica<br />3: manuale<br />4: disabilitato<br /><br /> Ammette i valori Null.|  
+|startup_desc|**nvarchar(256)**|Descrive la modalità di avvio del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> Altro: Altro (esecuzione avvio)<br />Altro: Altro (avvio del sistema)<br />Automatico: L'avvio automatico<br />Manuale: Avvio richiesta<br />Disabilitato: disabilitato<br /><br /> Non può essere Null.|  
+|status|**int**|Indica lo stato corrente del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 1: arrestato<br />2: altro (avvio in sospeso)<br />3: altri (arresto in sospeso)<br />4: in esecuzione<br />5: altro (in attesa della ripresa)<br />6: altre (sospensione in sospeso)<br />7: in pausa<br /><br /> Ammette i valori Null.|  
+|status_desc|**nvarchar(256)**|Descrive lo stato corrente del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> Arrestato: Il servizio viene arrestato.<br />Altri (operazione di avvio in sospeso): il servizio è in corso di avvio.<br />Altri (operazione di arresto in sospeso): il servizio è in corso l'arresto.<br />In esecuzione: Il servizio è in esecuzione.<br />Altri (continuare le operazioni in sospeso): il servizio è in sospeso.<br />Altra (in attesa della sospensione): il servizio è in corso la sospensione.<br />Sospeso: Il servizio è sospeso.<br /><br /> Non può essere Null.|  
+|process_id|**int**|ID di processo del servizio. Non può essere Null.|  
 |last_startup_time|**datetimeoffset(7)**|Data e ora dell'ultimo avvio del servizio. Ammette i valori Null.|  
-|service_account|**nvarchar(256)**|Account autorizzato a controllare il servizio. L'account consente di avviare o arrestare il servizio oppure di modificarne le proprietà. Non può essere null.|  
-|filename|**nvarchar(256)**|Percorso e nome file dell'eseguibile del servizio. Non può essere null.|  
-|is_clustered|**nvarchar(1)**|Indica se il servizio è installato come risorsa di un server di cluster. Non può essere null.|  
+|service_account|**nvarchar(256)**|Account autorizzato a controllare il servizio. L'account consente di avviare o arrestare il servizio oppure di modificarne le proprietà. Non può essere Null.|  
+|filename|**nvarchar(256)**|Percorso e nome file dell'eseguibile del servizio. Non può essere Null.|  
+|is_clustered|**nvarchar(1**|Indica se il servizio è installato come risorsa di un server di cluster. Non può essere Null.|  
 |cluster_nodename|**nvarchar(256)**|Il nome del nodo del cluster su cui è installato il servizio. Ammette i valori Null.|
-|instant_file_initialization_enabled|**nvarchar(1)**|Specifica se l'inizializzazione immediata dei file è abilitata per il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servizio.<br /><br />Y = inizializzazione immediata dei file è abilitata per il servizio.<br /><br />N = inizializzazione immediata dei file è disabilitato per il servizio.<br /><br /> Ammette i valori Null.<br /><br /> **Nota:** non si applica ad altri servizi, ad esempio SQL Server Agent.<br /><br /> **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (inizia con [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 tramite tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
+|instant_file_initialization_enabled|**nvarchar(1**|Specifica se l'inizializzazione immediata dei file è abilitato per il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servizio.<br /><br />Y = inizializzazione immediata dei file è abilitato per il servizio.<br /><br />N = inizializzazione immediata dei file è disabilitato per il servizio.<br /><br /> Ammette i valori Null.<br /><br /> **Nota:** non si applica ad altri servizi, ad esempio SQL Server Agent.<br /><br /> **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 tramite tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
 
 ## <a name="security"></a>Sicurezza  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione `VIEW SERVER STATE` per il server.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37fa2a790e5eeeabd621cd6581848d913f178138
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19d3d28ac65625fd3141089f5c99a59b72225f2e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182881"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135667"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Rapporto di valori Null nella colonna (Attività Profiling dati)
   Utilizzare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni per la richiesta **Richiesta profilo Rapporto di valori Null nella colonna** selezionata nel riquadro delle richieste. Il profilo Rapporto di valori Null nella colonna segnala la percentuale di valori Null nella colonna selezionata e consente di identificare eventuali problemi nei dati, ad esempio un rapporto inaspettatamente elevato di valori Null in una colonna. Un profilo Rapporto di valori Null nella colonna può analizzare, ad esempio, una colonna contenente CAP e individuare una percentuale eccessivamente elevata di CAP mancanti.  

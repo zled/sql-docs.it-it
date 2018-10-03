@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - DMX [Analysis Services], user interface
 - query designers [DMX]
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d8b4d662cb54e827f8810695c4945f2eee25d327
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9da8e25466da90ad4d76ae787695eec66b2f4f8f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286707"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136661"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Interfaccia utente di Progettazione query DMX in Analysis Services
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili finestre Progettazione query con interfaccia grafica per la compilazione di query MDX (Multidimensional Expression) e query DMX (Data Mining Expression) per un'origine dati di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. In questo argomento viene descritta Progettazione query DMX. Per altre informazioni sulla finestra Progettazione query MDX, vedere [interfaccia utente di progettazione Query di Analysis Services MDX](analysis-services-mdx-query-designer-user-interface.md).  
@@ -36,7 +33,7 @@ ms.locfileid: "37286707"
 ## <a name="graphical-dmx-query-designer-toolbar"></a>Barra degli strumenti di Progettazione query DMX  
  I pulsanti della barra degli strumenti di Progettazione query consentono di progettare query DMX utilizzando l'interfaccia grafica. Nella tabella seguente vengono illustrati i pulsanti con le relative funzioni.  
   
-|Pulsante|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**Modifica come testo**|Disabilitato per questo tipo di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file di definizione di report (con estensione rdl) nel file system. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  

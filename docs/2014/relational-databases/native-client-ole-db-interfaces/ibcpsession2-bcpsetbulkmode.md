@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f0c0ec3e7f76da7eb908cf2154cd33a2ee55b40
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5d95910ce8874d2a9eacdc28c6abf5d7d3be6efa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427520"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103391"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode offre un'alternativa al [ibcpsession:: BCPColFmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md) per specificare il formato della colonna. A differenza di ibcpsession:: BCPColFmt, che imposta gli attributi di formato di colonna singola, IBCPSession2::BCPSetBulkMode imposta tutti gli attributi.  
@@ -60,17 +57,17 @@ HRESULT BCPSetBulkMode (
 |||  
 |-|-|  
 |`S_OK`|Il metodo è riuscito.|  
-|`E_FAIL`|Si è verificato un errore specifico del provider, per informazioni dettagliate usare l'interfaccia ISQLServerErrorInfo.|  
+|`E_FAIL`|Si è verificato un errore specifico del provider. Per informazioni dettagliate, usare l'interfaccia ISQLServerErrorInfo.|  
 |`E_UNEXPECTED`|La chiamata al metodo non era prevista. Ad esempio, il `IBCPSession2::BCPInit` (metodo) non è stato chiamato prima di chiamare IBCPSession2::BCPSetBulkMode.|  
 |`E_INVALIDARG`|L'argomento non è valido.|  
 |`E_OUTOFMEMORY`|Errore di memoria insufficiente.|  
   
 ## <a name="remarks"></a>Note  
- IBCPSession2::BCPSetBulkMode utilizzabile da copiare da una query o una tabella. Quando IBCPSession2::BCPSetBulkMode viene usato per copiare da un'istruzione di query in blocco, deve essere chiamato prima di chiamare `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` per specificare l'istruzione di query.  
+ IBCPSession2::BCPSetBulkMode utilizzabile da copiare da una query o una tabella. Quando si utilizza IBCPSession2::BCPSetBulkMode per eseguire una copia bulk da un'istruzione di query, è necessario chiamare tale metodo prima di `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` per specificare l'istruzione di query.  
   
  È necessario evitare di combinare la sintassi di chiamata RPC con la sintassi di query batch (ad esempio `{rpc func};SELECT * from Tbl`) in un unico testo di comando.  Ciò causerà ICommandPrepare:: Prepare restituire un errore e non consentono il recupero dei metadati. Utilizzare la sintassi ODBC CALL (ad esempio `{call func}; SELECT * from Tbl`) se è necessario combinare l'esecuzione della stored procedure e una query batch in un singolo testo di comando.  
   
- Nella tabella seguente sono elencate le costanti per la *proprietà* parametro.  
+ Nella tabella seguente sono elencate le costanti per il parametro *property*.  
   
 |Proprietà|Description|  
 |--------------|-----------------|  
@@ -83,7 +80,7 @@ HRESULT BCPSetBulkMode (
   
  Non è possibile richiamare ibcpsession:: Bcpcontrol con `BCP_OPTION_TEXTFILE` e IBCPSession2::BCPSetBulkMode.  
   
- Se si prova a chiamare IBCPSession2::BCPSetBulkMode con una sequenza di chiamate di funzione che include ibcpsession:: BCPColFmt ibcpsession:: Bcpcontrol e ibcpsession:: Bcpreadfmt, una delle chiamate di funzione restituirà un errore nella sequenza. Se si sceglie di correggere l'errore, chiamare ibcpsession:: BCPInit per reimpostare le impostazioni e ricominciare da capo.  
+ Se si prova a chiamare IBCPSession2::BCPSetBulkMode con una sequenza di chiamate di funzione che include ibcpsession:: BCPColFmt ibcpsession:: Bcpcontrol e ibcpsession:: Bcpreadfmt, una delle chiamate di funzione restituirà un errore nella sequenza. Se si sceglie di correggere l'errore, chiamare IBCPSession::BCPInit per reimpostare le impostazioni e ricominciare.  
   
  Nella tabella seguente sono illustrati alcuni esempi di chiamate di funzione che comportano un errore nella sequenza della funzione:  
   

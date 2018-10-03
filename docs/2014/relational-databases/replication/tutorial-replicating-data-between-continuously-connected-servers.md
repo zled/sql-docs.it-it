@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
 - replication [SQL Server], tutorials
 - wizards [SQL Server replication]
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20c45c34806cf8373c8063421dc1a54ac78e5f07
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 382a505f8e7c716f3c2ccd8c117468c376ad6b08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329311"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094621"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Esercitazione: Replica di dati tra server con connessione continua
   La replica è una buona soluzione al problema legato al trasferimento dei dati tra server con connessione continua. Le procedure guidate relative alla replica consentono di eseguire in modo semplificato i passaggi necessari per configurare e amministrare una topologia di replica. In questa esercitazione viene descritto come configurare una topologia di replica per server con connessione continua.  

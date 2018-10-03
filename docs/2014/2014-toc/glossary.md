@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -16,28 +15,26 @@ ms.technology:
 - replication
 - reporting-services-native
 - reporting-services-sharepoint
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
 - glossary [SQL Server]
 - terminology [SQL Server]
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
-caps.latest.revision: 1952
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 390fedf55957e0038d10579fe444bb843a057d47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e606d82d50d1293c9149476e9c976bfcea61201a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164332"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085531"
 ---
-# Glossario
+# <a name="glossary"></a>Glossario
   
   
-## Termini  
+## <a name="terms"></a>Termini  
   
 |Nome|Definizione|  
 |----------|----------------|  
@@ -835,9 +832,9 @@ ms.locfileid: "37164332"
 |tabella di collegamento|Tabella che stabilisce una relazione tra altre tabelle.|  
 |grafico Kagi|Grafico, quasi sempre indipendente dal tempo, utilizzato per rilevare i movimenti dei prezzi e prendere decisioni sull'acquisto di scorte.|  
 |chiave|Stringa che identifica un oggetto nella cache. Questa stringa deve essere univoca all'interno di un'area. Gli oggetti sono associati a una chiave quando vengono aggiunti e quindi recuperati con la stessa chiave.|  
-|Key|Per la crittografia, l'autenticazione e le firme digitali, valore utilizzato in combinazione con un algoritmo per crittografare o decrittografare informazioni.|  
-|Key|In una matrice, il campo in base al quale i dati archiviati vengono organizzati e resi accessibili.|  
-|Key|Colonna o gruppo di colonne che identifica in modo univoco una riga (chiave primaria) definisce la relazione tra le due tabelle (chiave esterna) oppure che viene utilizzata per la compilazione di un indice.|  
+|chiave|Per la crittografia, l'autenticazione e le firme digitali, valore utilizzato in combinazione con un algoritmo per crittografare o decrittografare informazioni.|  
+|chiave|In una matrice, il campo in base al quale i dati archiviati vengono organizzati e resi accessibili.|  
+|chiave|Colonna o gruppo di colonne che identifica in modo univoco una riga (chiave primaria) definisce la relazione tra le due tabelle (chiave esterna) oppure che viene utilizzata per la compilazione di un indice.|  
 |attributo chiave|Attributo di una dimensione che collega gli attributi non chiave nella dimensione alle misure correlate.|  
 |colonna chiave|Colonna il cui contenuto identifica in modo univoco ogni riga di una tabella.|  
 |generatore di chiavi|Componente hardware o software utilizzato per generare il materiale della chiave di crittografia.|  

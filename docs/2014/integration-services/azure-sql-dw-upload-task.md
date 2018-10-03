@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPDWUPTASK.F1
 - SQL11.DTS.DESIGNER.AFPDWUPTASK.F1
 ms.assetid: 112cf764-f85a-4c1a-b732-d299d717c0d4
-caps.latest.revision: 5
 author: yualan
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfdaa7d851e4d29f476e50ddeaacf0fae943c410
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 651ad07d91d3cf8a351ca6faa9f912c6bd01c07c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250538"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063701"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Attività di caricamento di Azure SQL DW
 L' **attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di caricare i dati locali in una tabella in Azure SQL Data Warehouse (DW). Il formato di file dei dati di origine attualmente supportato è testo delimitato in codifica UTF8. Il processo di caricamento segue l'efficiente approccio della tecnologia PolyBase. In particolare, i dati vengono prima caricati in Archiviazione BLOB di Azure e poi in Azure SQL DW. Per usare questa attività, è quindi necessario un account di Archiviazione BLOB di Azure.

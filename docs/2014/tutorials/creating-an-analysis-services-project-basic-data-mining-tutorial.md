@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
-caps.latest.revision: 50
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7f191090750d9a4417b6432ce31f24f3214376b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e3c88894ee271e9b96e98e25dc14e62bfc0361ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260117"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048331"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Creazione di un progetto di Analysis Services (Esercitazione di base sul data mining)
   Ciascuna [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto definisce gli oggetti in una singola [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. Un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] può contenere molti tipi diversi di oggetti  
@@ -58,7 +55,7 @@ ms.locfileid: "37260117"
   
 2.  Sul lato sinistro del riquadro **Pagine delle proprietà** fare clic su **Distribuzione**in **Proprietà di configurazione**.  
   
-3.  Sul lato destro del riquadro **Pagine delle proprietà** , verificare in **Destinazione**che il nome del **Server** sia **localhost**. Se si usa un'altra istanza, digitarne il nome. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  Sul lato destro del riquadro **Pagine delle proprietà** , verificare in **Destinazione**che il nome del **Server** sia **localhost**. Se si utilizza un'altra istanza, digitarne il nome. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Creazione di un'origine dati &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  

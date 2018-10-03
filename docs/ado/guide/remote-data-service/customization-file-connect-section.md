@@ -1,40 +1,37 @@
 ---
-title: File di personalizzazione connettersi sezione | Documenti Microsoft
+title: Sezione sulla connessione del File di personalizzazione | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6774d32587a2c6d5c969be4d56640d137972ddc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 04850440b9dd1a5da9270b7782c07dca93bbab54
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273850"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757799"
 ---
-# <a name="customization-file-connect-section"></a>Collegare il File di personalizzazione
-Il comportamento predefinito del gestore consiste nel negare tutte le connessioni. Il **connettersi** sezione specifica le eccezioni a questo comportamento. Ad esempio, se tutti i **connettersi** sezioni sono assenti o vuota, quindi per impostazione predefinita può essere eseguita alcuna connessione.  
+# <a name="customization-file-connect-section"></a>Sezione sulla connessione del file di personalizzazione
+Il comportamento predefinito del gestore consiste nel rifiutare tutte le connessioni. Il **connettere** sezione specifica le eccezioni a tale comportamento. Ad esempio, se tutti i **connettere** sezioni sono assenti o vuota, quindi per impostazione predefinita è stato possibile stabilire alcuna connessione.  
   
- Il **connettersi** sezione può contenere:  
+ Il **connettere** sezione può contenere:  
   
--   Una voce di accesso predefinita che specifica il valore predefinito lettura e scrittura di operazioni consentite in questa connessione. Se non è presente alcuna voce di accesso predefinita nella sezione, la sezione verrà ignorata.  
+-   Una voce di accesso predefinita che specifica il valore predefinito leggono e scrivono le operazioni consentite sulla connessione. Se è presente alcuna voce di accesso predefinito nella sezione, è possibile che la sezione verrà ignorata.  
   
 -   Nuova stringa di connessione che sostituisce la stringa di connessione client.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
  Una voce di accesso predefinito è nel formato:  
@@ -46,7 +43,7 @@ accessRight
   
 ```  
   
- Una voce di stringa di connessione di sostituzione è nel formato:  
+ Una voce della stringa di connessione sostituzione è nel formato:  
   
 ```  
   
@@ -55,24 +52,24 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 |Parte|Description|  
 |----------|-----------------|  
-|**Connect**|Una stringa letterale che indica che si è una stringa di connessione.|  
+|**Connect**|Una valore letterale stringa che indica che si è una voce della stringa di connessione.|  
 |***connectionString***|Stringa che sostituisce la stringa di connessione client intero.|  
-|**Accesso**|Una stringa letterale che indica che si è una voce di accesso.|  
-|***accessRight***|Uno dei diritti di accesso seguenti:<br /><br /> -   **NoAccess** : utente non è possibile accedere all'origine dati.<br />-   **ReadOnly** , ovvero l'utente può leggere l'origine dati.<br />-   **ReadWrite** : utente può leggere o scrivere all'origine dati.|  
+|**Accesso**|Una valore letterale stringa che indica che si è una voce di accesso.|  
+|***accessRight***|Uno dei seguenti diritti di accesso:<br /><br /> -   **NoAccess** : utente non è possibile accedere all'origine dati.<br />-   **ReadOnly** , ovvero l'utente può leggere l'origine dati.<br />-   **Lettura/scrittura** , ovvero utente può leggere o scrivere nell'origine dati.|  
   
- Se si desidera consentire qualsiasi connessione (in disabilitando il comportamento del gestore predefinito), impostare la voce di accesso **connettersi predefinito** sezione a `Access=ReadWrite`ed eliminare o qualsiasi altro commento **connettersi** *identificatore* sezione.  
+ Se si desidera consentire le connessioni (in disabilitando il comportamento del gestore predefinito), impostare la voce di accesso **connessione predefinita** sezione `Access=ReadWrite`ed eliminare o qualsiasi altro commento **connettersi** *identificatore* sezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sezione Log File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Sezione relativa alla personalizzazione File SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Sezione UserList File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Sezione SQL del File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [Sezione UserList del File personalizzazione](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [Personalizzazione di DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Impostazioni Client richieste](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Informazioni sui File di personalizzazione](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
+ [Informazioni sul file di personalizzazione.](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Scrittura di un gestore personalizzato](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 
 

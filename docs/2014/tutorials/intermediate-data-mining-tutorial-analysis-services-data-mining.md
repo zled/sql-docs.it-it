@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 404b31d5-27f4-4875-bd60-7b2b8613eb1b
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2286ab1890865e651f8166ebd4cc8f0dd42274f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61c81668f2bac2f25b75a6b58efb9e1b97da4144
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301301"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119651"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Esercitazione intermedia sul data mining (Analysis Services - Data mining)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce un ambiente integrato per la creazione e utilizzo di modelli di data mining. È possibile eseguire facilmente l'associazione a origini dati, creare e testare più modelli sugli stessi dati e distribuire modelli da utilizzare nelle analisi predittive.  
@@ -72,7 +69,7 @@ ms.locfileid: "37301301"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con il database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con il database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)].  
   
  Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database ufficiali per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitare il [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) pagina e selezionare la versione appropriata del database di esempio.  
   

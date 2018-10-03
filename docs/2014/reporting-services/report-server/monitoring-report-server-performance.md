@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
-caps.latest.revision: 64
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: facca3a93bb3681903ff6bb9ee7b6cf219c9ffcf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0379e0105522caf643d2295070da395df51a41a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244341"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112853"
 ---
 # <a name="monitoring-report-server-performance"></a>Monitoraggio delle prestazioni del server di report
   Con gli strumenti di monitoraggio delle prestazioni è possibile valutare l'attività del server di report, osservare le tendenze, diagnosticare i colli di bottiglia a livello di sistema e raccogliere dati che consentono di determinare più facilmente se la configurazione del sistema corrente è sufficiente. Per ottimizzare le prestazioni del server, è possibile specificare la frequenza di riciclo del dominio dell'applicazione del server di report. Per altre informazioni, vedere [Configurare la memoria disponibile per applicazioni del server di report](../report-server/configure-available-memory-for-report-server-applications.md).  

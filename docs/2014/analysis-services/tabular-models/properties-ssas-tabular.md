@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a35d8e93874e05a81c8ba479c309a6dc97735672
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c1d712f1b5445ce1293f63f66256d106e2291d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297181"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116021"
 ---
 # <a name="properties-ssas-tabular"></a>Proprietà (SSAS tabulare)
   I progetti di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] dispongono di varie proprietà che consentono di definire i comportamenti di progetti, modelli, report e distribuzioni. Le impostazioni delle proprietà sono archiviate in formato XML nel file Model.bim, tuttavia, tutte le proprietà descritte in questa sezione possono essere configurate nelle finestre **Proprietà** in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Argomento|Description|  
 |-----------|-----------------|  

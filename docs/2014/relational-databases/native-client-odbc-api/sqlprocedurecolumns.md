@@ -1,28 +1,25 @@
 ---
-title: SQLProcedureColumns | Microsoft Docs
+title: SQLProcedureColumns | Documenti di Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
-caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b693d06e42f0fc5d2815b188826b21f5d89cae7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ddbc2d437ab41238b1c9426659522fb4d0ab3ada
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428390"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130091"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
   `SQLProcedureColumns` Restituisce una riga che riporta gli attributi del valore restituito di tutte le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure.  
@@ -31,7 +28,7 @@ ms.locfileid: "37428390"
   
  `SQLProcedureColumns` può essere eseguito in un cursore del server statico. Un tentativo di eseguire `SQLProcedureColumns` in un cursore aggiornabile (dinamico o keyset) restituirà SQL_SUCCESS_WITH_INFO, che indica che il tipo di cursore è stato modificato.  
   
- La tabella seguente elenca le colonne restituite da set di risultati e come sono state estese per gestire il **udt** e **xml** tipi di dati tramite il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client:  
+ Nella tabella seguente sono elencate le colonne restituite dal set di risultati e come sono state estese per gestire il **udt** e **xml** i tipi di dati tramite il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client:  
   
 |Nome colonna|Description|  
 |-----------------|-----------------|  
@@ -43,7 +40,7 @@ ms.locfileid: "37428390"
 |SS_XML_SCHEMACOLLECTION_NAME|Restituisce il nome di una raccolta di XML Schema. Se non è possibile trovare il nome, questa variabile contiene una stringa vuota.|  
   
 ## <a name="sqlprocedurecolumns-and-table-valued-parameters"></a>SQLProcedureColumns e parametri con valori di tabella  
- SQLProcedureColumns gestisce i parametri con valori di tabella in modo simile a tipi CLR definiti dall'utente. Nelle righe restituite per i parametri con valori di tabella le colonne presentano i valori seguenti:  
+ SQLProcedureColumns gestisce i parametri valutati a livello di tabella in modo simile a tipi CLR definiti dall'utente. Nelle righe restituite per i parametri con valori di tabella le colonne presentano i valori seguenti:  
   
 |Nome colonna|Descrizione/valore|  
 |-----------------|------------------------|  

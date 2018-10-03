@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ecca7d87492645502e122497cc66eb54f083097
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 462dd89e60ef2e997ad35ec07fad4a5b767f5944
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267587"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118971"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>Visualizzare la cronologia dell'aggiornamento dati (PowerPivot per SharePoint)
   La cronologia dell'aggiornamento dati è un record di tutte le attività di aggiornamento dei dati PowerPivot in una cartella di lavoro di Excel. Le operazioni di aggiornamento dati vengono eseguite in un'istanza del server Analysis Services di una farm di SharePoint in base a una pianificazione fornita dall'utente. Per impostazione predefinita, la cronologia dell'aggiornamento dati viene mantenuta per un anno. L'amministratore di una farm può tuttavia specificare criteri di memorizzazione diversi per la cronologia relativa all'utilizzo e agli eventi, in modo da stabilire la durata di mantenimento in memoria dei record dell'aggiornamento dati.  
@@ -66,7 +63,7 @@ ms.locfileid: "37267587"
   
 |Elemento|Description|  
 |----------|-----------------|  
-|nome|Consente di specificare il nome di file della cartella di lavoro di Excel in cui sono contenuti i dati PowerPivot.|  
+|Nome|Consente di specificare il nome di file della cartella di lavoro di Excel in cui sono contenuti i dati PowerPivot.|  
 |Stato corrente|I valori disponibili sono **Pianificato**, **Aggiornamento in corso**, **Operazione completata**o **Operazione non riuscita**.<br /><br /> Il valore**Pianificato** viene visualizzato quando si crea per la prima volta la pianificazione. Dopo la prima esecuzione dell'aggiornamento dei dati, questo messaggio di stato non viene più visualizzato.<br /><br /> **Aggiornamento in corso** indica che è in corso l'aggiornamento dei dati. Una richiesta si trova nella coda dei processi o è in esecuzione nel server.<br /><br /> **Operazione completata** indica che l'ultima operazione di aggiornamento dei dati è stata completata e la cartella di lavoro aggiornata viene nuovamente archiviata nella raccolta di SharePoint.<br /><br /> **Operazione non riuscita** indica che l'ultima operazione di aggiornamento dei dati non è stata completata. I dati aggiornati non sono stati salvati. Nella cartella di lavoro sono inclusi gli stessi dati presenti prima dell'inizio dell'aggiornamento.|  
 |Ultimo aggiornamento riuscito|Consente di specificare la data in cui l'ultimo aggiornamento dei dati è stato completato correttamente.|  
 |Prossimo aggiornamento pianificazione|Consente di specificare la data in cui è previsto il prossimo aggiornamento dei dati in base alla pianificazione.<br /><br /> Il collegamento **Configura pianificazione** reindirizza l'utente alla pagina di definizione della pianificazione. Se si dispone di autorizzazioni di collaborazione nella cartella di lavoro, è possibile fare clic sul collegamento per visualizzare e modificare le informazioni sulla pianificazione che regolano l'aggiornamento automatico dei dati PowerPivot nella cartella di lavoro.|  

@@ -1,32 +1,29 @@
 ---
-title: Istruzioni SQL costruite in fase di esecuzione | Documenti Microsoft
+title: Istruzioni SQL costruite in fase di esecuzione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - run time constructed SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], building at run time
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18f5a02bdcec575ac1362d3f656480eb0ab9b4a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0573851ee93bda4aa33e8645148cf2ee66200bee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914296"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848099"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>Istruzioni SQL costruite in fase di esecuzione
-Applicazioni che eseguono analisi ad hoc comunemente compilare istruzioni SQL in fase di esecuzione. Ad esempio, un foglio di calcolo potrebbe consentire a un utente di selezionare le colonne da cui recuperare i dati:  
+Le applicazioni che eseguono l'analisi ad hoc comunemente compilare istruzioni SQL in fase di esecuzione. Ad esempio, un foglio di calcolo potrebbe consentire a un utente di selezionare le colonne da cui recuperare i dati:  
   
 ```  
 // SQL_Statements_Constructed_at_Run_Time.cpp  
@@ -72,8 +69,8 @@ int main() {
 }  
 ```  
   
- Un'altra classe di applicazioni che in genere crea istruzioni SQL in fase di esecuzione sono gli ambienti di sviluppo di applicazioni. Tuttavia, le istruzioni che creano sono hardcoded nell'applicazione in corso di sviluppo, in cui possono in genere essere ottimizzati e testati.  
+ Un'altra classe di applicazioni che in genere crea istruzioni SQL in fase di esecuzione sono ambienti di sviluppo dell'applicazione. Tuttavia, le istruzioni che creano sono impostate come hardcoded nell'applicazione in corso di sviluppo, in cui possono in genere essere ottimizzati e testati.  
   
- Le applicazioni che creare istruzioni SQL in fase di esecuzione possano offrono flessibilità per l'utente. Come si può notare nell'esempio precedente, che non supporta anche le operazioni comuni come **in** clausole, **ORDER BY** clausole o join, la costruzione di istruzioni SQL in fase di esecuzione è molto più complesso rispetto alle istruzioni a livello di codice. Inoltre, verifica di tali applicazioni è problematica, perché è possibile costruire un numero arbitrario di istruzioni SQL.  
+ Le applicazioni che creare istruzioni SQL in fase di esecuzione possono fornire una notevole flessibilità per l'utente. Come si può notare nell'esempio precedente, che non supporta ancora le operazioni comuni come la **in cui** clausole **ORDER BY** clausole o join, costruzione di istruzioni SQL in fase di esecuzione è notevolmente più complessa rispetto alle istruzioni di impostare come hardcoded. Inoltre, test di tali applicazioni è problematico, perché è possibile costruire un numero arbitrario di istruzioni SQL.  
   
- Uno svantaggio potenziale di creazione di istruzioni SQL in fase di esecuzione è che richiede più tempo per costruire un'istruzione di usare un'istruzione a livello di codice. Fortunatamente, raramente si tratta di un problema. Tali applicazioni tendono a essere elevato utilizzo di interfaccia utente e il tempo dedicato dall'applicazione di istruzioni SQL è generalmente di dimensioni ridotte rispetto all'ora in cui l'utente impiega immissione dei criteri.
+ Un potenziale svantaggio della costruzione di istruzioni SQL in fase di esecuzione è che richiede molto più tempo per costruire un'istruzione di usare un'istruzione a livello di codice. Fortunatamente, questo raramente rappresenta un problema. Tali applicazioni tendono a essere a elevato utilizzo di interfaccia utente e l'ora l'applicazione trascorre la costruzione di istruzioni SQL è generalmente di dimensioni ridotte rispetto all'ora l'utente impiega immettendo i criteri.

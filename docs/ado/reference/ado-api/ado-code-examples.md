@@ -1,39 +1,36 @@
 ---
-title: Esempi di codice ADO | Documenti Microsoft
+title: Esempi di codice ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO code examples
 - ADO, code examples
 ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89a5b8a91481fd11a22c6a429065c9b8ccb46fe5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7105160c7008d6f36d1c4e01faf8b1631080b8d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275406"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718809"
 ---
 # <a name="ado-code-examples"></a>Esempi di codice ADO
-Utilizzare gli esempi di codice seguente per informazioni su come utilizzare gli oggetti ADO, metodi, proprietà ed eventi.  
+Usare gli esempi di codice seguente per informazioni su come usare gli oggetti, metodi, proprietà ed eventi ADO.  
   
 > [!NOTE]
->  Incollare l'esempio di tutto il codice nell'editor di codice. L'esempio potrebbe non essere eseguita correttamente se vengono utilizzati esempi parziali o se la formattazione di paragrafo.  
+>  Incollare l'intero esempio di codice nell'editor di codice. L'esempio potrebbe non essere eseguita correttamente se vengono usati esempi parziali o se la formattazione di paragrafo.  
   
 -   [Esempi di codice ADO in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)  
   
--   [Esempi di codice ADO in VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)  
+-   [Esempi di codice ADO VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)  
   
 -   [Esempi di codice ADO in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)  
   
--   [Esempi di codice ADO in JScript](../../../ado/reference/ado-api/ado-code-examples-in-microsoft-jscript.md)
+-   [Esempi di codice ADO JScript](../../../ado/reference/ado-api/ado-code-examples-in-microsoft-jscript.md)

@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rows [OLE DB]
 ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fc243f4f5be0982e8e06496860b67faa419d9f1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8c019b7735b70247d0646cccc9f8de277725eec8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407641"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122791"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>Recuperare righe da un set di risultati (OLE DB)
   In questo esempio viene illustrato come recuperare righe da un set di risultati. Questo esempio non è supportato in IA64.  
   
- In questo esempio richiede il database di esempio AdventureWorks, che è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page di.  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -33,7 +30,7 @@ ms.locfileid: "37407641"
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Description  
- Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" a L"(local)\\\name", dove nome è un'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
+ Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
 ### <a name="code"></a>codice  
   
@@ -379,6 +376,6 @@ int ProcessResultSet() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure per i risultati di elaborazione &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [Procedure relative all'elaborazione dei risultati &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

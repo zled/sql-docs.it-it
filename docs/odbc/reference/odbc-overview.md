@@ -1,33 +1,30 @@
 ---
-title: Panoramica ODBC | Documenti Microsoft
+title: Panoramica di ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC]
 - ODBC [ODBC], about ODBC
 ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39ab7586ebc1cd63d028caab0d3c2f09b82c7172
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b064436dae6cb2f3d5f37fa02ab57a1e4a3f015
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916076"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801539"
 ---
-# <a name="odbc-overview"></a>Panoramica ODBC
-Open Database Connectivity (ODBC) è una diffuso API application programming interface () per l'accesso al database. È basato sulle specifiche di interfaccia a livello di chiamata (CLI) da Open Group e ISO/IEC per API di database e si utilizza Structured Query Language (SQL) poiché la lingua di accesso del database.  
+# <a name="odbc-overview"></a>Panoramica di ODBC
+Open Database Connectivity (ODBC) è una diffuso API application programming interface () per l'accesso al database. Si basa sulle specifiche a livello di chiamata Interface (CLI) di Open Group e ISO/IEC per API di database e Usa Structured Query Language (SQL) come lingua del database l'accesso.  
   
- ODBC è progettato per il numero massimo *interoperabilità* -, ovvero la possibilità di una singola applicazione di accedere a sistemi di gestione di diversi database (DBMS) con lo stesso codice di origine. Applicazioni di database chiamano le funzioni nell'interfaccia di ODBC, che vengono implementate nei moduli specifici del database denominati *driver*. L'utilizzo di driver di isola le applicazioni da chiamate specifico del database nello stesso modo che i driver della stampante isolare elaboratori di comandi specifico della stampante. Poiché i driver sono stati caricati in fase di esecuzione, un utente ha solo per aggiungere un nuovo driver per accedere a un nuovo sistema DBMS; non è necessario ricompilare o ricollegare l'applicazione.  
+ ODBC è progettato per massimo *interoperabilità* -, ovvero la possibilità di una singola applicazione di accedere ai sistemi di gestione di diversi database (DBMS) con lo stesso codice sorgente. Le applicazioni del database chiamano funzioni nell'interfaccia di ODBC, che vengono implementate nei moduli specifici del database denominati *driver*. L'uso dei driver consente di isolare le applicazioni dalle chiamate specifiche del database nello stesso modo che i driver della stampante isolare i programmi di elaborazione di testi da comandi specifici della stampante. Poiché i driver vengono caricati in fase di esecuzione, un utente deve solo aggiungere un nuovo driver per accedere a un nuovo DBMS; non è necessario ricompilare o ricollegare all'applicazione.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

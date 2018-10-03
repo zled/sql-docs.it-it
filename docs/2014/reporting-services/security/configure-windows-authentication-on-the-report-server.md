@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c71455bc6f9748cdd31cddfde2f3cfb01f6a9589
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0ce020f0d3df8b91591daf083748f909edbb1e7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325721"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116347"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurare l'autenticazione di Windows nel server di report.
   Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accetta richieste che specificano l'autenticazione con negoziazione o NTLM. Se nella distribuzione sono incluse applicazioni client e browser che utilizzano tali provider di sicurezza, è possibile utilizzare i valori predefiniti senza alcuna configurazione aggiuntiva. Se si desidera utilizzare un provider di sicurezza diverso per la sicurezza integrata di Windows, ad esempio se si desidera utilizzare direttamente l'autenticazione Kerberos, o se i valori predefiniti sono stati modificati e si desidera ripristinare le impostazioni originali, è possibile utilizzare le informazioni contenute in questo argomento per specificare le impostazioni di autenticazione nel server di report.  

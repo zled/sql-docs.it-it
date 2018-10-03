@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.configurelogs.errorlog.f1
 helpviewer_keywords:
 - Log File Viewer
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb208e39b64a619315c1d33947e86876990f3a17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f73e63e7e7d7d9f0a95b8b7d31b2ed7b995f0520
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316151"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090901"
 ---
 # <a name="log-file-viewer-f1-help"></a>Guida sensibile al contesto del Visualizzatore file di log
   Nel Visualizzatore file di log sono visualizzate informazioni sui log relativi a molti componenti diversi. Quando il Visualizzatore file di log è aperto, selezionare i log che si desidera visualizzare nel riquadro **Seleziona log** . In ogni log vengono visualizzate le colonne appropriate per il tipo di log specifico.  
@@ -76,7 +73,7 @@ ms.locfileid: "37316151"
  **Origine log**  
  Visualizza una descrizione del log di origine in cui viene acquisito l'evento.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per accedere ai file di log per le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] online, è necessaria l'appartenenza al ruolo predefinito del server securityadmin.  
   
  Per accedere ai file di log per le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offline, è necessario avere accesso in lettura sia allo spazio dei nomi WMI **Root\Microsoft\SqlServer\ComputerManagement10** che alla cartella in cui sono archiviati i file di log. Per altre informazioni, vedere la sezione Autorizzazioni dell'argomento [Visualizzare file di log offline](view-offline-log-files.md).  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.advanced.f1
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 548f8a0dd6a8c24c91144598f649e3bc564e614c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c598ca2dc2e1fd79e221c0c3d3fc1a5c3592dcb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293041"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139581"
 ---
 # <a name="query-options-execution-advanced-page"></a>Esecuzione di Opzioni query (pagina Avanzate)
   L'uso dell'istruzione **SET** rende disponibili numerose opzioni. Usare questa pagina per specificare un'opzione **set** per l'esecuzione di query di Microsoft SQL Server. Per informazioni dettagliate su ogni opzione, vedere la documentazione online di SQL Server.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing logs
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - errors [SQL Server], Setup
 - logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-caps.latest.revision: 50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 365c5dca84514169082859900a1a3e065770f358
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91a3f00b2aeba382b31713104839d0f2fa2d8821
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163352"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101642"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Visualizzare e leggere i file di log del programma di installazione di SQL Server
   Ogni esecuzione del programma di installazione crea file di log con una nuova cartella dei log con timestamp nel percorso % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\. Il formato del nome della cartella dei log con indicazione di data e ora è AAAAMMGG_hhmmss. L'esecuzione del programma di installazione in modalità automatica determina la creazione dei file di log nel percorso % temp%\sqlsetup*.log. Tutti i file inclusi nella cartella dei log vengono archiviati nel file Log\*.cab nella rispettiva cartella dei log.  

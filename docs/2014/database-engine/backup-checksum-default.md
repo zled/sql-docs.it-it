@@ -4,20 +4,17 @@ ms.custom: ''
 ms.date: 02/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a3b70885-47d7-4bd0-b28b-5a44947ae83c
-caps.latest.revision: 4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9dffe7fec912b410a10efa8c78aa8fc1a9afe3db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263477"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126735"
 ---
 # <a name="backup-checksum-default"></a>checksum di backup predefinito
   Usare l'impostazione del checksum di backup predefinito per abilitare o disabilitare il checksum di backup durante il backup e ripristino.  
@@ -26,7 +23,7 @@ ms.locfileid: "37263477"
   
 |||  
 |-|-|  
-|**Value**|**Significato**|  
+|**Valore**|**Significato**|  
 |0|Disabilitato. Si tratta dell'impostazione predefinita.|  
 |1|Abilitata|  
   

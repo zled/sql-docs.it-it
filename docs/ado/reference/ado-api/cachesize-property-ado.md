@@ -1,13 +1,11 @@
 ---
-title: Proprietà CacheSize (ADO) | Documenti Microsoft
+title: Esempio di proprietà CacheSize (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,38 +13,37 @@ f1_keywords:
 helpviewer_keywords:
 - CacheSize property [ADO]
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3e27d5ce3302ea6c356ee84b9cc767bbde76c72
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 76cd9e4977ffda023c270a027602597ddf7b9a4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276160"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724669"
 ---
 # <a name="cachesize-property-ado"></a>Proprietà CacheSize (ADO)
-Indica il numero di record da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti memorizzati nella cache in locale.  
+Indica il numero di record restituiti da una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti memorizzati localmente nella memoria.  
   
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Restituisce o imposta un **lungo** valore che deve essere maggiore di 0. Valore predefinito è 1.  
+ Imposta o restituisce un **lungo** valore che deve essere maggiore di 0. Valore predefinito è 1.  
   
-## <a name="remarks"></a>Remarks  
- Utilizzare il **CacheSize** proprietà per controllare il numero di record da recuperare contemporaneamente nella memoria locale dal provider. Ad esempio, se il **CacheSize** è 10, dopo avere aperto prima il **Recordset** dell'oggetto, il provider recupera i primi 10 record nella memoria locale. Quando si sposta attraverso i **Recordset** dell'oggetto, il provider restituisce i dati dal buffer di memoria locale. Non appena si sposta dopo l'ultimo record nella cache, il provider recupera i successivi 10 record dall'origine dati nella cache.  
+## <a name="remarks"></a>Note  
+ Usare la **CacheSize** proprietà per controllare il numero di record per recuperare in una sola volta nella memoria locale del provider. Ad esempio, se il **CacheSize** è 10, dopo l'apertura prima le **Recordset** dell'oggetto, il provider recupera i primi 10 record nella memoria locale. Quando si spostano attraverso la **Recordset** dell'oggetto, il provider restituisce i dati dal buffer di memoria locale. Non appena si sposta oltre l'ultimo record nella cache, il provider recupera i successivi 10 record dall'origine dati nella cache.  
   
 > [!NOTE]
->  **CacheSize** basa il **numero massimo di righe aperto** proprietà specifiche del provider (nel **proprietà** raccolta del **Recordset** oggetto). Non è possibile impostare **CacheSize** su un valore maggiore di **numero massimo di righe aperto**. Per modificare il numero di righe che può essere aperta dal provider, impostare **numero massimo di righe aperto**.  
+>  **CacheSize** si basa sul **numero massimo righe aperte** proprietà specifiche del provider (nel **le proprietà** insieme del **Recordset** oggetto). Non è possibile impostare **CacheSize** su un valore maggiore **numero massimo righe aperte**. Per modificare il numero di righe che può essere aperta dal provider, impostare **numero massimo righe aperte**.  
   
- Il valore di **CacheSize** può essere modificata durante il ciclo di vita del **Recordset** oggetto, ma se si modifica questo valore interessa solo il numero di record nella cache dopo recuperi successivi dall'origine dati. La modifica solo il valore della proprietà non modificherà il contenuto corrente della cache.  
+ Il valore di **CacheSize** può essere modificata nel corso della durata delle **Recordset** oggetto, ma se si modifica questo valore interessa solo il numero di record nella cache dopo recuperi successivi, dall'origine dati. La modifica il valore della proprietà da solo non modificherà il contenuto corrente della cache.  
   
- Se sono presenti record di un numero inferiore rispetto al recupero **CacheSize** specifica, il provider restituisce i record rimanenti e si verifica alcun errore.  
+ Se sono presenti record minore rispetto al recupero **CacheSize** specifica, il provider restituisce i record rimanenti e si verifica alcun errore.  
   
- Oggetto **CacheSize** impostazione pari a zero non è consentito e viene restituito un errore.  
+ Oggetto **CacheSize** impostando pari a zero non è consentito e restituisce un errore.  
   
- I record recuperati dalla cache non riflettono le modifiche simultanee da altri utenti ai dati di origine. Per forzare un aggiornamento di tutti i dati memorizzati nella cache, utilizzare il [Resync](../../../ado/reference/ado-api/resync-method.md) metodo.  
+ I record recuperati dalla cache non riflettono le modifiche simultanee che altri utenti apportate ai dati di origine. Per forzare un aggiornamento di tutti i dati memorizzati nella cache, usare il [Risincronizza](../../../ado/reference/ado-api/resync-method.md) (metodo).  
   
- Se **CacheSize** è impostata su un valore maggiore di uno, i metodi di navigazione ([spostare](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) potrebbe causare il passaggio a un eliminare i record, se l'eliminazione si verifica dopo che sono stati recuperati i record. Dopo l'operazione di recupero iniziale, le successive operazioni di eliminazione non si rifletteranno nella cache di dati fino a quando non si tenta di accedere a un valore di dati da una riga eliminata. Tuttavia, l'impostazione **CacheSize** a uno Elimina questo problema, poiché non è possibile recuperare le righe eliminate.  
+ Se **CacheSize** è impostata su un valore maggiore di uno, i metodi di navigazione ([spostare](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) potrebbe causare il passaggio a un eliminare record, se l'eliminazione viene eseguita dopo che sono stati recuperati i record. Dopo l'operazione di recupero iniziale, le successive operazioni di eliminazione non si rifletteranno nella cache per i dati fino a quando non si tenta di accedere a un valore di dati da una riga eliminata. Tuttavia, impostando **CacheSize** uno consente di eliminare questo problema poiché non è possibile recuperare le righe eliminate.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

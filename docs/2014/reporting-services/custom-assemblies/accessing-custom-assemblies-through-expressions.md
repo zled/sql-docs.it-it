@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - expressions [Reporting Services], custom assemblies
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - calling class members
 - custom assemblies [Reporting Services], expressions
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1ba043a1a8d817432976e726dd11f84243f389ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8870f37741a26f99065f41f0231cea8b22b2770
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250041"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102661"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Accesso agli assembly personalizzati tramite espressioni
   Dopo aver creato un assembly personalizzato, averlo reso disponibile in Progettazione report o nel server di report, aver aggiunto i criteri di sicurezza appropriati e aver aggiunto un riferimento all'assembly personalizzato nella definizione del report, è possibile accedere ai membri delle classi nell'assembly utilizzando le espressioni di report. Per fare riferimento al codice personalizzato in un'espressione, è necessario chiamare il membro di una classe nell'assembly. La modalità di esecuzione di tale operazione dipende dal tipo di metodo, ovvero statico o basato su istanze.  

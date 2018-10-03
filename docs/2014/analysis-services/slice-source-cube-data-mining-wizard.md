@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6024c1e58b48c8661eaa15a0ea85c464103403ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4036705b86b26e1f39bd42578c991014096f113
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326551"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089991"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Sezionamento cubo di origine (Creazione guidata modello di data mining)
   È possibile utilizzare la finestra di dialogo **Sezionamento cubo di origine** per limitare i dati utilizzati per il training del modello. In genere un cubo contiene i dati correlati a molti attributi e dimensioni diversi, ad esempio tutti i negozi, tutte le aree e tutti i prodotti. Poiché non è pratico eseguire il training di un modello su un numero illimitato di combinazioni di attributi, utilizzare questa finestra di dialogo per scegliere un set specifico da utilizzare per il training di un modello.  

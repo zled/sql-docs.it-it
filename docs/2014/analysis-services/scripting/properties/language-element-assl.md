@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Language Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Language element
 ms.assetid: 4d745d23-6b1f-4a85-97cf-d034cc41356f
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 738403bedd7a9da120e5ba706eabe4848f7e1e2b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ce2de9ae87ac0c4d22a179f25bbf7ff047e7633
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126063"
 ---
 # <a name="language-element-assl"></a>Elemento Language (ASSL)
   Contiene l'identificatore del linguaggio dell'elemento padre.  
@@ -50,10 +47,10 @@ ms.locfileid: "37293238"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Valore intero|  
-|Valore predefinito|None|  
+|Tipo di dati e lunghezza|Integer|  
+|Valore predefinito|Nessuno|  
   
- **Cardinalità**  
+ **cardinalità**  
   
 |Predecessore o padre|Cardinalità|  
 |------------------------|-----------------|  
@@ -65,7 +62,7 @@ ms.locfileid: "37293238"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Cubo](../objects/cube-element-assl.md), [Database](../objects/database-element-assl.md), [dimensione](../objects/dimension-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [traduzione](../objects/translation-element-assl.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Note  
  L'elemento `Language` contiene l'identificatore di lingua predefinito utilizzato dall'elemento padre oppure l'identificatore di lingua specifico per un elemento `Translation`. La lingua deve essere definita utilizzando codici di identificazione delle impostazioni locali (LCID). Il codice LCID 1033, ad esempio, viene utilizzato per indicare la lingua inglese (Stati Uniti).  

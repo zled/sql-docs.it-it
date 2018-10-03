@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - queued updating subscriptions [SQL Server replication]
 - articles [SQL Server replication], conflict resolution
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66d5efeb1da3cf3871fa33cd479a34dc8630514f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46d54056a60b2059bed038ddb8de3c83941ff38c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085641"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   Dato che le sottoscrizioni ad aggiornamento in coda consentono la modifica degli stessi dati in più posizioni, è possibile che durante la sincronizzazione dei dati nel server di pubblicazione si verifichino conflitti. I conflitti vengono rilevati quando le modifiche vengono sincronizzate con il server di pubblicazione e vengono risolti in base ai criteri di risoluzione selezionati durante la creazione della pubblicazione. È possibile che si verifichino i conflitti seguenti:  

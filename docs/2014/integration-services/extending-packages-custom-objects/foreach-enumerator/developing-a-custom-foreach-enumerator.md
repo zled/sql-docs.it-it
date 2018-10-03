@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services]
 - custom foreach enumerators [Integration Services], about custom foreach enumerators
 - foreach enumerators [Integration Services]
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b055244216ef6bc84f0a7448ba3938c1cb1c3bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 07df48880932c5e40c2ce8923b87d5c5ddbef876
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213381"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085021"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>Sviluppo di un enumeratore Foreach personalizzato
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] gli enumeratori Foreach vengono utilizzati per scorrere gli elementi di una raccolta ed eseguire le stesse attività per ogni elemento. In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] è inclusa una varietà di enumeratori Foreach che supportano le raccolte più comunemente utilizzate, ad esempio tutti i file di una cartella, tutte le tabelle di un database o tutti gli elementi di un elenco archiviato in una variabile del pacchetto. Se gli enumeratori Foreach e le raccolte disponibili non soddisfano completamente specifici requisiti, è possibile creare un enumeratore Foreach personalizzato.  

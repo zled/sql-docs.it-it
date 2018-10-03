@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.unionalltrans.f1
@@ -17,18 +15,17 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2de7c1d89f528598efe52b48f0291f0125ac384b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67c20bbe5841f7db1a0260550643279ae16a05f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166762"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070571"
 ---
-# <a name="union-all-transformation"></a>Unione input multipli - trasformazione
+# <a name="union-all-transformation"></a>Trasformazione Unione input multipli
   La trasformazione Unione input multipli consente di combinare più input in un unico output. È ad esempio possibile utilizzare gli output di cinque diverse origini file flat come input per la trasformazione Unione input multipli e combinarli in un singolo output.  
   
 ## <a name="inputs-and-outputs"></a>Input e output  
@@ -53,7 +50,7 @@ ms.locfileid: "37166762"
   
 -   [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Unione di dati tramite la trasformazione Unione input multipli](union-all-transformation.md)  
   
   

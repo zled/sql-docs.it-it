@@ -1,14 +1,12 @@
 ---
-title: Backup e ripristino dei database e log delle transazioni | Microsoft Docs
+title: Backup e ripristino dei database e dei registri delle transazioni | Documenti di Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [SMO]
@@ -20,19 +18,18 @@ helpviewer_keywords:
 - backing up databases [SMO]
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b5b5a885ef12294f1d8b755ba72873ffe70e2eb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb3452b587bd455488d391656eae9801e642391f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217011"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092941"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Backup e ripristino dei database e dei log delle transazioni
-  In SMO la classe <xref:Microsoft.SqlServer.Management.Smo.Backup> e la classe <xref:Microsoft.SqlServer.Management.Smo.Restore> sono classi di utilità che forniscono gli strumenti necessari per portare a termine le attività specifiche di backup e ripristino. Oggetto <xref:Microsoft.SqlServer.Management.Smo.Backup> oggetto rappresenta un'attività di backup specifica necessaria anziché un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oggetto nell'istanza del server.  
+  In SMO la classe <xref:Microsoft.SqlServer.Management.Smo.Backup> e la classe <xref:Microsoft.SqlServer.Management.Smo.Restore> sono classi di utilità che forniscono gli strumenti necessari per portare a termine le attività specifiche di backup e ripristino. Un <xref:Microsoft.SqlServer.Management.Smo.Backup> oggetto rappresenta un'attività di backup specifica che è necessaria invece di un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oggetto nell'istanza del server.  
   
  In caso di perdita o danneggiamento di dati, è necessario ripristinare il backup, completamente o parzialmente. Per il ripristino parziale viene utilizzata la raccolta <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> per segmentare i dati da ripristinare. Se il backup riguarda un log delle transazioni, è possibile ripristinare i dati fino a un momento specifico tramite la proprietà <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Restore>. È possibile convalidare i dati anche tramite il metodo <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>. La procedura di backup consigliata prevede il controllo dell'integrità del backup tramite un'operazione di ripristino e il controllo regolare dei dati nel database.  
   

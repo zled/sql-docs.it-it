@@ -1,36 +1,33 @@
 ---
-title: Architettura del Driver ODBC | Documenti Microsoft
+title: Architettura del Driver ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], architecture
 ms.assetid: 21a62c7c-192e-4718-a16e-aa12b0de4419
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9566599b68ac931604ab68c06da2f6cd624673fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 260767c88fdf980466a21d4cc9658b259b91c854
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917326"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788149"
 ---
-# <a name="odbc-driver-architecture"></a>Architettura del Driver ODBC
-Gli sviluppatori di driver è necessario che l'architettura del driver può influire se un'applicazione può utilizzare SQL DBMS specifici.  
+# <a name="odbc-driver-architecture"></a>Architettura dei driver ODBC
+Gli sviluppatori di driver necessario tenere presente che l'architettura del driver possa interessare un'applicazione può usare SQL specifici del DBMS.  
   
- ![Architettura del driver ODBC](../../../odbc/reference/develop-driver/media/odbcdriverovruarch.gif "ODBCDriverOvruArch")  
+ ![Mostra l'architettura del driver ODBC](../../../odbc/reference/develop-driver/media/odbcdriverovruarch.gif "ODBCDriverOvruArch")  
   
  [Driver basati su file](../../../odbc/reference/file-based-drivers.md)  
   
- Quando il driver accede direttamente i dati fisici, il driver funziona come driver e i dati di origine. Il driver deve elaborare chiamate ODBC sia istruzioni SQL. Gli sviluppatori di driver basati su file è necessario scrivere i propri motori di database.  
+ Quando il driver accede direttamente i dati fisici, il driver funge da origine dati e del driver. Il driver deve elaborare chiamate ODBC sia istruzioni SQL. Gli sviluppatori di driver basati su file è necessario scrivere i propri motori di database.  
   
  [Driver basati su DBMS](../../../odbc/reference/dbms-based-drivers.md)  
   
@@ -38,25 +35,25 @@ Gli sviluppatori di driver è necessario che l'architettura del driver può infl
   
  [Architettura di rete](../../../odbc/reference/network-example.md)  
   
- Configurazioni di file, DBMS ODBC può essere presente una singola rete.  
+ Le configurazioni di file e DBMS ODBC possono esistere in una singola rete.  
   
  [Altre architetture di driver](../../../odbc/reference/other-driver-architectures.md)  
   
- Quando è necessario un driver per funzionare con un'ampia gamma di origini dati, può essere utilizzato come middleware. Architettura del motore di join eterogeneo può rendere il driver vengono visualizzati come una Gestione driver. I driver possono anche essere installati nei server, in cui può essere condiviso da una serie di client.  
+ Quando è necessario un driver per funzionare con un'ampia gamma di origini dati, può essere utilizzato come middleware. Architettura del motore di join eterogeneo possa visualizzare i driver come strumento di Gestione driver. I driver possono anche essere installati nei server in cui può essere condiviso da una serie di client.  
   
- Per ulteriori informazioni sull'architettura di driver, vedere [gestione Driver](../../../odbc/reference/the-driver-manager.md) e [architettura Driver](../../../odbc/reference/driver-architecture.md) nella sezione [architettura ODBC](../../../odbc/reference/odbc-architecture.md).  
+ Per altre informazioni sull'architettura di driver, vedere [gestione Driver](../../../odbc/reference/the-driver-manager.md) e [architettura Driver](../../../odbc/reference/driver-architecture.md) nella sezione [architettura ODBC](../../../odbc/reference/odbc-architecture.md).  
   
- Ulteriori informazioni sui problemi di driver sono reperibile in percorsi descritti nella tabella seguente.  
+ Altre informazioni sui problemi di driver sono reperibile nei percorsi descritti nella tabella seguente.  
   
 |Problema|Argomento|Percorso|  
 |-----------|-----------|--------------|  
-|Problemi di compatibilità con applicazioni e driver|[Compatibilità dell'applicazione/Driver](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)|[Considerazioni sulla programmazione](../../../odbc/reference/develop-app/programming-considerations.md), in riferimento per programmatori ODBC|  
-|Driver ODBC di scrittura|[Scrittura di driver ODBC 3.x](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)|[Considerazioni sulla programmazione](../../../odbc/reference/develop-app/programming-considerations.md), in riferimento per programmatori ODBC|  
-|Linee guida di driver per la compatibilità con le versioni precedenti|[Linee guida di driver per la compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[Appendice g: Driver le linee guida per la compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md), in riferimento per programmatori ODBC|  
-|Connessione a un driver|[Scelta di un'origine dati o driver](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)|[La connessione a una Data origine o il Driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), in riferimento per programmatori ODBC|  
-|Identificazione dei driver|[Visualizzazione dei driver](../../../odbc/admin/viewing-drivers.md)|[Visualizzazione dei driver](../../../odbc/admin/viewing-drivers.md), nella Guida in linea Amministrazione origine dati ODBC di Microsoft|  
-|Abilitazione del pool di connessioni|[Pool di connessioni ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[La connessione a una Data origine o il Driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), in riferimento per programmatori ODBC|  
-|Problemi di driver e connessione Unicode o ANSI.|[Driver di Unicode](../../../odbc/reference/develop-app/unicode-drivers.md)|[Considerazioni sulla programmazione](../../../odbc/reference/develop-app/programming-considerations.md), in riferimento per programmatori ODBC|  
+|Problemi di compatibilità con le applicazioni e driver|[Compatibilità dell'applicazione/Driver](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)|[Considerazioni sulla programmazione](../../../odbc/reference/develop-app/programming-considerations.md), di riferimento per programmatori ODBC|  
+|Driver ODBC di scrittura|[Scrittura di driver ODBC 3.x](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)|[Considerazioni sulla programmazione](../../../odbc/reference/develop-app/programming-considerations.md), di riferimento per programmatori ODBC|  
+|Linee guida di driver per la compatibilità con le versioni precedenti|[Linee guida di driver per la compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[Appendice g: linee guida di Driver per la compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md), di riferimento per programmatori ODBC|  
+|La connessione a un driver|[Scelta di un'origine dati o driver](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)|[La connessione a una Data sorgente o il Driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), di riferimento per programmatori ODBC|  
+|Identificare i driver|[Visualizzazione dei driver](../../../odbc/admin/viewing-drivers.md)|[Visualizzazione dei driver](../../../odbc/admin/viewing-drivers.md), nella Guida in linea Amministrazione origine dati ODBC di Microsoft|  
+|Abilitazione del pool di connessioni|[Pool di connessioni ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[La connessione a una Data sorgente o il Driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), di riferimento per programmatori ODBC|  
+|Problemi di connessione e driver di Unicode/ANSI|[Driver di Unicode](../../../odbc/reference/develop-app/unicode-drivers.md)|[Considerazioni sulla programmazione](../../../odbc/reference/develop-app/programming-considerations.md), di riferimento per programmatori ODBC|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sviluppo di un driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

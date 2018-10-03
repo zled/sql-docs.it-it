@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_min_lsn
 - fn_cdc_get_min_lsn
@@ -23,21 +18,20 @@ helpviewer_keywords:
 - fn_cdc_get_min_lsn
 - sys.fn_cdc_get_min_lsn
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c4c6a9bf83e83628891104f0c95a6baefa08234
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230442"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825235"
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce il valore della colonna start_lsn per l'istanza di acquisizione specificata il [change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) tabella di sistema. Questo valore rappresenta l'endpoint inferiore dell'intervallo di validità per l'istanza di acquisizione.  
+  Restituisce il valore della colonna start_lsn per l'istanza di acquisizione specificata di [change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) tabella di sistema. Questo valore rappresenta l'endpoint inferiore dell'intervallo di validità per l'istanza di acquisizione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,18 +43,18 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **'** *capture_instance_name* **'**  
+ **«** *capture_instance_name* **»**  
  Nome dell'istanza di acquisizione. *capture_instance_name* viene **sysname**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **binary(10)**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Restituisce 0x00000000000000000000 quando l'istanza di acquisizione non esiste o quando il chiamante non è autorizzato ad accedere ai dati delle modifiche associati all'istanza di acquisizione.  
   
  Questa funzione è utilizzata in genere per identificare l'endpoint inferiore della cronologia dell'acquisizione dei dati delle modifiche associati a un'istanza di acquisizione. È inoltre possibile utilizzare questa funzione per verificare che gli endpoint di una query di intervallo si trovino all'interno della cronologia dell'istanza di acquisizione prima di richiedere i dati delle modifiche. È importante eseguire tali controlli perché l'endpoint inferiore di un'istanza di acquisizione cambia quando viene eseguito il processo di pulizia sulle tabelle delle modifiche. Se il tempo tra le richieste dei dati delle modifiche è significativo, anche un endpoint inferiore impostato sull'endpoint superiore della richiesta precedente dei dati delle modifiche potrebbe cadere al di fuori della cronologia corrente.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin o al ruolo predefinito del database db_owner. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database.  
   
 ## <a name="examples"></a>Esempi  

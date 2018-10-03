@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - adding controls
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - dragging and dropping text
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 27c2a0a6d04c62e08afcaba030202d8a608d4268
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 54942936f01c7702432b531a17566caa05fa8ecc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812077"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110891"
 ---
 # <a name="use-the-toolbox"></a>Utilizzo della casella degli strumenti
   Gli elementi, il testo e i controlli presenti nella casella degli strumenti possono essere selezionati e trascinati in form, pagine e finestre di progettazione. È inoltre possibile trascinare gli elementi nuovamente da tali origini alla casella degli strumenti, in modo da poterli riutilizzare in seguito. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , ad esempio, è possibile trascinare un'attività in un piano di manutenzione.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.credentials.f1
 - "10100"
 ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
-caps.latest.revision: 38
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e8ef67e673e6ba5fe21180c33c8dd501f1baa0c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5d1f22d37723545cde9430404a5e414fb1856c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280757"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079041"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>Finestra di dialogo Proprietà origine dati, Credenziali
   Selezionare **Credenziali** nella finestra di dialogo **Proprietà origine dati** per visualizzare e modificare le credenziali per la connessione a un'origine dati nel report. Le credenziali specificate vengono utilizzate per accedere all'origine dati e per memorizzare una copia dei dati nella cache per l'anteprima dei report. Per altre informazioni sulla modalità di memorizzazione nella cache dei dati di anteprima, vedere [Anteprima dei report](reports/previewing-reports.md). Per altre informazioni sulle credenziali, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  

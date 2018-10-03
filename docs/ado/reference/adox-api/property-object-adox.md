@@ -1,51 +1,48 @@
 ---
-title: Oggetto di proprietà (ADOX) | Documenti Microsoft
+title: Oggetto Property (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Property object [ADOX]
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db31ab407ee6268d14797ea3f50a9056c287f314
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2502dcdab170102f526aa1ea0fe67235e6bf3048
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286874"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815599"
 ---
-# <a name="property-object-adox"></a>Oggetto di proprietà (ADOX)
+# <a name="property-object-adox"></a>Oggetto Property (ADOX)
 Rappresenta una caratteristica di un oggetto ADOX.  
   
-## <a name="remarks"></a>Remarks  
- Gli oggetti ADOX dispongono di due tipi di proprietà: incorporato e dinamici.  
+## <a name="remarks"></a>Note  
+ Oggetti ADOX hanno due tipi di proprietà: predefinito e dinamico.  
   
- Proprietà predefinite sono quelle immediatamente disponibili per qualsiasi nuovo oggetto, utilizzando la sintassi MyObject. Non vengono visualizzati come oggetti di proprietà in un oggetto [raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md), sebbene sia possibile modificare i relativi valori, è pertanto possibile modificare le relative caratteristiche.  
+ Proprietà predefinite sono immediatamente disponibili per qualsiasi nuovo oggetto, utilizzando la sintassi MyObject tali proprietà. Non sono visualizzate come oggetti di proprietà in un oggetto [raccolta di proprietà](../../../ado/reference/ado-api/properties-collection-ado.md), pertanto anche se è possibile modificarne i valori, è possibile modificare le relative caratteristiche.  
   
- Proprietà dinamiche sono definite dal provider di dati sottostante e vengono visualizzati nella raccolta delle proprietà per l'oggetto ADOX appropriato.  Proprietà dinamiche possono fare riferimento solo tramite la raccolta utilizzando la sintassi MyObject.Properties(0) o MyObject.  
+ Proprietà dinamiche sono definite dal provider di dati sottostanti e vengono visualizzati nella raccolta delle proprietà per l'oggetto ADOX appropriato.  Proprietà dinamiche è possibile fare riferimento solo tramite la raccolta, usando la sintassi MyObject.Properties(0) o MyObject.  
   
- È possibile eliminare il tipo di proprietà.  
+ Non è possibile eliminare entrambi i tipi di proprietà.  
   
- Un oggetto dinamico di proprietà presenta quattro proprietà predefinite di un proprio:  
+ Un oggetto dinamico di proprietà presenta quattro proprietà incorporate propri:  
   
  Il [nome](../../../ado/reference/ado-api/name-property-ado.md) proprietà è una stringa che identifica la proprietà.  
   
  Il [tipo](../../../ado/reference/ado-api/type-property-ado.md) proprietà è un numero intero che specifica il tipo di dati di proprietà.  
   
- Il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà è una variabile variant contenente l'impostazione della proprietà. Valore è la proprietà predefinita per un oggetto di proprietà.  
+ Il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà è una variante che contiene l'impostazione della proprietà. Valore è la proprietà predefinita per un oggetto proprietà.  
   
  Il [attributi](../../../ado/reference/ado-api/attributes-property-ado.md) proprietà è un valore long che indica le caratteristiche della proprietà specifiche del provider.  
   
- In questa sezione contiene l'argomento seguente.  
+ In questa sezione contiene gli argomenti seguenti.  
   
 -   [Proprietà, metodi ed eventi dell'oggetto Property ADOX](../../../ado/reference/adox-api/adox-property-object-properties-methods-and-events.md)

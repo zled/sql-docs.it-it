@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query optimizer [SQL Server], index usage
 - index concepts [SQL Server]
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 560fed2eba751609f9e187be60a1d08d9b6a1364
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 525dd41faa2c1f9d150ba7bd02442b125975c395
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079411"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Descrizione di indici cluster e non cluster.
   Un indice è una struttura su disco associata a una tabella o a una vista che consente di recuperare in modo rapido le righe della tabella o della vista. L'indice contiene chiavi costituite da una o più colonne della tabella o della vista. Tali chiavi vengono archiviate in una struttura (albero B) che consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di individuare con rapidità ed efficienza la riga o le righe associate ai valori di chiave.  
@@ -60,7 +57,7 @@ ms.locfileid: "37188468"
   
  Query Optimizer seleziona in genere il metodo più efficace durante l'esecuzione delle query. Se, tuttavia, non è disponibile alcun indice, verrà utilizzata un'analisi di tabella. L'attività consiste nel progettare e creare indici adatti all'ambiente in modo che in Query Optimizer sia presente una selezione di indici efficienti da cui effettuare una selezione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce l' [Ottimizzazione guidata motore di database](../performance/database-engine-tuning-advisor.md) per facilitare l'analisi dell'ambiente del database e la selezione di indici adatti.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Creare indici cluster](create-clustered-indexes.md)  
   
  [Creare indici non cluster](create-nonclustered-indexes.md)  

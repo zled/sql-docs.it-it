@@ -1,13 +1,11 @@
 ---
-title: Istruzioni SQL dinamiche | Documenti Microsoft
+title: Istruzioni SQL dinamiche | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
@@ -17,30 +15,29 @@ helpviewer_keywords:
 - SQL [ODBC], dynamic SQL
 - embedded SQL [ODBC]
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 465f9785436880fce74136dd293abab33d1d2b4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbecd1d6db1d5ed77082253f6a6a57a96ceec4d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916896"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748405"
 ---
 # <a name="dynamic-sql"></a>SQL dinamica
-Sebbene SQL statico funziona bene in molte situazioni, è disponibile una classe di applicazioni in cui l'accesso ai dati non è possibile determinare in anticipo. Si supponga, ad esempio, che consente di immettere una query, il foglio di calcolo inviato per il sistema DBMS per recuperare dati da un foglio di calcolo. Il contenuto di questa query ovviamente non può essere noto al programmatore di quando viene scritto il foglio di calcolo.  
+Sebbene SQL statica funziona bene in molte situazioni, c'è una classe di applicazioni in cui l'accesso ai dati non è possibile determinare in anticipo. Si supponga, ad esempio, che un foglio di calcolo consente agli utenti di immettere una query, che il foglio di calcolo invia al sistema DBMS per recuperare i dati. Il contenuto di questa query ovviamente non può essere noto al programmatore quando viene scritto il programma di foglio di calcolo.  
   
- Per risolvere questo problema, il foglio di calcolo utilizza una forma di embedded SQL denominato SQL dinamico. A differenza delle istruzioni SQL statiche, che sono hardcoded nel programma, è possono compilate in fase di esecuzione delle istruzioni SQL dinamiche e inserite in una variabile di stringa host. Vengono quindi inviate al DBMS per l'elaborazione. Poiché il sistema DBMS deve generare un piano di accesso in fase di esecuzione per le istruzioni SQL dinamiche, linguaggio SQL dinamico è in genere inferiore a SQL statico. Quando viene compilato un programma che contiene istruzioni SQL dinamiche, le istruzioni SQL dinamiche non vengono rimosse dal programma, come SQL statico. Al contrario, vengono sostituiti da una chiamata di funzione che passa l'istruzione per il sistema DBMS; le istruzioni SQL statiche nello stesso programma vengono considerate normalmente.  
+ Per risolvere questo problema, il foglio di calcolo adotta un formato di embedded SQL denominato SQL dinamico. A differenza delle istruzioni SQL statiche, che sono impostate come hardcoded nel programma, le istruzioni SQL dinamiche possono essere compilate in fase di esecuzione e inserite in una variabile di stringa di host. Sono quindi inviati per il sistema DBMS per l'elaborazione. Poiché il sistema DBMS deve generare un piano di accesso in fase di esecuzione per le istruzioni SQL dinamiche, istruzioni SQL dinamiche è in genere più lento rispetto alle soluzioni SQL statico. Quando viene compilato un programma che contiene le istruzioni SQL dinamiche, le istruzioni SQL dinamiche non vengono rimossi dal programma, come in SQL statico. Al contrario, vengono sostituiti con una chiamata di funzione che passa l'istruzione per il sistema DBMS; istruzioni SQL statiche del programma stesso vengono gestite normalmente.  
   
  Il modo più semplice per eseguire un'istruzione SQL dinamica è con un'istruzione EXECUTE IMMEDIATE. Questa istruzione passa l'istruzione SQL per il sistema DBMS per la compilazione e l'esecuzione.  
   
- Uno svantaggio dell'istruzione EXECUTE IMMEDIATE è che il sistema DBMS devono essere eseguiti tramite ognuno dei cinque passaggi di elaborazione di un'istruzione SQL ogni volta che viene eseguita l'istruzione. L'overhead necessario per questo processo può essere significativo se molte istruzioni vengono eseguite in modo dinamico ed è dispendiosa se tali istruzioni sono simili. Per risolvere questa situazione, SQL dinamico offre un formato ottimizzato di esecuzione denominata esecuzione preparata, che utilizza la procedura seguente:  
+ Uno svantaggio dell'istruzione EXECUTE immediata è che il sistema DBMS deve passare attraverso ognuno dei cinque passaggi di un'istruzione SQL ogni volta che viene eseguita l'istruzione di elaborazione. L'overhead necessario per questo processo può essere significativo se numerose istruzioni vengono eseguite in modo dinamico ed è dispendioso se tali istruzioni sono simili. Per risolvere questa situazione, SQL dinamico offre una forma ottimizzata di esecuzione denominata esecuzione preparata, che usa la procedura seguente:  
   
-1.  Il programma crea un'istruzione SQL in un buffer, come avviene per l'istruzione EXECUTE IMMEDIATE. Invece di variabili host, è possibile sostituire un punto interrogativo (?) per una costante in un punto qualsiasi nel testo dell'istruzione per indicare che un valore per la costante verrà fornito in un secondo momento. Il punto interrogativo viene chiamato come marcatore di parametro.  
+1.  Il programma genera un'istruzione SQL in un buffer, come avviene per l'istruzione EXECUTE IMMEDIATE. Invece di variabili host, un punto interrogativo (?) può essere sostituito per una costante in un punto qualsiasi nel testo dell'istruzione per indicare che un valore per la costante verrà fornito in un secondo momento. Il punto interrogativo viene chiamato come un marcatore di parametro.  
   
-2.  Il programma passa l'istruzione SQL per il sistema DBMS con un'istruzione PREPARE, le richieste che il sistema DBMS analizzare, convalidare e ottimizza l'istruzione e generare un'esecuzione piano. Il programma utilizza quindi un'istruzione EXECUTE (non un'istruzione EXECUTE IMMEDIATE) per eseguire l'istruzione PREPARE in un secondo momento. Passa i valori dei parametri per l'istruzione tramite una struttura di dati speciale denominata SQLDA o Area dati di SQL.  
+2.  Il programma passa l'istruzione SQL per il sistema DBMS con un'istruzione PREPARE, le richieste che il sistema DBMS analizza, eseguire la convalida e ottimizza l'istruzione e genera un'esecuzione piano. Il programma utilizza quindi un'istruzione EXECUTE (non un'istruzione EXECUTE IMMEDIATE) per eseguire l'istruzione PREPARE in un secondo momento. Passa i valori dei parametri per l'istruzione tramite una struttura di dati speciale denominata di SQL Data Area o SQLDA.  
   
-3.  Il programma è possibile utilizzare l'istruzione EXECUTE più volte, specificando i valori di parametro diversi ogni volta che viene eseguita l'istruzione dinamica.  
+3.  Il programma è possibile usare l'istruzione EXECUTE più volte, specificando i valori dei parametri diversi ogni volta che viene eseguita l'istruzione dinamica.  
   
- Esecuzione preparata è ancora non lo stesso come SQL statico. In SQL statico, i primi quattro passaggi di elaborazione di un'istruzione SQL è avvenire in fase di compilazione. In esecuzione preparata, questi passaggi vengono ancora eseguiti in fase di esecuzione, ma vengono eseguite solo una volta. esecuzione del piano di viene eseguita solo quando viene chiamata EXECUTE. Ciò consente di eliminare alcuni svantaggi prestazioni inerenti l'architettura di SQL dinamico. Nella figura seguente vengono illustrate le differenze tra SQL statico, dinamico SQL con esecuzione immediata e istruzioni SQL dinamiche con l'esecuzione preparata.
+ Esecuzione preparata è ancora non lo stesso come istruzione SQL statica. In SQL statico, i primi quattro passaggi dell'elaborazione di un'istruzione SQL è avvengono in fase di compilazione. In esecuzione preparata, questi passaggi vengono comunque eseguiti in fase di esecuzione, ma vengono eseguiti solo una volta. esecuzione del piano di viene eseguita solo quando viene chiamato EXECUTE. Ciò consente di eliminare alcuni degli svantaggi delle prestazioni inerenti nell'architettura di istruzioni SQL dinamiche. La figura seguente mostra le differenze tra SQL statico, istruzioni SQL dinamiche con esecuzione immediata e istruzioni SQL dinamiche con l'esecuzione preparata.

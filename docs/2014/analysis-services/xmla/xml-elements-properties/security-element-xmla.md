@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Security Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Security element
 ms.assetid: 0b601f69-d16d-4d10-9361-b8afaa6ed357
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 138b93043cbfeba51472dfa61816cf9023a3f2c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 784a3f6b56c0372897b984c5fac4e8915cb53ebc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155022"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111951"
 ---
 # <a name="security-element-xmla"></a>Elemento Security (XMLA)
   Specifica come eseguire il backup o ripristino delle definizioni di sicurezza, ad esempio ruoli e autorizzazioni, durante una [Backup](../xml-elements-commands/backup-element-xmla.md) oppure [ripristinare](../xml-elements-commands/restore-element-xmla.md) comando.  

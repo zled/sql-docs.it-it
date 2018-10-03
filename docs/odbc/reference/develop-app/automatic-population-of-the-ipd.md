@@ -1,13 +1,11 @@
 ---
-title: Il popolamento automatico il IPD | Documenti Microsoft
+title: Il popolamento automatico dell'IPD | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatically populating ipd [ODBC]
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - ipd [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9e3d80ea280e4487f5443bca8152a3a541dfbd8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d127e2da3397e96059c7d04305a983766ca1db6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908356"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767310"
 ---
-# <a name="automatic-population-of-the-ipd"></a>Popolamento automatico il IPD
-Alcuni driver sono in grado di impostare i campi del IPD dopo che è stata preparata una query con parametri. I campi di descrizione vengono automaticamente popolati con informazioni sul parametro, inclusi il tipo di dati, precisione, scala e altre caratteristiche. Ciò equivale a supporto **SQLDescribeParam**. Queste informazioni possono rivelarsi particolarmente utile per un'applicazione non dispone di alcun altro modo per individuare, ad esempio quando una query ad hoc viene eseguita con parametri che l'applicazione non conosce.  
+# <a name="automatic-population-of-the-ipd"></a>Popolamento automatico dell'IPD
+Alcuni driver sono in grado di impostazione dei campi dell'IPD dopo aver preparata una query con parametri. I campi di descrizione vengono popolati automaticamente con informazioni sul parametro, inclusi il tipo di dati, precisione, scala e altre caratteristiche. Ciò equivale a supportare **SQLDescribeParam**. Queste informazioni possono essere particolarmente utile per un'applicazione quando non dispone di alcun altro modo per individuarlo, ad esempio quando viene eseguita una query ad hoc con parametri che l'applicazione non conosce.  
   
  Un'applicazione determina se il driver supporta il popolamento automatico chiamando **SQLGetConnectAttr** con un *attributo* di SQL_ATTR_AUTO_IPD. Se viene restituito SQL_TRUE, il driver supporta e l'applicazione può consentire impostando l'attributo di istruzione SQL_ATTR_ENABLE_AUTO_IPD su SQL_TRUE.  
   
- Quando il popolamento automatico è supportato e abilitato, il driver popola i campi del IPD dopo un'istruzione SQL che contengono marcatori di parametro è stata preparata da una chiamata a **SQLPrepare**. Un'applicazione può recuperare queste informazioni chiamando **SQLGetDescField** o **SQLGetDescRec**, o **SQLDescribeParam**. L'applicazione può utilizzare le informazioni da associare al buffer dell'applicazione più appropriato per un parametro o per specificare una conversione di dati per questo file.  
+ Quando il popolamento automatico è supportato e abilitato, il driver compila i campi dell'IPD dopo che è stata preparata un'istruzione SQL che contengono marcatori di parametro da una chiamata a **SQLPrepare**. Un'applicazione può recuperare queste informazioni chiamando **SQLGetDescField** oppure **SQLGetDescRec**, o **SQLDescribeParam**. L'applicazione può usare le informazioni da associare al buffer dell'applicazione più appropriato per un parametro o per specificare una conversione di dati per esso.  
   
- Il popolamento automatico il IPD potrebbe produrre una riduzione delle prestazioni. Un'applicazione può disattivare tale funzionalità per reimpostare l'attributo di istruzione SQL_ATTR_ENABLE_AUTO_IPD SQL_FALSE (il valore predefinito).
+ Il popolamento automatico dell'IPD produca una riduzione delle prestazioni. Un'applicazione possa disattivarla ripristinando l'attributo di istruzione SQL_ATTR_ENABLE_AUTO_IPD SQL_FALSE (valore predefinito).

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - results [SQL Server], cursors
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - requesting cursors
 - cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
-caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2c4180de87b9004f53c6a4e2391cd3be9ee23b82
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 10e6590da7d5efdb704a3f4005c278e2add41a5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271207"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134071"
 ---
 # <a name="cursors"></a>Cursori
   Nei database relazionali le operazioni vengono eseguite su set di righe completi. Ad esempio, il set di righe restituito dall'istruzione SELECT include tutte le righe che soddisfano le condizioni specificate nella clausola WHERE dell'istruzione. Il set di righe completo restituito dall'istruzione è noto come set di risultati. Le applicazioni, soprattutto le applicazioni online interattive, non sono sempre in grado di gestire in modo efficiente un intero set di risultati come singola unità. In tali applicazioni deve essere pertanto disponibile un meccanismo per l'elaborazione di una riga singola o di un blocco di righe di dimensioni ridotte. I cursori sono un'estensione dei set di risultati che implementano appunto tale meccanismo.  

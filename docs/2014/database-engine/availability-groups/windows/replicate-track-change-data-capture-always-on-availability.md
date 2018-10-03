@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
@@ -14,19 +12,18 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1519ac814a1f8a55333af5050eab8f5fcbc1b022
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50328c814b23f9df33a0524bae1758afecd3f5f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204031"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091261"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replica, Rilevamento modifiche, Change Data Capture e Gruppi di disponibilità AlwaysOn (SQL Server)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le funzionalità di replica, di rilevamento delle modifiche (CT, Change Tracking) e Change Data Capture (CDC) sono supportate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] vengono fornite disponibilità elevata e funzionalità aggiuntive di recupero database.  
+  Le funzionalità di replica, di rilevamento delle modifiche (CT, Change Tracking) e Change Data Capture (CDC) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono supportate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] vengono fornite disponibilità elevata e funzionalità aggiuntive di recupero database.  
   
  
   
@@ -202,7 +199,7 @@ ms.locfileid: "37204031"
   
 -   Le istanze del server di pubblicazione soddisfano tutti i prerequisiti richiesti per fare parte di un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Restrizioni  
  Combinazioni supportate di replica in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
 |||||  

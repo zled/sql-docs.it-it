@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [OLE DB]
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a694707cb44c9cf26da6a1a747ad3096fbb9bec
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 843bf7c05fad886e42ce4d1241715e21fd95918a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420900"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086293"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Enumerare origini dati OLE DB (OLE DB)
   In questo esempio viene illustrato come utilizzare l'oggetto enumeratore per elencare le origini dati disponibili.  
@@ -31,7 +28,7 @@ ms.locfileid: "37420900"
   
  Quando il server viene abilitato o disabilitato, possono essere necessari alcuni minuti per l'aggiornamento delle informazioni in tali domini.  
   
- In questo esempio richiede il database di esempio AdventureWorks, che è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page di.  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -51,7 +48,7 @@ ms.locfileid: "37420900"
 6.  Recuperare i dati dalla copia del set di righe della riga chiamando `IRowset::GetData` ed elaborarli.  
   
 ## <a name="example"></a>Esempio  
- Compilare il listato di codice C++ seguente con ole32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" a L"(local)\\\name", dove nome è un'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
+ Compilare il listato di codice C++ seguente con ole32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
 ```  
 // compile with: ole32.lib  

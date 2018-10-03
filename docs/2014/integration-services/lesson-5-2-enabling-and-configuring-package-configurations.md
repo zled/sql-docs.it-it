@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 380676537e0035077e0fd37afda058a98c75c741
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 33516b6f47a3c4f33d001c225c5a1a60a9802f7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274847"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100802"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Passaggio 2: Abilitazione e impostazione delle configurazioni dei pacchetti
   In questa attività si convertirà il progetto nel modello di distribuzione del pacchetto e si abiliteranno le configurazioni di pacchetto utilizzando la Configurazione guidata pacchetto. Questa procedura guidata consente di generare un file di configurazione XML contenente le impostazioni di configurazione per la proprietà `Directory` del contenitore Ciclo Foreach. Il valore della proprietà Directory è specificato da una variabile a livello di pacchetto che è possibile aggiornare in fase di esecuzione. Verrà inoltre popolata una cartella di dati di esempio da utilizzare durante il test.  

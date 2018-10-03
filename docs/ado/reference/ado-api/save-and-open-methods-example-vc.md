@@ -1,13 +1,11 @@
 ---
-title: Salvare e aprire l'esempio di metodi (VC + +) | Documenti Microsoft
+title: Salvare e aprire l'esempio di metodi (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - Save method [ADO], VC++ example
 - Open method [ADO]
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 870ae7f5776b601b312d799b643c09bd589dc26b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6eaa73453339fd1e62bcd2e3039374a9ca7974b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281330"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735989"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Salvare e aprire l'esempio di metodi (VC + +)
-Questi tre esempi viene illustrato come la [salvare](../../../ado/reference/ado-api/save-method.md) e **aprire** metodi possono essere utilizzati insieme.  
+Questi tre esempi che illustrano come il [salvare](../../../ado/reference/ado-api/save-method.md) e **Open** metodi possono essere usati insieme.  
   
- Si supponga che si sta in viaggio e si desidera portare con sé una tabella da un database. Prima di procedere, si accede ai dati come un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e salvarlo in un modulo da spostare. Quando si arriva a destinazione, si accede di **Recordset** come locale, disconnesso **Recordset**. Si apportano modifiche per il **Recordset**, quindi salvarlo nuovamente. Infine, quando si ritorna home, riconnettersi al database e aggiornarlo con le modifiche apportate in viaggio.  
+ Si supponga si prevede un viaggio d'affari e vuole portare con sé una tabella da un database. Prima di procedere, si accede ai dati come una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e salvarlo in un form trasportabile. Quando si arriva a rappresenti la destinazione, è accedere il **Recordset** come un'unità locale disconnesso **Recordset**. Si apportano modifiche per il **Recordset**, quindi salvarlo nuovamente. Infine, quando si ritorna home, riconnettersi al database e aggiornarlo con le modifiche apportate in viaggio.  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -265,6 +262,6 @@ bool FileExists() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Metodo Save](../../../ado/reference/ado-api/save-method.md)

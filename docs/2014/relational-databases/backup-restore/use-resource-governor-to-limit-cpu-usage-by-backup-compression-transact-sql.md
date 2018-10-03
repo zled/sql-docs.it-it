@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backup compression [SQL Server], Resource Governor
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - backups [SQL Server], compression
 - Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bc9e5e2f75d253e45a11d88fe9fbf6c527b71d03
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b28b574dcbe26796b6fc561b209425f023f0178f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283487"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108161"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup (Transact-SQL)
   Per impostazione predefinita, l'esecuzione di backup mediante la compressione aumenta in modo significativo l'utilizzo della CPU e la CPU aggiuntiva utilizzata dal processo di compressione può avere un impatto negativo sulle operazioni simultanee. È necessario quindi creare un backup compresso con priorità bassa in una sessione con utilizzo della CPU limitato da[Resource Governor](../resource-governor/resource-governor.md) nel caso in cui si verifichi una contesa di CPU. In questo argomento viene presentato uno scenario che classifica le sessioni di un particolare utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguendone mapping a un gruppo del carico di lavoro di Resource Governor che limita l'utilizzo della CPU in tali casi.  
@@ -79,7 +76,7 @@ ms.locfileid: "37283487"
   
      Per altre informazioni, vedere [GRANT - autorizzazioni per entità di database &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-principal-permissions-transact-sql).  
   
-### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Esempio A. Impostazione di un accesso e di un utente (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Esempio A. Impostazione di un account di accesso e di un utente (Transact-SQL)  
  L'esempio seguente è rilevante solo se si sceglie di creare un nuovo account di accesso e un nuovo utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire backup con priorità bassa. In alternativa, è possibile utilizzare un account di accesso e un utente esistenti, se appropriati.  
   
 > [!IMPORTANT]  

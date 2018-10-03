@@ -1,35 +1,32 @@
 ---
-title: Esempio del metodo Refresh (VBScript) | Documenti Microsoft
+title: Esempio del metodo Refresh (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Refresh method [ADO], VBScript example
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17bb8489dd1671806a512ed635c0143d7ba9f4b5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fcb4ccd685a5f28377972db03d32496017bda8cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288530"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731220"
 ---
 # <a name="refresh-method-example-vbscript"></a>Esempio del metodo Refresh (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Nell'esempio seguente viene illustrato come impostare i parametri necessari di [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) in fase di esecuzione. Il modo in cui un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) vengono recuperati utilizzando il [aggiornamento](../../../ado/reference/ado-api/refresh-method-ado.md) metodo è determinato dalle impostazioni del [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) e [FetchOptions ](../../../ado/reference/rds-api/fetchoptions-property-rds.md) proprietà. Per testare questo esempio, tagliare e incollare il codice seguente in un normale documento ASP e denominarlo **RefreshVBS**. Utilizzare **trovare** per individuare il file Adovbs. inc e inserirlo nella directory di cui si intende utilizzare. Lo script identificherà il server.  
+ Nell'esempio seguente viene illustrato come impostare i parametri necessari di [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) in fase di esecuzione. Il modo in cui un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) viene recuperato utilizzando il [aggiornare](../../../ado/reference/ado-api/refresh-method-ado.md) metodo è determinato dalle impostazioni del [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) e [FetchOptions ](../../../ado/reference/rds-api/fetchoptions-property-rds.md) proprietà. Per testare questo esempio, tagliare e incollare il codice seguente in un documento ASP normale e denominarla **RefreshVBS**. Usare **trovare** per individuare il file Adovbs. inc e inserirlo nella directory di cui si intende usare. Lo script identificherà il server.  
   
 ```  
 <!-- BeginRefreshVBS -->  
@@ -179,10 +176,10 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Proprietà ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
- [Proprietà FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Proprietà ExecuteOptions (Servizi Desktop remoto)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
+ [Proprietà FetchOptions (Servizi Desktop remoto)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Metodo Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
 
 

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], prefix length
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0924e829729039aec7221a8faeeff37a9e830310
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1f480c361c465f17fa50d2a13df29f44a56d131
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212901"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058761"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Specificare la lunghezza del prefisso nei file di dati tramite bcp (SQL Server)
   Per fornire il tipo di archiviazione file con la massima compressione durante l'esportazione in blocco dei dati in formato nativo in un file di dati, il comando **bcp** inserisce davanti a ogni campo uno o più caratteri che ne indicano la lunghezza. Tali caratteri sono denominati *caratteri per il prefisso di lunghezza*.  

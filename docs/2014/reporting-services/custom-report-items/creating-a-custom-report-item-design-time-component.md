@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 996e70b70e2cf253212baae972dd6caa6acdf7c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a6654b7ec23e2aae071a7e4ce6cd360b7ef10e4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149272"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107491"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione
   Un componente dell'elemento del report personalizzato per la fase di progettazione è un controllo che può essere utilizzato nell'ambiente Progettazione report di Visual Studio. Il componente dell'elemento del report personalizzato per la fase di progettazione fornisce un'area di progettazione attivata in grado di accettare operazioni di trascinamento della selezione, integrazione con il Visualizzatore proprietà di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e la possibilità di fornire editor di proprietà personalizzati.  

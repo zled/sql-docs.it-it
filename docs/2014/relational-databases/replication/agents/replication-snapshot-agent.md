@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, executables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 699fc162d167bf22695d6eb1d7e5b1ede5704d12
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: e6b6fe366014bdffce0eeef77c7e2e79872f22e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311691"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087161"
 ---
 # <a name="replication-snapshot-agent"></a>Agente snapshot repliche
   Agente snapshot repliche è un file eseguibile che consente di preparare i file di snapshot contenenti lo schema e i dati delle tabelle pubblicate e degli oggetti di database, di archiviare i file nella cartella snapshot e di registrare i processi di sincronizzazione nel database di distribuzione.  
@@ -197,12 +194,12 @@ ms.locfileid: "44311691"
 |**2**|Vengono stampati tutti i messaggi di errore e i messaggi di report di stato. Questa opzione è utile per l'esecuzione del debug.|  
 
  **-PrefetchTables** [ **0**| **1**]  
- Parametro facoltativo che specifica se gli oggetti tabella verranno eseguita la prelettura e memorizzati nella cache.  Il comportamento predefinito è eseguire la prelettura determinate proprietà di tabella usando il componente SMO basato su un calcolo interno.  Questo parametro può essere utile scenarions in cui SMO prelettura operazione accetta una notevole più per l'esecuzione. Se questo parametro non viene utilizzato, questa decisione viene presa in fase di esecuzione in base alla percentuale di tabelle che vengono aggiunti come articoli alla pubblicazione.  
+ Parametro facoltativo che specifica se per gli oggetti tabella verranno eseguite la prelettura e la memorizzazione nella cache.  Il comportamento predefinito prevede la prelettura di determinate proprietà delle tabelle usando il componente SMO in base a un calcolo interno.  Questo parametro può essere utile in scenari in cui l'operazione di prelettura SMO richiede notevole tempo per l'esecuzione. Se questo parametro non viene usato, questa decisione viene presa in fase di esecuzione in base alla percentuale di tabelle che vengono aggiunte come articoli alla pubblicazione.  
   
 |Valore di OutputVerboseLevel|Description|  
 |------------------------------|-----------------|  
-|**0**|Chiamata al metodo prelettura del componente SMO è disabilitato.|  
-|**1**|Agente snapshot chiamerà il metodo prelettura per memorizzare nella cache alcune proprietà di tabella tramite SMO|  
+|**0**|La chiamata al metodo Prefetch del componente SMO è disabilitata.|  
+|**1**|L'agente di snapshot chiamerà il metodo Prefetch per memorizzare nella cache alcune proprietà di tabella tramite SMO|  
   
  **-PacketSize** *packet_size*  
  Dimensione del pacchetto, in byte, utilizzata dall'agente snapshot durante la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il valore predefinito è 8192 byte.  

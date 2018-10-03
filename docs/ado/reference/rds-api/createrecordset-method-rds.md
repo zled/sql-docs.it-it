@@ -1,13 +1,11 @@
 ---
-title: Metodo CreateRecordset (RDS) | Documenti Microsoft
+title: Esempio di metodo CreateRecordset (Servizi Desktop remoto) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,22 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61f918c7a7530ae504825182a1d6a1c4ced1d84c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 791586badfeff0c1bde35b5cdf25ba750f79fe80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287620"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779029"
 ---
-# <a name="createrecordset-method-rds"></a>Metodo CreateRecordset (RDS)
+# <a name="createrecordset-method-rds"></a>Metodo CreateRecordset (Servizi Desktop remoto)
 Crea un oggetto vuoto, disconnesso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,31 +42,31 @@ object.CreateRecordset(ColumnInfos)
   
 #### <a name="parameters"></a>Parametri  
  *Oggetto*  
- Una variabile oggetto che rappresenta un [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
+ Una variabile oggetto che rappresenta un' [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) o [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
   
  *ColumnsInfos*  
- A **Variant** matrice di attributi che definisce ogni colonna di **Recordset** creato. Ogni definizione di colonna contiene una matrice di quattro attributi obbligatori e un attributo facoltativo.  
+ Oggetto **Variant** matrice di attributi che definiscono ciascuna colonna il **Recordset** creato. Ogni definizione di colonna contiene una matrice di quattro attributi obbligatori e un attributo facoltativo.  
   
-|attribute|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
-|nome|Nome dell'intestazione di colonna.|  
-|Tipo|Intero del tipo di dati.|  
-|Dimensione|Numero intero di larghezza in caratteri, indipendentemente dal tipo di dati.|  
+|Nome|Nome dell'intestazione di colonna.|  
+|Tipo|Valore intero del tipo di dati.|  
+|Dimensione|Valore intero della larghezza in caratteri, indipendentemente dal tipo di dati.|  
 |Supporto di valori Null|Valore booleano.|  
-|Scala (facoltativa)|Questo attributo facoltativo definisce la scala per i campi numerici. Se questo valore viene omesso, verranno troncati a una scala di tre valori numerici. Precisione non è interessata, ma verrà troncato a tre il numero di cifre dopo il separatore decimale.|  
+|Scalabilità (facoltativo)|Questo attributo facoltativo definisce la scala per i campi numerici. Se questo valore viene omesso, verranno troncati in una scala pari a tre valori numerici. Precisione non è interessata, ma verrà troncato a tre il numero di cifre dopo il separatore decimale.|  
   
- Il set di matrici di colonna verrà quindi raggruppato in una matrice, che definisce il **Recordset**.  
+ Il set di matrici di colonna viene quindi raggruppati in una matrice, che definisce il **Recordset**.  
   
-## <a name="remarks"></a>Remarks  
- L'oggetto business sul lato server è possibile popolare il valore risultante **Recordset** con dati da un provider di dati non OLE DB, ad esempio un sistema operativo file contenente le quotazioni di borsa.  
+## <a name="remarks"></a>Note  
+ L'oggetto business sul lato server è possibile popolare l'oggetto risultante **Recordset** con i dati da un provider di dati non OLE DB, ad esempio un sistema operativo file contenenti le quotazioni di borsa.  
   
- La tabella seguente elenca i [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valori supportati dal **CreateRecordset** metodo. Il numero indicato è il numero di riferimento utilizzato per definire i campi.  
+ La tabella seguente elenca i [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) i valori supportati per il **CreateRecordset** (metodo). Il numero indicato è il numero di riferimento usato per definire i campi.  
   
- Ognuno dei tipi di dati è di lunghezza fissa o variabile. Tipi a lunghezza fissa devono essere definiti con una dimensione di -1, perché la dimensione è predeterminata ed è ancora necessaria una definizione di dimensioni. Tipi di dati a lunghezza variabile consentono dimensioni compreso tra 1 e 32767.  
+ Ognuno dei tipi di dati è a lunghezza fissa o a lunghezza variabile. Tipi a lunghezza fissa devono essere definiti con una dimensione pari a – 1, perché la dimensione è predeterminata e una definizione di dimensioni è ancora necessaria. Tipi di dati a lunghezza variabile consentono una dimensione compreso tra 1 e 32767.  
   
- Per alcuni dei tipi di dati della variabile, il tipo può essere assegnato al tipo indicato nella colonna di sostituzione. Non si vedranno le sostituzioni fino a dopo il **Recordset** creata e compilata. È quindi possibile controllare per il tipo di dati effettivi, se necessario.  
+ Per alcuni dei tipi di dati della variabile, il tipo può essere assegnato al tipo indicato nella colonna di sostituzione. Non si vedranno le sostituzioni fino a dopo il **Recordset** creato e riempito. È quindi possibile cercare il tipo di dati effettivo, se necessario.  
   
-|Length|Costante|Number|Sostituzione|  
+|Length|Costante|Numero|Sostituzione|  
 |------------|--------------|------------|------------------|  
 |Fisso|**adTinyInt**|16||  
 |Fisso|**adSmallInt**|2||  

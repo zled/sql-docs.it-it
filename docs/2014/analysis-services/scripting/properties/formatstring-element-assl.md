@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - FormatString Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - FormatString element
 ms.assetid: 7b996221-936e-4f36-a3a8-676eb9869c55
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a61057708dd430fa6879101cda0dd315bbc82298
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbcc34f0bdc167f61beebb2e97171027759d6c3b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273197"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089861"
 ---
 # <a name="formatstring-element-assl"></a>Elemento FormatString (ASSL)
   Viene descritto il formato di visualizzazione per un [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento o una [misura](../objects/measure-element-assl.md) elemento.  
@@ -51,7 +48,7 @@ ms.locfileid: "37273197"
 |Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String|  
-|Valore predefinito|None|  
+|Valore predefinito|Nessuno|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -59,7 +56,7 @@ ms.locfileid: "37273197"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[CalculationProperty](../objects/calculationproperty-element-assl.md), [misura](../objects/measure-element-assl.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Note  
  La proprietà `FormatString` contiene un'espressione MDX (Multidimensional Expressions). Nel caso di `CalculationProperty` elementi, si applica agli elementi con un [CalculationType](calculationtype-element-assl.md) dei *membro* oppure *celle*.  

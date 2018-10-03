@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5f3ad348ebfc89706eb57dea34f91342550189b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d570104b705c55c926d3cf8e4c15af4111be29b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236301"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094451"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services Concepts (SSRS)
   In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -147,7 +144,7 @@ ms.locfileid: "37236301"
   
 -   Usare la funzione `Lookup` per cercare i valori delle coppie nome/valore in un set di dati diverso.  
   
- **Parti del report**  
+ **parti del report**  
  Una definizione di parte del report è un elemento del server di report (con estensione rsc), cioè un frammento XML di un file di definizione del report. Le parti del report vengono create da una definizione del report e dalla successiva selezione degli elementi nel report da pubblicare separatamente come parti del report. Nelle parti del report sono incluse aree dati, rettangoli e relativi elementi contenuti nonché immagini. È possibile salvare una parte del report con i relativi set di dati dipendenti e i riferimenti alle origini dati condivise in modo da poterla riutilizzare negli altri report. Per altre informazioni, vedere [Parti del report in Progettazione report &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   
  **Avvisi dati**  
@@ -203,7 +200,7 @@ ms.locfileid: "37236301"
  ![diagramma relativo all'elaborazione dei report](media/report-execution.gif "diagramma relativo all'elaborazione dei report")  
 Diagramma relativo all'elaborazione dei report  
   
- **Definizione del report**  
+ **definizione del report**  
  Il file di definizione del report (con estensione rdl) archiviato su un server di report. Per altre informazioni, vedere [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
  **Report compilato e formato report intermedio**  
@@ -215,7 +212,7 @@ Diagramma relativo all'elaborazione dei report
  **Report elaborato**  
  Un report completamente elaborato che contiene dati e informazioni sul layout.  
   
- **Report sottoposto a rendering**  
+ **report sottoposto a rendering**  
  Un report elaborato completamente viene inviato a un renderer di report per combinare i dati e il layout in ogni pagina del formato di rendering di destinazione. Le estensioni per il rendering sono personalizzabili ed estendibili. Il formato di rendering predefinito per un report è HTML 4.0. Per altre informazioni, vedere [Layout e rendering della pagina &#40;Generatore report e SSRS&#41;](report-design/page-layout-and-rendering-report-builder-and-ssrs.md) ed [Estensioni &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Report esportato**  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 259de5dd91dfdc50958b25589b90fdadde4ac005
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15ffda591bf3a27ff5599428abb63b652b61d8bc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37174957"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073471"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Creare una mappa documento (Generatore report e SSRS)
   Una mappa documento offre un set di collegamenti a elementi di report in un report visualizzabile. Quando si visualizza un report che include una mappa documento, accanto al report viene visualizzato un riquadro distinto. Gli utenti possono fare clic sui collegamenti della mappa documento per passare alla pagina del report in cui viene visualizzato l'elemento specifico. Le sezioni del report e i gruppi sono disposti in una gerarchia di collegamenti. Se si fa clic sugli elementi nella mappa documento, il report viene aggiornato e viene visualizzata l'area del report corrispondente all'elemento nella mappa documento.  

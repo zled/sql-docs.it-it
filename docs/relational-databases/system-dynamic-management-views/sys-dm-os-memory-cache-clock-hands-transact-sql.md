@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_memory_cache_clock_hands_TSQL
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_cache_clock_hands dynamic management view
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de0ef16300632983a07df2adf53734a1c4ac4256
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 6b39f40a36a9b9a639b8b6c90f6a6a37f7a32a4e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815111"
 ---
 # <a name="sysdmosmemorycacheclockhands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 05/23/2018
   Restituisce lo stato di ogni indicatore per un orologio della cache.  
   
 > [!NOTE]  
->  Per chiamare questo metodo dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys.dm_pdw_nodes_os_memory_cache_clock_hands**.  
+>  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_memory_cache_clock_hands**.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -50,14 +48,14 @@ ms.lasthandoff: 05/23/2018
 |**last_tick_time**|**bigint**|Ora, espressa in millisecondi, in cui l'indicatore dell'orologio si è spostata per l'ultima volta. Non ammette i valori Null.|  
 |**round_start_time**|**bigint**|Ora, espressa in millisecondi, dell'operazione precedente. Non ammette i valori Null.|  
 |**last_round_start_time**|**bigint**|Tempo totale, espresso in millisecondi, impiegato dall'orologio per completare il ciclo precedente. Non ammette i valori Null.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le informazioni vengono archiviate in memoria in una struttura denominata cache in memoria. Le informazioni archiviate nella cache possono essere dati, voci di indice, piani di procedure compilati e un'ampia gamma di altri tipi di informazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per evitare la nuova creazione delle informazioni, queste vengono mantenute nella cache in memoria per il maggior tempo possibile e vengono in genere rimosse quando risultano obsolete oppure quando è necessario spazio di memoria per nuove informazioni. Il processo di rimozione delle informazioni meno recenti è denominato operazione della memoria. L'operazione della memoria è un'attività frequente, ma non continua. Un algoritmo di orologio controlla l'operazione nella cache in memoria. Ogni orologio può controllare diverse operazioni della memoria tramite indicatori. L'indicatore dell'orologio della cache in memoria rappresenta la posizione corrente di uno degli indicatori di un'operazione della memoria.  
 
 ## <a name="see-also"></a>Vedere anche  

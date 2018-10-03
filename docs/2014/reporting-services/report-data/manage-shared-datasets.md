@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: af52516dccd163380cc6c36be9d0a862f3de94e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 942038c997c9b656f51ebe03875d3c2ec84adff8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168302"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118537"
 ---
 # <a name="manage-shared-datasets"></a>Gestire set di dati condivisi
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]i set di dati condivisi consentono il recupero di dati da origini dati condivise tramite cui si esegue la connessione alle origini dati esterne. Un set di dati condiviso consente di condividere una query per fornire un set di dati coerente a più report. Nella query del set di dati possono essere inclusi i parametri di quest'ultimo. È possibile configurare un set di dati condiviso per memorizzare nella cache i risultati della query per specifiche combinazioni di parametri al primo utilizzo o specificando una pianificazione. È possibile inoltre utilizzare la memorizzazione nella cache del set di dati condiviso in combinazione con la memorizzazione nella cache dei report e con i feed di dati del report per consentire di gestire l'accesso a un'origine dati.  

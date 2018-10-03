@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connection.login.dtsserver.f1
 ms.assetid: 5be897bd-f36c-4c6a-a91a-13d0d016f8b6
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b5311dc3879d09c1c7a052bb3bddb16e59be998
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 64c565c45288de157a3ba4c6c367ae7f8849dfee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812617"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096261"
 ---
 # <a name="connect-to-server-integration-services"></a>Connetti al server (Integration Services)
   Usare questa finestra di dialogo per visualizzare o specificare le opzioni per la connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -42,7 +39,7 @@ ms.locfileid: "43812617"
  Questa opzione non è disponibile in quanto per [!INCLUDE[ssIS](../includes/ssis-md.md)]è possibile utilizzare solo l'autenticazione di Windows.  
   
  **Password**  
- Questa opzione non è disponibile in quanto per [!INCLUDE[ssIS](../includes/ssis-md.md)]è possibile utilizzare solo l'autenticazione di Windows.  
+ Questa opzione non è disponibile in quanto per [!INCLUDE[ssIS](../includes/ssis-md.md)] è possibile utilizzare solo l'autenticazione di Windows.  
   
  **Connect**  
  Fare clic su questo pulsante per connettersi al server selezionato.  

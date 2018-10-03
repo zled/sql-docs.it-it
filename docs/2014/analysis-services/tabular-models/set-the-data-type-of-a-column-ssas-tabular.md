@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d0871dbef7b9b9a053a7c79688ec7073d2d8fdcc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82b2d4a687c490ed1909a27fc55fdece9cc3662c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312231"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083213"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Impostare il tipo di dati di una colonna (SSAS tabulare)
   Quando si importano o incollano dati in un modello, Progettazione modelli consentirà di rilevare e applicare automaticamente i tipi di dati. Dopo aver aggiunto i dati al modello, è possibile modificare manualmente il tipo di dati di una colonna per cambiarne la modalità di archiviazione oppure limitarsi a modificare il formato della modalità di visualizzazione dei dati.  
@@ -54,7 +51,7 @@ ms.locfileid: "37312231"
   
 |Tipi di dati dei modelli|  
 |----------------------|  
-|Text<br /><br /> Numero decimale<br /><br /> Numero intero<br /><br /> Currency<br /><br /> TRUE/FALSE<br /><br /> date|  
+|Text<br /><br /> Numero decimale<br /><br /> Numero intero<br /><br /> Currency<br /><br /> TRUE/FALSE<br /><br /> Data|  
   
  Se il tipo di dati è errato o è diverso da quello desiderato, è possibile eseguire diverse operazioni:  
   

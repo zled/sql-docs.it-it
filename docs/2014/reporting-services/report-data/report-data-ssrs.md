@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1f8b9d8587c41a45ee60203debee778a88714dd9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e57b58eb5b3a3321397dc17668b92ab10e0c5169
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214791"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093281"
 ---
 # <a name="report-data-ssrs"></a>Dati del report (SSRS)
   I dati del report possono provenire da più origini dei dati dell'organizzazione. Il primo passaggio nella progettazione di un report consiste nel creare le origini dati e i set di dati che rappresentano i dati del report sottostanti. Ogni origine dati include le informazioni sulle connessione dati. Ogni set di dati include un comando di query che consente di definire il set di campi da utilizzare come dati di un'origine dati. Per visualizzare i dati di ogni set di dati, aggiungere un'area dati, ad esempio una tabella, una matrice, un grafico o una mappa. Durante l'elaborazione del report, le query vengono eseguite sull'origine dati e ogni area dati viene espansa in base alle esigenze per visualizzare i risultati della query per il set di dati.  
@@ -67,7 +64,7 @@ ms.locfileid: "37214791"
   
 -   Le credenziali delle origini dati variano in base al tipo di origine dati e a seconda se i report vengono visualizzati nel client, nel server di report o nel sito di SharePoint. Per altre informazioni, vedere [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](../security/set-permissions-for-report-server-items-on-a-sharepoint-site.md), [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../integration-services/connection-manager/data-sources.md) e le informazioni sulle credenziali specifiche di ogni strumento in [Strumenti di Reporting Services](../tools/reporting-services-tools.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  Attività correlate alla creazione di connessioni dati, all'aggiunta di dati da origini, set di dati e query esterne.  
   
 |||  

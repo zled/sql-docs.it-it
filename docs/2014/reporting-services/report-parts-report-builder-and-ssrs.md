@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-caps.latest.revision: 8
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3fd8f519abce87b224d062cb245365b42d5ffc79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 818d24b62366e463b4b5e9eca15ce9af70336176
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262077"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098991"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Parti del report (Generatore report e SSRS)
   È possibile pubblicare come *parti di report*elementi quali tabelle, matrici, grafici e immagini. Le parti di report sono elementi pubblicati separatamente in un server di report e che possono essere riutilizzati in altri report. Le parti di report hanno un'estensione di file rsc.  

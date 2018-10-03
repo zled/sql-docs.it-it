@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Audit Database Mirroring Login event class
 - database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a91244c7e4ef93c9a5e34b7edb74eeb94bf75370
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d2c920a2b7341b75f85c2c9cf46bc381d607e1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288977"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128861"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Classe di evento Audit Database Mirroring Login
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Audit Database Mirroring Login** per segnalare messaggi di controllo relativi alla sicurezza del trasporto per il mirroring di database.  
@@ -54,7 +51,7 @@ ms.locfileid: "37288977"
 |**SPID**|**int**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |**State**|**int**|Indica la posizione che ha generato l'evento all'interno del codice sorgente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni punto che può generare questo evento è contraddistinto da un codice di stato diverso. Questo codice di stato consente al supporto tecnico Microsoft di individuare la posizione in cui è stato generato l'evento.|30|no|  
-|**TargetUserName**|**nvarchar**|Stato di accesso. I possibili valori sono i seguenti:<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> error<br /><br /> <br /><br /> Nota: ISC = Initiate Security Context. ASC = Accept Security Context.|39|no|  
+|**TargetUserName**|**nvarchar**|Stato di accesso. I possibili valori sono i seguenti:<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> <br /><br /> Nota: ISC = Initiate Security Context. ASC = Accept Security Context.|39|no|  
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|no|  
   
  Nella tabella seguente sono elencati i valori di sottoclasse per questa classe di evento.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
-caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8930abc8ead43bed31d53ed8e412d5d367b6051c
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395915"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050078"
 ---
 # <a name="back-up-database-general-page"></a>Backup database (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Backup database** per visualizzare o modificare le impostazioni per un'operazione di backup del database.  
@@ -57,7 +54,7 @@ ms.locfileid: "40395915"
  **Tipo di backup**  
  È possibile selezionare il tipo di backup che si desidera eseguire per il database specificato.  
   
-|Tipo di backup|Disponibile per|Restrictions|  
+|Tipo di backup|Disponibile per|Restrizioni|  
 |-----------------|-------------------|------------------|  
 |Completo|Database, file e filegroup|Per il database **master** è possibile eseguire solo backup completi.<br /><br /> Quando si utilizza il modello di recupero con registrazione minima, i backup di file e filegroup sono disponibili solo per filegroup di sola lettura.|  
 |Differenziale|Database, file e filegroup|Quando si utilizza il modello di recupero con registrazione minima, i backup di file e filegroup sono disponibili solo per filegroup di sola lettura.|  
@@ -79,7 +76,7 @@ ms.locfileid: "40395915"
 |**Database**|È possibile specificare di eseguire il backup dell'intero database.|  
 |**File e filegroup**|È possibile specificare di eseguire il backup dei file e/o dei filegroup specificati.<br /><br /> Selezionando questa opzione, viene visualizzata la finestra di dialogo **Seleziona file e filegroup** . Dopo avere selezionato i filegroup o i file di cui eseguire il backup e avere scelto **OK**, le opzioni selezionate verranno visualizzate nella casella **File e filegroup** .|  
   
-### <a name="destination"></a>Destination  
+### <a name="destination"></a>Destinazione  
  Con le opzioni del pannello **Destinazione** è possibile specificare il tipo di dispositivo di backup per l'operazione di backup e di trovare un dispositivo di backup logico o fisico esistente.  
   
 > [!NOTE]  

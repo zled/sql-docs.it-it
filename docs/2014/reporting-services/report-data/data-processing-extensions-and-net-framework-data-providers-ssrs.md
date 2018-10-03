@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - report data [Report Builder], accessing
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 80d27aca81ccac9b176cbc4fbab21b8cfae544b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f127b201d3141fc3480aa4f1c07ae0e69a03f38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150082"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093067"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Estensioni per l'elaborazione dati e provider di dati .NET Framework (SSRS)
   Un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è un componente installato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], progettato per recuperare i dati da un tipo specifico di origine dati e offrire funzionalità aggiuntive per supportare la progettazione e l'elaborazione dei report. Un'estensione per l'elaborazione dati di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è un componente reso disponibile da [!INCLUDE[msCoName](../../includes/msconame-md.md)] o da terze parti in grado di supportare le interfacce <xref:System.Data> che consentono di recuperare e modificare i dati da un tipo specifico di origine dati.  

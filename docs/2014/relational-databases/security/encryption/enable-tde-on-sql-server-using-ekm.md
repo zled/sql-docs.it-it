@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], TDE using an EKM
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - EKM, TDE how to
 - Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
-caps.latest.revision: 23
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: f9b31103c887986210e96d39ffdfb00da0d6bac7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e55afa78d82c19d9a6a09226c537ca95f65105ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202891"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125081"
 ---
 # <a name="enable-tde-using-ekm"></a>Abilitare TDE utilizzando EKM
   In questo argomento viene descritto come abilitare Transparent Data Encryption (TDE) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] per proteggere una chiave di crittografia del database tramite una chiave asimmetrica archiviata in un modulo Extensible Key Management (EKM) con [!INCLUDE[tsql](../../../includes/tsql-md.md)].  

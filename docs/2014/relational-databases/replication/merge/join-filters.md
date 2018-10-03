@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], join
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - merge replication join filters [SQL Server replication]
 - join filters
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14a87090d28b91744fcfb9328045d8aa00c1022c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18a01befd18bfd5a150eea3a7dedf1d71f3e495a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154482"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113678"
 ---
 # <a name="join-filters"></a>filtri di join
   Un filtro di join consente di filtrare una tabella in base al tipo di filtro applicato a una tabella correlata nella pubblicazione Viene in genere filtrata una tabella padre mediante un filtro con parametri, quindi vengono definiti uno o più filtri di join così come si definisce un join tra tabelle. I filtri di join estendono il filtro con parametri affinché i dati nelle tabelle correlate vengano replicati solo se corrispondenti alla clausola di filtro di join.  

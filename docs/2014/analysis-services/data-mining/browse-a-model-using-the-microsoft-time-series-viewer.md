@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], continuous columns
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - continuous columns
 - regression algorithms [Analysis Services]
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 740551a33911ed625df252103bb9cae9f1db60cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b05aec565feb655f9c66df928656ecef4bc675f1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191163"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137561"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Times Series
   Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series disponibile in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series è un algoritmo di regressione che consente di creare modelli di data mining per la stima di colonne continue, relative ad esempio alle vendite di un prodotto, in uno scenario di previsione. Questi modelli Time Series possono includere informazioni in base ad algoritmi diversi:  

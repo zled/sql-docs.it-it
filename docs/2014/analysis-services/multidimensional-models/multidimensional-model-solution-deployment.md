@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, planning
 - deploying [Analysis Services]
 - deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 781bbeed98772266d4ea9c228c42426df424fe1c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5874eae9b579371740f9faffed73957b78d86be2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222221"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113553"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Distribuzione di soluzioni di modelli multidimensionali
   Dopo aver completato lo sviluppo di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile distribuire il database in un server Analysis Services. In Analysis Services sono disponibili sei possibili metodi di distribuzione che possono essere utilizzati per spostare il database in un server di prova o di produzione. I metodi di distribuzione sono elencati di seguito in ordine di convenienza: automazione AMO, XMLA, Distribuzione guidata, Utilità di distribuzione, Sincronizzazione guidata database, Backup e ripristino.  

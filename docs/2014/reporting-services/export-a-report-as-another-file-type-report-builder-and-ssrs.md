@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
-caps.latest.revision: 9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 88d0969efabebe3da05ebfce8d666eb78ff4ba2d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0704648805ce9538e16ec504a8c3508b71f1c6ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166199"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053741"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Esportare un report in un altro tipo di file (Generatore report e SSRS)
   È possibile eseguire il rendering di un report in un altro formato di file, ad esempio CSV, immagine, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)] o [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)], durante la visualizzazione in anteprima in Generatore report o Progettazione report oppure durante la visualizzazione nel server di report. Il rendering del report in un formato specifico risulta utile quando si desidera salvare immediatamente il report in un altro tipo di file senza pubblicarlo sul server di report oppure quando si desidera visualizzare l'aspetto che avrà il report quando verrà recapitato ai lettori in un formato specifico. Il rendering del report nel server di report risulta utile quando si impostano sottoscrizioni o si recapitano i report tramite posta elettronica oppure se si desidera salvare un report disponibile nel server di report. Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  

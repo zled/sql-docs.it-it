@@ -1,35 +1,32 @@
 ---
-title: 'Passaggio 5: Eseguire il Commit della transazione | Documenti Microsoft'
+title: 'Passaggio 5: Eseguire il Commit della transazione | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application process [ODBC], committing transactions
 - committing transactions [ODBC]
 - transaction commit [ODBC]
 ms.assetid: 311685e2-f7b5-4ddc-8020-59380cd2f035
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a311752588742df8f597ce2957c6ba600d8b47c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 341f34afa1dbe65f4b83a46f461bb93f4fb4f4c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914736"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844295"
 ---
-# <a name="step-5-commit-the-transaction"></a>Passaggio 5: Eseguire il Commit della transazione
-Il passaggio successivo è il commit della transazione, come illustrato nella figura seguente.  
+# <a name="step-5-commit-the-transaction"></a>Passaggio 5: Eseguire il commit della transazione
+Il passaggio successivo è eseguire il commit della transazione, come illustrato nella figura seguente.  
   
  ![Viene illustrato come eseguire il commit di una transazione](../../../odbc/reference/develop-app/media/pr16.gif "pr16")  
   
- Il quinto passaggio consiste nel chiamare **SQLEndTran** per eseguire il commit o il rollback della transazione. L'applicazione esegue questo passaggio solo se è impostata la modalità di commit della transazione di commit manuale; Se la modalità di commit della transazione è commit automatico, ovvero l'impostazione predefinita, quando viene eseguita l'istruzione viene automaticamente il commit della transazione. Per ulteriori informazioni, vedere [transazioni](../../../odbc/reference/develop-app/transactions-odbc.md).  
+ Il quinto passaggio consiste nel chiamare **SQLEndTran** per eseguire il commit o rollback della transazione. L'applicazione esegue questo passaggio solo se la modalità di commit delle transazioni impostata su commit manuale; Se la modalità di commit delle transazioni è commit automatico, ovvero l'impostazione predefinita, viene automaticamente eseguito il commit della transazione quando viene eseguita l'istruzione. Per altre informazioni, vedere [transazioni](../../../odbc/reference/develop-app/transactions-odbc.md).  
   
  Per eseguire un'istruzione in una nuova transazione, l'applicazione torna al passaggio 3. Per disconnettersi dall'origine dati, l'applicazione procede al passaggio 6.

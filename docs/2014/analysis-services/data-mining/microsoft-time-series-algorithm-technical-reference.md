@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 78a54bc173a3d3b780e57752d86aebc33249066a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 13bbcae47cddd6b44b863b75884cd919003dfe80
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323621"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089141"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Time Series
   Nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series sono inclusi due algoritmi distinti per l'analisi delle serie temporali:  
@@ -162,7 +159,7 @@ ms.locfileid: "37323621"
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series supporta i tipi di contenuto specifici delle colonne di input, i tipi di contenuto specifici delle colonne stimabili e i flag di modellazione elencati nella tabella seguente.  
   
-|colonna|Tipi di contenuto|  
+|Colonna|Tipi di contenuto|  
 |------------|-------------------|  
 |Attributo di input|Continuous, Key, Key Time e Table|  
 |Attributo stimabile|Continuous e Table|  

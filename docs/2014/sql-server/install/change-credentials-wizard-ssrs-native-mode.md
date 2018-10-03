@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.changecredentialswizard.F1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Change Credentials Wizard
 - report server database, reconfigure
 ms.assetid: 9eb4060a-9c3e-41e0-8767-3cfaebc45de7
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0163bff016043e31bf36a689220976b85e4ae097
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 632cfe6f1ea61612f59225f38a665ef73da0d898
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078495"
 ---
 # <a name="change-credentials-wizard-ssrs-native-mode"></a>Procedura guidata Modifica credenziali (modalità nativa SSRS)
   In Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile la procedura guidata Modifica credenziali, che consente di eseguire in modo semplificato i passaggi necessari per riconfigurare l'account utilizzato dal server di report per la connessione al database del server di report. Quando si modificano le credenziali, Gestione configurazione aggiorna tutte le autorizzazioni e le informazioni sull'account di accesso al database nel server di database per il database del server di report utilizzato attivamente dal server di report.  

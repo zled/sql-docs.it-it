@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.general.f1
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
-caps.latest.revision: 29
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a6e8e45ea1ba74aeef1f063ad03154a9574bc9e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 955dcff3399f6936fb5b1f8042dae4658a55a11f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269807"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048971"
 ---
 # <a name="query-options-execution-general-page"></a>Opzioni query - Esecuzione (pagina Generale)
   Utilizzare questa pagina per specificare le opzioni per l'esecuzione di query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per accedere a questa finestra di dialogo, fare clic con il pulsante destro del mouse su una finestra dell'editor di query e quindi scegliere **Opzioni query**.  
@@ -39,7 +36,7 @@ ms.locfileid: "37269807"
  **Separatore di batch**  
  Consente di digitare una parola che verrà utilizzata per separare le istruzioni Transact-SQL in batch. Il valore predefinito è GO.  
   
- **Per impostazione predefinita, Apri le nuove query in modalità SQLCMD**  
+ **Per impostazione predefinita, apri le nuove query in modalità SQLCMD**  
  Selezionare questa casella di controllo per aprire le nuove query in modalità SQLCMD. Questa casella di controllo è disponibile solo se la finestra di dialogo è stata aperta tramite il menu **Strumenti** .  
   
  Quando si seleziona questa opzione, tenere presente le limitazioni seguenti:  
