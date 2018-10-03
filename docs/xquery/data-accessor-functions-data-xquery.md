@@ -1,36 +1,30 @@
 ---
-title: Funzione data (XQuery) | Documenti Microsoft
+title: Funzione data (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:data function
 - data function [XQuery]
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 74f8e5b5df2b8a6a95766576bdf5a1c8d83a4027
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 949286cef32dd3c6c9e55e1ad34504afffc20989
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078078"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734050"
 ---
-# <a name="data-accessor-functions---data-xquery"></a>Funzioni di accesso dati - dati (XQuery)
+# <a name="data-accessor-functions---data-xquery"></a>Funzioni di accesso dati - data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Restituisce il valore tipizzato per ciascun elemento specificato da *$arg*.  
@@ -46,7 +40,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  Sequenza di elementi per i quali verranno restituiti i valori tipizzati.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Per i valori tipizzati sono valide le osservazioni seguenti:  
   
 -   Il valore tipizzato di un valore atomico è il valore atomico.  
@@ -69,11 +63,11 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
  Per i nodi elemento tipizzati sono valide le osservazioni seguenti:  
   
--   Se l'elemento ha un tipo di contenuto semplice, **data ()** restituisce il valore tipizzato dell'elemento.  
+-   Se l'elemento ha un tipo di contenuto semplice **data ()** restituisce il valore tipizzato dell'elemento.  
   
--   Se il nodo è di tipo complesso, inclusi xs: anyType, **data ()** restituisce un errore statico.  
+-   Se il nodo è di tipo complesso, xs: anyType, compresi **data ()** restituisce un errore statico.  
   
- Sebbene l'utilizzo di **data ()** funzione è spesso facoltativa, come illustrato negli esempi seguenti, specificando il **data ()** funzione aumenta in modo esplicito la leggibilità della query. Per ulteriori informazioni, vedere [nozioni fondamentali su XQuery](../xquery/xquery-basics.md).  
+ Anche se tramite il **data ()** funzione è spesso facoltativa, come illustrato negli esempi seguenti, specificando la **data ()** funzione aumenta in modo esplicito la leggibilità della query. Per altre informazioni, vedere [nozioni fondamentali su XQuery](../xquery/xquery-basics.md).  
   
  Non è possibile specificare **data ()** nel codice XML creato, come illustrato nell'esempio seguente:  
   
@@ -87,7 +81,7 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. Utilizzo della funzione XQuery data() per estrarre il valore tipizzato di un nodo  
- La query seguente illustra come **data ()** funzione viene utilizzata per recuperare i valori di attributo, un elemento e un nodo di testo:  
+ La query seguente viene illustrato come la **data ()** funzione viene utilizzata per recuperare i valori di attributo, un elemento e un nodo di testo:  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -112,7 +106,7 @@ WHERE ProductModelID = 19
 <Root ProductID="19" Feature="parts and labor"/>  
 ```  
   
- Come accennato, la **data ()** (funzione) è facoltativa durante la creazione di attributi. Se non si specifica il **data ()** funzione, in modo implicito presuppone. La query seguente genera gli stessi risultati della query precedente:  
+ Come accennato, il **data ()** funzione è facoltativa durante la creazione di attributi. Se non si specifica la **data ()** funzione, in modo implicito presuppone. La query seguente genera gli stessi risultati della query precedente:  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -131,9 +125,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Gli esempi seguenti illustrano le istanze in cui il **data ()** è la funzione.  
+ Gli esempi seguenti illustrano le istanze in cui il **data ()** è necessaria la funzione.  
   
- Nella query seguente, **$pd / P1: Specifications / Material** restituisce il <`Material`> elemento. Inoltre, **dati ($pd/P1: Specifications/Material)** restituisce dati di tipo carattere tipizzati come xdt: untypedAtomic, perché <`Material`> non è tipizzato. Quando l'input non è tipizzato, il risultato del **data ()** è tipizzato come **xdt: untypedAtomic**.  
+ Nella query seguente, **$pd / pD/P1:Specifications/Material / materiale** restituisce il <`Material`> elemento. È inoltre **dei dati ($pd/pD/P1:Specifications/Material/materiale)** restituisce dati di tipo carattere tipizzati come xdt: untypedAtomic, perché <`Material`> non è tipizzato. Quando l'input è non tipizzato, il risultato del **data ()** tipizzata come **xdt: untypedAtomic**.  
   
 ```  
 SELECT CatalogDescription.query('  

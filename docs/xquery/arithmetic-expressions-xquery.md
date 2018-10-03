@@ -1,34 +1,28 @@
 ---
-title: Espressioni aritmetiche (XQuery) | Documenti Microsoft
+title: Espressioni aritmetiche (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - expressions [XQuery], arithmetic
 - arithmetic expressions
 ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b39c5febb04d22b5dd79791585cd1c0fb51e1649
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d970209b71a842aa1c78b2f7dd0db980e0ce73e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642649"
 ---
 # <a name="arithmetic-expressions-xquery"></a>Espressioni aritmetiche (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +36,7 @@ SELECT @x.query('2 div 2')
 SELECT @x.query('2 * 2')  
 ```  
   
- Poiché **idiv** non è supportato, una soluzione consiste nell'utilizzare il **xs:integer()** costruttore:  
+ In quanto **idiv** non è supportati, una soluzione consiste nell'utilizzare il **xs:integer()** costruttore:  
   
 ```  
 DECLARE @x xml  
@@ -53,9 +47,9 @@ SET @x=''
 SELECT @x.query('xs:integer(2 div 3)')  
 ```  
   
- Il tipo risultante da un operatore aritmetico dipende dai tipi dei valori di input. Se gli operandi sono di tipo diverso, all'occorrenza verrà eseguito il cast di uno o entrambi gli operandi a un tipo di base primitivo comune, in base alla gerarchia dei tipi. Per informazioni sulla gerarchia dei tipi, vedere [le regole di cast di tipo in XQuery](../xquery/type-casting-rules-in-xquery.md).  
+ Il tipo risultante da un operatore aritmetico dipende dai tipi dei valori di input. Se gli operandi sono di tipo diverso, all'occorrenza verrà eseguito il cast di uno o entrambi gli operandi a un tipo di base primitivo comune, in base alla gerarchia dei tipi. Per informazioni sulla gerarchia dei tipi, vedere [regole di cast di tipi in XQuery](../xquery/type-casting-rules-in-xquery.md).  
   
- È possibile che i tipi numeric vengano promossi se ai due operandi sono associati tipi di base numerici diversi. Ad esempio, aggiungendo un **xs: decimal** per un **xs: double** innanzitutto modificare il valore decimale in un valore double. Viene quindi eseguita l'addizione, il cui risultato sarà un valore double.  
+ È possibile che i tipi numeric vengano promossi se ai due operandi sono associati tipi di base numerici diversi. Ad esempio, aggiungendo un **xs: decimal** a un **xs: double** innanzitutto modificare il valore decimale in un valore double. Viene quindi eseguita l'addizione, il cui risultato sarà un valore double.  
   
  Vengono eseguito il cast al tipo di base numerico di altro operando o di valori atomici non tipizzati **xs: double** se anche l'altro operando non è tipizzato.  
   
@@ -64,6 +58,6 @@ SELECT @x.query('xs:integer(2 div 3)')
   
 -   Gli argomenti per gli operatori aritmetici devono essere di tipo numerico o **untypedAtomic**.  
   
--   Operazioni su **xs: integer** valori restituiscono un valore di tipo **xs: decimal** anziché **xs: integer**.  
+-   Operazioni sui **xs: integer** i valori restituiscono un valore di tipo **xs: decimal** anziché **xs: integer**.  
   
   

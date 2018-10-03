@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 801009112dffaa83bd1c938194a27934e4bbbdaa
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082713"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621079"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configura SQL Server gruppo di disponibilità AlwaysOn per la disponibilità elevata in Linux
 
@@ -68,6 +66,8 @@ I passaggi per creare un gruppo di disponibilità nei server Linux per la dispon
 [!INCLUDE [Create Prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## <a name="create-the-ag"></a>Creare il gruppo di disponibilità
+
+Gli esempi in questa sezione illustrano come creare il gruppo di disponibilità con Transact-SQL. È anche possibile usare la creazione guidata gruppo di SQL Server Management Studio disponibilità. Quando si crea un gruppo di disponibilità con la procedura guidata, restituirà un errore quando si crea un join le repliche per il gruppo di disponibilità. Per risolvere questo problema, concedere `ALTER`, `CONTROL`, e `VIEW DEFINITIONS` a di pacemaker nel gruppo di disponibilità in tutte le repliche. Una volta nella replica primaria vengono concesse le autorizzazioni, aggiungere i nodi per il gruppo di disponibilità tramite la procedura guidata, ma per la disponibilità elevata funzionare correttamente, concedere l'autorizzazione per tutte le repliche.
 
 Per una configurazione a disponibilità elevata che garantisce il failover automatico, il gruppo di disponibilità richiede almeno tre repliche. Una delle seguenti configurazioni possono supportare la disponibilità elevata:
 
@@ -192,6 +192,13 @@ Eseguire **sola** degli script seguenti:
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>Aggiungere le repliche secondarie al gruppo di disponibilità
 
+Richiede all'utente di pacemaker `ALTER`, `CONTROL`, e `VIEW DEFINITION` autorizzazioni nel gruppo di disponibilità in tutte le repliche. Per concedere le autorizzazioni, eseguire lo script di Transact-SQL seguente dopo aver creato il gruppo di disponibilità nella replica primaria e ogni replica secondaria immediatamente dopo essere stati aggiunti al gruppo di disponibilità. Prima di eseguire lo script, sostituire `<pacemakerLogin>` con il nome dell'account utente pacemaker.
+
+```Transact-SQL
+GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
+GRANT VIEW SERVER STATE TO <pacemakerLogin>
+```
+
 Lo script di Transact-SQL seguente aggiunge un'istanza di SQL Server a un gruppo di disponibilità denominato `ag1`. Aggiornare lo script per il proprio ambiente. In ogni istanza di SQL Server che ospita una replica secondaria, eseguire il Transact-SQL seguente per creare un join del gruppo di disponibilità.
 
 ```Transact-SQL
@@ -213,7 +220,7 @@ Se è stata seguita la procedura descritta in questo documento, è necessario un
 >Dopo aver configurato il cluster e aggiungere il gruppo di disponibilità come risorsa cluster, è possibile usare Transact-SQL per eseguire il failover le risorse del gruppo di disponibilità. Risorse del cluster SQL Server in Linux non sono collegate come strettamente con il sistema operativo perché sono in un Server Failover Cluster WSFC (Windows). Servizio SQL Server non riconosce la presenza del cluster. Tutte le orchestrazioni vengono eseguite mediante gli strumenti di gestione di cluster. In Ubuntu o RHEL utilizzare `pcs`. SLES usare `crm`. 
 
 >[!IMPORTANT]
->Se il gruppo di disponibilità è una risorsa cluster, è presente un problema noto nella versione corrente in cui il failover forzato con perdita di dati a una replica asincrona non funziona. Questo problema verrà risolto nella prossima versione. Failover manuale o automatico in una replica asincrona ha esito positivo. 
+>Se il gruppo di disponibilità è una risorsa cluster, è presente un problema noto nella versione corrente in cui il failover forzato con perdita di dati a una replica asincrona non funziona. Questo problema verrà risolto nella prossima versione. Failover manuale o automatico in una replica asincrona ha esito positivo.
 
 
 ## <a name="next-steps"></a>Passaggi successivi

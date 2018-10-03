@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.component: search
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 822e02a83041aa07dd912c271719f63c91f24cd5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4a6aa1d3f6417d91c43eb59ea40c773e7b2b2619
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43058496"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715699"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ Il servizio Utilità di avvio del daemon filtri full-text di SQL è un servizio 
   
 1.  Nel menu **Start** scegliere **Tutti i programmi**, espandere [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] e quindi fare clic su **Gestione configurazione SQL Server 2016**.  
   
-2.  In **Gestione configurazione SQL Server** fare clic su **Servizi di SQL Server**, fare clic con il pulsante destro del mouse su **Utilità di avvio del daemon filtri full-text di SQL (***nome istanza***)** e quindi scegliere **Proprietà**.  
+2.  In **Gestione configurazione SQL Server**, fare clic su **Servizi di SQL Server**, fare clic con il pulsante destro del mouse su **Utilità di avvio del daemon filtri full-text di SQL (**_nome istanza_**)**, quindi scegliere **Proprietà**.  
   
 3.  Fare clic sulla scheda **Accesso** della finestra di dialogo e quindi selezionare o immettere l'account con il quale eseguire i processi avviati dal servizio Utilità di avvio del daemon filtri full-text di SQL.  
   

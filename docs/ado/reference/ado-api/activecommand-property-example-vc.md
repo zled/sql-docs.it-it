@@ -1,34 +1,31 @@
 ---
-title: Esempio di proprietà ActiveCommand (VC + +) | Documenti Microsoft
+title: Esempio di proprietà ActiveCommand (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveCommand property [ADO], VC++ example
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 906bf36756aea9f76a800ab586f3d356d0887723
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 00eaea347c379a64863b095a17f9518e5d1897a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274930"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632219"
 ---
-# <a name="activecommand-property-example-vc"></a>Esempio di proprietà ActiveCommand (VC + +)
+# <a name="activecommand-property-example-vc"></a>Esempio della proprietà ActiveCommand (VC++)
 Questo esempio viene illustrato il [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) proprietà.  
   
- Una subroutine viene passato un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) i cui **ActiveCommand** proprietà viene utilizzata per visualizzare il testo del comando e parametro che ha creato il **Recordset**.  
+ Una subroutine viene assegnata un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) il cui **ActiveCommand** proprietà viene utilizzata per visualizzare il testo del comando e parametro che ha creato il **Recordset**.  
   
 ## <a name="example"></a>Esempio  
   
@@ -210,7 +207,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>Input di esempio  
+## <a name="sample-input"></a>Esempio di Input  
   
 ```  
 Ringer  
@@ -225,5 +222,5 @@ Name = 'Anne  Ringer'
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [Esempio di proprietà ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

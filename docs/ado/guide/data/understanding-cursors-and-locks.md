@@ -1,31 +1,28 @@
 ---
-title: Informazioni su cursori e blocchi | Documenti Microsoft
+title: Informazioni su cursori e blocchi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdbbaa5d57bdaa1bf3d9d784f3bb378a833db9cc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a5c5a0d7d51acfd2ecf6d0ffda945a6223c7e04f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273040"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696960"
 ---
 # <a name="understanding-cursors-and-locks"></a>Informazioni su cursori e blocchi
-È importante comprendere il funzionano di cursori che consente di selezionare il tipo di cursore migliore e più efficiente per i requisiti di accesso ai dati di un'applicazione. Una configurazione di cursore non ottimale può eseguire operazioni di accesso ai dati Purtroppo lente.  
+È importante comprendere il funzionamento dei cursori in modo che è possibile selezionare il tipo di cursore migliore e più efficiente per i requisiti di accesso ai dati di un'applicazione. Una configurazione di cursore-ottimali può risultare quasi lente operazioni di accesso ai dati.  
   
  Molte funzionalità di ADO **Recordset** oggetto dipendono dal tipo e posizione del cursore, nonché il tipo di blocco.  
   

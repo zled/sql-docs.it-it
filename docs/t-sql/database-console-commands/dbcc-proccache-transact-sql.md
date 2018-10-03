@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC PROCCACHE
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - displaying procedure cache information
 - DBCC PROCCACHE statement
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
-caps.latest.revision: 31
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 33589511fcb6461143a25558121d3ad66c65ea52
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d4580bb57680392c1e3901c2fd64b399c125736
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261540"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741109"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ La cache delle procedure viene utilizzata per inserire nella cache i piani compi
 ## <a name="result-sets"></a>Set di risultati  
 Nella tabella seguente vengono descritte le colonne del set di risultati.
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |**num proc buffs**|Numero totale di pagine utilizzate da tutte le voci nella cache delle procedure.|  
 |**num proc buffs used**|Numero totale di pagine utilizzate da tutte le voci in uso.|  
@@ -71,7 +68,7 @@ Nella tabella seguente vengono descritte le colonne del set di risultati.
 |**proc cache used**|Numero totale di voci in uso.|  
 |**proc cache active**|Disponibile solo per compatibilità con le versioni precedenti. Numero totale di voci in uso.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .
   
 ## <a name="see-also"></a>Vedere anche  

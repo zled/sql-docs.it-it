@@ -1,13 +1,11 @@
 ---
-title: Il formato di File di testo (Driver di File di testo) | Documenti Microsoft
+title: Formato di File di testo (Driver File di testo) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - delimited text lines
@@ -15,42 +13,41 @@ helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2f0de1d7b5ca14c5ae51cd057244d0c3252780a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911076"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739529"
 ---
-# <a name="text-file-format-text-file-driver"></a>Formato di File di testo (Driver di File di testo)
-Il driver ODBC testo supporta entrambi i file di testo delimitati e a larghezza fissa. Un file di testo è costituito da una riga di intestazione facoltativa e zero o più righe di testo.  
+# <a name="text-file-format-text-file-driver"></a>Formato file di testo (driver file di testo)
+Il driver ODBC testo supporta entrambi i file di testo a larghezza fissa che quelli delimitati. Un file di testo è costituito da una riga di intestazione facoltativi e zero o più righe di testo.  
   
- Anche se la riga di intestazione Usa lo stesso formato come le altre righe nel file di testo, il driver ODBC testo interpreta le voci di riga di intestazione come nomi di colonna, non i dati.  
+ Anche se la riga di intestazione Usa lo stesso formato come le altre righe nel file di testo, il driver ODBC testo interpreta le voci di riga di intestazione come nomi di colonna e non dati.  
   
- Una riga di testo delimitato contiene uno o più valori di dati separati da delimitatori: virgole, tabulazioni o un delimitatore personalizzato. Lo stesso delimitatore deve essere utilizzato in tutto il file. I valori null sono indicati da due delimitatori in una riga senza dati tra di essi. Stringhe di caratteri in una riga di testo delimitato da virgole possono essere racchiusi tra virgolette doppie (""). Spazi vuoti non possono verificarsi prima o dopo i valori delimitato da virgole.  
+ Una riga di testo delimitato contiene uno o più valori di dati separati da delimitatori: virgole, tabulazioni o un delimitatore personalizzato. Lo stesso delimitatore deve essere usato in tutto il file. I valori null sono contrassegnati da due delimitatori di una riga senza dati tra di essi. Stringhe di caratteri in una riga di testo delimitato da virgole possono essere racchiuso tra virgolette doppie (""). Spazi vuoti non possono verificarsi prima o dopo i valori delimitato da virgole.  
   
  La larghezza di ogni voce di dati in una riga di testo a larghezza fissa viene specificata in uno schema. I valori null sono indicati da spazi vuoti.  
   
- Le tabelle sono limitate a un massimo di 255 campi. I nomi di campo sono limitati a 64 caratteri e la larghezza dei campi è limitate a 32.766 caratteri. I record sono limitati a 65.000 byte.  
+ Le tabelle sono limitate a un massimo di 255 campi. I nomi dei campi sono limitate a 64 caratteri e la larghezza dei campi è limitati a 32,766 caratteri. I record sono limitati a 65.000 byte.  
   
  Un file di testo può essere aperto solo per un singolo utente. Più utenti non sono supportati.  
   
- La grammatica seguente, scritta per i programmatori, che definisce il formato di file di testo che può essere letti dal driver ODBC di testo:  
+ La grammatica seguente, scritta per i programmatori, definisce il formato di un file di testo che può essere letta dal driver ODBC di testo:  
   
 |Formato|Rappresentazione|  
 |------------|--------------------|  
-|Non corsivo|Caratteri che devono essere inseriti come indicato|  
-|*Italics*|Argomenti che vengono definiti altrove nella grammatica|  
+|Non-corsivo|Caratteri che devono essere immesso come visualizzato|  
+|*Corsivo*|Argomenti definiti in un' posizione nella grammatica|  
 |parentesi quadre ([])|Elementi facoltativi|  
 |le parentesi graffe ({})|Un elenco di scelte si escludono a vicenda|  
 |le barre verticali (&#124;)|Opzioni si escludono a vicenda separate|  
 |puntini di sospensione (...)|Elementi che possono essere ripetuti una o più volte|  
   
- Il formato di file di testo è:  
+ Il formato di un file di testo è:  
   
 ```  
 text-file ::=  
@@ -91,7 +88,7 @@ custom-delimitercustom-delimiter ::= any character except:
 ```  
   
 > [!NOTE]  
->  Il delimitatore in un file di testo delimitato personalizzato è specificato nel file ini.  
+>  Il delimitatore in un file di testo delimitato da personalizzata è specificato nel file ini.  
   
 ```  
 quote-character ::= "  
@@ -117,7 +114,7 @@ delimited-null ::=
 ```  
   
 > [!NOTE]  
->  Per i file delimitati, un valore NULL è rappresentato da dati non racchiuso tra delimitatori di due.  
+>  Per i file delimitati, un valore NULL è rappresentato da dati non tra due delimitatori.  
   
 ```  
 fixed-width-null ::= <SPACE>...  

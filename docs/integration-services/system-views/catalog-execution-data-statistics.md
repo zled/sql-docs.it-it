@@ -4,30 +4,26 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- integration-services
-ms.tgt_pltfrm: ''
+ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8afc79fecdf3731bc1579dc354a16162f0bfe3f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f413b5d7d5cb3480adfa8ee37b8fd4af520d6a61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721349"
 ---
 # <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Nella vista viene visualizzata una riga ogni volta che un componente flusso di dati invia dati a un componente a valle, per l'esecuzione di un determinato pacchetto. Le informazioni contenute in questa vista possono essere utilizzate per calcolare la velocità effettiva dei dati per un componente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|Identificatore univoco (ID) dei dati.|  
 |execution_id|**bigint**|ID univoco per l'istanza di esecuzione.|  
@@ -49,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Per visualizzare i dati per l'esecuzione di un determinato pacchetto, impostare il livello di registrazione su **Verbose**. Per altre informazioni, vedere [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per questa vista è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazione READ per l'istanza di esecuzione  
