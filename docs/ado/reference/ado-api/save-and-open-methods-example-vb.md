@@ -1,13 +1,11 @@
 ---
-title: Salvare e aprire l'esempio di metodi (VB) | Documenti Microsoft
+title: Salvare e aprire l'esempio di metodi (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - Save method [ADO], Visual Basic example
 - Open method [ADO]
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6541e8d8da07f956557d80d2f66144e56f216a24
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 313ebe2cee8fdae430401eb5443604a84b057a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281390"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828849"
 ---
-# <a name="save-and-open-methods-example-vb"></a>Salvare e aprire l'esempio di metodi (VB)
-Questi tre esempi viene illustrato come la [salvare](../../../ado/reference/ado-api/save-method.md) e [aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodi possono essere utilizzati insieme.  
+# <a name="save-and-open-methods-example-vb"></a>Esempio dei metodi Save e Open (VB)
+Questi tre esempi che illustrano come il [salvare](../../../ado/reference/ado-api/save-method.md) e [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodi possono essere usati insieme.  
   
- Si supponga di dover effettuare un viaggio e che si voglia lungo una tabella da un database. Prima di procedere, si accede ai dati come un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e salvarlo in un modulo da spostare. Quando si arriva a destinazione, si accede di **Recordset** come locale, disconnesso **Recordset**. Si apportano modifiche per il **Recordset**e quindi salvarlo nuovamente. Infine, quando si ritorna home, riconnettersi al database e aggiornarlo con le modifiche apportate in viaggio.  
+ Si supponga che si prevede un viaggio d'affari e vuole portare con sé una tabella da un database. Prima di procedere, si accede ai dati come una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e salvarlo in un form trasportabile. Quando si arriva a rappresenti la destinazione, è accedere il **Recordset** come un'unità locale disconnesso **Recordset**. Si apportano modifiche per il **Recordset**e quindi salvarlo nuovamente. Infine, quando si ritorna home, riconnettersi al database e aggiornarlo con le modifiche apportate in viaggio.  
   
  In primo luogo, accedere e salvare il ***autori*** tabella.  
   
@@ -88,20 +85,20 @@ End Sub
 'EndSaveVB  
 ```  
   
- Si è arrivati a questo punto, la destinazione. L'accesso è necessario il ***autori*** tabella come un'unità locale disconnesso **Recordset**. È necessario disporre di **MSPersist** provider nel computer in cui si utilizza per accedere al file salvato, a:\Pubs.xml.  
+ Si è arrivati a questo punto, la destinazione. Si accederà il ***Authors*** tabella come un'unità locale disconnesso **Recordset**. È necessario disporre di **MSPersist** provider nel computer in cui si usa per accedere al file salvato, a:\Pubs.xml.  
   
 ```  
 Attribute VB_Name = "Save"  
 ```  
   
- Infine, restituire home. Ora è possibile aggiornare il database con le modifiche.  
+ Infine, restituire home. A questo punto è possibile aggiornare il database con le modifiche.  
   
 ```  
 Attribute VB_Name = "Save"  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Ulteriori informazioni su persistenza Recordset](../../../ado/guide/data/more-about-recordset-persistence.md)   
+ [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Informazioni sulla persistenza dei Recordset](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Metodo Save](../../../ado/reference/ado-api/save-method.md)

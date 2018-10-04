@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_traninfo
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20a15bd329da102b45b3f611a9cbe86651ba2b3d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: c67f85b2a98b950b9614bfeb712c4d47d03d943b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795029"
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,15 +63,15 @@ ms.lasthandoff: 05/23/2018
 |**max_cmds_in_tran**|**int**|Numero massimo di comandi una transazione logica, come specificato dall'agente di lettura log.|  
 |**begin_time**|**datetime**|Ora di inizio della transazione.|  
 |**commit_time**|**datetime**|Ora in cui è stato eseguito il commit della transazione.|  
-|**session_id**|**int**|ID della sessione di analisi del log relativo all'acquisizione dei dati delle modifiche. Questa colonna è mappata al **session_id** colonna [Sys.dm cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  
-|**session_phase**|**int**|Numero che indica la fase in cui si trovava la sessione quando si è verificato l'errore. Questa colonna è mappata al **phase_number** colonna [Sys.dm cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).|  
+|**session_id**|**int**|ID della sessione di analisi del log relativo all'acquisizione dei dati delle modifiche. Questa colonna è associata ai **session_id** colonna nelle [DM cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  
+|**session_phase**|**int**|Numero che indica la fase in cui si trovava la sessione quando si è verificato l'errore. Questa colonna è associata ai **phase_number** colonna nelle [DM cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).|  
 |**is_known_cdc_tran**|**bit**|Indica che la transazione è controllata dall'acquisizione dei dati delle modifiche.<br /><br /> 0 = Transazione di replica della transazione.<br /><br /> 1 = Transazione di acquisizione dati delle modifiche.|  
 |**error_count**|**int**|Numero di errori.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede l'autorizzazione VIEW DATABASE STATE per il database di pubblicazione o il database abilitato per l'acquisizione dei dati delle modifiche.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Vengono restituite informazioni solo per gli oggetti di database replicati o per le tabelle abilitate per l'acquisizione dei dati delle modifiche caricati nella cache dell'articolo.  
   
 ## <a name="see-also"></a>Vedere anche  

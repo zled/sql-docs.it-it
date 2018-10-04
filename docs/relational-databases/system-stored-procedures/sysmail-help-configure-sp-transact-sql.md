@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_configure_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_help_configure_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_configure_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d000f176194551f844485bcab04bfd0e085d702
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1ef80206f9ff82cf1ab2917e90f61432be15c190
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838429"
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +41,13 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ## <a name="arguments"></a>Argomenti  
  [**@parameter_name** =] **'***parameter_name***'**  
- Nome dell'impostazione di configurazione da recuperare. Quando specificato, viene restituito il valore dell'impostazione di configurazione nel **@parameter_value** parametro di OUTPUT. Se non si **@parameter_name** è specificato, questa stored procedure restituisce un set di risultati contenente tutte le impostazioni di configurazione di posta elettronica Database nell'istanza.  
+ Nome dell'impostazione di configurazione da recuperare. Quando specificato, viene restituito il valore dell'impostazione di configurazione nel **@parameter_value** parametro di OUTPUT. Se non si specifica **@parameter_name** è specificato, questa stored procedure restituisce un set di risultati contenente tutte le impostazioni di configurazione di posta elettronica Database nell'istanza.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Se non si **@parameter_name** viene specificato, restituisce un set di risultati con le colonne seguenti.  
+ Se non si specifica **@parameter_name** viene specificato, restituisce un set di risultati con le colonne seguenti.  
   
 ||||  
 |-|-|-|  
@@ -60,15 +56,15 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 |**ParamValue**|**nvarchar(256)**|Valore del parametro di configurazione.|  
 |**description**|**nvarchar(256)**|Descrizione del parametro di configurazione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  La stored procedure **sysmail_help_configure_sp** sono elencate le impostazioni di configurazione di posta elettronica Database corrente per l'istanza.  
   
- Quando un **@parameter_name** è specificato, ma viene fornito alcun parametro di output per **@parameter_value**, questa stored procedure non genera alcun output.  
+ Quando un **@parameter_name** viene specificato, ma non viene fornito alcun parametro di output per **@parameter_value**, questa stored procedure non genera alcun output.  
   
  La stored procedure **sysmail_help_configure_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere richiamata con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono visualizzate le impostazioni di configurazione di Posta elettronica database per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

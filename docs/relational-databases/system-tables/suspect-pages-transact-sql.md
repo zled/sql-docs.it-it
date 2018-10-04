@@ -1,14 +1,11 @@
 ---
-title: suspect_pages (Transact-SQL) | Documenti Microsoft
+title: suspect_pages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - suspect_page_table
@@ -19,23 +16,22 @@ helpviewer_keywords:
 - suspect_pages system table
 - suspect pages [SQL Server]
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1aa5d789fbac65efadbc5a50ecf35e744dfa7233
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 112e45b056de0f1915a4ef5419e0e916f1f8d5a6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261383"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772619"
 ---
 # <a name="suspectpages-transact-sql"></a>suspect_pages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una riga per pagina in cui si è verificato un errore 823 secondario o un errore 824. Le pagine sono elencate in questa tabella perché è possibile che siano errate. Quando una pagina sospetta viene ripristinata, il relativo stato viene aggiornato nel **event_type** colonna.  
+  Contiene una riga per ogni pagina che non è riuscita con un errore 823 secondario o un errore 824. Le pagine sono elencate in questa tabella perché è possibile che siano errate. Quando una pagina sospetta viene ripristinata, il relativo stato viene aggiornato nel **event_type** colonna.  
   
- Nella tabella seguente, che ha un limite di 1.000 righe, viene archiviata nel **msdb** database.  
+ La tabella seguente, che ha un limite di 1.000 righe, viene archiviata nel **msdb** database.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,7 +42,7 @@ ms.locfileid: "33261383"
 |**error_count**|**int**|Numero di volte che si è verificato l'errore.|  
 |**last_update_date**|**datetime**|Timestamp relativo all'ultimo aggiornamento.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Chiunque abbia accesso a **msdb** può leggere i dati nella tabella **suspect_pages** . Chiunque disponga dell'autorizzazione UPDATE nella tabella suspect_pages può aggiornare i relativi record. I membri del ruolo predefinito del database **db_owner** in **msdb** o del ruolo predefinito del server **sysadmin** possono inserire, aggiornare ed eliminare i record.  
   
 ## <a name="see-also"></a>Vedere anche  

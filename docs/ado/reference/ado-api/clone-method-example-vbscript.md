@@ -1,36 +1,33 @@
 ---
-title: Esempio del metodo Clone (VBScript) | Documenti Microsoft
+title: Esempio del metodo Clone (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83bc13a4f86c888a819b2c7dc39ea971f4ffcda7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b259eaf019bc3ac173bfd1a4c282b517b41b1394
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276390"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783669"
 ---
 # <a name="clone-method-example-vbscript"></a>Esempio del metodo Clone (VBScript)
-Questo esempio viene utilizzato il [Clone](../../../ado/reference/ado-api/clone-method-ado.md) metodo per creare copie di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e consente all'utente posiziona il puntatore del record di ogni copia in modo indipendente.  
+Questo esempio Usa la [Clone](../../../ado/reference/ado-api/clone-method-ado.md) metodo per creare copie di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e quindi consente all'utente di posizionare il puntatore al record di ogni copia in modo indipendente.  
   
- Usare l'esempio seguente in una pagina ASP (Active Server). Questo esempio viene utilizzato il **Northwind** database distribuito con Microsoft Access. Tagliare e incollare il codice seguente in blocco note o un altro editor di testo e salvarlo come CloneVBS. È possibile visualizzare il risultato in qualsiasi browser client.  
+ Usare l'esempio seguente in una pagina ASP (Active Server). Questo esempio Usa la **Northwind** database distribuito con Microsoft Access. Tagliare e incollare il codice seguente nel blocco note o un altro editor di testo e salvarlo come CloneVBS. È possibile visualizzare il risultato in qualsiasi browser client.  
   
- Per utilizzare l'esempio, modificare la riga `RsCustomerList.Source = "Customers"` per `RsCustomerList.Source = "Products"` il conteggio di una tabella di dimensioni maggiori.  
+ Per usare l'esempio, modificare la riga `RsCustomerList.Source = "Customers"` a `RsCustomerList.Source = "Products"` da contare una tabella di dimensioni maggiori.  
   
 ```  
 <!-- BeginCloneVBS -->  

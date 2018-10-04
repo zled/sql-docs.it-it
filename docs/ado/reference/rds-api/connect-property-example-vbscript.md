@@ -1,35 +1,32 @@
 ---
-title: La connessione di esempio di proprietà (VBScript) | Documenti Microsoft
+title: Esempio di proprietà (VBScript) Connect | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55f60063261a600d57667cc94f6c514eb52af6b6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c1d76ff4205e84033542b28938509b4267988163
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287400"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730749"
 ---
-# <a name="connect-property-example-vbscript"></a>La connessione di esempio di proprietà (VBScript)
+# <a name="connect-property-example-vbscript"></a>Esempio della proprietà Connect (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Questo codice viene illustrato come impostare il [Connetti](../../../ado/reference/rds-api/connect-property-rds.md) proprietà in fase di progettazione:  
+ Questo codice viene illustrato come impostare il [Connect](../../../ado/reference/rds-api/connect-property-rds.md) proprietà in fase di progettazione:  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -41,9 +38,9 @@ ms.locfileid: "35287400"
 </OBJECT>  
 ```  
   
- Nell'esempio seguente viene illustrato come impostare il **Connetti** proprietà in fase di esecuzione nel codice VBScript.  
+ Nell'esempio seguente viene illustrato come impostare il **Connect** proprietà in fase di esecuzione di codice VBScript.  
   
- Per testare questo esempio, tagliare e incollare il codice tra le \<corpo > e \</Body > del documento e assegnargli il nome di tag in HTML un normale **ConnectVBS**. Lo script identificherà il server.  
+ Per testare questo esempio, tagliare e incollare il codice tra il \<Body > e \</Body > tag in HTML un normale del documento e denominarlo **ConnectVBS**. Lo script identificherà il server.  
   
 ```  
 <!-- BeginConnectVBS -->  

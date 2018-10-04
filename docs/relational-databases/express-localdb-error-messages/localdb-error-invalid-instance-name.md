@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8844d103c0b10092fa34b04973140b606d8b3336
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: af54579e891a5eca7bc00f2f61352fdfe8e5a714
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329772"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625384"
 ---
 # <a name="localdberrorinvalidinstancename"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,6 +34,6 @@ ms.locfileid: "34329772"
  Il nome di istanza contiene caratteri non validi o è troppo lungo.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- Consultare la documentazione dell'API di Runtime database locale API in merito ai nomi validi per le istanze di Runtime database locale.  Per ulteriori informazioni, vedere [SQL Server Express LocalDB istanza riferimento all'API](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md).
+ Consultare la documentazione dell'API di Runtime database locale API in merito ai nomi validi per le istanze di Runtime database locale.  Per altre informazioni, vedere [SQL Server Express LocalDB API di riferimento all'istanza](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md).
   
   

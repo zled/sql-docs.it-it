@@ -1,13 +1,11 @@
 ---
-title: Esempio di proprietà DefinedSize (VC + +) e ActualSize | Documenti Microsoft
+title: Esempio di ActualSize e l'esempio di proprietà DefinedSize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - ActualSize property [ADO], VC++ example
 - DefinedSize property [ADO], VC++ example
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54bb6f590da02e26adb3b617de49c5f4a1de5a82
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275060"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789279"
 ---
-# <a name="actualsize-and-definedsize-properties-example-vc"></a>Esempio ActualSize e DefinedSize proprietà (VC + +)
-Questo esempio viene utilizzato il [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) proprietà per visualizzare le dimensioni definite e le dimensioni effettive di un campo.  
+# <a name="actualsize-and-definedsize-properties-example-vc"></a>Esempio di ActualSize e l'esempio di proprietà DefinedSize (VC + +)
+Questo esempio Usa la [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) proprietà da visualizzare la dimensione definita e dalla dimensione effettiva di un campo.  
   
 ## <a name="example"></a>Esempio  
   
@@ -132,23 +129,23 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **Nome dell'archivio: Eric i libri di lettura**  
-**Definite dimensioni: 40**  
+ **Store Name: Eric la documentazione di lettura**  
+**Definisce dimensioni: 40**  
 **Dimensioni effettive: 19**  
-**Nome dell'archivio: Barnum**  
-**Definite dimensioni: 40**  
+**Nome Store: Di Barnum**  
+**Definisce dimensioni: 40**  
 **Dimensioni effettive: 8**  
-**Nome dell'archivio: Notizie & Brews**  
-**Definite dimensioni: 40**  
+**Nome Store: Novità e Brews**  
+**Definisce dimensioni: 40**  
 **Dimensioni effettive: 12**  
-**Nome dell'archivio: Doc-U-Mat: bucato qualità e documentazione**  
-**Definite dimensioni: 40**  
+**Nome Store: Doc-U-Mat: bucato qualità e documentazione**  
+**Definisce dimensioni: 40**  
 **Dimensioni effettive: 36**  
-**Nome dell'archivio: Fricative Bookshop**  
-**Definite dimensioni: 40**  
+**Nome Store: Bookshop Fricative**  
+**Definisce dimensioni: 40**  
 **Dimensioni effettive: 18**  
-**Nome dell'archivio: Bookbeat**  
-**Definite dimensioni: 40**  
+**Store Name: Bookbeat**  
+**Definisce dimensioni: 40**  
 **Dimensioni effettive: 8**   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   

@@ -1,32 +1,29 @@
 ---
-title: Funzionalità di controllo per | Documenti Microsoft
+title: Funzionalità da controllare per | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], writing interoperable applications
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 704fc0c45706e80408218d185146a438099da829
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911366"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770619"
 ---
-# <a name="features-to-watch-for"></a>Funzionalità di controllo per
-In questa sezione descrive alcune delle funzionalità che gli sviluppatori di applicazioni accettano spesso per concesso. Infatti, queste funzionalità variano notevolmente in supporto e modalità di supporto tra DBMS; Errore nel codice per essi è possono causare problemi in applicazioni interoperative.  
+# <a name="features-to-watch-for"></a>Funzionalità da controllare
+Questa sezione descrive una serie di funzionalità che gli sviluppatori di applicazioni spesso danno per scontate. Infatti, queste caratteristiche variano notevolmente in supporto e la modalità di supporto tra DBMS; è probabile che provocare problemi nelle applicazioni interoperative errori nel codice per loro.  
   
- In questa sezione non sono elencate tutte le funzionalità che gli sviluppatori di applicazioni devono prendere in considerazione. Per ulteriori informazioni, vedere il [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), e [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) funzione descrizioni, [lagrammaticaSQLappendicec:](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)e le sezioni di questo manuale che ogni funzione.  
+ In questa sezione non è elencate tutte le funzionalità che gli sviluppatori di applicazioni devono considerare. Per ulteriori informazioni, vedere la [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), e [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) funzione descrizioni, [lagrammaticaSQLappendicec:](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)e le sezioni del presente manuale che illustrano ogni funzionalità.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

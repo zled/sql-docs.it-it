@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_queue_sp (Transact-SQL) | Documenti Microsoft
+title: sysmail_help_queue_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_queue_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b5087f212e72f4fa6970aff614983d8116d1f5b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 76f51489a449c44dd7d43bab75d504f68e946374
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259521"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796515"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,25 +41,25 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 ## <a name="arguments"></a>Argomenti  
  [ **@queue_type** =] **'***queue_type***'**  
- Messaggi di posta elettronica del tipo specificato come argomento facoltativo che elimina il *queue_type*. *queue_type* viene **nvarchar(6)** non prevede alcun valore predefinito. Le voci valide sono **posta** e **stato**.  
+ Argomento facoltativo che elimina messaggi di posta elettronica del tipo specificato come la *queue_type*. *queue_type* viene **nvarchar(6)** non prevede alcun valore predefinito. Possibili valori sono **mail** e **stato**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-set"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**queue_type**|**nvarchar(6)**|Tipo di coda. I valori possibili sono **posta** e **stato**.|  
-|**lunghezza**|**int**|Numero di elementi di posta nella coda specificata.|  
-|**state**|**nvarchar(64)**|Stato del server di monitoraggio. I valori possibili sono **inattivo** (coda è inattiva), **NOTIFIED** (coda ha ricevuto una notifica di), e **RECEIVES_OCCURRING** (coda riceve).|  
+|**queue_type**|**nvarchar(6)**|Tipo di coda. I valori possibili sono **mail** e **stato**.|  
+|**Lunghezza**|**int**|Numero di elementi di posta nella coda specificata.|  
+|**state**|**nvarchar(64)**|Stato del server di monitoraggio. I valori possibili sono **INACTIVE** (coda è inattiva), **NOTIFIED** (coda ha ricevuto una notifica al verificarsi), e **RECEIVES_OCCURRING** (coda riceve).|  
 |**last_empty_rowset_time**|**DATA/ORA**|Data e ora dell'ultimo svuotamento della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
 |**last_activated_time**|**DATA/ORA**|Data e ora dell'ultima attivazione della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
   
-## <a name="remarks"></a>Osservazioni  
- Quando la risoluzione dei problemi di posta elettronica Database, utilizzare **sysmail_help_queue_sp** per visualizzare il numero di elementi presenti nella coda, lo stato della coda e l'ultima attivazione.  
+## <a name="remarks"></a>Note  
+ La risoluzione dei problemi di posta elettronica Database, usare **sysmail_help_queue_sp** per visualizzare il numero di elementi nella coda, lo stato della coda e l'ultima attivazione.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, solo i membri del **sysadmin** ruolo predefinito del server può accedere a questa procedura.  
   
 ## <a name="examples"></a>Esempi  

@@ -1,13 +1,11 @@
 ---
-title: Aggiungere e un esempio di metodi CreateParameter (JScript) | Documenti Microsoft
+title: Append e CreateParameter (esempio di metodi (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CreateParameter method [ADO], JScript example
 - Append method [ADO], JScript example
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d93d5b956576a9e2b66359ae4aef0b4d8b1e5223
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f9bd0c28d481ef107dc31e36e13582fba459b502
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275810"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827619"
 ---
-# <a name="append-and-createparameter-methods-example-jscript"></a>Aggiungere e un esempio di metodi CreateParameter (JScript)
-Questo esempio viene utilizzato il [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) metodi per eseguire una stored procedure con un parametro di input. Tagliare e incollare il codice seguente in blocco note o un altro editor di testo e salvarlo come **AppendJS**.  
+# <a name="append-and-createparameter-methods-example-jscript"></a>Append e CreateParameter (esempio di metodi (JScript)
+Questo esempio Usa la [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) metodi per eseguire una stored procedure con un parametro di input. Tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **AppendJS**.  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -146,8 +143,8 @@ body {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Append (metodo) (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
+ [Metodo Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Metodo CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Oggetto Field](../../../ado/reference/ado-api/field-object.md)   
- [Raccolta di campi (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)

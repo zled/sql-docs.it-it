@@ -1,32 +1,29 @@
 ---
-title: Esempio di proprietà Count (VB) | Documenti Microsoft
+title: Esempio di proprietà Count (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5e462bef0846b71a963c1e510fac1e23d00e010
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 902d077cfb46926ce9eade6ea9a99c2df0730916
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277260"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747219"
 ---
-# <a name="count-property-example-vb"></a>Esempio di proprietà Count (VB)
-Questo esempio viene illustrato il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà con due raccolte nel ***dipendente*** database. La proprietà ottiene il numero di oggetti in ogni raccolta e imposta il limite superiore per i cicli che enumerano questi insiemi. Un altro modo per enumerare le raccolte senza il **conteggio** proprietà potrebbe consistere nell'utilizzare `For Each...Next` istruzioni.  
+# <a name="count-property-example-vb"></a>Esempio della proprietà Count (VB)
+Questo esempio viene illustrato il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) con due raccolte nelle proprietà il ***dipendente*** database. La proprietà ottiene il numero di oggetti in ogni raccolta e imposta il limite superiore per i cicli di enumerare le raccolte. Un altro modo per enumerare le raccolte senza usare la **conteggio** proprietà potrebbe consistere nell'utilizzare `For Each...Next` istruzioni.  
   
 ```  
 'BeginCountVB  

@@ -1,31 +1,28 @@
 ---
-title: Le proprietà dell'oggetto parametro, metodi ed eventi | Documenti Microsoft
+title: Le proprietà dell'oggetto parametro, metodi ed eventi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Parameter object [ADO], members
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc627b0bacd523a05e02ede96d2c4283db707c3e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 45cf2031d9b87b569f206364f984db17633b7a5e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280520"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659695"
 ---
-# <a name="parameter-object-properties-methods-and-events"></a>Le proprietà dell'oggetto parametro, metodi ed eventi
-## <a name="propertiescollections"></a>Raccolte di proprietà /  
- [Proprietà attributi](../../../ado/reference/ado-api/attributes-property-ado.md)  
+# <a name="parameter-object-properties-methods-and-events"></a>Gli eventi, metodi e proprietà dell'oggetto parametro
+## <a name="propertiescollections"></a>Le proprietà e le raccolte  
+ [Attributi proprietà](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [Proprietà Direction](../../../ado/reference/ado-api/direction-property.md)  
   
@@ -41,7 +38,7 @@ ms.locfileid: "35280520"
   
  [Proprietà del tipo](../../../ado/reference/ado-api/type-property-ado.md)  
   
- [Value (proprietà)](../../../ado/reference/ado-api/value-property-ado.md)  
+ [Proprietà Value](../../../ado/reference/ado-api/value-property-ado.md)  
   
 ## <a name="methods"></a>Metodi  
  [Metodo AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.passwordexpired.f1
 helpviewer_keywords:
 - Password Expired dialog box
 ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 982795a23e2fc45a3c15feaa2d81a433f0c281bd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819097"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068931"
 ---
 # <a name="password-expired"></a>Password scaduta
   Questa finestra di dialogo viene visualizzata quando si esegue la connessione a un server con [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel caso in cui la password immessa sia corretta ma scaduta. Viene visualizzata anche quando si esegue la connessione a un server usando un nuovo account creato con l'opzione **Cambiamento obbligatorio password all'accesso successivo** . La finestra di dialogo **Password scaduta** consente di cambiare la password per l'account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

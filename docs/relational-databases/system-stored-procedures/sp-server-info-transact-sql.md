@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_info
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9355b4a6ca344111c5b3d9365823b2175942bcea
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6ee0f3e2f7858959b04394e4e809df3ab71dcc83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026208"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846639"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,23 +69,23 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**16**|IDENTIFIER_CASE<br /><br /> Specifica i nomi definiti dall'utente (nomi di tabella, colonna e stored procedure) nel database (la combinazione di maiuscole e minuscole negli oggetti dei cataloghi di sistema).|SENSITIVE|  
 |**17**|TX_ISOLATION<br /><br /> Specifica il livello iniziale di isolamento delle transazioni adottato dal server. Tale livello corrisponde a un livello di isolamento definito in SQL-92.|2|  
 |**18**|COLLATION_SEQ<br /><br /> Specifica l'ordinamento del set di caratteri per il server corrente.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
-|**19**|SAVEPOINT_SUPPORT<br /><br /> Specifica se il sistema DBMS sottostante supporta o meno i punti di salvataggio denominati.|S|  
-|**20**|MULTI_RESULT_SETS<br /><br /> Specifica se il database sottostante o il gateway stesso supporta o meno più set di risultati (è possibile inviare più istruzioni attraverso il gateway con più set di risultati restituiti al client).|S|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> Specifica se nella **sp_tables**, il gateway restituisce solo le tabelle, viste e così via, accessibile all'utente corrente (ovvero, l'utente che dispone almeno delle autorizzazioni SELECT per la tabella).|S|  
+|**19**|SAVEPOINT_SUPPORT<br /><br /> Specifica se il sistema DBMS sottostante supporta o meno i punti di salvataggio denominati.|Y|  
+|**20**|MULTI_RESULT_SETS<br /><br /> Specifica se il database sottostante o il gateway stesso supporta o meno più set di risultati (è possibile inviare più istruzioni attraverso il gateway con più set di risultati restituiti al client).|Y|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> Specifica se nella **sp_tables**, il gateway restituisce solo le tabelle, viste e così via, accessibile all'utente corrente (ovvero, l'utente che dispone almeno delle autorizzazioni SELECT per la tabella).|Y|  
 |**100**|USERID_LENGTH<br /><br /> Specifica il numero massimo di caratteri per un nome utente.|128|  
 |**101**|QUALIFIER_TERM<br /><br /> Specifica il termine del sistema DBMS per il qualificatore di tabella (la prima parte di un nome composto da tre parti).|Database|  
-|**102**|NAMED_TRANSACTIONS<br /><br /> Specifica se il sistema DBMS sottostante supporta o meno transazioni denominate.|S|  
-|**103**|SPROC_AS_LANGUAGE<br /><br /> Specifica se è possibile eseguire le stored procedure come eventi del linguaggio.|S|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> Specifica se nella **sp_stored_procedures**, il gateway restituisce solo le stored procedure eseguibili dall'utente corrente.|S|  
+|**102**|NAMED_TRANSACTIONS<br /><br /> Specifica se il sistema DBMS sottostante supporta o meno transazioni denominate.|Y|  
+|**103**|SPROC_AS_LANGUAGE<br /><br /> Specifica se è possibile eseguire le stored procedure come eventi del linguaggio.|Y|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> Specifica se nella **sp_stored_procedures**, il gateway restituisce solo le stored procedure eseguibili dall'utente corrente.|Y|  
 |**105**|MAX_INDEX_COLS<br /><br /> Specifica il numero massimo di colonne di un indice del sistema DBMS.|16|  
-|**106**|RENAME_TABLE<br /><br /> Specifica se è possibile rinominare le tabelle.|S|  
-|**107**|RENAME_COLUMN<br /><br /> Specifica se è possibile rinominare le colonne.|S|  
-|**108**|DROP_COLUMN<br /><br /> Specifica se è possibile eliminare le colonne.|S|  
-|**109**|INCREASE_COLUMN_LENGTH<br /><br /> Specifica se è possibile incrementare le dimensioni di colonna.|S|  
-|**110**|DDL_IN_TRANSACTION<br /><br /> Specifica se visualizzare istruzioni DDL nelle transazioni.|S|  
-|**111**|DESCENDING_INDEXES<br /><br /> Specifica se gli indici decrescenti sono supportati.|S|  
-|**112**|SP_RENAME<br /><br /> Specifica se è possibile rinominare una stored procedure.|S|  
-|**113**|REMOTE_SPROC<br /><br /> Specifica se è possibile eseguire stored procedure tramite le funzioni di stored procedure remote di DB-Library.|S|  
+|**106**|RENAME_TABLE<br /><br /> Specifica se è possibile rinominare le tabelle.|Y|  
+|**107**|RENAME_COLUMN<br /><br /> Specifica se è possibile rinominare le colonne.|Y|  
+|**108**|DROP_COLUMN<br /><br /> Specifica se è possibile eliminare le colonne.|Y|  
+|**109**|INCREASE_COLUMN_LENGTH<br /><br /> Specifica se è possibile incrementare le dimensioni di colonna.|Y|  
+|**110**|DDL_IN_TRANSACTION<br /><br /> Specifica se visualizzare istruzioni DDL nelle transazioni.|Y|  
+|**111**|DESCENDING_INDEXES<br /><br /> Specifica se gli indici decrescenti sono supportati.|Y|  
+|**112**|SP_RENAME<br /><br /> Specifica se è possibile rinominare una stored procedure.|Y|  
+|**113**|REMOTE_SPROC<br /><br /> Specifica se è possibile eseguire stored procedure tramite le funzioni di stored procedure remote di DB-Library.|Y|  
 |**500**|SYS_SPROC_VERSION<br /><br /> Specifica la versione delle stored procedure di catalogo implementate.|Numero di versione corrente|  
   
 ## <a name="remarks"></a>Note  

@@ -1,13 +1,11 @@
 ---
-title: Il recupero di dati digitare le informazioni con SQLGetTypeInfo | Documenti Microsoft
+title: Del tipo di dati durante il recupero delle informazioni con SQLGetTypeInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC], identifiers
@@ -17,24 +15,23 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d764d8470343d67bd37c1ef7ce5dcf15962079e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44c1edaadc1a30dd27556c52bb7dc7a8f297ae48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645919"
 ---
-# <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>Durante il recupero delle informazioni sul tipo di dati con SQLGetTypeInfo
-Poiché i mapping dai tipi di dati SQL sottostanti per gli identificatori di tipo ODBC sono approssimativi, ODBC fornisce una funzione (**SQLGetTypeInfo**) tramite un driver possibili completamente descrivere ogni tipo di dati SQL nell'origine dati. Questa funzione restituisce un set di risultati, ogni riga di cui vengono descritte le caratteristiche di un tipo di dati singolo, ad esempio nome, tipo identificatore, precisione, scala e supporto di valori null.  
+# <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>Recupero di informazioni sul tipo di dati con SQLGetTypeInfo
+Poiché il mapping tra tipi di dati SQL sottostanti e gli identificatori di tipo ODBC sono approssimativi, ODBC offre una funzione (**SQLGetTypeInfo**) tramite cui un driver può completamente descrivere ciascun tipo di dati SQL nell'origine dati. Questa funzione restituisce un set di risultati, ogni riga di cui vengono descritte le caratteristiche di un tipo di dati singolo, ad esempio nome, identificatore del tipo, precisione, scala e supporto di valori null.  
   
- In genere, queste informazioni vengono utilizzate dalle applicazioni generiche che consentono all'utente di creare e modificare le tabelle. Chiamata di questo tipo applicazioni **SQLGetTypeInfo** per recuperare le informazioni sul tipo di dati e quindi presenta alcuni o tutti i relativi all'utente. Tali applicazioni è necessario essere a conoscenza delle seguenti operazioni:  
+ In genere, queste informazioni vengono utilizzate dalle applicazioni generiche che consentono di creare e modificare le tabelle. Tali le applicazioni chiamano **SQLGetTypeInfo** per recuperare le informazioni sul tipo di dati e quindi presentano alcuni o tutti, all'utente. Queste applicazioni devono essere a conoscenza delle seguenti operazioni:  
   
--   Più di un tipo di dati SQL è possibile eseguire il mapping a un identificatore di tipo singolo, che può rendere difficile determinare il tipo di dati da utilizzare. Per risolvere questo problema, il set di risultati viene ordinato prima dall'identificatore di tipo e la seconda dal livello alla definizione dell'identificatore di tipo. Inoltre, i tipi di dati definito dall'origine dati hanno la precedenza su tipi di dati definito dall'utente. Ad esempio, si supponga che un'origine dati definisce i tipi di dati INTEGER e contatore in base ad eccezione del fatto che i CONTATORI è a incremento automatico. Si supponga inoltre che il tipo definito dall'utente WHOLENUM è un sinonimo dell'intero. Ognuno di questi tipi viene eseguito il mapping a SQL_INTEGER. Nel **SQLGetTypeInfo** set di risultati, numero intero viene visualizzata in primo luogo, seguito da WHOLENUM e quindi del contatore. WHOLENUM viene visualizzato dopo l'intero perché è definito dall'utente, ma prima di contatore perché è più possibile corrispondente la definizione del SQL_INTEGER tipo identificatore.  
+-   Più di un tipo di dati SQL può eseguire il mapping a un identificatore unico tipo, che può renderlo difficile determinare quali dati di tipo da usare. Per risolvere questo problema, il set di risultati è ordinato prima di tutto dall'identificatore di tipo e la seconda da vicinanza alla definizione dell'identificatore del tipo. Inoltre, i tipi di dati definito dall'origine dati hanno la precedenza su tipi di dati definito dall'utente. Ad esempio, si supponga che un'origine dati definisce i tipi di dati INTEGER e il contatore per lo stesso ad eccezione del fatto che, CONTATORI è a incremento automatico. Si supponga inoltre che il tipo definito dall'utente WHOLENUM è un sinonimo dell'intero. Ognuno di questi tipi viene mappato a SQL_INTEGER. Nel **SQLGetTypeInfo** set di risultati, numero intero viene visualizzata per prima, seguita da WHOLENUM e quindi del contatore. WHOLENUM viene visualizzata dopo il numero intero perché è definito dall'utente, ma prima del contatore quanto più da vicino corrisponde la definizione di SQL_INTEGER l'identificatore di tipo.  
   
--   ODBC non definisce i nomi dei tipi di dati per l'utilizzo in **CREATE TABLE** e **ALTER TABLE** istruzioni. Al contrario, l'applicazione deve utilizzare il nome restituito nella colonna TYPE_NAME del set di risultati restituito da **SQLGetTypeInfo**. Il motivo è che sebbene la maggior parte di SQL non variare molto tra DBMS, nomi dei tipi di dati variare notevolmente. Anziché forzare il driver per analizzare le istruzioni SQL e sostituire i nomi dei tipi di dati standard con nomi di tipi di dati specifici del DBMS, ODBC richiede alle applicazioni di utilizzare i nomi specifici del DBMS in primo luogo.  
+-   ODBC non definisce nomi di tipi di dati per l'utilizzo in **CREATE TABLE** e **ALTER TABLE** istruzioni. Al contrario, l'applicazione deve utilizzare il nome restituito nella colonna TYPE_NAME del set di risultati restituito da **SQLGetTypeInfo**. Il motivo è che sebbene la maggior parte di SQL non presenti variazioni significative in DBMS, nomi dei tipi di dati variare notevolmente. Anziché richiedere driver per analizzare le istruzioni SQL e sostituire i nomi dei tipi di dati standard con nomi di tipi di dati specifici del DBMS, ODBC richiede alle applicazioni di utilizzare i nomi specifici del DBMS in primo luogo.  
   
- Si noti che **SQLGetTypeInfo** non necessariamente descritti tutti i tipi di dati può verificarsi un'applicazione. In particolare, i set di risultati potrebbero contenere tipi di dati non direttamente supportati dall'origine dati. Questi tipi di dati potrebbero non essere supportati dall'origine dati, ad esempio, sono definiti i tipi di dati delle colonne nel set di risultati restituiti dalle funzioni di catalogo da ODBC. Per determinare le caratteristiche dei tipi di dati in un set di risultati, un'applicazione chiama **SQLColAttribute**.
+ Si noti che **SQLGetTypeInfo** non necessariamente descrive tutti i tipi di dati può verificarsi un'applicazione. In particolare, i set di risultati potrebbero contenere tipi di dati non supportati direttamente dall'origine dati. Ad esempio, i tipi di dati delle colonne nel set di risultati restituiti dalle funzioni di catalogo vengono definiti da ODBC e questi tipi di dati potrebbero non essere supportati dall'origine dati. Per determinare le caratteristiche dei tipi di dati in un set di risultati, un'applicazione chiama **SQLColAttribute**.

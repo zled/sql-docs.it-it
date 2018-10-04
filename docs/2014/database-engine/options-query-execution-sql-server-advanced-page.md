@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
-caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 179cddf3670cc29cbb298b53c442c30b80dd202f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b2268b945b6b4eb2f82ed3d517be01bb2ec750c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067405"
 ---
-# <a name="options-query-executionsql-serveradvanced-page"></a>Opzioni (Query in esecuzione: SQL Server: pagina avanzate)
+# <a name="options-query-executionsql-serveradvanced-page"></a>Opzioni (Esecuzione query/SQL Server/pagina Avanzate)
   Utilizzando il comando SET sono disponibili numerose opzioni. Usare questa pagina per specificare un'opzione **set** per l'esecuzione di query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nell'editor di query di SQL Server. Le opzioni non hanno avranno alcun effetto su altri editor del codice. Le modifiche apportate a queste opzioni si applicano soltanto alle nuove query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni delle query correnti scegliere **Opzioni query** dal menu **Query** o il menu di scelta rapida della finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Fare clic su **Avanzate** in **Esecuzione**. Per ulteriori informazioni su ognuna di queste opzioni, vedere la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Opzioni  

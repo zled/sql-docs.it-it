@@ -1,13 +1,11 @@
 ---
-title: Metodo Refresh (RDS) | Documenti Microsoft
+title: Metodo Refresh (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,22 +15,21 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee9fd5b4748d2343b78e2dc696e7826341223d53
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8ba03aa3be2b644dfbd554528824162a75bc30a2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288420"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691049"
 ---
-# <a name="refresh-method-rds"></a>Metodo Refresh (RDS)
-Riesegue l'origine dati specificata una query di [Connetti](../../../ado/reference/rds-api/connect-property-rds.md) proprietà e gli aggiornamenti, i risultati della query.  
+# <a name="refresh-method-rds"></a>Metodo Refresh (Servizi Desktop remoto)
+Riesegue l'origine dati specificata una query di [Connect](../../../ado/reference/rds-api/connect-property-rds.md) proprietà e gli aggiornamenti, i risultati della query.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,12 +40,12 @@ DataControl.Refresh
   
 #### <a name="parameters"></a>Parametri  
  *DataControl*  
- Una variabile oggetto che rappresenta un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
+ Una variabile oggetto che rappresenta un [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
   
-## <a name="remarks"></a>Remarks  
- È necessario impostare il [Connetti](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md), e [SQL](../../../ado/reference/rds-api/sql-property.md) proprietà prima di utilizzare il **aggiornamento** metodo. Tutti i controlli con associazione a dati nel form di cui è associato un **RDS. DataControl** oggetto rifletterà il nuovo set di record. Pre-esistente [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto viene rilasciato e le modifiche non salvate vengono eliminate. Il **aggiornamento** metodo imposta automaticamente il primo record del record corrente.  
+## <a name="remarks"></a>Note  
+ È necessario impostare il [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md), e [SQL](../../../ado/reference/rds-api/sql-property.md) proprietà prima di usare il **Aggiorna** (metodo). Tutti i controlli con associazione a dati nel form di cui è associato un **Servizi Desktop remoto. DataControl** oggetto rifletterà il nuovo set di record. Eventualmente preesistenti [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto viene rilasciato e non vengono eliminate eventuali modifiche non salvate. Il **Aggiorna** metodo effettua automaticamente il primo record del record corrente.  
   
- È consigliabile chiamare il **aggiornamento** metodo periodicamente quando si utilizzano dati. Se si recuperano dati e quindi lasciato in un computer client per un periodo di tempo, è probabile che diventi obsoleto. È possibile che eventuali modifiche apportate avrà esito negativo, perché un altro utente sia stato modificato il record e inviati prima di procedere.  
+ È consigliabile chiamare il **Aggiorna** metodo periodicamente quando si utilizzano i dati. Se si recuperano dati e quindi lasciarlo in un computer client per un periodo di tempo, è probabile che diventano obsolete. È possibile che eventuali modifiche apportate non riuscirà, perché un altro utente potrebbe avere modificato il record ed è stato inviato prima di procedere.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
@@ -56,8 +53,8 @@ DataControl.Refresh
 ## <a name="see-also"></a>Vedere anche  
  [Esempio del metodo Refresh (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Esempio del metodo Refresh (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
- [Pulsanti di Address Book comando](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
- [Metodo CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
+ [Comando pulsanti di Address Book](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
+ [Metodo CancelUpdate (Servizi Desktop remoto)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Metodo Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [Metodo SubmitChanges (Servizi Desktop remoto)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 

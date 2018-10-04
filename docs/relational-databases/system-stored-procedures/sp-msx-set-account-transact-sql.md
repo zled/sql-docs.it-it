@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_set_account
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_set_account
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2d776a7ad3d29c180a4a2d2b017f5e1e6d0158a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 358918d91a13cf879d56ff5afd23d9aea0c8d81f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249423"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627935"
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,24 +41,24 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
   
 ## <a name="arguments"></a>Argomenti  
  [  **@credential_name=** ] **'***credential_name***'**  
- Nome delle credenziali da utilizzare per accedere al server master. Il nome specificato deve corrispondere al nome di una credenziale esistente. Entrambi *credential_name* o *credential_id* deve essere specificato.  
+ Nome delle credenziali da utilizzare per accedere al server master. Il nome specificato deve corrispondere al nome di una credenziale esistente. Entrambi *credential_name* oppure *credential_id* deve essere specificato.  
   
  [  **@credential_id=** ] *credential_id*  
- Identificatore delle credenziali da utilizzare per accedere al server master. L'identificatore deve corrispondere a un identificatore di credenziali già esistenti. Entrambi *credential_name* o *credential_id* deve essere specificato.  
+ Identificatore delle credenziali da utilizzare per accedere al server master. L'identificatore deve corrispondere a un identificatore di credenziali già esistenti. Entrambi *credential_name* oppure *credential_id* deve essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ Nessuna.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza le credenziali per archiviare le informazioni relative al nome utente e alla password utilizzate da un server di destinazione per accedere a un server master. Questa procedura imposta le credenziali utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per questo server di destinazione per accedere al server master.  
   
- Le credenziali specificate devono corrispondere a delle credenziali esistenti. Per ulteriori informazioni sulla creazione di una credenziale, vedere [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
+ Le credenziali specificate devono corrispondere a delle credenziali esistenti. Per altre informazioni sulla creazione di una credenziale, vedere [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
- Le autorizzazioni di esecuzione **sp_msx_set_account** per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Le autorizzazioni di esecuzione **sp_msx_set_account** per impostazione predefinita ai membri delle **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene impostato il server per utilizzare le credenziali `MsxAccount` per accedere al server master.  

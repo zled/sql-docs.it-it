@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_proxy
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - CREATE PROXY statement
 - sp_add_proxy
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6b46ca35bc88c0e8d1677ca83bcb1da9af1e640
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e9353e797f5ff84101726b0cfe7d12020f14fca3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238941"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811449"
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,41 +48,41 @@ sp_add_proxy
   
 ## <a name="arguments"></a>Argomenti  
  [ **@proxy_name**=] **'***proxy_name***'**  
- Nome del proxy da creare. Il *proxy_name* è **sysname**, con un valore predefinito è NULL. Quando il *proxy_name* è NULL o una stringa vuota, il nome delle impostazioni predefinite del proxy per il *nome_utente* fornito.  
+ Nome del proxy da creare. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Quando la *nome_proxy* è NULL o una stringa vuota, il nome delle impostazioni predefinite del proxy per il *nome_utente* fornito.  
   
  [ **@enabled** =] *is_enabled*  
- Specifica se il proxy è attivato. Il *is_enabled* flag **tinyint**, con un valore predefinito è 1. Quando *is_enabled* è **0**, il proxy non è abilitato e non può essere utilizzato da un passaggio di processo.  
+ Specifica se il proxy è attivato. Il *is_enabled* flag è **tinyint**, con un valore predefinito è 1. Quando *is_enabled* viene **0**, il proxy non è abilitato e non può essere utilizzato da un passaggio di processo.  
   
  [ **@description**=] **'***descrizione***'**  
- Descrizione del proxy. La descrizione è **nvarchar (512)**, con un valore predefinito è NULL. La descrizione consente di documentare il proxy, ma non viene altrimenti utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questo argomento è pertanto facoltativo.  
+ Descrizione del proxy. La descrizione è **nvarchar(512)**, con un valore predefinito è NULL. La descrizione consente di documentare il proxy, ma non viene altrimenti utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questo argomento è pertanto facoltativo.  
   
  [ **@credential_name** =] **'***credential_name***'**  
- Nome delle credenziali per il proxy. Il *credential_name* è **sysname**, con un valore predefinito è NULL. Entrambi *credential_name* o *credential_id* deve essere specificato.  
+ Nome delle credenziali per il proxy. Il *credential_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *credential_name* oppure *credential_id* deve essere specificato.  
   
  [ **@credential_id** =] *credential_id*  
- Numero di identificazione delle credenziali per il proxy. Il *credential_id* è **int**, con un valore predefinito è NULL. Entrambi *credential_name* o *credential_id* deve essere specificato.  
+ Numero di identificazione delle credenziali per il proxy. Il *credential_id* viene **int**, con un valore predefinito è NULL. Entrambi *credential_name* oppure *credential_id* deve essere specificato.  
   
  [ **@proxy_id**=] *id* OUTPUT  
  Numero di identificazione assegnato al proxy se viene creato correttamente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Questa stored procedure deve essere eseguita **msdb** database.  
   
  Un proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent gestisce la sicurezza per i passaggi di processo che implicano i sottosistemi diversi da [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ogni proxy corrisponde a una credenziale di sicurezza Un proxy può avere accesso a qualsiasi numero di sottosistemi.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo di sicurezza predefinito può eseguire questa procedura.  
   
- I membri del **sysadmin** ruolo di sicurezza predefinito può creare passaggi di processo che utilizzano qualsiasi proxy. Utilizzare la stored procedure [sp_grant_login_to_proxy &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md) per concedere l'accesso altri account di accesso al proxy.  
+ I membri del **sysadmin** ruolo di sicurezza predefinito possa creare passaggi di processo che utilizzano qualsiasi proxy. Utilizzare la stored procedure [sp_grant_login_to_proxy &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md) per concedere l'accesso altri account di accesso al proxy.  
   
 ## <a name="examples"></a>Esempi  
- In questo esempio viene creato un proxy per le credenziali `CatalogApplicationCredential`. Nel codice si presuppone che le credenziali esistano già. Per ulteriori informazioni sulle credenziali, vedere [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
+ In questo esempio viene creato un proxy per le credenziali `CatalogApplicationCredential`. Nel codice si presuppone che le credenziali esistano già. Per altre informazioni sulle credenziali, vedere [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
   
 ```  
 USE msdb ;  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.browseforremotepartition.f1
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bbc311b4c096f5f834141084f705fa8bdf50c3e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 691214181386bb5ec82394dfb6aadc1b0b76bf1f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212071"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060053"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Cerca cartella remota (Analysis Services - Dati multidimensionali)
   Nella finestra di dialogo **Cerca cartella remota** viene visualizzato un elenco di cartelle di dati e log disponibili definite per un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. È possibile selezionare una delle cartelle incluse nell'elenco oppure specificarne un'altra. Per visualizzare la finestra di dialogo **Cerca cartella remota** , eseguire uno dei passaggi seguenti:  

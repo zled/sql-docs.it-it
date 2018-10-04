@@ -1,14 +1,11 @@
 ---
-title: syscollector_collection_sets (Transact-SQL) | Documenti Microsoft
+title: syscollector_collection_sets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collection_sets_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collection_sets view
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7407828836e4831e313e982111df7f61bd110e8e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dcc027ad80d4bbe1142a9e17add52f8a42d7d404
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221142"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842509"
 ---
 # <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +35,7 @@ ms.locfileid: "33221142"
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|Identificatore locale del set di raccolta. Non ammette i valori Null.|  
 |collection_set_uid|**uniqueidentifier**|Identificatore univoco globale del set di raccolta. Non ammette i valori Null.|  
-|name|**nvarchar(4000)**|Nome del set di raccolta. Ammette i valori Null.|  
+|NAME|**nvarchar(4000)**|Nome del set di raccolta. Ammette i valori Null.|  
 |target|**nvarchar(max)**|Identifica la destinazione per il set di raccolta. Ammette i valori Null.|  
 |is_system|**bit**|Attivato (1) o disattivato (0) per indicare se il set di raccolta è stato fornito con l'agente di raccolta dati o se è stato aggiunto in seguito da dc_admin. Potrebbe trattarsi di un set di raccolta personalizzato sviluppato internamente o da terze parti. Non ammette i valori Null.|  
 |is_running|**bit**|Indica se il set di raccolta è in esecuzione o no. Non ammette i valori Null.|  
@@ -51,13 +47,13 @@ ms.locfileid: "33221142"
 |logging_level|**smallint**|Specifica il livello di registrazione (0, 1 o 2). Non ammette i valori Null.|  
 |days_until_expiration|**smallint**|Numero di giorni durante i quali i dati raccolti vengono salvati nel data warehouse di gestione. Non ammette i valori Null.|  
 |description|**nvarchar(4000)**|Descrive il set di raccolta. Ammette i valori Null.|  
-|dump_on_any_error|**bit**|Attivato (1) o disattivato (0) per indicare se creare un [!INCLUDE[ssIS](../../includes/ssis-md.md)] file di dump su qualsiasi errore. Non ammette i valori Null.|  
-|dump_on_codes|**nvarchar(max)**|Contiene l'elenco di [!INCLUDE[ssIS](../../includes/ssis-md.md)] i codici di errore utilizzati per attivare il file di dump. Ammette i valori Null.|  
+|dump_on_any_error|**bit**|Attivato (1) o disattivato (0) per indicare se creare un [!INCLUDE[ssIS](../../includes/ssis-md.md)] file dump per qualsiasi errore. Non ammette i valori Null.|  
+|dump_on_codes|**nvarchar(max)**|Contiene l'elenco di [!INCLUDE[ssIS](../../includes/ssis-md.md)] i codici di errore che consentono di attivare il file di dump. Ammette i valori Null.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede SELECT per dc_operator, dc_proxy.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  L'API dell'agente di raccolta dati consente di modificare o eliminare solo i set di raccolta da essi creati. I set di raccolta forniti con il sistema non possono essere modificati o eliminati. Tuttavia, è possibile abilitare o disabilitare un set di raccolta del sistema e modificare la configurazione.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,31 +1,28 @@
 ---
-title: Parametro (ADO - sintassi WFC) | Documenti Microsoft
+title: Parametro (ADO - WFC sintassi) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb5ee000ca00031f35f27ec23dec3e284656f56a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7bcb96b2bd0710af94b944d2f8e3417d9cfbcee6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280590"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720708"
 ---
-# <a name="parameter-ado---wfc-syntax"></a>Parametro (ADO - sintassi WFC)
-## <a name="package-commswfcdata"></a>pacchetto com.ms. wfc.  
+# <a name="parameter-ado---wfc-syntax"></a>Parameter (sintassi ADO/WFC)
+## <a name="package-commswfcdata"></a>creare un pacchetto com.ms. wfc.  
   
 ### <a name="constructor"></a>Costruttore  
   
@@ -68,14 +65,14 @@ public void setValue(Object v)
 public AdoProperties getProperties()  
 ```  
   
-## <a name="parameter-accessor-methods"></a>Metodi di accesso parametro  
- Il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà di un [parametro](../../../ado/reference/ado-api/parameter-object.md) oggetto Ottiene o imposta il contenuto di tale oggetto. Il contenuto è rappresentato come un tipo di oggetto che può essere assegnato un valore e i diversi tipi di dati VARIANT.  
+## <a name="parameter-accessor-methods"></a>Metodi della funzione di accesso di parametro  
+ Il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà di un [parametro](../../../ado/reference/ado-api/parameter-object.md) oggetto Ottiene o imposta il contenuto di tale oggetto. Il contenuto è rappresentato come una variante, un tipo di oggetto che può essere assegnato un valore e i diversi tipi di dati.  
   
- ADO/WFC implementa il **valore** proprietà con il **getValue** metodo, che restituisce un oggetto VARIANT; e **setValue** metodo, che accetta una variante come argomento. Le varianti sono altamente efficiente in alcuni linguaggi, ad esempio Microsoft Visual Basic.  
+ ADO/WFC implementa il **valore** proprietà con il **getValue** metodo, che restituisce un oggetto VARIANT; e il **setValue** metodo, che utilizza una variante come argomento. Varianti sono altamente efficienti in determinate lingue, ad esempio Microsoft Visual Basic.  
   
- Oltre al **valore** proprietà ADO/WFC include *della funzione di accesso* metodi che utilizzano tipi di dati Java per ottenere e impostare il contenuto di **parametro** oggetti. La maggior parte di questi metodi ha il formato dei nomi **ottenere * * * il tipo di dati* o **impostare * * * il tipo di dati*.  
+ Oltre al **valore** ADO/WFC di proprietà, fornisce *della funzione di accesso* metodi che utilizzano tipi di dati Java per ottenere e impostare il contenuto del **parametro** oggetti. La maggior parte di questi metodi presentano nomi nel formato **ottenere * * * DataType* o **impostare * * * DataType*.  
   
- Vi è un'eccezione degno di nota: è presente alcun **importante** proprietà; viene invece un **isNull** proprietà che restituisce un valore booleano che indica se il campo è null.  
+ Vi è un'eccezione degno di nota: è presente alcun **importante** proprietà; viene invece un' **isNull** proprietà che restituisce un valore booleano che indica se il campo è null.  
   
 ```  
 public boolean getBoolean()  

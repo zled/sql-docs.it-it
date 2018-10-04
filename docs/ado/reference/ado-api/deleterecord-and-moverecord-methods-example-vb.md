@@ -1,13 +1,11 @@
 ---
-title: Esempio di metodi di MoveRecord (VB) e DeleteRecord | Documenti Microsoft
+title: Esempio di DeleteRecord e MoveRecord (esempio di metodi (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - MoveRecord method [ADO], Visual Basic example
 - DeleteRecord method [ADO], Visual Basic example
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5bc593b8184d73085e01d637863075a960e34ae8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 78dba1568180e7e49ebe1c5cc7e6ee2ed61f9497
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277630"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811895"
 ---
-# <a name="deleterecord-and-moverecord-methods-example-vb"></a>Esempio di metodi di MoveRecord (VB) e DeleteRecord
-In questo esempio viene illustrato come copiare, spostare, modificare ed eliminare il contenuto di un file di testo pubblicato in una cartella Web. Altre proprietà e metodi utilizzati includono [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [origine](../../../ado/reference/ado-api/source-property-ado-record.md), e [scaricamento](../../../ado/reference/ado-api/flush-method-ado.md).  
+# <a name="deleterecord-and-moverecord-methods-example-vb"></a>Esempio di DeleteRecord e MoveRecord (esempio di metodi (VB)
+In questo esempio viene illustrato come copiare, spostare, modificare ed eliminare il contenuto di un file di testo pubblicati in una cartella Web. Includono altre proprietà e metodi usati [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [origine](../../../ado/reference/ado-api/source-property-ado-record.md), e [Flush](../../../ado/reference/ado-api/flush-method-ado.md).  
   
 ```  
 'BeginDeleteRecordVB  
@@ -154,7 +151,7 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo DeleteRecord (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
- [Flush (metodo) (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
+ [Metodo Flush (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [Metodo GetChildren (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   
  [Metodo MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
  [Proprietà ParentURL (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   

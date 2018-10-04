@@ -1,13 +1,11 @@
 ---
-title: Impostare RDS. DataControl Server e associare a una tabella HTML (VBScript) | Documenti Microsoft
+title: Set di servizi desktop remoto. DataControl Server e associare la tabella HTML (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,22 +17,21 @@ helpviewer_keywords:
 - SortColumn property [RDS], VBScript example
 - FilterValue property [ADO], VBScript example
 ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 465cb7deef84e3b5e853df3ee4d14359babc4221
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c0cea18d6895363e1a264258c88d733fc3c5ab35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288384"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661119"
 ---
-# <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn, FilterCriterion, FilterValue, SortColumn, SortDirection proprietà e la reimpostazione metodo esempio (VBScript)
+# <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn, FilterCriterion, valore FilterValue, SortColumn e SortDirection Properties ed esempio di metodo Reset (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Il codice seguente viene illustrato come impostare il [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Server** in fase di progettazione e la relativa associazione a un supporto dati HTML tabella utilizzando un'origine dati. Tagliare e incollare il codice seguente in blocco note o un altro editor di testo e salvarlo come **FilterColumnVBS**.  
+ Il codice seguente viene illustrato come impostare il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Server** parametro alla fase di progettazione e la relativa associazione a un HTML basata sui dati tabella utilizzando un'origine dati. Tagliare e incollare il codice seguente nel blocco note o un altro editor di testo e salvarlo come **FilterColumnVBS**.  
   
 ```  
 <!-- BeginFilterColumnVBS -->  
@@ -208,12 +205,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Proprietà FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
- [Proprietà FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
- [Proprietà FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
- [Reset (metodo) (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)   
- [Proprietà SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
+ [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Proprietà FilterColumn (Servizi Desktop remoto)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
+ [Proprietà FilterCriterion (Servizi Desktop remoto)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
+ [Proprietà FilterValue (Servizi Desktop remoto)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
+ [Metodo Reset (Servizi Desktop remoto)](../../../ado/reference/rds-api/reset-method-rds.md)   
+ [Proprietà SortColumn (Servizi Desktop remoto)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [Proprietà SortDirection (Servizi Desktop remoto)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
 
 

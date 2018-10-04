@@ -1,29 +1,26 @@
 ---
-title: L'esecuzione ODBC diretta | Documenti Microsoft
+title: Esecuzione diretta ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], direct execution
 - direct execution [ODBC]
 - SQL statements [ODBC], executing
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e506f856fff84065b0026e3e3629a4299d14dae2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c061718dc326e43f72be369a28ad12726a3cab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912036"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603049"
 ---
 # <a name="direct-execution-odbc"></a>Esecuzione diretta ODBC
 Esecuzione diretta è il modo più semplice per eseguire un'istruzione. Quando l'istruzione viene inviata per l'esecuzione, l'origine dati lo compila in un piano di accesso e quindi esegue il piano di accesso.  
@@ -40,20 +37,20 @@ BuildStatement(SQLStatement);
 SQLExecDirect(hstmt, SQLStatement, SQL_NTS);  
 ```  
   
- Esecuzione diretta risulta più adatta per le istruzioni che verranno eseguite una sola volta. Il principale svantaggio è che l'istruzione SQL viene analizzata ogni volta che viene eseguita. Inoltre, l'applicazione non può recuperare le informazioni sul set di risultati creati tramite l'istruzione (se presente) fino a quando viene eseguita l'istruzione; Questo è possibile se l'istruzione viene preparata ed eseguita in due fasi distinte.  
+ Esecuzione diretta risulta più adatta per le istruzioni che verranno eseguite una sola volta. Il principale svantaggio è che l'istruzione SQL viene analizzata ogni volta che viene eseguita. Inoltre, l'applicazione non è possibile recuperare le informazioni sul set di risultati creati tramite l'istruzione (se presente) fino a quando l'istruzione viene eseguita; Ciò è possibile se l'istruzione viene preparata ed eseguita in due passaggi distinti.  
   
  Per eseguire un'istruzione direttamente, l'applicazione esegue le azioni seguenti:  
   
-1.  Imposta i valori dei parametri. Per ulteriori informazioni, vedere [parametri dell'istruzione](../../../odbc/reference/develop-app/statement-parameters.md), più avanti in questa sezione.  
+1.  Imposta i valori dei parametri. Per altre informazioni, vedere [parametri delle istruzioni](../../../odbc/reference/develop-app/statement-parameters.md), più avanti in questa sezione.  
   
-2.  Chiamate **SQLExecDirect** e lo passa a una stringa contenente l'istruzione SQL.  
+2.  Le chiamate **SQLExecDirect** e lo passa a una stringa contenente l'istruzione SQL.  
   
 3.  Quando **SQLExecDirect** viene chiamato, il driver:  
   
-    -   Modifica l'istruzione SQL per l'utilizzo di grammatica SQL dell'origine dati senza analizzare l'istruzione. Questo include sostituendo le sequenze di escape descritte in [sequenze di Escape ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). L'applicazione può recuperare il modulo di un'istruzione SQL modificato chiamando **SQLNativeSql**. Se è impostato l'attributo di istruzione SQL_ATTR_NOSCAN, le sequenze di escape non vengono sostituite.  
+    -   Modifica l'istruzione SQL per usare la grammatica SQL dell'origine dati senza analizzare l'istruzione. sono inclusi sostituendo le sequenze di escape descritte in [sequenze di Escape in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). L'applicazione può recuperare il modulo di un'istruzione SQL modificato chiamando **SQLNativeSql**. Se è impostato l'attributo di istruzione SQL_ATTR_NOSCAN, le sequenze di escape non vengono sostituite.  
   
-    -   Recupera i valori di parametro corrente e li converte in base alle esigenze. Per ulteriori informazioni, vedere [parametri dell'istruzione](../../../odbc/reference/develop-app/statement-parameters.md), più avanti in questa sezione.  
+    -   Recupera i valori di parametro corrente e li converte in base alle esigenze. Per altre informazioni, vedere [parametri delle istruzioni](../../../odbc/reference/develop-app/statement-parameters.md), più avanti in questa sezione.  
   
-    -   Invia l'istruzione e i valori di parametro convertito all'origine dati per l'esecuzione.  
+    -   Invia l'istruzione e i valori dei parametri convertiti all'origine dati per l'esecuzione.  
   
-    -   Restituisce gli eventuali errori. Questi includono sequenziazione o diagnostica di stato, quali SQLSTATE 24000 (stato del cursore non valido), errori di sintassi, ad esempio SQLSTATE 42000 (sintassi o violazione di accesso) e gli errori semantici, ad esempio 42S02 SQLSTATE (Base tabella o vista non trovato).
+    -   Restituisce gli eventuali errori. Queste includono la sequenziazione o diagnostica stato ad esempio SQLSTATE 24000 (stato del cursore non valido), errori sintattici, ad esempio SQLSTATE 42000 (sintassi o violazione di accesso) e gli errori semantici, ad esempio SQLSTATE 42S02 (di Base nella tabella o vista non trovato).

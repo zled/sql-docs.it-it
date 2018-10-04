@@ -1,42 +1,39 @@
 ---
-title: Aggiunta di record mediante AddNew | Documenti Microsoft
+title: Aggiunta di record mediante AddNew | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AddNew method [ADO]
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36827d102d7e6ef0850c557eb6555135343fbec0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 68b1a34a5d23d9aab32b6216eda3b3ef8f977e79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270090"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819525"
 ---
 # <a name="adding-records-using-addnew-method"></a>Aggiunta di record mediante AddNew (metodo)
-Questa è la sintassi di base di **AddNew** metodo:
+Si tratta la sintassi di base del **AddNew** metodo:
 
- *recordset*. AddNew *elenco campi*, *valori*
+ *recordset*. AddNew *FieldList*, *valori*
 
- Il *elenco campi* e *valori* gli argomenti sono facoltativi. *Elenco campi* è un singolo nome o una matrice di nomi o posizioni ordinali dei campi nel nuovo record.
+ Il *FieldList* e *valori* gli argomenti sono facoltativi. *Elenco campi* è un singolo nome o una matrice di nomi o le posizioni ordinali dei campi nel nuovo record.
 
  Il *valori* argomento è un singolo valore o una matrice di valori per i campi nel nuovo record.
 
- In genere, quando si prevede di aggiungere un singolo record, è necessario chiamare il **AddNew** metodo senza argomenti. In particolare, si chiamerà **AddNew**; impostare il **valore** di ogni campo nel nuovo record; e quindi chiamare **aggiornamento** o **UpdateBatch**, o entrambi. È possibile assicurarsi che il **Recordset** supporta l'aggiunta di nuovi record utilizzando il **supporta** proprietà con il **adAddNew** costante enumerata.
+ In genere, quando si prevede di aggiungere un singolo record, chiama il **AddNew** metodo senza alcun argomento. In particolare, si chiamerà **AddNew**; impostare il **valore** di ogni campo nel nuovo record; e quindi chiamare **Update** oppure **UpdateBatch**, o entrambi. È possibile assicurarsi che il **Recordset** supporta l'aggiunta di nuovi record tramite il **supporta** proprietà con il **adAddNew** costante enumerata.
 
- Il codice seguente usa questa tecnica per aggiungere un nuovo spedizioniere per l'esempio **Recordset**. SQL Server fornisce il valore del campo IDCorriere automaticamente. Pertanto, il codice non tenta di fornire un valore di campo per i nuovi record.
+ Il codice seguente usa questa tecnica per aggiungere un nuovo spedizioniere al campione **Recordset**. SQL Server fornisce il valore del campo ShipperID automaticamente. Pertanto, il codice non tenta di fornire un valore di campo per i nuovi record.
 
 ```
 'BeginAddNew1.1
@@ -51,5 +48,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>Remarks
- Poiché il codice utilizza un disconnesso **Recordset** con un cursore sul lato client in modalità batch, è necessario riconnettere il **Recordset** all'origine dati con un nuovo **connessione** oggetto prima di chiamare il **UpdateBatch** metodo per inviare modifiche al database. Ciò avviene con facilità utilizzando la nuova funzione **GetNewConnection**.
+## <a name="remarks"></a>Note
+ Poiché questo codice Usa un disconnessa **Recordset** con un cursore lato client in modalità batch, è necessario riconnettere le **Recordset** all'origine dati con un nuovo **connessione** oggetto prima di poter chiamare le **UpdateBatch** metodo per registrare le modifiche al database. Ciò avviene con facilità usando la nuova funzione **GetNewConnection**.

@@ -1,13 +1,11 @@
 ---
-title: Open (metodo) (connessione ADO) | Documenti Microsoft
+title: Metodo Open (connessione ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,18 +15,17 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8035a40949e269fd8d8b039eb1931e8ed17c73c7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 008ff3dacaa4bf3256429984973608c10a73d43e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280010"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606487"
 ---
-# <a name="open-method-ado-connection"></a>Open (metodo) (connessione ADO)
+# <a name="open-method-ado-connection"></a>Metodo Open (Connection - ADO)
 Apre una connessione a un'origine dati.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -39,41 +36,41 @@ connection.Open ConnectionString, UserID, Password, Options
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *connectionString*  
- Facoltativo. Oggetto **stringa** valore che contiene informazioni di connessione. Vedere il [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà per informazioni dettagliate sulle impostazioni valide.  
+ *ConnectionString*  
+ Facoltativo. Oggetto **stringa** valore contenente le informazioni di connessione. Vedere le [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà per informazioni dettagliate sulle impostazioni valide.  
   
  *ID utente*  
- Facoltativo. Oggetto **stringa** valore che contiene un nome utente da utilizzare per stabilire la connessione.  
+ Facoltativo. Oggetto **stringa** valore che contiene un nome utente da usare quando si stabilisce la connessione.  
   
  *Password*  
- Facoltativo. Oggetto **stringa** valore che contiene una password da utilizzare per stabilire la connessione.  
+ Facoltativo. Oggetto **stringa** valore contenente una password da usare quando si stabilisce la connessione.  
   
  *Opzioni*  
- Facoltativo. Oggetto [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) valore che determina se questo metodo deve essere restituito dopo (in modo sincrono) o prima (in modo asincrono) in cui viene stabilita la connessione.  
+ Facoltativo. Oggetto [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) valore che determina se questo metodo deve restituire dopo (in modo sincrono) o prima (in modo asincrono) viene stabilita la connessione.  
   
-## <a name="remarks"></a>Remarks  
- Utilizzando il **aprire** metodo su un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto stabilisce la connessione fisica a un'origine dati. Dopo il metodo viene completato correttamente, viene stabilita la connessione ed è possibile eseguire comandi su di esso e a elaborare i risultati.  
+## <a name="remarks"></a>Note  
+ Usando il **aperto** metodo su un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto stabilisce la connessione fisica a un'origine dati. Dopo che questo metodo viene completato correttamente, viene stabilita la connessione ed è possibile eseguire comandi su di esso ed elaborare i risultati.  
   
- Utilizzare l'opzione facoltativa *ConnectionString* argomento per specificare una stringa di connessione che contiene una serie di *argomento* *= valore* istruzioni separate da punti e virgola o un risorsa file o directory identificata da un URL. Il **ConnectionString** proprietà eredita automaticamente il valore utilizzato per il *ConnectionString* argomento. Pertanto, è possibile impostare il **ConnectionString** proprietà del **connessione** oggetto prima di aprirlo oppure utilizzare il *ConnectionString* argomento per impostare o eseguire l'override i parametri di connessione corrente durante il **aprire** chiamata al metodo.  
+ Usare l'opzione facoltativa *ConnectionString* argomento per specificare una stringa di connessione contenente una serie di *argomento* *= valore* istruzioni separate da punti e virgola o un oggetto risorsa file o directory identificata da un URL. Il **ConnectionString** proprietà eredita automaticamente il valore usato per il *ConnectionString* argomento. Pertanto, è possibile impostare il **ConnectionString** proprietà delle **connessione** dell'oggetto prima di aprirlo oppure usare il *ConnectionString* argomento per impostare o eseguire l'override i parametri di connessione corrente durante la **aperto** chiamata al metodo.  
   
- Se si passa l'utente e password informazioni sia il *ConnectionString* argomento e nella facoltativa *UserID* e *Password* argomenti, il *UserID*  e *Password* argomenti sostituiranno i valori specificati in *ConnectionString*.  
+ Se si passa l'utente e password informazioni entrambi nel *ConnectionString* argomento e in facoltativo *UserID* e *Password* argomenti, il *UserID*  e *Password* argomenti sostituiranno i valori specificati nella *ConnectionString*.  
   
- Quando si hanno concluso le operazioni attraverso un **connessione**, utilizzare il [Chiudi](../../../ado/reference/ado-api/close-method-ado.md) metodo per liberare le risorse di sistema associate. Chiusura di un oggetto senza rimuoverlo dalla memoria. è possibile modificare le impostazioni delle proprietà e utilizzare il **aprire** metodo aprirlo più tardi. Per eliminare completamente l'oggetto dalla memoria, impostare la variabile oggetto *nulla*.  
-  
-> [!NOTE]
->  **Utilizzo del servizio dati remoti** quando viene utilizzata su un lato client **connessione** oggetto, il **aprire** metodo non stabilisce una connessione al server fino un [Recordset ](../../../ado/reference/ado-api/recordset-object-ado.md) viene aperta sul **connessione** oggetto.  
+ Quando aver concluso le operazioni su un oggetto aperto **connessione**, utilizzare il [Chiudi](../../../ado/reference/ado-api/close-method-ado.md) metodo da liberare eventuali risorse di sistema associate. Chiusura di un oggetto senza rimuoverlo dalla memoria. è possibile modificare le impostazioni delle proprietà e usare la **aprire** metodo aprirlo più tardi. Per eliminare completamente un oggetto dalla memoria, impostare la variabile oggetto *Nothing*.  
   
 > [!NOTE]
->  Gli URL che utilizzano lo schema http richiamerà automaticamente il [il Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  **Utilizzo del servizio dati remoto** quando viene usato in un client-side **connessione** oggetto, il **Open** metodo non stabilisce una connessione al server fino a un [Recordset ](../../../ado/reference/ado-api/recordset-object-ado.md) viene aperto nel **connessione** oggetto.  
+  
+> [!NOTE]
+>  Gli URL che utilizzano lo schema http chiama automaticamente il [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per altre informazioni, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di metodi di apertura e chiusura (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
- [Esempio di metodi di apertura e chiusura (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
- [Esempio di metodi di apertura e chiusura (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
- [Open (metodo) (Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Open (metodo) (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Esempio di metodi Open e Close (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
+ [Esempio di metodi Open e Close (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
+ [Esempio di metodi Open e Close (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
+ [Metodo Open (Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
+ [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Metodo Open (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Metodo OpenSchema](../../../ado/reference/ado-api/openschema-method.md)

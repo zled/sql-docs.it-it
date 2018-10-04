@@ -1,36 +1,33 @@
 ---
-title: La funzione SQLSetConnectAttr (libreria di cursori) | Documenti Microsoft
+title: SQLSetConnectAttr (libreria di cursori) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectAttr function [ODBC], Cursor Library
 ms.assetid: 6f70bbd0-a057-49ef-8b05-4c80b58fc6e6
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d10356488b0a590fb065c49a36a05f0e9b976991
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d4023c513ffda04a3cf499110185d3746ca40d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907706"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713459"
 ---
-# <a name="sqlsetconnectattr-cursor-library"></a>Funzione SQLSetConnectAttr (libreria di cursori)
+# <a name="sqlsetconnectattr-cursor-library"></a>SQLSetConnectAttr (libreria di cursori)
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Si consiglia di utilizzare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
   
- In questo argomento viene illustrato l'utilizzo del **SQLSetConnectAttr** funzione nella libreria di cursori. Per informazioni generali su **SQLSetConnectAttr**, vedere [funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
+ In questo argomento viene illustrato l'utilizzo dei **SQLSetConnectAttr** funzione nella libreria di cursori. Per informazioni generali sul **SQLSetConnectAttr**, vedere [funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
   
- Un'applicazione chiama **SQLSetConnectAttr** con l'attributo SQL_ATTR_ODBC_CURSORS per specificare se la libreria di cursori viene sempre utilizzata, utilizzata se il driver non supporta i cursori scorrevoli o mai utilizzata. La libreria di cursori si presuppone che un driver supporta i cursori scorrevoli se restituisce SQL_CA1_RELATIVE per il tipo di informazioni SQL_STATIC_CURSOR_ATTRIBUTES1 in **SQLGetInfo**.  
+ Un'applicazione chiama **SQLSetConnectAttr** con l'attributo SQL_ATTR_ODBC_CURSORS per specificare se la libreria di cursori viene sempre usata, utilizzata se il driver non supporta i cursori scorrevoli o mai utilizzata. La libreria di cursori si presuppone che un driver supporta cursori scorrevoli se per il tipo di informazioni SQL_STATIC_CURSOR_ATTRIBUTES1 in restituisce SQL_CA1_RELATIVE **SQLGetInfo**.  
   
- L'applicazione deve chiamare **SQLSetConnectAttr** per specificare l'utilizzo della libreria di cursori dopo aver chiamato **SQLAllocHandle** con un *HandleType* impostato su SQL_HANDLE_DBC per allocare la connessione e prima che si connetta all'origine dati. Se un'applicazione chiama **SQLSetConnectAttr** con l'attributo SQL_ATTR_ODBC_CURSORS durante la connessione è ancora attiva, la libreria di cursori restituisce un errore.  
+ L'applicazione deve chiamare **SQLSetConnectAttr** per specificare l'utilizzo della libreria di cursori dopo aver chiamato **SQLAllocHandle** con un *HandleType* SQL_HANDLE_DBC per allocare la connessione e prima che si connette all'origine dati. Se un'applicazione chiama **SQLSetConnectAttr** con l'attributo SQL_ATTR_ODBC_CURSORS mentre la connessione è ancora attiva, la libreria di cursori restituisce un errore.  
   
- Per impostare un attributo di istruzione supportato dalla libreria di cursori per tutte le istruzioni associata a una connessione, un'applicazione deve chiamare **SQLSetConnectAttr** per l'attributo dopo la connessione all'origine dati e prima dell'istruzione Apre il cursore. Se un'applicazione chiama **SQLSetConnectAttr** con un'istruzione attributo e un cursore è aperto in un'istruzione associata alla connessione, l'attributo di istruzione non essere applicato a tale istruzione fino a quando il cursore è chiuso e riaperto.
+ Per impostare un attributo di istruzione supportato dalla libreria di cursori per tutte le istruzioni associate a una connessione, un'applicazione deve chiamare **SQLSetConnectAttr** per tale attributo dell'istruzione dopo la connessione all'origine dati e prima di esso Apre il cursore. Se un'applicazione chiama **SQLSetConnectAttr** con un'istruzione di attributo e un cursore è aperto in un'istruzione associata alla connessione, l'attributo di istruzione non essere applicato a tale istruzione fino a quando il cursore viene chiuso e riaperto.

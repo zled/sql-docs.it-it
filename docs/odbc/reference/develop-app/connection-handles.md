@@ -1,42 +1,39 @@
 ---
-title: Handle di connessione | Documenti Microsoft
+title: Handle di connessione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b2f8168384c4636bab98cd64105f4c9d0884155
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77fdb63f346ada40346544a53c3ff69db0a8a9a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828940"
 ---
 # <a name="connection-handles"></a>Handle di connessione
-Oggetto *connessione* è costituito da un driver e un'origine dati. Un handle di connessione identifica ogni connessione. Consente di definire l'handle di connessione non solo driver da utilizzare, ma l'origine dati da utilizzare con il driver. All'interno di un segmento di codice che implementa ODBC (Driver Manager o un driver), l'handle di connessione identifica una struttura contenente informazioni di connessione, ad esempio le operazioni seguenti:  
+Oggetto *connessione* è costituito da un driver e un'origine dati. Un handle di connessione identifica ogni connessione. L'handle di connessione definisce non solo il driver da usare, ma l'origine dati da utilizzare con tale driver. All'interno di un segmento di codice che implementa ODBC (gestione Driver o un driver), l'handle di connessione identifica una struttura che contiene informazioni di connessione, ad esempio il seguente:  
   
 -   Lo stato della connessione  
   
 -   La diagnostica a livello di connessione corrente  
   
--   Gli handle di istruzioni e descrittori allocati per la connessione  
+-   Gli handle delle istruzioni e i descrittori allocati per la connessione  
   
 -   Le impostazioni correnti di ogni attributo di connessione  
   
- ODBC non impedisce più connessioni simultanee, se il driver supportarle. Pertanto, in un particolare ambiente ODBC, più handle di connessione potrebbero fare riferimento a un'ampia gamma di driver e origini dati per lo stesso driver e una varietà di origini dati o anche a più connessioni allo stesso driver e origine dati. Alcuni driver limitare il numero di connessioni attive che supportano; opzione di SQL_MAX_DRIVER_CONNECTIONS **SQLGetInfo** specifica il numero di connessioni attivo supporta un driver specifico.  
+ ODBC non impedisce più connessioni simultanee, se il driver supportarle. Pertanto, in un ambiente ODBC specifico, più handle di connessione potrebbero fare riferimento a un'ampia gamma di driver e origini dati per lo stesso driver e una varietà di origini dati, o anche a più connessioni allo stesso driver e origine dati. Alcuni driver limitare il numero di connessioni attive che supportano; opzione il SQL_MAX_DRIVER_CONNECTIONS **SQLGetInfo** specifica il numero di connessioni attivo supporta un driver specifico.  
   
- Handle di connessione vengono utilizzati principalmente per la connessione all'origine dati (**SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect**), disconnessione dai dati origine (**SQLDisconnect**), recupero di informazioni sull'origine dati e i driver (**SQLGetInfo**), il recupero di diagnostica (**SQLGetDiagField** e **SQLGetDiagRec**) e l'esecuzione di transazioni (**SQLEndTran**). Vengono inoltre utilizzati durante l'impostazione e recupero degli attributi di connessione (**SQLSetConnectAttr** e **SQLGetConnectAttr**) e quando si ottiene il formato nativo di un'istruzione SQL (**SQLNativeSql** ).  
+ Handle di connessione vengono utilizzati principalmente per la connessione all'origine dati (**SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect**), disconnessione dai dati origine (**SQLDisconnect**), recupero di informazioni relative all'origine dati e del driver (**SQLGetInfo**), il recupero di diagnostica (**SQLGetDiagField** e **SQLGetDiagRec**) e l'esecuzione di transazioni (**SQLEndTran**). Vengono usati anche quando l'impostazione e recupero di attributi di connessione (**SQLSetConnectAttr** e **SQLGetConnectAttr**) e quando si recupera il formato nativo di un'istruzione SQL (**SQLNativeSql** ).  
   
- Handle di connessione vengono allocati con **SQLAllocHandle** e liberata con **SQLFreeHandle**.
+ Handle di connessione vengono allocati con **SQLAllocHandle** e liberati con **SQLFreeHandle**.

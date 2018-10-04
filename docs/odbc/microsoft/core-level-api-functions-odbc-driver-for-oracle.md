@@ -1,13 +1,11 @@
 ---
-title: Funzioni API di livello, il Driver ODBC per Oracle, di base | Documenti Microsoft
+title: Funzioni API del livello (Driver ODBC per Oracle) di base | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], ODBC driver for Oracle
@@ -15,45 +13,44 @@ helpviewer_keywords:
 - core level API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4135e192a2a97944ff455c72c76c136faaac4652
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ead4e816049f6dcce6bfc560a60d8f8bafa9d61c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904516"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724689"
 ---
-# <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Funzioni API di livello principale (Driver ODBC per Oracle)
+# <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Funzioni API del livello di base (driver ODBC per Oracle)
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, utilizzare il driver ODBC fornito da Oracle.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare il driver ODBC fornito da Oracle.  
   
  Funzioni a questo livello costituiscono il livello minimo di conformità di interfaccia per i driver ODBC.  
   
-|Funzione API|Note|  
+|Funzione dell'API|Note|  
 |------------------|-----------|  
-|**SQLAllocConnect**|Alloca memoria per un handle di connessione, *hdbc*, all'interno dell'ambiente identificato da *henv*. Gestione Driver elabora questa chiamata e il driver chiama **SQLAllocConnect** funzione ogni volta che **SQLConnect**, **SQLBrowseConnect**, o  **SQLDriverConnect** viene chiamato.|  
-|**SQLAllocEnv**|Visualizza una finestra di dialogo che specifica il requisito per il software Client Oracle e quindi restituisce SQL_NULL_HANDLE. Se non è installato il software Client Oracle, questa funzione alloca memoria per un handle di ambiente, *henv*e inizializza l'interfaccia del livello di chiamata ODBC per l'utilizzo da parte di un'applicazione.|  
-|**SQLAllocStmt**|Alloca memoria per un handle di istruzione e associa l'handle di istruzione con la connessione specificata dall'oggetto hdbc. Gestione Driver passa la chiamata al driver, che consente di allocare la memoria per la struttura hstmt.|  
-|**SQLBindCol**|Assegna spazio di archiviazione per una colonna di risultati e specifica il tipo del risultato.|  
-|**SQLCancel**|Annulla l'elaborazione su un handle di istruzione, hstmt. In alcuni casi, Oracle non consente l'annullamento di un'istruzione in esecuzione. Ciò significa che un'istruzione in esecuzione continua fino al Oracle completa il processo, nel qual caso i risultati dalle istruzioni vengono annullati dal Driver ODBC per Oracle.|  
-|**SQLColAttributes**|Restituisce informazioni sul descrittore per una colonna in un set di risultati. Informazioni del descrittore viene restituite come una stringa di caratteri, un dipendente dal descrittore di valore a 32 bit o un valore intero.|  
-|**SQLConnect**|Si connette a un'origine dati. Per utilizzare l'autenticazione del sistema operativo di Oracle, specificare "/" come il *szUID* parametro e "" come il *szAuthStr* parametro.|  
-|**SQLDescribeCol**|Restituisce il nome, tipo, precisione, scala e supporto di valori null della colonna di risultati specificato. **Nota:****SQLDescribeCol** riporta le colonne calcolate come SQL_VARCHAR.|  
-|**SQLDisconnect**|Chiude una connessione. Se il pool di connessioni è abilitato per un ambiente condiviso e un'applicazione chiama **SQLDisconnect** su una connessione in tale ambiente, la connessione viene restituita al pool di connessioni ed è ancora disponibile per altri componenti utilizzando lo stesso ambiente condiviso.|  
-|**SQLError**|Restituisce le informazioni di stato o di errore sull'ultimo errore. Il driver gestisce un stack o un elenco di errori che possono essere restituite per il *hstmt*, *hdbc*, e *henv* argomenti, a seconda di come la chiamata a **SQLError**  viene eseguita. La coda di errore viene svuotata dopo ogni istruzione. In genere recupera un messaggio di errore Oracle e in caso contrario è vuoto.|  
-|**SQLExecDirect**|Esegue un'istruzione SQL nuovo, non preparata. Il driver utilizza i valori correnti delle variabili di marcatore di parametro, se sono presenti parametri nell'istruzione. La tabella, vista o i nomi dei campi contengono spazi, racchiudere i nomi di backup offerta contrassegni. Ad esempio, se il database contiene una tabella denominata *tabella personale* e il campo *My Field*, racchiudere ogni elemento dell'identificatore in questo modo:<br /><br /> Selezionare \`tabella\`. \`My Field1\`, \`Della tabella\`.\` My Field2\` FROM \`la tabella '|  
+|**SQLAllocConnect**|Alloca memoria per un handle di connessione *hdbc*, all'interno dell'ambiente identificato dal *henv*. Gestione Driver elabora questa chiamata e il driver chiama **SQLAllocConnect** funzione ogni qualvolta **SQLConnect**, **SQLBrowseConnect**, o  **SQLDriverConnect** viene chiamato.|  
+|**SQLAllocEnv**|Visualizza una finestra di dialogo che specifica il requisito per il software Client Oracle e quindi restituisce SQL_NULL_HANDLE. Se non è installato il software Client Oracle, questa funzione alloca memoria per un handle di ambiente *henv*e la inizializza l'interfaccia ODBC a livello di chiamata usata da un'applicazione.|  
+|**SQLAllocStmt**|Alloca memoria per un handle di istruzione e associa la connessione specificata dall'oggetto hdbc l'handle di istruzione. Gestione Driver passa la chiamata al driver, che consente di allocare la memoria per la struttura hstmt.|  
+|**SQLBindCol**|Assegna lo spazio di archiviazione per una colonna di risultati e specifica il tipo del risultato.|  
+|**SQLCancel**|Annulla l'elaborazione su un handle di istruzione, hstmt. In alcuni casi, Oracle non supporta l'annullamento di un'istruzione in esecuzione. Ciò significa che un'istruzione in esecuzione continuerà fino a quando non Oracle completa il processo, momento in cui i risultati delle istruzioni vengono annullati dal Driver ODBC per Oracle.|  
+|**SQLColAttributes**|Restituisce informazioni sul descrittore per una colonna in un set di risultati. Informazioni sul descrittore viene restituiti come una stringa di caratteri, un valore di dipendente dal descrittore di 32 bit o un valore intero.|  
+|**SQLConnect**|Si connette a un'origine dati. Per utilizzare l'autenticazione del sistema operativo Oracle, specificare "/" come il *szUID* parametro e "" come il *szAuthStr* parametro.|  
+|**SQLDescribeCol**|Restituisce il nome, tipo, precisione, scala e supporto di valori null della colonna di risultati specificato. **Nota:****SQLDescribeCol** riporta le colonne calcolate come SQL_VARCHAR.  |  
+|**SQLDisconnect**|Chiude una connessione. Se il pool di connessioni è abilitato per un ambiente condiviso e un'applicazione chiama **SQLDisconnect** su una connessione in tale ambiente, viene restituita al pool di connessioni e ancora disponibile ad altri componenti tramite la connessione lo stesso ambiente condiviso.|  
+|**SQLError**|Restituisce le informazioni di stato o di errore sull'ultimo errore. Il driver gestisce un stack o un elenco di errori che possono essere restituite per il *hstmt*, *hdbc*, e *henv* argomenti, a seconda di come la chiamata a **SQLError**  viene eseguita. Nella coda degli errori deve essere scaricata dopo ogni istruzione. In genere recupera un messaggio di errore Oracle e in caso contrario, è vuoto.|  
+|**SQLExecDirect**|Esegue un'istruzione SQL nuovo, non preparata. Il driver utilizza i valori correnti delle variabili di marcatore di parametro, se sono presenti parametri nell'istruzione. Se la tabella, vista o i nomi dei campi contengono spazi, racchiudere i nomi tra backup preventivo contrassegni. Ad esempio, se il database contiene una tabella denominata *My Table* e il campo *My Field*, racchiudere ogni elemento dell'identificatore come segue:<br /><br /> Selezionare \`tabella\`. \`My Field1\`, \`Della tabella\`.\` My Field2\` FROM \`nella tabella '|  
 |**SQLExecute**|Esegue un'istruzione SQL preparata (un'istruzione già preparata da **SQLPrepare**). Il driver utilizza i valori correnti delle variabili di marcatore di parametro, se sono presenti parametri nell'istruzione.|  
-|**SQLFetch**|Recupera una riga da un set di risultati in percorsi specificati dalle chiamate precedenti alla **SQLBindCol**. Prepara il driver per una chiamata a **SQLGetData** per le colonne non associate.|  
+|**SQLFetch**|Recupera una riga da un set di risultati in posizioni specificate dalle chiamate precedenti a **SQLBindCol**. Prepara il driver per una chiamata a **SQLGetData** per le colonne non associate.|  
 |**SQLFreeConnect**|Rilascia un handle di connessione e libera tutta la memoria allocata per l'handle.|  
-|**SQLFreeEnv**|Chiude il Driver ODBC per Oracle e rilascia tutta la memoria associata al driver.|  
-|**SQLFreeStmt**|Arresta elaborazione associata a un oggetto specifico hstmt, chiude tutti i cursori aperti associati hstmt, Elimina i risultati in sospeso e facoltativamente libera tutte le risorse associate all'handle di istruzione.|  
+|**SQLFreeEnv**|Chiude il Driver ODBC per Oracle e libera tutta la memoria associata al driver.|  
+|**SQLFreeStmt**|Arresta elaborazione associata a un oggetto specifico hstmt, chiude tutti i cursori aperti associati hstmt, ignora risultati in sospeso e, facoltativamente, rilascia tutte le risorse associate all'handle di istruzione.|  
 |**SQLGetCursorName**|Restituisce il nome del cursore associato hstmt specificato.|  
 |**SQLNumResultCols**|Restituisce il numero di colonne in un cursore del set di risultati.|  
-|**SQLPrepare**|Prepara un'istruzione SQL tramite la pianificazione come ottimizzare ed eseguire l'istruzione. L'istruzione SQL viene compilata per l'esecuzione da **SQLExecDirect**.<br /><br /> La tabella, vista o i nomi dei campi contengono spazi, racchiudere i nomi di backup offerta contrassegni. Ad esempio, se il database contiene una tabella denominata *tabella personale* e il campo *My Field*, racchiudere ogni elemento dell'identificatore, come indicato di seguito:<br /><br /> Selezionare \`tabella\`.\` Campo\` FROM \`la tabella '<br /><br /> Per informazioni sull'utilizzo di set di risultati che contengono matrici di parametri formali, vedere [la restituzione di parametri di matrice dalle Stored procedure](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
-|**SQLRowCount**|Oracle non fornisce un modo per determinare il numero di righe nel risultato fino a quando una volta recuperare l'ultima riga, quindi restituisce – 1.|  
-|**SQLSetCursorName**|Associa un nome di cursore con un handle di istruzione attiva, *hstmt*.|  
+|**SQLPrepare**|Prepara un'istruzione SQL, pianificare come ottimizzare ed eseguire l'istruzione. L'istruzione SQL viene compilata per l'esecuzione dal **SQLExecDirect**.<br /><br /> Se la tabella, vista o i nomi dei campi contengono spazi, racchiudere i nomi tra backup preventivo contrassegni. Ad esempio, se il database contiene una tabella denominata *My Table* e il campo *My Field*, racchiudere ogni elemento dell'identificatore, come indicato di seguito:<br /><br /> Selezionare \`della tabella\`.\` Il campo relativo alla\` FROM \`nella tabella '<br /><br /> Per informazioni sull'uso di set di risultati contenenti matrici di parametri formali, vedere [restituzione di parametri di matrice dalle Stored procedure](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
+|**SQLRowCount**|Oracle non fornisce un modo per determinare il numero di righe in un risultato impostata fino a quando non dopo il recupero dell'ultima riga, pertanto, restituisce -1.|  
+|**SQLSetCursorName**|Associa un handle di istruzione attiva, un nome di cursore *hstmt*.|  
 |**SQLSetParam**|Sostituito da SQLBindParameter in ODBC 2. *x*.|  
-|**SQLTransact**|Richiede un'operazione di commit o rollback per tutte le operazioni attive in tutti gli handle di istruzione (hstmts) associati a una connessione o per tutte le connessioni associate all'handle di ambiente, *henv*. Se un'operazione di commit ha esito negativo quando è in modalità manuale, la transazione rimane attiva. è possibile scegliere di eseguire il rollback della transazione o ripetere l'operazione di commit. Se un'operazione di commit ha esito negativo quando è in modalità automatica delle transazioni, il rollback della transazione. la transazione non può essere inattiva.|
+|**SQLTransact**|Richiede un'operazione di commit o rollback per tutte le operazioni attive in tutti gli handle di istruzione (HSTMT) associati a una connessione o per tutte le connessioni associate l'handle di ambiente *henv*. Se un'operazione di commit ha esito negativo quando è in modalità manuale, la transazione rimane attiva; è possibile scegliere di rollback della transazione o ripetere l'operazione di commit. Se un'operazione di commit ha esito negativo quando è in modalità di transazione automatica, il rollback della transazione automaticamente. la transazione non può essere inattiva.|

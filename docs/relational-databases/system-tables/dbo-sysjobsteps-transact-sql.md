@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobsteps (Transact-SQL) | Documenti Microsoft
+title: dbo.sysjobsteps (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobsteps
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sysjobsteps system table
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fff8cb852214733a96d1641cd767d578420cb9a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 91973f7c98409df52afa18db09dfbdac689a34d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259391"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842679"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ ms.locfileid: "33259391"
 |**step_id**|**int**|ID del passaggio del processo.|  
 |**step_name**|**sysname**|Nome del passaggio del processo.|  
 |**subsystem**|**nvarchar(40)**|Nome del sottosistema utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per eseguire il passaggio del processo|  
-|**comando**|**nvarchar(max)**|Comando deve essere eseguito da **sottosistema**.|  
+|**comando**|**nvarchar(max)**|Comando da eseguire tramite **sottosistema**.|  
 |**flags**|**int**|Riservato.|  
 |**additional_parameters**|**ntext**|Riservato.|  
 |**cmdexec_success_code**|**int**|Valore a livello di errore restituito da **CmdExec** passaggi del sottosistema per indicare l'esito positivo.|  
@@ -51,7 +47,7 @@ ms.locfileid: "33259391"
 |**on_fail_action**|**tinyint**|Azione da eseguire quando un passaggio non viene eseguito correttamente.|  
 |**on_fail_step_id**|**int**|ID del passaggio successivo da eseguire quando un passaggio non viene eseguito correttamente.|  
 |**server**|**sysname**|Riservato.|  
-|**database_name**|**sysname**|Nome del database in cui **comando** viene eseguita se **sottosistema** è TSQL.|  
+|**database_name**|**sysname**|Nome del database in cui **comandi** viene eseguita se **sottosistema** è TSQL.|  
 |**database_user_name**|**sysname**|Nome dell'utente del database di cui viene utilizzato l'account quando si esegue il passaggio.|  
 |**retry_attempts**|**int**|Numero di tentativi in caso di esecuzione errata del passaggio.|  
 |**retry_interval**|**int**|Periodo di attesa tra un tentativo e il successivo.|  

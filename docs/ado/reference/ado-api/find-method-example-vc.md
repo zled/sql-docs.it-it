@@ -1,32 +1,29 @@
 ---
-title: Esempio del metodo Find (VC + +) | Documenti Microsoft
+title: Esempio del metodo Find (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3280728d8e2e7a7f822be568052a5cbac84767a3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 448768620100ac444fefe030e2ef42812e2eb03c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278590"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682119"
 ---
-# <a name="find-method-example-vc"></a>Esempio del metodo Find (VC + +)
-Questo esempio viene utilizzato il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [trovare](../../../ado/reference/ado-api/find-method-ado.md) per individuare e calcolare il numero di titoli di business nel **Pubs** database. Si presuppone che il provider sottostante non supporta una funzionalità simile.  
+# <a name="find-method-example-vc"></a>Esempio del metodo Find (VC++)
+Questo esempio Usa la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [trovare](../../../ado/reference/ado-api/find-method-ado.md) metodo per individuare e contare il numero di titoli aziendali nel **Pubs** database. L'esempio presuppone che il provider sottostante non supporta una funzionalità simile.  
   
 ```  
 // BeginFindCpp.cpp  
@@ -159,5 +156,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Find (metodo) (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
+ [Metodo Find (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

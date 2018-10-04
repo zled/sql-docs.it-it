@@ -1,13 +1,11 @@
 ---
-title: Scrittura di un'applicazione interoperabile | Documenti Microsoft
+title: La scrittura di un'applicazione interoperativa | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], feature support and variability
@@ -15,27 +13,26 @@ helpviewer_keywords:
 - feature support in interoperable applications [ODBC]
 - feature variability in interoperable applications [ODBC]
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6aae50c316072c0970ffea4eb953f4e0ee86c5d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e559eab5787a64b6bdf0850147d7d9128fc435c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757259"
 ---
-# <a name="writing-an-interoperable-application"></a>Scrittura di un'applicazione di interoperabilità
-Ogni volta che un'applicazione utilizza lo stesso codice con più di un driver, il codice deve essere interoperabile tra i driver. Nella maggior parte dei casi, si tratta di un'attività semplice. Ad esempio, il codice per recuperare le righe con un cursore forward-only è uguale per tutti i driver. In alcuni casi, può essere più difficile. Ad esempio, il codice per costruire gli identificatori per l'utilizzo nelle istruzioni SQL deve considerare il caso di identificatore, racchiudere tra virgolette e convenzioni di denominazione in tre parti, due parti e una parte.  
+# <a name="writing-an-interoperable-application"></a>Scrittura di un'applicazione interoperativa
+Ogni volta che un'applicazione utilizza lo stesso codice rispetto a più di un driver, tale codice deve essere interoperabili tra i driver. Nella maggior parte dei casi, questo è un compito facile. Ad esempio, il codice per recuperare le righe con un cursore forward-only è lo stesso per tutti i driver. In alcuni casi, può essere più difficile. Ad esempio, il codice per costruire gli identificatori per l'uso nelle istruzioni SQL deve prendere in considerazione maiuscole/minuscole identificatore deve essere racchiuso tra e le convenzioni di denominazione di una sola parte, due parti e tre parti.  
   
- In generale, codice di interoperabilità deve affrontano problemi di supporto delle funzionalità e la variabilità delle funzionalità. *Supporto alle funzionalità* fa riferimento a o meno una particolare caratteristica è supportata. Ad esempio, non tutti i DBMS supportano le transazioni e interoperativa codice deve funzionare correttamente indipendentemente dal supporto delle transazioni. *Funzionalità variabilità* fa riferimento a variazione nel modo in cui è supportata una determinata funzionalità. Ad esempio, i nomi di catalogo si trovano all'inizio degli identificatori di alcuni DBMS e alla fine di identificatori in altri.  
+ In generale, codice di interoperabilità deve far fronte con problemi di supporto delle funzionalità e della variabilità delle funzionalità. *Supporto alle funzionalità* fa riferimento a una caratteristica particolare o meno è supportata. Ad esempio, DBMS non tutte supportano le transazioni e interoperativa codice deve funzionare correttamente indipendentemente dal supporto delle transazioni. *Variabilità delle funzionalità* fa riferimento a variazione nel modo in cui una determinata funzionalità è supportata. Ad esempio, i nomi di catalogo vengono inseriti all'inizio di identificatori in alcune DBMS e alla fine di identificatori in altri casi.  
   
- È possono gestire le applicazioni con supporto di funzionalità e la variabilità delle funzionalità in fase di progettazione o in fase di esecuzione. Per risolvere il supporto delle funzionalità e la variabilità in fase di progettazione, uno sviluppatore esamina il DBMS di destinazione e i driver e assicura che lo stesso codice saranno interoperabile tra di essi. Si tratta in genere il modo in cui le applicazioni con bassa o limitate interoperabilità gestiscono questi problemi.  
+ Consente di gestire le applicazioni con supporto della funzionalità e della variabilità delle funzionalità in fase di progettazione o in fase di esecuzione. Per risolvere il supporto delle funzionalità e la variabilità in fase di progettazione, uno sviluppatore esamina il DBMS di destinazione e i driver e assicura che lo stesso codice sia interoperativo tra di essi. Questo è in genere il modo in cui le applicazioni a basso o limitato interoperability gestiscono questi problemi.  
   
- Ad esempio, se lo sviluppatore garantisce che un'applicazione verticale funziona solo con quattro DBMS particolare e ognuno di tali DBMS supporta le transazioni, l'applicazione non è necessario codice per verificare il supporto delle transazioni in fase di esecuzione. È possibile presupporre sempre le transazioni sono disponibili a causa delle decisioni in fase di progettazione da usare solo quattro DBMS, ognuno dei quali supporta le transazioni.  
+ Ad esempio, se lo sviluppatore garantisce che un'applicazione verticale funzionerà solo con quattro specifico DBMS e ognuno di tali DBMS supporta le transazioni, l'applicazione non è necessario verificare il supporto delle transazioni in fase di esecuzione di codice. Può sempre presupporre che le transazioni sono disponibili a causa la decisione di progettazione da usare solo quattro DBMS, ognuno dei quali supporta le transazioni.  
   
- Per risolvere il supporto delle funzionalità e la variabilità in fase di esecuzione, l'applicazione deve testare per diverse funzionalità in fase di esecuzione e agire di conseguenza. Si tratta in genere il modo in cui le applicazioni altamente interoperabile gestiscono questi problemi. Per i problemi di supporto di funzionalità, ciò significa la scrittura di codice che rende il codice facoltativo o la scrittura di funzionalità che emula la funzionalità quando non è disponibile. Per problemi di funzionalità variabilità, ciò significa la scrittura di codice che supporta tutte le possibili varianti.  
+ Per risolvere il supporto delle funzionalità e la variabilità in fase di esecuzione, l'applicazione deve testare per diverse funzionalità in fase di esecuzione e agire di conseguenza. Questo è in genere il modo in cui le applicazioni altamente interoperabile gestiscono questi problemi. Per i problemi di supporto di funzionalità, ciò significa che la scrittura di codice che rende facoltativo o la scrittura del codice della funzione che emula la funzionalità quando non è disponibile. Per problemi di variabilità di funzionalità, ciò significa la scrittura di codice che supporta tutte le possibili varianti.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

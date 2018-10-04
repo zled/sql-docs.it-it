@@ -1,40 +1,37 @@
 ---
-title: Istruzioni SQL hard-Coded | Documenti Microsoft
+title: Le istruzioni SQL hard-Coded | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], hard-coded
 - hard-coded SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab17362cdece97582e26e6bc99ed38e678db6a4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911506"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746239"
 ---
-# <a name="hard-coded-sql-statements"></a>Istruzioni SQL hard-Coded
-Applicazioni che eseguono attività fissa in genere contengono le istruzioni SQL hard-coded. Ad esempio, un sistema di immissione degli ordini è possibile utilizzare la chiamata seguente a ordini di vendita Apri elenco:  
+# <a name="hard-coded-sql-statements"></a>Istruzioni SQL hard-coded
+Le applicazioni che eseguono attività fissa in genere contengono istruzioni SQL hard-coded. Ad esempio, un sistema di immissione dell'ordine potrebbe usare la chiamata seguente a ordini di vendita aperti elenco:  
   
 ```  
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- Esistono numerosi vantaggi per le istruzioni SQL hard-coded: possono essere verificate quando l'applicazione è scritta. sono più semplici da implementare rispetto alle istruzioni create in fase di esecuzione. e semplificano l'applicazione.  
+ Esistono diversi vantaggi per le istruzioni SQL hard-coded: possono essere verificate quando l'applicazione viene scritta; sono più semplici da implementare rispetto a istruzioni costruite in fase di esecuzione. e semplificano l'applicazione.  
   
- Utilizzo dei parametri di istruzione e preparazione di istruzioni ancora migliore consentono di utilizzare le istruzioni SQL hard-coded. Si supponga, ad esempio, che nella tabella parti contiene le colonne PartID, la descrizione e prezzo. Un modo per inserire una nuova riga in questa tabella, è possibile creare ed eseguire un **inserire** istruzione:  
+ Usando i parametri delle istruzioni e preparazione di istruzioni forniscono modi ancora migliori per usare le istruzioni SQL hard-coded. Si supponga, ad esempio, che la tabella di parti contiene le colonne PartID, descrizione e il prezzo. Un modo per inserire una nuova riga in questa tabella, è possibile costruire ed eseguire un' **Inserisci** istruzione:  
   
 ```  
 #define DESC_LEN 51  
@@ -55,7 +52,7 @@ sprintf_s(Statement, 100, "INSERT INTO Parts (PartID, Description,  Price) "
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- Un metodo migliore consiste nell'utilizzare un'istruzione con parametri, a livello di codice. Questo ha due vantaggi rispetto a un'istruzione con valori di dati hardcoded. In primo luogo, risulta più semplice costruire un'istruzione con parametri perché i valori dei dati possono essere inviati nei rispettivi tipi nativi, ad esempio numeri interi e numeri a virgola mobile anziché la loro conversione in stringhe. In secondo luogo, tale istruzione consente più di una volta la modifica dei valori di parametro e rieseguire. non è necessario ricompilarlo.  
+ Un metodo migliore consiste nell'utilizzare un'istruzione con parametri, a livello di codice. Ciò comporta due vantaggi in un'istruzione con valori di dati hardcoded. Prima di tutto risulta più semplice costruire un'istruzione con parametri poiché i valori dei dati possono essere inviati nei rispettivi tipi nativi, ad esempio numeri interi e numeri a virgola mobile anziché convertendoli in stringhe. In secondo luogo, un'istruzione di questo tipo può essere utilizzata più di volta semplicemente eseguendo la modifica dei valori di parametro e rieseguire. non è necessario ricompilarlo.  
   
 ```  
 #define DESC_LEN 51  
@@ -82,7 +79,7 @@ GetNewValues(&PartID, Desc, &Price);
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- Supponendo che questa istruzione deve essere eseguita più volte, può essere preparato per una maggiore efficienza:  
+ Supponendo che questa istruzione deve essere eseguito più volte, possa essere preparato per migliorare l'efficienza ancora maggiore:  
   
 ```  
 #define DESC_LEN 51  
@@ -110,7 +107,7 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecute(hstmt);  
 ```  
   
- Ad esempio il modo più efficiente per utilizzare l'istruzione consiste nel creare una procedura contenente l'istruzione, come illustrato nell'esempio di codice seguente. Poiché la procedura viene costruita in fase di sviluppo e archiviata nell'origine dati, non è necessario preparare in fase di esecuzione. Uno svantaggio di questo metodo è che la sintassi per la creazione di procedure è specifico del sistema DBMS e procedure devono essere costruite separatamente per ogni sistema DBMS in cui l'applicazione deve essere eseguita.  
+ Probabilmente il modo più efficiente di utilizzare l'istruzione consiste nel creare una procedura contenente l'istruzione, come illustrato nell'esempio di codice seguente. Poiché la procedura viene costruita in fase di sviluppo e archiviata nell'origine dati, non dovrà essere preparata in fase di esecuzione. Uno svantaggio di questo metodo è che la sintassi per la creazione di procedure è specifici del DBMS e le procedure devono essere costruite separatamente per ogni sistema DBMS in cui l'applicazione deve essere eseguita.  
   
 ```  
 #define DESC_LEN 51  
@@ -133,4 +130,4 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecDirect(hstmt, "{call InsertPart(?, ?, ?)}", SQL_NTS);  
 ```  
   
- Per ulteriori informazioni sui parametri, le istruzioni preparate e procedure, vedere [l'esecuzione di un'istruzione](../../../odbc/reference/develop-app/executing-a-statement.md).
+ Per altre informazioni sui parametri, le istruzioni preparate e procedure, vedere [esecuzione di un'istruzione](../../../odbc/reference/develop-app/executing-a-statement.md).

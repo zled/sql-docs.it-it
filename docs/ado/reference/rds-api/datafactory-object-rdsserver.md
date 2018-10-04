@@ -1,48 +1,45 @@
 ---
-title: Oggetto DataFactory (RDSServer) | Documenti Microsoft
+title: Oggetto DataFactory (RDSServer) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - DataFactory object [ADO]
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8835ad02e999c5dfc6d5879fe0dfafb295a77a34
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 512174e0a5e8e593dcfbd075d5f459cb2d92d8c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288280"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602769"
 ---
 # <a name="datafactory-object-rdsserver"></a>Oggetto DataFactory (RDSServer)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Questo oggetto business sul lato server per impostazione predefinita implementa metodi che forniscono accesso ai dati di lettura/scrittura per le applicazioni sul lato client alle origini dati specificato.  
+ Questo oggetto di business sul lato server per impostazione predefinita implementa metodi che forniscono accesso ai dati di lettura/scrittura per le applicazioni lato client per origini dati specificate.  
   
- Il **RDSServer** oggetto è stato progettato come un oggetto di automazione sul lato server che riceve le richieste client. In un'implementazione di Internet, si trova in un server Web e viene creata un'istanza dal componente ADISAPI. Il **RDSServer** oggetto consente di lettura e accesso in scrittura ai dati specificati origini, ma non contiene qualsiasi logica delle regole di convalida o di business.  
+ Il **RDSServer** oggetto è stato progettato come un oggetto di automazione sul lato server che riceve le richieste client. In un'implementazione di Internet, lo si trova in un server Web e viene creata un'istanza dal componente ADISAPI. Il **RDSServer** oggetto offre lettura e accesso in scrittura ai dati specificati origini, ma non contiene alcuna logica di regole di convalida o business.  
   
- Se si utilizza un metodo che è disponibile in entrambe le **RDSServer** e [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetti, Remote Data Service utilizza la **RDS. DataControl** versione per impostazione predefinita. Il valore predefinito presuppone uno scenario di programmazione di base, in cui il **RDSServer** funge da oggetto business generico sul lato server.  
+ Se si usa un metodo che è disponibile in entrambe le **RDSServer** e [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetti, Remote Data Service Usa la **Servizi Desktop remoto. DataControl** versione per impostazione predefinita. Il valore predefinito presuppone uno scenario di programmazione di base, in cui il **RDSServer** funge da un oggetto generico business sul lato server.  
   
- Se si desidera che l'applicazione Web per gestire l'elaborazione sul lato server specifici dell'attività, è possibile sostituire il **RDSServer** con un oggetto di business personalizzata.  
+ Se si desidera che l'applicazione Web per gestire l'elaborazione sul lato server specifici dell'attività, è possibile sostituire il **RDSServer** con un oggetto business personalizzato.  
   
- È possibile creare gli oggetti business sul lato server che chiamano il **RDSServer** metodi, ad esempio [Query](../../../ado/reference/rds-api/query-method-rds.md) e [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md). Ciò risulta utile se si desidera aggiungere funzionalità a oggetti di business, ma possono sfruttare le tecnologie esistenti Remote Data Service.  
+ È possibile creare oggetti business sul lato server che chiamano il **RDSServer** metodi, ad esempio [Query](../../../ado/reference/rds-api/query-method-rds.md) e [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md). Ciò è utile se si desidera aggiungere funzionalità a oggetti business, ma è possibile sfruttare le tecnologie esistenti di servizio dati remoto.  
   
- Il **DataFactory** oggetto non è sicuro per gli script da eseguire sul lato client.  
+ Il **DataFactory** oggetto non è sicuro per gli script eseguiti sul lato client.  
   
- L'ID di classe per il **RDSServer** oggetto è 9381D8F5-11-0288 D 0-9501-00AA00B911A5.  
+ L'ID della classe per il **RDSServer** oggetto è il D 9381D8F5-0288-11 0-9501-00AA00B911A5.  
   
- In questa sezione contiene l'argomento seguente.  
+ In questa sezione contiene gli argomenti seguenti.  
   
 -   [Proprietà, metodi ed eventi dell'oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
   

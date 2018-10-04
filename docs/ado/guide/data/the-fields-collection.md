@@ -1,42 +1,39 @@
 ---
-title: Raccolta di campi | Documenti Microsoft
+title: Raccolta di campi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO], fields collection
 - Fields collection [ADO]
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb5d538f9c8cf8ae28f1397aac32555da1b33ecc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4bd852423ed285165b4d699b391807b9a748f9b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730677"
 ---
-# <a name="the-fields-collection"></a>Raccolta di campi
-Il **campi** insieme è uno degli insiemi intrinseci di ADO. Una raccolta è un set ordinato di elementi che può essere indicato come un'unità. Per ulteriori informazioni sulle raccolte di ADO, vedere [il modello a oggetti ADO](../../../ado/guide/data/ado-objects-and-collections.md).  
+# <a name="the-fields-collection"></a>Raccolta Fields
+Il **campi** insieme è uno degli insiemi intrinseci di ADO. Una raccolta è un set ordinato di elementi che può essere indicato come un'unità. Per altre informazioni sulle raccolte di ADO, vedere [il modello a oggetti ADO](../../../ado/guide/data/ado-objects-and-collections.md).  
   
- Il **campi** raccolta contiene un **campo** oggetto per ogni campo (colonna) di **Recordset**. Come tutte le raccolte di ADO, ha **conteggio** e **elemento** proprietà, così come **Append** e **aggiornamento** metodi. Include inoltre **CancelUpdate**, **eliminare**, **Resync**, e **aggiornamento** metodi, che non sono disponibili in altre raccolte di ADO.  
+ Il **i campi** raccolta contiene un **campo** dell'oggetto per ogni campo (colonna) nei **Recordset**. Come tutte le raccolte di ADO, ha **conteggio** e **elemento** le proprietà, nonché **Append** e **Aggiorna** metodi. Include inoltre **CancelUpdate**, **eliminare**, **Risincronizza**, e **Update** metodi, che non sono disponibili ad altre raccolte di ADO.  
   
 ## <a name="examining-the-fields-collection"></a>Esaminare la raccolta di campi  
- Si consideri il **campi** raccolta del campione **Recordset** introdotte in questa sezione. L'esempio **Recordset** è stata derivata dall'istruzione SQL  
+ Prendere in considerazione la **i campi** raccolta del campione **Recordset** introdotte in questa sezione. L'esempio **Recordset** è stata derivata dall'istruzione SQL  
   
 ```  
 SELECT ProductID, ProductName, UnitPrice FROM Products WHERE CategoryID = 7  
 ```  
   
- Pertanto, è necessario trovare che il **Recordset Fields** insieme contiene tre campi.  
+ In questo modo, si rileverà che il **Recordset Fields** insieme contiene tre campi.  
   
 ```  
 'BeginWalkFields  
@@ -53,15 +50,15 @@ SELECT ProductID, ProductName, UnitPrice FROM Products WHERE CategoryID = 7
 'EndWalkFields  
 ```  
   
- Questo codice determina semplicemente il numero di **campo** gli oggetti di **campi** insieme utilizzando la **conteggio** proprietà e scorre la raccolta, restituendo il valore di il **nome** proprietà per ogni **campo** oggetto. È possibile utilizzare molti altri **campo** proprietà per ottenere informazioni su un campo. Per ulteriori informazioni sull'esecuzione di query un **campo**, vedere [il campo oggetto](../../../ado/guide/data/the-field-object.md).  
+ Questo codice determina semplicemente il numero di **campo** gli oggetti nel **campi** insieme utilizzando il **conteggio** proprietà e scorre in ciclo l'insieme restituendo il valore di il **Name** proprietà per ogni **campo** oggetto. È possibile usare molte altre **campo** proprietà per ottenere informazioni su un campo. Per altre informazioni sull'esecuzione di query su un **campo**, vedere [il campo oggetto](../../../ado/guide/data/the-field-object.md).  
   
 ## <a name="counting-columns"></a>Conteggio delle colonne  
- Come prevedibile, la **conteggio** proprietà restituisce il numero effettivo di **campo** gli oggetti il **campi** insieme. Poiché la numerazione dei membri di una raccolta inizia da zero, è consigliabile codificare sempre i cicli a partire dal membro zero e terminando con il valore di **conteggio** proprietà meno 1. Se si utilizza Microsoft Visual Basic e si desidera per scorrere in ciclo i membri di una raccolta senza il controllo il **conteggio** proprietà, utilizzare il **For Each... Avanti** comando.  
+ Come è prevedibile, il **conteggio** proprietà restituisce il numero effettivo di **campo** gli oggetti nel **campi** raccolta. Poiché per i membri di una raccolta di numerazione inizia da zero, è consigliabile codificare sempre i cicli a partire dal membro zero e terminando con il valore della **conteggio** proprietà meno 1. Se si utilizza Microsoft Visual Basic e si desidera eseguire un ciclo attraverso i membri di una raccolta senza il controllo il **conteggio** proprietà, utilizzare il **For Each... Avanti** comando.  
   
  Se il **conteggio** proprietà è zero, non sono presenti oggetti nella raccolta.  
   
-## <a name="getting-to-the-field"></a>Guida per il campo  
- Come con qualsiasi insieme di ADO, il **elemento** proprietà la proprietà predefinita della raccolta. Restituisce i singoli **campo** oggetto specificato dal nome o l'indice passato. Pertanto, le istruzioni seguenti sono equivalenti per l'esempio **Recordset**:  
+## <a name="getting-to-the-field"></a>Introduzione al campo  
+ Come con qualsiasi raccolta di ADO, il **elemento** proprietà la proprietà predefinita della raccolta. Restituisce i singoli **campo** oggetto specificato dal nome o indice passato ad esso. Di conseguenza, le istruzioni seguenti sono equivalenti per il campione **Recordset**:  
   
 ```  
 objField = objRecordset.Fields.Item("ProductID")  
@@ -70,17 +67,17 @@ objField = objRecordset.Fields.Item(0)
 objField = objRecordset.Fields(0)  
 ```  
   
- Se questi metodi sono equivalenti, che è più adatta? Dipende. Utilizzo di un indice per recuperare un **campo** dalla raccolta è più veloce perché accede il **campo** direttamente senza dover eseguire una ricerca di stringa. D'altra parte, l'ordine dei **campi** all'interno della raccolta deve essere nota, e se l'ordine viene modificato, il riferimento di **del campo** indice dovrà essere modificato ogni volta che si verifica. Anche se leggermente più lento, utilizzando il nome del **campo** è più flessibile perché non variano in base all'ordine dei **campi** nella raccolta.  
+ Se questi metodi sono equivalenti, cui è preferibile? Dipende. Usando un indice per recuperare un **campo** dalla raccolta è più veloce perché accede il **campo** direttamente senza dover eseguire una ricerca di stringa. D'altra parte, l'ordine degli **campi** all'interno della raccolta deve essere nota, e se l'ordine viene modificato, il riferimento al **del campo** indice dovrà essere modificato ovunque si trovi. Anche se leggermente più lento, utilizzando il nome del **campo** è più flessibile perché non variano in base all'ordine dei **campi** nella raccolta.  
   
-## <a name="using-the-refresh-method"></a>Utilizzando il metodo di aggiornamento  
- A differenza di alcuni altri insiemi di ADO, utilizzando il **aggiornamento** metodo il **campi** raccolta non ha alcun effetto visibile. Per recuperare le modifiche dalla struttura di database sottostante, è necessario utilizzare il **Requery** metodo, o se il **Recordset** oggetto non supporta i segnalibri, il **MoveFirst**(metodo), che provoca il comando per essere eseguita nuovamente nel provider.  
+## <a name="using-the-refresh-method"></a>Usando il metodo di aggiornamento  
+ A differenza di alcune altre raccolte di ADO, usando il **Refresh** metodo sul **campi** raccolta non ha alcun effetto visibile. Per recuperare le modifiche apportate dalla struttura di database sottostante, è necessario usare il **Requery** metodo, o se il **Recordset** objekt nepodporuje segnalibri, il **MoveFirst**metodo, che causerà il comando da eseguire confrontandolo con il provider di nuovo.  
   
-## <a name="adding-fields-to-a-recordset"></a>Aggiunta di campi a un Recordset  
- Il **Append** metodo viene utilizzato per aggiungere i campi in un **Recordset**.  
+## <a name="adding-fields-to-a-recordset"></a>Aggiunta di campi a un set di record  
+ Il **Append** metodo viene utilizzato per aggiungere campi a un **Recordset**.  
   
- È possibile utilizzare il **Append** metodo per creare un **Recordset** a livello di codice senza dover aprire una connessione a un'origine dati. Se si verificherà un errore di run-time di **Append** metodo viene chiamato sul **campi** insieme di open **Recordset** o scegliere un **Recordset** in cui il **ActiveConnection** proprietà è stata impostata. È possibile aggiungere campi solo a un **Recordset** che non sia aperto e non è ancora stato connesso a un'origine dati. Tuttavia, per specificare valori per l'oggetto appena aggiunto **campi**, **Recordset** deve prima essere aperto.  
+ È possibile usare la **Append** metodo per creare un **Recordset** a livello di codice senza dover aprire una connessione a un'origine dati. Se si verificherà un errore di run-time di **Append** metodo viene chiamato sul **campi** raccolta di un elemento aperto **Recordset** o in un **Recordset** in cui il **ActiveConnection** proprietà è stata impostata. È possibile aggiungere campi solo a un **Recordset** che non è aperta e non è ancora stato connesso a un'origine dati. Tuttavia, per specificare i valori per l'oggetto appena aggiunto **i campi**, il **Recordset** deve innanzitutto essere aperto.  
   
- Gli sviluppatori devono spesso una posizione per archiviare alcuni dati, o temporaneamente alcuni dati di agire come se proviene da un server in modo da partecipare nell'associazione di dati in un'interfaccia utente. ADO (in combinazione con il [servizio cursore per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)) consente agli sviluppatori di compilare un oggetto vuoto **Recordset** oggetto che specifica le informazioni di colonna e chiamando **aprire**. Nell'esempio seguente, tre nuovi campi vengono aggiunti a un nuovo **Recordset** oggetto. Il **Recordset** è aperto, due nuovi record vengono aggiunti e **Recordset** è persistente in un file. (Per ulteriori informazioni su **Recordset** persistenza, vedere [aggiornamento e il mantenimento dati](../../../ado/guide/data/updating-and-persisting-data.md).)  
+ Gli sviluppatori devono spesso una posizione per archiviare alcuni dati temporaneamente o alcuni dei dati su cui agire come se provenissero da un server in modo da partecipare nel data binding in un'interfaccia utente. ADO (in combinazione con il [Microsoft Cursor Service per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)) consente agli sviluppatori di compilare un oggetto vuoto **Recordset** oggetto che specifica le informazioni di colonna e chiamando **aprire**. Nell'esempio seguente, vengono aggiunti tre nuovi campi a una nuova **Recordset** oggetto. Il **Recordset** viene aperto, due nuovi record vengono aggiunti e il **Recordset** è persistente in un file. (Per altre informazioni sulle **Recordset** persistenza, vedere [aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).)  
   
 ```  
 'BeginFabricate  
@@ -115,7 +112,7 @@ objField = objRecordset.Fields(0)
 'EndFabricate  
 ```  
   
- L'utilizzo del **aggiungere campi** metodo differisce tra il **Recordset** oggetto e **Record** oggetto. Per ulteriori informazioni sul **Record** , vedere [record e i flussi](../../../ado/guide/data/records-and-streams.md).  
+ L'utilizzo del **accodare i campi** metodo differisce tra le **Recordset** oggetto e il **Record** oggetto. Per altre informazioni sul **Record** oggetti, vedere [record e flussi](../../../ado/guide/data/records-and-streams.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di recordset gerarchici](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)

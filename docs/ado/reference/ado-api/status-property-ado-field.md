@@ -1,13 +1,11 @@
 ---
-title: Proprietà Status (campo ADO) | Documenti Microsoft
+title: Proprietà Status (campo ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,36 +15,35 @@ f1_keywords:
 helpviewer_keywords:
 - Status property [ADO Field]
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70baf781839fe9a606f1aed2c26676dffe102d69
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 11a39cf6f30e7a4892d6f2df5c8c373ab6847632
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282010"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741519"
 ---
-# <a name="status-property-ado-field"></a>Proprietà Status (campo ADO)
+# <a name="status-property-ado-field"></a>Proprietà Status (Field - ADO)
 Indica lo stato di un [campo](../../../ado/reference/ado-api/field-object.md) oggetto.  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) valore. Il valore predefinito è **adFieldOK**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="record-field-status"></a>Stato dei campi di record  
- Imposta sul valore di un **campo** oggetto nella raccolta di campi di un [Record](../../../ado/reference/ado-api/record-object-ado.md) vengono memorizzate nella cache fino a quando l'oggetto [aggiornamento](../../../ado/reference/ado-api/update-method.md) metodo viene chiamato. A questo punto, la modifica il valore del campo ha causato un errore, OLE DB genera l'errore **DB_E_ERRORSOCCURRED** (2147749409). La proprietà di stato di uno qualsiasi del **campo** gli oggetti di **campi** insieme che ha causato l'errore sarà presente un valore dal [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) che descrive la causa del il problema.  
+ Modifiche al valore di una **campo** oggetto nella raccolta di campi di un [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto vengono memorizzati nella cache finché l'oggetto [Update](../../../ado/reference/ado-api/update-method.md) viene chiamato il metodo. Se le modifiche apportate al valore del campo ha causato un errore, a questo punto, viene generato l'errore OLE DB **DB_E_ERRORSOCCURRED** (2147749409). La proprietà di stato di uno qualsiasi del **campo** gli oggetti nel **campi** raccolta che ha causato l'errore conterrà un valore compreso il [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) che descrive la causa di il problema.  
   
- Per migliorare le prestazioni, aggiunte ed eliminazioni per il [campi](../../../ado/reference/ado-api/fields-collection-ado.md) insiemi di **Record** vengono memorizzate nella cache fino a quando il **aggiornamento** metodo viene chiamato e quindi le modifiche vengono eseguite in un aggiornamento ottimistico batch. Se il **aggiornamento** non viene chiamato, il server non è aggiornato. Se tutti gli aggiornamenti non viene restituito un errore del provider OLE DB (DB_E_ERRORSOCCURRED) e **stato** proprietà indica la somma dei valori del codice di stato errore e l'operazione. Ad esempio, **adFieldPendingInsert o eliminato**. Il **stato** proprietà per ogni **campo** può essere usato per stabilire perché il **campo** non aggiunto, modificato o eliminato.  
+ Per migliorare le prestazioni, aggiunte ed eliminazioni per il [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolte del **Record** oggetto vengono memorizzati nella cache finché il **Update** viene chiamato il metodo e quindi le modifiche vengono eseguite un aggiornamento in blocco ottimistico. Se il **Update** non viene chiamato, il server non vengono aggiornato. Se tutti gli aggiornamenti non riescono, viene restituito un errore del provider OLE DB (DB_E_ERRORSOCCURRED) e il **stato** proprietà indica la somma dei valori del codice di stato operazione e di errore. Ad esempio, **adFieldPendingInsert o eliminato**. Il **lo stato** proprietà per ogni **campo** può essere utilizzato per determinare il motivo il **campo** non aggiunto, modificato o eliminato.  
   
- Molti tipi di problemi rilevati durante l'aggiunta, modifica o eliminazione di un **campo** sono segnalati tramite la **stato** proprietà. Ad esempio, se l'utente elimina un **campo**, è contrassegnato per l'eliminazione di **campi** insieme. Se il successivo **aggiornamento** restituisce un errore perché l'utente ha tentato di eliminare un **campo** per cui non dispongano dell'autorizzazione, il **campo** avrà un  **Stato** di **adFieldPermissionDenied o adFieldPendingDelete**. La chiamata di [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) metodo valori originali di ripristino e imposta il **stato** per **adFieldOK**.  
+ Molti tipi di problemi riscontrati quando si aggiunge, modifica o eliminazione di un **campo** vengono segnalati tramite il **stato** proprietà. Ad esempio, se l'utente elimina un **campo**, è contrassegnata per l'eliminazione dalle **campi** raccolta. Se il successivo **Update** restituisce un errore perché l'utente ha tentato di eliminare un **campo** per cui non dispongono dell'autorizzazione, il **campo** avranno un  **Lo stato** dei **adFieldPermissionDenied o adFieldPendingDelete**. Chiama il [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) metodo ripristini i valori originale e imposta il **stato** a **adFieldOK**.  
   
- Analogamente, il **aggiornamento** metodo può restituire un errore perché un nuovo **campo** è stato aggiunto e assegnargli un valore appropriato. In tal caso il nuovo **campo** verrà incluso il **campi** insieme e lo stato del **adFieldPendingInsert** ed eventualmente **adFieldCantCreate** (a seconda del provider). È possibile fornire un valore appropriato per il nuovo **campo** e chiamare **aggiornamento** nuovamente.  
+ Analogamente, il **Update** metodo può restituire un errore perché un nuovo **campo** è stato aggiunto e assegnargli un valore non appropriato. In tal caso il nuovo **campo** sarà nel **campi** insieme e hanno lo stato **adFieldPendingInsert** ed eventualmente **adFieldCantCreate** (a seconda del provider). È possibile fornire un valore appropriato per il nuovo **campo** e chiamare **Update** nuovamente.  
   
 ## <a name="recordset-field-status"></a>Stato dei campi di recordset  
- Imposta sul valore di un **campo** oggetto nella raccolta di campi di uno un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) vengono memorizzati nella cache fino a quando l'oggetto [aggiornamento](../../../ado/reference/ado-api/update-method.md) metodo viene chiamato. A questo punto, la modifica il valore del campo ha causato un errore, OLE DB genera l'errore **DB_E_ERRORSOCCURRED** (2147749409). La proprietà di stato di uno qualsiasi del **campo** gli oggetti di **campi** insieme che ha causato l'errore sarà presente un valore dal [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) che descrive la causa del il problema.  
+ Modifiche al valore di una **campo** oggetto nella raccolta di campi di uno una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) vengono memorizzati nella cache finché l'oggetto [Update](../../../ado/reference/ado-api/update-method.md) viene chiamato il metodo. Se le modifiche apportate al valore del campo ha causato un errore, a questo punto, viene generato l'errore OLE DB **DB_E_ERRORSOCCURRED** (2147749409). La proprietà di stato di uno qualsiasi del **campo** gli oggetti nel **campi** raccolta che ha causato l'errore conterrà un valore compreso il [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) che descrive la causa di il problema.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Field](../../../ado/reference/ado-api/field-object.md)  

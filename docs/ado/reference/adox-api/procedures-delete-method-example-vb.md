@@ -1,32 +1,29 @@
 ---
-title: Procedure di esempio del metodo Delete (VB) | Documenti Microsoft
+title: Procedure di esempio del metodo Delete (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADOX], Visual Basic example
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3ff286753b12fa5e648d5d43bf8bb4c360a441a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d75b8b66157ee46b423800a430d4cef30d28359a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286690"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678439"
 ---
-# <a name="procedures-delete-method-example-vb"></a>Procedure di esempio del metodo Delete (VB)
-Il codice seguente viene illustrato come eliminare una stored procedure utilizzando il [eliminare](../../../ado/reference/adox-api/delete-method-adox-collections.md) metodo il [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) insieme.  
+# <a name="procedures-delete-method-example-vb"></a>Esempio del metodo Delete di Procedures (VB)
+Il codice seguente viene illustrato come eliminare una stored procedure utilizzando il [eliminare](../../../ado/reference/adox-api/delete-method-adox-collections.md) metodo per il [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) raccolta.  
   
 ```  
 ' BeginDeleteProcedureVB  
@@ -60,7 +57,7 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Oggetto del catalogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Delete (metodo) (ADOX raccolte)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
+ [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Elimina metodo (raccolte ADOX)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
  [Oggetto procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Raccolta di oggetti Procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

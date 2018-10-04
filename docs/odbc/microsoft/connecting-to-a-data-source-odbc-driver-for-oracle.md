@@ -1,43 +1,40 @@
 ---
-title: Connessione a un'origine dati (Driver ODBC per Oracle) | Documenti Microsoft
+title: La connessione a un'origine dati (Driver ODBC per Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to data source [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], connecting to data sources
 ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c12472544fd843214cab4294311889d0a84010d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: adee8d8dd8d6db0d79b37ff853c41e7604fe21de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900954"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825299"
 ---
-# <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>Connessione a un'origine dati (Driver ODBC per Oracle)
+# <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>Connessione a un'origine dati (driver ODBC per Oracle)
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, utilizzare il driver ODBC fornito da Oracle.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare il driver ODBC fornito da Oracle.  
   
- Un'applicazione ODBC è possibile passare le informazioni di connessione in diversi modi. Ad esempio, l'applicazione potrebbe avere il driver Chiedi sempre conferma all'utente le informazioni di connessione. O l'applicazione potrebbe prevedere una stringa di connessione che specifica la connessione all'origine dati. La modalità di connessione a un'origine dati dipende dal metodo di connessione utilizzato dall'applicazione ODBC.  
+ Un'applicazione ODBC è possibile passare le informazioni di connessione in diversi modi. Ad esempio, l'applicazione potrebbe avere il driver Chiedi sempre conferma all'utente le informazioni di connessione. O l'applicazione potrebbe aspettarsi una stringa di connessione che specifica la connessione all'origine dati. Modalità di connessione a un'origine dati dipende dal metodo di connessione usato dall'applicazione ODBC.  
   
- Un modo comune per connettersi a un'origine dati è tramite la finestra di dialogo origine dati. Se l'applicazione ODBC è configurato per utilizzare una finestra di dialogo, tale finestra di dialogo viene visualizzata e viene richiesto per le informazioni di connessione di origine di dati appropriato.  
+ Un modo comune per connettersi a un'origine dati è tramite la finestra di dialogo origine dati. Se l'applicazione ODBC è configurato per usare una finestra di dialogo, queste finestre di dialogo viene visualizzata e viene richiesto per le informazioni di connessione origine dati appropriata.  
   
- È inoltre possibile connettersi a un'origine dati usando il [stringa di connessione](../../odbc/microsoft/connection-string-format-and-attributes.md).  
+ È anche possibile connettersi a un'origine dati usando il [stringa di connessione](../../odbc/microsoft/connection-string-format-and-attributes.md).  
   
 ### <a name="to-connect-to-a-data-source-using-a-dialog-box"></a>Per connettersi a un'origine dati tramite una finestra di dialogo  
   
-1.  Quando viene visualizzata la finestra di dialogo origine dati, selezionare un'origine dati Oracle e quindi fare clic su OK. Verrà visualizzata la finestra di dialogo Connetti.  
+1.  Quando viene visualizzata la finestra di dialogo origine dati, selezionare un'origine dati Oracle e quindi fare clic su OK. Viene visualizzata la finestra di dialogo Connetti.  
   
-2.  Compilare le informazioni appropriate per la finestra di dialogo di connessione e quindi fare clic su OK.  
+2.  Immettere le informazioni appropriate per la finestra di dialogo di connessione e quindi fare clic su OK.  
   
- Dopo la connessione è verificare informazioni, l'applicazione può utilizzare il Driver ODBC per Oracle per accedere alle informazioni contenute nell'origine dati.
+ Dopo la connessione informazioni vengono verificate, l'applicazione può usare il Driver ODBC per Oracle di accedere alle informazioni contenute nell'origine dati.

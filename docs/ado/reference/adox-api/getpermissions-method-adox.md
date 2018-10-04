@@ -1,13 +1,11 @@
 ---
-title: Metodo GetPermissions (ADOX) | Documenti Microsoft
+title: Metodo GetPermissions (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -18,19 +16,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetPermissions method [ADOX]
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55a5d4f9096d5a75855d4b612a202afd034b11da
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6517b09e682853492cd129e0c43abfd7164ed2e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286040"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648991"
 ---
 # <a name="getpermissions-method-adox"></a>Metodo GetPermissions (ADOX)
-Restituisce le autorizzazioni per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) o [utente](../../../ado/reference/adox-api/user-object-adox.md) su un oggetto o un contenitore di oggetti.  
+Restituisce le autorizzazioni per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) oppure [utente](../../../ado/reference/adox-api/user-object-adox.md) su un oggetto o un contenitore di oggetti.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +37,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce un **lungo** valore che specifica una maschera di bit che contiene le autorizzazioni che il gruppo o utente dispone per l'oggetto. Questo valore può essere uno o più di [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) costanti.  
+ Restituisce un **lungo** valore che specifica una maschera di bit che contiene le autorizzazioni che il gruppo o l'utente dispone sull'oggetto. Questo valore può essere uno o più i [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) costanti.  
   
 #### <a name="parameters"></a>Parametri  
  *Nome*  
@@ -50,7 +47,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
  Oggetto **lungo** valore che può essere uno del [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) costanti, che specifica il tipo dell'oggetto per cui ottenere le autorizzazioni.  
   
  *ObjectTypeId*  
- Facoltativo. Oggetto **Variant** valore che specifica il GUID per un tipo di oggetto del provider non definito dalla specifica OLE DB. Questo parametro è obbligatorio se *ObjectType* è impostato su **impostato su adPermObjProviderSpecific**; in caso contrario, non viene utilizzato.  
+ Facoltativo. Oggetto **Variant** valore che specifica il GUID per un tipo di oggetto provider non è definito dalla specifica OLE DB. Questo parametro è obbligatorio se *ObjectType* è impostata su **impostato su adPermObjProviderSpecific**; in caso contrario, non viene utilizzato.  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -59,6 +56,6 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 |[Oggetto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Oggetto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [GetPermissions e metodi SetPermissions (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [Nome proprietà (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
+ [GetPermissions e SetPermissions metodi (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
+ [Proprietà Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [Metodo SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)

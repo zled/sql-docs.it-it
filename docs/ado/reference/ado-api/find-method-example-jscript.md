@@ -1,32 +1,29 @@
 ---
-title: Esempio del metodo Find (JScript) | Documenti Microsoft
+title: Esempio del metodo Find (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Find method [ADO], JScript example
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 067f8c214d3ebf1f90871108444b666e0da77bfb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1bd954af100273e3a8a8d91a72daae71b995ddab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278640"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811099"
 ---
 # <a name="find-method-example-jscript"></a>Esempio del metodo Find (JScript)
-Questo esempio viene utilizzato il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [trovare](../../../ado/reference/ado-api/find-method-ado.md) metodo per individuare e visualizzare le società il ***Northwind*** database il cui nome inizia con la lettera G. tagliare e incollare i seguente codice nel blocco note o un altro editor di testo e salvarlo come **FindJS**.  
+Questo esempio Usa il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [trovare](../../../ado/reference/ado-api/find-method-ado.md) metodo per individuare e visualizzare le società il ***Northwind*** database il cui nome inizia con la lettera G. le operazioni Taglia e Incolla i seguente codice nel blocco note o un altro editor di testo e salvarlo come **FindJS**.  
   
 ```  
 <!-- BeginFindJS -->  
@@ -157,5 +154,5 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Find (metodo) (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
+ [Metodo Find (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

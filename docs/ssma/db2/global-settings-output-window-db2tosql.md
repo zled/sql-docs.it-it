@@ -1,35 +1,29 @@
 ---
-title: Impostazioni globali (finestra di Output) (DB2ToSQL) | Documenti Microsoft
+title: Impostazioni globali (finestra di Output) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: f21f80f4-9a2a-448d-9fe8-b6926595389e
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 00d4eca40654fe5cd6ade31a8088ee8abbc64653
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: dff9c41c13b37c223bdbf127eb44b1c83cda88ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774757"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620000"
 ---
 # <a name="global-settings-output-window-db2tosql"></a>Impostazioni globali (finestra di Output) (DB2ToSQL)
-Utilizzare il **impostazioni globali** la finestra di dialogo per specificare le impostazioni per SSMA.  
+Usare la **Global Settings** finestra di dialogo per specificare le impostazioni per SSMA.  
   
-Per accedere alle impostazioni della finestra di Output, scegliere il **strumenti** dal menu **impostazioni globali**, fare clic su **GUI** nella parte inferiore del riquadro sinistro, quindi scegliere **finestra di Output**.  
+Per accedere alle impostazioni della finestra di Output, nelle **degli strumenti** dal menu **impostazioni globali**, fare clic su **GUI** nella parte inferiore del riquadro a sinistra e quindi selezionare **Output Finestra**.  
   
 ## <a name="options"></a>Opzioni  
-**Mostra riquadro elenco errori**  
+**Mostra riquadro di elenco errori**  
 Selezionare **True** se si desidera SSMA per visualizzare il riquadro elenco errori quando sono presenti messaggi.  
   
 **Mostra riquadro di Output**  

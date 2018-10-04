@@ -1,28 +1,25 @@
 ---
-title: Introduzione a ODBC e SQL | Documenti Microsoft
+title: Introduzione a SQL e ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27ed4223-89ff-4044-8bb9-19c8eafa8ad8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3e3dff0ef6dba30ff6fe0fe5363ca5548011956
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cb5d88243b604d7ca0fe40ee8b7f9a040380150
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915208"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656099"
 ---
-# <a name="introduction-to-sql-and-odbc"></a>Introduzione a ODBC e SQL
-ODBC è stato creato per fornire un metodo uniforme di accesso ai sistemi di gestione di database eterogenei, o diverse (DBMS). In questa introduzione vengono illustrati i concetti relativi allo sviluppo di ODBC.  
+# <a name="introduction-to-sql-and-odbc"></a>Introduzione a SQL e ODBC
+ODBC è stato creato per fornire un metodo uniforme di accesso ai sistemi di gestione diversi o eterogenei, database (DBMS). In questa introduzione illustra concetti relativi allo sviluppo di ODBC.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

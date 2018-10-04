@@ -1,13 +1,11 @@
 ---
-title: Valori letterali numerici | Documenti Microsoft
+title: Valori letterali numerici | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], numeric data types
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4538a959703941243241d4512a40752865901d1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b2effb3900e4277d82edee70439628c8adc837d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906446"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715719"
 ---
 # <a name="numeric-literals"></a>Valori letterali numerici
-Quando i valori di dati numerici vengono archiviati nelle stringhe di caratteri, vengono utilizzati valori letterali numerici. Per la conversione di dati numerici di SQL su una stringa SQL_C_CHAR o conversione di dati numerici di C in una stringa SQL_CHAR o SQL_VARCHAR, sintassi del valore letterale numerica viene utilizzata per specificare il contenuto archiviato nel database di destinazione. Per la conversione di numerico archiviato come stringa SQL_C_CHAR a dati numerici di SQL o numerico archiviato sotto forma di stringa a dati C numerici SQL_CHAR, questa sintassi è utilizzata per convalidare il contenuto archiviato nell'origine.  
+Valori letterali numerici vengono usati quando i valori di dati numerici vengono archiviati nelle stringhe di caratteri. Per la conversione dei dati numerici di SQL su una stringa SQL_C_CHAR o conversione di dati C numerici su una stringa SQL_CHAR o SQL_VARCHAR, sintassi dei valori letterali numerica viene usata per specificare che viene archiviato nel database di destinazione. Per una conversione di un valore numerico archiviato come stringa SQL_C_CHAR a dati numerici di SQL o un valore numerico archiviato come stringa SQL_CHAR a dati C numerici, questa sintassi viene utilizzata per convalidare ciò che viene archiviato nell'origine.  
   
- Valori letterali numerici devono essere conformi alla sintassi definita nella sezione [sintassi del valore letterale numerico](../../../odbc/reference/appendixes/numeric-literal-syntax.md) nella grammatica SQL di appendice c:.  
+ Valori letterali numerici devono essere conformi alla sintassi definita nella sezione [sintassi dei valori letterali numerici](../../../odbc/reference/appendixes/numeric-literal-syntax.md) nell'appendice c: SQL grammatica.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

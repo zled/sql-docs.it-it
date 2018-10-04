@@ -1,13 +1,11 @@
 ---
-title: Metodo SaveToFile | Documenti Microsoft
+title: Metodo SaveToFile | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - SaveToFile method [ADO]
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0dda2aaf0d73889ac74e171c48ed3bb3d320ddc4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6afe36c7b3923c9ebf33fd615a1c21e34955e62d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281600"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827599"
 ---
 # <a name="savetofile-method"></a>Metodo SaveToFile
-Salva il contenuto binario di un [flusso](../../../ado/reference/ado-api/stream-object-ado.md) in un file.  
+Salva il contenuto binario di un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) in un file.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,24 +36,24 @@ Stream.SaveToFile FileName, SaveOptions
   
 #### <a name="parameters"></a>Parametri  
  *FileName*  
- A **stringa** valore contenente il nome completo del file in cui il contenuto del **flusso** verranno salvate. È possibile salvare in qualsiasi percorso locale valido, o qualsiasi posizione, è possibile accedere tramite un valore di tipo UNC.  
+ Oggetto **stringa** valore contenente il nome completo del file a cui il contenuto del **Stream** verrà salvato. È possibile salvare in un percorso locale valido, o qualsiasi posizione è possibile accedere tramite un valore di tipo UNC.  
   
  *SaveOptions*  
  Oggetto [SaveOptionsEnum](../../../ado/reference/ado-api/saveoptionsenum.md) valore che specifica se deve essere creato un nuovo file da **SaveToFile**, se non esiste già. Valore predefinito è **adSaveCreateNotExists**. Con queste opzioni è possibile specificare che si verifica un errore se il file specificato non esiste. È inoltre possibile specificare che **SaveToFile** sovrascrive il contenuto corrente di un file esistente.  
   
 > [!NOTE]
->  Se si sovrascrive un file esistente (quando **adSaveCreateOverwrite** è impostata), **SaveToFile** tronca i byte da un file esistente originale che seguono il nuovo [fine del flusso](../../../ado/reference/ado-api/eos-property.md).  
+>  Se si sovrascrive un file esistente (quando **adSaveCreateOverwrite** è impostato), **SaveToFile** tronca i byte da un file esistente originale che seguono il nuovo [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
-## <a name="remarks"></a>Remarks  
- **SaveToFile** può essere utilizzato per copiare il contenuto di un **flusso** oggetto in un file locale. Non è stata modificata nel contenuto o le proprietà del **flusso** oggetto. Il **flusso** oggetto deve essere aperto prima di chiamare **SaveToFile**.  
+## <a name="remarks"></a>Note  
+ **SaveToFile** può essere usato per copiare il contenuto di un **Stream** oggetto in un file locale. Sussiste alcuna modifica nelle proprietà del contenuto o il **Stream** oggetto. Il **Stream** oggetto deve essere aperto prima di chiamare **SaveToFile**.  
   
- Questo metodo non modifica l'associazione del **flusso** oggetto alla relativa origine sottostante. Il **flusso** oggetto continuerà a essere associato con l'URL originale o **Record** che è stata la relativa origine all'apertura.  
+ Questo metodo non modifica l'associazione del **Stream** oggetto all'origine sottostante. Il **Stream** oggetto continuerà a essere associato con l'URL originale oppure **Record** che è stata la relativa origine all'apertura.  
   
- Dopo un **SaveToFile** operazione, la posizione corrente ([posizione](../../../ado/reference/ado-api/position-property-ado.md)) nel flusso è impostata sull'inizio del flusso (0).  
+ Dopo una **SaveToFile** operazione, la posizione corrente ([posizione](../../../ado/reference/ado-api/position-property-ado.md)) nel flusso è impostata all'inizio del flusso (0).  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Open (metodo) (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Metodo Open (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Metodo Save](../../../ado/reference/ado-api/save-method.md)

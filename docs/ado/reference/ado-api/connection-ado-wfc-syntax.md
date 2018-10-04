@@ -1,31 +1,28 @@
 ---
-title: Connessione (ADO.NET - sintassi WFC) | Documenti Microsoft
+title: Connessione (ADO - WFC sintassi) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Connection collection [ADO], ADO/WFC syntax
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb4fb9792fc59c6206328b23f97b9b2f3257228b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2f50c116060f5ef842cf359b958f9e6cedb5c716
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276851"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633649"
 ---
-# <a name="connection-ado---wfc-syntax"></a>Connessione (ADO.NET - sintassi WFC)
-## <a name="package-commswfcdata"></a>pacchetto com.ms. wfc.  
+# <a name="connection-ado---wfc-syntax"></a>Connection (sintassi ADO/WFC)
+## <a name="package-commswfcdata"></a>creare un pacchetto com.ms. wfc.  
   
 ### <a name="constructor"></a>Costruttore  
   
@@ -48,7 +45,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- Il **executeUpdate** metodo è un metodo speciale che chiama l'oggetto ADO sottostante **eseguire** metodo con determinati parametri. Il **executeUpdate** metodo non supporta la restituzione di un **Recordset** oggetto, pertanto la **eseguire** del metodo *opzioni* parametro modificato con **AdoEnums.ExecuteOptions.NORECORDS**. Dopo il **eseguire** metodo viene completato, l'aggiornamento *RecordsAffected* parametro viene passato nuovamente al **executeUpdate** metodo, che viene infine restituito come un **int**.  
+ Il **executeUpdate** è un metodo case speciale che chiama ADO sottostante **execute** metodo con determinati parametri. Il **executeUpdate** metodo non supporta la restituzione di un **Recordset** oggetto, in modo che il **eseguire** del metodo *opzioni* parametro Modifica con **AdoEnums.ExecuteOptions.NORECORDS**. Dopo il **execute** metodo viene completato, l'aggiornamento *RecordsAffected* parametro viene passato nuovamente al **executeUpdate** metodo, che viene infine restituito come un **int**.  
   
 ```  
 public void open()   
@@ -90,7 +87,7 @@ public com.ms.wfc.data.Errors getErrors()
 ```  
   
 ### <a name="events"></a>Eventi  
- Per ulteriori informazioni sugli eventi ADO/WFC, vedere [la creazione di istanze di ADO evento dal linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+ Per altre informazioni sugli eventi ADO/WFC, vedere [creazione di istanze evento ADO per linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  

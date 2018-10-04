@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_create_collection_item (Transact-SQL) | Documenti Microsoft
+title: sp_syscollector_create_collection_item (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_item
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 818294f3fdeebc19a26a8689403205f57d9c8e03
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1e155fb51bd5f78a3c4a639e9233746131ddf6f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261682"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719819"
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +51,7 @@ sp_syscollector_create_collection_item
  Identificatore univoco locale del set di raccolta. *collection_set_id* viene **int**.  
   
  [ @collector_type_uid =] '*collector_type_uid*'  
- GUID che identifica il tipo di agente di raccolta dati da utilizzare per questo elemento *collector_type_uid* è **uniqueidentifier** non prevede alcun valore predefinito... Per un elenco di tipi di agenti di raccolta, eseguire una query sulla vista di sistema syscollector_collector_types.  
+ GUID che identifica il tipo di agente di raccolta dati da utilizzare per questo elemento *collector_type_uid* viene **uniqueidentifier** non prevede alcun valore predefinito... Per un elenco di tipi di agenti di raccolta, eseguire una query sulla vista di sistema syscollector_collector_types.  
   
  [ @name =] '*nome*'  
  Nome dell'elemento della raccolta. *nome* viene **sysname** e non può essere una stringa vuota o NULL.  
@@ -68,24 +64,24 @@ sp_syscollector_create_collection_item
  Se il set di raccolta è impostato sulla modalità non in cache, la frequenza viene ignorata in quanto in questa modalità la raccolta e il caricamento dei dati vengono eseguiti in base alla pianificazione specificata per il set di raccolta. Per visualizzare la modalità di raccolta del set di raccolta, eseguire una query di [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) vista di sistema.  
   
  [ @parameters =] '*parametri*'  
- Parametri di input per il tipo agente di raccolta. *i parametri* viene **xml** con un valore predefinito è NULL. Il *parametri* schema deve corrispondere allo schema di parametri di tipo agente di raccolta.  
+ Parametri di input per il tipo agente di raccolta. *i parametri* viene **xml** con valore predefinito è NULL. Il *parametri* dello schema deve corrispondere allo schema di parametri del tipo di agente di raccolta.  
   
  [ @collection_item_id =] *collection_item_id*  
  Identificatore univoco che identifica l'elemento del set di raccolta. *collection_item_id* viene **int** e ha OUTPUT.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È necessario eseguire sp_syscollector_create_collection_item nel contesto del database di sistema msdb.  
   
  Il set di raccolta al quale viene aggiunto l'elemento deve essere arrestato prima della creazione dell'elemento della raccolta. Non è possibile aggiungere elementi della raccolta ai set di raccolta di sistema.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creato un elemento della raccolta basato sul tipo di raccolta `Generic T-SQL Query Collector Type` e successivamente tale elemento viene aggiunto al set di raccolta denominato `Simple collection set test 2`. Per creare la raccolta specificata impostato, eseguire l'esempio B in [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Nell'esempio seguente viene creato un elemento della raccolta basato sul tipo di raccolta `Generic T-SQL Query Collector Type` e successivamente tale elemento viene aggiunto al set di raccolta denominato `Simple collection set test 2`. Per creare la raccolta specificata impostata, eseguire l'esempio B nel [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
 ```  
 USE msdb;  

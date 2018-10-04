@@ -1,14 +1,11 @@
 ---
-title: Sys. availability_databases_cluster (Transact-SQL) | Documenti Microsoft
+title: Sys. availability_databases_cluster (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.availability_databases_cluster_TSQL
@@ -23,21 +20,20 @@ helpviewer_keywords:
 - sys.availability_databases_cluster catalog view
 - Availability Groups [SQL Server], databases
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b0c0cd91b58c4e59cba2440d8f02cd01a93c870
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 7d312a5ecb60e1ab046b0108e01ef1834adaa900
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33179187"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842309"
 ---
 # <a name="sysavailabilitydatabasescluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni database di disponibilità nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita una replica di disponibilità per qualsiasi gruppo di disponibilità AlwaysOn nel cluster Windows Server Failover Clustering (WSFC), indipendentemente dal fatto che la copia locale del database è stato aggiunto al gruppo di disponibilità ancora.  
+  Contiene una riga per ogni database di disponibilità nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita una replica di disponibilità per qualsiasi gruppo di disponibilità Always On nel cluster Windows Server Failover Clustering (WSFC), indipendentemente dal fatto che la copia locale del database è stato aggiunto al gruppo di disponibilità ancora.  
   
 > [!NOTE]  
 >  Quando un database viene aggiunto a un gruppo di disponibilità, viene automaticamente creato un join del database primario con il gruppo. È necessario preparare i database secondari su ogni replica secondaria prima di poterne creare un join al gruppo di disponibilità.   
@@ -48,8 +44,8 @@ ms.locfileid: "33179187"
 |**group_database_id**|**uniqueidentifier**|Identificatore univoco del database nel gruppo di disponibilità a cui partecipa il database. **group_database_id** è lo stesso per il database nella replica primaria e in ogni replica secondaria in cui il database è stato aggiunto al gruppo di disponibilità.<br /><br /> NULL = il database non fa parte di una replica di disponibilità in alcun gruppo di disponibilità.|  
 |**database_name**|**sysname**|Nome del database aggiunto al gruppo di disponibilità.|  
   
-## <a name="permissions"></a>Autorizzazioni  
- Se il chiamante di **Sys. availability_databases_cluster** non è il proprietario del database, le autorizzazioni minime necessarie per visualizzare la riga corrispondente sono ALTER ANY DATABASE o autorizzazione a livello di server VIEW ANY DATABASE o CREATE Autorizzazione DATABASE per il **master** database.  
+## <a name="permissions"></a>Permissions  
+ Se il chiamante **Sys. availability_databases_cluster** non è il proprietario del database, le autorizzazioni minime necessarie per visualizzare la riga corrispondente sono ALTER ANY DATABASE o autorizzazione VIEW ANY DATABASE a livello di server o crea L'autorizzazione per DATABASE di **master** database.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   

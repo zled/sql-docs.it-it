@@ -1,13 +1,11 @@
 ---
-title: Impostazione delle opzioni a livello di codice per il Driver per Excel | Documenti Microsoft
+title: Impostazione delle opzioni a livello di codice per il Driver per Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Excel driver
@@ -15,24 +13,23 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], setting options programmatically
 ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30c48b72009b687e85edafc383213ae048b942f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c62503611e88435b139a00b180d3e087769b7fda
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904256"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786584"
 ---
-# <a name="setting-options-programmatically-for-the-excel-driver"></a>Impostazione delle opzioni a livello di codice per il Driver per Excel
+# <a name="setting-options-programmatically-for-the-excel-driver"></a>Impostazione delle opzioni a livello di codice per il driver Excel
 |Opzione|Description|Metodo|  
 |------------|-----------------|------------|  
-|Nome origine dati|Un nome che identifica l'origine dati, ad esempio: retribuzioni o dipendenti.|Per impostare questa opzione in modo dinamico, usare il **DSN** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
-|Database|Un'origine dati Microsoft Access da impostare senza selezionare o creare un database. Se viene specificato alcun database al momento dell'installazione, l'utente verrà richiesto di scegliere un file di database durante la connessione all'origine dati.|Per impostare questa opzione in modo dinamico, usare il **DBQ** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
-|Description|Una descrizione facoltativa dei dati nell'origine dati; ad esempio, "Hire date, cronologia stipendi e situazione corrente di tutti i dipendenti."|Per impostare questa opzione in modo dinamico, usare il **descrizione** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
-|Directory|Visualizza la directory selezionata.<br /><br /> Per i file di Microsoft Excel versione 3.0 o 4.0, la visualizzazione del percorso con etichetta "Directory", mentre per Microsoft Excel 5.0, 7.0, 97 o file, la visualizzazione del percorso con etichetta "Cartella di lavoro".|Per impostare questa opzione in modo dinamico, usare il **DEFAULTDIR** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
-|Read Only|Indica il database in sola lettura.|Per impostare questa opzione in modo dinamico, usare il **READONLY** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
-|Righe da analizzare|Il numero di righe da esaminare per determinare il tipo di dati di ogni colonna. Il tipo di dati è determinato dal numero massimo di tipi di dati rilevati. Se vengono rilevati dati non corrispondente al tipo di dati previsto per la colonna, il tipo di dati verrà restituito come un valore NULL.<br /><br /> Per il driver Microsoft Excel, è possibile immettere un numero da 1 a 16 per le righe da analizzare. Il valore predefinito è 8; Se è impostato su 0, vengono analizzate tutte le righe. (Un numero di fuori del limite verrà restituito un errore).|Per impostare questa opzione in modo dinamico, usare il **MAXSCANROWS** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
-|Selezionare la Directory|Visualizza una finestra di dialogo in cui è possibile selezionare una directory che contiene i file che si desidera accedere.<br /><br /> Quando si definisce una directory di origine dati (per tutti i driver, ad eccezione di Microsoft Access), specificare la directory in cui si trovano i file utilizzati più di frequente. Il driver ODBC utilizza questa directory come la directory predefinita. Copiare gli altri file in questa directory se vengono usati frequentemente. In alternativa, è possibile qualificare i nomi di file in un'istruzione SELECT con il nome della directory:<br /><br /> SELEZIONARE \* DA C:\MYDIR\EMP<br /><br /> In alternativa, è possibile specificare una nuova directory predefinita utilizzando il **SQLSetConnectOption** funzione con l'opzione SQL_CURRENT_QUALIFIER.<br /><br /> Per Microsoft Excel 3.0 o 4.0 file, la visualizzazione del percorso è denominata "Directory" e il pulsante di selezione del percorso con etichetta "Seleziona Directory". Per i file di Microsoft Excel 97 5.0 o 7.0, la visualizzazione del percorso è denominata "Cartella di lavoro" e il pulsante di selezione del percorso con etichetta "Selezione cartella di lavoro". Quando si definisce una directory di origine dati, specificare la directory in cui i file di Microsoft Excel utilizzati più di frequente si trovano per Microsoft Excel versione 3.0 o 4.0, o la directory in cui il file della cartella di lavoro si trova per Microsoft Excel 97 5.0 o 7.0. **Utilizzare Directory corrente** è disabilitata per Microsoft Excel 97 5.0 e 7.0.|Per impostare questa opzione in modo dinamico, usare il **DEFAULTDIR** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|
+|Nome origine dati|Un nome che identifica l'origine dati, ad esempio Payroll o personale.|Per impostare questa opzione in modo dinamico, usare il **DSN** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
+|Database|Un'origine dati Microsoft Access da impostare senza selezionare o creare un database. Se viene specificato alcun database al momento dell'installazione, l'utente verrà chiesto di scegliere un file di database durante la connessione all'origine dati.|Per impostare questa opzione in modo dinamico, usare il **DBQ** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
+|Description|Una descrizione facoltativa dei dati nell'origine dati; ad esempio, "Hire data, cronologia degli stipendi e situazione corrente di tutti i dipendenti."|Per impostare questa opzione in modo dinamico, usare il **DESCRIPTION** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
+|Directory|Consente di visualizzare la directory attualmente selezionata.<br /><br /> Per i file di Microsoft Excel versione 3.0 o 4.0, la visualizzazione del percorso con l'etichetta "Directory", mentre per Microsoft Excel 5.0, 7.0, 97 o file, la visualizzazione del percorso con l'etichetta "Cartella di lavoro".|Per impostare questa opzione in modo dinamico, usare il **DEFAULTDIR** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
+|Read Only|Definisce il database in sola lettura.|Per impostare questa opzione in modo dinamico, usare il **READONLY** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
+|Righe da analizzare|Il numero di righe da esaminare per determinare il tipo di dati di ogni colonna. Il tipo di dati viene determinato dato il numero massimo di tipi di dati disponibili. Se vengono rilevati dati che non corrisponde al tipo di dati previsto per la colonna, il tipo di dati restituirà come valore NULL.<br /><br /> Per il driver di Microsoft Excel, è possibile immettere un numero da 1 a 16 per le righe da analizzare. Il valore predefinito è 8, mentre Se è impostato su 0, vengono analizzate tutte le righe. (Un numero di fuori del limite verrà restituito un errore).|Per impostare questa opzione in modo dinamico, usare il **MAXSCANROWS** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
+|Selezionare la Directory|Visualizza una finestra di dialogo in cui è possibile selezionare una directory che contiene i file che si desidera accedere.<br /><br /> Quando si definisce una directory di origine dati (per tutti i driver, ad eccezione di Microsoft Access), specificare la directory in cui si trovano i file più comunemente utilizzati. Il driver ODBC usa tale directory come directory predefinita. Copiare altri file in questa directory, se vengono usati frequentemente. In alternativa, è possibile qualificare nomi di file in un'istruzione SELECT con il nome della directory:<br /><br /> SELEZIONARE \* DA C:\MYDIR\EMP<br /><br /> Oppure, è possibile specificare una nuova directory predefinita usando il **SQLSetConnectOption** canonica con l'opzione SQL_CURRENT_QUALIFIER.<br /><br /> Per Microsoft Excel 3.0 o 4.0 file, la visualizzazione del percorso è denominata "Directory" e pulsante di selezione del percorso con l'etichetta "Seleziona Directory". Per i file di Microsoft Excel 97, versione 7.0 o 5.0, la visualizzazione del percorso è denominata "Cartella di lavoro" e pulsante di selezione del percorso con l'etichetta "Selezione cartella di lavoro". Quando si definisce una directory di origine dati, specificare la directory in cui i file Microsoft Excel più comunemente utilizzati si trovano per Microsoft Excel versione 3.0 o 4.0 o la directory in cui il file della cartella di lavoro si trova per Microsoft Excel 97, versione 7.0 o 5.0. **Usare la Directory corrente** è disabilitata per Microsoft Excel 97, 7.0 e 5.0.|Per impostare questa opzione in modo dinamico, usare il **DEFAULTDIR** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|

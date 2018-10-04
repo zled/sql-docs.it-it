@@ -1,13 +1,11 @@
 ---
-title: ConnectPromptEnum | Documenti Microsoft
+title: ConnectPromptEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectPromptEnum enumeration [ADO]
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62b1bb38789dcfb2fd15b80501315d9c1be38a66
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9434c4cc81e8a94e87a3afceedc1b40d5ece2c29
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277240"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696900"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
-Specifica se deve essere visualizzata una finestra di dialogo per la richiesta di parametri mancanti quando si apre una connessione a un'origine dati.  
+Specifica se una finestra di dialogo deve essere visualizzata per la richiesta di parametri mancanti quando si apre una connessione a un'origine dati.  
   
 |Costante|valore|Description|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|Richiede sempre.|  
 |**adPromptComplete**|2|Viene richiesto se sono necessarie ulteriori informazioni.|  
 |**adPromptCompleteRequired**|3|Viene richiesto se sono necessarie ulteriori informazioni, ma non sono consentiti parametri facoltativi.|  
-|**adPromptNever**|4|Non richiede mai.|  
+|**adPromptNever**|4|Mai richieste.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
  Package: **com.ms.wfc.data**  
   
 |Costante|  

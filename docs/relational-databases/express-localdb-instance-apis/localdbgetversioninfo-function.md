@@ -1,15 +1,12 @@
 ---
-title: Funzione LocalDBGetVersionInfo | Documenti Microsoft
+title: Funzione LocalDBGetVersionInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetVersionInfo
@@ -17,22 +14,21 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
-caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8be469a7f4a9f1b316b881ea884f7fbabc955dfb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3b4d8e565aa1494e4e68a0243eb470bd7efe90b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935086"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661799"
 ---
 # <a name="localdbgetversioninfo-function"></a>Funzione LocalDBGetVersionInfo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Vengono restituite le informazioni per la versione del database locale di SQL Server Express specificata, se esistente, e il numero completo della versione del database locale, ovvero con i numeri di compilazione e della versione inclusi.  
   
- Vengono restituite le informazioni sotto forma di un **struct** denominato **LocalDBVersionInfo**, che presenta la definizione seguente.  
+ Vengono restituite le informazioni sotto forma di una **struct** denominate **LocalDBVersionInfo**, che presenta la seguente definizione.  
   
 ```  
 typedef struct _LocalDBVersionInfo  
@@ -72,7 +68,7 @@ HRESULT LocalDBGetVersionInfo(
  [Output] Buffer per archiviare le informazioni sulla versione del database locale.  
   
  *dwVersionInfoSize*  
- [Input] Include le dimensioni del *VersionInfo* buffer.  
+ [Input] Include le dimensioni dei *VersionInfo* buffer.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  S_OK  
@@ -93,9 +89,9 @@ HRESULT LocalDBGetVersionInfo(
 ## <a name="details"></a>Dettagli  
  La logica alla base dell'introduzione del **struct** argomento delle dimensioni (*lpVersionInfoSize*) consiste nell'abilitare l'API per versioni diverse di restituire il **LocalDBVersionInfostruct**, in modo efficace l'abilitazione di compatibilità con le versioni precedenti e successive.  
   
- Se il **struct** argomento delle dimensioni (*lpVersionInfoSize*) corrisponde alle dimensioni di una versione nota del **LocalDBVersionInfostruct**, tale versione di  **struct** viene restituito. In caso contrario, viene restituito LOCALDB_ERROR_INVALID_PARAMETER.  
+ Se il **struct** argomento delle dimensioni (*lpVersionInfoSize*) corrisponde alle dimensioni di una versione nota dei **LocalDBVersionInfostruct**, che la versione del  **struct** viene restituito. In caso contrario, viene restituito LOCALDB_ERROR_INVALID_PARAMETER.  
   
- Un esempio tipico di **LocalDBGetVersionInfo** utilizzo delle API è simile al seguente:  
+ Un esempio tipico **LocalDBGetVersionInfo** utilizzo dell'API si presenta come segue:  
   
 ```  
 LocalDBVersionInfo vi;  
@@ -103,8 +99,8 @@ LocalDBVersionInfo(L”11.0”, &vi, sizeof(LocalDBVersionInfo));
   
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Per un esempio di codice che usa l'API del database locale, vedere [riferimento di SQL Server Express LocalDB](../../relational-databases/sql-server-express-localdb-reference.md).  
+## <a name="remarks"></a>Note  
+ Per un esempio di codice che utilizza l'API LocalDB, vedere [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

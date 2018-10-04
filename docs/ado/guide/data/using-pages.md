@@ -1,13 +1,11 @@
 ---
-title: Utilizzando le pagine | Documenti Microsoft
+title: Uso delle pagine | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PageSize property [ADO]
@@ -16,24 +14,23 @@ helpviewer_keywords:
 - AbsolutePage property [ADO]
 - PageCount property [ADO]
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6afd42480be68c98eafa1d7531a79792620aa255
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c1eced0fae443a67c85cc1f3f8ec9b44867ce464
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273320"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812119"
 ---
-# <a name="using-pages"></a>Utilizzo delle pagine
-Utilizzare il **PageCount** proprietà per determinare il numero di pagine di dati di **Recordset** oggetto. *Pagine* sono gruppi di record la cui dimensione è uguale al **PageSize** impostazione della proprietà. Anche se l'ultima pagina incompleta perché sono presenti record minore rispetto di **PageSize** valore, viene conteggiata come una pagina aggiuntiva nel **PageCount** valore. Se il **Recordset** oggetto non supporta questa proprietà, **PageCount** sarà -1 per indicare che il **PageCount** non è possibile determinare.  
+# <a name="using-pages"></a>Uso delle pagine
+Usare la **PageCount** proprietà per determinare il numero di pagine di dati presenti nel **Recordset** oggetto. *Le pagine* sono gruppi di record con dimensioni uguali i **PageSize** l'impostazione della proprietà. Anche se l'ultima pagina incompleta perché sono presenti record minore del **PageSize** valore, viene conteggiata come una pagina aggiuntiva nel **PageCount** valore. Se il **Recordset** oggetto non supporta questa proprietà, **PageCount** sarà -1 per indicare che il **PageCount** non è possibile determinare.  
   
- Utilizzare il **PageSize** proprietà per determinare il numero di record che costituiscono una pagina logica dei dati. La definizione di una dimensione di pagina consente di utilizzare il **AbsolutePage** proprietà per passare al primo record di una pagina specifica. Ciò è utile negli scenari di server Web quando si desidera consentire all'utente di spostarsi tra i dati, la visualizzazione di un determinato numero di record alla volta.  
+ Usare la **PageSize** proprietà per determinare il numero di record che costituiscono una pagina logica dei dati. La definizione di una dimensione di pagina consente di usare la **AbsolutePage** proprietà per passare al primo record di una pagina particolare. Ciò è utile negli scenari di server Web quando si vuole consentire all'utente di pagine di dati, visualizzazione di un determinato numero di record alla volta.  
   
- Questa proprietà può essere impostata in qualsiasi momento e il relativo valore verrà utilizzato per calcolare la posizione del primo record di una pagina specifica.  
+ Questa proprietà può essere impostata in qualsiasi momento e il relativo valore verrà utilizzato per calcolare la posizione del primo record di una pagina particolare.  
   
- Utilizzare il **AbsolutePage** proprietà per identificare il numero di pagina in cui si trova il record corrente. Nuovamente, il provider deve supportare le funzionalità appropriate per questa proprietà sia disponibile.  
+ Usare la **AbsolutePage** proprietà per identificare il numero di pagina in cui si trova il record corrente. Anche in questo caso, il provider deve supportare le funzionalità appropriate per questa proprietà sia disponibile.  
   
- **AbsolutePage** è basato su 1 e uguale a 1 quando il record corrente è il primo record il **Recordset**. Impostare questa proprietà per passare al primo record di una pagina specifica. Ottenere il numero totale di pagine dal **PageCount** proprietà.
+ **Proprietà AbsolutePage** è basato su 1 e uguale a 1 quando il record corrente è il primo record nel **Recordset**. Impostare questa proprietà per spostare il primo record di una pagina particolare. Ottenere il numero totale di pagine dal **PageCount** proprietà.

@@ -1,36 +1,33 @@
 ---
-title: SQLSetConnectOption (dBASE Driver) | Documenti Microsoft
+title: SQLSetConnectOption (Driver dBASE) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DBase driver [ODBC], SQLSetConnectOption
 - SQLSetConnectOption function [ODBC], dBASE Driver
 ms.assetid: b1924c33-6820-4566-b716-6897807edd0f
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a7860fbea2f87cf8d582141c699a21055b8b10a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0b3c421ad00a1627ddfb7e6f4fb63ee5d30981a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903397"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618789"
 ---
-# <a name="sqlsetconnectoption-dbase-driver"></a>SQLSetConnectOption (dBASE Driver)
+# <a name="sqlsetconnectoption-dbase-driver"></a>SQLSetConnectOption (driver dBASE)
 > [!NOTE]  
->  In questo argomento fornisce informazioni specifiche del Driver dBASE. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento fornisce informazioni specifiche del Driver dBASE. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |fOption|Commento|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|Il parametro fOption SQL_ACCESS_MODE può essere impostato SQL_MODE_READ_ONLY o SQL_MODE_READ_WRITE. Tuttavia, il driver non impedisce l'aggiornamento se SQL_ACCESS_MODE è impostata su SQL_MODE_READ_ONLY.|  
+|SQL_ACCESS_MODE|Il fOption SQL_ACCESS_MODE può essere impostato su SQL_MODE_READ_ONLY o SQL_MODE_READ_WRITE. Tuttavia, il driver non impedisce gli aggiornamenti se SQL_ACCESS_MODE è impostato su SQL_MODE_READ_ONLY.|  
 |SQL_AUTOCOMMIT|Il driver dBASE supporta solo SQL_AUTOCOMMIT che viene impostato su (stato predefinito), perché non supporta le transazioni.|  
 |SQL_CURRENT_QUALIFIER|Supportato.|  
 |SQL_LOGIN_TIMEOUT|Non supportato.|  

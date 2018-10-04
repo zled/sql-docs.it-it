@@ -1,13 +1,11 @@
 ---
-title: Raccolta delle proprietà (ADO) | Documenti Microsoft
+title: Raccolta delle proprietà (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,32 +15,31 @@ f1_keywords:
 helpviewer_keywords:
 - Properties collection [ADO]
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 557f24dcc7695efadb9a3db5c18f81ae6a26b59d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bf4a56ea4efa8e9b5c29e9e4bdd10f8867817d61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280665"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616759"
 ---
-# <a name="properties-collection-ado"></a>Raccolta delle proprietà (ADO)
-Contiene tutti i [proprietà](../../../ado/reference/ado-api/property-object-ado.md) oggetti per un'istanza specifica di un oggetto.  
+# <a name="properties-collection-ado"></a>Raccolta Properties (ADO)
+Contiene tutti i [proprietà](../../../ado/reference/ado-api/property-object-ado.md) gli oggetti per un'istanza specifica di un oggetto.  
   
-## <a name="remarks"></a>Remarks  
- Alcuni oggetti ADO un **proprietà** raccolta costituita da **proprietà** oggetti. Ogni **proprietà** oggetto corrisponde a una caratteristica dell'oggetto ADO specifica del provider.  
+## <a name="remarks"></a>Note  
+ Alcuni oggetti ADO hanno una **delle proprietà** raccolta costituita da **proprietà** oggetti. Ciascuna **proprietà** oggetto corrisponde a una caratteristica dell'oggetto ADO specifico del provider.  
   
 > [!NOTE]
->  Vedere il [proprietà](../../../ado/reference/ado-api/property-object-ado.md) argomento di oggetto per una spiegazione più dettagliata di come utilizzare **proprietà** oggetti.  
+>  Vedere le [proprietà](../../../ado/reference/ado-api/property-object-ado.md) argomento di oggetto per una spiegazione più dettagliata di come usare **proprietà** oggetti.  
   
- Il **proprietà dinamiche** del **Recordset** oggetto andare fuori ambito (diventano non disponibile) quando il **Recordset** viene chiuso.  
+ Il **proprietà dinamiche** delle **Recordset** oggetto passare dall'ambito (diventano non disponibile) quando il **Recordset** viene chiuso.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Raccolta di proprietà, metodi ed eventi](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
+-   [Proprietà di raccolta di proprietà, metodi ed eventi](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto di proprietà (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+ [Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Appendice A: Provider](../../../ado/guide/appendixes/appendix-a-providers.md)

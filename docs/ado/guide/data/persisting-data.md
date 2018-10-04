@@ -1,13 +1,11 @@
 ---
-title: Rendere persistenti i dati | Documenti Microsoft
+title: Rendere persistenti i dati | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
@@ -15,31 +13,30 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 438a09dd8f835653f9b2c76d73b7ce7f4583c1a5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c8fc264df4708b5d6c58c8a87861597d299cdca2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272200"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722989"
 ---
-# <a name="persisting-data"></a>Rendere persistenti i dati
-Computer portatili (ad esempio, usando i computer portatili) ha generato la necessità per le applicazioni che possono essere eseguiti in uno stato connesso e disconnesso. ADO ha aggiunto il supporto per questo offrendo agli sviluppatori la possibilità di salvare un cursore client **Recordset** su disco e ricaricare il file in un secondo momento.  
+# <a name="persisting-data"></a>Persistenza dei dati
+Computer portatili (ad esempio, Usa computer portatili) ha generato l'esigenza di applicazioni eseguibili in uno stato connesso e disconnesso. ADO ha aggiunto il supporto per l'oggetto da fornire allo sviluppatore la possibilità di salvare un cursore sul lato client **Recordset** su disco e caricarla in un secondo momento.  
   
- Esistono diversi scenari in cui è possibile utilizzare questo tipo di funzionalità, inclusi i seguenti:  
+ Esistono diversi scenari in cui è possibile usare questo tipo di funzionalità, incluse le seguenti:  
   
--   **In viaggio:** quando si esegue l'applicazione in viaggio, è essenziale per fornire la possibilità di apportare modifiche e aggiungere nuovi record che può essere riconnesso al database in un secondo momento e il commit.  
+-   **In viaggio:** quando si esegue l'applicazione in viaggio, è fondamentale per fornire la possibilità di apportare modifiche e aggiungere nuovi record che possono essere riconnesse al database in un secondo momento e il commit.  
   
--   **Aggiornati di rado ricerche:** spesso in un'applicazione, le tabelle vengono utilizzate come ricerche, ad esempio, definiscono tabelle imposte. Che vengono aggiornati di rado e sono di sola lettura. Invece di rileggere i dati dal server ogni volta che l'applicazione viene avviata, l'applicazione può semplicemente caricare i dati da un locale persistente **Recordset**.  
+-   **Aggiornati di rado ricerche:** spesso in un'applicazione, le tabelle vengono utilizzate come le ricerche, ad esempio stato tabelle imposta sulle vendite. Che vengono aggiornati di rado e sono di sola lettura. Invece di rileggere i dati dal server ogni volta che l'applicazione viene avviata, l'applicazione può caricare semplicemente i dati da un locale persistente **Recordset**.  
   
- In ADO, per salvare e caricare **recordset**, utilizzare il **Recordset. Save** e **Recordset.Open(,,,adCmdFile)** metodi sull'oggetto ADO **Recordset**oggetto.  
+ In ADO, salvare e caricare **recordset**, utilizzare il **Recordset. Save** e **Recordset.Open(,,,adCmdFile)** metodi sull'oggetto ADO **Recordset**oggetto.  
   
- È possibile utilizzare il **Salva Recordset** metodo per rendere persistenti le ADO **Recordset** in un file su disco. (È anche possibile salvare un **Recordset** per un oggetto ADO **flusso** oggetto. **Flusso** vengono descritti gli oggetti in un secondo momento nella Guida.) Successivamente, è possibile utilizzare il **aprire** metodo per riaprire il **Recordset** quando si è pronti a usarlo. Per impostazione predefinita, ADO Salva il **Recordset** in formato proprietario di Microsoft Advanced dati viene (ADTG). Questo formato binario viene specificato utilizzando il **adPersistADTG PersistFormatEnum** valore. In alternativa, è possibile scegliere di salvare il **Recordset** out come XML utilizzando invece **il valore adPersistXML**. Per ulteriori informazioni sul salvataggio di recordset in formato XML, vedere [salvataggio di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
+ È possibile usare la **Recordset salvataggio** metodo per rendere persistenti i ADO **Recordset** in un file su disco. (È anche possibile salvare una **Recordset** a un oggetto ADO **Stream** oggetto. **Stream** gli oggetti sono descritti più avanti nella Guida.) In un secondo momento, è possibile usare la **aperto** metodo per riaprire il **Recordset** quando è pronti a usarlo. Per impostazione predefinita, ADO Salva il **Recordset** nel formato proprietario Microsoft avanzata dei dati viene (ADTG). Questo formato binario viene specificato usando il **adPersistADTG PersistFormatEnum** valore. In alternativa, è possibile scegliere di salvare il **Recordset** out come XML usando invece **il valore adPersistXML**. Per altre informazioni sul salvataggio di recordset in formato XML, vedere [record di persistenza in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
   
- La sintassi del **salvare** metodo è il seguente:  
+ La sintassi del **salvare** è la seguente:  
   
 ```  
   
@@ -49,25 +46,25 @@ Destination, PersistFormat
   
 ```  
   
- La prima volta che salva il **Recordset**, è possibile specificare facoltativamente *destinazione*. Se si omette *destinazione*, verrà creato un nuovo file con un nome di impostare il valore di [origine](../../../ado/reference/ado-api/source-property-ado-recordset.md) proprietà del **Recordset**.  
+ La prima volta che salva il **Recordset**, è possibile specificare facoltativamente *destinazione*. Se si omette *destinazione*, verrà creato un nuovo file con un nome impostato sul valore della [origine](../../../ado/reference/ado-api/source-property-ado-recordset.md) proprietà del **Recordset**.  
   
- Omettere *destinazione* quando si chiama successivamente **salvare** dopo il primo salvataggio o un errore di run-time si verificherà. Se si chiama successivamente **salvare** con un nuovo *destinazione*, **Recordset** viene salvato nella nuova destinazione. Tuttavia, la nuova destinazione e la destinazione originale sia sarà aperti.  
+ Omettere *destinazione* quando si chiama successivamente **salvare** dopo il primo salvataggio o un errore di run-time si verificherà. Se successivamente si chiama **salvare** con un nuovo oggetto *destinazione*, il **Recordset** viene salvato nella nuova destinazione. Tuttavia, la nuova destinazione e la destinazione originale entrambi saranno aperte.  
   
- **Salvare** non chiude il **Recordset** o *destinazione*, pertanto è possibile continuare a lavorare con i **Recordset** e salvare le modifiche più recenti. *Destinazione* rimane aperto fino a quando il **Recordset** viene chiusa, durante il quale le altre applicazioni possono leggere, ma non scrivere *destinazione*.  
+ **Salvare** non chiude il **Recordset** o *destinazione*, quindi è possibile continuare a lavorare con i **Recordset** e salvare le modifiche più recenti. *Destinazione* rimane aperta fino a quando il **Recordset** viene chiusa, durante i quali altre applicazioni possono leggere ma non di scrivere *destinazione*.  
   
- Per motivi di sicurezza, il **salvare** metodo consente solo l'utilizzo di impostazioni di protezione basso e personalizzato da uno script eseguito da Microsoft Internet Explorer.  
+ Per motivi di sicurezza, il **salvare** metodo consente solo l'uso delle impostazioni di sicurezza personalizzato e basso da uno script eseguito da Microsoft Internet Explorer.  
   
- Se il **salvare** metodo viene chiamato durante asincrono **Recordset** recuperare, eseguire o aggiornare è in corso, operazione **salvare** attendere fino a che l'operazione asincrona completare.  
+ Se il **salvare** viene chiamato durante un'asincrona **Recordset** recuperare, eseguire o aggiornare è in corso l'operazione **Salva** attende fino a quando l'operazione asincrona è completare.  
   
- I record vengono salvati a partire dalla prima riga del **Recordset**. Quando il **salvare** metodo termina, la posizione della riga corrente viene spostata nella prima riga del **Recordset**.  
+ Vengono salvati i record che iniziano con la prima riga del **Recordset**. Quando la **salvare** metodo termina, la posizione della riga corrente viene spostata sulla prima riga del **Recordset**.  
   
- Per ottenere risultati ottimali, impostare il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà **adUseClient** con **salvare**. Se il provider non supporta tutte le funzionalità necessarie per salvare **Recordset** oggetti, il servizio cursore fornirà tale funzionalità.  
+ Per ottenere risultati ottimali, impostare il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà **adUseClient** con **Salva**. Se il provider non supporta tutte le funzionalità necessarie per salvare **Recordset** oggetti, il servizio di cursore fornirà tale funzionalità.  
   
- Quando un **Recordset** vengono rese persistenti con la **CursorLocation** proprietà impostata su **adUseServer**, la funzionalità di aggiornamento per il **Recordset**è limitato. In genere, gli aggiornamenti a tabella singola, inserimenti ed eliminazioni sono consentite (dipende dalla funzionalità del provider). Il [Resync](../../../ado/reference/ado-api/resync-method.md) metodo inoltre è disponibile in questa configurazione.  
+ Quando un **Recordset** persistente con il **CursorLocation** proprietà impostata su **adUseServer**, la funzionalità di aggiornamento per il **Recordset**è limitato. In genere, solo tabella singola aggiornamenti, inserimenti ed eliminazioni sono consentite (dipende da funzionalità del provider). Il [Risincronizza](../../../ado/reference/ado-api/resync-method.md) metodo è anche disponibile in questa configurazione.  
   
- Poiché il *destinazione* parametro può accettare qualsiasi oggetto che supporta OLE DB **IStream** interfaccia, è possibile salvare un **Recordset** direttamente a ASP  **Risposta** oggetto.  
+ Poiché il *destinazione* parametro può accettare qualsiasi oggetto che supporta OLE DB **IStream** interfaccia, è possibile salvare una **Recordset** direttamente a ASP  **Risposta** oggetto.  
   
- Nell'esempio seguente, il **salvare** e **aprire** metodi vengono utilizzati per mantenere un **Recordset** e riaprirlo successivamente:  
+ Nell'esempio seguente, il **salvare** e **Open** vengono utilizzati metodi per rendere persistente un **Recordset** e riaprirlo successivamente:  
   
 ```  
 'BeginPersist  
@@ -116,7 +113,7 @@ Destination, PersistFormat
 'EndPersist  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  In questa sezione vengono trattati gli argomenti seguenti.  
   
 -   [Altre informazioni sulla persistenza dei recordset](../../../ado/guide/data/more-about-recordset-persistence.md)  

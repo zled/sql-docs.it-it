@@ -1,13 +1,11 @@
 ---
-title: Metodo CancelBatch (ADO) | Documenti Microsoft
+title: Metodo CancelBatch (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - CancelBatch method [ADO]
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c2db735e51ec0c71f35e211db50b952f942cc3a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4c8f0268a91b66f6f26eec1d87502355a1c9795a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276250"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828389"
 ---
 # <a name="cancelbatch-method-ado"></a>Metodo CancelBatch (ADO)
 Annulla un aggiornamento batch in sospeso.  
@@ -39,27 +36,27 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Parametri  
  *AffectRecords*  
- Facoltativo. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che indica il numero di record di **CancelBatch** saranno influenzati dal metodo.  
+ Facoltativo. Un' [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che indica il numero di record la **CancelBatch** saranno influenzati dal metodo.  
   
-## <a name="remarks"></a>Remarks  
- Utilizzare il **CancelBatch** metodo annullare eventuali aggiornamenti in sospeso in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in modalità di aggiornamento batch. Se il **Recordset** è in modalità di aggiornamento immediato, la chiamata **CancelBatch** senza **adAffectCurrent** genera un errore.  
+## <a name="remarks"></a>Note  
+ Usare la **CancelBatch** metodo annullare eventuali aggiornamenti in sospeso in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in modalità di aggiornamento batch. Se il **Recordset** è in modalità di aggiornamento immediato, chiama **CancelBatch** senza **adAffectCurrent** genera un errore.  
   
- Se si sta modificando il record corrente o aggiungendo un nuovo record quando si chiama **CancelBatch**, ADO prima chiama il [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) metodo per annullare eventuali modifiche memorizzate nella cache. Dopo che tutte le modifiche in sospeso il **Recordset** vengono annullate.  
+ Se si sta modificando il record corrente o si aggiunge un nuovo record quando si chiama **CancelBatch**, ADO prima chiama il [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) metodo per annullare eventuali modifiche memorizzate nella cache. Successivamente, tutte le modifiche in sospeso il **Recordset** vengono annullate.  
   
- Il record corrente potrebbe essere dopo un **CancelBatch** chiama, in particolare se era in corso l'aggiunta di un nuovo record. Per questo motivo, è consigliabile impostare la posizione corrente in un percorso noto nel **Recordset** dopo il **CancelBatch** chiamare. Ad esempio, chiamare il [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) metodo.  
+ Il record corrente potrebbe essere non determinabile dopo una **CancelBatch** chiamare, in particolare se fosse in corso l'aggiunta di un nuovo record. Per questo motivo, è consigliabile impostare la posizione del record corrente in una posizione nota nel **Recordset** dopo le **CancelBatch** chiamare. Ad esempio, chiama il [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) (metodo).  
   
- Se il tentativo di annullare gli aggiornamenti in sospeso non riesce a causa di un conflitto con i dati sottostanti (ad esempio, se un record è stato eliminato da un altro utente), il provider restituisce avvisi per il [errori](../../../ado/reference/ado-api/errors-collection-ado.md) raccolta ma non interrompe esecuzione del programma. Errore di run-time si verifica solo se sono presenti conflitti in tutti i record richiesti. Utilizzare il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà (**adFilterAffectedRecords**) e [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà per individuare i record con conflitti.  
+ Se il tentativo di annullare gli aggiornamenti in sospeso non riesce a causa di un conflitto con i dati sottostanti (ad esempio, se un record è stato eliminato da un altro utente), il provider restituisce avvisi per i [errori](../../../ado/reference/ado-api/errors-collection-ado.md) raccolta ma non arrestano esecuzione del programma. Errore di run-time si verifica solo se sono presenti conflitti in tutti i record richiesti. Usare la [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà (**adFilterAffectedRecords**) e il [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà per individuare i record con conflitti.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio UpdateBatch e CancelBatch metodi (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
+ [Esempio di UpdateBatch e CancelBatch (esempio di metodi (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
  [Esempio UpdateBatch e CancelBatch metodi (VC + +)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
- [Cancel (metodo) (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Metodo Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
+ [Metodo Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
+ [Metodo Cancel (Servizi Desktop remoto)](../../../ado/reference/rds-api/cancel-method-rds.md)   
  [Metodo CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Metodo CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Clear (metodo) (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
+ [Metodo CancelUpdate (Servizi Desktop remoto)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
+ [Metodo Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Proprietà LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)

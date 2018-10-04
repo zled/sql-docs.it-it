@@ -1,18 +1,13 @@
 ---
-title: Espressioni logiche (XQuery) | Documenti Microsoft
+title: Espressioni logiche (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -22,16 +17,15 @@ helpviewer_keywords:
 - EBV
 - expressions [XQuery], logical
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 20579cbbc8fc16fad2ab33c033fa8c73fbeadf1d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f30b9673ac7ba59e54544e00aaeecbf501c7500b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076768"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627899"
 ---
 # <a name="logical-expressions-xquery"></a>Espressioni logiche (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +37,7 @@ expression1 and expression2
 expression1 or expression2  
 ```  
   
- Le espressioni di test, `expression1,``expression2`nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può comportare una sequenza vuota, una sequenza di uno o più nodi o un singolo valore booleano. In base al risultato, il valore booleano effettivo viene determinato nel modo seguente:  
+ Le espressioni di prova `expression1,``expression2`, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può comportare una sequenza vuota, una sequenza di uno o più nodi o un singolo valore booleano. In base al risultato, il valore booleano effettivo viene determinato nel modo seguente:  
   
 -   Se l'espressione di prova restituisce una sequenza vuota, il risultato dell'espressione è False.  
   
