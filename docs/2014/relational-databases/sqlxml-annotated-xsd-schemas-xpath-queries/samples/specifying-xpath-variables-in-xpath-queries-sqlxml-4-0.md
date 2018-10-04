@@ -1,29 +1,26 @@
 ---
-title: Specifica le variabili XPath in query XPath (SQLXML 4.0) | Microsoft Docs
+title: Specifica di variabili XPath nelle query XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], XPath variables
 - XPath variables [SQLXML]
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c778b7697ce627e8aaf493cb6a089502c667e524
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bab72b2b390e4eace12bc8559347784d5be54e3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168233"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085671"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Definizione di variabili XPath in query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato il modo in cui passare variabili XPath in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -31,7 +28,7 @@ ms.locfileid: "37168233"
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-use-the-xpath-variables"></a>A. Utilizzare le variabili XPath  
- Un modello di esempio è costituito da due query XPath. Ognuna delle query XPath accetta un parametro. Il modello specifica inoltre valori predefiniti per tali parametri. Se i valori dei parametri non sono specificati, vengono utilizzati i valori predefiniti. Due parametri con valori predefiniti vengono specificati in  **\<SQL: header >**.  
+ Un modello di esempio è costituito da due query XPath. Ognuna delle query XPath accetta un parametro. Il modello specifica inoltre valori predefiniti per tali parametri. Se i valori dei parametri non sono specificati, vengono utilizzati i valori predefiniti. Vengono specificati due parametri con i valori predefiniti in  **\<sql:header >**.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
