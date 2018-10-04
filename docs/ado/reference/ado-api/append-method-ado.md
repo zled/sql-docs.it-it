@@ -1,13 +1,11 @@
 ---
-title: Append (metodo) (ADO) | Documenti Microsoft
+title: Metodo Append (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b887ece3551b2ef88bc9b61037c0f2ddebd75f5e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5e03e29d5c9696efb55ef5ce6ec47fcf28fc0467
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275900"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712383"
 ---
-# <a name="append-method-ado"></a>Append (metodo) (ADO)
-Aggiunge un oggetto a una raccolta. Se la raccolta è [campi](../../../ado/reference/ado-api/fields-collection-ado.md), un nuovo [campo](../../../ado/reference/ado-api/field-object.md) oggetto può essere creato prima di essere aggiunto alla raccolta.  
+# <a name="append-method-ado"></a>Metodo Append (ADO)
+Aggiunge un oggetto a una raccolta. Se la raccolta è [i campi](../../../ado/reference/ado-api/fields-collection-ado.md), un nuovo [campo](../../../ado/reference/ado-api/field-object.md) oggetto può essere creato prima di essere aggiunta alla raccolta.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,11 +35,11 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *raccolta*  
+ *Raccolta*  
  Oggetto raccolta.  
   
  *Campi*  
- Oggetto **campi** insieme.  
+ Oggetto **campi** raccolta.  
   
  *object*  
  Una variabile oggetto che rappresenta l'oggetto da aggiungere.  
@@ -51,10 +48,10 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  Oggetto **stringa** valore contenente il nome del nuovo **campo** dell'oggetto e non deve essere lo stesso nome come qualsiasi altro oggetto nel *campi*.  
   
  *Tipo*  
- Oggetto [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valore, il cui valore predefinito è **adEmpty**, che specifica il tipo di dati del nuovo campo. I seguenti tipi di dati non supportati da ADO e dovrebbe non essere utilizzato quando aggiungendo nuovi campi a un [Recordset ADO (Object)](../../../ado/reference/ado-api/recordset-object-ado.md): **adIDispatch**, **adIUnknown**, **adVariant**.  
+ Oggetto [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valore, il cui valore predefinito è **adEmpty**, che specifica il tipo di dati del nuovo campo. Tipi di dati seguenti non sono supportati da ADO e dovrebbe non essere utilizzato quando Accodamento di nuovi campi a un [Recordset ADO (Object)](../../../ado/reference/ado-api/recordset-object-ado.md): **adIDispatch**, **adIUnknown**, **adVariant**.  
   
- *DefinedSize*  
- Facoltativo. Oggetto **lungo** valore che rappresenta le dimensioni definite, in caratteri o byte, del nuovo campo. Il valore predefinito per questo parametro è derivato da *tipo*. Campi che dispongono di un *DefinedSize* maggiori di 255 byte vengono considerati come colonne di lunghezza variabile. Il valore predefinito per *DefinedSize* non è specificato.  
+ *Proprietà DefinedSize*  
+ Facoltativo. Oggetto **lungo** valore che rappresenta la dimensione definita, in caratteri o byte, del nuovo campo. Il valore predefinito per questo parametro viene derivato dalla *tipo*. Campi che dispongono di un *DefinedSize* maggiori di 255 byte vengono gestite come colonne a lunghezza variabile. Il valore predefinito per *DefinedSize* non è specificato.  
   
  *Attrib*  
  Facoltativo. Oggetto [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) valore, il cui valore predefinito è **adFldDefault**, che specifica gli attributi per il nuovo campo. Se questo valore viene omesso, il campo conterrà gli attributi derivati da *tipo*.  
@@ -62,32 +59,32 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *Valore FieldValue*  
  Facoltativo. Oggetto **Variant** che rappresenta il valore per il nuovo campo. Se non specificato, il campo viene aggiunto con un valore null.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="parameters-collection"></a>Raccolta Parameters  
- È necessario impostare il [tipo](../../../ado/reference/ado-api/type-property-ado.md) proprietà di un [parametro](../../../ado/reference/ado-api/parameter-object.md) oggetto prima dell'aggiunta per il [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) insieme. Se si seleziona un tipo di dati a lunghezza variabile, è necessario impostare anche la [dimensioni](../../../ado/reference/ado-api/size-property-ado-parameter.md) su un valore maggiore di zero.  
+ È necessario impostare il [tipo](../../../ado/reference/ado-api/type-property-ado.md) proprietà di un [parametro](../../../ado/reference/ado-api/parameter-object.md) oggetto prima di aggiungerlo al [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta. Se si seleziona un tipo di dati a lunghezza variabile, è necessario impostare anche il [dimensioni](../../../ado/reference/ado-api/size-property-ado-parameter.md) proprietà su un valore maggiore di zero.  
   
- Che descrive i parametri manualmente riduce al minimo le chiamate al provider e pertanto consente di migliorare le prestazioni quando si utilizzano stored procedure o query con parametri. Tuttavia, è necessario conoscere le proprietà dei parametri associati la stored procedure o parametri di query che si desidera chiamare.  
+ Che descrive i parametri manualmente riduce al minimo le chiamate al provider e pertanto migliora le prestazioni quando si utilizzano le stored procedure o query con parametri. Tuttavia, è necessario conoscere le proprietà dei parametri associati con la stored procedure o con parametri di query che si vuole chiamare.  
   
- Utilizzare il [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) metodo per creare **parametro** oggetti con le impostazioni di proprietà appropriato e l'utilizzo di **Append** metodo per aggiungerli al [ I parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) insieme. Consente di impostare e restituire i valori dei parametri senza la necessità di chiamare il provider per le informazioni sui parametri. Se si sta scrivendo su un provider che non fornisce informazioni sui parametri, è necessario utilizzare questo metodo per compilare manualmente la **parametri** insieme per utilizzare i parametri.  
+ Usare la [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) metodo per creare **parametro** oggetti con le impostazioni di proprietà appropriata e usare il **Append** metodo a cui aggiungere i il [ Parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta. Ciò consente di impostare e restituire i valori dei parametri senza la necessità di chiamare il provider per le informazioni sui parametri. Se si scrive in un provider che non fornisce informazioni sui parametri, è necessario utilizzare questo metodo per compilare manualmente la **parametri** insieme per poter utilizzare i parametri.  
   
 ## <a name="fields-collection"></a>Raccolta Fields  
- Il *FieldValue* parametro è valido solo quando si aggiunge un **campo** l'oggetto in un [Record](../../../ado/reference/ado-api/record-object-ado.md) dell'oggetto, non a un **Recordset** oggetto. Con un **Record** dell'oggetto, è possibile aggiungere campi e specificare i valori nello stesso momento. Con un **Recordset** dell'oggetto, è necessario creare campi durante la **Recordset** è chiuso e quindi aprire il **Recordset** e assegnare valori ai campi.  
+ Il *FieldValue* parametro è valido solo quando si aggiunge un **campo** dell'oggetto a una [Record](../../../ado/reference/ado-api/record-object-ado.md) dell'oggetto, non a un **Recordset** oggetto. Con un **Record** dell'oggetto, è possibile aggiungere campi e specificare i valori nello stesso momento. Con un **Recordset** dell'oggetto, è necessario creare campi durante le **Recordset** è chiuso e quindi aprire il **Recordset** e assegnare valori ai campi.  
   
 > [!NOTE]
->  Per i nuovi **campo** gli oggetti che sono stati accodati per il **campi** raccolta di un **Record** oggetto, il [valore](../../../ado/reference/ado-api/value-property-ado.md) deve essere impostata prima di qualsiasi altro **campo** le proprietà possono essere specificate. Innanzitutto, un valore specifico per il **valore** proprietà necessario è stata assegnata e [aggiornamento](../../../ado/reference/ado-api/update-method.md) sul **campi** raccolta denominata. Quindi, altre proprietà, ad esempio [tipo](../../../ado/reference/ado-api/type-property-ado.md) o [attributi](../../../ado/reference/ado-api/attributes-property-ado.md) accessibili. **Campo** oggetti dei seguenti tipi di dati (**DataTypeEnum**) non possono essere accodati per il **campi** raccolta e causerà un errore: **adArray**, **adChapter**, **adEmpty**, **adPropVariant**, e **adUserDefined**. Inoltre, i tipi di dati seguenti non sono supportati da ADO: **adIDispatch**, **adIUnknown**, e **adIVariant**. Per questi tipi, si verificherà alcun errore quando aggiunto, ma utilizzo può produrre risultati imprevisti, tra cui le perdite di memoria.  
+>  Per ottenere nuove **campo** gli oggetti che sono stati accodati per il **campi** raccolta di un **Record** oggetto, il [valore](../../../ado/reference/ado-api/value-property-ado.md) deve essere impostata prima di qualsiasi altro **campo** proprietà possono essere specificate. Per prima cosa, un valore specifico per il **valore** proprietà necessario aver assegnata e [Update](../../../ado/reference/ado-api/update-method.md) sul **campi** raccolta denominata. Quindi, le altre proprietà, ad esempio [tipo](../../../ado/reference/ado-api/type-property-ado.md) oppure [attributi](../../../ado/reference/ado-api/attributes-property-ado.md) sono accessibili. **Campo** oggetti dei seguenti tipi di dati (**DataTypeEnum**) non possono essere accodati per il **campi** raccolta e causerà un errore si verifica: **adArray**, **adChapter**, **adEmpty**, **adPropVariant**, e **adUserDefined**. Inoltre, i tipi di dati seguenti non sono supportati da ADO: **adIDispatch**, **adIUnknown**, e **adIVariant**. Per questi tipi, nessun errore si verifica quando aggiunto, ma utilizzo può produrre risultati imprevisti, tra cui le perdite di memoria.  
   
 ## <a name="recordset"></a>recordset  
- Se non si imposta la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà prima di chiamare il **Append** metodo **CursorLocation** verrà impostato su **adUseClient** ( un [CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md) valore) automaticamente quando il [aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodo il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) viene chiamato l'oggetto.  
+ Se non si imposta la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà prima di chiamare il **Append** metodo **CursorLocation** verrà impostato su **adUseClient** ( una [CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md) valore) automaticamente quando il [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodo per il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) viene chiamato l'oggetto.  
   
- Se si verificherà un errore di run-time di **Append** metodo viene chiamato sul **campi** insieme di open **Recordset**, o scegliere un **Recordset** in cui il [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) proprietà è stata impostata. È possibile aggiungere solo i campi in un **Recordset** che non sia aperto e non è ancora stato connesso a un'origine dati. Si tratta in genere quando un **Recordset** oggetto viene creato con il [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) metodo o assegnata a una variabile oggetto.  
+ Se si verificherà un errore di run-time di **Append** metodo viene chiamato sul **campi** raccolta di un elemento aperto **Recordset**, o in un **Recordset** in cui il [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) proprietà è stata impostata. È possibile aggiungere solo i campi da un **Recordset** che non è aperta e non è ancora stato connesso a un'origine dati. Ciò avviene in genere quando un **Recordset** oggetto viene creato con il [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) metodo o assegnato a una variabile oggetto.  
   
 ## <a name="record"></a>Record  
- Errore di run-time non si verificherà se il **Append** metodo viene chiamato sul **campi** insieme di open **Record**. Verrà aggiunto il nuovo campo per il **campi** insieme il **Record** oggetto. Se il **Record** è stata derivata da una **Recordset**, il nuovo campo non compariranno nella **campi** insieme del **Recordset** oggetto.  
+ Errore di run-time non si verificherà se il **Append** metodo viene chiamato sulle **campi** raccolta di un elemento aperto **Record**. Verrà aggiunto il nuovo campo per il **i campi** insieme delle **Record** oggetto. Se il **Record** fu derivata da una **Recordset**, il nuovo campo non compariranno nella **campi** raccolta del **Recordset** oggetto.  
   
- Un campo esistente non può essere creato e aggiunto al **campi** raccolta assegnando un valore per l'oggetto campo, come se esistesse già nella raccolta. L'assegnazione verrà attivata la creazione automatica e l'aggiunta del **campo** oggetto e l'assegnazione verrà completata.  
+ Può essere creato e aggiunto a un campo inesistente il **campi** raccolta assegnando un valore per l'oggetto campo, come se esistesse già nella raccolta. L'assegnazione verrà attivata la creazione automatica e l'aggiunta del **campo** oggetto e quindi l'assegnazione verrà completata.  
   
- Dopo l'aggiunta una **campo** per il **campi** raccolta di un **Record** dell'oggetto, chiamare il **aggiornamento** metodo il **campi**  insieme per salvare le modifiche.  
+ Dopo aver aggiunto un **campo** per il **campi** raccolta di un **Record** dell'oggetto, chiamare il **Update** metodo del **campi**  insieme per salvare le modifiche.  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -95,10 +92,10 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 - [Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere e un esempio di metodi CreateParameter (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
- [Aggiungere e CreateParameter metodi (VC + +)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
+ [Append e CreateParameter (esempio di metodi (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
+ [Append e CreateParameter metodi (VC + +)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [Metodo CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Metodo Delete (insieme Fields ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [Metodo Delete (insieme Parameters ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
- [Delete (metodo) (Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Metodo Delete (raccolta Fields ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [Metodo Delete (insieme di parametri ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
+ [Elimina metodo (Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Metodo Update](../../../ado/reference/ado-api/update-method.md)

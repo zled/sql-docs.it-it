@@ -1,79 +1,76 @@
 ---
-title: Connettersi a Oracle (OracleToSQL) | Documenti Microsoft
+title: Connettersi a Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 3d002682b0671bedbe15a3c790429b9a80452a35
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3e2e84fd2117afe15075084741e65989a30960cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776997"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674175"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Connettersi a Oracle (OracleToSQL)
-Utilizzare il **Connect to Oracle** la finestra di dialogo per la connessione al database Oracle che si desidera eseguire la migrazione.  
+Usare la **Connetti a Oracle** finestra di dialogo per la connessione al database Oracle che vuoi eseguire la migrazione.  
   
-Per accedere a questa finestra di dialogo, scegliere il **File** dal menu **Connect to Oracle**. Se in precedenza si è connessi, il comando è **Riconnetti a Oracle**.  
+Per accedere a questa finestra di dialogo, scegliere il **File** dal menu **Connect to Oracle**. Se si è già connessa, il comando viene **Riconnetti a Oracle**.  
   
 ## <a name="options"></a>Opzioni  
 **Provider**  
-Selezionare il provider di accesso ai dati per la connessione al database Oracle. I provider disponibili sono il Provider Client Oracle e il Provider OLE DB. Il valore predefinito è il Provider Client Oracle.  
+Selezionare il provider di accesso ai dati per la connessione al database Oracle. I provider disponibili sono il Provider del Client Oracle e il Provider OLE DB. Il valore predefinito è Provider Client Oracle.  
   
 **Mode**  
-Selezionare la modalità Standard, TNSNAME o stringa di connessione.  
+Selezionare modalità Standard, TNSNAME o stringa di connessione.  
   
 -   In modalità Standard, immettere o selezionare i valori per il provider, nome del server, porta del server, Oracle SID, nome utente e password.  
   
--   In modalità TNSNAME, immettere l'identificatore di connessione (alias TNS) del database Oracle, nome utente e password.  
+-   In modalità TNSNAME, immettere l'identificatore di connect (alias TNS) del database Oracle, nome utente e password.  
   
--   In modalità di stringa di connessione, si fornisce una stringa di connessione.  
+-   In modalità stringa di connessione, è fornire una stringa di connessione.  
   
     > [!IMPORTANT]  
-    > Non è consigliabile utilizzare la modalità di stringa di connessione perché il testo potrebbe includere le password, e vengono inviato come testo non crittografato.  
+    > Non è consigliabile utilizzare la modalità stringa di connessione perché il testo può includere le password, e viene inviato come testo non crittografato.  
   
 Il valore predefinito è la modalità Standard.  
   
 **Nome server**  
-Immettere il nome del server Oracle. Il nome del server predefinito è lo stesso nome del computer. Questa è un'opzione di modalità Standard.  
+Immettere il nome del server Oracle. Il nome del server predefinita è lo stesso nome del computer. Questa è un'opzione di modalità Standard.  
   
 **Porta server**  
-Se si utilizza un numero di porta diverso da 1521 (impostazione predefinita) per le connessioni a Oracle, immettere il numero di porta. Questa è un'opzione di modalità Standard.  
+Se si usa un numero di porta diverso da 1521 (impostazione predefinita) per le connessioni a Oracle, immettere il numero di porta. Questa è un'opzione di modalità Standard.  
   
 **Identificatore di connessione**  
-Immettere il Oracle connettersi identificatore. Questo è l'alias del database, come definito nel file tnsnames.ora locale.  
+Immettere il Oracle connect identificatore. Questo è l'alias del database come definito nel file tnsnames. ora locale.  
   
 Questa è un'opzione di modalità TNSNAME.  
   
 **SID Oracle**  
-Immettere il SID per il database. Il SID è un identificatore che distingue i database Oracle in un computer. Il valore predefinito di SID per un database è i primi otto caratteri del nome del database.  
+Immettere il SID per il database. Il SID è un identificatore che consente di distinguere il database Oracle in un computer. Il valore predefinito di SID per un database è i primi otto caratteri del nome del database.  
   
 Questa è un'opzione di modalità Standard.  
   
 **Nome utente**  
-Immettere il nome utente utilizzato per connettersi al database Oracle SSMA.  
+Immettere il nome utente che SSMA userà per connettersi al database Oracle.  
   
 **Password**  
 Immettere la password associata al nome utente.  
   
 **Stringa di connessione**  
 > [!IMPORTANT]  
-> Non è consigliabile utilizzare la modalità di stringa di connessione perché il testo potrebbe includere le password, e vengono inviato come testo non crittografato.  
+> Non è consigliabile utilizzare la modalità stringa di connessione perché il testo può includere le password, e viene inviato come testo non crittografato.  
   
-Se si utilizza la modalità di stringa di connessione, immettere la stringa di connessione completa per la connessione a Oracle.  
+Se si usa la modalità stringa di connessione, immettere la stringa di connessione completa per la connessione a Oracle.  
   
-Le stringhe di connessione è costituito da coppie nome / valore di parametro.  
+Le stringhe di connessione sono costituiti da coppie nome / valore di parametro.  
   
--   Per informazioni sulla stringa di connessione OLE DB, vedere [il Provider Microsoft OLE DB per Oracle](http://go.microsoft.com/fwlink/?LinkId=85640) articolo in MSDN Library.  
+-   Per informazioni sulla stringa di connessione OLE DB, vedere [Provider Microsoft OLE DB per Oracle](http://go.microsoft.com/fwlink/?LinkId=85640) articolo in MSDN Library.  
   
-Per le stringhe di connessione di SSMA sempre includere il parametro del Provider. Inoltre, assicurarsi di includere il parametro Port quando ci si connette a Oracle.  
+Per le stringhe di connessione di SSMA, sempre includere il parametro del Provider. Inoltre, assicurarsi di includere il parametro Port quando ci si connette a Oracle.  
   

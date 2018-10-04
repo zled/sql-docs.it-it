@@ -6,18 +6,16 @@ ms.technology: samples
 ms.custom: ''
 ms.date: 04/04/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35228d6773e576b2d8b062c94aa8797d07f00809
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ed73e9e97c34ad1bd1d3aa4e0d37a351cbac0703
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38000663"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798041"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogo del database WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -163,7 +161,7 @@ Il `Reports` e `PowerBI` gli schemi sono pensati per reporting services e a scop
 
 Queste sono le procedure utilizzate da un'applicazione client, ad esempio un Web front-end.
 
-|Procedura|Scopo|
+|Routine|Scopo|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|Consente a una persona (da `Application.People`) di accedere al sito Web.|
 |ChangePassword|Modifica password dell'utente (per gli utenti che non usano meccanismi di autenticazione esterni).|
@@ -185,7 +183,7 @@ Le stored procedure in questo schema vengono utilizzate dal processo ETL. Otteng
 
 Simula un carico di lavoro che inserisce le vendite e acquisti. La stored procedure principale è `PopulateDataToCurrentDate`, che consente di inserire i dati di esempio fino alla data corrente.
 
-|Procedura|Scopo|
+|Routine|Scopo|
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|Crea nuovamente le procedure necessarie per i dati di simulazione di carico. È necessario per spostare i dati fino alla data corrente.|
 |Configuration_RemoveDataLoadSimulationProcedures|Questa operazione rimuove le procedure nuovamente dopo la simulazione di dati è stata completata.|
@@ -198,7 +196,7 @@ Simula un carico di lavoro che inserisce le vendite e acquisti. La stored proced
 
 Queste procedure vengono utilizzate per configurare l'esempio. Vengono utilizzati per applicare le funzionalità dell'edizione enterprise per la versione standard edition dell'esempio, nonché per aggiungere il controllo e l'indicizzazione full-text.
 
-|Procedura|Scopo|
+|Routine|Scopo|
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|Aggiunge un membro a un ruolo se non è già membro del ruolo|
 |Configuration_ApplyAuditing|Aggiunge il controllo. Il controllo server viene applicato per i database standard edition; il controllo del database aggiuntivo viene aggiunta per enterprise edition.|
@@ -217,7 +215,7 @@ Queste procedure vengono utilizzate per configurare l'esempio. Vengono utilizzat
 
 Procedure per configurare le sequenze nel database.
 
-|Procedura|Scopo|
+|Routine|Scopo|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Chiama la routine ReseedSequenceBeyondTableValue per tutte le sequenze.|
 |ReseedSequenceBeyondTableValue|Usato per riposizionare il valore di sequenza successivo oltre il valore in qualsiasi tabella che utilizza la stessa sequenza. (Ad esempio, un DBCC CHECKIDENT per equivalente a colonne identity per le sequenze ma tra potenzialmente più tabelle).|

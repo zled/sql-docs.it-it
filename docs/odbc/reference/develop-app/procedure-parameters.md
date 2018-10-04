@@ -1,59 +1,56 @@
 ---
-title: Parametri di procedura | Documenti Microsoft
+title: I parametri di routine | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - procedure parameters [ODBC]
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc7e82b134ef578907dc0b5e84aa0e1ed7224027
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cab0fea9c39e4946122698f2476668464e556c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913476"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751863"
 ---
-# <a name="procedure-parameters"></a>Parametri di routine
-I parametri nelle chiamate di procedura possono essere di input, input/output o i parametri di output. Ciò è diverso dai parametri di tutte le altre istruzioni SQL sono sempre i parametri di input.  
+# <a name="procedure-parameters"></a>Parametri di procedure
+I parametri nelle chiamate a procedure possono essere di input, input/output o i parametri di output. Questo è diverso dai parametri di tutte le altre istruzioni di SQL, che sono sempre i parametri di input.  
   
- Parametri di input vengono utilizzati per inviare i valori per la procedura. Si supponga, ad esempio, che la tabella di parti contiene colonne PartID, la descrizione e prezzo. La procedura InsertPart potrebbe essere un parametro di input per ogni colonna nella tabella. Esempio:  
+ I parametri di input vengono utilizzati per inviare i valori per la procedura. Si supponga, ad esempio, che la tabella di parti contiene colonne PartID, la descrizione e prezzo. La routine InsertPart può avere un parametro di input per ogni colonna nella tabella. Esempio:  
   
 ```  
 {call InsertPart(?, ?, ?)}  
 ```  
   
- Un driver non deve modificare il contenuto di un buffer di input fino al **SQLExecDirect** o **SQLExecute** restituisce SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE o SQL_NO_DATA. Il contenuto del buffer di input non deve essere modificato mentre **SQLExecDirect** o **SQLExecute** restituisce SQL_NEED_DATA o SQL_STILL_EXECUTING.  
+ Un driver non deve modificare il contenuto di un buffer di input fino alla **SQLExecDirect** oppure **SQLExecute** restituisce SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE o SQL_NO_DATA. Il contenuto del buffer di input non deve essere modificato mentre **SQLExecDirect** oppure **SQLExecute** restituisce SQL_NEED_DATA o SQL_STILL_EXECUTING.  
   
- Parametri di input/output vengono utilizzati sia per l'invio di valori alle procedure e recuperare valori da procedure. Utilizzando lo stesso parametro di input e un parametro di output tende a essere poco chiare e deve essere evitato. Si supponga, ad esempio, una stored procedure accetta un ID ordine e restituisce l'ID del cliente. Ciò può essere definito con un singolo parametro di input/output:  
+ Parametri di input/output vengono utilizzati sia per inviare i valori per le procedure e recuperare i valori da routine. Usando lo stesso parametro come input e un parametro di output tende a generare confusione e deve essere evitata. Si supponga, ad esempio, una procedura accetta un ID ordine e restituisce l'ID del cliente. Ciò può essere definito con un singolo parametro di input/output:  
   
 ```  
 {call GetCustID(?)}  
 ```  
   
- Potrebbe essere preferibile utilizzare due parametri: un parametro di input per l'ID dell'ordine e un output o un parametro di input/output per l'ID del cliente:  
+ Potrebbe essere preferibile usare due parametri: un parametro di input per l'ID dell'ordine e un output o un parametro di input/output per l'ID cliente:  
   
 ```  
 {call GetCustID(?, ?)}  
 ```  
   
- I parametri di output vengono utilizzati per recuperare il valore restituito dalla routine e per recuperare valori da argomenti di routine. le procedure che restituiscono valori sono anche detto *funzioni*. Si supponga, ad esempio, il **GetCustID** procedure citate restituisce un valore che indica se è stato possibile trovare l'ordine. Nella chiamata seguente, il primo parametro è un parametro di output utilizzato per recuperare il valore restituito dalla routine, il secondo parametro è un parametro di input utilizzato per specificare l'ID dell'ordine e il terzo parametro è un parametro di output utilizzato per recuperare l'ID del cliente:  
+ I parametri di output vengono usati per recuperare il valore restituito di routine e per recuperare valori da argomenti di procedure. le procedure che restituiscono i valori vengono talvolta nota anche come *funzioni*. Ad esempio, si supponga che il **GetCustID** procedure descritti in precedenza restituisce un valore che indica se è stato possibile trovare l'ordine. Nella chiamata seguente, il primo parametro è un parametro di output usato per recuperare il valore restituito di routine, il secondo parametro è un parametro di input utilizzato per specificare l'ID dell'ordine e il terzo parametro è un parametro di output usato per recuperare l'ID cliente:  
   
 ```  
 {? = call GetCustID(?, ?)}  
 ```  
   
- Driver gestiscono i valori per l'input e di input/output parametri nelle procedure non in modo diverso rispetto ai parametri di input in altre istruzioni SQL. Quando viene eseguita l'istruzione, vengano recuperati i valori delle variabili associate a questi parametri e li inviano all'origine dati.  
+ I driver di gestiscono i valori per l'input, input/output parametri nelle procedure no in modo diverso rispetto ai parametri di input in altre istruzioni SQL. Quando viene eseguita l'istruzione, vengano recuperati i valori delle variabili associate a questi parametri e inviarli all'origine dati.  
   
- Dopo l'istruzione è stata eseguita, i driver di archiviano i valori restituiti di input/output e i parametri di output nelle variabili associate a tali parametri. Questi restituito non è garantito che i valori vengano impostati fino a dopo che sono stati recuperati tutti i risultati restituiti dalla procedura e **SQLMoreResults** ha restituito SQL_NO_DATA. Se l'esecuzione dell'istruzione genera un errore, il contenuto del buffer del parametro di input/output o buffer dei parametri di output è definito.  
+ Dopo l'istruzione è stata eseguita, i driver di archiviano i valori restituiti di input/output e i parametri di output nelle variabili associate a tali parametri. Questi ha restituito valori non sono garantiti da impostare fino a dopo che sono stati recuperati tutti i risultati restituiti dalla procedura e **SQLMoreResults** è stato restituito SQL_NO_DATA. Se l'esecuzione dell'istruzione genera un errore, il contenuto del buffer del parametro di input/output o buffer dei parametri di output è definito.  
   
- Un'applicazione chiama **SQLProcedure** per determinare se una stored procedure con un valore restituito. Chiama **SQLProcedureColumns** per determinare il tipo (valore restituito, input, input/output o di output) di ogni parametro di routine.
+ Un'applicazione chiama **SQLProcedure** per determinare se una procedura con un valore restituito. Viene chiamato **SQLProcedureColumns** per determinare il tipo (valore restituito, input, input/output o di output) di ogni parametro di routine.

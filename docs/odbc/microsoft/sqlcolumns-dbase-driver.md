@@ -1,35 +1,32 @@
 ---
-title: SQLColumns (dBASE Driver) | Documenti Microsoft
+title: SQLColumns (Driver dBASE) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLColumns function [ODBC], dBASE Driver
 - DBase driver [ODBC], SQLColumns
 ms.assetid: 168171de-ab7d-4b5b-af7f-6e2106adfcce
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1ef4ef2cecc45c6faef437d030f9c6e947a6420
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3a3227556a3adfe63431f0cf10169a29d434495
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653259"
 ---
-# <a name="sqlcolumns-dbase-driver"></a>SQLColumns (dBASE Driver)
+# <a name="sqlcolumns-dbase-driver"></a>SQLColumns (driver dBASE)
 > [!NOTE]  
->  In questo argomento fornisce informazioni specifiche del Driver dBASE. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento fornisce informazioni specifiche del Driver dBASE. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|Colonna|Commenti|  
+|colonna|Commenti|  
 |------------|--------------|  
 |TABLE_QUALIFIER|Viene restituito il percorso di una directory.|  
-|TABLE_OWNER|In questa colonna viene restituito NULL perché il nome del proprietario non è supportato.|  
-|NULLABLE|SQL_NO_NULLS viene restituito per le colonne che partecipano in una chiave primaria o di un indice univoco.|
+|TABLE_OWNER|Poiché il nome del proprietario non è supportato in questa colonna viene restituito NULL.|  
+|NULLABLE|SQL_NO_NULLS viene restituito per le colonne che fanno parte di una chiave primaria o un indice univoco.|

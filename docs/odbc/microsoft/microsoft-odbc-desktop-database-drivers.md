@@ -1,13 +1,11 @@
 ---
-title: Microsoft ODBC driver di Database Desktop | Documenti Microsoft
+title: Microsoft ODBC driver di Database Desktop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4411abb0d9eccf3a209f873d80360de92317ae48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81cdf1738d35d89c35c34500900be79f7702f877
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903316"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631669"
 ---
-# <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC driver di Database Desktop
-ODBC è un'API che utilizza Structured Query Language (SQL) come linguaggio di accesso di database. È possibile accedere a un'ampia gamma di sistemi di gestione di database (DBMS) con lo stesso codice di origine ODBC che è direttamente incorporato nel codice sorgente dell'applicazione. Con il driver ODBC Microsoft di Database Desktop, un utente di un'applicazione ODBC compatibile può aprire, query e aggiornare un database desktop tramite l'interfaccia ODBC.  
+# <a name="microsoft-odbc-desktop-database-drivers"></a>Driver di database desktop ODBC Microsoft
+ODBC è un'API che usa Structured Query Language (SQL) come lingua di accesso del database. È possibile accedere a un'ampia gamma di sistemi di gestione di database (DBMS) con lo stesso codice di origine ODBC che è direttamente incorporato nel codice sorgente dell'applicazione. Con i driver di Database Desktop ODBC di Microsoft, un utente di un'applicazione ODBC compatibile può aprire, query e aggiornare un database desktop tramite l'interfaccia ODBC.  
   
- I driver di Database di Microsoft ODBC Desktop sono un set di Jet basato su Microsoft, dei driver ODBC. Mentre i driver Microsoft ODBC Desktop Database 2.0 include i driver a 16 bit e a 32 bit, 3.0 e versioni successive includono solo driver a 32 bit che funzionano in Windows 95 o versioni successive, Windows NT Workstation o Server versione 4.0, Windows 2000 Professional o Windows 2000 Server. Questi driver consentono di accedere ai tipi di origini dati seguenti:  
+ I driver di Database Desktop ODBC Microsoft sono un set in base al Jet Microsoft dei driver ODBC. Mentre i driver Microsoft ODBC Desktop Database 2.0 include i driver a 16 bit e a 32 bit, le versioni 3.0 e versioni successive includono solo driver a 32 bit che funzionano in Windows 95 o versioni successive, Workstation di Windows NT o versione 4.0, Windows 2000 Professional o Windows 2000 Server Server. Questi driver forniscono l'accesso per i tipi di origini dati seguenti:  
   
 -   Microsoft Access  
   
@@ -41,12 +38,12 @@ ODBC è un'API che utilizza Structured Query Language (SQL) come linguaggio di a
   
 -   file dBASE  
   
--   Text  
+-   Testo  
   
- Vedere [Driver ODBC Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) per informazioni dettagliate riguardanti il Driver ODBC di Microsoft Visual FoxPro®.  
+ Visualizzare [Driver ODBC Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) per la documentazione dettagliata su Visual FoxPro Microsoft® ODBC Driver.  
   
 > [!NOTE]  
->  Accesso ad altre origini dati, ad esempio HTML, Lotus 1-2-3 e Microsoft Exchange è abilitato per il driver ISAM (IISAM) installabili. Per ulteriori informazioni su questi driver, vedere "Accesso ai dati esterni" nel *di riferimento per programmatori di Microsoft Jet Database Engine*. ODBC Desktop Database driver 4.0 non supportano i formati di dati Btrieve ed EMS.  
+>  Accesso ad altre origini dati, ad esempio Lotus 1 a 2, 3, Microsoft Exchange e HTML, è abilitato per i driver installabili ISAM (IISAM). Per altre informazioni su questi driver, vedere "Accesso ai dati esterni" nel *di riferimento per programmatori di Microsoft Jet Database Engine*. 4.0 driver di Database Desktop ODBC non supportano i formati di dati Btrieve ed EMS.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

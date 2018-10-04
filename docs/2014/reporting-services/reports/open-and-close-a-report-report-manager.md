@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - opening reports
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c88878e5bd680ec6ca6fcbb310b25e5ec216977e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8db59646eb8bbb4d4bbe35c0fc54e4b243d4b28
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212291"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065731"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Aprire e chiudere un report (Gestione report)
   È possibile utilizzare Gestione report per visualizzare i report pubblicati in un server di report. Per impostazione predefinita, tutti i report vengono aperti in formato HTML. Dopo avere aperto un report, è possibile esportarlo per visualizzarlo in altri formati di applicazioni. Se il report contiene caratteristiche interattive o se si tratta di un report di Generatore report contenente dati interattivi, sarà possibile fare clic sui collegamenti per visualizzare report o dati aggiuntivi.  

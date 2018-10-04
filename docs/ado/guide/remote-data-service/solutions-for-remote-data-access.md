@@ -1,55 +1,52 @@
 ---
-title: Soluzioni per l'accesso a dati remoti | Documenti Microsoft
+title: Soluzioni per RDA | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS [ADO]
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df366a09a146f54bca5f6fec056fe8c7865a0808
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3ac979fa1c9baab8de361709606af1c337bf848d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274520"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612453"
 ---
-# <a name="solutions-for-remote-data-access"></a>Soluzioni per l'accesso a dati remoti
+# <a name="solutions-for-remote-data-access"></a>Soluzioni per RDA (Remote Data Access)
 ## <a name="the-issue"></a>Il problema  
- ADO consente all'applicazione di accedere direttamente e modificare origini dati (detta anche un sistema a due livelli). Ad esempio, se la connessione all'origine dati che contiene i dati, che è una connessione diretta in un sistema a due livelli.  
+ ADO consente all'applicazione direttamente accedere a e modificare origini dati (operazione talvolta denominate un sistema a due livelli). Ad esempio, se la connessione all'origine dati che contiene i dati, che è una connessione diretta in un sistema a due livelli.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Tuttavia, è consigliabile accedere a origini dati indirettamente tramite un intermediario, ad esempio Microsoft® Internet Information Services (IIS). Questa disposizione è detto anche un sistema a tre livelli. IIS è un sistema client/server che fornisce un modo efficiente per un'applicazione locale o dal client richiamare un programma remoto o nel server, in Internet o intranet. Il programma server accede all'origine dati e, facoltativamente, elabora i dati acquisiti.  
+ Tuttavia, è possibile accedere a origini dati indirettamente attraverso un intermediario, ad esempio Microsoft® Internet Information Services (IIS). Questa disposizione è talvolta definita un sistema a tre livelli. IIS è un sistema client/server che offre un modo efficiente per un'applicazione locale o un client richiamare un programma remoto o server, in Internet o intranet. Il programma del server riesce ad accedere all'origine dati e, facoltativamente, elabora i dati acquisiti.  
   
- Ad esempio, la pagina Web intranet contiene un'applicazione scritta in Microsoft® Visual Basic Scripting Edition (VBScript), che si connette a IIS. IIS a sua volta si connette all'origine dei dati effettivi, recupera i dati, viene elaborato in qualche modo e quindi restituisce le informazioni elaborate all'applicazione.  
+ Pagina Web intranet, ad esempio, contiene un'applicazione scritta in Microsoft® Visual Basic Scripting Edition (VBScript), che si connette a IIS. IIS a sua volta si connette all'origine dati effettiva, recupera i dati, lo elabora in qualche modo e quindi restituisce le informazioni elaborate all'applicazione.  
   
- In questo esempio, l'applicazione mai connessi direttamente a origine dati. Stato di IIS. IIS i dati di accedere tramite ADO.  
+ In questo esempio, l'applicazione mai direttamente connesso all'origine dati; È stato IIS. E IIS accessibili i dati tramite ADO.  
   
 > [!NOTE]
->  L'applicazione client/server non deve essere basata su Internet o intranet (ovvero, basata sul Web), può essere costituito esclusivamente programmi compilati su una rete locale. Tuttavia, il caso tipico è un'applicazione basata sul Web.  
+>  L'applicazione client/server non deve essere basato su Internet o intranet (vale a dire, basata sul Web), può essere costituito esclusivamente programmi compilati su una rete locale. Tuttavia, il caso tipico è un'applicazione basata sul Web.  
   
- Poiché per alcuni controlli visuali, ad esempio una griglia, una casella di controllo o un elenco, è possono utilizzare le informazioni restituite, le informazioni restituite devono essere facilmente usate da un controllo visivo.  
+ Dato che un controllo visual, ad esempio una griglia, una casella di controllo o un elenco, può usare le informazioni restituite, è necessario usare facilmente le informazioni restituite da un controllo visual.  
   
- Si desidera un'interfaccia di programmazione di applicazioni semplice ed efficiente che supporta i sistemi a tre livelli che restituisce informazioni come facilmente come se fosse stato recuperato in un sistema a due livelli. Remote Data Service (RDS) è questa interfaccia.  
+ Per visualizzare un'interfaccia di programmazione di applicazioni semplice ed efficiente che supporta i sistemi a tre livelli e restituisce informazioni come facilmente come se fosse stato recuperato in un sistema a due livelli. Servizio dati remoto (RDS) è questa interfaccia.  
   
 ## <a name="the-solution"></a>Soluzione  
- Servizi Desktop remoto definisce un modello di programmazione, la sequenza di attività necessarie per accedere e aggiornare un'origine dati, per ottenere l'accesso ai dati tramite un intermediario, ad esempio Internet Information Services (IIS). Il modello di programmazione riepiloga l'intera funzionalità di RDS.  
+ Servizi Desktop remoto definisce un modello di programmazione, la sequenza di attività necessarie per accedere e aggiornare un'origine dati, per ottenere l'accesso ai dati tramite un intermediario, ad esempio Internet Information Services (IIS). Il modello di programmazione riepiloga l'intera funzionalità di servizi desktop remoto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modello di programmazione di base di servizi desktop remoto](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
- [Scenario di servizi desktop remoto](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Esercitazione di servizi desktop remoto](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [Modello di programmazione RDS di base](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
+ [Scenario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [Esercitazione su RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Utilizzo e sicurezza per RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

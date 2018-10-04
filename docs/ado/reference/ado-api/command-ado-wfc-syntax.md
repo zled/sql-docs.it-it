@@ -1,31 +1,28 @@
 ---
-title: Comando (ADO - sintassi WFC) | Documenti Microsoft
+title: Comando (ADO - WFC sintassi) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Command collection [ADO], ADO/WFC syntax
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c57cd9a65cdbf3662f7ed7499d979753d9ecd0b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d6866423ba07ed79992ebd098b7b4f5e5eff91ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276610"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770819"
 ---
-# <a name="command-ado---wfc-syntax"></a>Comando (ADO - sintassi WFC)
-## <a name="package-commswfcdata"></a>pacchetto com.ms. wfc.  
+# <a name="command-ado---wfc-syntax"></a>Command (sintassi ADO/WFC)
+## <a name="package-commswfcdata"></a>creare un pacchetto com.ms. wfc.  
   
 ### <a name="constructor"></a>Costruttore  
   
@@ -48,7 +45,7 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- Il **executeUpdate** metodo è un metodo speciale che chiama l'oggetto ADO sottostante **eseguire** metodo con determinati parametri. Il **executeUpdate** metodo non supporta la restituzione di un **Recordset** oggetto, pertanto la **eseguire** del metodo *opzioni* parametro modificato con **AdoEnums.ExecuteOptions.NORECORDS**. Dopo il **eseguire** metodo viene completato, l'aggiornamento *RecordsAffected* parametro viene passato nuovamente al **executeUpdate** metodo, che viene infine restituito come un **int**.  
+ Il **executeUpdate** è un metodo case speciale che chiama ADO sottostante **execute** metodo con determinati parametri. Il **executeUpdate** metodo non supporta la restituzione di un **Recordset** oggetto, in modo che il **eseguire** del metodo *opzioni* parametro Modifica con **AdoEnums.ExecuteOptions.NORECORDS**. Dopo il **execute** metodo viene completato, l'aggiornamento *RecordsAffected* parametro viene passato nuovamente al **executeUpdate** metodo, che viene infine restituito come un **int**.  
   
 ### <a name="properties"></a>Proprietà  
   

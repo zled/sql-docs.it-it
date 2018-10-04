@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_sproc_columns
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_sproc_columns
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8923e4f38ec6ef69de9817ebc3940da07a1518db
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1b1e2b14830e6b2be7d1e00ac1419070ee26eb5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077171"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833139"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -92,8 +88,8 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**AMMETTE VALORI NULL**|**smallint**|Specifica se i valori Null sono supportati o meno:<br /><br /> 1 = È possibile creare il tipo di dati con supporto per valori Null.<br /><br /> 0 = I valori Null non sono supportati.|  
 |**SEZIONE OSSERVAZIONI**|**varchar (** 254 **)**|Descrizione della colonna della procedura. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|Valore predefinito della colonna.|  
-|**SQL_DATA_TYPE**|**smallint**|Valore del tipo di dati SQL visualizzato nei **tipo** campo del descrittore. Questa colonna corrisponde al **DATA_TYPE** colonna, tranne che per il **datetime** e ISO **intervallo** i tipi di dati. In questa colonna viene sempre restituito un valore.|  
-|**SQL_DATETIME_SUB**|**smallint**|Il **data/ora** ISO **intervallo** sottocodice se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i dati di tipi diversi da **data/ora** e ISO **intervallo**, questo campo è NULL.|  
+|**SQL_DATA_TYPE**|**smallint**|Valore del tipo di dati SQL visualizzato nei **tipo** campo del descrittore. Questa colonna corrisponde alla colonna **DATA_TYPE**, tranne che per i tipi di dati **datetime** e ISO **interval**. In questa colonna viene sempre restituito un valore.|  
+|**SQL_DATETIME_SUB**|**smallint**|Sottocodice **datetime** ISO **interval** se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i dati di tipi diversi da **data/ora** e ISO **intervallo**, questo campo è NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Lunghezza massima in byte di un **carattere** oppure **binario** colonna tipo di dati. Per gli tutti gli altri tipi di dati, il valore di questa colonna è NULL.|  
 |**ORDINAL_POSITION**|**int**|Posizione ordinale della colonna nella tabella. La prima colonna nella tabella è 1. In questa colonna viene sempre restituito un valore.|  
 |**IS_NULLABLE**|**varchar(254)**|Impostazione relativa al supporto di valori Null nella colonna della tabella. Per determinare il supporto di valori Null vengono seguite le regole ISO. In un sistema DBMS conforme a ISO non vengono restituite stringhe vuote.<br /><br /> Se la colonna ammette valori Null, viene visualizzato YES. In caso contrario viene visualizzato NO.<br /><br /> Quando non è noto se i valori Null sono supportati, in questa colonna viene restituita una stringa di lunghezza zero.<br /><br /> Il valore restituito per questa colonna è diverso dal valore restituito per la colonna NULLABLE.|  

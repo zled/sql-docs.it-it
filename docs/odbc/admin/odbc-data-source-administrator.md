@@ -1,35 +1,32 @@
 ---
-title: Amministrazione origine dati ODBC | Documenti Microsoft
+title: Amministrazione origine dati ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC data source administrator [ODBC], about ODBC data source administrator
 - ODBC data source administrator [ODBC]
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e529ab5d321625f8e6bf795a70d0e0143499df7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c718595d0912e4d87bb190788a6357453a8a0ee5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34706949"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677279"
 ---
 # <a name="odbc-data-source-administrator"></a>Amministratore origine dati ODBC
-Amministrazione origine dati di Microsoft® ODBC gestisce le origini dati e i driver di database. Questa applicazione si trova nel Pannello di controllo di Windows in **strumenti di amministrazione**. A partire da Windows 8, l'icona è denominata **origini dati ODBC**, e nei sistemi operativi a 64 bit è disponibile una versione a 32 e 64 bit.  
+Amministrazione origine dati di Microsoft® ODBC gestisce le origini dati e i driver di database. Questa applicazione si trova nel Pannello di controllo di Windows sotto **strumenti di amministrazione**. A partire da Windows 8, l'icona è denominata **origini dati ODBC**, e nei sistemi operativi a 64 bit è disponibile una versione a 32 e 64 bit.  
   
- Per informazioni sulle procedure dettagliate di amministratore ODBC, aprire il [Amministrazione origine dati ODBC](http://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) la finestra di dialogo e fare clic su **Guida**.  
+ Per informazioni sulle procedure dettagliate Amministratore ODBC, aprire il [Amministrazione origine dati ODBC](http://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) finestra di dialogo e fare clic su **Guida**.  
   
- È possibile utilizzare i comandi di PowerShell per gestire i driver e origini dati. Per ulteriori informazioni su questi comandi di PowerShell, vedere [comandi di Windows PowerShell i componenti di accesso ai dati](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+ È possibile usare i comandi di PowerShell per gestire i driver e origini dati. Per altre informazioni su questi comandi di PowerShell, vedere [i comandi di PowerShell di componenti Windows Data Access](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

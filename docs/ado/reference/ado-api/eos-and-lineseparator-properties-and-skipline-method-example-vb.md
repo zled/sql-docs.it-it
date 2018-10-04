@@ -1,13 +1,11 @@
 ---
-title: Fine del flusso e proprietà di LineSeparator ed esempio di metodo SkipLine (VB) | Documenti Microsoft
+title: EOS e LineSeparator proprietà e metodo SkipLine esempio (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Skipline method [ADO], Visual Basic example
 - EOS property [ADO], Visual Basic example
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60a68227156d7138f6dbaacd3670fbd142543a9a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 19bc563e6080d1eba9768e95db5315d1d808a9b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278040"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603189"
 ---
-# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Fine del flusso e proprietà di LineSeparator ed esempio di metodo SkipLine (VB)
-In questo esempio viene illustrato come modificare le dei righe flussi di testo alla volta. L'effetto della modifica del separatore di riga dal ritorno predefinito ritorno a capo/avanzamento riga (**adCRLF**) per semplicemente avanzamento riga (**adLF**) o ritorno a capo (**adCR**) viene visualizzato.  
+# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS e LineSeparator proprietà e metodo SkipLine esempio (VB)
+In questo esempio viene illustrato come modificare testo flussi una riga alla volta. L'effetto della modifica il separatore di riga dall'impostazione predefinita ritorno a capo/avanzamento riga (**adCRLF**) a semplicemente avanzamento riga (**adLF**) o ritorno a capo (**adCR**) viene visualizzato.  
   
 ```  
 'BeginSkipLineVB  
@@ -117,6 +114,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà di fine del flusso](../../../ado/reference/ado-api/eos-property.md)   
+ [Proprietà EOS](../../../ado/reference/ado-api/eos-property.md)   
  [Proprietà LineSeparator (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [Metodo SkipLine](../../../ado/reference/ado-api/skipline-method.md)

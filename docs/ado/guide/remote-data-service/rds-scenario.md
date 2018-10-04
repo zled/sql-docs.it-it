@@ -1,55 +1,52 @@
 ---
-title: Scenario di servizi desktop remoto | Documenti Microsoft
+title: Scenario RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfd70ea9f926732be2a9bac2de198a0865e98760
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: aaeedb6dffb992ac940eebd450c63d33badb299d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274270"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845279"
 ---
-# <a name="rds-scenario"></a>Scenario di servizi desktop remoto
+# <a name="rds-scenario"></a>Scenario RDS
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- L'applicazione Address Book è uno scenario che illustra come usare Remote Data Service (RDS) per compilare un'applicazione Web semplice, compatibile con i dati, ovvero una rubrica della società online. Questo scenario è utile per Microsoft Visual Basic, Scripting Edition (VBScript) e i programmatori COM che desiderano informazioni su come utilizzare i controlli ActiveX che supportano i dati con Servizi Desktop remoto per il software più esperto gli sviluppatori che desiderano creare applicazioni Web incentrate sui dati.  
+ L'applicazione Address Book è uno scenario che illustra come usare Remote Data Service (RDS) per compilare un'applicazione Web semplice e basata sui dati, ovvero una rubrica online aziendali. Questo scenario è utile per Microsoft Visual Basic, Scripting Edition (VBScript) e ai programmatori di COM che desiderano imparare a usare i controlli ActiveX in grado di riconoscere i dati con Servizi Desktop remoto per il software più esperto gli sviluppatori che desiderano creare applicazioni Web incentrate sui dati.  
   
- Questo scenario si presuppone che si sapere come utilizzare il tag di layout HTML basic, le tecniche di associazione di dati di utilizzo DHTML e programma con i controlli ActiveX.  
+ Questo scenario presuppone che si sappia usare layout tag HTML, le tecniche di associazione di dati di utilizzo DHTML e programma di base con i controlli ActiveX.  
   
- Se è stato installato il SDK, il codice sorgente completo per l'applicazione di esempio Address Book è reperibile nella directory SDK in samples\dataaccess\rds\AddressBook\AddressBook.asp. Per visualizzare lo scenario di Address Book, in Internet Explorer 4.0 o versione successiva, digitare **http://*webserver*/RDS/AddressBook/AddressBook.asp** in *webserver* è il nome specificato nel computer server di Windows NT 4.0 o Windows 2000 Web che esegue Internet Information Services (IIS) e ASP.  
+ Se è stato installato il SDK, il codice sorgente completo per l'applicazione di esempio Address Book è reperibile nella directory SDK in samples\dataaccess\rds\AddressBook\AddressBook.asp. Per visualizzare lo scenario di Address Book, in Internet Explorer 4.0 o versione successiva, digitare **http://*webserver*/RDS/AddressBook/AddressBook.asp** in cui *webserver* è il nome assegnato nel computer server Windows NT 4.0 o Windows 2000 Web che esegue Internet Information Services (IIS) e ASP.  
   
 ## <a name="introduction-to-address-book"></a>Introduzione alla Rubrica  
- L'applicazione di esempio Address Book fornisce una rubrica online semplice che è possibile utilizzare per la pubblicazione di una directory di ricerca su una rete intranet. La Rubrica è progettata in modo che un utente può immettere una stringa di ricerca in uno o più campi per richiedere informazioni sui dipendenti. Per visualizzare le funzionalità di base del servizio dati remota, l'applicazione di esempio viene mantenuta intenzionalmente piccolo, con un numero minimo di oggetti e i campi di ricerca.  
+ L'applicazione di esempio Address Book offre una rubrica online semplice che è possibile usare per pubblicare una directory disponibili per la ricerca su una rete intranet. Nella Rubrica è progettata in modo che un utente può immettere una stringa di ricerca in uno o più campi per richiedere informazioni sui dipendenti. Per illustrare le funzionalità di base del servizio dati remoto, l'applicazione di esempio è intenzionalmente mantenerle di dimensioni ridotte, con un numero minimo di oggetti e i campi di ricerca.  
   
  L'interfaccia dell'applicazione è costituita dalle parti seguenti:  
   
--   Non visivi **RDS. DataControl** oggetto di associazione di dati utilizzato dal client per connettersi al database.  
+-   Non visivo **Servizi Desktop remoto. DataControl** oggetto di associazione dati utilizzato dal client per connettersi al database.  
   
--   Criteri di ricerca di caselle di testo HTML che agiscono come campi di input per l'attributo dipendente.  
+-   Caselle di testo HTML che agiscono come campi di input per i criteri di ricerca di attributo dipendente.  
   
--   HTML pulsanti di comando di compilazione di query, cancellare i campi di ricerca, aggiornare il database con informazioni sui dipendenti, annullare le modifiche in sospeso e passare le righe di dati visualizzati nella griglia.  
+-   Pulsanti di comando HTML per compilare query, deselezionare i campi di ricerca, aggiornare il database con informazioni sui dipendenti, annullare le modifiche in sospeso e passare le righe di dati visualizzati nella griglia.  
   
--   Associazione dati DHTML per visualizzare i dati restituiti dalle query in un database back-end (tramite il **RDS. DataControl** oggetto con associazione a dati) in una tabella.  
+-   Associazione di dati DHTML per visualizzare i dati restituiti dalle query su un database back-end (tramite il **Servizi Desktop remoto. DataControl** oggetto con associazione a dati) in una tabella.  
   
--   Routine di VBScript che si connettono a ognuno degli elementi che sono stati indicati in precedenza e consentano loro di interagire. Il codice VBScript viene inoltre utilizzato per inizializzare il **RDS. DataControl** dell'oggetto e creare in modo dinamico le intestazioni di colonna nella tabella HTML dai nomi di **RDS. DataControl** i campi del recordset.  
+-   Routine di VBScript che si connettono ognuno degli elementi citate in precedenza e consentono loro di interagire. Il codice VBScript viene inoltre utilizzato per inizializzare il **Servizi Desktop remoto. DataControl** dell'oggetto e creare in modo dinamico le intestazioni di colonna della tabella HTML dai nomi del **Servizi Desktop remoto. DataControl** dei campi del recordset.  
   
- Seguire i collegamenti del passaggio per passaggio per impostare ed eseguire lo scenario e per ulteriori informazioni sulle modalità di funzionamento dello scenario.  
+ Seguire i collegamenti dal passaggio per passaggio per configurare ed eseguire lo scenario e per altre informazioni sul funzionamento dello scenario.  
   
  Questo scenario contiene gli argomenti seguenti.  
   
@@ -68,7 +65,7 @@ ms.locfileid: "35274270"
 ## <a name="see-also"></a>Vedere anche  
  [Requisiti di sistema per l'applicazione Address Book](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Nozioni di base di servizi desktop remoto](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
+ [Nozioni fondamentali su RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [Esercitazione su RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)
 
 

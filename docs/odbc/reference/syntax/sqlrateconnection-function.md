@@ -1,31 +1,28 @@
 ---
-title: Funzione SQLRateConnection | Documenti Microsoft
+title: Funzione SQLRateConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLRateConnection function [ODBC]
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f6db1bd9703229ba6e2833865bad44494b9ecc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f3d0058e798fe9bdbcbfcbc1ed3adea8e405a98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918256"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776389"
 ---
-# <a name="sqlrateconnection-function"></a>SQLRateConnection (funzione)
+# <a name="sqlrateconnection-function"></a>Funzione SQLRateConnection
 **Conformità**  
- Introdotta: versione ODBC standard 3,81 conformità: ODBC  
+ Versione introdotta: Conformità 3,81 standard ODBC: ODBC  
   
  **Riepilogo**  
  **SQLRateConnection** determina se un driver può riutilizzare una connessione esistente nel pool di connessioni.  
@@ -43,19 +40,19 @@ SQLRETURN  SQLRateConnection(
   
 ## <a name="arguments"></a>Argomenti  
  *hRequest*  
- [Input] Handle di token che rappresenta la nuova richiesta di connessione dell'applicazione.  
+ [Input] Un handle del token che rappresenta la nuova richiesta di connessione dell'applicazione.  
   
  *hCandidateConnection*  
- [Input] La connessione esistente nel pool di connessioni. La connessione deve essere in uno stato aperto.  
+ [Input] La connessione esistente nel pool di connessioni. La connessione deve essere aperta.  
   
  *fRequiredTransactionEnlistment*  
- [Input] Se TRUE, il riutilizzo della connessione esistente *hCandidateConnection* per la nuova richiesta di connessione (*hRequest*) richiede un'integrazione aggiuntiva.  
+ [Input] Se TRUE, il riutilizzo della connessione esistente *hCandidateConnection* per la nuova richiesta di connessione (*hRequest*) richiede la creazione di un'integrazione aggiuntiva.  
   
  *ID transazione*  
- [Input] Se *fRequiredTransactionEnlistment* è TRUE, *ID transazione* rappresenta la transazione DTC che la richiesta verrà inserita. Se *fRequiredTransactionEnlistment* è FALSE, *ID transazione* verrà ignorato.  
+ [Input] Se *fRequiredTransactionEnlistment* è TRUE, *ID transazione* rappresenta la transazione DTC che aggiungerà la richiesta. Se *fRequiredTransactionEnlistment* FALSO *ID transazione* verranno ignorati.  
   
  *pRating*  
- [Output] *hCandidateConnection*punteggio per il riutilizzo di *hRequest*. Questa valutazione sarà compreso tra 0 e 100 (inclusivo).  
+ [Output] *hCandidateConnection*riutilizzo del punteggio per il *hRequest*. Questa valutazione è compreso tra 0 e 100 (inclusivo).  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS o SQL_ERROR, SQL_INVALID_HANDLE.  
@@ -63,24 +60,24 @@ SQLRETURN  SQLRateConnection(
 ## <a name="diagnostics"></a>Diagnostica  
  Gestione Driver non elaborerà le informazioni di diagnostica restituite dalla funzione.  
   
-## <a name="remarks"></a>Osservazioni  
- **SQLRateConnection** produce un punteggio compreso tra 0 e 100 che indica come anche una connessione esistente corrisponde alla richiesta (inclusivo).  
+## <a name="remarks"></a>Note  
+ **SQLRateConnection** produce un punteggio compreso tra 0 e 100 (inclusivo) che indica come una connessione esistente corrisponde alla richiesta.  
   
 |Punteggio|Significato (quando viene restituito SQL_SUCCESS)|  
 |-----------|-----------------------------------------------|  
-|0|*hCandidateConnection* non devono essere riutilizzate per le *hRequest*.|  
-|Qualsiasi valore compreso tra 1 e 98 (inclusivo)|Maggiore il punteggio, più vicina che *hCandidateConnection* corrisponde a *hRequest*.|  
+|0|*hCandidateConnection* non deve essere riutilizzato per la *hRequest*.|  
+|I valori compresi tra 1 e 98 (inclusivo)|Maggiore è il punteggio, maggiore che *hCandidateConnection* corrisponde *hRequest*.|  
 |99|Sono disponibili solo le mancate corrispondenze negli attributi non significativi.  Gestione Driver deve interrompere il ciclo di valutazione.|  
 |100|Corrispondenza esatta.  Gestione Driver deve interrompere il ciclo di valutazione.|  
-|Qualsiasi valore maggiore di 100|*hCandidateConnection* è contrassegnata come inattiva e non verrà riutilizzate anche in una richiesta di connessione future.|  
+|Qualsiasi altro valore maggiore di 100|*hCandidateConnection* viene contrassegnato come inattivo e non verrà riutilizzate anche in una richiesta di connessione future.|  
   
- Gestione Driver verranno contrassegnate come una connessione come inattivi se il codice restituito è diverso da SQL_SUCCESS (inclusi SQL_SUCCESS_WITH_INFO) o la classificazione è maggiore di 100. La connessione di messaggi non recapitabili non verrà riutilizzata (anche in richieste di connessione future) e verrà infine timeout dopo CPTimeout passa. Gestione Driver continuerà a trovare un'altra connessione dal pool di frequenza.  
+ Gestione Driver contrassegna una connessione come inattivo se il codice restituito è diverso da SQL_SUCCESS (inclusi SQL_SUCCESS_WITH_INFO) o la classificazione è maggiore di 100. Tale connessione inattiva non verrà riutilizzate non (ancora nelle richieste di connessione futuri) e verrà infine un timeout dopo CPTimeout passa. Gestione Driver continuerà a trovare un'altra connessione dal pool di frequenza.  
   
- Se Gestione Driver riutilizzare una connessione con punteggio è rigorosamente minore di 100 (inclusi 99), Driver Manager chiamerà SQLSetConnectAttr(SQL_ATTR_DBC_INFO_TOKEN) per reimpostare la connessione nello stato richiesto dall'applicazione. Il driver non deve reimpostare la connessione in questa chiamata di funzione.  
+ Se Gestione Driver riutilizzare una connessione il cui punteggio è rigorosamente inferiore a 100 (inclusi 99), Driver Manager chiamerà SQLSetConnectAttr(SQL_ATTR_DBC_INFO_TOKEN) per reimpostare la connessione torna allo stato richiesto dall'applicazione. Il driver non reimpostare la connessione in questa chiamata di funzione.  
   
- Se *fRequiredTransactionEnlistment* è TRUE, viene riutilizzata *hCandidateConnection* richiede un'integrazione aggiuntiva (*ID transazione* ! = NULL) o unenlistment ( *ID transazione* = = NULL). Indica il costo di riutilizzare una connessione e se il driver deve integrare / rimuovere la connessione se sta per riutilizzare la connessione. Se *fRequireTransactionEnlistment* è FALSE, driver deve ignorare il valore di *ID transazione*.  
+ Se *fRequiredTransactionEnlistment* è TRUE, viene riutilizzata *hCandidateConnection* richiede un'integrazione aggiuntiva (*ID transazione* ! = NULL) o unenlistment ( *ID transazione* = = NULL). Indica il costo di riutilizzare una connessione e indica se il driver deve integrare o rimuovere la connessione se sta per riutilizzare la connessione. Se *fRequireTransactionEnlistment* è FALSE, driver deve ignorare il valore di *ID transazione*.  
   
- Gestione Driver garantisce che l'elemento padre HENV gestire di *hRequest* e *hCandidateConnection* sono uguali. Gestione Driver garantisce che l'ID del pool è associata a *hRequest* e *hCandidateConnection* sono uguali.  
+ Gestione Driver garantisce che padre gestire HENV *hRequest* e *hCandidateConnection* sono uguali. Gestione Driver garantisce che l'ID del pool associato *hRequest* e *hCandidateConnection* sono uguali.  
   
  Le applicazioni non devono chiamare direttamente questa funzione. Un driver ODBC che supporta il pool di connessioni compatibile con il driver deve implementare questa funzione.  
   

@@ -1,34 +1,31 @@
 ---
-title: ADO - indice sintassi WFC | Documenti Microsoft
+title: ADO - WFC sintassi indice | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - syntax indexes [ADO], ADO/WFC
 - ADO/WFC syntax index [ADO]
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 355a32f2e37aca0202c803cde7c527a47bfe1905
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ce86f56f1436d3442cd974f77ed7b3047d6d23a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275640"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811429"
 ---
-# <a name="ado---wfc-syntax-index"></a>ADO - WFC sintassi indice
-Riferimenti al linguaggio ADO utilizza il linguaggio di programmazione Microsoft Visual Basic per illustrare la sintassi di metodi e proprietà ADO. Questo indice è un riferimento incrociato per gli argomenti di riferimento al linguaggio ADO, in base a ADO per Windows Foundation Classes (ADO/WFC). Quando si verificano differenze di sintassi, è possibile utilizzare le firme di funzione nell'indice, anziché le voci della sintassi nella Guida di riferimento del linguaggio.  
+# <a name="ado---wfc-syntax-index"></a>Indice sintassi ADO/WFC
+Riferimenti al linguaggio ADO utilizza il linguaggio di programmazione Microsoft Visual Basic per illustrare la sintassi di metodi e le proprietà di ADO. Questo indice è un riferimento incrociato per gli argomenti di riferimento al linguaggio di ADO, basato su ADO per Windows Foundation Classes (ADO/WFC). Quando si verificano differenze nella sintassi, usare le firme di funzione in questo indice, anziché gli elenchi di sintassi nella Guida di riferimento del linguaggio.  
   
- Sintassi di metodi e proprietà sono elencate per gli elementi seguenti:  
+ Sintassi di metodo e proprietà sono elencate per gli elementi seguenti:  
   
 ## <a name="activex-data-objects"></a>ActiveX Data Objects (ADO)  
   
@@ -46,9 +43,9 @@ Riferimenti al linguaggio ADO utilizza il linguaggio di programmazione Microsoft
   
 -   [Oggetto Recordset](../../../ado/reference/ado-api/recordset-ado-wfc-syntax.md)  
   
-## <a name="remote-data-service"></a>Remote Data Service  
+## <a name="remote-data-service"></a>Servizio dati remoto  
   
--   [DataSpace](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
+-   [Spazio dati](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
   
 -   [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)  
   

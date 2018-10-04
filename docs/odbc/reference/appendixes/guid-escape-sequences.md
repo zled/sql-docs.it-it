@@ -1,60 +1,57 @@
 ---
-title: Sequenze di Escape GUID | Documenti Microsoft
+title: Le sequenze di Escape GUID | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC escape sequences [ODBC], GUID
 - escape sequences [ODBC], guid
 - guid escape sequence [ODBC]
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00648aba76f64bc999c4df2a1f60de6e8c1010a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf41671abc6393a18fad06e1debd297fed1f04c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906946"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654981"
 ---
-# <a name="guid-escape-sequences"></a>Sequenze di Escape GUID
-ODBC utilizza le sequenze di escape per i valori letterali GUID. La sintassi di questa sequenza di escape è come segue:  
+# <a name="guid-escape-sequences"></a>Sequenze di escape GUID
+ODBC Usa sequenze di escape per i valori letterali GUID. La sintassi di questa sequenza di escape è come segue:  
   
 ```  
 {guid 'nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn'}  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Nella notazione BNF, la sintassi è:  
+## <a name="remarks"></a>Note  
+ Nella notazione BNF, la sintassi è come segue:  
   
  *ODBC-guid-escape* :: =  
-     *Guid ODBC-esc-iniziatore* '*valore guid*' *ODBC-esc-carattere di terminazione*  
+     *Guid ODBC-esc-iniziatore* »*valore guid*' *ODBC-esc-carattere di terminazione*  
   
  *ODBC-esc-iniziatore* :: = {  
   
  *ODBC-esc-carattere di terminazione* :: =}  
   
- *valore GUID* :: = *nodo-valore del separatore di guid-low-valore dell'orologio del separatore guid-intermedio-valore dell'orologio del clock alto valore guid-separatore separatore guid-seq-valore dell'orologio*  
+ *valore GUID* :: = *orologio di scarso valore guid-separatore orologio-medio-value. guid-separatore orologio di alto valore guid-separatore orologio-seq-value. guid-separatore nodo-valore*  
   
  *separatore di GUID* :: = -  
   
- *low-valore dell'orologio* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
+ *orologio-low-value* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
   
- *valore dell'intermedio orologio* :: = *hex_digit hex_digit hex_digit hex_digit*  
+ *valore intermedio di clock* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *orologio di alto valore* :: = *hex_digit hex_digit hex_digit hex_digit*  
+ *Clock rilevanza* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *valore dell'orologio-seq* :: = *hex_digit hex_digit hex_digit hex_digit*  
+ *orologio-seq-value* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *valore di nodo clock* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
+ *orologio-nodo-value* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
   
  *hex_digit* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; A &#124; B &#124; C &#124; 1!d &#124; E &#124; F  
   

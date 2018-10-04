@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 765db574f9db0a4e81dbdbfc4a154e1ccad01491
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210161"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050971"
 ---
 # <a name="processing-analysis-services-objects"></a>Elaborazione di oggetti di Analysis Services
   L'elaborazione interessa i tipi di oggetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seguenti: database, cubi, dimensioni, gruppi di misure, partizioni e strutture e modelli di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per ogni tipo di oggetto è possibile specificare il livello di elaborazione o impostare l'opzione Elaborazione predefinita in modo che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] selezioni automaticamente il livello di elaborazione ottimale. Per altre informazioni sui diversi livelli di elaborazione per ogni oggetto, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  

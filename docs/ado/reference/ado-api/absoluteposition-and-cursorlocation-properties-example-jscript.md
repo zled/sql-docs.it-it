@@ -1,13 +1,11 @@
 ---
-title: Esempio AbsolutePosition e CursorLocation proprietà (JScript) | Documenti Microsoft
+title: Esempio di AbsolutePosition e CursorLocation (esempio di proprietà (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - AbsolutePosition property [ADO], JScript example
 - CursorLocation property [ADO], JScript example
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42804caabae25b5c3617b6a17bcb74a77531bbe1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f252bf8a7c4fb7ecac2b226f669f5bd114b90574
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647968"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>Esempio AbsolutePosition e CursorLocation proprietà (JScript)
-Questo esempio viene illustrato come la [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) proprietà è possibile monitorare lo stato di un ciclo che enumera tutti i record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà per abilitare il **AbsolutePosition** proprietà impostando il cursore su un cursore client. Tagliare e incollare il codice seguente in blocco note o un altro editor di testo e salvarlo come **AbsolutePositionJS**.  
+# <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>Esempio di AbsolutePosition e CursorLocation (esempio di proprietà (JScript)
+Questo esempio viene illustrato come la [esempio di AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) proprietà può tenere traccia dell'avanzamento di un ciclo che enumera tutti i record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà per abilitare il **AbsolutePosition** proprietà impostando il cursore su un cursore client. Tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **AbsolutePositionJS**.  
   
 ```  
 <!-- BeginAbsolutePositionJS -->  

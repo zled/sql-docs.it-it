@@ -1,35 +1,32 @@
 ---
-title: Le trasformazioni XSLT | Documenti Microsoft
+title: Trasformazioni XSLT | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 835362b473c16d71cbdd6c46d6e068a17d7d051d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 59b00a521624759af8f73a94f75c4a74101b1937
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839679"
 ---
 # <a name="xslt-transformations"></a>Trasformazioni XSLT
-XSLT può essere applicato per il codice XML generato per trasformarlo in un altro formato. Comprendere il formato XML in ADO consente di sviluppare modelli XSLT che è possono trasformare in un formato di facile utilizzo.  
+XSLT possono essere applicati al codice XML generato per trasformarlo in un altro formato. Comprendere il formato XML in ADO consente di sviluppare modelli XSLT che possano trasformarlo in un modulo più semplici da usare.  
   
- Ad esempio, si conosce che ogni riga del Recordset viene salvato come elemento z: riga all'interno dell'elemento di dati: rs. Analogamente, ogni campo del Recordset viene salvato come coppia attributo-valore per questo elemento.  
+ Ad esempio, si sa che ogni riga del set di record viene salvato come elemento z: riga all'interno dell'elemento dati: rs. Analogamente, ogni campo del set di record viene salvato come una coppia attributo-valore per questo elemento.  
   
-## <a name="remarks"></a>Remarks  
- Il seguente script XSLT può essere applicato per il codice XML visualizzato nella sezione precedente per trasformarlo in una tabella HTML da visualizzare nel browser:  
+## <a name="remarks"></a>Note  
+ Il seguente script XSLT può essere applicato al codice XML illustrato nella sezione precedente per trasformarlo in una tabella HTML da visualizzare nel browser:  
   
 ```  
 <?xml version="1.0" encoding="ISO-8859-1"?>  
@@ -54,7 +51,7 @@ XSLT può essere applicato per il codice XML generato per trasformarlo in un alt
 </html>  
 ```  
   
- Lo script XSLT converte il flusso XML generato dal metodo Save ADO in una tabella HTML che visualizza ogni campo del Recordset insieme a un'intestazione di tabella. Le righe e intestazioni della tabella vengono inoltre assegnate diversi tipi di carattere e colori.  
+ Il file XSLT consente di convertire il flusso XML generato dal metodo ADO Salva in una tabella HTML che visualizza ogni campo del set di record con un'intestazione di tabella. Le righe e intestazioni della tabella vengono inoltre assegnate diversi tipi di carattere e colori.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Persistenza di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

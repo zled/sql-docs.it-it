@@ -1,13 +1,11 @@
 ---
-title: Livelli di conformità | Documenti Microsoft
+title: Livelli di conformità | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], conformance levels
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - conformance levels [ODBC]
 - conformance levels [ODBC], about conformance levels
 ms.assetid: f776d467-5d5d-4761-9043-3dad5f73c610
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9342bbddb2e80f948922df5b26dee760662781a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4274188beb0b67fa5a49ce9e25b781c5b1cd95d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908126"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680575"
 ---
 # <a name="conformance-levels"></a>Livelli di conformità
-Driver ODBC consentono l'accesso all'applicazione alle origini dati diverse. Ogni driver consente all'applicazione di determinare in fase di esecuzione quali funzionalità di ODBC e la grammatica SQL quali il driver e supporta ogni origine dati. Questo non è un requisito di applicazioni progettate per funzionare con un singolo driver o un set di piccole dimensioni, noto di driver, perché queste applicazioni semplicemente possono essere scritte per le funzionalità di tale driver o driver. Per consentire applicazioni di individuare i driver e le funzionalità di origine dati, sono disponibili due aree di conformità: l'interfaccia ODBC e la grammatica SQL.  
+Driver ODBC consentono l'accesso all'applicazione da diverse origini dati. Ogni driver consente all'applicazione di determinare in fase di esecuzione quali grammatica SQL e le funzionalità ODBC driver e supporta ogni origine dati. Questo non è un requisito di applicazioni progettate per funzionare con un singolo driver o un set di piccole dimensioni, noto di driver, perché queste applicazioni è possono semplicemente scrivere le funzionalità di tale driver o driver. Per consentire le applicazioni di individuare i driver e le funzionalità di origine dei dati, sono disponibili due aree di conformità: l'interfaccia ODBC e grammatica SQL.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

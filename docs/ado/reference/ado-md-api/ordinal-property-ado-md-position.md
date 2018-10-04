@@ -1,13 +1,11 @@
 ---
-title: Proprietà Ordinal (ADO MD Position) | Documenti Microsoft
+title: Proprietà Ordinal (Position-ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,32 +14,31 @@ f1_keywords:
 helpviewer_keywords:
 - Ordinal property [ADO MD]
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b800c41c5d3dfb306b503d013c042477778929f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 319d63b5faead9a01588ef50482e20f5fb179ca4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284666"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695185"
 ---
-# <a name="ordinal-property-ado-md-position"></a>Proprietà Ordinal (ADO MD posizione)
+# <a name="ordinal-property-ado-md-position"></a>Proprietà Ordinal (Position - ADO MD)
 Identifica in modo univoco un [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md) lungo un asse.  
   
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce un **lungo** integer ed è di sola lettura.  
   
-## <a name="remarks"></a>Remarks  
- Il **ordinale** proprietà di un [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md) corrisponde all'indice dell'oggetto il **posizione** all'interno di [posizioni](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) insieme.  
+## <a name="remarks"></a>Note  
+ Il **ordinale** proprietà di un [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md) corrisponde all'indice dell'oggetto il **posizione** all'interno del [posizioni](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) raccolta.  
   
- Una cella può essere recuperata rapidamente tramite la **ordinale** del **posizione** lungo ogni asse con il [elemento](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) proprietà del [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetto .  
+ Una cella rapidamente può essere recuperata tramite il **ordinale** del **posizione** lungo ogni asse con il [elemento](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) proprietà del [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetto .  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Position (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
- [Proprietà dell'elemento (ADO MD Cellset)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
+ [Proprietà Item (Cellset-ADO MD)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
  [Proprietà Ordinal (Cell - ADO MD)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)

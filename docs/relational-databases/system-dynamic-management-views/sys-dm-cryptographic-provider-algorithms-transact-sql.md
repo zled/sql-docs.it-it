@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_cryptographic_provider_algorithms_TSQL
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_algorithms dynamic management function
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e8a16f5247cbd1ef142c4698c1e9781fd7be45d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: cb48a9f0f7e30e6df4fa09485b9e0ea0c9fc8a56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699209"
 ---
 # <a name="sysdmcryptographicprovideralgorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +53,7 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
 |key_type|**nvarchar(128)**|Mostra il tipo di chiave. Restituisce un valore ASYMMETRIC KEY o SYMMETRIC KEY.|  
 |key_length|**int**|Indica la lunghezza della chiave in bit.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'utente deve essere membro del ruolo public del database.  
   
 ## <a name="examples"></a>Esempi  

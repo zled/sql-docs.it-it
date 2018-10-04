@@ -1,13 +1,11 @@
 ---
-title: Campi insieme (ADO) | Documenti Microsoft
+title: I campi Collection (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,35 +15,34 @@ f1_keywords:
 helpviewer_keywords:
 - Fields collection [ADO]
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2641f21c0726d010990964d84f89148814e866c9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 74e6deb0caba88e6bbcf2897dcfa4aaaa22f04d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278490"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762599"
 ---
-# <a name="fields-collection-ado"></a>Raccolta di campi (ADO)
-Contiene tutti i [campo](../../../ado/reference/ado-api/field-object.md) gli oggetti di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) o [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto.  
+# <a name="fields-collection-ado"></a>Raccolta Fields (ADO)
+Contiene tutti i [campo](../../../ado/reference/ado-api/field-object.md) gli oggetti di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oppure [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto.  
   
-## <a name="remarks"></a>Remarks  
- Oggetto **Recordset** oggetto ha un **campi** raccolta costituita da **campo** oggetti. Ogni **campo** oggetto corrisponde a una colonna di **Recordset**. È possibile popolare il **campi** raccolta prima dell'apertura di **Recordset** chiamando il [aggiornamento](../../../ado/reference/ado-api/refresh-method-ado.md) metodo per la raccolta.  
+## <a name="remarks"></a>Note  
+ Oggetto **Recordset** oggetto dispone di un **campi** raccolta costituita da **campo** oggetti. Ciascuna **campo** corrisponde a una colonna in oggetto il **Recordset**. È possibile popolare la **campi** raccolta prima di aprire le **Recordset** chiamando il [Aggiorna](../../../ado/reference/ado-api/refresh-method-ado.md) metodo per la raccolta.  
   
 > [!NOTE]
->  Vedere il **campo** argomento di oggetto per una spiegazione più dettagliata di come utilizzare **campo** oggetti.  
+>  Vedere le **campo** argomento di oggetto per una spiegazione più dettagliata di come usare **campo** oggetti.  
   
- Il **campi** raccolta ha un [Append](../../../ado/reference/ado-api/append-method-ado.md) metodo, che è temporaneamente crea e aggiunge un **campo** oggetto alla raccolta e un **aggiornare**(metodo), che consente di finalizzare qualsiasi aggiunta o eliminazione.  
+ Il **i campi** raccolta ha un [Append](../../../ado/reference/ado-api/append-method-ado.md) metodo, che crea e aggiunge temporaneamente una **campo** oggetto alla raccolta e un **aggiornare**metodo, che consente di finalizzare qualsiasi aggiunta o eliminazione.  
   
- Oggetto **Record** oggetto dispone di due campi speciale che possono essere indicizzati con [FieldEnum](../../../ado/reference/ado-api/fieldenum.md) costanti. Una costante accede a un campo contenente il flusso predefinito per il **Record**, e l'altro accede a un campo che contiene la stringa URL assoluta per il **Record**.  
+ Oggetto **Record** oggetto dispone di due campi speciali che possono essere indicizzati con [FieldEnum](../../../ado/reference/ado-api/fieldenum.md) costanti. Una costante di accede a un campo che contiene il flusso predefinito per il **Record**, e l'altro accede a un campo che contiene la stringa URL assoluta per il **Record**.  
   
- Alcuni provider (ad esempio, il [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) possono popolare la **campi** insieme con un sottoinsieme dei campi disponibili per il **Record** o **Recordset**. Non possibile aggiungere altri campi a raccolta finché vengono innanzitutto a cui fa riferimento in base al nome o indicizzati tramite il codice.  
+ Alcuni provider (ad esempio, il [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) possono popolare il **campi** insieme con un subset dei campi disponibili per il **Record** oppure **Recordset**. Gli altri campi non essere aggiunti alla raccolta fino a quando non vengono prima di tutto fatto riferimento in base al nome o indicizzati dal codice.  
   
- Se si tenta di fare riferimento a un campo non esistente in base al nome, un nuovo **campo** verrà aggiunto all'oggetto di **campi** insieme con un [stato](../../../ado/reference/ado-api/status-property-ado-field.md) di  **adFieldPendingInsert**. Quando si chiama [aggiornamento](../../../ado/reference/ado-api/update-method.md), ADO creerà un nuovo campo nell'origine dati se consentito dal provider.  
+ Se si tenta di fare riferimento a un campo inesistente in base al nome, una nuova **campo** verrà aggiunto all'oggetto il **campi** insieme con un [stato](../../../ado/reference/ado-api/status-property-ado-field.md) di  **adFieldPendingInsert**. Quando si chiama [Update](../../../ado/reference/ado-api/update-method.md), ADO creerà un nuovo campo nell'origine dati se consentito dal provider.  
   
- In questa sezione contiene l'argomento seguente.  
+ In questa sezione contiene gli argomenti seguenti.  
   
 -   [Le proprietà della raccolta campi, metodi ed eventi](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
   

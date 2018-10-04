@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - logon triggers
@@ -17,12 +15,12 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b42fdfa556a2e7a26a04dd85fd7740ca23d36967
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 867c341443b7ce1c459806eaac5427a06a8bbebe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427200"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075991"
 ---
 # <a name="logon-triggers"></a>Trigger LOGON
   I trigger LOGON consentono di attivare stored procedure in risposta a un evento LOGON generato quando viene stabilita una sessione utente a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I trigger LOGON vengono attivati dopo il completamento della fase di autenticazione della procedura di accesso, ma prima che la sessione utente venga effettivamente stabilita. Per questo motivo, tutti i messaggi generati all'interno del trigger che verrebbero normalmente visualizzati all'utente, come i messaggi di errore e i messaggi dall'istruzione PRINT, vengono invece indirizzati al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I trigger LOGON non vengono attivati in caso di esito negativo dell'autenticazione.  
@@ -54,7 +52,7 @@ ms.locfileid: "37427200"
 ## <a name="disabling-a-logon-trigger"></a>Disabilitazione di un trigger di accesso  
  Un trigger di accesso può impedire le connessioni al [!INCLUDE[ssDE](../../../includes/ssde-md.md)] per tutti gli utenti, inclusi i membri del ruolo predefinito del server `sysadmin`. Quando un trigger di accesso impedisce le connessioni, i membri del ruolo predefinito del server `sysadmin` possono connettersi tramite la connessione amministrativa dedicata o avviando il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] nella modalità di configurazione minima (- f). Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Attività|Argomento|  
 |----------|-----------|  

@@ -1,12 +1,10 @@
 ---
-title: Sys.dm xe_objects (Transact-SQL) | Documenti Microsoft
+title: . dm xe_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_objects
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b34ce63f29a798db910115fae7db2e0c732dafdc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: df8b9dae2c8c427444da4a9e19a1754f792dcef4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467207"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601369"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +44,17 @@ ms.locfileid: "34467207"
 
  |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|Nome dell'oggetto . nome è univoco all'interno di un pacchetto per un tipo di oggetto specifico. Non ammette i valori Null.|  
-|object_type|**nvarchar(60)**|Tipo dell'oggetto. object_type è uno dei valori seguenti:<br /><br /> evento<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> Tipo<br /><br /> Non ammette i valori Null.|  
+|NAME|**nvarchar(60)**|Nome dell'oggetto . nome è univoco all'interno di un pacchetto per un tipo di oggetto specifico. Non ammette i valori Null.|  
+|object_type|**nvarchar(60)**|Tipo dell'oggetto. object_type è uno dei seguenti:<br /><br /> evento<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> Tipo<br /><br /> Non ammette i valori Null.|  
 |package_guid|**uniqueidentifier**|GUID del pacchetto che espone questa azione. C'è una relazione molti-a-uno con sys.dm_xe_packages.package_id. Non ammette i valori Null.|  
-|description|**nvarchar(256)**|Descrizione dell'azione. Descrizione impostata dall'autore del pacchetto. Non ammette i valori Null.|  
+|description|**nvarchar(256)**|Descrizione dell'azione. descrizione viene impostata dall'autore del pacchetto. Non ammette i valori Null.|  
 |capabilities|**int**|Bitmap che descrive le funzionalità dell'oggetto. Ammette i valori Null.|  
-|capabilities_desc|**nvarchar(256)**|Elenca tutte le funzionalità dell'oggetto. Ammette i valori Null.<br /><br /> **Funzionalità che si applicano a tutti i tipi di oggetto**<br /><br /> —<br />                                **Privato**. Unico oggetto disponibile per uso interno e a cui non è possibile accedere tramite CREATE/ALTER EVENT SESSION DDL. In questa categoria rientrano le destinazioni e gli eventi di controllo oltre a un esiguo numero di oggetti utilizzati internamente.<br /><br /> ===============<br /><br /> **Funzionalità degli eventi**<br /><br /> —<br />                                **No_block**. L'evento si trova in un percorso di codice critico che non può essere bloccato per alcun motivo. Gli eventi con questa funzionalità non possono essere aggiunti ad alcuna sessione eventi che specifica NO_EVENT_LOSS.<br /><br /> ===============<br /><br /> **Funzionalità che si applicano a tutti i tipi di oggetto**<br /><br /> —<br />                                **Process_whole_buffers**. La destinazione utilizza un buffer di eventi alla volta, anziché evento per evento.<br /><br /> —<br />                        **Singleton**. In un processo può essere presente una sola istanza della destinazione. Sebbene più sessioni eventi possano fare riferimento alla stessa destinazione singleton, in realtà è presente una sola istanza e tale istanza visualizzerà ogni evento univoco solo una volta. Questo è importante se la destinazione viene aggiunta a più sessioni che raccolgono tutte lo stesso evento.<br /><br /> —<br />                                **Synchronous**. La destinazione viene eseguita sul thread che ha generato l'evento, prima che il controllo venga restituito alla riga di codice chiamante.|  
+|capabilities_desc|**nvarchar(256)**|Elenca tutte le funzionalità dell'oggetto. Ammette i valori Null.<br /><br /> **Funzionalità che si applicano a tutti i tipi di oggetto**<br /><br /> —<br />                                **Privato**. Unico oggetto disponibile per uso interno e a cui non è possibile accedere tramite CREATE/ALTER EVENT SESSION DDL. In questa categoria rientrano le destinazioni e gli eventi di controllo oltre a un esiguo numero di oggetti utilizzati internamente.<br /><br /> ===============<br /><br /> **Caratteristiche di eventi**<br /><br /> —<br />                                **No_block**. L'evento si trova in un percorso di codice critico che non può essere bloccato per alcun motivo. Gli eventi con questa funzionalità non possono essere aggiunti ad alcuna sessione eventi che specifica NO_EVENT_LOSS.<br /><br /> ===============<br /><br /> **Funzionalità che si applicano a tutti i tipi di oggetto**<br /><br /> —<br />                                **Process_whole_buffers**. La destinazione utilizza un buffer di eventi alla volta, anziché evento per evento.<br /><br /> —<br />                        **Singleton**. In un processo può essere presente una sola istanza della destinazione. Sebbene più sessioni eventi possano fare riferimento alla stessa destinazione singleton, in realtà è presente una sola istanza e tale istanza visualizzerà ogni evento univoco solo una volta. Questo è importante se la destinazione viene aggiunta a più sessioni che raccolgono tutte lo stesso evento.<br /><br /> —<br />                                **Synchronous**. La destinazione viene eseguita sul thread che ha generato l'evento, prima che il controllo venga restituito alla riga di codice chiamante.|  
 |type_name|**nvarchar(60)**|Nome per oggetti pred_source e pred_compare. Ammette i valori Null.|  
 |type_package_guid|**uniqueidentifier**|GUID per il pacchetto che espone il tipo sul quale questo oggetto opera. Ammette i valori Null.|  
 |type_size|**int**|Dimensione del tipo di dati espressa in byte. Solo per tipi di oggetti validi. Ammette i valori Null.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
