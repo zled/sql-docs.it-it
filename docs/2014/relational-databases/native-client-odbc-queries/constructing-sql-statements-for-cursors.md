@@ -1,12 +1,10 @@
 ---
-title: Costruzione di istruzioni SQL per i cursori | Microsoft Docs
+title: Creazione di istruzioni SQL per i cursori | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], statement construction
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2911415122307216afc5f6ff7d41a8f54e46f059
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407479"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228761"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Costruzione di istruzioni SQL per i cursori
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client utilizza cursori server per implementare la funzionalità del cursore definita nella specifica ODBC. Un'applicazione ODBC consente di controllare il comportamento del cursore utilizzando [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) per impostare gli attributi di istruzione diversi. Di seguito sono indicati gli attributi e le rispettive impostazioni predefinite.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client utilizza i cursori del server per implementare le funzionalità di cursore definita nella specifica ODBC. Un'applicazione ODBC controlla il comportamento del cursore tramite [la funzione SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) per impostare gli attributi di istruzione diverso. Di seguito sono indicati gli attributi e le rispettive impostazioni predefinite.  
   
 |attribute|Default|  
 |---------------|-------------|  
@@ -38,7 +35,7 @@ ms.locfileid: "37407479"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- Quando queste opzioni sono impostate sui valori predefiniti al momento viene eseguita un'istruzione SQL, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client utilizza un cursore server per implementare il set di risultati; Usa invece un set di risultati predefinito. Se queste opzioni vengono modificati i valori predefiniti al momento viene eseguita un'istruzione SQL, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client tenta di utilizzare un cursore server per implementare il set di risultati.  
+ Quando queste opzioni vengono impostate sui valori predefiniti al momento viene eseguita un'istruzione SQL, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client non utilizza un cursore del server per implementare il set di risultati, ma utilizza un set di risultati predefinito. Se una di queste opzioni vengono modificata le impostazioni predefinite al momento viene eseguita un'istruzione SQL, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client tenta di utilizzare un cursore del server per implementare il set di risultati.  
   
  I set di risultati predefiniti supportano tutte le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Non sono presenti restrizioni sui tipi di istruzioni SQL che è possibile eseguire quando si utilizza un set di risultati predefinito.  
   
@@ -76,7 +73,7 @@ szErrorMsgString: "[Microsoft][SQL Server Native Client][SQL Server]
                Cursor type changed."  
 ```  
   
- Le applicazioni ODBC ricevuto questo messaggio possono chiamare [SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md) per determinare le impostazioni del cursore corrente.  
+ Le applicazioni ODBC riceve questo messaggio possono chiamare [SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md) per determinare le impostazioni correnti del cursore.  
   
  Un tentativo di eseguire una procedura con più istruzioni SELECT quando si utilizzano cursori server genera l'errore seguente:  
   

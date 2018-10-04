@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b1524b18-b9f1-46d2-a34e-dd7c91ca4684
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 235f7cb4c724f03fddc662231a34b30639bc0256
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e96ad77f71674042b16b402f51d555b22867669
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270007"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204621"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Progettazione query MDX di Analysis Services (PowerPivot)
   Progettazione query MDX (Multidimensional Expression) di Analysis Services offre un'interfaccia utente grafica per semplificare la creazione di query MDX per un'origine dati [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Nella finestra Progettazione query con interfaccia grafica MDX sono disponibili due modalità: progettazione e query. In ogni modalità è disponibile un riquadro dei metadati da cui è possibile trascinare membri dei cubi selezionati per compilare una query MDX per il recupero dei dati che si desidera utilizzare.  

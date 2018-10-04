@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
-caps.latest.revision: 11
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0b6689c1a75cfc9354f8c47532d0ed773f3c6e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18c950015de84ac6b4204e657dfd52f894b6bced
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238591"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207431"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Finestra di dialogo Proprietà origine dati, Credenziali (Generatore report)
   Selezionare **Credenziali** nella finestra di dialogo **Proprietà origine dati** per visualizzare e modificare le credenziali per la connessione a un'origine dati incorporata nel report. Le credenziali fornite dall'utente vengono utilizzate per accedere all'origine dati per la visualizzazione in anteprima dei report. Per altre informazioni sulle credenziali, vedere [Specificare credenziali in Generatore report](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
