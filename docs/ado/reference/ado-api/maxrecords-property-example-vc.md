@@ -1,32 +1,29 @@
 ---
-title: Esempio di proprietà MaxRecords (VC + +) | Documenti Microsoft
+title: Esempio di proprietà MaxRecords (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91c3a9d2016b0ec99ee4deee8ebcac16c9befa83
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279330"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636909"
 ---
-# <a name="maxrecords-property-example-vc"></a>Esempio di proprietà MaxRecords (VC + +)
-Questo esempio viene utilizzato il [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) proprietà per aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenente i titoli più costosi 10 il ***titoli*** tabella.  
+# <a name="maxrecords-property-example-vc"></a>Esempio della proprietà MaxRecords (VC++)
+Questo esempio Usa la [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) per aprire una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenente le 10 libri più costosi indicati nel ***titoli*** tabella.  
   
 ## <a name="example"></a>Esempio  
   
@@ -169,17 +166,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Le prime dieci titoli in base al prezzo:**  
+ **Titoli di dieci principali in base al prezzo:**  
 **Ma è facile? ---22.95**  
-**Computer individui un e Non un: Modifiche al comportamento---21.59**  
-**Cipolle Leeks e il pane all'aglio: Cooking segreti del Mediterraneo---20.95**  
-**Segreti di Silicon Valley---20.00**  
-**Guida di Database della persona occupato---i 19,99 dollari**  
-**Retta Talk sui computer---i 19,99 dollari**  
+**Utenti singoli Non spaventati e un computer: Variazioni di comportamento---21.59**  
+**Cipolle Leeks e aglio: cucina segreti di Mar---20.95**  
+**Segreti di Silicon Valley---20,00**  
+**Guida di Database del dirigente occupato---i 19,99 dollari**  
+**Parlare direttamente sui computer---i 19,99 dollari**  
 **Considera Silicon Valley Gastronomic---i 19,99 dollari**  
-**Dati prolungato privative: Quattro Case study---i 19,99 dollari**  
-**Sushi, tutti gli utenti? ---14,99**  
-**50 anni in Buckingham Palace cucine---11.95**   
+**Interruzioni prolungate nel Data privative: Quattro casi di Studio---i 19,99 dollari**  
+**Sushi tutti gli utenti? ---14,99**  
+**Cinquanta gli anni in Palace Buckingham cucine---11.95**   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà MaxRecords (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

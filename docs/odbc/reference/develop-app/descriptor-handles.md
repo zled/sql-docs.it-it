@@ -1,13 +1,11 @@
 ---
-title: Gli handle di descrittore | Documenti Microsoft
+title: Handle descrittore | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application parameter descriptor [ODBC]
@@ -23,30 +21,29 @@ helpviewer_keywords:
 - ird [ODBC]
 - application row descriptor [ODBC]
 ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 791a28ece56894c8bbe9167c8e2445da32c3e07b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3aa085cc0a098f557ca7a8cbddcd787a178b79d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912626"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711609"
 ---
-# <a name="descriptor-handles"></a>Handle di descrittore
+# <a name="descriptor-handles"></a>Handle del descrittore
 Oggetto *descrittore* è una raccolta di metadati che descrivono i parametri di un'istruzione SQL o le colonne di un set di risultati, come illustrato per l'applicazione o il driver (noto anche come il *implementazione*). Di conseguenza, un descrittore può compilare uno qualsiasi dei quattro ruoli:  
   
--   **Descrittore del parametro dell'applicazione (APD).** Contiene informazioni sui buffer di applicazione associate ai parametri in un'istruzione SQL, ad esempio i relativi tipi di dati C, indirizzi e lunghezze.  
+-   **Descrittore di parametri dell'applicazione (APD).** Contiene informazioni sui buffer di applicazione associate ai parametri in un'istruzione SQL, ad esempio relativi indirizzi, le lunghezze e tipi di dati C.  
   
--   **Descrizione del parametro di implementazione (IPD).** Contiene informazioni sui parametri in un'istruzione SQL, ad esempio i tipi di dati SQL, lunghezze e supporto di valori null.  
+-   **Descrizione del parametro di implementazione (IPD).** Contiene informazioni sui parametri in un'istruzione SQL, ad esempio i tipi di dati SQL, le lunghezze e supporto dei valori null.  
   
--   **Descrittore della riga di applicazione (ARD).** Contiene informazioni sui buffer di applicazione associati alle colonne del set di risultati, ad esempio i relativi tipi di dati C, indirizzi e lunghezze.  
+-   **Descrittore delle righe dell'applicazione (ARD).** Contiene informazioni sui buffer di applicazione associati alle colonne in un set di risultati, ad esempio relativi indirizzi, le lunghezze e tipi di dati C.  
   
--   **Descrittore della riga di implementazione (IRD).** Contiene informazioni sulle colonne in un set di risultati, ad esempio i tipi di dati SQL, lunghezze e supporto di valori null.  
+-   **Descrittore riga di implementazione (IRD).** Contiene informazioni sulle colonne in un set di risultati, ad esempio i tipi di dati SQL, le lunghezze e supporto di valori null.  
   
- Descrittori (un riempimento di ogni ruolo) vengono allocati automaticamente quando un'istruzione viene allocata. Questi sono conosciuti come *allocato automaticamente descrittori* e sono sempre associati a tale istruzione. Le applicazioni possono anche allocare descrittori con **SQLAllocHandle**. Questi sono conosciuti come *allocato in modo esplicito i descrittori*. Essi vengono allocate in una connessione e può essere associati a una o più istruzioni in tale connessione per soddisfare il ruolo di un APD o ARD in tali istruzioni.  
+ I descrittori di quattro (un riempimento di ogni ruolo) vengono allocati automaticamente quando viene allocata un'istruzione. Si parla *allocato automaticamente descrittori* e sempre associate a tale istruzione. Le applicazioni possono inoltre allocare descrittori con **SQLAllocHandle**. Si parla *allocata in modo esplicito i descrittori*. Essi vengono allocate in una connessione e può essere associati a una o più istruzioni in tale connessione per soddisfare il ruolo di un APD o ARD su tali istruzioni.  
   
- La maggior parte delle operazioni in ODBC possono essere eseguite senza l'utilizzo esplicito di descrittori di dall'applicazione. Tuttavia, i descrittori forniscono un comodo collegamento per alcune operazioni. Si supponga, ad esempio, che un'applicazione si desidera inserire i dati da due diversi set di buffer. Per utilizzare il primo set di buffer, viene chiamato ripetutamente **SQLBindParameter** per associarle a parametri in un **inserire** istruzione e quindi eseguire l'istruzione. Per utilizzare il secondo set di buffer, è necessario ripetere questo processo. In alternativa, è possibile impostare le associazioni per il primo set di buffer in un descrittore e il secondo set di buffer nel descrittore di un altro. Per passare tra i set di associazioni, l'applicazione chiama semplicemente **SQLSetStmtAttr** e associare il descrittore corretto con l'istruzione come APD.  
+ La maggior parte delle operazioni in ODBC possono essere eseguite senza l'utilizzo esplicito di descrittori di dall'applicazione. Tuttavia, i descrittori forniscono un comodo collegamento per alcune operazioni. Si supponga, ad esempio, che un'applicazione vuole inserire i dati da due set diversi di buffer. Per usare il primo set di buffer, doveva chiamare ripetutamente **SQLBindParameter** associazione ai parametri in un **Inserisci** istruzione e quindi eseguire l'istruzione. Per usare il secondo set di buffer, è necessario ripetere questo processo. In alternativa, è possibile configurare le associazioni per il primo set di buffer nel descrittore di uno e il secondo set di buffer nel descrittore di un altro. Per passare tra i set di associazioni, l'applicazione chiama semplicemente **SQLSetStmtAttr** e associare il descrittore corretto con l'istruzione come APD.  
   
- Per ulteriori informazioni sui descrittori, vedere [tipi di descrittori](../../../odbc/reference/develop-app/types-of-descriptors.md).
+ Per altre informazioni sui descrittori, vedere [tipi di descrittori](../../../odbc/reference/develop-app/types-of-descriptors.md).

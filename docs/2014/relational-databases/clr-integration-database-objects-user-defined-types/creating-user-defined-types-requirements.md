@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - UDTs [CLR integration], requirements
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff2d8987dee15e39a5f85e4efc01f0bdaef27e06
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 9d652bb9f722b33eb6a0bfa0f2aed324b5ecbfc8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057551"
 ---
 # <a name="user-defined-type-requirements"></a>Requisiti per i tipi definiti dall'utente
   È necessario apportare alcune decisioni di progettazione importante durante la creazione di un tipo definito dall'utente (UDT) per l'installazione nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Benché nella maggior parte dei casi sia consigliabile creare il tipo definito dall'utente come struttura, la creazione come classe rappresenta un'altra opzione valida. Perché il tipo venga registrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la definizione del tipo definito dall'utente deve essere conforme alle specifiche relative alla creazione di tali tipi.  
@@ -72,7 +69,7 @@ ms.locfileid: "37350073"
 ## <a name="native-serialization"></a>Serializzazione nativa  
  La scelta degli attributi di serializzazione corretti per il tipo definito dall'utente dipende dal tipo definito dall'utente che si desidera creare. Nel formato di serializzazione `Native` viene utilizzata una struttura molto semplice che consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di archiviare una rappresentazione nativa efficace del tipo definito dall'utente nel disco. Il formato `Native` rappresenta la scelta consigliata se il tipo definito dall'utente è semplice e contiene solo campi dei tipi seguenti:  
   
- **bool**, **byte**, **sbyte**, **breve**, **ushort**, **int**, ** uint**, **lungo**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, ** SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **bool**, **byte**, **sbyte**, **breve**, **ushort**, **int**,  **uint**, **lungo**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  I tipi di valore composti da campi in cui sono utilizzati i tipi elencati in precedenza costituiscono candidati validi per il formato `Native`, ad esempio `structs` in Visual C# (o `Structures`, come viene denominato in Visual Basic). Un tipo definito dall'utente specificato, ad esempio, con il formato di serializzazione `Native` può contenere un campo di un altro tipo definito dall'utente specificato anch'esso con il formato `Native`. Se la definizione del tipo definito dall'utente è più complessa e contiene tipi di dati non inclusi nell'elenco precedente, è invece necessario specificare il formato di serializzazione `UserDefined`.  
   

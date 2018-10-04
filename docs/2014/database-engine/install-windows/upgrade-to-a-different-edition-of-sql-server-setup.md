@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d88903151c3557ec48b9457a50d4a257075eb04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f98b8ba6a5396af70c0475f177e719a39a48b388
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182858"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088281"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Eseguire l'aggiornamento a un'edizione diversa di SQL Server 2014 (programma di installazione)
   Il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'aggiornamento dell'edizione fra le varie edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni sui percorsi di aggiornamento supportati, vedere [Aggiornamenti di versione ed edizione supportati](supported-version-and-edition-upgrades.md). Prima di iniziare l'aggiornamento dell'edizione di un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], rivedere gli argomenti seguenti:  
@@ -41,7 +38,7 @@ ms.locfileid: "37182858"
 > [!IMPORTANT]  
 >  Per rendere effettiva la modifica dell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario riavviare i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ciò determina un periodo di inattività mentre i servizi sono offline.  
   
-## <a name="procedure"></a>Procedura  
+## <a name="procedure"></a>Routine  
   
 #### <a name="to-upgrade-to-a-different-edition-of-includesscurrentincludessscurrent-mdmd"></a>Per eseguire l'aggiornamento a un'edizione diversa di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   

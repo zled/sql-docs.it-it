@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b681fb6cf46ae61cf8a706925aa8d853baf38532
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a3ae4c2b4742365bc2022e602d15f00a3b37b96c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106731"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guida di riferimento ai messaggi e agli errori di Integration Services
   Nelle tabelle seguenti vengono riportati gli errori, gli avvisi e i messaggi informativi predefiniti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , elencati in ordine numerico crescente all'interno di ciascuna categoria. Vengono inoltre indicati i codici numerici e nomi simbolici corrispondenti. Ognuno degli errori è definito come campo nella classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> nello spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -1046,7 +1043,7 @@ ms.locfileid: "39085723"
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|Buffer orfano. Gestione buffer è stato chiuso lasciando un buffer in sospeso e non verrà eseguita alcuna operazione di pulizia. Potrebbero verificarsi perdite di memoria o altri problemi.|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|Tentativo di individuazione della colonna di input denominata "%1" non riuscito con codice di errore 0x%2!8.8X!. Impossibile trovare la colonna di input specificata nella raccolta delle colonne di input.|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|Tentativo di individuazione della colonna di input con ID %1!d! non riuscito con codice di errore 0x%2!8.8X!. Impossibile trovare la colonna di input nella raccolta delle colonne di input.|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|Token non riconosciuto "%1" nell'espressione. Se "%1" è una variabile, deve essere espressa nel formato "\@%1". Il token specificato non è valido. Se il token deve essere un nome di variabile, dovrebbe essere preceduto il \@ simbolo.|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|Token non riconosciuto "%1" nell'espressione. Se "%1" è una variabile, deve essere espressa nel formato "\@%1". Il token specificato non è valido. Se il token viene usato come nome di variabile, dovrebbe essere preceduto dal simbolo \@.|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|Token non riconosciuto "#%1!d!" nell'espressione.|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|Impossibile trovare la variabile "%1" nella raccolta Variables. È possibile che la variabile non esista nell'ambito corretto.|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|Tentativo di analisi dell'espressione "%1" non riuscito. È possibile che l'espressione contenga un token non valido, un token incompleto o un elemento non valido. È inoltre possibile che il formato dell'espressione non sia corretto o che nell'espressione manchi una parte di un elemento obbligatorio, come una parentesi.|  
@@ -1093,7 +1090,7 @@ ms.locfileid: "39085723"
 |0xC00470DA|-1073450790|DTS_E_INDIVIDUALPUTREFTRACKERFAILED|Il componente "%1" non è riuscito a memorizzare nella cache la raccolta di registrazione dei riferimenti agli oggetti di run-time. Codice di errore restituito: 0x%2!8.8X!.|  
 |0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|Esistono più colonne di input con il nome "%1". È necessario specificare la colonna di input desiderata qualificandola in modo univoco come [Nome componente].[%2] oppure è possibile farvi riferimento con l'ID di derivazione. Attualmente, la colonna di input specificata esiste in più di un componente.|  
 |0xC00470DC|-1073450788|DTS_E_EXPREVALDOTTEDINPUTCOLUMNNAMENOTFOUND|Impossibile individuare la colonna di input denominata "[%1].[%2]". Codice di errore: 0x%3!8.8X!. Impossibile trovare la colonna di input nella raccolta delle colonne di input.|  
-|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|Esistono più variabili con il nome "%1". La variabile desiderata deve essere specificata in modo univoco come \@[spazio dei nomi::%2]. La variabile esiste in più di uno spazio dei nomi.|  
+|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|Esistono più variabili con il nome "%1". È necessario specificare la variabile desiderata qualificandola in modo univoco come \@[Spazio dei nomi::%2]. La variabile esiste in più di uno spazio dei nomi.|  
 |0xC00470DE|-1073450786|DTS_E_REDUCTIONFAILED|L'utilità di pianificazione del motore flusso di dati non è riuscita a ridurre il piano di esecuzione per la pipeline. Impostare la proprietà OptimizedMode su false.|  
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|Impossibile applicare la funzione SQRT a valori negativi. È stato passato un valore negativo alla funzione SQRT.|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|Impossibile applicare la funzione LN a valori negativi o pari a zero. È stato passato un valore zero o negativo alla funzione LN.|  
@@ -1226,7 +1223,7 @@ ms.locfileid: "39085723"
 |0xC004909D|-1073442659|DTS_E_EXPREVALSTATIC_INVALIDTOKENSINGLEEQUAL|Segno di uguale (=) imprevisto nell'espressione. Questo errore si verifica in genere quando è necessario un segno di uguale doppio (==).|  
 |0xC00490AA|-1073442646|DTS_E_EXPREVALSTATIC_AMBIGUOUSINPUTCOLUMNNAME|Il nome di colonna di input specificato è ambiguo.  Il nome della colonna deve essere qualificato nel formato [Nome componente].[Nome colonna] oppure è necessario fare riferimento alla colonna con l'ID di derivazione. Questo errore si verifica quando la colonna di input esiste in uno o più componenti ed è necessario differenziarlo con l'aggiunta del nome del componente o utilizzando l'ID di derivazione.|  
 |0xC00490AB|-1073442645|DTS_E_EXPREVALSTATIC_PLACEHOLDERINEXPRESSION|L'espressione contiene un segnaposto per un parametro o un operando della funzione. Il segnaposto deve essere sostituito con il parametro o l'operando effettivo.|  
-|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|Il nome di variabile specificato è ambiguo. La variabile desiderata deve essere nel formato \@[Spazio_dei_nomi:: variabile]. Questo errore si verifica quando la variabile esiste in più di uno spazio dei nomi.|  
+|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|Il nome di variabile specificato è ambiguo. È necessario qualificare la variabile desiderata nel formato \@[Spazio dei nomi::Variabile]. Questo errore si verifica quando la variabile esiste in più di uno spazio dei nomi.|  
 |0xC00490D3|-1073442605|DTS_E_EXPREVALSTATIC_BINARYOPDTSTRNOTSUPPORTED|Per gli operandi di un'operazione binaria, il tipo di dati DT_STR è supportato solo per le colonne di input e le operazioni cast. In un'operazione binaria non è consentito l'utilizzo di un operando DT_STR che non sia una colonna di input o il risultato di un cast. Per eseguire questa operazione, è necessario eseguire il cast esplicito dell'operando con un operatore cast.|  
 |0xC00490D4|-1073442604|DTS_E_EXPREVALSTATIC_CONDITIONALOPDTSTRNOTSUPPORTED|Per gli operandi dell'operatore condizionale, il tipo di dati DT_STR è supportato solo per le colonne di input e le operazioni cast. In un'operazione condizionale non è consentito l'utilizzo di un operando DT_STR che non sia una colonna di input o il risultato di un cast. Per eseguire questa operazione, è necessario eseguire il cast esplicito dell'operando con un operatore cast.|  
 |0xC00490D5|-1073442603|DTS_E_EXPREVALSTATIC_FNFINDSTRINGINVALIDOCCURRENCECOUNT|Parametro del conteggio delle occorrenze non valido per la funzione FINDSTRING. Il valore del parametro deve essere maggiore di zero.|  

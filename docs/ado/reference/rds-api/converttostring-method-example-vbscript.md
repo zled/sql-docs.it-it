@@ -1,35 +1,32 @@
 ---
-title: Esempio di metodo ConvertToString (VBScript) | Documenti Microsoft
+title: Esempio di metodo ConvertToString (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ConvertToString method [ADO], VBScript example
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db50af8d67fee0687386c31f5ba301fc3f3ef84b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b7f1a765d67307eb116c567c9cd5998d27b1ff53
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287560"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770119"
 ---
-# <a name="converttostring-method-example-vbscript"></a>Esempio di metodo ConvertToString (VBScript)
+# <a name="converttostring-method-example-vbscript"></a>Esempio del metodo ConvertToString (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Nell'esempio seguente viene illustrato come convertire un **Recordset** in una stringa codificata in formato MIME con il **RDSServer ConvertToString** metodo. Viene quindi illustrato come la stringa può essere convertita in un **Recordset**. Tagliare e incollare il codice seguente in blocco note o un altro editor di testo e salvarlo come **ConvertToString**.  
+ Nell'esempio seguente viene illustrato come convertire un **Recordset** in una stringa con codifica MIME usando la **RDSServer ConvertToString** (metodo). Viene quindi illustrato come la stringa può essere convertita in una **Recordset**. Tagliare e incollare il codice seguente nel blocco note o un altro editor di testo e salvarlo come **ConvertToString**.  
   
 ```  
 <!-- BeginConvertToStringVBS -->  
@@ -98,7 +95,7 @@ MIME Encoded RS: <BR>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
+ [Esempio di metodo ConvertToString (Servizi Desktop remoto)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 
 

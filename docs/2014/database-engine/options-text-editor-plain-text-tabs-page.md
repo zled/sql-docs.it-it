@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 6bce8fcc9ea458c3cf2408a3edeb497def4044b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4025a4812b7bb284d5fdf0540491d1506f05cdea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275307"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074767"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Opzioni (Editor di testo - Testo normale - pagina Tabulazioni)
   Utilizzare questa finestra di dialogo per cambiare il comportamento di tabulazione dell'editor di testo utilizzato per modificare un documento non associato a un dato linguaggio di sviluppo. Per visualizzare queste impostazioni scegliere **Opzioni** dal menu **Strumenti**, espandere **Editor di testo**, espandere **Testo normale** e quindi fare clic su **Tabulazioni**.  

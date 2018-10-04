@@ -1,13 +1,11 @@
 ---
-title: Mapping dei tipi di cursore oggetti Attributes1 informazioni | Documenti Microsoft
+title: Mapping di cursore1 tipi di informazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], mapping cursor attributes1 information types
@@ -16,24 +14,23 @@ helpviewer_keywords:
 - backward compatibility [ODBC], mapping cursor attributes1 information types
 - upgrading applications [ODBC], mapping cursor attributes1 information types
 ms.assetid: 9f112449-ca86-45ac-a865-e6174d67f91b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec986c2feea1b5c2ef64de87d64944ce0d184898
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e9549c442e301f3a6ed8d3da9c73d52177adf01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910546"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821329"
 ---
-# <a name="mapping-the-cursor-attributes1-information-types"></a>Mapping dei tipi di cursore oggetti Attributes1 informazioni
-Quando un'applicazione ODBC 3. *x* applicazione chiama **SQLGetInfo** un 2 di ODBC*x* driver con il tipo di informazioni SQL_XXXX_CURSOR_ATTRIBUTES1 (per dinamici e forward-only, i driver, o i cursori statici), l'impostazione dei bit restituiti da Gestione Driver dipende dal quale ODBC 2. *x* driver restituisce per corrispondente ODBC 2. *x* tipi di informazioni. I bit vengono impostati come illustrato nella tabella seguente.  
+# <a name="mapping-the-cursor-attributes1-information-types"></a>Mapping delle informazioni di tipo Cursor Attributes1
+Quando un'applicazione ODBC 3. *x* applicazione chiama **SQLGetInfo** in un'API ODBC 2*x* driver con il tipo di informazioni SQL_XXXX_CURSOR_ATTRIBUTES1 (per dinamico di tipo forward-only, i driver, o i cursori statici), l'impostazione dei bit restituiti da Gestione Driver dipende dal quale ODBC 2. *x* driver restituisce per la corrispondente di ODBC 2. *x* tipi di informazioni. I bit sono impostati come illustrato nella tabella seguente.  
   
 |Bit in<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Tipo di cursore|ODBC 2. *x* informazioni<br /><br /> Tipo|  
 |-----------------------------------------------|-----------------|-------------------------------------|  
-|SQL_CA1_NEXT|Tutto|SQL_FETCH_DIRECTION|  
-|SQL_CA1_ABSOLUTE SQL_CA1_RELATIVE SQL_CA1_BOOKMARK|Dinamico, i driver, statico|SQL_FETCH_DIRECTION|  
-|SQL_CA1_LOCK_NO_CHANGE SQL_CA1_LOCK_UNLOCK SQL_CA1_LOCK_EXCLUSIVE|Dinamico, i driver, statico|SQL_LOCK_TYPES|  
-|SQL_CA1_POSITIONED_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_SELECT_FOR_UPDATE|Tutto|SQL_POSITIONED_STATEMENTS|  
-|SQL_CA1_POS_POSITION SQL_CA1_POS_DELETE SQL_CA1_POS_REFRESH SQL_CA1_POS_BULK_ADD|Dinamico, i driver, statico|SQL_POS_OPERATIONS|
+|SQL_CA1_NEXT|All|SQL_FETCH_DIRECTION|  
+|SQL_CA1_ABSOLUTE SQL_CA1_RELATIVE SQL_CA1_BOOKMARK|Dinamici, i driver, statico|SQL_FETCH_DIRECTION|  
+|SQL_CA1_LOCK_NO_CHANGE SQL_CA1_LOCK_UNLOCK SQL_CA1_LOCK_EXCLUSIVE|Dinamici, i driver, statico|SQL_LOCK_TYPES|  
+|SQL_CA1_POSITIONED_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_SELECT_FOR_UPDATE|All|SQL_POSITIONED_STATEMENTS|  
+|SQL_CA1_POS_POSITION SQL_CA1_POS_DELETE SQL_CA1_POS_REFRESH SQL_CA1_POS_BULK_ADD|Dinamici, i driver, statico|SQL_POS_OPERATIONS|

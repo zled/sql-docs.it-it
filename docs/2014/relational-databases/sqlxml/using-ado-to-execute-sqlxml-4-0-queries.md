@@ -1,14 +1,12 @@
 ---
-title: Utilizzo di ADO per eseguire SQLXML 4.0 esegue una query | Microsoft Docs
+title: Utilizzare ADO per SQLXML 4.0 di eseguire una query | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - query testers [SQLXML]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - queries [SQLXML], ADO
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91ccb8afcc1de50498695da442ba1f20a0942d27
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 270bd5a9354f5f1a60bfa867638d4b75a6d2303f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201191"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082261"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Utilizzo di ADO per eseguire query SQLXML 4.0
   Nelle versioni precedenti di SQLXML viene fornito il supporto per l'esecuzione di query basate su HTTP mediante le directory virtuali IIS e il filtro ISAPI SQLXML. In SQLXML 4.0 questi componenti sono stati rimossi in quanto simili e, a partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], è stata fornita una funzionalità sostitutiva con i servizi Web XML nativi.  
@@ -117,11 +114,11 @@ ms.locfileid: "37201191"
   
 1.  Verificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sia installato, come segue:  
   
-    1.  Dal **avviare** dal menu **impostazioni**e quindi fare clic su **Pannello di controllo**.  
+    1.  Dal **Start** dal menu **impostazioni**, quindi fare clic su **Pannello di controllo**.  
   
-    2.  Nel Pannello di controllo aprire **Aggiungi / Rimuovi programmi**  
+    2.  Nel Pannello di controllo aprire **Installazione applicazioni**  
   
-    3.  Nell'elenco dei programmi correntemente installati, verificare che **Microsoft SQL Server Native Client** visualizzato nell'elenco.  
+    3.  Nell'elenco dei programmi attualmente installati, verificare che **Microsoft SQL Server Native Client** viene visualizzato nell'elenco.  
   
         > [!NOTE]  
         >  Se è necessario installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, vedere [installazione di SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shapes, data mining
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Visio shapes, decision tree
 - decision tree [data mining]
 ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d4b4eb570d1d81bc724c885e8c277aa662cf4ff5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b98c237b7cc8aaf58c177ee151e7a1398a4fd5c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291717"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079711"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Descrizione dettagliata del diagramma dell'albero delle decisioni (componenti aggiuntivi Data Mining dei dati)
   Se è stato creato un modello di albero delle decisioni, è possibile creare un diagramma personalizzato in Visio tramite la forma Albero delle decisioni o la forma Rete di dipendenze. In questo argomento descrive le personalizzazioni è possibile eseguire utilizzando la **albero delle decisioni** questi controlli e forme:  

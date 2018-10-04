@@ -1,28 +1,25 @@
 ---
-title: SQLMoreResults | Microsoft Docs
+title: SQLMoreResults | Documenti di Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLMoreResults function
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aed3bff56fcb794f50958f96ffe14df83205bb07
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4c6b6bc36139020f64ae4dd280988f5783d6f837
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410480"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207671"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults** consente all'applicazione di recuperare più set di righe di risultati. Un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT contenente una clausola COMPUTE, o un batch inviato di istruzioni ODBC o [!INCLUDE[tsql](../../includes/tsql-md.md)] , comporta la generazione di più set di risultati da parte del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente la creazione di un cursore server per elaborare i risultati in entrambi i casi. Pertanto, lo sviluppatore deve assicurarsi che l'istruzione ODBC sia bloccata. Lo sviluppatore deve esaurire i dati restituiti o annullare l'istruzione ODBC prima di elaborare i dati di altre istruzioni attive nella connessione.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.issuedetails.f1
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 821136c482351f97d74282410450f1ffe6798777
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ccdf69264de1531c1296763eb95e2e0369ce034b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254613"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215751"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Finestra di dialogo Dettagli conversione colonna (Importazione/Esportazione guidata SQL Server)
   Usare la **Dettagli conversione colonna** finestra di dialogo per esaminare le informazioni di conversione dettagliate su una singola colonna. Queste informazioni sulla conversione contengono il tipo di dati della colonna nell'origine e nella destinazione e la conversione che verrà eseguita tramite la procedura guidata. In questa pagina sono inoltre elencati i file di mapping dei tipi di dati utilizzati dalla procedura guidata per determinare le conversioni dei tipi di dati necessarie. Tali file di mapping dei tipi di dati vengono installati durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

@@ -1,32 +1,29 @@
 ---
-title: Limitazioni di istruzione UPDATE | Documenti Microsoft
+title: Limitazioni dell'istruzione UPDATE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - UPDATE statement limitations [ODBC]
 - ODBC SQL grammar, UPDATE statement limitations
 ms.assetid: 14700aac-e135-4dc0-9138-4b01224461d5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 006d0f9644c9f62a6b50e2d327384ec3a9c954c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6b854cc417898c5576c60ca129c597eae280df4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906596"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826339"
 ---
-# <a name="update-statement-limitations"></a>Limitazioni di istruzione di aggiornamento
-Per il driver Paradox aggiornare una tabella, la tabella deve includere un indice univoco (chiave primaria). Quando si utilizza il driver Paradox senza implementare Borland Database Engine, non è possibile aggiornare una tabella di Paradox.  
+# <a name="update-statement-limitations"></a>Limitazioni dell'istruzione UPDATE
+Per il driver Paradox aggiornare una tabella, la tabella deve avere un indice univoco (chiave primaria Paradox). Quando si usa il driver Paradox senza implementare il motore di Database Borland, non è possibile aggiornare una tabella Paradox.  
   
- Non è supportata dal driver del testo.  
+ Non è supportato dal driver del testo.  
   
- Quando viene utilizzato il driver per Microsoft Excel, è possibile aggiornare i valori, ma non può essere eliminata una riga da una tabella in base a un foglio di calcolo di Microsoft Excel. Di conseguenza, l'istruzione UPDATE non è considerata ufficialmente supportata dal driver Microsoft Excel. Solo l'istruzione INSERT è considerato supportato.
+ Quando viene usato il driver di Microsoft Excel, è possibile aggiornare i valori, ma non può essere eliminata una riga da una tabella basata su un foglio di calcolo di Microsoft Excel. Di conseguenza, l'istruzione UPDATE non è considerata supportati ufficialmente dal driver per Microsoft Excel. Solo l'istruzione INSERT è considerato supportato.

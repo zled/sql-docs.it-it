@@ -1,13 +1,11 @@
 ---
-title: Oggetto Parameter | Documenti Microsoft
+title: Oggetto Parameter | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,44 +13,43 @@ f1_keywords:
 helpviewer_keywords:
 - Parameter object [ADO]
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb2eda53603a06ed73dce0962bea4ca18035714f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e4a39f93e6b98595270e46d5a6f9b54b35098cb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280710"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751792"
 ---
 # <a name="parameter-object"></a>Oggetto Parameter
 Rappresenta un parametro o un argomento associato a un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto basato su una query con parametri o stored procedure.  
   
-## <a name="remarks"></a>Remarks  
- Molti provider supportano i comandi con parametri. Questi sono i comandi in cui l'azione desiderata è definita una sola volta, ma le variabili (o parametri) vengono usati per modificare alcuni dettagli del comando. Un'istruzione SQL SELECT, ad esempio, utilizzare un parametro per definire i criteri di corrispondenza di una clausola WHERE e un altro per definire il nome di colonna per una clausola di ordinamento.  
+## <a name="remarks"></a>Note  
+ Molti provider supporta i comandi con parametri. Questi sono i comandi in cui l'azione desiderata è definita una sola volta, ma le variabili (o parametri) vengono usati per modificare alcuni dettagli del comando. Ad esempio, un'istruzione SQL SELECT è stato possibile utilizzare un parametro per definire i criteri di corrispondenza di una clausola WHERE e un altro per definire il nome della colonna per una clausola di ordinamento.  
   
- **Parametro** oggetti rappresentano i parametri associati alle query con parametri o gli argomenti in/out e i valori restituiti di stored procedure. A seconda della funzionalità del provider, alcuni insiemi, metodi o proprietà di un **parametro** oggetto potrebbe non essere disponibile.  
+ **Parametro** oggetti rappresentano i parametri associati alle query con parametri o gli argomenti in e out e i valori restituiti di stored procedure. A seconda della funzionalità del provider, alcune raccolte, metodi o proprietà di un **parametro** oggetto potrebbe non essere disponibile.  
   
  Con le raccolte, i metodi e proprietà di un **parametro** dell'oggetto, è possibile eseguire le operazioni seguenti:  
   
 -   Impostare o restituire il nome di un parametro con il [nome](../../../ado/reference/ado-api/name-property-ado.md) proprietà.  
   
--   Impostare o restituire il valore di un parametro con il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà. **Valore** è la proprietà predefinita di **parametro** oggetto.  
+-   Ottenere o impostare il valore di un parametro con il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà. **Valore** è la proprietà predefinita di **parametro** oggetto.  
   
--   Impostare o restituire le caratteristiche del parametro con il [attributi](../../../ado/reference/ado-api/attributes-property-ado.md), [direzione](../../../ado/reference/ado-api/direction-property.md), [precisione](../../../ado/reference/ado-api/precision-property-ado.md), [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md), [ Dimensioni](../../../ado/reference/ado-api/size-property-ado-parameter.md), e [tipo](../../../ado/reference/ado-api/type-property-ado.md) proprietà.  
+-   Impostare o restituire le caratteristiche del parametro con il [attributi](../../../ado/reference/ado-api/attributes-property-ado.md), [direzione](../../../ado/reference/ado-api/direction-property.md), [precisione](../../../ado/reference/ado-api/precision-property-ado.md), [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md), [ Le dimensioni](../../../ado/reference/ado-api/size-property-ado-parameter.md), e [tipo](../../../ado/reference/ado-api/type-property-ado.md) proprietà.  
   
--   Passare dati long binari o character a un parametro con il [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) metodo.  
+-   Passare i dati caratteri o binari long a un parametro con il [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) (metodo).  
   
--   Attributi specifici del provider di accesso tramite il [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) insieme.  
+-   Gli attributi specifici del provider di accesso usando il [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta.  
   
- Se si conoscono i nomi e le proprietà dei parametri associati con la stored procedure o query con parametri a cui si desidera chiamare, è possibile utilizzare il [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) metodo per creare **parametro** oggetti con le impostazioni di proprietà appropriato e l'utilizzo di [Append](../../../ado/reference/ado-api/append-method-ado.md) metodo per aggiungerli al [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) insieme. Consente di impostare e restituire i valori dei parametri senza necessità di chiamare il [aggiornamento](../../../ado/reference/ado-api/refresh-method-ado.md) metodo il **parametri** raccolta per recuperare le informazioni sui parametri dal provider, un potenzialmente operazione utilizza molte risorse.  
+ Se si conoscono i nomi e le proprietà dei parametri associati con la stored procedure o query con parametri che si desidera chiamare, è possibile usare la [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) metodo per creare **parametro** oggetti con le impostazioni di proprietà appropriata e usare la [Append](../../../ado/reference/ado-api/append-method-ado.md) metodo a cui aggiungere i le [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta. Ciò consente di impostare e restituire i valori dei parametri senza dover chiamare il [aggiornare](../../../ado/reference/ado-api/refresh-method-ado.md) metodo sul **parametri** insieme per recuperare le informazioni sul parametro dal provider, un potenzialmente operazione a elevato utilizzo di risorse.  
   
- Il **parametro** oggetto non è sicuro per lo scripting.  
+ Il **parametro** oggetto non sicuro per lo script.  
   
- In questa sezione contiene l'argomento seguente.  
+ In questa sezione contiene gli argomenti seguenti.  
   
--   [Le proprietà dell'oggetto parametro, metodi ed eventi](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
+-   [Gli eventi, metodi e proprietà dell'oggetto parametro](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   

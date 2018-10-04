@@ -1,13 +1,11 @@
 ---
-title: Compila un programma SQL incorporato | Documenti Microsoft
+title: Compilazione di un programma SQL incorporato | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - compiling embedded SQL programs [ODBC]
 - embedded SQL [ODBC]
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e4b89a65475b35b50a968b9497c6d90574c6738
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc8133241ad0b76579e87164350a5c6fe2a39f2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908936"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600909"
 ---
-# <a name="compiling-an-embedded-sql-program"></a>Compila un programma SQL incorporato
-Poiché un programma SQL incorporato contiene una combinazione di istruzioni SQL e host, non può essere inviato direttamente a un compilatore per il linguaggio host. Al contrario, viene compilato tramite un processo in più passaggi. Anche se questo processo è diverso da un prodotto per un prodotto, i passaggi sono quasi gli stessi per tutti i prodotti.  
+# <a name="compiling-an-embedded-sql-program"></a>Compilazione di un programma Embedded SQL
+Poiché un programma SQL incorporato contiene una combinazione delle istruzioni del linguaggio SQL e host, non possono essere inviata direttamente a un compilatore per il linguaggio host. Al contrario, viene compilato tramite un processo in più passaggi. Anche se questo processo è diverso da prodotto a prodotto, i passaggi sono all'incirca lo stesso per tutti i prodotti.  
   
  Questa illustrazione mostra i passaggi necessari per compilare un programma SQL incorporato.  
   
@@ -35,14 +32,14 @@ Poiché un programma SQL incorporato contiene una combinazione di istruzioni SQL
   
  Cinque passaggi coinvolti nella compilazione di un programma SQL incorporato:  
   
-1.  Il programma SQL incorporato viene inviato il precompilatore SQL, uno strumento di programmazione. Il precompilatore esegue l'analisi del programma, individua le istruzioni SQL incorporate e li elabora. Un precompilatore diversi è necessario per ogni linguaggio di programmazione supportato dal sistema DBMS. Prodotti DBMS offrono in genere precompilers per uno o più lingue, ad esempio C, Pascal, COBOL, Fortran, Ada, PL / I e varie lingue di assembly.  
+1.  Il programma SQL incorporato viene inviato a precompilatore il SQL, uno strumento di programmazione. Il precompilatore analizza il programma, individua le istruzioni SQL incorporate e li elabora. Un precompilatore diverso è necessario per ogni linguaggio di programmazione supportato dal sistema DBMS. Prodotti DBMS offrono in genere precompilers per uno o più lingue, tra cui C, Pascal, COBOL, Fortran, Ada, PL / I e vari linguaggi assembly.  
   
-2.  Il precompilatore produce due file di output. Il primo file è il file di origine, senza le istruzioni SQL incorporate. Al loro posto il precompilatore sostituisce chiamate alle routine DBMS proprietarie che forniscano il collegamento in fase di esecuzione tra il programma e il sistema DBMS. In genere, i nomi e le sequenze di chiamata di queste routine sono note solo per il precompilatore e DBMS; non sono un'interfaccia pubblica per il sistema DBMS. Il secondo file è una copia di tutte le istruzioni di SQL incorporate utilizzata nel programma. Questo file è denominato talvolta un modulo di richiesta di database o nome DBRM.  
+2.  Il precompilatore produce due file di output. Il primo file è il file di origine, privato di relative istruzioni SQL incorporate. Al loro posto i precompilatore sostituisce con chiamate alle routine DBMS proprietari che forniscono il collegamento in fase di esecuzione tra il programma e il sistema DBMS. In genere, i nomi e le sequenze di queste routine chiamate sono note solo al precompilatore e del sistema DBMS; non sono un'interfaccia pubblica per il sistema DBMS. Il secondo file è una copia di tutte le istruzioni di SQL incorporate nel programma. Questo file viene chiamato talvolta un modulo di richiesta di database o nome DBRM.  
   
-3.  L'output del file di origine dal precompilatore viene inviato al compilatore standard per l'host del linguaggio (ad esempio, un compilatore C o COBOL) di programmazione. Il compilatore elabora il codice sorgente e produce un codice oggetto come output. Si noti che questo passaggio non ha nulla a che vedere con il sistema DBMS o SQL.  
+3.  L'output del file di origine dal precompilatore viene inviato al compilatore standard per l'host di linguaggio (ad esempio un compilatore C o COBOL) di programmazione. Il compilatore elabora il codice sorgente e produce codice dell'oggetto come output. Si noti che questo passaggio non ha nulla a che fare con il sistema DBMS o SQL.  
   
-4.  Il linker accetta i moduli di oggetto generati dal compilatore, li collega con le diverse routine di libreria e produce un programma eseguibile. Le routine della libreria collegate il programma eseguibile includono le routine DBMS proprietarie descritte nel passaggio 2.  
+4.  Il linker accetta i moduli di oggetto generati dal compilatore, li collega con diverse routine di libreria e produce un programma eseguibile. Le routine della libreria collegate nel programma eseguibile includono le routine DBMS proprietarie descritte nel passaggio 2.  
   
-5.  Il modulo di richiesta del database generato dallo strumento di precompilazione viene inviato a un'utilità di associazione speciale. Questa utilità esamina le istruzioni SQL, analizza, convalida e ottimizza le e produce quindi un piano di accesso per ogni istruzione. Il risultato è un piano di accesso combinato per l'intero programma, che rappresenta una versione eseguibile delle istruzioni SQL incorporate. L'utilità di associazione archivia il piano nel database, assegnando in genere il nome dell'applicazione in uso. Se questo passaggio viene eseguita in fase di compilazione o fase di esecuzione varia a seconda del sistema DBMS.  
+5.  Il modulo di richiesta database generato dallo strumento di precompilazione viene inviato a un'utilità di binding speciali. Questa utilità esamina le istruzioni SQL, analizza, convalida e ottimizzarli e produce quindi un piano di accesso per ogni istruzione. Il risultato è un piano di accesso combinato per l'intero programma, che rappresenta una versione eseguibile delle istruzioni SQL incorporate. L'utilità di associazione archivia il piano nel database, in genere assegnarle il nome dell'applicazione che verrà usato. Indica se questo passaggio viene eseguita in fase di compilazione o fase di esecuzione varia a seconda del sistema DBMS.  
   
- Si noti che i passaggi necessari per compilare un programma SQL incorporato correlare strettamente con i passaggi descritti in precedenza nella [l'elaborazione di un'istruzione SQL](../../odbc/reference/processing-a-sql-statement.md). In particolare, si noti che il precompilatore separa le istruzioni SQL dal codice del linguaggio host e l'utilità di associazione analizza e convalida le istruzioni SQL e crea i piani di accesso. Nel passaggio 5 in cui ha luogo in fase di compilazione di DBMS, i primi quattro passaggi di elaborazione di un'istruzione SQL eseguite in fase di compilazione, mentre l'ultimo passaggio (esecuzione) viene eseguita in fase di esecuzione. Questo ha lo scopo di rendere l'esecuzione di query in tali DBMS molto veloce.
+ Si noti che i passaggi necessari per compilare un programma SQL incorporato correlare strettamente con i passaggi descritti nella sezione precedente [elaborazione di un'istruzione SQL](../../odbc/reference/processing-a-sql-statement.md). In particolare, si noti che il precompilatore separa le istruzioni SQL dal codice del linguaggio host e l'utilità di associazione consente di analizzare e convalida le istruzioni SQL e crea i piani di accesso. In DBMS in cui il passaggio 5 viene eseguita in fase di compilazione, i primi quattro passaggi dell'elaborazione di un'istruzione SQL avvengono in fase di compilazione, mentre l'ultimo passaggio (esecuzione) viene eseguita in fase di esecuzione. Ciò ha lo scopo di rendere l'esecuzione di query in questo tipo DBMS molto veloce.

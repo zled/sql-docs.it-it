@@ -8,18 +8,16 @@ ms.date: 03/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: bdd0cd86d3a20e61712f40c97e688b0d3728bcb4
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
-ms.translationtype: MT
+ms.openlocfilehash: 6c1a6a7ef05a10662a878c9b0e86d336835af4a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713733"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775789"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Guida introduttiva: Immagini del contenitore in esecuzione SQL Server con Docker
 
@@ -37,11 +35,11 @@ In questa guida introduttiva si usa Docker per effettuare il pull ed eseguire l'
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In questa Guida introduttiva, è usare Docker per il pull ed eseguire l'immagine del contenitore, anteprima SQL Server 2019 [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Ci si connette quindi con **sqlcmd** per creare il primo database ed eseguire query.
+In questa Guida introduttiva, è usare Docker per il pull ed eseguire l'immagine del contenitore, anteprima SQL Server 2019 [mssql-server](https://hub.docker.com/r/microsoft/mssql-server). Ci si connette quindi con **sqlcmd** per creare il primo database ed eseguire query.
 
 ::: moniker-end
 
-Questa immagine è costituita da SQL Server in esecuzione su Linux basato su Ubuntu 16.04. Può essere usata con il motore Docker 1.8 o versione successiva su Linux o in Docker per Mac/Windows. Questa guida introduttiva illustra nello specifico l'uso dell'immagine mssql-server-**linux**. L'immagine Windows non è argomento di questa guida, ma è possibile ottenere informazioni su di essa nella [pagina mssql-server-windows-developer dell'hub Docker](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
+Questa immagine è costituita da SQL Server in esecuzione su Linux basato su Ubuntu 16.04. Può essere usata con il motore Docker 1.8 o versione successiva su Linux o in Docker per Mac/Windows. Questa Guida introduttiva è incentrata in particolare sull'uso di SQL Server in **linux** immagine. L'immagine Windows non è argomento di questa guida, ma è possibile ottenere informazioni su di essa nella [pagina mssql-server-windows-developer dell'hub Docker](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 ## <a id="requirements"></a> Prerequisites
 

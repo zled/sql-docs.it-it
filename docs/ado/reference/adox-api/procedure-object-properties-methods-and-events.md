@@ -1,31 +1,28 @@
 ---
-title: Le proprietà dell'oggetto stored procedure, metodi ed eventi | Documenti Microsoft
+title: Le proprietà dell'oggetto procedure, metodi ed eventi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Procedure object [ADOX], members
 ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d20fc56e0698d7e59d06f760643f353bb5524ee5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 73d3eec4f68fbf43481f604b352c8daa92da1356
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286710"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602029"
 ---
-# <a name="procedure-object-properties-methods-and-events"></a>Le proprietà dell'oggetto stored procedure, metodi ed eventi
+# <a name="procedure-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Procedure
 ## <a name="properties"></a>Proprietà  
- [Proprietà dei comandi](../../../ado/reference/adox-api/command-property-adox.md)  
+ [Proprietà Command](../../../ado/reference/adox-api/command-property-adox.md)  
   
  [Proprietà DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)  
   

@@ -1,37 +1,34 @@
 ---
-title: Il recupero dei segnalibri | Documenti Microsoft
+title: Recupero di segnalibri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving bookmarks [ODBC]
 - result sets [ODBC], bookmarks
 - bookmarks [ODBC]
 ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a78b232a1cdb5564388cdf9b335a5ce06cfcb68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d7d4bd52a5f6e5b03a084cef4402e0a9044f97d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911916"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777626"
 ---
-# <a name="retrieving-bookmarks"></a>Il recupero dei segnalibri
-Se l'applicazione utilizzerà i segnalibri, è necessario impostare l'attributo di istruzione SQL_ATTR_USE_BOOKMARKS per SQL_UB_VARIABLE prima di preparazione o l'esecuzione dell'istruzione. Ciò è necessario perché la creazione e la gestione di segnalibri possono essere un'operazione dispendiosa, pertanto i segnalibri devono essere abilitati solo quando un'applicazione può effettuare buona loro utilizzo.  
+# <a name="retrieving-bookmarks"></a>Recupero di segnalibri
+Se l'applicazione utilizzerà i segnalibri, è necessario impostare l'attributo di istruzione SQL_ATTR_USE_BOOKMARKS a SQL_UB_VARIABLE prima di preparazione o l'esecuzione dell'istruzione. Ciò è necessario perché creare e gestire i segnalibri possono essere un'operazione dispendiosa, in modo che i segnalibri devono essere abilitati solo quando un'applicazione può rendere buona loro utilizzo.  
   
- I segnalibri vengono restituiti come colonna 0 del set di risultati. Sono disponibili in un'applicazione è possibile recuperarle in tre modi:  
+ I segnalibri vengono restituiti come colonna 0 nel set di risultati. Esistono tre modi che possibile recuperarle in un'applicazione:  
   
--   Associare la colonna 0 del set di risultati. **SQLFetch** oppure **SQLFetchScroll** restituisce i segnalibri per ogni riga nel set di righe insieme ai dati per altri colonne associate.  
+-   Eseguire l'associazione colonna 0 nel set di risultati. **SQLFetch** oppure **SQLFetchScroll** restituisce i segnalibri per ogni riga nel set di righe con i dati per altri colonne associate.  
   
--   Chiamare **SQLSetPos** per posizionarsi su una riga nel set di righe e quindi chiamare **SQLGetData** per la colonna 0. Se un driver supporta i segnalibri, deve supportare sempre la possibilità di chiamare **SQLGetData** per la colonna 0, anche se non consente alle applicazioni di chiamare **SQLGetData** per le altre colonne prima il limite ultimo colonna.  
+-   Chiamare **SQLSetPos** posizionarsi su una riga nel set di righe, quindi chiamare **SQLGetData** per la colonna 0. Se un driver supporta segnalibri, deve sempre supportare la possibilità di chiamare **SQLGetData** per la colonna 0, anche se non consente alle applicazioni di chiamare **SQLGetData** per le altre colonne prima l'ultimo associato a colonna.  
   
--   Chiamare **SQLBulkOperations** con il *operazione* argomento impostato su SQL_ADD e colonna 0 associato. Il cursore inserisce la riga e restituisce il segnalibro per la riga nel buffer associato.
+-   Chiamare **SQLBulkOperations** con il *operazione* argomento impostato su SQL_ADD e alla colonna 0 associato. Il cursore viene inserita la riga e restituisce il segnalibro per la riga nel buffer associato.
