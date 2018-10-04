@@ -1,34 +1,31 @@
 ---
-title: Esempio di proprietà StayInSync (VC + +) | Documenti Microsoft
+title: Esempio di proprietà StayInSync (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - StayInSync property [ADO], VC++ example
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 755fcb827a2ee4789beb85f8a4f58666c6176657
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ce7a4a2a9cbfefd9ff2c61fcf8ff4fdfeed233c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281940"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729489"
 ---
-# <a name="stayinsync-property-example-vc"></a>Esempio di proprietà StayInSync (VC + +)
+# <a name="stayinsync-property-example-vc"></a>Esempio della proprietà StayInSync (VC++)
 Questo esempio viene illustrato come la [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) proprietà semplifica l'accesso alle righe in un modello gerarchico [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Il ciclo esterno viene visualizzato il nome e cognome, stato e identificazione di ogni autore. L'oggetto aggiunto **Recordset** per ogni riga viene recuperato dal [campi](../../../ado/reference/ado-api/fields-collection-ado.md) insieme e assegnata automaticamente agli **rstTitleAuthor** dal **StayInSync**  proprietà ogni volta che l'elemento padre **Recordset** passa a una nuova riga. Il ciclo interno visualizza quattro campi da ogni riga del Recordset accodato.  
+ Il ciclo esterno viene visualizzato il nome e cognome, stato e identificazione ogni autore. L'oggetto aggiunto **Recordset** per ogni riga viene recuperato dalle [campi](../../../ado/reference/ado-api/fields-collection-ado.md) insieme e assegnata automaticamente agli **rstTitleAuthor** dal **StayInSync**  proprietà ogni volta che l'elemento padre **Recordset** passa a una nuova riga. Il ciclo interno vengono visualizzati quattro campi di ogni riga nel set di record accodato.  
   
 ```  
 // BeginStayInSyncCpp.cpp  
@@ -148,6 +145,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Raccolta di campi (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Oggetto Recordset ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Proprietà StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)

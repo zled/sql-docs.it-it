@@ -1,13 +1,11 @@
 ---
-title: Proprietà di elementi figlio (ADO MD) | Documenti Microsoft
+title: Proprietà Children (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,25 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Children property [ADO MD]
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ca7bff8aae165833dcf6e0cc20bd1af55d62279
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f489a87573dabbd091f5d2dce8a084b53cc5771e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283540"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626129"
 ---
-# <a name="children-property-ado-md"></a>Proprietà di elementi figlio (ADO MD)
+# <a name="children-property-ado-md"></a>Proprietà Children (ADO MD)
 Restituisce un [membri](../../../ado/reference/ado-md-api/members-collection-ado-md.md) raccolta per cui corrente [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) padre nella gerarchia.  
   
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce un **membri** raccolta ed è di sola lettura.  
   
-## <a name="remarks"></a>Remarks  
- Il **figli** proprietà contiene un **membri** raccolta per cui corrente **membro** è il padre gerarchico. Livello di foglia **membro** oggetti presentano membri figlio **membri** insieme. Questa proprietà è supportata solo su **membro** oggetti appartenenti a un [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md) oggetto. Si verifica un errore quando questa proprietà viene fatto riferimento dal **membro** oggetti appartenenti a un [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md) oggetto.  
+## <a name="remarks"></a>Note  
+ Il **figli** proprietà contiene un **membri** raccolta per cui corrente **membro** è l'oggetto padre gerarchico. A livello di foglia **membro** gli oggetti non presentano membri figlio **membri** raccolta. Questa proprietà è supportata solo nei **membro** oggetti appartenenti a un [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md) oggetto. Si verifica un errore quando questa proprietà viene fatto riferimento dal **membro** oggetti appartenenti a un [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md) oggetto.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
