@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Batch Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Batch command
 ms.assetid: 818f3212-9605-4e34-8623-1154d9fae1f0
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 269eedd9a48d1bf7bde43d0294bac7a81b9f90ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d402c1f6c35370a506ed57c43b8fbc05d0b6bef7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178141"
 ---
 # <a name="batch-element-xmla"></a>Elemento Batch (XMLA)
   Esegue uno o più XML per i comandi Analysis (XMLA) come operazione batch, in sequenza o in parallelo, in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -73,7 +70,7 @@ ms.locfileid: "37291237"
 |attribute|Description|  
 |---------------|-----------------|  
 |ProcessAffectedObjects|(Attributo `Boolean` facoltativo) Indica se tutti gli oggetti che richiedono la rielaborazione saranno elaborati.<br /><br /> Se è impostato su True, l'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] elabora qualsiasi oggetto che richiede la rielaborazione in seguito all'elaborazione di un oggetto incluso nel comando `Batch`.<br /><br /> Se è impostato su `false`, l'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] elabora solo gli oggetti inclusi nel comando `Batch`.|  
-|Transazione|(Attributo `Boolean` facoltativo) Indica se i comandi inclusi nel comando `Batch` vengono trattati come una singola transazione o come transazioni separate.<br /><br /> Se è impostato su True, tutti i comandi inclusi nel comando `Batch` sono considerati come una singola transazione. Se un comando ha esito negativo, viene eseguito il rollback dei comandi eseguiti prima di tale comando e il comando `Batch` si arresta senza eseguire i comandi successivi.<br /><br /> Se è impostato su `false`, il comando `Batch` tenta di eseguire ogni comando ed esegue il commit dei risultati di ogni comando completato correttamente.|  
+|Transaction|(Attributo `Boolean` facoltativo) Indica se i comandi inclusi nel comando `Batch` vengono trattati come una singola transazione o come transazioni separate.<br /><br /> Se è impostato su True, tutti i comandi inclusi nel comando `Batch` sono considerati come una singola transazione. Se un comando ha esito negativo, viene eseguito il rollback dei comandi eseguiti prima di tale comando e il comando `Batch` si arresta senza eseguire i comandi successivi.<br /><br /> Se è impostato su `false`, il comando `Batch` tenta di eseguire ogni comando ed esegue il commit dei risultati di ogni comando completato correttamente.|  
   
 ## <a name="remarks"></a>Note  
   

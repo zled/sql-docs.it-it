@@ -1,14 +1,12 @@
 ---
-title: Registrare il processo di generazione (SQLXML 4.0) | Microsoft Docs
+title: Registrare il processo di generazione (SQLXML 4.0) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], record generation process
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - leaving node scope [SQLXML]
 - schema mapping [SQLXML]
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60daad1df3838e7c35af82887da3449a74267753
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92fe956495692226cd0771a61ff3e298644f6dc2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262417"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182251"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Processo di generazione di record (SQLXML 4.0)
   Il caricamento bulk XML elabora i dati di input XML e prepara record per le tabelle appropriate in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La logica nel caricamento bulk XML determina il momento in cui generare un nuovo record, i valori di elemento o attributo figlio da copiare nei campi del record e il momento in cui il record è completo e pronto per essere inviato a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per l'inserimento.  
@@ -47,7 +44,7 @@ ms.locfileid: "37262417"
  Il caricamento bulk XML gestisce annotazioni dello schema di mapping, inclusi i mapping di colonne e tabelle (specificati in modo esplicito utilizzando annotazioni o in modo implicito tramite il mapping predefinito), e relazioni di join comuni.  
   
 > [!NOTE]  
->  Si presuppone una certa familiarità con gli schemi di mapping XSD o XDR con annotazioni. Per altre informazioni sugli schemi, vedere [Introduzione agli schemi XSD con annotazioni &#40;SQLXML 4.0&#41; ](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md) oppure [schemi XDR con annotazioni &#40;deprecato in SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  Si presuppone una certa familiarità con gli schemi di mapping XSD o XDR con annotazioni. Per ulteriori informazioni sugli schemi, vedere [Introduzione agli schemi XSD di annotazione &#40;SQLXML 4.0&#41; ](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md) o [schemi XDR &#40;obsoleta in SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
  La comprensione della generazione di record richiede una certa familiarità con i concetti seguenti:  
   
@@ -60,7 +57,7 @@ ms.locfileid: "37262417"
 -   Eccezioni alla regola di generazione di record  
   
 ## <a name="scope-of-a-node"></a>Ambito di un nodo  
- Un nodo in un documento XML (un elemento o attributo) entra *nell'ambito* quando il caricamento Bulk XML lo rileva nel flusso di dati di input XML. Per un nodo elemento, il tag di inizio dell'elemento inserisce l'elemento nell'ambito. Per un nodo attributo, il nome di attributo inserisce l'attributo nell'ambito.  
+ Inserisce un nodo in un documento XML (un elemento o attributo) *in ambito* quando il caricamento di massa XML rileva nel flusso di input di dati XML. Per un nodo elemento, il tag di inizio dell'elemento inserisce l'elemento nell'ambito. Per un nodo attributo, il nome di attributo inserisce l'attributo nell'ambito.  
   
  Un nodo abbandona l'ambito quando non include più dati in corrispondenza del tag di fine (nel caso di un nodo elemento) o alla fine di un valore di attributo (nel caso di un nodo attributo).  
   
@@ -81,7 +78,7 @@ ms.locfileid: "37262417"
 </xsd:schema>  
 ```  
   
- Lo schema specifica un  **\<cliente >** elemento con **CustomerID** e **CompanyName** attributi. Il `sql:relation` annotazione esegue il mapping di  **\<cliente >** elemento alla tabella Customers.  
+ Specifica lo schema di un  **\<cliente >** elemento con **CustomerID** e **CompanyName** gli attributi. Il `sql:relation` annotazione esegue il mapping di  **\<cliente >** elemento alla tabella Customers.  
   
  Si consideri il frammento seguente di un documento XML:  
   
@@ -93,13 +90,13 @@ ms.locfileid: "37262417"
   
  Quando il caricamento bulk XML riceve lo schema descritto nei paragrafi precedenti e i dati XML come input, elabora i nodi (elementi e attributi) nei dati di origine nel modo seguente:  
   
--   Il tag di inizio del primo  **\<cliente >** elemento inserisce l'elemento nell'ambito. Questo nodo viene mappato alla tabella Customers. Il caricamento bulk XML genera pertanto un record per la tabella Customers.  
+-   Il tag di inizio del primo  **\<cliente >** elemento visualizza tale elemento nell'ambito. Questo nodo viene mappato alla tabella Customers. Il caricamento bulk XML genera pertanto un record per la tabella Customers.  
   
--   Nello schema, tutti gli attributi del  **\<cliente >** elemento mappati alle colonne della tabella Customers. Poiché questi attributi entrano nell'ambito, il caricamento bulk XML ne copia i valori nel record del cliente già generato dall'ambito padre.  
+-   Nello schema, tutti gli attributi di  **\<cliente >** elemento mapping alle colonne della tabella Customers. Poiché questi attributi entrano nell'ambito, il caricamento bulk XML ne copia i valori nel record del cliente già generato dall'ambito padre.  
   
--   Quando il caricamento Bulk XML raggiunge il tag di fine per il  **\<cliente >** elemento, l'elemento abbandona l'ambito. Di conseguenza, il caricamento bulk XML considera il record completo e lo invia a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Quando il caricamento di massa XML raggiunge il tag di fine per il  **\<cliente >** elemento, l'elemento esce dall'ambito. Di conseguenza, il caricamento bulk XML considera il record completo e lo invia a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Caricamento Bulk XML segue questo processo per ogni successiva  **\<cliente >** elemento.  
+ Caricamento di massa XML segue questo processo per ogni successiva  **\<cliente >** elemento.  
   
 > [!IMPORTANT]  
 >  In questo modello, poiché viene inserito un record quando viene raggiunto il tag di fine (o il nodo è esterno all'ambito), è necessario definire tutti i dati associati al record all'interno dell'ambito del nodo.  
@@ -151,9 +148,9 @@ ms.locfileid: "37262417"
   
  I dati XML di esempio e la procedura per creare un esempio reale vengono forniti di seguito.  
   
--   Quando un  **\<cliente >** nodo di elemento nel file di dati XML entra nell'ambito, il caricamento Bulk XML genera un record per la tabella Cust. Caricamento Bulk XML copia quindi i valori di colonna necessari (CustomerID, CompanyName e City) dal  **\<CustomerID >**,  **\<CompanyName >** e il  **\<City >** gli elementi figlio mentre gli elementi entrano nell'ambito.  
+-   Quando un  **\<cliente >** inserisce il nodo dell'elemento nel file di dati XML nell'ambito, il caricamento di massa XML genera un record della tabella Cust. Caricamento di massa XML quindi copia i valori della colonna necessari (CustomerID, CompanyName e City) dalla  **\<CustomerID >**,  **\<CompanyName >** e la  **\<Città >** immettere elementi figlio come questi elementi nell'ambito.  
   
--   Quando un  **\<ordine >** nodo elemento entra nell'ambito, il caricamento Bulk XML genera un record per la tabella CustOrder. Caricamento Bulk XML copia il valore della **OrderID** attributo per questo record. Il valore richiesto per la colonna CustomerID viene ottenuta dal  **\<CustomerID >** elemento figlio dell'elemento il  **\<cliente >** elemento. Caricamento Bulk XML utilizza le informazioni specificate in `<sql:relationship>` per ottenere il valore di chiave esterna CustomerID per il record, a meno che il **CustomerID** attributo è stato specificato nel  **\<ordine >** elemento. La regola generale prevede che se l'elemento specifica in modo esplicito un valore per l'attributo chiave esterna, il caricamento bulk XML utilizza tale valore e non ottiene il valore dall'elemento padre tramite l'annotazione `<sql:relationship>` specificata. Come si  **\<ordine >** nodo elemento abbandona l'ambito, il caricamento Bulk XML invia il record a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi elabora tutti i successivi  **\<ordine >** nodi elemento allo stesso modo.  
+-   Quando un  **\<ordine >** nodo elemento entra in ambito, il caricamento di massa XML genera un record per la tabella CustOrder. Caricamento di massa XML viene copiato il valore di **OrderID** attribuire a questo record. Il valore richiesto per la colonna CustomerID viene ottenuta dalla  **\<CustomerID >** elemento figlio dell'elemento di  **\<cliente >** elemento. Caricamento Bulk XML utilizza le informazioni specificate in `<sql:relationship>` per ottenere il valore di chiave esterna CustomerID per il record, a meno che il **CustomerID** attributo è stato specificato nel  **\<ordine >** elemento. La regola generale prevede che se l'elemento specifica in modo esplicito un valore per l'attributo chiave esterna, il caricamento bulk XML utilizza tale valore e non ottiene il valore dall'elemento padre tramite l'annotazione `<sql:relationship>` specificata. Come si  **\<ordine >** nodo elemento abbandona l'ambito, il caricamento Bulk XML invia il record a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi elabora tutti i successivi  **\<ordine >** nodi elemento allo stesso modo.  
   
 -   Infine, il  **\<cliente >** nodo elemento abbandona l'ambito. A questo punto, il caricamento bulk XML invia il record del cliente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il caricamento bulk XML segue questo processo per tutti i clienti successivi nel flusso di dati XML.  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element (Action)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99147acb4b2a1b467913087f4e4df14469de9a03
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af38eb6a60e8e54ecfc4ac5bb4fb05faeab69feb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249082"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168421"
 ---
 # <a name="type-element-action-assl"></a>Elemento Type (Action) (ASSL)
   Contiene il tipo dei [azione](../objects/action-element-assl.md) elemento.  
@@ -72,7 +69,7 @@ ms.locfileid: "37249082"
 |*Drill-through*|Recupera un set di righe per il drill-through.<br /><br /> Questo valore è identico a *set di righe* e identifica le azioni di drill-through. Può solo essere usata in azioni il cui [TargetType](targettype-element-assl.md) è impostato su *celle*.|  
 |*Set di dati*|Consente di recuperare un set di dati.|  
 |*Rowset*|Consente di recuperare un set di righe.|  
-|*Riga di comando*|Esegue un comando a un prompt dei comandi.|  
+|*riga di comando*|Esegue un comando a un prompt dei comandi.|  
 |*Proprietario*|Esegue un'operazione utilizzando un'interfaccia diversa da quelle elencate in precedenza in questa tabella.|  
 |*Report*|Visualizza una pagina variabile in un browser Internet.<br /><br /> Questo valore è identico a *Url* e identifica le azioni report.|  
   
