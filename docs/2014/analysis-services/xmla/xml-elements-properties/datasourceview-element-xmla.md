@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSourceView Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataSourceView element
 ms.assetid: c4a4360f-7342-484b-bac1-0a247e8f279d
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7f230cf653a6435c7f9bb541c6e3cb39615efe42
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 299c6cd4c9eab4b982c294cffc8e728d14e4b2cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211811"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150331"
 ---
 # <a name="datasourceview-element-xmla"></a>Elemento DataSourceView (XMLA)
   Contiene una vista origine dati out-of-line di associazione per l'elemento padre [Batch](../xml-elements-commands/batch-element-xmla.md) oppure [processo](../xml-elements-commands/process-element-xmla.md) elemento.  

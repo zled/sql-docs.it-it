@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationFunction Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AggregationFunction element
 ms.assetid: 40cfc7f9-1089-45f9-be90-a29770ed9682
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90908001138f59d4270811376ac44025148889cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 453d51d678a8e721eaa7fa280e23248c66019b5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308441"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153211"
 ---
 # <a name="aggregationfunction-element-assl"></a>Elemento AggregationFunction (ASSL)
   Contiene la funzione di aggregazione da usare per il tipo di account.  
@@ -58,7 +55,7 @@ ms.locfileid: "37308441"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[Account](../objects/account-element-assl.md)|  
+|Elementi padre|[account](../objects/account-element-assl.md)|  
 |Elementi figlio|None|  
   
 ## <a name="remarks"></a>Note  
@@ -67,7 +64,7 @@ ms.locfileid: "37308441"
 |valore|Description|  
 |-----------|-----------------|  
 |*Sum*|Per l'aggregazione della misura viene utilizzata la funzione `Sum`.|  
-|*Conteggio*|Per l'aggregazione della misura viene utilizzata la funzione `Count`.|  
+|*conteggio*|Per l'aggregazione della misura viene utilizzata la funzione `Count`.|  
 |*Min*|Per l'aggregazione della misura viene utilizzata la funzione `Min`.|  
 |*Max*|Per l'aggregazione della misura viene utilizzata la funzione `Max`.|  
 |*DistinctCount*|Per l'aggregazione della misura viene utilizzata la funzione `DistinctCount`.|  

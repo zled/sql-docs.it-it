@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cea8b8e9d6f883d6933ed72591da20de73d55326
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc2118315b40ab89d19d562b364a0a0250f7f3c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210221"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165751"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Autenticazione e autorizzazione di PowerPivot
   Una distribuzione PowerPivot per SharePoint eseguita in una farm di SharePoint 2010 utilizza il sottosistema di autenticazione e il modello di autorizzazione forniti dai server SharePoint. L'infrastruttura di sicurezza di SharePoint si estende al contenuto e alle operazioni di PowerPivot poiché tutto il contenuto correlato a PowerPivot viene archiviato nei database del contenuto di SharePoint e tutte le operazioni correlate a PowerPivot vengono effettuate dai servizi condivisi PowerPivot nella farm. L'autenticazione degli utenti che richiedono una cartella di lavoro contenente dati PowerPivot avviene tramite un'identità utente di SharePoint basata sull'identità utente di Windows. Le autorizzazioni di visualizzazione nella cartella di lavoro consentono di determinare se la richiesta viene concessa o negata.  
@@ -102,7 +99,7 @@ ms.locfileid: "37210221"
  In Excel Services le impostazioni di configurazione correlate alla sicurezza vengono specificate in percorsi attendibili, provider di dati attendibili e raccolte connessioni dati attendibili. Nella tabella seguente vengono descritte le impostazioni che abilitano o migliorano l'accesso ai dati PowerPivot. Se un'impostazione non rientra tra quelle elencate, non avrà alcun effetto sulle connessioni del server PowerPivot. Per istruzioni su come specificare queste impostazioni passo a passo, vedere la sezione "Abilitare Excel Services" nella [la configurazione iniziale &#40;PowerPivot per SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
   
 > [!NOTE]  
->  La maggior parte delle impostazioni correlate alla sicurezza si applicano ai percorsi attendibili. Se si desidera mantenere valori predefiniti o utilizzare valori diversi per siti differenti, è possibile creare un percorso attendibile aggiuntivo per siti che contengono dati PowerPivot, quindi configurare le impostazioni seguenti solo per quel sito. Per altre informazioni, vedere [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+>  La maggior parte delle impostazioni correlate alla sicurezza si applicano ai percorsi attendibili. Se si desidera mantenere valori predefiniti o utilizzare valori diversi per siti differenti, è possibile creare un percorso attendibile aggiuntivo per siti che contengono dati PowerPivot, quindi configurare le impostazioni seguenti solo per quel sito. Per altre informazioni, vedere [Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 |Area|Impostazione|Description|  
 |----------|-------------|-----------------|  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.INSERTFUNCTIONDB.F1
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77045c8ec5b542f8a01829adaa8074724a693092
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f35be763558ecfab37b799b776eb5661ea32ca8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159672"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125943"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Finestra di dialogo Inserisci funzione (SSAS)
   La finestra di dialogo **Inserisci funzione** consente di scegliere da un elenco di funzioni utilizzabili quando si compilano formule. Per accedere a questa finestra di dialogo da Progettazione modelli, nella barra della formula sopra ogni tabella fare clic sul pulsante della funzione (**fx**). Per ulteriori informazioni sulla scelta di funzioni da utilizzare nelle formule, vedere le sezioni relative all'introduzione a DAX e alla compilazione di una formula.  
@@ -48,7 +45,7 @@ ms.locfileid: "37159672"
   
  Statistiche  
   
- Text  
+ Testo  
   
 ## <a name="measures-and-formulas"></a>Misure e formule  
  La finestra di dialogo **Inserisci funzione** è disponibile solo quando si compila una formula. È possibile creare i calcoli in una colonna calcolata o in una tabella o grafico pivot. Le formule compilate espressamente per essere usate in una tabella pivot vengono chiamate anche *misure*. Per altre informazioni, vedere [Creare una colonna calcolata &#40;SSAS tabulare&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md), [Creare e gestire misure &#40;SSAS tabulare&#41;](tabular-models/measures-ssas-tabular.md).  

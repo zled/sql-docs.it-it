@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - database-engine
@@ -12,7 +11,6 @@ ms.technology:
 - master-data-services
 - replication
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - new features [SQL Server]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - sql server 2014 sp1
 - sql server 2014 sp2
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 70
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5845455529c1b7d2cec25e7407ac8425a0a0e4a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4323b2099836d1c381babbf60c376adb178ef7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150152"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117959"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>Cosa&#39;s New in SQL Server 2014
   In questo argomento riepiloga i collegamenti dettagliati alle nuove funzionalità di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e riepiloga i pacchetti di servizi per [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
@@ -88,7 +85,7 @@ ms.locfileid: "37150152"
 -   **Nuova DMF per il recupero dei buffer di input in SQL Server:** una nuova DMF per il recupero del buffer di input per una sessione o una richiesta (DM exec_input_buffer) è ora disponibile. Dal punto di vista funzionale equivale a DBCC INPUTBUFFER. [Vedere il blog per informazioni dettagliate](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/).
 -   **Mitigazione dei rischi per la concessione di memoria sottostimati e sopravvalutati:** aggiunto nuovo hint per la query per Resource Governor tramite MIN_GRANT_PERCENT e MAX_GRANT_PERCENT. Ciò consente di sfruttare questi hint durante l'esecuzione di query limitando le concessioni di memoria per evitare una contesa di memoria. Per altre informazioni, vedere [KB310740 articolo della knowledge base](https://support.microsoft.com/en-us/kb/3107401)
 -   **Migliore diagnostica di concessione/utilizzo memoria:** un nuovo evento esteso è stato aggiunto all'elenco delle funzionalità di traccia in SQL Server (query_memory_grant_usage) per tenere traccia delle richieste e concesse delle concessioni di memoria. Fornisce funzionalità di traccia e analisi migliorate per la risoluzione dei problemi di esecuzione query con concessioni di memoria. Per altre informazioni, vedere [articolo della knowledge base KB3107173](https://support.microsoft.com/en-us/kb/3107173).
--   **Eseguire query di diagnostica di esecuzione per spill tempdb:**-avviso di Hash e Sort Warnings ora hanno colonne aggiuntive per tenere traccia delle statistiche i/o fisico, memoria utilizzata e righe interessate. È stato anche introdotto un nuovo evento esteso hash_spill_details. A questo punto è possibile tenere traccia delle informazioni più granulari per gli avvisi di hash e ordinamento ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). Questo miglioramento è ora anche esposto attraverso i piani di Query XML sotto forma di un nuovo attributo al tipo complesso SpillToTempDbType ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). Impostare le statistiche su ora Mostra Ordina le statistiche della tabella di lavoro. ,
+-   **Eseguire query di diagnostica di esecuzione per spill tempdb:**-avviso di Hash e Sort Warnings ora hanno colonne aggiuntive per tenere traccia delle statistiche i/o fisico, memoria utilizzata e righe interessate. È stato anche introdotto un nuovo evento esteso hash_spill_details. A questo punto è possibile tenere traccia delle informazioni più granulari per gli avvisi di hash e ordinamento ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). Questo miglioramento è ora anche esposto attraverso i piani di Query XML sotto forma di un nuovo attributo al tipo complesso SpillToTempDbType ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). Impostare le statistiche su ora Mostra Ordina le statistiche della tabella di lavoro. .
 -   **Miglioramento della diagnostica per i piani di esecuzione di query che implicano la distribuzione del predicato residua:** ora le righe effettive lette verranno segnalate nei piani di esecuzione query per migliorare la risoluzione dei problemi delle prestazioni di query. Questa deve annullare la necessità per acquisire SET STATISTICS IO separatamente. Questa ora consente di visualizzare le informazioni relative a una distribuzione del predicato residua in un piano di query. Per altre informazioni, vedere [articolo della knowledge base KB3107397](https://support.microsoft.com/en-us/kb/3107397).
 
 

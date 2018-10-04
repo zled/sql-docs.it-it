@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d0735af06261d606888fe04d45e968b63f5d6403
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 050be457b1b7915e4354e8a0edf2fe79fabf8d67
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300921"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126471"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Esplorazione, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare le funzionalità in **Barra degli strumenti** in Progettazione cubi per eseguire operazioni comuni durante la progettazione o l'esplorazione di un cubo o del relativo oggetto oppure durante la creazione di una query MDX. Le operazioni comuni sia in fase di progettazione che in visualizzazione query includono l'impostazione del contesto utente, l'elaborazione di oggetti e l'impostazione della lingua predefinita.  
   
  La tabella seguente elenca i pulsanti della **Barra degli strumenti** con le relative funzioni.  
   
-|Pulsante|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**Modifica come testo**|Non abilitato per questo tipo di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file di definizione di report (con estensione rdl) nel file system.|  

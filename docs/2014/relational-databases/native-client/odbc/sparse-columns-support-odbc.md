@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d50666d333a77f4a1e2188ac911d0866395b4cc9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a6e1583dad869860bdd2f555a354850c7f7a1198
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396567"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124331"
 ---
 # <a name="sparse-columns-support-odbc"></a>Supporto per colonne di tipo sparse (ODBC)
   In questo argomento viene descritto il supporto ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client per le colonne di tipo sparse. Per un esempio che illustra il supporto ODBC per colonne di tipo sparse, vedere [chiamare SQLColumns in una tabella con colonne di tipo Sparse](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md). Per altre informazioni sulle colonne di tipo sparse, vedere [supporto per colonne di tipo Sparse in SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md).  

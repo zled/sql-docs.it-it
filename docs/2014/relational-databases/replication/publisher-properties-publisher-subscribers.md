@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.pubproperties.subscribers.f1
 helpviewer_keywords:
 - Publisher Properties dialog box
 ms.assetid: 552d2bd6-13f9-4876-b8f1-89adb242ef70
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d117a82a04fd7a8301b74a821a09aa2b196d8a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f217aee1d3453a1672114c4899d07202ca16db1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319841"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130221"
 ---
 # <a name="publisher-properties---publisher-subscribers"></a>Proprietà server di pubblicazione - Server di pubblicazione, Sottoscrittori
   La pagina **Sottoscrittori** della finestra di dialogo **Proprietà server di pubblicazione** viene utilizzata per i server di pubblicazione che eseguono versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Questa pagina consente di abilitare i Sottoscrittori al ricevimento di dati dalle pubblicazioni incluse nel server di pubblicazione corrente. L'abilitazione di un Sottoscrittore al ricevimento di dati dal server di pubblicazione corrente non crea sottoscrizioni delle pubblicazioni incluse nel server di pubblicazione. Per creare una sottoscrizione è necessario utilizzare la Creazione guidata nuova sottoscrizione.  

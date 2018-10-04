@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ce62236dc084f495dff2530141553ca77ee9697
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: d6eec2455269026151d285f781ee475934825082
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809597"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160011"
 ---
 # <a name="create-queries-visual-database-tools"></a>Creazione di query (Visual Database Tools)
   Le query consentono di recuperare dati dalle tabelle e dalle viste del database. Le query vengono create e usate in **Progettazione query e Progettazione viste**, uno strumento che comprende quattro riquadri: il [riquadro Diagramma](visual-database-tools.md), il [riquadro SQL](sql-pane-visual-database-tools.md), il [riquadro Criteri Pane](criteria-pane-visual-database-tools.md)e il [riquadro Risultati](results-pane-visual-database-tools.md).  
