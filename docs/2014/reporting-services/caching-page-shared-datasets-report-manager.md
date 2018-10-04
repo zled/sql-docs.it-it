@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5fdd495e3110deb2cc8c9fc7b8a4848f0252f206
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d19f339b8cb8955ab33f73ea164f8bbfb2e7fce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247991"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205174"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>Pagina Memorizzazione nella cache, set di dati condivisi (Gestione report)
   La pagina delle proprietà di memorizzazione nella cache consente di impostare le opzioni di cache per un set di dati condiviso.  
@@ -53,7 +50,7 @@ ms.locfileid: "37247991"
  **Pianificazione in base al set di dati**  
  Consente di specificare una pianificazione utilizzata solo per questo set di dati.  
   
- **Pianificazione condivisa**  
+ **pianificazione condivisa**  
  Consente di specificare una pianificazione condivisa fra report, sottoscrizioni e altri set di dati condivisi.  
   
  **Applica**  

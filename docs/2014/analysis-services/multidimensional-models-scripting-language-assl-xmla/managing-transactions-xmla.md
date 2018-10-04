@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML for Analysis, transactions
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - committing transactions
 - starting transactions
 ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fefda354d9f596c92a06673e7692bb840f582071
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 846c6adfc9af94e79d8605c8d051e6e18d597e0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167612"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223081"
 ---
 # <a name="managing-transactions-xmla"></a>Gestione di transazioni (XMLA)
   Ogni comando XML for Analysis (XMLA) inviato a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito all'interno del contesto di una transazione nella sessione implicita o esplicita corrente. Per gestire ognuna di queste transazioni, si utilizza il [BeginTransaction](../xmla/xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../xmla/xml-elements-commands/committransaction-element-xmla.md), e [RollbackTransaction](../xmla/xml-elements-commands/rollbacktransaction-element-xmla.md) comandi. che consentono di creare transazioni implicite o esplicite, modificare il conteggio dei riferimenti alla transazione nonché di avviare le transazioni ed eseguirne il commit e il rollback.  
@@ -38,10 +35,10 @@ ms.locfileid: "37167612"
 ## <a name="implicit-and-explicit-transactions"></a>Transazioni implicite ed esplicite  
  Una transazione può essere implicita o esplicita, come descritto di seguito.  
   
- **Transazione implicita**  
+ **transazione implicita**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Crea un' *implicita* transazione per un XMLA comando se il `BeginTransaction` comando non specifica l'inizio di una transazione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue sempre il commit di una transazione implicita se il comando riesce e ne esegue il rollback se il comando non riesce.  
   
- **Transazione esplicita**  
+ **transazione esplicita**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Crea un' *esplicite* transazione se il `BeginTransaction` comando avvia una transazione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tuttavia esegue il commit di una transazione esplicita solo se viene inviato un comando `CommitTransaction` e ne esegue il rollback se viene inviato un comando `RollbackTransaction`.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inoltre esegue il rollback sia di transazioni implicite che di transazioni esplicite se la sessione corrente termina prima del completamento della transazione attiva.  

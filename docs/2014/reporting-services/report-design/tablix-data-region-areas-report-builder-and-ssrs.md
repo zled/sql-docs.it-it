@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: df869e1dc331a16d500e95bbc711584ab7482d3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a640d8a5950f8a1f37b34becf470daf423ee49e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244281"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210941"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Aree dell'area dati Tablix (Generatore report e SSRS)
   Un'area dati Tablix può includere quattro aree contenenti le celle della Tablix, ovvero l'angolo, l'area dei gruppi di righe, l'area dei gruppi di colonne e il corpo. Le celle di ogni area presentano una funzione distinta. L'aggiunta di celle all'area del corpo della Tablix consente la visualizzazione di dati dettaglio e dati raggruppati. Quando si crea un gruppo, Progettazione report e Generatore report consentono di aggiungere celle all'area del gruppo di righe o del gruppo di colonne per visualizzare i valori delle istanze del gruppo. Consentono inoltre di creare celle d'angolo della Tablix quando sono presenti gruppi di righe e gruppi di colonne.  

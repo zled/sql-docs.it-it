@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Schema Object Take Ownership event class
 ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d5a6dc1785cf3eaf06af20d9fc4a4f1407d5c9c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0106c8c08361b3017aceef03ed8f5f6bcd0e70d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279617"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210051"
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Audit Schema Object Take Ownership - classe di evento
   La classe di evento **Audit Schema Object Take Ownership** viene generata quando vengono controllate le autorizzazioni per la modifica del proprietario dell'oggetto dello schema, ad esempio una tabella, una procedura o una funzione. Questa situazione si verifica quando si assegna un proprietario a un oggetto tramite l'istruzione ALTER AUTHORIZATION.  

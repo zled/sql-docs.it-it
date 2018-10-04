@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10033"
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
-caps.latest.revision: 21
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 9a6895b0b0654f5309aaec9debb88b26c7a9a15a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70301dae9505cce59e924cd37149e32314f6868d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189818"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204668"
 ---
 # <a name="grouping-pane"></a>Riquadro di raggruppamento
   Nel riquadro di raggruppamento vengono visualizzati i gruppi di righe e di colonne dell'area dati Tablix selezionata. Il riquadro Raggruppamento non è disponibile per le aree dati Grafico e Misuratore. Il riquadro di raggruppamento è costituito da un riquadro Gruppi di righe e da un riquadro Gruppi di colonne e include due modalità: predefinita e avanzata. Nella modalità predefinita è riportata una visualizzazione gerarchica dei membri dinamici dei gruppi di righe e di colonne. Nella modalità avanzata vengono visualizzati sia i membri dinamici che quelli statici dei gruppi di righe e di colonne. Un gruppo è un set di dati denominato che deriva da un set di dati del report visualizzato in un'area dati. I gruppi sono organizzati in gerarchie che includono membri statici e dinamici. Per altre informazioni, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
@@ -67,11 +64,11 @@ ms.locfileid: "37189818"
   
 -   **KeepTogether**.  
   
--   `KeepWithGroup`(Indici per tabelle con ottimizzazione per la memoria). Proprietà di tipo Boolean. Valida solo per i membri di riga statici. Se possibile, consente di mantenere la riga con il membro dinamico di pari livello precedente o successivo, se non è nascosto.  
+-   `KeepWithGroup` (Indici per tabelle con ottimizzazione per la memoria). Proprietà di tipo Boolean. Valida solo per i membri di riga statici. Se possibile, consente di mantenere la riga con il membro dinamico di pari livello precedente o successivo, se non è nascosto.  
   
 -   **RepeatOnNewPage**. Proprietà di tipo Boolean. Valida solo per i membri di riga statici e quando la proprietà KeepWithGroup non è impostata su None. Se possibile, ripetere questa riga statica in ogni pagina contenente almeno un'istanza del membro dinamico specificato da KeepWithGroup.  
   
--   `Hidden`(Indici per tabelle con ottimizzazione per la memoria). Proprietà di tipo Boolean. Indica se è necessario nascondere inizialmente la riga o la colonna.  
+-   `Hidden` (Indici per tabelle con ottimizzazione per la memoria). Proprietà di tipo Boolean. Indica se è necessario nascondere inizialmente la riga o la colonna.  
   
 -   **ToggleItem.** Proprietà di tipo String. Il nome della casella di testo alla quale aggiungere l'immagine dell'elemento Toggle. La casella di testo deve trovarsi nello stesso ambito del gruppo o in un ambito contenitore.  
   

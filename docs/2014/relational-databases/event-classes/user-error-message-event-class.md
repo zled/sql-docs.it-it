@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - User Error Message event class
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ddc5834ba3db783740b2325816d392dfd2a949a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 387a961edba89d3b46236fe30cdd2d4851a68d6c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170882"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176981"
 ---
 # <a name="user-error-message-event-class"></a>User Error Message - classe di evento
   La classe di evento User Error Message visualizza il messaggio di errore nella stessa forma visualizzata all'utente in caso di errore o eccezione. Il testo del messaggio di errore viene visualizzato nel campo TextData.  

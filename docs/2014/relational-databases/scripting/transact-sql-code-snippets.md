@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1d2a85cc2409820165b151542dc1152eda83e44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5dfafdfee1947bdc02301b505a54cac8776a9dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166802"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229700"
 ---
 # <a name="transact-sql-code-snippets"></a>Frammenti di codice Transact-SQL
   Un frammento di codice di [!INCLUDE[tsql](../../includes/tsql-md.md)]è un modello che contiene la struttura di base dell'istruzione o del blocco di [!INCLUDE[tsql](../../includes/tsql-md.md)] . È possibile utilizzare frammenti di codice come punto di partenza per l'aggiunta di istruzioni nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . È possibile inserire i frammenti predefiniti forniti con SQL Server oppure creare frammenti personalizzati.  

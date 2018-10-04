@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], assemblies
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - assemblies [Analysis Services]
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa24fc7d6b9bc2d22ef852d039637cf5c0f35b71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f5109e604c65d8a525e5c65127ca287c8e3b049
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243491"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172111"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gestione di assembly di modelli multidimensionali
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre una vasta gamma di funzioni intrinseche da usare con i linguaggi MDX (Multidimensional Expressions) e DMX (Data Mining Extensions), progettate per eseguire qualsiasi tipo di operazione, dai calcoli statistici standard all'attraversamento dei membri di una gerarchia. Come avviene per qualsiasi altro prodotto complesso e affidabile, tuttavia, si avverte sempre l'esigenza di estendere ulteriormente la funzionalità di questo servizio.  
@@ -83,7 +80,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  *NomeAssembly*!*IDInterfaccia*!*NomeProcedura*(*Argomento1*, *Argomento2*, ...)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  La sicurezza degli assembly è basata sul modello di sicurezza dall'accesso di codice di .NET Framework. .NET Framework supporta un meccanismo di sicurezza dall'accesso di codice che presume che il run-time possa ospitare codice completamente o parzialmente attendibile. In genere, la sicurezza delle risorse mediante sicurezza dall'accesso di codice di .NET Framework viene eseguita tramite wrapping delle risorse con codice gestito, che richiede l'autorizzazione corrispondente prima di consentire l'accesso alla risorsa. La richiesta di autorizzazione viene soddisfatta solo se tutti i chiamanti a livello di assembly nello stack di chiamate dispongono dell'autorizzazione corrispondente per la risorsa.  
   
  Per gli assembly, l'autorizzazione relativa all'esecuzione viene passata con la proprietà `PermissionSet` sull'oggetto `Assembly`. Le autorizzazioni ricevute dal codice gestito sono determinate dai criteri di sicurezza attivi. In un ambiente diverso da[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistono già tre livelli di criteri attivi: organizzazione, computer e utente. L'elenco effettivo delle autorizzazioni ricevute dal codice è determinato dall'intersezione delle autorizzazioni ottenute da questi tre livelli.  

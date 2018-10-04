@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureGroupBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MeasureGroupBinding data type
 ms.assetid: 47e83eec-e0bc-4118-9a0f-5bfdd6218297
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 530ed80199c0bc607016a1b34a1a830dfaabee5a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3551685e96e248b7cd3e3a5e79eae67bf06efe3d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324911"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201551"
 ---
 # <a name="measuregroupbinding-data-type-assl"></a>Tipo di dati MeasureGroupBinding (ASSL)
   Definisce un tipo di dati derivato che rappresenta un'associazione a un [MeasureGroup](../objects/group-element-assl.md) elemento.  
@@ -55,7 +52,7 @@ ms.locfileid: "37324911"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipi di dati di base|[Associazione](binding-data-type-assl.md)|  
+|Tipi di dati di base|[associazione](binding-data-type-assl.md)|  
 |Tipi di dati derivati|None|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  

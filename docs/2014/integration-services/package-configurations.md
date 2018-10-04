@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - package configuration syntax [Integration Services]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - direct configurations [Integration Services]
 - packages [Integration Services], configurations
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
-caps.latest.revision: 47
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4b8341d97c711501b4a9ade2f15d73443312e83a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 832cd038151c3816decbc17542c805ed7e161465
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314151"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200921"
 ---
 # <a name="package-configurations"></a>SSIS
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornisce configurazioni di pacchetto che è possibile usare per aggiornare i valori delle proprietà in fase di esecuzione.  
@@ -152,7 +149,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Nelle configurazioni indirette vengono utilizzate variabili di ambiente. Anziché specificare l'impostazione di configurazione in modo diretto, la configurazione punta a una variabile di ambiente, la quale contiene il valore di configurazione. È consigliabile utilizzare le configurazioni indirette quando la posizione della configurazione può essere diversa nelle varie distribuzioni di un pacchetto.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  

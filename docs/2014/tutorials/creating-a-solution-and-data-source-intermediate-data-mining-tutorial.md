@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0488b231-1045-4169-aabb-c1005d86ca30
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22bfe87f9d0cd09d2d7c7f650d500398b936cde0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ad99c202d858bbdf5de47a21fe26070328e2de2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216241"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119631"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Creazione di una soluzione e di un'origine dati (Esercitazione intermedia sul data mining)
   Per lavorare con il data mining, è innanzitutto necessario creare un progetto in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] usando il modello **multidimensionale di Analysis Services e progetto di Data Mining**. Quando si apre il modello, nella finestra di progettazione vengono caricati tutti gli schemi che potrebbero essere necessari per il data mining: origini dati, strutture di data mining, modelli di data mining e persino cubi nel caso in cui nella struttura di data mining vengano usati dati multidimensionali.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - mining models, viewing
 - association [data mining]
 ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a108693491fba5c706f48a2eaf12b57ee0f3f69
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5c441081c5e185494c693c44b5f7665529c9b90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246151"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210441"
 ---
 # <a name="browsing-an-association-rules-model"></a>Esplorazione di un modello Association Rules
   Quando si apre un modello di associazione utilizzando **esplorare**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore Microsoft Association Rules in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  Il visualizzatore consente di visualizzare immediatamente gli elementi correlati l'uno con l'altro e le regole che è possibile utilizzare per la stima o creare indicazioni.  
@@ -90,9 +87,9 @@ ms.locfileid: "37246151"
 ###  <a name="BKMK_Rules"></a> Regole  
  Il **regole** scheda combina informazioni sui set di elementi e il relativo valore.  
   
- ![Le regole:] il (media/dm13-association-rules.gif " algoritmo Microsoft Association Rules utilizza i valori di probabilità per limitare il numero di regole generate.")  
+ ![Elenco di regole create da un modello di associazione](media/dm13-association-rules.gif "elenco di regole create da un modello di associazione")  
   
- *Per altre informazioni sulla configurazione dei parametri avanzati, vedere *algoritmi di Data Mining &#40;componenti aggiuntivi Data Mining di SQL Server&#41;*. È simile al concetto statistico di probabilità *confidenza*e offre un'indicazione del modo in cui probabilmente il risultato di una regola deve verificarsi. È possibile modificare il valore di **probabilità minima** in questo riquadro per filtrare le regole visualizzate.  
+ *Probabilità* rappresenta la frazione di case nel set di dati che contengono la combinazione di elementi prevista. È simile al concetto statistico di probabilità *confidenza*e offre un'indicazione del modo in cui probabilmente il risultato di una regola deve verificarsi. È possibile modificare il valore di **probabilità minima** in questo riquadro per filtrare le regole visualizzate.  
   
  Il valore per **probabilità minima** inizialmente visualizzato è il valore di soglia che è stato usato dall'algoritmo quando si compila il modello. Una volta completato il modello, non è possibile ridurre questo valore, ma è possibile aumentarlo per mostrare solo gli elementi con maggiore probabilità.  
   

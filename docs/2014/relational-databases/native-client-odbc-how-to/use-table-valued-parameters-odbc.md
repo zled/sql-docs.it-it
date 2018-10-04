@@ -1,24 +1,21 @@
 ---
-title: Usare parametri con valori di tabella (ODBC) | Microsoft Docs
+title: Usare parametri con valori di tabella (ODBC) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13cf47c37cf2b7936ed2e6be5d3aaa27eb74fdb0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ec4d66af36ff74b5b0a9160529990c9fc52fc961
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417120"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138463"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Utilizzare parametri con valori di tabella (ODBC)
   In questo esempio viene illustrata la modalità di utilizzo di parametri con valori di tabella per inserire più righe con più colonne e una chiamata al server.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managedbackup.configure.f1
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
-caps.latest.revision: 9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d09c001bc7c267b2235377a1312609ee8b7b3fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0403d34b48b74d0517aaf3cb31ea520dbc436f89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209831"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165601"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configurare il backup gestito (SQL Server Management Studio)
   Il **Backup gestito** finestra di dialogo consente di configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] valori predefiniti per l'istanza. In questo argomento viene descritto come utilizzare questa finestra di dialogo per configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] impostazioni per l'istanza e in tal caso, è necessario considerare le opzioni predefinite. Quando si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è configurato per l'istanza, le impostazioni vengono applicate a qualsiasi nuovo database creato successivamente.  
@@ -35,7 +32,7 @@ ms.locfileid: "37209831"
 ## <a name="includesssmartbackupincludesss-smartbackup-mdmd-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Le funzioni usando Managed interfaccia Backup in SQL Server Management Studio  
  In questa versione, è possibile configurare solo le impostazioni predefinite a livello di istanza utilizzando il **Gestione Backup** interfaccia. Non è possibile configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per un database, sospendere o riprendere [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] operazioni o le notifiche di posta elettronica il programma di installazione. Per informazioni su come eseguire operazioni non è attualmente supportate tramite il **Backup gestito** l'interfaccia, vedere [SQL Server Managed Backup to Windows Azure - impostazioni di archiviazione e memorizzazione](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  **Visualizza il nodo Backup gestito è SQL Server Management Studio:** per visualizzare **Backup gestito** nodo **Esplora oggetti**, è necessario essere un amministratore di sistema o disporre delle seguenti autorizzazioni concesse in modo specifico al proprio account utente:  
   
 -   `db_backupoperator`  

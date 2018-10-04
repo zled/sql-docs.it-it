@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
-caps.latest.revision: 5
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 765dbc5fc274146cfc6cd660acb2278c8e46b4ca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5ba084d6912d7f60b124b28ea8635aa37d8259f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309231"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222291"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Salvare i report nel computer in uso (Generatore report)
   In Generatore report è possibile salvare le definizioni di un report nel computer. Tuttavia, quando vengono salvati nel computer in uso, gli altri utenti non possono visualizzare i report; inoltre i report che fanno riferimento alle origini dati condivise o che consentono di archiviare esternamente gli elementi del report, ad esempio immagini e sottoreport, potrebbero non essere eseguiti esternamente. È consigliabile salvare i report in un server di report o in un sito di SharePoint.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Integration Services projects, creating
 - SSIS projects, creating
 ms.assetid: 6e90b016-36a5-415e-9440-a20199fffff0
-caps.latest.revision: 13
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0cb43470f1f426e52c9258cd7759b291e85546d1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8c58ba2eef86ec9c827ea1722abea441ac8ae48
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263287"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192071"
 ---
 # <a name="development-of-an-integration-services-project"></a>Sviluppo di un progetto di Integration Services
   Si aggiungono pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ai progetti. Per creare e usare progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , è necessario installare l'ambiente [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Per altre informazioni, vedere [Installazione di Integration Services](install-windows/install-integration-services.md).  
@@ -37,7 +34,7 @@ ms.locfileid: "37263287"
 > [!NOTE]  
 >  Per impostazione predefinita, quando si crea un nuovo progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], la soluzione non viene visualizzata nel riquadro **Esplora soluzioni** . Per modificare questo comportamento predefinito, scegliere **Opzioni** dal menu **Strumenti**. Nella finestra di dialogo **Opzioni** espandere **Progetti e soluzioni**e quindi fare clic su **Generale**. Nella pagina **Generale** selezionare **Mostra sempre soluzione**.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 -   [Creazione di un nuovo progetto di Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
   

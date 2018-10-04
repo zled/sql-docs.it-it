@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d46187b7f92fb9bb02bb693b51bd13bcd12da1f6
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 76fbfdf3ae8752d4187c43c35d12278b0dbcb792
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394474"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216672"
 ---
 # <a name="supported-sql-server-features"></a>Funzionalità di SQL Server supportate
   In questo argomento vengono illustrate le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportate o non supportate per l'utilizzo con oggetti ottimizzati per la memoria.  
@@ -42,7 +39,7 @@ ms.locfileid: "40394474"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects. Per altre informazioni, vedere [Supporto di SQL Server Management Objects per OLTP in memoria](sql-server-management-objects-support-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)](Indici per tabelle con ottimizzazione per la memoria). Per altre informazioni, vedere [Supporto di SQL Server Management Studio per OLTP in memoria](sql-server-management-studio-support-for-in-memory-oltp.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (Indici per tabelle con ottimizzazione per la memoria). Per altre informazioni, vedere [Supporto di SQL Server Management Studio per OLTP in memoria](sql-server-management-studio-support-for-in-memory-oltp.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Per ulteriori informazioni, vedere [Panoramica di SQL Server PowerShell](http://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
   

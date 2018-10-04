@@ -1,24 +1,21 @@
 ---
-title: Leggere una colonna FILESTREAM in un File utilizzando IBCPSession (OLE DB) | Microsoft Docs
+title: Leggere una colonna FILESTREAM in un file utilizzando IBCPSession (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2298503d85090cebc234fcaedc39bb9fee61cf4b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: db51298ccadb2dc3ef6b9060bc3d83987bb3c9ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412870"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203691"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Leggere una colonna FILESTREAM in un file utilizzando IBCPSession (OLE DB)
   In questo esempio viene letta una colonna FILESTREAM in un file utilizzando l'interfaccia IBCPSession e viene scritto un file di formato.  
@@ -30,9 +27,9 @@ ms.locfileid: "37412870"
   
  Per creare la tabella letta in questo esempio, utilizzare uno degli esempi seguenti:  
   
--   [Inviare dati a una colonna FILESTREAM utilizzando ISequentialStream in associazione al parametro ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Inviare dati a una colonna FILESTREAM usando ISequentialStream associato al parametro ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Inviare dati a una colonna FILESTREAM usando IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Copiare il primo listato di codice e incollarlo in un file denominato ISSHelper.h.  
   

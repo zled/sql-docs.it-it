@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data changes [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 - data [SQL Server], changing
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
-caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8953f24d60b3007ab2fee218507cdd77c69561ed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23abfb7b5de5f319a15d8d255705929cc4d7293d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276147"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220291"
 ---
 # <a name="about-change-tracking-sql-server"></a>Informazioni sul rilevamento delle modifiche (SQL Server)
   Il rilevamento delle modifiche è una soluzione semplice che consente di rilevare in modo efficiente le modifiche per le applicazioni. Per consentire alle applicazioni di eseguire una query per le modifiche apportate ai dati in un database e di accedere alle informazioni correlate, gli sviluppatori di applicazioni dovevano in genere implementare meccanismi di rilevamento delle modifiche personalizzati. La creazione di tali meccanismi era di solito molte operazioni e comportava frequentemente usando una combinazione di trigger, `timestamp` colonne, nuove tabelle per archiviare le informazioni di rilevamento e processi di pulizia personalizzati.  

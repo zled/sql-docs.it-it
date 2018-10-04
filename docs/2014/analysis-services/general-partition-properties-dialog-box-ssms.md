@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.general.f1
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 54ef8ce15795f8744b8ab7d368c05892a2dc850a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 612a997e51e23c6b8d3b1860fbc74df79de6c73c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170152"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211101"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>Generale (finestra di dialogo Proprietà partizione) (SSMS)
   La pagina **Generale** della finestra di dialogo **Proprietà partizione** di SQL Server Management Studio consente di impostare le proprietà generali di una partizione in un gruppo di misure di un cubo contenuto in un database di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -43,7 +40,7 @@ ms.locfileid: "37170152"
 |**Nome**|Consente di visualizzare il nome della partizione.|  
 |**Modalità di elaborazione**|Consente di selezionare la modalità di elaborazione della partizione. Per altre informazioni sulle modalità di elaborazione per [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oggetti, vedere [l'elaborazione di oggetti modello multidimensionale](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
 |**ID origine dati remota**|Consente di visualizzare l'identificatore dell'origine dei dati remota da cui viene recuperata l'origine dei dati della partizione.<br /><br /> Nota: questa proprietà contiene un valore solo per le partizioni remote.|  
-|**Sezione**|Consente di visualizzare l'espressione che identifica la sezione di dati rappresentata dalla partizione.|  
+|**sezione**|Consente di visualizzare l'espressione che identifica la sezione di dati rappresentata dalla partizione.|  
 |**Origine**|Consente di visualizzare la tabella o la query che rappresenta l'origine dei dati della partizione.|  
 |**State**|Consente di visualizzare lo stato di elaborazione corrente della partizione.|  
 |**Percorso di archiviazione**|Consente di visualizzare la cartella in cui vengono archiviati i dati della partizione.<br /><br /> Nota: questa proprietà contiene un valore solo se viene specificata una posizione di archiviazione diversa da quella predefinita per l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
