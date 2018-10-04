@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47318402206bc0a11ce943d74df8a612acd5f128
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3d67e256b6dca357db45cd831b2f9eab3ff93dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280427"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103454"
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
   Il contenitore Ciclo Foreach definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **Foreach** nei linguaggi di programmazione. In un pacchetto per l'esecuzione del ciclo viene utilizzato un enumeratore Foreach.  Il contenitore Ciclo Foreach ripete il flusso di controllo per ogni membro di un enumeratore specificato.  
@@ -89,7 +86,7 @@ ms.locfileid: "37280427"
   
  Per evitare le conseguenze negative della temporizzazione non deterministica dell'esecuzione parallela delle attività nel ciclo, è possibile configurare il pacchetto in modo da eseguire un solo eseguibile alla volta. Se ad esempio un pacchetto che può eseguire più attività contemporaneamente include un contenitore Ciclo Foreach che enumera i file in una cartella, recupera i nomi dei file e quindi utilizza un'attività Esegui SQL per inserire i nomi dei file in una tabella, quando due istanze dell'attività Esegui SQL tentano di scrivere contemporaneamente nella tabella potrebbero verificarsi conflitti di scrittura. Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../expressions/use-property-expressions-in-packages.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
  Per informazioni dettagliate sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  

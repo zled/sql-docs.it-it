@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44922bea51081a134410ac7f656cb5e3670001af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 584dea7a48b316a4e78a46b0ef1b014b8cc7cf02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315041"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106906"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Creare e gestire una partizione remota (Analysis Services)
   In caso di partizionamento di un gruppo di misure, è possibile configurare un database secondario in un'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] come archiviazione della partizione.  
@@ -114,7 +111,7 @@ ms.locfileid: "37315041"
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>Configurare la partizione remota (in SSDT)  
   
-1.  Nel server master: aprire il cubo in Progettazione cubi e fare clic sulla scheda **Partizioni** . Espandere il gruppo di misure. Fare clic su **Nuova partizione** se il gruppo di misure è già configurato per più partizioni oppure fare clic sul pulsante Sfoglia (. , ) nella colonna Origine per modificare la partizione esistente.  
+1.  Nel server master: aprire il cubo in Progettazione cubi e fare clic sulla scheda **Partizioni** . Espandere il gruppo di misure. Fare clic su **Nuova partizione** se il gruppo di misure è già configurato per più partizioni oppure fare clic sul pulsante Sfoglia (. . ) nella colonna Origine per modificare la partizione esistente.  
   
 2.  In **Impostazione informazioni origine**della Creazione guidata partizione selezionare la vista origine dati originale e la tabella dei fatti.  
   

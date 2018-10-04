@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sending feedback to Microsoft
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - product feedback [SQL Server]
 - automatic error or usage reporting
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
-caps.latest.revision: 26
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e878c3d09e2dde7d32e9fa5b37fd02081a6979c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32068cf03a971cd6b8010618d7b74d1a613ec856
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312101"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109895"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Invio di commenti e suggerimenti su SQL Server 2014
   [!INCLUDE[msCoName](../includes/msconame-md.md)] ringrazia gli utenti per il tempo dedicato e per il contributo che consente di migliorare i prodotti e la documentazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile fornire suggerimenti e report sui bug relativi alle funzionalità del prodotto e all'interfaccia utente, inviare commenti e suggerimenti sulla documentazione e scegliere di inviare automaticamente segnalazioni di errori e dati sull'utilizzo a [!INCLUDE[msCoName](../includes/msconame-md.md)] per l'analisi. Ognuna di queste tre opzioni relative ai commenti e ai suggerimenti viene descritta di seguito.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data retrieval [Reporting Services]
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 94e37e8c947074d23b208ebdfc18f21220c1f0de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 24482f0120f9d33fc4fe9442b770d7ca8656ac80
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200871"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107361"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrare un provider di dati .NET Framework standard (SSRS)
   Per usare un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] di terze parti per recuperare dati per un set di dati di un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è necessario distribuire e registrare l'assembly del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] in due posizioni, ovvero nel client di creazione dei report e nel server di report. Nel client per la creazione del report, è necessario registrare il provider di dati come tipo di origine dei dati e associarlo a una finestra Progettazione query. Sarà quindi possibile selezionare il provider di dati come tipo di origine dei dati per la creazione di un set di dati di report. La finestra Progettazione query associata verrà aperta per consentire la creazione di query per il tipo di origine dei dati specifico. Nel server di report il provider di dati deve essere registrato come tipo di origine dei dati. Sarà quindi possibile elaborare i report pubblicati che recuperano i dati da un'origine mediante il provider di dati.  

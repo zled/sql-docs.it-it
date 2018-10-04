@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
-caps.latest.revision: 22
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b66c8286d3ae062307175e689f222f33ea3be6a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa8ab18d7ca4e44d3b30129c7353c24660cd0b3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150992"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090943"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Opzioni (Editor di testo - Testo normale - pagina Generale)
   Utilizzare questa finestra di dialogo per cambiare il comportamento di modifica generale dell'editor di testo utilizzato per modificare un documento non associato a un dato linguaggio di sviluppo. Per visualizzare queste impostazioni scegliere **Opzioni** dal menu **Strumenti** , espandere **Editor di testo**, espandere **Testo normale** e quindi fare clic su **Generale**.  

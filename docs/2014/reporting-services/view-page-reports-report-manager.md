@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
-caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ff8af0b8badf1bc1bbee5e864f825af9d0ab03c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8a2697af9ede2b6b72e7f08efd88822101c51d53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311231"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102801"
 ---
 # <a name="view-page-reports-report-manager"></a>Pagina Visualizza, Report (Gestione report)
   La pagina Visualizza per i report consente di visualizzare un report. La prima volta che si apre un report in Gestione report, questo viene visualizzato in formato HTML. I report HTML includono una barra degli strumenti dei report visualizzata nella parte superiore del report, che consente di spostarsi tra le pagine del report, eseguire ricerche all'interno di un report oppure esportarlo in un diverso formato. Nella figura seguente viene illustrata la barra degli strumenti dei report.  

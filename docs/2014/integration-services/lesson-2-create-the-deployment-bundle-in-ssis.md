@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 947f9a04de5203742bf4a0fd8c0f605a8288d79a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0193a58fe54ccd288f7e9496b87c21c36917a900
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223701"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098791"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>Lezione 2: Creazione del pacchetto di distribuzione
   Nella lezione 1, [Preparazione alla creazione del pacchetto di distribuzione](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), è stato creato il progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] denominato Deployment Tutorial, sono stati aggiunti i pacchetti e i file di supporto al progetto e sono state implementate le configurazioni nei pacchetti.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d24b53a146a7e89a0f6cb8301d3fba34cfb50021
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0906216a465b9261bf96b11626c1d7c874c84499
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171452"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090961"
 ---
 # <a name="data-quality-client-application"></a>Applicazione client Data Quality
   L'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] consente di eseguire operazioni relative alla qualità dei dati utilizzando uno strumento autonomo. Con questa applicazione è possibile creare Knowledge Base, creare ed eseguire progetti Data Quality ed eseguire attività amministrative.  
@@ -29,7 +26,7 @@ ms.locfileid: "37171452"
 ## <a name="installing-the-data-quality-client-application"></a>Installazione dell'applicazione client Data Quality  
  L'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] viene installata tramite il programma di installazione di SQL Server. Può essere installata nello stesso computer di [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]o su un computer remoto. Per altre informazioni sull'installazione dell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], vedere [Installare Data Quality Services](install-windows/install-data-quality-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

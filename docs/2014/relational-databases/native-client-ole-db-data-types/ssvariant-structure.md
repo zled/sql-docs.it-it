@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - SSVARIANT
 helpviewer_keywords:
 - SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52ea23ff970d094330aaf046f9ebdd843c8b4956
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0af799acbf0c498797564f2c057532a4964db0ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429040"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101321"
 ---
 # <a name="ssvariant-structure"></a>Struttura SSVARIANT
   La struttura `SSVARIANT`, definita in sqlncli.h, corrisponde a un valore DBTYPE_SQLVARIANT nel provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- `SSVARIANT` è un'unione discriminante. A seconda del valore del membro vt, il consumer può determinare il membro da leggere. i valori VT corrispondono a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati. Pertanto, la struttura `SSVARIANT` può contenere qualsiasi tipo SQL Server. Per altre informazioni sulla struttura dei dati per i tipi OLE DB standard, vedere [indicatori di tipo](http://go.microsoft.com/fwlink/?LinkId=122171).  
+ `SSVARIANT` è un'unione discriminante. A seconda del valore del membro vt, il consumer può determinare il membro da leggere. I valori vt corrispondono ai tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pertanto, la struttura `SSVARIANT` può contenere qualsiasi tipo SQL Server. Per altre informazioni sulla struttura dei dati per i tipi OLE DB standard, vedere [indicatori di tipo](http://go.microsoft.com/fwlink/?LinkId=122171).  
   
 ## <a name="remarks"></a>Note  
  Quando DataTypeCompat==80, diversi sottotipi di `SSVARIANT` diventano stringhe. I valori vt seguenti vengono ad esempio visualizzati in `SSVARIANT` come VT_SS_WVARSTRING:  
@@ -76,7 +73,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |NCharVal|Nessun indicatore del tipo OLE DB corrispondente.|`struct _NCharVal`|`VT_SS_WVARSTRING,`<br /><br /> `VT_SS_WSTRING`|Supporta il `nchar` e **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati.<br /><br /> Include i membri indicati di seguito:<br /><br /> *sActualLength* (`SHORT`) specifica la lunghezza effettiva per la stringa a cui *pwchNCharVal* punti. Non include lo zero finale.<br /><br /> *sMaxLength* (`SHORT`) specifica la lunghezza massima per la stringa a cui *pwchNCharVal* punti.<br /><br /> *pwchNCharVal* (`WCHAR` \*) puntatore alla stringa.<br /><br /> Membri non utilizzati: *rgbReserved*, *dwReserved*, e *pwchReserved*.|  
 |CharVal|Nessun indicatore del tipo OLE DB corrispondente.|`struct _CharVal`|`VT_SS_STRING,`<br /><br /> `VT_SS_VARSTRING`|Supporta il `char` e **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati.<br /><br /> Include i membri indicati di seguito:<br /><br /> *sActualLength* (`SHORT`) specifica la lunghezza effettiva per la stringa da cui *pchCharVal* punti. Non include lo zero finale.<br /><br /> *sMaxLength* (`SHORT`) specifica la lunghezza massima per la stringa da cui *pchCharVal* punti.<br /><br /> *pchCharVal* (`CHAR` \*) puntatore alla stringa.<br /><br /> Membri non utilizzati:<br /><br /> *rgbReserved*, *dwReserved*, e *pwchReserved*.|  
 |BinaryVal|Nessun indicatore del tipo OLE DB corrispondente.|`struct _BinaryVal`|`VT_SS_VARBINARY,`<br /><br /> `VT_SS_BINARY`|Supporta il `binary` e **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati.<br /><br /> Include i membri indicati di seguito:<br /><br /> *sActualLength* (`SHORT`) specifica la lunghezza effettiva per i dati a cui *prgbBinaryVal* punti.<br /><br /> *sMaxLength* (`SHORT`) specifica la lunghezza massima per i dati a cui *prgbBinaryVal* punti.<br /><br /> *prgbBinaryVal* (`BYTE` \*) puntatore ai dati binari.<br /><br /> Membro non utilizzato: *dwReserved*.|  
-|Tipo sconosciuto|UNUSED|UNUSED|UNUSED|UNUSED|  
+|UnknownType|UNUSED|UNUSED|UNUSED|UNUSED|  
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
   
 ## <a name="see-also"></a>Vedere anche  

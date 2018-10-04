@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a296db8f933ceef5d3e17e2f3f3b8034cf8a0e2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36e50a34f708bc13da489591d73ca0521cdb5a6b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272177"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101211"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Attività 2: Caricamento dei dati fornitore in MDS utilizzando il componente aggiuntivo MDS per excel
   In questa attività si pubblicano i dati puliti e fornitore **MDS** usando la **il componente aggiuntivo MDS per Excel**. Creare un'entità denominata **Supplier** nel **Suppliers** modello creato nella lezione precedente. All'entità sarà associato un attributo per ogni colonna nel file di Excel. Gli attributi Name e Code dell'entità Supplier corrispondono per la **SupplierID** e **Supplier Name** colonne in Excel.  

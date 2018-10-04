@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e9339227-6c2e-4c4b-8be2-8c1960bc4a8d
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c18097b6851bc23522882227158b5aad390570e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e91853bba6b33ed57cc0152e266994d4e0ef528
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189568"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092908"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Creazione di una struttura del modello di data mining Sequence Clustering (Esercitazione intermedia sul data mining)
   Il primo passaggio nella creazione di un modello di data mining Sequence Clustering consiste nell'utilizzo della Creazione guidata modello di data mining per la creazione di una nuova struttura di data mining e di un modello di data mining sulla base dell'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering.  
@@ -75,12 +72,12 @@ ms.locfileid: "37189568"
   
     |Tabelle/Colonne|Tipo di contenuto|Tipo di dati|  
     |---------------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Text|  
-    |OrderNumber|Key|Text|  
-    |Region|Discrete|Text|  
+    |IncomeGroup|Discrete|Testo|  
+    |OrderNumber|Key|Testo|  
+    |Region|Discrete|Testo|  
     |vAssocSeqLineItems|||  
     |Line Number|Key Sequence|Long|  
-    |Modello|Discrete|Text|  
+    |Modello|Discrete|Testo|  
   
 9. Nel **crea Set di Testing** pagina, modificare il **percentuale dei dati per i test** su 20, quindi fare clic su **Avanti**.  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LowMemoryLimit property
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - HighMemoryPrice property
 - HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77902cfe21cf2f486007f802c0556bd410f46d4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 94fa7654af0494d7d6bfec8396212634afade30f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286377"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091651"
 ---
 # <a name="memory-properties"></a>Proprietà della memoria
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà della memoria del server elencate nella tabella seguente. Per le linee guida di impostazione di queste proprietà, vedere la [Guida operativa di SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  

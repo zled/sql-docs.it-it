@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - leaf members [Master Data Services], about leaf members
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 934dbb8ff42bfbb3c334131f77e33d44d8542223
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b07719a39cd8f82561bd92635dcba8e97ffee532
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307981"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096041"
 ---
 # <a name="members-master-data-services"></a>Membri (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]i membri sono i dati master fisici. Ad esempio, un membro può essere una bicicletta Road-150 in un'entità Product o un cliente specifico in un'entità Customer.  
@@ -61,7 +58,7 @@ ms.locfileid: "37307981"
   
  ![Tabella dell'entità prodotto bicicletta](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella dell'entità prodotto bicicletta")  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
