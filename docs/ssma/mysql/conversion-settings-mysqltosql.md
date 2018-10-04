@@ -1,53 +1,47 @@
 ---
-title: Le impostazioni di conversione (MySQLToSQL) | Documenti Microsoft
+title: Le impostazioni di conversione (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 70450580a3b473f7b549578924e7f965531ad30f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a311b35597b3c474c2128e73b148ab882f19f42c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776017"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732319"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Impostazioni di conversione (MySQLToSQL)
-Il **'Impostazioni'** scheda consente di impostare le impostazioni a livello di nodo. La scheda è disponibile in nodi Metabase seguenti:  
+Il **'Impostazioni'** scheda consente all'utente di impostare le impostazioni a livello di nodo. La scheda sarà disponibile a livello dei nodi della Metabase seguenti:  
   
 -   Nodo del database  
   
 -   Categoria di funzioni  
   
--   Nodo (funzione)  
+-   Nodo della funzione  
   
 -   Categoria di tabelle  
   
 -   Nodo della tabella  
   
 ## <a name="specifications"></a>Specifiche:  
-Il **impostazioni** scheda sono presenti due impostazioni utente, dei quali.:  
+Il **impostazioni** scheda ha due impostazioni utente, una visualizzazione dei.:  
   
 1.  Conversione (funzione)  
   
 2.  Conversione della tabella  
   
-Queste impostazioni saranno disponibili in base al tipo di nodo della Metabase. Ad esempio, funzione di conversione correlati impostazione non sarà disponibile in corrispondenza del nodo di tabella  
+Queste impostazioni saranno disponibili in base al tipo di nodo della Metabase. Ad esempio, conversione di funzioni correlate impostazione non sarà disponibile in corrispondenza del nodo di tabella  
   
 > [!NOTE]  
-> -   Le modifiche apportate dall'utente verranno essere salvate come file separato preferenza nell'area di lavoro di progetto.  
-> -   L'estensione di questo file sarà **ccprefs**.  
+> -   Le modifiche apportate dall'utente verranno salvate nell'area di lavoro di progetto come file separato delle preferenze.  
+> -   L'estensione del file saranno **ccprefs**.  
   
 1.  **Impostazione di conversione (funzione):**  
   
@@ -57,17 +51,17 @@ Queste impostazioni saranno disponibili in base al tipo di nodo della Metabase. 
   
         -   Sempre la conversione a una funzione  
   
-        -   Converte sempre in una stored Procedure  
+        -   Sempre la conversione a una routine  
   
         -   Convertire in base alle impostazioni di progetto  
   
-    2.  In base alle impostazioni, la funzione verrà convertita in una funzione o a una stored procedure.  
+    2.  Basato sulle impostazioni, la funzione verrà convertita in una funzione o a una stored procedure.  
   
-    3.  Le impostazioni apportate dall'utente vengono salvate nel file delle preferenze in serie fare clic su **applica** pulsante.  
+    3.  Le impostazioni apportate dall'utente vengono salvate nel file di preferenze propagate fa clic sul pulsante **applica** pulsante.  
   
-2.  **Impostazione di conversione tabella:**  
+2.  **Impostazione di conversione di tabella:**  
   
-    1.  Questa scheda contiene **'Generazione colonna ausiliario esclusione ROWID'** opzione. L'opzione può avere uno dei quattro valori seguenti:  
+    1.  Questa scheda contiene **'La generazione delle colonne ausiliario sopprimere ROWID'** opzione. L'opzione può avere uno dei quattro valori seguenti:  
   
         -   Convertire in base alle impostazioni di progetto [ereditate]  
   
@@ -77,10 +71,10 @@ Queste impostazioni saranno disponibili in base al tipo di nodo della Metabase. 
   
         -   Convertire in base alle impostazioni di progetto  
   
-    2.  Se **'Sì'**, questa impostazione impedisce la creazione della creazione di colonna ausiliario ROWID nelle tabelle di destinazione.  
+    2.  Se **'Sì'**, questa impostazione impedisce la creazione della creazione di colonne ausiliario ROWID nelle tabelle di destinazione.  
   
-    3.  Le impostazioni apportate dall'utente vengono salvate nel file di preferenze in serie fare clic su **applica** pulsante.  
+    3.  Le impostazioni apportate dall'utente vengono salvate nel file di preferenze propagate fa clic sul pulsante **applica** pulsante.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Impostazioni del progetto (conversione) (MySQL to SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
+[Impostazioni progetto (conversione) (MySQL a SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6014fcc072e9ce6d85fffc62d76f5ba51f341556
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c3616e40ff54c67d27902ddf9454084fb62e282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271707"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101371"
 ---
 # <a name="cross-database-transactions-not-supported-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn (SQL Server)
   Le transazioni tra database e quelle distribuite non sono supportate da [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o dal mirroring del database perché l'atomicità e integrità delle transazioni non può essere garantita per i motivi seguenti:  

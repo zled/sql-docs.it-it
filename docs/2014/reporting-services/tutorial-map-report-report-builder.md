@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 76795367b5f03e65673468d4af8e7f7c7222e73b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2218fdb184fb4fe67d110b95c42f10f761ef3975
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249741"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098851"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Esercitazione: Report mappa (Generatore report)
   Questa esercitazione intende fornire un approfondimento delle funzionalità della mappa che è possibile utilizzare per visualizzare i dati del report rispetto a uno sfondo geografico.  
@@ -231,9 +228,9 @@ ms.locfileid: "37249741"
   
 21. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-22. Visualizzare i valori predefiniti impostati dalla procedura guidata. Solo le regioni a cui sono associati dati analitici vengono visualizzati nei **rosso** attraverso **verde** colori dalle regole colore specificato.  
+22. Visualizzare i valori predefiniti impostati dalla procedura guidata. Nel **nel riquadro livelli mappa**, fare clic sul livello punto e quindi fare clic su **regola tipo marcatore**.  
   
-     Per rappresentare un nuovo Negozio che non è ancora stato compilato, specificare un punto e usare la **puntina da disegno** tipo di marcatore. Sulla barra degli strumenti, fare clic su **Aggiungi livello**, quindi fare clic su livello punto. Fare clic sulla freccia in giù in PointLayer2 e quindi fare clic su **Aggiungi punto**.  
+     Nel **generale** scheda marcatori sono elencati nell'ordine in cui compaiono nella legenda. Nel **distribuzione** scheda, il numero di intervalli secondari è 5. Nel **legenda** scheda, il testo della legenda è impostato per visualizzare il valore iniziale e finale in ogni intervallo.  
   
 23. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -248,13 +245,13 @@ ms.locfileid: "37249741"
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Selezionare l'opzione **Ignora opzioni punto per questo livello**.  
+2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti, fare clic su **Creazione guidata nuovo livello**.  
   
 3.  Nella pagina **Scegliere un'origine dati spaziali** selezionare **Query spaziale di SQL Server** e fare clic su **Avanti**.  
   
 4.  Nella pagina **Scegliere un set di dati con dati spaziali di SQL Server** fare clic su **Aggiungere un nuovo set di dati con dati spaziali di SQL Server** , quindi su **Avanti**.  
   
-5.  Fare clic su **marcatore**.  
+5.  Nel **scegliere una connessione a un'origine dati spaziali di SQL Server**, selezionare DataSource1, l'origine dati creata nella prima procedura.  
   
 6.  Scegliere **Avanti**.  
   
@@ -285,7 +282,7 @@ ms.locfileid: "37249741"
   
 14. Scegliere **Fine**.  
   
- Per la **tipo di marcatore**, selezionare Star. In questo esempio i dati spaziali provengono da un set di dati, tuttavia nessun dato analitico è associato alla riga.  
+ La mappa viene visualizzato un nuovo livello di riga con il tipo di origine dati spaziali **set di dati**. In questo esempio i dati spaziali provengono da un set di dati, tuttavia nessun dato analitico è associato alla riga.  
   
 ##  <a name="TileLayer"></a> 4. Aggiungere uno sfondo a tessere mappa di Bing  
  Aggiungere un livello mappa in cui sia visualizzato uno sfondo a tessere mappa di Bing.  
@@ -294,7 +291,7 @@ ms.locfileid: "37249741"
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti, fare clic su **Aggiungi livello** ![rs_IconMapAddLayer](../../2014/tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
+2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti, fare clic su **Aggiungi livello**![rs_IconMapAddLayer](../../2014/tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
   
 3.  Nell'elenco a discesa fare clic su **Livello sezione**.  
   
@@ -303,9 +300,9 @@ ms.locfileid: "37249741"
     > [!NOTE]  
     >  Nella procedura guidata è anche possibile aggiungere un livello sezione nella pagina **Scegli opzioni di dati spaziali e vista mappa** . A tale scopo, selezionare **Aggiungi sfondo Bing Maps per la vista mappa**. In un report visualizzabile, lo sfondo a sezioni visualizza le tessere mappa di Bing per l'attuale livello di allineamento al centro e zoom del viewport mappa.  
   
-4.  Fare clic sul punto appena aggiunto e quindi fare clic su **proprietà punto incorporato**.  
+4.  Fare clic sulla freccia in giù in TileLayer1 e quindi fare clic su **proprietà del riquadro**.  
   
-5.  Nelle **testo dell'etichetta**, digitare **Store New**. La vista aerea non contiene testo.  
+5.  Nelle **tipo**, selezionare **aeree**. La vista aerea non contiene testo.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -318,11 +315,11 @@ ms.locfileid: "37249741"
   
 2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** .  
   
-3.  Pulsante destro del mouse sul viewport mappa e quindi fare clic su **proprietà Viewport**. Viene visualizzata la finestra di dialogo **Proprietà livello poligono mappa** .  
+3.  Fare clic sulla freccia in giù in PolygonLayer1 e quindi fare clic su **dati livello**. Viene visualizzata la finestra di dialogo **Proprietà livello poligono mappa** .  
   
 4.  Fare clic su **Visibilità**.  
   
-5.  Fare clic su **al centro e Zoom**.  
+5.  Nelle **trasparenza (%)**, digitare **30**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -342,15 +339,15 @@ ms.locfileid: "37249741"
   
 2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** .  
   
-3.  Pulsante destro del mouse sul viewport mappa e quindi fare clic su **proprietà Viewport**. Viene visualizzata la finestra di dialogo **Proprietà livello poligono mappa** .  
+3.  Fare clic sulla freccia in giù in PolygonLayer1 e quindi fare clic su **dati livello**. Viene visualizzata la finestra di dialogo **Proprietà livello poligono mappa** .  
   
 4.  Fare clic su **Dati analitici**.  
   
 5.  Nell'elenco a discesa selezionare DataSet1. Questo set di dati è stato creato dalla procedura guidata quando è stata specificata la query dei dati spaziali per le regioni.  
   
-6.  Per altre informazioni, vedere **Maps &#40;Generatore Report e SSRS&#41;**  e il post di blog **Cartographic Adjustment of Spatial Data per SQL Server Reporting Services** sul sito Web blogs.msdn.com. Viene aggiunta una nuova riga.  
+6.  Nelle **campi per corrispondenze**, fare clic su **Add**. Viene aggiunta una nuova riga.  
   
-7.  Per altre esercitazioni, vedere **esercitazioni &#40;Generatore Report&#41;**.  
+7.  Nelle **dal set di dati spaziale**, dall'elenco a discesa elenco, fare clic su COUNTYNAME.  
   
 8.  Nelle **dal set di dati analitici**, dall'elenco a discesa elenco, fare clic su Countyname.  
   

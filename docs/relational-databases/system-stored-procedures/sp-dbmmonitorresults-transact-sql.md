@@ -1,14 +1,11 @@
 ---
-title: sp_dbmmonitorresults (Transact-SQL) | Documenti Microsoft
+title: sp_dbmmonitorresults (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorresults
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16061dc41994cd032a9e6124d38abf3acb2e6be5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 54cf9a13396674c2ac9dd43845c94d7ac657f008
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256671"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702749"
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +61,11 @@ sp_dbmmonitorresults database_name
   
  5 = Righe relative agli ultimi due giorni  
   
- 6 = ultimo 100 righe  
+ 6 = righe relative alle ultime 100  
   
- 7 = 500 ultime righe  
+ 7 = righe relative alle ultime 500  
   
- 8 = ultimo 1.000 righe  
+ 8 = righe relative alle ultime 1000  
   
  9 = Ultimo milione di righe  
   
@@ -78,10 +74,10 @@ sp_dbmmonitorresults database_name
   
  Se il valore è 0, non aggiorna lo stato del database. I risultati vengono calcolati utilizzando solo le ultime due righe, la cui data dipende dal momento in cui è stato eseguito l'aggiornamento della tabella di stato.  
   
- 1 = aggiorna lo stato per il database chiamando **sp_dbmmonitorupdate** prima di calcolare i risultati. Tuttavia, se la tabella dello stato è stata aggiornata entro i 15 secondi precedenti o che l'utente non è membro il **sysadmin** ruolo predefinito del server, **sp_dbmmonitorresults** viene eseguita senza aggiornare lo stato.  
+ 1 = aggiorna lo stato per il database chiamando **sp_dbmmonitorupdate** prima di calcolare i risultati. Tuttavia, se la tabella dello stato è stata aggiornata entro i 15 secondi precedenti, o l'utente non è un membro del **sysadmin** ruolo predefinito del server **sp_dbmmonitorresults** viene eseguita senza aggiornare lo stato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- Nessuno  
+ None  
   
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce il numero richiesto di righe dello stato della cronologia per il database specificato. Ogni riga contiene le informazioni seguenti:  
@@ -90,7 +86,7 @@ sp_dbmmonitorresults database_name
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nome di un database con mirroring.|  
 |**Ruolo**|**int**|Ruolo di mirroring corrente dell'istanza del server:<br /><br /> 1 = Database principale<br /><br /> 2 = Database mirror|  
-|**mirroring_state**|**int**|Stato del database:<br /><br /> 0 = sospeso<br /><br /> 1 = disconnesso<br /><br /> 2 = Sincronizzazione in corso<br /><br /> 3 = Failover in sospeso<br /><br /> 4 = Sincronizzato|  
+|**mirroring_state**|**int**|Stato del database:<br /><br /> 0 = degli elementi sospesi<br /><br /> 1 = disconnesso<br /><br /> 2 = Sincronizzazione in corso<br /><br /> 3 = Failover in sospeso<br /><br /> 4 = Sincronizzato|  
 |**witness_status**|**int**|Stato di connessione del server di controllo del mirroring nella sessione di mirroring del database. I possibili valori sono i seguenti:<br /><br /> 0 = Sconosciuto<br /><br /> 1 = Connesso<br /><br /> 2 = Disconnesso|  
 |**log_generation_rate**|**int**|Quantità di log generati a partire dall'ultimo aggiornamento dello stato di mirroring del database, espressa in kilobyte al secondo.|  
 |**unsent_log**|**int**|Dimensioni del log non inviato nella coda di invio nel database principale, espressa in kilobyte.|  
@@ -104,14 +100,14 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|Ora approssimativa dell'orologio di sistema del database principale rispetto al quale è aggiornato il database mirror. Questo valore è significativo solo nell'istanza del server principale.|  
 |**local_time**|**datetime**|Ora dell'orologio di sistema nell'istanza locale del server al momento dell'aggiornamento della riga.|  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_dbmmonitorresults** può essere eseguito solo nel contesto del **msdb** database.  
+## <a name="remarks"></a>Note  
+ **sp_dbmmonitorresults** possono essere eseguite solo nel contesto del **msdb** database.  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **sysadmin** ruolo predefinito del server o nel **dbm_monitor** ruolo predefinito del database nel **msdb** database. Il **dbm_monitor** ruolo consente ai membri di visualizzare lo stato di mirroring del database, ma non l'aggiornamento, ma non visualizzare o configurare gli eventi di mirroring del database.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **sysadmin** ruolo predefinito del server o nel **dbm_monitor** ruolo predefinito del database nel **msdb** database. Il **dbm_monitor** ruolo consente ai membri di visualizzare lo stato di mirroring del database, ma non eseguirne l'aggiornamento, ma non visualizzare o configurare gli eventi di mirroring del database.  
   
 > [!NOTE]  
->  La prima volta che **sp_dbmmonitorupdate** viene eseguita, crea il **dbm_monitor** ruolo predefinito del database nel **msdb** database. I membri del **sysadmin** ruolo predefinito del server può aggiungere qualsiasi utente per il **dbm_monitor** ruolo predefinito del database.  
+>  La prima volta che **sp_dbmmonitorupdate** viene eseguita, viene creato il **dbm_monitor** ruolo predefinito del database nel **msdb** database. I membri del **sysadmin** ruolo predefinito del server può aggiungere qualsiasi utente per il **dbm_monitor** ruolo predefinito del database.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite le righe registrate nelle due ore precedenti senza aggiornare lo stato del database.  

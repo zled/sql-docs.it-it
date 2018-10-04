@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_addmergepublication
 - sp_addmergepublication_TSQL
@@ -22,12 +17,12 @@ ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1cbbc503f8c2559eddae757f22060bac83cd13f8
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: da75521685e31c60c238af9903a763de836075fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038302"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816109"
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +137,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Indirizzo di rete del servizio FTP per il database di distribuzione. *ftp_address* viene **sysname**, con un valore predefinito è NULL. Specifica la posizione dei file di snapshot della pubblicazione, dove i file possono essere prelevati dall'agente di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può essere associato un diverso *ftp_address*. La pubblicazione deve supportare la propagazione di snapshot tramite FTP.  
   
  [  **@ftp_port=** ] *ftp_port*  
- Numero di porta del servizio FTP per il database di distribuzione. *ftp_port* viene **int**, con un valore predefinito è 21. Specifica la posizione dei file di snapshot della pubblicazione, dove i file possono essere prelevati dall'agente di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può avere un proprio *ftp_port*.  
+ Numero di porta del servizio FTP per il server di distribuzione. *ftp_port* viene **int**, con un valore predefinito è 21. Specifica la posizione dei file di snapshot della pubblicazione, dove i file possono essere prelevati dall'agente di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può avere un proprio *ftp_port*.  
   
  [  **@ftp_subdirectory =** ] **'***ftp_subdirectory***'**  
  Specifica la posizione dei file di snapshot, dove i file possono essere prelevati dall'agente di merge del Sottoscrittore se la pubblicazione supporta la propagazione di snapshot tramite FTP. *ftp_subdirectory* viene **nvarchar(255**, con un valore predefinito è NULL. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può avere un proprio *ftp_subdirctory* oppure scegliere di non utilizzare una sottodirectory con un valore NULL.  

@@ -1,14 +1,11 @@
 ---
-title: sp_update_category (Transact-SQL) | Documenti Microsoft
+title: sp_update_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_category
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f07e44e12193e506146e299bd57f84b02c802856
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 22cb6ac1283c0ad8e7b423d73f6ec768c90af11c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255747"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670519"
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +44,28 @@ sp_update_category
   
 ## <a name="arguments"></a>Argomenti  
  [  **@class =**] **'***classe***'**  
- Classe della categoria da aggiornare. *classe*viene **varchar (8)** e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
+ Classe della categoria da aggiornare. *classe*viene **varchar (8)** e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**AVVISO**|Aggiorna una categoria di avvisi.|  
 |**JOB**|Aggiorna una categoria di processi.|  
-|**(OPERATORE)**|Aggiorna una categoria di operatori.|  
+|**OPERATORE**|Aggiorna una categoria di operatori.|  
   
  [  **@name =**] **'***vecchio_nome***'**  
  Nome corrente della categoria. *vecchio_nome*viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@new_name =**] **'***new_name***'**  
- Nuovo nome della categoria. *nuovo_nome*viene **sysname**, non prevede alcun valore predefinito.  
+ Nuovo nome della categoria. *new_name*viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_update_category** deve essere eseguita la **msdb** database.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Per eseguire questa stored procedure, è necessario consentire agli utenti di **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Permissions  
+ Per eseguire questa stored procedure, gli utenti devono disporre i **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente la categoria di processi `AdminJobs` viene rinominata in `Administrative Jobs`.  

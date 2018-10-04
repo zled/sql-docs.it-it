@@ -1,31 +1,28 @@
 ---
-title: SQLGetFunctions (Driver ODBC di Visual FoxPro) | Documenti Microsoft
+title: SQLGetFunctions (Driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetFunctions function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc3350e8b6a7a4ddcf505fed14a056422cbbbe41
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0ae7b8eb0468dd401009ef58c83b87606b0679a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904776"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628609"
 ---
-# <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (Driver ODBC di Visual FoxPro)
+# <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Supporto: completo  
   
@@ -33,9 +30,9 @@ ms.locfileid: "32904776"
   
  Restituisce TRUE per tutte le funzioni supportate.  
   
- Il Driver ODBC di Visual FoxPro supporta funzioni tutte le API ODBC Core e di livello 1. Nella tabella seguente indica se il driver supporta una funzione specifica di livello 2.  
+ Il Driver ODBC Visual FoxPro supporta funzioni tutte le API ODBC Core e livello 1. Nella tabella seguente indica se il driver supporta una funzione specifica di livello 2.  
   
-|*Funzione*|Supported|  
+|*Funzione*|Supportato|  
 |----------------|---------------|  
 |SQL_API_SQLBROWSECONNECT|no|  
 |SQL_API_SQLCOLUMNPRIVELEGES|no|  
@@ -55,4 +52,4 @@ ms.locfileid: "32904776"
 |SQL_API_SQLSETSCROLLOPTIONS|Sì|  
 |SQL_API_SQLTABLEPRIVILEGES|no|  
   
- Per ulteriori informazioni, vedere [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) nel *riferimento per programmatori ODBC*.
+ Per altre informazioni, vedere [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) nel *riferimento per programmatori ODBC*.

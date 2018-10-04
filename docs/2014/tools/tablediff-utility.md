@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing data
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6d073e95d896429e1827009c249b940ade2e7b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32a750ead87e8d775388d93c2ddc84ed12f2ca98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147933"
 ---
 # <a name="tablediff-utility"></a>utilità tablediff
   L'utilità **tablediff** viene usata per confrontare i dati in due tabelle per rilevarne l'eventuale non convergenza e risulta particolarmente utile per la risoluzione dei problemi relativi alla non convergenza in una topologia di replica. Questa utilità può essere utilizzata dal prompt dei comandi oppure in un file batch per eseguire le attività seguenti:  
@@ -214,7 +211,7 @@ ms.locfileid: "37180968"
   
 -   `image`  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per confrontare tabelle, è necessario disporre delle autorizzazioni SELECT ALL sugli oggetti tabella da confrontare.  
   
  Per usare l'opzione **-et** , è necessario essere membro del ruolo predefinito del database db_owner oppure disporre almeno dell'autorizzazione CREATE TABLE nel database di sottoscrizione e dell'autorizzazione ALTER per lo schema del proprietario della destinazione nel server di destinazione.  

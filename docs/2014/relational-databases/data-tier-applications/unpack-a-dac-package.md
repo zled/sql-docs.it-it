@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d256a069213df774519a357d29ab1be8fe5417d8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 74caa8d0ef17bf0b9401662969ce34c8d78cc112
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809667"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125481"
 ---
 # <a name="unpack-a-dac-package"></a>Decompressione di un pacchetto di applicazione livello dati
   Utilizzare la finestra di dialogo per la decompressione dell'applicazione livello dati per decomprimere gli script e i file da un pacchetto di applicazioni livello dati (DAC). Gli script e i file vengono copiati in una cartella dove è possibile controllarli prima che il pacchetto venga utilizzato per distribuire l'applicazione del livello dati in un sistema di produzione. È inoltre possibile confrontare il contenuto di un pacchetto di applicazione livello dati con il contenuto di un altro pacchetto decompresso in un'altra cartella.  

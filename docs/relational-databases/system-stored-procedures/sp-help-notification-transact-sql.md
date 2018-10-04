@@ -1,14 +1,11 @@
 ---
-title: sp_help_notification (Transact-SQL) | Documenti Microsoft
+title: sp_help_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6499d3830859063af74417c84c7fe9e1855b3313
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833579"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,38 +46,38 @@ sp_help_notification
   
 ## <a name="arguments"></a>Argomenti  
  [  **@object_type =**] **'***object_type***'**  
- Tipo di informazioni che si desidera ottenere. *object_type*viene **char(9)**, non prevede alcun valore predefinito. *object_type* sono ALERTS, con cui vengono elencati gli avvisi assegnati al nome dell'operatore specificato *,* o operatori, in cui sono elencati gli operatori responsabili del nome dell'avviso fornito *.*  
+ Tipo di informazioni che si desidera ottenere. *object_type*viene **char(9)**, non prevede alcun valore predefinito. *object_type* sono ALERTS, con cui sono elencati gli avvisi assegnati al nome dell'operatore specificato *,* operatori, in cui sono elencati gli operatori responsabili del nome dell'avviso specificato o *.*  
   
  [  **@name =**] **'***nome***'**  
  Nome di un operatore (se *object_type* è OPERATORS) o nome di un avviso (se *object_type* è ALERTS). *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@enum_type =**] **'***enum_type***'**  
- Il *object_type*informazioni restituite. *enum_type* è ACTUAL nella maggior parte dei casi. *enum_type*viene **char (10)** e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
+ Il *object_type*informazioni restituite. *enum_type* è ACTUAL nella maggior parte dei casi. *enum_type*viene **char (10)** e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
-|ACTUAL|Elenca solo i *oggetti object_type* associato *nome*.|  
-|ALL|Elenca tutte le*oggetti object_type* inclusi quelli che non sono associati *nome*.|  
-|TARGET|Elenca solo i *oggetti object_type* corrispondenza fornito *target_name*, indipendentemente dall'associazione con*nome*.|  
+|ACTUAL|Elenca solo le *oggetti object_type* associati *nome*.|  
+|ALL|Elenca tutti i*oggetti object_type* inclusi quelli che non sono associati *nome*.|  
+|TARGET|Elenca solo le *oggetti object_type* corrispondenza fornito *target_name*, indipendentemente dall'associazione con*nome*.|  
   
  [  **@notification_method =**] *notification_method*  
  Un valore numerico che determina le colonne del metodo di notifica da restituire. *notification_method* viene **tinyint**, e può essere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
-|**1**|Posta elettronica: restituisce solo il **use_email** colonna.|  
-|**2**|Cercapersone: restituisce solo il **use_pager** colonna.|  
-|**4**|NetSend: restituisce solo il **use_netsend** colonna.|  
+|**1**|Messaggio di posta elettronica: restituisce solo le **use_email** colonna.|  
+|**2**|Cercapersone: restituisce solo le **use_pager** colonna.|  
+|**4**|NetSend: restituisce solo le **use_netsend** colonna.|  
 |**7**|Tutto: restituisce tutte le colonne.|  
   
  [  **@target_name =**] **'***target_name***'**  
- Il nome di un avviso da cercare (se *object_type* è ALERTS) o il nome di un operatore per la ricerca (se *object_type* è OPERATORS). *target_name* è necessario solo se *enum_type* destinazione. *target_name* viene **sysname**, con un valore predefinito è NULL.  
+ Il nome di un avviso da cercare (se *object_type* è ALERTS) o il nome di un operatore da cercare (se *object_type* è OPERATORS). *target_name* è necessario solo se *enum_type* è TARGET. *target_name* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-valves"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Se *object_type* è **avvisi**, il set di risultati vengono elencati tutti gli avvisi per un determinato operatore.  
+ Se *object_type* viene **avvisi**, il set di risultati sono elencati tutti gli avvisi per un dato operatore.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -92,9 +88,9 @@ sp_help_notification
 |**use_netsend**|**int**|Specifica se il metodo di notifica utilizzato è NetSend:<br /><br /> **1** = Sì<br /><br /> **0** = No|  
 |**has_email**|**int**|Numero di notifiche inviate tramite posta elettronica per l'avviso specificato.|  
 |**has_pager**|**int**|Numero di notifiche inviate tramite cercapersone per l'avviso specificato.|  
-|**has_netsend**|**int**|Numero di **net send** notifiche inviate per questo avviso.|  
+|**has_netsend**|**int**|Numerosi **net send** notifiche per l'avviso.|  
   
- Se **object_type** è **operatori**, il set di risultati include tutti gli operatori per un determinato avviso.  
+ Se **object_type** viene **operatori**, il set di risultati vengono elencati tutti gli operatori per un determinato avviso.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -107,10 +103,10 @@ sp_help_notification
 |**has_pager**|**int**|Specifica se all'operatore è associato un indirizzo cercapersone:<br /><br /> **1** = Sì<br /><br /> **0** = No|  
 |**has_netsend**|**int**|Specifica se per l'operatore è stata specificata la notifica tramite Net Send.<br /><br /> **1** = Sì<br /><br /> **0** = No|  
   
-## <a name="remarks"></a>Osservazioni  
- È necessario eseguire questa stored procedure dal **msdb** database.  
+## <a name="remarks"></a>Note  
+ Questa stored procedure deve essere eseguita dal **msdb** database.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire questa stored procedure, è necessario che gli utenti siano membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  

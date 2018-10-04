@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
-caps.latest.revision: 86
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5556c3e3392dd52fdd27acacd6c3320b7d9fbff0
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: ca646f4df2976d75ee6665731e5c5641bbb8d982
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40392065"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176071"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurazione di IIS per la sincronizzazione Web
   Le procedure descritte in questo argomento rappresentano il secondo passaggio nella configurazione della sincronizzazione Web per la replica di tipo merge. Questo passaggio è successivo all'abilitazione di una pubblicazione per la sincronizzazione Web. Per una panoramica del processo di configurazione, vedere [Configura sincronizzazione Web](configure-web-synchronization.md). Al termine delle procedure indicate in questo argomento, procedere al terzo passaggio, che consiste nella configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web. Questo terzo passaggio è descritto negli argomenti seguenti:  
@@ -34,7 +31,7 @@ ms.locfileid: "40392065"
   
 -   RMO: [Procedura: Configurazione di una sottoscrizione per l'utilizzo di una sottoscrizione Web (Programmazione RMO)](http://msdn.microsoft.com/library/ms345207.aspx)  
   
- Nella sincronizzazione Web viene utilizzato un computer che esegue [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) per sincronizzare le sottoscrizioni pull con le pubblicazioni di tipo merge. Sono supportati IIS versione 5.0, IIS versione 6.0 e IIS versione 7.0. La Configurazione guidata sincronizzazione Web non è supportata in IIS versione 7.0.  
+ Nella sincronizzazione Web viene utilizzato un computer che esegue [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) per sincronizzare le sottoscrizioni pull con le pubblicazioni di tipo merge. Sono supportate le versioni 5.0, 6.0 e 7.0 di IIS. La Configurazione guidata sincronizzazione Web non è supportata in IIS versione 7.0.  
   
 > [!IMPORTANT]  
 >  Verificare che nell'applicazione venga utilizzato solo [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versione successiva e che le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] non siano installate sul server IIS. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] possono causare errori come, ad esempio, "Formato di messaggio non valido durante la sincronizzazione Web. Verificare che i componenti di replica siano configurati correttamente nel server Web".  
@@ -161,7 +158,7 @@ ms.locfileid: "40392065"
   
     2.  Nella casella **Percorso** immettere un percorso per la directory virtuale. Ad esempio, se è stato immesso `websync1` nella **Alias** , immettere `C:\Inetpub\wwwroot\websync1` nel **percorso** casella. Scegliere **Avanti**.  
   
-    3.  In entrambe le finestre di dialogo fare clic su **Sì**. In questo modo viene specificato che si intende creare una nuova cartella e copiare la DLL ISAPI (Internet Server API) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . ,  
+    3.  In entrambe le finestre di dialogo fare clic su **Sì**. In questo modo viene specificato che si intende creare una nuova cartella e copiare la DLL ISAPI (Internet Server API) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . .  
   
 7.  Nella pagina **Accesso autenticato** :  
   

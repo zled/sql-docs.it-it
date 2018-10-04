@@ -1,32 +1,29 @@
 ---
-title: Esempio di set di celle (VB) | Documenti Microsoft
+title: Esempio di Cellset (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Cellset object [ADO MD], Visual Basic example
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb42d133c68942c690f9976af08e1283b49caf85
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9c637d3bcb56a3e2b5e581b3348271f50adb9fd7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283360"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714429"
 ---
-# <a name="cellset-example-vb"></a>Esempio di set di celle (VB)
-Questo progetto di Visual Basic viene illustrato l'utilizzo di ADO MD per accedere ai dati del cubo di base. Visualizza le didascalie dei membri per le intestazioni di riga e colonna, quindi Visualizza i valori di celle specifiche all'interno del set di celle formattati.  
+# <a name="cellset-example-vb"></a>Esempio di Cellset (VB)
+Questo progetto di Visual Basic illustra le nozioni di base dell'uso di ADO MD per accedere ai dati del cubo. Visualizza le didascalie dei membri per le intestazioni di riga e colonna, quindi Visualizza i valori di celle specifiche nel set di celle formattati.  
   
 ```  
 Private Sub cmdCellSettoDebugWindow_Click()  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, F1 Help
 ms.assetid: 41e5e3d1-cc45-4bb0-ac09-4639d2ffc0ea
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca4ce364da49d35e7f9e901937196f3dbad63af7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 913d830772403f1a7e9abd622611663a0a0e141f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218171"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123311"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>Guida sensibile al contesto della Generazione guidata schema (Analysis Services - Dati multidimensionali)
   Utilizzare la Generazione guidata schema per generare automaticamente lo schema relazionale per un database dell'area di interesse basato su cubi e dimensioni esistenti. È inoltre possibile popolare tabelle generate dalla procedura guidata per le dimensioni temporali e gestire la convenzione di denominazione e le opzioni per il database dell'area di interesse.  
