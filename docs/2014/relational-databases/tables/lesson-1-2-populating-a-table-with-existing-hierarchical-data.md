@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ded697f41f68e26e677fe5054e7e4f59955fc74c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce20cc81961c70984eb36ad39e8aa0b06fab0e08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186118"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213585"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Popolamento di una tabella con dati gerarchici esistenti
   Questa attività consente di creare una nuova tabella e popolarla con i dati della tabella **EmployeeDemo**. Questa attività prevede i passaggi seguenti:  

@@ -1,35 +1,32 @@
 ---
-title: Ricerca di ulteriori informazioni su SQL Server Native Client | Microsoft Docs
+title: Ricerca di ulteriori informazioni su SQL Server Native Client | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLNCLI, additional resources
 - SQL Server Native Client, additional resources
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fba30d71b06f0c25de8916f1dbfac7d5edd99d3d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2d6ab3a01c0de578bd226a596c9fbdc3628d04e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418640"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156891"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Ricerca di ulteriori informazioni su SQL Server Native Client
   Per ulteriori informazioni su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e sugli altri tipi di programmazione per l'accesso ai dati, vedere le risorse online seguenti:  
   
- [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173)  
+ [Centro per sviluppatori di soluzioni di accesso ai dati e archiviazione](http://go.microsoft.com/fwlink?linkid=4173)  
  In questo sito sono disponibili articoli tecnici, codice di esempio e altre risorse per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e altre tecnologie di accesso ai dati.  
   
- [Blog su accesso dati](http://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Blog per l'accesso ai dati](http://go.microsoft.com/fwlink/?LinkId=48617)  
  In questo blog vengono fornite informazioni sulle tecnologie di accesso ai dati ed è possibile interagire direttamente con i membri del team di prodotto.  
   
  [Windows Data Access Components](http://go.microsoft.com/fwlink/?LinkId=107907)  

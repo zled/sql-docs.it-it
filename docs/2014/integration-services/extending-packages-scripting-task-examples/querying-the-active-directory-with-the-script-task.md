@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03a12904a08c964a122f0658ccb53a4f5f0bd4ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a22b2648d450bb5c50439aca02b65c39de65ea2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245191"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226790"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Esecuzione di query su Active Directory tramite l'attività Script
   Le applicazioni di elaborazione di dati aziendali, ad esempio i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], devono in genere elaborare i dati in modo diverso a seconda del grado, della posizione o di altre caratteristiche dei dipendenti archiviati in Active Directory. Active Directory è un servizio directory di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows che rende disponibile un archivio centralizzato di metadati sugli utenti e su altre risorse dell'organizzazione, come computer e stampanti. Lo spazio dei nomi `System.DirectoryServices` in Microsoft .NET Framework fornisce le classi per l'utilizzo di Active Directory, che consente di indirizzare il flusso di lavoro dell'elaborazione dei dati in base alle informazioni archiviate.  
@@ -48,7 +45,7 @@ ms.locfileid: "37245191"
   
 4.  Nel progetto di script aggiungere un riferimento allo spazio dei nomi `System.DirectoryServices`.  
   
-5.  , Nel codice utilizzare un'istruzione `Imports` per importare lo spazio dei nomi `DirectoryServices`.  
+5.  . Nel codice utilizzare un'istruzione `Imports` per importare lo spazio dei nomi `DirectoryServices`.  
   
 > [!NOTE]  
 >  Per eseguire correttamente lo script, è necessario che l'azienda utilizzi Active Directory nella propria rete e archivi le informazioni sui dipendenti utilizzati nell'esempio.  

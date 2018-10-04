@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 72484d27-3ef1-4f16-813c-2f43231fc2da
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 578d47783f22e857bb2fb84949e9d22dd6ad0e85
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b97cec782c7f95de42ee64d7db0ce56ffa916c3e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37174953"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176607"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Impostazione del tipo di dati e contenuto (Esercitazione di base sul data mining)
   Ora che sono state selezionate le colonne da utilizzare per la compilazione della struttura e il training dei modelli, apportare le modifiche necessarie ai tipi di dati e di contenuto predefiniti impostati dalla procedura guidata.  
@@ -36,11 +33,11 @@ ms.locfileid: "37174953"
     |------------|------------------|---------------|  
     |**Riga indirizzo 1**|**Discreta**|**Text**|  
     |**Riga indirizzo 2**|**Discreta**|**Text**|  
-    |**Età**|**Continua**|**Long**|  
+    |**Età**|**continua**|**Long**|  
     |**Bike Buyer**|**Discreta**|**Long**|  
     |**Commute Distance**|**Discreta**|**Text**|  
     |**CustomerKey**|**Key**|**Long**|  
-    |**DateLastPurchase**|**Continua**|**Data**|  
+    |**DateLastPurchase**|**continua**|**Data**|  
     |**Email Address**|**Discreta**|**Text**|  
     |**English Education**|**Discreta**|**Text**|  
     |**English Occupation**|**Discreta**|**Text**|  
@@ -54,7 +51,7 @@ ms.locfileid: "37174953"
     |**Number Children At Home**|**Discreta**|**Long**|  
     |**Region**|**Discreta**|**Text**|  
     |**Total Children**|**Discreta**|**Long**|  
-    |**Yearly Income**|**Continua**|**Double**|  
+    |**Yearly Income**|**continua**|**Double**|  
   
 3.  Scegliere **Avanti**.  
   

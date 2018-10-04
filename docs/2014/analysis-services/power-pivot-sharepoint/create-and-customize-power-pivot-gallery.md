@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d2e5434ae7f306b3f4a8de1d1c7356beb989b82
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c52425d05f7e9acf8ea5468dff21f17aaf30ebe4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163681"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Creare e personalizzare la raccolta PowerPivot
   La raccolta PowerPivot è un tipo particolare di raccolta documenti di SharePoint tramite cui vengono fornite un'anteprima dettagliata e la gestione dei documenti per cartelle di lavoro pubblicate di Excel e per report di Reporting Services contenenti dati PowerPivot.  
@@ -63,7 +60,7 @@ ms.locfileid: "37181003"
   
  Le immagini di anteprima si basano sul modo in cui viene eseguito il rendering della cartella di lavoro mediante Excel Services. La rappresentazione nella raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve corrispondere a ciò che viene visualizzato quando si apre una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in un browser. L'anteprima tuttavia presenta una superficie di attacco limitata. Parti di una cartella di lavoro o di un report potrebbero essere tagliate per adattarsi allo spazio disponibile. Per visualizzare il documento completo potrebbe essere necessario aprire una cartella di lavoro o un report.  
   
- L'aggiornamento dati della cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] da origini dati esterne è supportato nella Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ma viene richiesta una configurazione aggiuntiva. L'amministratore di una farm o di un servizio deve aggiungere la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] come percorso attendibile di Excel Services. Per altre informazioni, vedere [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ L'aggiornamento dati della cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] da origini dati esterne è supportato nella Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ma viene richiesta una configurazione aggiuntiva. L'amministratore di una farm o di un servizio deve aggiungere la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] come percorso attendibile di Excel Services. Per altre informazioni, vedere [Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="createlib"></a> Creare la raccolta PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] viene creata durante l'installazione di [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] tramite l'opzione di installazione Nuovo server. Se è stato aggiunto [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a una farm esistente o si desidera una raccolta aggiuntiva, è possibile crearne una nuova per l'applicazione o il sito.  

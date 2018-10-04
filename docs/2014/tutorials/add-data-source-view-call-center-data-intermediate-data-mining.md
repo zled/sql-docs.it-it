@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a448e7e4-dbd1-4d31-90bc-4d4a1c23b352
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1e8c03f9b19ee0338915077c6177799072b2356
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f212c6436af0e35c7cfaceadf8c519765d0a07a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291737"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171947"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Aggiunta di una vista origine dati per i dati del call center (Esercitazione intermedia sul data mining)
   In questa attività verrà aggiunta una vista origine dati da utilizzare per accedere ai dati del call center. Gli stessi dati verranno utilizzati per compilare sia il modello di rete neurale iniziale per l'esplorazione, sia il modello di regressione logistica che verrà utilizzato per preparare i consigli.  

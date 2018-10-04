@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ae1d09ddc1df0d4ff33808c92b708f92b4f4820c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db0a090cd82e1bbcd9caa9ac5542662f67c5aecd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240531"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181258"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Elenco di controllo per la distribuzione: installazione multiserver di PowerPivot per SharePoint 2010
   Questo elenco di controllo in modo semplificato i passaggi per l'aggiunta di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint a una farm di SharePoint 2010 a tre livelli che crea da zero. In una farm a tre livelli sono inclusi i livelli database, applicazione e Web. Aggiunta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per questa topologia richiede l'esecuzione del programma di installazione di SQL Server per installare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nel livello applicazione. File di programma PowerPivot vengono aggiunti al livello web, ma solo come un'attività di post-installazione quando si deploy soluzione dell'applicazione web. Anche se sono disponibili passaggi relativi alla distribuzione, non è necessario eseguire alcun passaggio di installazione separato nel livello Web o nel livello dati. È l'unico passaggio che è necessario eseguire l'installazione [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nei server dell'applicazione.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - code groups [Reporting Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - code access security [Reporting Services], about code access security
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 94cae16b2cfd437ff5e2e1d4878ffb027745e3ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03c0dde2c3df8d8403897b660ed81ba7dbe75f43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218901"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163731"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Sicurezza dall'accesso di codice in Reporting Services
   La sicurezza dall'accesso di codice si basa su tre concetti principali, ovvero evidenza, gruppi di codice e set di autorizzazione denominati. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] i componenti Gestione report, Progettazione report e server di report dispongono ognuno di un file di criteri che configura la sicurezza dall'accesso di codice per assembly personalizzati ed estensioni per i dati, il recapito, il rendering e di sicurezza. Nelle sezioni seguenti viene fornita una panoramica sulla sicurezza dall'accesso di codice. Per altre informazioni sugli argomenti trattati in questa sezione, vedere la sezione relativa al modello dei criteri di sicurezza nella documentazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK.  

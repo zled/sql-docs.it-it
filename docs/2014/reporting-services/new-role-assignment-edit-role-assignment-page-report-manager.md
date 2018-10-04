@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d1635c6b9c801b5a2ad9a2eff107c3bf35cf23a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9b964ba4be7587836da9e8852261a43f1e8f43c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179648"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181791"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Pagina Nuova assegnazione ruolo: Modifica assegnazione ruolo (Gestione report)
   La pagina Nuova assegnazione ruolo o Modifica assegnazione ruolo consente di concedere le autorizzazioni per operazioni ed elementi del server di report. Per ogni utente che deve accedere a un server di report è necessario definire almeno un'assegnazione di ruolo per definire il livello di accesso. È possibile creare assegnazioni di ruolo nel nodo radice o in uno specifico report, modello, cartella, risorsa o origine dati condivisa. Il sistema di sicurezza di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] si basa su assegnazioni di ruolo che vengono applicate agli elementi. Tramite un'assegnazione di ruolo, un gruppo o un utente viene assegnato a una definizione di ruolo e ogni definizione di ruolo identifica le attività che i gruppi o gli utenti sono autorizzati a eseguire in relazione a un elemento specifico.  

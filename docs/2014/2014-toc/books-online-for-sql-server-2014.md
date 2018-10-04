@@ -4,8 +4,6 @@ ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: 'index-page '
 f1_keywords:
 - sql12.portal.f1
@@ -21,20 +19,20 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2504ca0853d11d496e88b963a4421885b83631b0
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 31232de01fcd2e1f4c9d6ce67d446c737990d105
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310198"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161761"
 ---
-# Books Online for SQL Server 2014
+# <a name="books-online-for-sql-server-2014"></a>Books Online for SQL Server 2014
   Documentazione online di [!INCLUDE[msCoName](../includes/msconame-md.md)]® per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Documentazione Online contiene le descrizioni delle attività e la documentazione di riferimento che descrive come eseguire operazioni di business intelligence aziendale e di gestione di dati mediante [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Per provarlo:**  
  ![Macchina virtuale di Azure piccola](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Se si ha un account di Azure,  Quindi andare **[qui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** creare rapidamente una macchina virtuale con SQL Server 2014 Service Pack 1 (SP1) già installato. Per altre informazioni su SQL Server 2014 (SP1), vedere [informazioni sulla versione di SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865). 
   
-## Tecnologie di SQL Server  
+## <a name="sql-server-technologies"></a>Tecnologie di SQL Server  
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono incluse diverse tecnologie di gestione e analisi dei dati. Fare clic sui collegamenti nella tabella seguente per trovare la funzionalità, l'attività e la documentazione di riferimento attinenti a ogni tecnologia.  
   
 |||  
@@ -47,7 +45,7 @@ ms.locfileid: "39310198"
 |![Icona della replica](media/replication.gif "icona della replica")|[Replica](../relational-databases/replication/sql-server-replication.md)<br /><br /> La replica è costituita da un set di tecnologie per la copia e la distribuzione di oggetti di database e dati da un database a un altro e dalla successiva sincronizzazione dei database allo scopo di mantenerne la consistenza. Tramite la funzione di replica è possibile distribuire i dati in diverse posizioni a utenti remoti o mobili tramite reti LAN o WAN, connessioni remote, connessioni wireless e Internet.|  
 |![Icona di Reporting Services](media/reportingservices.gif "sull'icona di Reporting Services")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services offre funzionalità Web aziendali per la gestione e la creazione di report usando come contenuto una serie di origini dati diverse, la pubblicazione dei report in vari formati e la gestione centralizzata della sicurezza e delle sottoscrizioni.|  
   
-## Informazioni su SQL Server nel Web:  
+## <a name="sql-server-information-on-the-web"></a>Informazioni su SQL Server nel Web:  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] pubblica informazioni aggiuntive su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in diversi siti Web.  
   
  **Siti Web di SQL Server**  
@@ -64,7 +62,7 @@ ms.locfileid: "39310198"
   
 -   [Centro per sviluppatori XML](http://go.microsoft.com/fwlink/?LinkId=42458)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di Gestione configurazione SQL Server](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

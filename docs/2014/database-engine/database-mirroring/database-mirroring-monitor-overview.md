@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.main.f1
 helpviewer_keywords:
 - Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e0a6c5fe31a244e60e57a14453a29f1392fdcb73
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e5a129fbd9a6dc9fbafd6b06fe5088d162ac9ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330521"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210851"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Panoramica di Monitoraggio mirroring del database
   Se si dispone delle autorizzazioni corrette, è possibile utilizzare Monitoraggio mirroring del database per monitorare eventuali subset dei database con mirroring su un'istanza del server. Il monitoraggio consente di verificare se e quanto correttamente i dati vengono trasmessi alla sessione di mirroring del database. Monitoraggio mirroring del database è inoltre utile per individuare e risolvere la causa di una riduzione del flusso di dati.  
@@ -35,7 +32,7 @@ ms.locfileid: "37330521"
   
 -   Gli ultimi ruoli noti di ogni partner (principale o mirror)  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per monitorare il mirroring del database, è necessario essere membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **dbm_monitor** nel database **msdb** nell'istanza del server. Se l'utente è membro di **sysadmin** o di **dbm_monitor** su una sola delle istanze del server partner, il monitoraggio può connettersi solo a tale partner e non riesce a recuperare informazioni dall'altro partner.  
   
  Se l'utente è membro solo di **dbm_monitor** su un'istanza del server, disporrà di autorizzazioni limitate su tale istanza. L'utente sarà in grado di visualizzare esclusivamente la riga di stato più recente. Se l'utente si connette a un'istanza del server usando le autorizzazioni per **dbm_monitor** , Monitoraggio mirroring del database avvisa che l'utente ha autorizzazioni limitate.  

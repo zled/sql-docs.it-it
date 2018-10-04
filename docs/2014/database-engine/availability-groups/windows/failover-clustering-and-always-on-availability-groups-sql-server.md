@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0fc322f09ab45756de441e3edf806ab99a02e5c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: edb2632b0c523bb1ecf49eef767ff3540694f2af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267147"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167942"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>Clustering di failover e gruppi di disponibilità AlwaysOn (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la soluzione di ripristino di emergenza a disponibilità elevata introdotta in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], richiede WSFC (Windows Server Failover Clustering). Sebbene inoltre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non dipenda dal clustering di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è possibile utilizzare un'istanza di clustering di failover per ospitare una replica di disponibilità per un gruppo di disponibilità. È importante conoscere la funzione di ogni tecnologia di clustering e sapere quali sono le considerazioni necessarie per la progettazione di un ambiente di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  

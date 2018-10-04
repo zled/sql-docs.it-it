@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.showplan.nestedloops.f1
@@ -135,16 +133,15 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 99d305034989f0fdd2f9ca65dae9cef7d0881c2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97130c8e9a0a32a3719ed745565fce4a511d0dd3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161341"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Guida di riferimento a operatori Showplan logici e fisici
   Gli operatori descrivono la modalità di esecuzione di una query o di un'istruzione del linguaggio di manipolazione dei dati (DML, Data Manipulation Language) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . In Query Optimizer gli operatori consentono di compilare un piano di query per ottenere i risultati specificati nella query o per eseguire l'operazione specificata nell'istruzione DML. Il piano di query è un albero composto da operatori fisici che è possibile visualizzare tramite le istruzioni SET SHOWPLAN, le opzioni del piano di esecuzione grafico in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]o le classi di eventi Showplan di SQL Server Profiler.  

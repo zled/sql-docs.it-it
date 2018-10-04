@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Template
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adc7d7a6700373227d5508cbd77e4101a0051ba9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eaee265571f647c4908a42634a45fc91b355d7bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268987"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209281"
 ---
 # <a name="qntemplate-event-class"></a>Classe di evento QN:Template
   L'evento QN:Template fornisce informazioni sull'utilizzo interno dei modelli di query che rappresentano il meccanismo tramite il quale [!INCLUDE[ssDE](../../includes/ssde-md.md)] consente di condividere le definizioni di una query per la notifica. Questi modelli vengono creati insieme alle tabelle di parametri. [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un evento di questo tipo quando viene creato, utilizzato o eliminato un modello di query.  

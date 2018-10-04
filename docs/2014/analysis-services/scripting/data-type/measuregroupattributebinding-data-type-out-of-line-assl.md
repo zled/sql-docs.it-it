@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureGroupAttributeBinding Data Type (out-of-line)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - MeasureGroupAttributeBinding data type
 ms.assetid: bfe09a95-4e04-4f93-9389-7dd0b4c8f5e4
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 244656b0ae951ec5f8274f11e58153faef80957d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 247e96f7994fa076b8641394231b772e80685e32
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218211"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156581"
 ---
 # <a name="measuregroupattributebinding-data-type-out-of-line-assl"></a>Tipo di dati MeasureGroupAttributeBinding (out-of-line) (ASSL)
   Definisce un tipo di dati derivato che rappresenta un'associazione out-of-line per un attributo in una dimensione incluso in un gruppo di misure.  
@@ -51,7 +48,7 @@ ms.locfileid: "37218211"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipi di dati di base|[Associazione](binding-data-type-assl.md)|  
+|Tipi di dati di base|[associazione](binding-data-type-assl.md)|  
 |Tipi di dati derivati|None|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  

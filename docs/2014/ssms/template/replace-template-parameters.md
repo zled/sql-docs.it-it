@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.templates.replaceparameters.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Replace (Query) Template Parameters dialog box
 - replacing template parameters
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04ec0872a0a0daf82ca54107a7f60639cd1ed9d9
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 160ccd170228e029484e4c51ffbacc9912bbadde
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818497"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214031"
 ---
 # <a name="replace-template-parameters"></a>Sostituisci parametri modello
   I modelli contengono parametri che possono essere sostituiti da valori specifici dell'implementazione ogni volta che il modello è utilizzato. Dopo avere aperto un modello in un editor di codice, è possibile sostituire i parametri con i valori attinenti all'implementazione.  

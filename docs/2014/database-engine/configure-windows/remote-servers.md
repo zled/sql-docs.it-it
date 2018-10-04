@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], remote servers
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 254dc9a0160527be50654ac00cac30d02152abab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 98585ac8a3e504a2b73741559f4db839e6737154
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328201"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168691"
 ---
 # <a name="remote-servers"></a>Server remoti
   I server remoti sono supportati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esclusivamente per compatibilità con le versioni precedenti. È opportuno impostare le nuove applicazioni in modo che utilizzino i server collegati. Per altre informazioni, vedere [Server collegati &#40;Motore di database&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
@@ -99,7 +96,7 @@ GO
 ## <a name="viewing-local-or-remote-server-properties"></a>Visualizzazione delle proprietà dei server locali o remoti  
  Per esaminare gli attributi per i server locali o remoti, è possibile usare la stored procedure estesa **xp_msver** . Tali attributi includono il numero di versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il tipo e il numero di processori nel computer e la versione del sistema operativo. Dal server locale è possibile visualizzare database, file, account di accesso e strumenti di un server remoto. Per altre informazioni, vedere [xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Server collegati &#40;Motore di database&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  

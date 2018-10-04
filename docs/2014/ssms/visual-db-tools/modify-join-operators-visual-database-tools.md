@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - joins [SQL Server], operators
 - modifying join operators
 - join operators
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad48b7e744dc83e5a32bec972383067eb076d470
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5dfc560a935373a9495edc884a892937fbd13161
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817217"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167161"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modifica di operatori di join (Visual Database Tools)
   Per impostazione predefinita, in [Progettazione query e Progettazione viste](visual-database-tools.md) le tabelle vengono unite in join tramite un segno di uguale (equijoin) che collega i valori delle due colonne join. Se si desidera, sarà possibile modificare l'operatore utilizzato per confrontare i valori nelle colonne join.  

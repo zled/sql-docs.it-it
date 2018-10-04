@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-caps.latest.revision: 82
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19ca1d323f2b0e53e458aa808f791936b823eef7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a6d6197cb525ba4ad395da590ea113bdd0a1f0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164262"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220341"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurare e gestire i file del thesaurus per la ricerca full-text
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le query full-text possono eseguire la ricerca di sinonimi dei termini specificati dall'utente tramite l'uso di un thesaurus. Oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *thesaurus* definisce un set di sinonimi per una lingua specifica. Gli amministratori di sistema possono definire due forme di sinonimi, i set di espansione e i set di sostituzione. Sviluppando un thesaurus basato sui dati full-text in uso, è possibile ampliare in modo efficace l'ambito delle query full-text su tali dati. Corrispondenza con il Thesaurus si verifica per tutte le [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) e [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) query e per qualsiasi [CONTAINS](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) che esegue una query specificare la clausola FORMSOF THESAURUS.  

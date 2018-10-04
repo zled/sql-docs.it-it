@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
-caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 799b6a05850abb88c97c8e2a27214055eb20d976
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301341"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164871"
 ---
-# Architettura e gestione del log delle transazioni di SQL Server
+# <a name="sql-server-transaction-log-architecture-and-management"></a>Architettura e gestione del log delle transazioni di SQL Server
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   In ogni database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è incluso un log delle transazioni in cui vengono registrate tutte le transazioni e le modifiche apportate dalle transazioni stesse al database. Il log delle transazioni è un componente fondamentale del database e, in caso di errore di sistema, può essere necessario per ripristinare la coerenza del database. In questa guida vengono fornite informazioni sull'architettura fisica e logica del log delle transazioni. Le informazioni sull'architettura consentono di gestire più efficacemente i log delle transazioni.  
@@ -82,7 +79,7 @@ ms.locfileid: "37301341"
   
  Se il log include più file di log fisici, il log logico utilizzerà tutti i file di log fisici prima di tornare all'inizio del primo file di log fisico.  
   
-### Troncamento del log  
+### <a name="log-truncation"></a>Troncamento del log  
  Il troncamento del log è essenziale per evitare il riempimento del log. Il troncamento del log comporta l'eliminazione dei file di log virtuali inattivi dal log delle transazioni logico di un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , liberando spazio nel log logico per il riutilizzo da parte del log delle transazioni fisico. Se un log delle transazioni non viene mai troncato, è possibile che le sue dimensioni aumentino fino a occupare tutto lo spazio su disco allocato ai file di log fisici. Tuttavia, prima che sia possibile troncare il log, è necessario eseguire un'operazione su checkpoint. Tramite un checkpoint vengono scritte le pagine modificate in memoria correnti, note come pagine dirty, e le informazioni sul log delle transazioni dalla memoria sul disco. Quando viene eseguito il checkpoint, la parte inattiva del log delle transazioni viene contrassegnata come riutilizzabile. Successivamente, tale parte inattiva potrà essere liberata mediante il troncamento del log. Per altre informazioni sui checkpoint, vedere [Checkpoint di database &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
  Nelle figure seguenti viene illustrato un log delle transazioni prima e dopo il troncamento. Nella prima figura viene illustrato un log delle transazioni che non è mai stato troncato. Attualmente, il log logico utilizza quattro file di log virtuali. Il log logico inizia prima del primo file di log virtuale e termina al log virtuale 4. Il record MinLSN si trova nel log virtuale 3. I log virtuali 1 e 2 contengono solo record di log inattivi. Questi record possono essere troncati. Il log virtuale 5 è ancora inutilizzato e non fa parte del log logico corrente.  
@@ -117,15 +114,15 @@ ms.locfileid: "37301341"
   
  Per limitare il numero di backup dei log che è necessario ripristinare, è fondamentale eseguire regolarmente il backup dei dati. Ad esempio, è possibile pianificare un backup completo del database una volta la settima e backup differenziali del database una volta al giorno.  
   
-### Catena di log  
+### <a name="the-log-chain"></a>Catena di log  
  Una sequenza continua di backup del log è denominata *catena di log*. Una catena di log ha inizio con un backup completo del database. In genere, una nuova catena di log viene creata solo quando si esegue il backup del database per la prima volta oppure dopo il passaggio dal modello di recupero con registrazione minima al modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk. Se si sceglie di non sovrascrivere i set di backup esistenti durante la creazione di un backup completo del database, la catena di log esistente rimane intatta. Con la catena di log intatta, è possibile ripristinare il database da qualsiasi backup completo del database nel set di supporti, seguito da tutti i backup del log successivi tramite il punto di recupero specifico. Il punto di recupero può essere la fine dell'ultimo backup del log o un punto di recupero specifico in uno dei backup del log. Per altre informazioni, vedere [Backup di log delle transazioni &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  Per ripristinare un database al punto in cui si è verificato l'errore, è necessario che la catena di log sia intatta. In altre parole, è necessario che una sequenza non interrotta di backup del log delle transazioni si estenda fino al punto di errore. Il punto in cui la sequenza del log deve iniziare dipende dal tipo di backup dei dati che si sta ripristinando, ovvero un backup del database, parziale o di file. Nel caso di un backup del database o parziale, la sequenza di backup del log si deve estendere dalla fine di un backup del database o parziale. Nel caso di un set di backup di file, la sequenza di backup del log si deve estendere dall'inizio di un intero set di backup di file. Per altre informazioni, vedere [Applicazione dei backup di log delle transazioni &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-### Ripristinare i backup di log  
+### <a name="restore-log-backups"></a>Ripristinare i backup di log  
  Il ripristino di un backup del log determina il rollforward delle modifiche registrate nel log delle transazioni in modo da ricreare l'esatto stato del database esistente all'inizio dell'operazione di backup del log. Quando si ripristina un database, è necessario ripristinare i backup del log creati dopo il backup completo del database ripristinato oppure dall'inizio del primo backup di file ripristinato. In genere, dopo il ripristino del backup dei dati o del backup differenziale più recente, è necessario ripristinare una serie di backup del log fino al punto di recupero desiderato. Recuperare quindi il database. Verrà eseguito il rollback di tutte le transazioni incomplete nel momento in cui è iniziato il recupero e verrà attivata la modalità online per il database. Dopo il recupero del database, non è possibile ripristinare altri backup. Per altre informazioni, vedere [Applicazione dei backup di log delle transazioni &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-## Ulteriori informazioni  
+## <a name="additional-reading"></a>Ulteriori informazioni  
  Per ulteriori informazioni sul log delle transazioni, vedere gli articoli e i documenti riportati di seguito.  
   
  [Informazioni sulla registrazione e il recupero in SQL Server di Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/14/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.roleproperties.selectobject.f1
@@ -20,12 +18,12 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: da63c9918fb2d4c89ab32b3a06402c39bea0785b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: fa9af5a2542581cad1b3a5f4be956cce9651d4f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029103"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170181"
 ---
 # <a name="securables"></a>Entità a protezione diretta
   Le entità a protezione diretta sono le risorse il cui accesso è controllato dal sistema di autorizzazioni del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Ad esempio, una tabella è un'entità a protezione diretta. Alcune entità a protezione diretta possono essere contenute da altre, creando gerarchie nidificate denominate ambiti, che possono a loro volta essere protetti. Gli ambiti a protezione diretta sono **server**, **database**e **schema**.  
@@ -91,7 +89,7 @@ ms.locfileid: "43029103"
   
     -   Funzione  
   
-    -   Procedura  
+    -   Routine  
   
     -   Coda  
   

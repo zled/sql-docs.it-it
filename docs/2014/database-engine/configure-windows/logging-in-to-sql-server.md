@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server, logging in
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - logging in [SQL Server]
 - logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bf56217a597d97514c5dea81947973d5df260598
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4f3e9da57e718790ac071ebc1411ec8a33d23f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269487"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201781"
 ---
 # <a name="logging-in-to-sql-server"></a>Accesso a SQL Server
   È possibile accedere a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno degli strumenti di amministrazione a interfaccia grafica oppure dal prompt dei comandi.  
@@ -51,7 +48,7 @@ ms.locfileid: "37269487"
 |----------------------|-------------------------------|  
 |Connessione a un'istanza predefinita utilizzando il protocollo predefinito. (Si tratta della voce consigliata per un'istanza predefinita).|APPHOST|  
 |Connessione a un'istanza denominata utilizzando il protocollo predefinito. (Si tratta della voce consigliata per un'istanza denominata).|APPHOST\SQLEXPRESS|  
-|Connessione a un'istanza predefinita sullo stesso computer utilizzando un punto per indicare che l'istanza è in esecuzione sul computer locale.|,|  
+|Connessione a un'istanza predefinita sullo stesso computer utilizzando un punto per indicare che l'istanza è in esecuzione sul computer locale.|.|  
 |Connessione a un'istanza denominata sullo stesso computer utilizzando un punto per indicare che l'istanza è in esecuzione sul computer locale.|.\SQLEXPRESS|  
 |Connessione a un'istanza predefinita sullo stesso computer utilizzando localhost per indicare che l'istanza è in esecuzione sul computer locale.|localhost|  
 |Connessione a un'istanza denominata sullo stesso computer utilizzando localhost per indicare che l'istanza è in esecuzione sul computer locale.|localhost\SQLEXPRESS|  
@@ -81,7 +78,7 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;  
 ```  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Accedere a un'istanza di SQL Server &#40;prompt dei comandi&#41;](log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Le risorse seguenti possono contribuire alla risoluzione di un problema di connessione.  
