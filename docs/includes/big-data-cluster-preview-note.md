@@ -1,0 +1,2 @@
+> [!NOTE]
+> I cluster di big data di SQL Server sia disponibile come anteprima pubblica limitata tramite il programma di adozione anticipata SQL Server 2019. Per richiedere l'accesso, registrare [qui](https://aka.ms/eapsignup)e specificare l'interesse dimostrato per provare i cluster di big data di SQL Server. Microsoft valuta tutte le richieste e risposta appena possibile.

@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 814e94b955776f1a9c6c0648b0d47b53fa9cabf3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724345"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798589"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lezione 3: Esplorare e visualizzare i dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -92,7 +92,7 @@ Per creare il tracciato, utilizzare [rxHistogram](https://docs.microsoft.com/mac
     GO
     ```
 
-La stored procedure **PlotHistogram2** è identica a una stored procedure preesistente **PlotHistogram** creando il `RunSQL_SQL_Walkthrough.ps1` script. 
+La stored procedure **PlotHistogram2** è identica a una stored procedure preesistente **PlotHistogram** trovato nel database NYCTaxi_sample. 
   
 + La variabile `@query` definisce il testo della query (`'SELECT tipped FROM nyctaxi_sample'`) che viene passato allo script R come argomento alla variabile di input dello script `@input_data_1`.
   
@@ -164,7 +164,7 @@ La stored procedure restituisce l'immagine come un flusso di dati varbinary, che
 
 In genere, i data Scientist possono generano più visualizzazioni dei dati per ottenere informazioni dettagliate sui dati da prospettive diverse. In questo esempio, la stored procedure viene utilizzata la funzione Hist per creare l'istogramma, esportando i dati binari in formati comuni, ad esempio. JPG. PDF, e. PNG. 
 
-1. Utilizzare la stored procedure esistente **PlotInOutputFiles**per creare istogrammi, grafici e altri elementi grafici R per. JPG e. Formato PDF. Il `RunSQL_SQL_Walkthrough.ps1` consente di creare **PlotInOutputFiles** e lo aggiunge il database. Usare i pulsante destro del mouse **Modify** per visualizzare l'origine.
+1. Utilizzare la stored procedure esistente **PlotInOutputFiles**per creare istogrammi, grafici e altri elementi grafici R per. JPG e. Formato PDF. Usare i pulsante destro del mouse **Modify** per visualizzare l'origine.
 
 2. Facoltativamente, di esercitazione, creare la propria copia della routine come **PlotInOutputFiles2**, con un nome univoco per evitare un conflitto di denominazione.
 

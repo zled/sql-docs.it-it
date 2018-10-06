@@ -1,6 +1,6 @@
 ---
 title: Proprietà della memoria | Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,31 +9,31 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0239d2d203e7cb32a2ea587ee069d26ad003b0e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a080bed935a8f981376ff40dc36e19ef61a3c144
+ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054873"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48264881"
 ---
 # <a name="memory-properties"></a>Proprietà della memoria
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prealloca una modesta quantità di memoria all'avvio in modo che le richieste possono essere gestite immediatamente. La memoria aggiuntiva viene allocata come query e i carichi di lavoro di elaborazione aumentano. 
+  Analysis Services viene pre-allocato una modesta quantità di memoria all'avvio in modo che le richieste possono essere gestite immediatamente. La memoria aggiuntiva viene allocata come query e i carichi di lavoro di elaborazione aumentano. 
   
   Tramite la specifica delle impostazioni di configurazione è possibile controllare le soglie di rilascio della memoria. L'impostazione **HardMemoryLimit** consente ad esempio di specificare una condizione di memoria esaurita imposta automaticamente (per impostazione predefinita, questa soglia non è abilitata), in cui le nuove richieste vengono rifiutate completamente finché non diventano disponibili altre risorse.
 
-Per altre informazioni sulla quantità di memoria massima usata per ogni istanza di Analysis Services dall'edizione, vedere [edizioni e funzionalità supportate di SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
+Per altre informazioni sulla quantità di memoria massima usata per ogni istanza di SQL Server Analysis Services dall'edizione, vedere [edizioni e funzionalità supportate di SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
   
- Le impostazioni seguenti si applicano a entrambe le modalità server tabulare e multidimensionale se non specificato diversamente.  
+ Le impostazioni seguenti si applicano ai server tabulari e multidimensionali se non specificato diversamente.  
  
 ## <a name="default-memory-configuration"></a>Configurazione di memoria predefinita
 
-In base alla configurazione predefinita, ogni istanza di Analysis Services consente di allocare una piccola quantità di RAM (40MB a 50 MB) all'avvio, anche se l'istanza è inattiva. 
+In base alla configurazione predefinita, ogni istanza di Analysis Services consente di allocare una piccola quantità di RAM (40 MB a 50 MB) all'avvio, anche se l'istanza è inattiva. 
 
 Tenere presente che le impostazioni di configurazione si intendono per istanza. Se si eseguono più istanze di Analysis Services nello stesso hardware, ad esempio un'istanza tabulare e una multidimensionale, ogni istanza allocherà la propria memoria in modo indipendente dalle altre istanze.
 
-La tabella seguente descrive brevemente le impostazioni di memoria più comuni. Per informazioni più dettagliate, vedere la sezione di riferimento. È necessario configurare queste impostazioni solo se Analysis Services entra in competizione per la memoria con altre applicazioni sullo stesso server:
+La tabella seguente descrive brevemente le impostazioni di memoria più comuni. Per informazioni più dettagliate, vedere la sezione di riferimento. Configurare queste impostazioni solo se Analysis Services entra in competizione per la memoria con altre applicazioni sullo stesso server:
 
 Impostazione | Description
 --------|------------
@@ -66,12 +66,10 @@ Solo per Azure Analysis Services. Una proprietà avanzata per controllare la qua
  **VertiPaqPagingPolicy**  
   Solo per le istanze tabulari, specifica il comportamento di paging nel caso in cui la memoria del server sia insufficiente. I valori validi sono i seguenti:  
   
-  
-
 Impostazione  |Description  
 ---------|---------
-**0**     |  Disabilita il paging. Se la memoria è insufficiente, l'elaborazione ha esito negativo e provoca un errore memoria insufficiente. Se si disabilita il paging, è necessario concedere i privilegi di Windows all'account del servizio. Per istruzioni, vedere [Configurare gli account del servizio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md). 
-**1**     |  (Impostazione predefinita) Questa proprietà abilita il paging su disco usando il file di paging del sistema operativo (pagefile.sys).   
+**0**     |  (impostazione predefinita per Azure Analysis Services) Disabilita il paging. Se la memoria è insufficiente, l'elaborazione ha esito negativo e provoca un errore memoria insufficiente. Se si disabilita il paging, è necessario concedere i privilegi di Windows all'account del servizio. Per istruzioni, vedere [Configurare gli account del servizio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md). 
+**1**     |  (impostazione predefinita per SQL Server Analysis Services) Questa proprietà abilita il paging su disco utilizzando il file di paging del sistema operativo (Pagefile. sys).   
   
 Quando è impostata su 1, è meno probabile che l'elaborazione non venga completata a causa di limitazioni di memoria perché il server tenterà di eseguire il paging su disco usando il metodo specificato. L'impostazione della proprietà **VertiPaqPagingPolicy** non garantisce che non si verificheranno mai gli errori della memoria. Gli errori di memoria insufficiente si possono comunque verificare nelle condizioni seguenti:  
   

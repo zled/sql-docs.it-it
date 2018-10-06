@@ -10,16 +10,16 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f8667c74843ab26b251c5a23a1e93f7f26e72fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 187517c79f14ddcbf08ffa644e65558fa0a85b38
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759359"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251999"
 ---
 # <a name="sql-server-always-on-availability-group-kubernetes-operator-parameters"></a>SQL Server Always On gruppo Kubernetes operatore i parametri di disponibilità
 
-Un gruppo di disponibilità Always On su Kubernetes richiede un operatore. Viene descritto l'operatore in un file con estensione yaml.  Vedere un esempio della specifica nella [in questa esercitazione](tutorial-sql-server-ag-kubernetes.md).
+Un gruppo di disponibilità Always On su Kubernetes richiede un operatore. Un manifesto descrive l'operatore. Il manifesto è un `.yaml` file. Vedere un esempio della specifica nella [i gruppi di disponibilità per i contenitori di SQL Server](sql-server-ag-kubernetes.md).
 
 Questo articolo illustra le variabili di ambiente globali operatore.
 
@@ -31,15 +31,15 @@ L'esempio seguente illustra una distribuzione per il `mssql-operator`.
 
 * `MSSQL_K8S_POD_NAMESPACE` 
   * Obbligatorio
-  * **Descrizione**: lo spazio dei nomi Kubernetes dell'operatore.
+  * **Descrizione**: spazi dei nomi Kubernetes The dell'operatore.
 
 * `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`
   * Facoltativo
-  * **Descrizione**: la durata di sql server esterne scrivere lease per mantenere scrivibile sql server ed evitare gli scenari di "split Brain". Repliche secondarie attendere la scadenza dopo la designazione di un nuovo leader.
+  * **Descrizione**: la durata del lease di scrittura sql server. Consente di mantenere il server sql scrivibile ed evitare gli scenari di "split Brain". Repliche secondarie di attesa per questo numero di secondi dopo aver selezionato un nuovo leader.
 
 * `MSSQL_K8S_MONITOR_PERIOD_SECONDS`
   * Facoltativo
-  * **Descrizione**: il periodo per il monitoraggio se lo stato del gruppo di disponibilità. Determina la rapidità le repliche vengono aggiunti ed eliminate. Deve essere minore di `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`.
+  * **Descrizione**: il periodo per monitorare lo stato del gruppo di disponibilità. Determina la rapidità le repliche vengono aggiunti ed eliminate. Deve essere minore di `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`.
   * **Default**: 1
 
 * `MSSQL_K8S_LEASE_DURATION_SECONDS`

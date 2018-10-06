@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 6c1a6a7ef05a10662a878c9b0e86d336835af4a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 55375101434b719cfd785a6ddab2b6ec3e779927
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775789"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782370"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Guida introduttiva: Immagini del contenitore in esecuzione SQL Server con Docker
 
@@ -54,7 +54,7 @@ any changes to one section should be duplicated in the other-->
 
 ## <a id="pullandrun2017"></a> Eseguire il pull ed eseguire l'immagine del contenitore
 
-1. Eseguire il pull dell'immagine del contenitore di SQL Server 2017 su Linux dall'hub Docker.
+1. Eseguire il pull dal registro contenitori di Microsoft l'immagine del contenitore SQL Server 2017 su Linux.
 
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
@@ -67,7 +67,7 @@ any changes to one section should be duplicated in the other-->
    > [!TIP]
    > Se si vuole provare l'immagine di anteprima di SQL Server 2019, vedere la [versione di anteprima di SQL Server 2019 di questo articolo](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
 
-   Il comando riportato sopra esegue il pull dell'immagine del contenitore di SQL Server 2017 più recente. Se si vuole eseguire il pull di un'immagine specifica, aggiungere un segno di due punti e il nome del tag (ad esempio `mcr.microsoft.com/mssql/server:2017-GA`). Per vedere tutte le immagini disponibili, vedere la [pagina mssql-server-linux dell'hub Docker](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+   Il comando riportato sopra esegue il pull dell'immagine del contenitore di SQL Server 2017 più recente. Se si vuole eseguire il pull di un'immagine specifica, aggiungere un segno di due punti e il nome del tag (ad esempio `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`). Per informazioni su tutte le immagini disponibili, vedere [pagina dell'hub Docker mssql-server](https://hub.docker.com/r/microsoft/mssql-server).
 
    Per i comandi di bash in questo articolo, `sudo` viene usato. In MacOS, `sudo` potrebbe non essere necessaria. In Linux, se non si desidera utilizzare `sudo` per eseguire Docker, è possibile configurare un **docker** gruppo e aggiungere utenti a tale gruppo. Per altre informazioni, vedere [passaggi di post-installazione per Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
@@ -99,7 +99,7 @@ any changes to one section should be duplicated in the other-->
    | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>'** | Specificare la password complessa composta da almeno 8 caratteri e conforme ai [requisiti per le password di SQL Server](../relational-databases/security/password-policy.md). Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-p 1433:1433** | Eseguire il mapping di una porta TCP nell'ambiente host (primo valore) con una porta TCP nel contenitore (secondo valore). In questo esempio, SQL Server è in ascolto sulla porta TCP 1433 nel contenitore e questa funzionalità è esposta alla porta 1433, nell'host. |
    | **--name sql1** | Specificare un nome personalizzato per il contenitore, invece di un nome generato in modo casuale. Se si eseguono più contenitori, non è possibile riutilizzare questo stesso nome. |
-   | **microsoft/mssql-server-linux:2017-latest** | Immagine del contenitore di SQL Server 2017 su Linux. |
+   | **MCR.microsoft.com/MSSQL/Server:2017-Latest** | Immagine del contenitore di SQL Server 2017 su Linux. |
 
 3. Per visualizzare i contenitori di Docker, usare il comando `docker ps`.
 
@@ -181,7 +181,7 @@ L'impostazione di `-h` e `--name` sullo stesso valore è un buon modo per identi
    | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>'** | Specificare la password complessa composta da almeno 8 caratteri e conforme ai [requisiti per le password di SQL Server](../relational-databases/security/password-policy.md). Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-p 1433:1433** | Eseguire il mapping di una porta TCP nell'ambiente host (primo valore) con una porta TCP nel contenitore (secondo valore). In questo esempio, SQL Server è in ascolto sulla porta TCP 1433 nel contenitore e questa funzionalità è esposta alla porta 1433, nell'host. |
    | **--name sql1** | Specificare un nome personalizzato per il contenitore, invece di un nome generato in modo casuale. Se si eseguono più contenitori, non è possibile riutilizzare questo stesso nome. |
-   | **Microsoft/mssql-server-linux:vNext-CTP2.0** | L'immagine del contenitore Linux di SQL Server 2019 CTP 2.0. |
+   | **MCR.microsoft.com/MSSQL/Server:vNext-CTP2.0-Ubuntu** | L'immagine del contenitore Linux di SQL Server 2019 CTP 2.0. |
 
 3. Per visualizzare i contenitori di Docker, usare il comando `docker ps`.
 
