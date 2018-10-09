@@ -51,7 +51,7 @@ ms.locfileid: "48148781"
   
 2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Specificare **@publication**, **@subscriber**, il nome del database nel Sottoscrittore contenente i dati pubblicati per **@destination_db**, il valore **pull** per **@subscription_type**e il valore **replication support only** per **@sync_type**. Per altre informazioni, vedere [Creazione di una sottoscrizione pull](create-a-pull-subscription.md).  
   
-3.  Nel Sottoscrittore eseguire [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Per le sottoscrizioni di aggiornamento, vedere [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+3.  Nel Sottoscrittore eseguire [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Per le sottoscrizioni di aggiornamento, vedere [Creazione di una sottoscrizione aggiornabile di una pubblicazione transazionale](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 4.  Nel Sottoscrittore eseguire [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Per altre informazioni, vedere [Creazione di una sottoscrizione pull](create-a-pull-subscription.md).  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48148781"
   
 1.  Verificare che lo schema e i dati esistano nel database di sottoscrizione. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Specificare il nome del database nel Sottoscrittore contenente i dati pubblicati per **@destination_db**, il valore **push** per **@subscription_type**e il valore **replication support only** per **@sync_type**. Per le sottoscrizioni di aggiornamento, vedere [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Specificare il nome del database nel Sottoscrittore contenente i dati pubblicati per **@destination_db**, il valore **push** per **@subscription_type**e il valore **replication support only** per **@sync_type**. Per le sottoscrizioni di aggiornamento, vedere [Creazione di una sottoscrizione aggiornabile di una pubblicazione transazionale](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Per altre informazioni, vedere [Creazione di una sottoscrizione push](create-a-push-subscription.md).  
   
