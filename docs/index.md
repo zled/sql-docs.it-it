@@ -44,7 +44,7 @@ ms.locfileid: "44343126"
                                                     <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016">SQL Server 2016</a></li>
                                                     <li><a class="barLink" href="/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014">SQL Server 2014</a></li>
                                                     <li><a class="barLink" href="https://docs.microsoft.com/en-us/previous-versions/sql/">Versioni precedenti di SQL Server (2005 - 2012)</a></li>
-                                                    <li><a class="barLink" href="/sql/analytics-platform-system/index">Piattaforma di strumenti analitici - Parallel Data Warehouse</a><li>
+                                                    <li><a class="barLink" href="/sql/analytics-platform-system/index">Piattaforma di strumenti analitici - Parallel Data Warehouse</a></li>
                                                 </ul>
                                                 <h4>In Windows o Linux</h4>
                                                 <ul class="noBullet">
