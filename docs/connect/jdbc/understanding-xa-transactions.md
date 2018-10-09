@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 782b254eca5a0fb60ab354e35b40eae5d5fd2640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810809"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851976"
 ---
 # <a name="understanding-xa-transactions"></a>Informazioni sulle transazioni XA
 
@@ -59,7 +59,16 @@ Per utilizzare le origini dei dati XA con Microsoft Distributed Transaction Coor
 
 > [!NOTE]  
 > I componenti della transazione distribuita JDBC sono inclusi nella directory xa dell'installazione del driver JDBC. Tali componenti includono i file xa_install.sql e sqljdbc_xa.dll.  
-  
+
+> [!NOTE]  
+> A partire da SQL Server 2019 versione CTP 2.0 di anteprima pubblica, stored procedure di XA di JDBC sono inclusi i componenti delle transazioni distribuite nel motore di SQL Server che può essere abilitato o disabilitato con un sistema. Per abilitare i componenti necessari eseguire le transazioni distribuite XA utilizza il driver JDBC, eseguire stored procedura seguente.
+>
+> EXEC sp_sqljdbc_xa_install
+>
+> Per disabilitare i componenti installati in precedenza, eseguire la seguente stored procedure. 
+>
+> EXEC sp_sqljdbc_xa_uninstall
+
 ### <a name="running-the-ms-dtc-service"></a>Esecuzione del servizio MS DTC
 
 Il servizio MS DTC deve essere contrassegnato come **Automatico** in Service Manager per assicurarsi che sia in esecuzione all'avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per abilitare MS DTC per le transazioni XA, procedere come segue:  
