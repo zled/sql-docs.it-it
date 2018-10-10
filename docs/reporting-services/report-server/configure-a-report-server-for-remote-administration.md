@@ -44,7 +44,7 @@ ms.locfileid: "47805079"
 ## <a name="tasks"></a>Attività  
  Tra le attività che consentono di configurare un server di report remoto sono incluse le seguenti:  
   
--   Abilitare le porte in Windows Firewall per consentire le richieste sulle porte utilizzate dal server di report e dall'istanza del Motore di database di SQL Server.  Vedere [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) e [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+-   Abilitare le porte in Windows Firewall per consentire le richieste sulle porte utilizzate dal server di report e dall'istanza del Motore di database di SQL Server.  Vedere [Configurare un firewall per l'accesso al server di report](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) e [Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 -   Consentire le connessioni remote all'istanza del Motore di database che ospita il database del server di report. Una connessione remota è necessaria per la configurazione della connessione al database del server di report e per la gestione delle chiavi di crittografia.  
   

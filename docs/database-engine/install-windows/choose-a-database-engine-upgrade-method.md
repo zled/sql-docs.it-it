@@ -22,7 +22,7 @@ ms.locfileid: "47713919"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
-  Sono disponibili diversi approcci da considerare quando si intende eseguire l'aggiornamento di [!INCLUDE[ssDE](../../includes/ssde-md.md)] da una versione precedente di SQL Server per ridurre al minimo i tempi di inattività e il rischio. È possibile eseguire un aggiornamento sul posto, la migrazione a una nuova installazione o un aggiornamento in sequenza. Il diagramma seguente consentirà di scegliere tra questi approcci. Ogni approccio del diagramma viene anche illustrato in basso. Per assistenza nei punti decisionali all'interno del diagramma, consultare anche [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+  Sono disponibili diversi approcci da considerare quando si intende eseguire l'aggiornamento di [!INCLUDE[ssDE](../../includes/ssde-md.md)] da una versione precedente di SQL Server per ridurre al minimo i tempi di inattività e il rischio. È possibile eseguire un aggiornamento sul posto, la migrazione a una nuova installazione o un aggiornamento in sequenza. Il diagramma seguente consentirà di scegliere tra questi approcci. Ogni approccio del diagramma viene anche illustrato in basso. Per assistenza nei punti decisionali all'interno del diagramma, consultare anche [pianificare e testare il Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Albero delle decisioni per il metodo di aggiornamento del motore di database](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Albero delle decisioni per il metodo di aggiornamento del motore di database")  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47713919"
   
 -   Un ambiente di sviluppo senza una configurazione a disponibilità elevata.  
   
--   Un ambiente di produzione non mission-critical in grado di tollerare i tempi di inattività e in esecuzione su hardware e software recenti. La quantità di tempo di inattività dipende dalle dimensioni del database e dalla velocità del sottosistema di I/O. L'aggiornamento di SQL Server 2014 quando le tabelle ottimizzate per la memoria sono in uso comporta maggiore tempo. Per altre informazioni, vedere [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+-   Un ambiente di produzione non mission-critical in grado di tollerare i tempi di inattività e in esecuzione su hardware e software recenti. La quantità di tempo di inattività dipende dalle dimensioni del database e dalla velocità del sottosistema di I/O. L'aggiornamento di SQL Server 2014 quando le tabelle ottimizzate per la memoria sono in uso comporta maggiore tempo. Per altre informazioni, vedere [pianificare e testare il Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
 > [!WARNING]  
 >  Quando si esegue il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene arrestata e riavviata quando si eseguono i controlli di pre-aggiornamento.  
@@ -73,7 +73,7 @@ ms.locfileid: "47713919"
  Quando il nuovo   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ambiente dispone degli stessi oggetti di sistema dell'ambiente esistente, procedere quindi alla migrazione dei database utente dal sistema esistente verso l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo da ridurre al minimo i tempi di inattività del sistema esistente. Eseguire la migrazione del database tramite backup e ripristino oppure tramite un nuovo puntamento dei numeri di unità logica (LUN) se si dispone di un ambiente SAN. Nel diagramma seguente vengono descritte le procedure per entrambi i metodi.  
   
 > [!CAUTION]  
->  La quantità di tempo di inattività dipende dalle dimensioni del database e dalla velocità del sottosistema di I/O. L'aggiornamento di SQL Server 2014 quando le tabelle ottimizzate per la memoria sono in uso comporta maggiore tempo. Per altre informazioni, vedere [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+>  La quantità di tempo di inattività dipende dalle dimensioni del database e dalla velocità del sottosistema di I/O. L'aggiornamento di SQL Server 2014 quando le tabelle ottimizzate per la memoria sono in uso comporta maggiore tempo. Per altre informazioni, vedere [pianificare e testare il Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  Dopo la migrazione dei database utente, puntare i nuovi utenti verso la nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando uno dei diversi metodi, ad esempio rinominando il server, usando una voce DNS, modificando le stringhe di connessione.  Il nuovo approccio di installazione riduce rischi e tempi di inattività rispetto all'aggiornamento sul posto e agevola gli aggiornamenti hardware e del sistema operativo in combinazione con l'aggiornamento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47713919"
 -   Ambiente SQL Server Reporting Services con scalabilità orizzontale: per i passaggi dettagliati dell'esecuzione di un aggiornamento in sequenza in questo ambiente, vedere [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="next-steps"></a>Passaggi successivi
- [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ [Pianificare e testare il piano di aggiornamento del motore di Database](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [Completare l'aggiornamento al motore di database](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
   
