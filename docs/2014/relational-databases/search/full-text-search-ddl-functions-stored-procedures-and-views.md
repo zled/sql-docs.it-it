@@ -22,7 +22,7 @@ ms.locfileid: "48226121"
   
  Questo elenco esclude gli oggetti deprecati.  
   
- Per l'elenco di oggetti di database che supportano la ricerca semantica, vedere [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md).  
+ Per l'elenco di oggetti di database che supportano la ricerca semantica, vedere [Semantic Search DDL, funzioni, Stored procedure e viste](../views/views.md).  
   
 ##  <a name="ddl"></a> Istruzioni Transact-SQL DDL (Data Definition Language)  
   
