@@ -149,7 +149,7 @@ ms.locfileid: "47840989"
  I messaggi di errore definiti dall'utente sono contenuti nella vista del catalogo [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) . Questa vista del catalogo è archiviata nel database **master**. Se un'applicazione del database dipende da messaggi di errore definiti dall'utente e il database è reso disponibile in un'altra istanza del server, usare [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) per aggiungere tali messaggi definiti dall'utente nell'istanza del server di destinazione.  
 
   
-##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
+##  <a name="event_notif_and_wmi_events"></a> Le notifiche degli eventi e gli eventi di Windows Management Instrumentation (WMI) (a livello di Server)  
   
 ### <a name="server-level-event-notifications"></a>Notifiche degli eventi a livello di server  
  Le notifiche degli eventi a livello di server sono archiviate nel database **msdb**. Se un'applicazione del database si basa su una notifica degli eventi a livello di server, tale notifica deve essere nuovamente creata nell'istanza del server di destinazione. Per visualizzare le notifiche degli eventi in un'istanza del server, usare la vista del catalogo [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) . Per altre informazioni, vedere [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
