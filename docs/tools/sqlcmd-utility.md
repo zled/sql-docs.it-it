@@ -29,17 +29,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9748fcba84e037a58007c4a50ce218291cb098d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 8252d8eca6a9196630bc224a39324989c4388a6a
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796629"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252118"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > Per SQL Server 2014 e inferiori, vedere [utilità sqlcmd](sqlcmd-utility.md).
+ > Per SQL Server 2014 e inferiori, vedere [utilità sqlcmd](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-2014
+).
 
  > Per l'utilizzo di sqlcmd in Linux, vedere [installare sqlcmd e bcp in Linux](../linux/sql-server-linux-setup-tools.md).
 
@@ -759,7 +760,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
 ### <a name="sqlcmd-file-names"></a>Nomi di file per sqlcmd  
  È possibile specificare i file di input di**sqlcmd** con l'opzione **-i** o il comando **:r** . I file di output possono essere specificati con l'opzione **-o** oppure con i comandi **:Error**, **:Out** e **:Perftrace** . Di seguito vengono illustrate alcune linee guida per l'utilizzo di tali file:  
   
--   In **:Error**, **:Out** e **:Perftrace** è consigliabile usare valori **\<**_filename_**>** distinti. Se viene usato lo stesso valore **\<**_filename_**>**, è possibile che gli input di tali comandi vengano confusi.  
+-   In **:Error**, **:Out** e **:Perftrace** è consigliabile usare valori **\<**_filename_**>** distinti. Se viene usato lo stesso valore **\<**_filename_**>** , è possibile che gli input di tali comandi vengano confusi.  
   
 -   Se un file di input che si trova in un server remoto viene chiamato da **sqlcmd** in un computer locale e contiene un percorso di file con unità come :Out c:\OutputFile.txt, il file di output viene creato nel computer locale e non nel server remoto.  
   
