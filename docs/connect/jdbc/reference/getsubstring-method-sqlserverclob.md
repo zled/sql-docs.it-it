@@ -1,13 +1,11 @@
 ---
-title: Metodo getSubString (SQLServerClob) | Documenti Microsoft
+title: Metodo getSubString (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerClob.getSubString
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 364f238e12958ab099aa0a6a1ffe43883ffee7ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7cecfab59bc318d2ce6a2061e2116f5523b9874d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837766"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652231"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>Metodo getSubString (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,18 +41,18 @@ public java.lang.String getSubString(long pos,
   
  Primo carattere della sottostringa da estrarre. Il primo carattere si trova nella posizione 1.  
   
- *lunghezza*  
+ *length*  
   
  Numero di caratteri consecutivi da copiare.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto **stringa** che rappresenta la sottostringa specificata nell'oggetto CLOB.  
+ Valore **String** che rappresenta la sottostringa specificata nell'oggetto CLOB.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getSubString viene specificato dal metodo getSubString nell'interfaccia Java.SQL. Clob.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getSubString viene specificato dal metodo getSubString nell'interfaccia CLOB.  
   
  Se si tenta di ottenere zero caratteri da un oggetto CLOB Null o di lunghezza zero, viene restituita una stringa vuota. Se si tenta di ottenere un numero qualsiasi di caratteri in qualsiasi posizione diversa da 1 in un oggetto CLOB di lunghezza zero, verrà generata un'eccezione di posizione.  
   

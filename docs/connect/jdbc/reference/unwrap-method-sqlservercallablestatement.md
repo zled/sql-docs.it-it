@@ -1,30 +1,27 @@
 ---
-title: Metodo Unwrap (SQLServerCallableStatement) | Documenti Microsoft
+title: Metodo Unwrap (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 85f1e7364f5037817b4b49b31c387d3be83f7c43
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 40a1072776d2f926d353012656c921f217528d92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666789"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>Metodo unwrap (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Restituisce un oggetto che implementa l'interfaccia specificata per consentire l'accesso per il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-metodi specifici.  
+  Restituisce un oggetto che implementa l'interfaccia specificata per consentire l'accesso ai metodi specifici di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +33,7 @@ public <T> T unwrap(Class<T> iface)
 #### <a name="parameters"></a>Parametri  
  *iface*  
   
- Una classe di tipo **T** che definisce un'interfaccia.  
+ Classe di tipo **T** che definisce un'interfaccia.  
   
 ## <a name="return-value"></a>Valore restituito  
  Oggetto che implementa l'interfaccia specificata.  
@@ -44,16 +41,16 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Il [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) metodo è definito dall'interfaccia Java.SQL, introdotta nella specifica JDBC 4.0.  
+## <a name="remarks"></a>Remarks  
+ Il metodo [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) è definito dall'interfaccia java.sql.Wrapper, introdotta nella specifica JDBC 4.0.  
   
- Potrebbe essere necessario accedere alle estensioni dell'API JDBC siano per le applicazioni di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Il metodo unwrap supporta l'annullamento del wrapping classi pubbliche che estende l'oggetto, se le classi espongono estensioni del fornitore.  
+ È possibile che le applicazioni debbano accedere alle estensioni dell'API JDBC specifiche di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Il metodo unwrap supporta l'annullamento del wrapping nelle classi pubbliche estese dall'oggetto, se le classi espongono estensioni del fornitore.  
   
- [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) implementa [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), che è stato esteso dal [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Quando questo metodo viene chiamato, l'oggetto Annulla il wrapping nelle classi seguenti: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), e [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
+ [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) implementa l'oggetto [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), che viene esteso da [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Quando viene chiamato questo metodo, l'oggetto annulla il wrapping nelle classi seguenti: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
- Per ulteriori informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Per altre informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
- Esempio di codice riportato di seguito viene illustrato come utilizzare il isWrapperFor e unwrap metodi per verificare le estensioni del driver e richiamare i metodi specifici del fornitore, ad esempio [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) e [ getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md).  
+ Nell'esempio di codice seguente viene illustrato come usare i metodi isWrapperFor e unwrap per controllare le estensioni del driver e richiamare i metodi specifici del fornitore, ad esempio [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) e [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md).  
   
 ```  
 public static void executeStoredProcedure(Connection con) {  

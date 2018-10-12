@@ -1,13 +1,11 @@
 ---
-title: Metodo createStatement (int, int) | Documenti Microsoft
+title: Metodo createStatement (int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.createStatement (int, int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 90dbf639-c3d8-4519-9300-5447c79aec17
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fae1d8ed3aa008415d325b04f02f8e96adc519f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 58390bfd2310b1cae9ce7427106c88a8e38915df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645369"
 ---
 # <a name="createstatement-method-int-int"></a>Metodo createStatement (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Crea un [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) oggetto che genera l'errore [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetti con il tipo specificato e la concorrenza.  
+  Crea un oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) che genera oggetti [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) con il tipo e la concorrenza specificati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,11 +39,11 @@ public java.sql.Statement createStatement(int resultSetType,
 #### <a name="parameters"></a>Parametri  
  *resultSetType*  
   
- Il **int** valore che rappresenta il tipo di set di risultati.  
+ Valore **int** che rappresenta il tipo di set di risultati.  
   
  *resultSetConcurrency*  
   
- Il **int** valore che rappresenta il tipo di concorrenza del set di risultati.  
+ Valore **int** che rappresenta il tipo di concorrenza del set di risultati.  
   
 ## <a name="return-value"></a>Valore restituito  
  L'oggetto istruzione.  
@@ -54,8 +51,8 @@ public java.sql.Statement createStatement(int resultSetType,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo createStatement viene specificato dal metodo createStatement nell'interfaccia Java.SQL. Connection.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo createStatement viene specificato dal metodo createStatement nell'interfaccia Java.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo createStatement &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

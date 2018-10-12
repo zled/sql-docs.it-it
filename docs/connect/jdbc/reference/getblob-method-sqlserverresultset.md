@@ -1,13 +1,11 @@
 ---
-title: getBlob (metodo) (SQLServerResultSet) | Documenti Microsoft
+title: Metodo getBlob (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getBlob
@@ -15,28 +13,27 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2a43d1c8-ec8a-43de-b51e-b9108f4e3eae
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5001f76664ffcadccec09ed38adeae2abe7e0314
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7bf984e1b8fd71fa7e56edb7b8b51747907badb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831686"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667289"
 ---
-# <a name="getblob-method-sqlserverresultset"></a>getBlob (metodo) (SQLServerResultSet)
+# <a name="getblob-method-sqlserverresultset"></a>Metodo getBlob (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera il valore della colonna designata nella riga corrente di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto come oggetto Blob nel linguaggio di programmazione Java.  
+  Recupera il valore della colonna designata nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto BLOB nel linguaggio di programmazione Java.  
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|Nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
-|[getBlob (int)](../../../connect/jdbc/reference/getblob-method-int-sqlserverresultset.md)|Recupera il valore di indice della colonna designata nella riga corrente di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto come oggetto Blob nel linguaggio di programmazione Java.|  
-|[getBlob (lang)](../../../connect/jdbc/reference/getblob-method-java-lang-string-sqlserverresultset.md)|Recupera il valore del nome della colonna designata nella riga corrente di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto come oggetto Blob nel linguaggio di programmazione Java.|  
+|[getBlob (int)](../../../connect/jdbc/reference/getblob-method-int-sqlserverresultset.md)|Recupera il valore dell'indice di colonna designato nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto Blob nel linguaggio di programmazione Java.|  
+|[getBlob (java.lang.String)](../../../connect/jdbc/reference/getblob-method-java-lang-string-sqlserverresultset.md)|Recupera il valore del nome di colonna designato nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto Blob nel linguaggio di programmazione Java.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

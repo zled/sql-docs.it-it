@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_fetch
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - API Reference, sqlsrv_fetch
 - retrieving data, as a single field
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf3aeff30e84deed5f66eb65d778aa4c154eef98
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b03669df3fdfadec0f06f5bd964a16827d1aff2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309030"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604233"
 ---
 # <a name="sqlsrvfetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Rende la riga successiva di un set di risultati disponibile per la lettura. Utilizzare [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) per leggere i campi della riga.  
+Rende la riga successiva di un set di risultati disponibile per la lettura. Usare [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) per leggere i campi della riga.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,7 +43,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 > [!NOTE]  
 > Un'istruzione deve essere eseguita prima che sia possibile recuperare i risultati. Per informazioni sull'esecuzione di un'istruzione, vedere [sqlsrv_query](../../connect/php/sqlsrv-query.md) e [sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
-*riga* [facoltativo]: uno dei valori seguenti, che specifica la riga per accedere a un set di risultati che usa un cursore scorrevole:  
+*row* [FACOLTATIVO]: uno dei valori seguenti, che specifica la riga a cui accedere in un set di risultati che usa un cursore scorrevole:  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -68,7 +65,7 @@ Per altre informazioni su questi valori, vedere [Specifica di un tipo di cursore
 Se la riga successiva del set di risultati è stata recuperata correttamente, viene restituito **true** . Se nel set di risultati non sono presenti altri risultati, viene restituito **null** . Se si è verificato un errore, viene restituito **false** .  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente usa **sqlsrv_fetch** per recuperare una riga di dati contenente una revisione di prodotto e il nome del revisore. Per recuperare i dati dal set di risultati, [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) viene utilizzato. Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+L'esempio seguente usa **sqlsrv_fetch** per recuperare una riga di dati contenente una revisione di prodotto e il nome del revisore. Per recuperare i dati dal set di risultati, è possibile usare [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md). Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

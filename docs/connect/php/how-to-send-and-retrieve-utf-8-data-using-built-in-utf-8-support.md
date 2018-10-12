@@ -1,29 +1,26 @@
 ---
-title: 'Procedura: Inviare e recuperare dati UTF-8 con il supporto incorporato di UTF-8'
+title: 'Procedura: Inviare e recuperare dati UTF-8 con il supporto incorporato di UTF-8 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data, UTF-8 encoded data
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfeb770ad5151216fecbf796851f7eb06da8545f
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: db9f2758c2df5585a4d9034df7b309ae4547e52c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42783895"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633939"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Procedura: Invio e recupero di dati UTF-8 con il supporto incorporato di UTF-8
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,10 +37,10 @@ Per inviare dati con codifica UTF-8 al server o per recuperarli:
   
     Quando si specifica un set di caratteri come parte delle opzioni di connessione, il driver presuppone che le altre stringhe delle opzioni di connessione usino lo stesso set di caratteri. Si presuppone, inoltre, che anche le stringhe di query e nome del server usino tale set di caratteri.  
   
-Si noti che è possibile passare UTF-8 o SQLSRV_ENC_CHAR a CharacterSet** (non è possibile passare SQLSRV_ENC_BINARY). La codifica predefinita è SQLSRV_ENC_CHAR.  
+È possibile passare UTF-8 o SQLSRV_ENC_CHAR a **CharacterSet**, ma non è possibile passare SQLSRV_ENC_BINARY. La codifica predefinita è SQLSRV_ENC_CHAR.  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene illustrato come inviare e recuperare dati con codificata UTF-8 specificando il set di caratteri UTF-8 quando si effettua la connessione. Nell'esempio viene aggiornata la colonna Comments della tabella Production.ProductReview per un ID revisione specificato. Nell'esempio vengono inoltre recuperati e visualizzati i dati appena aggiornati. Si noti che la colonna Comments è di tipo nvarcahr (3850).** Si noti inoltre che, prima che vengano inviati al server, i dati vengono convertiti alla codifica UTF-8 usando la funzione PHP utf8_encode**. Questa operazione viene eseguita solo per scopi dimostrativi. In uno scenario di applicazione reale, si inizierebbe già con dati con codifica UTF-8.  
+Nell'esempio seguente viene illustrato come inviare e recuperare dati con codificata UTF-8 specificando il set di caratteri UTF-8 quando si effettua la connessione. Nell'esempio viene aggiornata la colonna Comments della tabella Production.ProductReview per un ID revisione specificato. Nell'esempio vengono inoltre recuperati e visualizzati i dati appena aggiornati. Si noti che la colonna Comments è di tipo **nvarchar(3850)**. Si noti inoltre che, prima che vengano inviati al server, i dati vengono convertiti nella codifica UTF-8 usando la funzione PHP **utf8_encode**. Questa operazione viene eseguita solo per scopi dimostrativi. In uno scenario di applicazione reale, si inizierebbe già con dati con codifica UTF-8.  
   
 Nell'esempio si presuppone che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando l'esempio viene eseguito dal browser, tutto l'output viene scritto nel browser.  
   
@@ -129,7 +126,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Per informazioni sull'archiviazione di dati Unicode, vedere [Utilizzo di dati Unicode](https://msdn.microsoft.com/library/ms175180.aspx).  
+Per informazioni sull'archiviazione di dati Unicode, vedere [Working with Unicode Data](https://msdn.microsoft.com/library/ms175180.aspx) (Uso di dati Unicode).  
   
 ## <a name="example"></a>Esempio  
 L'esempio seguente è simile al primo, ma anziché specificare il set di caratteri UTF-8 nella connessione, in questo caso si illustra come specificare il set di caratteri UTF-8 nella colonna.  

@@ -1,13 +1,11 @@
 ---
-title: Metodo getAsciiStream (int) | Documenti Microsoft
+title: Metodo getAsciiStream (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getAsciiStream (int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1ec7e246-4b91-4420-9a4c-0ebd98e2e38b
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4418ef48b7dd906735e319821ab950856869628
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a96c4e91c449c6055d960fee13f429867ffddd0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831176"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643014"
 ---
 # <a name="getasciistream-method-int"></a>Metodo getAsciiStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera il valore di indice della colonna designata nella riga corrente di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto come un flusso di caratteri ASCII.  
+  Recupera il valore dell'indice di colonna designato nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come flusso di caratteri ASCII.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +38,7 @@ public java.io.InputStream getAsciiStream(int columnIndex)
 #### <a name="parameters"></a>Parametri  
  *columnIndex*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
  Un oggetto InputStream.  
@@ -49,8 +46,8 @@ public java.io.InputStream getAsciiStream(int columnIndex)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getAsciiStream viene specificato dal metodo getAsciiStream nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getAsciiStream viene specificato dal metodo getAsciiStream nell'interfaccia ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getAsciiStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   

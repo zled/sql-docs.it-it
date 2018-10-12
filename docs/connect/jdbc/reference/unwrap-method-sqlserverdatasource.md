@@ -1,30 +1,27 @@
 ---
-title: Metodo Unwrap (SQLServerDataSource) | Documenti Microsoft
+title: Metodo (SQLServerDataSource) Unwrap | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb8abe29-f3ec-4752-a590-1d5dc3e48f08
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0c9709a4b6db48611ce35af2156631fb5022f66a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 00d6f3bd7d512342565da93dd245a0f5714f5021
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682619"
 ---
 # <a name="unwrap-method-sqlserverdatasource"></a>Metodo unwrap (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Restituisce un oggetto che implementa l'interfaccia specificata per consentire l'accesso per il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-metodi specifici.  
+  Restituisce un oggetto che implementa l'interfaccia specificata per consentire l'accesso ai metodi specifici di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,14 +41,14 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Il [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) metodo è definito dall'interfaccia Java.SQL, introdotta nella specifica JDBC 4.0.  
+## <a name="remarks"></a>Remarks  
+ Il metodo [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) è definito dall'interfaccia java.sql.Wrapper, introdotta nella specifica JDBC 4.0.  
   
- Potrebbe essere necessario accedere alle estensioni dell'API JDBC siano per le applicazioni di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Il metodo unwrap supporta l'annullamento del wrapping classi pubbliche che consente di estendere l'oggetto se le classi espongono estensioni del fornitore.  
+ È possibile che le applicazioni debbano accedere alle estensioni dell'API JDBC specifiche di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Il metodo unwrap supporta l'annullamento del wrapping nelle classi pubbliche estese dall'oggetto, se le classi espongono estensioni del fornitore.  
   
- Quando questo metodo viene chiamato, l'oggetto Annulla il wrapping di [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) classe.  
+ Quando viene chiamato questo metodo, l'oggetto annulla il wrapping nella classe [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Per ulteriori informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Per altre informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo isWrapperFor &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)   

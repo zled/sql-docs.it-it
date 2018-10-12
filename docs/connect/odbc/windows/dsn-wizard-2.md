@@ -1,75 +1,72 @@
 ---
-title: Schermata della procedura guidata 2, il Driver ODBC per SQL Server, dell'origine dati | Documenti Microsoft
+title: Origine di dati guidata schermata 2 (Driver ODBC per SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.openlocfilehash: 96907675f7bdb1072923da9ad56412dd7dcd59c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7d352b02d118c3de14cd437daf012885d7491c1b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852416"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639519"
 ---
 # <a name="data-source-wizard-screen-2"></a>Creazione guidata origine dati - Schermata 2
 
-Specificare il metodo di autenticazione e configurare le voci client avanzato Microsoft SQL Server e l'account e la password, che il driver ODBC per SQL Server utilizzerà per connettersi a SQL Server durante la configurazione dell'origine dati.
+Specificare il metodo di autenticazione e configurare le voci del client avanzato di Microsoft SQL Server, nonché l'account di accesso e la password usati dal driver ODBC per SQL Server per connettersi a SQL Server durante la configurazione dell'origine dati.
 
 ## <a name="options"></a>Opzioni
 
-### <a name="with-integrated-windows-authentication"></a>Con l'autenticazione integrata di Windows
+### <a name="with-integrated-windows-authentication"></a>Autenticazione Windows integrata
 
-Specifica che il driver è richiesta una connessione protetta (o trusted) a SQL Server. Se si seleziona questa opzione, in SQL Server verrà utilizzata la sicurezza degli accessi integrata per stabilire connessioni con questa origine dati, indipendentemente dalla modalità di sicurezza degli accessi corrente del server. Qualsiasi password o ID di accesso specificato viene ignorato. L'amministratore di sistema di SQL Server deve essere associati l'account di accesso di Windows con un ID di accesso di SQL Server (ad esempio, utilizzando SQL Server Management Studio).
+Specifica che il driver richiede una connessione protetta (o trusted) a un Server SQL. Se si seleziona questa opzione, in SQL Server verrà utilizzata la sicurezza degli accessi integrata per stabilire connessioni con questa origine dati, indipendentemente dalla modalità di sicurezza degli accessi corrente del server. Qualsiasi password o ID di accesso specificato viene ignorato. L'amministratore di sistema di SQL Server deve avere associato l'account di accesso di Windows con un ID di accesso di SQL Server (ad esempio, usando SQL Server Management Studio).
 
 È inoltre possibile specificare un nome SPN per il server.
 
-### <a name="with-active-directory-integrated-authentication"></a>Con l'autenticazione integrata di Active Directory
+### <a name="with-active-directory-integrated-authentication"></a>Con autenticazione integrata di Active Directory
 
-Specifica che il driver si autenticano a SQL Server con Azure Active Directory. Se selezionata, SQL Server utilizza la sicurezza degli accessi integrata in Azure Active Directory per stabilire una connessione con questa origine dati, indipendentemente dalla modalità di sicurezza corrente di account di accesso nel server.
+Specifica che il driver di eseguire l'autenticazione a SQL Server usando Azure Active Directory. Se si seleziona questa opzione, SQL Server usa la sicurezza degli accessi integrata di Azure Active Directory per stabilire una connessione tramite questa origine dati, indipendentemente dalla modalità di protezione degli accessi corrente nel server.
 
-### <a name="with-sql-server-authentication"></a>Con l'autenticazione di SQL Server
+### <a name="with-sql-server-authentication"></a>Autenticazione di SQL Server
 
-Specifica che il driver si autenticano a SQL Server utilizzando un ID di accesso e una password.
+Specifica che il driver di eseguire l'autenticazione in SQL Server usando un ID di accesso e una password.
 
-### <a name="with-active-directory-password-authentication"></a>Con l'autenticazione di Password di Active Directory
+### <a name="with-active-directory-password-authentication"></a>Con autenticazione della password di Active Directory
 
-Specifica che il driver si autenticano a SQL Server utilizzando un ID di accesso di Azure Active Directory e una password.
+Specifica che il driver di eseguire l'autenticazione in SQL Server usando un ID di accesso di Azure Active Directory e una password.
 
-### <a name="with-active-directory-interactive-authentication"></a>Con l'autenticazione di Active Directory interattiva
+### <a name="with-active-directory-interactive-authentication"></a>Con autenticazione interattiva di Active Directory
 
-Specifica che il driver si autenticano a SQL Server utilizzando la modalità interattiva Azure Active Directory, fornendo l'ID di accesso. In questo modo verrà attivata la finestra di dialogo prompt dei comandi di Windows Azure Authentication.
+Specifica che il driver di eseguire l'autenticazione a SQL Server utilizzando la modalità interattiva Azure Active Directory, fornendo l'ID di accesso. Verrà attivata la finestra di dialogo dei messaggi di richiesta di autenticazione di Windows Azure.
 
 ### <a name="login-id"></a>ID accesso
 
-Specifica l'ID di accesso vengono utilizzate quando ci si connette a SQL Server se **con autenticazione di SQL Server tramite un ID di accesso e password immessi dall'utente** o **l'autenticazione con Password di Active Directory utilizzando un ID di accesso e la password immessi dall'utente** oppure **autenticazione con Active Directory interattiva tramite un ID di accesso immessi dall'utente** sia selezionata. Si applica solo alla connessione effettuata per determinare le impostazioni predefinite del server. Non si applica invece alle connessioni successive effettuate utilizzando l'origine dati dopo la relativa creazione.
+Specifica l'ID di accesso nel driver vengono utilizzate quando ci si connette a SQL Server se **con autenticazione di SQL Server usando un ID di accesso e una password immessi dall'utente** o **l'autenticazione con Password di Active Directory usando un ID di accesso e la password immessa dall'utente** oppure **autenticazione con Active Directory Interactive usando un ID di accesso immessi dall'utente** sia selezionata. Si applica solo alla connessione effettuata per determinare le impostazioni predefinite del server. Non si applica invece alle connessioni successive effettuate utilizzando l'origine dati dopo la relativa creazione.
 
 ### <a name="password"></a>Password
 
-Specifica la password, il driver utilizza per la connessione a SQL Server se **con autenticazione di SQL Server tramite un ID di accesso e password immessi dall'utente** o **l'autenticazione con Password di Active Directory utilizzando un ID di accesso e la password immessi dall'utente** è selezionata. Si applica solo alla connessione effettuata per determinare le impostazioni predefinite del server. Non si applica invece alle connessioni successive effettuate utilizzando la nuova origine dati.
+Specifica la password nel driver vengono utilizzate quando ci si connette a SQL Server se **con autenticazione di SQL Server usando un ID di accesso e una password immessi dall'utente** o **l'autenticazione con Password di Active Directory usando un ID di accesso e la password immessa dall'utente** sia selezionata. Si applica solo alla connessione effettuata per determinare le impostazioni predefinite del server. Non si applica invece alle connessioni successive effettuate utilizzando la nuova origine dati.
 
-Entrambi i **ID di accesso** e **Password** caselle sono disabilitate se **autenticazione integrata di Windows** o **con integrata in Active Directory autenticazione** è selezionata.
+Entrambi i **ID di accesso** e **Password** finestre sono disabilitate se **l'autenticazione con Windows integrata** o **con integrata di Active Directory autenticazione** sia selezionata.
 
 ### <a name="next"></a>Avanti
 
-Passare alla schermata successiva della procedura guidata.
+Procede alla schermata successiva della procedura guidata.
 
 ### <a name="back"></a>Indietro
 
-Consente di tornare alla schermata precedente della procedura guidata.
+Tornare alla schermata precedente della procedura guidata.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Schermata di creazione guidata origine dati 1](../../../connect/odbc/windows/dsn-wizard-1.md)
+[Creazione guidata origine dati - Schermata 1](../../../connect/odbc/windows/dsn-wizard-1.md)
 
-[Schermata di creazione guidata origine dati 3](../../../connect/odbc/windows/dsn-wizard-3.md)
+[Creazione guidata origine dati - Schermata 3](../../../connect/odbc/windows/dsn-wizard-3.md)
 

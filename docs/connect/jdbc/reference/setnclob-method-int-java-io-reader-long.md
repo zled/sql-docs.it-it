@@ -1,30 +1,27 @@
 ---
-title: Metodo setNClob (int, Java.IO. Reader, long) | Documenti Microsoft
+title: Metodo setNClob (int, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11071f8f-0e9b-45f0-b600-aaef7e2815d8
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a8298c9396846635f639d2414ac772774cb028e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6f29ca79628442087867d598ed77a2c41144175b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842626"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639052"
 ---
 # <a name="setnclob-method-int-javaioreader-long"></a>Metodo setNClob (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Imposta il parametro designato per l'oggetto Reader specificato, ovvero il numero specificato di caratteri.  
+  Imposta il parametro designato sull'oggetto Reader specificato, che contiene il numero specificato di caratteri.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,23 +33,23 @@ public final void setNClob(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *parameterIndex*  
+ *parametro parameterIndex*  
   
- Un **int** che indica l'indice del parametro.  
+ Valore **int** che specifica l'indice del parametro.  
   
- *Lettore*  
+ *reader*  
   
- Un oggetto di lettura che indica il valore del parametro.  
+ Oggetto Reader che indica il valore del parametro.  
   
- *lunghezza*  
+ *length*  
   
- Un **lungo** che indica il numero di caratteri nel valore del parametro.  
+ Valore **long** che indica il numero di caratteri nel valore del parametro.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo setNClob viene specificato dal metodo setNClob nell'interfaccia Java.SQL. PreparedStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo setNClob viene specificato dal metodo setNClob nell'interfaccia java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo setNClob &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnclob-method-sqlserverpreparedstatement.md)   

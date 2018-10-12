@@ -1,25 +1,22 @@
 ---
-title: Metodo updateBlob (int, Java.IO. InputStream) | Documenti Microsoft
+title: Metodo updateBlob (int, java.io.InputStream) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d0263018-d326-4a7b-bf6f-5f508db899d4
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 190269911011e132450dc44abc4148c0620db340
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: be97300d01a5f5ce7106f4225c30319ee0f42de7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850206"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642099"
 ---
 # <a name="updateblob-method-int-javaioinputstream"></a>Metodo updateBlob (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +34,7 @@ public void updateBlob(int columnIndex,
 #### <a name="parameters"></a>Parametri  
  *columnIndex*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
  *inputStream*  
   
@@ -46,8 +43,8 @@ public void updateBlob(int columnIndex,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo updateBlob viene specificato dal metodo updateBlob nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo updateBlob viene specificato dal metodo updateBlob nell'interfaccia ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateBlob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   

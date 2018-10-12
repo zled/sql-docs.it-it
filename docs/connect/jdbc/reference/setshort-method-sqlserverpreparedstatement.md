@@ -1,13 +1,11 @@
 ---
-title: Metodo (SQLServerPreparedStatement) setShort | Documenti Microsoft
+title: Metodo setShort (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setShort
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6a9171a4-3e44-44ea-a453-23f57e5320e9
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0520dd4c6c95bc1fc47b806095b2967b5d850ea9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3532554a9ae4b03e37bd455fe35a6fed58768bba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844706"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621669"
 ---
-# <a name="setshort-method-sqlserverpreparedstatement"></a>setShort (metodo) (SQLServerPreparedStatement)
+# <a name="setshort-method-sqlserverpreparedstatement"></a>Metodo setShort (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Imposta il parametro designato il dato **breve** valore.  
+  Imposta il parametro designato sul valore **short** specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +39,7 @@ public final void setShort(int index,
 #### <a name="parameters"></a>Parametri  
  *index*  
   
- Un **int** che indica il numero di parametro.  
+ Valore **int** che indica il numero di parametro.  
   
  *x*  
   
@@ -51,8 +48,8 @@ public final void setShort(int index,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo setShort viene specificato dal metodo setShort nell'interfaccia Java.SQL. PreparedStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo setShort viene specificato dal metodo setShort nell'interfaccia java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

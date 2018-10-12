@@ -1,31 +1,28 @@
 ---
-title: "Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo di ADO.NET | Documenti Microsoft"
+title: "Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo ADO.NET | Microsoft Docs"
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9a7163a7cd0062313d1e0dbdf23cd96c7b61d5f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: f4c78d9001a802b60963f9c02ad03b84b431a025
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288900"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616999"
 ---
-# <a name="step-1-configure-development-environment-for-adonet-development"></a>Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo di ADO.NET
+# <a name="step-1-configure-development-environment-for-adonet-development"></a>Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo ADO.NET
 
-- L'articolo successivo:&nbsp;&nbsp;&nbsp;[passaggio 2: creare un database SQL per lo sviluppo di ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
+- Articolo successivo:&nbsp;&nbsp;&nbsp;[Passaggio 2: Creare un database SQL per lo sviluppo ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
 
-## <a name="download-a-net-sql-driver"></a>Scaricare un driver SQL .NET
+## <a name="download-a-net-sql-driver"></a>Scaricare un driver .NET SQL
 
 Esempio di codice corrente Usa ADO.NET di .NET Framework, per Windows. .NET Core è disponibile per Linux e MacOS (oltre a Windows).
 
@@ -33,13 +30,13 @@ Esempio di codice corrente Usa ADO.NET di .NET Framework, per Windows. .NET Core
 
 1. ![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[per scaricare e installare .NET Framework, inclusi ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-2. Installare Visual Studio Community o simili integrato l'ambiente di sviluppo (IDE) per la scrittura e la compilazione di codice sorgente c#. Microsoft offre ora una Community di Visual Studio per *disponibile*.  
+2. Installare Visual Studio Community o una simile ambiente di sviluppo (IDE) integrato per la scrittura e la compilazione di codice sorgente c#. Attualmente Microsoft fornisce Visual Studio Community per *gratuita*.  
     - [Scaricare Visual Studio Community](http://www.visualstudio.com/products/visual-studio-community-vs)  
-    - [Altre opzioni per libero Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
+    - [Altre opzioni per gratuito Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
-### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET core, per-Ubuntu Linux e MacOS
+### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET core per Ubuntu Linux e MacOS
 
-Collegamenti per il download di .NET Core, per un'ampia gamma di sistemi operativi, sono disponibili in:
+I collegamenti per scaricare .NET Core, per un'ampia gamma di sistemi operativi, sono disponibili in:
 
 - ![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[per scaricare e installare .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

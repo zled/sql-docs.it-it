@@ -1,30 +1,27 @@
 ---
-title: Metodo updateNClob (int, Java.IO. Reader) | Documenti Microsoft
+title: Metodo updateNClob (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 17adafd4-3ac3-4ff0-af9d-f087cc5ef936
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 158e303da9c973f194a8cf9777919038d8e632c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d5bf40ccd10d1c97728feadbb8a3d1c5512df070
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851176"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612119"
 ---
 # <a name="updatenclob-method-int-javaioreader"></a>Metodo updateNClob (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Aggiorna la colonna designata utilizzando l'oggetto specificato **lettore** oggetto.  
+  Aggiorna la colonna designata usando l'oggetto **Reader** specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,19 +34,19 @@ public void updateNClob(int columnIndex,
 #### <a name="parameters"></a>Parametri  
  *columnIndex*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
- *Lettore*  
+ *reader*  
   
- Un oggetto del lettore.  
+ Oggetto lettore.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo updateNClob viene specificato dal metodo updateNClob nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo updateNClob viene specificato dal metodo updateNClob nell'interfaccia ResultSet.  
   
- Questo metodo è supportato solo in **nvarchar (max)**, **ntext**, e **xml** colonne. L'utilizzo di questo metodo su qualsiasi altro tipo di dati genererà un'eccezione.  
+ Questo metodo è supportato solo sul **nvarchar (max)**, **ntext**, e **xml** colonne. L'utilizzo di questo metodo su qualsiasi altro tipo di dati genererà un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

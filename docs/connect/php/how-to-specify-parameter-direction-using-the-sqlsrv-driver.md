@@ -1,32 +1,29 @@
 ---
-title: 'Procedura: specificare la direzione del parametro usando il Driver SQLSRV | Documenti Microsoft'
+title: 'Procedura: Specificare la direzione del parametro usando il driver SQLSRV | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4738ce4f8071c5fc1485fad608e00f5e47d9abb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 64c73b14f0195441979891f626976648b56d583d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307840"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642369"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Procedura: Specificare la direzione del parametro usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In questo argomento viene illustrato come usare il driver SQLSRV per specificare la direzione del parametro nella chiamata di una stored procedure. La direzione del parametro viene specificato quando si costruisce una matrice di parametri (passaggio 3) che viene passata a [sqlsrv_query](../../connect/php/sqlsrv-query.md) oppure [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
+In questo argomento viene illustrato come usare il driver SQLSRV per specificare la direzione del parametro nella chiamata di una stored procedure. Si noti che la direzione del parametro viene specificata quando si crea una matrice di parametri (passaggio 3) che viene passata a [sqlsrv_query](../../connect/php/sqlsrv-query.md) o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
   
 ### <a name="to-specify-parameter-direction"></a>Per specificare la direzione di un parametro  
   
@@ -37,7 +34,7 @@ In questo argomento viene illustrato come usare il driver SQLSRV per specificare
     ```  
   
     > [!NOTE]  
-    > È consigliabile pertanto chiamare le stored procedure usando la sintassi canonica. Per ulteriori informazioni sulla sintassi canonica, vedere [chiamare una Stored Procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+    > È consigliabile pertanto chiamare le stored procedure usando la sintassi canonica. Per altre informazioni sulla sintassi canonica, vedere [Chiamata di una stored procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
 2.  Inizializzare o aggiornare le variabili PHP che corrispondono ai segnaposto della query Transact-SQL. Ad esempio, il codice seguente consente di inizializzare i due parametri della stored procedure UpdateVacationHours:  
   
@@ -49,7 +46,7 @@ In questo argomento viene illustrato come usare il driver SQLSRV per specificare
     > [!NOTE]  
     > Le variabili inizializzate o aggiornate su **null**, **DateTime**o tipi di flusso non possono essere usate come parametri di output.  
   
-3.  Usare le variabili PHP del passaggio 2 per creare o aggiornare una matrice di valori di parametri che corrispondono nell'ordine ai segnaposto della stringa di Transact-SQL. Specificare la direzione per ogni parametro nella matrice. La direzione di ogni parametro è determinata in uno dei due modi: per impostazione predefinita (per i parametri di input) o tramite **SQLSRV_PARAM _\***  costanti (per i parametri di output e bidirezionali). Ad esempio, il codice seguente specifica il parametro *$employeeId* come parametro di input e il parametro *$usedVacationHours* come parametro bidirezionale:  
+3.  Usare le variabili PHP del passaggio 2 per creare o aggiornare una matrice di valori di parametri che corrispondono nell'ordine ai segnaposto della stringa di Transact-SQL. Specificare la direzione per ogni parametro nella matrice. La direzione di ogni parametro è determinata in uno dei due modi seguenti: per impostazione predefinita (per i parametri di input) o tramite costanti **SQLSRV_PARAM_\*** (per i parametri di output e bidirezionali). Ad esempio, il codice seguente specifica il parametro *$employeeId* come parametro di input e il parametro *$usedVacationHours* come parametro bidirezionale:  
   
     ```  
     $params = array(  

@@ -1,13 +1,11 @@
 ---
-title: Metodo supportsResultSetHoldability (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo supportsResultSetHoldability (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsResultSetHoldability
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ab575792-fd11-4ff3-8847-1368e7a322c5
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ce9aa5a562b4ec2b3641ac63b62c251842df443
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 701fb1118f8ddd129a944d3ad68b38afe2eac79a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848096"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621259"
 ---
 # <a name="supportsresultsetholdability-method-sqlserverdatabasemetadata"></a>Metodo supportsResultSetHoldability (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,9 +36,9 @@ public boolean supportsResultSetHoldability(int holdability)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *trattenibilità*  
+ *holdability*  
   
- Un **int** che indica il set di risultati trattenibilità, che può essere uno dei valori seguenti:  
+ Valore **int** che indica la trattenibilità dei set di risultati. Può essere uno dei valori seguenti:  
   
  ResultSet.HOLD_CURSORS_OVER_COMMIT  
   
@@ -53,7 +50,7 @@ public boolean supportsResultSetHoldability(int holdability)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo supportsResultSetHoldability viene specificato dal metodo supportsResultSetHoldability nell'interfaccia DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  

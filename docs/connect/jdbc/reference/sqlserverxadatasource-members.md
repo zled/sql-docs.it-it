@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d496016fc323bd0fc6616a019c9c3a4668b384d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 4e9e25a45940304b977623b0f009ed134b56caed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787204"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672329"
 ---
 # <a name="sqlserverxadatasource-members"></a>Membri di SQLServerXADataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -77,7 +74,7 @@ ms.locfileid: "42787204"
 |[setLockTimeout](../../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md)|Ereditato da [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Imposta un valore **int** che indica il numero di millisecondi di attesa del database prima che venga segnalato un timeout blocchi.|  
 |[setLoginTimeout](../../../connect/jdbc/reference/setlogintimeout-method-sqlserverdatasource.md)|Ereditato da [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Imposta il numero di secondi di attesa dell'oggetto DataSource durante il tentativo di stabilire una connessione.|  
 |[setLogWriter](../../../connect/jdbc/reference/setlogwriter-method-sqlserverdatasource.md)|Ereditato da [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Imposta un flusso di output dei caratteri da usare per tutti i messaggi di registrazione e di traccia.|  
-|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|(Ereditato da [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) imposta il valore della **multiSubnetFailover** proprietà di connessione.|  
+|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|Ereditato da [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Imposta il valore della proprietà di connessione **multiSubnetFailover**.|  
 |[setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)|Ereditato da [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Imposta la password che verrà usata per la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md)|Ereditato da [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Imposta il numero di porta da usare per comunicare con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[setSelectMethod](../../../connect/jdbc/reference/setselectmethod-method-sqlserverdatasource.md)|Ereditato da [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Imposta il tipo di cursore predefinito usato per tutti i set di risultati creati tramite questo oggetto DataSource.|  

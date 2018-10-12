@@ -1,13 +1,11 @@
 ---
-title: Metodo setString (SQLServerCallableStatement) | Documenti Microsoft
+title: Metodo setString (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setString
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f38b97b5-d4f0-4f74-a33d-740241a85842
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a2fa007aa6edfc764534f745029ae6107edd6d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b36100c0a2b87abad223c47fc4c81dd802c16cc7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844106"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682609"
 ---
 # <a name="setstring-method-sqlservercallablestatement"></a>Metodo setString (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Imposta il parametro designato per il linguaggio specificato **stringa** valore.  
+  Imposta il parametro designato sul valore **String** Java specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,19 +39,19 @@ public void setString(java.lang.String sCol,
 #### <a name="parameters"></a>Parametri  
  *sCol*  
   
- Oggetto **stringa** che contiene il nome del parametro.  
+ Una **stringa** che contiene il nome del parametro.  
   
- *S*  
+ *s*  
   
- Oggetto **stringa** valore.  
+ Valore **String**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo setString viene specificato dal metodo setString nell'interfaccia Java.SQL. CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo setString viene specificato dal metodo setString nell'interfaccia java.sql.CallableStatement.  
   
- Stringa binarie conversioni vengono eseguite solo quando [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] conosce il tipo di destinazione è binario. In casi in cui il driver JDBC non è noto il tipo sottostante, passerà il **stringa** letterale e viene restituito un errore del server se il server non è possibile eseguire la conversione.  
+ Le conversioni da valori stringa a valori binari vengono eseguite solo quando il tipo di destinazione viene riconosciuto come binario da [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Nei casi in cui al driver JDBC non è noto il tipo sottostante, verrà passato il valore letterale **String** e verrà restituito un errore del server se il server non può eseguire la conversione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

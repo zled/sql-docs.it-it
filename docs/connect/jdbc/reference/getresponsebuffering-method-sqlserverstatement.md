@@ -1,13 +1,11 @@
 ---
-title: Metodo getResponseBuffering (SQLServerStatement) | Documenti Microsoft
+title: Metodo getResponseBuffering (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.getResponseBuffering()
@@ -15,21 +13,20 @@ apilocation:
 - SQLServerStatement.getResponseBuffering()
 apitype: Assembly
 ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64ad84e838e64c0e4bd148705e2753277f908a3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c682e28244bf85ce761ab6f8d0b54d5f5f054679
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836626"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680409"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>Metodo getResponseBuffering (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera la risposta per questa modalità di buffering [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) oggetto.  
+  Recupera la modalità di memorizzazione delle risposte nel buffer per questo oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,16 +36,16 @@ public final java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto **stringa** contenente minuscolo **completo** o **adattivo**.  
+ Oggetto **stringa** che contiene una minuscola **completo** oppure **adattivo**.  
   
-## <a name="remarks"></a>Osservazioni  
- **adattivo** specifica il buffer di dati minima possibile quando necessario.  
+## <a name="remarks"></a>Remarks  
+ Il valore **adaptive** specifica la memorizzazione nel buffer della quantità di dati minima possibile, quando necessario.  
   
- **completa** specifica la lettura dell'intero risultato dal server in fase di esecuzione.  
+ Il valore **full** specifica la lettura dell'intero risultato dal server in fase di esecuzione.  
   
- **adattivo** è il valore predefinito nel Driver JDBC versione 2.0 e 3.0. **completa** è il valore predefinito prima della versione 2.0 del Driver JDBC.  
+ **Adaptive** è il valore predefinito nel Driver JDBC versione 2.0 e 3.0. **completa** era l'impostazione predefinita prima della versione 2.0 del Driver JDBC.  
   
- Per ulteriori informazioni sull'utilizzo della modalità di buffering di risposta, vedere [utilizzando il buffer adattivo](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Per altre informazioni sull'uso la modalità di memorizzazione delle risposte, vedere [Using Adaptive Buffering](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo setResponseBuffering &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)   

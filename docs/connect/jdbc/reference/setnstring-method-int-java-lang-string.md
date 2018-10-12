@@ -1,30 +1,27 @@
 ---
-title: Metodo (int, lang) setNString | Documenti Microsoft
+title: Metodo setNString (int, lang) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b7da6d44-f5b1-44f8-95f5-40179968b1b0
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1fbe3580d39e1ea97f59940450f9b6b11becea6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cef8c88654cf29f9a860a30fc3b79ef6d5124ce4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844246"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650019"
 ---
 # <a name="setnstring-method-int-javalangstring"></a>Metodo setNString (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Imposta il parametro designato sull'oggetto specificato **stringa** oggetto.  
+  Imposta il parametro designato sull'oggetto **String** specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,21 +32,21 @@ public final void setNString(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *parameterIndex*  
+ *parametro parameterIndex*  
   
- Un **int** che indica l'indice del parametro.  
+ Valore **int** che specifica l'indice del parametro.  
   
  *Valore*  
   
- Oggetto **stringa** oggetto che contiene il valore del parametro.  
+ Oggetto **String** contenente il valore del parametro.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo deve essere utilizzato per **NCHAR**, **NVARCHAR**, **NTEXT**, e **XML** tipi di dati.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo deve essere usato per **NCHAR**, **NVARCHAR**, **NTEXT**, e **XML** i tipi di dati.  
   
- Questo metodo setNString viene specificato dal metodo setNString nell'interfaccia Java.SQL. PreparedStatement.  
+ Questo metodo setNString viene specificato dal metodo setNString nell'interfaccia java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  

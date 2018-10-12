@@ -1,25 +1,22 @@
 ---
-title: Classe SQLServerConnectionPoolDataSource | Documenti Microsoft
+title: Classe SQLServerConnectionPoolDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b00e5a90-2af7-4d04-8ef8-256183777dcf
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdbe0150749782416eda8d713224df097a68f43a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 416f9dd730bd1cc085f8a48d1b748584037d1b65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845906"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692279"
 ---
 # <a name="sqlserverconnectionpooldatasource-class"></a>Classe SQLServerConnectionPoolDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +27,7 @@ ms.locfileid: "32845906"
   
  **Estende:** [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
- **Implementa:** ConnectionPoolDataSource  
+ **Implementa:** javax.sql.ConnectionPoolDataSource  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,11 +36,11 @@ ms.locfileid: "32845906"
 public class SQLServerConnectionPoolDataSource  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- SQLServerConnectionPoolDataSource viene in genere utilizzato negli ambienti di Server applicazioni Java che supportano il pool di connessioni predefinito e richiedono un ConnectionPoolDataSource fornire connessioni fisiche, ad esempio Java Platform, Enterprise Edition (Java Il pool di connessioni della specifica i server applicazioni Java EE) che forniscono API JDBC 3.0.  
+## <a name="remarks"></a>Remarks  
+ SQLServerConnectionPoolDataSource viene in genere usato negli ambienti dei server applicazioni Java che supportano il pool di connessioni predefinito e richiedono un oggetto ConnectionPoolDataSource per fornire connessioni fisiche, come i server applicazioni Java EE (Java Platform, Enterprise Edition) che forniscono il pool di connessioni della specifica dell'API JDBC 3.0.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-members.md)   
- [Riferimento all'API del Driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Informazioni di riferimento sull'API del driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3287815e6622d2d44693b401e2829275d22a2785
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 7e56d57cb3df19df1cbf09811ebfebca66efe51b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42783936"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677579"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Funzionalità di Microsoft ODBC Driver for SQL Server in Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -35,9 +32,9 @@ Azure Active Directory consente agli utenti, gli amministratori di database e i 
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Microsoft ODBC Driver 11 for SQL Server in Windows  
 
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene tutte le funzionalità del driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fornito con [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Per altre informazioni, vedere [Programmazione in SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md). Il driver ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client è basato sul driver ODBC fornito con il sistema operativo Windows. Per altre informazioni, vedere [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx).  
+Il driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene tutte le funzionalità del driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fornito con [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Per altre informazioni, vedere [Programmazione in SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md). Il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client è basato sul driver ODBC fornito con il sistema operativo Windows. Per altre informazioni, vedere [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx).  
   
-Questa versione di Driver ODBC for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene le nuove funzionalità seguenti:  
+Questa versione del driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene le nuove funzionalità seguenti:  
   
 ### <a name="bcpexe-l-option-for-specifying-a-login-timeout"></a>opzione – l bcp.exe per specificare un timeout di accesso
  

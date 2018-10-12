@@ -1,13 +1,11 @@
 ---
-title: Metodo getMoreResults (int) | Documenti Microsoft
+title: Metodo getMoreResults (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.getMoreResults (int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75609ec8f24674dd7ff9d1a6724cbc458be47f84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a7d4fe32d7d1ac4be9a20923fc4d230ac64d1c8d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837746"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667809"
 ---
 # <a name="getmoreresults-method-int"></a>Metodo getMoreResults (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Passa al risultato successivo di questo [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) riguarda eventuali risultati attualmente aperti e oggetto impostate oggetti in base alle istruzioni specificate dalla modalità fornita.  
+  Passa al risultato successivo di questo oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) e gestisce qualsiasi oggetto del set di risultati attualmente aperto in base alle istruzioni indicate dalla modalità specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,9 +36,9 @@ public final boolean getMoreResults(int mode)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Modalità*  
+ *mode*  
   
- Un **int** che indica come gestire gli oggetti del set di risultati attualmente aperto. Deve essere una delle costanti seguenti:  
+ Valore **int** che indica come gestire oggetti del set di risultati attualmente aperti. Deve essere una delle costanti seguenti:  
   
  CLOSE_CURRENT_RESULT  
   
@@ -55,10 +52,10 @@ public final boolean getMoreResults(int mode)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getMoreResults viene specificato dal metodo getMoreResults nell'interfaccia Java.SQL. Statement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getMoreResults viene specificato dal metodo getMoreResults nell'interfaccia Statement.  
   
- Se il metodo getMoreResults viene chiamato prima del recupero dei risultati, si comporta come specificato da di *modalità* argomento e passa al risultato successivo.  
+ Se il metodo getMoreResults viene chiamato prima che vengano recuperati i risultati, si comporta come specificato dall'argomento *mode* e passa al risultato successivo.  
   
 > [!NOTE]  
 >  Il driver JDBC non supporta l'utilizzo della costante KEEP_CURRENT_RESULT. Se utilizzata, verrà generata un'eccezione.  

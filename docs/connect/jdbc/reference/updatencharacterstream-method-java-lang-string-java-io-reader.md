@@ -1,25 +1,22 @@
 ---
-title: Metodo updateNCharacterStream (lang, Java.IO. Reader) | Documenti Microsoft
+title: Metodo updateNCharacterStream (java.lang.String, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 504d7d06-0227-45e1-8b01-899c3e6006e8
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94f50da3e2d042d3570455c75a1bb193f25cae73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5c1b4baeb3fb44c68e0b8a1492b85df62fb1e69b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849286"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677329"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader"></a>Metodo updateNCharacterStream (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,19 +34,19 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parametri  
  *columnLabel*  
   
- Oggetto **stringa** che contiene l'etichetta di colonna.  
+ Valore **String** contenente l'etichetta della colonna.  
   
- *Lettore*  
+ *reader*  
   
- Un oggetto del lettore.  
+ Oggetto lettore.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo updateNCharacterStream viene specificato dal metodo updateNCharacterStream nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo updateNCharacterStream viene specificato dal metodo updateNCharacterStream nell'interfaccia ResultSet.  
   
- Questo metodo passa caratteri Unicode da un oggetto lettore selezionare **nchar**, **nvarchar (max)**, **ntext** e **xml** colonne. L'utilizzo di questo metodo su colonne con altri tipi di dati genererà un'eccezione.  
+ Questo metodo passa caratteri Unicode da un oggetto lettore selezionati **nchar**, **nvarchar (max)**, **ntext** e **xml** colonne. L'utilizzo di questo metodo su colonne con altri tipi di dati genererà un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateNCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   

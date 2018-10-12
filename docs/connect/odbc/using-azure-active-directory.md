@@ -5,21 +5,18 @@ ms.date: 03/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b1e12a4586cc063f6f4e556894b5da1e7f99eff
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7486e97fb0efe9fffa9fe6eb49ee75cc6d75bfce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983677"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635001"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Uso di Azure Active Directory con il driver ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,6 +24,9 @@ ms.locfileid: "38983677"
 ## <a name="purpose"></a>Scopo
 
 Microsoft ODBC Driver for SQL Server con la versione 13.1 o successiva consente alle applicazioni di ODBC per connettersi a un'istanza di SQL Azure usando un'identità federata in Azure Active Directory con un nome utente/password, un token di accesso di Azure Active Directory o Windows L'autenticazione integrata (_solo i driver di Windows_). Per il Driver ODBC versione 13.1, l'accesso di Azure Active Directory è l'autenticazione tramite token _solo Windows_. Il Driver ODBC versione 17 e versioni successive supportano questa autenticazione tutte le piattaforme (Windows, Linux e Mac). Una nuova autenticazione interattiva di Azure Active Directory con l'ID di accesso è stato introdotto nel Driver ODBC versione 17.1 per Windows. Tutti questi componenti vengono eseguiti tramite l'uso di nuovo DSN e parole chiave delle stringhe di connessione e gli attributi di connessione.
+
+> [!NOTE]
+> Il Driver ODBC in Linux e macOS non supporta Active Directory Federation Services. Se si utilizza l'autenticazione di nome utente e password di Azure Active Directory da un Linux o macOS client e la configurazione di Active Directory include servizi federati, l'autenticazione potrebbe non riuscire.
 
 ## <a name="new-andor-modified-dsn-and-connection-string-keywords"></a>DSN nuovi e/o modificati e parole chiave delle stringhe di connessione
 
@@ -65,7 +65,7 @@ La configurazione del DSN e la connessione delle interfacce utente del driver so
 
 ![CreateNewDSN_ADPassword.png](windows/CreateNewDSN_ADPassword.png)
 
-`Authentication=ActiveDirectoryInteractive` per l'autenticazione interattiva di Active Directory di Azure a SQL Azure
+`Authentication=ActiveDirectoryInteractive` per l'autenticazione interattiva di Azure Active Directory in SQL Azure
 
 ![CreateNewDSN_ADInteractive.png](windows/CreateNewDSN_ADInteractive.png)
 

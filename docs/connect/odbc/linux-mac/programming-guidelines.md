@@ -5,19 +5,17 @@ ms.date: 01/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3068d2a796e7e28e4eda58514cc316fe504bbce3
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5030124775a8016fe5ddb716524276365aa47be7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42784962"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613082"
 ---
 # <a name="programming-guidelines"></a>Linee guida per la programmazione
 
@@ -114,7 +112,7 @@ Quando si associano parametri di input con SQLBindParameter, se un carattere nar
 
 Per evitare la perdita di dati quando si associano parametri di input, specificare un tipo di carattere SQL Unicode, ad esempio SQL_NVARCHAR. In questo caso, il driver converte dal client di codifica UTF-16, che possono rappresentare tutti i caratteri Unicode. Inoltre, la colonna di destinazione o il parametro nel server deve inoltre essere un tipo di Unicode (**nchar**, **nvarchar**, **ntext**) o a uno con delle regole di confronto/codifica, che può essere rappresenta tutti i caratteri di dati di origine. Per evitare la perdita di dati con i parametri di output, specificare un tipo SQL Unicode e un Unicode C tipo (SQL_C_WCHAR), causando il driver restituire dati come UTF-16; o C narrow digitare e verificare che il client di codifica può rappresentare tutti i caratteri dei dati di origine (questo è sempre possibile eseguire con UTF-8).
 
-Per altre informazioni sulle regole di confronto e le codifiche, vedere [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md).
+Per altre informazioni sulle regole di confronto e sulle codifiche, vedere [Regole di confronto e supporto Unicode](../../../relational-databases/collations/collation-and-unicode-support.md).
 
 Esistono alcune differenze di conversione di codifica tra versioni diverse della libreria iconv in Linux e macOS e Windows. I dati di testo nella tabella codici 1255 (ebraico) dispone di un punto di codice (0xCA) che si comporta in modo diverso durante la conversione in Unicode. In Windows, questo carattere converte il punto di codice UTF-16 pari a 0x05BA. In macOS e Linux con libiconv precedenti alla versione 1.15, converte in a 0x00CA. In Linux con le librerie iconv che non supportano la revisione 2003 di Big5/CP950 (denominato `BIG5-2003`), caratteri aggiunti con tale revisione non convertirà correttamente. Nella tabella codici 932 (Japanese, Shift-JIS), il risultato di decodifica di caratteri non originariamente definiti nello standard di codifica è diversa anche. Ad esempio, il byte 0x80 converte da u+0080 su Windows ma può diventare 30FB U + in Linux e macOS, a seconda della versione iconv.
 

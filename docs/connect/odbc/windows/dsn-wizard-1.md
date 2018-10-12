@@ -1,37 +1,34 @@
 ---
-title: Schermata 1, il Driver ODBC per SQL Server, dell'origine dati | Documenti Microsoft
+title: Schermata di creazione guidata 1 (Driver ODBC per SQL Server) dell'origine dati | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d97cbdf8e73254b790ff0c8f965fa8b6d647951a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f13746005f05d84bd8b987fe048baf392e81af3b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852156"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641972"
 ---
-# <a name="data-source-wizard-screen-1"></a>Schermata di creazione guidata origine dati 1
+# <a name="data-source-wizard-screen-1"></a>Creazione guidata origine dati - Schermata 1
 
-Specificare il nome e descrizione dell'origine dati e il nome del server che esegue SQL Server a cui si connetterà l'origine dati. 
+Specificare il nome e la descrizione dell'origine dati e il nome del server in cui viene eseguito SQL Server cui si connetterà l'origine dati. 
     
 ## <a name="options"></a>Opzioni
 
-### <a name="name"></a>Nome
+### <a name="name"></a>nome
 
 Nome dell'origine dati utilizzato da un'applicazione ODBC quando richiede una connessione all'origine dati, ad esempio "Personale". Il nome dell'origine dati è visualizzato nella finestra di dialogo Amministrazione origine dati ODBC.
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descrizione
 
 Descrizione facoltativa dell'origine dati, ad esempio "Date collaborazioni, cronologia stipendi e situazione corrente di tutti i dipendenti".
 
@@ -39,20 +36,20 @@ Descrizione facoltativa dell'origine dati, ad esempio "Date collaborazioni, cron
 
 Il nome di un'istanza di SQL Server nella rete. Sarà necessario specificare un server nella casella di modifica successiva.
 
-Nella maggior parte dei casi, il driver ODBC è possibile connettersi utilizzando l'ordine dei protocolli predefinito e il nome del server fornito in questa casella. Se si desidera creare un alias per il server o configurare librerie di rete client, utilizzare Gestione configurazione SQL Server.
+Nella maggior parte dei casi, il driver ODBC può connettersi usando l'ordine dei protocolli predefinito e il nome del server specificato in questa casella. Usare Gestione configurazione SQL Server se si vuole creare un alias per il server o configurare librerie di rete client.
 
-È possibile immettere "(local)" nella finestra di server quando si utilizza lo stesso computer di SQL Server. L'utente può quindi connettersi all'istanza locale di SQL Server, anche quando si esegue una versione non in rete di SQL Server. Più istanze di SQL Server è possono eseguire nello stesso computer. Per specificare un'istanza denominata di SQL Server, il nome del server viene specificato come _ServerName_\\_InstanceName_.
+È possibile immettere "(locale)" nella casella del server quando si usa lo stesso computer in cui è presente SQL Server. L'utente può quindi connettersi all'istanza locale di SQL Server anche in caso di esecuzione di una versione non in rete di SQL Server. È possibile eseguire più istanze di SQL Server nello stesso computer. Per specificare un'istanza denominata di SQL Server, il nome del server deve essere specificato come _NomeServer_\\_NomeIstanza_.
 
-Per ulteriori informazioni sui nomi di server per diversi tipi di reti, vedere la documentazione di installazione di SQL Server nella documentazione Online di SQL Server.
+Per altre informazioni sui nomi dei server per tipi diversi di reti, vedere la documentazione relativa all'installazione di SQL Server nella documentazione online di SQL Server.
 
 ### <a name="finish"></a>Fine
 
-Se le informazioni specificate in questa schermata sono tutto ciò che è necessaria per connettersi a SQL Server, è possibile fare clic su **fine**. Per tutti gli attributi specificati nelle altre schermate della procedura guidata verranno utilizzate le impostazioni predefinite.
+Se le informazioni specificate in questa schermata sono le uniche necessarie per connettersi a SQL Server, è possibile fare clic su **Fine**. Per tutti gli attributi specificati nelle altre schermate della procedura guidata verranno utilizzate le impostazioni predefinite.
 
 ### <a name="next"></a>Avanti
 
-Per passare alla schermata successiva della procedura guidata, fare clic su **Avanti**.
+Per passare alla schermata successiva della procedura guidata, fare clic su **successivo**.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Schermata di creazione guidata origine dati 2](../../../connect/odbc/windows/dsn-wizard-2.md)
+[Creazione guidata origine dati - Schermata 2](../../../connect/odbc/windows/dsn-wizard-2.md)
