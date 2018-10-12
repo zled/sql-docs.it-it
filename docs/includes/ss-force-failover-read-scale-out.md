@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 19bf9ad54bee8b14796144d002e97c6eead541aa
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 189ffb02217d85d77cee524658cd35a2d2cff034
+ms.sourcegitcommit: 677a75e7d149ff257ed8376a392806d17dca0640
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38069972"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46488296"
 ---
 Ogni gruppo di disponibilità include solo una replica primaria, che consente operazioni di lettura e scrittura. Per modificare la replica primaria, è possibile effettuare il failover. In un gruppo di disponibilità per disponibilità elevata, il processo di failover è automatizzato da Gestione cluster. In un gruppo di disponibilità con tipo di cluster NONE, il processo di failover è manuale. 
 
@@ -29,6 +29,12 @@ Per forzare il failover con perdita di dati, connettersi all'istanza di SQL Serv
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
+```
+
+Quando viene recuperata la replica primaria precedente, questa assume anche il ruolo primario. Per assicurarsi che la replica primaria precedente passi a un ruolo secondario, eseguire il comando seguente nella replica primaria precedente.
+
+```SQL
+ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 ```
 
 ### <a name="manual-failover-without-data-loss"></a>Failover manuale senza perdita di dati
