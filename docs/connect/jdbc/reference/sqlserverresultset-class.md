@@ -1,25 +1,22 @@
 ---
-title: Classe SQLServerResultSet | Documenti Microsoft
+title: Classe SQLServerResultSet | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eaffcff1-286c-459f-83da-3150778480c9
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 671eda7647b1381feeedcf76c9cca1a81d8fc267
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 54a1bb855cf8933754b023965fb6dddc097e8589
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846696"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759039"
 ---
 # <a name="sqlserverresultset-class"></a>Classe SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,19 +34,19 @@ ms.locfileid: "32846696"
 public final class SQLServerResultSet  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Esistono due tipi di set di risultati: lato client e lato server.  
   
- I set di risultati del lato client vengono utilizzati quando le dimensioni dei risultati sono tali da consentirne la conservazione nella memoria del processo client. Questi risultati sono disponibili più rapidamente e vengono lette dal [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] interamente dal database. Inoltre non impongono carico aggiuntivo sul database, evitando l'overhead correlato alla creazione di cursori sul lato server. Tuttavia, questi tipi di set di risultati non sono aggiornabili.  
+ I set di risultati del lato client vengono utilizzati quando le dimensioni dei risultati sono tali da consentirne la conservazione nella memoria del processo client. Questi risultati sono disponibili più rapidamente e vengono letti interamente dal database da [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Inoltre non impongono carico aggiuntivo sul database, evitando l'overhead correlato alla creazione di cursori sul lato server. Tuttavia, questi tipi di set di risultati non sono aggiornabili.  
   
  I set di risultati del lato server possono essere utilizzati quando le dimensioni dei risultati sono tali da non consentirne la conservazione nella memoria del processo client o quando il set di risultati deve essere aggiornabile. Con questo tipo di set di risultati, il driver JDBC crea un cursore sul lato server e recupera in modo trasparente le righe del set di risultati man mano che l'utente scorre il set stesso.  
   
- La classe SQLServerResultSet fornisce numerosi metodi che consentono di aggiornare il set di risultati con qualsiasi tipo di dati Java nativo e numerosi tipi di oggetto Java.  
+ La classe SQLServerResultSet fornisce numerosi metodi che consentono l'aggiornamento del set di risultati con qualsiasi tipo di dati Java nativo e numerosi tipi di oggetti Java.  
   
- Questa classe supporta l'annullamento del wrapping nella classe SQLServerResultSet e interfaccia ISQLServerResultSet, interfaccia Java.SQL. ResultSet. Per ulteriori informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Questa classe supporta l'annullamento del wrapping nella classe SQLServerResultSet e interfaccia ISQLServerResultSet, interfaccia ResultSet. Per altre informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
- [Riferimento all'API del Driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Informazioni di riferimento sull'API del driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

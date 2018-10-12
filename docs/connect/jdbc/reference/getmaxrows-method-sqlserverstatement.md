@@ -1,13 +1,11 @@
 ---
-title: Metodo (SQLServerStatement) getMaxRows | Documenti Microsoft
+title: Metodo getMaxRows (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.getMaxRows
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d619f9505d9f6f5e9c2c6db7751ecb224fa2f5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8cb1c317930d97263038d09bd84e8836d5f6f4ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773639"
 ---
-# <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows (metodo) (SQLServerStatement)
+# <a name="getmaxrows-method-sqlserverstatement"></a>Metodo getMaxRows (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera il numero massimo di righe che un [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto generato da questo [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) oggetto può contenere.  
+  Recupera il numero massimo di righe che possono essere contenute da un oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) generato da questo oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,13 +36,13 @@ public final int getMaxRows()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Un **int** che indica il numero massimo di righe oppure 0 se non esiste alcun limite.  
+ Valore **int** che indica il numero massimo di righe oppure 0 in assenza di un limite.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getMaxRows viene specificato dal metodo getMaxRows nell'interfaccia Java.SQL. Statement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getMaxRows viene specificato dal metodo getMaxRows nell'interfaccia Statement.  
   
  Questo metodo getMaxRows restituisce sempre 0 per i cursori scorrevoli dinamici.  
   

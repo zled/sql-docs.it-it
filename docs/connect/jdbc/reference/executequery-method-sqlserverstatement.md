@@ -1,13 +1,11 @@
 ---
-title: Metodo executeQuery (SQLServerStatement) | Documenti Microsoft
+title: Metodo executeQuery (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.executeQuery
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 599cf463-e19f-4baa-bacb-513cad7c6cd8
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 053446b9110ea080a8b6e021e4455c3a1215be5b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5e60b24dd437ec100616da264b54997c9021554d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830596"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834730"
 ---
 # <a name="executequery-method-sqlserverstatement"></a>Metodo executeQuery (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Esegue l'istruzione SQL specificata e restituisce un singolo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+  Esegue l'istruzione SQL specificata e restituisce un solo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +38,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 #### <a name="parameters"></a>Parametri  
  *sql*  
   
- Oggetto **stringa** che contiene un'istruzione SQL.  
+ Valore **String** contenente un'istruzione SQL.  
   
 ## <a name="return-value"></a>Valore restituito  
  Oggetto SQLServerResultSet.  
@@ -49,12 +46,12 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo executeQuery viene specificato dal metodo executeQuery nell'interfaccia Java.SQL. Statement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo executeQuery viene specificato dal metodo executeQuery nell'interfaccia Statement.  
   
- [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) viene generata se l'istruzione SQL specificata produce qualsiasi oggetto tranne un singolo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Viene generata l'eccezione [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) se l'istruzione SQL specificata produce un risultato diverso da un solo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
- Se l'esecuzione di una stored procedure restituisce un conteggio di aggiornamento che è maggiore di uno o genera più set di risultati, utilizzare il [eseguire](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) metodo per eseguire la stored procedure.  
+ Se l'esecuzione di una stored procedure restituisce un conteggio di aggiornamenti maggiore di uno o genera più set di risultati, usare il metodo [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) per eseguire la stored procedure.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

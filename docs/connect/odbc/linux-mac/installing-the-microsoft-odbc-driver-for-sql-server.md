@@ -5,23 +5,20 @@ ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - driver, installing
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-caps.latest.revision: 69
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ab32d1ac12bbe6f81241590a1e61b9579772cb7d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 7cbc1a78a2cce71494da04ffeb19649b22b2585e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736479"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installazione di Microsoft ODBC Driver for SQL Server in Linux e macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -510,7 +507,7 @@ Il Driver ODBC in Linux e MacOS include i componenti seguenti:
 
 |Componente|Descrizione|  
 |---------------|-----------------|  
-|libmsodbcsql-17. X.so.X.X o libmsodbcsql-13. X.so.X.X|File della libreria di collegamento dinamico (`so`) che contiene tutte le funzionalità del driver. Questo file viene installato `/opt/microsoft/msodbcsql17/lib64/` per il Driver 17 e in `/opt/microsoft/msodbcsql/lib64/` per 13 del Driver.|  
+|libmsodbcsql-17. X.so.X.X o libmsodbcsql-13. X.so.X.X|File della libreria di collegamento dinamico dell'oggetto condiviso (`so`) che contiene tutte le funzionalità del driver. Questo file viene installato `/opt/microsoft/msodbcsql17/lib64/` per il Driver 17 e in `/opt/microsoft/msodbcsql/lib64/` per 13 del Driver.|  
 |`msodbcsqlr17.rll` o `msodbcsqlr13.rll`|File di risorse associato per la libreria del driver. Questo file viene installato in `[driver .so directory]../share/resources/en_US/`| 
 |msodbcsql.h|File di intestazione che contiene tutte le nuove definizioni necessarie per usare il driver.<br /><br /> **Nota:**  non è possibile fare riferimento a msodbcsql.h e odbcss.h nello stesso programma.<br /><br /> msodbcsql. h viene installato nella `/opt/microsoft/msodbcsql17/include/` per i Driver 17 e nel `/opt/microsoft/msodbcsql/include/` per 13 del Driver. |
 |File License. txt|File di testo che contiene i termini del contratto di licenza dell'utente finale. Questo file si trova nella `/usr/share/doc/msodbcsql17/` per i Driver 17 e nel `/usr/share/doc/msodbcsql/` per 13 del Driver.|

@@ -5,30 +5,27 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c5b69cb8fac0d91728e9cef945e83159e3151bc5
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 89ff07f25333cdd032d7ce17b7671b850ce8488a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024419"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736469"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversioni eseguite da server a client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Vengono descritte le conversioni di data/ora eseguite tra [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], o versione successiva, e un'applicazione client scritta con driver OLE DB per SQL Server.  
+  Questo articolo descrive le conversioni di data/ora eseguite tra [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (o versione successiva) e un'applicazione client scritta con il driver OLE DB per SQL Server.  
   
 ## <a name="conversions"></a>Conversioni  
  Nella tabella seguente vengono descritte le conversioni tra il tipo restituito al client e il tipo presente nell'associazione. Per i parametri di output, se è stato chiamato ICommandWithParameters:: SetParameterInfo e il tipo specificato nel *pwszDataSourceType* non corrisponde verrà eseguito il tipo effettivo nel server, una conversione implicita dal server , e il tipo restituito al client corrisponderà al tipo specificato tramite ICommandWithParameters:: SetParameterInfo. Se le regole di conversione del server sono diverse da quelle descritte in questo articolo, la conversione potrebbe dare risultati imprevisti. Quando ad esempio è necessario specificare una data predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizza 1900-1-1 anziché 1899-12-30.  

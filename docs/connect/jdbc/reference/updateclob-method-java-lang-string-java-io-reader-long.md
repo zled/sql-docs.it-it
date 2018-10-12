@@ -1,25 +1,22 @@
 ---
-title: Metodo updateClob (lang, Java.IO. Reader, long) | Documenti Microsoft
+title: Metodo updateClob (java.lang.String, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6b8f759a-ce5d-41b2-b6cc-24a3ab299f1f
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25ddba644335a47aba33889600330e1988905c47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3a24749da4854146d42a8515879aabd91d6c4258
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848926"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811769"
 ---
 # <a name="updateclob-method-javalangstring-javaioreader-long"></a>Metodo updateClob (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,21 +35,21 @@ public void updateClob(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parametri  
  *columnLabel*  
   
- Oggetto **stringa** che contiene l'etichetta di colonna.  
+ Valore **String** contenente l'etichetta della colonna.  
   
- *Lettore*  
+ *reader*  
   
- Un oggetto del lettore.  
+ Oggetto lettore.  
   
- *lunghezza*  
+ *length*  
   
  Numero di caratteri nei dati dei parametri.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo updateClob viene specificato dal metodo updateClob nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo updateClob viene specificato dal metodo nell'interfaccia ResultSet updateClob.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   

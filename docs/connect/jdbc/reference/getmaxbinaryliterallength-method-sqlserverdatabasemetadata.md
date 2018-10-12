@@ -1,13 +1,11 @@
 ---
-title: Metodo getMaxBinaryLiteralLength (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getMaxBinaryLiteralLength (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getMaxBinaryLiteralLength
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 42e49ff9-8072-44e4-ad75-c864c3a4ad8c
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35e6ac0258f81b17688953f784728607ef453a4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 13a713a7d50806e7370e17865dbca0e4f0662ca1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835066"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828029"
 ---
 # <a name="getmaxbinaryliterallength-method-sqlserverdatabasemetadata"></a>Metodo getMaxBinaryLiteralLength (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +36,12 @@ public int getMaxBinaryLiteralLength()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Un **int** che indica il numero massimo di caratteri esadecimali.  
+ Valore **int** che indica il numero massimo di caratteri esadecimali.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getMaxBinaryLiteralLength viene specificato dal metodo getMaxBinaryLiteralLength nell'interfaccia DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,13 +1,11 @@
 ---
-title: Metodo getAttributes (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getAttributes (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getAttributes
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4dc784ed-4699-4197-9af5-6e03da80d14c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21a129e92958022b692db1745ed4be0fd5e66093
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8e129702dea18ee9866aba2595ea357a739388b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833416"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754749"
 ---
 # <a name="getattributes-method-sqlserverdatabasemetadata"></a>Metodo getAttributes (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +29,7 @@ ms.locfileid: "32833416"
   Recupera una descrizione di un determinato attributo del tipo indicato per un tipo definito dall'utente disponibile nello schema e nel catalogo specificati.  
   
 > [!NOTE]  
->  Questo metodo non è attualmente supportato per il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Se viene chiamato, restituirà sempre un set di risultati vuoto.  
+>  Questo metodo non è attualmente supportato da [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Se viene chiamato, restituirà sempre un set di risultati vuoto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,27 +44,27 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
 #### <a name="parameters"></a>Parametri  
  *catalog*  
   
- Oggetto **stringa** che contiene il nome del catalogo.  
+ Valore **String** contenente il nome del catalogo.  
   
  *schemaPattern*  
   
- Oggetto **stringa** che contiene il modello di nome dello schema.  
+ Valore **String** contenente il modello del nome dello schema.  
   
  *typeNamePattern*  
   
- Oggetto **stringa** che contiene il modello di nome di tipo.  
+ Valore **String** contenente il modello del nome del tipo.  
   
  *attributePattern*  
   
- Oggetto **stringa** che contiene il modello di nome di attributo.  
+ Valore **String** contenente il modello del nome dell'attributo.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getAttributes viene specificato dal metodo getAttributes nell'interfaccia DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  

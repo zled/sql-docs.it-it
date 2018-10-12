@@ -1,31 +1,28 @@
 ---
-title: 'Passaggio 3: Modello di prova di connessione a SQL tramite Node.js | Documenti Microsoft'
+title: 'Passaggio 3: Modello di verifica per la connessione a SQL con Node.js | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6d9e49b709396519a3eb08ce37fb802c66aa283
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 4ffefc34eed32a27b29f40836762a16fd69cdd4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288920"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834140"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Passaggio 3: Modello di prova di connessione a SQL tramite Node.js
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Passaggio 3: Modello di verifica per la connessione a SQL con Node.js
 
-![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[scaricare il driver SQL Node. js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[per scaricare il driver SQL Node. js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-In questo esempio deve essere considerato un modello solo di prova.  Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft. Altri esempi che utilizzano le stesse funzioni fondamentali sono disponibili in Github:
+In questo esempio deve essere considerato un modello di verifica solo.  Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft. Altri esempi che usano le stesse funzioni fondamentali sono disponibili in Github:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
@@ -52,7 +49,7 @@ Il **nuova connessione** funzione viene utilizzata per connettersi al Database S
 ## <a name="step-2--execute-a-query"></a>Passaggio 2: Eseguire una query  
   
   
-Tutte le istruzioni SQL vengono eseguite utilizzando il **Request () nuovo** (funzione). Se l'istruzione restituisce righe, ad esempio un'istruzione select, è possibile recuperare utilizzando il **request.on()** (funzione). Se non sono presenti righe, la funzione request.on() restituisce elenchi vuoti.  
+Tutte le istruzioni SQL vengono eseguite usando il **Request (nuova)** (funzione). Se l'istruzione restituisce righe, ad esempio un'istruzione select, è possibile recuperarli usando il **Request** (funzione). Se non sono presenti righe, la funzione Request restituisce elenchi vuoti.  
   
   
 ```javascript  
@@ -101,7 +98,7 @@ Tutte le istruzioni SQL vengono eseguite utilizzando il **Request () nuovo** (fu
   
 ## <a name="step-3-insert-a-row"></a>Passaggio 3: Inserire una riga  
   
-In questo esempio verrà visualizzato come eseguire un [inserire](../../t-sql/statements/insert-transact-sql.md) istruzione in modo sicuro, passare parametri che la protezione dell'applicazione da [attacchi SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valore.    
+In questo esempio illustra come eseguire un' [inserire](../../t-sql/statements/insert-transact-sql.md) istruzione in modo sicuro, passare i parametri che proteggono l'applicazione dal [attacchi SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valore.    
   
   
 ```javascript  

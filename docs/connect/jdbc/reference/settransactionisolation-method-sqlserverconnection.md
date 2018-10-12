@@ -1,13 +1,11 @@
 ---
-title: Metodo (SQLServerConnection) setTransactionIsolation | Documenti Microsoft
+title: Metodo setTransactionIsolation (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.setTransactionIsolation
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6a8fa4d3-5237-40f8-8a02-b40a3d7a1131
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd1a4fb0ef1c55c54a17dfe1825fd208ebd6035f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 992ce78ec0fab556bb2bb91fdcaf97f54f3145e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846166"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811819"
 ---
-# <a name="settransactionisolation-method-sqlserverconnection"></a>setTransactionIsolation (metodo) (SQLServerConnection)
+# <a name="settransactionisolation-method-sqlserverconnection"></a>Metodo setTransactionIsolation (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Tenta di modificare il livello di isolamento delle transazioni per questo [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) oggetto a quello specificato.  
+  Cerca di impostare sul valore specificato il livello di isolamento della transazione corrente per questo oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,9 +36,9 @@ public void setTransactionIsolation(int level)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Livello*  
+ *level*  
   
- Un **int** valore contenente uno dei livelli di isolamento seguenti:  
+ Valore **int** contenente uno dei livelli di isolamento seguenti:  
   
  TRANSACTION_READ_UNCOMMITTED  
   
@@ -56,8 +53,8 @@ public void setTransactionIsolation(int level)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo setTransactionIsolation viene specificato dal metodo setTransactionIsolation nell'interfaccia Java.SQL. Connection.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo setTransactionIsolation viene specificato dal metodo setTransactionIsolation nell'interfaccia Java.  
   
  Il commit delle transazioni non viene eseguito se questo metodo viene chiamato durante una transazione.  
   

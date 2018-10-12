@@ -1,58 +1,55 @@
 ---
-title: I membri di SQLServerDatabaseMetaData | Documenti Microsoft
+title: I membri di SQLServerDatabaseMetaData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99e11d827cfc8e81f00a471b06521f33e872d64e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 95948680f7bd7bb1766207fa8894d274b5e09daf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853246"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788080"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>Membri di SQLServerDatabaseMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Le tabelle seguenti elencano i membri esposti dal [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) classe.  
+  Nelle tabelle seguenti sono elencati i membri esposti dalla classe [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md).  
   
 ## <a name="constructors"></a>Costruttori  
- Nessuno  
+ Nessuna.  
   
 ## <a name="fields"></a>Campi  
- Nessuno  
+ Nessuna.  
   
 ## <a name="inherited-fields"></a>Campi ereditati  
   
-|Nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |java.sql.DatabaseMetaData|attributeNoNulls, attributeNullable, attributeNullableUnknown, bestRowNotPseudo, bestRowPseudo, bestRowSession, bestRowTemporary, bestRowTransaction, bestRowUnknown, columnNoNulls, columnNullable, columnNullableUnknown, importedKeyCascade, importedKeyInitiallyDeferred, importedKeyInitiallyImmediate, importedKeyNoAction, importedKeyNotDeferrable, importedKeyRestrict, importedKeySetDefault, importedKeySetNull, procedureColumnIn, procedureColumnInOut, procedureColumnOut, procedureColumnResult, procedureColumnReturn, procedureColumnUnknown, procedureNoNulls, procedureNoResult, procedureNullable, procedureNullableUnknown, procedureResultUnknown, procedureReturnsResult, sqlStateSQL, sqlStateSQL99, sqlStateXOpen, tableIndexClustered, tableIndexHashed, tableIndexOther, tableIndexStatistic, typeNoNulls, typeNullable, typeNullableUnknown, typePredBasic, typePredChar, typePredNone, typeSearchable, versionColumnNotPseudo, versionColumnPseudo, versionColumnUnknown|  
   
 ## <a name="methods"></a>Metodi  
   
-|Nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
-|[allProceduresAreCallable](../../../connect/jdbc/reference/allproceduresarecallable-method-sqlserverdatabasemetadata.md)|Specifica se l'utente corrente disponga delle autorizzazioni per chiamare tutte le procedure restituite dal [getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md) metodo.|  
-|[allTablesAreSelectable](../../../connect/jdbc/reference/alltablesareselectable-method-sqlserverdatabasemetadata.md)|Specifica se l'utente corrente disponga delle autorizzazioni per utilizzare tutte le tabelle restituite dal [getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) metodo in un'istruzione SELECT.|  
+|[allProceduresAreCallable](../../../connect/jdbc/reference/allproceduresarecallable-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se l'utente corrente ha le autorizzazioni necessarie per chiamare tutte le procedure restituite dal metodo [getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md).|  
+|[allTablesAreSelectable](../../../connect/jdbc/reference/alltablesareselectable-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se l'utente corrente ha le autorizzazioni necessarie per usare tutte le tabelle restituite dal metodo [getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) in un'istruzione SELECT.|  
 |[autoCommitFailureClosesAllResultSets](../../../connect/jdbc/reference/autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata.md)|Indica se tramite il driver JDBC vengono chiusi tutti i set di risultati aperti, inclusi quelli trattenibili, quando è abilitata una modalità di commit automatico e viene generata un'eccezione.|  
 |[dataDefinitionCausesTransactionCommit](../../../connect/jdbc/reference/datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se un'istruzione di definizione dei dati all'interno di una transazione forza il commit della transazione.|  
 |[dataDefinitionIgnoredInTransactions](../../../connect/jdbc/reference/datadefinitionignoredintransactions-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se il database ignora un'istruzione di definizione dei dati all'interno di una transazione.|  
-|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|È possibile rilevare consente di recuperare o meno di eliminare una riga visibile chiamando il [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) metodo il [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) classe.|  
-|[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|Recupera se il valore restituito per il [getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) metodo include i tipi di dati SQL LONGVARCHAR e LONGVARBINARY.|  
-|[GetAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|Recupera una descrizione di un determinato attributo del tipo indicato per un tipo definito dall'utente disponibile nello schema e nel catalogo specificati.|  
+|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se è possibile rilevare una riga visibile eliminata chiamando il metodo [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) della classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
+|[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se il valore restituito per il metodo [getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) include i tipi di dati SQL LONGVARCHAR e LONGVARBINARY.|  
+|[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|Recupera una descrizione di un determinato attributo del tipo indicato per un tipo definito dall'utente disponibile nello schema e nel catalogo specificati.|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|Recupera una descrizione del set ottimale di colonne di una tabella che identifica una riga in modo univoco.|  
 |[getCatalogs](../../../connect/jdbc/reference/getcatalogs-method-sqlserverdatabasemetadata.md)|Recupera i nomi di catalogo disponibili nel server connesso.|  
-|[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|Recupera il **stringa** che questo database viene utilizzato come separatore tra un nome di catalogo e di tabella.|  
+|[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|Recupera il valore **String** usato dal database come separatore tra un nome di catalogo e un nome di tabella.|  
 |[getCatalogTerm](../../../connect/jdbc/reference/getcatalogterm-method-sqlserverdatabasemetadata.md)|Recupera il termine preferito del fornitore del database per indicare "catalogo".|  
 |[getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md)|Recupera un elenco di proprietà delle informazioni client supportate dal driver.|  
 |[getColumnPrivileges](../../../connect/jdbc/reference/getcolumnprivileges-method-sqlserverdatabasemetadata.md)|Recupera una descrizione dei diritti di accesso per le colonne di una tabella.|  
@@ -72,7 +69,7 @@ ms.locfileid: "32853246"
 |[getExtraNameCharacters](../../../connect/jdbc/reference/getextranamecharacters-method-sqlserverdatabasemetadata.md)|Recupera tutti i caratteri aggiuntivi che possono essere utilizzati nei nomi di identificatore non racchiusi tra virgolette, ad esempio quelli non inclusi in a-z, A-Z, 0-9 e _.|  
 |[getFunctions](../../../connect/jdbc/reference/getfunctions-method-sqlserverdatabasemetadata.md)|Recupera una descrizione delle funzioni utente e di sistema.|  
 |[getFunctionColumns](../../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md)|Recupera una descrizione dei parametri e del tipo restituito delle funzioni utente o di sistema del catalogo specificato.|  
-|[getIdentifierQuoteString](../../../connect/jdbc/reference/getidentifierquotestring-method-sqlserverdatabasemetadata.md)|Recupera il **stringa** che viene usato per delimitare gli identificatori SQL.|  
+|[getIdentifierQuoteString](../../../connect/jdbc/reference/getidentifierquotestring-method-sqlserverdatabasemetadata.md)|Recupera il valore **String** usato per racchiudere tra virgolette gli identificatori SQL.|  
 |[getImportedKeys](../../../connect/jdbc/reference/getimportedkeys-method-sqlserverdatabasemetadata.md)|Recupera una descrizione delle colonne di chiave primaria cui fanno riferimento le colonne di chiave esterna di una tabella.|  
 |[getIndexInfo](../../../connect/jdbc/reference/getindexinfo-method-sqlserverdatabasemetadata.md)|Recupera una descrizione degli indici e delle statistiche della tabella specificata.|  
 |[getJDBCMajorVersion](../../../connect/jdbc/reference/getjdbcmajorversion-method-sqlserverdatabasemetadata.md)|Recupera il numero della versione principale di JDBC per questo driver.|  
@@ -106,10 +103,10 @@ ms.locfileid: "32853246"
 |[getRowIdLifetime](../../../connect/jdbc/reference/getrowidlifetime-method-sqlserverdatabasemetadata.md)|Restituisce uno stato che indica se è supportato il tipo di dati SQL RowId. Se il tipo è supportato, restituisce la durata di validità di un oggetto RowId.|  
 |[getSchemas](../../../connect/jdbc/reference/getschemas-method.md)|Recupera i nomi di schema disponibili nel database corrente.|  
 |[getSchemaTerm](../../../connect/jdbc/reference/getschematerm-method-sqlserverdatabasemetadata.md)|Recupera il termine preferito per indicare "schema" nel database.|  
-|[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|Recupera il **stringa** che può essere utilizzato per eseguire l'escape di caratteri jolly.|  
+|[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|Recupera il valore **String** che può essere usato come escape per i caratteri jolly.|  
 |[getSQLKeywords](../../../connect/jdbc/reference/getsqlkeywords-method-sqlserverdatabasemetadata.md)|Recupera un elenco delimitato da virgole di tutte le parole chiave SQL del database che non sono anche parole chiave SQL92.|  
 |[getSQLStateType](../../../connect/jdbc/reference/getsqlstatetype-method-sqlserverdatabasemetadata.md)|Indica se il valore SQLSTATE restituito dal metodo SQLException.getSQLState è X/Open (ora noto come Open Group), SQL CLI, SQL99 (JDBC 3.0) o SQL:2003 (JDBC 4.0).|  
-|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|Recupera un elenco delimitato da virgole di **stringa** funzioni che sono disponibili con il database.|  
+|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|Recupera un elenco delimitato da virgole di funzioni **String** disponibili con il database.|  
 |[getSuperTables](../../../connect/jdbc/reference/getsupertables-method-sqlserverdatabasemetadata.md)|Recupera una descrizione delle gerarchie di tabelle definite in un determinato schema del database.|  
 |[getSuperTypes](../../../connect/jdbc/reference/getsupertypes-method-sqlserverdatabasemetadata.md)|Recupera una descrizione delle gerarchie di tipi definiti dall'utente configurate in un determinato schema del database.|  
 |[getSystemFunctions](../../../connect/jdbc/reference/getsystemfunctions-method-sqlserverdatabasemetadata.md)|Recupera un elenco delimitato da virgole delle funzioni di sistema disponibili con il database.|  
@@ -117,12 +114,12 @@ ms.locfileid: "32853246"
 |[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md)|Recupera una descrizione delle tabelle disponibili nel modello di nome di catalogo, di schema o di tabella specificato.|  
 |[getTableTypes](../../../connect/jdbc/reference/gettabletypes-method-sqlserverdatabasemetadata.md)|Recupera i tipi di tabella disponibili nel database corrente.|  
 |[getTimeDateFunctions](../../../connect/jdbc/reference/gettimedatefunctions-method-sqlserverdatabasemetadata.md)|Recupera un elenco delimitato da virgole delle funzioni data e ora disponibili con il database.|  
-|[GetTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|Recupera una descrizione di tutti i tipi SQL standard supportati dal database corrente.|  
+|[getTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|Recupera una descrizione di tutti i tipi SQL standard supportati dal database corrente.|  
 |[getUDTs](../../../connect/jdbc/reference/getudts-method-sqlserverdatabasemetadata.md)|Recupera una descrizione dei tipi definiti dall'utente configurati in un determinato schema.|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatabasemetadata.md)|Recupera l'URL del database.|  
-|[GetUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|Recupera il nome utente così noto nel database.|  
+|[getUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|Recupera il nome utente così noto nel database.|  
 |[getVersionColumns](../../../connect/jdbc/reference/getversioncolumns-method-sqlserverdatabasemetadata.md)|Recupera una descrizione delle colonne di una tabella che viene aggiornata automaticamente all'aggiornamento di un valore di una riga.|  
-|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|Recupera o meno in cui è possibile rilevare un inserimento riga visibile chiamando il metodo [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) metodo il [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) classe.|  
+|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se è possibile rilevare un inserimento di riga visibile chiamando il metodo [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) della classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[isCatalogAtStart](../../../connect/jdbc/reference/iscatalogatstart-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se un catalogo viene visualizzato all'inizio di un nome di tabella completo.|  
 |[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se il database è in modalità di sola lettura.|  
 |[locatorsUpdateCopy](../../../connect/jdbc/reference/locatorsupdatecopy-method-sqlserverdatabasemetadata.md)|Indica se gli aggiornamenti di un LOB vengono eseguiti su una copia o direttamente sul LOB.|  
@@ -174,8 +171,8 @@ ms.locfileid: "32853246"
 |[supportsMinimumSQLGrammar](../../../connect/jdbc/reference/supportsminimumsqlgrammar-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se il database supporta la grammatica SQL minima ODBC.|  
 |[supportsMixedCaseIdentifiers](../../../connect/jdbc/reference/supportsmixedcaseidentifiers-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se il database non tiene conto della distinzione tra maiuscole e minuscole negli identificatori SQL con maiuscole e minuscole non racchiusi tra virgolette e li archivia in minuscolo e maiuscolo.|  
 |[supportsMixedCaseQuotedIdentifiers](../../../connect/jdbc/reference/supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se il database non tiene conto della distinzione tra maiuscole e minuscole negli identificatori SQL con maiuscole e minuscole racchiusi tra virgolette e li archivia in minuscolo e maiuscolo.|  
-|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|Specifica se è possibile avere più [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) gli oggetti restituiti da una [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) oggetto contemporaneamente.|  
-|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|Recupera indica se il database supporta il recupero di più [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetti da una singola chiamata al [eseguire](../../../connect/jdbc/reference/execute-method.md) metodo il [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)classe.|  
+|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se è possibile che vengano restituiti simultaneamente più oggetti [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) da un oggetto [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).|  
+|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se il database supporta il recupero di più oggetti [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) da una singola chiamata al metodo [execute](../../../connect/jdbc/reference/execute-method.md) della classe [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).|  
 |[supportsMultipleTransactions](../../../connect/jdbc/reference/supportsmultipletransactions-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se il database consente l'apertura contemporanea di più transazioni su connessioni diverse.|  
 |[supportsNamedParameters](../../../connect/jdbc/reference/supportsnamedparameters-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se il database supporta parametri denominati nelle istruzioni richiamabili.|  
 |[supportsNonNullableColumns](../../../connect/jdbc/reference/supportsnonnullablecolumns-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se le colonne del database possono essere definite come colonne che non ammettono valori Null.|  
@@ -209,7 +206,7 @@ ms.locfileid: "32853246"
 |[supportsTransactions](../../../connect/jdbc/reference/supportstransactions-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se il database supporta transazioni.|  
 |[supportsUnion](../../../connect/jdbc/reference/supportsunion-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se il database supporta SQL UNION.|  
 |[supportsUnionAll](../../../connect/jdbc/reference/supportsunionall-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se il database supporta SQL UNION ALL.|  
-|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|Recupera o meno in cui è possibile rilevare un aggiornamento di riga visibile chiamando il [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) metodo il [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) classe.|  
+|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se è possibile rilevare un aggiornamento di riga visibile chiamando il metodo [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) della classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[usesLocalFilePerTable](../../../connect/jdbc/reference/useslocalfilepertable-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se il database utilizza un file per ogni tabella.|  
 |[usesLocalFiles](../../../connect/jdbc/reference/useslocalfiles-method-sqlserverdatabasemetadata.md)|Recupera un valore che indica se il database archivia le tabelle in un file locale.|  
   

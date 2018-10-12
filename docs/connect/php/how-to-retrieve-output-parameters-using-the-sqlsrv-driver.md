@@ -1,31 +1,28 @@
 ---
-title: 'Procedura: recuperare i parametri di Output mediante il Driver SQLSRV | Documenti Microsoft'
+title: 'Procedura: Recuperare i parametri di output mediante il driver SQLSRV | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.openlocfilehash: 969de4ba4e28398c540636e8f3c6f6649c0dcb30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563889"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700459"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procedura: Recuperare i parametri di output mediante il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In questo argomento viene illustrato come chiamare una stored procedure in cui un parametro è definito come parametro di output. Durante il recupero di un output o un parametro di input/output, tutti i risultati restituiti dalla stored procedure devono essere usati prima che il valore del parametro restituito sia accessibile.  
+In questo argomento viene illustrato come chiamare una stored procedure in cui un parametro è definito come parametro di output. Durante il recupero di un parametro di output o di input/output, tutti i risultati restituiti dalla stored procedure devono essere usati prima che il valore del parametro restituito sia accessibile.  
   
 > [!NOTE]  
 > Le variabili inizializzate o aggiornate su **null**, **DateTime**o tipi di flusso non possono essere usate come parametri di output.  
@@ -41,9 +38,9 @@ L'esempio seguente effettua una chiamata a una stored procedure che restituisce 
 Poiché la stored procedure restituisce un solo risultato, *$salesYTD* contiene il valore del parametro di output restituito immediatamente dopo l'esecuzione della stored procedure.  
   
 > [!NOTE]  
-> È consigliabile pertanto chiamare le stored procedure usando la sintassi canonica. Per ulteriori informazioni sulla sintassi canonica, vedere [chiamare una Stored Procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+> È consigliabile pertanto chiamare le stored procedure usando la sintassi canonica. Per altre informazioni sulla sintassi canonica, vedere [Chiamata di una stored procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -124,7 +121,7 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Quando si associa un parametro di output a un tipo bigint, se il valore può finire di fuori dell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), sarà necessario specificare il tipo di campo SQL come SQLSRV_SQLTYPE_BIGINT. In caso contrario, può comportare un'eccezione di "valore non compreso nell'intervallo".
+> Quando si associa un parametro di output a un tipo bigint, se il valore potrebbe finire compreso nell'intervallo di un' [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), è necessario specificarne il tipo di campo SQL come SQLSRV_SQLTYPE_BIGINT. In caso contrario, può comportare un'eccezione di "valore non compreso nell'intervallo".
 
 ## <a name="example-2"></a>Esempio 2
 Questo esempio di codice viene illustrato come associare un valore bigint grande come parametro di output.  

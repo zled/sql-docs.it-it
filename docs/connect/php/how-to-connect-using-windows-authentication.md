@@ -1,32 +1,29 @@
 ---
-title: "Procedura: connessione tramite l'autenticazione di Windows | Documenti Microsoft"
+title: "Procedura: connettersi usando l'autenticazione di Windows | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, Windows Authentication
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70c2c0f9316384d831af7d7ce317d16bdc3c41a6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c78506897432cdbfa4f4dd926e3f6035fb1881f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307400"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759945"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Procedura: Connessione con l'autenticazione di Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Per impostazione predefinita, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] usa l'autenticazione di Windows per la connessione a SQL Server. È importante notare che nella maggior parte degli scenari, ciò significa che l'identità del processo del server Web o l'identità del thread (se il server Web Usa l'impersonificazione) viene utilizzato per connettersi al server, non l'identità dell'utente finale.  
+Per impostazione predefinita, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] usa l'autenticazione di Windows per la connessione a SQL Server. È importante notare che nella maggior parte dei casi ciò significa che viene usata l'identità del processo del server Web o l'identità del thread (se il server Web usa l'impersonificazione) per connettersi al server e non l'identità dell'utente finale.  
   
 Quando si usa l'autenticazione di Windows per la connessione a SQL Server è necessario considerare i seguenti punti:  
   
@@ -48,7 +45,7 @@ Se l'autenticazione di Windows non è un'opzione possibile, vedere [How to: Conn
 ## <a name="example"></a>Esempio  
 Con il driver SQLSRV dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], l'esempio seguente usa l'autenticazione di Windows per connettersi a un'istanza locale di SQL Server. Dopo aver stabilito la connessione, viene richiesto al server l'account dell'utente che accede al database.  
   
-Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando l'esempio viene eseguito dal browser, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando l'esempio viene eseguito dal browser, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -115,13 +112,13 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 
 [Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Procedura: creare un account di accesso SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
+[Procedura: Creare un account di accesso di SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Procedura: creare un utente del Database](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Procedura: Creare un utente del database](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Gestione di utenti, ruoli e account di accesso](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
-[Separazione tra Schema e utente](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+[Separazione tra schema e utente](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
-[Concedere autorizzazioni per oggetti (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+[GRANT - autorizzazioni per oggetti (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

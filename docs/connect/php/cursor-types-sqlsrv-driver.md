@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: deffdb98790baa64eaa1983fee6839a65289d0d4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8d5d9fcb2664fa17e1138ebad57fd4330bea34af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37990163"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769440"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Tipi di cursore (driver SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +48,7 @@ Nella tabella seguente vengono descritti i valori in cui è possibile specificar
 |SQLSRV_SCROLL_NEXT|Specifica la riga successiva. Questo è il valore predefinito, se non si specifica la *riga* parametro per un set di risultati scorrevoli.|  
 |SQLSRV_SCROLL_PRIOR|Specifica la riga precedente alla riga corrente.|  
 |SQLSRV_SCROLL_FIRST|Specifica la prima riga del set di risultati.|  
-|SQLSRV_SCROLL_LAST|Specifica l'ultima riga nel set di risultati.|  
+|SQLSRV_SCROLL_LAST|Specifica l'ultima riga del set di risultati.|  
 |SQLSRV_SCROLL_ABSOLUTE|Specifica la riga specificata con il *offset* parametro.|  
 |SQLSRV_SCROLL_RELATIVE|Specifica la riga specificata con il *offset* parametro dalla riga corrente.|  
   

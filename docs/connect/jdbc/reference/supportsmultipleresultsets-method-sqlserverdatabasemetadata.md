@@ -1,13 +1,11 @@
 ---
-title: Metodo supportsMultipleResultSets (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo supportsMultipleResultSets (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsMultipleResultSets
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cb4d0b91-db1d-4a6f-a87c-8ea125215afc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 455fe783bcb6c5249a8197d14a6199946aa3889d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a17e40bc921dc730ae997d83d97e81707099b0f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848646"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732369"
 ---
 # <a name="supportsmultipleresultsets-method-sqlserverdatabasemetadata"></a>Metodo supportsMultipleResultSets (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera indica se il database supporta il recupero di più [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetti da una singola chiamata al [eseguire](../../../connect/jdbc/reference/execute-method.md) metodo il [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)classe.  
+  Recupera un valore che indica se il database supporta il recupero di più oggetti [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) da una singola chiamata al metodo [execute](../../../connect/jdbc/reference/execute-method.md) della classe [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +41,7 @@ public boolean supportsMultipleResultSets()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo supportsMultipleResultSets viene specificato dal metodo supportsMultipleResultSets nell'interfaccia DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  

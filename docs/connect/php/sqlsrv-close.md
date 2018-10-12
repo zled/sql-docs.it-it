@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_close
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - sqlsrv_close
 - API Reference, sqlsrv_close
 ms.assetid: 6ac6209c-a134-4f8f-b88b-8eefaa1cbc7f
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e071fc2ac51931a52ba6672e97936dc60ee12072
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b56cb6975f7fd7a4367912dcd5101271b611336
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006843"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806719"
 ---
 # <a name="sqlsrvclose"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +43,7 @@ sqlsrv_close( resource $conn )
 Valore booleano **true** a meno che la funzione non venga chiamata con un parametro non valido. Se la funzione viene chiamata con un parametro non valido, viene restituito **false** .  
   
 > [!NOTE]  
-> **Null** è un parametro valido per questa funzione. Permette alla funzione di essere chiamata più volte in uno script. Ad esempio, se si chiude una connessione in una condizione di errore e la si chiude nuovamente alla fine dello script, la seconda chiamata a sqlsrv_close **restituirà true** perché la prima chiamata a sqlsrv_close **(nella condizione di errore) imposta la risorsa di connessione su null**.  
+> **Null** è un parametro valido per questa funzione. Permette alla funzione di essere chiamata più volte in uno script. Ad esempio, se si chiude una connessione in una condizione di errore e la si chiude nuovamente alla fine dello script, la seconda chiamata a **sqlsrv_close** restituirà **true** perché la prima chiamata a **sqlsrv_close** (nella condizione di errore) imposta la risorsa di connessione su **null**.  
   
 ## <a name="example"></a>Esempio  
 L'esempio seguente chiude una connessione. Nell'esempio si presuppone che SQL Server sia installato nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nella console.  

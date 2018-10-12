@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aec0aabb38edc0446728569648dde0a4f4bafedc
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: bcf632e4953232144b82ba9701c62eb1d226d127
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784432"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697419"
 ---
 # <a name="understanding-ssl-support"></a>Informazioni sul supporto SSL
 
@@ -82,7 +79,7 @@ Durante l'handshake SSL, il server invia il proprio certificato chiave pubblica 
   
 - Il nome comune nell'oggetto o un nome DNS nel nome alternativo del soggetto (SAN, Subject Alternate Name) del certificato corrisponde esattamente al valore **serverName** specificato nella stringa di connessione o, se specificato, al valore della proprietà **hostNameInCertificate**.  
   
-- Un nome DNS può includere caratteri jolly. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], tuttavia, non supporta la corrispondenza dei caratteri jolly. In altre parole, abc.com non corrisponderà a *.com, ma \*.com corrisponderà a \*.com.  
+- Un nome DNS può includere caratteri jolly. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], tuttavia, non supporta la corrispondenza dei caratteri jolly. In altre parole, abc.com non corrisponderà a \*.com, ma \*.com corrisponderà a \*.com.  
   
 ## <a name="see-also"></a>Vedere anche
 

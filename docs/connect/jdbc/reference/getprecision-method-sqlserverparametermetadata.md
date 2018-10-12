@@ -1,13 +1,11 @@
 ---
-title: Metodo getPrecision (SQLServerParameterMetaData) | Documenti Microsoft
+title: Metodo getPrecision (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerParameterMetaData.getPrecision
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aaedd40b28aabcfda5ebf5526cf6921807876054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 32913e5120afb71f4773318acc1b34c9daed892a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836566"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813295"
 ---
 # <a name="getprecision-method-sqlserverparametermetadata"></a>Metodo getPrecision (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,16 +38,16 @@ public int getPrecision(int param)
 #### <a name="parameters"></a>Parametri  
  *param*  
   
- Un **int** che indica l'indice del parametro.  
+ Valore **int** che indica l'indice del parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un **int** che indica la precisione del parametro designato.  
+ Valore **int** che indica la precisione del parametro designato.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getPrecision viene specificato dal metodo getPrecision nell'interfaccia Java.SQL. parametermetadata.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getPrecision viene specificato dal metodo getPrecision nell'interfaccia parametermetadata.  
   
  Per i tipi numerici, questo metodo ottiene il numero di cifre decimali. Per i tipi carattere, ottiene la lunghezza massima in caratteri. Per i tipi binari, ottiene la lunghezza massima in byte. Se il numero di cifre è sconosciuto, questo metodo restituisce "0".  
   

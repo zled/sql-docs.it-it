@@ -1,13 +1,11 @@
 ---
-title: setString (metodo) (SQLServerPreparedStatement) | Documenti Microsoft
+title: Metodo setString (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setString
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 25dabdc9-c60f-485a-87eb-306067964765
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2840875ab082962df97636f33caa00a52ee83b6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 65841c763e12d99148c1ab0549cb70312a6172d8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844776"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733776"
 ---
-# <a name="setstring-method-sqlserverpreparedstatement"></a>setString (metodo) (SQLServerPreparedStatement)
+# <a name="setstring-method-sqlserverpreparedstatement"></a>Metodo setString (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Imposta il parametro designato il dato **stringa** valore.  
+  Imposta il parametro designato sul valore **String** specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,17 +39,17 @@ public final void setString(int index,
 #### <a name="parameters"></a>Parametri  
  *index*  
   
- Un **int** che indica il numero di parametro.  
+ Valore **int** che indica il numero di parametro.  
   
  *str*  
   
- Oggetto **stringa** valore.  
+ Valore **String**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo setString viene specificato dal metodo setString nell'interfaccia Java.SQL. PreparedStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo setString viene specificato dal metodo setString nell'interfaccia java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

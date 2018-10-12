@@ -1,13 +1,11 @@
 ---
-title: Metodo getBigDecimal (int, int) | Documenti Microsoft
+title: Metodo getBigDecimal (int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getBigDecimal (int, int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: d9351b35-7046-4852-a612-72d4c46b2bbb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f52732b2e6b752713dc62c377e7038d61c4d3b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: db344ebec9a8e1f7aef74bad918a7145514d4881
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833776"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742889"
 ---
 # <a name="getbigdecimal-method-int-int"></a>Metodo getBigDecimal (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +29,7 @@ ms.locfileid: "32833776"
   Recupera il valore del parametro designato come oggetto java.math.BigDecimal in base all'indice del parametro e alla scala.  
   
 > [!NOTE]  
->  Questo metodo è stato dichiarato deprecato dalla specifica JDBC. Utilizzare invece il [getBigDecimal (int)](../../../connect/jdbc/reference/getbigdecimal-method-int.md) metodo.  
+>  Questo metodo è stato dichiarato deprecato dalla specifica JDBC. È invece necessario usare il metodo [getBigDecimal (int)](../../../connect/jdbc/reference/getbigdecimal-method-int.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,11 +42,11 @@ public java.math.BigDecimal getBigDecimal(int index,
 #### <a name="parameters"></a>Parametri  
  *index*  
   
- Un **int** che indica l'indice del parametro.  
+ Valore **int** che specifica l'indice del parametro.  
   
  *scala*  
   
- Un **int** che indica il numero di cifre a destra del separatore decimale.  
+ Valore **int** che indica il numero di cifre a destra del separatore decimale.  
   
 ## <a name="return-value"></a>Valore restituito  
  Un oggetto BigDecimal.  
@@ -57,8 +54,8 @@ public java.math.BigDecimal getBigDecimal(int index,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getBigDecimal viene specificato dal metodo getBigDecimal nell'interfaccia Java.SQL. CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getBigDecimal viene specificato dal metodo getBigDecimal nell'interfaccia CallableStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getBigDecimal &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   

@@ -1,13 +1,11 @@
 ---
-title: Metodo Prepare (SQLServerXAResource) | Documenti Microsoft
+title: Metodo Prepare (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerXAResource.prepare
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f800c966-3fae-41b3-963a-464988f80da3
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ed9542ce0f81f477c5626b54ce79f846b5b74a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5a16d143266823b9455c306cefa37c9a7618524d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839516"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743649"
 ---
 # <a name="prepare-method-sqlserverxaresource"></a>Metodo prepare (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Richieste di Prepara il gestore delle risorse per un commit della transazione specificata dall'oggetto Xid specificato.  
+  Richiede che lo strumento di gestione delle risorse esegua la preparazione per un commit della transazione specificata dall'oggetto Xid fornito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,13 +41,13 @@ public int prepare(javax.transaction.xa.Xid xid)
  Oggetto Xid.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un **int** valore.  
+ Un' **int** valore.  
   
 ## <a name="exceptions"></a>Eccezioni  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo di preparazione è specificato dal metodo nell'interfaccia javax prepare.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo prepare viene specificato dal metodo prepare nell'interfaccia javax.transaction.xa.XAResource.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b01f19dcb7b55da9c547d07d07784fe1730cdd66
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f1e870d28371b44f77db8d7023fe7b7978ca01d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006893"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801769"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,15 +31,15 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>Parametri  
-$$: numero (misto) della colonna (indice in base 1) o nome della colonna nel set di risultati.  
+$*column*: numero (misto) della colonna (indice in base 1) o nome della colonna nel set di risultati.  
   
-&$param *: nome* misto della variabile PHP a cui verrà associata la colonna.  
+&$*param*: nome (misto) della variabile PHP a cui verrà associata la colonna.  
   
-$type *: tipo di dati facoltativo del parametro, rappresentato da una costante PDO::PARAM*.  
+$*type*: tipo di dati facoltativo del parametro, rappresentato da una costante PDO::PARAM_*.  
   
 $*maxLen*: intero facoltativo, non usato dai driver Microsoft per PHP per SQL Server.  
   
-$driverdata *: parametro o parametri misti facoltativi per il driver. Ad esempio, è possibile specificare PDO::SQLSRV_ENCODING_UTF8 per associare la colonna a una variabile come stringa codificata in UTF-8.  
+$*driverdata*: parametro o parametri misti facoltativi per il driver. Ad esempio, è possibile specificare PDO::SQLSRV_ENCODING_UTF8 per associare la colonna a una variabile come stringa codificata in UTF-8.  
   
 ## <a name="return-value"></a>Valore restituito  
 TRUE se ha esito positivo; in caso contrario, FALSE.  

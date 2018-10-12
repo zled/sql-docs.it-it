@@ -1,13 +1,11 @@
 ---
-title: setBytes (long, byte, int, int) (metodo) | Documenti Microsoft
+title: Metodo setBytes (long, byte, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerBlob.setBytes (long.byte[], int, int)
@@ -15,18 +13,17 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b18005c16cd62358eb5f269504fc9d80eadb6de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 178c41970407e6104181207396a5baefb5ed282e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843726"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713429"
 ---
-# <a name="setbytes-method-long-byte-int-int"></a>setBytes (long, byte, int, int) (metodo)
+# <a name="setbytes-method-long-byte-int-int"></a>Metodo setBytes (long, byte, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Scrive tutta o parte della matrice di byte specificata nell'oggetto BLOB a partire dalla posizione, dall'offset e dalla lunghezza specificati; quindi restituisce il numero di byte scritti.  
@@ -46,28 +43,28 @@ public int setBytes(long pos,
   
  Posizione (in base 1) nell'oggetto BLOB in corrispondenza della quale iniziare la scrittura dei dati.  
   
- *Byte*  
+ *bytes*  
   
  Matrice di byte da scrivere nell'oggetto BLOB.  
   
  *offset*  
   
- L'offset in byte della matrice in cui iniziare la lettura dei dati dal **byte** matrice.  
+ Offset nella matrice di byte in cui iniziare la lettura dei dati dalla matrice **byte**.  
   
  *len*  
   
  Numero di byte di cui tentare la lettura dalla matrice di byte nell'oggetto BLOB.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un **int** contenente il numero di byte scritti.  
+ Valore **int** contenente il numero di byte scritti.  
   
 ## <a name="exceptions"></a>Eccezioni  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo setBytes viene specificato dal metodo setBytes nell'interfaccia Java.SQL. BLOB.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo setBytes viene specificato dal metodo setBytes nell'interfaccia java.sql.Blob.  
   
- I dati vengono sovrascritti a partire dalla posizione specificata e possono superare la lunghezza iniziale dell'oggetto BLOB. Se si specifica un valore posizione+1, verranno aggiunti byte. Se si passa un valore posizione+2 o superiore (o zero o inferiore) verrà generato un errore di posizione. Il passaggio di lunghezza zero **byte** matrice restituirà zero perché è stato scritto alcun byte.  
+ I dati vengono sovrascritti a partire dalla posizione specificata e possono superare la lunghezza iniziale dell'oggetto BLOB. Se si specifica un valore posizione+1, verranno aggiunti byte. Se si passa un valore posizione+2 o superiore (o zero o inferiore) verrà generato un errore di posizione. Se si passa una matrice **byte** di lunghezza zero verrà restituito zero in quanto non sono stati scritti byte.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo setBytes &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   

@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_client_info
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - API Reference, sqlsrv_client_info
 - sqlsrv_client_info
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
-caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 145249dc452cd7aeabb9b9667c337a4e17e39637
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 9feacf047b9c949bae25958a3030fce4661c1583
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309240"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710446"
 ---
 # <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,18 +44,18 @@ Matrice associativa con chiavi descritte nella tabella seguente o **false** se l
   
 **Per PHP per SQL Server versione 3.2 e 3.1**:  
   
-|Key|Description|  
+|Key|Descrizione|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 for SQL Server)|  
 |DriverODBCVer|Versione ODBC (xx.yy)|  
-|DriverVer|Versione DLL di ODBC Driver 11 for SQL Server:<br /><br />ZZZZ ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione 3.2 o 3.1)|  
+|DriverVer|Versione DLL di ODBC Driver 11 for SQL Server:<br /><br />xx.yy.zzzz ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione 3.2 o 3.1)|  
 |ExtensionVer|versione di php_sqlsrv.dll:<br /><br />3.2.xxxx.x (per [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione 3.2)<br /><br />3.1.xxxx.x (per [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione 3.1)|  
   
 **Per PHP per SQL Server versione 3.0 e 2.0**:  
   
-|Key|Description|  
+|Key|Descrizione|  
 |-------|---------------|  
-|DriverDllName|SQLNCLI10. DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione 2.0)|  
+|DriverDllName|SQLNCLI10.DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione 2.0)|  
 |DriverODBCVer|Versione ODBC (xx.yy)|  
 |DriverVer|Versione DLL di SQL Server Native Client:<br /><br />10.50.xxx ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione 2.0)|  
 |ExtensionVer|versione di php_sqlsrv.dll:<br /><br />2.0.xxxx.x ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione 2.0)|  

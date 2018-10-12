@@ -1,13 +1,11 @@
 ---
-title: Metodo getMoreResults () | Documenti Microsoft
+title: Metodo getMoreResults () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.getMoreResults ()
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: df89db50-0b2f-4094-820a-30be25ad72fe
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2c39a59f723cf24932b70bac44074c3ad8c4b82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f2a0b2994bf377610574efbd5c3ff78b0d55035d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836106"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718369"
 ---
 # <a name="getmoreresults-method-"></a>Metodo getMoreResults ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Passa al risultato successivo di questo [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) oggetto.  
+  Passa al risultato successivo di questo oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,10 +41,10 @@ public final boolean getMoreResults()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getMoreResults viene specificato dal metodo getMoreResults nell'interfaccia Java.SQL. Statement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getMoreResults viene specificato dal metodo getMoreResults nell'interfaccia Statement.  
   
- Chiamata in modo implicito il metodo getMoreResults chiude tutti gli oggetti set di risultati attualmente aperti sono ottenuti con la [getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) metodo.  
+ La chiamata del metodo getMoreResults chiude in modo implicito tutti gli oggetti del set di risultati ottenuti con il metodo [getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getMoreResults &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)   

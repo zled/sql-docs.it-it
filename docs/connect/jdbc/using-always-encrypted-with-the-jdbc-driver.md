@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0dc1141fd4f01fef3e49380cdd048faba105ed9
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 6ce122713ce5d57daa9a7313d8b6d184bd33b850
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662473"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842749"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Uso di Always Encrypted con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -368,7 +365,7 @@ Always Encrypted può anche essere abilitato per le singole query. Per altre inf
 - L'applicazione può accedere alla chiave master della colonna che protegge le chiavi di crittografia di colonna, le quali crittografano le colonne di database sottoposte a query. Per usare il provider di Java Key Store, è necessario fornire altre credenziali nella stringa di connessione. Per altre informazioni, vedere [provider Using Java Key Store](#using-java-key-store-provider).
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configurazione della modalità di invio dei valori java.sql.Time al server
-La modalità di invio del valore java.sql.Time può essere configurata tramite la proprietà di connessione **sendTimeAsDatetime**. Se impostato su false, il valore di ora viene inviato come un tipo time di SQL Server. Se impostato su true, l'ora di invio valore come tipo datetime. Se una colonna time è crittografata, il **sendTimeAsDatetime** proprietà deve essere impostato su false, come le colonne crittografate non supportano la conversione dall'ora in datetime. Si noti inoltre che questa proprietà è per valore predefinito true, in modo che quando si usano colonne crittografate ora è possibile impostarlo su false. In caso contrario, il driver genera un'eccezione. A partire dalla versione 6.0 del driver, la classe SQLServerConnection offre due metodi per configurare il valore di questa proprietà a livello di codice:
+La proprietà di connessione **sendTimeAsDatetime** viene usata per configurare la modalità di invio del valore java.sql.Time al server. Se impostato su false, il valore di ora viene inviato come un tipo time di SQL Server. Se impostato su true, l'ora di invio valore come tipo datetime. Se una colonna time è crittografata, il **sendTimeAsDatetime** proprietà deve essere impostato su false, come le colonne crittografate non supportano la conversione dall'ora in datetime. Si noti inoltre che questa proprietà è per valore predefinito true, in modo che quando si usano colonne crittografate ora è possibile impostarlo su false. In caso contrario, il driver genera un'eccezione. A partire dalla versione 6.0 del driver, la classe SQLServerConnection offre due metodi per configurare il valore di questa proprietà a livello di codice:
  
 * public void setSendTimeAsDatetime (sendTimeAsDateTimeValue booleano)
 * public boolean getSendTimeAsDatetime()

@@ -5,22 +5,19 @@ ms.date: 02/14/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - known issues
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4a07cb8f8c5c3043ee307b7b7653846cc2d4e6e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 25ebc4837eb37604a45e98112fa5fc24bdb3e69b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42784970"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742999"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>Problemi noti in questa versione del driver
 
@@ -30,7 +27,7 @@ Questo articolo contiene un elenco di problemi noti con Microsoft ODBC Driver 13
 
 Altri problemi verranno pubblicati nel [blog del team di Microsoft ODBC Driver](http://blogs.msdn.com/b/sqlnativeclient/).  
 
-- Windows, Linux e macOS convertono i caratteri provenienti dall'Area uso privato (PUA) o i caratteri definiti dall'utente finale (EUDC) in modo diverso. Per le conversioni eseguite sul server all'interno di [!INCLUDE[tsql](../../../includes/tsql-md.md)] viene usata la libreria di conversione Windows. Le conversioni del driver di usano le librerie di conversione di Windows, Linux o macOS. Le conversioni eseguite con le due librerie possono produrre risultati diversi. Per altre informazioni, vedere l'articolo relativo ai [caratteri definiti dall'utente finale e caratteri Area uso privato](/windows/desktop/Intl/end-user-defined-characters).
+- Windows, Linux e macOS convertono i caratteri provenienti dall'Area uso privato (PUA) o i caratteri definiti dall'utente finale (EUDC) in modo diverso. Per le conversioni eseguite sul server all'interno di [!INCLUDE[tsql](../../../includes/tsql-md.md)] viene usata la libreria di conversione Windows. Le conversioni del driver di usano le librerie di conversione di Windows, Linux o macOS. Le conversioni eseguite con le due librerie possono produrre risultati diversi. Per altre informazioni, vedere [End-User-Defined and Private Use Area Characters](/windows/desktop/Intl/end-user-defined-characters) (Caratteri definiti dall'utente finale e caratteri di area uso privato).
 
 - Se il client di codifica è UTF-8, Gestione driver non sempre correttamente conversione da UTF-8 a UTF-16. Attualmente, il danneggiamento dei dati si verifica quando uno o più caratteri nella stringa non sono caratteri UTF-8 validi. Caratteri ASCII verranno mappati correttamente. Gestione driver tenta questa conversione quando si chiamano le versioni SQLCHAR dell'API ODBC (ad esempio, SQLDriverConnectA). Gestione driver non tenterà questa conversione quando si chiamano le versioni SQLWCHAR dell'API ODBC (ad esempio, SQLDriverConnectW).  
 

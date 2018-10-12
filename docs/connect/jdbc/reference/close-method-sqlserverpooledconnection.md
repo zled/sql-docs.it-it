@@ -1,13 +1,11 @@
 ---
-title: Metodo Close (SQLServerPooledConnection) | Documenti Microsoft
+title: Metodo Close (SQLServerPooledConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPooledConnection.close
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8de23939-aa84-47a1-aeb9-b03c69c090dc
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f0acbcb8301e2190de4894ee8f859f7939ca88cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: eb62fa568a327dff25ec7404270066d9dc91ef24
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828066"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776069"
 ---
 # <a name="close-method-sqlserverpooledconnection"></a>Metodo close (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Chiude la connessione fisica da questo [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) oggetto rappresenta.  
+  Chiude la connessione fisica rappresentata da questo oggetto [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,8 +38,8 @@ public void close()
 ## <a name="exceptions"></a>Eccezioni  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo di chiuso viene specificato dal metodo nell'interfaccia javax.SQL. PooledConnection chiude.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo close viene specificato dal metodo close nell'interfaccia javax.sql.PooledConnection.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   

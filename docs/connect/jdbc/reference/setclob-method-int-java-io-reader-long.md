@@ -1,30 +1,27 @@
 ---
-title: Metodo setClob (int, Java.IO. Reader, long) | Documenti Microsoft
+title: Metodo setClob (int, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 157882dd-1a96-4501-a895-46e88a49266e
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5d02a75ff0b80bc6d325a709722ea5b4b55ee3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c5a38ff98a8df384e16fabf93a4eae6afc57ddc8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842256"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818829"
 ---
 # <a name="setclob-method-int-javaioreader-long"></a>Metodo setClob (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Imposta il parametro designato per l'oggetto Reader specificato, ovvero il numero specificato di caratteri.  
+  Imposta il parametro designato sull'oggetto Reader specificato, che contiene il numero specificato di caratteri.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,20 +33,20 @@ public final void setClob(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *parameterIndex*  
+ *parametro parameterIndex*  
   
- Un **int** che indica l'indice del parametro.  
+ Valore **int** che specifica l'indice del parametro.  
   
- *Lettore*  
+ *reader*  
   
- Un oggetto del lettore.  
+ Oggetto lettore.  
   
- *lunghezza*  
+ *length*  
   
- Oggetto **lungo** che indica il numero di caratteri nel valore del parametro.  
+ Valore **long** che indica il numero di caratteri nel valore del parametro.  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo setClob viene specificato dal metodo setClob nell'interfaccia Java.SQL. PreparedStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo setClob viene specificato dal metodo setClob nell'interfaccia java.sql.PreparedStatement.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

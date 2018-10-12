@@ -1,48 +1,45 @@
 ---
-title: Driver di Python per SQL Server | Documenti Microsoft
+title: Driver Python per SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd2c3a6c3913cb712a441e400fc0a14b2688bb59
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 280667787916beade901c704c4679a14f689db6b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309570"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784799"
 ---
 # <a name="python-sql-driver"></a>Driver SQL Python
 
 ![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[per installare driver SQL per Python](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-È possibile connettersi a un Database SQL mediante Python per Windows, Linux o Mac.   
+È possibile connettersi a un Database SQL tramite Python su Windows, Linux o Mac.   
   
 ## <a name="getting-started"></a>Introduzione  
-Sono disponibili diversi i driver SQL python. Tuttavia, Microsoft inserisce relativa attività di test e la propria fiducia nel **pyodbc** driver. Scegliere un driver e configurare l'ambiente di sviluppo in modo appropriato:
-* [Driver SQL Python - pyodbc](pyodbc/python-sql-driver-pyodbc.md)
-* [Driver SQL Python - pymssql](pymssql/python-sql-driver-pymssql.md)
+Sono disponibili diversi driver SQL python. Tuttavia, Microsoft genera le attività di test e la propria fiducia nel **pyodbc** driver. Scegliere un driver e configurare l'ambiente di sviluppo in modo appropriato:
+* [Driver SQL per Python - pyodbc](pyodbc/python-sql-driver-pyodbc.md)
+* [Driver SQL per Python - pymssql](pymssql/python-sql-driver-pymssql.md)
   
 ## <a name="documentation"></a>Documentazione  
-* [Documentazione Python Python.org](https://www.python.org/doc/)  
+* [Documentazione di Python in Python.org](https://www.python.org/doc/)  
   
 ## <a name="community"></a>Community  
 * [Centro per sviluppatori Python di Azure](https://azure.microsoft.com/develop/python/)  
 * [Python.org Community](https://www.python.org/community/)  
   
 ## <a name="more-samples"></a>Altri esempi  
-* [Creare un'app web di Python usando DJango e il Database SQL nel sito Web di Azure](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
-* [Introduzione a Python in Windows](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
+* [Creare un'app web Python con DJango e Database SQL nel sito Web di Azure](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
+* [Getting Started with Python in Windows](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
 * [Introduzione a Python in macOS](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
-* [Introduzione a Python in Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)
-* [Introduzione a Python in Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/python/rhel/)
-* [Introduzione a Python in SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/python/sles/)
+* [Getting Started with Python in Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)
+* [Getting Started with Python in Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/python/rhel/)
+* [Getting Started with Python in SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/python/sles/)

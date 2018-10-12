@@ -5,9 +5,7 @@ ms.date: 03/23/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_num_fields
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - sqlsrv_num_fields
 - API Reference, sqlsrv_num_fields
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d533d9293641be5d40db2306f035827bf83b8722
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a61e2f3884b88f364e87b13b79e5514c674a19ec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006867"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798789"
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +43,7 @@ sqlsrv_num_fields( resource $stmt)
 Un valore intero che rappresenta il numero di campi nel set di risultati attivo. Se si verifica un errore, viene restituito il valore booleano **false** .  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente esegue una query per recuperare tutti i campi delle prime tre righe della tabella *HumanResources.Department* del database Adventureworks. La funzione **sqlsrv_num_fields** determina il numero di campi nel set di risultati. In questo modo è possibile visualizzare i dati eseguendo un'iterazione attraverso i campi in ogni riga restituita.  
+L'esempio seguente esegue una query per recuperare tutti i campi delle prime tre righe della tabella *HumanResources.Department* del database AdventureWorks. La funzione **sqlsrv_num_fields** determina il numero di campi nel set di risultati. In questo modo è possibile visualizzare i dati eseguendo un'iterazione attraverso i campi in ogni riga restituita.  
   
 Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   

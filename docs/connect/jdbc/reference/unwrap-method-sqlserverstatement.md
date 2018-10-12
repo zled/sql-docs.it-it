@@ -1,30 +1,27 @@
 ---
-title: Metodo Unwrap (SQLServerStatement) | Documenti Microsoft
+title: Metodo Unwrap (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0439fe23c859caf5884925f881c5bbc4167c164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7a6823a9f6f57e1ebf1348f35d4a1478100962bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850476"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785549"
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>Metodo unwrap (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Restituisce un oggetto che implementa l'interfaccia specificata per consentire l'accesso per il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-metodi specifici.  
+  Restituisce un oggetto che implementa l'interfaccia specificata per consentire l'accesso ai metodi specifici di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +33,7 @@ public <T> T unwrap(Class<T> iface)
 #### <a name="parameters"></a>Parametri  
  *iface*  
   
- Una classe di tipo **T** che definisce un'interfaccia.  
+ Classe di tipo **T** che definisce un'interfaccia.  
   
 ## <a name="return-value"></a>Valore restituito  
  Oggetto che implementa l'interfaccia specificata.  
@@ -44,16 +41,16 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Il [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) metodo è definito dall'interfaccia Java.SQL, introdotta nella specifica JDBC 4.0.  
+## <a name="remarks"></a>Remarks  
+ Il metodo [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) è definito dall'interfaccia java.sql.Wrapper, introdotta nella specifica JDBC 4.0.  
   
- Potrebbe essere necessario accedere alle estensioni dell'API JDBC siano per le applicazioni di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Il metodo unwrap supporta l'annullamento del wrapping classi pubbliche che estende l'oggetto, se le classi espongono estensioni del fornitore.  
+ È possibile che le applicazioni debbano accedere alle estensioni dell'API JDBC specifiche di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Il metodo unwrap supporta l'annullamento del wrapping nelle classi pubbliche estese dall'oggetto, se le classi espongono estensioni del fornitore.  
   
- Quando questo metodo viene chiamato, l'oggetto Annulla il wrapping di [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) classe.  
+ Quando questo metodo viene chiamato, l'oggetto annulla il wrapping nella classe [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
  Ad esempio di codice, vedere [l'aggiornamento di grandi dimensioni campione di dati](../../../connect/jdbc/updating-large-data-sample.md), o [metodo unwrap &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
   
- Per ulteriori informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Per altre informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo isWrapperFor &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)   

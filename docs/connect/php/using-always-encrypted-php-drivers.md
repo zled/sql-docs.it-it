@@ -3,19 +3,18 @@ title: Uso di Always Encrypted con i driver PHP per SQL Server | Microsoft Docs
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 12f0427b4ff23452f244c830c9116913dfb03968
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174968"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695679"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Uso di Always Encrypted con i driver PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "39174968"
 
 Questo articolo fornisce informazioni su come sviluppare applicazioni PHP usando [Always Encrypted (motore di Database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e il [driver PHP per SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md).
 
-Always Encrypted consente alle applicazioni client di eseguire la crittografia dei dati sensibili senza mai rivelare i dati o le chiavi di crittografia a SQL Server o al database SQL di Azure. Un Always Encrypted abilitata driver, ad esempio ODBC Driver for SQL Server, in modo trasparente crittografa e decrittografa i dati sensibili nell'applicazione client. Il driver determina automaticamente i parametri di query corrispondenti alle colonne di database con dati sensibili (protette mediante Always Encrypted) e crittografa i valori di tali parametri prima di passare i dati a SQL Server o al database SQL di Azure. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati, recuperati dalle colonne di database crittografate nei risultati delle query. Per altre informazioni, vedere [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Il driver PHP per SQL Server usano il Driver ODBC per SQL Server crittografare dati sensibili.
+Always Encrypted consente alle applicazioni client di eseguire la crittografia dei dati sensibili senza mai rivelare i dati o le chiavi di crittografia a SQL Server o al database SQL di Azure. Un driver abilitato per Always Encrypted, come ODBC Driver for SQL Server, esegue in modo trasparente la crittografia e la decrittografia dei dati sensibili nell'applicazione client. Il driver determina automaticamente i parametri di query corrispondenti alle colonne di database con dati sensibili (protette mediante Always Encrypted) e crittografa i valori di tali parametri prima di passare i dati a SQL Server o al database SQL di Azure. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati, recuperati dalle colonne di database crittografate nei risultati delle query. Per altre informazioni, vedere [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Il driver PHP per SQL Server usano il Driver ODBC per SQL Server crittografare dati sensibili.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -154,7 +153,7 @@ $stmt->execute();
 ### <a name="plaintext-data-retrieval-example"></a>Esempio di recupero dati in testo normale
 
 Gli esempi seguenti illustrano il filtraggio dei dati basata su valori crittografati e il recupero di dati crittografato dalle colonne crittografate usando il driver PDO_SQLSRV e SQLSRV. Tenere presente quanto segue:
- -   Il valore utilizzato nella clausola WHERE per filtrare la colonna SSN deve essere passato usando il parametro di associazione, in modo che il driver possibile codificarli in modo trasparente prima dell'invio al server.
+ -   Il valore usato nella clausola WHERE per filtrare la colonna SSN deve essere passato usando il parametro bind, in modo che il driver possa crittografarlo in modo trasparente prima dell'invio al server.
  -   Quando si esegue una query con parametri associati, il driver PHP determina automaticamente il tipo SQL per l'utente, a meno che l'utente specifica in modo esplicito il tipo SQL quando si usa il driver SQLSRV.
  -   Tutti i valori stampati dal programma sono in testo normale, poiché il driver decrittografa in modo trasparente i dati recuperati dalle colonne SSN e BirthDate.
  
@@ -229,7 +228,7 @@ Always Encrypted supporta alcune conversioni per i tipi di dati crittografati. P
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>Errori causati dal passaggio di testo non crittografato anziché di valori crittografati
 
-Qualsiasi valore destinato a una colonna crittografata deve essere crittografati prima dell'invio al server. Un tentativo di inserire, modificare o filtrare in base un valore di testo non crittografato sui risultati colonna crittografata in un errore. Per evitare tali errori, verificare che:
+Qualsiasi valore destinato a una colonna crittografata deve essere crittografati prima dell'invio al server. Il tentativo di inserire, modificare o filtrare in base a un valore di testo non crittografato in una colonna crittografata genera un errore. Per evitare tali errori, verificare che:
  -   Always Encrypted è abilitato (nella stringa di connessione, impostare il `ColumnEncryption` parola chiave da `Enabled`).
  -   Per inviare i dati destinati alle colonne crittografate venga usata l'associazione dei parametri. Nell'esempio seguente viene illustrata una query che filtra in modo errato un valore letterale o costante in una colonna crittografata (SSN):
 ```
@@ -266,7 +265,7 @@ Per ottenere il valore di testo normale di una chiave ECEK, il driver Ottiene pr
 
 Per il Driver Microsoft 5.3.0 per PHP per SQL Server, sono supportati solo i Provider Store Certificate di Windows e Azure Key Vault. L'altro Provider di archivio chiavi è supportata dal Driver ODBC (Provider di archivio chiavi personalizzato) non è ancora supportato.
 
-### <a name="using-the-windows-certificate-store-provider"></a>Utilizzo del Provider di Windows Store di certificato
+### <a name="using-the-windows-certificate-store-provider"></a>Uso del provider per l'archivio certificati Windows
 
 Il Driver ODBC per SQL Server in Windows include un provider di archivio chiavi master di colonna predefiniti per Store il certificato di Windows, denominato `MSSQL_CERTIFICATE_STORE`. (Questo provider non disponibile in macOS o Linux). A questo provider, la chiave CMK è archiviata localmente nel computer client e alcuna configurazione aggiuntiva per l'applicazione non è necessario usarlo con il driver. Tuttavia, l'applicazione deve avere accesso al certificato e la relativa chiave privata nell'archivio. Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 

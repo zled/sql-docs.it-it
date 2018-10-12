@@ -1,13 +1,11 @@
 ---
-title: Metodo getXAResource (SQLServerXAConnection) | Documenti Microsoft
+title: Metodo getXAResource (SQLServerXAConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerXAConnection.getXAResource
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e1d2828f-fd20-44b0-b796-dc70f77c5b03
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc93f1b4ee29d25893c64c7334c8ce6458354624
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d48ba821cee687eca112c405e5f0363244bc7842
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839246"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700139"
 ---
 # <a name="getxaresource-method-sqlserverxaconnection"></a>Metodo getXAResource (SQLServerXAConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera un [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) che il gestore delle transazioni verrà utilizzato per gestire questo [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) la partecipazione dell'oggetto in una transazione distribuita.  
+  Recupera un oggetto [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) che verrà usato dal servizio di gestione transazioni per gestire la partecipazione di questo oggetto [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) in una transazione distribuita.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,8 +41,8 @@ public javax.transaction.xa.XAResource getXAResource()
 ## <a name="exceptions"></a>Eccezioni  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo getXAResource viene specificato dal metodo getXAResource nell'interfaccia javax.SQL. XAConnection.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo getXAResource viene specificato dal metodo getXAResource nell'interfaccia XAConnection.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-methods.md)   

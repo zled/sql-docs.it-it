@@ -1,38 +1,35 @@
 ---
-title: 'Procedura: gestire errori e avvisi usando il Driver SQLSRV | Documenti Microsoft'
+title: 'Procedura: Gestire errori e avvisi usando il driver SQLSRV | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors and warnings
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16791a307fe317aa9495c5b4173cb1ebbb23d719
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: cc7a80e7c63a92863abdbcbba0475fe74f05a3c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307420"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799101"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Procedura: Gestire errori e avvisi usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Per impostazione predefinita, il driver SQLSRV considera gli avvisi come errori. una chiamata a un **sqlsrv** funzione che genera un errore o un avviso restituisce **false**. In questo argomento viene illustrato come disattivare questo comportamento predefinito e come gestire gli avvisi separatamente dagli errori.  
+Per impostazione predefinita, il driver SQLSRV considera gli avvisi come errori. Una chiamata a una funzione **sqlsrv** che genera un errore o un avviso restituisce **false**. In questo argomento viene illustrato come disattivare questo comportamento predefinito e come gestire gli avvisi separatamente dagli errori.  
   
 > [!NOTE]  
 > Esistono alcune eccezioni al comportamento predefinito di gestione degli avvisi come errori. Gli avvisi che corrispondono ai valori SQLSTATE 01000, 01001, 01003 e 01S02 non vengono mai considerati come errori.  
   
 ## <a name="example"></a>Esempio  
-L'esempio di codice seguente usa due funzioni definite dall'utente, **DisplayErrors** e **DisplayWarnings**, per gestire errori e avvisi. L'esempio illustra la gestione separata di avvisi ed errori tramite le operazioni seguenti:  
+L'esempio di codice seguente usa due funzioni definite dall'utente, **DisplayErrors** e **DisplayWarnings**, per la gestione degli errori e degli avvisi. L'esempio illustra la gestione separata di avvisi ed errori tramite le operazioni seguenti:  
   
 1.  Disattiva il comportamento predefinito di gestione degli avvisi come errori.  
   
@@ -42,11 +39,11 @@ L'esempio di codice seguente usa due funzioni definite dall'utente, **DisplayErr
   
 4.  Visualizza le ore di ferie rimanenti per ogni dipendente.  
   
-Nella prima chiamata a un **sqlsrv** funzione ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), gli avvisi vengono considerati come errori. Poiché gli avvisi vengono aggiunti alla raccolta degli errori, non è necessario controllare gli avvisi separatamente dagli errori. Nelle chiamate successive alle funzioni **sqlsrv** , tuttavia, gli avvisi non verranno considerati come errori e sarà pertanto necessario controllare in modo esplicito gli avvisi e gli errori.  
+Nella prima chiamata a una funzione **sqlsrv** ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), gli avvisi vengono considerati come errori. Poiché gli avvisi vengono aggiunti alla raccolta degli errori, non è necessario controllare gli avvisi separatamente dagli errori. Nelle chiamate successive alle funzioni **sqlsrv** , tuttavia, gli avvisi non verranno considerati come errori e sarà pertanto necessario controllare in modo esplicito gli avvisi e gli errori.  
   
 Si noti inoltre che il codice di esempio ricerca gli errori dopo ogni chiamata a una funzione **sqlsrv** . Questa è la procedura consigliata.  
   
-Questo esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser. Quando l'esempio viene eseguito in una nuova installazione del database AdventureWorks, produce tre avvisi e i due errori. I primi due avvisi sono avvisi standard che vengono rilasciati quando ci si connette a un database. Il terzo avviso si verifica perché le ore di ferie disponibili di un dipendente vengono aggiornate a un valore minore di zero. Gli errori si verificano perché le ore di ferie disponibili di un dipendente vengono aggiornate a un valore inferiore a -40 ore violando un vincolo nella tabella.  
+L'esempio presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser. Quando l'esempio viene eseguito in una nuova installazione del database AdventureWorks, produce tre avvisi e i due errori. I primi due avvisi sono avvisi standard che vengono rilasciati quando ci si connette a un database. Il terzo avviso si verifica perché le ore di ferie disponibili di un dipendente vengono aggiornate a un valore minore di zero. Gli errori si verificano perché le ore di ferie disponibili di un dipendente vengono aggiornate a un valore inferiore a -40 ore violando un vincolo nella tabella.  
   
 ```  
 <?php  

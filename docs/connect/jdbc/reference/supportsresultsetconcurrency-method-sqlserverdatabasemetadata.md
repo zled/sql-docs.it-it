@@ -1,13 +1,11 @@
 ---
-title: Metodo supportsResultSetConcurrency (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo supportsResultSetConcurrency (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsResultSetConcurrency
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87b9db3f492cdb0399396b35a15a665be1d6cc49
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c20b22e7eac31b66055e01c9442725d889f3309a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851328"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825979"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>Metodo supportsResultSetConcurrency (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +39,7 @@ public boolean supportsResultSetConcurrency(int type,
 #### <a name="parameters"></a>Parametri  
  *type*  
   
- Un **int** che indica il set di risultati tipo, che può essere uno dei valori seguenti come definito in Java.SQL. ResultSet o SQLServerResultSet:  
+ Valore **int** che indica il tipo di set di risultati, che può essere uno dei valori seguenti, in base a quanto definito in java.sql.ResultSet o SQLServerResultSet:  
   
 ## <a name="javasqlresultset-types"></a>Tipi java.sql.ResultSet  
  TYPE_FORWARD_ONLY  
@@ -62,9 +59,9 @@ public boolean supportsResultSetConcurrency(int type,
   
  TYPE_SS_SCROLL_DYNAMIC  
   
- *Concorrenza*  
+ *concurrency*  
   
- Un **int** che indica il set di risultati il livello di concorrenza, che può essere uno dei valori seguenti come definito in Java.SQL. ResultSet o SQLServerResultSet:  
+ Valore**int** che indica il livello di concorrenza del set di risultati che può essere uno dei valori seguenti, in base a quanto definito in java.sql.ResultSet o SQLServerResultSet:  
   
 ## <a name="javasqlresultset-types"></a>Tipi java.sql.ResultSet  
  CONCUR_READ_ONLY  
@@ -84,7 +81,7 @@ public boolean supportsResultSetConcurrency(int type,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo supportsResultSetConcurrency viene specificato dal metodo supportsResultSetConcurrency nell'interfaccia DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  

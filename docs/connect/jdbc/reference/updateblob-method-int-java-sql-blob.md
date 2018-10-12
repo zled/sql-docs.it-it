@@ -1,13 +1,11 @@
 ---
-title: Metodo updateBlob (int, Java.SQL. BLOB) | Documenti Microsoft
+title: Metodo updateBlob (int, Java) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateBlob (int, java.sql.Blob)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1e86f588-1365-4011-9412-f0acf7009880
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0874832d98fef91d02e10000ea87a1f7110e5559
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4f007a3b6b0cf5a42a5c69656095d77e7f32382b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849826"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736109"
 ---
 # <a name="updateblob-method-int-javasqlblob"></a>Metodo updateBlob (int, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +39,7 @@ public void updateBlob(int index,
 #### <a name="parameters"></a>Parametri  
  *index*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
  *x*  
   
@@ -51,8 +48,8 @@ public void updateBlob(int index,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo updateBlob viene specificato dal metodo updateBlob nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo updateBlob viene specificato dal metodo updateBlob nell'interfaccia ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateBlob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   

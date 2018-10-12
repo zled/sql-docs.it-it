@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_send_stream_data
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - API Reference, sqlsrv_send_stream_data
 - streaming data
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99be2cc8d56cde6ce960b5fc8d6caa2fab156a74
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c1ce0db099046fb243151a7977823ab0fcf458ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309490"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790609"
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Invia dati da flussi di parametri al server. Fino a otto kilobyte (8 KB) dei dati viene inviato con ogni chiamata a **sqlsrv_send_stream_data**.  
+Invia dati da flussi di parametri al server. Con ogni chiamata a **sqlsrv_send_stream_data** vengono inviati fino a otto kilobyte (8 KB) di dati.  
   
 > [!NOTE]  
 > Per impostazione predefinita, tutti i dati di flusso vengono inviati al server quando viene eseguita una query. Se questo comportamento predefinito non viene modificato, non è necessario usare **sqlsrv_send_stream_data** per inviare dati di flusso al server. Per informazioni sulla modifica del comportamento predefinito, vedere la sezione Parametri di [sqlsrv_query](../../connect/php/sqlsrv-query.md) o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
@@ -50,7 +47,7 @@ sqlsrv_send_stream_data( resource $stmt)
 Valore booleano: **true** se sono presenti altri dati da inviare. In caso contrario, **false**.  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente apre una revisione del prodotto sotto forma di flusso e lo invia al server. Il comportamento predefinito di invio di tutti i dati di flusso in fase di esecuzione è disabilitato. Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+L'esempio seguente apre una revisione del prodotto sotto forma di flusso e lo invia al server. Il comportamento predefinito di invio di tutti i dati di flusso in fase di esecuzione è disabilitato. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

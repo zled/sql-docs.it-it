@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [OLE DB], properties
@@ -19,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7c98299d1dc55a19d2199222ea3e639ae1e5d4bb
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8c78c56d08535b5d9947b5bd215afaf2f8e23e44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037434"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754829"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Proprietà e comportamenti dei set di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "43037434"
 |DBPROP_ACCESSORDER|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: DBPROPVAL_AO_RANDOM<br /><br /> Descrizione: ordine di accesso. Ordine in cui è necessario accedere alle colonne nel set di righe.<br /><br /> DBPROPVAL_AO_RANDOM: è possibile accedere alla colonna in qualsiasi ordine.<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS: è possibile accedere a colonne associate come oggetti di archiviazione solo in ordine sequenziale, determinato dall'ordinale di colonna.<br /><br /> DBPROPVAL_AO_SEQUENTIAL: è necessario accedere a tutte le colonne in ordine sequenziale, determinato dall'ordinale di colonna.|  
 |DBPROP_APPENDONLY|Questa proprietà set di righe non è implementata dal Driver OLE DB per SQL Server. Il tentativo di lettura o scrittura del valore della proprietà genera un errore.|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|L/S: Sola lettura<br /><br /> Impostazione predefinita: VARIANT_TRUE<br /><br /> Descrizione: Il Driver OLE DB per il blocco di oggetti di archiviazione SQL Server con altri metodi di set di righe.|  
-|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: il driver OLE DB per SQL Server supporta segnalibri per l'identificazione delle righe nel set di righe quando DBPROP_BOOKMARKS o DBPROP_LITERALBOOKMARKS è VARIANT_TRUE.<br /><br /> L'impostazione di una delle proprietà su VARIANT_TRUE non consente il posizionamento del set di righe in base al segnalibro. Impostare DBPROP_IRowsetLocate o DBPROP_IRowsetScroll su VARIANT_TRUE per creare un set di righe che supporta il posizionamento dei set di righe in base al segnalibro.<br /><br /> Il Driver OLE DB per SQL Server Usa una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursore per supportare un set di righe contenente segnalibri. Per altre informazioni, vedere [Set di righe e cursori SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).<br /><br /> L'impostazione di queste proprietà in conflitto con altre proprietà di definizione del cursore per il driver OLE DB per SQL Server causa un errore. Impostando, ad esempio, DBPROP_BOOKMARKS su VARIANT_TRUE quando anche DBPROP_OTHERINSERT è VARIANT_TRUE, viene generato un errore durante il tentativo di apertura di un set di righe da parte di un consumer.|  
+|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: il driver OLE DB per SQL Server supporta segnalibri per l'identificazione delle righe nel set di righe quando DBPROP_BOOKMARKS o DBPROP_LITERALBOOKMARKS è VARIANT_TRUE.<br /><br /> L'impostazione di una delle proprietà su VARIANT_TRUE non consente il posizionamento del set di righe in base al segnalibro. Impostare DBPROP_IRowsetLocate o DBPROP_IRowsetScroll su VARIANT_TRUE per creare un set di righe che supporta il posizionamento dei set di righe in base al segnalibro.<br /><br /> Il Driver OLE DB per SQL Server Usa una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursore per supportare un set di righe contenente segnalibri. Per altre informazioni, vedere [Set di righe e cursori SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).<br /><br /> Nota: l'impostazione di queste proprietà in conflitto con altre proprietà di definizione del cursore per il driver OLE DB per SQL Server causa un errore. Impostando, ad esempio, DBPROP_BOOKMARKS su VARIANT_TRUE quando anche DBPROP_OTHERINSERT è VARIANT_TRUE, viene generato un errore durante il tentativo di apertura di un set di righe da parte di un consumer.|  
 |DBPROP_BOOKMARKSKIPPED|L/S: Sola lettura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: il driver OLE DB per Server SQL restituisce DB_E_BADBOOKMARK se il consumer indica un segnalibro non valido quando si posiziona o si cerca un set di righe con segnalibro.|  
 |DBPROP_BOOKMARKTYPE|L/S: Sola lettura<br /><br /> Impostazione predefinita: DBPROPVAL_BMK_NUMERIC<br /><br /> Descrizione: Il Driver OLE DB per SQL Server implementa solo segnalibri numerici. Un Driver OLE DB per il segnalibro di SQL Server è intero senza segno a 32 bit, di tipo DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Questa proprietà set di righe non è implementata dal Driver OLE DB per SQL Server. Il tentativo di lettura o scrittura del valore della proprietà genera un errore.|  

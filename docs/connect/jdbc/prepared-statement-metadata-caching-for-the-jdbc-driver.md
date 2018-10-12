@@ -1,95 +1,92 @@
 ---
-title: La memorizzazione nella cache per il Driver JDBC di metadati di istruzione preparata | Documenti Microsoft
+title: Memorizzazione nella cache dei metadati delle istruzioni preparate per il driver JDBC
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a291cfb9497cee4fea87db915ca088069c1ec3cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3c412a4364e18a70cf10d9896138c5056318ae20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833156"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767339"
 ---
-# <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Metadati di istruzione preparata la memorizzazione nella cache per il Driver JDBC
+# <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Memorizzazione nella cache dei metadati delle istruzioni preparate per il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-In questo articolo vengono fornite informazioni sulle due modifiche che vengono implementate per migliorare le prestazioni del driver.
+Questo articolo fornisce informazioni sulle due modifiche implementate per migliorare le prestazioni del driver.
 
-## <a name="batching-of-unprepare-for-prepared-statements"></a>L'invio in batch di preparazione per le istruzioni preparate
-Poiché è stato implementato versione 6.1.6-preview, un miglioramento delle prestazioni tramite riduzione dei round trip a SQL Server al server. In precedenza, per ogni query prepareStatement, una chiamata a unprepare anche di invio. A questo punto, il driver è batch unprepare query fino a soglia "ServerPreparedStatementDiscardThreshold", che ha un valore predefinito di 10.
+## <a name="batching-of-unprepare-for-prepared-statements"></a>Invio in batch di Unprepare per le istruzioni preparate
+Poiché 6.1.6-preview versione, un miglioramento delle prestazioni è stata implementata tramite riducendo al minimo server round trip a SQL Server. In precedenza, per ogni query prepareStatement, una chiamata a unprepare è stata inviata anche. A questo punto, il driver è batch unprepare query fino a "ServerPreparedStatementDiscardThreshold", che ha un valore predefinito di 10 la soglia.
 
 > [!NOTE]  
 >  Gli utenti possono modificare il valore predefinito con il metodo seguente: setServerPreparedStatementDiscardThreshold (valore int)
 
-Una modifica di altre introdotta da 6.1.6-preview è che prima di questa driver sempre chiamerebbe sp_prepexec. A questo punto, per la prima esecuzione di un'istruzione preparata, il driver chiama sp_executesql e per il resto viene eseguita sp_prepexec e assegna un handle. Per reperire ulteriori dettagli [qui](https://github.com/Microsoft/mssql-jdbc/wiki/PreparedStatement-metadata-caching).
+Un'altra modifica introdotta da 6.1.6-preview è che prima di questa driver sempre chiamerebbe sp_prepexec. A questo punto, per la prima esecuzione di un'istruzione preparata, il driver chiama sp_executesql e per il resto esegue sp_prepexec e assegna un handle a esso. Altre informazioni sono reperibili [qui](https://github.com/Microsoft/mssql-jdbc/wiki/PreparedStatement-metadata-caching).
 
 > [!NOTE]  
->  Gli utenti possono modificare il comportamento predefinito per le versioni precedenti di chiamare sempre sp_prepexec dall'impostazione enablePrepareOnFirstPreparedStatementCall per **true** utilizzando il metodo seguente: setEnablePrepareOnFirstPreparedStatementCall (valore booleano)
+>  Gli utenti possono modificare il comportamento predefinito per le versioni precedenti di chiamare sempre sp_prepexec dall'impostazione enablePrepareOnFirstPreparedStatementCall al **true** usando il metodo seguente: setEnablePrepareOnFirstPreparedStatementCall (valore booleano)
 
-### <a name="list-of-the-new-apis-introduced-with-this-change-for-batching-of-unprepare-for-prepared-statements"></a>Elenco delle nuove API introdotte con questa modifica, per l'invio in batch di preparazione per le istruzioni preparate
+### <a name="list-of-the-new-apis-introduced-with-this-change-for-batching-of-unprepare-for-prepared-statements"></a>Elenco delle nuove API introdotte con questa modifica, per l'invio in batch di Unprepare per le istruzioni preparate
 
  **SQLServerConnection**
  
-|Nuovo metodo|Description|  
+|Nuovo metodo|Descrizione|  
 |-----------|-----------------|  
-|getDiscardedServerPreparedStatementCount() int|Restituisce il numero di attualmente in attesa preparata istruzione unprepare azioni.|
-|closeUnreferencedPreparedStatementHandles() void|Forza le richieste di unprepare per tutte le istruzioni preparate scartate in sospeso da eseguire.|
-|boolean getEnablePrepareOnFirstPreparedStatementCall()|Restituisce il comportamento per un'istanza di connessione specifica. Se false la prima esecuzione chiama sp_executesql e non prepara un'istruzione, dopo l'esecuzione del secondo caso chiama sp_prepexec e del programma di installazione effettivamente un handle di istruzione preparata. Seguenti esecuzioni chiamate sp_execute. Questo elimina la necessità di sp_unprepare in istruzione preparata chiudere se l'istruzione viene eseguita solo una volta. Il valore predefinito per questa opzione può essere modificato dalla chiamata setDefaultEnablePrepareOnFirstPreparedStatementCall().|
-|setEnablePrepareOnFirstPreparedStatementCall(boolean value) void|Specifica il comportamento per un'istanza di connessione specifica. Se il valore è false la prima esecuzione chiama sp_executesql e non prepara un'istruzione, dopo l'esecuzione del secondo caso chiama sp_prepexec e del programma di installazione effettivamente un handle di istruzione preparata. Seguenti esecuzioni chiamate sp_execute. Questo elimina la necessità di sp_unprepare in istruzione preparata chiudere se l'istruzione viene eseguita solo una volta.|
-|getServerPreparedStatementDiscardThreshold() int|Restituisce il comportamento per un'istanza di connessione specifica. Questa impostazione Controlla preparato in sospeso quanti Ignora istruzione azioni (sp_unprepare) possono essere in attesa per ogni connessione prima che venga eseguita una chiamata per pulire l'handle in sospeso nel server. Se l'impostazione è < = 1, unprepare azioni vengono eseguite immediatamente in chiusura istruzione preparata. Se è impostato su {@literal >} 1, queste chiamate sono raggruppate per evitare il sovraccarico della chiamata sp_unprepare troppo spesso. Il valore predefinito per questa opzione può essere modificato dalla chiamata getDefaultServerPreparedStatementDiscardThreshold().|
-|setServerPreparedStatementDiscardThreshold(int value) void|Specifica il comportamento per un'istanza di connessione specifica. Questa impostazione Controlla preparato in sospeso quanti Ignora istruzione azioni (sp_unprepare) possono essere in attesa per ogni connessione prima che venga eseguita una chiamata per pulire l'handle in sospeso nel server. Se l'impostazione è < = 1 unprepare azioni vengono eseguite immediatamente in chiusura istruzione preparata. Se è impostata su 1 > queste chiamate sono raggruppate per evitare l'overhead della chiamata sp_unprepare troppo spesso.|
+|getDiscardedServerPreparedStatementCount() int|Restituisce il numero di attualmente in sospeso preparata istruzione unprepare azioni.|
+|closeUnreferencedPreparedStatementHandles() void|Forza le richieste unprepare per qualsiasi istruzione preparate scartati in sospeso da eseguire.|
+|getEnablePrepareOnFirstPreparedStatementCall() booleano|Restituisce il comportamento per un'istanza di connessione specifica. Se false la prima esecuzione chiama sp_executesql e non preparare un'istruzione, dopo l'esecuzione secondo avviene chiama sp_prepexec ed effettivamente configurare un handle di istruzione preparata. Sp_execute chiamate esecuzioni seguito. Ciò riduce la necessità per sp_unprepare in istruzione preparata chiudere se l'istruzione viene eseguita solo una volta. Il valore predefinito per questa opzione può essere modificato da setDefaultEnablePrepareOnFirstPreparedStatementCall() chiamante.|
+|setEnablePrepareOnFirstPreparedStatementCall(boolean value) void|Specifica il comportamento per un'istanza di connessione specifica. Se il valore è false la prima esecuzione chiama sp_executesql e non preparare un'istruzione, dopo l'esecuzione secondo avviene chiama sp_prepexec ed effettivamente configurare un handle di istruzione preparata. Sp_execute chiamate esecuzioni seguito. Ciò riduce la necessità per sp_unprepare in istruzione preparata chiudere se l'istruzione viene eseguita solo una volta.|
+|getServerPreparedStatementDiscardThreshold() int|Restituisce il comportamento per un'istanza di connessione specifica. Questa impostazione Controlla quanti preparato in sospeso variabile discard istruzione azioni (sp_unprepare) possono rimanere in attesa per ogni connessione prima che venga eseguita una chiamata per pulire l'handle in sospeso nel server. Se l'impostazione è < = 1, unprepare azioni vengono eseguite immediatamente in chiusura istruzione preparata. Se è impostato su {@literal >} 1, queste chiamate vengono eseguite in batch insieme per evitare sovraccarichi del chiamante sp_unprepare troppo spesso. Il valore predefinito per questa opzione può essere modificato da getDefaultServerPreparedStatementDiscardThreshold() chiamante.|
+|setServerPreparedStatementDiscardThreshold(int value) void|Specifica il comportamento per un'istanza di connessione specifica. Questa impostazione Controlla quanti preparato in sospeso variabile discard istruzione azioni (sp_unprepare) possono rimanere in attesa per ogni connessione prima che venga eseguita una chiamata per pulire l'handle in sospeso nel server. Se l'impostazione è < = 1 unprepare azioni vengono eseguite immediatamente in chiusura istruzione preparata. Se è impostato su 1 > queste chiamate vengono eseguite in batch insieme per evitare il sovraccarico della chiamata al metodo sp_unprepare troppo spesso.|
 
  **SQLServerDataSource**
  
-|Nuovo metodo|Description|  
+|Nuovo metodo|Descrizione|  
 |-----------|-----------------|  
-|setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall) void|Se questa configurazione è false la prima esecuzione di un'istruzione preparata chiama sp_executesql e non prepara un'istruzione, dopo l'esecuzione del secondo caso chiama sp_prepexec e del programma di installazione effettivamente un handle di istruzione preparata. Seguenti esecuzioni chiamate sp_execute. Questo elimina la necessità di sp_unprepare in istruzione preparata chiudere se l'istruzione viene eseguita solo una volta.|
-|boolean getEnablePrepareOnFirstPreparedStatementCall()|Se questa configurazione restituisce false, la prima esecuzione di un'istruzione preparata chiama sp_executesql e non prepara un'istruzione, dopo l'esecuzione del secondo caso, chiama sp_prepexec e del programma di installazione effettivamente un handle di istruzione preparata. Seguenti esecuzioni chiamate sp_execute. Questo elimina la necessità di sp_unprepare in istruzione preparata chiudere se l'istruzione viene eseguita solo una volta.|
-|setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold) void|Questa impostazione Controlla preparato in sospeso quanti Ignora istruzione azioni (sp_unprepare) possono essere in attesa per ogni connessione prima che venga eseguita una chiamata per pulire l'handle in sospeso nel server. Se l'impostazione è < = 1 unprepare azioni vengono eseguite immediatamente in chiusura istruzione preparata. Se è impostato su {@literal >} 1 queste chiamate sono raggruppate per evitare l'overhead della chiamata sp_unprepare troppo spesso|
-|getServerPreparedStatementDiscardThreshold() int|Questa impostazione Controlla preparato in sospeso quanti Ignora istruzione azioni (sp_unprepare) possono essere in attesa per ogni connessione prima che venga eseguita una chiamata per pulire l'handle in sospeso nel server. Se l'impostazione è < = 1 unprepare azioni vengono eseguite immediatamente in chiusura istruzione preparata. Se è impostato su {@literal >} 1 queste chiamate sono raggruppate per evitare l'overhead della chiamata sp_unprepare troppo spesso.|
+|setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall) void|Se questa configurazione è false la prima esecuzione di un'istruzione preparata chiama sp_executesql e non preparare un'istruzione, dopo l'esecuzione secondo avviene chiama sp_prepexec ed effettivamente configurare un handle di istruzione preparata. Sp_execute chiamate esecuzioni seguito. Ciò riduce la necessità per sp_unprepare in istruzione preparata chiudere se l'istruzione viene eseguita solo una volta.|
+|getEnablePrepareOnFirstPreparedStatementCall() booleano|Se questa configurazione restituirà false la prima esecuzione di un'istruzione preparata chiama sp_executesql e non prepara un'istruzione, una volta la seconda esecuzione si verifica, chiama sp_prepexec ed effettivamente impostare un handle di istruzione preparata. Sp_execute chiamate esecuzioni seguito. Ciò riduce la necessità per sp_unprepare in istruzione preparata chiudere se l'istruzione viene eseguita solo una volta.|
+|setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold) void|Questa impostazione Controlla quanti preparato in sospeso variabile discard istruzione azioni (sp_unprepare) possono rimanere in attesa per ogni connessione prima che venga eseguita una chiamata per pulire l'handle in sospeso nel server. Se l'impostazione è < = 1 unprepare azioni vengono eseguite immediatamente in chiusura istruzione preparata. Se è impostato su {@literal >} 1 vengono eseguite in batch insieme queste chiamate per evitare il sovraccarico della chiamata al metodo sp_unprepare troppo spesso|
+|getServerPreparedStatementDiscardThreshold() int|Questa impostazione Controlla quanti preparato in sospeso variabile discard istruzione azioni (sp_unprepare) possono rimanere in attesa per ogni connessione prima che venga eseguita una chiamata per pulire l'handle in sospeso nel server. Se l'impostazione è < = 1 unprepare azioni vengono eseguite immediatamente in chiusura istruzione preparata. Se è impostato su {@literal >} 1 vengono eseguite in batch insieme queste chiamate per evitare il sovraccarico della chiamata al metodo sp_unprepare troppo spesso.|
 
 ## <a name="prepared-statement-metatada-caching"></a>Memorizzazione nella cache i metadati di istruzione preparata
-A partire dalla versione 6.3.0-preview, Microsoft JDBC driver per SQL Server supporta la memorizzazione nella cache di istruzione preparata. Prima dell'anteprima di v6.3.0, se uno esegue una query che è stato già preparata e archiviata nella cache, chiamando di nuovo la stessa query non comporterà la preparazione. A questo punto, il driver esegue la ricerca di query nella cache e trovare l'handle ed eseguirlo con sp_execute.
-Memorizzazione nella cache dei metadati di istruzione preparata è **disabilitato** per impostazione predefinita. Per abilitarlo, è necessario chiamare il metodo seguente per l'oggetto di connessione:
+A partire dalla versione 6.3.0-preview, Microsoft JDBC driver per SQL Server supporta la memorizzazione nella cache di un'istruzione preparata. Prima di v6.3.0-preview, se uno esegue una query che è stata già preparata e archiviata nella cache, chiamando di nuovo la stessa query non comporterà la preparazione. A questo punto, il driver cerca la query nella cache e trovare l'handle ed eseguirlo con sp_execute.
+Memorizzazione nella cache dei metadati di istruzione preparata viene **disabilitato** per impostazione predefinita. Per abilitarla, è necessario chiamare il metodo seguente sull'oggetto connessione:
 
 `setStatementPoolingCacheSize(int value)   //value is the desired cache size (any value bigger than 0)`
 `setDisableStatementPooling(boolean value) //false allows the caching to take place`
 
-Per esempio: `connection.setStatementPoolingCacheSize(10)`
+Ad esempio: `connection.setStatementPoolingCacheSize(10)`
 `connection.setDisableStatementPooling(false)`
 
-### <a name="list-of-the-new-apis-introduced-with-this-change-for-prepared-statement-metadata-caching"></a>Elenco delle nuove API introdotte con questa modifica, per l'istruzione preparata la memorizzazione nella cache di metadati
+### <a name="list-of-the-new-apis-introduced-with-this-change-for-prepared-statement-metadata-caching"></a>Elenco delle nuove API introdotte con questa modifica, per un'istruzione preparata la memorizzazione nella cache dei metadati
 
  **SQLServerConnection**
  
-|Nuovo metodo|Description|  
+|Nuovo metodo|Descrizione|  
 |-----------|-----------------|  
-|setDisableStatementPooling(boolean value) void|Imposta il pool di istruzione su true o false.|
+|setDisableStatementPooling(boolean value) void|Imposta il pool di istruzioni su true o false.|
 |getDisableStatementPooling() booleano|Restituisce true se il pool di istruzioni è disabilitato.|
-|setStatementPoolingCacheSize(int value) void|Specifica le dimensioni della cache dell'istruzione preparata per la connessione. Un valore inferiore a 1 non indica nessuna cache.|
-|int getStatementPoolingCacheSize()|Restituisce le dimensioni della cache dell'istruzione preparata per la connessione. Un valore inferiore a 1 non indica nessuna cache.|
-|int getStatementHandleCacheEntryCount()|Restituisce il numero corrente di handle di istruzione preparata in pool.|
-|isPreparedStatementCachingEnabled() booleano|Se il pool di istruzione è attivato o meno per la connessione.|
+|setStatementPoolingCacheSize(int value) void|Specifica le dimensioni della cache dell'istruzione preparata per la connessione. Un valore minore di 1 non significa Nessuna cache.|
+|getStatementPoolingCacheSize() int|Restituisce le dimensioni della cache dell'istruzione preparata per la connessione. Un valore minore di 1 non significa Nessuna cache.|
+|getStatementHandleCacheEntryCount() int|Restituisce il numero corrente di handle di istruzione preparata in pool.|
+|isPreparedStatementCachingEnabled() booleano|Se l'istruzione di limitazione delle richieste è abilitata o meno per questa connessione.|
 
  **SQLServerDataSource**
  
-|Nuovo metodo|Description|  
+|Nuovo metodo|Descrizione|  
 |-----------|-----------------|  
-|setDisableStatementPooling(boolean disableStatementPooling) void|Imposta l'istruzione pool su true o false|
+|setDisableStatementPooling(boolean disableStatementPooling) void|Imposta l'istruzione di limitazione delle richieste su true o false|
 |getDisableStatementPooling() booleano|Restituisce true se il pool di istruzioni è disabilitato.|
-|setStatementPoolingCacheSize(int statementPoolingCacheSize) void|Specifica le dimensioni della cache dell'istruzione preparata per la connessione. Un valore inferiore a 1 non indica nessuna cache.|
-|int getStatementPoolingCacheSize()|Restituisce le dimensioni della cache dell'istruzione preparata per la connessione. Un valore inferiore a 1 non indica nessuna cache.|
+|setStatementPoolingCacheSize(int statementPoolingCacheSize) void|Specifica le dimensioni della cache dell'istruzione preparata per la connessione. Un valore minore di 1 non significa Nessuna cache.|
+|getStatementPoolingCacheSize() int|Restituisce le dimensioni della cache dell'istruzione preparata per la connessione. Un valore minore di 1 non significa Nessuna cache.|
 
 ## <a name="see-also"></a>Vedere anche  
  [Uso del driver JDBC per il miglioramento di prestazioni e affidabilità](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  

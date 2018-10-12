@@ -1,13 +1,11 @@
 ---
-title: Metodo (lang) prepareStatement | Documenti Microsoft
+title: Metodo (lang) prepareStatement | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.prepareStatement (java.lang.String)
@@ -15,20 +13,19 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e825765c-eb55-4800-951b-f3495da36641
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12e52cbd2883891d7b6dee46ee1aadf5ce77af68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dbe43cf2af208d6547a1dc3dcd83d7d37947308e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840466"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788169"
 ---
 # <a name="preparestatement-method-javalangstring"></a>Metodo prepareStatement (java.lang.String)
 
-Crea un [SQLServerPreparedStatement](./sqlserverpreparedstatement-class.md) oggetto per l'invio di parametri di istruzioni SQL al database.
+Crea un oggetto [SQLServerPreparedStatement](./sqlserverpreparedstatement-class.md) per l'invio di istruzioni SQL con parametri al database.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,16 +36,16 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql)
 #### <a name="parameters"></a>Parametri
 *sql*
 
-Oggetto **stringa** contenente un'istruzione SQL.
+Valore **String** contenente un'istruzione SQL.
 
 ## <a name="return-value"></a>Valore restituito
-Un oggetto PreparedStatement.
+Un oggetto di impostazione PreparedStatement.
 
 ## <a name="exceptions"></a>Eccezioni  
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Osservazioni
-Questo metodo prepareStatement viene specificato dal metodo prepareStatement nell'interfaccia Java.SQL. Connection.
+## <a name="remarks"></a>Remarks
+Questo metodo prepareStatement viene specificato dal metodo prepareStatement nell'interfaccia Java.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,13 +1,11 @@
 ---
-title: Metodo releaseSavepoint (SQLServerConnection) | Documenti Microsoft
+title: Metodo releaseSavepoint (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.releaseSavepoint
@@ -15,24 +13,23 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b6b625ea-c7ce-4a32-a9e0-6d2b4321bfd8
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63704b974e2eb83c77a075d4ffba1d8498f2c7e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bda86d281e8e2fe2370ed4ee40d48a2aba261f55
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843526"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752259"
 ---
 # <a name="releasesavepoint-method-sqlserverconnection"></a>Metodo releaseSavepoint (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Rimuove il determinato [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) oggetto dalla transazione corrente.  
+  Rimuove l'oggetto [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) specificato dalla transazione corrente.  
   
 > [!NOTE]  
->  Questo metodo non è attualmente supportato per il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
+>  Questo metodo non è attualmente supportato da [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,15 +39,15 @@ public void releaseSavepoint(java.sql.Savepoint savepoint)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *punto di salvataggio*  
+ *savepoint*  
   
  L'oggetto punto di salvataggio da rimuovere.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo releaseSavepoint viene specificato dal metodo releaseSavepoint nell'interfaccia Java.SQL. Connection.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo releaseSavepoint viene specificato dal metodo releaseSavepoint nell'interfaccia Java.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

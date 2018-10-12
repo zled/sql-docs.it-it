@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DBPROPSET_SQLSERVERSESSION property
@@ -21,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 77960d1a5b38ef9ae66fe2705f38f10a739daa2a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: b09e62a5057a948e2a12bb6272c9a0e431ba7507
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031731"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864159"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Set di righe dello schema - Supporto di query distribuite
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +32,7 @@ ms.locfileid: "43031731"
 
   Per supportare query distribuite di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'interfaccia **IDBSchemaRowset** del driver OLE DB per SQL Server restituisce metadati sui server collegati.  
   
- Se la proprietà SSPROP_QUOTEDCATALOGNAMES di DBPROPSET_SQLSERVERSESSION è VARIANT_TRUE, è possibile utilizzare un identificatore tra virgolette per specificare il nome di catalogo (ad esempio "catalogo.personale"). Quando si restringe l'output del set di righe dello schema restituito in base al catalogo, il driver OLE DB per SQL Server riconosce un nome in due parti che contiene il server collegato e il nome del catalogo. Per il set di righe dello schema riportato nella tabella seguente, la specifica di un nome di catalogo in due parti, quale *linked_server ***.*** catalog*, restringe l'output al catalogo applicabile del server collegato denominato.  
+ Se la proprietà SSPROP_QUOTEDCATALOGNAMES di DBPROPSET_SQLSERVERSESSION è VARIANT_TRUE, è possibile utilizzare un identificatore tra virgolette per specificare il nome di catalogo (ad esempio "catalogo.personale"). Quando si restringe l'output del set di righe dello schema restituito in base al catalogo, il driver OLE DB per SQL Server riconosce un nome in due parti che contiene il server collegato e il nome del catalogo. Per il set di righe dello schema riportato nella tabella seguente, la specifica di un nome di catalogo in due parti, quale _linked\_server_**.**_catalog_, restringe l'output al catalogo applicabile del server collegato denominato.  
   
 |Set di righe dello schema|Restrizione per catalogo|  
 |-------------------|-------------------------|  
@@ -49,8 +46,8 @@ ms.locfileid: "43031731"
 |DBSCHEMA_TABLE_PRIVILEGES|TABLE_CATALOG|  
   
 > [!NOTE]  
->  Per limitare un set di righe dello schema a tutti i cataloghi di un server collegato, utilizzare la sintassi *linked_server* (dove il separatore punto fa parte della specifica del nome). Questa sintassi è equivalente alla specifica di NULL come restrizione del nome di catalogo e viene utilizzata anche quando il server collegato indica un'origine dati che non supporta cataloghi.  
-  
+>  Per limitare un set di righe dello schema a tutti i cataloghi di un server collegato, usare la sintassi *linked_server* (dove il separatore carattere di sottolineatura fa parte della specifica del nome). Questa sintassi è equivalente alla specifica di NULL come restrizione del nome di catalogo e viene utilizzata anche quando il server collegato indica un'origine dati che non supporta cataloghi.  
+ 
  Il driver OLE DB per SQL Server definisce il set di righe dello schema LINKEDSERVERS restituendo un elenco delle origini dati OLE DB registrate come server collegati.  
   
 ## <a name="see-also"></a>Vedere anche  
