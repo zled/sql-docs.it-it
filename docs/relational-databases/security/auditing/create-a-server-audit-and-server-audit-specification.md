@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.SQLAUDIT.FILTER.F1
@@ -20,12 +18,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 71af9860ae7af711c9c8e1cac4132f0046d8e01c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6742cefe44c2fd4a545b243d22993e0d7615e585
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43023216"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845409"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +97,7 @@ ms.locfileid: "43023216"
      Indica il percorso della cartella in cui vengono scritti i dati del controllo quando in **Destinazione controllo** è specificato un file.  
   
      **Puntini di sospensione (...)**  
-     Apre la finestra di dialogo *Trova cartella -***nome_server* per specificare un percorso file o creare una cartella in cui viene scritto il file di controllo.  
+     Apre la finestra di dialogo **Trova cartella -**_nome\_server_ per specificare un percorso di file o creare una cartella in cui viene scritto il file di controllo.  
   
      **Limite massimo di file di controllo:**  
      **Numero massimo file di rollover**  

@@ -5,9 +5,7 @@ ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filtered indexes [SQL Server], about filtered indexes
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], filtered
 - indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36ce8bf525cb02a2ddee85e02fba8947bc6d1e95
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d5dadd6da3f1f39060f8ec0f96e1034f42670300
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065468"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603249"
 ---
 # <a name="create-filtered-indexes"></a>Creare indici filtrati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +70,9 @@ ms.locfileid: "43065468"
   
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
--   Non è possibile creare un indice filtrato in una vista. Con Query Optimizer è tuttavia possibile sfruttare i vantaggi offerti da un indice filtrato definito in una tabella a cui si fa riferimento in una vista e, se i risultati della query saranno corretti, viene considerato un indice filtrato per una query per la quale la selezione viene effettuata da una vista.  
+-   Non è possibile creare un indice filtrato in una vista. Con Query Optimizer è tuttavia possibile sfruttare i vantaggi offerti da un indice filtrato definito in una tabella a cui si fa riferimento in una vista e, se i risultati della query saranno corretti, viene considerato un indice filtrato per una query per la quale la selezione viene effettuata da una vista.
+
+-   Non è possibile creare un indice filtrato su una tabella quando la colonna a cui si accede nell'espressione di filtro è di un tipo di dati CLR.
   
 -   Rispetto alle viste indicizzate gli indici filtrati offrono i vantaggi seguenti:  
   
@@ -120,7 +119,7 @@ ms.locfileid: "43065468"
   
 6.  In **Colonne chiave indice**fare clic su **Aggiungi**.  
   
-7.  Nella finestra di dialogo **Seleziona colonne da***nome_tabella* selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice univoco.  
+7.  Nella finestra di dialogo **Seleziona colonne da**_nome\_tabella_ selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice univoco.  
   
 8.  Fare clic su **OK**.  
   

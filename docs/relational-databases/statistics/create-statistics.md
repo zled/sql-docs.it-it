@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.stat.properties.f1
@@ -21,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcccb4f911bd3067694ff959bea49f1838924172
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 32c1cfde6f887074e3aa40486ea93f73f3865782
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070844"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672099"
 ---
 # <a name="create-statistics"></a>Creare statistiche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +71,7 @@ ms.locfileid: "43070844"
   
 4.  Fare clic con il pulsante destro del mouse sulla cartella **Statistiche** e scegliere **Nuove statistiche**.  
   
-     Nella pagina **Generale** della finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* vengono visualizzate le proprietà seguenti.  
+     Nella pagina **Generale** della finestra di dialogo **Nuove statistiche per Tabella** _nome\_tabella_ vengono visualizzate le proprietà seguenti.  
   
      **Nome tabella**  
      Consente di visualizzare il nome della tabella descritta dalle statistiche.  
@@ -117,12 +115,12 @@ ms.locfileid: "43070844"
      **Aggiorna statistiche per le colonne selezionate**  
      Selezionare questa opzione per aggiornare le statistiche alla chiusura della finestra di dialogo.  
   
-     Nella pagina **Filtro** della finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* viene visualizzata la proprietà seguente.  
+     Nella pagina **Filtro** della finestra di dialogo **Nuove statistiche per Tabella** _nome\_tabella_ viene visualizzata la proprietà seguente.  
   
      **Espressione filtro**  
      Specifica le righe di dati da includere nelle statistiche filtrate. Ad esempio, usare `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Nella finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* nella pagina **Generale** fare clic su **Aggiungi**.  
+5.  Nella pagina **Generale** della finestra di dialogo **Nuove statistiche per Tabella** _nome\_tabella_ fare clic su **Aggiungi**.  
   
      Nella finestra di dialogo **Seleziona colonne** vengono visualizzate le proprietà seguenti. Queste informazioni sono di sola lettura.  
   
@@ -143,7 +141,7 @@ ms.locfileid: "43070844"
   
 6.  Nella finestra di dialogo **Seleziona colonne** selezionare le caselle di controllo per tutte le colonne per cui si desidera creare una statistica e quindi fare clic su **OK**.  
   
-7.  Nella finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* fare clic su **OK**.  
+7.  Nella finestra di dialogo **Nuove statistiche per Tabella** _nome\_tabella_ fare clic su **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

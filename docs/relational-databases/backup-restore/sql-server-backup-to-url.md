@@ -5,21 +5,18 @@ ms.date: 11/17/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4d0071cbb32207d97d4df9c3bd4e69c91046691
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 07a0f669f9142f7b58d29089852d13f1cbd61a17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175294"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614899"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,6 +59,18 @@ ms.locfileid: "40175294"
   
  Il primo passo in questo processo consiste nella creazione di un account di archiviazione di Microsoft Azure nella sottoscrizione di Azure. Questo account di archiviazione è un account amministrativo con autorizzazioni amministrative complete per tutti i contenitori e gli oggetti creati con tale account. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare il nome dell'account di archiviazione di Microsoft Azure e il relativo valore della chiave di accesso per eseguire l'autenticazione, scrivere e leggere i BLOB nel servizio di archiviazione BLOB di Microsoft Azure oppure usare un token di firma di accesso condiviso generato per contenitori specifici che conceda diritti di lettura e scrittura. Per altre informazioni sugli account di archiviazione di Azure, vedere [Informazioni sugli account di archiviazione di Azure](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/) . Per altre informazioni sulle firme di accesso condiviso, vedere [Firme di accesso condiviso, parte 1: conoscere il modello di firma di accesso condiviso](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tramite cui vengono archiviate queste informazioni di autenticazione, vengono utilizzate durante le operazioni di backup o ripristino.  
   
+###  <a name="blockbloborpageblob"></a> Eseguire il backup su BLOB in blocchi o BLOB di pagine 
+ Esistono due tipi di BLOB che è possibile archiviare nel servizio di archiviazione BLOB di Microsoft Azure: BLOB in blocchi e di pagine. Il backup di SQL Server può usare uno dei due tipi di BLOB a seconda della sintassi Transact-SQL usata: se la chiave di archiviazione viene usata nella credenziale, verrà usato il BLOB di pagine. Se viene usata la firma di accesso condiviso, verrà usato il BLOB in blocchi.
+ 
+ Il backup su BLOB in blocchi è disponibile solo in SQL Server 2016 o versioni successive. È consigliabile eseguire il backup su BLOB in blocchi anziché su BLOB di pagine se si esegue SQL Server 2016 o versione successiva. I motivi principali sono:
+- La firma di accesso condiviso è un modo più sicuro per autorizzare l'accesso al BLOB rispetto alla chiave di archiviazione.
+- È possibile eseguire il backup su più BLOB in blocchi per ottenere prestazioni migliori per backup e ripristino e supportare il backup di database più grandi.
+- [BLOB in blocchi](https://azure.microsoft.com/pricing/details/storage/blobs/) è più economico di [BLOB di pagine](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 
+
+Quando si esegue il backup su BLOB in blocchi, le dimensioni del blocco massimo che è possibile specificare sono 4 MB. Le dimensioni massime di un singolo file di BLOB in blocchi sono di 4 MB * 50000 = 195 GB. Se il database ha dimensioni maggiori di 195 GB, è consigliabile:
+- Usare la compressione del backup
+- Eseguire il backup su più BLOB in blocchi
+
 ###  <a name="Blob"></a> Servizio di archiviazione BLOB di Microsoft Azure  
  **Account di archiviazione:** questo account è il punto di partenza per tutti i servizi di archiviazione. Per accedere al servizio di archiviazione BLOB di Microsoft Azure, creare prima un account di archiviazione di Microsoft Azure. Per altre informazioni, vedere la pagina relativa alla [creazione degli account di archiviazione](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   

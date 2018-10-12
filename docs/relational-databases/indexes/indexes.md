@@ -5,24 +5,21 @@ ms.date: 12/21/2016
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e30951b56cc0296b8028ab2c49463db9ef822a10
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e0211b346906daaa6d32e9dd3824d0f40dd2f008
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43060374"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770359"
 ---
 # <a name="indexes"></a>Indici
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,14 +43,15 @@ Nella tabella seguente sono inclusi i tipi di indici disponibili in [!INCLUDE[ss
 |Full-text|Tipo speciale di indice funzionale basato su token compilato e gestito dal motore di ricerca full-text Microsoft per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo indice offre supporto efficace per le ricerche di testo complesse nelle stringhe di caratteri.|[Popolamento degli indici full-text](../../relational-databases/search/populate-full-text-indexes.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Guida per la progettazione di indici di SQL Server](../../relational-databases/sql-server-index-design-guide.md) [Opzione SORT_IN_TEMPDB per gli indici](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)  
- [Disabilitare indici e vincoli](../../relational-databases/indexes/disable-indexes-and-constraints.md)  
- [Abilitare indici e vincoli](../../relational-databases/indexes/enable-indexes-and-constraints.md)  
- [Rinominare indici](../../relational-databases/indexes/rename-indexes.md)  
- [Impostare le opzioni di indice](../../relational-databases/indexes/set-index-options.md)  
- [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
- [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
- [Specificare un fattore di riempimento per un indice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
- [Guida sull'architettura di pagina ed extent](../../relational-databases/pages-and-extents-architecture-guide.md) [Descrizione di indici cluster e non cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
-  
+ [Guida per la progettazione di indici di SQL Server](../../relational-databases/sql-server-index-design-guide.md)      
+ [Opzione SORT_IN_TEMPDB per gli indici](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)     
+ [Disabilitare indici e vincoli](../../relational-databases/indexes/disable-indexes-and-constraints.md)     
+ [Abilitare indici e vincoli](../../relational-databases/indexes/enable-indexes-and-constraints.md)    
+ [Rinominare indici](../../relational-databases/indexes/rename-indexes.md)     
+ [Impostare le opzioni di indice](../../relational-databases/indexes/set-index-options.md)     
+ [Requisiti di spazio su disco per operazioni DDL sugli indici](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)     
+ [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)     
+ [Specificare un fattore di riempimento per un indice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)     
+ [Guida sull'architettura di pagina ed extent](../../relational-databases/pages-and-extents-architecture-guide.md)     
+ [Descrizione di indici cluster e non cluster.](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)     
   

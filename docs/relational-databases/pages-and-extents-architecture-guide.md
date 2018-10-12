@@ -1,31 +1,27 @@
 ---
 title: Guida sull'architettura di pagina ed extent | Microsoft Docs
 ms.custom: ''
-ms.date: 10/21/2016
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: 2
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9af33c1a357342a04d086ce0dee33856f9c7138e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9dc6bc734f81f9bba423f51591815f3eee676996
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43103821"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857139"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +38,7 @@ Gli extent sono un gruppo di otto pagine fisicamente contigue e vengono utilizza
 
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la dimensione di una pagina è 8 KB. I database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includono pertanto 128 pagine per megabyte. Ogni pagina inizia con un'intestazione di 96 byte utilizzata per archiviare informazioni di sistema relative alla pagina. Queste informazioni includono il numero della pagina, il tipo di pagina, la quantità di spazio disponibile nella pagina e l'ID dell'unità di allocazione dell'oggetto proprietario della pagina.
 
-Nella tabella seguente vengono elencati i tipi di pagina usati nei file di dati di un database SQL Server.
+Nella tabella seguente vengono elencati i tipi di pagina utilizzati nei file di dati di un database [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 |Tipo di pagina | Sommario |
 |-------|-------|
@@ -68,20 +64,25 @@ Le righe non possono estendersi su più pagine. È tuttavia possibile che parti 
 
 Questa restrizione è assoluta per tabelle contenenti colonne di tipo varchar, nvarchar, varbinary o sql_variant. Quando la dimensione totale delle righe di tutte le colonne a lunghezza fissa e variabile di una tabella supera il limite di 8.060 byte, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sposta dinamicamente una o più colonne a lunghezza variabile all'interno di pagine nell'unità di allocazione ROW_OVERFLOW_DATA, iniziando dalla colonna con la larghezza maggiore. 
 
-Questa operazione viene eseguita ogni volta che un aggiornamento o un inserimento aumenta la dimensione totale della riga fino a superare il limite di 8.060 byte. Quando una colonna viene spostata in una pagina nell'unità di allocazione ROW_OVERFLOW_DATA, viene mantenuto un puntatore di 24 byte sulla pagina originale nell'unità di allocazione IN_ROW_DATA. Se un'operazione successiva riduce la dimensione della riga, SQL Server sposta nuovamente le colonne nella pagina di dati originale in maniera dinamica. 
+Questa operazione viene eseguita ogni volta che un aggiornamento o un inserimento aumenta la dimensione totale della riga fino a superare il limite di 8.060 byte. Quando una colonna viene spostata in una pagina nell'unità di allocazione ROW_OVERFLOW_DATA, viene mantenuto un puntatore di 24 byte sulla pagina originale nell'unità di allocazione IN_ROW_DATA. Se un'operazione successiva riduce la dimensione della riga, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sposta nuovamente le colonne nella pagina di dati originale in maniera dinamica. 
 
 ### <a name="extents"></a>Extents 
 
 L'extent è l'unità di base in cui viene gestito lo spazio. Un extent è costituito da otto pagine fisicamente contigue, ovvero da 64 KB. I database di SQL Server includono pertanto 16 extent per megabyte.
 
-Per allocare lo spazio con la massima efficienza, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non vengono allocati interi extent in tabelle che includono quantità di dati ridotte. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] include due tipi di extent: 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] include due tipi di extent: 
 
 * Gli extent **uniformi** sono di proprietà di un unico oggetto, pertanto le otto pagine dell'extent possono essere usate solo da tale oggetto.
 * Gli extent **misti** possono essere condivisi da un massimo di otto oggetti. Ognuna delle otto pagine dell'extent può essere di proprietà di un oggetto differente.
 
-In una nuova tabella o nuovo indice vengono generalmente allocate pagine da extent misti. Se la tabella o l'indice aumenta di dimensioni fino a includere otto pagine, per le allocazioni successive a esso dirette vengono utilizzati extent uniformi. Se si crea un indice per una tabella esistente che contiene un numero di righe sufficiente per generare otto pagine nell'indice, tutte le allocazioni per l'indice appartengono a extent uniformi.
+Fino a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] incluso, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non alloca interi extent in tabelle che includono quantità di dati ridotte. In una nuova tabella o in un nuovo indice vengono generalmente allocate pagine da extent misti. Se la tabella o l'indice aumenta di dimensioni fino a includere otto pagine, per le allocazioni successive a esso dirette vengono utilizzati extent uniformi. Se si crea un indice per una tabella esistente che contiene un numero di righe sufficiente per generare otto pagine nell'indice, tutte le allocazioni per l'indice appartengono a extent uniformi. Tuttavia, a partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], gli extent uniformi rappresentano l'impostazione predefinita per tutte le allocazioni nel database.
 
 ![Extents](../relational-databases/media/extents.gif)
+
+> [!NOTE]
+> Fino a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] incluso, è possibile usare il flag di traccia 1118 per modificare l'allocazione predefinita in modo da usare sempre extent uniformi. Per altre informazioni su questo flag di traccia, vedere [DBCC TRACEON - Flag di traccia](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+>   
+> A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la funzionalità fornita dal flag di traccia 1118 è abilitata automaticamente per TempDB. Per i database utente, questo comportamento è controllato dall'opzione `SET MIXED_PAGE_ALLOCATION` di `ALTER DATABASE`, con il valore predefinito OFF, e il flag di traccia 1118 non ha alcun effetto. Per altre informazioni, vedere [Opzioni ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 ## <a name="managing-extent-allocations-and-free-space"></a>Gestione delle allocazioni di extent e dello spazio libero 
 
@@ -98,10 +99,10 @@ Le strutture di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] c
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono usati due tipi di mappe per la registrazione delle allocazioni di extent: 
 
 - **Mappa di allocazione globale (GAM, Global Allocation Map)**   
-  Nelle pagine GAM vengono registrati gli extent allocati. In ogni pagina GAM possono essere registrati riferimenti a 64.000 extent, ovvero a circa 4 GB di dati. La pagina GAM include un bit per ogni extent dell'intervallo che la riguarda. Se il bit è 1, l'extent è disponibile, mentre se è 0, l'extent è allocato. 
+  Nelle pagine GAM vengono registrati gli extent allocati. In ogni pagina GAM possono essere registrati riferimenti a 64.000 extent, ovvero a circa 4 gigabyte (GB) di dati. La pagina GAM include 1 bit per ogni extent dell'intervallo che la riguarda. Se il bit è 1, l'extent è disponibile, mentre se è 0, l'extent è allocato. 
 
 - **Mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map)**   
-  Nelle pagine SGAM vengono registrate informazioni sugli extent misti con almeno una pagina inutilizzata. In ogni pagina SGAM possono essere registrati riferimenti a 64.000 extent, ovvero a circa 4 GB di dati. La pagina SGAM include un bit per ogni extent dell'intervallo che la riguarda. Se il bit è 1, l'extent viene utilizzato come extent misto e include una pagina disponibile. Se il bit è 0, l'extent non viene utilizzato come extent misto o rappresenta un extent misto di cui sono in uso tutte le pagine. 
+  Nelle pagine SGAM vengono registrate informazioni sugli extent misti con almeno una pagina inutilizzata. In ogni pagina SGAM possono essere registrati riferimenti a 64.000 extent, ovvero a circa 4 GB di dati. La pagina SGAM include 1 bit per ogni extent dell'intervallo che la riguarda. Se il bit è 1, l'extent viene utilizzato come extent misto e include una pagina disponibile. Se il bit è 0, l'extent non viene utilizzato come extent misto o rappresenta un extent misto di cui sono in uso tutte le pagine. 
 
 Nelle pagine GAM e SGAM per ogni extent sono impostati gli schemi di bit indicati di seguito, in base all'utilizzo corrente dell'extent. 
 
@@ -115,21 +116,21 @@ Ciò consente di utilizzare semplici algoritmi di gestione degli extent.
 -   Per allocare un extent uniforme, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cerca un bit 1 nella pagina GAM e lo imposta su 0. 
 -   Per cercare un extent misto con pagine libere, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cerca un bit 1 nella pagina SGAM. 
 -   Per allocare un extent misto, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cerca un bit 1 nella pagina GAM, lo imposta su 0 e quindi imposta su 1 anche il bit corrispondente nella pagina SGAM. 
--   Per deallocare un extent, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verifica che il bit GAM sia impostato su 1 e il bit SGAM su 0. Gli algoritmi effettivamente utilizzati internamente da [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sono più sofisticati rispetto a quanto descritto in questo argomento, poiché [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] distribuisce dati in un database in modo uniforme. Anche gli algoritmi reali, tuttavia, risultano semplificati, in quanto non devono gestire catene di informazioni sull'allocazione degli extent.
+-   Per deallocare un extent, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verifica che il bit GAM sia impostato su 1 e il bit SGAM su 0. Gli algoritmi effettivamente usati internamente da [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sono più sofisticati rispetto a quanto descritto in questo articolo, poiché [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] distribuisce dati in un database in modo uniforme. Anche gli algoritmi reali, tuttavia, risultano semplificati, in quanto non devono gestire catene di informazioni sull'allocazione degli extent.
 
 ### <a name="tracking-free-space"></a>Rilevamento dello spazio libero
 
-Le pagine **PFS (Page Free Space, Spazio libero nella pagina)** consentono di rilevare lo stato di allocazione di ogni pagina, se una singola pagina è stata allocata e la quantità di spazio libero in ogni pagina. PFS include un bit per ogni pagina, indicando se la pagina è allocata e, in tal caso, se si tratta di una pagina vuota, in uso dall'1% al 50%, dal 51% all'80%, dall'81% al 95% o dal 96% al 100%.
+Le pagine **PFS (Page Free Space, Spazio libero nella pagina)** consentono di rilevare lo stato di allocazione di ogni pagina, se una singola pagina è stata allocata e la quantità di spazio libero in ogni pagina. PFS include 1 byte per ogni pagina, indicando se la pagina è allocata e, in tal caso, se si tratta di una pagina vuota, in uso dall'1% al 50%, dal 51% all'80%, dall'81% al 95% o dal 96% al 100%.
 
-Dopo che un extent è stato allocato a un oggetto, il motore di database usa le pagine PFS per registrare le pagine dell'extent allocate e quelle disponibili. Queste informazioni vengono usate quando il motore di database deve allocare una nuova pagina. La quantità di spazio libero in una pagina viene mantenuta solo per le pagine heap e text/image. Questo spazio viene usato quando il motore di database deve trovare una pagina con spazio libero disponibile per includere una nuova riga inserita. Per gli indici non è necessario tenere traccia dello spazio libero nella pagina, in quanto il punto di inserimento di una nuova riga viene impostato dai valori delle chiavi di indice.
+Dopo che un extent è stato allocato a un oggetto, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilizza le pagine PFS per registrare le pagine dell'extent allocate e quelle disponibili. Queste informazioni vengono utilizzate quando [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] deve allocare una nuova pagina. La quantità di spazio libero in una pagina viene mantenuta solo per le pagine heap e text/image. Questo spazio viene utilizzato quando [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] deve trovare una pagina con spazio libero disponibile per includere una nuova riga inserita. Per gli indici non è necessario tenere traccia dello spazio libero nella pagina, in quanto il punto di inserimento di una nuova riga viene impostato dai valori delle chiavi di indice.
 
-Una pagina PFS è la prima pagina dopo la pagina dell'intestazione di un file di dati (con ID pagina 1). Questa pagina è seguita da una pagina GAM (ID pagina 2) e quindi da una pagina SGAM (ID pagina 3). È presente una pagina PFS circa 8.000 pagine dopo la prima. È presente un'altra pagina GAM 64.000 extent dopo la prima pagina GAM a pagina 2 e un'altra pagina SGAM 64.000 extent dopo la prima pagina SGAM a pagina 3. Nella figura seguente viene illustrata la sequenza di pagine utilizzata da [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] per allocare e gestire gli extent.
+Una pagina PFS è la prima pagina dopo la pagina dell'intestazione di un file di dati (con ID pagina 1). Questa pagina è seguita da una pagina GAM (ID pagina 2) e quindi da una pagina SGAM (ID pagina 3). Esistono una nuova pagina PFS circa 8.000 pagine dopo la prima pagina PFS e altre pagine PFS a intervalli di 8.000 pagine successive. È presente un'altra pagina GAM 64.000 extent dopo la prima pagina GAM a pagina 2 e un'altra pagina SGAM 64.000 extent dopo la prima pagina SGAM a pagina 3 e altre pagine GAM e SGAM a intervalli successivi di 64.000 extent. Nella figura seguente viene illustrata la sequenza di pagine utilizzata da [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] per allocare e gestire gli extent.
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
 ## <a name="managing-space-used-by-objects"></a>Gestione dello spazio usato dagli oggetti 
 
-Una **pagina della mappa di allocazione degli indici (IAM)** esegue il mapping degli extent in una parte da 4 gigabyte (GB) di un file di database usato da un'unità di allocazione. Le unità di allocazione possono essere di tre tipi:
+Una pagina **IAM (Index Allocation Map)** esegue il mapping degli extent in una parte da 4 GB di un file di database usato da un'unità di allocazione. Le unità di allocazione possono essere di tre tipi:
 
 - IN_ROW_DATA   
     Contiene una partizione di un heap o di un indice.
@@ -140,7 +141,7 @@ Una **pagina della mappa di allocazione degli indici (IAM)** esegue il mapping d
 - ROW_OVERFLOW_DATA   
    Contiene dati a lunghezza variabile archiviati in colonne varchar, nvarchar, varbinary o sql_variant che superano il limite della lunghezza di riga di 8.060 byte. 
 
-Ogni partizione di un heap o di un indice contiene almeno un'unità di allocazione IN_ROW_DATA. Può inoltre contenere un'unità di allocazione LOB_DATA o ROW_OVERFLOW_DATA, a seconda dello schema dell'heap o dell'indice. Per altre informazioni sulle unità di allocazione, vedere Organizzazione di tabelle e indici.
+Ogni partizione di un heap o di un indice contiene almeno un'unità di allocazione IN_ROW_DATA. Può inoltre contenere un'unità di allocazione LOB_DATA o ROW_OVERFLOW_DATA, a seconda dello schema dell'heap o dell'indice.
 
 Una pagina IAM include informazioni relative a un intervallo di 4 GB di un file, che corrisponde a quello di una pagina GAM o SGAM. Se l'unità di allocazione contiene extent derivati da più file o più intervalli di 4 GB di un file, saranno presenti più pagine IAM concatenate in una catena IAM. A ogni unità di allocazione corrisponde pertanto almeno una pagina IAM per ogni file in cui sono inclusi extent per l'unità di allocazione. Le pagine IAM per un file possono inoltre essere più di una se il numero di extent del file allocati all'unità di allocazione è maggiore del numero di extent che una pagina IAM è in grado di registrare. 
 
@@ -149,13 +150,13 @@ Una pagina IAM include informazioni relative a un intervallo di 4 GB di un file,
 Le pagine IAM vengono allocate per ogni unità di allocazione in base alle necessità e vengono posizionate in modo casuale nel file. La vista di sistema sys.system_internals_allocation_units punta alla prima pagina IAM relativa a un'unità di allocazione. e tutte le pagine IAM di tale unità di allocazione sono concatenate.
 
 > [!IMPORTANT]
-> La vista di sistema sys.system_internals_allocation_units è solo per uso interno ed è soggetta a modifiche. Non è garantita la compatibilità.
+> La vista di sistema `sys.system_internals_allocation_units` è solo per uso interno ed è soggetta a modifiche. Non è garantita la compatibilità.
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  
 Pagine IAM collegate in catena per unità di allocazione Ogni pagina IAM include un'intestazione che indica l'extent iniziale dell'intervallo di extent sul quale viene eseguito il mapping dalla pagina IAM. La pagina IAM include inoltre una mappa di bit di grandi dimensioni in cui ogni bit rappresenta un extent. Il primo bit della mappa rappresenta il primo extent dell'intervallo, il secondo bit rappresenta il secondo extent e così via. Se un bit è 0, significa che l'extent che rappresenta non è allocato all'unità di allocazione proprietaria della pagina IAM. Se il bit è 1, significa che l'extent che rappresenta è allocato all'unità di allocazione proprietaria della pagina IAM.
 
-Se in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è necessario inserire una nuova riga ma lo spazio libero nella pagina non è sufficiente, vengono utilizzate le pagine IAM e PFS per trovare una pagina per l'allocazione o, nel caso di un heap o di una pagina di tipo text/image, una pagina in cui sia disponibile spazio sufficiente per la riga da inserire. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilizza le pagine IAM per trovare gli extent allocati all'unità di allocazione. Per ogni extent, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cerca le pagine PFS per verificare se esiste una pagina da utilizzare. Poiché ogni pagina IAM e PFS include i dati di un numero di pagine elevato, il numero di pagine IAM e PFS di un database è ridotto. Ciò significa che le pagine IAM e PFS in genere risiedono nella memoria del pool di buffer di SQL Server e che pertanto è possibile eseguire rapidamente ricerche al loro interno. Per gli indici, il punto di inserimento di una nuova riga viene impostato dalla chiave dell'indice. In questo caso, il processo di ricerca illustrato in precedenza non viene eseguito.
+Se in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è necessario inserire una nuova riga ma lo spazio libero nella pagina non è sufficiente, vengono utilizzate le pagine IAM e PFS per trovare una pagina per l'allocazione o, nel caso di un heap o di una pagina di tipo text/image, una pagina in cui sia disponibile spazio sufficiente per la riga da inserire. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilizza le pagine IAM per trovare gli extent allocati all'unità di allocazione. Per ogni extent, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cerca le pagine PFS per verificare se esiste una pagina da utilizzare. Poiché ogni pagina IAM e PFS include i dati di un numero di pagine elevato, il numero di pagine IAM e PFS di un database è ridotto. Ciò significa che le pagine IAM e PFS in genere risiedono nella memoria del pool di buffer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e che pertanto è possibile eseguire rapidamente ricerche al loro interno. Per gli indici, il punto di inserimento di una nuova riga viene impostato dalla chiave dell'indice. In questo caso, il processo di ricerca illustrato in precedenza non viene eseguito.
 
 In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] viene allocato un nuovo extent a un'unità di allocazione solo se non viene trovata rapidamente una pagina di un extent esistente in cui sia disponibile spazio sufficiente per la riga da inserire. 
 
@@ -174,4 +175,7 @@ In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] viene allocato un 
 L'intervallo tra le pagine DCM e BCM corrisponde all'intervallo tra le pagine GAM e SGAM, ovvero 64.000 extent. All'interno di un file fisico le pagine DCM e BCM sono seguite dalle pagine GAM e SGAM:
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
- 
+
+## <a name="see-also"></a>Vedere anche
+[sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+[Heap &#40;tabelle senza indici cluster&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    

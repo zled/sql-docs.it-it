@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/27/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac3d00cf51c5e01d3cb83ac4b3564f458a78b8c6
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f8108bc8c08100fa8a28ab8e23058f056bff3b27
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088603"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646189"
 ---
 # <a name="database-engine-errors"></a>Errori del motore di database
 La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il testo del messaggio di errore dalla vista del catalogo sys.messages. 
@@ -1139,7 +1136,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   2325    |   16  |   no  |   %sIl tag di fine '%ls' non corrisponde al tag di apertura '%ls:%ls' alla riga %u.    |
 |   2326    |   16  |   no  |   %sIl tag di fine '%ls:%ls' non corrisponde al tag di apertura '%ls:%ls' alla riga %u.    |
 |   2327    |   16  |   no  |   %sContenuto o definizione di <%ls> mancante.    |
-|   2328    |   16  |   no  |   %sLo spazio dei nomi dello schema '%ls' non corrisponde al '%ls' della direttiva <include>.  |
+|   2328    |   16  |   no  |   %sLo spazio dei nomi dello schema '%ls' non corrisponde <include> al '%ls' della direttiva  |
 |   2329    |   16  |   no  |   %sLa stringa "%ls" non è un valore di durata valido.  |
 |   2331    |   16  |   no  |   %sUna ridefinizione deve avere se stessa come tipo di base. Posizione: '%ls'.    |
 |   2332    |   16  |   no  |   %sImpossibile utilizzare '%ls' con un operando vuoto. |
@@ -1378,6 +1375,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   2812    |   16  |   no  |   Impossibile trovare la stored procedure '%.*ls'.    |
 |   2813    |   16  |   no  |   Questa edizione di SQL Server non supporta %.*ls.   |
 |   [2814](mssqlserver-2814-database-engine-error.md)   |   10  |   no  |   Rilevata una possibile ricompilazione infinita per SQLHANDLE %hs, PlanHandle %hs, offset iniziale %d, offset finale %d. Motivo dell'ultima ricompilazione: % d.   |
+|   2628    |   16  |   no  |   I dati stringa o binari verranno troncati nella tabella '%.*ls', colonna '%.* ls'. Valore troncato: '%. *ls'.    |
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-3000---3999"></a>Errori da 3000 a 3999

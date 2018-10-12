@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - partially contained database
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24e5cc8b801a80b754b7aaed9ab72b69ae9e93fc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a2799865b5c04403ac62f3ed3352d1f0b0d545b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43107974"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849190"
 ---
 # <a name="contained-databases"></a>Database indipendenti
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +73,7 @@ ms.locfileid: "43107974"
   
      Gli utenti di Windows autorizzati e i membri dei gruppi di Windows autorizzati possono connettersi direttamente al database e non devono disporre di account di accesso nel database **master** . Il database considera attendibile l'autenticazione di Windows.  
   
- Agli utenti con account di accesso nel database **master** può essere concesso l'accesso a un database indipendente, ma si creerebbe una dipendenza dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pertanto, per la creazione di utenti in base agli account di accesso, vedere il commento per i database parzialmente indipendenti.  
+ Agli utenti con account di accesso nel database **master** può essere concesso l'accesso a un database indipendente, ma si creerebbe una dipendenza dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pertanto, per la creazione di utenti in base agli account di accesso, sono necessari database parzialmente indipendenti.
   
 > [!IMPORTANT]  
 >  L'abilitazione dei delegati di database parzialmente indipendenti controlla l'accesso all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i proprietari del database. Per altre informazioni, vedere [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  

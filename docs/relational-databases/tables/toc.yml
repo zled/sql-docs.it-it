@@ -40,6 +40,17 @@ items:
   href: use-column-sets.md
 - name: Utilizzare parametri con valori di tabella (Motore di database)
   href: use-table-valued-parameters-database-engine.md
+- name: Vincoli di arco
+  href: graph-edge-constraints.md
+  items:
+  - name: Crea
+    href: create-edge-constraints.md
+  - name: DELETE
+    href: delete-edge-constraint.md
+  - name: Modifica
+    href: modify-edge-constraint.md
+  - name: Vista
+    href: view-edge-constraint-properties.md
 - name: Vincoli di chiavi primarie ed esterne
   href: primary-and-foreign-key-constraints.md
   items:
@@ -130,9 +141,9 @@ items:
     href: lesson-1-converting-a-table-to-a-hierarchical-structure.md
   - name: 'Lezione 2: Creazione e gestione di dati in una tabella gerarchica'
     href: lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
-ms.openlocfilehash: fd255928f82fec333250060f5f70639eeb19aa8e
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 9d65ec6e5e5367da83a163d7ca8ee8e2040f6153
+ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42782052"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47217506"

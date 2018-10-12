@@ -5,9 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index size [SQL Server]
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - designing indexes [SQL Server], included columns
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb3becf8e8bee70f9a06bd570094771fa6fcde20
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 90acf990b3e498c73d8b25cc4a11f414f6e24c31
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074571"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717939"
 ---
 # <a name="create-indexes-with-included-columns"></a>Creare indici con colonne incluse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,13 +90,13 @@ ms.locfileid: "43074571"
   
 6.  Nella scheda **Colonne chiave indice** scegliere **Aggiungi**.  
   
-7.  Nella finestra di dialogo **Seleziona colonne da***nome_tabella* selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice.  
+7.  Nella finestra di dialogo **Seleziona colonne da**_nome\_tabella_ selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice.  
   
 8.  Fare clic su **OK**.  
   
 9. Nella scheda **Colonne incluse** scegliere **Aggiungi**.  
   
-10. Nella finestra di dialogo **Seleziona colonne da***nome_tabella* selezionare le caselle di controllo delle colonne di tabella da aggiungere all'indice come colonne non chiave.  
+10. Nella finestra di dialogo **Seleziona colonne da**_nome\_tabella_ selezionare le caselle di controllo delle colonne di tabella da aggiungere all'indice come colonne non chiave.  
   
 11. Fare clic su **OK**.  
   
