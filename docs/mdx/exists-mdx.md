@@ -1,5 +1,5 @@
 ---
-title: Esiste (MDX) | Documenti Microsoft
+title: Esiste (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7237a4023bf9ad67f0050951b60b1ee33db4a53f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 9b53932676cae30e4b1111c785a6a78c992a3685
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740610"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119593"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
-  Restituisce il set di tuple del primo set specificato in cui esiste almeno una tupla del secondo set specificato. Questa funzione consente di eseguire manualmente ciò che la funzione Auto Exist esegue automaticamente. Per ulteriori informazioni su auto EXIST, vedere [concetti chiave di MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+  Restituisce il set di tuple del primo set specificato in cui esiste almeno una tupla del secondo set specificato. Questa funzione consente di eseguire manualmente ciò che la funzione Auto Exist esegue automaticamente. Per altre informazioni su auto EXIST, vedere [concetti chiave di MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
   
- Se l'opzione facoltativa \<nome gruppo misure > viene specificato, la funzione restituisce tuple in cui esistano almeno una tupla da un secondo set e le tuple cui sono associate righe della tabella dei fatti del gruppo di misure specificato.  
+ Se l'opzione facoltativa \<nome del gruppo di misure > viene specificato, la funzione restituisce le tuple che esiste con uno o più tuple dal secondo set e le tuple cui sono associate righe della tabella dei fatti del gruppo di misure specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,11 +40,11 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
  *MeasureGroupName*  
  Espressione stringa valida che specifica il nome di un gruppo di misure.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
-1.  Le righe di gruppo di misure con misure contenenti valori null contribuiscono a **Exists** quando è specificato l'argomento MeasureGroupName. Questa situazione rappresenta la differenza tra il form Exists e la funzione Nonempty. Se la proprietà NullProcessing di queste misure è impostata su Preserve, le misure visualizzeranno valori Null quando le query vengono eseguite sulla parte di cubo specifica. In questo caso la funzione NonEmpty rimuoverà sempre le tuple da un set con valori di misura Null, mentre Exists con l'argomento MeasureGroupName non filtrerà tuple che hanno associato righe del gruppo di misure, anche se i valori di misura sono Null.  
+1.  Le righe di gruppo di misure con misure contenenti valori null contribuiscono alla **Exists** quando viene specificato l'argomento MeasureGroupName. Questa è la differenza tra questo form EXISTS e la funzione Nonempty: se la proprietà NullProcessing di queste misure è impostata su Preserve, ciò significa che le misure saranno indicati i valori Null quando vengono eseguite query in base a tale parte del cubo. NonEmpty rimuoverà sempre le tuple da un set con valori di misura Null, mentre Exists con l'argomento MeasureGroupName non filtrerà tuple cui sono associate righe di gruppo di misure, anche se i valori di misura sono Null.  
   
-2.  Se *MeasureGroupName* parametro viene utilizzato, i risultati dipenderanno se sono presenti misure visibili nel gruppo di misure a cui fa riferimento; se non sono disponibili misure visibili nel gruppo di misure di cui viene fatto riferimento, EXISTS restituisce sempre un set vuoto, indipendentemente dai valori di *Set_Expression1* e *Set_Expression2*.  
+2.  Se *MeasureGroupName* parametro viene utilizzato, i risultati variano in base se sono presenti misure visibili nel gruppo di misure cui si fa riferimento; se non sono disponibili misure visibili nel gruppo di misure cui si fa riferimento, EXISTS restituisce sempre un set vuoto, indipendentemente dai valori della *Set_Expression1* e *Set_Expression2*.  
   
 ## <a name="examples"></a>Esempi  
  Clienti che vivono in California:  
@@ -94,7 +94,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
  [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)   

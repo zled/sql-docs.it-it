@@ -1,53 +1,66 @@
 ---
 title: Ripristinare un database in cluster di big data di SQL Server | Microsoft Docs
-description: ''
+description: Questo articolo illustra come ripristinare un database nell'istanza master di un cluster di big data di SQL Server.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 04514fb0184fa28e0ba959f3dd33cb2e1ec945cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e921948cb5dcd0bda52ed9ebcc07c8a2496611ff
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796448"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905051"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Ripristinare un database nell'istanza master del cluster dei big data di SQL Server
 
-Per portare un database di SQL Server esistente nell'istanza master, è consigliabile utilizzare un backup, copia e ripristino approccio.  In questo esempio verrà illustrato come ripristinare il database AdventureWorks, ma è possibile usare qualsiasi backup del database che è necessario.  È possibile scaricare il backup di AdventureWorks [qui](https://www.microsoft.com/en-us/download/details.aspx?id=49502).
+Questo articolo descrive come ripristinare un database esistente nell'istanza master di un cluster di big data di SQL Server 2019 (anteprima). Il metodo consigliato è usare una copia di backup, e il ripristino approccio.
 
-In primo luogo, il backup del database di SQL Server esistente in SQL Server in Windows o Linux usando uno dei normali metodi di creazione di un backup del database.
+## <a name="backup-your-existing-database"></a>Eseguire il backup del database esistente
+
+In primo luogo, il backup del database di SQL Server esistente da SQL Server in Windows o Linux. Usare le tecniche standard di backup con Transact-SQL o con uno strumento come SQL Server Management Studio (SSMS).
+
+Questo articolo illustra come ripristinare il database AdventureWorks, ma è possibile usare qualsiasi backup del database. 
+
+> [!TIP]
+> È possibile scaricare il backup di AdventureWorks [qui](https://www.microsoft.com/en-us/download/details.aspx?id=49502).
+
+## <a name="copy-the-backup-file"></a>Copiare il file di backup
 
 Copiare il file di backup nel contenitore di SQL Server nel pod istanza master del cluster Kubernetes.
 
 ```bash
-kubectl cp <path to .bak file> mssql-data-pool-master-0:/tmp/ -c mssql-data-pool-data -n <name of your cluster>
+kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your cluster>
 ```
 
 Esempio:
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-data-pool-master-0:/tmp/ -c mssql-data-pool-data -n clustertest
+kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c mssql-server -n clustertest
 ```
 
 Verificare quindi che il file di backup è stato copiato nel contenitore di pod.
 
 ```bash
-kubectl exec -it mssql-data-pool-master-0 -n <name of your cluster> -c mssql-data-pool-data -- bin/bash
-root@mssql-data-pool-master-0:/# ls /tmp
-root@mssql-data-pool-master-0:/# exit
+kubectl exec -it mssql-master-pool-0 -n <name of your cluster> -c mssql-server -- bin/bash
+cd /var/
+ls /tmp
+exit
 ```
 
 Esempio:
 
 ```bash
-kubectl exec -it mssql-data-pool-master-0 -n clustertest -c mssql-data-pool-data -- bin/bash
-root@mssql-data-pool-master-0:/# ls /tmp
+kubectl exec -it mssql-master-pool-0 -n clustertest -c mssql-server -- bin/bash
+ls /tmp
+exit
 ```
 
-Successivamente, ripristinare il backup del database per istanza master di SQL Server.  Se si sta ripristinando un backup di database che è stato creato in Windows, è necessario ottenere i nomi dei file.  In Ops Studio connesso all'istanza master, eseguire questo script SQL:
+## <a name="restore-the-backup-file"></a>Ripristinare il file di backup
+
+Successivamente, ripristinare il backup del database per istanza master di SQL Server.  Se si sta ripristinando un backup di database che è stato creato in Windows, è necessario ottenere i nomi dei file.  In Azure Data Studio, connettersi all'istanza master ed eseguire questo script SQL:
 
 ```sql
 RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
@@ -61,7 +74,7 @@ RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
 
 ![Elenco di file di backup](media/restore-database/database-restore-file-list.png)
 
-A questo punto, ripristinare il database con uno script simile al seguente, sostituendo i nomi o i percorsi in base alle esigenze a seconda del backup del database.
+A questo punto, ripristinare il database. Lo script seguente è riportato un esempio. Sostituire i nomi o i percorsi in base alle esigenze a seconda del backup del database.
 
 ```sql
 RESTORE DATABASE AdventureWorks2016CTP3
@@ -71,10 +84,28 @@ WITH MOVE 'AdventureWorks2016CTP3_Data' TO '/var/opt/mssql/data/AdventureWorks20
         MOVE 'AdventureWorks2016CTP3_mod' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_mod'
 ```
 
-A questo punto, se si desidera che il database di valore elevato essere in grado di accedere ai pool di dati che è necessario configurare il pool di dati le stored procedure aprendo ed eseguendo gli script dal repository GitHub.
+## <a name="configure-data-pool-and-hdfs-access"></a>Configurare l'accesso HDFS e pool di dati
 
-Eseguire il **elevata-valore-db-configuration\data_pool_ddl_install. SQL** script.
+A questo punto, per l'istanza master di SQL Server al pool di dati di accesso e HDFS, eseguire le procedure di pool archiviati pool e l'archiviazione dei dati. Eseguire gli script di Transact-SQL seguenti nel database appena ripristinato:
 
-- Supporto stored procedure di impostazione
+```sql
+USE AdventureWorks2016CTP3
+GO 
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+    CREATE EXTERNAL DATA SOURCE SqlDataPool
+    WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
 
-Eseguire il **elevata-valore-db-configuration\supportability. SQL** script.
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+    CREATE EXTERNAL DATA SOURCE SqlStoragePool
+    WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+GO
+```
+
+> [!NOTE]
+> È necessario eseguire questi script di installazione solo per i database ripristinati da versioni precedenti di SQL Server. Se si crea un nuovo database nell'istanza master di SQL Server, pool e l'archiviazione del pool store procedure dati sono già configurate per l'utente.
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Per altre informazioni sui cluster di big data di SQL Server, vedere Panoramica riportata di seguito:
+
+- [Che cos'è SQL Server 2019 i cluster di big data?](big-data-cluster-overview.md)

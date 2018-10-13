@@ -17,17 +17,17 @@ ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d077da2847a430b2a225ea896b1eafd289218a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4d2a8377466876270bcedd07138cf9cf30ef211
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603959"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906321"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Risolve le differenze tra le colonne nella tabella di Azure remota per le colonne di tabella abilitata per l'estensione SQL Server.  
+  Riconcilia le colonne nella tabella di Azure remota per le colonne nella tabella abilitata per l'estensione SQL Server.  
     
   **sp_rda_reconcile_columns** aggiunge colonne alla tabella remota presenti nella tabella abilitata per l'estensione SQL Server, ma non nella tabella remota. Queste colonne possono essere colonne accidentalmente eliminate dalla tabella remota. Tuttavia **sp_rda_reconcile_columns** non eliminare le colonne della tabella remota presenti nella tabella remota, ma non nella tabella di SQL Server.
   

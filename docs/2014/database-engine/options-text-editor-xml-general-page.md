@@ -13,18 +13,18 @@ ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 37c85ef93f04dd16d8ea3e00fa9ec99f40d2e1cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77d7d1616147a1461ac163a4a99e05c2b1c61e73
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157808"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48904914"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Opzioni (Editor di testo - XML - pagina Generale)
   Utilizzare questa finestra di dialogo per cambiare il comportamento di modifica generale dell'editor XML utilizzato per modificare i documenti XML. Per visualizzare le impostazioni scegliere **Opzioni** dal menu **Strumenti** , espandere la sottocartella **XML** e quindi fare clic su **Generale**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Opzioni di impostazione in più posizioni  
- Opzioni per l'Editor XML possono essere impostata anche il **tutti i linguaggi generale** finestra di dialogo. Se si utilizza la finestra di dialogo **Tutti i linguaggi** per impostare opzioni diverse per gli altri editor di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , ad esempio DMX o MDX, è necessario reimpostare le opzioni dell'editor XML tramite questa finestra di dialogo.  
+ Le opzioni per l'editor XML possono essere impostate anche nella finestra di dialogo **Tutti i linguaggi - Generale** . Se si utilizza la finestra di dialogo **Tutti i linguaggi** per impostare opzioni diverse per gli altri editor di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , ad esempio DMX o MDX, è necessario reimpostare le opzioni dell'editor XML tramite questa finestra di dialogo.  
   
 ## <a name="statement-completion"></a>Completamento istruzioni  
  **Elenco membri automatico**  

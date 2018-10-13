@@ -15,15 +15,15 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ea5731811b1ac6c0e6dcde82fc80a7844cdab1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5afd389288de04ec77f3258706bf8fd31b228ec
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177792"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120338"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Eseguire un failover manuale forzato di un gruppo di disponibilità (SQL Server)
-  In questo argomento viene illustrato come eseguire un failover forzato (con possibile perdita di dati) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un failover forzato rappresenta un tipo di failover manuale che deve essere utilizzato esclusivamente per il ripristino di emergenza, se non è possibile eseguire un [failover manuale pianificato](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Se si forza il failover in una replica secondaria non sincronizzata, è possibile che vengano persi alcuni dati. È pertanto consigliabile forzare il failover solo se è necessario ripristinare immediatamente il servizio nel gruppo di disponibilità e si è disposti a rischiare la perdita di dati.  
+  In questo argomento viene illustrato come eseguire un failover forzato (con possibile perdita di dati) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un failover forzato rappresenta un tipo di failover manuale che deve essere utilizzato esclusivamente per il ripristino di emergenza, se non è possibile eseguire un [failover manuale pianificato](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Se si forza il failover in una replica secondaria non sincronizzata, è possibile che vengano persi alcuni dati. È pertanto consigliabile forzare il failover solo se è necessario ripristinare immediatamente il servizio nel gruppo di disponibilità e si è disposti a rischiare la perdita di dati.  
   
  Dopo un failover forzato, la destinazione a cui è stato eseguito il failover del gruppo di disponibilità diventa la nuova replica primaria. I database secondari nelle repliche secondarie rimanenti vengono sospesi e dovranno essere ripresi manualmente. Quando la replica primaria precedente diventa disponibile, passa al ruolo secondario. In questo modo i database primari precedenti diventano database secondari e passano allo stato SUSPENDED. Prima di riprendere uno specifico database secondario, è possibile che si riesca a recuperare i dati perduti. Si tenga tuttavia presente che il troncamento del log delle transazioni viene ritardato in uno specifico database primario mentre i relativi database secondari sono sospesi.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48177792"
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per forzare il failover (con possibile perdita di dati)**  
   
-1.  Connettersi a un'istanza del server che ospita una replica con ruolo in stato SECONDARY o RESOLVING nel gruppo di disponibilità di cui è necessario eseguire il failover.  
+1.  Connettersi a un'istanza del server che ospita una replica il cui ruolo è in stato SECONDARY o RESOLVING nel gruppo di disponibilità che deve essere sottoposto a failover.  
   
 2.  Utilizzare l'istruzione [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) , come indicato di seguito:  
   
@@ -151,13 +151,13 @@ ms.locfileid: "48177792"
 ##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
  **Per forzare il failover (con possibile perdita di dati)**  
   
-1.  Spostarsi sulla directory (`cd`) di un'istanza del server che ospita una replica con ruolo in stato SECONDARY o RESOLVING nel gruppo di disponibilità di cui è necessario eseguire il failover.  
+1.  Passare alla directory (`cd`) a un'istanza del server che ospita una replica il cui ruolo è in stato SECONDARY o RESOLVING nel gruppo di disponibilità che deve essere sottoposto a failover.  
   
 2.  Utilizzare il cmdlet `Switch-SqlAvailabilityGroup` con il parametro `AllowDataLoss` in uno dei formati seguenti:  
   
     -   `-AllowDataLoss`  
   
-         Per impostazione predefinita, specificando il parametro `-AllowDataLoss` con `Switch-SqlAvailabilityGroup`, viene segnalato che il failover forzato può comportare la perdita di transazioni di cui non è stato eseguito il commit e viene richiesta la conferma dell'operazione. Per continuare, immettere `Y`; per annullare l'operazione, immettere `N`.  
+         Per impostazione predefinita, specificando il parametro `-AllowDataLoss` con `Switch-SqlAvailabilityGroup`, viene segnalato che il failover forzato può comportare la perdita di transazioni di cui non è stato eseguito il commit e viene richiesta la conferma dell'operazione. Per continuare, immettere `Y`. Per annullare l'operazione, immettere `N`.  
   
          Nell'esempio seguente viene eseguito un failover forzato (con possibile perdita di dati) del gruppo di disponibilità `MyAg` nella replica secondaria nell'istanza del server denominata `SecondaryServer\InstanceName`. Verrà richiesto di confermare questa operazione.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "48177792"
   
     -   **-AllowDataLoss-Force**  
   
-         Per iniziare un failover forzato senza conferma, specificare i parametri `-AllowDataLoss` e `-Force`. Ciò si rivela utile per includere il comando in uno script ed eseguirlo senza l'interazione dell'utente.  Tuttavia, usare il `-Force` opzione con cautela, perché un failover forzato può causare la perdita di dati dai database che fanno parte del gruppo di disponibilità.  
+         Per iniziare un failover forzato senza conferma, specificare i parametri `-AllowDataLoss` e `-Force`. Ciò si rivela utile per includere il comando in uno script ed eseguirlo senza l'interazione dell'utente.  Utilizzare tuttavia l'opzione `-Force` con cautela, perché un failover forzato può causare la perdita di dati dai database che fanno parte del gruppo di disponibilità.  
   
          Nell'esempio seguente viene eseguito il failover forzato (con possibile perdita di dati) del gruppo di disponibilità `MyAg` nell'istanza del server denominata `SecondaryServer\InstanceName`. Con l'opzione `-Force` viene eliminata la conferma di questa operazione.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "48177792"
         ```  
   
     > [!NOTE]  
-    >  Per visualizzare la sintassi di un cmdlet, usare il `Get-Help` cmdlet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ambiente PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Per visualizzare la sintassi di un cmdlet, utilizzare il cmdlet `Get-Help` nell'ambiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 3.  Dopo avere forzato il failover di un gruppo di disponibilità, completare i passaggi necessari. Per ulteriori informazioni, vedere [Completamento: Attività essenziali dopo un failover forzato](#FollowUp), più avanti in questo argomento.  
   

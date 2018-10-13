@@ -12,12 +12,12 @@ ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfed461589882e91f4fa4ec2394bc858def67d96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d7fe9246e0b689335d43a124c4a2391778f127a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182271"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905021"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>Elemento &lt;xsd:redefine&gt;
   L'elemento **redefine** dello schema XSD W3C rende disponibile il supporto per la ridefinizione dei componenti di schema. Tuttavia, il supporto per questa direttiva è potenzialmente i costi di prestazioni e richiede che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riconvalidare tutte le istanze del `xml` tipo di dati associato allo schema ridefinito. Di conseguenza, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questo elemento. XML Schema che includono l'elemento **\<xsd:redefine>** verranno rifiutati dal server.  
@@ -26,11 +26,11 @@ ms.locfileid: "48182271"
   
 1.  Creare una nuova raccolta XML Schema con i componenti di schema modificati.  
   
-2.  Riscrivere tutti i tipi di dati `xml` (XML DT) che utilizzano la raccolta XML Schema da ridefinire per utilizzare invece la nuova raccolta XML Schema. A questo scopo, utilizzare l'opzione ALTER COLUMN del comando ALTER TABLE per riscrivere colonne o modificare i vincoli della raccolta XML Schema su variabili o parametri.  
+2.  Riscrivere tutti i tipi di dati `xml` (XML DT) che usano la raccolta XML Schema da ridefinire per usare in sostituzione la nuova raccolta XML Schema. A questo scopo, utilizzare l'opzione ALTER COLUMN del comando ALTER TABLE per riscrivere colonne o modificare i vincoli della raccolta XML Schema su variabili o parametri.  
   
 3.  Eliminare la versione obsoleta della raccolta XML Schema.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Requisiti e limitazioni per le raccolte di XML Schema nel server](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

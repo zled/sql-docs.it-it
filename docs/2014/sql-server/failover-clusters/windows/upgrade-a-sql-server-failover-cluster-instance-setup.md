@@ -17,12 +17,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d10eb18560574e647c443caf4887b8e893d7501
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132111"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906491"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server (installazione)
   Per aggiornare un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un cluster di failover di [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], è possibile utilizzare l'Installazione guidata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o il prompt dei comandi.  
@@ -44,7 +44,7 @@ ms.locfileid: "48132111"
   
 -   Il programma di installazione consente di installare .NET Framework 4.0 in un sistema operativo di tipo cluster. Per ridurre il tempo di inattività, si consideri di installare .NET Framework 4.0 prima di eseguire il programma di installazione.  
   
--   Per assicurarsi che il componente di Visual Studio può essere installato correttamente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è necessario installare un aggiornamento. Il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verifica la presenza di tale aggiornamento, quindi richiede di scaricarlo e installarlo prima che sia possibile procedere all'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per evitare l'interruzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programma di installazione, è possibile scaricare e installare l'aggiornamento prima dell'esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di installazione come descritto di seguito (o installare tutti gli aggiornamenti per .NET 3.5 SP1 disponibili in Windows Update):  
+-   Per garantire la corretta installazione del componente Visual Studio, per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è necessaria l'installazione di un aggiornamento. Il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verifica la presenza di tale aggiornamento, quindi richiede di scaricarlo e installarlo prima che sia possibile procedere all'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per evitare l'interruzione dell'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è possibile scaricare e installare l'aggiornamento prima di avviare l'operazione di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , come illustrato di seguito (o installare tutti gli aggiornamenti per .NET 3.5 SP1 disponibili in Windows Update).  
   
      Se si installano [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] in un computer con sistema operativo Windows Server 2008 SP2, è possibile ottenere l'aggiornamento necessario da [qui](http://go.microsoft.com/fwlink/?LinkId=198093)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48132111"
   
 #### <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Per aggiornare un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
-1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , quindi nella cartella radice fare doppio clic sul file Setup.exe. Per eseguire l'installazione da una condivisione di rete, passare alla cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe. È possibile che venga richiesto di installare i prerequisiti se non sono già stati installati in precedenza.  
+1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], quindi nella cartella radice fare doppio clic sul file Setup.exe. Per eseguire l'installazione da una condivisione di rete, passare alla cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe. È possibile che venga richiesto di installare i prerequisiti se non sono già stati installati in precedenza.  
   
 2.  > [!IMPORTANT]  
     >  Per altre informazioni sui passaggi 3 e 4, vedere la [Best Practices prima l'aggiornamento di Cluster di Failover](#BestPractices) sezione.  

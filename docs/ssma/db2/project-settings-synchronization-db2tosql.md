@@ -10,12 +10,12 @@ ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0aa572611a522e1a83f334e13c36a7fc178c6090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dce11338b2d67412df1259e48d50c0734778d0d
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791769"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071765"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Progetto (sincronizzazione) (DB2ToSQL)
 La pagina di sincronizzazione del **impostazioni del progetto** finestra di dialogo contiene impostazioni che consentono di personalizzare la modalità SSMA carica e gli aggiornamenti di database oggetti, ad esempio tabelle e stored procedure, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -57,7 +57,7 @@ Specifica l'impostazione predefinita nella finestra di dialogo sincronizzazione 
 **Azione quando i metadati degli oggetti locali sono mancanti**  
 Specifica l'impostazione predefinita nella finestra di dialogo sincronizzazione quando mancano i metadati locali. Viene impostato un valore predefinito **aggiornare dal database**.  
   
--   Se si seleziona **aggiornare dal Database**, SSMA SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
+-   Se si seleziona **aggiornare dal Database**, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
   
 -   Se si seleziona **Skip**, SSMA non eseguirà alcuna azione di aggiornamento.  
   

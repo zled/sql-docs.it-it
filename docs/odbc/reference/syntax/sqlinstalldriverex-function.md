@@ -20,12 +20,12 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6e034ff8b17852b40a604beb8ce1d38bdd1612b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b6bae692efdb1d89642eea52e499b0fb2800377
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802465"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169331"
 ---
 # <a name="sqlinstalldriverex-function"></a>Funzione SQLInstallDriverEx
 **Conformità**  
@@ -100,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Commenti  
  Il *lpszDriver* argomento è un elenco di attributi in forma di coppie parola chiave / valore. Ogni coppia viene terminata con un byte null e l'intero elenco viene terminata con un byte null. (Vale a dire, due byte null contrassegnano la fine dell'elenco.) Il formato di questo elenco è come segue:  
   
- *driver desc* **\\**0Driver**=***driver-DLL-filename***\\**0 [programma di installazione **= ***programma di installazione-DLL-filename***\\**0]  
+ _driver desc_ **\\**0Driver**=**_driver-DLL-filename_ **\\**0 [programma di installazione**=**_programma di installazione-DLL-filename_<b>\\</b>0]  
   
- [*driver-attr-parolachiave1***=*** value1 ***\\**0] [* driver-attr-keyword2***=*** Value2 ***\\**0]... **\\**0  
+ [_driver-attr-parolachiave1_**=**_valore1_<b>\\</b>0] [_driver-attr-keyword2_  **=** _value2_<b>\\</b>0]... <b> \\ </b>0  
   
  dove \0 è un byte null e *driver-attr-keywordn* è qualsiasi parola chiave degli attributi del driver. Le parole chiave devono essere visualizzato nell'ordine specificato. Ad esempio, si supponga che un driver per i file di testo formattato dispone di driver separato e file DLL di installazione e possono usare i file con le estensioni di file con estensione txt e. csv. Il *lpszDriver* argomento per questo driver potrebbe essere come segue:  
   

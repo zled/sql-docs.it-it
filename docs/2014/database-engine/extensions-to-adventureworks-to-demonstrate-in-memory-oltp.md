@@ -10,17 +10,17 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ba04ced0358af468818bb755b1f3f2e9e14e0f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192191"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120384"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Estensioni a AdventureWorks per illustrare OLTP in memoria
     
 ## <a name="overview"></a>Panoramica  
- In questo esempio viene illustrata la nuova [!INCLUDE[hek_2](../includes/hek-2-md.md)] funzionalità, che fa parte di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Mostra le nuove tabelle con ottimizzazione per la memoria e stored procedure compilate in modo nativo che può essere utilizzato per illustrare i vantaggi delle prestazioni di [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
+ In questo esempio viene illustrata la nuova funzionalità di [!INCLUDE[hek_2](../includes/hek-2-md.md)], che fa parte di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Vengono mostrate le nuove tabelle ottimizzate per la memoria e le nuove stored procedure compilate in modo nativo, utilizzabili per illustrare i vantaggi a livello di prestazioni di [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
 >  Per visualizzare questo argomento per SQL Server 2016, vedere [Estensioni a AdventureWorks per illustrare OLTP in memoria](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
@@ -87,9 +87,9 @@ ms.locfileid: "48192191"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Scaricare lo script di esempio '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL ' dal [esempio SQL Server 2014 RTM In-Memory OLTP](http://go.microsoft.com/fwlink/?LinkID=396372) in una cartella locale.  
+5.  Scaricare lo script di esempio "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sq" dalla pagina relativa all' [esempio di OLTP in memoria di SQL Server 2014 RTM](http://go.microsoft.com/fwlink/?LinkID=396372) in una cartella locale.  
   
-6.  Aggiornare il valore della variabile "checkpoint_files_location" nello script "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql" per puntare al percorso di destinazione per i file del checkpoint di [!INCLUDE[hek_2](../includes/hek-2-md.md)]. I file del checkpoint devono essere posizionati in un'unità con prestazioni di I/O sequenziali ottimali.  
+6.  Aggiornare il valore della variabile "checkpoint_files_location" nello script "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql" per puntare al percorso di destinazione per i file del checkpoint di [!INCLUDE[hek_2](../includes/hek-2-md.md)] . I file del checkpoint devono essere posizionati in un'unità con prestazioni di I/O sequenziali ottimali.  
   
      Aggiornare il valore della variabile 'database_name' in modo da puntare al database AdventureWorks2014.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "48192191"
   
 -   *Colonne calcolate*. Le colonne calcolate SalesOrderNumber e TotalDue vengono omesse, poiché in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] non sono supportate colonne calcolate nelle tabelle ottimizzate per la memoria. La nuova vista Sales.vSalesOrderHeader_extended_inmem riflette le colonne SalesOrderNumber e TotalDue. Pertanto, può essere utilizzata qualora queste colonne fossero necessarie.  
   
--   *Vincoli di chiave esterna* non sono supportati per le tabelle ottimizzate per la memoria in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Inoltre, SalesOrderHeader_inmem è una tabella attiva nel carico di lavoro di esempio e i vincoli di chiavi esterne comportano un'ulteriore elaborazione per tutte le operazioni DML, in quanto sono necessarie ricerche in tutte le altre tabelle a cui viene fatto riferimento in questi vincoli. Pertanto, si presuppone che l'applicazione garantisca l'integrità referenziale e questa integrità non venga convalidata quando vengono inserite le righe. L'integrità referenziale per i dati di questa tabella può essere verificata utilizzando la stored procedure dbo.usp_ValidateIntegrity, tramite lo script seguente:  
+-   *Vincoli di chiave esterna*. Non sono supportati per le tabelle ottimizzate per la memoria in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Inoltre, SalesOrderHeader_inmem è una tabella attiva nel carico di lavoro di esempio e i vincoli di chiavi esterne comportano un'ulteriore elaborazione per tutte le operazioni DML, in quanto sono necessarie ricerche in tutte le altre tabelle a cui viene fatto riferimento in questi vincoli. Pertanto, si presuppone che l'applicazione garantisca l'integrità referenziale e questa integrità non venga convalidata quando vengono inserite le righe. L'integrità referenziale per i dati di questa tabella può essere verificata utilizzando la stored procedure dbo.usp_ValidateIntegrity, tramite lo script seguente:  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -223,7 +223,7 @@ ms.locfileid: "48192191"
   
 -   *Tipi alias definiti dall'utente (UDT)* . Nella tabella originale viene utilizzato il tipo di dati definito dall'utente dbo.Flag, equivalente al bit del tipo di dati di sistema. Nella tabella migrata viene utilizzato, in alternativa, il tipo di dati bit.  
   
--   *Regole di confronto BIN2* : le colonne Name e ProductNumber sono incluse nelle chiavi di indice e devono pertanto disporre di regole di confronto BIN2 in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. In questo caso, si presuppone che l'applicazione non si basi sulle specifiche delle regole di confronto, quale l'esclusione della distinzione tra maiuscole e minuscole.  
+-   *Regole di confronto BIN2* . Le colonne Name e ProductNumber sono incluse nelle chiavi di indice e devono pertanto disporre di regole di confronto BIN2 in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. In questo caso, si presuppone che l'applicazione non si basi sulle specifiche delle regole di confronto, quale l'esclusione della distinzione tra maiuscole e minuscole.  
   
 -   *Rowguid* . La colonna rowguid viene omessa. Per informazioni dettagliate, vedere la descrizione della tabella SalesOrderHeader.  
   
@@ -412,7 +412,7 @@ ms.locfileid: "48192191"
   
 -   -S. Nome dell'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alla quale connettersi  
   
--   -E. Utilizzare l'autenticazione di Windows per la connessione (valore predefinito); se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , usare le opzioni –U e –P per specificare rispettivamente il nome utente e la password  
+-   -E. Utilizzare l'autenticazione di Windows per la connessione (valore predefinito); se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], usare le opzioni –U e –P per specificare rispettivamente il nome utente e la password  
   
 -   -d. Nome del database, per questo esempio AdventureWorks2014  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- Si può notare un totale pari a circa 6,5 GB di dati. Si noti che le dimensioni degli indici delle tabelle SalesOrderHeader_inmem e SalesOrderDetail_inmem equivalgono alle dimensioni degli indici prima dell'inserimento degli ordini vendita. Le dimensioni dell'indice non sono state modificate perché in entrambe le tabelle vengono utilizzati indici hash e questo tipo di indice è statico.  
+ Si può notare un totale pari a circa 6,5 GB di dati. Si noti che le dimensioni degli indici su tabelle SalesOrderHeader_inmem e SalesOrderDetail_inmem equivalgono alle dimensioni degli indici prima di inserire gli ordini di vendita. Le dimensioni dell'indice non sono state modificate perché in entrambe le tabelle vengono utilizzati indici hash e questo tipo di indice è statico.  
   
 #### <a name="after-demo-reset"></a>Dopo la reimpostazione della dimostrazione  
  La stored procedure Demo.usp_DemoReset può essere utilizzata per reimpostare la dimostrazione. Tramite essa vengono eliminati i dati nelle tabelle SalesOrderHeader_inmem e SalesOrderDetail_inmem e vengono reinizializzati i dati dalle tabelle originali SalesOrderHeader e SalesOrderDetail.  

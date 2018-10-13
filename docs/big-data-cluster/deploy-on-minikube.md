@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 1f20f2adc916a456e4a1975804fac1640ee95f69
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: a01d7e1f0162d4dc5cc1d604d5c780cf101646a5
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818049"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100342"
 ---
 # <a name="configure-minikube-for-sql-server-2019-ctp-20"></a>Configurare Minikube per SQL Server 2019 CTP 2.0
 
@@ -23,7 +23,7 @@ Minikube è uno strumento che rende più semplice eseguire Kubernetes in un sing
 - Per eseguire un cluster di Minikube per SQL Server 2019 CTP 2.0 in una configurazione del cluster SQL Big Data, è consigliabile che il computer dispone di almeno 32 GB di RAM.
 
    > [!TIP] 
-   > Se il computer disponga di memoria insufficiente, quindi modificare la configurazione del cluster in modo che vengano create solo 3 istanze: un'istanza di master e due istanze di calcolo.
+   > Se nel computer è solo il valore minimo consigliato di memoria, quindi configurare la distribuzione del cluster per avere solo 1 istanza di calcolo del pool, 1 istanza del pool di dati e istanza del pool di archiviazione di 1. Questa configurazione deve essere utilizzata solo per gli ambienti di valutazione in cui non è importante la durabilità e disponibilità dei dati. Vedere le [documentazione sulla distribuzione](deployment-guidance.md#define-environment-variables) per altre informazioni sulle variabili di ambiente da impostare per configurare il numero di repliche per i pool di dati, di calcolo di pool e i pool di archiviazione.
 
 - La virtualizzazione VT-x o AMD-v deve essere abilitata nel BIOS del computer.
 

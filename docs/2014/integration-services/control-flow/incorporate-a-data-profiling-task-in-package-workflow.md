@@ -13,12 +13,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ac9b22a6f7157123ab233a6c10f24846eaca8fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74e2ca64c47aaf1b0388fa0d58a3e76f2ec9d20e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147571"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085517"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporamento di un'attività Profiling dati nel flusso di lavoro del pacchetto
   Il profiling dati e la pulizia non sono attività potenziali per un processo automatizzato nelle fasi iniziali. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]l'output dell'attività Profiling dati richiede di solito un'analisi visiva e una valutazione umana per determinare se le violazioni segnalate sono significative o eccessive. Anche dopo il riconoscimento di problemi di qualità dei dati, è comunque necessario definire con attenzione un piano ben studiato per tentare di individuare l'approccio migliore per la pulizia.  
@@ -265,13 +265,13 @@ ms.locfileid: "48147571"
 8.  Chiudere l'ambiente di sviluppo dello script, quindi l'editor attività Script.  
   
 #### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Codice alternativo: lettura dell'output del profilo da una variabile  
- La procedura riportata in precedenza indica come caricare l'output dell'attività Profiling dati da un file. Un metodo alternativo consiste nel caricare questo output da una variabile del pacchetto. A tale scopo, è necessario apportare le modifiche seguenti al codice di esempio:  
+ La procedura precedente illustra come caricare l'output dell'attività Profiling dati da un file. Un metodo alternativo consiste nel caricare questo output da una variabile del pacchetto. A tale scopo, è necessario apportare le modifiche seguenti al codice di esempio:  
   
--   Chiamare il `LoadXml` metodo del `XmlDocument` classe anziché il `Load` (metodo).  
+-   Chiamare il metodo `LoadXml` della classe `XmlDocument` anziché il metodo `Load`.  
   
--   Nell'Editor attività Script, aggiungere il nome della variabile del pacchetto che contiene l'output del profilo per l'attività `ReadOnlyVariables` elenco.  
+-   Nell'editor attività Script aggiungere il nome della variabile del pacchetto che contiene l'output del profilo all'elenco `ReadOnlyVariables` dell'attività.  
   
--   Passare il valore di stringa della variabile a cui il `LoadXML` metodo, come illustrato nell'esempio di codice seguente. In questo esempio viene utilizzato "ProfileOutput" come nome della variabile del pacchetto che contiene l'output del profilo.  
+-   Passare il valore stringa della variabile al metodo `LoadXML` come illustrato nell'esempio di codice seguente. In questo esempio viene utilizzato "ProfileOutput" come nome della variabile del pacchetto che contiene l'output del profilo.  
   
     ```vb  
     Dim outputString As String  
@@ -329,7 +329,7 @@ ms.locfileid: "48147571"
 7.  Nei vincoli di precedenza che connettono l'attività Script ai rami a valle nel flusso di lavoro, scrivere espressioni che utilizzano i valori delle variabili per indirizzare il flusso di lavoro.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programma di installazione dell'attività Profiling dati](data-profiling-task.md)   
+ [Impostazione dell'attività Profiling dati](data-profiling-task.md)   
  [Visualizzatore profilo dati](data-profile-viewer.md)  
   
   

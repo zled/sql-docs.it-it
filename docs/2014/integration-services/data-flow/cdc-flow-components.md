@@ -11,12 +11,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47eb98f064cfecf7cf18ddf0ba20023eda320346
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df2aac01300c006858a84097bf346875f175c82
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195631"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120139"
 ---
 # <a name="cdc-flow-components"></a>Componenti di flusso CDC
   I componenti Change Data Capture di Attunity per Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] consentono agli sviluppatori SSIS di utilizzare CDC e riducono la complessità dei pacchetti CDC.  
@@ -58,20 +58,20 @@ ms.locfileid: "48195631"
 -   Windows Server 2008 R2 64 bit (x64)  
   
 ### <a name="running-the-installation-program"></a>Esecuzione del programma di installazione  
- Prima di eseguire l'installazione guidata, assicurarsi che il [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] viene chiuso. Quindi, seguire le indicazioni nell'installazione guidata.  
+ Prima di eseguire l'installazione guidata, accertarsi di aver chiuso [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] . Quindi, seguire le indicazioni nell'installazione guidata.  
   
 ### <a name="restart-ssis"></a>Riavviare SSIS  
- Dopo avere installato i componenti CDC, è necessario riavviare il servizio SSIS per essere certi che i componenti funzionino correttamente quando si sviluppano pacchetti in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)].  
+ Dopo aver installato i componenti CDC, è necessario riavviare il servizio SSIS per essere certi che i componenti funzionino correttamente quando si sviluppano pacchetti in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] di SQL.  
   
  Al termine dell'installazione dei componenti, viene visualizzato un messaggio. Fare clic su **Sì** quando richiesto.  
   
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>Disinstallazione dei componenti CDC Microsoft  
  Per disinstallare l'origine CDC, la barra di divisione CDC o l'attività di controllo CDC, utilizzare la disinstallazione guidata. Prima di disinstallare i componenti verificare quanto segue:  
   
- Se si usa la [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] per lo sviluppo dei pacchetti, assicurarsi che il [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] sia chiuso prima di eseguire la disinstallazione guidata.  
+ Se si usa [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] per lo sviluppo di pacchetti, verificare che [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] sia chiuso prima di eseguire la disinstallazione guidata.  
   
 ## <a name="benefits"></a>Vantaggi  
- I componenti CDC per [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] componenti consentono agli sviluppatori SSIS di compilare facilmente pacchetti SSIS che elaborano i dati delle modifiche. Questi componenti migliorano la capacità degli sviluppatori di SSIS di gestire CDC e riducono la complessità dei pacchetti CDC.  
+ I componenti CDC per i componenti [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] consentono agli sviluppatori di SSIS di compilare facilmente pacchetti SSIS che elaborano i dati di modifica. Questi componenti migliorano la capacità degli sviluppatori di SSIS di gestire CDC e riducono la complessità dei pacchetti CDC.  
   
  I componenti CDC di SSIS sono utilizzati per fornire i dati di modifica in modo da facilitarne un'ulteriore elaborazione per la replica, ovvero il caricamento di un data warehouse, l'aggiornamento di dimensioni a modifica lenta per OLAP, il controllo delle modifiche o ulteriori altri possibili utilizzi. Il tipo di ulteriore elaborazione utilizzato è determinato dallo sviluppatore di SSIS.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48195631"
   
  ![Flusso di controllo del pacchetto di elaborazione di Trickle-Feed](../media/tricklefeedprocessing.gif "Flusso di controllo del pacchetto di elaborazione di Trickle-Feed")  
   
- Ciò [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] flusso di controllo contiene due attività di controllo CDC e l'attività flusso di dati. La prima attività denominata **Get CDC Processing Range** stabilisce l'intervallo LSN per le modifiche elaborate nell'attività Flusso di dati denominata **Process Changes**. Questo intervallo viene stabilito in base a ciò che è stato elaborato durante l'ultima esecuzione del pacchetto e salvato in un archivio persistente.  
+ Questo flusso di controllo [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contiene due attività di controllo CDC e l'attività Flusso di dati. La prima attività denominata **Get CDC Processing Range** stabilisce l'intervallo LSN per le modifiche elaborate nell'attività Flusso di dati denominata **Process Changes**. Questo intervallo viene stabilito in base a ciò che è stato elaborato durante l'ultima esecuzione del pacchetto e salvato in un archivio persistente.  
   
  Per altre informazioni sull'uso dell'attività di controllo CDC, vedere [Attività di controllo CDC](../control-flow/cdc-control-task.md) e [CDC Control Task Editor](../cdc-control-task-editor.md).  
   
@@ -104,9 +104,9 @@ ms.locfileid: "48195631"
   
  [Editor origine CDC &#40;pagina Gestione connessione&#41;](../cdc-source-editor-connection-manager-page.md)  
   
- [Editor origine CDC &#40;(pagina colonne)&#41;](../cdc-source-editor-columns-page.md)  
+ [Editor origine CDC &#40;pagina Colonne&#41;](../cdc-source-editor-columns-page.md)  
   
- [Editor origine CDC &#40;pagina dell'Output degli errori&#41;](../cdc-source-editor-error-output-page.md)  
+ [Editor origine CDC &#40;pagina Output degli errori&#41;](../cdc-source-editor-error-output-page.md)  
   
  Per ulteriori informazioni sulla barra di divisione CDC, vedere:  
   

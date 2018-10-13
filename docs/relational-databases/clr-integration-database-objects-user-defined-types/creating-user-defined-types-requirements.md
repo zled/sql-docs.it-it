@@ -20,12 +20,12 @@ ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6faf51099d0a5eced6543704d5f45b6fc922f522
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697120"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119749"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Creazione di tipi definiti dall'utente - Requisiti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "47697120"
   
  **bool**, **byte**, **sbyte**, **breve**, **ushort**, **int**,  **uint**, **lungo**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- I tipi che sono costituite da campi dei tipi precedenti sono buoni candidati per valore **nativa** formato, ad esempio **struct** in Visual c# (o **strutture** in cui sono noti Visual Basic). Ad esempio, un tipo definito dall'utente specificato con il **nativa** formato di serializzazione può contenere un campo di un altro tipo definito dall'utente che è stato specificato anche con il **Native** formato. Se la definizione UDT è più complessa e contiene tipi di dati non presenti nell'elenco precedente, è necessario specificare il **UserDefined** invece formato di serializzazione.  
+ Tipi di valore sono composte da dei campi dei tipi precedenti sono buoni candidati per **nativi** formato, ad esempio **struct** in Visual c# (o **strutture** in cui sono noti Visual Basic). Ad esempio, un tipo definito dall'utente specificato con il **nativa** formato di serializzazione può contenere un campo di un altro tipo definito dall'utente che è stato specificato anche con il **Native** formato. Se la definizione UDT è più complessa e contiene tipi di dati non presenti nell'elenco precedente, è necessario specificare il **UserDefined** invece formato di serializzazione.  
   
  Il **nativa** formato presenta i requisiti seguenti:  
   

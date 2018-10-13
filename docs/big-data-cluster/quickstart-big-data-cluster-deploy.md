@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: e44e6588cb58148c1474bc9e5ddda7527737ebba
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 5781b3acfd2262b3a3be540abb331839dfcc56c6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817989"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120458"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Guida introduttiva: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)
 
@@ -50,17 +50,12 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 
 Impostare le variabili di ambiente necessarie per la distribuzione di cluster di big data leggermente diverso a seconda se si usano client Windows o Linux/macOS.  Scegliere i passaggi seguenti a seconda del sistema operativo in uso.
 
-> [!IMPORTANT]
-> Verificare che a capo le password tra virgolette quando contiene caratteri speciali. Si noti che i delimitatori tra virgolette doppie funzionano solo in comandi bash.
->
-> È possibile impostare le variabili di ambiente della password con qualsiasi nome desiderato, ma assicurarsi che questi sono sufficientemente complessi e non usare la `!`, `&`, o `‘` caratteri.
+Prima di continuare, tenere presenti le linee guida seguenti:
 
-[!IMPORTANT]
-Il **SA** account sia un amministratore di sistema nell'istanza Master di SQL Server che viene creato durante l'installazione. Dopo la creazione il contenitore di SQL Server, la variabile di ambiente MSSQL_SA_PASSWORD specificata diventa individuabile eseguendo echo MSSQL_SA_PASSWORD $ nel contenitore. Per motivi di sicurezza, modificare la password dell'amministratore di sistema in base alle procedure consigliate documentate [qui](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
-
-
-> [!NOTE]
-> Per la versione CTP 2.0 non modificare le porte predefinite.
+- Verificare che a capo le password tra virgolette quando contiene caratteri speciali. Si noti che i delimitatori tra virgolette doppie funzionano solo in comandi bash.
+- È possibile impostare le variabili di ambiente della password con qualsiasi nome desiderato, ma assicurarsi che questi sono sufficientemente complessi e non usare la `!`, `&`, o `‘` caratteri.
+- Per la versione CTP 2.0, non modificare le porte predefinite.
+- Il **SA** account sia un amministratore di sistema nell'istanza Master di SQL Server che viene creato durante l'installazione. Dopo la creazione il contenitore di SQL Server, la variabile di ambiente MSSQL_SA_PASSWORD specificata diventa individuabile eseguendo echo MSSQL_SA_PASSWORD $ nel contenitore. Per motivi di sicurezza, modificare la password dell'amministratore di sistema in base alle procedure consigliate documentate [qui](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Inizializzare le variabili di ambiente seguenti.  Sono necessari per distribuire un cluster di big data:
 
@@ -109,7 +104,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 > [!NOTE]
 > Durante l'anteprima pubblica limitata, le credenziali di Docker per scaricare le immagini del cluster di Big Data di SQL Server sono fornite a ogni cliente da Microsoft. Per richiedere l'accesso, registrare [qui](https://aka.ms/eapsignup)e specificare l'interesse dimostrato per provare i cluster di big data di SQL Server.
 
-## <a name="deploy-sql-server-big-data-cluster"></a>Distribuire il CLuster di Big Data SQL Server
+## <a name="deploy-a-big-data-cluster"></a>Distribuire un cluster di big data
 
 Per distribuire un cluster di big data 2019 CTP 2.0 di SQL Server nel cluster Kubernetes, eseguire il comando seguente:
 
@@ -146,7 +141,7 @@ kubectl get svc service-proxy-lb -n <name of your cluster>
 > Si verrà visualizzato un avviso di sicurezza all'accesso alla pagina web poiché si sta usando i certificati SSL generati automaticamente. Nelle future versioni, Microsoft fornirà la possibilità di fornire i propri certificati firmati.
  
 
-## <a name="connect-to-sql-server-master-instance-and-sql-server-big-data-cluster-hdfsspark-end-points"></a>Connettersi all'istanza master di SQL Server e i punti finali di SQL Server i big data cluster HDFS/Spark
+## <a name="connect-to-the-big-data-cluster"></a>Connettersi al cluster di big data
 
 Dopo che lo script di distribuzione è stata completata, è possibile ottenere l'indirizzo IP dell'istanza master di SQL Server e i punti finali Spark o HDFS usando i passaggi descritti di seguito. Tutti gli endpoint del cluster vengono visualizzati nella sezione nel portale di amministrazione Cluster anche per semplificarne la consultazione all'endpoint del servizio.
 
@@ -157,9 +152,9 @@ kubectl get svc service-master-pool-lb -n <name of your cluster>
 kubectl get svc service-security-lb -n <name of your cluster>
 ```
 
-Cercare il **External-IP** valore assegnato ai servizi. Connettersi all'istanza master di SQL Server usando l'indirizzo IP per il `service-master-pool-lb` alla porta 31433 (es:  **\<ip-address\>, 31433**) e per l'endpoint del cluster SQL Server i big data usando l'indirizzo IP esterno per il `service-security-lb` servizio.   Che i big data punto finale del cluster è in cui si è possibile interagire con HDFS e inviare Spark processi tramite Knox.
+Cercare il **External-IP** valore assegnato ai servizi. Connettersi all'istanza master di SQL Server usando l'indirizzo IP per il `service-master-pool-lb` alla porta 31433 (es:  **\<ip-address\>, 31433**) e per l'endpoint del cluster SQL Server i big data usando l'indirizzo IP esterno per il `service-security-lb` servizio.   Che i big data cluster punto finale è che consente di interagire con HDFS e inviare processi Spark tramite Knox.
 
-# <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 Ora che viene distribuito il cluster di big data di SQL Server, provare alcune delle nuove funzionalità:
 

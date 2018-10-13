@@ -13,15 +13,15 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8b839a64feb81a538f943d403733fee3772cce7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116380"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119839"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Definizione di un intervallo dei dati delle modifiche
-  Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un carico incrementale dei dati delle modifiche, la prima attività consiste nel calcolare gli endpoint dell'intervallo di modifiche. Questi endpoint sono `datetime` valori e verranno archiviati in variabili del pacchetto per l'uso in un secondo momento nel pacchetto.  
+  Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un carico incrementale dei dati delle modifiche, la prima attività consiste nel calcolare gli endpoint dell'intervallo di modifiche. Tali endpoint sono valori `datetime` e verranno archiviati in variabili del pacchetto per l'utilizzo successivo nel pacchetto.  
   
 > [!NOTE]  
 >  Per una descrizione del processo complessivo di progettazione del flusso di controllo, vedere [Change Data Capture &#40;SSIS&#41;](change-data-capture-ssis.md).  
@@ -35,44 +35,44 @@ ms.locfileid: "48116380"
   
 2.  Nella finestra **Variabili** creare le variabili seguenti:  
   
-    1.  Creare una variabile con il `datetime` tipo di dati per contenere il punto di partenza per l'intervallo.  
+    1.  Creare una variabile con il tipo di dati `datetime` per memorizzare il punto iniziale per l'intervallo.  
   
          In questo esempio viene utilizzato il nome di variabile ExtractStartTime.  
   
-    2.  Creare un'altra variabile con il `datetime` tipo di dati per contenere il punto finale per l'intervallo.  
+    2.  Creare un'altra variabile con il tipo di dati `datetime` per memorizzare il punto finale per l'intervallo.  
   
          In questo esempio viene utilizzato il nome di variabile ExtractEndTime.  
   
  Se si calcolano gli endpoint in un pacchetto master che esegue più pacchetti figlio, è possibile utilizzare le configurazioni Variabile pacchetto padre per passare i valori di tali variabili a ciascun pacchetto figlio. Per altre informazioni, vedere [Attività Esegui pacchetto](../control-flow/execute-package-task.md) e [Utilizzare i valori di variabili e parametri in un pacchetto figlio](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>Calcolare un punto iniziale e un punto finale per i dati delle modifiche  
- Dopo avere configurato le variabili del pacchetto per gli endpoint dell'intervallo, è possibile calcolare i valori effettivi per tali endpoint ed eseguirne il mapping alle variabili del pacchetto corrispondenti. Poiché gli endpoint sono valori `datetime`, sarà necessario utilizzare funzioni in grado di calcolare o utilizzare valori `datetime`. Entrambi i [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linguaggio delle espressioni e Transact-SQL includono funzioni che usano con `datetime` valori:  
+ Dopo avere configurato le variabili del pacchetto per gli endpoint dell'intervallo, è possibile calcolare i valori effettivi per tali endpoint ed eseguirne il mapping alle variabili del pacchetto corrispondenti. Poiché gli endpoint sono valori `datetime`, sarà necessario utilizzare funzioni in grado di calcolare o utilizzare valori `datetime`. Sia il linguaggio delle espressioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che Transact-SQL dispongono di funzioni che utilizzano valori `datetime`:  
   
- Le funzioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linguaggio delle espressioni che funzionano con `datetime` valori  
- -   [DATEADD &#40;espressione di SSIS&#41;](../expressions/dateadd-ssis-expression.md)  
+ Funzioni nel linguaggio delle espressioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che utilizzano valori `datetime`  
+ -   [DATEADD &#40;espressione SSIS&#41;](../expressions/dateadd-ssis-expression.md)  
   
--   [DATEDIFF &#40;espressione di SSIS&#41;](../expressions/datediff-ssis-expression.md)  
+-   [DATEDIFF &#40;espressione SSIS&#41;](../expressions/datediff-ssis-expression.md)  
   
--   [DATEPART &#40;espressione di SSIS&#41;](../expressions/datepart-ssis-expression.md)  
+-   [DATEPART &#40;espressione SSIS&#41;](../expressions/datepart-ssis-expression.md)  
   
--   [GIORNO &#40;espressione di SSIS&#41;](../expressions/day-ssis-expression.md)  
+-   [DAY &#40;espressione SSIS&#41;](../expressions/day-ssis-expression.md)  
   
--   [GETDATE &#40;espressione di SSIS&#41;](../expressions/getdate-ssis-expression.md)  
+-   [GETDATE &#40;espressione SSIS&#41;](../expressions/getdate-ssis-expression.md)  
   
--   [GETUTCDATE &#40;espressione di SSIS&#41;](../expressions/getutcdate-ssis-expression.md)  
+-   [GETUTCDATE &#40;espressione SSIS&#41;](../expressions/getutcdate-ssis-expression.md)  
   
--   [MESE &#40;espressione di SSIS&#41;](../expressions/month-ssis-expression.md)  
+-   [MONTH &#40;espressione SSIS&#41;](../expressions/month-ssis-expression.md)  
   
--   [YEAR &#40;espressione di SSIS&#41;](../expressions/year-ssis-expression.md)  
+-   [YEAR &#40;espressione SSIS&#41;](../expressions/year-ssis-expression.md)  
   
- Le funzioni in Transact-SQL che funzionano con `datetime` valori  
+ Funzioni in Transact-SQL che utilizzano valori `datetime`  
  [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
   
  Prima di utilizzare una di queste funzioni `datetime` per calcolare gli endpoint, è necessario determinare se l'intervallo è fisso e si verifica regolarmente. In genere, le modifiche verificatesi nelle tabelle di origine vengono applicate alle tabelle di destinazione a intervalli regolari. Potrebbe essere necessario, ad esempio, applicare le modifiche su base oraria, giornaliera o settimanale.  
   
  Dopo avere determinato se l'intervallo di modifiche è fisso o più casuale, è possibile calcolare gli endpoint:  
   
--   **Calcolo della data e dell'ora di inizio**. Utilizzare la data e l'ora di fine del caricamento precedente come data e ora di inizio correnti. Se si usa un intervallo fisso per i caricamenti incrementali, è possibile calcolare questo valore usando il `datetime` funzioni di Transact-SQL o il [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linguaggio delle espressioni. In caso contrario, potrebbe essere necessario impostare la persistenza degli endpoint tra le esecuzioni e utilizzare un'attività Esegui SQL o un'attività Script per caricare l'endpoint precedente.  
+-   **Calcolo della data e dell'ora di inizio**. Utilizzare la data e l'ora di fine del caricamento precedente come data e ora di inizio correnti. Se si utilizza un intervallo fisso per i caricamenti incrementali, è possibile calcolare questo valore utilizzando le funzioni `datetime` di Transact-SQL o del linguaggio delle espressioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. In caso contrario, potrebbe essere necessario impostare la persistenza degli endpoint tra le esecuzioni e utilizzare un'attività Esegui SQL o un'attività Script per caricare l'endpoint precedente.  
   
 -   **Calcolo della data e dell'ora di fine**. Se si utilizza un intervallo fisso per i carichi incrementali, calcolare la data e l'ora di fine correnti come offset della data e dell'ora di inizio. Anche in questo caso, è possibile calcolare questo valore usando il `datetime` funzioni di Transact-SQL o il [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linguaggio delle espressioni.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48116380"
 3.  Nella pagina **Set dei risultati** di **Editor attività Esegui SQL**eseguire il mapping tra il risultato di ExtractStartTime e la variabile del pacchetto ExtractStartTime e tra il risultato di ExtractEndTime e la variabile del pacchetto ExtractEndTime.  
   
     > [!NOTE]  
-    >  Quando si usa un'espressione per impostare il valore di una variabile in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , l'espressione viene valutata ogni volta che si accede al valore della variabile.  
+    >  Quando si utilizza un'espressione per impostare il valore di un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variabile, l'espressione viene valutata ogni volta che il valore della variabile è accessibile.  
   
 ## <a name="next-step"></a>Passaggio successivo  
  Dopo avere calcolato il punto iniziale e il punto finale per un intervallo di modifiche, il passaggio successivo consiste nel determinare se i dati delle modifiche sono pronti.  

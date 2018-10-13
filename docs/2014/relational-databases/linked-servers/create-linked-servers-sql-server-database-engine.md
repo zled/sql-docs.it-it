@@ -18,12 +18,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3837e800bc1193a4f72b58bc0d78c0cb314e6076
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152025"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120208"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Creazione di server collegati (Motore di database di SQL Server)
   In questo argomento viene illustrato come creare un server collegato e come accedere ai dati da un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creazione di server collegati consente di utilizzare dati di più origini. Il server collegato non deve essere un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia si tratta di uno scenario comune.  
@@ -82,7 +82,7 @@ ms.locfileid: "48152025"
     > [!NOTE]  
     >  Se l'istanza di **SQL Server** è quella predefinita, immettere il nome del computer che ospita l'istanza di **SQL Server**. Se l'istanza di **SQL Server** è un'istanza denominata, immettere il nome del computer e il nome dell'istanza, ad esempio **Contabilità\SQLExpress**.  
   
-3.  Nell'area **Tipo di server** selezionare **SQL Server** per indicare che il server collegato è un'altra istanza di **SQL Server**.  
+3.  Nel **tipo di Server** area, selezionare **SQL Server** per indicare che il server collegato è un'altra istanza di **SQL Server**.  
   
 4.  Nella pagina **Sicurezza** specificare il contesto di sicurezza che verrà utilizzato quando la connessione al server collegato viene eseguita dall'istanza originale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In un ambiente di dominio in cui gli utenti eseguono la connessione tramite account di dominio personalizzati, la selezione di **Verranno effettuate con il contesto di sicurezza corrente dell'account di accesso** è spesso la soluzione migliore. Quando gli utenti eseguono la connessione all'istanza originale di **SQL Server** utilizzando un account di accesso di **SQL Server** , la scelta ottimale spesso consiste nel selezionare **Verranno effettuate con il contesto di sicurezza seguente**, quindi fornendo le credenziali necessarie per l'autenticazione nel server collegato.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48152025"
      Indica che sul provider vengono richiamate solo le interfacce OLE DB di livello 0.  
   
      **Consenti in-process**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente la creazione di un'istanza del provider come server in-process. Se questa opzione non viene impostata, per impostazione predefinita viene creata un'istanza del provider al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La creazione di un'istanza del provider al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di proteggere il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dagli errori che si verificano nel provider. Quando il provider viene creata un'istanza all'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elaborare, aggiornamenti o gli inserimenti che fanno riferimento a colonne long (`text`, `ntext`, o `image`) non sono consentiti.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente la creazione di un'istanza del provider come server in-process. Se questa opzione non viene impostata, per impostazione predefinita viene creata un'istanza del provider al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La creazione di un'istanza del provider al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di proteggere il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dagli errori che si verificano nel provider. Quando l'istanza del provider viene creata al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gli aggiornamenti o gli inserimenti che fanno riferimento a colonne per valori di grandi dimensioni (`text`, `ntext` o `image`) non sono consentiti.  
   
      **Aggiornamenti non in transazioni**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente gli aggiornamenti anche se **ITransactionLocal** non è disponibile. Se questa opzione è abilitata, gli aggiornamenti sul provider non sono recuperabili poiché il provider non supporta le transazioni.  

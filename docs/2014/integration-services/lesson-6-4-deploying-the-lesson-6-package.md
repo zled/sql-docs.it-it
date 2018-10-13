@@ -11,12 +11,12 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81119bcb31e46667e572c4d5cd2ea37858306876
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7cc4a80849f9dfd12bd7148351c0230e30e64ed
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177041"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905041"
 ---
 # <a name="step-4-deploying-the-lesson-6-package"></a>Passaggio 4: Distribuzione del pacchetto della lezione 6
   La distribuzione del pacchetto implica l'aggiunta del pacchetto al catalogo SSISDB in Integration Services in un'istanza di SQL Server. In questa lezione verranno illustrate le procedure per aggiungere il pacchetto creato nella lezione 6 al catalogo SSISDB, impostare il parametro ed eseguire il pacchetto. Per questa lezione verrà usato SQL Server Management Studio per aggiungere il pacchetto della lezione 6 al catalogo SSISDB e distribuire il pacchetto. Dopo avere distribuito il pacchetto, modificare il parametro in modo da puntare a un nuovo percorso, quindi eseguire il pacchetto.  
@@ -31,7 +31,7 @@ ms.locfileid: "48177041"
   
 -   Eseguire il pacchetto in SSMS.  
   
-### <a name="to-locate-or-add-the-the-ssisdb-catalog"></a>Per individuare o aggiungere il catalogo SSISDB  
+### <a name="to-locate-or-add-the-ssisdb-catalog"></a>Per individuare o aggiungere il catalogo SSISDB  
   
 1.  Fare clic sul pulsante Start, scegliere Tutti i programmi, Microsoft SQL Server 2012, quindi fare clic su SQL Server Management Studio.  
   

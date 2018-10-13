@@ -23,12 +23,12 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8043e2187ccb1eca7dea58507451113da45429a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5861d48490df31e731113b673972a7768867a5ab
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814379"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119899"
 ---
 # <a name="xml-construction-xquery"></a>Costruzione di strutture XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47814379"
   
     -   Il \<funzionalità > elemento dispone di tre nodi elemento figlio, \<colore >, \<peso >, e \<Warranty >. Ognuno di questi nodi ha un nodo di testo figlio. I valori dei nodi sono rispettivamente "Red", "25" e "2 years parts and labor".  
   
-```  
+```sql
 declare @x xml;  
 set @x='';  
 select @x.query('<ProductModel ProductModelID="111">;  
@@ -68,7 +68,7 @@ This is product model catalog description.
   
  Codice XML risultante:  
   
-```  
+```xml
 <ProductModel ProductModelID="111">  
   This is product model catalog description.  
   <Summary>Some description</Summary>  
@@ -82,7 +82,7 @@ This is product model catalog description.
   
  Anche se la costruzione di elementi da espressioni costanti, come illustrato in questo esempio, può risultare utile, il punto forte di questa caratteristica del linguaggio XQuery è costituito dalla possibilità di costruire strutture XML che estraggono i dati da un database in modo dinamico. È possibile utilizzare le parentesi graffe per specificare le espressioni di query. Nel codice XML risultante l'espressione viene sostituita dal relativo valore. Ad esempio, la query seguente crea un elemento <`NewRoot`> con un elemento figlio (<`e`>). Il valore dell'elemento <`e`> viene calcolato specificando un'espressione di percorso fra parentesi graffe ({..." }").  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');  
@@ -92,7 +92,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  Risultato:  
   
-```  
+```xml
 <NewRoot>  
   <e>  
     <root>5</root>  
@@ -102,7 +102,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  La query successiva è simile alla precedente. Tuttavia, l'espressione fra parentesi graffe specifica la **data ()** funzione per recuperare il valore atomico del <`root`> elemento e lo assegna all'elemento costruito, <`e`>.  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -115,7 +115,7 @@ SELECT @y;
   
  Risultato:  
   
-```  
+```xml
 <NewRoot>  
   <e>5</e>  
 </NewRoot>  
@@ -123,7 +123,7 @@ SELECT @y;
   
  Se si desidera utilizzare le parentesi graffe come parte del testo invece che come token di scambio del contesto, è necessario utilizzare la relativa sequenza di escape "}}" o "{{", come illustrato in questo esempio:  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -134,13 +134,13 @@ SELECT @y;
   
  Risultato:  
   
-```  
+```xml
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
  La query seguente è un altro esempio di creazione di elementi mediante il costruttore diretto di elementi. Il valore dell'elemento <`FirstLocation`> viene ottenuto eseguendo l'espressione fra parentesi graffe. L'espressione della query restituisce le fasi di produzione nel primo centro di lavorazione dalla colonna Instructions della tabella Production.ProductModel.  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation>  
@@ -153,7 +153,7 @@ WHERE ProductModelID=7;
   
  Risultato:  
   
-```  
+```xml
 <FirstLocation>  
   <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
       Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
@@ -168,7 +168,7 @@ WHERE ProductModelID=7;
 #### <a name="element-content-in-xml-construction"></a>Contenuto dell'elemento nella costruzione di strutture XML  
  Nell'esempio seguente viene illustrato il funzionamento delle espressioni nella creazione del contenuto dell'elemento utilizzando il costruttore diretto di elementi. Nell'esempio seguente, il costruttore diretto di elementi specifica un'espressione. In base a questa espressione, nel codice XML risultante viene creato un nodo di testo.  
   
-```  
+```sql
 declare @x xml;  
 set @x='  
 <root>  
@@ -187,13 +187,13 @@ select @x.query('
   
  La sequenza di valori atomici risultante dalla valutazione dell'espressione viene aggiunta al nodo di testo con l'aggiunta di uno spazio fra i valori atomici adiacenti, come illustrato nel risultato. L'elemento creato ha un figlio, un nodo di testo contenente il valore mostrato nel risultato.  
   
-```  
+```xml
 <result>This is step 1 This is step 2 This is step 3</result>  
 ```  
   
  Se anziché una sola espressione si specificano tre espressioni separate che generano tre nodi di testo, nel codice XML risultante i nodi di testo adiacenti vengono uniti in un singolo nodo di testo, per concatenazione.  
   
-```  
+```sql
 declare @x xml;  
 set @x='  
 <root>  
@@ -211,14 +211,14 @@ select @x.query('
   
  Il nodo di elemento creato ha un figlio, un nodo di testo contenente il valore mostrato nel risultato.  
   
-```  
+```xml
 <result>This is step 1This is step 2This is step 3</result>  
 ```  
   
 ### <a name="constructing-attributes"></a>Costruzione di attributi  
  Quando si costruiscono elementi utilizzando il costruttore diretto di elementi è possibile specificarne gli attributi utilizzando sintassi in stile XML, come illustrato nell'esempio seguente:  
   
-```  
+```sql
 declare @x xml;  
 set @x='';  
 select @x.query('<ProductModel ProductModelID="111">;  
@@ -229,7 +229,7 @@ This is product model catalog description.
   
  Codice XML risultante:  
   
-```  
+```xml
 <ProductModel ProductModelID="111">  
   This is product model catalog description.  
   <Summary>Some description</Summary>  
@@ -246,7 +246,7 @@ This is product model catalog description.
   
  Nell'esempio seguente, il **data ()** funzione non è strettamente necessaria. Poiché si sta assegnando il valore dell'espressione a un attributo **data ()** viene applicata in modo implicito per recuperare il valore tipizzato dell'espressione specificata.  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -256,13 +256,13 @@ SELECT @y;
   
  Risultato:  
   
-```  
+```xml
 <NewRoot attr="5" />  
 ```  
   
  Di seguito viene riportato un altro esempio nel quale vengono specificate espressioni per la costruzione degli attributi LocationID e SetupHrs. Le espressioni vengono valutate in base al codice XML nella colonna Instruction. Il valore tipizzato dell'espressione viene assegnato agli attributi.  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation   
@@ -277,7 +277,7 @@ where ProductModelID=7;
   
  Risultato parziale:  
   
-```  
+```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
   <AWMI:step …   
   </AWMI:step>  
@@ -290,13 +290,13 @@ where ProductModelID=7;
   
 -   Le espressioni di attributo multiple o miste (stringa ed espressione XQuery) non sono supportate. Ad esempio, come illustrato nella query seguente, si costruisce una struttura XML dove `Item` è una costante e il valore `5` viene ottenuto valutando un'espressione di query:  
   
-    ```  
+    ```xml
     <a attr="Item 5" />  
     ```  
   
      La query seguente restituisce un errore, perché combina una stringa costante con un'espressione ({/x}) e ciò non è supportato:  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     SELECT @x.query( '<a attr="Item {/x}"/>' )   
@@ -306,19 +306,19 @@ where ProductModelID=7;
   
     -   Formare il valore dell'attributo mediante la concatenazione di due valori atomici. Tali valori atomici vengono serializzati nel valore dell'attributo con uno spazio fra un valore e l'altro:  
   
-        ```  
+        ```sql
         SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
         ```  
   
          Risultato:  
   
-        ```  
+        ```xml
         <a attr="Item 5" />  
         ```  
   
     -   Usare la [Concat-funzione](../xquery/functions-on-string-values-concat.md) per concatenare i due argomenti stringa in valore di attributo risultante:  
   
-        ```  
+        ```sql
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
         ```  
   
@@ -326,13 +326,13 @@ where ProductModelID=7;
   
          Risultato:  
   
-        ```  
+        ```xml
         <a attr="Item5" />  
         ```  
   
 -   Le espressioni multiple come valore di attributo non sono supportate. Ad esempio, la query seguente restituisce un errore:  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
@@ -340,7 +340,7 @@ where ProductModelID=7;
   
 -   Le sequenze eterogenee non sono supportate. Qualsiasi tentativo di assegnare una sequenza eterogenea come valore di attributo provocherà la restituzione di un errore, come illustrato nell'esempio seguente. In questo esempio una sequenza eterogenea, una stringa "Item" e un elemento <`x`> vengono specificati come valore di attributo:  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     select @x.query( '<a attr="{''Item'', /x }" />')  
@@ -348,19 +348,19 @@ where ProductModelID=7;
   
      Se si applica il **data ()** funzione, la query funziona, poiché recupera il valore atomico dell'espressione, `/x`, che è concatenato la stringa. Quella che segue è una sequenza di valori atomici:  
   
-    ```  
+    ```sql
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
     ```  
   
      Risultato:  
   
-    ```  
+    ```xml
     <a attr="Item 5" />  
     ```  
   
 -   L'ordine del nodo attributo viene applicato durante la serializzazione anziché durante il controllo dei tipi statici. Ad esempio, la query seguente ha esito negativo poiché tenta di aggiungere un attributo dopo un nodo non attributo.  
   
-    ```  
+    ```sql
     select convert(xml, '').query('  
     element x { attribute att { "pass" }, element y { "Element text" }, attribute att2 { "fail" } }  
     ')  
@@ -385,7 +385,7 @@ where ProductModelID=7;
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>Utilizzo di un attributo di dichiarazione dello spazio dei nomi per l'aggiunta degli spazi dei nomi  
  Nell'esempio seguente viene utilizzato un attributo di dichiarazione dello spazio dei nomi nella costruzione dell'elemento <`a`> per la dichiarazione di uno spazio dei nomi predefinito. La costruzione dell'elemento figlio <`b`> annulla la dichiarazione dello spazio dei nomi predefinito dichiarato nell'elemento padre.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -396,7 +396,7 @@ select @x.query( '
   
  Risultato:  
   
-```  
+```xml
 <a xmlns="a">  
   <b xmlns="" />  
 </a>  
@@ -404,7 +404,7 @@ select @x.query( '
   
  È possibile assegnare allo spazio dei nomi un prefisso, specificandolo nella costruzione dell'elemento <`a`>.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -415,7 +415,7 @@ select @x.query( '
   
  Risultato:  
   
-```  
+```xml
 <x:a xmlns:x="a">  
   <b />  
 </x:a>  
@@ -423,7 +423,7 @@ select @x.query( '
   
  È possibile annullare la dichiarazione di uno spazio dei nomi predefinito nella costruzione di strutture XML, ma non di un prefisso di spazio dei nomi. La query seguente restituisce un errore poiché non è possibile annullare la dichiarazione di un prefisso come specificato nella costruzione dell'elemento <`b`>.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -434,7 +434,7 @@ select @x.query( '
   
  Il nuovo spazio dei nomi costruito è disponibile per l'utilizzo all'interno della query. Ad esempio, la query seguente dichiara uno spazio dei nomi nella costruzione dell'elemento <`FirstLocation`>e specifica il prefisso nelle espressioni per i valori di attributo LocationID e SetupHrs.  
   
-```  
+```sql
 SELECT Instructions.query('  
         <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
          LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
@@ -448,7 +448,7 @@ where ProductModelID=7
   
  Si noti che un nuovo prefisso di spazio dei nomi creato in questo modo sostituirà le dichiarazioni dello spazio dei nomi preesistenti per il prefisso. Ad esempio, la dichiarazione dello spazio dei nomi `AWMI="http://someURI"` nel prologo della query viene sostituita dalla dichiarazione dello spazio dei nomi nell'elemento <`FirstLocation`>.  
   
-```  
+```sql
 SELECT Instructions.query('  
 declare namespace AWMI="http://someURI";  
         <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
@@ -464,7 +464,7 @@ where ProductModelID=7
 #### <a name="using-a-prolog-to-add-namespaces"></a>Utilizzo di un prologo per l'aggiunta degli spazi dei nomi  
  In questo esempio viene illustrata l'aggiunta degli spazi dei nomi alla struttura XML costruita. Nel prologo della query viene dichiarato uno spazio dei nomi predefinito.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -474,8 +474,10 @@ select @x.query( '
   
  Si noti che nella costruzione dell'elemento <`b`>, il valore dell'attributo di dichiarazione dello spazio dei nomi è specificato da una stringa vuota. In questo modo la dichiarazione dello spazio dei nomi predefinito dichiarato nel padre viene annullata.  
   
-```  
-This is the result:  
+
+Risultato:  
+
+```xml
 <a xmlns="a">  
   <b xmlns="" />  
 </a>  
@@ -496,7 +498,7 @@ This is the result:
   
  Nell'esempio seguente viene illustrata la gestione degli spazi vuoti nella costruzione di strutture XML:  
   
-```  
+```sql
 -- line feed is repaced by space.  
 declare @x xml  
 set @x=''  
@@ -525,7 +527,7 @@ test
   
  Risultato:  
   
-```  
+```xml
 -- result  
 <test attr="<test attr="    my test   attr  value    "><a>  
   
@@ -550,7 +552,7 @@ test
   
  Nella query seguente il costrutto XML include un elemento, due attributi, un commento e un'istruzione di elaborazione. Si noti che prima di <`FirstLocation`> viene utilizzata una virgola, perché si sta costruendo una sequenza.  
   
-```  
+```sql
 SELECT Instructions.query('  
   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    <?myProcessingInstr abc="value" ?>,   
@@ -569,7 +571,7 @@ where ProductModelID=7;
   
  Risultato parziale:  
   
-```  
+```xml
 <?myProcessingInstr abc="value" ?>  
 <FirstLocation WorkCtrID="10" SetupHrs="0.5">  
   <!-- some comment -->  
@@ -578,7 +580,7 @@ where ProductModelID=7;
   nsert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
   </AWMI:step>  
     ...  
-/FirstLocation>  
+</FirstLocation>  
   
 ```  
   
@@ -593,7 +595,7 @@ where ProductModelID=7;
   
  Per i nodi elemento e attributo, le parole chiave sono seguite dal nome del nodo e dall'espressione, racchiusa fra parentesi, che genera il contenuto del nodo. Nell'esempio seguente si costruisce il codice XML successivo:  
   
-```  
+```xml
 <root>  
   <ProductModel PID="5">Some text <summary>Some Summary</summary></ProductModel>  
 </root>  
@@ -601,7 +603,7 @@ where ProductModelID=7;
   
  Di seguito è riportata la query che utilizza i costruttori calcolati per generare il codice XML:  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 select @x.query('element root   
@@ -618,7 +620,7 @@ text{"Some text "},
   
  L'espressione che genera il contenuto del nodo può specificare un'espressione di query.  
   
-```  
+```sql
 declare @x xml  
 set @x='<a attr="5"><b>some summary</b></a>'  
 select @x.query('element root   
@@ -636,7 +638,7 @@ text{"Some text "},
   
  Nell'esempio seguente, il contenuto dei nodi costruiti viene ottenuto da istruzioni di produzione XML archiviate nella colonna Instructions della **xml** tipo di dati della tabella ProductModel.  
   
-```  
+```sql
 SELECT Instructions.query('  
   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    element FirstLocation   
@@ -651,7 +653,7 @@ where ProductModelID=7
   
  Risultato parziale:  
   
-```  
+```xml
 <FirstLocation LocationID="10">  
   <AllTheSteps>  
     <AWMI:step> ... </AWMI:step>  

@@ -11,12 +11,12 @@ ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82646e7dd6b51df00083e7eb175ab0dd99349173
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aacaab21574c3cf70e1c3ee358094dd212462441
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101461"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119208"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Backup e ripristino di database DQS
   In questo argomento viene descritto come eseguire il backup e il ripristino dei database DQS.  

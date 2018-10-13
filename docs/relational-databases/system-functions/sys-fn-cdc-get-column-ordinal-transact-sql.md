@@ -21,12 +21,12 @@ ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b82aac8f856c1e057f389ac0af7d06dfee549fa5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3170d1b191538f23b374a59af19084effa73e81
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624209"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072015"
 ---
 # <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
  Questa funzione viene utilizzata per identificare la posizione ordinale di una colonna acquisita all'interno della maschera di aggiornamento dell'acquisizione dei dati delle modifiche. Viene principalmente usato in combinazione con la funzione [Sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) per estrarre informazioni dalla maschera di aggiornamento quando si eseguono query per i dati delle modifiche.  
   
 ## <a name="permissions"></a>Permissions  
- Richiede l'autorizzazione SELECT per tutte le colonne acquisite di una tabella di origine. Se per l'istanza di acquisizione viene specificato un ruolo del database per il componente di acquisizione dei dati delle modifiche, viene anche richiesta l'appartenenza a tale ruolo.  
+ È richiesta l'autorizzazione SELECT in tutte le colonne acquisite della tabella di origine. Se per l'istanza di acquisizione viene specificato un ruolo del database per il componente di acquisizione dei dati delle modifiche, viene anche richiesta l'appartenenza a tale ruolo.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente si ottiene la posizione ordinale della colonna `VacationHours` nella maschera di aggiornamento per l'istanza di acquisizione `HumanResources_Employee`. Questo valore viene poi utilizzato nella chiamata a `sys.fn_cdc_is_bit_set` per estrarre informazioni dalla maschera di aggiornamento restituita.  

@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d6a86d2d45cecc2dce3275e28ca0fb9e06e0cba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713209"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169221"
 ---
 # <a name="schemaini-file-text-file-driver"></a>File Schema.ini (driver file di testo)
 Quando viene usato il driver di testo, il formato del file di testo viene determinato usando un file di informazioni dello schema. Il file di informazioni dello schema è sempre denominato schema. ini e mantenuto sempre nella stessa directory dell'origine dati di testo. Il file di informazioni dello schema fornisce le IISAM con informazioni sul formato generale del file, il nome della colonna e le informazioni sul tipo di dati e diverse altre caratteristiche di dati. File schema ini è sempre obbligatorio per l'accesso ai dati a lunghezza fissa. Quando la tabella di testo contiene DateTime, Currency, o dati Decimal o ogni volta che si desidera maggiore controllo sulla gestione dei dati nella tabella, è consigliabile utilizzare un file ini.  
@@ -80,14 +80,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- Alla voce successiva definisce i campi in una tabella con il numero di colonna (**Col * * * n*) opzione, che è facoltativa per i file delimitati da caratteri ed è obbligatorio per i file di lunghezza fissa. L'esempio mostra le voci di schema. ini per due campi, un campo di testo NumeroCliente 10 caratteri e un campo di testo CustomerName 30 caratteri:  
+ Alla voce successiva definisce i campi in una tabella con il numero di colonna (**Col**_n_) opzione, che è facoltativa per i file delimitati da caratteri ed è obbligatorio per i file di lunghezza fissa. L'esempio mostra le voci di schema. ini per due campi, un campo di testo NumeroCliente 10 caratteri e un campo di testo CustomerName 30 caratteri:  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- La sintassi di **Col * * * n* è:  
+ La sintassi del **Col**_n_ è:  
   
 ```  
   

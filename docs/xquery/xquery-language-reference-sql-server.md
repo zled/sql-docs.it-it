@@ -18,12 +18,12 @@ ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b0b66722189a42b4bd5f157900815a96a716f49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6125bdcff27bc79d8eb850e7baafdd872342adf6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840693"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119529"
 ---
 # <a name="xquery-language-reference-sql-server"></a>Riferimento al linguaggio XQuery (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47840693"
   
  Per eseguire un'istanza XML archiviata in una variabile o colonna di una query **xml** tipo, utilizzare il [metodi con tipo di dati xml](../t-sql/xml/xml-data-type-methods.md). Ad esempio, è possibile dichiarare una variabile di **xml** digitare ed eseguire una query usando la **query ()** metodo il **xml** tipo di dati.  
   
-```  
+```sql
 DECLARE @x xml  
 SET @x = '<ROOT><a>111</a></ROOT>'  
 SELECT @x.query('/ROOT/a')  
@@ -46,7 +46,7 @@ SELECT @x.query('/ROOT/a')
   
  Nell'esempio seguente, la query viene specificata sulla colonna Instructions della **xml** tipo nella tabella ProductModel nel database AdventureWorks.  
   
-```  
+```sql
 SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') as Result   
@@ -83,6 +83,6 @@ WHERE ProductModelID=7
 ## <a name="see-also"></a>Vedere anche  
  [Dati XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Raccolte di XML Schema &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)   
- [Esempi di importazione ed esportazione in blocco di documenti XML &#40;SQL Server&#41;](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
+ [Esempi di importazione ed esportazione bulk di documenti XML &#40;SQL Server&#41;](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   

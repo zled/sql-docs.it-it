@@ -10,12 +10,12 @@ ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 574188dc87c9d89e370cb0187c44d30cd5dc3158
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93698be4738ef2a28c79581d0957f695b036c911
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076811"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119170"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configurazione dell'archiviazione per le tabelle con ottimizzazione per la memoria
   È necessario configurare la capacità di archiviazione e le operazioni di input/output al secondo (IOPS).  
@@ -28,7 +28,7 @@ ms.locfileid: "48076811"
   
 -   Quando si esegue la migrazione delle tabelle basate su disco nelle tabelle ottimizzate per la memoria, verificare che il log delle transazioni sia in un supporto di archiviazione che supporti l'attività aumentata del log delle transazioni. Ad esempio, se il supporto di archiviazione supporta le operazioni del log delle transazioni a 100 MB/sec e le tabelle ottimizzate per la memoria restituiscono prestazioni cinque volte superiori, anche il supporto di archiviazione del log delle transazioni deve essere in grado di supportare un incremento di cinque volte delle prestazioni, per impedire all'attività del log delle transazioni di diventare un collo di bottiglia.  
   
--   Le tabelle con ottimizzazione per la memoria sono persistenti nei file distribuiti in uno o più contenitori. In genere è necessario eseguire il mapping al proprio spindle di ogni contenitore, che viene usato per aumentare la capacità di archiviazione e migliorare le prestazioni. È necessario assicurarsi che le operazioni di IOPS sequenziali del supporto di archiviazione possono supportare un aumento pari a 3 volte la velocità effettiva del log delle transazioni.  
+-   Le tabelle con ottimizzazione per la memoria sono persistenti nei file distribuiti in uno o più contenitori. In genere è necessario eseguire il mapping al proprio spindle di ogni contenitore, che viene usato per aumentare la capacità di archiviazione e migliorare le prestazioni. È necessario assicurarsi che IOPS sequenziali del supporto di archiviazione può supportare un 3 volte in cui aumentare la velocità effettiva del log delle transazioni.  
   
      Ad esempio, se le tabelle ottimizzate per la memoria generano 500MB/sec di attività nel log delle transazioni, l'archiviazione per le tabelle ottimizzate per la memoria deve supportare 1,5 GB/sec. La necessità di supportare un 3 volte aumento della velocità effettiva del log delle transazioni deriva dall'analisi che le coppie di file di dati e differenziali vengono prima scritti con dati iniziali e quindi devono essere in lettura e riscritti come parte di un'operazione di unione.  
   

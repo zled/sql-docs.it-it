@@ -39,12 +39,12 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dab367196f1d4d80f965a2ff400fd6193b6e3508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171181"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905761"
 ---
 # <a name="general-properties"></a>Proprietà generali
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server elencate nelle tabelle seguenti. In questo argomento vengono documentate le proprietà del server disponibili nel file msmdsrv.ini che non sono incluse in una sezione specifica, ad esempio Sicurezza, Rete o Pool di thread. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "48171181"
  Proprietà stringa che specifica in un elenco delimitato le cartelle che è possibile esplorare durante il salvataggio, l'apertura e la ricerca di file nelle finestra di dialogo di Analysis Services. È necessario che l'account del servizio Analysis Services abbia letto e scritto le autorizzazioni a qualsiasi cartella aggiunta all'elenco.  
   
  `BackupDir`  
- Proprietà stringa che identifica il nome della directory in cui vengono archiviati i file di backup per impostazione predefinita, nel caso in cui non sia stato specificato un percorso con il comando di backup.  
+ Proprietà stringa che identifica il nome della directory in cui sono archiviati i file di backup per impostazione predefinita, nel caso in cui un percorso non è specificato come parte del comando Backup.  
   
  `CollationName`  
  Proprietà di stringa che identifica le regole di confronto del server. Per altre informazioni, vedere [Lingue e regole di confronto &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md).  
@@ -132,7 +132,7 @@ ms.locfileid: "48171181"
  Per altre informazioni su questa proprietà, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(Guida operativa di SQL Server 2008 R2 Analysis Services).  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` si applica ai comandi di elaborazione di cubi e alle operazioni di writeback.  
+>  `ForceCommitTimeout` si applica ai comandi di elaborazione dei cubi e alle operazioni di writeback.  
   
  `IdleConnectionTimeout`  
  Proprietà Integer che specifica un timeout, espresso in secondi, per le connessioni inattive.  

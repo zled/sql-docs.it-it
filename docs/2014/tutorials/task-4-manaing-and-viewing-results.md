@@ -13,12 +13,12 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c298daa69c57c7771787c181cc0087927ff83f68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163501"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119873"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Attività 4: Gestione e visualizzazione dei risultati
   In questa attività si controllano i risultati della pulizia computerizzata; inoltre, si effettua la pulizia interattiva dei dati del fornitore. Visualizzare [fase di pulizia interattiva](http://msdn.microsoft.com/library/hh213061.aspx#Interactive) per altri dettagli.  
@@ -55,7 +55,7 @@ ms.locfileid: "48163501"
   
     1.  Si noti che **r. Datum corp** è stato corretto in **A. Datum Corporation** e il **motivo** è impostata su **relazione basata su termini. A. datum Corporation** è un valore di dominio noto a DQS perché è stato individuato durante il processo di individuazione delle informazioni. È pertanto DQS **certezza al 100%** di questa correzione.  
   
-    2.  Si noti che che **Lazy Country Storex** è stato corretto in **Lazy Country Store**, **livello di confidenza** è impostata su **100%** e la  **Motivo** è impostata su **valore del dominio**. Durante il processo di individuazione della Knowledge Base, si imposta **Lazy Country Storex** come un errore con **Lazy Country Store** come il **correzione**, quindi viene eseguita DQS **100% certi** questa correzione.  
+    2.  Si noti che **Lazy Country Storex** è stato corretto in **Lazy Country Store**, **livello di confidenza** è impostata su **100%** e il **Motivo** è impostata su **valore di dominio**. Durante il processo di individuazione della Knowledge Base, si imposta **Lazy Country Storex** come un errore con **Lazy Country Store** come il **correzione**, quindi viene eseguita DQS **100% certi** questa correzione.  
   
     3.  DQS non abbia familiarità con gli altri valori nell'elenco, ma vengono individuate le correzioni per tali valori usando il **correttore ortografico** e vengono proposte le opportune correzioni. DQS è **non 100%** certi di queste correzioni, ma il livello di confidenza è superiore all'80%, ovvero il livello di soglia per correzioni automatiche in modo da DQS vengono proposte correzioni.  
   

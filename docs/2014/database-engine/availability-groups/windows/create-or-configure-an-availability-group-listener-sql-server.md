@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 265bf3544f427f2dc23a437bc864cbac6dc53f1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d2a18c1f9f425ec7531c46299a5cf4c78278437
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052371"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120408"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Creare o configurare un listener del gruppo di disponibilità (SQL Server)
   In questo argomento viene illustrato come creare o configurare un singolo *listener del gruppo di disponibilità* per un gruppo di disponibilità AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -160,7 +160,7 @@ ms.locfileid: "48052371"
      `New-SqlAvailabilityGroupListener`  
      Crea un nuovo listener del gruppo di disponibilità e lo collega a un gruppo di disponibilità esistente.  
   
-     Ad esempio, il seguente `New-SqlAvailabilityGroupListener` comando crea un listener del gruppo di disponibilità denominato `MyListener` per il gruppo di disponibilità `MyAg`. Il listener utilizzerà l'indirizzo IPv4 passato al `-StaticIp` parametro come relativo indirizzo IP virtuale.  
+     Ad esempio, il seguente comando `New-SqlAvailabilityGroupListener` crea un listener del gruppo di disponibilità denominato `MyListener` per il gruppo di disponibilità `MyAg`. Il listener utilizzerà l'indirizzo IPv4 passato al parametro `-StaticIp` come relativo indirizzo IP virtuale.  
   
     ```  
     New-SqlAvailabilityGroupListener -Name MyListener `   
@@ -210,7 +210,7 @@ ms.locfileid: "48052371"
 ##  <a name="FollowUp"></a> Completamento: Creazione di un listener del gruppo di disponibilità  
   
 ###  <a name="MultiSubnetFailover"></a> Parola chiave MultiSubnetFailover e funzionalità associate  
- `MultiSubnetFailover` una nuova parola chiave stringa di connessione consente di accelerare il failover con i gruppi di disponibilità AlwaysOn e le istanze del Cluster di Failover AlwaysOn in SQL Server 2012. Le tre seguenti funzionalità secondarie vengono abilitate quando `MultiSubnetFailover=True` è impostato nella stringa di connessione:  
+ `MultiSubnetFailover` è una nuova parola chiave della stringa di connessione utilizzata per accelerare il failover con i gruppi di disponibilità AlwaysOn e le istanze del cluster di failover AlwaysOn in SQL Server 2012. Le tre seguenti funzionalità secondarie vengono abilitate quando `MultiSubnetFailover=True` è impostato nella stringa di connessione:  
   
 -   Failover multisubnet più rapido su un listener su più subnet per un gruppo di disponibilità AlwaysOn o istanze del cluster di failover.  
   
@@ -241,11 +241,11 @@ ms.locfileid: "48052371"
      **Svantaggi:** se si verifica un failover tra subnet, il tempo di recupero client potrebbe essere di 15 minuti o, a seconda di `HostRecordTTL` impostazione e della pianificazione della replica DNS/AD tra siti.  
   
 ###  <a name="RegisterAllProvidersIP"></a> Impostazione RegisterAllProvidersIP  
- Quando si usa [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], o PowerShell per creare un listener del gruppo di disponibilità, il punto di accesso Client viene creato in WSFC con la `RegisterAllProvidersIP` proprietà impostata su 1 (true). L'effetto del valore di questa proprietà dipende dalla stringa di connessione client, come indicato di seguito:  
+ Se si utilizza [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell per creare un listener del gruppo di disponibilità, il punto di accesso client viene creato in WSFC con la proprietà `RegisterAllProvidersIP` impostata su 1 (true). L'effetto del valore di questa proprietà dipende dalla stringa di connessione client, come indicato di seguito:  
   
 -   Stringhe di connessione che impostano `MultiSubnetFailover` su true  
   
-     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Imposta il `RegisterAllProvidersIP` proprietà su 1 per ridurre il tempo di riconnessione dopo un failover per i client le cui stringhe di connessione specificano `MultiSubnetFailover = True`, come consigliato. Per sfruttare la funzionalità di più subnet del listener, i client possono richiedere un provider di dati che supporta la parola chiave `MultiSubnetFailover`. Per informazioni sul supporto dei driver per il failover su più subnet, vedere [Connettività client AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
+     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] imposta la proprietà `RegisterAllProvidersIP` su 1 per ridurre il tempo di riconnessione in seguito a un failover per i client le cui stringhe di connessione specificano `MultiSubnetFailover = True`, come consigliato. Per sfruttare la funzionalità di più subnet del listener, i client possono richiedere un provider di dati che supporta la parola chiave `MultiSubnetFailover`. Per informazioni sul supporto dei driver per il failover su più subnet, vedere [Connettività client AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
   
      Per informazioni sul clustering su più subnet, vedere [Clustering su più subnet di SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
@@ -258,16 +258,16 @@ ms.locfileid: "48052371"
   
 -   Stringhe di connessione che non impostano `MultiSubnetFailover` su true  
   
-     Se `RegisterAllProvidersIP = 1`, in tutti i client le cui stringhe di connessione non utilizzano `MultiSubnetFailover = True`si verificheranno connessioni ad alta latenza. Questa situazione si verifica in quanto questi client tentano di effettuare connessioni a tutti gli indirizzi IP in sequenza. Al contrario, se `RegisterAllProvidersIP` viene impostato su 0, l'indirizzo IP attivo viene registrato nel punto di accesso client del cluster WSFC, riducendo la latenza per i client legacy. Pertanto, se alcuni client legacy devono connettersi a un listener del gruppo di disponibilità e non è possibile utilizzare la proprietà `MultiSubnetFailover`, è consigliabile impostare `RegisterAllProvidersIP` su 0.  
+     Se `RegisterAllProvidersIP = 1`, in tutti i client le cui stringhe di connessione non utilizzano `MultiSubnetFailover = True` si verificheranno connessioni ad alta latenza. Questa situazione si verifica in quanto questi client tentano di effettuare connessioni a tutti gli indirizzi IP in sequenza. Al contrario, se `RegisterAllProvidersIP` viene impostato su 0, l'indirizzo IP attivo viene registrato nel punto di accesso client del cluster WSFC, riducendo la latenza per i client legacy. Pertanto, se sono presenti client legacy devono connettersi a un listener del gruppo di disponibilità e non è possibile usare la `MultiSubnetFailover` proprietà, è consigliabile modificare `RegisterAllProvidersIP` su 0.  
   
     > [!IMPORTANT]  
-    >  Quando si crea un listener del gruppo di disponibilità con il cluster WSFC (GUI di gestione Cluster di Failover), `RegisterAllProvidersIP` sarà pari a 0 (false) per impostazione predefinita.  
+    >  In fase di creazione di un listener del gruppo di disponibilità mediante il cluster WSFC (interfaccia utente grafica di Gestione cluster di failover), `RegisterAllProvidersIP` sarà 0 (false) per impostazione predefinita.  
   
 ###  <a name="HostRecordTTL"></a> Impostazione HostRecordTTL  
- Per impostazione predefinita, tramite i client vengono memorizzati nella cache record DNS del cluster per 20 minuti.  Grazie alla riduzione `HostRecordTTL`, il tempo a Live (TTL), per i record memorizzati nella cache, i client legacy possono riconnettersi più rapidamente.  Tuttavia, riducendo il `HostRecordTTL` impostando maggio anche risultato un aumento del traffico ai server DNS.  
+ Per impostazione predefinita, tramite i client vengono memorizzati nella cache record DNS del cluster per 20 minuti.  Riducendo `HostRecordTTL`, la durata (TTL), per il record memorizzato nella cache, i client legacy possono riconnettersi più rapidamente.  Tuttavia, la riduzione dell'impostazione `HostRecordTTL` può inoltre comportare un aumento del traffico nei server DN.  
   
 ###  <a name="SampleScript"></a> Script PowerShell di esempio per disabilitare RegisterAllProvidersIP e ridurre TTL  
- L'esempio di PowerShell seguente illustra come configurare entrambi i `RegisterAllProvidersIP` e `HostRecordTTL` parametri per la risorsa listener del cluster.  Il record DNS verrà memorizzato nella cache per 5 minuti anziché per i 20 minuti predefiniti.  Modificando entrambi i parametri del cluster è possibile ridurre il tempo di connessione all'indirizzo IP corretto dopo un failover per client legacy tramite cui non è possibile utilizzare il parametro `MultiSubnetFailover`.  Sostituire `yourListenerName` con il nome del listener che si sta modificando.  
+ Nell'esempio di PowerShell riportato di seguito viene illustrato come configurare i parametri del cluster `RegisterAllProvidersIP` e `HostRecordTTL` per la risorsa del listener.  Il record DNS verrà memorizzato nella cache per 5 minuti anziché per i 20 minuti predefiniti.  La modifica di entrambi i parametri del cluster può ridurre il tempo di connessione all'indirizzo IP corretto dopo un failover per i client legacy che non possono utilizzare il parametro `MultiSubnetFailover`.  Sostituire `yourListenerName` con il nome del listener che si sta modificando.  
   
 ```  
 Import-Module FailoverClusters  

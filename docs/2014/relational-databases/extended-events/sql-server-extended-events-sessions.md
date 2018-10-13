@@ -15,12 +15,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5fc2c924249518ecc40d363722ba6a6b1e882d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17062493d2c07e7dfbf1625aad584823953f043d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051361"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120258"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessioni Eventi estesi di SQL Server
   Una sessione di eventi estesi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene creata nel processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è ospitato il motore degli eventi estesi. Gli aspetti seguenti di una sessione degli eventi estesi forniscono un contesto per la comprensione dell'infrastruttura degli eventi estesi e dell'elaborazione generale che si verifica:  
@@ -55,7 +55,7 @@ ms.locfileid: "48051361"
   
  Con riferimento all'illustrazione precedente, si noti che:  
   
--   Il mapping tra oggetti del pacchetto e le sessioni è molti-a-molti, ciò significa che un oggetto può apparire in più sessioni e una sessione può contenere più oggetti.  
+-   Il mapping tra gli oggetti di pacchetto e le sessioni è molti-a-molti, il che significa che un oggetto può apparire in più sessioni e una sessione può contenere più oggetti.  
   
 -   Lo stesso evento (Evento 1) o destinazione (Destinazione 1) può essere abilitato in più di una sessione.  
   

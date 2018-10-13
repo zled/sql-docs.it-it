@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3e5ff998bc153921d9976e3996465c6cbd92f023
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e602cacff0c8f92b2a7748f4113a5a2ec2f34947
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393222"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100382"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gestione del carico di lavoro nel sistema di piattaforma Analitica
 
@@ -107,7 +107,7 @@ Per ogni account di accesso, le impostazioni di classe di risorse vengono applic
   
 Prima di SQL Server PDW esegue un'istruzione, tenta di acquisire gli slot di concorrenza necessari per la richiesta. Se non è possibile acquisire slot di concorrenza sufficienti, SQL Server PDW Sposta la richiesta in uno stato di attesa di esecuzione. Tutte le risorse di sistema che sono stati già allocati alla richiesta vengono restituiti al sistema.  
   
-La maggior parte delle istruzioni SQL che richiedono sempre le allocazioni di risorse predefinito e pertanto non vengono controllata dalle classi di risorse. Ad esempio, CREATE LOGIN solo richiede una piccola quantità di risorse e viene allocata le risorse predefinite, anche se l'account di accesso chiama CREATE LOGIN è un membro di una classe di risorse.  Se, ad esempio, Anna è un membro della classe di risorse largerc e Anna invia un'istruzione CREATE LOGIN, l'istruzione CREATE LOGIN eseguirà con il numero predefinito di risorse.  
+La maggior parte delle istruzioni SQL che richiedono sempre le allocazioni di risorse predefinito e pertanto non vengono controllata dalle classi di risorse. Ad esempio, creare account di accesso solo richiede una piccola quantità di risorse e vengono allocate le risorse predefinite anche se l'account di accesso chiama CREATE LOGIN è un membro di una classe di risorse.  Se, ad esempio, Anna è un membro della classe di risorse largerc e Anna invia un'istruzione CREATE LOGIN, l'istruzione CREATE LOGIN eseguirà con il numero predefinito di risorse.  
   
 Le istruzioni SQL e operazioni regolate dalle classi di risorse:  
   

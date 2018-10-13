@@ -11,12 +11,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eded16b19f9645444c8161e04c63c8a283673b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3282f801e8ced6ab51d0188e74eb854631c399c1
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108187"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120228"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurare l'accesso HTTP ad Analysis Services in Internet Information Services (IIS) 8.0
   In questo articolo viene illustrato come configurare un endpoint HTTP per l'accesso a un'istanza di Analysis Services. È possibile abilitare l'accesso HTTP configurando MSMDPUMP.dll, un'estensione ISAPI che viene eseguita in IIS (Internet Information Services) e che consente di eseguire attività di data pump da applicazioni client a un server Analysis Services e viceversa. Questo approccio fornisce un'alternativa per la connessione ad Analysis Services se per le soluzioni Business Intelligence in uso sono richieste le funzionalità seguenti:  
@@ -257,7 +257,7 @@ ms.locfileid: "48108187"
 |Autenticazione Windows|Aggiungere all'elenco Appartenenza gli account di gruppo o utente di Windows che richiedono i dati di Analysis Services mediante la rappresentazione o la delega.<br /><br /> Supponendo che venga utilizzata la delega vincolata Kerberos, gli unici account che richiedono le autorizzazioni sono gli account di gruppo e l'utente di Windows che richiedono l'accesso. Nessuna autorizzazione è necessaria per l'identità del pool di applicazioni.|  
 |Autenticazione di base|Aggiungere all'elenco Appartenenza gli account di gruppo o utente di Windows che vengono passati nella stringa di connessione.<br /><br /> Inoltre, se si passano le credenziali tramite `EffectiveUserName` nella stringa di connessione, l'identità del pool di applicazioni deve disporre dei diritti di amministratore sull'istanza di Analysis Services. In SSMS, fare doppio clic sull'istanza di &#124; **delle proprietà** &#124; **sicurezza** &#124; **Add**. Immettere l'identità del pool di applicazioni. Se è stata usata l'identità predefinita incorporata, l'account viene specificato come **IIS AppPool\DefaultAppPool**.<br /><br /> ![](../media/ssas-httpaccess-iisapppoolidentity.png)|  
   
- Per altre informazioni, vedere [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
+ Per altre informazioni, vedere [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)(Autenticazione a Microsoft BI e delega d'identità).  
   
 ##  <a name="bkmk_test"></a> Passaggio 6: Verificare la configurazione  
  La sintassi della stringa di connessione per MSMDPUMP è l'URL del MSMDPUMP.dll.  
@@ -300,9 +300,9 @@ ms.locfileid: "48108187"
   
 ## <a name="see-also"></a>Vedere anche  
  [Post del forum (accesso http tramite msmdpump e autenticazione di base)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
- [Configurare il Firewall di Windows per consentire l'accesso ad Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Autorizzare l'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
+ [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
  [Metodi di autenticazione IIS](http://go.microsoft.com/fwlink/?LinkdID=208461)   
- [Come configurare SSL in IIS 7](http://go.microsoft.com/fwlink/?LinkId=207562)  
+ [Enable Anonymous Authentication (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=207562)  
   
   

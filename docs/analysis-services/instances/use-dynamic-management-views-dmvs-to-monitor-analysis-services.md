@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ce22aad16b8a789c1224adf3421e61ad113a0ccb
-ms.sourcegitcommit: a7edd16af7be25f627d16e5c8a6e8d6de7071a28
+ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47178327"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906401"
 ---
 # <a name="dynamic-management-views-dmvs"></a>Viste a gestione dinamica (DMV) 
 
@@ -210,4 +210,4 @@ I set di righe dello schema sono descritti nelle due protocolli di SQL Server An
 |[MDSCHEMA_SETS](https://msdn.microsoft.com/library/ee301356)|Descrive i set attualmente descritti in un database, compresi i set con ambito sessione.|  
 
 > [!NOTE]
-> Viste a gestione dinamica di risorse di archiviazione non è un set di righe dello schema descritti nel protocollo.
+> Viste a gestione dinamica di risorse di archiviazione non è un set di righe dello schema descritto nella specifica del protocollo.

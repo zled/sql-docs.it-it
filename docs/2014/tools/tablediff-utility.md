@@ -19,12 +19,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 32a750ead87e8d775388d93c2ddc84ed12f2ca98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 321bcbc0c07d4de2d5e9a7f930cb21c0995ce79b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147933"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169401"
 ---
 # <a name="tablediff-utility"></a>utilità tablediff
   L'utilità **tablediff** viene usata per confrontare i dati in due tabelle per rilevarne l'eventuale non convergenza e risulta particolarmente utile per la risoluzione dei problemi relativi alla non convergenza in una topologia di replica. Questa utilità può essere utilizzata dal prompt dei comandi oppure in un file batch per eseguire le attività seguenti:  
@@ -77,8 +77,8 @@ ms.locfileid: "48147933"
  [ **-?** ]  
  Restituisce l'elenco dei parametri supportati.  
   
- **-sourceserver** *source_server_name*[**\\***instance_name*]  
- Nome del server di origine. Specificare *source_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare *source_server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *source_server_name*[**\\**_instance_name_]  
+ Nome del server di origine. Specificare _origine\_server\_name_ per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare _origine\_server\_name_**\\**_istanza\_nome_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  Nome del database di origine.  
@@ -101,8 +101,8 @@ ms.locfileid: "48147933"
  **-sourcelocked**  
  La tabella di origine viene bloccata durante il confronto mediante gli hint di tabella TABLOCK e HOLDLOCK.  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- Nome del server di destinazione. Specificare *destination_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare *destination_server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *destination_server_name*[**\\**_istanza\_nome_]  
+ Nome del server di destinazione. Specificare *destination_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare _destinazione\_server\_name_**\\**_istanza\_nome_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  Nome del database di destinazione.  
@@ -126,7 +126,7 @@ ms.locfileid: "48147933"
  La tabella di destinazione viene bloccata durante il confronto mediante gli hint di tabella TABLOCK e HOLDLOCK.  
   
  **-b** *large_object_bytes*  
- È il numero di byte per confrontare le colonne di tipo di dati large object, che include: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` e `varbinary(max)`. L'impostazione predefinita di*large_object_bytes* corrisponde alle dimensioni della colonna. I dati che superano il valore di *large_object_bytes* non verranno confrontati.  
+ Numero di byte per confrontare le colonne con tipo di dati LOB, ovvero `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` e `varbinary(max)`. L'impostazione predefinita di*large_object_bytes* corrisponde alle dimensioni della colonna. I dati che superano il valore di *large_object_bytes* non verranno confrontati.  
   
  **-bf**  *number_of_statements*  
  Numero di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] da scrivere nel file script [!INCLUDE[tsql](../includes/tsql-md.md)] corrente quando si usa l'opzione **-f** . Se il numero di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] supera il valore di *number_of_statements*, viene creato un nuovo file script [!INCLUDE[tsql](../includes/tsql-md.md)] .  
@@ -172,7 +172,7 @@ ms.locfileid: "48147933"
 ## <a name="remarks"></a>Note  
  L'utilità **tablediff** non può essere usata con server non[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Tabelle con `sql_variant` colonne di tipo di dati non sono supportate.  
+ Le tabelle contenenti colonne con il tipo di dati `sql_variant` non sono supportate.  
   
  Per impostazione predefinita, l'utilità **tablediff** supporta i mapping dei tipi di dati tra colonne di origine e di destinazione elencati di seguito.  
   

@@ -11,12 +11,12 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f75599c201c4c34fe2b22f7ddb27308c4d69a38f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213881"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085477"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Esplorazione del modello Sequence Clustering (Esercitazione intermedia sul data mining)
   Ora che è stata compilata la **Sequence Clustering with Region** modello, è possibile esaminarlo utilizzando il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Sequence Clustering nel **visualizzatore modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining. Il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Sequence Clustering include cinque schede: **diagramma dei Cluster**, **profili Cluster**, **caratteristiche Cluster**,  **ClusterDiscrimination**, e **transizioni di stato**. Per altre informazioni su come utilizzare questo visualizzatore, vedere [esplorare un modello usando il visualizzatore Microsoft Sequence Clustering](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
@@ -257,7 +257,7 @@ ms.locfileid: "48213881"
  [Creazione di un modello Sequence Clustering correlato &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmo Microsoft Sequence Clustering](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Esempi di query su modelli Sequence Clustering](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Esempi di query sul modello di cluster di sequenza](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

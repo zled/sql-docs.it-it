@@ -11,12 +11,12 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ecc95a89d3db446122d1da4e9701d1555028fe5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bc835d09f02e170c3b5595495eb6554c1319df5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136021"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906381"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Informazioni su DAX nei modelli tabulari (SSAS tabulare)
   Data Analysis Expressions (DAX) è il linguaggio delle formule usato per creare calcoli personalizzati in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per cartelle di lavoro di Microsoft Excel e progetti di modelli tabulari di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le formule DAX includono funzioni, operatori e valori che consentono di eseguire calcoli avanzati sui dati in tabelle e colonne.  
@@ -52,7 +52,7 @@ ms.locfileid: "48136021"
 ##  <a name="bkmk_DAXintm"></a> DAX nei modelli tabulari  
  Sia in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] che nei modelli tabulari non esiste alcuna differenza funzionale nella modalità di calcolo dei valori dei rispettivi set di dati applicata nelle formule DAX. È tuttavia diversa la posizione in cui le formule DAX vengono create negli strumenti di creazione di cartelle di lavoro e modelli, così come è diversa la posizione in cui viene valutato il contesto in determinate misure.  
   
- In [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]le formule di calcolo vengono in genere create dall'utente della cartella di lavoro per l'analisi di Business Intelligence in modalità self-service. Le colonne calcolate vengono create per una tabella nella finestra di PowerPivot e le misure vengono create nelle tabelle pivot o nell'area calcoli. Diversamente dai progetti di modelli tabulari, le cartelle di lavoro di PowerPivot non forniscono la sicurezza basata sui ruoli con cui è possibile utilizzare formule DAX per proteggere i dati.  
+ In [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] le formule di calcolo vengono in genere create dall'utente della cartella di lavoro per l'analisi di Business Intelligence in modalità self-service. Le colonne calcolate vengono create per una tabella nella finestra di PowerPivot e le misure vengono create nelle tabelle pivot o nell'area calcoli. Diversamente dai progetti di modelli tabulari, le cartelle di lavoro di PowerPivot non forniscono la sicurezza basata sui ruoli con cui è possibile utilizzare formule DAX per proteggere i dati.  
   
  Nei progetti di modelli tabulari le formule di calcolo vengono create in Progettazione modelli in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] dagli autori dei modelli. Mentre i valori delle colonne calcolate, calcolati tramite le formule DAX, vengono immediatamente visualizzati nella tabella in Progettazione modelli, fatta eccezione per la funzionalità di anteprima delle misure nella griglia delle misure, le misure non vengono calcolate fino a che un utente non specifica un filtro in uno strumento client di creazione report quale [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] o nelle tabelle pivot di Microsoft Excel.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48136021"
   
  I filtri di riga vengono applicati alle righe specificate e a quelle correlate. Quando una tabella dispone di più relazioni, tramite i filtri viene applicata la sicurezza alla relazione che è attiva. I filtri di riga saranno intersecati con altri relativi filtri definiti per le tabelle correlate.  
   
- Per altre informazioni, vedere [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md).  
+ Per altre informazioni, vedere [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_DAX_datatypes"></a> Tipi di dati DAX  
  In un modello è possibile importare dati provenienti da numerose origini dati diverse in grado di supportare tipi di dati differenti. Quando si importano dati in un modello, i dati vengono convertiti in uno dei tipi di dati dei modelli tabulari. Quando i dati del modello vengono usati in un calcolo, i dati vengono quindi convertiti in un tipo di dati DAX per la durata e l'output del calcolo. Quando si crea una formula di DAX, i termini utilizzati nella formula determinano automaticamente il tipo di dati del valore restituito.  
@@ -219,7 +219,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   Nelle funzioni DAX sono incluse numerose funzioni di *Business Intelligence per le gerarchie temporali* . Queste funzioni consentono di definire o selezionare intervalli di date e di eseguire calcoli dinamici in base a tali date o intervalli. Ad esempio, è possibile confrontare somme in periodi paralleli.  
   
 ### <a name="date-and-time-functions"></a>Funzioni di data e ora  
- Le funzioni di data e ora in DAX sono molto simili alle funzioni di data e ora di Microsoft Excel. Tuttavia, le funzioni DAX sono basate sul `datetime` tipi di dati utilizzati da Microsoft SQL Server. Per altre informazioni, vedere [funzioni di data e ora &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
+ Le funzioni di data e ora in DAX sono molto simili alle funzioni di data e ora di Microsoft Excel. Le funzioni DAX sono tuttavia basate sui tipi di dati `datetime` utilizzati da Microsoft SQL Server. Per altre informazioni, vedere [funzioni di data e ora &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
   
 ### <a name="filter-functions"></a>Funzioni di filtro  
  Le funzioni di filtro in DAX restituiscono specifici tipi di dati, cercano valori nelle tabelle correlate e filtrano in base a valori correlati. Le funzioni di ricerca utilizzano tabelle e relazioni, come un database. Le funzioni di filtro consentono di modificare il contesto dei dati per creare calcoli dinamici. Per altre informazioni, vedere [funzioni di filtro &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx).  
@@ -423,10 +423,10 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ## <a name="see-also"></a>Vedere anche  
  [Data Analysis Expressions &#40;DAX&#41; riferimento](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   
- [Le misure &#40;tabulare di SSAS&#41;](measures-ssas-tabular.md)   
- [Le colonne calcolate &#40;tabulare di SSAS&#41;](ssas-calculated-columns.md)   
- [I ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)   
- [Gli indicatori KPI &#40;tabulare di SSAS&#41;](kpis-ssas-tabular.md)   
+ [Misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md)   
+ [Colonne calcolate &#40;SSAS tabulare&#41;](ssas-calculated-columns.md)   
+ [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)   
+ [Indicatori KPI &#40;SSAS tabulare&#41;](kpis-ssas-tabular.md)   
  [Origini dati supportate &#40;SSAS tabulare&#41;](data-sources-supported-ssas-tabular.md)  
   
   

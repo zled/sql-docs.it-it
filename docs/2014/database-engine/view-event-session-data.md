@@ -11,12 +11,12 @@ ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d25e4c745ba7cd5d937ed558283c21a49d6ec0a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159491"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120298"
 ---
 # <a name="view-event-session-data"></a>Visualizzare i dati della sessione eventi
   In questo argomento verrà descritto l'utilizzo dell'interfaccia utente visualizzata per vedere e analizzare i dati degli eventi estesi:  
@@ -51,7 +51,7 @@ ms.locfileid: "48159491"
   
     -   Fare doppio clic sul file XEL.  
   
-    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] fare clic con il pulsante destro del mouse su una sessione Eventi estesi in esecuzione e selezionare Visualizza dati di destinazione.  
+    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse su una sessione Eventi estesi in esecuzione e selezionare Visualizza dati di destinazione.  
   
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48159491"
  Nel riquadro **Dettagli** vengono visualizzate tutte le colonne per l'evento selezionato, inclusi campi e azioni. È possibile aggiungere una colonna alla tabella dei dati di destinazione facendo clic con il pulsante destro del mouse su una riga nel riquadro **Dettagli** e selezionando **Mostra colonna in tabella**.  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>Creare, modificare o eliminare le colonne unite  
- Con una colonna unita è possibile combinare un set di campi da visualizzare in una sola colonna. Nella colonna unita verranno mostrati i dati dal primo campo non Null in base all'ordine con cui vengono aggiunti all'elenco dei campi. Ciò è simile a quanto visualizzato nel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, in cui una colonna specifica può visualizzare dati diversi a seconda dell'evento (l'esempio più comune di questo è il campo TextData in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler). Per un esempio, è possibile unire i campi statement e batch_text rispettivamente dagli eventi sql_statement_completed e sql_batch_completed in un campo denominato myStatement. Quando si visualizza la colonna myStatement nella tabella, in essa verranno mostrati i dati appropriati per l'evento associato.  
+ Con una colonna unita è possibile combinare un set di campi da visualizzare in una sola colonna. Nella colonna unita verranno mostrati i dati dal primo campo non Null in base all'ordine con cui vengono aggiunti all'elenco dei campi. Si tratta di una situazione simile a quella visualizzata in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, dove in una colonna specifica è possibile visualizzare dati diversi a seconda dell'evento. Il relativo esempio più comune è il campo TextData in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler. Per un esempio, è possibile unire i campi statement e batch_text rispettivamente dagli eventi sql_statement_completed e sql_batch_completed in un campo denominato myStatement. Quando si visualizza la colonna myStatement nella tabella, in essa verranno mostrati i dati appropriati per l'evento associato.  
   
  È possibile creare, modificare o eliminare le colonne unite:  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48159491"
  In caso di raggruppamento di colonne, il relativo ordinamento comporta l'esecuzione della stessa operazione esclusivamente per i dati all'interno del gruppo.  
   
 ### <a name="group-results"></a>Raggruppare i risultati  
- Risultati raggruppati sono equivalenti alle funzionalità dei `GROUP BY` clausola in [!INCLUDE[tsql](../includes/tsql-md.md)]. Nella tabella dei dati di destinazione verranno mostrati i dati raggruppati, consentendo all'utente di espandere e comprimere i dati.  
+ La funzionalità dei risultati raggruppati è simile a quella della clausola `GROUP BY` in [!INCLUDE[tsql](../includes/tsql-md.md)]. Nella tabella dei dati di destinazione verranno mostrati i dati raggruppati, consentendo all'utente di espandere e comprimere i dati.  
   
  È necessario raggruppare i dati prima di poter aggregarli. Ad esempio, è possibile raggruppare in base al valore query_hash, disporre in ordine decrescente in base alla durata, ottenere la durata media per ogni gruppo, quindi disporre in modo decrescente in base all'aggregazione.  In questo modo verrà generato un elenco contenente istruzioni univoche dalla durata media più lunga a quella più corta. Quando si espande il gruppo di livello superiore verranno visualizzate le singole esecuzioni della query specificata, ordinate dalla più lunga alla più corta.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "48159491"
   
     -   Colonne della tabella. Utilizzare questa opzione per eseguire ricerche in tutte le colonne visibili nella finestra di traccia.  
   
-    -   Dettagli. Utilizzare questa opzione per eseguire ricerche in tutte le colonne (promosse e non promosse) della finestra di traccia selezionate prima di aprire la finestra di dialogo **Trova in eventi estesi** .  
+    -   Dettagli. Usare questa opzione per eseguire ricerche in tutte le colonne (promosse e non promosse) nella finestra di traccia selezionate prima di aprire la **trova in eventi estesi** nella finestra di dialogo.  
   
     -   *Event_column_name*. Utilizzare questa opzione per eseguire ricerche in una colonna specifica dell'evento dall'elenco a discesa.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "48159491"
   
  Per copiare i risultati della traccia, selezionare una cella, una o più righe, fare clic con il pulsante destro del mouse e scegliere **Copia** , quindi selezionare **Cella**, **Riga**o **Dettagli**. Eventi estesi supporta la copia di un massimo di 1000 righe.  
   
- È possibile esportare i risultati della traccia per una. XEL file, tabella, o. File CSV selezionando **esportare** dal **eventi estesi** opzione di menu in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+ È possibile esportare i risultati della traccia in un file XEL, una tabella o un file CSV selezionando **Esporta in** nell'opzione di menu **Eventi estesi** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="view-a-deadlock-graph-and-query-plans"></a>Visualizzare un evento Deadlock Graph e piani di query  
  È possibile visualizzare l'evento Deadlock Graph per **xml_deadlock_report** nel riquadro Dettagli per consentire di risolvere i problemi relativi ai deadlock. È anche possibile visualizzare i grafici del piano di query per gli eventi seguenti:  

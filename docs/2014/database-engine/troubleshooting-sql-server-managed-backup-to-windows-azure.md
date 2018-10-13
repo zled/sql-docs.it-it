@@ -10,12 +10,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00d66f99c09292046f2372621faf65e01757b80c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4feb316cf43524fa84734d85bf62631833e26d0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121751"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120068"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Risoluzione dei problemi relativi al backup gestito di SQL Server in Windows Azure
   In questo argomento vengono descritti gli strumenti e le attività utilizzabili per la risoluzione dei problemi relativi agli errori che si possono verificare durante le operazioni di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "48121751"
   
 1.  **Errori durante l'abilitazione o la configurazione [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     Errore relativo all'impossibilità di accesso all'URL di archiviazione Specificare una credenziale SQL valida..." : È possibile riscontrare questo e altri errori simili che fa riferimento alle credenziali SQL.  In questi casi, verificare il nome delle credenziali SQL fornite, nonché le informazioni archiviate nelle credenziali in questione, vale a dire il nome dell'account di archiviazione e la chiave di accesso all'archiviazione, e assicurarsi che siano correnti e valide.  
+     Errore relativo all'impossibilità di accesso all'URL di archiviazione Specificare una credenziale SQL valida..." : È possibile riscontrare questo e altri errori simili che fa riferimento alle credenziali SQL.  In questi casi, verificare il nome delle credenziali SQL fornite, nonché le informazioni archiviate nelle credenziali SQL: il nome di account di archiviazione e la chiave di accesso di archiviazione e assicurarsi che siano correnti e valide.  
   
      Errore: "... non è possibile configurare il database... perché si tratta di un database di sistema": verrà visualizzato questo errore se si prova ad abilitare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per un database di sistema.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] non supporta i backup per i database di sistema.  Per configurare il backup di un database di sistema, utilizzare altre tecnologie di backup di SQL Server, ad esempio i piani di manutenzione.  
   

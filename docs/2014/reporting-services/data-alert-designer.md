@@ -18,12 +18,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b4bf77cc626f78014ab139d3e27377c8f139e0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da531e62f2067ff1ae217a313d1fdd0eb8ce24a7
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162241"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120118"
 ---
 # <a name="data-alert-designer"></a>Finestra di progettazione Avviso dati
   Le definizioni di avviso dati vengono create e modificate nella finestra di progettazione Avviso dati. Una definizione di avviso è una raccolta di metadati, inclusi i dati del report a cui si è interessati, le regole che i dati del report devono soddisfare per creare istanze di avviso dati e inviare messaggi di avviso dati, i destinatari del messaggio di avviso e così via.  
@@ -45,7 +45,7 @@ ms.locfileid: "48162241"
 > [!NOTE]  
 >  Poiché la funzionalità relativa agli avvisi dati di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è disponibile solo quando si installa [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, il report per cui si desidera creare un avviso deve essere salvato, distribuito o caricato in una raccolta documenti di SharePoint.  
 >   
->  Gli avvisi dati non possono essere creati per report in cui viene utilizzata l'autenticazione integrata di Windows o che richiedono le credenziali. Nei report devono venire utilizzate credenziali archiviate. Per altre informazioni, vedere [specificare le credenziali e informazioni di connessione per origini dati del Report](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+>  Gli avvisi dati non possono essere creati per report in cui viene utilizzata l'autenticazione integrata di Windows o che richiedono le credenziali. Nei report devono venire utilizzate credenziali archiviate. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  Per aprire la finestra di progettazione Avviso dati, scegliere **Nuovo avviso dati** dal menu **Azioni** sulla barra degli strumenti dei report. Se l'opzione **Nuovo avviso dati** non è visualizzata, il report non è configurato per l'utilizzo di credenziali archiviate. È possibile aggiornare il tipo di credenziali aggiornando l'origine dati del report dalla raccolta di SharePoint.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48162241"
 ### <a name="alert-name"></a>Nome dell'avviso  
  Per impostazione predefinita, la definizione di avviso e il report hanno lo stesso nome. È possibile modificare il nome dell'avviso per renderlo più significativo. In questo modo sarà più semplice gestire gli avvisi, determinando quali aggiornare, eliminare e così via.  
   
- È possibile creare più avvisi in un report nonché disporre di più definizioni di avviso con lo stesso nome. Tuttavia si consiglia di utilizzare nomi di avviso univoci in modo da facilitare la differenziazione e la gestione delle definizioni di avviso. L'elenco di tutti gli avvisi creati può essere visualizzato in Gestione avvisi dati. Per altre informazioni, vedere [Gestione avvisi dati per gli amministratori di avvisi](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) e [gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
+ È possibile creare più avvisi in un report nonché disporre di più definizioni di avviso con lo stesso nome. Tuttavia si consiglia di utilizzare nomi di avviso univoci in modo da facilitare la differenziazione e la gestione delle definizioni di avviso. L'elenco di tutti gli avvisi creati può essere visualizzato in Gestione avvisi dati. Per altre infomrazioni, vedere [Gestione avvisi dati per gli amministratori di avvisi](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) e [Gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
   
 ### <a name="rules-and-clauses"></a>Regole e clausole  
  L'ambito delle modifiche ai dati e delle regole di avviso definisce le modifiche ai dati tramite cui viene attivato l'avviso. L'ambito delle modifiche ai dati può essere uno dei seguenti:  
@@ -172,7 +172,7 @@ ms.locfileid: "48162241"
  Per altre informazioni sulla modalità di generazione del messaggio di posta elettronica, vedere [Reporting Services Data Alerts](../ssms/agent/alerts.md).  
   
 ##  <a name="CreateAlert"></a> Creare una definizione di avviso dati  
- Se all'utente vengono concesse le autorizzazioni Visualizzazione elementi e Creazione avvisi di SharePoint, potrà creare una definizione di avviso dati per qualsiasi report per il quale dispone dell'autorizzazione per la visualizzazione, a condizione che nel report vengano utilizzate credenziali archiviate o nessuna credenziale. Il report viene eseguito da una raccolta di SharePoint. I dati disponibili per l'utilizzo nella finestra di progettazione Avviso dati provengono dal report. Se il report è con parametri, potrebbe essere necessario eseguirlo utilizzando valori dei parametri diversi per assicurarsi che i dati di interesse vengano visualizzati nel report. Dopo aver aperto il report, scegliere **Nuovo avviso dati** dal menu **Azioni** sulla barra degli strumenti dei report per aprire la finestra di progettazione Avviso dati. Nell'immagine seguente viene illustrato come aprire la finestra di progettazione Avviso dati.  
+ Se all'utente vengono concesse le autorizzazioni Visualizzazione elementi e Creazione avvisi di SharePoint, potrà creare una definizione di avviso dati per qualsiasi report per il quale dispone dell'autorizzazione per la visualizzazione, a condizione che nel report vengano utilizzate credenziali archiviate o nessuna credenziale. Il report viene eseguito da una raccolta di SharePoint. I dati disponibili per l'utilizzo nella finestra di progettazione Avviso dati provengono dal report. Se il report include parametri, si potrebbe essere necessario eseguire il report utilizzando i valori di parametro diversi per garantire che i dati che sia interessati a verrà visualizzata nel report. Dopo aver aperto il report, scegliere **Nuovo avviso dati** dal menu **Azioni** sulla barra degli strumenti dei report per aprire la finestra di progettazione Avviso dati. Nell'immagine seguente viene illustrato come aprire la finestra di progettazione Avviso dati.  
   
  ![Aprire la finestra di progettazione Avviso dati dalla raccolta di SharePoint](media/rs-openalertdesigneriw.gif "Aprire la finestra di progettazione Avviso dati dalla raccolta di SharePoint")  
   
@@ -207,7 +207,7 @@ ms.locfileid: "48162241"
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Avvisi dati di Reporting Services](../ssms/agent/alerts.md)   
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)   
  [Gestione avvisi dati per gli amministratori di avvisi](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)  
   
   

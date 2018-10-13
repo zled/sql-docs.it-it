@@ -13,12 +13,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07a8a8f04257e68b5294bb7ee0b0757ffc048fbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 285d4863cfb3b3ccd812d7e0b4894d4446257562
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207558"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168822"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitoraggio attività processi (Impostazioni filtro)
   Utilizzare questa pagina per ridurre il numero di righe visualizzate in Monitoraggio attività processi. Immettere i criteri in una o più caselle disponibili per visualizzare solo le righe che soddisfano i valori specificati. Alcune caselle, ad esempio **Stato** o **Tipo blocco** , consentono di immettere un numero finito di valori possibili, disponibili in un elenco a discesa. In altre caselle, ad esempio **Applicazione** , è invece possibile immettere qualsiasi tipo e numero di valori sotto forma di elenco delimitato da virgole. Le icone sulla barra degli strumenti possono essere utilizzate per ordinare le caselle disponibili alfabeticamente o in base alla categoria. Fare clic sui criteri per visualizzarne una breve descrizione.  
@@ -60,7 +60,7 @@ ms.locfileid: "48207558"
  In questa casella senza nome viene visualizzata una breve descrizione dei criteri nel momento in cui vengono selezionati.  
   
  **Applica filtro**  
- Per applicare il filtro, fare clic su **Applica****filtro** e quindi su **OK**. Per conservare le impostazioni di filtro nella finestra di dialogo **Impostazioni****filtro** senza applicarle, deselezionare **Applica****filtro**e quindi fare clic su **OK**in modo da visualizzare tutte le righe.  
+ Per applicare il filtro, fare clic su **Applica filtro** e quindi fare clic su **OK**. Per conservare le impostazioni di filtro nel **impostazioni filtro** finestra di dialogo casella, ma non applicarle, deselezionare **Applica filtro**e quindi fare clic su **OK**, per visualizzare tutte le righe.  
   
  **Clear**  
  Consente di ripristinare le impostazioni di filtro predefinite.  

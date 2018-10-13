@@ -15,12 +15,12 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b8d8daec2367212b405f2cf39b8f4229cc7dace
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 667dbd4e0b323f50721af716a30709ba9ea6d5c8
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144241"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071815"
 ---
 # <a name="create-a-database-mail-profile"></a>Creare un profilo di Posta elettronica database
   Per creare profili pubblici e privati di Posta elettronica database, è possibile utilizzare **Configurazione guidata posta elettronica database** o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -191,7 +191,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*Stato del profilo predefinito* '  
   
-     dove *@profile_name* corrisponde al nome del profilo e *@principal_name* indica che si tratta di un profilo pubblico e *@is_default* determina se il profilo dell'utente o del ruolo del database è quello predefinito o meno.  
+     in cui *@profile_name* è il nome del profilo, e *@principal_name* per indicare che si tratta di un profilo pubblico e *@is_default* determina se questo profilo è il valore predefinito per il ruolo o utente del database.  
   
  Nell'esempio seguente vengono creati un account e un profilo privato di Posta elettronica database, quindi viene aggiunto l'account al profilo e viene concesso l'accesso pubblico al profilo.  
   

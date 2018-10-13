@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45fe288818c6234b61226311226cdbc6a471146b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8745874d47d173160848ea385d0479ccbbfb7173
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217431"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169329"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Riferimento all'interfaccia utente dell'utilità di esecuzione pacchetti (DtExecUI)
   Utilizzare l' **Utilità di esecuzione pacchetti** per eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tramite l'utilità è possibile eseguire i pacchetti archiviati in una delle tre posizioni seguenti: database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system. Questa interfaccia utente, che può essere aperto da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure digitando `dtexecui` un prompt dei comandi, è un'alternativa all'esecuzione di pacchetti tramite il **DTExec** strumento del prompt dei comandi.  
@@ -283,7 +283,7 @@ ms.locfileid: "48217431"
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ## <a name="logging-page"></a>Pagina Registrazione  
- Utilizzare la pagina **Registrazione** della finestra di dialogo **Utilità di esecuzione pacchetti** per rendere disponibili i provider di log per il pacchetto in fase di esecuzione. Specificare il tipo di provider di log del pacchetto e la stringa di connessione al log. Per ogni voce del provider di log, viene aggiunta un'opzione **/LOGGER***classid* al prompt dei comandi.  
+ Utilizzare la pagina **Registrazione** della finestra di dialogo **Utilità di esecuzione pacchetti** per rendere disponibili i provider di log per il pacchetto in fase di esecuzione. Specificare il tipo di provider di log del pacchetto e la stringa di connessione al log. Per ogni voce di provider di log, viene aggiunta un'opzione **/LOGGER**_idclasse_ al prompt dei comandi.  
   
 ### <a name="options"></a>Opzioni  
  **Provider di log**  
@@ -302,7 +302,7 @@ ms.locfileid: "48217431"
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ## <a name="set-values-page"></a>Pagina Imposta valori  
- Utilizzare la pagina **Imposta valori** della finestra di dialogo **Utilità di esecuzione pacchetti** per impostare i valori delle proprietà di pacchetti, file eseguibili, connessioni, variabili e provider di log specificando i percorsi delle proprietà e i valori di queste ultime. Per ogni voce del percorso, viene aggiunta un'opzione **/SET***propertypath;value* al prompt dei comandi.  
+ Utilizzare la pagina **Imposta valori** della finestra di dialogo **Utilità di esecuzione pacchetti** per impostare i valori delle proprietà di pacchetti, file eseguibili, connessioni, variabili e provider di log specificando i percorsi delle proprietà e i valori di queste ultime. Ogni percorso aggiunge un'opzione **/SET**_percorsoproprietà;valore_ al prompt dei comandi.  
   
 ### <a name="options"></a>Opzioni  
  **Percorso proprietà**  

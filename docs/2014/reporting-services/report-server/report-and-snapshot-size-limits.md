@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 964c6dace976f54e053947c301b3093de5aa921f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e60abee965bd78dd25c5db053bfbb679b153e4d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217951"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119327"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limiti delle dimensioni di report e snapshot
   Le informazioni contenute in questo argomento consentono agli amministratori che gestiscono una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di conoscere i limiti relativi alle dimensioni dei report quando questi ultimi vengono pubblicati in un server di report, quando ne viene eseguito il rendering in fase di esecuzione e quando vengono salvati nel file system. In questo argomento vengono inoltre fornite indicazioni pratiche su come calcolare le dimensioni di un database del server di report e vengono descritti gli effetti delle dimensioni degli snapshot sulle prestazioni del server.  
@@ -35,7 +35,7 @@ ms.locfileid: "48217951"
   
  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] prevede un limite massimo per i file inviati al fine di ridurre i rischi di attacchi Denial of Service contro il server. Aumentando il valore, vengono ridotte le capacità di sicurezza garantite da questa limitazione. È pertanto consigliabile aumentarlo solo se i vantaggi che questa modifica comporta bilanciano i maggiori rischi a cui viene esposto il sistema di sicurezza.  
   
- Si tenga presente che il valore impostato per l'elemento `maxRequestLength` deve essere maggiore dei limiti effettivi delle dimensioni che si desidera applicare. È necessario un valore più grande per tener conto dell'inevitabile aumento delle dimensioni della richiesta HTTP che si verifica dopo che tutti i parametri vengono incapsulati in una busta SOAP e a determinati parametri come quello relativo alla dimensione nei metodi <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> e <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> viene applicata la codifica Base64. Con la codifica Base64 le dimensioni dei dati originali vengono aumentate di circa il 33%. Di conseguenza, il valore specificato per il `maxRequestLength` elemento deve essere di circa il 33% maggiore delle dimensioni effettive dell'elemento utilizzabile. Ad esempio, se si specifica un valore pari a 64 MB per `maxRequestLength`, è possibile prevedere realisticamente che le dimensioni massime dei file di report inviati al server di report saranno di circa 48 MB.  
+ Si tenga presente che il valore impostato per l'elemento `maxRequestLength` deve essere maggiore dei limiti effettivi delle dimensioni che si desidera applicare. È necessario un valore più grande per tener conto dell'inevitabile aumento delle dimensioni della richiesta HTTP che si verifica dopo che tutti i parametri vengono incapsulati in una busta SOAP e a determinati parametri come quello relativo alla dimensione nei metodi <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> e <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> viene applicata la codifica Base64. Con la codifica Base64 le dimensioni dei dati originali vengono aumentate di circa il 33%. Di conseguenza, il valore specificato per l'elemento `maxRequestLength` deve essere di circa il 33% maggiore delle dimensioni effettive dell'elemento utilizzabile. Ad esempio, se si specifica un valore pari a 64 MB per `maxRequestLength`, è possibile prevedere realisticamente che le dimensioni massime dei file di report inviati al server di report saranno di circa 48 MB.  
   
 ## <a name="report-size-in-memory"></a>Dimensioni dei report in memoria  
  Quando si esegue un report, le dimensioni di quest'ultimo corrispondono alla quantità di dati restituiti nel report più le dimensioni del flusso di output. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è previsto un limite massimo per le dimensioni di un report visualizzabile. La memoria del sistema determina il limite superiore per le dimensioni (per impostazione predefinita, in caso di esecuzione il rendering di un report un server di report utilizza tutta la memoria configurata disponibile), ma è possibile specificare impostazioni di configurazione per impostare soglie di memoria e criteri della gestione della memoria. Per altre informazioni, vedere [Configurare la memoria disponibile per applicazioni del server di report](../report-server/configure-available-memory-for-report-server-applications.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "48217951"
   
  Per impostazione predefinita, sia per il database **reportserver** che per il database **reportservertempdb** è impostato l'aumento automatico delle dimensioni. Le dimensioni del database possono aumentare automaticamente ma non vengono mai ridotte automaticamente. Se nel database **reportserver** è presente capacità in eccesso in quanto sono stati eliminati snapshot, per recuperare spazio su disco è necessario ridurre il database manualmente. Analogamente, se le dimensioni del database **reportservertempdb** sono aumentate per adattarsi a un volume insolitamente elevato di report interattivi, l'allocazione dello spazio su disco rimane impostata in base a quei valori fino a quando non la si riduce.  
   
- Per calcolare le dimensioni dei database del server di report, è possibile eseguire i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] riportati di seguito. Il calcolo delle dimensioni totali del database a intervalli regolari può agevolare lo sviluppo di una stima ragionevole delle modalità di allocazione nel tempo dello spazio per il database del server di report. Le istruzioni seguenti consentono di calcolare la quantità di spazio attualmente in uso e presuppongono l'utilizzo dei nomi di database predefiniti:  
+ Per calcolare le dimensioni dei database del server di report, è possibile eseguire i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] riportati di seguito. Il calcolo delle dimensioni totali del database a intervalli regolari può agevolare lo sviluppo di una stima ragionevole delle modalità di allocazione nel tempo dello spazio per il database del server di report. Le istruzioni seguenti misurano la quantità di spazio attualmente utilizzato (le istruzioni presuppongono l'uso di nomi di database predefinito):  
   
 ```  
 USE ReportServer  
@@ -81,8 +81,8 @@ EXEC sp_spaceused
  La quantità di snapshot archiviati in un database del server di report non è un fattore che influisce sulle prestazioni. È possibile archiviare un numero elevato di snapshot senza influenzare le prestazioni del server, nonché mantenere gli snapshot per un periodo illimitato. Tenere tuttavia presente che la cronologia del report può essere modificata. Se un amministratore del server di report riduce il limite per la cronologia del report, si potrebbero perdere snapshot presenti nella cronologia che si desiderava mantenere. Se si elimina il report, viene eliminata anche tutta la relativa cronologia.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare le proprietà di elaborazione dei Report](set-report-processing-properties.md)   
- [Database del Server di report &#40;modalità nativa SSRS&#41;](report-server-database-ssrs-native-mode.md)   
+ [Impostare proprietà di elaborazione dei report](set-report-processing-properties.md)   
+ [Database del server di report &#40;modalità nativa SSRS&#41;](report-server-database-ssrs-native-mode.md)   
  [Elaborare report di grandi dimensioni](process-large-reports.md)  
   
   

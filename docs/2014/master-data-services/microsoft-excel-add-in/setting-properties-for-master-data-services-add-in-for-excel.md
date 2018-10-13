@@ -11,12 +11,12 @@ ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 50b08b56a203a5a7e9be2e53dee9eab607dcac9f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56d3b122b7a458bad7522c766559e1d775b31ef7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154801"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905933"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Impostazione delle proprietà per il componente aggiuntivo Master Data Services per Excel
   Le impostazioni del componente aggiuntivo Master Data Services per Excel determinano il modo in cui i dati vengono caricati da MDS nel componente aggiuntivo di Excel e in che modo i dati vengono pubblicati dal componente aggiuntivo per Excel in MDS.  
@@ -30,7 +30,7 @@ ms.locfileid: "48154801"
 |Scheda e sezione|Impostazione|Description|  
 |Impostazioni: Server di pubblicazione|Mostra la finestra di dialogo **Pubblicazione e annotazione** durante la pubblicazione|Selezionare questa opzione per visualizzare la finestra di dialogo **Pubblicazione e annotazione** dopo avere fatto clic su **Pubblica**e consentire di immettere una sola annotazione per tutte le modifiche o un'annotazione per ogni modifica.<br /><br /> Deselezionare questa opzione per specificare che il processo Pubblica è iniziato senza visualizzare la finestra di dialogo **Pubblicazione e annotazione** . Non si avrà la possibilità di immettere un'annotazione.|  
 |Impostazioni: Versione|Selezione della versione|Selezionare la versione dei dati master che saranno caricati nel componente aggiuntivo di Excel. I possibili valori sono i seguenti:<br /><br /> **Nessuno** per fare in modo che la versione non venga impostata automaticamente su alcuna versione<br /><br /> **Meno recente** per impostare come valore predefinito la versione meno recente **Più recente** per impostare come valore predefinito la versione più recente.|  
-|Impostazioni: Registrazione|Abilita registrazione dettagliata|Consente la registrazione per il processo di caricamento dei dati master da MDS nel componente aggiuntivo di Excel, così che il risultato di ogni comando nel servizio venga registrato.|  
+|Impostazioni: Registrazione|Abilita registrazione dettagliata|Abilitare la registrazione per il processo di caricamento dei dati master da MDS nel componente aggiuntivo per Excel, in modo che il risultato di ogni comando nel servizio venga registrato.|  
 |Impostazioni: Dimensione dell'invio in batch|Numero di celle per il caricamento|Selezionare un numero per indicare quante migliaia di celle saranno caricate in un batch caricato dal server MDS in Excel. Il valore predefinito è 50.000 celle.|  
 |Impostazioni: Dimensione dell'invio in batch|Numero di celle per la pubblicazione|Selezionare un numero per indicare quante migliaia di celle saranno pubblicate in un batch restituito dal Excel al server. Il valore predefinito è 50.000 celle.|  
 |Impostazioni: Server aggiunti a elenco elementi attendibili|Cancella tutto|Fare clic per cancellare l'elenco di connessioni definito come attendibile quando è stato aperto il file di query collegamento associato.|  

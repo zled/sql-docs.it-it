@@ -20,12 +20,12 @@ ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96299b8b3fb7a4e22bfc3500b82429720b493462
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a044f3122f3f553e068d474901e52cce3eef1c9
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686641"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120084"
 ---
 # <a name="sqlprocedures-function"></a>Funzione SQLProcedures
 **Conformità**  

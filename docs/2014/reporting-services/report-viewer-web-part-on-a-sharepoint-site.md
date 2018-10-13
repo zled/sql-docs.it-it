@@ -16,17 +16,17 @@ ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 84afc267fe7b61ee850395750128a5cad15f716f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80baae6ca56757c8723934102341352f34cb0709
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063471"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905232"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Web part Visualizzatore report in un sito di SharePoint
-  La web part Visualizzatore report è una web part personalizzata installata con il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per prodotti SharePoint. È possibile utilizzare questa web part per visualizzare, esplorare, stampare ed esportare report in un server di report configurato per l'esecuzione in modalità integrata SharePoint. La Web Part Visualizzatore Report è associata ai file di definizione (con estensione rdl) di report che vengono elaborati da un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report. Non è possibile utilizzarla con altri documenti di report creati con altri prodotti software.  
+  La web part Visualizzatore report è una web part personalizzata installata con il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per prodotti SharePoint. È possibile utilizzare questa web part per visualizzare, esplorare, stampare ed esportare report in un server di report configurato per l'esecuzione in modalità integrata SharePoint. La web part Visualizzatore report è associata a file di definizione del report (con estensione rdl) elaborati da un server di report di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Non è possibile utilizzarla con altri documenti di report creati con altri prodotti software.  
   
- Per installare la web part, è necessario eseguire il programma di installazione per il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. La Web part non deve essere installata in modo indipendente, poiché è inclusa nel componente aggiuntivo e può essere installata solo tramite il programma di installazione di quest'ultimo. Il nome di file della web part Visualizzatore report è ReportViewer.dwp. Il file si trova nella cartella Programmi\File comuni\Microsoft Shared\Web Server Extensions\12\template\features\reportserver. Il file non deve essere spostato in altre cartelle.  
+ Per installare la web part, è necessario eseguire il programma di installazione per il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . La Web part non deve essere installata in modo indipendente, poiché è inclusa nel componente aggiuntivo e può essere installata solo tramite il programma di installazione di quest'ultimo. Il nome di file della web part Visualizzatore report è ReportViewer.dwp. Il file si trova nella cartella Programmi\File comuni\Microsoft Shared\Web Server Extensions\12\template\features\reportserver. Il file non deve essere spostato in altre cartelle.  
   
  Per utilizzare la web part, è necessario che nel sistema sia installato e configurato il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e che il server di report sia configurato per l'integrazione con SharePoint. È inoltre necessario disporre di alcuni report da mostrare nel visualizzatore. Possono essere visualizzati solo report che si trovano in una raccolta, in una cartella all'interno di una raccolta o nella cronologia di un report oppure che sono collegati da una web part Raccolta a una web part Visualizzatore report. Non è possibile aprire report salvati come allegati a un elemento in un elenco personalizzato.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48063471"
  Il comando**Esporta** nel menu **Azioni** visualizza i formati applicativi associati alle estensioni per il rendering distribuite in un server di report. Per determinare la disponibilità di un formato specifico, è possibile aggiungere o rimuovere un'estensione per il rendering sul server di report oppure modificare le impostazioni di configurazione in modo da rimuovere un particolare formato di esportazione dall'elenco. Per controllare i formati disponibili, è inoltre possibile specificare impostazioni di configurazione sul server di report. È possibile modificare il comportamento predefinito di un formato specifico aggiungendo e modificando le impostazioni di configurazione per la corrispondente estensione per il rendering.  
   
 ### <a name="print-action-on-the-report-toolbar"></a>Azione Stampa sulla barra degli strumenti Report  
- **Stampare** nella **azioni** menu è una funzionalità di stampa personalizzata che viene fornita tramite [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Quando si fa clic su **Stampa**, sul computer client viene scaricato un controllo ActiveX di stampa per il lato client. Nella maggior parte dei casi l'utente che fa clic su **Stampa** deve disporre di autorizzazioni di amministratore sul computer locale, poiché in genere il download dei controlli ActiveX viene consentito solo agli utenti con autorizzazioni di amministratore. È possibile utilizzare Amministrazione centrale SharePoint per abilitare o disabilitare il download del controllo di stampa lato client.  
+ Il comando**Stampa** nel menu **Azioni** rappresenta una funzionalità di stampa personalizzata disponibile in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Quando si fa clic su **Stampa**, sul computer client viene scaricato un controllo ActiveX di stampa per il lato client. Nella maggior parte dei casi l'utente che fa clic su **Stampa** deve disporre di autorizzazioni di amministratore sul computer locale, poiché in genere il download dei controlli ActiveX viene consentito solo agli utenti con autorizzazioni di amministratore. È possibile utilizzare Amministrazione centrale SharePoint per abilitare o disabilitare il download del controllo di stampa lato client.  
   
 ### <a name="find-action-on-the-report-toolbar"></a>Azione Trova sulla barra degli strumenti del report  
  Il comando**Trova** nel menu **Azioni** consente di spostarsi in una posizione di destinazione nel report. È possibile ricercare contenuto in un report digitando la parola o la frase che si desidera trovare. Il numero massimo di caratteri del termine di ricerca è 256. Quando viene trovato un valore corrispondente nel report, la visualizzazione del report viene spostata sulla sezione che lo contiene.  
@@ -65,12 +65,12 @@ ms.locfileid: "48063471"
  Accanto all'area di visualizzazione possono essere visualizzati i riquadri**Credenziali** e **Parametri** . Il riquadro**Credenziali** viene visualizzato quando la connessione all'origine dati per il report è configurata in modo da richiedere all'utente l'immissione di un account e di una password dotati di diritti di accesso all'origine dati. Il riquadro**Parametri** viene visualizzato se il report accetta l'input dell'utente per i parametri definiti nel report.  
   
 ### <a name="setting-properties-on-the-report-viewer-web-part"></a>Impostazione delle proprietà nella web part Visualizzatore report  
- Le proprietà della web part includono proprietà personalizzate specifiche e proprietà generali valide per qualsiasi web part. Per altre informazioni, vedere [personalizzare la Web Part Visualizzatore Report](../../2014/reporting-services/customize-the-report-viewer-web-part.md).  
+ Le proprietà della web part includono proprietà personalizzate specifiche e proprietà generali valide per qualsiasi web part. Per altre informazioni, vedere [Personalizzare la web part Visualizzatore report](../../2014/reporting-services/customize-the-report-viewer-web-part.md).  
   
  Per impostazione predefinita, i report vengono aperti in modalità Pagina intera. In tale modalità viene visualizzata la barra degli strumenti, che fornisce i controlli per navigazione tra le pagine, la ricerca e altre funzionalità. È possibile personalizzare la web part per modificarne l'aspetto o il comportamento predefinito.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare o disinstallare il Reporting aggiuntivo Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [Aggiungere la Web Part Visualizzatore Report a una pagina Web &#40;Reporting Services in SharePoint la modalità integrata&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Aggiungere la web part Visualizzatore report a una pagina Web &#40;Reporting Services in modalità integrata SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f6695b6f5d77b506147fa6d9f6aa0b77e1978ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152751"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072285"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipi CLR definiti dall'utente di grandi dimensioni (ODBC)
   In questo argomento vengono illustrate le modifiche apportate a ODBC in SQL Server Native Client per supportare i tipi CLR (Common Language Runtime) definiti dall'utente (UDT) di grandi dimensioni.  
@@ -163,7 +163,7 @@ ms.locfileid: "48152751"
  In questa sezione vengono illustrate le modifiche apportate alle funzioni ODBC di SQL Server Native Client per supportare i tipi CLR definiti dall'utente di grandi dimensioni.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- I valori della colonna dei risultati dei tipi definiti dall'utente vengono convertiti dai tipi di dati SQL ai tipi di dati C come descritto nella sezione "Associazioni e conversioni" riportata in precedenza in questo argomento.  
+ Valori di colonna di risultati di tipo definito dall'utente vengono convertiti da SQL ai tipi di dati C come descritto nella sezione "Associazioni e conversioni", più indietro in questo argomento.  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  I valori necessari per i tipi definiti dall'utente sono i seguenti:  
@@ -196,13 +196,13 @@ ms.locfileid: "48152751"
 |SQL_SS_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- I valori della colonna dei risultati dei tipi definiti dall'utente vengono convertiti dai tipi di dati SQL ai tipi di dati C come descritto nella sezione "Associazioni e conversioni" riportata in precedenza in questo argomento.  
+ Valori di colonna di risultati di tipo definito dall'utente vengono convertiti da SQL ai tipi di dati C come descritto nella sezione "Associazioni e conversioni", più indietro in questo argomento.  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- I valori della colonna dei risultati dei tipi definiti dall'utente vengono convertiti dai tipi di dati SQL ai tipi di dati C come descritto nella sezione "Associazioni e conversioni" riportata in precedenza in questo argomento.  
+ Valori di colonna di risultati di tipo definito dall'utente vengono convertiti da SQL ai tipi di dati C come descritto nella sezione "Associazioni e conversioni", più indietro in questo argomento.  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- I valori della colonna dei risultati dei tipi definiti dall'utente vengono convertiti dai tipi di dati SQL ai tipi di dati C come descritto nella sezione "Associazioni e conversioni" riportata in precedenza in questo argomento.  
+ Valori di colonna di risultati di tipo definito dall'utente vengono convertiti da SQL ai tipi di dati C come descritto nella sezione "Associazioni e conversioni", più indietro in questo argomento.  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  I campi di descrizione disponibili con i nuovi tipi sono descritti nelle sezioni "Campi di descrizione per i parametri" e "Campi di descrizione per i risultati" riportate in precedenza in questo argomento.  
@@ -222,7 +222,7 @@ ms.locfileid: "48152751"
  I valori restituiti per i tipi definiti dall'utente sono uguali a quelli descritti nella sezione "Metadati della colonna restituiti da SQLColumns e SQLProcedureColumns (metadati del catalogo)" riportata in precedenza in questo argomento.  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- I valori dei parametri dei tipi definiti dall'utente vengono convertiti dai tipi di dati C ai tipi di dati SQL come descritto nella sezione "Associazioni e conversioni" riportata in precedenza in questo argomento.  
+ I valori di parametro di tipo definito dall'utente vengono convertiti da C ai tipi di dati SQL come descritto nella sezione "Associazioni e conversioni", più indietro in questo argomento.  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
  I campi di descrizione disponibili con i nuovi tipi sono descritti nelle sezioni "Campi di descrizione per i parametri" e "Campi di descrizione per i risultati" riportate in precedenza in questo argomento.  

@@ -16,12 +16,12 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7cc4dcb033a7baa86b81619f6e1dbb6dc37ddb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b90a461af4969c9404af77bfbac75ebf7cad0fbc
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063443"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120358"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Vincoli di chiavi primarie ed esterne
   Le chiavi primarie e le chiavi esterne sono due tipi di vincoli che possono essere utilizzati per applicare l'integrità dei dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si tratta di importanti oggetti di database.  
@@ -39,7 +39,7 @@ ms.locfileid: "48063443"
   
  Quando si specifica un vincolo di chiave primaria per una tabella, [!INCLUDE[ssDE](../../includes/ssde-md.md)] assicura l'univocità dei dati creando automaticamente un indice univoco per le colonne chiave primaria. Questo indice consente inoltre di accedere rapidamente ai dati quando si utilizza la chiave primaria nelle query. Se un vincolo di chiave primaria viene definito per più colonne, possono essere presenti valori duplicati nella stessa colonna, ma ogni combinazione di valori di tutte le colonne nella definizione del vincolo di chiave primaria deve essere univoca.  
   
- Le colonne **ProductID** e **VendorID** nella tabella **Purchasing.ProductVendor** costituiscono un vincolo di chiave primaria composto per la tabella, come illustrato nella figura seguente. Ciò assicura che ogni riga nella tabella **ProductVendor** presenti una combinazione univoca di **ProductID** e **VendorID**. e impedisce l'inserimento di righe duplicate.  
+ Le colonne **ProductID** e **VendorID** nella tabella **Purchasing.ProductVendor** costituiscono un vincolo di chiave primaria composto per la tabella, come illustrato nella figura seguente. Ciò assicura che ogni riga nella tabella **ProductVendor** contenga una combinazione univoca di **ProductID** e **VendorID**. e impedisce l'inserimento di righe duplicate.  
   
  ![Vincolo PRIMARY KEY composto](../../database-engine/media/fund04.gif "Vincolo PRIMARY KEY composto")  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48063443"
  Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un errore e viene eseguito il rollback dell'operazione di eliminazione o di aggiornamento sulla riga nella tabella padre.  
   
  CASCADE  
- Le righe corrispondenti vengono aggiornate o eliminate nella tabella di riferimento quando la riga viene aggiornata o eliminata nella tabella padre. Non è possibile specificare CASCADE se un `timestamp` colonna fa parte di chiave esterna o la chiave di cui viene fatto riferimento. Non è possibile specificare ON DELETE CASCADE per una tabella in cui è presente un trigger INSTEAD OF DELETE. Non è possibile specificare ON UPDATE CASCADE per tabelle in cui sono presenti trigger INSTEAD OF UPDATE.  
+ Le righe corrispondenti vengono aggiornate o eliminate nella tabella di riferimento quando la riga viene aggiornata o eliminata nella tabella padre. Non è possibile specificare la clausola CASCADE se nella chiave esterna o nella chiave a cui si fa riferimento è presente una colonna `timestamp`. Non è possibile specificare ON DELETE CASCADE per una tabella in cui è presente un trigger INSTEAD OF DELETE. Non è possibile specificare ON UPDATE CASCADE per tabelle in cui sono presenti trigger INSTEAD OF UPDATE.  
   
  SET NULL  
  Tutti i valori che costituiscono la chiave esterna vengono impostati su NULL quando viene aggiornata o eliminata la riga corrispondente nella tabella padre. Per l'esecuzione di questo vincolo, è necessario che le colonne chiave esterna ammettano valori Null. Il vincolo non può essere specificato per tabelle in cui sono presenti trigger INSTEAD OF UPDATE.  

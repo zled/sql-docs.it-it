@@ -15,12 +15,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 98a6efa4bcac46a50de84c70fcfb49a0e202c860
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee420b28442909af74a17a196ffac653b6089eb5
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128871"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072325"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Creazione guidata mappa e Creazione guidata livello mappa (Generatore report e SSRS)
   La Creazione guidata mappa e la Creazione guidata livello mappa consentono di automatizzare l'attività di creazione di una mappa, di aggiunta di un livello mappa o di modifica delle opzioni di livello mappa in un livello esistente.  
@@ -30,7 +30,7 @@ ms.locfileid: "48128871"
   
  Prima di aggiungere una mappa a un report o un livello mappa a una mappa, è necessario disporre delle informazioni seguenti:  
   
--   **Origine dati spaziali.** Percorso o connessione a un'origine che fornisce dati spaziali, ad esempio, il nome di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza e un database che contiene dati spaziali o il nome di un file di forma Environmental Systems Research Institute, Inc. (ESRI).  
+-   **Origine dati spaziali.** Percorso o connessione a un'origine che fornisce dati spaziali, ad esempio il nome di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e di un database in cui sono contenuti dati spaziali o il nome di un file di forma Environmental Systems Research Institute, Inc. (ESRI).  
   
 -   **.** Dall'origine dati spaziali, un campo che contiene set di coordinate che specificano le posizioni.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48128871"
   
  Fare clic sul titolo della pagina della procedura guidata per il contenuto della guida corrispondente. Le pagine visualizzate variano a seconda delle scelte effettuate per il tipo di mappa, l'origine dei dati spaziali e l'origine dei dati analitici.  
   
-1.  [Scegliere un'origine dati spaziali](#SpatialDataSource). I dati spaziali possono provenire dalla raccolta mappe, da un file di forma Environmental Systems Research Institute, Inc. (ESRI) o dai dati spaziali di un database relazionale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  [Scegliere un'origine dati spaziali](#SpatialDataSource). I dati spaziali possono provenire dalla raccolta mappe, ovvero un file di forma Environmental Systems Research Institute, Inc. (ESRI) o da dati spaziali di un database relazionale [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
     -   [Informazioni sui dati spaziali](#SpatialData)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48128871"
   
  Dopo aver aggiunto una mappa o un relativo livello e visualizzato in anteprima il report, è possibile modificare le opzioni della mappa e del relativo livello che sono state impostate nelle procedure guidate. Per altre informazioni, vedere [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Per altre informazioni sulle mappe, vedere [esegue il mapping di &#40;Generatore Report e SSRS&#41;](maps-report-builder-and-ssrs.md). Per istruzioni dettagliate sull'aggiunta di una mappa a un report, vedere [Esercitazione: Report mappa &#40;Generatore report&#41;](../tutorial-map-report-report-builder.md).  
+ Per altre informazioni sulle mappe, vedere [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md). Per istruzioni dettagliate sull'aggiunta di una mappa a un report, vedere [Esercitazione: Report mappa &#40;Generatore report&#41;](../tutorial-map-report-report-builder.md).  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
@@ -198,7 +198,7 @@ ms.locfileid: "48128871"
   
  Per altre informazioni sulle sezioni, vedere [Bing Maps Tiles System](http://go.microsoft.com/fwlink/?LinkId=147315). Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](http://go.microsoft.com/fwlink/?LinkId=151371) e [Informativa sulla privacy](http://go.microsoft.com/fwlink/?LinkId=151372).  
   
- Per vedere uno sfondo a sezioni in visualizzazione della struttura, è necessario poter accedere a Internet. Per vedere in anteprima lo sfondo a sezioni di un report in un server di report, quest'ultimo deve essere configurato in modo da supportare le tessere mappa di Bing. Per altre informazioni, vedere [risolvere i problemi di report: report mappa &#40;Generatore Report e SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e "Pianificazione per le mappe" nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nella documentazione Online di SQL Server .  
+ Per vedere uno sfondo a sezioni in visualizzazione della struttura, è necessario poter accedere a Internet. Per vedere in anteprima lo sfondo a sezioni di un report in un server di report, quest'ultimo deve essere configurato in modo da supportare le tessere mappa di Bing. Per altre informazioni, vedere [risolvere i problemi di report: report mappa &#40;Generatore Report e SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e "Pianificazione per le mappe" nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nella documentazione Online di SQL Server.  
   
  Per altre informazioni su come personalizzare un livello sezione, vedere [Aggiungere, modificare o eliminare una mappa o livello mappa &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

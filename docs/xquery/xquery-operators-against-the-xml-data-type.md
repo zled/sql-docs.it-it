@@ -18,12 +18,12 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a845e4b4ce7cfa17a3f618501e2f270ca63dfea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10102e3c726a3703a3a9f3aa953171fb4a5dd79b
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641489"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119279"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Operatori di XQuery per il tipo di dati xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47641489"
   
  La query Usa la **=** operatore di confronto. Ogni nodo nella sequenza sul lato destro del **=** operatore viene confrontato con ogni nodo nella sequenza di sinistra. Se i nodi corrispondono, il confronto nodo viene **TRUE**. Viene quindi convertito in un tipo di dati int e confrontato con 1, quindi la query restituisce l'ID del cliente.  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS ACI,  
 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
@@ -62,7 +62,7 @@ WHERE  AdditionalContactInfo.value('
 ### <a name="b-using-a-numeric-operator"></a>B. Utilizzo di un operatore numerico  
  L'operatore + nella query è un operatore per i valori, perché viene applicato a un singolo elemento. Ad esempio, il valore 1 viene aggiunto alle dimensioni di un lotto restituite dalla query:  
   
-```  
+```sql
 SELECT ProductModelID, Instructions.query('  
      declare namespace   
  AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
@@ -82,7 +82,7 @@ where ProductModelID=7
 ### <a name="c-using-a-value-operator"></a>C. Utilizzo di un operatore per valori  
  La query seguente recupera gli elementi <`Picture`> per un modello di prodotto per cui le dimensioni dell'immagine sono "small":  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      for $P in /PD:ProductDescription/PD:Picture[PD:Size eq "small"]  

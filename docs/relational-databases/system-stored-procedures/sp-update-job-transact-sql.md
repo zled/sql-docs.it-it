@@ -18,12 +18,12 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4371609b9d0c72d9d589d37f0edacc4d37a2996c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fd6986a245d960a96592c8c63c9744b741fa5ff
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651559"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119688"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,27 +61,27 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Numero di identificazione del processo da aggiornare. *job_id*viene **uniqueidentifier**.  
   
  [ **@job_name =**] **'***job_name***'**  
- Nome del processo. *nome_processo*viene **nvarchar (128)**.  
+ Nome del processo. *nome_processo* viene **nvarchar (128)**.  
   
 > **Nota:** entrambe *job_id* oppure *job_name* deve essere specificato ma non è possibile specificarli entrambi.  
   
  [ **@new_name =**] **'***new_name***'**  
- Nuovo nome del processo. *new_name*viene **nvarchar (128)**.  
+ Nuovo nome del processo. *new_name* viene **nvarchar (128)**.  
   
  [  **@enabled =**] *abilitata*  
- Specifica se il processo è abilitato (**1**) o non abilitato (**0**). *abilitata*viene **tinyint**.  
+ Specifica se il processo è abilitato (**1**) o non abilitato (**0**). *abilitata* viene **tinyint**.  
   
  [  **@description =**] **'***descrizione***'**  
  Descrizione del processo. *Descrizione* viene **nvarchar(512)**.  
   
  [ **@start_step_id =**] *step_id*  
- Numero di identificazione del primo passaggio da eseguire per il processo. *step_id*viene **int**.  
+ Numero di identificazione del primo passaggio da eseguire per il processo. *step_id* viene **int**.  
   
  [  **@category_name =**] **'***categoria***'**  
- Categoria del processo. *categoria*viene **nvarchar (128)**.  
+ Categoria del processo. *categoria* viene **nvarchar (128)**.  
   
  [  **@owner_login_name =**] **'***account di accesso***'**  
- Nome dell'account di accesso proprietario del processo. *account di accesso*viene **nvarchar (128)** solo i membri del **sysadmin** ruolo predefinito del server è possibile modificare la proprietà dei processi.  
+ Nome dell'account di accesso proprietario del processo. *account di accesso* viene **nvarchar (128)** solo i membri del **sysadmin** ruolo predefinito del server è possibile modificare la proprietà dei processi.  
   
  [  **@notify_level_eventlog =**] *eventlog_level*  
  Viene specificato quando inserire una voce per il processo nel registro applicazioni di Microsoft Windows. *eventlog_level*viene **int**, i possibili valori sono i seguenti.  
@@ -100,7 +100,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Viene specificato quando inviare un messaggio di rete al termine del processo. *netsend_level*viene **int**. *netsend_level*Usa gli stessi valori *eventlog_level*.  
   
  [  **@notify_level_page =**] *page_level*  
- Viene specificato quando inviare una pagina al termine del processo. *page_level*viene **int**. *page_level*Usa gli stessi valori *eventlog_level*.  
+ Viene specificato quando inviare una pagina al termine del processo. *page_level* viene **int**. *page_level*Usa gli stessi valori *eventlog_level*.  
   
  [  **@notify_email_operator_name =**] **'***nome_operatore***'**  
  Il nome dell'operatore a cui viene inviato il messaggio di posta elettronica quando *email_level* viene raggiunto. *nome_posta_elettronica* viene **nvarchar (128)**.  

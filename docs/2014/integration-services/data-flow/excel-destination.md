@@ -16,12 +16,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd9ed39459d5302fa721c2e0eab176768bb66bc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130681"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905245"
 ---
 # <a name="excel-destination"></a>Destinazione Excel
   La destinazione Excel consente di caricare dati in fogli di lavoro o intervalli di una cartella di lavoro di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -49,7 +49,7 @@ ms.locfileid: "48130681"
   
      Per informazioni su come evitare di includere la virgoletta singola, vedere il post di blog seguente relativo all' [aggiunta della virgoletta singola a tutte le stringhe quando i dati sono trasformati in Excel tramite il componente per flusso di dati di destinazione di Excel in un pacchetto SSIS](http://go.microsoft.com/fwlink/?LinkId=400876), su msdn.com.  
   
--   **Salvataggio di dati memo (ntext)**. Per poter salvare correttamente stringhe di oltre 255 caratteri in una colonna Excel, il driver deve riconoscere il tipo di dati della colonna di destinazione come **memo** invece di **string**. Se la tabella di destinazione contiene già righe di dati, le prime righe campionate dal driver devono contenere almeno un'istanza di un valore composto da più di 255 caratteri nella colonna con tipo di dati memo. Se la tabella di destinazione viene creata durante la progettazione del pacchetto o in fase di esecuzione, l'istruzione CREATE TABLE deve usare LONGTEXT (o uno dei sinonimi) come tipo di dati della colonna con tipo di dati memo.  
+-   **Salvataggio di dati memo (ntext)**. Per poter salvare correttamente stringhe di oltre 255 caratteri in una colonna Excel, il driver deve riconoscere il tipo di dati della colonna di destinazione come **memo** invece di **string**. Se la tabella di destinazione contiene già righe di dati, le prime righe campionate dal driver devono contenere almeno un'istanza di un valore composto da più di 255 caratteri nella colonna con tipo di dati memo. Se la tabella di destinazione viene creata durante la progettazione del pacchetto o in fase di esecuzione, quindi l'istruzione CREATE TABLE deve usare LONGTEXT (o uno dei sinonimi) come tipo di dati della colonna di tipo memo.  
   
 -   **Tipi di dati**. Il driver per Excel riconosce solo un set limitato di tipi di dati. Tutte le colonne numeriche vengono interpretate come valori double (DT_R8) e tutte le colonne di tipo stringa (con tipo di dati diverso da memo) vengono interpretate come stringhe Unicode di 255 caratteri (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esegue il mapping dei tipi di dati di Excel nel modo seguente:  
   
@@ -84,9 +84,9 @@ ms.locfileid: "48130681"
   
 -   [Editor destinazione Excel &#40;pagina Gestione connessione&#41;](../excel-destination-editor-connection-manager-page.md)  
   
--   [Editor destinazione Excel &#40;pagina mapping&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Editor destinazione Excel &#40;pagina Mapping&#41;](../excel-destination-editor-mappings-page.md)  
   
--   [Editor destinazione Excel &#40;pagina dell'Output degli errori&#41;](../excel-destination-editor-error-output-page.md)  
+-   [Editor destinazione Excel &#40;pagina Output degli errori&#41;](../excel-destination-editor-error-output-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48130681"
   
 -   [Proprietà personalizzate di Excel](excel-custom-properties.md)  
   
- Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente flusso di dati](set-the-properties-of-a-data-flow-component.md).  
+ Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48130681"
   
 -   [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](../control-flow/foreach-loop-container.md)  
   
--   [Impostare le proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48130681"
   
 ## <a name="see-also"></a>Vedere anche  
  [Origine Excel](excel-source.md)   
- [Integration Services &#40;SSIS&#41; le variabili](../integration-services-ssis-variables.md)   
+ [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Flusso di dati](data-flow.md)   
  [Utilizzo di file di Excel con l'attività Script](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

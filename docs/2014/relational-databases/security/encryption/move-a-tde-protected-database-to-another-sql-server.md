@@ -13,15 +13,15 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 55c88228de170336fec7ecd24f5acb17851fdea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e255d37a5f6fff65b223d889755bab4cf70d0687
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132941"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072275"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
-  In questo argomento viene descritto come proteggere un database tramite TDE (Transparent Data Encryption) e spostare il database in un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE consente di eseguire la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per la crittografia viene usata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. La chiave di decrittografia è una chiave simmetrica protetta tramite un certificato archiviato nel database `master` del server o una chiave asimmetrica protetta da un modulo EKM.  
+  In questo argomento descrive come proteggere un database tramite transparent data encryption (TDE) e quindi spostare il database in un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE consente di eseguire la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per la crittografia viene usata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. La chiave di decrittografia è una chiave simmetrica protetta tramite un certificato archiviato nel database `master` del server o una chiave asimmetrica protetta da un modulo EKM.  
   
  **Contenuto dell'argomento**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48132941"
   
 -   È necessario `CREATE CERTIFICATE` l'autorizzazione per il `master` database per creare il certificato che protegge la chiave DEK.  
   
--   È necessario `CONTROL DATABASE` l'autorizzazione per il database crittografato e `VIEW DEFINITION` dell'autorizzazione per il certificato o chiave asimmetrica a cui viene utilizzata per crittografare la chiave di crittografia del database.  
+-   Sono richieste l'autorizzazione `CONTROL DATABASE` per il database crittografato e l'autorizzazione `VIEW DEFINITION` per la chiave asimmetrica o il certificato usato per crittografare la chiave di crittografia del database.  
   
 ##  <a name="SSMSProcedure"></a> Per creare un database protetto con TDE  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48132941"
      Nella finestra di dialogo **Gestione crittografia del database** sono disponibili le opzioni indicate di seguito.  
   
      **Algoritmo di crittografia**  
-     Visualizza o imposta l'algoritmo da usare per la crittografia del database. `AES128` è l'algoritmo predefinito. Il campo non può essere vuoto. Per altre informazioni sugli algoritmi di crittografia, vedere [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md).  
+     Visualizza o imposta l'algoritmo da usare per la crittografia del database. L'algoritmo predefinito è `AES128`. Il campo non può essere vuoto. Per altre informazioni sugli algoritmi di crittografia, vedere [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md).  
   
      **Usa certificato server**  
      Imposta la sicurezza della crittografia mediante un certificato. Selezionarne uno dall'elenco. Se non si dispone dell'autorizzazione `VIEW DEFINITION` per i certificati del server, l'elenco sarà vuoto. Se viene selezionato un metodo certificato di crittografia, il valore non può essere vuoto. Per altre informazioni sui certificati, vedere [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).  

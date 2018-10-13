@@ -11,12 +11,12 @@ ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 596fc7d8ebdbdac3795920948b5082a0e066ba0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 142cdef210c541fb1394b84c8297823f36358ea0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104621"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906061"
 ---
 # <a name="kpis-ssas-tabular"></a>Indicatori KPI (SSAS tabulare)
   In un modello tabulare un indicatore di prestazioni chiave (*KPI*) viene usato per misurare le prestazioni di un valore, definito da una misura di *base*, rispetto a un valore di *destinazione*, definito anch'esso da una misura o da un valore assoluto. In questo argomento vengono fornite ai creatori di modelli tabulari informazioni di base sugli indicatori KPI in un modello tabulare.  
@@ -84,10 +84,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |Argomento|Description|  
 |-----------|-----------------|  
-|[Creare e gestire indicatori KPI &#40;tabulare di SSAS&#41;](kpis-ssas-tabular.md)|Viene descritto come creare un indicatore KPI con una misura di base, una misura di destinazione e soglie di stato.|  
+|[Creare e gestire indicatori KPI &#40;SSAS tabulare&#41;](kpis-ssas-tabular.md)|Viene descritto come creare un indicatore KPI con una misura di base, una misura di destinazione e soglie di stato.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le misure &#40;tabulare di SSAS&#41;](measures-ssas-tabular.md)   
- [Le prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)  
+ [Misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md)   
+ [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)  
   
   

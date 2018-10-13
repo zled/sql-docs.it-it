@@ -17,12 +17,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ccb9267242dbe3a44350efd1762c45bc6bbccbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4119b2ef17bcb735669d25662972ae4c79bbae31
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140703"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906411"
 ---
 # <a name="data-profiling-task"></a>Attività Profiling dati
   L'attività Profiling dati calcola i diversi profili che consentono di familiarizzare con un'origine dati e identificare i problemi nei dati che devono essere corretti.  
@@ -30,7 +30,7 @@ ms.locfileid: "48140703"
  È possibile utilizzare l'attività Profiling dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per eseguire il profiling dei dati archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e identificare i possibili problemi relativi alla qualità dei dati.  
   
 > [!NOTE]  
->  In questo argomento vengono descritti i requisiti e le caratteristiche dell'attività Profiling dati. Per la procedura dettagliata relativa all'uso dell'attività Profiling dati, vedere la sezione [Attività Profiling dati e visualizzatore](data-profiling-task-and-viewer.md).  
+>  Questo argomento descrive solo le funzionalità e requisiti dell'attività Profiling dati. Per la procedura dettagliata relativa all'uso dell'attività Profiling dati, vedere la sezione [Attività Profiling dati e visualizzatore](data-profiling-task-and-viewer.md).  
   
 ## <a name="requirements-and-limitations"></a>Requisiti e limitazioni  
  L'attività Profiling dati funziona solo con i dati archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'attività non funziona con origini dati di terze parti o basate su file.  
@@ -55,7 +55,7 @@ ms.locfileid: "48140703"
 |Profilo Distribuzione lunghezze di colonna|Segnala tutte le singole lunghezze dei valori stringa nella colonna selezionata e la percentuale di righe nella tabella che ogni lunghezza rappresenta.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio valori non validi. Si analizza, ad esempio, una colonna che contiene i codici degli stati degli Stati Uniti a due caratteri e si individuano valori con lunghezza superiore a due caratteri.|  
 |Profilo Rapporto di valori Null nella colonna|Segnala la percentuale di valori Null nella colonna selezionata.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio un rapporto di valori di colonna Null inaspettatamente elevato. Si analizza, ad esempio, una colonna contenente CAP e si individua una percentuale eccessivamente elevata di codici mancanti.|  
 |Profilo Criteri di ricerca colonna|Segnala un set di espressioni regolari che coprono la percentuale specificata di valori in una colonna stringa.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio stringhe non valide. Questo profilo può inoltre indicare espressioni regolari che possono essere utilizzate in futuro per convalidare nuovi valori. Un profilo di criteri di ricerca di una colonna contenente codici postali ZIP (Stati Uniti) potrebbe ad esempio produrre le seguenti espressioni regolari: \d{5}-\d{4}, \d{5} e \d{9}. Se vengono visualizzate altre espressioni regolari, è probabile che i dati contengano valori non validi o in formato non corretto.|  
-|Profilo Statistiche di colonna|Segnala le statistiche, ad esempio minimo, massimo, medio e deviazione standard per le colonne numeriche e minima e massima per `datetime` colonne.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio date non valide. Si analizza, ad esempio, una colonna di date cronologiche e si individua una data massima successiva alla data corrente.|  
+|Profilo Statistiche di colonna|Segnala le statistiche, ad esempio la deviazione minima, massima, media e standard per le colonne numeriche e minima e massima per le colonne di tipo `datetime`.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio date non valide. Si analizza, ad esempio, una colonna di date cronologiche e si individua una data massima successiva alla data corrente.|  
 |Profilo Distribuzione valori di colonna|Segnala tutti i valori distinct nella colonna selezionata e la percentuale di righe nella tabella che ogni valore rappresenta. Può inoltre segnalare valori che rappresentano più di una percentuale specificata di righe nella tabella.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio un numero non corretto di valori distinct in una colonna. Si analizza, ad esempio, una colonna che si suppone contenga gli stati degli Stati Uniti e si individuano più di 50 valori distinct.|  
   
  I seguenti tre profili analizzano più colonne o relazioni tra colonne e tabelle.  
@@ -76,12 +76,12 @@ ms.locfileid: "48140703"
 |-------------|------------------------|  
 |ColumnStatisticsProfile|Colonne di tipo numerico o di tipo `datetime` (no `mean` e `stddev` per la colonna `datetime`)|  
 |ColumnNullRatioProfile|Tutte le colonne**|  
-|ColumnValueDistributionProfile|Colonne di `integer` , digitare `char` tipo, e `datetime` tipo|  
-|ColumnValueDistributionProfile|Colonne di `char` tipo|  
-|ColumnPatternProfile|Colonne di `char` tipo|  
-|CandidateKeyProfile|Colonne di `integer` , digitare `char` tipo, e `datetime` tipo|  
-|FunctionalDependencyProfile|Colonne di `integer` , digitare `char` tipo, e `datetime` tipo|  
-|InclusionProfile|Colonne di `integer` , digitare `char` tipo, e `datetime` tipo|  
+|ColumnValueDistributionProfile|Colonne di tipo `integer`, tipo `char` e tipo `datetime`|  
+|ColumnValueDistributionProfile|Colonne di tipo `char`|  
+|ColumnPatternProfile|Colonne di tipo `char`|  
+|CandidateKeyProfile|Colonne di tipo `integer`, tipo `char` e tipo `datetime`|  
+|FunctionalDependencyProfile|Colonne di tipo `integer`, tipo `char` e tipo `datetime`|  
+|InclusionProfile|Colonne di tipo `integer`, tipo `char` e tipo `datetime`|  
   
  \* Nella tabella precedente di tipi di dati valido, il `integer`, `char`, `datetime`, e `numeric` includono i tipi di dati specifici seguenti:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48140703"
   
  I tipi di data e ora includono `datetime`, `smalldatetime` e `timestamp`.  
   
- I tipi numerici includono `integer` tipi (eccetto `bit`), `money`, `smallmoney`, `decimal`, `float`, `real`, e `numeric`.  
+ I tipi numerici includono i tipi `integer` (tranne `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` e `numeric`.  
   
  \*\* `image`, `text`, `XML`, `udt`, e `variant` tipi non sono supportati per profili diversi dal profilo rapporto di colonna Null.  
   
@@ -134,25 +134,25 @@ ms.locfileid: "48140703"
  Configurare l'attività Profiling dati utilizzando **Editor attività Profiling dati**. L'editor è composto da due pagine:  
   
  [Pagina Generale](../general-page-of-integration-services-designers-options.md)  
- Nella pagina **Generale** viene specificato il file di output o la variabile. È inoltre possibile selezionare **Profilo rapido** per configurare rapidamente l'attività per il calcolo dei profili utilizzando le impostazioni predefinite. Per altre informazioni, vedere [Single Table Quick Profile Form &#40;Data Profiling Task&#41;](data-profiling-task.md).  
+ Nella pagina **Generale** viene specificato il file di output o la variabile. È inoltre possibile selezionare **Profilo rapido** per configurare rapidamente l'attività per il calcolo dei profili utilizzando le impostazioni predefinite. Per altre informazioni, vedere [Form profilo rapido singola tabella &#40;Attività Profiling dati&#41;](data-profiling-task.md).  
   
- [Pagina richieste del profilo](data-profiling-task-editor-profile-requests-page.md)  
+ [Pagina Richieste del profilo](data-profiling-task-editor-profile-requests-page.md)  
  Nella pagina **Richieste profilo** specificare l'origine dati e quindi selezionare e configurare i profili dei dati che si vogliono calcolare. Per ulteriori informazioni sui diversi profili che è possibile configurare, vedere gli argomenti seguenti:  
   
--   [Opzioni di richiesta profilo chiave candidata &#40;attività Profiling dati&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Chiave candidata &#40;Attività Profiling dati&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo distribuzione lunghezze di colonna &#40;attività Profiling dati&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Distribuzione lunghezze di colonna &#40;Attività Profiling dati&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo rapporto di valori Null di colonna &#40;attività Profiling dati&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Rapporto di valori Null nella colonna &#40;Attività Profiling dati&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo criteri di ricerca colonna &#40;attività Profiling dati&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Criteri di ricerca colonna &#40;Attività Profiling dati&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo statistiche di colonna &#40;attività Profiling dati&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Statistiche di colonna &#40;Attività Profiling dati&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo distribuzione valori di colonna &#40;attività Profiling dati&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Distribuzione valori di colonna &#40;Attività Profiling dati&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo dipendenza funzionale &#40;attività Profiling dati&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Dipendenza funzionale &#40;Attività Profiling dati&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo inclusione valore &#40;attività Profiling dati&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Inclusione valore &#40;Attività Profiling dati&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

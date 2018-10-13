@@ -1,5 +1,5 @@
 ---
-title: Gli indicatori KPI | Documenti Microsoft
+title: Gli indicatori KPI | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6eaaf0fc4589fb07484dd10479ded4956650b245
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8c718c3f8501a56b9ba02062e9457ca0cd67ad56
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043725"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906431"
 ---
 # <a name="kpis"></a>KPI
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  In un modello tabulare un indicatore di prestazioni chiave ( *KPI* ) viene usato per misurare le prestazioni di un valore, definito da una misura di *base* , rispetto a un valore di *destinazione* , definito anch'esso da una misura o da un valore assoluto. Questo articolo fornisce agli autori di modelli tabulari una conoscenza di base di indicatori KPI in un modello tabulare.  
+  In un modello tabulare un indicatore di prestazioni chiave ( *KPI* ) viene usato per misurare le prestazioni di un valore, definito da una misura di *base* , rispetto a un valore di *destinazione* , definito anch'esso da una misura o da un valore assoluto. Questo articolo fornisce agli autori di modelli tabulari una conoscenza di base degli indicatori KPI in un modello tabulare.  
   
 ##  <a name="bkmk_benefits"></a> Vantaggi  
  Nella terminologia aziendale un indicatore KPI rappresenta una misurazione quantificabile per la valutazione degli obiettivi aziendali e viene stimato con una frequenza spesso elevata. Il reparto vendite di un'organizzazione può ad esempio utilizzare un indicatore KPI per misurare il profitto lordo mensile rispetto al profitto lordo previsto. Il reparto contabilità può misurare le spese mensili rispetto ai ricavi per valutare i costi, mentre un reparto risorse umane può misurare l'avvicendamento trimestrale dei dipendenti. Ognuno di questi rappresenta un esempio di utilizzo di un indicatore KPI. I professionisti aziendali utilizzano spesso gli indicatori di prestazioni chiave raggruppati in una scorecard aziendale per ottenere un riepilogo cronologico immediato e accurato del successo aziendale o per identificare le tendenze.  
@@ -37,7 +37,7 @@ ms.locfileid: "34043725"
 ##  <a name="bkmk_example"></a> Esempio  
  Il responsabile vendite di Adventure Works desidera creare una tabella pivot da utilizzare per visualizzare rapidamente se i dipendenti addetti alle vendite soddisfano o meno le rispettive quote di vendite per un determinato periodo (anno). Nella tabella pivot dovranno essere visualizzati, per ogni dipendente, l'importo in dollari delle vendite effettive, l'importo in dollari della quota di vendite e un semplice grafico con l'indicazione dello stato, ovvero se la quota di vendite di ognuno è inferiore, uguale o superiore a quella definita. Desidera inoltre poter sezionare i dati per anno.  
   
- A tale scopo, il responsabile vendite supporta lo sviluppatore di soluzioni di Business Intelligence dell'organizzazione aggiungendo un indicatore KPI delle vendite al modello tabulare di AdventureWorks. Il responsabile vendite utilizzerà quindi Excel per connettersi al modello tabulare Adventure Works come origine dati e creare una tabella pivot con i campi (misure e KPI) e i filtri dei dati per analizzare o meno la forza vendita soddisfa rispettive quote.  
+ A tale scopo, il responsabile vendite supporta lo sviluppatore di soluzioni di Business Intelligence dell'organizzazione aggiungendo un indicatore KPI delle vendite al modello tabulare di AdventureWorks. Il responsabile vendite utilizzerà quindi Excel per connettersi al modello tabulare Adventure Works come origine dati e creare una tabella pivot con i campi (misure e KPI) e i filtri dei dati da analizzare se la forza vendita soddisfa le rispettive quote.  
   
  Nel modello viene creata una misura nella colonna SalesAmount della tabella FactResellerSales che indica l'importo in dollari delle vendite effettive per ogni dipendente addetto alle vendite. Tale misura definirà il valore di base dell'indicatore KPI.  
   

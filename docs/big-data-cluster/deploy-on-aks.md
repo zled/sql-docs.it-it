@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ea1ab30f9b3b8ef77834a56b059b2a56de4467b5
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48796759"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877934"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>Configurare Azure Kubernetes Service per SQL Server 2019 CTP 2.0
 
@@ -24,7 +24,10 @@ Questo articolo descrive i passaggi per la distribuzione di Kubernetes nel servi
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Per un ambiente del servizio contenitore di AZURE, il requisito minimo di macchine Virtuali è almeno due macchine virtuali dell'agente (oltre a master) di una dimensione minima Standard_DS3_V2. Risorse minime necessarie per ogni macchina virtuale sono 4 CPU e 14 GB di memoria.
+- Per un ambiente del servizio contenitore di AZURE, il requisito minimo di macchine Virtuali è almeno due macchine virtuali dell'agente, in aggiunta al master, di una dimensione minima [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Risorse minime necessarie per ogni macchina virtuale sono 4 CPU e 14 GB di memoria.
+  
+   > [!NOTE]
+   > Se si prevede di eseguire processi di big data o più applicazioni di Spark, è la dimensione minima [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), e le risorse minime necessarie per ogni macchina virtuale sono di 8 CPU e 32 GB di memoria.
 
 - In questa sezione è necessario che sia in esecuzione la CLI di Azure versione 2.0.4 o versioni successive. Se è necessario installare o eseguire l'aggiornamento, vedere [installare Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Eseguire `az --version` per trovare la versione, se necessario.
 
@@ -80,7 +83,7 @@ Un gruppo di risorse di Azure è un gruppo logico in Azure le risorse vengono di
     --kubernetes-version 1.10.7
     ```
 
-    È possibile aumentare o ridurre il numero di agenti predefinito aggiungendo `--node-count <n>` per il az aks create comando dove `<n>` è il numero di nodi agente che si desidera avere.
+    È possibile aumentare o ridurre il numero di agenti predefinito modificando il `--node-count <n>` in cui `<n>` è il numero di nodi agente che si desidera avere.
 
     Dopo alcuni minuti, il comando viene completato e restituisce le informazioni in formato JSON sul cluster.
 

@@ -15,12 +15,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6805a64e8f7fd27513d87bfdb87dec7087addfa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7dada71a017f37969f94382e23cd07ad75dd356
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171991"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119788"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Connettersi a SQL Server se gli amministratori di sistema sono bloccati
   In questo argomento viene descritto come ottenere nuovamente l'accesso al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] come amministratore di sistema. Un amministratore di sistema può perdere l'accesso a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per uno dei motivi seguenti:  
@@ -62,11 +62,11 @@ ms.locfileid: "48171991"
 5.  Nel **parametri di avvio** nella scheda il **specificare un parametro di avvio** , digitare `-m` e quindi fare clic su `Add`. .  
   
     > [!NOTE]  
-    >  In alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è presente alcuna scheda **Parametri di avvio** . In questo caso, nella scheda **Avanzate** fare doppio clic su **Parametri di avvio**. I parametri vengono visualizzati in una finestra molto piccola. Fare attenzione a non modificare nessuno dei parametri esistenti. Alla fine, aggiungere un nuovo parametro `;-m` e quindi fare clic su `OK`. .  
+    >  In alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è presente alcuna scheda **Parametri di avvio** . In questo caso, nella scheda Avanzate** fare doppio clic su **Parametri di avvio**. I parametri vengono visualizzati in una finestra molto piccola. Fare attenzione a non modificare nessuno dei parametri esistenti. Al termine, aggiungere un nuovo parametro `;-m` (cioè un punto e virgola seguito da un trattino e una lettera m minuscola), quindi fare clic su `OK` .  
   
 6.  Fare clic su `OK`, dopo il messaggio di riavvio, fare clic sul nome del server e quindi fare clic su **riavviare**.  
   
-7.  Dopo il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il server sarà in modalità utente singolo. Accertarsi che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non sia in esecuzione, altrimenti l'unica connessione presente non sarà più disponibile a causa del relativo utilizzo da parte di questo servizio.  
+7.  Dopo il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il server sarà in modalità utente singolo. Verificare che l'opzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente non è in esecuzione. altrimenti l'unica connessione presente non sarà più disponibile a causa del relativo utilizzo da parte di questo servizio.  
   
 8.  Nella schermata iniziale di Windows 8 fare clic con il pulsante destro del mouse sull'icona di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Nella parte inferiore della schermata selezionare **Esegui come amministratore**. (le credenziali di amministratore verranno passate in SSMS).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48171991"
 11. Nel **parametri di avvio** nella scheda il **parametri esistenti** , quindi selezionare `-m` e quindi fare clic su `Remove`.  
   
     > [!NOTE]  
-    >  In alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è presente alcuna scheda **Parametri di avvio** . In questo caso, nella scheda **Avanzate** fare doppio clic su **Parametri di avvio**. I parametri vengono visualizzati in una finestra molto piccola. Rimuovere il `;-m` aggiunti in precedenza, e quindi fare clic su `OK`.  
+    >  In alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è presente alcuna scheda **Parametri di avvio** . In questo caso, nella scheda Avanzate** fare doppio clic su **Parametri di avvio**. I parametri vengono visualizzati in una finestra molto piccola. Rimuovere il `;-m` aggiunti in precedenza, e quindi fare clic su `OK`.  
   
 12. Fare clic con il pulsante destro del mouse sul nome del server e quindi scegliere **Riavvia**.  
   

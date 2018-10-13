@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 2fdccaf93ad53e6fda7671b734dc1ce12caa652c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7e554e0fb010e51af7e0ece757094800078c0d0
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641679"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085103"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Gestione cluster di dischi condivisi di Red Hat Enterprise Linux per SQL Server
 
@@ -153,7 +153,7 @@ Visualizzare i log dell'agente di risorsa in `/var/log/cluster/corosync.log`
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
  
-2. Impostare la password per l'utente predefinito creato durante l'installazione dei pacchetti Corosync e Pacemaker. Usare la stessa password per i nodi esistenti. 
+2. Impostare la password per l'utente predefinito creato durante l'installazione dei pacchetti Pacemaker e Corosync. Usare la stessa password per i nodi esistenti. 
 
    ```bash
    sudo passwd hacluster

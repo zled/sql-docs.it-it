@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 147276d31ee08a0dc5908a49cd65925e62c3bae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796209"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851886"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  Proprietario del blocco, ovvero il valore di *lock_owner* al momento della richiesta del blocco. *lock_owner* è **nvarchar(32)**. Il valore può essere **Transaction** (impostazione predefinita) o **Session**. Quando la *lock_owner* valore è **transazione**, predefinito o specificato in modo esplicito, sp_getapplock deve essere eseguito in una transazione.  
   
  [ @LockTimeout=] '*valore*'  
- Valore di timeout del blocco espresso in millisecondi. Il valore predefinito è lo stesso come il valore restituito da@LOCK_TIMEOUT. Per indicare che una richiesta di blocco deve restituire un errore anziché rimanere in attesa del blocco quando non può essere soddisfatta immediatamente, specificare 0.  
+ Valore di timeout del blocco espresso in millisecondi. Il valore predefinito è lo stesso come il valore restituito da@LOCK_TIMEOUT. Per indicare che una richiesta di blocco deve restituire un codice restituito-1 invece di attendere il blocco quando la richiesta non può essere soddisfatta immediatamente, specificare 0.  
   
  [ @DbPrincipal=] '*database_principal*'  
  Utente, ruolo o ruolo applicazione al quale sono state assegnate autorizzazioni per un oggetto di un database. Il chiamante della funzione deve essere un membro del *database_principal*, dbo o db_owner ruolo predefinito del database per chiamare la funzione correttamente. Il valore predefinito è public.  

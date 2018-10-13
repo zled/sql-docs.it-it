@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 989ee419406d0f69cd7bda26485d3d44cbf56550
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 137da00959f6f8d3498bb3d063ceb21337266aef
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827332"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878014"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Come usare i notebook in fase di anteprima di SQL Server 2019
 
@@ -76,6 +76,9 @@ Quando si seleziona uno di questi kernel, verrà installato tale kernel nell'amb
 La selezione Attach-to fornisce il contesto per il Kernel da collegare. Quando si è connessi al punto finale di cluster di SQL Server i big data, la selezione predefinita Attach-to sarà tale endpoint del cluster.
 
 ![image7](media/notebooks-guidance/image7.png)
+
+> [!NOTE]
+> Per impostazione predefinita, l'applicazione Spark è configurata con 1 driver e 3 esecutori che saranno eseguite circa 8,5 GB di memoria. La configurazione consigliata per l'esecuzione più sessioni di spark è per ogni server in cluster siano disponibili almeno 32 GB di memoria (ad esempio, in un ambiente del servizio contenitore di AZURE usare **Standard_D8_v3** dimensioni delle macchine Virtuali, con 32 GB di memoria).
 
 ## <a name="hello-world-in-the-different-contexts"></a>HelloWorld in contesti diversi
 

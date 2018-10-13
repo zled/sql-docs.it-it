@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: cd4f7b3f447d5a7d05ed08fa07ecf36a685a10ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feae91ed25dafa499026b2cadf72a2eafa0c63ae
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786969"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906231"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procedura dettagliata per la funzionalità di sicurezza di SQL Server in Linux
 
@@ -67,7 +67,7 @@ L'account di accesso Larry possono ora creare ulteriori account di accesso e l'u
 
 ## <a name="granting-access-with-least-privileges"></a>Concessione dell'accesso con privilegi minimi
 
-I primi utenti di connettersi a un database utente sarà l'amministratore e gli account proprietario del database. Tuttavia, questi utenti hanno tutti il le autorizzazioni disponibili per il database. Si tratta di autorizzazioni maggiori rispetto a quasi tutti gli utenti devono avere. 
+I primi utenti di connettersi a un database utente sarà l'amministratore e gli account proprietario del database. Tuttavia questi utenti hanno tutte le autorizzazioni disponibili per il database. Si tratta di autorizzazioni maggiori rispetto a quasi tutti gli utenti devono avere. 
 
 Quando sta iniziando, è possibile assegnare alcune categorie generali di autorizzazioni tramite l'oggetto incorporato *ruoli predefiniti del database*. Ad esempio, il `db_datareader` può leggere tutte le tabelle nel database del ruolo predefinito del database, ma senza apportare alcuna modifica. Concedere l'appartenenza a un ruolo predefinito del database usando il [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) istruzione. Nell'esempio seguente l'utente di aggiungere `Jerry` per il `db_datareader` ruolo predefinito del database.   
    
@@ -282,7 +282,7 @@ WITH
 GO  
 ```
 
-Per altre informazioni, vedere [crittografia dei Backup](../relational-databases/backup-restore/backup-encryption.md).
+Per altre informazioni, vedere [Crittografia dei backup](../relational-databases/backup-restore/backup-encryption.md).
 
 
 ## <a name="next-steps"></a>Passaggi successivi

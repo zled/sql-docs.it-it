@@ -18,12 +18,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 039961b8c2811d32fcf8544f395c527e7981abb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 117391f9cbefeb7ed7fbc76d2c1d93376e5a1fa6
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073011"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085337"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurare il backup su repliche di disponibilità (SQL Server)
   In questo argomento viene descritto come configurare il backup delle repliche secondarie per un gruppo di disponibilità AlwaysOn utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -111,13 +111,13 @@ ms.locfileid: "48073011"
 ##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
  **Per configurare il backup delle repliche secondarie**  
   
-1.  Impostare il valore predefinito (`cd`) all'istanza del server che ospita la replica primaria.  
+1.  Impostare il valore predefinito (`cd`) sull'istanza del server che ospita la replica primaria.  
   
 2.  Facoltativamente, configurare la priorità di backup di ogni replica di disponibilità aggiunta o modificata. Tale priorità viene utilizzata dall'istanza del server che ospita la replica primaria per stabilire quale replica deve soddisfare una richiesta di backup automatico in un database nel gruppo di disponibilità (viene scelta la replica con la priorità più alta). La priorità può essere impostata su qualsiasi numero compreso tra 0 e 100 inclusi. 0 indica che la replica non deve essere considerata per soddisfare le richieste di backup.  L'impostazione predefinita è 50.  
   
      Quando si aggiunge una replica di disponibilità a un gruppo di disponibilità, utilizzare il cmdlet `New-SqlAvailabilityReplica`. Quando si modifica una replica di disponibilità esistente, utilizzare il cmdlet `Set-SqlAvailabilityReplica`. In entrambi i casi specificare il `BackupPriority` *n* parametro, in cui *n* è un valore compreso tra 0 e 100.  
   
-     Ad esempio, il comando seguente imposta la priorità di backup della replica di disponibilità `MyReplica` a `60`.  
+     Ad esempio, nel comando seguente viene impostata la priorità di backup della replica di disponibilità `MyReplica` su `60`.  
   
     ```  
     Set-SqlAvailabilityReplica -BackupPriority 60 `  
@@ -126,7 +126,7 @@ ms.locfileid: "48073011"
   
 3.  Configurare facoltativamente la preferenza di backup automatico per il gruppo di disponibilità in fase di creazione o modifica. Questa preferenza indica la modalità di valutazione della replica primaria da parte di un processo di backup nella scelta della posizione in cui eseguire i backup. L'impostazione predefinita è quella di preferire le repliche secondarie.  
   
-     Quando si crea un gruppo di disponibilità, utilizzare il cmdlet `New-SqlAvailabilityGroup`. Quando si modifica un gruppo di disponibilità esistente, usare il `Set-SqlAvailabilityGroup` cmdlet. In entrambi i casi specificare il `AutomatedBackupPreference` parametro.  
+     Quando si crea un gruppo di disponibilità, utilizzare il cmdlet `New-SqlAvailabilityGroup`. Quando si modifica un gruppo di disponibilità esistente, utilizzare il cmdlet `Set-SqlAvailabilityGroup`. In entrambi i casi, specificare il parametro `AutomatedBackupPreference`.  
   
      dove  
   
@@ -157,7 +157,7 @@ ms.locfileid: "48073011"
     ```  
   
 > [!NOTE]  
->  Per visualizzare la sintassi di un cmdlet, usare il `Get-Help` cmdlet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ambiente PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Per visualizzare la sintassi di un cmdlet, utilizzare il cmdlet `Get-Help` nell'ambiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Per impostare e utilizzare il provider PowerShell per SQL Server**  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5c1da774f52f78b67e6adb34f33513930c316991
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4ba4e28a17b0a025b48d41b077d4a536a9be8e9
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229931"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878124"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installare SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -188,86 +188,22 @@ Se il passaggio di verifica dello script esterno ha esito positivo, è possibile
 
 Se è stato visualizzato un errore quando si esegue il comando, rivedere i passaggi di configurazione aggiuntive in questa sezione. Si potrebbe essere necessario effettuare altre configurazioni appropriate per il servizio o il database.
 
-Scenari comuni che richiedono modifiche aggiuntive includono:
+A livello di istanza, potrebbe includere un'ulteriore configurazione:
 
-* [Configurare Windows firewall per le connessioni in ingresso](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
+* [Configurazione del firewall per SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md)
 * [Abilitare i protocolli di rete aggiuntivi](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Abilitare le connessioni remote](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
-* [Estendere le autorizzazioni predefinite per gli utenti remoti](#bkmk_configureAccounts)
-* [Concedere l'autorizzazione per eseguire gli script esterni](#bkmk_AllowLogon)
-* [Concedere l'accesso ai singoli database](#permissions-db)
+
+<a name="bkmk_configureAccounts"></a>
+<a name="bkmk_AllowLogon"></a>
+
+Il database, potrebbe essere necessario gli aggiornamenti di configurazione seguenti:
+
+* [Consentire agli utenti di SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
+* [Aggiungere SQLRUserGroup come utente del database](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
 > Non tutte le modifiche elencate sono necessari e nessuno potrebbero essere necessarie. I requisiti variano a seconda lo schema di sicurezza, in cui è installato SQL Server e come si prevede che gli utenti per connettersi al database ed eseguire gli script esterni. Altri suggerimenti sulla risoluzione dei problemi sono disponibili qui: [domande frequenti su installazione e aggiornamento](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-<a name="bkmk_configureAccounts"></a>
-
-### <a name="enable-implied-authentication-for-the-launchpad-account-group"></a>Abilitare l'autenticazione implicita per il gruppo di account Launchpad
-
-Durante l'installazione, vengono creati alcuni nuovi account utente di Windows per l'esecuzione di attività con il token di sicurezza del [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] servizio. Quando un utente invia uno script R da un client esterno, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attiva un account di lavoro disponibili, viene eseguito il mapping all'identità dell'utente chiamante ed esegue lo script R per conto dell'utente. Questo nuovo servizio del motore di database supporta l'esecuzione sicura di script esterni, definito *l'autenticazione implicita*.
-
-È possibile visualizzare questi account nel gruppo di utenti Windows **SQLRUserGroup**. Per impostazione predefinita, vengono creati 20 account di lavoro, che corrisponde in genere i processi più che sufficienti per l'esecuzione di R.
-
-Tuttavia, se è necessario eseguire gli script R da un client di analisi scientifica dei dati remoti e Usa l'autenticazione di Windows, è necessario concedere questi account di lavoro l'autorizzazione per accedere al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza per tuo conto.
-
-1. In Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere la cartella **Sicurezza**, fare clic con il pulsante destro del mouse su **Account di accesso**e quindi scegliere **Nuovo account di accesso**.
-2. Nel **account di accesso - nuovo** finestra di dialogo **ricerca**.
-3. Selezionare il **tipi di oggetti** e **gruppi** caselle di controllo e deselezionare tutte le altre caselle di controllo.
-4. Fare clic su **avanzate**, verificare che la posizione in cui cercare il computer corrente e quindi fare clic su **trova ora**.
-5. Scorrere l'elenco degli account di gruppo nel server fino a individuare che inizia con `SQLRUserGroup`.
-    
-    + Il nome del gruppo di cui è associato il servizio Launchpad per il _istanza predefinita_ è sempre sufficiente **SQLRUserGroup**. Selezionare questo account solo per l'istanza predefinita.
-    + Se si usa un' _istanza denominata_, il nome dell'istanza viene aggiunto al nome predefinito, `SQLRUserGroup`. Di conseguenza, se l'istanza è denominata "MLTEST", il nome di gruppo utente predefinito per questa istanza sarebbe **SQLRUserGroupMLTest**.
-5. Fare clic su **OK** per chiudere la finestra di dialogo di ricerca avanzata, verificare di aver selezionato l'account corretto per l'istanza. Ogni istanza può usare solo il proprio servizio Launchpad e il gruppo creato per tale servizio.
-6. Fare clic su **OK** ancora una volta per chiudere la **Seleziona utente o gruppo** nella finestra di dialogo.
-7. Nel **account di accesso - nuovo** finestra di dialogo, fare clic su **OK**. Per impostazione predefinita, l'account di accesso viene assegnato al ruolo **public** e dispone dell'autorizzazione per connettersi al motore di database.
-
-<a name="bkmk_AllowLogon"></a>
-
-### <a name="give-users-permission-to-run-external-scripts"></a>Concedere agli utenti l'autorizzazione per eseguire gli script esterni
-
-> [!NOTE]
-> Se si usa un account di accesso SQL per l'esecuzione di script R in un contesto di calcolo di SQL Server, questo passaggio non è obbligatorio.
-
-Se è stato installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella tua istanza di, si sono in genere l'esecuzione di script come amministratore, o almeno un proprietario del database, e pertanto disporre di autorizzazioni implicite per varie operazioni, tutti i dati nel database e la possibilità di installare nuovi pacchetti in base alle esigenze.
-
-Tuttavia, in uno scenario aziendale, la maggior parte degli utenti, inclusi quelli che hanno accesso al database usando l'account di accesso SQL, non hanno tali autorizzazioni con privilegi elevati. Pertanto, per ogni utente che eseguirà script R, è necessario concedere le autorizzazioni per eseguire gli script in ogni database in cui verranno usati gli script esterni.
-
-```SQL
-USE <database_name>
-GO
-GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
-```
-
-> [!TIP]
-> Serve aiuto per l'installazione? Non si è certi di aver eseguito tutti i passaggi? Usare questi report personalizzati per controllare lo stato di installazione ed eseguire passaggi aggiuntivi. 
-> 
-> [Monitorare servizi di Machine Learning tramite i report personalizzati](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
-
-<a name="permissions-db"></a>
-
-###  <a name="give-your-users-read-write-or-ddl-permissions-to-the-database"></a>Assegnare l'utenti di lettura, scrittura o autorizzazioni DDL per il database
-
-L'account utente usato per eseguire R potrebbe essere necessario per leggere i dati da altri database, creare nuove tabelle per archiviare i risultati e scrivere dati nelle tabelle. Pertanto, per ogni utente che eseguirà script R, verificare che l'utente disponga delle autorizzazioni appropriate sul database: *db_datareader*, *db_datawriter*, o *db_ddladmin*.
-
-Ad esempio, l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente concede all'account di accesso SQL *MySQLLogin* i diritti per l'esecuzione di query T-SQL nel database *RSamples* . Per eseguire questa istruzione, l'account di accesso SQL deve essere già presente nel contesto di sicurezza del server.
-
-```SQL
-USE RSamples
-GO
-EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
-```
-
-Per altre informazioni sulle autorizzazioni incluse in ogni ruolo, vedere [ruoli a livello di Database](../../relational-databases/security/authentication-access/database-level-roles.md).
-
-
-### <a name="create-an-odbc-data-source-for-the-instance-on-your-data-science-client"></a>Creare un'origine dati ODBC per l'istanza del client per l'analisi scientifica dei dati
-
-Se si crea una soluzione R in un computer client di analisi scientifica dei dati ed è necessario eseguire il codice usando il computer SQL Server come contesto di calcolo, è possibile usare un account di accesso SQL o l'autenticazione integrata di Windows.
-
-* Per gli account di accesso SQL: assicurarsi che l'account abbia le autorizzazioni appropriate sul database in cui si leggeranno i dati. È possibile farlo aggiungendo *connettersi a* e *selezionare* autorizzazioni, o aggiungendo l'account di accesso per il *db_datareader* ruolo. Per gli account di accesso necessario per creare oggetti, aggiungere *DDL_admin* diritti. Per gli account di accesso deve salvare dati in tabelle, aggiungere l'account di accesso per il *db_datawriter* ruolo.
-
-* Per l'autenticazione di Windows: si potrebbe essere necessario configurare un'origine dati ODBC nel client di data science che specifica il nome dell'istanza e altre informazioni sulla connessione. Per altre informazioni, vedere [Amministrazione origine dati ODBC](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
 
 ## <a name="suggested-optimizations"></a>Delle ottimizzazioni suggerite
 
@@ -275,7 +211,7 @@ Ora che avete accertato il corretto funzionamento, si potrebbe anche voler ottim
 
 ### <a name="add-more-worker-accounts"></a>Aggiungere altri account di lavoro
 
-Se si ritiene che è possibile usare R in modo rilevante, o se si prevede che molti utenti sia gli script in esecuzione contemporaneamente, è possibile aumentare il numero di account di lavoro assegnati al servizio Launchpad. Per altre informazioni, vedere [modificare il pool di account utente per SQL Server Machine Learning Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
+Se si ritiene che è possibile usare R in modo rilevante, o se si prevede che molti utenti sia gli script in esecuzione contemporaneamente, è possibile aumentare il numero di account di lavoro assegnati al servizio Launchpad. Per altre informazioni, vedere [modificare il pool di account utente per SQL Server Machine Learning Services](../administration/modify-user-account-pool.md).
 
 <a name="bkmk_optimize"></a>
 
@@ -289,7 +225,7 @@ Per garantire che i processi di machine learning sono la priorità e risorse ass
   
 - Per modificare la quantità di memoria riservata per il database, vedere [opzioni di configurazione memoria Server](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-- Per modificare il numero di account R che può essere avviata dal [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], vedere [modificare il pool di account utente per l'apprendimento](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
+- Per modificare il numero di account R che può essere avviata dal [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], vedere [modificare il pool di account utente per l'apprendimento](../administration/modify-user-account-pool.md).
 
 Se si usa l'edizione Standard e sono privi di Resource Governor, è possibile utilizzare viste a gestione dinamica (DMV) e degli eventi estesi, nonché eventi di Windows di monitoraggio, che consente di gestire le risorse di server che vengono usate da R. Per altre informazioni, vedere [monitoraggio e gestione dei servizi R](../r/managing-and-monitoring-r-solutions.md).
 

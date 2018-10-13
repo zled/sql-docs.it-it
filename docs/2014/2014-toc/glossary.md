@@ -24,12 +24,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: e606d82d50d1293c9149476e9c976bfcea61201a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085531"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120478"
 ---
 # <a name="glossary"></a>Glossario
   
@@ -832,9 +832,9 @@ ms.locfileid: "48085531"
 |tabella di collegamento|Tabella che stabilisce una relazione tra altre tabelle.|  
 |grafico Kagi|Grafico, quasi sempre indipendente dal tempo, utilizzato per rilevare i movimenti dei prezzi e prendere decisioni sull'acquisto di scorte.|  
 |chiave|Stringa che identifica un oggetto nella cache. Questa stringa deve essere univoca all'interno di un'area. Gli oggetti sono associati a una chiave quando vengono aggiunti e quindi recuperati con la stessa chiave.|  
-|chiave|Per la crittografia, l'autenticazione e le firme digitali, valore utilizzato in combinazione con un algoritmo per crittografare o decrittografare informazioni.|  
-|chiave|In una matrice, il campo in base al quale i dati archiviati vengono organizzati e resi accessibili.|  
-|chiave|Colonna o gruppo di colonne che identifica in modo univoco una riga (chiave primaria) definisce la relazione tra le due tabelle (chiave esterna) oppure che viene utilizzata per la compilazione di un indice.|  
+|Key|Per la crittografia, l'autenticazione e le firme digitali, valore utilizzato in combinazione con un algoritmo per crittografare o decrittografare informazioni.|  
+|Key|In una matrice, il campo in base al quale i dati archiviati vengono organizzati e resi accessibili.|  
+|Key|Colonna o gruppo di colonne che identifica in modo univoco una riga (chiave primaria) definisce la relazione tra le due tabelle (chiave esterna) oppure che viene utilizzata per la compilazione di un indice.|  
 |attributo chiave|Attributo di una dimensione che collega gli attributi non chiave nella dimensione alle misure correlate.|  
 |colonna chiave|Colonna il cui contenuto identifica in modo univoco ogni riga di una tabella.|  
 |generatore di chiavi|Componente hardware o software utilizzato per generare il materiale della chiave di crittografia.|  
@@ -1377,7 +1377,7 @@ ms.locfileid: "48085531"
 |rsconfig - utilità|Strumento di gestione delle connessioni del server.|  
 |rsconfig.exe|Strumento di gestione delle connessioni del server.|  
 |esecuzione della regola|Processo di esecuzione di una delle regole dell'applicazione, ovvero regole della cronologia degli eventi, degli eventi di sottoscrizione e di sottoscrizione pianificate, specificate nel file di definizione dell'applicazione (ADF).|  
-|query con eccessivo tempo di esecuzione|Query con eccessivo tempo di esecuzione che può causare un problema di blocco. Per tale tipo di query non viene in genere utilizzato un timeout di blocco o di query.|  
+|query con eccessivo tempo di esecuzione|Query con eccessivo tempo di esecuzione che può causare un problema di blocco. Tipo di query, in genere, non usa un timeout di blocco o di query.|  
 |errore di run-time|Errore software che si verifica durante l'esecuzione di un programma, come rilevato da un compilatore o da un altro programma di supervisione.|  
 |codice sicuro|Codice eseguito dall'ambiente Common Language Runtime anziché direttamente dal sistema operativo. Le applicazioni di codice gestito usufruiscono dei servizi Common Language Runtime, tra cui operazioni di Garbage Collection in modalità automatica, controllo dei tipi in fase di esecuzione, supporto della sicurezza e così via. Tali servizi consentono di offrire un comportamento uniforme e indipendente dalla piattaforma e dal linguaggio delle applicazioni di codice gestito.|  
 |campionamento|Processo statistico che fornisce una conoscenza inferenziale su una popolazione o un set di dati di interesse nel suo complesso osservando o analizzando una parte della popolazione o del set di dati.|  
@@ -1472,7 +1472,7 @@ ms.locfileid: "48085531"
 |profilo smart card|Profilo di Certificate Lifecycle Manager (CLM) creato quando viene eseguita una richiesta mediante un modello di profilo che include solo modelli di certificato basati su smart card.|  
 |lettore di smart card|Dispositivo installato nei computer per consentire l'utilizzo di smart card per funzionalità di sicurezza avanzate.|  
 |Smart Card Self Service Control|Software installato in un computer client che consente agli utenti finali e agli amministratori di gestire le smart card fornendo una connessione dal computer client alla smart card.|  
-|sblocco della smart card|Azione tramite cui una smart card viene associata alle credenziali amministrative per reimpostare il contatore dei tentativi del numero di identificazione personale (PIN).|  
+|sblocco della smart card|L'azione di una smart card con credenziali amministrative per reimpostare il numero di identificazione personale (PIN) contatore dei tentativi.|  
 |SMO|Interfaccia API (Application Programming Interface) che supporta l'incorporazione dell'amministrazione di SQL Server in qualsiasi applicazione di automazione COM oppure OLE.|  
 |SMTP|Membro della famiglia di protocolli TCP/IP tramite cui viene regolato lo scambio di posta elettronica tra agenti di trasferimento messaggi.|  
 |snap-in|Tipo di strumento che è possibile aggiungere a una console supportata da Microsoft Management Console (MMC). Uno snap-in autonomo può essere aggiunto come componente indipendente, mentre uno snap-in di estensione può essere aggiunto soltanto per ampliare le funzioni di un altro snap-in.|  

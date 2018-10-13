@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 6725f986a66020d0560c4e3f17be5da12a2cd3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0eb32296c0122709ff1dc6c83deda70d88293d38
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745749"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851846"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Domande frequenti su SQL Server in Linux
 
@@ -103,7 +103,7 @@ Le sezioni seguenti forniscono domande e risposte comuni per SQL Server in esecu
 
 1. **SQL Server in Linux supporta più istanze nello stesso host?**
 
-   È consigliabile eseguire più contenitori in un host a dispone di più istanze distinte. Ogni contenitore deve restare in ascolto su una porta diversa. Per altre informazioni, vedere [esecuzione di più contenitori di SQL Server](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
+   È consigliabile eseguire più contenitori in un host a dispone di più istanze distinte. Questo avviene facilmente usando docker, ma ogni contenitore deve restare in ascolto su una porta diversa. Per altre informazioni, vedere [esecuzione di più contenitori di SQL Server](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
 
 1. **Autenticazione di Active Directory è supportato in Linux?**
 

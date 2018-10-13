@@ -11,12 +11,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9edb241dab5b2a1aaeefb5c11c53726f1e46498d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144421"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071845"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Creare un avviso dati nella finestra di progettazione Avviso dati
   Le definizioni di avviso dati vengono create nella finestra di progettazione Avviso dati. Dopo aver salvato le definizioni di avviso, è possibile riaprirle, modificarle, quindi salvare di nuovo nella finestra di progettazione Avviso dati. Per informazioni sulla modifica delle definizioni di avviso, vedere [Gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md) e [Modificare un avviso dati nella finestra di progettazione di avvisi](edit-a-data-alert-in-alert-designer.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "48144421"
   
      Il nome predefinito della definizione di avviso corrisponde al nome del report. Non è necessario che i nomi delle definizioni di avviso siano univoci, ma l'utilizzo di nomi uguali ne renderebbe difficile la distinzione quando si visualizza l'elenco di avvisi in Gestione avvisi dati. È consigliabile utilizzare nomi significativi e univoci per le definizioni di avviso.  
   
-6.  Facoltativamente, cambiare l'opzione dei dati predefiniti da **any data in the data feed has** (alcuni dati nel feed di dati hanno) in **no data in the data feed has**(nessun dato del feed di dati ha).  
+6.  Facoltativamente, modificare l'opzione di dati predefiniti da **alcuni dati nel feed di dati hanno** al **Nessun dato del feed di dati ha**.  
   
 7.  Fare clic su **Aggiungi regola**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48144421"
      Per impostazione predefinita, un messaggio di avviso non dispone di alcuna data di fine.  
   
     > [!NOTE]  
-    >  L'arresto di un messaggio di avviso non comporta l'eliminazione della definizione di avviso. Dopo avere arrestato un messaggio di avviso, è possibile riavviarlo aggiornando le date di inizio e di fine. Per informazioni sull'eliminazione di definizioni di avviso, vedere [gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
+    >  L'arresto di un messaggio di avviso non comporta l'eliminazione della definizione di avviso. Dopo avere arrestato un messaggio di avviso, è possibile riavviarlo aggiornando le date di inizio e di fine. Per informazioni sull'eliminazione delle definizioni di avviso, vedere [Gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
   
 18. Facoltativamente, deselezionare la casella di controllo **Invia un messaggio solo se cambiano i risultati degli avvisi** .  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48144421"
 22. Fare clic su **Salva**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di progettazione avviso dati](../../2014/reporting-services/data-alert-designer.md)   
+ [Finestra di progettazione Avviso dati](../../2014/reporting-services/data-alert-designer.md)   
  [Gestione avvisi dati per gli amministratori di avvisi](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Avvisi dati di Reporting Services](../ssms/agent/alerts.md)  
   

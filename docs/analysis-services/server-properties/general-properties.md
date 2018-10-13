@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53d2563c050fc1567d396e9526505c5d4dd813a8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033339"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906211"
 ---
 # <a name="general-properties"></a>Proprietà generali
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "38033339"
  Proprietà stringa che specifica in un elenco delimitato le cartelle che è possibile esplorare durante il salvataggio, l'apertura e la ricerca di file nelle finestra di dialogo di Analysis Services. È necessario che l'account del servizio Analysis Services abbia letto e scritto le autorizzazioni a qualsiasi cartella aggiunta all'elenco.  
   
  **BackupDir**  
- Proprietà stringa che identifica il nome della directory in cui vengono archiviati i file di backup per impostazione predefinita, nel caso in cui non sia stato specificato un percorso con il comando di backup.  
+ Proprietà stringa che identifica il nome della directory in cui sono archiviati i file di backup per impostazione predefinita, nel caso in cui un percorso non è specificato come parte del comando Backup.  
   
  **CollationName**  
  Proprietà di stringa che identifica le regole di confronto del server. Per altre informazioni, vedere [Lingue e regole di confronto &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md).  
