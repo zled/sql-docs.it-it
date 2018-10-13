@@ -14,12 +14,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 174918e72602acaef4ec4f505fb387e78ab04d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c62ca169091e1ac33815c3c8a4b0c7bf771a1adf
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085357"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085117"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Corrispondenza automatica di coppie della sintassi
   La corrispondenza automatica di coppie della sintassi consente di verificare immediatamente se gli elementi della sintassi che devono essere codificati in coppie sono abbinati correttamente. Questa corrispondenza è nota come corrispondenza tra delimitatori nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , corrispondenza tra parentesi graffe nell'editor di query XMLA di Analysis Services e corrispondenza tra parentesi negli editor MDX e DMX.  
@@ -70,6 +70,6 @@ ms.locfileid: "48085357"
 -   Virgolette di apertura e di chiusura sugli attributi.  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>Corrispondenza tra parentesi negli editor DMX e MDX  
- Negli editor MDX (Multidimensional Expressions) e DMX (Data Mining Expressions) vengono messe in automaticamente in corrispondenza le coppie di parentesi nelle funzioni.  
+ Le espressioni multidimensionali (MDX) e gli editor di espressioni DMX (Data Mining) automaticamente corrispondono coppie di parentesi nelle funzioni.  
   
   

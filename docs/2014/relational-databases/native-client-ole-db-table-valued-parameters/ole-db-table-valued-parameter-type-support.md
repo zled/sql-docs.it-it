@@ -12,12 +12,12 @@ ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ef0667c28d87deb6c714a91bbe3605792c51c1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27ae90e05784c18d85f84daa9955818d3133ad07
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133151"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085267"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Supporto del tipo di parametro con valori di tabella OLE DB
   In questo argomento viene descritto il supporto del tipo OLE DB per i parametri con valori di tabella.  
