@@ -41,7 +41,7 @@ ms.locfileid: "47855229"
   
  I miglioramenti delle prestazioni consentono di creare modelli di dimensioni maggiori, caricare i dati in modo più efficiente e ottenere migliori prestazioni complessive. I miglioramenti riguardano anche le prestazioni del componente aggiuntivo per Microsoft Excel in cui sono stati ridotti i tempi di caricamento dei dati ed è stata abilitata la funzionalità che permette di gestire entità di dimensioni maggiori.  
   
- Per altre informazioni sul componente aggiuntivo per Microsoft Excel, vedere [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Per altre informazioni sul componente aggiuntivo per Microsoft Excel, vedere [Componente aggiuntivo Master Data Services per Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Sono inclusi i seguenti miglioramenti di funzionalità.  
   
