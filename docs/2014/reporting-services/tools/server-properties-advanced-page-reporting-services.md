@@ -13,12 +13,12 @@ ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0af66da35bdc42bf78601e3040d91095646a9b75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8756be81a5517602558ab974bb63310e19c32049
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183356"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119874"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Proprietà server (pagina Avanzate) - Reporting Services
   Questa pagina consente di impostare le proprietà di sistema nel server di report. Le proprietà di sistema possono essere impostate in diversi modi. Questo strumento fornisce un'interfaccia utente grafica che consente di impostare le proprietà senza dovere scrivere codice.  
@@ -27,7 +27,7 @@ ms.locfileid: "48183356"
   
 ## <a name="options"></a>Opzioni  
  **EnableMyReports**  
- Indica se la caratteristica Report personali è abilitata. Un valore di `true` indica che la funzionalità è abilitata.  
+ Indica se la caratteristica Report personali è abilitata. Un valore `true` indica che la caratteristica è abilitata.  
   
  **MyReportsRole**  
  Nome del ruolo utilizzato durante la creazione dei criteri di sicurezza nelle cartelle Report personali dell'utente. Il valore predefinito è `My Reports Role`.  
@@ -39,7 +39,7 @@ ms.locfileid: "48183356"
  Indica se la registrazione per l'esecuzione di report è attivata. Il valore predefinito è `true`. Per altre informazioni sul log di esecuzione del server di report, vedere [Log di esecuzione Server di Report e vista ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
- Numero di giorni durante i quali le informazioni sulle esecuzioni dei report vengono conservate nel log di esecuzione. I valori validi per questa proprietà includono `-1` attraverso `2`,`147`,`483`,`647`. Se il valore è `-1` le voci non vengono eliminate dalla tabella del log di esecuzione. Il valore predefinito è `60`.  
+ Numero di giorni durante i quali le informazioni sulle esecuzioni dei report vengono conservate nel log di esecuzione. I valori validi per questa proprietà sono i valori compresi tra `-1` e `2`.`147`.`483`.`647`. Se il valore è `-1` le voci non vengono eliminate dalla tabella del log di esecuzione. Il valore predefinito è `60`.  
   
  **SessionTimeout**  
  Intervallo, in secondi, durante il quale una sessione rimane attiva. Il valore predefinito è `600`.  
@@ -51,10 +51,10 @@ ms.locfileid: "48183356"
  Nome del sito del server di report visualizzato nel titolo della pagina di Gestione report. Il valore predefinito è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Questa proprietà può essere una stringa vuota. La lunghezza massima è di 8.000 caratteri.  
   
  **StoredParametersLifetime**  
- Specifica il numero massimo di giorni per cui è possibile conservare un parametro archiviato. I valori validi sono `-1`, `+1` tramite `2,147,483,647`. Il valore predefinito è `180` giorni.  
+ Specifica il numero massimo di giorni per cui è possibile conservare un parametro archiviato. I valori validi sono `-1` e i valori compresi tra `+1` e `2,147,483,647`. Il valore predefinito è `180` giorni.  
   
  **StoredParametersThreshold**  
- Specifica il numero massimo di valori dei parametri che possono essere archiviati nel server di report. I valori validi sono `-1`, `+1` tramite `2,147,483,647`. Il valore predefinito è `1500`.  
+ Specifica il numero massimo di valori dei parametri che possono essere archiviati dal server di report. I valori validi sono `-1` e i valori compresi tra `+1` e `2,147,483,647`. Il valore predefinito è `1500`.  
   
  **UseSessionCookies**  
  Indica se il server di report deve utilizzare cookie di sessione per le comunicazioni con i browser dei client. Il valore predefinito è `true`.  
@@ -72,10 +72,10 @@ ms.locfileid: "48183356"
  **All** = gli snapshot vengono compressi per tutte le opzioni di archiviazione, incluso il database del server di report o il file system.  
   
  **SystemReportTimeout**  
- Valore di timeout  predefinito per l'elaborazione dei report, espresso in secondi, per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono `-1` attraverso `2`,`147`,`483`,`647`. Se il valore è `-1` durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è `1800`.  
+ Valore di timeout  predefinito per l'elaborazione dei report, espresso in secondi, per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra `-1` e `2`.`147`.`483`.`647`. Se il valore è `-1` durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è `1800`.  
   
  **SystemSnapshotLimit**  
- Numero massimo di snapshot archiviati per un report. I valori validi sono `-1` attraverso `2`,`147`,`483`,`647`. Se il valore è `-1`, non esiste un limite di snapshot.  
+ Numero massimo di snapshot archiviati per un report. I valori validi sono compresi tra `-1` e `2`.`147`.`483`.`647`. Se il valore è `-1`, non vi sono limiti per gli snapshot.  
   
  **EnableIntegratedSecurity**  
  Determina se la sicurezza integrata di Windows è supportata per le connessioni alle origini dati dei report. Il valore predefinito è `True`. I valori validi sono i seguenti:  
@@ -85,7 +85,7 @@ ms.locfileid: "48183356"
  `False` = la sicurezza integrata di Windows non è attivata. Le origini dati dei report configurate per l'utilizzo della sicurezza integrata di Windows non verranno eseguite.  
   
  `EnableLoadReportDefinition`  
- Selezionare questa opzione per specificare se gli utenti possono eseguire report ad hoc da un report di Generatore report. Impostando questa opzione determina il valore della `EnableLoadReportDefinition` proprietà nel server di report.  
+ Selezionare questa opzione per specificare se gli utenti possono eseguire report ad hoc da un report di Generatore report. L'impostazione di questa opzione determina il valore della proprietà `EnableLoadReportDefinition` nel server di report.  
   
  Se si deseleziona questa opzione, la proprietà viene impostata su False e nel server di report non sarà possibile generare report click-through per i report che utilizzano un modello di report come origine dati. Qualsiasi chiamata al metodo LoadReportDefinition verrà bloccata.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48183356"
  Consente di specificare il numero di secondi prima del timeout di una sessione di modifica del report. Il valore predefinito è 7200 secondi (2 ore).  
   
  **EnableTestConnectionDetailedErrors**  
- Indica se messaggi di errore dettagliati vengono inviati al computer client quando gli utenti verificano le connessioni all'origine dati utilizzando il server di report. Il valore predefinito è `true`. Se l'opzione è impostata su `false`, vengono inviati solo messaggi di errore generico.  
+ Indica se messaggi di errore dettagliati vengono inviati al computer client quando gli utenti verificano le connessioni all'origine dati utilizzando il server di report. Il valore predefinito è `true`. Se l'opzione viene impostata su `false`, vengono inviati solo messaggi di errore generici.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare le proprietà di un server di report &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
