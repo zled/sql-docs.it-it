@@ -1,13 +1,11 @@
 ---
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2015
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER COLUMN ENCRYPTION
@@ -20,21 +18,20 @@ helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: af850156a7600acde614849c897bbb69df0dfa1b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8f76bfc903eaf18978c2c77803cdd7054d384ace
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38016111"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839529"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Modifica una chiave di crittografia della colonna in un database, aggiungendo o eliminando un valore crittografato. Una chiave di crittografia della colonna può avere fino a due valori in moda da consentire la rotazione della chiave master della colonna corrispondente. La chiave di crittografia della colonna viene usata per crittografare le colonne tramite la funzionalità [Always Encrypted &#40;Motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Prima di aggiungere un valore per la chiave di crittografia della colonna, è necessario definire la chiave master della colonna usata per crittografare il valore tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o l'istruzione [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
+  Modifica una chiave di crittografia della colonna in un database, aggiungendo o eliminando un valore crittografato. Una chiave di crittografia della colonna può avere fino a due valori in modo da consentire la rotazione della chiave master della colonna corrispondente. La chiave di crittografia della colonna viene usata per crittografare le colonne tramite la funzionalità [Always Encrypted &#40;Motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Prima di aggiungere un valore per la chiave di crittografia della colonna, è necessario definire la chiave master della colonna usata per crittografare il valore tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o l'istruzione [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,15 +57,21 @@ ALTER COLUMN ENCRYPTION KEY key_name
  Nome dell'algoritmo di crittografia usato per crittografare il valore. L'algoritmo per i provider di sistema deve essere **RSA_OAEP**. Questo argomento non è valido quando si elimina un valore della chiave di crittografia della colonna.  
   
  *varbinary_literal*  
- BLOB della chiave di crittografia della colonna crittografato con la chiave di crittografia master specificata. , Questo argomento non è valido quando si elimina un valore della chiave di crittografia della colonna.  
+ BLOB della chiave di crittografia della colonna crittografato con la chiave di crittografia master specificata. Questo argomento non è valido quando si elimina un valore della chiave di crittografia della colonna.  
   
 > [!WARNING]  
 >  Non passare mai i valori della chiave di crittografia della colonna in testo non crittografato in questa istruzione, altrimenti sarà compromesso il vantaggio di questa funzionalità.  
   
 ## <a name="remarks"></a>Remarks  
- In genere, una chiave di crittografia della colonna viene creata con un solo valore crittografato. Quando una chiave master della colonna deve essere ruotata, vale a dire la chiave master della colonna corrente deve essere sostituita dalla nuova chiave master della colonna, è possibile aggiungere un nuovo valore della chiave di crittografia della colonna, crittografato con la nuova chiave master della colonna. In questo modo è possibile garantire alle applicazioni client l'accesso ai dati crittografati con la chiave di crittografia della colonna, mentre la nuova chiave master della colonna sarà resa disponibile alle applicazioni client. Un driver abilitato per Always Encrypted in un'applicazione client che non ha accesso alla nuova chiave master potrà usare il valore della chiave di crittografia della colonna crittografato con la vecchia chiave master della colonna per accedere ai dati sensibili. Per gli algoritmi di crittografia supportati da Always Encrypted è necessario che il valore del testo non crittografato sia di 256 bit. È necessario generare un valore crittografato tramite un provider dell'archivio chiavi in cui è incapsulato l'archivio chiavi contenente la chiave master della colonna.  
-  
- Usare [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) e [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) per visualizzare le informazioni sulle chiavi di crittografia della colonna.  
+ In genere, una chiave di crittografia della colonna viene creata con un solo valore crittografato. Quando una chiave master della colonna deve essere ruotata, vale a dire la chiave master della colonna corrente deve essere sostituita dalla nuova chiave master della colonna, è possibile aggiungere un nuovo valore della chiave di crittografia della colonna, crittografato con la nuova chiave master della colonna. Questo flusso di lavoro consente di garantire alle applicazioni client l'accesso ai dati crittografati con la chiave di crittografia della colonna, mentre la nuova chiave master della colonna sarà resa disponibile alle applicazioni client. Un driver abilitato per Always Encrypted in un'applicazione client che non ha accesso alla nuova chiave master potrà usare il valore della chiave di crittografia della colonna crittografato con la vecchia chiave master della colonna per accedere ai dati sensibili. Per gli algoritmi di crittografia supportati da Always Encrypted è necessario che il valore del testo non crittografato sia di 256 bit. È necessario generare un valore crittografato tramite un provider dell'archivio chiavi in cui è incapsulato l'archivio chiavi contenente la chiave master della colonna.  
+
+ Le chiavi master della colonna vengono ruotate per i motivi seguenti:
+- La conformità alle normative può richiedere che le chiavi vengano ruotate periodicamente.
+- Una chiave master della colonna è compromessa e deve essere ruotata per motivi di sicurezza.
+- Per abilitare o disabilitare la condivisione delle chiavi di crittografia di colonna con un'enclave protetto sul lato server. Ad esempio, se la chiave master della colonna corrente non supporta i calcoli dell'enclave (ovvero non è stata definita con la proprietà ENCLAVE_COMPUTATIONS) e si vuole abilitare i calcoli dell'enclave nelle colonne protette con una chiave di crittografia della colonna crittografata dalla chiave master della colonna, è necessario sostituire la chiave master della colonna con la nuova chiave con la proprietà ENCLAVE_COMPUTATIONS. Per altre informazioni, vedere [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
+
+Usare [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) e [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) per visualizzare le informazioni sulle chiavi di crittografia della colonna.  
   
 ## <a name="permissions"></a>Permissions  
  È necessaria l'autorizzazione **ALTER ANY COLUMN ENCRYPTION KEY** per il database.  

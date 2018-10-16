@@ -1,18 +1,18 @@
 ---
 title: Attestazioni per il servizio token Windows (c2WTS) e Reporting Services | Microsoft Docs
-ms.date: 09/15/2017
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint
-ms.suite: pro-bi
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4092aa6f801d1f3f521cffc088e8b345495267b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+manager: kfile
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.topic: conceptual
+ms.date: 09/15/2017
+ms.openlocfilehash: d201fb9d134f4066e0504056c208d2c1c0507fa3
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275608"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782290"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Attestazioni per il servizio token Windows (C2WTS) e Reporting Services
 
@@ -25,11 +25,16 @@ C2WTS è inoltre necessario con la modalità SharePoint di SQL Server Reporting 
 > [!NOTE]
 > L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
-## <a name="report-viewer-web-part-configuration"></a>Configurazione della web part Visualizzatore di report
+## <a name="report-viewer-native-mode-web-part-configuration"></a>Configurazione della web part (modalità nativa) di Visualizzatore di report
 
-La web part Visualizzatore di report può essere usata per incorporare i report in modalità nativa di SQL Server Reporting Services nel sito di SharePoint. Questa web part è disponibile per SharePoint 2013 e SharePoint 2016. SharePoint 2013 e SharePoint 2016 usano l'autenticazione delle attestazioni. SQL Server Reporting Services (modalità nativa) usa l'autenticazione di Windows per impostazione predefinita. Di conseguenza, per il rendering corretto dei report, è necessario configurare C2WTS in modo appropriato.
+La web part Visualizzatore di report può essere usata per incorporare i report in modalità nativa di SQL Server Reporting Services nel sito di SharePoint. Questa web part è disponibile per SharePoint 2013 e SharePoint 2016. SharePoint 2013 e SharePoint 2016 usano l'autenticazione delle attestazioni. Di conseguenza, C2WTS deve essere configurato nel modo giusto e Reporting Services deve essere configurato per l'autenticazione Kerberos perché i report vengano generati correttamente.
 
-## <a name="sharepoint-mode-integaration"></a>Integrazione della modalità SharePoint
+1. Per configurare l'istanza di Reporting Services (modalità nativa) per l'autenticazione Kerberos, determinare l'account del servizio SSRS, impostare un SPN e aggiornare il file rsreportserver.config per usare il tipo di autenticazione RSWindowsNegotiate. [Registrare un nome dell'entità servizio (SPN) per un server di report](https://docs.microsoft.com/en-us/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
+
+2. Seguire la procedura in [Passaggi necessari per configurare c2WTS](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)
+ 
+
+## <a name="sharepoint-mode-integration"></a>Integrazione della modalità SharePoint
 
 **Questa sezione si applica solo a SQL Server 2016 Reporting Services e versioni precedenti.**
 
@@ -37,14 +42,25 @@ Il componente Attestazioni per il servizio token Windows (C2WTS) di SharePoint �
 
 ## <a name="steps-needed-to-configure-c2wts"></a>Passaggi necessari per configurare c2WTS
 
-I token creati da C2WTS funzioneranno solo con delega vincolata (vincoli a servizi specifici) e l'opzione di configurazione "Utilizza un qualsiasi protocollo di autenticazione". Come notato in precedenza, se le origini dati si trovano nello stesso computer del servizio condiviso, la delega vincolata non è necessaria.
+I token creati da C2WTS funzioneranno solo con la delega vincolata (vincoli a servizi specifici) e l'opzione di configurazione che prevede l'uso di qualsiasi protocollo di autenticazione (transizione di protocollo).
 
 Se l'ambiente utilizzerà la delega vincolata Kerberos, le origini dati esterne e il servizio SharePoint Server devono trovarsi nello stesso dominio Windows. Qualsiasi servizio basato su Attestazioni per il servizio token Windows (c2WTS) deve usare la delega **vincolata** Kerberos per consentire a c2WTS di usare la transizione del protocollo Kerberos per convertire le attestazioni in credenziali di Windows. Questi requisiti sono validi per tutti i servizi condivisi SharePoint. Per altre informazioni, vedere [Pianificare l'autenticazione Kerberos in SharePoint 2013](http://technet.microsoft.com/library/ee806870.aspx).  
 
-1. Configurare l'account del servizio C2WTS. Aggiungere l'account del servizio al gruppo di amministratori locale in ogni server in cui si userà C2WTS.
+1. Configurare l'account di dominio del servizio C2WTS. 
 
-    Per la **web part Visualizzatore di report** saranno i server Web front-end (WFE). Per la **modalità integrata SharePoint** saranno i server applicazioni in cui è in esecuzione il servizio Reporting Services.
+    **Come procedura consigliata C2WTS deve essere eseguito con la propria identità di dominio.**
 
+    * Creare un account Active Directory e registrarlo come account gestito in SharePoint Server. Per altre informazioni sugli account gestiti, vedere [Managed Accounts in Sharepoint](https://blogs.technet.microsoft.com/wbaer/2010/04/11/managed-accounts-in-sharepoint-2010/) (Account gestiti in Sharepoint)
+   
+    * Configurare il servizio C2WTS per usare l'account gestito tramite Amministrazione centrale SharePoint > Sicurezza > Configura account di servizio > Servizio Windows - Attestazioni per il servizio token Windows
+
+    Aggiungere l'account del servizio C2WTS al gruppo di amministratori locale in ogni server in cui si userà C2WTS. Per la **web part Visualizzatore di report** saranno i server Web front-end (WFE). Per la **modalità integrata SharePoint** saranno i server applicazioni in cui è in esecuzione il servizio Reporting Services.
+    * Concedere all'account C2WTS le autorizzazioni seguenti nei criteri di sicurezza locale in Criteri locali > Assegnazione diritti utente:
+        * Agisci come parte del sistema operativo
+        * Rappresenta un client dopo l'autenticazione
+        * Accedi come servizio
+
+    
 2. Configurare la delega per l'account del servizio C2WTS.
 
     L'account necessita della delega vincolata con transizione di protocollo e delle autorizzazioni per la delega ai servizi con cui deve comunicare, ovvero il motore di database di SQL Server e SQL Server Analysis Services. Per configurare la delega è possibile usare lo snap-in Utenti e computer di Active Directory ed è necessario essere un amministratore di dominio.
@@ -65,9 +81,10 @@ Se l'ambiente utilizzerà la delega vincolata Kerberos, le origini dati esterne 
 
     * Selezionare **Aggiungi** per aggiungere un servizio per la delega.
 
-    * Selezionare **Utenti o computer...*** e immettere l'account che ospita il servizio. Ad esempio, se SQL Server è in esecuzione con un account denominato *sqlservice*, immettere `sqlservice`. 
+    * Selezionare **Users or Computers...&#42;** (Utenti o computer) e immettere l'account che ospita il servizio. Ad esempio, se SQL Server è in esecuzione con un account denominato *sqlservice*, immettere `sqlservice`. 
+      Per la **Web part Visualizzatore di report** sarà l'account del servizio per l'istanza di Reporting Services (modalità nativa).
 
-    * Selezionare l'elenco del servizio. Verranno visualizzati i nomi SPN disponibili per tale account. Se non viene visualizzato, il servizio indicato per l'account può essere mancante o inserito in un altro account. è possibile usare l'utilità SetSPN per modificare i nomi SPN.
+    * Selezionare l'elenco del servizio. Verranno visualizzati i nomi SPN disponibili per tale account. Se non viene visualizzato, il servizio indicato per l'account può essere mancante o inserito in un altro account. è possibile usare l'utilità SetSPN per modificare i nomi SPN. Per la **Web part Visualizzatore di report**, verrà visualizzato il nome SPN http configurato in [Configurazione della web part (modalità nativa) di Visualizzatore di report](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
 
     * Selezionare OK per uscire dalle finestre di dialogo.
 
@@ -96,6 +113,6 @@ Se l'ambiente utilizzerà la delega vincolata Kerberos, le origini dati esterne 
     </configuration>
     ```
 
-4. Avviare Attestazioni per il servizio token Windows tramite Amministrazione centrale SharePoint nella pagina **Gestisci servizi nel server**. Il servizio deve essere avviato nel server che eseguirà l'azione. Ad esempio, in presenza di un server WFE e di un server applicazioni in cui è in esecuzione il servizio condiviso SQL Server Reporting Services, sarà sufficiente avviare C2WTS solo nel server applicazioni. La presenza di C2WTS è necessaria in un server WFE solo se si esegue la web part Visualizzatore di report.
+4. Avviare (arrestare e avviare di nuovo nel caso fosse già stato avviato) Attestazioni per il servizio token Windows tramite Amministrazione centrale SharePoint nella pagina **Gestisci servizi nel server**. Il servizio deve essere avviato nel server che eseguirà l'azione. Ad esempio, in presenza di un server WFE e di un server applicazioni in cui è in esecuzione il servizio condiviso SQL Server Reporting Services, sarà sufficiente avviare C2WTS solo nel server applicazioni. La presenza di C2WTS è necessaria in un server WFE solo se si esegue la web part Visualizzatore di report.
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

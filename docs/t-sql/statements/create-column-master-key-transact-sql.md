@@ -1,13 +1,11 @@
 ---
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2016
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQL13.SWB.NEWCOLUMNMASTERKEYDEF.GENERAL.F1
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a4f7c950785268f1b462c8363e4fb9e5f426055b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 56af3e381d8466f7afe68a5a1e77584511de5422
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993133"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609609"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,14 +40,19 @@ ms.locfileid: "37993133"
   Crea un oggetto metadati chiave master della colonna nel database. Una voce di metadati chiave master della colonna che rappresenta una chiave, archiviata in un archivio chiavi esterno, usato per proteggere (crittografare) le chiavi di crittografia della colonna quando si usa la funzionalità [Always Encrypted &#40;motore di database&#41; ](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Più chiavi master della colonna consentono la rotazione delle chiavi, modificando periodicamente la chiave per migliorare la sicurezza. È possibile creare una chiave master della colonna in un archivio chiavi e l'oggetto metadati corrispondente nel database tramite Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o PowerShell. Per i dettagli, vedere [Panoramica della gestione delle chiavi per Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+ 
+
+> [!IMPORTANT]
+> La creazione di chiavi basate su enclave (con ENCLAVE_COMPUTATIONS) richiede [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
 ## <a name="syntax"></a>Sintassi  
-  
+
 ```  
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
         KEY_PATH = 'key_path'   
+        [,ENCLAVE_COMPUTATIONS (SIGNATURE = signature)]
          )   
 [;]  
 ```  
@@ -153,10 +155,12 @@ La tabella seguente contiene i nomi dei provider di sistema:
      *KeyUrl*  
      URL della chiave in Azure Key Vault
 
+ENCLAVE_COMPUTATIONS  
+Specifica che la chiave master della colonna è abilitata da enclave, ovvero tutte le chiavi di crittografia di colonna crittografate con questa chiave master della colonna possono essere condivise con un'enclave protetto sul lato server e usate per i calcoli all'interno dell'enclave. Per altre informazioni, vedere [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-Esempio:
- 
-`N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700'`  
+ *signature*  
+Valore letterale binario che è il risultato della firma digitale del *percorso della chiave* e dell'impostazione ENCLAVE_COMPUTATIONS con la chiave master della colonna (la firma riflette se ENCLAVE_COMPUTATIONS è stato specificato oppure no). La firma consente di proteggere i valori firmati dalla modifica da parte di utenti non autorizzati. Un driver client abilitato per Always Encrypted verifica la firma e restituisce un errore all'applicazione se la firma non è valida. La firma deve essere generata usando gli strumenti lato client. Per altre informazioni, vedere [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -200,7 +204,7 @@ WITH (
         MyCMK/4c05f1a41b12488f9cba2ea964b6a700');  
 ```  
   
- Creazione di una chiave master della colonna archiviata in un archivio chiavi master della colonna:  
+ Creazione di una voce di metadati della chiave master della colonna per una chiave master archiviata in un archivio chiavi master della colonna personalizzato:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -208,6 +212,28 @@ WITH (
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
     KEY_PATH = 'https://contoso.vault/sales_db_tce_key'  
 );  
+```  
+### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. Creazione di una chiave master della colonna abilitata da enclave  
+ Creazione di una voce di metadati della chiave master della colonna per una chiave master della colonna abilitata da enclave archiviata nell'archivio certificati, per applicazioni client che usano il provider MSSQL_CERTIFICATE_STORE per accedere alla chiave master della colonna:  
+  
+```  
+CREATE COLUMN MASTER KEY MyCMK  
+WITH (  
+     KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
+     KEY_PATH = 'Current User/Personal/f2260f28d909d21c642a3d8e0b45a830e79a1420'  
+     ENCLAVE_COMPUTATIONS (SIGNATURE = 0xA80F5B123F5E092FFBD6014FC2226D792746468C901D9404938E9F5A0972F38DADBC9FCBA94D9E740F3339754991B6CE26543DEB0D094D8A2FFE8B43F0C7061A1FFF65E30FDDF39A1B954F5BA206AAC3260B0657232020542419990261D878318CC38EF4E853970ED69A8D4A306693B8659AAC1C4E4109DE5EB148FD0E1FDBBC32F002C1D8199D313227AD689279D8DEEF91064DF122C19C3767C463723AB663A6F8412AE17E745922C0E3A257EAEF215532588ACCBD440A03C7BC100A38BD0609A119E1EF7C5C6F1B086C68AB8873DBC6487B270340E868F9203661AFF0492CEC436ABF7C4713CE64E38CF66C794B55636BFA55E5B6554AF570CF73F1BE1DBD)
+  );  
+```  
+  
+ Creazione di una voce di metadati della chiave master della colonna per una chiave master della colonna abilitata da enclave archiviata in Azure Key Vault, per applicazioni client che usano il provider AZURE_KEY_VAULT per accedere alla chiave master della colonna.  
+  
+```  
+CREATE COLUMN MASTER KEY MyCMK  
+WITH (  
+    KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
+    KEY_PATH = N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700');
+    ENCLAVE_COMPUTATIONS (SIGNATURE = 0xA80F5B123F5E092FFBD6014FC2226D792746468C901D9404938E9F5A0972F38DADBC9FCBA94D9E740F3339754991B6CE26543DEB0D094D8A2FFE8B43F0C7061A1FFF65E30FDDF39A1B954F5BA206AAC3260B0657232020582413990261D878318CC38EF4E853970ED69A8D4A306693B8659AAC1C4E4109DE5EB148FD0E1FDBBC32F002C1D8199D313227AD689279D8DEEF91064DF122C19C3767C463723AB663A6F8412AE17E745922C0E3A257EAEF215532588ACCBD440A03C7BC100A38BD0609A119E1EF7C5C6F1B086C68AB8873DBC6487B270340E868F9203661AFF0492CEC436ABF7C4713CE64E38CF66C794B55636BFA55E5B6554AF570CF73F1BE1DBD)
+  );
 ```  
   
 ## <a name="see-also"></a>Vedere anche
