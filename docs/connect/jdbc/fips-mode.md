@@ -1,33 +1,33 @@
 ---
-title: La modalità FIPS | Microsoft Docs
+title: Modalità FIPS in JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 07/12/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: craigg
 ms.technology: connectivity
 ms.topic: conceptual
-ms.assetid: ''
-author: v-nisidh
-ms.author: v-nisidh
-manager: andrela
-ms.openlocfilehash: cc13455e6f56950d6988909b53aa7664c7fd77f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: David-Engel
+ms.author: v-daveng
+manager: kenvh
+ms.openlocfilehash: 1708bf5d1fbd47f7fb2dcefbbb5150d4b5646343
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723829"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324570"
 ---
 # <a name="fips-mode"></a>Modalità FIPS
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Microsoft JDBC Driver per SQL Server supporta *modalità conforme a FIPS 140*. Per Oracle / JVM Sun, vedere la [modalità conforme a FIPS 140 per SunJSSE](https://docs.oracle.com/javase/7/docs/technotes/guides/security/jsse/FIPS.html) sezione fornito da Oracle per configurare FIPS per JVM abilitato. 
 
-**Prerequisiti**:
-* FIPS configurato JVM
-* Certificato SSL appropriato.
-* File dei criteri appropriate. 
-* Parametri di configurazione appropriato. 
+#### <a name="prerequisites"></a>Prerequisites
+
+- FIPS configurato JVM
+- Certificato SSL appropriato.
+- File dei criteri appropriate. 
+- Parametri di configurazione appropriato. 
 
 
 ## <a name="fips-configured-jvm"></a>FIPS configurato JVM
@@ -50,31 +50,41 @@ public boolean isFIPS() throws Exception {
 Per connettersi a SQL Server in modalità FIPS, è necessario un certificato SSL valido. Installare o importarlo in Java Key Store nel computer client (JVM) in cui è abilitato FIPS.
 
 ### <a name="importing-ssl-certificate-in-java-keystore"></a>Importare il certificato SSL nell'archivio chiavi Java
-Per FIPS, molto probabilmente è necessario importare il certificato (con estensione CERT) per entrambi PKCS o in un formato specifico del provider. Usare il frammento di codice seguente per importare il certificato SSL e archiviarlo in una directory di lavoro con il formato dell'archivio chiavi appropriata. _TRUST_STORE_PASSWORD_ è la password per archivio chiavi Java. 
+Per FIPS, molto probabilmente è necessario importare il certificato (con estensione CERT) per entrambi PKCS o in un formato specifico del provider. Usare il frammento di codice seguente per importare il certificato SSL e archiviarlo in una directory di lavoro con il formato dell'archivio chiavi appropriata. _TRUST\_STORE\_PASSWORD_ è la password per archivio chiavi Java. 
+
 
 ```java
-    public void saveGenericKeyStore(String provider, String trustStoreType, String certName, String certPath) throws KeyStoreException, CertificateException, NoSuchAlgorithmException, NoSuchProviderException, IOException {
-        KeyStore ks = KeyStore.getInstance(trustStoreType, provider);
-        FileOutputStream os = new FileOutputStream("./MyTrustStore_" + trustStoreType);
-        ks.load(null, null);
-        ks.setCertificateEntry(certName, getCertificate(certPath));
-        ks.store(os, TRUST_STORE_PASSWORD.toCharArray());
-        os.flush();
-        os.close();
-    }
+public void saveGenericKeyStore(
+        String provider,
+        String trustStoreType,
+        String certName,
+        String certPath
+        ) throws KeyStoreException, CertificateException,
+            NoSuchAlgorithmException, NoSuchProviderException,
+            IOException
+{
+    KeyStore ks = KeyStore.getInstance(trustStoreType, provider);
+    FileOutputStream os = new FileOutputStream("./MyTrustStore_" + trustStoreType);
+    ks.load(null, null);
+    ks.setCertificateEntry(certName, getCertificate(certPath));
+    ks.store(os, TRUST_STORE_PASSWORD.toCharArray());
+    os.flush();
+    os.close();
+}
 
-    private Certificate getCertificate(String pathName) throws FileNotFoundException, CertificateException {
-        FileInputStream fis = new FileInputStream(pathName);
-        CertificateFactory cf = CertificateFactory.getInstance("X.509");
-        return cf.generateCertificate(fis);
-    }
-
+private Certificate getCertificate(String pathName)
+        throws FileNotFoundException, CertificateException
+{
+    FileInputStream fis = new FileInputStream(pathName);
+    CertificateFactory cf = CertificateFactory.getInstance("X.509");
+    return cf.generateCertificate(fis);
+}
 ```
 
 
-Nell'esempio seguente importa un certificato SSL di Azure nel formato PKCS12 BouncyCastle provider. Il certificato viene importato nella directory di lavoro denominata _MyTrustStore_PKCS12_ usando il frammento seguente:
+Nell'esempio seguente importa un certificato SSL di Azure nel formato PKCS12 BouncyCastle provider. Il certificato viene importato nella directory di lavoro denominata _MyTrustStore\_PKCS12_ usando il frammento seguente:
 
-` saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer"); `
+`saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 
 ## <a name="appropriate-policy-files"></a>File dei criteri appropriati
 Per alcuni provider di FIPS, sono necessari file JAR di criteri senza restrizioni. In questi casi, per Sun / Oracle, scaricare il Java Cryptography Extension (JCE) senza limiti Strenght Jurisdiction Policy Files per [JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) oppure [JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). 
@@ -82,7 +92,7 @@ Per alcuni provider di FIPS, sono necessari file JAR di criteri senza restrizion
 ## <a name="appropriate-configuration-parameters"></a>Parametri di configurazione appropriato
 Per eseguire il Driver JDBC in modalità FIPS compatibile, configurare le proprietà di connessione come illustrato nella tabella seguente. 
 
-**Proprietà**: 
+#### <a name="properties"></a>Proprietà 
 
 |Proprietà|Tipo|Default|Descrizione|Note|
 |---|---|---|---|---|
@@ -93,7 +103,5 @@ Per eseguire il Driver JDBC in modalità FIPS compatibile, configurare le propri
 |fips|booleano ["true/false"]|"false"|Per JVM abilitato FIPS questa proprietà deve essere **true**|Aggiunto in 6.1.4 (stabile versione 6.2.2)||
 |fipsProvider|String|null|Provider FIPS configurato nella JVM. Ad esempio, BCFIPS o SunPKCS11 NSS |Aggiunto in 6.1.2 (stabile versione 6.2.2), deprecato in 6.4.0 - visualizzare i dettagli [qui](https://github.com/Microsoft/mssql-jdbc/pull/460).|
 |trustStoreType|String|JKS|Per tipo di archivio trust set modalità FIPS PKCS12 o tipo definito dal provider FIPS |Aggiunto in 6.1.2 (stabile versione 6.2.2)||
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-
-
-  

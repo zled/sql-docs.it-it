@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a812aacbbbd87ba8fc38479be7d62a0fc9401b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75c6f352a962232b2109861b2a264d458af05e70
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731369"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119804"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET
 
@@ -39,7 +39,7 @@ Le classi ADO.NET per la connessione a Microsoft SQL Server locale possono anche
   
 Il programma deve distinguere gli errori temporanei dagli errori persistenti. Gli errori temporanei sono condizioni di errore che potrebbero cancellare entro un breve periodo di tempo, ad esempio problemi di rete temporanei.  Un esempio di un errore permanente durante sarebbe, se il programma presenta un errore di ortografia del nome del database di destinazione: in questo caso, l'errore "Database non trovato" rende persistente e non dispone di alcuna possibilità di la cancellazione dei entro un breve periodo di tempo.  
   
-L'elenco dei numeri di errore sono classificati come guasti temporanei è disponibile all'indirizzo in [messaggi di errore per le applicazioni client di Database SQL](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+L'elenco dei numeri di errore sono classificati come guasti temporanei è disponibile all'indirizzo [messaggi di errore per le applicazioni client di Database SQL](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>Passaggio 2: Creare ed eseguire l'applicazione di esempio  
   
