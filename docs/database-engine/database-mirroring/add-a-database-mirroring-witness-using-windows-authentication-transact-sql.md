@@ -15,12 +15,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0569a8f94232ec31e96024e798da6027e0c695a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca1ecc06039f8bdfbf4516778a04f9c191544e45
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742319"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168895"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ ms.locfileid: "47742319"
   
 3.  Connettersi al server principale ed eseguire la seguente istruzione:  
   
-     ALTER DATABASE *<nome_database>* SET WITNESS **=***<indirizzo_rete_server>*  
+     ALTER DATABASE *<database_name>* SET WITNESS **=**_<server_network_address>_  
   
      dove *<database_name>* è il nome del database di cui eseguire il mirroring (tale nome è lo stesso per entrambi i partner) e *<server_network_address>* è l'indirizzo di rete dell'istanza del server di controllo del mirroring.  
   
      La sintassi per un indirizzo di rete del server presenta la seguente struttura:  
   
-     TCP **://**\<*system-address>***:**\<* port>*  
+     TCP<b>://</b>_\<indirizzo_sistema>_<b>:</b>_\<porta>_  
   
      dove \<*indirizzo-sistema>* è una stringa che identifica in maniera univoca il computer di destinazione e \<*porta>* è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
