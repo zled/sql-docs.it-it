@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cbe41975f57e0294d936e0b8554b5d936f1474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0c960d3c0477420868e0d1cfaee50ee51252ef9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839999"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906515"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>Clausola SELECT - ORDER BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,7 +208,7 @@ ORDER BY order_by_expression
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. Specifica di una singola colonna definita nell'elenco di selezione  
  Nell'esempio seguente il set di risultati viene ordinato in base alla colonna `ProductID` numerica. Poiché non viene specificato un ordinamento specifico, viene utilizzata l'impostazione predefinita (ordine crescente).  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -219,7 +219,7 @@ ORDER BY ProductID;
 #### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>B. Specifica di una colonna non definita nell'elenco di selezione  
  Nell'esempio seguente il set di risultati viene ordinato in base a una colonna non inclusa nell'elenco di selezione, ma viene definito nella tabella specificata nella clausola FROM.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name, Color  
@@ -231,7 +231,7 @@ ORDER BY ListPrice;
 #### <a name="c-specifying-an-alias-as-the-sort-column"></a>C. Specifica di un alias come colonna di ordinamento  
  Nell'esempio seguente l'alias della colonna `SchemaName` viene specificato come colonna di ordinamento.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT name, SCHEMA_NAME(schema_id) AS SchemaName  
@@ -244,7 +244,7 @@ ORDER BY SchemaName;
 #### <a name="d-specifying-an-expression-as-the-sort-column"></a>D. Specifica di un'espressione come colonna di ordinamento  
  Nell'esempio seguente viene utilizzata un'espressione come colonna di ordinamento. L'espressione viene definita tramite la funzione DATEPART per ordinare il set di risultati in base all'anno in cui sono stati assunti i dipendenti.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, JobTitle, HireDate  
@@ -258,7 +258,7 @@ ORDER BY DATEPART(year, HireDate);
 #### <a name="a-specifying-a-descending-order"></a>A. Specifica di un ordine decrescente  
  Nell'esempio seguente il set di risultati viene ordinato in base alla colonna numerica `ProductID` in ordine decrescente.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -270,7 +270,7 @@ ORDER BY ProductID DESC;
 #### <a name="b-specifying-an-ascending-order"></a>B. Specifica di un ordine crescente  
  Nell'esempio seguente il set di risultati viene ordinato in base alla colonna `Name` in ordine crescente. I caratteri sono ordinati alfabeticamente, non numericamente. Di conseguenza, 10 precede 2.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -282,7 +282,7 @@ ORDER BY Name ASC ;
 #### <a name="c-specifying-both-ascending-and-descending-order"></a>C. Specifica di entrambi gli ordini, crescente e decrescente  
  Nell'esempio seguente il set di risultati viene ordinato in base a due colonne. Il set di risultati della query viene ordinato prima in ordine crescente in base alla colonna `FirstName` e quindi in ordine decrescente in base alla colonna `LastName`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT LastName, FirstName FROM Person.Person  
@@ -294,7 +294,7 @@ ORDER BY FirstName ASC, LastName DESC ;
 ###  <a name="Collation"></a> Specifica di regole di confronto  
  Nell'esempio seguente viene illustrato come la specifica di regole di confronto nella clausola ORDER BY possa modificare l'ordine in cui vengono restituiti i risultati della query. Viene creata una tabella contenente una colonna definita tramite regole di confronto che non fanno distinzione tra maiuscole e minuscole e tra i vari accenti. I valori vengono inseriti con una varietà di differenze di caso e accento. Poiché nella clausola ORDER BY non vengono specificate regole di confronto, la prima query utilizza le regole di confronto della colonna quando si ordinano i valori. Nella seconda query, nella clausola ORDER BY, vengono specificate regole di confronto che fanno distinzione tra maiuscole e minuscole e tra gli accenti che comportano la modifica dell'ordine in cui vengono restituite le righe.  
   
-```  
+```sql
 USE tempdb;  
 GO  
 CREATE TABLE #t1 (name nvarchar(15) COLLATE Latin1_General_CI_AI)  
@@ -315,7 +315,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ###  <a name="Case"></a> Specifica di un ordine condizionale  
  Negli esempi seguenti viene usata l'espressione CASE in una clausola ORDER BY per determinare in modo condizionale l'ordinamento delle righe in base a un valore di colonna specificato. Nel primo esempio, viene calcolato il valore nella colonna `SalariedFlag` della tabella `HumanResources.Employee`. I dipendenti per cui `SalariedFlag` è impostato su 1 vengono restituiti in ordine decrescente in base a `BusinessEntityID`. I dipendenti per cui `SalariedFlag` è impostato su 0 vengono restituiti in ordine crescente in base a `BusinessEntityID`. Nel secondo esempio il set di risultati viene ordinato in base alla colonna `TerritoryName` quando la colonna `CountryRegionName` è uguale a 'United States' e in base a `CountryRegionName` per tutte le altre righe.  
   
-```  
+```sql
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
@@ -324,7 +324,7 @@ GO
   
 ```  
   
-```  
+```sql
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
@@ -336,7 +336,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
 ###  <a name="Rank"></a> Utilizzo di ORDER BY in una funzione di rango  
  Nell'esempio seguente la clausola ORDER BY viene utilizzata nelle funzioni di rango ROW_NUMBER, RANK, DENSE_RANK e NTILE.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -362,7 +362,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Specifica di valori costanti interi per OFFSET e FETCH  
  Nell'esempio seguente viene specificata una costante intera come valore per le clausole OFFSET e FETCH. La prima query restituisce tutte le righe ordinate in base alla colonna `DepartmentID`. Confrontare i risultati restituiti da questa query ai risultati delle due query che la seguono. La query successiva utilizza la clausola `OFFSET 5 ROWS` per ignorare le prime 5 righe e restituire tutte le righe rimanenti. Nella query finale viene utilizzata la clausola `OFFSET 0 ROWS` per iniziare con la prima riga, quindi `FETCH NEXT 10 ROWS ONLY` per limitare le righe restituite a 10 righe dal set di risultati ordinato.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Return all rows sorted by the column DepartmentID.  
@@ -387,7 +387,7 @@ ORDER BY DepartmentID
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. Specifica di variabili per i valori OFFSET e FETCH  
  Nell'esempio seguente vengono dichiarate le variabili `@StartingRowNumber` e `@FetchRows` che vengono in seguito specificate nelle clausole OFFSET e FETCH.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
@@ -404,7 +404,7 @@ ORDER BY DepartmentID ASC
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. Specifica di espressioni per i valori OFFSET e FETCH  
  Nell'esempio seguente vengono utilizzate l'espressione `@StartingRowNumber - 1` per specificare il valore OFFSET e l'espressione `@EndingRowNumber - @StartingRowNumber + 1` per specificare il valore FETCH. Viene inoltre specificato l'hint per la query OPTIMIZE FOR. Questo hint può essere utilizzato per specificare un valore per una variabile locale quando la query viene compilata e ottimizzata. Il valore viene utilizzato solo durante l'ottimizzazione della query e non durante l'esecuzione. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -423,7 +423,7 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
 #### <a name="d-specifying-a-constant-scalar-subquery-for-offset-and-fetch-values"></a>D. Specifica di una sottoquery scalare costante per valori OFFSET e FETCH  
  Nell'esempio seguente viene utilizzata una sottoquery scalare costante per definire il valore per la clausola FETCH. La sottoquery restituisce un singolo valore dalla colonna `PageSize` nella tabella `dbo.AppSettings`.  
   
-```  
+```sql
 -- Specifying a constant scalar subquery  
 USE AdventureWorks2012;  
 GO  
@@ -443,7 +443,7 @@ ORDER BY DepartmentID ASC
 #### <a name="e-running-multiple-queries-in-a-single-transaction"></a>E. Esecuzione di più query in una singola transazione  
  Nell'esempio seguente viene illustrato un metodo per l'implementazione di una soluzione di paging che garantisca la restituzione di risultati stabili in tutte le richieste dalla query. La query viene eseguita in una singola transazione utilizzando il livello di isolamento dello snapshot e la colonna specificata nella clausola ORDER BY garantisce l'univocità della colonna.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -487,7 +487,7 @@ GO
 ###  <a name="Union"></a> Utilizzo di ORDER BY con UNION, EXCEPT e INTERSECT  
  Quando una query utilizza l'operatore UNION, EXCEPT o INTERSECT, è necessario specificare la clausola ORDER BY alla fine dell'istruzione e i risultati delle query combinate vengono ordinati. Nell'esempio seguente vengono restituiti tutti i prodotti rossi o gialli e questo elenco combinato viene ordinato in base alla colonna `ListPrice`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Color, ListPrice  
@@ -505,7 +505,7 @@ ORDER BY ListPrice ASC;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente viene illustrato l'ordinamento di un set di risultati in base alla colonna `EmployeeKey` numerica in ordine crescente.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -515,7 +515,7 @@ ORDER BY EmployeeKey;
   
  Nell'esempio seguente un set di risultati viene ordinato in base alla colonna numerica `EmployeeKey` in ordine decrescente.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -525,7 +525,7 @@ ORDER BY EmployeeKey DESC;
   
  Nell'esempio seguente il set di risultati viene ordinato in base alla colonna `LastName`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -535,7 +535,7 @@ ORDER BY LastName;
   
  Nell'esempio seguente l'ordinamento viene fatto in base a due colonne. Questa query esegue l'ordinamento crescente in base alla colonna `FirstName`, quindi esegue un ordinamento decrescente dei valori `FirstName` comuni in base alla colonna `LastName`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0640a41beedbd7752a7b12a356e0d12314493d58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30c20b9232725ec41d8d6438c82ce18820181fee
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711739"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085047"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Aprire e chiudere un report (Gestione report)
   È possibile utilizzare Gestione report per visualizzare i report pubblicati in un server di report. Per impostazione predefinita, tutti i report vengono aperti in formato HTML. Dopo avere aperto un report, è possibile esportarlo per visualizzarlo in altri formati di applicazioni. Se il report contiene caratteristiche interattive o se si tratta di un report di Generatore report contenente dati interattivi, sarà possibile fare clic sui collegamenti per visualizzare report o dati aggiuntivi.  
@@ -39,7 +39,6 @@ ms.locfileid: "47711739"
      La chiusura di un report non ne comporta la rimozione dalla cache del browser. Per disconnettere il report è necessario chiudere il browser.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca di report e altri elementi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [Pagina Contenuto &#40;Gestione report&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  

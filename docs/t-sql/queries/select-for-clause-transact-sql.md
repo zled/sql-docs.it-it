@@ -22,12 +22,12 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cec143edb47f54e63d18a07991cb3b1d3c9ab7a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0db7176da41eec27cfffc4db5a9cbcc0835196a9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817079"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906271"
 ---
 # <a name="select---for-clause-transact-sql"></a>Clausola SELECT - FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ JSON
   
 -   Per attivare la modalità browse mediante l'opzione **NO_BROWSETABLE**, è necessario eseguire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente:  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON  
     ```  
   
@@ -123,7 +123,7 @@ JSON
   
 2.  Nel database SampleDB, creare una tabella tleft e una tabella tright, contenenti entrambe una sola colonna denominata c1. Definire un indice univoco sulla colonna c1 nella tabella tleft e impostare la colonna affinché accetti valori null. A tale scopo, eseguire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti in una finestra di query appropriata:  
   
-    ```  
+    ```sql
     CREATE TABLE tleft(c1 INT NULL UNIQUE) ;  
     GO   
     CREATE TABLE tright(c1 INT NULL) ;  
@@ -132,7 +132,7 @@ JSON
   
 3.  Inserire diversi valori nelle tabelle tleft e tright. Verificare che nella tabella tleft venga inserito un valore null. A tale scopo, eseguire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti nella finestra di query:  
   
-    ```  
+    ```sql
     INSERT INTO tleft VALUES(2) ;  
     INSERT INTO tleft VALUES(NULL) ;  
     INSERT INTO tright VALUES(1) ;  
@@ -143,14 +143,14 @@ JSON
   
 4.  Attivare l'opzione **NO_BROWSETABLE**. A tale scopo, eseguire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti nella finestra di query:  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON ;  
     GO  
     ```  
   
 5.  Accedere ai dati nelle tabelle tleft e tright utilizzando un'istruzione outer join nella query SELECT. Verificare che la tabella tleft si trovi nel lato interno dell'istruzione outer join. A tale scopo, eseguire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti nella finestra di query:  
   
-    ```  
+    ```sql
     SELECT tleft.c1   
     FROM tleft   
     RIGHT JOIN tright   
@@ -223,7 +223,7 @@ JSON
   
  Nell'esempio seguente la clausola `FOR XML AUTO` viene specificata con le opzioni `TYPE` e `XMLSCHEMA`. Essendo presente l'opzione `TYPE`, il set dei risultati viene restituito al client come tipo **xml**. L'opzione `XMLSCHEMA` imposta l'aggiunta dello schema XSD inline nei dati XML restituiti e l'opzione `ELEMENTS` specifica che il risultato XML è incentrato sugli elementi.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.BusinessEntityID, FirstName, LastName, PhoneNumber AS Phone  

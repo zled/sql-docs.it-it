@@ -25,12 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28967819353769601e5ba8e760435f6d43aac3a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d07dc597f293414c2c4fae2704085ac4449038cf
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818499"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905772"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - Uso di PIVOT e UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ Gli identificatori di colonna nella clausola `UNPIVOT` seguono le regole di conf
 ## <a name="basic-pivot-example"></a>Esempio di PIVOT di base  
  Nell'esempio di codice seguente viene generata una tabella a due colonne che include quattro righe.  
   
-```  
+```sql
 USE AdventureWorks2014 ;  
 GO  
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
@@ -93,7 +93,7 @@ GROUP BY DaysToManufacture;
   
  Il codice seguente consente di visualizzare lo stesso risultato, trasformato tramite Pivot in modo che i valori di `DaysToManufacture` diventino le intestazioni di colonna. Una colonna è disponibile per tre `[3]` giorni, anche se i risultati sono `NULL`.  
   
-```  
+```sql
 -- Pivot table with one row and five columns  
 SELECT 'AverageCost' AS Cost_Sorted_By_Production_Days,   
 [0], [1], [2], [3], [4]  
@@ -119,7 +119,7 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
 ## <a name="complex-pivot-example"></a>Esempio di PIVOT complesso  
  Uno scenario comune in cui `PIVOT` può essere utile è il caso in cui si desidera generare report a tabulazione incrociata per creare un riepilogo dei dati. Si supponga, ad esempio, di voler eseguire una query sulla tabella `PurchaseOrderHeader` nel database di esempio `AdventureWorks2014` per determinare il numero di ordini di acquisto effettuati da dipendenti specifici. La query seguente fornisce questo report, ordinato per fornitore.  
   
-```  
+```sql
 USE AdventureWorks2014;  
 GO  
 SELECT VendorID, [250] AS Emp1, [251] AS Emp2, [256] AS Emp3, [257] AS Emp4, [260] AS Emp5  
@@ -149,7 +149,7 @@ VendorID    Emp1        Emp2        Emp3        Emp4        Emp5
   
  I risultati restituiti dall'istruzione di selezione secondaria vengono trasformati tramite Pivot nella colonna `EmployeeID`.  
   
-```  
+```sql
 SELECT PurchaseOrderID, EmployeeID, VendorID  
 FROM PurchaseOrderHeader;  
 ```  
@@ -161,7 +161,7 @@ FROM PurchaseOrderHeader;
   
  `UNPIVOT` esegue l'operazione quasi opposta rispetto a `PIVOT`, ruotando le colonne in righe. Si supponga che la tabella generata nell'esempio precedente venga archiviata nel database come `pvt` e che si desideri ruotare gli identificatori di colonna `Emp1`, `Emp2`, `Emp3`, `Emp4` e `Emp5` in valori di riga corrispondenti a un particolare fornitore. Ciò significa che è necessario identificare altre due colonne. La colonna che includerà i valori di colonna da ruotare (`Emp1`, `Emp2`,...) sarà denominata `Employee` e la colonna che includerà i valori che attualmente si trovano nelle colonne da ruotare sarà denominata `Orders`. Queste colonne corrispondono rispettivamente a *pivot_column* e *value_column* nella definizione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La query è la seguente.  
   
-```  
+```sql
 -- Create the table and insert values as portrayed in the previous example.  
 CREATE TABLE pvt (VendorID int, Emp1 int, Emp2 int,  
     Emp3 int, Emp4 int, Emp5 int);  
