@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8108bc8c08100fa8a28ab8e23058f056bff3b27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646189"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100542"
 ---
 # <a name="database-engine-errors"></a>Errori del motore di database
 La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il testo del messaggio di errore dalla vista del catalogo sys.messages. 
@@ -846,7 +846,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   1732    |   16  |   no  |   Impossibile creare il set di colonne di tipo sparse '%.*ls' nella tabella '%.* ls' perché una tabella non può presentare più di un set di colonne di tipo sparse. Modificare l'istruzione in modo che solo una colonna sia specificata come COLUMN_SET FOR ALL_SPARSE_COLUMNS.   |
 |   1733    |   16  |   no  |   Impossibile creare il set di colonne di tipo sparse '%.*ls' nella tabella '%.* ls' perché un set di colonne di tipo sparse deve essere una colonna XML che ammette valori Null. Modificare la definizione della colonna affinché ammetta valori Null.  |
 |   1734    |   16  |   no  |   Impossibile creare il set di colonne di tipo sparse '%.*ls' nella tabella '%.* ls' perché la tabella contiene già una o più colonne di tipo sparse. Non è possibile aggiungere un set di colonne di tipo sparse a una tabella se questa contiene una colonna di tipo sparse.   |
-|   1736    |   16  |   no  |   Impossibile fare riferimento alla colonna '%.*ls' nella tabella '%.* ls' in un vincolo CHECK o nella definizione di una colonna calcolata perché la colonna è una set di colonne di tipo sparse. Impossibile fare riferimento a un set di colonne di tipo sparse in un vincolo CHECK o nella definizione di una colonna calcolata. |
+|   1736    |   16  |   no  |   Impossibile fare riferimento alla colonna '%.*ls' nella tabella '%.* ls' in un vincolo CHECK o nella definizione di una colonna calcolata perché la colonna è una set di colonne di tipo sparse. Impossibile fare riferimento a un set di colonne di tipo sparse in un vincolo CHECK o nella definizione di una colonna calcolata.   |
 |   1738    |   10  |   no  |   Impossibile creare la tabella '%.*ls' con una sola colonna del set di colonne e senza alcuna colonna non calcolata nella tabella.    |
 |   1750    |   10  |   no  |   Impossibile creare il vincolo. Vedere gli errori precedenti.   |
 |   1752    |   16  |   no  |   La colonna '%.*ls' della tabella '%.* ls' non è valida per la creazione di un vincolo predefinito.   |
