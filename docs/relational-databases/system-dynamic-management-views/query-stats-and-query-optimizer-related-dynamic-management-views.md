@@ -1,28 +1,17 @@
 ---
-title: Statistiche di utilizzo e performance delle viste in un database SQL Server
-description: Statistiche di utilizzo e performance delle viste in un database SQL Server
-author: segovoni
-ms.author: aldod
-ms.manager: csiism
+title: Usage statistics and performance of the views in a SQL Server database
+description: Usage statistics and performance of the views in a SQL Server database
+manager: craigg
+author: craigg-msft
+ms.author: craig
 ms.date: 22/07/2018
 ---
-
-# Statistiche di utilizzo e performance delle viste in un database SQL Server
-
-Introduzione
-============
-
-Le performance di una soluzione database sono spesso oggetto di diatriba tra chi fornisce la soluzione e chi la personalizza. Scrivere codice T-SQL ottimizzato, in grado di scalare all'aumentare dei dati e degli utenti, non è affatto semplice e quando la complessità aumenta, le attività di manutenzione del codice diventano difficili da attuare anche per l'autore stesso.
-
-In questo articolo, condivido la metodologia di tuning e alcuni script che utilizzo per ottenere informazioni sulle **performance delle query che utilizzano le viste** presenti nel database oggetto dell'analisi. La presenza di viste nidificate contenenti query non ottimizzate può diventare oggetto di analisi specifica, gli script contenuti in questo articolo hanno l'obiettivo di fornire alcuni indicatori sull'utilizzo e sulle performance delle viste di un DB.
-
-Alcuni indicatori sulle performance delle viste in SQL Server
-=============================================================
-
-Il primo dato interessante è stato ottenuto interrogando la DMV [sys.dm_exec_query_optimizer_info](https://docs.microsoft.com/it-it/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql) che espone le statistiche sulle ottimizzazioni eseguite dal Query Optimizer dall'avvio dell'istanza SQL Server; i valori sono quindi cumulativi.
-
-La CTE riportata di seguito, basata sulla DMV [sys.dm_exec_query_optimizer_info](https://docs.microsoft.com/it-it/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql), fornisce informazioni sul carico di lavoro. Il dato interessante che si ottiene è il numero (in percentuale) di query che referenziano una vista. Ho avuto l'opportunità di esaminare casi dove circa l'85% delle query eseguite referenziava una vista. Il dato puro, di per sé, non necessariamente è sintomo di un problema di performance, ma se associato alle lamentele degli utenti circa la lentezza del sistema, ci suggerisce quantomeno un approfondimento.
-
+# Usage statistics and performance of the views in a SQL Server database
+This article covers methodology and scripts used to get information about the **performance of queries that use views** in a database object. The intention of these scripts is to provide indicators of use and performance of various views found within a database. 
+## View performance indicators 
+The DMV [sys.dm_exec_query_optimizer_info](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql) exposes statistics about the optimizations performed by the SQL Server query optimizer. These values are cumulative and begin recording when SQL Server starts.  
+### Sys.dm_exec_query_optimizer_info
+The below common_table_expression (CTE) uses this  DMV to provide information about the workload, such as the percentage of queries that reference a view. The results returned by this query do not indicate a performance problem by themselves, but can expose underlying issues when combined with users' complaints of slow-performing queries. 
 ```SQL
 WITH CTE_QO AS
 (
@@ -58,7 +47,7 @@ QOInfo AS
                   ,'remote query'
                   ,'dynamic cursor request'
                   ,'fast forward cursor request'
-	         )
+             )
 )
 SELECT
   [optimizations] AS [optimizations %]
@@ -100,11 +89,12 @@ PIVOT (MAX([%]) FOR [counter]
       ,[fast forward cursor request])) AS p;
 GO
 ```
-
-L'approfondimento può essere eseguito mettendo in relazione la vista di sistema [sys.views](https://docs.microsoft.com/it-it/sql/relational-databases/system-catalog-views/sys-views-transact-sql) con le DMV che espongono le statistiche delle query recenti, il testo della query ed il relativo piano di esecuzione in cache.
-
-La seguente CTE fornisce informazioni statistiche dettagliate sulle query in cache che utilizzano le viste presenti nel database corrente. I valori relativi a numero di esecuzioni, tempo totale di esecuzione, pagine di memoria lette e le altre informazioni dipendenti dalla versione di SQL Server in uso, forniscono una chiara indicazione sulle query da controllare/ottimizzare; analisi supportata dalla visualizzazione del piano di esecuzione in cache.
-
+Combine the results of this query with the results of the system view [sys.views](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-views-transact-sql) to identify query statistics, query text, and the cached execution plan. 
+### Sys.views
+The below CTE provides information about the number of executions, total run time, and pages read from memory. The results can be used to identify queries that may be candidates for optimization. 
+  
+  >[!NOTE]
+  > The results of this query can vary depending on the version of SQL Server.  
 ```SQL
 WITH CTE_VW_STATS AS
 (
@@ -158,9 +148,8 @@ CROSS APPLY
   ) AS t;
 GO
 ```
-
-L'ultima query fornisce informazioni sulle viste non utilizzate, fate molta attenzione ai dati che estrae, è basata sulla DMV [sys.dm_exec_cached_plans](https://docs.microsoft.com/it-it/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql) che è soggetta al fluttuare dei piani di esecuzione all'interno della plan cache. Se una vista non è in cache nel momento in cui eseguite la query, non è detto che tale vista sia da eliminare. Se ritenete che la cache sia abbastanza rappresentativa del vostro carico di lavoro, tenetene semplicemente conto. Se nei successivi controlli, la vista sarà sempre presente, potrete valutare di effettuare altre indagini.
-
+### Sys.dmv_exec_cached_plans
+The final query provides information about unused views by using the DMV [sys.dmv_exec_cached_plans](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql). However, the execution plan cache is dynamic, and results can vary. As such, use this query over time to determine whether or not a view is actually being used or not. 
 ```SQL
 SELECT
   SCHEMA_NAME(vw.schema_id) AS schemaname
@@ -185,20 +174,10 @@ WHERE
   st.dbid = DB_ID();
 GO
 ```
-
-Risorse correlate
-=================
-
-Alcune risorse correlate:
-
-1. [DMVs for Performance Tuning (Video - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)
-
-2. [DMVs for Performance Tuning (Slide e Demo - SQL Saturday Pordenone)](http://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
-
-3. [SQL Server Tuning in pillole (Video - SQL Saturday Parma)](https://vimeo.com/200980883)
-
-4. [SQL Server Tuning in pillole (Slide e Demo - SQL Saturday Parma)](http://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
-
-5. [Performance Tuning With SQL Server Dynamic Management Views](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)
-
-6. [The Most Prominent Wait Types of your SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)
+## Related external resources
+- [DMVs for Performance Tuning (Video - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)
+- [DMVs for Performance Tuning (Slide e Demo - SQL Saturday Pordenone)](http://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
+- [SQL Server Tuning in capsule form (movie-SQL Saturday Parma)](https://vimeo.com/200980883)
+- [SQL Server Tuning in a nutshell (slides and Demo-SQL Saturday Parma)](http://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
+- [Performance Tuning With SQL Server Dynamic Management Views](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)
+- [The Most Prominent Wait Types of your SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)
