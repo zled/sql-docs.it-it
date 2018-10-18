@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursoropen
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c10ba380b31a2d8169dcf0a57de15418db059eac
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 61097f1cee2616e18199edcd662db2b7344b04c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028160"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596439"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -150,7 +146,7 @@ sp_cursoropen cursor OUTPUT, stmt
  Un cursore di avanzamento rapido è stato chiuso automaticamente.  
   
 > [!NOTE]  
->  Se la routine sp_cursoropen viene eseguita correttamente, vengono inviati i parametri restituiti RPC e un set di risultati con informazioni sul formato di colonna TDS (messaggi 0xa0 e 0xa1). Se non riesce, vengono inviati uno o più messaggi di errore TDS. In entrambi i casi, non verranno restituiti dati di riga e il conteggio del messaggio *done* sarà zero. Se si utilizza una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a 7.0, vengono restituiti i messaggi 0xa0, 0xa1 (standard per le istruzioni SELECT) insieme ai flussi di token 0xa5 e 0xa4. Se si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, viene restituito 0x81 (standard per le istruzioni SELECT) insieme ai flussi di token 0xa5 e 0xa4.  
+>  Se la routine sp_cursoropen viene eseguita correttamente, vengono inviati i parametri restituiti RPC e un set di risultati con informazioni sul formato di colonna TDS (messaggi 0xa0 e 0xa1). Se non riesce, vengono inviati uno o più messaggi di errore TDS. In entrambi i casi, non verranno restituiti dati di riga e il conteggio del messaggio done* sarà zero. Se si utilizza una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a 7.0, vengono restituiti i messaggi 0xa0, 0xa1 (standard per le istruzioni SELECT) insieme ai flussi di token 0xa5 e 0xa4. Se si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, viene restituito 0x81 (standard per le istruzioni SELECT) insieme ai flussi di token 0xa5 e 0xa4.  
   
 ## <a name="remarks"></a>Note  
   
