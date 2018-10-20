@@ -4,17 +4,17 @@ description: Questo articolo offre risposte alle domande frequenti su SQL Server
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/24/2018
+ms.date: 07/25/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0eb32296c0122709ff1dc6c83deda70d88293d38
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: c45203e8524fe2df9301250afd1bef40df37bc3d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851846"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419356"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Domande frequenti su SQL Server in Linux
 
@@ -69,6 +69,22 @@ Le sezioni seguenti forniscono domande e risposte comuni per SQL Server in esecu
 1. **È possibile eseguire un'installazione automatica di SQL Server in Linux?**
 
    Sì. Per una discussione di installazione automatica, vedere [informazioni aggiuntive sull'installazione per SQL Server in Linux](sql-server-linux-setup.md#unattended). Vedere gli script di esempio per [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), e [Ubuntu](sample-unattended-install-ubuntu.md). È anche possibile esaminare [questo script di esempio](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/) creati da SQL Server Customer Advisory Team.
+
+1. **Quale edizione di SQL Server scegliere quando ho già acquistato?**
+
+   Quando si esegue l'installazione mssql-conf vengono fornite queste opzioni:  
+   `Choose an edition of SQL Server:` <br>
+`     1. Evaluation (free, no production use rights, 180-day limit)` <br>
+`     2. Developer (free, no production use rights)` <br>
+`     3. Express (free)` <br>
+`     4. Web (PAID)` <br>
+`     5. Standard (PAID)` <br>
+`     6. Enterprise (PAID)` <br>
+`     7. Enterprise Core (PAID)` <br>
+`     8. I bought a license through a retail sales channel and have a product key to enter.`
+     
+   Se si è ottenuto la licenza tramite i contratti multilicenza come parte di un contratto Enterprise Agreement o tramite l'abbonamento MSDN, è necessario selezionare 4 a 7. Se è stato acquistato Standard edition tramite un canale di vendita al dettaglio, è necessario selezionare 8. 
+
 
 ## <a name="tools"></a>Strumenti
 

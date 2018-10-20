@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3569b1026ab8eded80164610ab8581209de7e9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13359f151ef1453a7bc8b2020dc4cd8db9a13b80
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669309"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390833"
 ---
 # <a name="configure-replication-with-t-sql"></a>Configurare la replica con T-SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-In questa esercitazione si configurerà la replica snapshot SQL Server in Linux con 2 istanze di SQL Server usando Transact-SQL. Server di pubblicazione e server di distribuzione sarà la stessa istanza, e il sottoscrittore sarà in un'istanza separata.
+In questa esercitazione si configurerà la replica snapshot SQL Server in Linux con due istanze di SQL Server usando Transact-SQL. Server di pubblicazione e server di distribuzione sarà la stessa istanza, e il sottoscrittore sarà in un'istanza separata.
 
 > [!div class="checklist"]
 > * Abilitare gli agenti di replica di SQL Server in Linux
@@ -38,7 +38,7 @@ Tutte le configurazioni di replica possono essere configurate con [stored proced
 ## <a name="prerequisites"></a>Prerequisiti  
 Per completare questa esercitazione, è necessario:
 
-- 2 istanze di SQL Server con la versione più recente di SQL Server in Linux
+- Due istanze di SQL Server con la versione più recente di SQL Server in Linux
 - Uno strumento per eseguire T-SQL Query per impostare la replica, ad esempio SQLCMD o SQL Server Management Studio
 
   Visualizzare [usare SSMS per gestire SQL Server in Linux](./sql-server-linux-manage-ssms.md).
@@ -50,15 +50,6 @@ Per completare questa esercitazione, è necessario:
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
-  ```
-
-1. Configurare l'istanza di SQL Server per la replica eseguire la stored procedure seguente nel database msdb per ogni istanza CTP1.5 partecipano alla replica di SQL Server.
-
-  ```sql
-  USE msdb
-  GO
-  exec sys.sp_MSrepl_createdatatypemappings;
-  GO
   ```
 
 1. Creare Database di esempio e un tabella nel server di pubblicazione creare un database di esempio e una tabella che verrà utilizzato come gli articoli per una pubblicazione.
@@ -282,7 +273,7 @@ Per completare questa esercitazione, è necessario:
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-In questa esercitazione è stato configurato la replica snapshot SQL Server in Linux con 2 istanze di SQL Server usando Transact-SQL.
+In questa esercitazione è stato configurato la replica snapshot SQL Server in Linux con due istanze di SQL Server usando Transact-SQL.
 
 > [!div class="checklist"]
 > * Abilitare gli agenti di replica di SQL Server in Linux

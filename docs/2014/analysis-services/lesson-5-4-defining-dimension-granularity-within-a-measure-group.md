@@ -11,12 +11,12 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 59a10da991e4a6e029d3a108a8bf7aaa744a4972
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8936d7c79538f4cb609f9208c6bd458369093076
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083881"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460926"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definizione della granularità della dimensione in un gruppo di misure
   È possibile dimensionare le tabelle dei fatti a diversi livelli di dettaglio o granularità a seconda degli scopi. È ad esempio possibile registrare per ogni giorno i dati relativi alle vendite per rivenditore o le vendite effettuate tramite Internet, mentre le informazioni sulle quote di vendita esistono solo per il mese o il trimestre. In questi casi è possibile che la dimensione temporale abbia un livello di dettaglio diverso per ognuna di queste diverse tabelle dei fatti. Sebbene sia possibile definire una nuova dimensione del database come dimensione temporale con tale diverso livello di dettaglio, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]è disponibile un modo più semplice.  
@@ -221,11 +221,11 @@ ms.locfileid: "48083881"
      ![Gruppo di misure Sales Quota correttamente dimensionato](../../2014/tutorials/media/l5-granularity-7.gif "gruppo di misure Sales Quota correttamente dimensionato")  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 6: definizione di calcoli] ((lezione-6: definizione-calculations.md)  
+ [Lezione 6: Definizione di calcoli](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Relazioni tra dimensioni](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definire una relazione di tipo regolare e delle relative proprietà](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [Utilizzare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Usare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

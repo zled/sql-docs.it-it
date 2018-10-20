@@ -3,17 +3,17 @@ title: Configurazione del firewall per SQL Server Machine Learning Services | Mi
 description: Come configurare il firewall per SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: d8a24ca6348054041ca1d8a0f4d0c352dc5bdabd
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d2bf36ea9a7c7a0b193dc4613f6a36f58e66014a
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48881460"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419056"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>Configurazione del firewall per SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,9 +22,9 @@ Questo articolo illustra considerazioni sulla configurazione del firewall che l'
 
 ## <a name="default-firewall-rules"></a>Regole del firewall predefinite
 
-Per impostazione predefinita, il programma di installazione di SQL Server disabilita le connessioni in uscita tramite la creazione di regole del firewall. 
+Per impostazione predefinita, il programma di installazione di SQL Server disabilita le connessioni in uscita tramite la creazione di regole del firewall.
 
-In SQL Server 2016 e 2017, queste regole sono basate su account utente locale, in cui il programma di installazione creato una regola in uscita per **SQLRUserGroup** che negato l'accesso alla rete per i relativi membri (ogni account di lavoro è stato elencato come un principio soggetto a locale la regola.
+In SQL Server 2016 e 2017, queste regole sono basate su account utente locale, in cui il programma di installazione creato una regola in uscita per **SQLRUserGroup** che negato l'accesso alla rete per i relativi membri (ogni account di lavoro è stato elencato come un principio soggetto a locale la regola. Per altre informazioni sulle SQLRUserGroup, vedere [Panoramica sulla sicurezza per il framework di estendibilità in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md#sqlrusergroup).
 
 In SQL Server 2019, come parte del passaggio a AppContainers, sono disponibili nuove regole del firewall basate su AppContainer SIDs: uno per ognuno dei 20 AppContainers creato dal programma di installazione di SQL Server. Le convenzioni di denominazione per il nome della regola firewall **bloccare l'accesso alla rete per AppContainer 00 in SQL Server instance MSSQLSERVER**, dove 00 corrisponde al numero di AppContainer (00-20 per impostazione predefinita), e MSSQLSERVER è il nome di SQL Istanza del server.
 

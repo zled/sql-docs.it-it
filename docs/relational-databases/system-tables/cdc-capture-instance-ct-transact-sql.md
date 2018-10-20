@@ -18,12 +18,12 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b13f890063246c1557d11a504ccf229bb162057
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 346fea411891f04e4b4742ff50c2dd9cce6f1587
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621029"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336250"
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>CDC. &lt;capture_instance&gt;CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Il `__$command_id` colonna è una colonna è stata introdotta in un aggiornament
 3.  Modificare la tabella di origine specificando il nuovo tipo di dati. La modifica del tipo di dati è propagata correttamente alla tabella delle modifiche.  
   
 ## <a name="data-manipulation-language-modifications"></a>Modifiche DML  
- Quando su una tabella di origine abilitata per Change Data Capture vengono eseguite operazioni di inserimento, aggiornamento ed eliminazione, nel log delle transazioni del database viene visualizzato un record relativo a tali operazioni DML. Il processo di acquisizione Change Data Capture recupera le informazioni su tali modifiche dal log delle transazioni e aggiunge una o due righe alla tabella delle modifiche per registrare la modifica stessa. Le voci vengono aggiunte alla tabella delle modifiche nello stesso ordine in cui è stato eseguito il relativo commit nella tabella di origine, anche se il commit delle voci della tabella delle modifiche deve essere eseguito in genere per un gruppo di modifiche anziché per una voce singola.  
+ Quando su una tabella di origine abilitata per Change Data Capture vengono eseguite operazioni di inserimento, aggiornamento ed eliminazione, nel log delle transazioni del database viene visualizzato un record relativo a tali operazioni DML. Il processo change data capture recupera le informazioni su tali modifiche dal log delle transazioni e aggiunge uno o due righe alla tabella delle modifiche per registrare la modifica. Le voci vengono aggiunte alla tabella delle modifiche nello stesso ordine in cui è stato eseguito il relativo commit nella tabella di origine, anche se il commit delle voci della tabella delle modifiche deve essere eseguito in genere per un gruppo di modifiche anziché per una voce singola.  
   
  Entro la voce della tabella di modifica, la **_ $start_lsn** colonna viene utilizzata per registrare il LSN associato per la tabella di origine, la modifica di commit e il **colonna _ $seqval** viene utilizzata per ordinare la modifica all'interno la transazione. Nel loro complesso queste colonne di metadati possono essere utilizzate per garantire che venga mantenuto l'ordine di commit delle modifiche di origine. Poiché il processo di acquisizione ottiene le informazioni relative alle modifiche dal log delle transazioni, è importante notare che le voci della tabella delle modifiche non vengono visualizzate in modo sincrono con le modifiche della tabella di origine corrispondenti. Al contrario, le modifiche corrispondenti vengono visualizzate in modo asincrono dopo che il processo di acquisizione ha elaborato le voci di modifica attinenti dal log delle transazioni.  
   

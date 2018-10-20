@@ -17,12 +17,12 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b85c611b01727c21059d43d04cb65134c7f2fc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190181"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460972"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Monitorare Gruppi di disponibilità (Transact-SQL)
   Per monitorare le repliche e i gruppi di disponibilità e i database associati tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] offre un set di viste del catalogo, di DMV e di proprietà del server. Tramite le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT, è possibile utilizzare le viste per monitorare i gruppi di disponibilità e i relativi database e repliche. Le informazioni restituite per un gruppo di disponibilità variano a seconda che l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a cui si è connessi ospiti la replica primaria o una replica secondaria.  
@@ -80,7 +80,7 @@ ms.locfileid: "48190181"
 > [!NOTE]  
 >  Vedere anche **sys.dm_hadr_availability_replica_cluster_nodes** e **sys.dm_hadr_availability_replica_cluster_states** nella sezione [Monitoraggio delle repliche di disponibilità](#AvReplicas) e **sys.availability_databases_cluster** e **sys.dm_hadr_database_replica_cluster_states** nella sezione [Monitoraggio dei database di disponibilità](#AvDbs) più avanti in questo argomento.  
   
- Per informazioni sui cluster WSFC e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server] ((.. /.. /.. / sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) e [Clustering di Failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md).  
+ Per informazioni sui cluster WSFC e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) e [Clustering di Failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="AvGroups"></a> Monitoraggio dei gruppi disponibilità  
  Per monitorare i gruppi di disponibilità per cui l'istanza del server ospita una replica di disponibilità, utilizzare le viste seguenti:  
@@ -198,7 +198,7 @@ ms.locfileid: "48190181"
   
 -   [Usare Dettagli Esplora oggetti per monitorare i gruppi di disponibilità &#40;SQL Server Management Studio&#41;](use-object-explorer-details-to-monitor-availability-groups.md)  
   
--   [Visualizzazione delle Proprietà dei gruppi di disponibilità &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
+-   [Visualizzare le proprietà dei gruppi di disponibilità &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
 -   [Visualizzazione delle proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   

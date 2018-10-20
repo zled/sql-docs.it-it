@@ -11,12 +11,12 @@ ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 376f93db5b4dbac672846226229858c8ee84f19d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2265baf4c4a342692ae67afcbcc50a0bb0d0a283
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107481"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461977"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Market Basket
   In questa lezione verranno aggiunti due modelli di data mining alla struttura di data mining Market Basket creata nella [lezione 1: creazione della struttura di Data Mining Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Questi modelli di data mining consentiranno di creare stime.  
@@ -28,7 +28,7 @@ ms.locfileid: "48107481"
  Si visualizzeranno l'effetto della modifica il *MINIMUM_PROBABILTY* parametro in una lezione successiva.  
   
 ## <a name="alter-mining-structure-statement"></a>Istruzione ALTER MINING STRUCTURE  
- Per aggiungere un modello di data mining che contiene una tabella nidificata a una struttura di data mining, si utilizza il [ALTER MINING STRUCTURE &#40;DMX&#41;] (istruzione (~/dmx/alter-mining-structure-dmx.md). Il codice nell'istruzione può essere suddiviso nelle parti seguenti:  
+ Per aggiungere un modello di data mining che contiene una tabella nidificata a una struttura di data mining, si utilizza il [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) istruzione. Il codice nell'istruzione può essere suddiviso nelle parti seguenti:  
   
 -   Identificazione della struttura di data mining  
   

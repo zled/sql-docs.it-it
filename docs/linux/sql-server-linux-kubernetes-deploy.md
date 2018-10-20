@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e062f97f5fe63966cf3b03b9727cd13a509d3ae5
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 3d4a2786a795b20e9c2f943824027859230b2c85
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878104"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460466"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-kubernetes-cluster"></a>Distribuire un Server SQL sempre sul gruppo di disponibilità nel Cluster Kubernetes
 
@@ -109,7 +109,7 @@ In Kubernetes la distribuzione include un operatore di SQL Server, i contenitori
 
 ### <a name="monitor-the-deployment"></a>Monitorare la distribuzione
 
-È possibile usare [dashboard di Kubernetes con Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard) monitorare la distribuzione.
+È possibile usare [dashboard di Kubernetes con Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-dashboard) monitorare la distribuzione.
 
 Usare `az aks browse` per avviare il dashboard. 
 

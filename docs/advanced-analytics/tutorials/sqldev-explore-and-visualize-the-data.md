@@ -1,21 +1,21 @@
 ---
-title: Lezione 3 esplorare e visualizzare i dati usando R e T-SQL (SQL Server Machine Learning Services) | Microsoft Docs
+title: Lezione 1 esplorare e visualizzare i dati usando R e T-SQL (SQL Server Machine Learning Services) | Microsoft Docs
 description: Esercitazione che illustra come incorporare R in SQL Server stored procedure e funzioni T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: e3e32fef767193f8cf9a33553163f301da3cfa4d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798589"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461987"
 ---
-# <a name="lesson-3-explore-and-visualize-the-data"></a>Lezione 3: Esplorare e visualizzare i dati
+# <a name="lesson-1-explore-and-visualize-the-data"></a>Lezione 1: Esplorare e visualizzare i dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo fa parte di un'esercitazione per sviluppatori SQL su come usare R in SQL Server.
@@ -279,8 +279,8 @@ Per visualizzare il grafico, aprire la cartella di destinazione ed esaminare i f
 
 ## <a name="next-lesson"></a>Lezione successiva
 
-[Lezione 3: Creare funzionalità di dati mediante T-SQL](sqldev-create-data-features-using-t-sql.md)
+[Lezione 2: Creare funzionalità di dati mediante T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Lezione precedente
 
-[Lezione 1: Configurare i dati demo dei Taxi di NYC](sqldev-download-the-sample-data.md)
+[Imposta i dati demo dei Taxi di NYC](demo-data-nyctaxi-in-sql.md)

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 09bac30e30a6549dd572b8594e5efeec6473ef2a
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450348"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460632"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurare PolyBase per accedere a dati esterni in archiviazione Blob di Azure
 
@@ -32,7 +32,7 @@ L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire
 
 Innanzitutto, configurare i punti di accesso per usare l'archiviazione Blob di Azure.
 
-1. Eseguire [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) con 'hadoop connectivity' impostato su un provider di archiviazione Blob di Azure. Per trovare il valore per i provider, vedere [configurazione della connettività di PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+1. Eseguire [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) con 'hadoop connectivity' impostato su un provider di archiviazione Blob di Azure. Per trovare il valore per i provider, vedere [Configurazione della connettività di PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
    ```sql  
    -- Values map to various external data sources.  
@@ -49,7 +49,7 @@ Innanzitutto, configurare i punti di accesso per usare l'archiviazione Blob di A
   
 ## <a name="configure-an-external-table"></a>Configurare una tabella esterna
 
-Per eseguire query sui dati nell'archiviazione Blob di Azure, è necessario definire una tabella esterna da utilizzare nella query Transact-SQL. I passaggi seguenti descrivono come configurare la tabella esterna.
+Per eseguire query sui dati nell'archiviazione Blob di Azure, è necessario definire una tabella esterna da utilizzare nella query Transact-SQL. Le procedure seguenti descrivono come configurare la tabella esterna.
 
 1. Creare una chiave master nel database. È necessario crittografare il segreto della credenziale.
 
@@ -66,7 +66,7 @@ Per eseguire query sui dati nell'archiviazione Blob di Azure, è necessario defi
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Creare un'origine dati esterna con [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)...
+1. Creare un'origine dati esterna con [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -89,7 +89,7 @@ Per eseguire query sui dati nell'archiviazione Blob di Azure, è necessario defi
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. Creare una tabella esterna che punta ai dati archiviati in archiviazione di Azure con [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). In questo esempio, i dati esterni contengono i dati dei sensori di automobili.
+1. Creare una tabella esterna che punta ai dati archiviati in Archiviazione di Azure con [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). In questo esempio, i dati esterni contengono i dati dei sensori di automobili.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -106,7 +106,7 @@ Per eseguire query sui dati nell'archiviazione Blob di Azure, è necessario defi
    );  
    ```
 
-1. Creare statistiche su una tabella esterna.
+1. Creare statistiche per una tabella esterna.
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -118,9 +118,9 @@ PolyBase è adatto per assolvere a una triplice funzione:
   
 - Query ad hoc su tabelle esterne.  
 - Importazione di dati.  
-- Esportazione dei dati.  
+- Esportazione di dati.  
 
-Le query seguenti viene fornito l'esempio con i dati dei sensori di automobili fittizie.
+Le query seguenti forniscono esempi con dati fittizi di sensori di auto.
 
 ### <a name="ad-hoc-queries"></a>Query ad hoc  
 
@@ -179,7 +179,5 @@ In SQL Server Data Tools, le tabelle esterne vengono visualizzate in una cartell
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Esplorare altri modi per usare e monitorare PolyBase, vedere gli articoli seguenti:
-
-[Mapping dei tipi di dati con PolyBase](../relational-databases/polybase/polybase-type-mapping.md).  
+Per altre informazioni su PolyBase, vedere la [What ' s PolyBase?](../relational-databases/polybase/polybase-guide.md). 
 

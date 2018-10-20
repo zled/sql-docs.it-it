@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 629d7fd887e96013b17a5686ce82eb966044f240
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796647"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460576"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistenza dei dati con cluster di big data di SQL Server in Kubernetes
 
@@ -23,6 +23,7 @@ ms.locfileid: "48796647"
 Il modo in cui il cluster di big data di SQL Server utilizza questi volumi permanenti consiste nell'usare [classi di archiviazione](https://kubernetes.io/docs/concepts/storage/storage-classes/). È possibile creare classi di archiviazione diversi per tipi diversi di archiviazione e specificarli al momento della distribuzione di cluster dei big Data. È possibile configurare la classe di archiviazione da usare per quale scopo (pool). Crea cluster di big data server&#41 [attestazioni di volume permanente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) con il nome della classe di archiviazione specificato per ogni pod necessari volumi permanenti. Quindi consente di montare i volumi permanenti corrispondenti nel pod.
 
 > [!NOTE]
+
 > Per versioni da CTP 2.0, solo `ReadWriteOnce` modalità di accesso per l'intero cluster è supportata.
 
 ## <a name="deployment-settings"></a>Impostazioni di distribuzione
@@ -36,11 +37,20 @@ Se si imposta il flag su true, è necessario specificare anche **STORAGE_CLASS_N
 
 ## <a name="aks-storage-classes"></a>Classi di archiviazione servizio contenitore di AZURE
 
-Servizio contenitore di AZURE viene fornito con [due classi di archiviazione predefinite](https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv) **predefinito** e **premium-storage** insieme dinamico strumento di provisioning per loro. È possibile specificare uno di questi due o creare la propria classe di archiviazione per la distribuzione di cluster di big data con abilitata l'archiviazione permanente.
+Servizio contenitore di AZURE viene fornito con [due classi di archiviazione predefinite](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **predefinita** e **gestiti premium** insieme dinamico strumento di provisioning per loro. È possibile specificare uno di questi due o creare la propria classe di archiviazione per la distribuzione di cluster di big data con abilitata l'archiviazione permanente.
 
 ## <a name="minikube-storage-class"></a>Classe di archiviazione Minikube
 
-Minikube dotato di una classe di archiviazione predefinito denominata **standard** insieme a un strumento di provisioning dinamico appositamente.
+Minikube dotato di una classe di archiviazione predefinito denominata **standard** insieme a un strumento di provisioning dinamico appositamente. Si noti che in Minikube, se USE_PERSISTENT_VOLUME = true (impostazione predefinita), è inoltre necessario sostituire il valore predefinito per la variabile di ambiente STORAGE_CLASS_NAME perché il valore predefinito è diverso. Impostare il valore su `standard`: 
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+In alternativa, è possibile eliminare l'uso di volumi permanenti in Minikube:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
+
 
 ## <a name="kubeadm"></a>Kubeadm
 
@@ -61,7 +71,7 @@ export STORAGE_SIZE=10Gi
 
 ```bash
 export STORAGE_POOL_USE_PERSISTENT_VOLUME=true
-export STORAGE_POOL_STORAGE_CLASS_NAME=premium-storage
+export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 

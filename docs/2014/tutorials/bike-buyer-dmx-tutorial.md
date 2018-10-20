@@ -1,7 +1,7 @@
 ---
 title: Bike Buyer DMX esercitazione | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/19/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -17,12 +17,12 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2d5b77952cd3476adddcdf0a528c2e12ab30cc2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25ca6a8a5769da023da506c25c858a012b7f7a7c
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074961"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462017"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Esercitazione su DMX per Bike Buyer
   In questa esercitazione vengono descritte le procedure per la creazione, il training e l'esplorazione di modelli di data mining utilizzando il linguaggio di query DMX (Data Mining Extensions). Questi modelli di data mining verranno quindi utilizzati per la creazione di stime relative alla probabilità che un cliente acquisti una bicicletta.  
@@ -69,7 +69,7 @@ ms.locfileid: "48074961"
  ALTER MINING STRUCTURE  
  Questa istruzione consente di aggiungere un modello di data mining a una struttura di data mining già esistente sul server. È utile se si desidera creare una struttura di data mining contenente più modelli di data mining. L'esigenza di aggiungere più modelli di data mining in un'unica struttura di data mining può essere dettata da numerose ragioni. È possibile ad esempio creare più modelli di data mining che utilizzano algoritmi diversi per stabilire quale algoritmo funziona meglio oppure creare più modelli di data mining che utilizzano lo stesso algoritmo, ma impostando un parametro in modo diverso in ogni modello per individuare l'impostazione ottimale per il parametro.  
   
- Per altre informazioni, vedere [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md).  
+ Per altre informazioni, vedere [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016).  
   
  In questa esercitazione si utilizzerà il secondo metodo poiché si creerà una struttura di data mining contenente diversi modelli di data mining.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48074961"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   Database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio ufficiali per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitare il [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) pagina e selezionare i database che si desidera installare...  
+-   Database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] . Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio ufficiali per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitare il [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) pagina e selezionare i database che si desidera installare...  
   
 > [!NOTE]  
 >  Quando si esaminano le esercitazioni, è consigliabile aggiungere **argomento successivo** e **argomento precedente** pulsanti alla barra degli strumenti del Visualizzatore di documenti.  

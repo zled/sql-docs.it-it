@@ -16,17 +16,17 @@ ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b88d3ec75e73329f8de1e97f7b9936203e745946
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe0d9ebeea4693eeacebe9d0747bf71f26f85ad5
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062177"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460196"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Estensione di un set di dati tramite la trasformazione Merge join
   È possibile aggiungere e configurare una trasformazione Merge join solo se il pacchetto include già almeno un'attività Flusso di dati e due componenti flusso di dati che forniscono input alla trasformazione Merge join.  
   
- La trasformazione Merge join richiede due input ordinati. Per altre informazioni, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](sort-data-for-the-merge-and-merge-join-transformations.md).  
+ La trasformazione Merge join richiede due input ordinati. Per altre informazioni, vedere [Ordinare i dati per le trasformazioni Unione e Merge join](sort-data-for-the-merge-and-merge-join-transformations.md).  
   
 ### <a name="to-extend-a-dataset"></a>Per estendere un set di dati  
   
@@ -62,9 +62,9 @@ ms.locfileid: "48062177"
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Trasformazione Merge Join](merge-join-transformation.md)   
+ [Merge Join Transformation](merge-join-transformation.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)   
  [Percorsi in Integration Services](../integration-services-paths.md)   
- [Attività flusso di dati] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Attività Flusso di dati](../../control-flow/data-flow-task.md)  
   
   

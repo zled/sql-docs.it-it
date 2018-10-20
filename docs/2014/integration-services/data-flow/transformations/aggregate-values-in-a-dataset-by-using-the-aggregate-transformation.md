@@ -15,12 +15,12 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 490c8bc5c2a045f911a3bbe0a5a372a81d49a08e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d0d415a9dd8dbb891892fce083b65745dd27ff3
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115079"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460306"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Aggregazione di valori in un set di dati utilizzando la trasformazione Aggregazione
   È possibile aggiungere e configurare una trasformazione Aggregazione solo se il pacchetto include almeno un'attività Flusso di dati e un'origine.  
@@ -70,9 +70,9 @@ ms.locfileid: "48115079"
 15. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Trasformazione aggregazione](aggregate-transformation.md)   
+ [Trasformazione Aggregazione](aggregate-transformation.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)   
  [Percorsi in Integration Services](../integration-services-paths.md)   
- [Attività flusso di dati] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Attività Flusso di dati](../../control-flow/data-flow-task.md)  
   
   

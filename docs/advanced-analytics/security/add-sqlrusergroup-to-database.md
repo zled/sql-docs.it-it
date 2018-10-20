@@ -1,35 +1,31 @@
 ---
 title: Aggiungere SQLRUserGroup come utente del database (SQL Server Machine Learning Services) | Microsoft Docs
-description: Come aggiungere SQLRUserGroup come utente del database per SQL Server Machine Learning Services.
+description: Per le connessioni loopback tramite autenticazione implicita, aggiungere SQLRUserGroup come utente del database in modo che un account di lavoro possa accedere al server, per la conversione di identità all'utente chiama.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/10/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fc5294453def64d13cc43a74a8a5fb299c3e23e3
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 4685288eb383c486556efba1eb4861ca9d708c0f
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100322"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419086"
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>Aggiungere SQLRUserGroup come utente del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Creare un account di accesso di database per il [SQLRUserGroup](../concepts/security.md#sqlrusergroup) per consentire le connessioni attendibili provenienti da script R e Python, se la destinazione sono dati o le operazioni nell'istanza di SQL Server. 
+Creare un account di accesso di database per [SQLRUserGroup](../concepts/security.md#sqlrusergroup) quando un [ciclo connessione loopback](../../advanced-analytics/concepts/security.md#implied-authentication) nello script specifica un *connessione trusted*e l'identità usata per eseguire un oggetto contiene il codice è un account utente di Windows.
 
-Per gli script che contiene le stringhe di connessione con gli account di accesso di SQL Server o un nome utente completo e una password, la creazione di un account di accesso non è obbligatoria.
+Attendibili le connessioni sono quelli con `Trusted_Connection=True` nella stringa di connessione. Quando SQL Server riceve una richiesta che specifica una connessione trusted, controlla se l'identità dell'utente Windows corrente dispone di un account di accesso. Per i processi esterni in esecuzione come un account di lavoro (ad esempio MSSQLSERVER01 dal **SQLRUserGroup**), la richiesta ha esito negativo perché tali account non dispongono di un account di accesso per impostazione predefinita.
 
-## <a name="when-a-login-is-required"></a>Quando è necessario un account di accesso
-
-Se lo script R o Python include una stringa di connessione che specifica una connessione trusted (ad esempio, "Trusted_Connection = True"), è una configurazione aggiuntiva necessaria per la presentazione corretta dell'identità dell'utente per SQL Server. Per i processi esterni in esecuzione con un **SQLRUserGroup** account di lavoro, ad esempio MSSQLSERVER01, l'utente attendibile viene presentato come l'identità di lavoro. Poiché questa identità non dispone di alcun diritto di accesso di SQL Server, attendibili le connessioni non riusciranno a meno che non si aggiungono **SQLRUserGroup** come utente del database. Per altre informazioni, vedere [ *l'autenticazione implicita*](../../advanced-analytics/concepts/security.md#implied-authentication).
-
-È importante ricordare che Launchpad conserva un mapping dell'utente originale che ha richiamato lo script e l'account di lavoro che esegue il processo. Dopo aver stabilito la connessione trusted per l'account di lavoro, l'identità dell'utente chiamante originale subentra e viene usato per recuperare i dati. Non è necessario concedere le autorizzazioni db_datareader per **SQLRUserGroup**.
+È possibile risolvere l'errore di connessione, assegnando **SQLServerRUserGroup** un account di accesso di SQL Server. Per altre informazioni su identità e i processi esterni, vedere [Panoramica sulla sicurezza per il framework di estendibilità](../concepts/security.md).
 
 > [!Note]
->  Verificare che l'opzione **SQLRUserGroup** disponga delle autorizzazioni "Consenti accesso locale". Per impostazione predefinita, questo diritto viene assegnato a tutti i nuovi utenti locali, ma in alcune organizzazioni potrebbero essere applicati criteri di gruppo più rigorosi.
+>  Verificare che l'opzione **SQLRUserGroup** disponga delle autorizzazioni "Consenti accesso locale". Per impostazione predefinita, questo diritto viene assegnato a tutti i nuovi utenti locali, ma in alcune organizzazioni i criteri di gruppo più rigorosi potrebbero disabilitare questo diritto.
 
 ## <a name="create-a-login"></a>Crea un accesso
 
@@ -54,9 +50,9 @@ Se lo script R o Python include una stringa di connessione che specifica una con
 5. Scorrere l'elenco degli account di gruppo nel server fino a individuare che inizia con `SQLRUserGroup`.
     
     + Il nome del gruppo di cui è associato il servizio Launchpad per il _istanza predefinita_ è sempre **SQLRUserGroup**, indipendentemente dal fatto che sia installata di R o Python oppure entrambi. Selezionare questo account per solo l'istanza predefinita.
-    + Se si usa un' _istanza denominata_, il nome dell'istanza viene aggiunto al nome del nome del gruppo ruolo di lavoro predefinito, `SQLRUserGroup`. Di conseguenza, se l'istanza è denominata "MLTEST", il nome di gruppo utente predefinito per questa istanza sarebbe **SQLRUserGroupMLTest**.
+    + Se si usa un' _istanza denominata_, il nome dell'istanza viene aggiunto al nome del nome del gruppo ruolo di lavoro predefinito, `SQLRUserGroup`. Ad esempio, se l'istanza è denominata "MLTEST", il nome di gruppo utente predefinito per questa istanza sarà **SQLRUserGroupMLTest**.
  
-     ![Esempio di gruppi nel server](media/implied-auth-login5.png "esempio di gruppi sul server")
+ ![Esempio di gruppi nel server](media/implied-auth-login5.png "esempio di gruppi sul server")
    
 5. Fare clic su **OK** per chiudere la finestra di dialogo di ricerca avanzata.
 
@@ -66,3 +62,8 @@ Se lo script R o Python include una stringa di connessione che specifica una con
 6. Fare clic su **OK** ancora una volta per chiudere la **Seleziona utente o gruppo** nella finestra di dialogo.
 
 7. Nel **account di accesso - nuovo** finestra di dialogo, fare clic su **OK**. Per impostazione predefinita, l'account di accesso viene assegnato al ruolo **public** e dispone dell'autorizzazione per connettersi al motore di database.
+
+## <a name="next-steps"></a>Passaggi successivi
+
++ [Panoramica della sicurezza](../concepts/security.md)
++ [Framework di estendibilità](../concepts/extensibility-framework.md)

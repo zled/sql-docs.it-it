@@ -14,26 +14,26 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ff65938770d14d5f1084b33421f89bf8744031ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198691"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461016"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Differenze di comportamento nella ricerca full-text
   In questo argomento vengono descritte le modifiche del comportamento nella ricerca full-text. Queste modifiche influiscono sulle modalità di utilizzo o di interazione delle funzionalità in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>Modifiche del comportamento nella ricerca Full-Text in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>Modifiche del comportamento nella ricerca full-text in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Informazioni disponibili in futuro.  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Modifiche del comportamento nella ricerca Full-Text in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
- In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] viene installata una nuova versione dei word breaker e degli stemmer per l'Inglese (Stati Uniti), LCID 1033, e l'Inglese (Regno Unito), LCID 2057. È tuttavia possibile passare alla versione precedente di questi componenti se si desidera mantenere il comportamento precedente. Per altre informazioni, vedere [modifica del Word Breaker utilizzato per inglese Stati Uniti e in inglese Regno Unito](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Modifiche del comportamento nella ricerca full-text in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] viene installata una nuova versione dei word breaker e degli stemmer per l'Inglese (Stati Uniti), LCID 1033, e l'Inglese (Regno Unito), LCID 2057. È tuttavia possibile passare alla versione precedente di questi componenti se si desidera mantenere il comportamento precedente. Per altre informazioni vedere [Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>Installazione di word breaker e stemmer nuovi  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Aggiorna tutti i word breaker e stemmer utilizzati dalla ricerca Full-Text e semantica. Per coerenza tra il contenuto di indici e i risultati di query, si consiglia di ripopolare gli indici full-text esistenti.  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] consente di aggiornare tutti i word breaker e stemmer utilizzati dalla ricerca full-text e semantica. Per coerenza tra il contenuto di indici e i risultati di query, si consiglia di ripopolare gli indici full-text esistenti.  
   
-1.  Sono disponibili word breaker nuovi per l'inglese. Se è necessario mantenere il comportamento precedente, vedere [modifica del Word Breaker utilizzato per inglese Stati Uniti e in inglese Regno Unito](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+1.  Sono disponibili word breaker nuovi per l'inglese. Se è necessario mantenere il comportamento precedente, vedere [Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 2.  I word breaker di terze parti per il danese, il polacco e il turco inclusi con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono stati sostituiti con i componenti [!INCLUDE[msCoName](../includes/msconame-md.md)] . I nuovi componenti sono abilitati per impostazione predefinita.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48198691"
      Il motore full-text consente di indicizzare il contenuto dei BLOB FILESTREAM. L'indicizzazione di file di immagini, ad esempio, potrebbe non essere utile. Un BLOB FILESTREAM viene reindicizzato quando viene aggiornato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca full-Text] ((.. / relational-databases/search/full-text-search.md)   
+ [Ricerca full-text](../relational-databases/search/full-text-search.md)   
  [Compatibilità con le versioni precedenti di ricerca full-Text](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [Aggiornamento della ricerca Full-Text](../relational-databases/search/upgrade-full-text-search.md)   
  [Introduzione alla ricerca full-text](../relational-databases/search/get-started-with-full-text-search.md)  

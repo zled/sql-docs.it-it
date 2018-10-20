@@ -5,23 +5,23 @@ ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 17bb33ddc366196d21f45a0dd6ec895c5ceaef20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e113e2755a5d50fa7b8c5a06486227b3671347e
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038559"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460618"
 ---
 # <a name="sql-server-import-extension-preview"></a>Estensione di SQL Server Import (anteprima)
 
 L'estensione di SQL Server Import (anteprima) converte file txt e CSV in una tabella SQL. Questa procedura guidata Usa un framework di Microsoft Research detto [Program Synthesis using esempi (PROSE)](https://microsoft.github.io/prose/) analizzare in modo intelligente il file con input minimo dell'utente. È un framework potente per la gestione dei dati ed è la stessa tecnologia alla base Flash Fill in Microsoft Excel
 
-Per altre informazioni sulla versione di SSMS di questa funzionalità, è possibile leggere [questo articolo](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard).
+Per altre informazioni sulla versione di SSMS di questa funzionalità, è possibile leggere [questo articolo](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard).
 
 
 ## <a name="install-the-sql-server-import-extension"></a>Installare l'estensione di SQL Server Import

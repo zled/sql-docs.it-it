@@ -15,20 +15,20 @@ ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 64c8fc3b51cbf6c96b25218a3ea53be4eac12f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122401"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460696"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Modifiche di rilievo alla ricerca full-text
   In questo argomento vengono descritte le modifiche di rilievo apportate alla ricerca full-text. Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile che questi problemi si verifichino quando viene effettuato un aggiornamento. Per altre informazioni, vedere [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
-## <a name="breaking-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>Modifiche di rilievo nella ricerca Full-Text in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="breaking-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>Modifiche di rilievo nella ricerca full-text in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Informazioni disponibili in futuro.  
   
-## <a name="breaking-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Modifiche di rilievo nella ricerca Full-Text in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="breaking-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Modifiche di rilievo nella ricerca full-text in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="collation-changed-for-name-column-in-sysfulltextlanguages"></a>Regole di confronto modificate per la colonna name in sys.fulltext_languages  
  Le regole di confronto della colonna **name** nella vista del catalogo [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) sono state modificate dalle regole di confronto fisse del database Resource nelle regole di confronto predefinite selezionate per l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Questa modifica consente di confrontare i valori nella colonna **name** quando si crea un join della vista [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) con **sys.fulltext_languages**. Ad esempio, è possibile eseguire una query per tutti i database dove l'opzione di configurazione full-text language è diversa dal linguaggio di database predefinito.  
@@ -59,6 +59,6 @@ ms.locfileid: "48122401"
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifiche del comportamento di ricerca Full-Text](../relational-databases/search/full-text-search.md)   
- [Ricerca full-Text] ((.. / relational-databases/search/full-text-search.md)  
+ [Ricerca full-text](../relational-databases/search/full-text-search.md)  
   
   

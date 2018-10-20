@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3167bff4f976cbf23c955eea40f63c4a51bc1b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d071a1d56808f7c634070e19707daf125d589396
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802591"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390863"
 ---
 # <a name="sql-samples"></a>Esempi di SQL
 
@@ -51,3 +51,13 @@ Sono disponibili nel database AdventureWorks il [SQL Server Samples](https://git
 - [Download di AdventureWorks per SQL Server 2014 e versioni successive](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Include i file con estensione bak per le versioni 2012.
 - [Download di AdventureWorks per SQL Server 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012).
 - [Download di AdventureWorks per SQL Server 2008 R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2).
+
+## <a name="azure-samples-and-templates"></a>Esempi di Azure e i modelli
+Sono disponibili numerosi esempi di codice di Microsoft Azure ed esempi su Github in .NET, Java, Python, Node. js, PHP e Ruby. Inoltre, Azure Resource Manager consente il provisioning delle applicazioni usando un modello dichiarativo. In un singolo modello, è possibile distribuire più servizi e le relative dipendenze. Si usa lo stesso modello per distribuire più volte l'applicazione durante ogni fase del ciclo di vita dell'applicazione.
+
+- [Esempi di Azure](https://github.com/Azure-Samples)
+- [Modelli di avvio rapido di Azure](https://azure.microsoft.com/resources/templates/)
+
+
+
+

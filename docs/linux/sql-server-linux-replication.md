@@ -4,7 +4,7 @@ description: Questo articolo descrive la replica di SQL Server in Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.technology: database-engine
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c4bad8947944d59208a0516e5950d36f64a84e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bef97eb018e35179f0f9288f18bf170b04ae630
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734129"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390843"
 ---
 # <a name="sql-server-replication-on-linux"></a>Replica di SQL Server in Linux
 
@@ -34,7 +34,7 @@ Può far parte di un'istanza di SQL Server in qualsiasi ruolo replica:
 * Database di distribuzione
 * Sottoscrittore
 
-Uno schema di replica può combinarsi e corrispondere piattaforme del sistema operativo. Ad esempio, uno schema di replica può usare le istanze di SQL Server in Linux per la distribuzione e la pubblicazione e sottoscrittori possono includere istanze di SQL Server in Windows.
+Uno schema di replica può combinarsi e corrispondere piattaforme del sistema operativo. Ad esempio, uno schema di replica può includere un'istanza di SQL Server in Linux per server di pubblicazione e server di distribuzione e sottoscrittori sono istanze di SQL Server in Windows, nonché di Linux.
 
 Istanze di SQL Server in Linux possono partecipare a un tipo di replica.
 
@@ -62,6 +62,7 @@ Per [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] sono supportate le f
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] non supporta le funzionalità seguenti:
 
 * Sottoscrittori di aggiornamento immediato
+* Pubblicazione Oracle
 
 ## <a name="next-steps"></a>Passaggi successivi
 

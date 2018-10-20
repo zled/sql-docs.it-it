@@ -14,12 +14,12 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8ced7cfaef647fb8aaa93a477c69f1d690d0328
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9ed22ac35505515bfd1f4f1863bb55c59f70bef
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213451"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460596"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordinamento dei dati per le trasformazioni Unione e Merge Join
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]le trasformazioni Unione e Merge Join richiedono dati di input ordinati. I dati di input devono essere ordinati fisicamente ed è necessario impostare le opzioni di ordinamento sugli output e sulle colonne di output nell'origine o nella trasformazione a monte. Se le opzioni di ordinamento indicano che i dati sono ordinati, mentre in realtà non lo sono, l'operazione di Unione o Merge join restituisce risultati imprevisti.  
@@ -52,11 +52,11 @@ ms.locfileid: "48213451"
 -   La proprietà `IsSorted` dell'output che indica se i dati sono stati ordinati. Questa proprietà deve essere impostata su `True`.  
   
     > [!IMPORTANT]  
-    >  Impostazione del valore della `IsSorted` proprietà `True` non consente di ordinare i dati. Questa proprietà fornisce solo un hint ai componenti a valle in relazione all'ordinamento precedente dei dati.  
+    >  L'impostazione del valore della proprietà `IsSorted` su `True` non determina l'ordinamento dei dati. Questa proprietà fornisce solo un hint ai componenti a valle in relazione all'ordinamento precedente dei dati.  
   
--   Il `SortKeyPosition` proprietà delle colonne di output che indica se una colonna è ordinata, dell'ordinamento della colonna e la sequenza in cui vengono ordinati in più colonne. Questa proprietà deve essere impostata per ogni colonna di dati ordinati.  
+-   La proprietà `SortKeyPosition` delle colonne di output che indica se una colonna è ordinata, l'ordinamento della colonna e la sequenza di ordinamento di più colonne. Questa proprietà deve essere impostata per ogni colonna di dati ordinati.  
   
- Se si utilizza una trasformazione Ordinamento per ordinare i dati, entrambe le proprietà vengono impostate come richiesto dalla trasformazione Unione o Merge join, Vale a dire, la trasformazione Ordinamento imposta la `IsSorted` proprietà dell'output su `True`e imposta il `SortKeyPosition` le proprietà delle colonne di output.  
+ Se si utilizza una trasformazione Ordinamento per ordinare i dati, entrambe le proprietà vengono impostate come richiesto dalla trasformazione Unione o Merge join, ovvero, la trasformazione Ordinamento imposta la proprietà `IsSorted` dell'output su `True` e le proprietà `SortKeyPosition` delle colonne di output.  
   
  Tuttavia, se non si utilizza una trasformazione Ordinamento per ordinare i dati, è necessario impostare manualmente queste proprietà di ordinamento nell'origine o nella trasformazione a monte. Per impostare manualmente le proprietà di ordinamento nell'origine o nella trasformazione a monte, utilizzare la procedura seguente.  
   
@@ -75,11 +75,11 @@ ms.locfileid: "48213451"
 6.  Fare clic su  **\<nome componente > Output**e impostare il `IsSorted` proprietà `True`.  
   
     > [!NOTE]  
-    >  Se si imposta manualmente il `IsSorted` proprietà dell'output `True` e i dati non sono ordinati, alcuni potrebbero essere mancanti dei dati o danneggiati nella trasformazione unione o Merge Join quando si esegue il pacchetto.  
+    >  Se si imposta manualmente la proprietà `IsSorted` dell'output su `True` e se i dati non sono ordinati, alcuni dati potrebbero essere mancanti o danneggiati nella trasformazione Unione o Merge Join quando si esegue il pacchetto.  
   
 7.  Espandere **Colonne di output**.  
   
-8.  Scegliere la colonna che si desidera indicare come ordinata e impostare il `SortKeyPosition` proprietà su un valore intero diverso da zero attenendosi alle linee guida:  
+8.  Fare clic sulla colonna che si desidera indicare come ordinata e impostarne la proprietà `SortKeyPosition` su un valore intero diverso da zero attenendosi alle linee guida seguenti:  
   
     -   Il valore intero deve rappresentare una sequenza numerica che inizia con 1 e che ha incrementi di 1.  
   
@@ -93,13 +93,13 @@ ms.locfileid: "48213451"
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
-     Per questa istruzione, è necessario impostare il `SortKeyPosition` proprietà per ogni colonna come indicato di seguito:  
+     Per questa istruzione, impostare la proprietà `SortKeyPosition` per ogni colonna come segue:  
   
     -   Impostare la proprietà `SortKeyPosition` di ColumnA su 1. In questo modo viene indicato che ColumnA è la prima colonna da ordinare e che l'ordinamento deve essere crescente.  
   
     -   Impostare la proprietà `SortKeyPosition` di ColumnB su -2. In questo modo viene indicato che ColumnB è la seconda colonna da ordinare e che l'ordinamento deve essere decrescente.  
   
-    -   Impostare il `SortKeyPosition` proprietà di ColumnC su 3. In questo modo viene indicato che ColumnC è la terza colonna da ordinare e che l'ordinamento deve essere crescente.  
+    -   Impostare la proprietà `SortKeyPosition` di ColumnC su 3. In questo modo viene indicato che ColumnC è la terza colonna da ordinare e che l'ordinamento deve essere crescente.  
   
 9. Ripetere il passaggio 8 per ogni colonna ordinata.  
   
@@ -108,10 +108,10 @@ ms.locfileid: "48213451"
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Unione-trasformazione](merge-transformation.md)   
- [Trasformazione Merge Join](merge-join-transformation.md)   
+ [Trasformazione Unione](merge-transformation.md)   
+ [Trasformazione Merge join](merge-join-transformation.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)   
  [Percorsi in Integration Services](../integration-services-paths.md)   
- [Attività flusso di dati] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Attività Flusso di dati](../../control-flow/data-flow-task.md)  
   
   

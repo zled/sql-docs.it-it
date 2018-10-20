@@ -16,12 +16,12 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dde4eb098dd034bf136c9885d3da37305068b016
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed3c5436a8c3a922ea1a118714c1b429dcc9f286
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129791"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461076"
 ---
 # <a name="contained-databases"></a>Database indipendenti
   Un*database indipendente* è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre all'utente quattro modalità per isolare il database dall'istanza.  
@@ -34,7 +34,7 @@ ms.locfileid: "48129791"
   
 -   L'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di creare report (DMV, XEvents e così via) e agire in base alle informazioni di indipendenza.  
   
- Alcune funzionalità dei database parzialmente indipendenti, ad esempio l'archiviazione dei metadati nel database, si applicano a tutti i database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Alcuni vantaggi dei database parzialmente indipendenti, ad esempio l'autenticazione a livello di database e le regole di confronto del catalogo, devono essere abilitati per poter essere disponibili. Indipendenza parziale si abilita tramite le `CREATE DATABASE` e `ALTER DATABASE` istruzioni o utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni sull'abilitazione dell'indipendenza parziale del database, vedere [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md).  
+ Alcune funzionalità dei database parzialmente indipendenti, ad esempio l'archiviazione dei metadati nel database, si applicano a tutti i database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Alcuni vantaggi dei database parzialmente indipendenti, ad esempio l'autenticazione a livello di database e le regole di confronto del catalogo, devono essere abilitati per poter essere disponibili. L'indipendenza parziale si abilita tramite le istruzioni `CREATE DATABASE` e `ALTER DATABASE` o usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni sull'abilitazione dell'indipendenza parziale del database, vedere [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md).  
   
  In questo argomento sono contenute le sezioni seguenti.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48129791"
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>Vantaggi degli utenti di database indipendenti con AlwaysOn  
  Riducendo i valori equivalenti all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i database parzialmente indipendenti possono essere utili durante il failover quando si usano [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- La creazione di utenti indipendenti consente all'utente di connettersi direttamente al database indipendente. Si tratta di una funzionalità molto significativa in scenari a disponibilità elevata e di ripristino di emergenza, ad esempio in una soluzione AlwaysOn. Se gli utenti sono indipendenti, in caso di failover può essere possibile connettersi al database secondario senza creare account di accesso sull'istanza che ospita il database secondario. Questo rappresenta un vantaggio immediato. Per altre informazioni, vedere [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) e [prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;] ((.. /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ La creazione di utenti indipendenti consente all'utente di connettersi direttamente al database indipendente. Si tratta di una funzionalità molto significativa in scenari a disponibilità elevata e di ripristino di emergenza, ad esempio in una soluzione AlwaysOn. Se gli utenti sono indipendenti, in caso di failover può essere possibile connettersi al database secondario senza creare account di accesso sull'istanza che ospita il database secondario. Questo rappresenta un vantaggio immediato. Per altre informazioni, vedere [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) e [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="initial-database-development"></a>Sviluppo iniziale di database  
  Poiché è possibile che uno sviluppatore non conosca l'ambiente nel quale verrà distribuita un nuovo database, limitando gli impatti ambientali distribuiti al database sarà possibile ridurre il lavoro e le problematiche per lo sviluppatore. Nel modello non indipendente lo sviluppatore deve quindi considerare i possibili impatti ambientali sul nuovo database e programmare di conseguenza. Tuttavia, usando i database parzialmente indipendenti, gli sviluppatori possono rilevare l'impatto a livello di istanza sul database e le problematiche a livello di istanza che è necessario affrontare.  

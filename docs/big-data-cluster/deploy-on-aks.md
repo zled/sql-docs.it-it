@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: ee1faae6d43cbf2cc6c8a23086600241ad15e061
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877934"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460896"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>Configurare Azure Kubernetes Service per SQL Server 2019 CTP 2.0
 
@@ -22,6 +22,9 @@ In questo modo è possibile usare le competenze esistenti o disegnare su un cons
 
 Questo articolo descrive i passaggi per la distribuzione di Kubernetes nel servizio contenitore di AZURE tramite la CLI di Azure. Se non hai una sottoscrizione di Azure, creare un account gratuito prima di iniziare.
 
+> [!TIP] 
+> Per un esempio di script python che consente di distribuire cluster di big data sia servizio contenitore di AZURE e SQL Server, vedere [distribuire un cluster di big data in Azure Kubernetes Service (AKS) di SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+
 ## <a name="prerequisites"></a>Prerequisiti
 
 - Per un ambiente del servizio contenitore di AZURE, il requisito minimo di macchine Virtuali è almeno due macchine virtuali dell'agente, in aggiunta al master, di una dimensione minima [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Risorse minime necessarie per ogni macchina virtuale sono 4 CPU e 14 GB di memoria.
@@ -29,7 +32,7 @@ Questo articolo descrive i passaggi per la distribuzione di Kubernetes nel servi
    > [!NOTE]
    > Se si prevede di eseguire processi di big data o più applicazioni di Spark, è la dimensione minima [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), e le risorse minime necessarie per ogni macchina virtuale sono di 8 CPU e 32 GB di memoria.
 
-- In questa sezione è necessario che sia in esecuzione la CLI di Azure versione 2.0.4 o versioni successive. Se è necessario installare o eseguire l'aggiornamento, vedere [installare Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Eseguire `az --version` per trovare la versione, se necessario.
+- In questa sezione è necessario che sia in esecuzione la CLI di Azure versione 2.0.4 o versioni successive. Se è necessario installare o eseguire l'aggiornamento, vedere [installare Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Eseguire `az --version` per trovare la versione, se necessario.
 
 - Installare [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Cluster di Big Data di SQL Server richiede qualsiasi versione secondaria all'interno dell'intervallo di 1.10 versione per Kubernetes, per i server e client. Per installare una versione specifica nel client kubectl, vedere [installare kubectl binari tramite curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Per AKS dovrai usare `--kubernetes-version` parametro per specificare una versione diversa da quella predefinita. Si noti che l'intervallo di tempo versione CTP2.0, servizio contenitore di AZURE supporta solo le versioni 1.10.7 e 1.10.8. 
 
@@ -91,7 +94,7 @@ Un gruppo di risorse di Azure è un gruppo logico in Azure le risorse vengono di
 
 ## <a name="connect-to-the-cluster"></a>Connettersi al cluster
 
-1. Per configurare kubectl per la connessione al cluster Kubernetes, eseguire la [az aks get-credentials](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) comando. Questo passaggio Scarica credenziali e consente di configurare l'interfaccia della riga di comando per usarli kubectl.
+1. Per configurare kubectl per la connessione al cluster Kubernetes, eseguire la [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) comando. Questo passaggio Scarica credenziali e consente di configurare l'interfaccia della riga di comando per usarli kubectl.
 
    ```bash
    az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster

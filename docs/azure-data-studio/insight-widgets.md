@@ -4,18 +4,18 @@ description: Informazioni sui widget insight in Data Studio di Azure.
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
-ms.technology: ssops
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d838147a29fc83723ac97267f6c0a0a6ccf3cc90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d669b72aadb9fe1ea2ec61c2059a1d932ee52d4d
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038565"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356332"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gestire server e database con i widget di Insight in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -58,5 +58,5 @@ La query T-SQL e il relativo set di risultati determinano il comportamento del w
 
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
-- [Editor di query](tutorial-sql-editor.md)
+- [Editor query](tutorial-sql-editor.md)
 

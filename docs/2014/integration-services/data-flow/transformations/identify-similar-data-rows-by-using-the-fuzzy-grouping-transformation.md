@@ -16,12 +16,12 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfe08cf1c21a4187008bb80a1f742ba35da7e9ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c9538a492ae6f2da0c4a5adeceb86bd7985d539
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131761"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460286"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identificazione di righe di dati simili tramite la trasformazione Raggruppamento fuzzy
   È possibile aggiungere e configurare una trasformazione Raggruppamento fuzzy solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine.  
@@ -81,9 +81,9 @@ ms.locfileid: "48131761"
 20. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Trasformazione Raggruppamento fuzzy](fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)   
  [Percorsi in Integration Services](../integration-services-paths.md)   
- [Attività flusso di dati] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Attività Flusso di dati](../../control-flow/data-flow-task.md)  
   
   

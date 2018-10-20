@@ -15,12 +15,12 @@ ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1aedb460d51eb79325d6a45650eb4964a10618ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d16fc8f7911e358a5b46610d1c03d7304b514fb7
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184731"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460336"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Divisione di un set di dati tramite la trasformazione Suddivisione condizionale
   È possibile aggiungere e configurare una trasformazione Suddivisione condizionale solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine.  
@@ -61,11 +61,11 @@ ms.locfileid: "48184731"
 12. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Trasformazione Suddivisione condizionale](conditional-split-transformation.md)   
+ [Conditional Split Transformation](conditional-split-transformation.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)   
  [Percorsi in Integration Services](../integration-services-paths.md)   
  [Tipi di dati di Integration Services](../integration-services-data-types.md)   
- [Attività flusso di dati] ((.. /.. /Control-Flow/Data-Flow-Task.MD)   
+ [Attività Flusso di dati](../../control-flow/data-flow-task.md)   
  [Espressioni di Integration Services &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md)  
   
   

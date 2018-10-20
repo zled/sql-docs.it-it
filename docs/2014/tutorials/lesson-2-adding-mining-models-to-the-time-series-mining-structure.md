@@ -11,18 +11,18 @@ ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8efde3304c2aa0ff51936754e6cba255d3dce4de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b58723b20802619baf9489f6dd0c6302805301b
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158431"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461947"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Time Series
   In questa lezione si aggiungerà un nuovo modello di data mining alla struttura di data mining appena creato nel [lezione 1: creazione di un modello di Data Mining Time Series e struttura di Data Mining](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>Istruzione ALTER MINING STRUCTURE  
- Per aggiungere un nuovo modello di data mining a una struttura di data mining esistente, viene utilizzata la [ALTER MINING STRUCTURE &#40;DMX&#41;] (istruzione (~/dmx/alter-mining-structure-dmx.md). Il codice nell'istruzione può essere suddiviso nelle parti seguenti:  
+ Per aggiungere un nuovo modello di data mining a una struttura di data mining esistente, viene utilizzata la [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) istruzione. Il codice nell'istruzione può essere suddiviso nelle parti seguenti:  
   
 -   Identificazione della struttura di data mining  
   

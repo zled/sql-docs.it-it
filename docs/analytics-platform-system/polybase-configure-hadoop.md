@@ -1,5 +1,5 @@
 ---
-title: Configurare PolyBase per accedere a dati esterni in Hadoop | Microsoft Docs
+title: Configurare PolyBase per l'accesso a dati esterni in Hadoop | Microsoft Docs
 description: Viene illustrato come configurare PolyBase in Parallel Data Warehouse per la connessione a esterna Hadoop.
 author: mzaman1
 manager: craigg
@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d87ba02342948d140afb68c2d9d13a2aef9464eb
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: 89ce9402540c21a9f9eedbba4f488ea1c3350956
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450353"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460878"
 ---
-# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurare PolyBase per accedere a dati esterni in Hadoop
+# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurare PolyBase per l'accesso a dati esterni in Hadoop
 
 L'articolo illustra come usare PolyBase in un'appliance APS per eseguire query sui dati esterni in Hadoop.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-PolyBase supporta due provider di Hadoop, Hortonworks Data Platform (HDP) e Cloudera Distributed Hadoop (CDH). Hadoop segue il modello "Major.Minor.Version" per le nuove versioni e sono supportate tutte le versioni all'interno di una versione principale e secondaria supportata. Sono supportati i seguenti provider di Hadoop:
+PolyBase supporta due provider di Hadoop, Hortonworks Data Platform (HDP) e Cloudera Distributed Hadoop (CDH). Hadoop segue il modello "principale.secondaria.versione" per le nuove versioni e sono supportate tutte le versioni all'interno di una versione principale e secondaria supportata. Sono supportati i provider Hadoop seguenti:
  - Hortonworks HDP 1.3 su Linux/Windows Server  
  - Hortonworks HDP 2.1 - 2.6 su Linux
  - Hortonworks HDP 2.1 - 2.3 su Windows Server  
@@ -33,7 +33,7 @@ PolyBase supporta due provider di Hadoop, Hortonworks Data Platform (HDP) e Clou
 
 Innanzitutto, configurare i punti di accesso per l'uso di specifici provider di Hadoop.
 
-1. Eseguire [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) con 'hadoop connectivity' e impostare un valore appropriato per il provider. Per trovare il valore per il provider, vedere [configurazione della connettività di PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md). 
+1. Eseguire [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) con 'hadoop connectivity' e impostare un valore appropriato per il provider. Per trovare il valore per il provider, vedere [Configurazione della connettività di PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md). 
 
    ```sql  
    -- Values map to various external data sources.  
@@ -48,9 +48,9 @@ Innanzitutto, configurare i punti di accesso per l'uso di specifici provider di 
 
 2. Riavviare area APS usando pagina stato del servizio sul [Appliance Configuration Manager](launch-the-configuration-manager.md).
   
-## <a id="pushdown"></a> Abilitare il pushdown del calcolo  
+## <a id="pushdown"></a> Abilitare il calcolo con distribuzione  
 
-Per migliorare le prestazioni delle query, abilitare il calcolo della distribuzione per il cluster Hadoop:  
+Per migliorare le prestazioni delle query, abilitare il calcolo con distribuzione nel cluster Hadoop:  
   
 1. Aprire una connessione desktop remoto al nodo di controllo di PDW.
 
@@ -68,7 +68,7 @@ Per migliorare le prestazioni delle query, abilitare il calcolo della distribuzi
 
 ## <a name="configure-an-external-table"></a>Configurare una tabella esterna
 
-Per eseguire query sui dati nell'origine dati Hadoop, è necessario definire una tabella esterna da utilizzare nella query Transact-SQL. I passaggi seguenti descrivono come configurare la tabella esterna.
+Per eseguire query sui dati nell'origine dati Hadoop, è necessario definire una tabella esterna da usare in query Transact-SQL. Le procedure seguenti descrivono come configurare la tabella esterna.
 
 1. Creare una chiave master nel database. È necessario crittografare il segreto della credenziale.
 
@@ -76,7 +76,7 @@ Per eseguire query sui dati nell'origine dati Hadoop, è necessario definire una
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
 
-2. Creare una credenziale con ambito database per i cluster Hadoop protetto con Kerberos.
+2. Creare credenziali con ambito database per i cluster Hadoop con protezione Kerberos.
 
    ```sql
    -- IDENTITY: the Kerberos user name.  
@@ -126,7 +126,7 @@ Per eseguire query sui dati nell'origine dati Hadoop, è necessario definire una
    );  
    ```
 
-6. Creare statistiche su una tabella esterna.
+6. Creare statistiche per una tabella esterna.
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -138,9 +138,9 @@ PolyBase è adatto per assolvere a una triplice funzione:
   
 - Query ad hoc su tabelle esterne.  
 - Importazione di dati.  
-- Esportazione dei dati.  
+- Esportazione di dati.  
 
-Le query seguenti viene fornito l'esempio con i dati dei sensori di automobili fittizie.
+Le query seguenti forniscono esempi con dati fittizi di sensori di auto.
 
 ### <a name="ad-hoc-queries"></a>Query ad hoc  
 
@@ -200,7 +200,5 @@ In SQL Server Data Tools, le tabelle esterne vengono visualizzate in una cartell
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Esplorare altri modi per configurare PolyBase negli articoli seguenti:
-
-[PolyBase configurazione e sicurezza per Hadoop ](../relational-databases/polybase/polybase-configuration.md).  
+Per altre informazioni sulle PoliyBase, vedere la [What ' s PolyBase?](../relational-databases/polybase/polybase-guide.md). 
  
