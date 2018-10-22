@@ -15,19 +15,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d704ef10542ab2ef4b9ef2669dc49d8beb2b5226
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43458e87144b5903a0d6436d5596bb5c3585d928
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687809"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383322"
 ---
 # <a name="install-sql-server"></a>Installare SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
- > Per contenuti relativi alle versioni precedenti di SQL Server, vedere [Installare SQL Server 2014](install-sql-server.md).
-
  A partire da [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] è disponibile solo come applicazione a 64 bit. Di seguito sono riportati importanti dettagli su come ottenere SQL Server e su come eseguire l'installazione.
 
 ## <a name="installation-details"></a>Informazioni sull'installazione

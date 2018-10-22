@@ -21,16 +21,14 @@ helpviewer_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b4424cfb5311ee75bc6ea184b1fb25d0246b03b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b74a33bb9b81c930075b87fa0703014b079909f
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724209"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383286"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
-
- > Per contenuti relativi alle versioni precedenti di SQL Server, vedere [SQL Server Integration Services](sql-server-integration-services.md).
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è una piattaforma per la creazione di soluzioni di integrazione e trasformazione di dati a livello aziendale. Usare [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per risolvere problemi aziendali complessi, tramite operazioni di copia o download di file, caricamento di data warehouse, pulizia dei dati e data mining e gestione di oggetti e dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 

@@ -20,17 +20,16 @@ ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5dd4d957386cc352bf218e72204f91e937d9605d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1aa8edf745211beb04a52d3d7c3b7f8363d7988
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668689"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383536"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
- > Per contenuti relativi alle versioni precedenti di SQL Server, vedere [FOR XML (SQL Server)](for-xml-sql-server.md).
-
+ 
   Una query SELECT restituisce i risultati sotto forma di set di righe. È possibile recuperare facoltativamente i risultati di una query SQL come codice XML specificando la clausola FOR XML nella query. È possibile utilizzare la clausola FOR XML nelle query di livello principale e nelle sottoquery. La clausola FOR XML di livello principale può essere utilizzata solo nell'istruzione SELECT. Nelle sottoquery, è possibile utilizzare FOR XML nelle istruzioni INSERT, UPDATE e DELETE. La clausola può inoltre essere utilizzata nelle istruzioni di assegnazione.  
   
  In una clausola FOR XML, è necessario specificare una delle modalità seguenti:  
