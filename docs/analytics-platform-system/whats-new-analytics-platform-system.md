@@ -9,23 +9,23 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c71e8f433a49d4338025dcf4f3383ce94e4fe226
-ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
+ms.openlocfilehash: bc9b0e8b89fb7fd6e507e9e615190fef21a94466
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289312"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461106"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quali sono le novità nel sistema di piattaforma Analitica, di un data warehouse di tipo scale-out MPP
 Vedere Novità gli ultimi aggiornamenti di Appliance per Microsoft® Analitica piattaforma di strumenti analitici. I punti di accesso è un'appliance di scalabilità orizzontale in locale che ospita MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 <a name="h2-aps-cu7.1"></a>
-## <a name="aps-cu71"></a>CU7.1 APS
+## <a name="aps-cu71"></a>APS CU7.1
 Data di rilascio - luglio 2018
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>Comandi DBCC non usano gli slot di concorrenza (modifica del comportamento)
-I punti di accesso supporta un subset T-SQL [comandi DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) , ad esempio [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). In precedenza, questi comandi richiederebbe una [slot di concorrenza](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) riducendo il numero di caricamenti/le query utente che potrebbero essere eseguite. Il `DBCC` comandi vengono ora eseguiti in una coda locale che non usano uno slot di concorrenza utente miglioramento complessivo delle prestazioni di esecuzione di query.
+I punti di accesso supporta un subset T-SQL [comandi DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) , ad esempio [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). In precedenza, questi comandi richiederebbe una [slot di concorrenza](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) riducendo il numero di caricamenti/le query utente che potrebbero essere eseguite. Il `DBCC` comandi vengono ora eseguiti in una coda locale che non usano uno slot di concorrenza utente miglioramento complessivo delle prestazioni di esecuzione di query.
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Sostituisce alcune chiamate di metadati con oggetti del catalogo
 Utilizzando oggetti del catalogo per le chiamate di metadati anziché utilizzare SMO è stato illustrato il miglioramento delle prestazioni nella piattaforma di strumenti analitici. A partire da CU7.1, alcune di queste chiamate metadati ora di usare oggetti del catalogo per impostazione predefinita. Questo comportamento può essere disattivato dagli [opzione della funzionalità](appliance-feature-switch.md) se i clienti che usano query sui metadati eventuali problemi.
@@ -40,7 +40,7 @@ Utilizzando oggetti del catalogo per le chiamate di metadati anziché utilizzare
 
 
 <a name="h2-aps-au7"></a>
-## <a name="aps-au7"></a>AU7 APS
+## <a name="aps-au7"></a>APS AU7
 Data di rilascio: maggio 2018
 
 APS 2016 è un prerequisito per l'aggiornamento a AU7. Di seguito sono nuove funzionalità di piattaforma di strumenti analitici AU7:
@@ -85,7 +85,7 @@ APS AU6 supporta questi miglioramenti di compatibilità di T-SQL.  Questi elemen
 
 **Tipi di dati**
 
-- [Varchar (max)][], [nvarchar (max)][] e [varbinary (max)][]. Questi tipi di dati LOB hanno una dimensione massima di 2 GB. Per caricare questi oggetti di uso [bcp Utility][]. Polybase e dwloader non attualmente supportano questi tipi di dati. 
+- [Varchar (max)][], [nvarchar (max)][] e [varbinary (max)][]. Questi tipi di dati LOB hanno una dimensione massima di 2 GB. Per caricare questi oggetti di uso [utilità bcp][]. Polybase e dwloader non attualmente supportano questi tipi di dati. 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][] e tipi di dati decimale.
@@ -155,7 +155,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [Tabelle estese in larghezza]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
-[bcp Utility]:/sql/tools/bcp-utility
+[Utilità bcp]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
 [NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [ROWS o RANGE]:/sql/t-sql/queries/select-over-clause-transact-sql
