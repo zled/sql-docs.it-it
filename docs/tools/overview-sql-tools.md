@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1ff16d7a8b2253fc793db00cb46282539415ff86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 359144187de1b1a780ba3d866f4a4881c2444442
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767369"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643939"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Gli strumenti di SQL e le utilità per SQL Server, Database SQL di Azure e Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Di seguito sono gli strumenti dell'interfaccia utente principale di con interfac
 | Strumento | Descrizione | Viene eseguito in |
 |:--|:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] è uno strumento gratuito, leggero, per la gestione di database ogni volta che sono in esecuzione. Questa versione di anteprima fornisce funzionalità di gestione di database, tra cui un editor Transact-SQL esteso e personalizzabile approfondite lo stato operativo dei database. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] viene eseguito in Windows, macOS e Linux**.|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Usare SQL Server Management Studio (SSMS) per eseguire una query, progettare e gestire SQL Server, Database SQL di Azure e Azure SQL Data Warehouse. | **SQL Server Management Studio viene eseguito in Windows**.|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Usare SQL Server Management Studio (SSMS) per eseguire una query, progettare e gestire SQL Server, Database SQL di Azure e Azure SQL Data Warehouse. | **SSMS viene eseguito in Windows**.|
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Trasforma Visual Studio in un ambiente di sviluppo avanzato per SQL Server, Database SQL di Azure e Azure SQL Data Warehouse.| **SSDT viene eseguito in Windows**.|
 | [Visual Studio Code](https://code.visualstudio.com/)| Dopo aver installato Visual Studio Code, installare il [estensione mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) per lo sviluppo di Microsoft SQL Server, Database SQL di Azure e SQL Data Warehouse.| **Visual Studio Code viene eseguito in Windows, macOS e Linux**.|
 
@@ -72,6 +72,7 @@ Di seguito sono i principali strumenti da riga di comando:
 |:--|:--|
 | [Gestione configurazione](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Utilizzare Gestione configurazione SQL Server per configurare servizi di SQL Server e configurare la connettività di rete. Configuration Manager viene eseguito in Windows|
 | [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | Usare SQL Server Migration Assistant per automatizzare la migrazione di database a SQL Server da Microsoft Access, DB2, MySQL, Oracle e Sybase.|
+| [Database Experimentation Assistant](../dea/database-experimentation-assistant-overview.md) | Usare Database sperimentazione Assistant per valutare una versione di destinazione di SQL per un determinato carico di lavoro. |
 | [Riesecuzione distribuita](../tools/distributed-replay/install-distributed-replay-overview.md) | Usare la funzionalità riesecuzione distribuita che consentono di valutare l'impatto dei futuri aggiornamenti di SQL Server. Inoltre, utilizzare Distributed Replay per valutare l'impatto dell'hardware e aggiornamenti del sistema operativo e ottimizzazione di SQL Server. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | L'utilità ssbdiagnose segnala i problemi in conversazioni di Service Broker o la configurazione dei servizi di Service Broker. |
 
