@@ -28,7 +28,7 @@ ms.locfileid: "48084521"
 > [!NOTE]  
 >  I componenti di origine dispongono di output e di nessun input, mentre i componenti di destinazione dispongono di input e di nessun output. Le trasformazioni dispongono sia di input che di output.  
   
- Per ulteriori informazioni sul componente Script, vedere [Script Component](data-flow/transformations/script-component.md) e [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per informazioni sulla programmazione del componente Script, vedere [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Per altre informazioni sul componente Script, vedere [componente Script](data-flow/transformations/script-component.md) e [configurazione del componente Script nell'Editor del componente di Script](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per una panoramica sulla programmazione del componente Script, vedere [Estensione del flusso di dati con il componente script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Opzioni  
  **Inputs and outputs**  

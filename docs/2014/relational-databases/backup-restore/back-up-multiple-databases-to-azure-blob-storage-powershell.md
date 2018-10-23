@@ -30,7 +30,7 @@ ms.locfileid: "48064291"
  Questo cmdlet viene utilizzato per ripristinare un database.  
   
  New-SqlCredential  
- Questo cmdlet viene utilizzato per creare le credenziali SQL da utilizzare per il backup di SQL Server nel servizio di archiviazione di Windows Azure. Per ulteriori informazioni sulle credenziali e sul relativo utilizzo nelle operazioni di backup e ripristino di SQL Server, vedere [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Questo cmdlet viene utilizzato per creare le credenziali SQL da utilizzare per il backup di SQL Server nel servizio di archiviazione di Windows Azure. Per ulteriori informazioni sulle credenziali e sul relativo utilizzo nelle operazioni di backup e ripristino di SQL Server, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  Get-SqlCredential  
  Questo cmdlet viene utilizzato per recuperare l'oggetto Credential e le relative proprietà.  
@@ -265,7 +265,7 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [Backup e ripristino di SQL Server nel servizio Archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   
