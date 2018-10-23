@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: a6507c72a325871fa4ec2e075a00dc458ac64ba3
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100542"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384176"
 ---
 # <a name="database-engine-errors"></a>Errori del motore di database
 La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il testo del messaggio di errore dalla vista del catalogo sys.messages. 
@@ -1290,6 +1290,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   2597    |   10  |   no  |   Il flag di traccia %d verrà ignorato. Non è valido oppure è un file di traccia che è possibile specificare solo durante l'avvio del server.    |
 |   2599    |   16  |   no  |   Impossibile passare alla modalità text in row nella tabella "%.*ls".  |
 |   2601    |   14  |   no  |   Non è possibile inserire la riga di chiave duplicata nell'oggetto '%.*ls' con indice univoco '%.* ls'.    |
+|   2628    |   16  |   no  |   I dati stringa o binari verranno troncati nella tabella '%.*ls', colonna '%.* ls'. Valore troncato: '%. *ls'.|
 |   2627    |   14  |   no  |   Violazione del vincolo %ls '%.*ls'. Non è possibile inserire la chiave duplicata nell'oggetto '%.* ls'. |
 |   2701    |   10  |   no  |   Nome di database '%.*ls' ignorato, oggetto di riferimento in tempdb.    |
 |   2702    |   16  |   no  |   Il database '%.*ls' non esiste.    |

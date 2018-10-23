@@ -30,17 +30,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 94a3adf850c633f3ba825da86a70ff560fb1edf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8455d2c3681b78fe892e91d20857ee2ad7a7dfb2
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600529"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383846"
 ---
 # <a name="bcp-utility"></a>Utilità bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > Per contenuti relativi alle versioni precedenti di SQL Server, vedere [Utilità bcp](bcp-utility.md).
 
  > Per la versione più recente dell'utilità bcp, vedere [14.0 utilità della riga di comando di Microsoft per SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
@@ -133,7 +131,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-b** _**batch\_size**_<a name="b"></a>  
  Specifica il numero di righe per ogni batch di dati importati. Ogni batch viene importato e registrato come transazione distinta che importa l'intero batch prima del commit. Per impostazione predefinita, tutte le righe incluse nel file di dati vengono importate come un unico batch. Per distribuire le righe tra più batch, specificare un valore di *batch_size* inferiore al numero di righe presenti nel file di dati. Se la transazione per un batch non viene completata correttamente, viene eseguito il rollback solo degli inserimenti dal batch corrente. I batch già importati dalle transazioni di cui è stato eseguito il commit non sono influenzati in caso di esito negativo.  
   
- Non usare questa opzione in combinazione con l'opzione **-h "** ROWS_PER_BATCH **=**_bb_**"**.  
+ Non usare questa opzione in combinazione con l'opzione **-h "** ROWS_PER_BATCH **=**_bb_**"** .  
  
  **-c**<a name="c"></a>  
  Esegue l'operazione utilizzando un tipo di dati carattere. Questa opzione non determina la visualizzazione di una richiesta per ogni campo, ma usa **char** come tipo di archiviazione, senza prefissi e con il carattere di tabulazione ( **\t** ) come separatore di campo e il carattere di nuova riga ( **\r\n** ) come carattere di terminazione della riga. **-c** non è compatibile con **-w**.  
@@ -528,7 +526,7 @@ bcp -v
 ```
   
 ### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. Copia delle righe di tabella in un file di dati (con connessione trusted)  
-Gli esempi seguenti illustrano l'uso dell'opzione **out** nella tabella `WideWorldImporters.Warehouse.StockItemTransactions`.
+Gli esempi seguenti illustrano l'uso dell'opzione **out** nella tabella `WideWorldImporters.Warehouse.StockItemTransactions` .
 
 - **Base**  
 Questo esempio crea un file di dati denominato `StockItemTransactions_character.bcp` in cui vengono copiati i dati della tabella usando il formato **carattere** .

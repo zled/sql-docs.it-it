@@ -19,17 +19,15 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f868f562ead9ff0d4b9dfa895624a02d018da9cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac89fa10f34d8c6f4d06c26a3be063cf00fcad2a
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827689"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383786"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Transparent Data Encryption (TDE)](transparent-data-encryption-tde.md).
 
   *Transparent Data Encryption* (TDE) consente di crittografare file di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]e [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] con un'operazione nota come crittografia dei dati inattivi. Per proteggere il database è possibile adottare alcune accortezze, tra cui la progettazione di un sistema sicuro, la crittografia dei dati riservati e la compilazione di un firewall attorno ai server di database. Tuttavia, nel caso in cui i supporti fisici (ad esempio unità o nastri di backup) venissero rubati, un malintenzionato potrebbe ripristinare o collegare il database e accedere ai dati. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
   
@@ -53,7 +51,7 @@ ms.locfileid: "47827689"
   
  **Informazioni applicabili a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- Quando si usa TDE con [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 il certificato a livello di server archiviato nel database master viene creato automaticamente da [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Per spostare un database TDE nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] , è necessario decrittografare il database, spostarlo e quindi abilitare nuovamente TDE nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]di destinazione. Per istruzioni dettagliate su TDE in [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], vedere [Transparent Data Encryption con il database SQL di Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
+ Quando si usa TDE con [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 il certificato a livello di server archiviato nel database master viene creato automaticamente da [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Per spostare un database TDE nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] , è necessario decrittografare il database, spostarlo e quindi abilitare nuovamente TDE nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]di destinazione. Per istruzioni dettagliate su TDE nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], vedere [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
   
  **Informazioni applicabili a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
@@ -118,7 +116,7 @@ GO
 |[CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)|Consente di creare una chiave usata per crittografare un database.|  
 |[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Consente di modificare la chiave usata per crittografare un database.|  
 |[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Consente di rimuovere la chiave usata per crittografare un database.|  
-|[Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql-set-options.md)|Descrive l'opzione **ALTER DATABASE** , usata per abilitare TDE.|  
+|[Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql-set-options.md)|Descrive l'opzione **ALTER DATABASE** , usata per abilitare TDE.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Viste del catalogo e viste a gestione dinamica  
  Nella tabella seguente vengono illustrate le viste del catalogo e le viste a gestione dinamica di TDE.  

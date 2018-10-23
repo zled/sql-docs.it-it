@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc1fdb499855be399f0d2dc77b44eae452615b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 803b1a72edb5a6c0a951eb9d199a4d7ff27526fe
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649376"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460942"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -144,8 +144,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE consente una o più definizioni di colonna. Sia CREATE EXTERNAL TABLE che CREATE TABLE usano la stessa sintassi per definire una colonna. Un'eccezione è che non è possibile usare DEFAULT CONSTRAINT per le tabelle esterne. Per informazioni dettagliate sulle definizioni di colonna e i relativi tipi di dati, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [CREATE TABLE (database SQL di Azure)](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
- Le definizioni di colonna, inclusi i tipi di dati e il numero di colonne, devono corrispondere ai dati nei file esterni. In caso di mancata corrispondenza, le righe di file verranno rifiutate quando si eseguono query sui dati effettivi. Per altre informazioni su come eseguire il mapping di tipi di dati per origini dati esterne diverse, vedere [Mapping dei tipi con PolyBase](../../relational-databases/polybase/polybase-type-mapping.md).  
-  
+ Le definizioni di colonna, inclusi i tipi di dati e il numero di colonne, devono corrispondere ai dati nei file esterni. In caso di mancata corrispondenza, le righe di file verranno rifiutate quando si eseguono query sui dati effettivi.  
   
  LOCATION =  '*folder_or_filepath*'  
  Specifica la cartella o il percorso e il nome del file per i dati effettivi in Hadoop o nell'archiviazione BLOB di Azure. Il percorso inizia dalla directory radice, ovvero la posizione dei dati specificata nell'origine dati esterna.  

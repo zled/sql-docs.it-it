@@ -41,16 +41,15 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3bd7f88349097cd4308a962786d407c798ec77c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf944c001534a6b1dec008498122e5d020e1a0c1
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802299"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383826"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Avviare, arrestare, sospendere, riprendere, riavviare i servizi SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Per i contenuti relativi alle versioni precedenti di SQL Server, vedere [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](https://msdn.microsoft.com/en-US/library/hh403394(SQL.120).aspx).
 
   Questo argomento illustra come avviare, arrestare, sospendere, riprendere o riavviare [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser usando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ,  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], i comandi **net** da un prompt dei comandi, [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
   
@@ -121,7 +120,7 @@ ms.locfileid: "47802299"
 ####  <a name="Permissions"></a> Permissions  
  Per impostazione predefinita, solo i membri del gruppo di amministratori locale possono avviare, arrestare, mettere in pausa, riprendere o riavviare un servizio. Per concedere a utenti non amministratori la possibilità di gestire servizi, vedere [Concedere agli utenti i privilegi per gestire i servizi in Windows Server 2003](http://support.microsoft.com/kb/325349). Il processo è analogo ad altre versioni di Windows.  
   
- L'arresto del [!INCLUDE[ssDE](../../includes/ssde-md.md)] con il comando [!INCLUDE[tsql](../../includes/tsql-md.md)]SHUTDOWN**di** richiede l'appartenenza ai ruoli predefiniti del server **sysadmin** o **serveradmin** e non è trasferibile.  
+ L'arresto del [!INCLUDE[ssDE](../../includes/ssde-md.md)] con il comando [!INCLUDE[tsql](../../includes/tsql-md.md)]SHUTDOWN **di** richiede l'appartenenza ai ruoli predefiniti del server **sysadmin** o **serveradmin** e non è trasferibile.  
   
 ##  <a name="SSCMProcedure"></a> Utilizzo di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
