@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7b598d4fe860c0d0eb1cb95730bb483be5470a
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 6208a06f94b84fb145cd3fa1c4f2eef0e428f915
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252108"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461086"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -326,7 +326,7 @@ Solo l'account di accesso dell'entità di livello server (creato dal processo di
 Una volta creato, un account di accesso può connettersi al database SQL ma ha solo le autorizzazioni concesse al ruolo **public**. Provare a eseguire alcune delle attività seguenti. 
   
 - Per connettersi a un database, creare un utente del database per accedere al database stesso. Per altre informazioni, vedere [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
-- Per concedere le autorizzazioni a un utente in un database, usare l'istruzione **ALTER SERVER ROLE** … **ADD MEMBER** per aggiungere l'utente a uno dei ruoli predefiniti del database o a un ruolo personalizzato o concedere le autorizzazioni all'utente direttamente tramite l'istruzione [GRANT]((../../t-sql/statements/grant-transact-sql.md). Per altre informazioni, vedere [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) (Ruoli non amministrativi), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles, e [GRANT](grant-transact-sql.md).
+- Per concedere le autorizzazioni a un utente in un database, usare l'istruzione **ALTER SERVER ROLE** … **ADD MEMBER** per aggiungere l'utente a uno dei ruoli predefiniti del database o a un ruolo personalizzato o concedere le autorizzazioni all'utente direttamente tramite l'istruzione [GRANT](../../t-sql/statements/grant-transact-sql.md). Per altre informazioni, vedere [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) (Ruoli non amministrativi), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles, e [GRANT](grant-transact-sql.md).
 - Per concedere autorizzazioni a livello di server, creare un utente del database nel database master e usare l'istruzione **ALTER SERVER ROLE** … **ADD MEMBER** per aggiungere l'utente a uno dei ruoli di amministrazione del server. Per altre informazioni, vedere [Ruoli a livello di server](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e [Ruoli del server](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 - Usare l'istruzione **GRANT** per concedere le autorizzazioni a livello di server al nuovo account di accesso o a un ruolo in cui esso è contenuto. Per altre informazioni, vedere [GRANT](../../t-sql/statements/grant-transact-sql.md).
   
@@ -444,7 +444,7 @@ Solo l'account di accesso dell'entità di livello server (creato dal processo di
 Una volta creato, un account di accesso può connettersi al database SQL ma ha solo le autorizzazioni concesse al ruolo **public**. Provare a eseguire alcune delle attività seguenti. 
   
 - Per connettersi a un database, creare un utente del database per accedere al database stesso. Per altre informazioni, vedere [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
-- Per concedere le autorizzazioni a un utente in un database, usare l'istruzione **ALTER SERVER ROLE** … **ADD MEMBER** per aggiungere l'utente a uno dei ruoli predefiniti del database o a un ruolo personalizzato o concedere le autorizzazioni all'utente direttamente tramite l'istruzione [GRANT]((../../t-sql/statements/grant-transact-sql.md). Per altre informazioni, vedere [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) (Ruoli non amministrativi), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles, e [GRANT](grant-transact-sql.md).
+- Per concedere le autorizzazioni a un utente in un database, usare l'istruzione **ALTER SERVER ROLE** … **ADD MEMBER** per aggiungere l'utente a uno dei ruoli predefiniti del database o a un ruolo personalizzato o concedere le autorizzazioni all'utente direttamente tramite l'istruzione [GRANT](../../t-sql/statements/grant-transact-sql.md). Per altre informazioni, vedere [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) (Ruoli non amministrativi), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles, e [GRANT](grant-transact-sql.md).
 - Per concedere autorizzazioni a livello di server, creare un utente del database nel database master e usare l'istruzione **ALTER SERVER ROLE** … **ADD MEMBER** per aggiungere l'utente a uno dei ruoli di amministrazione del server. Per altre informazioni, vedere [Ruoli a livello di server](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e [Ruoli del server](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 - Usare l'istruzione **GRANT** per concedere le autorizzazioni a livello di server al nuovo account di accesso o a un ruolo in cui esso è contenuto. Per altre informazioni, vedere [GRANT](../../t-sql/statements/grant-transact-sql.md).
   
