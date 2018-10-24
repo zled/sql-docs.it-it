@@ -51,17 +51,15 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e8f10e1a42df80b66754bd8544fc560713cb90d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0093ef6c277198953a93c8f8f7ba21c17af3ebd
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694989"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383806"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurare account di servizio e autorizzazioni di Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Per informazioni relative alle versioni precedenti di SQL Server, vedere [Configurare account di servizio e autorizzazioni di Windows](configure-windows-service-accounts-and-permissions.md).
-
 
   Ogni servizio in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rappresenta un processo o un set di processi destinato a gestire l'autenticazione delle operazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Windows. Nel presente argomento viene fornita la descrizione della configurazione predefinita dei servizi disponibili in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e delle opzioni di configurazione per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile impostare durante e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo argomento offre informazioni dettagliate sugli account di servizio destinate agli utenti avanzati.  
   
@@ -544,7 +542,7 @@ In tutte le installazioni, il programma di installazione di [!INCLUDE[ssNoVersio
 ###  <a name="SSAS"></a> Provisioning di SSAS  
  I requisiti dell'account del servizio[!INCLUDE[ssAS](../../includes/ssas-md.md)] variano a seconda della modalità di distribuzione del server. Se si installa [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà richiesto di configurare il servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da eseguire con un account di dominio. Gli account di dominio sono necessari per supportare la funzionalità dell'account gestito compilato in SharePoint. Per questo motivo, il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non fornisce un account del servizio predefinito, ad esempio un account virtuale, per un'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Per altre informazioni sul provisioning di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, vedere [Configurare gli account del servizio PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md).  
   
- Per tutte le altre installazioni autonome di [!INCLUDE[ssAS](../../includes/ssas-md.md)] , è possibile effettuare il provisioning del servizio da eseguire con un account di dominio, un account di sistema predefinito, un account gestito o un account virtuale. Per altre informazioni sul provisioning degli account, vedere [Configurare gli account del servizio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  
+ Per tutte le altre installazioni autonome di [!INCLUDE[ssAS](../../includes/ssas-md.md)], è possibile effettuare il provisioning del servizio da eseguire con un account di dominio, un account di sistema predefinito, un account gestito o un account virtuale. Per altre informazioni sul provisioning degli account, vedere [Configurare gli account del servizio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  
   
  Per le installazioni cluster, è necessario specificare un account di dominio o un account di sistema predefinito. Per i cluster di failover di [!INCLUDE[ssAS](../../includes/ssas-md.md)] non sono supportati account gestiti, né account virtuali.  
   

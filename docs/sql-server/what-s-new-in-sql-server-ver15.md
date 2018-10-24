@@ -1,7 +1,7 @@
 ---
 title: Novità di SQL Server 2019 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 09/27/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology:
@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 68a872164528bec49b0342f603107fb86e31fe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 015a6d65f1d225ab5a8752352d41fd2201f871b5
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678269"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461116"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novità di SQL Server 2019
 
@@ -233,7 +233,7 @@ Per altre informazioni, vedere [Individuazione dati e classificazione SQL](../re
 Anche il [controllo](../relational-databases/security/auditing/sql-server-audit-database-engine.md) è stato migliorato e il log di controllo ora include un nuovo campo denominato `data_sensitivity_information`, che registra le classificazioni (etichette punteggio) di riservatezza dei dati effettivi restituiti dalla query. Per dettagli ed esempi vedere [ADD SENSITIVITY CLASSIFICATION](../t-sql/statements/add-sensitivity-classification-transact-sql.md).
 
 >[!NOTE]
->Non sono state apportate modifiche alle modalità di abilitazione del controllo. È stato aggiunto ai record di controllo un nuovo campo `data_sensitivity_information`, che registra le classificazioni (etichette punteggio) di riservatezza dei dati effettivi restituiti dalla query. Vedere [Controllo dell'accesso ai dati sensibili](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
+>Non sono state apportate modifiche alle modalità di abilitazione del controllo. È stato aggiunto ai record di controllo un nuovo campo `data_sensitivity_information`, che registra le classificazioni (etichette punteggio) di riservatezza dei dati effettivi restituiti dalla query. Vedere [Controllo dell'accesso ai dati sensibili](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
 
 ### <a name="expanded-support-for-persistent-memory-devices"></a>Supporto esteso per i dispositivi con memoria persistente
 
