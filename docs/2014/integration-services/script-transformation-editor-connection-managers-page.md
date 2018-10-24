@@ -25,7 +25,7 @@ ms.locfileid: "48081371"
 # <a name="script-transformation-editor-connection-managers-page"></a>Editor trasformazione Script (pagina Gestioni connessioni)
   Utilizzare la pagina **Gestioni connessioni** dell' **Editor trasformazione Script** per specificare le connessioni che verranno utilizzate dallo script.  
   
- Per ulteriori informazioni sul componente Script, vedere [Script Component](data-flow/transformations/script-component.md) e [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per informazioni sulla programmazione del componente Script, vedere [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Per altre informazioni sul componente Script, vedere [componente Script](data-flow/transformations/script-component.md) e [configurazione del componente Script nell'Editor del componente di Script](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per una panoramica sulla programmazione del componente Script, vedere [Estensione del flusso di dati con il componente script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Opzioni  
  **Connection managers**  

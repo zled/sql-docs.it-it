@@ -123,7 +123,7 @@ ms.locfileid: "48095711"
   
  Dopo aver aggiunto una mappa con la Creazione guidata mappa, è possibile creare livelli aggiuntivi o modificare le opzioni di un livello tramite la Creazione guidata livello. Per altre informazioni sulle procedure guidate, vedere [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
- È possibile personalizzare la visualizzazione o le opzioni dei dati per ogni livello in modo indipendente. Per altre informazioni sulla personalizzazione di una mappa dopo l'esecuzione di una procedura guidata, vedere [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ È possibile personalizzare la visualizzazione o le opzioni dei dati per ogni livello in modo indipendente. Per altre informazioni sulla personalizzazione di una mappa dopo l'esecuzione di una procedura guidata, vedere [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
  
   
