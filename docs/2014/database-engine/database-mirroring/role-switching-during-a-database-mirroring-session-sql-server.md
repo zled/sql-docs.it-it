@@ -83,7 +83,7 @@ ms.locfileid: "48181213"
  L'amministratore del database può utilizzare il failover manuale per aggiornare l'hardware o il software senza ridurre la disponibilità. Per eseguire aggiornamenti del software mediante il mirroring del database, è necessario che il server mirror e/o il sistema ricevano precedentemente gli aggiornamenti.  
   
 > [!NOTE]  
->  Il mirroring del database dovrebbe consentire l'esecuzione di un aggiornamento in sequenza. Questo non è tuttavia garantito poiché le modifiche future non sono ancora note. Per altre informazioni, vedere [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
+>  Il mirroring del database dovrebbe consentire l'esecuzione di un aggiornamento in sequenza. Questo non è tuttavia garantito poiché le modifiche future non sono ancora note. Per altre informazioni, vedere [Riduzione al minimo del tempo di inattività per i database con mirroring quando si aggiornano le istanze del server](upgrading-mirrored-instances.md).  
   
  Nella figura seguente è illustrato un esempio di utilizzo del failover manuale per mantenere la disponibilità del database mentre si aggiorna un'istanza del server di database. Al termine dell'aggiornamento, un amministratore può eseguire facoltativamente il failover all'istanza del server originale. Questa operazione è utile se l'amministratore desidera arrestare la sessione di mirroring e utilizzare il server mirror in un'altra posizione. In questo modo, è possibile utilizzare ripetutamente una singola istanza del server per aggiornare una serie di istanze del server di database.  
   
