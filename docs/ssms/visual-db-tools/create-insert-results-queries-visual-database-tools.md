@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - Insert Results query
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c84391103acc56a4602bb91d960557f190cb52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e02bff525732632dc97c3dc2fe6955053106e5d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053578"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845009"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Creazione di query di accodamento (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,11 +78,11 @@ Quando si crea una query di accodamento, nel riquadro Criteri vengono visualizza
     > [!NOTE]  
     > In Progettazione query e Progettazione viste non è possibile stabilire in anticipo le tabelle e le viste da aggiornare. Pertanto nell'elenco **Nome tabella** della finestra di dialogo **Choose Table for Insert From Query** (Scegli tabella per query di inserimento) sono visualizzate tutte le tabelle e le viste disponibili nella connessione dati su cui si esegue la query, anche quelle che non sono valide come tabelle o viste di destinazione.  
   
-4.  Nel rettangolo che rappresenta la tabella o l'oggetto con valori di tabella scegliere i nomi delle colonne di cui si desidera copiare il contenuto. Per copiare righe intere, scegliere **\&#42; (Tutte le colonne)**.  
+4.  Nel rettangolo che rappresenta la tabella o l'oggetto con valori di tabella scegliere i nomi delle colonne di cui si desidera copiare il contenuto. Per copiare righe intere, scegliere **&#42; (Tutte le colonne)**.  
   
     Le colonne selezionate verranno aggiunte alla colonna **Colonna** del riquadro Criteri.  
   
-5.  Nella colonna **Aggiungi** del riquadro Criteri selezionare una colonna di destinazione nella tabella di destinazione per ogni colonna da copiare. Scegliere *tablename.\&#42;* per copiare righe intere. I tipi di dati nelle colonne della tabella di destinazione devono essere uguali o compatibili con quelli delle colonne nella tabella di origine.  
+5.  Nella colonna **Aggiungi** del riquadro Criteri selezionare una colonna di destinazione nella tabella di destinazione per ogni colonna da copiare. Scegliere *tablename.&#42;* per copiare righe intere. I tipi di dati nelle colonne della tabella di destinazione devono essere uguali o compatibili con quelli delle colonne nella tabella di origine.  
   
 6.  Se si desidera copiare le righe in un particolare ordine, specificare il criterio di ordinamento. Per informazioni dettagliate, vedere [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md).  
   

@@ -5,9 +5,7 @@ ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - startup service states [SQL Server]
@@ -50,16 +48,15 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2794fb22369bc00f8758778ea6952bea7e94ebd6
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: e8f10e1a42df80b66754bd8544fc560713cb90d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348572"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694989"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurare account di servizio e autorizzazioni di Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -306,7 +303,8 @@ In questa sezione vengono descritte le autorizzazioni configurate dal programma 
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**Accesso come servizio** (SeServiceLogonRight)|  
 |**Motore PolyBase e DMS**| **Accesso come servizio** (SeServiceLogonRight)  |   
 |**Launchpad:**|**Accesso come servizio** (SeServiceLogonRight) <br /><br /> **Sostituzione di token a livello di processo** (SeAssignPrimaryTokenPrivilege)<br /><br />**Ignorare controllo incrociato** (SeChangeNotifyPrivilege)<br /><br />**Regolazione quote di memoria per un processo** (SeIncreaseQuotaPrivilege)|     
-|**R Services:** **SQLRUserGroup**  |**Consenti accesso locale** |   
+|**R Services:** **SQLRUserGroup** (SQL 2016 e 2017)  |**Consenti accesso locale** |   
+|**Machine Learning** '**Tutti i pacchetti applicazioni' [AppContainer]** (SQL 2019)  |**Autorizzazioni Read ed execute** per le directory SQL Server 'Binn', R_Services e PYTHON_Services |   
 
  \*Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è disabilitato nelle istanze di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   

@@ -1,7 +1,7 @@
 ---
 title: Configurare il database di distribuzione di SQL Server nel gruppo di disponibilità | Microsoft Docs
 ms.custom: ''
-ms.date: 05/23/2018
+ms.date: 10/04/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,18 +20,18 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1af1ffe2423fad7e8b9b2b07f2085bdf0efed1f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
+ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615380"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48817999"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurare il database di distribuzione repliche nel gruppo di disponibilità Always On
 
 In questo articolo viene illustrato come configurare i database di distribuzione repliche di SQL Server in un gruppo disponibilità Always On.
 
-SQL Server 2017 CU 6 introduce il supporto per i database di distribuzione repliche in un gruppo di disponibilità tramite i meccanismi seguenti:
+SQL Server 2017 CU6 e SQL Server 2016 SP2-CU3 introducono il supporto per i database di distribuzione repliche in un gruppo di disponibilità tramite i meccanismi seguenti:
 
 - Il gruppo di disponibilità del database di distribuzione deve avere un listener. Quando il server di pubblicazione aggiunge il server di distribuzione, usa il nome del listener come nome del server di distribuzione.
 - I processi di replica vengono creati con il nome del listener come nome del server di distribuzione.
@@ -190,13 +190,15 @@ In questo esempio viene aggiunto un nuovo server di distribuzione a una configur
    sp_adddistributiondb 'distribution'
    ```
 
-1. In DIST3 eseguire: 
+4. In DIST3 eseguire: 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
    Il valore di `@working_directory` deve essere quello specificato per DIST1 e DIST2.
+
+4. In DIST3 è necessario ricreare i server collegati presso i sottoscrittori.
 
 ## <a name="remove-a-replica-from-distribution-database-ag"></a>Rimuovere una replica dal gruppo di disponibilità del database di distribuzione
 

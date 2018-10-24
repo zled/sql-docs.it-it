@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0909562fb69695b3efde0663bc0afa48178c4358
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 41fcde697bcdaa0334ed364c7c12cd9d3e8481d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42774058"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733689"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,13 +63,13 @@ Un processo master di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
 4.  Fare clic con il pulsante destro del mouse sul processo in cui si intende modificare passaggi e scegliere **Proprietà**.  
   
-5.  Nella finestra di dialogo **Proprietà processo –***nome_processo* selezionare **Passaggi** in **Seleziona una pagina**.  
+5.  Nella finestra di dialogo **Proprietà processo -**_nome\_processo_ in **Seleziona una pagina** selezionare **Passaggi**.  
   
-6.  Fare clic su **Modifica** per aprire la finestra di dialogo **Proprietà passaggio processo –***nome_passaggio_processo*. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo, vedere [Proprietà passaggio processo - nuovo passaggio di processo &#40;pagina generale & #41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) e [Proprietà passaggio processo - nuovo passaggio di processo &#40;pagina avanzate& #41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
+6.  Fare clic su **Modifica** per aprire la finestra di dialogo  **Proprietà passaggio processo -**_nome\_passaggio\_processo_. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo, vedere [Proprietà passaggio processo - nuovo passaggio di processo &#40;pagina generale & #41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) e [Proprietà passaggio processo - nuovo passaggio di processo &#40;pagina avanzate& #41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Al termine, fare clic su **OK**.  
   
-8.  Nella finestra di dialogo **Proprietà processo –***nome_processo* scegliere **OK**.  
+8.  Nella finestra di dialogo **Proprietà processo -**_nome\_processo_ fare clic su **OK**.  
   
 ## <a name="TsqlProcedure"></a>Utilizzo di Transact-SQL  
   

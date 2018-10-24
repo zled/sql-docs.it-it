@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91da8325f2917605cf508f1e279ae829d525e658
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cfd9c9d9a1e309cae28abfa7674d021405f6d02
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838619"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798600"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -232,7 +232,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 #### <a name="a-using-delete-with-no-where-clause"></a>A. Utilizzo di DELETE senza una clausola WHERE  
  Nell'esempio seguente vengono eliminate tutte le righe dalla tabella `SalesPersonQuotaHistory` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] perché una clausola WHERE non è utilizzata per limitare il numero di righe eliminate.  
   
-```  
+```sql
 DELETE FROM Sales.SalesPersonQuotaHistory;  
 GO  
 ```  
@@ -243,7 +243,7 @@ GO
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Utilizzo della clausola WHERE per eliminare un set di righe  
  Nell'esempio seguente vengono eliminate tutte le righe della tabella `ProductCostHistory` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] in cui il valore della colonna `StandardCost` è maggiore di `1000.00`.  
   
-```    
+```sql
 DELETE FROM Production.ProductCostHistory  
 WHERE StandardCost > 1000.00;  
 GO  
@@ -251,7 +251,7 @@ GO
   
  Nell'esempio seguente viene illustrata una clausola WHERE più complessa. La clausola WHERE definisce due condizioni che devono essere soddisfatte per determinare le righe da eliminare. Il valore nella colonna `StandardCost` deve essere compreso tra `12.00` e `14.00` , mentre quello nella colonna `SellEndDate` deve essere Null. Nell'esempio viene anche stampato il valore dalla funzione **@@ROWCOUNT** per restituire il numero di righe eliminate.  
   
-```  
+```sql
 DELETE Production.ProductCostHistory  
 WHERE StandardCost BETWEEN 12.00 AND 14.00  
       AND EndDate IS NULL;  
@@ -261,7 +261,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. Utilizzo di un cursore per determinare la riga da eliminare  
  Nell'esempio seguente viene eliminata una riga dalla tabella `EmployeePayHistory` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] usando un cursore denominato `my_cursor`. L'operazione di eliminazione interessa unicamente la riga attualmente recuperata dal cursore.  
   
-```  
+```sql
 DECLARE complex_cursor CURSOR FOR  
     SELECT a.BusinessEntityID  
     FROM HumanResources.EmployeePayHistory AS a  
@@ -281,7 +281,7 @@ GO
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D. Utilizzo di join e sottoquery per i dati di una tabella per eliminare righe di un'altra tabella  
  Negli esempi seguenti vengono illustrati due modi per eliminare righe di una tabella in base ai dati di un'altra tabella. In entrambi gli esempi le righe della tabella `SalesPersonQuotaHistory` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] vengono eliminate in base alle vendite da inizio anno archiviate nella tabella `SalesPerson`. La prima istruzione `DELETE` illustra la soluzione di sottoquery compatibile con ISO, mentre la seconda istruzione `DELETE` illustra l'estensione FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] per creare un join tra le due tabelle.  
   
-```  
+```sql
 -- SQL-2003 Standard subquery  
   
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -292,7 +292,7 @@ WHERE BusinessEntityID IN
 GO  
 ```  
   
-```  
+```sql
 -- Transact-SQL extension  
   
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -303,7 +303,7 @@ WHERE sp.SalesYTD > 2500000.00;
 GO  
 ```  
   
-```  
+```sql
 -- No need to mention target table more than once.  
   
 DELETE spqh  
@@ -317,7 +317,7 @@ DELETE spqh
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. Utilizzo di TOP per limitare il numero di righe eliminate  
  Quando si usa una clausola TOP (*n*) con l'istruzione DELETE, l'operazione di eliminazione viene eseguita su una selezione casuale di un numero di righe *n*. Nell'esempio seguente vengono eliminate `20` righe casuali della tabella `PurchaseOrderDetail` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che contengono date di scadenza precedenti alla data 1 luglio 2006.  
   
-```  
+```sql
 DELETE TOP (20)   
 FROM Purchasing.PurchaseOrderDetail  
 WHERE DueDate < '20020701';  
@@ -326,7 +326,7 @@ GO
   
  Se è necessario utilizzare TOP per eliminare le righe in un ordine cronologico significativo, è necessario utilizzare TOP insieme a ORDER BY in un'istruzione subselect. Tramite la query seguente vengono eliminate le 10 righe della tabella `PurchaseOrderDetail` contenenti le date di scadenza più imminenti. Per assicurarsi che vengano eliminate solo 10 righe, la colonna specificata nell'istruzione di selezione secondaria (`PurchaseOrderID`) è la chiave primaria della tabella. L'utilizzo di una colonna non chiave nell'istruzione sub-SELECT può avere come conseguenza l'eliminazione di più di 10 righe se la colonna specificata contiene valori duplicati.  
   
-```  
+```sql
 DELETE FROM Purchasing.PurchaseOrderDetail  
 WHERE PurchaseOrderDetailID IN  
    (SELECT TOP 10 PurchaseOrderDetailID   
@@ -343,7 +343,7 @@ GO
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Eliminazione di dati da una tabella remota tramite un server collegato  
  Nell'esempio seguente vengono eliminate righe da una tabella remota. L'esempio inizia con la creazione di un collegamento all'origine dati remota tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Il nome del server collegato, `MyLinkServer`, viene specificato come parte del nome di oggetto in quattro parti nel formato *server.catalogo.schema.oggetto*.  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -357,7 +357,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -369,7 +369,7 @@ GO
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. Eliminazione di dati da una tabella remota tramite una funzione OPENQUERY  
  Nell'esempio seguente vengono eliminate righe da una tabella remota specificando la funzione per i set di righe [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). Viene utilizzato il nome del server collegato creato nell'esempio precedente.  
   
-```  
+```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
 FROM AdventureWorks2012.HumanResources.Department  
 WHERE DepartmentID = 18');  
@@ -379,7 +379,7 @@ GO
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>H. Eliminazione di dati da una tabella remota tramite una funzione OPENDATASOURCE  
  Nell'esempio seguente vengono eliminate righe da una tabella remota specificando la funzione per i set di righe [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Specificare un nome server valido per l'origine dati usando il formato *nome_server* oppure *nome_server\nome_istanza*.  
   
-```  
+```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
@@ -391,7 +391,7 @@ WHERE DepartmentID = 17;'
 #### <a name="i-using-delete-with-the-output-clause"></a>I. Utilizzo di DELETE con la clausola OUTPUT  
  Nell'esempio seguente viene illustrato come salvare i risultati di un'istruzione `DELETE` in una variabile di tabella nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql
 DELETE Sales.ShoppingCartItem  
 OUTPUT DELETED.*   
 WHERE ShoppingCartID = 20621;  
@@ -406,7 +406,7 @@ GO
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Utilizzo di OUTPUT con <from_table_name> in un'istruzione DELETE  
  Nell'esempio seguente vengono eliminate alcune righe della tabella `ProductProductPhoto` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] in base ai criteri di ricerca definiti nella clausola `FROM` dell'istruzione `DELETE`. La clausola `OUTPUT` restituisce le colonne della tabella che si desidera eliminare, `DELETED.ProductID`, `DELETED.ProductPhotoID`e alcune colonne della tabella `Product` . Queste informazioni vengono utilizzate nella clausola `FROM` per specificare le righe da eliminare.  
   
-```  
+```sql
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -436,14 +436,14 @@ GO
 ### <a name="k-delete-all-rows-from-a-table"></a>K. Eliminare tutte le righe di una tabella  
  Nell'esempio seguente vengono eliminate tutte le righe dalla tabella `Table1` perché non viene utilizzata una clausola WHERE per limitare il numero di righe eliminate.  
   
-```  
+```sql
 DELETE FROM Table1;  
 ```  
   
 ### <a name="l-delete-a-set-of-rows-from-a-table"></a>L. Eliminare un set di righe di una tabella  
  Nell'esempio seguente vengono eliminate dalla tabella `Table1` tutte le righe in cui il valore della colonna `StandardCost` è maggiore di 1000,00.  
   
-```  
+```sql
 DELETE FROM Table1  
 WHERE StandardCost > 1000.00;  
 ```  
@@ -451,7 +451,7 @@ WHERE StandardCost > 1000.00;
 ### <a name="m-using-label-with-a-delete-statement"></a>M. Uso di LABEL con un'istruzione DELETE  
  Nell'esempio seguente viene usata un'etichetta con l'istruzione DELETE.  
   
-```  
+```sql
 DELETE FROM Table1  
 OPTION ( LABEL = N'label1' );  
   
@@ -460,7 +460,7 @@ OPTION ( LABEL = N'label1' );
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. Uso di un'etichetta e di un hint per la query con l'istruzione DELETE  
  Questa query illustra la sintassi di base per l'uso di un hint di join per la query con l'istruzione DELETE. Per altre informazioni sugli hint di join e su come usare la clausola OPTION, vedere [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DELETE FROM dbo.FactInternetSales  

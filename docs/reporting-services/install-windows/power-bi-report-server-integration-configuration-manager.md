@@ -1,22 +1,18 @@
 ---
 title: Integrazione del server di report di Power BI (Gestione configurazione) | Microsoft Docs
-ms.date: 10/05/2017
-ms.prod: reporting-services
-ms.prod_service: reporting-services-native
-ms.suite: pro-bi
-ms.topic: conceptual
-f1_keywords:
-- pbi
-- power bi
-- power bi integration
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76ce650fba286a81e803a304d22ae5b30e79f3dc
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+manager: kfile
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.topic: conceptual
+ms.date: 09/17/2017
+ms.openlocfilehash: 6561f4a6378a31485722a9e87d59d293ced0dad9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277797"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759429"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integrazione del server di report e di Power BI (Gestione configurazione)
 
@@ -55,6 +51,9 @@ Completare i passaggi seguenti da Gestione configurazione [!INCLUDE[ssRSnoversio
 1. Selezionare la pagina di integrazione di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] .
 
 2. Selezionare **Registra con Power BI**.
+
+    >[!Note]
+    > Verificare che la porta 443 non sia bloccata.
 
 3. Nella finestra di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] immettere le credenziali usate per accedere a [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 

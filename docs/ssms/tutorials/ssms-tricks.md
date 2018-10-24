@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: f5443268f025b5bb30f673993819ab584230b676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749496"
+ms.locfileid: "47864389"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Esercitazione: Suggerimenti e consigli per l'uso di SSMS
 Questa esercitazione offre alcuni suggerimenti aggiuntivi per l'uso di SQL Server Management Studio (SSMS). Questo articolo illustra come: 
@@ -82,12 +82,19 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
 7. Evidenziare tutto ad eccezione del comando **Alter Database** e quindi selezionare il pulsante **Commento**:
 
     ![Commentare tutto](media/ssms-tricks/commenteverything.png)
+    
+    > [!NOTE]
+    > La scelta rapida da tastiera per commentare il testo è **CTRL+K, CTRL+C**. 
 
 8. Evidenziare la parte di testo **Alter Database** e quindi selezionare il pulsante **Rimuovi commento** per rimuovere i commenti:
 
     ![Rimuovere commenti dal testo](media/ssms-tricks/uncomment.png)
     
+    > [!NOTE]
+    > La scelta rapida da tastiera per rimuovere i commenti dal testo è **CTRL+K, CTRL+U**. 
+    
 9. Selezionare **Esegui** per eseguire la parte di testo senza commenti. 
+
 
 ## <a name="indent-your-text"></a>Impostare un rientro del testo
 È possibile usare i pulsanti di rientro sulla barra degli strumenti per aumentare o ridurre il rientro del testo. 

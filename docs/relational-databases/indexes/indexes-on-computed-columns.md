@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f3144520a5473a913dbc50f6002f69954042bcd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff278b06fcc964ec95b57bfc8f4685d22c420e0a
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789855"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851876"
 ---
 # <a name="indexes-on-computed-columns"></a>Indici per le colonne calcolate
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Tutti i riferimenti a funzioni nella colonna calcolata devono avere lo stesso pr
 > [!IMPORTANT]  
 >  Le espressioni sono deterministiche se restituiscono sempre lo stesso risultato per un determinato set di input. La proprietà **IsDeterministic** della funzione [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) indica se una *computed_column_expression* è deterministica.  
   
- La *computed_column_expression* deve essere deterministica. Una *computed_column_expression* è deterministica quando viene soddisfatta una o più delle condizioni seguenti:  
+ La *computed_column_expression* deve essere deterministica. Una *computed_column_expression* è deterministica quando sono soddisfatte tutte le condizioni seguenti:  
   
 -   Tutte le funzioni alle quali l'espressione fa riferimento sono deterministiche e precise. Queste funzioni includono funzioni definite dall'utente e funzioni predefinite. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). Le funzioni potrebbero non essere precise se la colonna calcolata è PERSISTED. Per altre informazioni, vedere [Creazione di indici per colonne calcolate persistenti](#BKMK_persisted) più avanti in questo argomento.  
   

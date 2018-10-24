@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2b5d840a5b6073a7026806ee084dffc0ca51af7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 387aaeb28e0dfc976bce72c33dd50d8b865bb432
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801699"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874369"
 ---
 # <a name="system-settings-master-data-services"></a>Impostazioni di sistema (Master Data Services)
 
@@ -102,6 +102,7 @@ ms.locfileid: "47801699"
 |-----------------------------------|--------------------|-----------------|  
 |**Numero di cui incrementare nuove regole business**|**BusinessRuleDefaultPriorityIncrement**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **System Administration** functional area, the number the priority of each new business rule is incremented by. Il valore predefinito è **10**.|  
 |**Numero di membri a cui applicare regole business**|**BusinessRuleRealtimeMemberCount**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members in the grid to apply business rules to. Nel [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], numero massimo di membri nel foglio di lavoro attivo a cui applicare le regole di business. Il valore predefinito è **10000**.|  
+|**Regola business eseguita per prima dallo script utente**|**BusinessRuleUserScriptExecuteFirst**|In genere l'azione della regola business viene eseguita con la sequenza "Valore predefinito", "Modifica valore", "Convalida", "Azione esterna", "Script azione definito dall'utente". Se questa impostazione viene modificata e impostata su **1**, "Script azione definita dall'utente" diventa il primo passaggio nell'esecuzione dell'azione della regola business. Questa è un'impostazione nascosta. Il valore predefinito è **0**.|  
   
  Per altre informazioni, vedere [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
   

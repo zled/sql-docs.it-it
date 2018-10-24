@@ -14,16 +14,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11dde12055fd45d78db1d55a15f6547798aa213a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8a477f90842e7aa6c1fb9da5347e0555927a036
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689139"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874329"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificati SQL Server e chiavi simmetriche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  La crittografia a chiave pubblica (PKI) è un sistema di tutela della segretezza dei messaggi in cui un utente crea una chiave *pubblica* e una chiave *privata* . La chiave privata viene tenuta segreta, mentre la chiave pubblica può essere distribuita ad altri. Sebbene le chiavi siano collegate da una relazione matematica, non è possibile estrapolare facilmente la chiave privata utilizzando la chiave pubblica. La chiave pubblica viene utilizzata per crittografare dati mentre quella privata viene impiegata per decrittografarli. Un messaggio crittografato con la chiave pubblica può essere decrittografato solo utilizzando la chiave privata corretta. Poiché si tratta di due chiavi diverse, queste chiavi sono *asimmetriche*.  
+
+ La crittografia a chiave pubblica è un sistema di tutela della segretezza dei messaggi in cui un utente crea una chiave *pubblica* e una chiave *privata*. La chiave privata viene tenuta segreta, mentre la chiave pubblica può essere distribuita ad altri. Sebbene le chiavi siano collegate da una relazione matematica, non è possibile estrapolare facilmente la chiave privata utilizzando la chiave pubblica. La chiave pubblica può essere usata per crittografare dati che potranno essere decrittografati solo dalla chiave privata corrispondente. Questo approccio può essere usato per crittografare messaggi destinati al proprietario della chiave privata. In modo analogo il proprietario di una chiave privata può crittografare dati che possono essere decrittografati solo con la chiave pubblica. Questo approccio costituisce la base dei certificati digitali, in cui le informazioni presenti nel certificato vengono crittografate dal proprietario di una chiave privata, in modo da offrire una garanzia all'autore del contenuto. Poiché le chiavi di crittografia e decrittografia sono diverse, sono note come chiavi *asimmetriche*.
   
  Certificati e chiavi asimmetriche rappresentano entrambi una modalità di utilizzo della crittografia asimmetrica. I certificati vengono spesso utilizzati come contenitori delle chiavi asimmetriche perché possono contenere un maggior numero di informazioni, ad esempio date di scadenza e autorità emittenti. Non c'è differenza tra i due meccanismi per l'algoritmo di crittografia e nessuna differenza nel livello di protezione fornito a parità di lunghezza della chiave. In genere, si utilizza un certificato per crittografare gli altri tipi di chiavi di crittografia in un database o per firmare moduli di codice.  
   

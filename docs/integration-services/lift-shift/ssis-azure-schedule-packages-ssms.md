@@ -1,27 +1,26 @@
 ---
 title: Pianificare i pacchetti SSIS in Azure con SQL Server Management Studio | Microsoft Docs
 description: Informazioni su come pianificare i pacchetti SSIS distribuiti al database SQL di Azure tramite il comando Pianifica in SQL Server Management Studio (SSMS).
-ms.date: 05/09/2018
+ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: d52568b59540ed5a3c4a1111ebf1759f5bdd77f8
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.openlocfilehash: 2276b2d769128be1d8ce5cbd44c992f08ddf625b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36261976"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786239"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Pianificare l'esecuzione di pacchetti SSIS distribuiti in Azure con SQL Server Management Studio (SSMS)
 
-È possibile usare SQL Server Management Studio (SSMS) per pianificare i pacchetti SSIS distribuiti nel database SQL di Azure. SQL Server in locale e Istanza gestita di database SQL (anteprima) hanno come pianificatore di processi SSIS di prima classe SQL Server Agent e Managed Instance Agent rispettivamente. Il database SQL invece non ha un pianificatore di processi SSIS di prima classe integrato. La funzionalità SSMS descritta in questo articolo offre un'interfaccia utente familiare e simile a SQL Server Agent per la pianificazione dei pacchetti distribuiti al database SQL.
+È possibile usare SQL Server Management Studio (SSMS) per pianificare i pacchetti SSIS distribuiti nel database SQL di Azure. SQL Server in locale e Istanza gestita di database SQL hanno come pianificatore di processi SSIS di prima classe SQL Server Agent e Managed Instance Agent rispettivamente. Il database SQL invece non ha un pianificatore di processi SSIS di prima classe integrato. La funzionalità SSMS descritta in questo articolo offre un'interfaccia utente familiare e simile a SQL Server Agent per la pianificazione dei pacchetti distribuiti al database SQL.
 
 Se si usa il database SQL per ospitare il catalogo SSIS `SSISDB`, è possibile usare questa funzionalità SSMS per generare le pipeline, le attività e i trigger Data Factory necessari per la pianificazione dei pacchetti SSIS. È poi possibile in seguito e facoltativamente modificare ed estendere tali oggetti in Data Factory.
 

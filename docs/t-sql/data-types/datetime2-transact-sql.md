@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed5b430bfdd6f24e0942c72b4ce8d0cfce40d672
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c10e012010eb51973f3833573b09f0bb7e5fa18
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626999"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782330"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,7 +144,7 @@ SELECT @datetime2 AS '@datetime2', @datetimeoffset AS '@datetimeoffset';
 --2016-10-23 12:45:37.1234567 2016-10-23 12:45:37.1234567 +10:00
 ```  
 
-Quando la conversione è da **datetime**, la data e l'ora vengono copiate.  La precisione frazionaria viene estesa a 7 cifre.  Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `datetime` in un valore `datetime2`.
+Quando la conversione è da **datetime**, la data e l'ora vengono copiate. La precisione frazionaria viene estesa a 7 cifre. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `datetime` in un valore `datetime2`.
 
 ```sql
 DECLARE @datetime datetime = '2016-10-23 12:45:37.333';
@@ -157,7 +157,10 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 ------------------------- ---------------------------
 --2016-10-23 12:45:37.3333333 2016-10-23 12:45:37.333
 ```  
-  
+
+> [!NOTE]
+> Nel livello di compatibilità del database 130, le conversioni implicite dai tipi di dati datetime a datetime2 mostrano una maggiore precisione prevedendo i millisecondi frazionari, risultanti in diversi valori convertiti (come appare nell'esempio precedente). Usare il cast esplicito per il tipo di dati datetime2 ogni volta che si presenta uno scenario di confronto misto tra tipi di dati datetime e datetime2. Per altre informazioni, fare riferimento a questo [articolo del supporto tecnico Microsoft](http://support.microsoft.com/help/4010261).
+
 ### <a name="converting-string-literals-to-datetime2"></a>Conversione di valori letterali stringa nel tipo di dati datetime2  
 Le conversioni da valori letterali stringa a tipi di data e ora sono consentite se tutte le parti delle stringhe hanno formati validi. In caso contrario, viene generato un errore di runtime. Le conversioni implicite o esplicite che non specificano uno stile, dai tipi di data e ora ai valori letterali stringa, saranno nel formato predefinito della sessione corrente. Nella tabella seguente vengono illustrate le regole per la conversione di un valore letterale stringa nel tipo di dati **datetime2**.
   

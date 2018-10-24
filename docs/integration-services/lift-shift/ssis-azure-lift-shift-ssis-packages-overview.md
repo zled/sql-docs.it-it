@@ -1,26 +1,25 @@
 ---
 title: Distribuire ed eseguire i pacchetti SSIS in Azure | Microsoft Docs
 description: Informazioni su come spostare progetti, pacchetti e carichi di lavoro di SQL Server Integration Services (SSIS) nel cloud di Microsoft Azure.
-ms.date: 07/01/2018
+ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 95705c0ac220ce4e7c0752785cba46d36dd1d984
-ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
+ms.openlocfilehash: bd2d91d38c964bc2795294a1ca4a4617fe2a0a48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39482662"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829677"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrazione lift-and-shift dei carichi di lavoro di SQL Server Integration Services nel cloud
-È ora possibile spostare progetti, pacchetti e carichi di lavoro di SQL Server Integration Services (SSIS) nel cloud di Azure. Distribuire, eseguire e gestire progetti e pacchetti SSIS nel catalogo SSIS (SSISDB) per il database SQL di Azure o Istanza gestita di database SQL (anteprima) con strumenti noti come SQL Server Management Studio (SSMS).
+È ora possibile spostare progetti, pacchetti e carichi di lavoro di SQL Server Integration Services (SSIS) nel cloud di Azure. Distribuire, eseguire e gestire progetti e pacchetti SSIS nel catalogo SSIS (SSISDB) per il database SQL di Azure o Istanza gestita di database SQL con strumenti noti come SQL Server Management Studio (SSMS).
 
 ## <a name="benefits"></a>Vantaggi
 Spostare i carichi di lavoro SSIS locali in Azure presenta i potenziali vantaggi seguenti:
@@ -36,7 +35,7 @@ La differenza più significativa è la separazione dell'archiviazione dal runtim
 | Percorso | Archiviazione | Runtime | Scalabilità |
 |---|---|---|---|
 | Locale | SQL Server | Runtime SSIS ospitato da SQL Server | SQL Server Integration Services Scale Out (in SQL Server 2017 e versioni successive)<br/><br/>Soluzioni personalizzate (nelle versioni precedenti di SQL Server) |
-| In Azure | Database SQL o Istanza gestita di database SQL (anteprima) | Runtime di integrazione Azure-SSIS, un componente di Azure Data Factory | Opzioni di scalabilità per il runtime di integrazione Azure-SSIS |
+| In Azure | Database SQL o Istanza gestita di database SQL | Runtime di integrazione Azure-SSIS, un componente di Azure Data Factory | Opzioni di scalabilità per il runtime di integrazione Azure-SSIS |
 | | | | |
 
 ## <a name="provision-ssis-on-azure"></a>Provisioning di SSIS in Azure

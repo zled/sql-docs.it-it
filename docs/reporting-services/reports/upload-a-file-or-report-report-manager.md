@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b24b1d8a73aa2f371642f9b8a54b20471e20cb23
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ce224e5b45e22bdc27f675da5d2697c09b139b41
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277290"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660199"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>Caricare un file o un report nel server di report
 Il portale Web del server di report include una caratteristica di caricamento che consente di aggiungere report e altri file a un server di report senza pubblicarli da un'applicazione client. I file caricati da un file system vengono archiviati come elementi in un server di report. Il tipo di file caricato determina le modalità di archiviazione:  
@@ -35,7 +34,7 @@ Il portale Web del server di report include una caratteristica di caricamento ch
   
 4.  Passare al file da caricare. È possibile caricare un file di definizione del report, un'immagine, un documento o qualsiasi altro file che si desidera rendere disponibile nel server di report.  
   
-5.  Digitare un nome per il nuovo elemento. Il nome di un elemento può includere spazi ma non i caratteri riservati, ovvero ; ? : \@ & = + , $ / * < > |.  
+5.  Digitare un nome per il nuovo elemento. Il nome di un elemento può includere spazi ma non i seguenti caratteri riservati: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|.  
   
 6.  Se si desidera sostituire un elemento esistente con il nuovo elemento, selezionare **Sovrascrivi se esistente**.  
   

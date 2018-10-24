@@ -5,9 +5,7 @@ ms.date: 2/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c316c7a1e2e2913c5f0b4ce2e2bb4f63a2f5246
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084309"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719259"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -303,7 +300,7 @@ Note sulla tabella:
 ## <a name="performance"></a>restazioni
  L'uso dei file compressi implica sempre un compromesso tra il trasferimento di una minore quantità di dati tra l'origine dati esterna e SQL Server e l'incremento dell'utilizzo della CPU per comprimere e decomprimere i dati.
   
- I file di testo compressi Gzip non sono possono essere suddivisi. Per migliorare le prestazioni dei file di testo compressi Gzip, si consiglia di generare più file da archiviare nella stessa directory all'interno dell'origine dati esterna. Questa struttura di file consente a PolyBase di leggere e decomprimere i dati più rapidamente usando più processi di lettura e decompressione. Il numero ideale di file compressi è il numero massimo di processi del lettore dati per ogni nodo di calcolo. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] il numero massimo di processi del lettore dati è 8 per ogni nodo nella versione corrente. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] il numero massimo di processi del lettore dati per ogni nodo varia in base al punto di disconnessione singolo. Per informazioni dettagliate, vedere il [blog sui modelli e le strategie di caricamento di Azure SQL Data Warehouse](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/).  
+ I file di testo compressi Gzip non sono possono essere suddivisi. Per migliorare le prestazioni dei file di testo compressi Gzip, si consiglia di generare più file da archiviare nella stessa directory all'interno dell'origine dati esterna. Questa struttura di file consente a PolyBase di leggere e decomprimere i dati più rapidamente usando più processi di lettura e decompressione. Il numero ideale di file compressi è il numero massimo di processi del lettore dati per ogni nodo di calcolo. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] il numero massimo di processi di lettura dati è di 8 per ogni nodo, ad eccezione di Azure SQL Data Warehouse Gen2, in cui è di 20 processi per ogni nodo. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] il numero massimo di processi del lettore dati per ogni nodo varia in base al punto di disconnessione singolo. Per informazioni dettagliate, vedere il [blog sui modelli e le strategie di caricamento di Azure SQL Data Warehouse](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/).  
   
 ## <a name="examples"></a>Esempi  
   

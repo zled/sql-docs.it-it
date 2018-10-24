@@ -5,9 +5,7 @@ ms.date: 05/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_INDEX_TSQL
@@ -31,17 +29,16 @@ helpviewer_keywords:
 - XML indexes [SQL Server], dropping
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-caps.latest.revision: 99
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b9796266ff1c5ff8d7e42ffbc3a94e44fd4b142
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3b84acd01f7291ad420cf2a643ffb9bc350e0a6a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072651"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777969"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -183,7 +180,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { *partition_scheme_name ***(*** column_name***)** | *filegroup_name* | **"** default **"**  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_**)** | _filegroup\_name_ | **"** default **"**  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Il [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] supporta "default" come nome del filegroup.  
   
  Specifica una posizione in cui spostare le righe dei dati attualmente nel livello foglia dell'indice cluster. I dati vengono spostati nella nuova posizione sotto forma di heap. È possibile specificare come nuova posizione uno schema di partizione o un filegroup, ma questo deve essere già esistente. MOVE TO non può essere utilizzata per viste indicizzate o indici non cluster. Se uno schema di partizione o filegroup non viene specificato, la tabella risultante si troverà nello stesso schema di partizione o filegroup definito per l'indice cluster.  
@@ -234,7 +231,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Quando si elimina l'indice cluster di una vista indicizzata, tutte le statistiche create automaticamente e tutti gli indici non cluster della stessa vista vengono eliminati automaticamente. Le statistiche create manualmente non vengono eliminate.  
   
- La sintassi *table_or_view_name ***.*** index_name* è stata mantenuta per la compatibilità con le versioni precedenti. Non è possibile eliminare un indice XML o spaziale tramite la sintassi compatibile con le versioni precedenti.  
+ La sintassi _table\_or\_view\_name_**.**_index\_name_ è stata mantenuta per la compatibilità con le versioni precedenti. Non è possibile eliminare un indice XML o spaziale tramite la sintassi compatibile con le versioni precedenti.  
   
  Quando vengono eliminati gli indici con 128 o più extent, [!INCLUDE[ssDE](../../includes/ssde-md.md)] posticipa le deallocazioni effettive delle pagine e dei relativi blocchi associati fino al termine dell'esecuzione del commit della transazione.  
   
@@ -264,10 +261,10 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 Quando un indice cluster viene eliminato offline, vengono rimossi solo i livelli superiori degli indici cluster, pertanto l'operazione è piuttosto veloce. Quando un indice cluster viene eliminato ONLINE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricompila l'heap due volte, una volta per l'operazione descritta nel passaggio 1 e una volta per quella descritta nel passaggio 2. Per altre informazioni sulla compressione dei dati, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="xml-indexes"></a>Indici XML  
- Quando si elimina un indice XML non è possibile specificare opzioni né usare la sintassi *table_or_view_name ***.*** index_name*. Quando viene eliminato un indice XML primario, tutti gli indici XML secondari associati vengono eliminati automaticamente. Per altre informazioni, vedere [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ Quando si elimina un indice XML non è possibile specificare opzioni né usare la sintassi _table\_or\_view\_name_**.**_index\_name_. Quando viene eliminato un indice XML primario, tutti gli indici XML secondari associati vengono eliminati automaticamente. Per altre informazioni, vedere [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="spatial-indexes"></a>Indici spaziali  
- Gli indici spaziali sono supportati solo nelle tabelle. Quando si elimina un indice spaziale non è possibile specificare alcuna opzione o usare **.***index_name*. La sintassi corretta è la seguente:  
+ Gli indici spaziali sono supportati solo nelle tabelle. Quando si elimina un indice spaziale non è possibile specificare alcuna opzione né usare ***.**_index\_name_. La sintassi corretta è la seguente:  
   
  DROP INDEX *spatial_index_name* ON *spatial_table_name*;  
   

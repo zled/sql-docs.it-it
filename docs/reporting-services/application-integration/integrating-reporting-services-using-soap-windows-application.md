@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - rendered reports [Reporting Services]
 - Windows applications [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e3337d0912e0249c7ac49523bb4159458ba36e8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ab817b7529bf13e738b3110e5f876b3287f32ec9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274048"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775041"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>Integrazione di Reporting Services tramite SOAP - Applicazione Windows
   È possibile accedere alle funzionalità complete del server di report tramite l'API SOAP di Reporting Services. L'API SOAP è un servizio Web e, in quanto tale, è possibile accedervi in modo semplice per fornire caratteristiche di creazione di report aziendali alle applicazioni aziendali personalizzate. È possibile accedere al servizio Web in un'applicazione Windows semplicemente scrivendo codice che consenta di effettuare chiamate al servizio. Usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile generare una classe proxy che espone le proprietà e i metodi del servizio Web e consente di usare un'infrastruttura familiare e gli strumenti per compilare applicazioni aziendali basate sulla tecnologia [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -90,11 +87,11 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  È tuttavia possibile utilizzare il metodo <xref:ReportExecution2005.ReportExecutionService.Render%2A> dell'API SOAP per eseguire il rendering dei report e salvarli in diversi formati di output a livello di programmazione. Questo è un vantaggio rispetto all'accesso con URL, che richiede l'interazione dell'utente. Quando si esegue il rendering di un report utilizzando il metodo <xref:ReportExecution2005.ReportExecutionService.Render%2A> dell'API SOAP, è possibile scegliere qualsiasi formato di output supportato.  
   
- È anche possibile usare gratuitamente i controlli ReportViewer distribuibili inclusi in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]. I controlli ReportViewer consentono di incorporare in modo semplice le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni personalizzate. Tali controlli sono destinati agli sviluppatori che desiderano fornire report predefiniti e completi come parte del set di caratteristiche di un'applicazione. Un'applicazione di gestione di un sito Web può ad esempio includere report relativi a un'analisi clickstream nei siti Web aziendali. L'incorporamento dei controlli in un'applicazione costituisce un'alternativa efficace all'inclusione dei componenti server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella distribuzione dell'applicazione. I controlli forniscono funzionalità per i report, ma senza il supporto aggiuntivo per la creazione, la pubblicazione o la distribuzione e il recapito di report, disponibile in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ È anche possibile usare i controlli Visualizzatore report distribuibili gratuitamente e inclusi in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]. I controlli Visualizzatore report consentono di incorporare in modo semplice le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni personalizzate. Tali controlli sono destinati agli sviluppatori che desiderano fornire report predefiniti e completi come parte del set di caratteristiche di un'applicazione. Un'applicazione di gestione di un sito Web può ad esempio includere report relativi a un'analisi clickstream nei siti Web aziendali. L'incorporamento dei controlli in un'applicazione costituisce un'alternativa efficace all'inclusione dei componenti server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella distribuzione dell'applicazione. I controlli forniscono funzionalità per i report, ma senza il supporto aggiuntivo per la creazione, la pubblicazione o la distribuzione e il recapito di report, disponibile in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Sono disponibili due versioni dei controlli ReportViewer: una versione per le applicazioni rich client Windows e una per le applicazioni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. I controlli supportano sia la modalità di elaborazione locale che quella remota. In modalità di elaborazione locale l'applicazione fornisce la definizione e i set di dati del report e avvia l'elaborazione del report. In modalità di elaborazione remota il recupero dei dati e l'elaborazione del report vengono eseguiti nel server di report e il controllo viene utilizzato per visualizzare e navigare il report. Questo modello consente di compilare applicazioni complete adatte per ambienti di qualsiasi dimensione, dal desktop all'azienda.  
+ Sono disponibili due versioni dei controlli Visualizzatore report: una versione per le applicazioni rich client Windows e una per le applicazioni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. I controlli supportano sia la modalità di elaborazione locale che quella remota. In modalità di elaborazione locale l'applicazione fornisce la definizione e i set di dati del report e avvia l'elaborazione del report. In modalità di elaborazione remota il recupero dei dati e l'elaborazione del report vengono eseguiti nel server di report e il controllo viene utilizzato per visualizzare e navigare il report. Questo modello consente di compilare applicazioni complete adatte per ambienti di qualsiasi dimensione, dal desktop all'azienda.  
   
- I controlli ReportViewer sono descritti nella Guida online di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Per ulteriori informazioni, vedere la documentazione di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ I controlli Visualizzatore report sono descritti nella Guida in linea di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Per ulteriori informazioni, vedere la documentazione di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di applicazioni tramite servizio Web e .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

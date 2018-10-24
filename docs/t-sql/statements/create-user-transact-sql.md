@@ -5,9 +5,7 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WITHOUT_LOGIN_TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - users [SQL Server]
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-caps.latest.revision: 111
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5e044f1555019aca5f50694f1367ee79b6237cc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 533622016967deef4f1fbcb4ead0c17975910899
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43094855"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618089"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +162,7 @@ CREATE USER user_name
  Specifica il nome con cui viene identificato l'utente all'interno del database. *user_name* è un **sysname**. Non può superare la lunghezza di 128 caratteri. Quando si crea un utente basato su un'entità di Windows, il nome dell'entità di Windows diventa il nome utente, a meno che non ne sia stato specificato un altro.  
   
  LOGIN *login_name*  
- Specifica l'account di accesso per cui viene creato l'utente del database. *login_name* deve essere un account di accesso valido nel server. Può essere un account di accesso basato su un'entità di Windows (utente o gruppo) o un account di accesso che usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si accede al database tramite questo account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si acquisisce il nome e l'ID dell'utente del database che si sta creando. Quando si crea un account di accesso con mapping da un'entità di sicurezza di Windows, usare il formato **[***\<nomeDominio>***\\***\<nomeAccesso>***]**. Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary).  
+ Specifica l'account di accesso per cui viene creato l'utente del database. *login_name* deve essere un account di accesso valido nel server. Può essere un account di accesso basato su un'entità di Windows (utente o gruppo) o un account di accesso che usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si accede al database tramite questo account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si acquisisce il nome e l'ID dell'utente del database che si sta creando. Quando si crea un account di accesso con mapping da un'entità di sicurezza di Windows, usare il formato **[**_\<domainName\>_**\\**_\<loginName\>_**]**. Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary).  
   
  Se l'istruzione CREATE USER è l'unica istruzione in un batch SQL, il database SQL di Microsoft Azure supporta la clausola WITH LOGIN. Se l'istruzione CREATE USER non è l'unica istruzione in un batch SQL o viene eseguita in SQL dinamico, la clausola WITH LOGIN non è supportata.  
   
@@ -173,7 +170,7 @@ CREATE USER user_name
  Specifica il primo schema in cui verrà eseguita una ricerca nel server durante la risoluzione dei nomi di oggetti per l'utente del database.  
   
  '*windows_principal*'  
- Specifica l'entità di Windows per la quale viene creato l'utente del database. The *windows_principal* può essere un utente o un gruppo di Windows. L'utente verrà creato anche se *windows_principal* non ha un account di accesso. Quando si effettua la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se *windows_principal* non ha un account di accesso, l'entità di sicurezza di Windows deve eseguire l'autenticazione a livello del [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite l'appartenenza a un gruppo di Windows che abbia un account di accesso. In alternativa, la stringa di connessione deve specificare il database indipendente come catalogo iniziale. Quando si crea un utente da un'entità di sicurezza di Windows, usare il formato **[***\<nomeDominio>***\\***\<nomeAccesso>***]**. Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary). I nomi degli utenti basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.    
+ Specifica l'entità di Windows per la quale viene creato l'utente del database. The *windows_principal* può essere un utente o un gruppo di Windows. L'utente verrà creato anche se *windows_principal* non ha un account di accesso. Quando si effettua la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se *windows_principal* non ha un account di accesso, l'entità di sicurezza di Windows deve eseguire l'autenticazione a livello del [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite l'appartenenza a un gruppo di Windows che abbia un account di accesso. In alternativa, la stringa di connessione deve specificare il database indipendente come catalogo iniziale. Quando si crea un utente da un'entità di sicurezza di Windows, usare il formato **[**_\<domainName\>_**\\**_\<loginName\>_**]**. Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary). I nomi degli utenti basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.    
   
  '*Azure_Active_Directory_principal*'  
  **Si applica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  

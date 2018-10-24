@@ -5,9 +5,7 @@ ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ANSI_PADDING_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - SET ANSI_PADDING statement
 - trailing blanks
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a03b86fcd019a1e53d592acc5a23a352ab12d3a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fd1a43b50d0d36efacfe3c5a93a9bf0a169c4ede
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106250"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760339"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +65,7 @@ SET ANSI_PADDING ON
   
 |Impostazione|char(*n*) NOT NULL o binary(*n*) NOT NULL|char(*n*) NULL o binary(*n*) NULL|varchar(*n*) o varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|Completa il valore originale con spazi vuoti finali in colonne di tipo **char** e con zeri finali in colonne di tipo **binary** in modo da riempire l'intera lunghezza della colonna.|Segue le stesse regole di **char(***n***)** o **binary(***n***)** NOT NULL quando l'opzione SET ANSI_PADDING è impostata su ON.|Gli spazi vuoti finali nei valori di tipo carattere inseriti in colonne di tipo **varchar** non vengono eliminati. Gli zeri finali in valori binari inseriti in colonne di tipo **varbinary** non vengono eliminati. I valori non vengono riempiti con caratteri nulli per l'intera lunghezza della colonna.|  
+|ON|Completa il valore originale con spazi vuoti finali in colonne di tipo **char** e con zeri finali in colonne di tipo **binary** in modo da riempire l'intera lunghezza della colonna.|Segue le stesse regole di **char(**_n_**)** o **binary(**_n_**)** NOT NULL quando l'opzione SET ANSI_PADDING è impostata su ON.|Gli spazi vuoti finali nei valori di tipo carattere inseriti in colonne di tipo **varchar** non vengono eliminati. Gli zeri finali in valori binari inseriti in colonne di tipo **varbinary** non vengono eliminati. I valori non vengono riempiti con caratteri nulli per l'intera lunghezza della colonna.|  
 |OFF|Completa il valore originale con spazi vuoti finali in colonne di tipo **char** e con zeri finali in colonne di tipo **binary** in modo da riempire l'intera lunghezza della colonna.|Segue le stesse regole di **varchar** o **varbinary** quando l'opzione SET ANSI_PADDING è impostata su OFF.|Gli spazi vuoti finali in valori di tipo carattere inseriti in colonne di tipo **varchar** vengono eliminati. Gli zeri finali in valori binari inseriti in colonne di tipo **varbinary** vengono eliminati.|  
   
 > [!NOTE]  

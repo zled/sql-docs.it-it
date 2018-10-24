@@ -3,21 +3,19 @@ title: Supplemento alla privacy di SQL Server | Microsoft Docs
 ms.date: 4/24/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40c6bfb24ea3e711ca6b14509921d5599b316ebf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9d0db88d84effcc76c97addeeab6e9d6c104aa5f
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975288"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878114"
 ---
 # <a name="sql-server-privacy-supplement"></a>Supplemento alla privacy di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +25,7 @@ In questo articolo viene riepilogato il comportamento di vari oggetti dati usati
 - Database SQL di Azure
 - SQL Server Management Studio (SSMS)
 - SQL Server Data Tools (SSDT)
-- SQL Operations Studio
+- Azure Data Studio
 - Data Migration Assistant
 - SQL Server Migration Assistant
 - Estensione MS-SQL
@@ -130,6 +128,7 @@ I dati riportati si seguito sono considerati metadati di sistema se non includon
 - Dati di configurazione del server, ad esempio le impostazioni di sp_configure
 - Dati di configurazione delle funzionalità
 - Nomi degli eventi e codici di errore
+- Impostazioni hardware e identificazione, ad esempio il produttore OEM
 
 Microsoft esamina i valori dei nomi di applicazione impostati da altri programmi che usano SQL Server (esempio: SharePoint o programmi in pacchetto di terze parti) e include queste informazioni nei metadati di sistema inviate a Microsoft quando sono abilitati i dati di utilizzo. I clienti non devono inserire dati personali, ad esempio le informazioni personali dell'utente finale, nei campi di metadati di sistema o creare applicazioni progettate per archiviare dati personali in questi campi. 
 

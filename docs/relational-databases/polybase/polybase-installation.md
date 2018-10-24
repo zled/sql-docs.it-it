@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01182a581f231ffed82be26698e8e50bf82df9e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94334d025645ec13e6f046800de49eeb902401f4
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842549"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874359"
 ---
 # <a name="install-polybase-on-windows"></a>Installare PolyBase in Windows
 
@@ -68,6 +68,8 @@ Dopo aver installato PolyBase in un nodo singolo o in un gruppo di scalabilità 
 2. Fare clic su **Installazione**e quindi scegliere **Nuova installazione di SQL Server autonomo o aggiunta di funzionalità**.  
    
 3. Nella pagina Selezione funzionalità scegliere **Servizio query PolyBase per i dati esterni**.  
+
+ ![Servizi PolyBase](../../relational-databases/polybase/media/install-wizard.png "Servizi PolyBase")  
    
 4. Nella pagina Configurazione server configurare il **servizio motore PolyBase di SQL Server** e SQL Server PolyBase Data Movement Service per l'esecuzione con lo stesso account.  
    
@@ -89,7 +91,9 @@ Dopo aver installato PolyBase in un nodo singolo o in un gruppo di scalabilità 
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
-Dopo l'installazione, è necessario [abilitare la funzionalità PolyBase](#enable).
+  > **IMPORTANTE**
+  >
+  > Dopo l'installazione, è necessario [abilitare la funzionalità PolyBase](#enable).
 
 ::: moniker-end
 
@@ -156,11 +160,16 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> Abilitare PolyBase
 
-A partire da SQL Server 2019 CTP 2.0, è necessario abilitare PolyBase dopo l'installazione usando il comando Transact-SQL seguente:
+
+Dopo aver completato l'installazione, è necessario abilitare PolyBase per accedere alle relative funzionalità. Connettersi a SQL Server 2019 CTP 2.0 e abilitare PolyBase dopo l'installazione usando il comando Transact-SQL seguente:
+
 
 ```sql
-sp_configure @configname = 'polybase enabled', @configvalue = 1;
+exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
+RECONFIGURE [ WITH OVERRIDE ]  ;
 ```
+L'istanza deve quindi essere **riavviata** 
+
 
 ::: moniker-end
 
