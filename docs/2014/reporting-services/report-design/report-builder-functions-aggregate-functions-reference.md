@@ -45,7 +45,7 @@ ms.locfileid: "48194117"
   
 -   [Verifica dell'ambito](#TestingforScope)  
   
- Per determinare gli ambiti validi per una funzione, vedere l'argomento di riferimento delle singole funzioni. Per altre informazioni ed esempi, vedere [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Per determinare gli ambiti validi per una funzione, vedere l'argomento di riferimento delle singole funzioni. Per altre informazioni ed esempi, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

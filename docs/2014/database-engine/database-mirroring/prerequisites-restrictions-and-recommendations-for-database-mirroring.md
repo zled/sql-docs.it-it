@@ -51,7 +51,7 @@ ms.locfileid: "48164791"
 -   I due partner, cioè il server principale e il server mirror, devono essere in esecuzione nella stessa edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il server di controllo, se presente, può essere eseguito in qualsiasi edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta il mirroring del database.  
   
     > [!NOTE]  
-    >  È possibile aggiornare istanze del server che operano come partner in una sessione di mirroring a una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
+    >  È possibile aggiornare istanze del server che operano come partner in una sessione di mirroring a una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Riduzione al minimo del tempo di inattività per i database con mirroring quando si aggiornano le istanze del server](upgrading-mirrored-instances.md).  
   
 -   Il database deve utilizzare il modello di recupero con registrazione completa. I modelli di recupero con registrazione minima e con registrazione minima delle operazioni bulk non supportano il mirroring del database. Di conseguenza, le operazioni bulk vengono sempre registrate completamente per un database con mirroring. Per informazioni sui modelli di recupero, vedere [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   

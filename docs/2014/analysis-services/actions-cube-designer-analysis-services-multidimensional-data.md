@@ -37,10 +37,10 @@ ms.locfileid: "48067577"
  Usare l' **editor dei form delle azioni** nella visualizzazione Form per modificare le azioni standard contenute nel cubo. Per altre informazioni su questo riquadro, vedere [Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Editor dei Form delle azioni drill-through**  
- Usare l' **editor dei form delle azioni drill-through** per modificare le azioni drill-through contenute nel cubo. Per altre informazioni su questo riquadro, vedere [Drillthrough Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Usare l' **editor dei form delle azioni drill-through** per modificare le azioni drill-through contenute nel cubo. Per altre informazioni su questo riquadro, vedere [Editor dei form delle azioni drill-through &#40;scheda Azioni, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Editor dei Form delle azioni report**  
- Usare l' **editor dei form delle azioni report** per modificare le azioni report contenute nel cubo. Per altre informazioni su questo riquadro, vedere [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Usare l' **editor dei form delle azioni report** per modificare le azioni report contenute nel cubo. Per altre informazioni su questo riquadro, vedere [Editor dei form delle azioni report &#40;scheda Azioni, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Azioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

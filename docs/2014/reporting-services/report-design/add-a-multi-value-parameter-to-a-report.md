@@ -23,7 +23,7 @@ ms.locfileid: "48074470"
   
  È possibile passare più valori di parametro al report nell'URL del report. Per un esempio di URL include un parametro multivalore, vedere [passare un parametro di Report in un URL](../pass-a-report-parameter-within-a-url.md).  
   
- Per informazioni su come passare più valori di parametro a una stored procedure, vedere [Working With Multi-Select Parameters for SSRS Reports](http://go.microsoft.com/fwlink/?LinkId=321529) (Utilizzo di parametri a selezione multipla per report SSRS) nel sito Web mssqltips.com.  
+ Per informazioni su come passare più valori di parametro a una stored procedure, vedere [Utilizzo di parametri a selezione multipla per report SSRS](http://go.microsoft.com/fwlink/?LinkId=321529) nel sito Web mssqltips.com.  
   
 ### <a name="to-add-a-multi-value-parameter"></a>Per aggiungere un parametro multivalore  
   
