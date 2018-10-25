@@ -25,7 +25,7 @@ ms.locfileid: "48207921"
   
 -   È stato creato un database nel computer di origine.  
   
--   È stato creato un backup del database (con estensione bak) in archiviazione di Azure usando il [SQL Server Backup and Restore with Windows Azure Blob Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) funzionalità. Si noti che è necessario creare un'altra credenziale di SQL Server durante questo passaggio. La credenziale usano le chiavi di account di archiviazione.  
+-   È stato creato un backup del database (con estensione bak) in archiviazione di Azure usando il [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) funzionalità. Si noti che è necessario creare un'altra credenziale di SQL Server durante questo passaggio. La credenziale usano le chiavi di account di archiviazione.  
   
 -   Creazione di un account di Archiviazione di Windows Azure.  
   

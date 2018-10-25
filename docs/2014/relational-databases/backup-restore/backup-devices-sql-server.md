@@ -210,7 +210,7 @@ GO
  Se un nastro viene inavvertitamente lasciato aperto, il modo più rapido per rilasciarlo consiste nell'uso del comando : RESTORE REWINDONLY FROM TAPE **=***nome_dispositvo_backup*. Per altre informazioni, vedere [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Utilizzo del servizio di archiviazione BLOB di Windows Azure  
- I backup di SQL Server possono essere scritti nel servizio di archiviazione BLOB di Windows Azure.  Per ulteriori informazioni su come utilizzare il servizio di archiviazione BLOB di Windows Azure per i backup, vedere [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ I backup di SQL Server possono essere scritti nel servizio di archiviazione BLOB di Windows Azure.  Per ulteriori informazioni su come utilizzare il servizio di archiviazione BLOB di Windows Azure per i backup, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a> Usando un dispositivo di Backup logico  
  Un *dispositivo di backup logico* è un nome facoltativo definito dall'utente tramite cui viene fatto riferimento a un dispositivo di backup fisico specifico, ovvero un file su disco o un'unità nastro. Un dispositivo di backup logico consente di utilizzare i riferimenti indiretti per fare riferimento al dispositivo di backup fisico corrispondente.  
