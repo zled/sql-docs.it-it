@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2052b098f0be7ab377cf38a36b896794d3caa07a
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 8f7520a4e9bdc346113e4777bd6899f5ccc0e01c
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874349"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460316"
 ---
 # <a name="polybase-features-and-limitations"></a>Funzionalità e limitazioni di PolyBase
 
@@ -80,13 +80,11 @@ PolyBase include le limitazioni seguenti:
 - [PolyBase non viene installato quando si aggiunge un nodo a un cluster di failover di SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
+
 - L'autenticazione integrata non è supportata. Attualmente sono supportati solo il nome utente e la password.  
-- La crittografia è abilitata per impostazione predefinita. Per disabilitare la crittografia è necessario... (comunicare con thanh)
-- [Limitazioni del mapping dei tipi di dati](polybase-type-mapping.md)
 
+- La crittografia è abilitata per impostazione predefinita.
 
-## <a name="security-and-authentication"></a>Sicurezza e autenticazione 
+## <a name="next-steps"></a>Passaggi successivi
 
-## <a name="see-also"></a>Vedere anche  
-
-[Guida a PolyBase](../../relational-databases/polybase/polybase-guide.md)  
+Per altre informazioni su PolyBase, vedere [Che cos'è PolyBase?](polybase-guide.md).

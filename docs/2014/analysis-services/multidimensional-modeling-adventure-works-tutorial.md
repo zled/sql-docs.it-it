@@ -35,10 +35,10 @@ ms.locfileid: "48049422"
   
 -   Come definire calcoli, indicatori di prestazioni chiave (KPI), azioni, prospettive, traduzioni e ruoli di sicurezza in un cubo.  
   
- Con questa esercitazione viene fornita una descrizione dello scenario in modo da comprendere meglio il contesto di queste lezioni. Per ulteriori informazioni, vedere [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md).  
+ Con questa esercitazione viene fornita una descrizione dello scenario in modo da comprendere meglio il contesto di queste lezioni. Per ulteriori informazioni, vedere [Scenario di Analysis Services Tutorial](analysis-services-tutorial-scenario.md).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Per completare tutte le lezioni di questa esercitazione sono necessari dati di esempio, file di progetto di esempio e software specifici. Per istruzioni su come trovare e installare i prerequisiti per questa esercitazione, vedere [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](install-sample-data-and-projects.md).  
+ Per completare tutte le lezioni di questa esercitazione sono necessari dati di esempio, file di progetto di esempio e software specifici. Per istruzioni su come trovare e installare i prerequisiti per questa esercitazione, vedere [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](install-sample-data-and-projects.md).  
   
  Per completare questa esercitazione sono inoltre necessarie le autorizzazioni seguenti:  
   

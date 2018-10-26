@@ -90,7 +90,7 @@ ms.locfileid: "48142461"
   
 -   Eliminando icone dal set di indicatori per rendere più semplice la visualizzazione dei dati utilizzando solo alcune icone.  
   
- Per altre informazioni, vedere [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Modificare le icone degli indicatori e dei set di indicatori &#40;Generatore report e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
   
   
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> Utilizzo degli indicatori in tabelle e matrici  
@@ -100,9 +100,9 @@ ms.locfileid: "48142461"
   
  ![rs_IndicatorReportBlueArrows](../media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
- Per altre informazioni sull'aggiunta, la modifica e l'eliminazione degli indicatori, vedere [Add or Delete an Indicator &#40;Report Builder and SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md).  
+ Per altre informazioni sull'aggiunta, la modifica e l'eliminazione degli indicatori, vedere [Aggiungere o eliminare un indicatore &#40;Generatore report e SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md).  
   
- Quando si aggiunge per la prima volta un indicatore a un report, viene configurato in modo da utilizzare i valori predefiniti. Successivamente è possibile modificare i valori in modo che l'indicatore raffiguri i dati in base alle proprie esigenze. È possibile modificare l'aspetto delle icone dell'indicatore, il modo in cui l'indicatore sceglie quale icona utilizzare, nonché le icone utilizzate da un set di indicatori. Per altre informazioni, vedere [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
+ Quando si aggiunge per la prima volta un indicatore a un report, viene configurato in modo da utilizzare i valori predefiniti. Successivamente è possibile modificare i valori in modo che l'indicatore raffiguri i dati in base alle proprie esigenze. È possibile modificare l'aspetto delle icone dell'indicatore, il modo in cui l'indicatore sceglie quale icona utilizzare, nonché le icone utilizzate da un set di indicatori. Per altre informazioni, vedere [Modificare le icone degli indicatori e dei set di indicatori &#40;Generatore report e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
   
  Per impostazione predefinita, gli indicatori sono configurati per utilizzare le percentuali come unità di misura e per rilevare automaticamente i valori minimo e massimo nei dati. Ogni icona nel set di indicatori dispone di un intervallo di percentuale. Il numero di intervalli di percentuale dipende dal numero di icone nel set di icone, tuttavia gli intervalli presentano le stesse dimensioni e sono sequenziali. Ad esempio, se il set dispone di cinque icone, sono disponibili cinque intervalli di percentuale, ognuno dei quali è pari a 20 in termini di dimensioni. Il primo inizia da 0 e termina a 20, il secondo inizia da 20 e termina a 40 e così via. Per l'indicatore nel report viene utilizzata l'icona del set di indicatori che dispone di un intervallo di percentuale all'interno del quale si trova il valore di dati dell'indicatore. È possibile modificare l'intervallo di percentuale per ogni icona nel set. I valori minimo e massimo possono essere impostati in modo esplicito fornendo un valore o un'espressione. Inoltre, è possibile cambiare l'unità di misura in valore numerico. In questo caso, non si specifica il valore minimo o massimo per i dati. Al contrario, vengono forniti solo i valori iniziale e finale per ogni icona utilizzata dall'indicatore. Per altre informazioni, vedere [Set e configurare le unità di misura &#40;Generatore Report e SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48142461"
   
  Per informazioni generali sull'impostazione dell'ambito all'interno dei report, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Negli indicatori viene utilizzato un solo valore. Se è necessario visualizzare più valori di dati, utilizzare un grafico sparkline o una barra dei dati anziché un indicatore. Pur consentendo di rappresentare più valori di dati, sono semplici, facili da capire in formati di piccole dimensioni e funzionano bene in tabelle e matrici. Per altre informazioni, vedere [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
+ Negli indicatori viene utilizzato un solo valore. Se è necessario visualizzare più valori di dati, utilizzare un grafico sparkline o una barra dei dati anziché un indicatore. Pur consentendo di rappresentare più valori di dati, sono semplici, facili da capire in formati di piccole dimensioni e funzionano bene in tabelle e matrici. Per altre informazioni, vedere [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
   
 ##  <a name="SizingIndicatators"></a> Ridimensionamento degli indicatori per migliorare l'impatto visivo  
@@ -128,9 +128,9 @@ ms.locfileid: "48142461"
   
  ![rs_GaugePanelWithIndicatorAndGauge](../media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
   
- Per altre informazioni, vedere [Include Indicators and Gauges in a Gauge Panel &#40;Report Builder and SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Includere indicatori e misuratori in un pannello del misuratore &#40;Generatore report e SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
   
- Per altre informazioni sull'uso dei misuratori, vedere [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md).  
+ Per altre informazioni sull'uso dei misuratori, vedere [Misuratori &#40;Generatore report e SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
   
 ##  <a name="SequenceIndicatorStates"></a> Sequenza di stati indicatore  
