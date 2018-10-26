@@ -44,7 +44,7 @@ ms.locfileid: "48192631"
   
  Oltre ai bordi standard, ai grafici è possibile applicare bordi aggiuntivi. Per altre informazioni, vedere [Aggiungere un bordo o un frame a un grafico &#40;Generatore report e SSRS&#41;](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md).  
   
- È anche possibile aggiungere un bordo al report stesso. Per altre informazioni, vedere [Add a Border to a Report &#40;Report Builder and SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
+ È anche possibile aggiungere un bordo al report stesso. Per altre informazioni, vedere [Aggiungere un bordo a un report &#40;Generatore report e SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
   
 ## <a name="applying-background-colors"></a>Applicazione di colori di sfondo  
  È possibile impostare un colore a tinta unita come sfondo per l'intero report, una casella di testo del report o una cella oppure un gruppo di celle in un'area dati. Per impostazione predefinita, il colore di sfondo è il bianco. È tuttavia possibile selezionare un altro colore nella scheda **Riempimento** della finestra di dialogo **Proprietà** dell'elemento di report. Se ad esempio si vuole modificare il colore di sfondo di una casella di testo, fare clic con il pulsante destro del mouse sulla casella di testo, quindi scegliere **Proprietà casella di testo**. Fare clic su **Riempimento** , quindi selezionare il colore desiderato. In questa finestra di dialogo è possibile selezionare un colore di sfondo per l'elemento selezionato oppure aggiungere un'immagine da visualizzare come sfondo.  

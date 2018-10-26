@@ -71,7 +71,7 @@ ms.locfileid: "48084827"
   
 ## <a name="other-options"></a>Altre opzioni  
  **Profilo rapido**  
- Consente di visualizzare l'opzione **Form profilo rapido singola tabella**. Questo form semplifica l'attività di profiling di una singola tabella o vista tramite le impostazioni predefinite. Per altre informazioni, vedere [Single Table Quick Profile Form &#40;Data Profiling Task&#41;](single-table-quick-profile-form-data-profiling-task.md).  
+ Consente di visualizzare l'opzione **Form profilo rapido singola tabella**. Questo form semplifica l'attività di profiling di una singola tabella o vista tramite le impostazioni predefinite. Per altre informazioni, vedere [Form profilo rapido singola tabella &#40;Attività Profiling dati&#41;](single-table-quick-profile-form-data-profiling-task.md).  
   
  **Apri Visualizzatore profilo**  
  Consente di aprire il Visualizzatore profilo dati. Il Visualizzatore profilo dati autonomo visualizza l'output del profilo dei dati dall'attività Profiling dati. È possibile visualizzare l'output del profilo dei dati dopo avere eseguito l'attività Profiling dati nel pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e aver calcolato i profili dati.  
