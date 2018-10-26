@@ -16,12 +16,12 @@ ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4c674c7a100d5a757ef0d7d3d1f06349f0ec5e50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8fa157929e6936ed80ab8ca895b89309d68b960d
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844643"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383566"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Correzione di pagina automatica (Gruppi di disponibilità/Mirroring del database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "47844643"
   
 1.  Con il mirroring del database, se vengono rilevati errori di I/O in una o più pagine dal database mirror quando tramite quest'ultimo viene eseguito il rollforward di un record di log, per la sessione di mirroring viene attivato lo stato SOSPESO. Con [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], se vengono rilevati errori di I/O in una o più pagine da una replica secondaria quando tramite quest'ultima viene eseguito il rollforward di un record di log, per il database secondario viene attivato lo stato SOSPESO. A questo punto, il database mirror o secondario inserisce una riga con la stato di errore appropriato nella tabella **suspect_pages** . Dal database mirror o secondario viene quindi richiesta una copia della pagina dal database principale o primario.  
   
-2.  Tramite il database principale o primario si tenta di accedere alla pagina nella relativa copia del database. Se è possibile accedere alla pagina, la copia della pagina al database mirror o secondario viene inviata dal database principale o primario.  
+2.  Tramite il database principale o primario si tenta di accedere alla pagina nella relativa copia del database. Se è possibile accedere alla pagina, il database principale o primario invia la copia della pagina al database mirror o secondario.  
   
 3.  Se dal database mirror o secondario si riceve una copia di tutte le pagine richieste, tramite questo database si tenta di riprendere la sessione di mirroring. Se la correzione automatica di una pagina sospetta viene eseguita, la pagina viene contrassegnata nella tabella **suspect_pages** come ripristinata (**event_type** = 4).  
   

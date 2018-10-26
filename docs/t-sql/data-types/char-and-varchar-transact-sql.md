@@ -1,7 +1,7 @@
 ---
 title: char e varchar (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,42 +19,49 @@ helpviewer_keywords:
 - varchar(max) data type
 - variable-length data types [SQL Server]
 - varchar data type
+- utf8
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6699c1b1c02f071dd95cd642f15a9b449de8e815
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1aa8e57c93a96c2d8f48d8b675c97ef51f7396f
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824792"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49644009"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char and varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Questi tipi di dati sono a lunghezza fissa o variabile.  
+Tipi di dati carattere a lunghezza fissa, **char**, o a lunghezza variabile, **varchar**. A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], quando si usano regole di confronto che supportano UTF-8, questi tipi di dati archiviano l'intera gamma dei dati di tipo carattere [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) e usano la codifica dei caratteri [UTF-8 ](http://www.wikipedia.org/wiki/UTF-8). Se si specificano regole di confronto non UTF-8, questi tipi di dati archiviano solo un subset dei caratteri supportati dalla tabella codici corrispondente di tali regole di confronto.
   
 ## <a name="arguments"></a>Argomenti  
-**char** [ ( *n* ) ] Dati di stringa a lunghezza fissa, non-Unicode. *n* definisce la lunghezza della stringa e deve essere un valore compreso tra 1 e 8.000. Le dimensioni di archiviazione corrispondono a *n* byte. Il sinonimo ISO per **char** è **character**.
-  
-**varchar** [ ( *n* | **max** ) ] Dati di stringa a lunghezza variabile, non-Unicode. *n* definisce la lunghezza della stringa e può essere un valore compreso tra 1 e 8.000. **max** indica che le dimensioni massime della risorsa di archiviazione sono di 2^31-1 byte (2 GB). Le dimensioni dello spazio di archiviazione corrispondono alla lunghezza effettiva dei dati immessi + 2 byte. I sinonimi ISO per **varchar** sono **charvarying** o **charactervarying**.
-  
+**char** [ ( *n* ) ] Dati stringa a lunghezza fissa. *n* definisce la lunghezza della stringa in byte e deve essere un valore compreso tra 1 e 8.000. Per i set di caratteri con codifica a byte singolo, ad esempio *Latin*, le dimensioni di archiviazione sono pari a *n* byte e anche il numero di caratteri che possono essere archiviati è *n*. Per i set di caratteri con codifica multibyte, le dimensioni di archiviazione sono di nuovo *n* byte, ma il numero di caratteri che possono essere archiviati può essere inferiore a *n*. Il sinonimo ISO per **char** è **character**. Per altre informazioni sui set di caratteri, vedere [Set di caratteri a byte singolo e multibyte](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+
+**varchar** [ ( *n* | **max** ) ] Dati stringa a lunghezza variabile. *n* definisce la lunghezza della stringa in byte e può essere un valore compreso tra 1 e 8.000. **max** indica che le dimensioni massime della risorsa di archiviazione sono di 2^31-1 byte (2 GB). Per i set di caratteri con codifica a byte singolo, ad esempio *Latin*, le dimensioni di archiviazione sono pari a *n* byte + 2 byte e anche il numero di caratteri che possono essere archiviati è *n*. Per i set di caratteri con codifica multibyte, le dimensioni di archiviazione sono di nuovo *n* byte + 2 byte, ma il numero di caratteri che possono essere archiviati può essere inferiore a *n*. I sinonimi ISO per **varchar** sono **charvarying** o **charactervarying**. Per altre informazioni sui set di caratteri, vedere [Set di caratteri a byte singolo e multibyte](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+
 ## <a name="remarks"></a>Remarks  
 Se *n* viene omesso in un'istruzione di definizione dei dati o di dichiarazione di variabili, la lunghezza predefinita è 1. Se *n* viene omesso nell'uso delle funzioni CAST e CONVERT, la lunghezza predefinita è 30.
   
 Agli oggetti che usano **char** o **varchar** vengono assegnate le regole di confronto predefinite del database, a meno che non vengano assegnate regole di confronto specifiche tramite la clausola COLLATE. Le regole di confronto controllano la tabella codici utilizzata per l'archiviazione dei dati di tipo carattere.
-  
-Nel caso di siti che supportano più lingue, è consigliabile usare i tipi di dati Unicode **nchar** o **nvarchar** per ridurre al minimo i problemi di conversione dei caratteri. Se si usano i tipi di dati **char** o **varchar**, è consigliabile:
+
+Le codifiche multibyte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includono:
+-   Set di caratteri DBCS (Double Byte Character Set) per alcune lingue asiatiche orientali che usano le tabelle codici 936 e 950 (cinese), 932 (giapponese) o 949 (coreano).
+-   UTF-8 con tabella codici 65001. **Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]))
+
+In presenza di siti che supportano più lingue:
+- A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], è consigliabile usare le regole di confronto abilitate per UTF-8 per il supporto di Unicode e per ridurre al minimo i problemi di conversione dei caratteri. 
+- Se si usa una versione precedente di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] valutare la possibilità di usare i tipi di dati Unicode **nchar** oppure **nvarchar** per ridurre al minimo i problemi di conversione dei caratteri.   
+
+Se si usano i tipi di dati **char** o **varchar**, è consigliabile:
 - Usare **char** quando le dimensioni delle voci di dati delle colonne sono coerenti.  
 - Usare **varchar** quando le dimensioni delle voci di dati delle colonne presentano notevoli differenze.  
-- Usare il tipo di dati **varchar(max)** quando le dimensioni delle voci di dati delle colonne variano in modo significativo e possono essere superiori a 8.000 byte.  
+- Usare **varchar(max)** quando le dimensioni delle voci di dati delle colonne variano in modo significativo e la lunghezza delle stringhe potrebbe essere superiore a 8.000 byte.  
   
 Se l'opzione SET ANSI_PADDING è impostata su OFF quando si esegue l'istruzione CREATE TABLE o ALTER TABLE, le colonne di tipo **char** definite come NULL vengono gestite come colonne di tipo **varchar**.
   
-Quando la tabella codici delle regole di confronto usa caratteri a doppio byte, le dimensioni di archiviazione risultano comunque pari a *n* byte. In base alla stringa di caratteri, le dimensioni della risorsa di archiviazione di *n* byte possono corrispondere a meno di *n* caratteri.
-
 > [!WARNING]
 > Ogni colonna non Null varchar(max) o nvarchar(max) richiede 24 byte di allocazione fissa aggiuntiva che concorre al raggiungimento del limite delle righe di 8.060 byte durante un'operazione di ordinamento. Ciò può creare un limite implicito per il numero di colonne non Null varchar(max) o nvarchar(max) che è possibile creare in una tabella.  
 Non vengono segnalati errori particolari (oltre il normale avviso che indica che le dimensioni massime per le righe superano il valore massimo consentito di 8060 byte) durante la creazione della tabella o l'inserimento dei dati. Queste dimensioni delle righe eccessive possono causare errori (ad esempio, l'errore 512) durante le normali operazioni, ad esempio un aggiornamento della chiave dell'indice cluster o l'ordinamento del set di colonne completo, che gli utenti non possono prevedere finché non eseguono un'operazione.
@@ -65,7 +72,7 @@ Se un'espressione di caratteri viene convertita in un tipo di dati carattere di 
 Se un'espressione di caratteri viene convertita in un'espressione di caratteri con tipo di dati o dimensioni diverse, ad esempio da**char(5)** a **varchar(5)**, o da **char(20)** a **char(15)**, al valore convertito vengono assegnate le regole di confronto del valore di input. Se un'espressione non di caratteri viene convertita in dati di tipo carattere, al valore convertito vengono assegnate le regole di confronto predefinite del database corrente. In entrambi i casi è possibile assegnare regole di confronto specifiche mediante la clausola [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
   
 > [!NOTE]  
->  Le conversioni tra tabelle codici sono supportate per i tipi di dati **char** e **varchar**, ma non per il tipo di dati **text**. Come nel caso delle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la perdita di dati durante le conversioni di tabella codici non viene segnalata.  
+> Le conversioni tra tabelle codici sono supportate per i tipi di dati **char** e **varchar**, ma non per il tipo di dati **text**. Come nel caso delle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la perdita di dati durante le conversioni di tabella codici non viene segnalata.  
   
 Le espressioni di caratteri che vengono convertite in un tipo di dati **numeric** approssimato possono includere una notazione esponenziale facoltativa: una e minuscola o maiuscola seguita da un segno più (+) o meno (-) facoltativo e quindi da un numero.
   
@@ -115,7 +122,7 @@ WHERE CAST(SalesYTD AS varchar(20) ) LIKE '1%';
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 BusinessEntityID SalesYTD              DisplayFormat CurrentDate             DisplayDateFormat  
 ---------------- --------------------- ------------- ----------------------- -----------------  
 278              1453719.4653          1,453,719.47  2011-05-07 14:29:01.193 07/05/11  
@@ -144,7 +151,7 @@ SELECT @ID, CONVERT(uniqueidentifier, @ID) AS TruncatedValue;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 String                                       TruncatedValue  
 -------------------------------------------- ------------------------------------  
 0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong    0E984725-C51C-4BF4-9960-E1C80E27ABA0  
@@ -158,6 +165,7 @@ String                                       TruncatedValue
 [COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [Conversione del tipo di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[Stima delle dimensioni di un database](../../relational-databases/databases/estimate-the-size-of-a-database.md)
-  
+[Stima delle dimensioni di un database](../../relational-databases/databases/estimate-the-size-of-a-database.md)     
+[Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md)    
+[Set di caratteri a byte singolo e multibyte](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)
   

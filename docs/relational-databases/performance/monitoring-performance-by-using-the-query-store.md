@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdf4b9ba29155d3779f1c28b74b7ad8617be0d48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91d662dde7fe35ff74802ac9d899e03baaf8feb2
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717059"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359348"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,6 +66,9 @@ Per altre opzioni della sintassi correlate all'archivio query, vedere [Opzioni A
  I piani di esecuzione per query specifiche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in genere cambiano nel tempo per motivi diversi, quali modifiche delle statistiche, modifiche dello schema, creazione/eliminazione di indici e così via. Nella cache delle procedure, dove sono archiviati i piani di query memorizzati nella cache, viene archiviato solo il piano di esecuzione più recente. La rimozione dei piani dalla cache dei piani può dipendere anche da problemi di memoria. Di conseguenza, le regressioni delle prestazioni di esecuzione delle query causate da modifiche del piano di esecuzione possono essere rilevanti e richiedere tempo per la risoluzione.  
   
  Dal momento che nell'archivio query vengono mantenuti più piani di esecuzione per ogni query, è possibile applicare i criteri in modo che il processore di query usi un piano di esecuzione specifico per una query. Questo processo viene chiamato utilizzo forzato del piano. Per applicare l'utilizzo forzato del piano in Archivio query, viene usato un meccanismo simile all'hint per la query [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) , che però non richiede modifiche nelle applicazioni utente. Grazie all'utilizzo forzato del piano è possibile risolvere molto rapidamente una regressione delle prestazioni di esecuzione delle query causata da una modifica del piano.  
+
+> [!NOTE]
+> Query Store raccoglie i piani per le istruzioni DML come SELECT, INSERT, UPDATE, DELETE, MERGE e BULK INSERT.
 
  Le **statistiche di attesa** sono un'altra fonte di informazione con le quali è possibile risolvere i problemi di prestazioni in SQL Server. Per molto tempo le statistiche di attesa sono state disponibili solo a livello di istanza, il che rendeva difficile l'esecuzione del backtracking per la query effettiva. In SQL Server 2017 e nel database SQL di Azure è stata aggiunta un'altra dimensione in Query Store che tiene traccia delle statistiche di attesa. 
 

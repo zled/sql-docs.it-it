@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc81d7a915a79af3406d5fc90ef9920d5e19055a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0a6c44ddcf6a222db8db865896921ad29ea2f56
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757050"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636480"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ Le regole di confronto specificano i modelli di bit che rappresentano i caratter
     
 I risultati di un'istruzione[!INCLUDE[tsql](../../includes/tsql-md.md)] possono variare se l'istruzione viene eseguita nel contesto di database diversi che utilizzano impostazioni diverse per le regole di confronto. Se possibile, usare regole di confronto standardizzate per l'organizzazione. In questo modo, non è necessario specificare esplicitamente le regole di confronto in ogni carattere o espressione Unicode. Se è necessario usare oggetti con impostazioni diverse per tabelle codici e regole di confronto, codificare le query in modo da considerare la precedenza delle regole di confronto. Per altre informazioni, vedere [Precedenza delle regole di confronto (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-Alle regole di confronto sono associate le opzioni seguenti: distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza e distinzione dei selettori di variazione. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce un'opzione aggiuntiva per la codifica UTF-8. Tali opzioni vengono specificate aggiungendole al nome delle regole di confronto. Ad esempio, le regole di confronto `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` prevedono distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza e codifica UTF-8. Sempre a titolo di esempio, le regole di confronto `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` prevedono le opzioni seguenti: nessuna distinzione tra lettere maiuscole e minuscole, nessuna distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza, distinzione dei selettori di variazione e usano la codifica non Unicode. La tabella seguente descrive il comportamento associato a queste opzioni.    
+Alle regole di confronto sono associate le opzioni seguenti: distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza e distinzione dei selettori di variazione. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce un'opzione aggiuntiva per la codifica [UTF-8](http://www.wikipedia.org/wiki/UTF-8). Tali opzioni vengono specificate aggiungendole al nome delle regole di confronto. Ad esempio, le regole di confronto `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` prevedono distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza e codifica UTF-8. Sempre a titolo di esempio, le regole di confronto `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` prevedono le opzioni seguenti: nessuna distinzione tra lettere maiuscole e minuscole, nessuna distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza, distinzione dei selettori di variazione e usano la codifica non Unicode. La tabella seguente descrive il comportamento associato a queste opzioni.    
     
 |Opzione|Descrizione|    
 |------------|-----------------|    

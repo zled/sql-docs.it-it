@@ -34,7 +34,7 @@ ms.locfileid: "48199951"
   
 -   **Linee con rientri**. Grafico a linee in cui viene utilizzata una linea con rientri anziché regolare. I punti vengono collegati tramite una linea in modo simile ai gradini di una scala.  
   
--   **Grafici sparkline**. Le variazioni del grafico a linee in cui viene visualizzata solo la serie di linee nella cella di una tabella o matrice. Per altre informazioni, vedere [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
+-   **Grafici sparkline**. Le variazioni del grafico a linee in cui viene visualizzata solo la serie di linee nella cella di una tabella o matrice. Per altre informazioni, vedere [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="data-considerations-for-line-charts"></a>Considerazioni sui dati per i grafici a linee  
   

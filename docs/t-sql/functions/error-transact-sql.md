@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd379df3c82a16924a984464d1bdbe68e8ebfce8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a164a4c4c3cff6b2569e49f5dc84348376a727d4
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632129"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359298"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47632129"
 ### <a name="a-using-error-to-detect-a-specific-error"></a>A. Uso di @@ERROR per trovare un errore specifico  
  Nell'esempio seguente si utilizza `@@ERROR` per rilevare una violazione di vincolo CHECK (errore numero 547) in un'istruzione `UPDATE`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.EmployeePayHistory  
@@ -72,7 +72,7 @@ GO
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. Uso di @@ERROR per l'uscita condizionale da una procedura  
  Nell'esempio seguente vengono usate istruzioni `IF...ELSE` per testare `@@ERROR` dopo un'istruzione `DELETE` in una stored procedure. Il valore della variabile `@@ERROR` determina il codice restituito inviato al programma chiamante per segnalare se la procedura ha avuto esito positivo o negativo.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Drop the procedure if it already exists.  
@@ -107,7 +107,7 @@ GO
 ### <a name="c-using-error-with-rowcount"></a>C. Uso di @@ERROR con @@ROWCOUNT  
  Nell'esempio seguente si utilizza `@@ERROR` con `@@ROWCOUNT` per verificare l'operazione di un'istruzione `UPDATE`. Il valore di `@@ERROR` viene controllato per verificare la presenza di errori, mentre la funzione `@@ROWCOUNT` viene utilizzata per assicurare che l'aggiornamento di una riga della tabella sia stato eseguito correttamente.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Purchasing.usp_ChangePurchaseOrderHeader',N'P')IS NOT NULL  
@@ -176,7 +176,7 @@ GO
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
  [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
-  
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)     
+ [Guida di riferimento ad errori e eventi &#40;motore di database&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
 

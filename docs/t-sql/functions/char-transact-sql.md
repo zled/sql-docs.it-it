@@ -1,7 +1,7 @@
 ---
 title: CHAR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 10/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 737ea3c8553d6d994096fc30a2a944483b2027b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a548ec574f6ae81b6e365f8f0e9f68db6357102
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637899"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643779"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,13 +44,16 @@ Questa funzione converte un codice ASCII di tipo **int** in un valore di caratte
   
 ## <a name="syntax"></a>Sintassi  
   
-```sql
+```
 CHAR ( integer_expression )  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
 *integer_expression*  
-Valore intero compreso tra 0 e 255. `CHAR` restituisce un valore `NULL` per le espressioni integer esterne all'intervallo.
+Valore intero compreso tra 0 e 255. `CHAR` restituisce un valore `NULL` per le espressioni integer non comprese in questo intervallo o quando il valore integer esprime solo il primo byte di un carattere a byte doppio.
+
+> [!NOTE]
+> Alcuni set di caratteri non europei, come [Shift Japanese Industrial Standards](http://www.wikipedia.org/wiki/Shift_JIS), includono caratteri che possono essere rappresentati in uno schema di codifica a byte singolo, ma richiedono la codifica multibyte. Per altre informazioni sui set di caratteri, vedere [Set di caratteri a byte singolo e multibyte](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
   
 ## <a name="return-types"></a>Tipi restituiti
 **char(1)**
@@ -88,7 +91,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ----------- -
 78          N  
 ----------- -  
@@ -112,9 +115,9 @@ In questo esempio si usa `CHAR(13)` per stampare nome e indirizzo di posta elett
   
 ```sql
 SELECT p.FirstName + ' ' + p.LastName, + CHAR(13)  + pe.EmailAddress   
-FROM Person.Person p JOIN Person.EmailAddress pe  
-ON p.BusinessEntityID = pe.BusinessEntityID  
-AND p.BusinessEntityID = 1;  
+FROM Person.Person p 
+INNER JOIN Person.EmailAddress pe ON p.BusinessEntityID = pe.BusinessEntityID  
+  AND p.BusinessEntityID = 1;  
 GO  
 ```
   
@@ -127,8 +130,6 @@ ken0@adventure-works.com
 (1 row(s) affected)
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>C. Utilizzo di ASCII e CHAR per stampare valori ASCII da una stringa  
 Questo esempio presuppone che si usi un set di caratteri ASCII. Restituisce il valore del carattere per sei diversi valori numerici ASCII.
   
@@ -140,7 +141,7 @@ CHAR(49) AS [49], CHAR(50) AS [50];
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 65   66   97   98   49   50  
 ---- ---- ---- ---- ---- ----  
 A    B    a    b    1    2  
@@ -157,15 +158,46 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
+```
+name                                      create_date               name                                  state_desc  
+--------------------------------------------------------------------------------------------------------------------  
+master                    was created on  2003-04-08 09:13:36.390   master                  is currently  ONLINE 
+tempdb                    was created on  2014-01-10 17:24:24.023   tempdb                  is currently  ONLINE   
+AdventureWorksPDW2012     was created on  2014-05-07 09:05:07.083   AdventureWorksPDW2012   is currently  ONLINE 
+```
+
+### <a name="e-using-char-to-return-single-byte-characters"></a>E. Uso di CHAR per restituire caratteri a byte singolo  
+Questo esempio usa valori interi ed esadecimali nell'intervallo valido per ASCII. La funzione CHAR è in grado di restituire il carattere giapponese a byte singolo.
+  
 ```sql
-name     create_date    name    state_desc  
-------------------------------------------------------------  
-master                   was created on  2003-04-08 09:13:36.390   
-master                   is currently  ONLINE  
-tempdb                   was created on  2014-01-10 17:24:24.023   
-tempdb                   is currently  ONLINE  
-AdventureWorksPDW2012    was created on  2014-05-07 09:05:07.083 
-AdventureWorksPDW2012    is currently  ONLINE  
+SELECT CHAR(188) AS single_byte_representing_complete_character, 
+  CHAR(0xBC) AS single_byte_representing_complete_character;  
+GO  
+```
+  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+  
+```
+single_byte_representing_complete_character single_byte_representing_complete_character
+------------------------------------------- -------------------------------------------
+ｼ                                           ｼ                                         
+```
+
+### <a name="f-using-char-to-return-multibyte-characters"></a>F. Uso di CHAR per restituire caratteri multibyte  
+Questo esempio usa valori interi ed esadecimali nell'intervallo valido per ASCII. Tuttavia, la funzione CHAR restituisce NULL perché il parametro rappresenta solo il primo byte di un carattere multibyte.
+  
+```sql
+SELECT CHAR(129) AS first_byte_of_double_byte_character, 
+  CHAR(0x81) AS first_byte_of_double_byte_character;  
+GO  
+```
+  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+  
+```
+first_byte_of_double_byte_character first_byte_of_double_byte_character
+----------------------------------- -----------------------------------
+NULL                                NULL                                         
 ```
   
 ## <a name="see-also"></a>Vedere anche

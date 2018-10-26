@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb0294ccfb7a099cda01c698719e71141eb88005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 256ec0931c0abb3b15947a9f04892c35a5066862
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716551"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636440"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,9 +42,9 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>Argomenti  
  *integer_expression*  
- Quando le regole di confronto del database non contengono il flag di caratteri supplementari (SC), si tratta di un numero intero positivo compreso tra 0 e 65535 (tra 0 e 0xFFFF). Se viene specificato un valore non compreso in questo intervallo, viene restituito NULL. Per altre informazioni sui caratteri supplementari, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Quando le regole di confronto del database non contengono il flag di [caratteri supplementari (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), si tratta di un intero positivo compreso tra 0 e 65535 (tra 0 e 0xFFFF). Se viene specificato un valore non compreso in questo intervallo, viene restituito NULL. Per altre informazioni sui caratteri supplementari, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- Quando le regole di confronto del database supportano il flag di caratteri supplementari (SC), si tratta di un numero intero positivo compreso tra 0 e 1114111 (tra 0 e 0x10FFFF). Se viene specificato un valore non compreso in questo intervallo, viene restituito NULL.  
+ Quando le regole di confronto del database supportano il flag SC, si tratta di un intero positivo compreso tra 0 e 1114111 (tra 0 e 0x10FFFF). Se viene specificato un valore non compreso in questo intervallo, viene restituito NULL.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **nchar(1)** quando le regole di confronto predefinite del database non supportano i caratteri supplementari.  
@@ -53,7 +53,7 @@ NCHAR ( integer_expression )
   
  Se il parametro *integer_expression* rientra nell'intervallo 0 - 0xFFFF, viene restituito un solo carattere. Per i valori superiori, NCHAR restituisce la coppia di surrogati corrispondente. Non creare una coppia di surrogati tramite `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Utilizzare invece regole di confronto del database che supportano caratteri supplementari, quindi specificare il punto di codice Unicode per la coppia di surrogati. Nell'esempio seguente vengono illustrati sia il metodo obsoleto per la creazione di una coppia di surrogati che il metodo preferito per la specifica del punto di codice Unicode.  
   
-```  
+```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
 DECLARE @d nvarchar(10) = N'𣅿';
 -- Old style method.  
@@ -71,7 +71,7 @@ SELECT NCHAR(UNICODE(@d));
 ### <a name="a-using-nchar-and-unicode"></a>A. Utilizzo delle funzioni NCHAR e UNICODE  
  Nell'esempio seguente vengono utilizzate le funzioni `UNICODE` e `NCHAR` per stampare il valore `UNICODE` e il risultato di `NCHAR` (carattere Unicode) del secondo carattere della stringa di caratteri `København`, nonché il secondo carattere effettivo, ovvero `ø`.  
   
-```  
+```sql  
 DECLARE @nstring nchar(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
@@ -90,7 +90,7 @@ GO
 ### <a name="b-using-substring-unicode-convert-and-nchar"></a>B. Utilizzo di SUBSTRING, UNICODE, CONVERT e NCHAR  
  Nell'esempio seguente vengono utilizzate le funzioni `SUBSTRING`, `UNICODE`, `CONVERT`, e `NCHAR` per stampare il numero di caratteri, il carattere Unicode e il valore UNICODE di ogni carattere della stringa `København`.  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  

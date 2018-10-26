@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c181aa25c7bf06a107ff4fc8a0b0bcd39f66cc2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c5995a59cc226700ccdc0aea15a8fe16a28d75
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775609"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356142"
 ---
 # <a name="databases"></a>Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47775609"
  A un utente che dispone di accesso a un database può essere fornita l'autorizzazione per accedere agli oggetti nel database. Sebbene sia possibile concedere autorizzazioni a singoli utenti, si consiglia di creare ruoli del database, aggiungere gli utenti del database ai ruoli, quindi concedere l'autorizzazione di accesso ai ruoli. La concessione di autorizzazioni ai ruoli anziché agli utenti agevola la coerenza e la comprensibilità delle autorizzazioni man mano che il numero di utenti aumenta e si modifica. Per altre informazioni sulle autorizzazioni per i ruoli, vedere [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md) ed [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
   
 ## <a name="working-with-databases"></a>Utilizzo dei database  
- La maggior parte degli utenti che operano con i database utilizza lo strumento [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Lo strumento [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dispone di un'interfaccia utente grafica per la creazione di database e degli oggetti nei database. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] usa anche un editor di query per interagire con i database scrivendo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile installare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dal disco dell'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o scaricandolo da MSDN.  
+ La maggior parte degli utenti che operano con i database utilizza lo strumento [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Lo strumento [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dispone di un'interfaccia utente grafica per la creazione di database e degli oggetti nei database. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] usa anche un editor di query per interagire con i database scrivendo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile installare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dal disco dell'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o scaricandolo da MSDN. Per altre informazioni sullo strumento [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [Scaricare SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md).
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
