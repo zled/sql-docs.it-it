@@ -16,12 +16,12 @@ ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: afa6c20ccf591b4cea6917cd11817cb24c786abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078061"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145096"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Finestra di dialogo Proprietà computer Analysis Server (Analysis Services)
   Usare la finestra di dialogo **Proprietà computer Analysis Server** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per definire le impostazioni generali, di sicurezza e di lingua e regole di confronto per un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per visualizzare la finestra di dialogo **Proprietà computer Analysis Server**, è possibile fare clic con il pulsante destro del mouse su un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in **Esplora oggetti** e scegliere **Proprietà** dal menu di scelta rapida. Nella finestra di dialogo **Proprietà computer Analysis Server** sono incluse le proprietà seguenti.  
@@ -35,7 +35,7 @@ ms.locfileid: "48078061"
   
 -   **1103** è il livello di compatibilità predefinito per le modalità di distribuzione 1 o 2, per le installazioni che supportano la modalità tabulare o per [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)].  
   
- Il server restituisce questo valore quando un client che supporta lo spazio dei nomi richiede DISCOVER_XML_METADATA. Per altre informazioni, vedere [Set di righe DISCOVER_XML_METADATA](schema-rowsets/xml/discover-xml-metadata-rowset.md).  
+ Il server restituisce questo valore quando un client che supporta lo spazio dei nomi richiede DISCOVER_XML_METADATA. Per altre informazioni, vedere [Set di righe DISCOVER_XML_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset).  
   
 ## <a name="general-properties"></a>Proprietà generali  
  Utilizzare questa pagina per impostare le proprietà generali di base e avanzate, ad esempio i percorsi delle cartelle e le impostazioni di rete, relative a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -96,7 +96,7 @@ ms.locfileid: "48078061"
  Utilizzare questa pagina per specificare gli account utente e di gruppo di Windows appartenenti al ruolo di amministratore del server per un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . L'appartenenza a questo ruolo concede le autorizzazioni necessarie per effettuare attività a livello di intero server, ad esempio la creazione o l'elaborazione di un database, la modifica delle proprietà del server, l'aggiunta o la rimozione di altri membri di questo ruolo oppure l'avvio di una traccia. Visualizzare [Concedi autorizzazioni di amministratore del Server &#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) per informazioni dettagliate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Determinare la modalità Server di un'istanza di Analysis Services](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Determinare la modalità server di un'istanza di Analysis Services](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Configurare le proprietà del Server in Analysis Services](server-properties/server-properties-in-analysis-services.md)   
  [Metodologie di autenticazione supportate da Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Ruoli e autorizzazioni &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   

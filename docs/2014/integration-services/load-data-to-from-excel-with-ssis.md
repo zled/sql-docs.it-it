@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21467fe09feb96feb6ae865c8252623bbefe7eb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098517"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991254"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importare i dati da Excel o esportarli in Excel con SQL Server Integration Services (SSIS)
 
@@ -254,9 +254,9 @@ Per altre informazioni sulle procedure e sui componenti descritti in questo arti
 [Utilizzo di file di Excel con l'attività Script](extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)
 
 ### <a name="about-the-sql-server-import-and-export-wizard"></a>Informazioni sull'Importazione/Esportazione guidata SQL Server
-[Connettersi a un'origine dati Excel](/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)  
-[Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[Connettersi a un'origine dati Excel](/sql/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard)  
+[Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](/sql/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard)
 
 ### <a name="other-articles"></a>Altri articoli
-[Importare dati da Excel a SQL Server o al database SQL di Azure](/relational-databases/import-export/import-data-from-excel-to-sql.md)  
+[Importare dati da Excel a SQL Server o al database SQL di Azure](/sql/relational-databases/import-export/import-data-from-excel-to-sql)  
 

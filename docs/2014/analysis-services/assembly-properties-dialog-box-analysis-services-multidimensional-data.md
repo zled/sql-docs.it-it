@@ -13,12 +13,12 @@ ms.assetid: da1174d6-d82b-4337-ac19-7368dbd95a84
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cdaa5e0fe92c09b728540d28aa71bdc786d8cae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36ad3870fbbbfbcb457e54929bcd4729b7814d8b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149181"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147716"
 ---
 # <a name="assembly-properties-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Proprietà assembly (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Proprietà assembly** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per impostare le proprietà di un riferimento ad assembly in un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È possibile visualizzare la finestra di dialogo **Proprietà assembly** facendo clic con il pulsante destro del mouse su un assembly in **Esplora oggetti** e scegliendo **Proprietà**.  
@@ -34,8 +34,8 @@ ms.locfileid: "48149181"
 |**Ultimo aggiornamento schema**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento ai metadati per il riferimento a un assembly.|  
 |**Tipo**|Consente di visualizzare il tipo del riferimento a un assembly. Vengono visualizzati i valori seguenti:<br /><br /> **Assembly .NET**: il riferimento all'assembly fa riferimento a un [!INCLUDE[msCoName](../includes/msconame-md.md)] assembly .NET Framework.<br /><br /> **DLL COM**: il riferimento all'assembly fa riferimento a una libreria COM.|  
 |**Origine**|Consente di visualizzare l'origine del riferimento a un assembly. Questa proprietà in genere contiene il percorso completo e il nome file di assembly a cui si riferisce il riferimento a un assembly.|  
-|**Set di autorizzazioni**|Consente di selezionare il set di autorizzazioni utilizzato per determinare l'accesso al riferimento a un assembly. Per altre informazioni sui valori disponibili per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>.|  
-|**Impostazioni di rappresentazione**|Consente di selezionare le impostazioni di rappresentazione da utilizzare per l'accesso al riferimento a un assembly. Per altre informazioni sui valori disponibili per questa proprietà, vedere [Elemento ImpersonationInfo &#40;ASSL&#41;](scripting/properties/impersonationinfo-element-assl.md)|  
+|**Set di autorizzazioni**|Consente di selezionare il set di autorizzazioni utilizzato per determinare l'accesso al riferimento a un assembly. Per ulteriori informazioni sui valori disponibili per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>.|  
+|**Impostazioni di rappresentazione**|Consente di selezionare le impostazioni di rappresentazione da utilizzare per l'accesso al riferimento a un assembly. Per altre informazioni sui valori disponibili per questa proprietà, vedere [Elemento ImpersonationInfo &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

@@ -1,28 +1,43 @@
 ---
-title: Usare un modello Python in SQL Server per il training e previsioni | Microsoft Docs
-description: Creare ed eseguire il training di un modello usando Python e il set di dati Iris classico. Salvare il modello in SQL Server e quindi usarlo per generare i risultati stimati.
+title: Modelli di Python in SQL Server per il training e le stime utilizzando le stored procedure | Microsoft Docs
+description: Incorporare il codice Python in stored procedure SQL Server per creare, eseguire il training e usare un modello Python con il set di dati Iris classico. Salvare un modello con training per SQL Server e quindi usarlo per generare i risultati stimati.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/18/2018
+ms.date: 10/23/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 839bcecdeaf7b5e2a7ea1297fe941353bffed20e
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 3cdab7ab26166392724ee278cbaf76afd68b9472
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461837"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099872"
 ---
-# <a name="use-a-python-model-in-sql-server-for-training-and-scoring"></a>Usare un modello Python in SQL Server per il training e assegnazione dei punteggi
+# <a name="create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Creare, eseguire il training e usare un modello Python con le stored procedure in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo esercizio di Python, informazioni su un modello comune per la creazione, training e tramite un modello in SQL Server. Questo esercizio crea due stored procedure. Il primo genera un modello Naïve Bayes per prevedere una specie di Iris in base alle caratteristiche del fiore. La seconda procedura sia per l'assegnazione dei punteggi. Chiama il modello generato nella prima procedura per un set di stime di output. Procedendo in questo esercizio, verrà illustrato le tecniche di base che sono fondamentali per l'esecuzione del codice Python in un'istanza di motore di database di SQL Server.
+Questo esercizio viene illustrata l'integrazione di Python con SQL Server quando si aggiunge il [servizi di Machine Learning](../install/sql-machine-learning-services-windows-install.md) funzionalità a un'istanza del motore di database. In tal caso, è possibile eseguire il wrapping di codice Python all'interno di un [stored procedure di](../../relational-databases/stored-procedures/stored-procedures-database-engine.md) per rendere operativo lo script per i carichi di lavoro di produzione. La possibilità di incorporare il codice in una stored procedure offre vantaggi tangibili nel modo in cui progettare, testare e la gestione di analisi scientifica dei dati e attività di machine learning. Rende lo script e modelli accessibili a qualsiasi applicazione in grado di connettersi a SQL Server.
 
-Dati di esempio usati in questo esercizio sono le [set di dati Iris](demo-data-iris-in-sql.md) nel **irissql** database.
+In questo esercizio di Python, si crea e due stored procedure. Il primo Usa il set di dati dei fiori Iris classico e genera un modello Naïve Bayes per prevedere una specie di Iris in base alle caratteristiche del fiore. La seconda procedura sia per l'assegnazione dei punteggi. Chiama il modello generato nella prima procedura per un set di stime di output. Inserire codice in una stored procedure, le operazioni sono indipendenti, riutilizzabili e richiamabile da altre stored procedure e le applicazioni client. 
 
-## <a name="create-a-model-using-a-sproc"></a>Creare un modello utilizzando una stored procedure
+Completando questa esercitazione, si apprenderà:
+
+> [!div class="checklist"]
+> * Come incorporare codice Python in una stored procedure
+> * Come passare gli input per il codice tramite gli input nella stored procedure
+> * Come vengono usate stored procedure per rendere operativi i modelli
+
+## <a name="prerequisites"></a>Prerequisiti
+
+Dati di esempio usati in questo esercizio sono le [ **irissql** ](demo-data-iris-in-sql.md) database.
+
+È anche necessario un editor T-SQL, ad esempio [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017).
+
+## <a name="create-a-stored-procedure-that-generates-models"></a>Creare una stored procedure che genera i modelli
+
+Un modello comune nello sviluppo di SQL Server consiste nell'organizzare operazioni programmabile in stored procedure distinte. In questo passaggio si creerà una stored procedure che genera un modello per la stima dei risultati. 
 
 1. Aprire una nuova finestra query in Management Studio connesso per il **irissql** database. 
 
@@ -31,9 +46,15 @@ Dati di esempio usati in questo esercizio sono le [set di dati Iris](demo-data-i
     GO
     ```
 
-2. Eseguire il codice seguente in una nuova finestra di query per creare la stored procedure che compila ed esegue il training di un modello. I modelli archiviati per il riutilizzo in SQL Server sono serializzati come un flusso di byte e archiviati in una colonna varbinary (max) in una tabella di database. Dopo aver creato il modello, sottoposti a training, serializzati e salvati in un database, può essere chiamato da altre procedure o dalla funzione di stima T-SQL nell'assegnazione dei punteggi dei carichi di lavoro.
+2. Copiare il codice seguente per creare una nuova stored procedure. 
 
-   Questo codice Usa pickle per serializzare il modello e scikit per fornire all'algoritmo Naïve Bayes. Il modello verrà eseguito il training usando i dati di colonne tra 0 e 4 i **iris_data** tabella. I parametri vedere nella seconda parte della procedura articolare dei dati di input e output dei modelli. 
+   Quando viene eseguita, questa routine chiama [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) per avviare una sessione di Python. 
+   
+   Gli input necessari per il codice Python vengono passati come parametri di input in questa stored procedure. L'output sarà un modello con training, basato su Python **scikit-informazioni su** libreria per l'algoritmo di machine learning. 
+
+   Questo codice viene utilizzata [ **pickle** ](https://docs.python.org/2/library/pickle.html) per serializzare il modello. Il modello verrà eseguito il training usando i dati di colonne tra 0 e 4 i **iris_data** tabella. 
+   
+   I parametri vedere nella seconda parte della procedura articolare dei dati di input e output dei modelli. Quanto più possibile, si desidera che il codice Python in esecuzione in una stored procedure di aver chiaramente definito gli input e output che eseguono il mapping a stored procedure input e output passato fase di esecuzione. 
 
     ```sql
     CREATE PROCEDURE generate_iris_model (@trained_model varbinary(max) OUTPUT)
@@ -54,13 +75,17 @@ Dati di esempio usati in questo esercizio sono le [set di dati Iris](demo-data-i
     GO
     ```
 
-3. Verificare che esista la stored procedure. Se lo script T-SQL nel passaggio precedente è stato eseguito senza errori, una nuova stored procedure denominata **generate_iris_model** viene creato e aggiunto per il **irissql** database. È possibile trovare le stored procedure in Management Studio **Esplora oggetti**, in **programmabilità**.
+3. Verificare che esista la stored procedure. 
 
-## <a name="execute-the-sproc-to-create-and-train-models"></a>Eseguire la stored procedure per creare ed eseguire il training di modelli
+   Se lo script T-SQL nel passaggio precedente è stato eseguito senza errori, una nuova stored procedure denominata **generate_iris_model** viene creato e aggiunto per il **irissql** database. È possibile trovare le stored procedure in Management Studio **Esplora oggetti**, in **programmabilità**.
 
-1. Dopo aver creata la stored procedure, eseguire il codice seguente sotto per eseguirlo. L'istruzione specifico per l'esecuzione di una stored procedure è `EXEC` nella quinta riga.
+## <a name="execute-the-procedure-to-create-and-train-models"></a>Eseguire la procedura per creare ed eseguire il training di modelli
 
-   Questo particolare script elimina un modello esistente con lo stesso nome ("Naive Bayes") per liberare spazio per nuovi file creati eseguendo nuovamente la stessa procedura. Senza l'eliminazione del modello, si verifica un errore che indica che l'oggetto esiste già. 
+In questo passaggio, eseguire la procedura per eseguire il codice incorporato, la creazione di un modello con training e serializzato come output. I modelli archiviati per il riutilizzo in SQL Server sono serializzati come un flusso di byte e archiviati in una colonna varbinary (max) in una tabella di database. Una volta il modello viene creato, sottoposto a training, serializzato e salvato in un database, può essere chiamato tramite altre procedure. exe o la [stimare T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) funzione nell'assegnazione dei punteggi dei carichi di lavoro.
+
+1. Copiare il codice seguente per eseguire la procedura. L'istruzione specifico per l'esecuzione di una stored procedure è `EXEC` nella quinta riga.
+
+   Questo particolare script elimina un modello esistente con lo stesso nome ("Naive Bayes") per liberare spazio per nuovi file creati eseguendo nuovamente la stessa procedura. Senza l'eliminazione del modello, si verifica un errore che indica che l'oggetto esiste già. Il modello viene archiviato in una tabella denominata **iris_models**, il provisioning di una volta creato il **irissql** database.
 
     ```sql
     DECLARE @model varbinary(max);
@@ -82,7 +107,7 @@ Dati di esempio usati in questo esercizio sono le [set di dati Iris](demo-data-i
     | 1 | Naive Bayes     | 
 
 
-## <a name="create-and-execute-a-sproc-for-generating-predictions"></a>Creare ed eseguire una stored procedure per la generazione di stime
+## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>Creare ed eseguire una stored procedure per la generazione di stime
 
 Ora che si hanno creati, sottoposti a training e salvato un modello, passare al passaggio successivo: creazione di una stored procedure che genera stime. Si sarà tal sp_execute_external_script chiamante per avviare Python e quindi passare nello script Python che carica un modello serializzato creato nell'esercizio precedente e quindi assegna per assegnare un punteggio dei dati di input.
 
@@ -128,13 +153,14 @@ Ora che si hanno creati, sottoposti a training e salvato un modello, passare al 
 
 ## <a name="conclusion"></a>Conclusioni
 
-In questo esercizio, si è appreso come creare le stored procedure per attività diverse, usare la stored procedure di sistema in cui ogni stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) per avviare un processo di Python. Gli input al processo di Python vengono passati allo script sp_execute_external come parametri. Script di Python stesso sia le variabili di dati in un database di SQL Server vengono passate come input.
+In questo esercizio, si è appreso come creare le stored procedure dedicate per diverse attività, utilizzare la stored procedure di sistema in cui ogni stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) per avviare un processo di Python. Gli input al processo di Python vengono passati allo script sp_execute_external come parametri. Script di Python stesso sia le variabili di dati in un database di SQL Server vengono passate come input.
 
-Se è abituati a usare in Python, è possibile il caricamento dei dati, creare alcuni riepiloghi e grafici, quindi un modello di training e generazione di punteggi nelle stesse 250 righe di codice. Questo articolo è diverso da approcci consueti organizzando operazioni in procedure separate. Questa pratica è utile a vari livelli.
+Per alcuni sviluppatori di Python che sono abituati a scrivere script gratis gestisce una gamma di operazioni, organizzare le attività in procedure separate potrebbero sembrare non necessaria. Ma di training e di assegnazione dei punteggi dispone di diversi casi d'uso. Separandoli, è possibile inserire ogni attività nella pianificazione diversi e autorizzazioni per l'ambito all'operazione.
 
-Un vantaggio è che è possibile separare i processi in passaggi ripetibili che possono essere modificati usando i parametri. Quanto più possibile, si desidera che il codice Python che vengono eseguiti in una stored procedure di aver chiaramente definito gli input e output su cui eseguire il mapping a stored procedure input e output che può essere passato fase di esecuzione. In questo esercizio, codice Python che consente di creare un modello, denominato "Naive Bayes" in questo esempio, viene passato come input per una seconda stored procedure che chiama il modello in un processo di assegnazione dei punteggi.
+Allo stesso modo, è anche possibile sfruttare le funzionalità allocazione delle risorse di SQL Server, ad esempio l'elaborazione parallela, governance delle risorse, o scrivendo script per l'uso in algoritmi [revoscalepy](../python/what-is-revoscalepy.md) oppure [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) che supporto per lo streaming e l'esecuzione parallela. Separando i set di training e assegnazione dei punteggi, è possibile destinare le ottimizzazioni per i carichi di lavoro specifici.
 
-Un secondo miglioramento è corsi di formazione e i processi di assegnazione dei punteggi può essere ottimizzata, sfruttando le funzionalità di SQL Server, ad esempio l'elaborazione parallela, governance delle risorse, o usando gli algoritmi [revoscalepy](../python/what-is-revoscalepy.md) o [MicrosoftML ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) che supportano la trasmissione e l'esecuzione parallela. Separando i set di training e assegnazione dei punteggi, è possibile destinare le ottimizzazioni per i carichi di lavoro specifici.
+Un vantaggio finale è che i processi possono essere modificati usando i parametri. In questo esercizio, codice Python che è stato creato il modello, denominato "Naive Bayes" in questo esempio, è stato passato come input per una seconda stored procedure che chiama il modello in un processo di assegnazione dei punteggi. Questo esercizio Usa solo un modello, ma si può immaginare come definizione di parametri per il modello in un'attività di assegnazione dei punteggi renderebbe lo script più utile.
+
 
 ## <a name="next-steps"></a>Passaggi successivi
 

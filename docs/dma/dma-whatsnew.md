@@ -1,7 +1,7 @@
 ---
 title: Novità in Data Migration Assistant (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -11,18 +11,33 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 31c75b46eb01e5d892a7930ab0bec84b19e02a54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655655"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643949"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novità di Data Migration Assistant
 Questo articolo elenca le aggiunte in ogni versione di Data Migration Assistant (DMA).
+
+## <a name="dma-v41"></a>V4.1 DMA
+La versione 4.1 di DMA introduce il supporto per la valutazione globale dei database di SQL Server in locale la migrazione a istanza gestita di Azure SQL Database.
+
+Il flusso di lavoro di valutazione ti aiuta a rilevare i problemi seguenti, che possono influire sulla migrazione a istanza gestita di Azure SQL Database:
+
+- **Non è supportato o funzionalità parzialmente supportate**. DMA valuta i database di SQL Server di origine per le funzionalità in uso che sono parzialmente supportate o non è supportato in istanza gestita di Azure SQL Database di destinazione. Quindi, lo strumento fornisce un set completo di indicazioni, approcci alternativi disponibili in Azure e l'attenuazione dei passaggi in modo che i clienti possono sfruttare queste informazioni in considerazione quando si pianificano i propri progetti di migrazione.
+
+- **Problemi di compatibilità**. DMA inoltre identificati i problemi di compatibilità relativi alle aree seguenti:
+
+    - Modifiche di rilievo: gli oggetti dello schema specifiche che potrebbero compromettere la funzionalità migrazione al database di destinazione.  Si consiglia di correggere questi oggetti dello schema dopo la migrazione del database.
+    - Modifiche del comportamento: gli oggetti dello schema segnalati continuino a funzionare, ma che potrebbero presentare un comportamento diverso, ad esempio un calo delle prestazioni.
+    - Problemi informativi: questi oggetti non avrà impatto sulla migrazione, ma potrebbe sono stati deprecati funzionalità di versioni di SQL Server.
+
+Dopo aver completata la valutazione, utilizzare nostri [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) per eseguire la migrazione dei tuoi database di SQL Server a istanza gestita di Azure SQL Database.  Servizio migrazione del database supporta entrambe [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (una tantum) e [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) le migrazioni del database (tempo di inattività minimo) per istanza gestita di Azure SQL Database.
 
 ## <a name="dma-v40"></a>DMA v4.0
 La versione v4.0 di DMA introduce la funzionalità di raccomandazioni dello SKU del Database SQL di Azure, che consente agli utenti di identificare il valore minimo consigliato di SKU di Database SQL di Azure basati sui contatori delle prestazioni raccolti dai computer che ospita i database. Questa funzionalità offre consigli relativi ai prezzi di livello, a livello di calcolo e le dimensioni massime dei dati, nonché il costo stimato al mese. Offre inoltre la possibilità di eseguire il provisioning in blocco tutti i database in Azure.
@@ -35,7 +50,7 @@ Per ulteriori informazioni, vedere l'articolo [identificare lo SKU del Database 
 ## <a name="dma-v36"></a>V3.6 DMA
 La versione v3.6 di DMA introduce "Correggi" per gli oggetti dello schema che sono interessati da blocchi di migrazione più comuni.
 
-Questa versione fornisce auto-correzione per il seguente blocco di migrazione e problemi di modifica del comportamento:
+Questa versione fornisce autofix per il seguente blocco di migrazione e problemi di modifica del comportamento:
 - Gli oggetti dello schema che utilizzano la sintassi di Join non qualificato.
 - Gli oggetti dello schema che usano l'istruzione RAISEERROR legacy.
 - Istruzioni SQL che usano ordine dall'intero valore letterale.

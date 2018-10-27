@@ -1,5 +1,5 @@
 ---
-title: Le sub-SELECT nelle query | Documenti Microsoft
+title: Le sub-SELECT nelle query | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a74ddce096d58ba7b350617515bae3edc5b80c45
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 77aadc5cfc60df17b9553810b5dee2562717b8b3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025268"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147886"
 ---
 # <a name="subselects-in-queries"></a>Sub-SELECT nelle query
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -280,7 +280,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessorio|Components|Mountain|Road|Touring|  
+||Tutti i prodotti|Accessorio|Components|Mountain|Road|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |United States|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
@@ -338,7 +338,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Come è possibile notare, ci sono differenze nei risultati in entrambi i set. La prima query ha risposto alla domanda sui prodotti più venduti nelle 5 aree principali, la seconda query ha risposto alla domanda sulle aree in cui si è verificato il maggior numero di vendite dei 5 prodotti più venduti.  
   
-### <a name="remarks"></a>Osservazioni  
+### <a name="remarks"></a>Note  
  Le sub-SELECT sono sottoposte alle restrizioni e limitazioni seguenti:  
   
 -   La clausola WHERE non filtra il sottospazio.  
@@ -349,6 +349,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   La clausola HAVING non è consentita in una clausola dell'asse; usare invece un'espressione della funzione [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md) .  
   
--   Per impostazione predefinita i membri calcolati non sono consentiti nelle sub-SELECT; Tuttavia, questa restrizione può essere modificata, in una per ogni singola sessione, assegnando un valore per il **sottoquery** proprietà di stringa di connessione <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o **DBPROP_MSMD_SUBQUERIES** proprietà [ Proprietà XMLA supportate &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Vedere [Membri calcolati in sub-SELECT e sottocubi](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) per una spiegazione dettagliata del comportamento dei membri calcolati in base ai valori di **sottoquery** o **DBPROP_MSMD_SUBQUERIES**.  
+-   Per impostazione predefinita i membri calcolati non sono consentiti nelle sub-SELECT; Tuttavia, questa restrizione può essere modificata, singola per ogni sessione, assegnando un valore per il **sottoquery** proprietà di stringa di connessione in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o **DBPROP_MSMD_SUBQUERIES** proprietà nel [ Proprietà XMLA supportate &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Vedere [Membri calcolati in sub-SELECT e sottocubi](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) per una spiegazione dettagliata del comportamento dei membri calcolati in base ai valori di **sottoquery** o **DBPROP_MSMD_SUBQUERIES**.  
   
   

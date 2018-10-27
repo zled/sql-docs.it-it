@@ -1,5 +1,5 @@
 ---
-title: Strumenti Query di Data Mining | Documenti Microsoft
+title: Strumenti Query di Data Mining | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e24cab61196e8d16f8bb79caeb47e075725d6ab2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 67f58d5fea9da2df2e65d4085446f591ebd7ff25
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015178"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147946"
 ---
 # <a name="data-mining-query-tools"></a>Strumenti query di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34015178"
  L'editor di query disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente anche di compilare ed eseguire query DMX. È possibile connettersi a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e selezionare un database, le colonne della struttura di data mining e un modello di data mining. **Visualizzatore metadati** contiene un elenco di funzioni di stima che è possibile esplorare.  
   
 ##  <a name="bkmk_Templates"></a> Modelli DMX  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]fornisce modelli di query DMX interattivi che è possibile utilizzare per compilare le query DMX. Se l'elenco di modelli non è visualizzato, fare clic su **Visualizza** sulla barra degli strumenti e selezionare **Esplora modelli**. Per visualizzare tutti i modelli di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , inclusi i modelli per DMX, MDX e XMLA, fare clic sull'icona del cubo.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include modelli di query DMX interattivi che consentono di compilare query di questo tipo. Se l'elenco di modelli non è visualizzato, fare clic su **Visualizza** sulla barra degli strumenti e selezionare **Esplora modelli**. Per visualizzare tutti i modelli di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , inclusi i modelli per DMX, MDX e XMLA, fare clic sull'icona del cubo.  
   
  Per compilare una query utilizzando un modello, è possibile trascinare il modello in una finestra Query aperta o fare doppio clic sul modello per aprire una nuova connessione e un nuovo riquadro query.  
   
@@ -63,16 +63,16 @@ ms.locfileid: "34015178"
   
  Tuttavia, XMLA costituisce il formato di messaggio sottostante per tutte le interazioni con un server Analysis Services. All'interno di un messaggio XMLA, le query sono rappresentate in modo diverso a seconda se si invia una query di stima basata su DMX, una query sul contenuto o una query mediante la quale vengono recuperati i metadati del modello utilizzando i set di righe dello schema di data mining.  
   
--   Il testo delle **query di stima**, e tutte le altre istruzioni DMX, viene inviato in XMLA tramite il [metodo Execute &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md), con la query DMX posizionata come testo all'interno dell'[elemento Statement &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md) dell'[elemento Command &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md).  
+-   Il testo delle **query di stima**, e tutte le altre istruzioni DMX, viene inviato in XMLA tramite il [metodo Execute &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute), con la query DMX posizionata come testo all'interno dell'[elemento Statement &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) dell'[elemento Command &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/command-element-xmla).  
   
--   Per recuperare il **contenuto del modello** e i **metadati del modello**, ad esempio il numero di cluster, gli attributi usati negli alberi delle decisioni, la data dell'ultima elaborazione del modello e i parametri dell'algoritmo usati durante la creazione del modello, è possibile usare il [metodo Discover &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md) e specificare uno dei set di righe dello schema di data mining nell'intestazione dell'[elemento RequestType &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md). Per restringere l'ambito della query, immettere i criteri come restrizioni all'interno dell'elemento [RestrictionList Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md).  
+-   Per recuperare il **contenuto del modello** e i **metadati del modello**, ad esempio il numero di cluster, gli attributi usati negli alberi delle decisioni, la data dell'ultima elaborazione del modello e i parametri dell'algoritmo usati durante la creazione del modello, è possibile usare il [metodo Discover &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) e specificare uno dei set di righe dello schema di data mining nell'intestazione dell'[elemento RequestType &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/requesttype-element-xmla). Per restringere l'ambito della query, immettere i criteri come restrizioni all'interno dell'elemento [RestrictionList Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions & #40; DMX & #41; Riferimento](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Soluzioni di Data Mining](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Informazioni sull'istruzione Select di DMX](../../dmx/understanding-the-dmx-select-statement.md)   
- [Struttura e l'utilizzo di query di stima DMX](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Creare una Query di stima utilizzando Generatore di Query di stima](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
- [Creare una Query DMX in SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Informazioni sull'istruzione DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
+ [Struttura e utilizzo di query di stima DMX](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Creare una query di stima utilizzando Generatore query di stima](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
+ [Creare una query DMX in SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

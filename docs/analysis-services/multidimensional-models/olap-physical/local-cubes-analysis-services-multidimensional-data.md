@@ -1,5 +1,5 @@
 ---
-title: Cubi locali (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Cubi locali (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 11c4a7b2917d7baa4860137fa0764026264024a8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7bf47347967dcc4344ee71ee131951923df47713
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025748"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148466"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Cubi locali (Analysis Services - Dati multidimensionali)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34025748"
   
  I cubi locali e i modelli di data mining locali consentono di eseguire analisi in una workstation client disconnessa dalla rete. Un'applicazione client può ad esempio chiamare il provider OLE DB per OLAP 9.0 (MSOLAP.3), il quale carica il motore dei cubi locali per creare cubi locali ed eseguire query su di essi, come illustrato nella figura seguente:  
   
- ![Architettura client per i modelli e cubi locali](../../../analysis-services/multidimensional-models/olap-physical/media/as-localcubearch9.gif "architettura Client per i modelli e cubi locali")  
+ ![Architettura client per i cubi locali e modelli](../../../analysis-services/multidimensional-models/olap-physical/media/as-localcubearch9.gif "architettura Client per modelli e cubi locali")  
   
  Il motore dei cubi locali viene inoltre caricato da ADMOD.NET e dalla libreria AMO (Analysis Management Objects) durante l'interazione con cubi locali. A un file di cubo locale può accedere un unico processo, poiché il motore dei cubi locali blocca un file di cubo locale in modo esclusivo quando stabilisce una connessione con esso. Durante uno stesso processo, sono consentite fino a cinque connessioni simultanee.  
   
@@ -36,17 +36,17 @@ ms.locfileid: "34025748"
   
 |Origine dei dati per il cubo locale|Metodo di creazione|  
 |------------------------------------|---------------------|  
-|Cubo basato su server|È possibile utilizzare l'istruzione CREATE GLOBAL CUBE o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] script Scripting Language (ASSL) per creare e popolare un cubo da un cubo basato su server. Per altre informazioni, vedere [CREATE GLOBAL CUBE-istruzione &#40;MDX&#41; ](../../../mdx/mdx-data-definition-create-global-cube.md) o [Analysis Services Scripting Language &#40;ASSL per XMLA&#41;](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
-|Origine dei dati relazionale|Per creare e popolare un cubo da un database relazionale OLE DB è possibile utilizzare uno script ASSL. Per creare un cubo locale tramite ASSL, è sufficiente connettersi a un file di cubo locale con estensione cub ed eseguire lo script ASSL così come in caso di esecuzione di uno script ASSL su un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] per creare un cubo sul server. Per altre informazioni, vedere [Guida di riferimento ad Analysis Services Scripting Language &#40;ASSL&#41;](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
+|Cubo basato su server|È possibile usare l'istruzione CREATE GLOBAL CUBE oppure un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] script Scripting Language (ASSL) per creare e popolare un cubo da un cubo basato su server. Per altre informazioni, vedere [istruzione CREATE GLOBAL CUBE &#40;MDX&#41; ](../../../mdx/mdx-data-definition-create-global-cube.md) oppure [Analysis Services Scripting Language &#40;ASSL per XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
+|Origine dei dati relazionale|Per creare e popolare un cubo da un database relazionale OLE DB è possibile utilizzare uno script ASSL. Per creare un cubo locale tramite ASSL, è sufficiente connettersi a un file di cubo locale con estensione cub ed eseguire lo script ASSL così come in caso di esecuzione di uno script ASSL su un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] per creare un cubo sul server. Per altre informazioni, vedere [Guida di riferimento ad Analysis Services Scripting Language &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
   
- Utilizzare l'istruzione REFRESH CUBE per ricompilare un cubo locale e aggiornarne i dati. Per altre informazioni, vedere [REFRESH CUBE-istruzione &#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md).  
+ Utilizzare l'istruzione REFRESH CUBE per ricompilare un cubo locale e aggiornarne i dati. Per altre informazioni, vedere [REFRESH CUBE Statement &#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md).  
   
 ### <a name="local-cubes-created-from-server-based-cubes"></a>Cubi locali creati da cubi basati su server  
  In caso di creazione di cubi locali a partire da cubi basati su server, si applicano le considerazioni seguenti:  
   
 -   Non sono supportate misure Distinct Count.  
   
--   Quando si aggiunge una misura, è inoltre necessario includere almeno una dimensione correlata alla misura aggiunta. Per ulteriori informazioni sulle relazioni tra dimensioni a gruppi di misure, vedere [relazioni tra dimensioni](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+-   Quando si aggiunge una misura, è inoltre necessario includere almeno una dimensione correlata alla misura aggiunta. Per altre informazioni sulle relazioni tra dimensioni per i gruppi di misure, vedere [relazioni di tipo](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 -   Quando si aggiunge una gerarchia padre-figlio, i relativi livelli e filtri vengono ignorati e viene inclusa l'intera gerarchia padre-figlio.  
   
@@ -67,13 +67,13 @@ ms.locfileid: "34025748"
 -   Nel cubo locale verranno inclusi soltanto i membri calcolati, i set denominati e le assegnazioni basati su misure e dimensioni aggiunte al cubo locale. I membri calcolati, i set denominati e le assegnazioni non validi verranno automaticamente esclusi.  
   
 ### <a name="security"></a>Sicurezza  
- Affinché un utente di creare un cubo locale da un cubo sul server, all'utente devono essere concesse **drill-through e cubo locale** le autorizzazioni per il cubo sul server. Per altre informazioni, vedere [concedere le autorizzazioni del cubo o modello &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+ Affinché un utente di creare un cubo locale da un cubo sul server, è necessario concedergli **drill-through e cubo locale** le autorizzazioni per il cubo sul server. Per altre informazioni, vedere [concedere le autorizzazioni del cubo o modello &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
- I cubi locali non sono protetti tramite ruoli come i cubi sul server. Qualsiasi utente con accesso a livello di file per un file di cubo locale può eseguire query sui cubi in esso contenuti. È possibile utilizzare il **Password di crittografia** proprietà di connessione in un file di cubo locale per impostare una password per il file di cubo locale. Con l'impostazione di una password per un file di cubo locale, tutte le successive connessioni a tale file dovranno utilizzare la password per eseguire query sul file.  
+ I cubi locali non sono protetti tramite ruoli come i cubi sul server. Qualsiasi utente con accesso a livello di file per un file di cubo locale può eseguire query sui cubi in esso contenuti. È possibile usare la **Password di crittografia** proprietà di connessione in un file di cubo locale per impostare una password nel file di cubo locale. Con l'impostazione di una password per un file di cubo locale, tutte le successive connessioni a tale file dovranno utilizzare la password per eseguire query sul file.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzione CREATE GLOBAL CUBE &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-global-cube.md)   
  [Sviluppo con Analysis Services Scripting Language &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [Istruzione di aggiornamento cubo &#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  
+ [REFRESH CUBE Statement &#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  
   
   

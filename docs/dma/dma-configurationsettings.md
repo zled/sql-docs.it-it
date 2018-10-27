@@ -2,7 +2,7 @@
 title: Configurare le impostazioni per Data Migration Assistant (SQL Server) | Microsoft Docs
 description: Informazioni su come configurare le impostazioni per Data Migration Assistant aggiornando i valori nel file di configurazione
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 87e81a1b73ac8b3af9b9c35449dc4966fc4cf285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755579"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643819"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurare le impostazioni per Data Migration Assistant
 
@@ -40,9 +40,9 @@ Assicurarsi di salvare una copia del file di configurazione originale prima di a
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Numero di database per valutare in parallelo
 
-Data Migration Assistant valuta più database in parallelo. Durante la valutazione Data Migration Assistant estrae dell'applicazione livello dati (dacpac) per comprendere lo schema del database. Questa operazione possibile timeout se valutati in parallelo in più database nello stesso server. 
+Data Migration Assistant valuta più database in parallelo. Durante la valutazione Data Migration Assistant estrae dell'applicazione livello dati (dacpac) per comprendere lo schema del database. Questa operazione può causare il timeout se valutati in parallelo in più database nello stesso server. 
 
-A partire da v2.0 Data Migration Assistant, è possibile controllo questo impostando parallelDatabases il valore di configurazione. Valore predefinito è 8.
+A partire da v2.0 Data Migration Assistant, è possibile controllare questo impostando parallelDatabases il valore di configurazione. Valore predefinito è 8.
 
 ```
 <advisorGroup>
@@ -87,15 +87,15 @@ Durante la valutazione, Data Migration Assistant estrae dell'applicazione livell
 
 - commandTimeout
 
-   Questo imposta la proprietà IDbCommand.CommandTimeout *secondi*. (Predefinito = 60)
+   Questo parametro imposta la proprietà IDbCommand.CommandTimeout *secondi*. (Predefinito = 60)
 
 - databaseLockTimeout
 
-   Ciò equivale a [blocco impostato\_TIMEOUT timeout\_periodo ](../t-sql/statements/set-lock-timeout-transact-sql.md) nelle *millisecondi*. (Predefinito = 5000)
+   Questo parametro è equivalente a [blocco impostato\_TIMEOUT timeout\_periodo](../t-sql/statements/set-lock-timeout-transact-sql.md) nelle *millisecondi*. (Predefinito = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-   Numero di connessioni di pool di connessione SQL da usare. (Predefinito = 8)
+  Questo parametro imposta il numero di connessioni di pool di connessione SQL da usare. (Predefinito = 8)
 
 ```
 <advisorGroup>
@@ -109,7 +109,6 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorGroup>
 ```
-
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Soglia di raccomandazione
 

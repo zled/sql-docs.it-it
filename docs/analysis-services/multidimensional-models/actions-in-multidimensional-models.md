@@ -1,5 +1,5 @@
 ---
-title: Azioni nei modelli multidimensionali | Documenti Microsoft
+title: Azioni nei modelli multidimensionali | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ed03893bbf3f18137329fc1792ecd0b30a77a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024278"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145706"
 ---
 # <a name="actions-in-multidimensional-models"></a>Azioni nei modelli multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -69,12 +69,12 @@ ms.locfileid: "34024278"
 |--------------|-----------------|  
 |**Chiamata**|Specifica la modalità di esecuzione dell'azione. L'impostazione predefinita Interattiva specifica che l'azione viene eseguita quando un utente accede a un oggetto. Le impostazioni possibili sono:<br /><br /> Batch<br /><br /> Interattiva<br /><br /> Su apertura|  
 |**Applicazione**|Descrive l'applicazione dell'azione.|  
-|**Description**|Descrive l'azione.|  
+|**Descrizione**|Descrive l'azione.|  
 |**Caption**|Visualizza una didascalia da associare all'azione. Se la didascalia è MDX, specificare **True** in **Didascalia MDX**.|  
 |**Didascalia MDX**|Specificare **True** se la didascalia è MDX, in caso contrario specificare **False** .|  
   
 > [!NOTE]  
->  Per definire i tipi di azione HTML e Riga di comando, è necessario utilizzare Analysis Services Scripting Language (ASSL) o la libreria AMO (Analysis Management Objects). Per altre informazioni, vedere [Elemento Action &#40;ASSL&#41;](../../analysis-services/scripting/objects/action-element-assl.md), [Elemento Type &#40;Action&#41; &#40;ASSL&#41;](../../analysis-services/scripting/properties/type-element-action-assl.md) e [Programmazione di oggetti avanzati OLAP in AMO](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md).  
+>  Per definire i tipi di azione HTML e Riga di comando, è necessario utilizzare Analysis Services Scripting Language (ASSL) o la libreria AMO (Analysis Management Objects). Per altre informazioni, vedere [Elemento Action &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Elemento Type &#40;Action&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) e [Programmazione di oggetti avanzati OLAP in AMO](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects).  
   
 ## <a name="creating-a-reporting-action"></a>Creazione di un'azione report  
  Il server di report risponde alle richieste basate su URL relative ai report. Per creare un'azione report scegliere **Nuova azione report** dal menu **Cubo**. Le opzioni seguenti sono specifiche di un'azione report.  

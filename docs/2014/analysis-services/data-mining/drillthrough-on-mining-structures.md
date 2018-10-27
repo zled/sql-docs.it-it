@@ -11,12 +11,12 @@ ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8d1e4f8b036a21becde793f2d4fdde89913e7b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9eb585f756c03388bfe5b280a75b85f57d35394d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146031"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146686"
 ---
 # <a name="drillthrough-on-mining-structures"></a>Drill-through sulle strutture di data mining
   Il termine*drill-through* indica la possibilità di eseguire query su un modello o una struttura di data mining e di ottenere dati dettagliati non esposti nel modello.  
@@ -33,13 +33,13 @@ ms.locfileid: "48146031"
 ## <a name="enabling-drillthrough-to-structure-data"></a>Abilitazione del drill-through per i dati della struttura  
  Per utilizzare il drill-through per la struttura di data mining, è necessario soddisfare le condizioni seguenti:  
   
--   È anche necessario abilitare il drill-through per il modello. Per impostazione predefinita, entrambi i tipi di drill-through sono disabilitati. Per abilitare il drill-through nella Creazione guidata modello di data mining, selezionare l'opzione per abilitare il drill-through per i case del modello nell'ultima pagina della procedura guidata. È possibile anche aggiungere la possibilità di drill-through su un modello in un secondo momento modificando il `AllowDrillthrough` proprietà.  
+-   È anche necessario abilitare il drill-through per il modello. Per impostazione predefinita, entrambi i tipi di drill-through sono disabilitati. Per abilitare il drill-through nella Creazione guidata modello di data mining, selezionare l'opzione per abilitare il drill-through per i case del modello nell'ultima pagina della procedura guidata. È anche possibile abilitare in seguito il drill-through per un modello modificando la proprietà `AllowDrillthrough`.  
   
 -   Se si crea la struttura di data mining utilizzando DMX, utilizzare la clausola WITH DRILLTHROUGH. Per altre informazioni, vedere [CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx).  
   
--   Il drill-through consiste nel recupero delle informazioni sui case di training memorizzati nella cache durante l'elaborazione della struttura di data mining. Pertanto, se si cancellano i dati memorizzati nella cache dopo l'elaborazione della struttura impostando la <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> proprietà `ClearAfterProcessing`, drill-through non funzionerà. Per abilitare il drill-through alle colonne della struttura, è necessario modificare il <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> proprietà `KeepTrainingCases` e rielaborare la struttura.  
+-   Il drill-through consiste nel recupero delle informazioni sui case di training memorizzati nella cache durante l'elaborazione della struttura di data mining. Pertanto, se i dati memorizzati nella cache vengono cancellati dopo l'elaborazione della struttura impostando la proprietà <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> su `ClearAfterProcessing`, il drill-through non funziona. Per abilitare il drill-through per le colonne della struttura, è necessario impostare la proprietà <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> su `KeepTrainingCases` e rielaborare la struttura.  
   
--   Verificare che la struttura di data mining sia nel modello di data mining sia la [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md) impostata su `True`. È inoltre necessario essere membro di un ruolo che disponga delle autorizzazioni di drill-through sia per la struttura sia per il modello.  
+-   Verificare che la struttura di data mining sia nel modello di data mining sia la [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) impostata su `True`. È inoltre necessario essere membro di un ruolo che disponga delle autorizzazioni di drill-through sia per la struttura sia per il modello.  
   
 ## <a name="security-issues-for-drillthrough"></a>Problemi di sicurezza correlati al drill-through  
  Le autorizzazioni di drill-through vengono impostate separatamente per la struttura e per il modello. L'autorizzazione del modello consente di eseguire il drill-through dal modello, anche se non si dispone di autorizzazioni sulla struttura. Le autorizzazioni di drill-through per la struttura consentono di includere colonne della struttura nelle query di drill-through dal modello usando la funzione [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  
@@ -56,7 +56,7 @@ ms.locfileid: "48146031"
 |-|-|  
 |Utilizzo del drill-through per la struttura dai visualizzatori del modello di data mining|[Usare il drill-through dai visualizzatori modello](use-drillthrough-from-the-model-viewers.md)|  
 |Per tipi di modelli specifici, vedere gli esempi di query drill-through.|[Query di data mining](data-mining-queries.md)|  
-|Ottenere informazioni sulle autorizzazioni applicabili a strutture e modelli di data mining specifici.|[Concedere le autorizzazioni per modelli e strutture di data mining &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Ottenere informazioni sulle autorizzazioni applicabili a strutture e modelli di data mining specifici.|[Concedere le autorizzazioni per le strutture e i modelli di data mining &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Drill-through sui modelli di data mining](drillthrough-on-mining-models.md)  

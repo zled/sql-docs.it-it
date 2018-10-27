@@ -15,15 +15,15 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b2f9b97122e157ffd356163de63b0ab96708f36a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b271d597f9941e83e9ad8ce6993831a738108e7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178201"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147876"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite
-  Spesso quando un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] amministratore del database (dba) vuole cambiare la modalità di lettura/scrittura di un database tabulare o multidimensionale. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio condividere il database fra un pool di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server per migliorare l'esperienza utente.  
+  In alcune situazioni frequenti, un amministratore del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] potrebbe voler modificare la modalità lettura/scrittura di un database tabulare o multidimensionale. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio condividere il database fra un pool di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server per migliorare l'esperienza utente.  
   
  In un database è possibile passare da una modalità all'altra in vari modi. In questo documento vengono illustrati gli scenari comuni seguenti:  
   
@@ -171,11 +171,11 @@ ms.locfileid: "48178201"
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Collegamento e scollegamento di database di Analysis Services](attach-and-detach-analysis-services-databases.md)   
- [Percorso di archiviazione database](database-storage-location.md)   
- [Proprietà readwritemode del database](database-readwritemodes.md)   
- [Elemento Attach](../xmla/xml-elements-commands/attach-element.md)   
- [Elemento Detach](../xmla/xml-elements-commands/detach-element.md)   
- [Elemento ReadWriteMode](../xmla/xml-elements-properties/readwritemode-element.md)   
- [Elemento DbStorageLocation](../xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Percorso di archiviazione dei database](database-storage-location.md)   
+ [Proprietà ReadWriteMode del database](database-readwritemodes.md)   
+ [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Elemento ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [Elemento DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

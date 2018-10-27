@@ -12,12 +12,12 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45a1af97868260d103890c13ce7c7446dd8f01d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098141"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146517"
 ---
 # <a name="csdlbi-concepts"></a>Concetti di CSDLBI
   Il linguaggio CSDL (Conceptual Schema Definition Language) con annotazioni Business Intelligence (CSDLBI) è basato su Entity Data Framework, ovvero un'astrazione per la rappresentazione di dati in modo da rendere possibile l'accesso, l'esecuzione di query o l'esportazione di set di dati diversi a livello di programmazione. CSDLBI viene utilizzato per rappresentare i modelli di dati creati utilizzando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] perché supporta le applicazioni e la creazione di rapporti guidata dai dati e avanzata.  
@@ -131,7 +131,7 @@ ms.locfileid: "48098141"
   
  **Dimensioni:** una dimensione è rappresentata in CSDLBI come entità (tabella) con le colonne e le proprietà. Si noti che anche se non è presente in una prospettiva, una dimensione inclusa nel modello verrà rappresentata nell'output CSDL, contrassegnata come `Hidden`.  
   
- **Prospettive:** un client può richiedere a CSDL le singole prospettive. Per altre informazioni, vedere [set di righe DISCOVER_CSDL_METADATA](../schema-rowsets/xml/discover-csdl-metadata-rowset.md).  
+ **Prospettive:** un client può richiedere a CSDL le singole prospettive. Per altre informazioni, vedere [set di righe DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
  **Gerarchie:** gerarchie sono supportate e rappresentate in CSDLBI come set di livelli.  
   
@@ -148,6 +148,6 @@ ms.locfileid: "48098141"
  **Limitazioni:** sicurezza della cella non è supportata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Annotazioni CSDL per Business Intelligence &#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [Annotazioni CSDL per Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

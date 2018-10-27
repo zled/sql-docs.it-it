@@ -1,5 +1,5 @@
 ---
-title: Compilare i progetti di Analysis Services (SSDT) | Documenti Microsoft
+title: Compilare progetti di Analysis Services (SSDT) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18c906c7dea3b57b2760a7bb5f44e69834906e6a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b00fecf6712d8ab1d4ba8b810485af6d432479ac
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022994"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147271"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Compilare progetti di Analysis Services (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,14 +48,14 @@ ms.locfileid: "34022994"
   
 |File (nella cartella obj)|Description|  
 |-----------------------------|-----------------|  
-|\<Nome di configurazione > \LastBuilt.Xml|Contiene il timestamp e il codice hash che identificano l'ultima compilazione del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|\<Nome configurazione > \LastBuilt.xml|Contiene il timestamp e il codice hash che identificano l'ultima compilazione del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
- Questi file XML non contengono \<Create > e \<Alter > tag, che vengono costruiti durante la distribuzione.  
+ Questi file XML non contengono \<Crea > e \<Alter > tag, che vengono costruiti durante la distribuzione.  
   
  Nella directory di output vengono inoltre copiati gli assembly a cui viene fatto riferimento, ad eccezione degli assembly di sistema standard e di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In presenza di riferimenti ad altri progetti di una soluzione, tali progetti vengono innanzitutto compilati, utilizzando la configurazione di progetto appropriata e le dipendenze di compilazione stabilite dai riferimenti ai progetti, e quindi copiati nella cartella di output del progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analysis Services Scripting Language &#40;ASSL per XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Distribuire progetti di Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services Scripting Language &#40;ASSL per XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Distribuire progetti di Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

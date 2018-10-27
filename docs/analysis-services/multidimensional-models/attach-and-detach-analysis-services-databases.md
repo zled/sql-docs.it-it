@@ -1,5 +1,5 @@
 ---
-title: Collegamento e scollegamento di database di Analysis Services | Documenti Microsoft
+title: Collegamento e scollegamento di database di Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7779a0ecac1a8a5d1e53b186e5b221477e20bdf9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2419b057f6bc3fbe85c937911dd76bc8b9729b95
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020268"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144856"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Collegamento e scollegamento di database di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "34020268"
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Spostare un Database di Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [Proprietà readwritemode del database](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [Passare a un database di Analysis Services tra le modalità ReadOnly e ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [Elemento Detach](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [Elemento Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
+ [Spostare un database di Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
+ [Proprietà ReadWriteMode del database](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
+ [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

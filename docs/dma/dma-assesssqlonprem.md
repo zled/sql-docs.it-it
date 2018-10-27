@@ -2,7 +2,7 @@
 title: Eseguire una valutazione della migrazione di SQL Server (Data Migration Assistant) | Microsoft Docs
 description: Informazioni su come usare Data Migration Assistant per valutare un SQL Server in locale prima della migrazione a un altro SQL Server o Database SQL di Azure
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 0131c267d3a26782d0f32df3a3555afcbc43d22d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706189"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643979"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione di SQL Server con Data Migration Assistant
 
@@ -32,7 +32,7 @@ Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione p
 
 2.  Impostare il tipo di server di origine e di destinazione.
 
-    Se si sta aggiornando l'istanza di SQL Server locale a un'istanza di SQL Server moderno in locale o a SQL Server ospitato in una VM di Azure, il tipo di server di origine e di destinazione impostato su **SQL Server**. Se si esegue la migrazione al Database SQL di Azure, invece impostare il tipo di server di destinazione **Database SQL di Azure**.
+    Se si sta aggiornando l'istanza di SQL Server locale a un'istanza di SQL Server moderno in locale o a SQL Server ospitato in una VM di Azure, impostare il tipo di server di origine e destinazione su **SQL Server**. Se si esegue la migrazione al Database SQL di Azure, invece impostare il tipo di server di destinazione **Database SQL di Azure**.
 
 3.  Fare clic su **Crea**.
 
@@ -44,7 +44,7 @@ Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione p
 
 2. Selezionare il tipo di report.
 
-   Quando si desidera valutare l'istanza di SQL Server di origine per la migrazione a SQL Server in locale o a SQL Server ospitati in destinazioni di macchina virtuale di Azure, è possibile scegliere uno o entrambi i tipi di report di valutazione seguenti:
+   Quando si è verificata l'istanza di SQL Server di origine per la migrazione a SQL Server in locale o a SQL Server ospitati in destinazioni di macchina virtuale di Azure, è possibile scegliere uno o entrambi i tipi di report di valutazione seguenti:
 
     -   **Problemi di compatibilità**
 
@@ -52,7 +52,7 @@ Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione p
 
     ![Selezionare un tipo di report di valutazione per la destinazione di SQL Server](../dma/media/AssessmentTypes.png)
 
-   Quando si desidera valutare l'istanza di SQL Server di origine per la migrazione al Database SQL di Azure, è possibile scegliere uno o entrambi i tipi di report di valutazione seguenti:
+   Quando si è verificata l'istanza di SQL Server di origine per la migrazione al Database SQL di Azure, è possibile scegliere uno o entrambi i tipi di report di valutazione seguenti:
 
     -   **Verificare la compatibilità del database**
 
@@ -77,7 +77,7 @@ Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione p
 
 ## <a name="view-results"></a>Visualizzare i risultati
 
-La durata della valutazione dipende dal numero di database aggiunti e le dimensioni dello schema di ogni database. I risultati vengono visualizzati per ogni database, non appena sono disponibili.
+La durata della valutazione dipende dal numero di database aggiunti e le dimensioni dello schema di ogni database. I risultati vengono visualizzati per ogni database, non appena risultano disponibili.
 
 1.  Selezionare il database in cui è stata completata la valutazione e quindi passare da una **problemi di compatibilità** e **funzionalità consigliate** usando l'apposito controllo.
 

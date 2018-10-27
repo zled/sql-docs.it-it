@@ -1,18 +1,18 @@
 ---
 title: Che cos'è il controller del cluster di SQL Server i big Data? | Microsoft Docs
-description: ''
+description: Questo articolo descrive il controller di un cluster di big data di SQL Server 2019.
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cb6a999c1ca791eea683e71e37ac788b8018672e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: cfc26567d13787671319cbbbee09bae39be126bf
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460606"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050873"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-controller"></a>Che cos'è il controller di cluster di SQL Server i big Data?
 
@@ -48,7 +48,7 @@ Il controller e gli oggetti Kubernetes (set di informazioni sullo stato, i POD, 
 
 `mssqlctl` è un'utilità della riga di comando scritta in Python che consente agli amministratori di cluster da avviare e gestire i cluster di big data tramite le API REST esposta dal servizio controller.
 
-### <a name="cluster-administration-portal"></a>Portale di amministrazione del cluster
+### <a name="cluster-administration-portal"></a>Portale di amministrazione cluster
 
 Quando il servizio controller è attivo e in esecuzione, amministratore del cluster è possibile usare il portale di amministrazione Cluster per monitorare l'avanzamento della distribuzione, rilevare e risolvere i problemi con i servizi all'interno del cluster. 
 
@@ -69,4 +69,4 @@ L'autenticazione all'endpoint del servizio controller è basato su nome utente e
 
 To learn more about the SQL Server big data clusters, see the following overview:
 
-- [What is SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)

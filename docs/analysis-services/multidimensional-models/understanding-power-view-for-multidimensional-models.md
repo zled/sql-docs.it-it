@@ -1,5 +1,5 @@
 ---
-title: La comprensione di Power View per modelli multidimensionali | Documenti Microsoft
+title: La comprensione di Power View per modelli multidimensionali | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 23f30c2cebf7e048a8fb515edf370f4ab858bbff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300499"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147456"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Informazioni su Power View per modelli multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,12 +57,12 @@ ms.locfileid: "34300499"
 |-----------------------------|--------------------|  
 |Cube|Modello|  
 |Dimensione cubo|Tabella|  
-|Attributi dimensione (Chiave/i, Nome)|Colonna|  
+|Attributi dimensione (Chiave/i, Nome)|colonna|  
 |Gruppo di misure|Tabella|  
 |Misura|Misura|  
 |Misura senza gruppo di misure|In una tabella denominata Misure|  
 |Relazione gruppo di misure dimensione del cubo|Relazione|  
-|Prospettiva|Prospettiva|  
+|Perspective|Perspective|  
 |Indicatore KPI|Indicatore KPI|  
 |Gerarchie utente/padre-figlio|Gerarchia|  
 |Cartella di visualizzazione|Cartella di visualizzazione|  
@@ -94,7 +94,7 @@ ms.locfileid: "34300499"
  ![Gerarchia non aggregabile in Power View](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Gerarchia non aggregabile in Power View")  
   
 ### <a name="implicit-measures"></a>Misure implicite  
- I modelli tabulari permettono agli utenti di creare misure *implicite* come conteggio, somma o media dei campi. Per i modelli multidimensionali, poiché i dati dell'attributo dimensione viene archiviati in modo diverso, l'esecuzione di query le misure implicite può richiedere molto tempo. Per questo motivo, le misure implicite non sono disponibili in Power View.  
+ I modelli tabulari permettono agli utenti di creare misure *implicite* come conteggio, somma o media dei campi. Per i modelli multidimensionali, poiché i dati sugli attributi dimensione vengono archiviati in modo diverso, l'esecuzione di query le misure implicite può richiedere molto tempo. Per questo motivo, le misure implicite non sono disponibili in Power View.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensioni, attributi e gerarchie  
  Le dimensioni del cubo vengono esposte come tabelle nei metadati tabulari. Nell'elenco campi di Power View gli attributi dimensione vengono mostrati come colonne nelle cartelle di visualizzazione  Gli attributi dimensione la cui proprietà AttributeHierarchyEnabled è impostata su false, ad esempio l'attributo Birth Date nella dimensione Customer o la proprietà AttributeHierarchyVisible impostata su false, non sono visibili nell'elenco campi di Power View. Le gerarchie multilivello o le gerarchie utente, ad esempio Customer Geography nella dimensione Customer, vengono esposte come gerarchie nell'elenco campi di Power View. Gli elementi UnknownMembers nascosti di un attributo dimensione sono esposti nelle query DAX e in Power View.  
@@ -108,7 +108,7 @@ ms.locfileid: "34300499"
   
  **Tipi geography dell'attributo dimensione in SSDT e nell'elenco campi di Power View**  
   
- ![Tipi geography dell'attributo della dimensione](../../analysis-services/multidimensional-models/media/daxmd-ssdt-attribute-geog-types.gif "tipi geography dell'attributo della dimensione")  
+ ![Tipi geography dell'attributo dimensione](../../analysis-services/multidimensional-models/media/daxmd-ssdt-attribute-geog-types.gif "tipi geography dell'attributo dimensione")  
   
 ### <a name="dimension-calculated-members"></a>Membri calcolati della dimensione  
  I modelli multidimensionali supportano i membri calcolati per l'elemento figlio di All con un membro reale singolo. Di seguito sono riportati vincoli aggiuntivi riguardanti l'esposizione di questo tipo di membro calcolato:  
@@ -125,7 +125,7 @@ ms.locfileid: "34300499"
   
  **Report di Power View con membri calcolati**  
   
- ![Membri calcolati in Power View](../../analysis-services/multidimensional-models/media/daxmd-calcmembersinpowerview.gif "di membri calcolati in Power View")  
+ ![Membri calcolati in Power View](../../analysis-services/multidimensional-models/media/daxmd-calcmembersinpowerview.gif "membri calcolati in Power View")  
   
 ### <a name="default-members"></a>Membri predefiniti  
  I modelli multidimensionali supportano i membri predefiniti per gli attributi dimensione. Il membro predefinito viene utilizzato da Analysis Services nel corso dell'aggregazione di dati per una query. Il membro predefinito di un attributo dimensione viene esposto come filtro o valore predefinito per la colonna corrispondente nei metadati tabulari.  
@@ -147,7 +147,7 @@ ms.locfileid: "34300499"
   
  **Tipo di attributo dimensione ImageURL in SSDT**  
   
- ![Proprietà dell'attributo della dimensione](../../analysis-services/multidimensional-models/media/daxmd-dimattribute-properties.gif "delle proprietà degli attributi della dimensione")  
+ ![Proprietà degli attributi della dimensione](../../analysis-services/multidimensional-models/media/daxmd-dimattribute-properties.gif "delle proprietà degli attributi della dimensione")  
   
 ## <a name="parent-child-hierarchies"></a>Gerarchie padre-figlio  
  I modelli multidimensionali supportano le gerarchie padre-figlio, esposte come gerarchia nei metadati tabulari. Ogni livello della gerarchia padre-figlio viene esposto come colonna nascosta. L'attributo chiave della dimensione padre-figlio non viene esposto nei metadati tabulari.  
@@ -174,7 +174,7 @@ ms.locfileid: "34300499"
   
  **Filtri bloccati**  
   
- ![Filtro bloccato](../../analysis-services/multidimensional-models/media/daxmd-pinnedfilterinpowerview.gif "filtro bloccato")  
+ ![Aggiunta filtro](../../analysis-services/multidimensional-models/media/daxmd-pinnedfilterinpowerview.gif "Aggiunta filtro")  
   
 ## <a name="unsupported-features"></a>Funzionalità non supportate  
  **Power View in Excel 2013** : non supporta la connessione a report per modelli multidimensionali né la loro creazione. **Power View in Excel 2016** , invece, supporta queste operazioni. Per altre informazioni, vedere [Power View e OLAP in Excel 2016](https://support.office.com/en-us/article/power-view-and-olap-in-excel-2016-ea5ff7a5-ea5f-48d4-aeb0-98c89ab738ac)  
@@ -217,7 +217,7 @@ ms.locfileid: "34300499"
   
  La richiesta DISCOVER_CSDL_METADATA presenta le restrizioni seguenti:  
   
-|Nome|Required|Description|  
+|nome|Obbligatorio|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Sì|Nome del catalogo\database.|  
 |PERSPECTIVE_NAME|Sì, se il cubo contiene più di una prospettiva. Facoltativo se è presente un solo cubo o una prospettiva predefinita.|Nome del cubo o della prospettiva nel database multidimensionale.|  
@@ -225,7 +225,7 @@ ms.locfileid: "34300499"
   
  Il documento CSDL in uscita restituito rappresenta il modello come spazio dei nomi, contenente entità, associazioni e proprietà.  
   
- Per informazioni dettagliate sulle annotazioni CSDLBI per i modelli tabulari, vedere [Riferimento tecnico per le annotazioni di Business Intelligence per CSDL](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) in MSDN e [\[MS-CSDLBI\]: Formato di file delle definizioni dello schema concettuale con annotazioni di Business Intelligence](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ Per informazioni dettagliate sulle annotazioni CSDLBI per i modelli tabulari, vedere [Riferimento tecnico per le annotazioni di Business Intelligence per CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) in MSDN e [\[MS-CSDLBI\]: Formato di file delle definizioni dello schema concettuale con annotazioni di Business Intelligence](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## <a name="client-help-on-officecom"></a>Guida del client su Office.com  
  Negli articoli seguenti, disponibili su Office.com, vengono fornite ulteriori informazioni sulla modalità di visualizzazione degli oggetti del modello multidimensionale in Power View e sulla creazione di un report di esempio:  

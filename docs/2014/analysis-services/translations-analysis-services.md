@@ -18,19 +18,19 @@ ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8454d379bcce879ed444a98bf5938e0736ea30e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153061"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145956"
 ---
 # <a name="translations-analysis-services"></a>Traduzioni (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Solo dati multidimensionali  
   
  In un modello di dati multidimensionale di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è possibile incorporare più traduzioni di una didascalia per fornire stringhe specifiche delle impostazioni locali in base all'identificatore LCID. È possibile aggiungere traduzioni per il nome del database, gli oggetti cubo e gli oggetti dimensione del database.  
   
- La definizione di una traduzione crea i metadati e la didascalia tradotta all'interno del modello, ma per eseguire il rendering delle stringhe localizzate in un'applicazione client, è necessario impostare la proprietà `Language` per l'oggetto o passare un parametro `Locale Identifier` nella stringa di connessione, impostando ad esempio `LocaleIdentifier=1036` per restituire le stringhe francesi. Pensare di usare `Locale Identifier` se si vuole supportare più traduzioni simultanee dello stesso oggetto in lingue diverse. L'impostazione di `Language` proprietà funziona, ma influisce anche sull'elaborazione e query, che potrebbe avere conseguenze impreviste. Impostazione `Locale Identifier` rappresenta la scelta migliore, perché viene usato solo per restituire le stringhe tradotte.  
+ La definizione di una traduzione crea i metadati e la didascalia tradotta all'interno del modello, ma per eseguire il rendering delle stringhe localizzate in un'applicazione client, è necessario impostare la proprietà `Language` per l'oggetto o passare un parametro `Locale Identifier` nella stringa di connessione, impostando ad esempio `LocaleIdentifier=1036` per restituire le stringhe francesi. Pensare di usare `Locale Identifier` se si vuole supportare più traduzioni simultanee dello stesso oggetto in lingue diverse. L'impostazione della proprietà `Language` funziona, ma influisce anche sull'elaborazione e l'esecuzione di query comportando conseguenze impreviste. È preferibile scegliere di impostare il parametro `Locale Identifier` in quanto viene usato solo per restituire le stringhe tradotte.  
   
  Una traduzione è costituita da un identificatore delle impostazioni locali (LCID), una didascalia tradotta per l'oggetto (ad esempio, il nome di una dimensione o di un attributo) e facoltativamente un'associazione a una colonna che fornisce i valori dei dati nella lingua di destinazione. È possibile avere più traduzioni, ma è possibile usarne solo una per ogni connessione specifica. In teoria, non vi sono limiti al numero di traduzioni che è possibile incorporare nel modello, ma ogni traduzione aggiunge complessità al test e tutte le traduzioni devono condividere le stesse regole di confronto, pertanto quando si progetta la soluzione tenere presenti questi vincoli normali.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48153061"
   
 4.  Fare clic con il pulsante destro del mouse su un campo qualsiasi e scegliere **Esplora dati**. Verranno visualizzare le traduzione in inglese, spagnolo e francese di ciascun membro.  
   
- I formati di data, ora e valuta non vengono implementati tramite le traduzioni. Per fornire in modo dinamico i formati specifici della lingua in base alle impostazioni locali del client, usare la Conversione guidata valuta e la proprietà `FormatString`. Per informazioni dettagliate, vedere [Conversioni di valuta &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) ed [Elemento FormatString &#40;ASSL&#41;](scripting/properties/formatstring-element-assl.md).  
+ I formati di data, ora e valuta non vengono implementati tramite le traduzioni. Per fornire in modo dinamico i formati specifici della lingua in base alle impostazioni locali del client, usare la Conversione guidata valuta e la proprietà `FormatString`. Per informazioni dettagliate, vedere [Conversioni di valuta &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) ed [Elemento FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
  [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) nelle Esercitazioni su Analysis Services illustrerà in dettaglio i passaggi per creare e testare le traduzioni.  
   
@@ -72,12 +72,12 @@ ms.locfileid: "48153061"
   
 4.  Compilare e distribuire il progetto.  
   
-5.  Connettersi al database tramite un'applicazione client, ad esempio Excel, modificando la stringa di connessione in modo da usare l'identificatore delle impostazioni locali. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md).  
+5.  Connettersi al database tramite un'applicazione client, ad esempio Excel, modificando la stringa di connessione in modo da usare l'identificatore delle impostazioni locali. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>Aggiungere le traduzioni per una dimensione e gli attributi  
  È possibile aggiungere le traduzioni per le dimensioni del database, gli attributi, le gerarchie e i livelli all'interno di una gerarchia.  
   
- Le didascalie tradotte vengono aggiunte al modello manualmente usando la tastiera o la funzione di copia e incolla, mentre per i membri degli attributi della dimensione è possibile ottenere i valori tradotti da un database esterno. In particolare, il `CaptionColumn` proprietà di un attributo può essere associata a una colonna in una vista origine dati.  
+ Le didascalie tradotte vengono aggiunte al modello manualmente usando la tastiera o la funzione di copia e incolla, mentre per i membri degli attributi della dimensione è possibile ottenere i valori tradotti da un database esterno. In particolare, è possibile associare la proprietà `CaptionColumn` di un attributo a una colonna in una vista origine dati.  
   
  A livello di attributo è possibile eseguire l'override delle impostazioni delle regole di confronto per poter ad esempio modificare la distinzione di larghezza o usare un ordinamento binario per un attributo specifico. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]le regole di confronto sono presenti dove vengono definiti i data binding. Poiché si sta associando una traduzione dell'attributo della dimensione a una colonna di origine diversa nella vista origine dati, è disponibile un'impostazione delle regole di confronto in modo da poter specificare le regole di confronto usate dalla colonna di origine. Per informazioni sulle regole di confronto delle colonne nel database relazionale, vedere [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md) .  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48153061"
   
 2.  In Traduzioni specificare la lingua di destinazione (viene risolta in un LCID), la didascalia tradotta e la descrizione tradotta. L'elenco delle lingue è coerente in Analysis Services, sia che si imposti la lingua del server in Management Studio sia che si aggiunga un override della traduzione per un singolo attributo.  
   
-3.  Nella pagina delle proprietà del database, impostare `Language` sullo stesso LCID specificato per la traduzione. Facoltativamente, impostare il `Collation` anche se il valore predefinito non è più adatto.  
+3.  Nella pagina delle proprietà del database impostare `Language` sullo stesso LCID specificato per la traduzione. Facoltativamente, impostare anche `Collation` se il valore predefinito non è più adatto.  
   
 4.  Compilare e distribuire il database.  
   
@@ -121,6 +121,6 @@ ms.locfileid: "48153061"
  [Scenari di globalizzazione per Analysis Services multidimensionale](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Lingue e regole di confronto &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Impostare o modificare le regole di confronto delle colonne](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Globalizzazione suggerimenti e procedure consigliate &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

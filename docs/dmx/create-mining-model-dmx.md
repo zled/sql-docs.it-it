@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ae4979d02f92ef95364cc264c1a89c83b49a48d2
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980591"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148046"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Nome di un algoritmo di data mining, secondo quanto definito dal provider corrente.  
   
 > [!NOTE]  
->  Un elenco degli algoritmi supportati dal provider corrente può essere recuperato tramite [set di righe DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vedere [proprietà di Data Mining](../analysis-services/server-properties/data-mining-properties.md).  
+>  Un elenco degli algoritmi supportati dal provider corrente può essere recuperato tramite [set di righe DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vedere [proprietà di Data Mining](../analysis-services/server-properties/data-mining-properties.md).  
   
  *elenco di parametri*  
  Facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
@@ -95,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Per un elenco dei tipi di dati, dei tipi di contenuto, delle distribuzioni di colonna e dei flag di modellazione che è possibile utilizzare per definire una colonna, vedere gli argomenti seguenti:  
   
--   [Tipi di dati &#40;Data Mining&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Tipi di dati &#40;Data mining&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [I tipi di contenuto &#40;Data Mining&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Tipi di contenuto &#40;Data mining&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Distribuzioni delle colonne &#40;Data Mining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Distribuzioni delle colonne &#40;Data mining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Flag di modellazione &#40;Data Mining&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Flag di modellazione &#40;data mining&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola alla descrizione. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta l'utilizzo delle opzioni seguenti \<relazione a colonna > clausola.  
   

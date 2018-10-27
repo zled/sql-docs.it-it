@@ -1,5 +1,5 @@
 ---
-title: Membri calcolati in sub-SELECT e sottocubi | Documenti Microsoft
+title: Membri calcolati in sub-SELECT e sottocubi | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 673f73c91f4cf3206e9f9df15f248b059a4e78d4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8bae68e24f6a7f2dfd42e335a9e003f56cf1d610
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023828"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145316"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membri calcolati in sub-SELECT e sottocubi
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Un membro calcolato è un membro di dimensione il cui valore viene calcolato da un'espressione in fase di esecuzione e può essere usato nelle sub-SELECT e nei sottocubi per definire con maggior precisione il valore cubespace di una query.  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>Abilitazione dei membri calcolati nel sottospazio  
- La proprietà della stringa di connessione **SubQueries** in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o la proprietà **DBPROPMSMDSUBQUERIES** in [Proprietà XMLA supportate &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) definisce il comportamento o l'utilizzo consentito dei membri calcolati o dei set calcolati su sub-SELECT o sottocubi. Nel contesto di questo documento con il termine sub-SELECT si fa riferimento a sub-SELECT e sottocubi, se non diversamente specificato.  
+ La proprietà della stringa di connessione **SubQueries** in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o la proprietà **DBPROPMSMDSUBQUERIES** in [Proprietà XMLA supportate &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) definisce il comportamento o l'utilizzo consentito dei membri calcolati o dei set calcolati su sub-SELECT o sottocubi. Nel contesto di questo documento con il termine sub-SELECT si fa riferimento a sub-SELECT e sottocubi, se non diversamente specificato.  
   
  La proprietà SubQueries consente i valori riportati di seguito.  
   
 |||  
 |-|-|  
-|Valore|Descrizione|  
+|valore|Description|  
 |0|I membri calcolati non sono consentiti in sub-SELECT o sottocubi.<br /><br /> Durante la valutazione della sub-SELECT o del sottocubo viene generato un errore se si fa riferimento a un membro calcolato.|  
 |1|I membri calcolati sono consentiti in sub-SELECT o sottocubi, ma nel sottospazio di restituzione non viene introdotto alcun predecessore.|  
 |2|I membri calcolati sono consentiti in sub-SELECT o sottocubi e nel sottospazio di restituzione vengono introdotti i predecessori. Inoltre, nella selezione dei membri calcolati è consentita la granularità mista.|  
@@ -71,7 +71,7 @@ Where [Measures].[Reseller Sales Amount]
   
 |||||||  
 |-|-|-|-|-|-|  
-||Tutti i periodi|CY 2011|CY 2012|CY 2013|CY 2014|  
+||All Periods|CY 2011|CY 2012|CY 2013|CY 2014|  
 |Seattle Metro Agg|$2,383,545.69|1$291,248.93|$763,557.02|$915,832.36|$412,907.37|  
   
  Come già affermato, i predecessori di [Seattle Metro] non esistono nel sottospazio restituito, quando SubQueries=1, pertanto [Geography].[Geography].allmembers contiene solo il membro calcolato.  
@@ -106,7 +106,7 @@ Where [Measures].[Reseller Sales Amount]
   
 |||||||  
 |-|-|-|-|-|-|  
-||Tutti i periodi|CY 2001|CY 2002|CY 2003|CY 2004|  
+||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
 |United States|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
 |Oregon|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
@@ -119,12 +119,12 @@ Where [Measures].[Reseller Sales Amount]
   
  Nei risultati sopra riportati i valori aggregati per [All Geographies], [United States], [Oregon] e [Washington] provengono dall'aggregazione sui discendenti di &[Portland]&[OR] e &[Spokane]&[WA]. Nulla proviene dal membro calcolato.  
   
-### <a name="remarks"></a>Osservazioni  
+### <a name="remarks"></a>Note  
  Solo i membri calcolati globali o della sessione sono consentiti nelle espressioni di sub-SELECT o sottocubi. La presenza di membri calcolati di query nell'espressione MDX genererà un errore durante la valutazione dell'espressione di sub-SELECT o sottocubo.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Sub-SELECT nelle query](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [Proprietà XMLA supportate & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
+ [Proprietà XMLA supportate &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

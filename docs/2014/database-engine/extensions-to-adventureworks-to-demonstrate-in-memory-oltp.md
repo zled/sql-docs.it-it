@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120384"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100412"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Estensioni a AdventureWorks per illustrare OLTP in memoria
     
@@ -23,7 +23,7 @@ ms.locfileid: "49120384"
  In questo esempio viene illustrata la nuova funzionalità di [!INCLUDE[hek_2](../includes/hek-2-md.md)], che fa parte di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Vengono mostrate le nuove tabelle ottimizzate per la memoria e le nuove stored procedure compilate in modo nativo, utilizzabili per illustrare i vantaggi a livello di prestazioni di [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
->  Per visualizzare questo argomento per SQL Server 2016, vedere [Estensioni a AdventureWorks per illustrare OLTP in memoria](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
+>  Per visualizzare questo argomento per SQL Server 2016, vedere [Estensioni a AdventureWorks per illustrare OLTP in memoria](https://msdn.microsoft.com/library/mt465764.aspx)  
   
  Nell'esempio viene eseguita la migrazione di 5 tabelle del database AdventureWorks a tabelle ottimizzate per la memoria. Inoltre, è incluso un carico di lavoro dimostrativo di ordini vendita. Questo carico di lavoro dimostrativo può essere utilizzato per verificare i vantaggi a livello di prestazioni di [!INCLUDE[hek_2](../includes/hek-2-md.md)] nel server.  
   

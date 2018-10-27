@@ -1,5 +1,5 @@
 ---
-title: Sviluppo con Analysis Services Scripting Language (ASSL) | Documenti Microsoft
+title: Sviluppo con Analysis Services Scripting Language (ASSL) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d1c01f567599353d360d8cf4a213e2abaa6c6cff
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c113e07099ed96abdb0eb5f62c8517ee422d3cc7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025838"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145806"
 ---
 # <a name="developing-with-analysis-services-scripting-language-assl"></a>Sviluppo con Analysis Services Scripting Language (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -22,13 +22,13 @@ ms.locfileid: "34025838"
   
 -   Linguaggio DDL (Data Definition Language), o linguaggio di definizione dell'oggetto, che specifica e descrive un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nonché i database e gli oggetti di database che l'istanza contiene.  
   
--   Un linguaggio di comando che invia i comandi di azione, ad esempio **crea**, **Alter**, o **processo**, a un'istanza di Analysis Services. Tale linguaggio di comando verrà discusso il [XML for Analysis &#40;XMLA&#41; riferimento](../../../analysis-services/xmla/xml-for-analysis-xmla-reference.md).  
+-   Un linguaggio di comando che invia i comandi di azione, ad esempio **Create**, **Alter**, o **processo**, a un'istanza di Analysis Services. Questo linguaggio di comando viene discusso nel [XML for Analysis &#40;XMLA&#41; riferimento](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference).  
   
  Per visualizzare l'ASSL che descrive una soluzione multidimensionale in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], è possibile utilizzare il comando Visualizza codice al livello del progetto. È inoltre possibile creare o modificare script ASSL in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] utilizzando l'editor di query XMLA. Gli script compilati possono essere utilizzati per gestire oggetti o eseguire comandi nel server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti ASSL e le caratteristiche degli oggetti](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)   
- [Convenzioni XML ASSL](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md)   
- [Origini dati e associazioni & #40; SSAS multidimensionale & #41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
+ [Oggetti ASSL e relative caratteristiche](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)   
+ [Convenzioni XML di ASSL](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md)   
+ [Origini dati e associazioni &#40;SSAS multidimensionale&#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   
   

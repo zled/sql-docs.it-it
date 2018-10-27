@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico per l'algoritmo Microsoft Association Rules | Documenti Microsoft
+title: Riferimento tecnico per l'algoritmo Microsoft Association Rules | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9cba8f282e1f355b7b4265298890eccb0a4d613
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b6b3d44410e4d3cf889bc99e7057b6c420f37d7a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017388"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145906"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Association Rules
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34017388"
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules supporta vari parametri che influiscono sul comportamento, sulle prestazioni e sull'accuratezza del modello di data mining risultante.  
   
 ### <a name="setting-algorithm-parameters"></a>Impostazione dei parametri dell'algoritmo  
- È possibile modificare in qualsiasi momento i parametri per un modello di data mining usando Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È inoltre possibile modificare i parametri a livello di codice utilizzando il <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> insieme in AMO oppure utilizzando il [elemento MiningModels &#40;ASSL&#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md) XMLA. Nella tabella seguente viene descritto ogni parametro.  
+ È possibile modificare in qualsiasi momento i parametri per un modello di data mining usando Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È inoltre possibile modificare i parametri a livello di codice usando il <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> raccolta in AMO oppure usando il [elemento MiningModels &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA. Nella tabella seguente viene descritto ogni parametro.  
   
 > [!NOTE]  
 >  Non è possibile modificare i parametri in un modello esistente usando un'istruzione DMX. È necessario specificare i parametri nell'istruzione DMX CREATE MODEL o ALTER STRUCTURE… ADD MODEL quando si crea il modello.  
@@ -143,7 +143,7 @@ ms.locfileid: "34017388"
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules supporta colonne di input e colonne stimabili specifiche, riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto di un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Colonna|Tipi di contenuto|  
+|colonna|Tipi di contenuto|  
 |------------|-------------------|  
 |Attributo di input|Cyclical, Discrete, Discretized, Key, Table e Ordered|  
 |Attributo stimabile|Cyclical, Discrete, Discretized, Table e Ordered|  
@@ -153,7 +153,7 @@ ms.locfileid: "34017388"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Association Rules](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Esempi di Query sul modello Association](../../analysis-services/data-mining/association-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli di associazione & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Esempi di query sul modello di associazione](../../analysis-services/data-mining/association-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli di associazione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

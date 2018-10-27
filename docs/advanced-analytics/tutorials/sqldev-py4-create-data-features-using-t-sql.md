@@ -1,5 +1,5 @@
 ---
-title: Passaggio 4 creare le funzionalità di Data utilizzando T-SQL | Documenti Microsoft
+title: Creare funzionalità di dati mediante T-SQL | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a0f77a624a94ca78b92539d8f098506246ac45e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eb63a00a2141fcc41194c48e56b9440340ab763a
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202073"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806681"
 ---
-# <a name="step-4-create-data-features-using-t-sql"></a>Passaggio 4: Creare funzionalità di dati mediante T-SQL
+# <a name="create-data-features-using-t-sql"></a>Creare funzionalità di dati mediante T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dopo l'esplorazione dei dati, sono raccolte alcune informazioni dai dati e sono pronti per passare a *funzionalità engineering*. Questo processo di creazione di funzionalità da dati non elaborati può essere un passaggio critico in analitica avanzate di modellazione.
+Dopo l'esplorazione dei dati, si sono raccolte alcune informazioni dettagliate dai dati e si è pronti per passare alla *progettazione di funzionalità*. Questo processo di creazione di funzionalità da dati non elaborati può essere un passaggio critico nella analitica avanzata di modellazione.
 
-In questo articolo fa parte di un'esercitazione, [analitica Python nel database per gli sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md). 
+Questo articolo fa parte di un'esercitazione [analitica di Python nel database per sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 In questo passaggio si apprenderà come creare funzionalità dai dati non elaborati tramite una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . Tale funzione verrà quindi chiamata da una stored procedure per creare una tabella contenente i valori della funzionalità.
 
@@ -29,7 +29,7 @@ I valori di distanza inclusi nei dati originali si basano sulla distanza registr
 
 Si userà una funzione T-SQL personalizzata, _fnCalculateDistance_, per calcolare la distanza con la formula dell'emisenoverso e una seconda funzione T-SQL personalizzata, _fnEngineerFeatures_, per creare una tabella contenente tutte le funzionalità.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcolare distanza di andata e ritorno utilizzando fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcolare distanza della corsa mediante fnCalculateDistance
 
 1.  La funzione _fnCalculateDistance_ va scaricata e registrata con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parte della preparazione per questa procedura dettagliata. È opportuno esaminare il codice.
   
@@ -66,7 +66,7 @@ Si userà una funzione T-SQL personalizzata, _fnCalculateDistance_, per calcolar
 
 Per aggiungere il valore calcolato a una tabella da usare per il training del modello è possibile usare un'altra funzione, _fnEngineerFeatures_.
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>Salvare le funzionalità usando _fnEngineerFeatures_
+### <a name="save-the-features-using-fnengineerfeatures"></a>Salvare le funzionalità con _fnEngineerFeatures_
 
 1.  Osservare il codice della funzione T-SQL personalizzata _fnEngineerFeatures_, creata in preparazione a questa procedura dettagliata.
   
@@ -106,16 +106,16 @@ Per aggiungere il valore calcolato a una tabella da usare per il training del mo
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Come si può notare, la distanza indicata dal tassametro non corrisponde sempre alla distanza geografica. È per questo motivo è importante Progettazione funzionalità.
+    Come si può notare, la distanza indicata dal tassametro non corrisponde sempre alla distanza geografica. Ecco perché la progettazione di funzionalità è importante.
 
-Nel passaggio successivo si apprenderà come usare queste funzionalità di dati per creare ed eseguire il training di un modello di machine learning Usa Python.
+Nel passaggio successivo si apprenderà come usare queste funzionalità di dati per creare ed eseguire il training di un modello di machine learning tramite Python.
 
 ## <a name="next-step"></a>Passaggio successivo
 
-[Passaggio 5: Eseguire il training e salvare un modello di Python con T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Eseguire il training e salvataggio di un modello Python con T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Passaggio precedente
 
-[Passaggio 3: Esplorare e visualizzare i dati](sqldev-py3-explore-and-visualize-the-data.md)
+[Esplorare e visualizzare i dati](sqldev-py3-explore-and-visualize-the-data.md)
 
 

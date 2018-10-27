@@ -1,5 +1,5 @@
 ---
-title: Inserimento, aggiornamento ed eliminazione di membri (XMLA) | Documenti Microsoft
+title: Inserimento, aggiornamento ed eliminazione di membri (XMLA) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: aafd5a15873b5f41a6c783e98581411da6538e37
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3a409e21e925b3912aee5ec751747f61bce05276
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024398"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147326"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Inserimento, aggiornamento ed eliminazione di membri (XMLA)
-  È possibile utilizzare il [inserire](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [aggiornare](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), e [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) comandi XML for Analysis (XMLA) consentono rispettivamente di inserire, aggiornare o eliminare membri da una dimensione abilitata per la scrittura. Per ulteriori informazioni sulle dimensioni abilitate per la scrittura, vedere [dimensioni abilitate per la scrittura](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+  È possibile usare la [inserire](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [aggiornare](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla), e [Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) comandi XML for Analysis (XMLA) consentono rispettivamente di inserire, aggiornare o eliminare membri da una dimensione abilitata per la scrittura. Per altre informazioni sulle dimensioni abilitate per la scrittura, vedere [dimensioni abilitate per la scrittura](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 ## <a name="inserting-new-members"></a>Inserimento di nuovi membri  
- Il **inserire** comando inserisce nuovi membri in attributi specificati in una dimensione abilitata per la scrittura.  
+ Il **Inserisci** comando inserisce i nuovi membri in attributi specificati in una dimensione abilitata per la scrittura.  
   
- Prima di costruire il **inserire** comando, è necessario disponibili per i nuovi membri da inserire le informazioni seguenti:  
+ Prima di costruire il **Inserisci** comando, è necessario disponibili per i nuovi membri da inserire le informazioni seguenti:  
   
 -   Dimensione in cui inserire i nuovi membri.  
   
@@ -34,19 +34,19 @@ ms.locfileid: "34024398"
   
 -   Valori per tutte le proprietà dell'attributo applicabili non implementate come altri attributi nella dimensione. Tali proprietà includono operazioni unarie, conversioni, rollup personalizzati e relative proprietà e livelli ignorati.  
   
- Il **inserire** comando accetta solo due proprietà:  
+ Il **Inserisci** comando accetta solo due proprietà:  
   
--   Il [oggetto](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) proprietà che contiene un riferimento all'oggetto per la dimensione in cui devono essere inseriti i membri. Il riferimento all'oggetto contiene l'identificatore di database, l'identificatore di cubo e l'identificatore di dimensione per la dimensione.  
+-   Il [oggetto](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) proprietà, che contiene un riferimento all'oggetto per la dimensione in cui devono essere inseriti i membri. Il riferimento all'oggetto contiene l'identificatore di database, l'identificatore di cubo e l'identificatore di dimensione per la dimensione.  
   
--   Il [attributi](../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md) proprietà, che contiene uno o più [attributo](../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) elementi per identificare gli attributi in cui devono essere inseriti i membri. Ogni **attributo** elemento identifica un attributo e fornisce nome, valore, traduzioni, operatore unario, rollup personalizzati, le proprietà personalizzate di rollup e livelli ignorati per un singolo membro da aggiungere all'attributo identificato.  
+-   Il [attributi](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attributes-element-xmla) proprietà, che contiene uno o più [attributo](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attribute-element-xmla) elementi per identificare gli attributi in cui devono essere inseriti i membri. Ciascuna **attributo** elemento identifica un attributo e fornisce il nome, valore, traduzioni, operatore unario, personalizzate di rollup, proprietà di rollup personalizzato e i livelli ignorati per un singolo membro da aggiungere all'attributo identificato.  
   
     > [!NOTE]  
     >  Tutte le proprietà per il **attributo** elemento deve essere incluso. In caso contrario, è possibile che si verifichi un errore.  
   
 ## <a name="updating-existing-members"></a>Aggiornamento di membri esistenti  
- Il **aggiornamento** comando Aggiorna i membri esistenti in attributi specificati, in base alle relazioni con altri membri in altri attributi, in una dimensione abilitata per la scrittura. Il **aggiornamento** comando è possibile spostare membri in altri livelli delle gerarchie contenute nella dimensione e possono essere utilizzati per ristrutturare gerarchie padre-figlio definite dagli attributi padre.  
+ Il **Update** comando Aggiorna i membri esistenti in attributi specificati, in base alle relazioni con altri membri in altri attributi in una dimensione abilitata per la scrittura. Il **Update** comando è possibile spostare membri in altri livelli nelle gerarchie contenuti nella dimensione e possono essere utilizzati per ristrutturare gerarchie padre-figlio definite dagli attributi padre.  
   
- Prima di costruire il **aggiornamento** comando, è necessario disponibili per i membri da aggiornare le informazioni seguenti:  
+ Prima di costruire il **Update** comando, è necessario disponibili per i membri da aggiornare le informazioni seguenti:  
   
 -   Dimensione in cui aggiornare i membri esistenti.  
   
@@ -56,27 +56,27 @@ ms.locfileid: "34024398"
   
 -   Valori per tutte le proprietà dell'attributo applicabili non implementate come altri attributi nella dimensione. Tali proprietà includono operazioni unarie, conversioni, rollup personalizzati e relative proprietà e livelli ignorati.  
   
- Il **aggiornamento** comando accetta solo tre proprietà obbligatorie:  
+ Il **Update** comando accetta solo tre proprietà obbligatorie:  
   
--   Il **oggetto** proprietà che contiene un riferimento all'oggetto per la dimensione in cui i membri devono essere aggiornati. Il riferimento all'oggetto contiene l'identificatore di database, l'identificatore di cubo e l'identificatore di dimensione per la dimensione.  
+-   Il **oggetto** proprietà, che contiene un riferimento all'oggetto per la dimensione in cui i membri devono essere aggiornati. Il riferimento all'oggetto contiene l'identificatore di database, l'identificatore di cubo e l'identificatore di dimensione per la dimensione.  
   
--   Il **attributi** proprietà, che contiene uno o più **attributo** elementi per identificare gli attributi in cui devono essere aggiornati i membri. Il **attributo** elemento identifica un attributo e fornisce nome, valore, traduzioni, operatore unario, rollup personalizzati, le proprietà personalizzate di rollup e livelli ignorati per un singolo membro da aggiornare per l'attributo identificato.  
+-   Il **attributi** proprietà, che contiene uno o più **attributo** elementi per identificare gli attributi in cui devono essere aggiornati i membri. Il **attributo** elemento identifica un attributo e fornisce il nome, valore, traduzioni, operatore unario, personalizzate di rollup, proprietà di rollup personalizzato e i livelli ignorati per un singolo membro da aggiornare per l'attributo identificato.  
   
     > [!NOTE]  
     >  Tutte le proprietà per il **attributo** elemento deve essere incluso. In caso contrario, è possibile che si verifichi un errore.  
   
--   Il [in](../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) proprietà, che contiene uno o più **attributo** gli elementi che vincolano gli attributi in cui devono essere aggiornati i membri. Il **in** proprietà è fondamentale per limitare un **aggiornamento** per istanze specifiche di un membro. Se il **dove** proprietà non è specificata, vengono aggiornate tutte le istanze di un membro specifico. Si supponga ad esempio che siano presenti tre clienti per cui si desidera modificare il nome di città da Redmond in Bellevue. Per modificare il nome della città, è necessario fornire un **dove** proprietà che identifica il cliente i tre membri dell'attributo per cui i membri dell'attributo City devono essere modificati. Se non si specifica questo **in** proprietà, ogni cliente il cui nome di città è attualmente Redmond avrebbe il nome di città Bellevue dopo il **aggiornamento** esecuzione del comando.  
+-   Il [in cui](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla) proprietà, che contiene uno o più **attributo** gli elementi che vincolano gli attributi in cui devono essere aggiornati i membri. Il **in cui** proprietà è fondamentale per limitare un' **Update** per istanze specifiche di un membro. Se il **in cui** proprietà non è specificata, vengono aggiornate tutte le istanze di un membro specifico. Si supponga ad esempio che siano presenti tre clienti per cui si desidera modificare il nome di città da Redmond in Bellevue. Per modificare il nome della città, è necessario specificare una **in cui** proprietà che identifica il cliente i tre membri dell'attributo per cui devono essere modificati i membri dell'attributo City. Se non si specifica questo **in cui** proprietà di ogni cliente il cui nome di città è attualmente Redmond avrebbe il nome di città Bellevue dopo le **Update** comando esegue.  
   
     > [!NOTE]  
-    >  Ad eccezione dei nuovi membri, il **aggiornare** comando possibile aggiornare solo i valori di chiave di attributo per gli attributi non presenti il **in cui** clausola. Quando ad esempio viene aggiornato un cliente, il relativo nome di città non può essere aggiornato. In caso contrario, il nome di città viene modificato per tutti i clienti.  
+    >  Fatta eccezione per i nuovi membri, il **aggiornare** comando è possibile aggiornare solo valori di chiave di attributo per gli attributi non inclusi nel **in cui** clausola. Quando ad esempio viene aggiornato un cliente, il relativo nome di città non può essere aggiornato. In caso contrario, il nome di città viene modificato per tutti i clienti.  
   
 ### <a name="updating-members-in-parent-attributes"></a>Aggiornamento di membri in attributi padre  
- Per supportare gli attributi padre, il **aggiornamento** comando facoltativo [MoveWithDescendants](../../analysis-services/xmla/xml-elements-properties/movewithdescendants-element-xmla.md)utilizza proprietà. L'impostazione di **MoveWithDescendants** proprietà su true indica che i discendenti del membro padre comporta lo spostamento con il membro padre quando cambia l'identificatore del membro padre. Se questo valore è impostato su false, lo spostamento di un membro padre comporta la promozione dei relativi discendenti immediati al livello in cui il membro padre si trovava in precedenza.  
+ Per supportare gli attributi padre, il **Update** comando facoltativo [MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)utilizza le proprietà. Impostando il **MoveWithDescendants** proprietà su true indica che i discendenti del membro padre inoltre devono essere spostati con il membro padre quando cambia l'identificatore di tale membro padre. Se questo valore è impostato su false, lo spostamento di un membro padre comporta la promozione dei relativi discendenti immediati al livello in cui il membro padre si trovava in precedenza.  
   
- Quando l'aggiornamento dei membri di un attributo padre, il **aggiornare** comando non è possibile aggiornare i membri di altri attributi.  
+ Quando si aggiornano i membri di un attributo padre, il **aggiornare** comando non è possibile aggiornare i membri di altri attributi.  
   
 ## <a name="dropping-existing-members"></a>Eliminazione di membri esistenti  
- Prima di costruire il **Drop** comando, è necessario disponibili per i membri da eliminare le informazioni seguenti:  
+ Prima di costruire il **Drop** comando, è necessario disponibili per i membri che si desidera eliminare le informazioni seguenti:  
   
 -   Dimensione in cui eliminare i membri esistenti.  
   
@@ -86,23 +86,23 @@ ms.locfileid: "34024398"
   
  Il **Drop** comando accetta solo due proprietà obbligatorie:  
   
--   Il **oggetto** proprietà che contiene un riferimento all'oggetto per la dimensione in cui i membri devono essere eliminati. Il riferimento all'oggetto contiene l'identificatore di database, l'identificatore di cubo e l'identificatore di dimensione per la dimensione.  
+-   Il **oggetto** proprietà, che contiene un riferimento all'oggetto per la dimensione in cui devono essere eliminati i membri. Il riferimento all'oggetto contiene l'identificatore di database, l'identificatore di cubo e l'identificatore di dimensione per la dimensione.  
   
--   Il **in** proprietà, che contiene uno o più **attributo** elementi per limitare gli attributi in cui i membri devono essere eliminati. Il **in** proprietà è fondamentale per limitare un **Drop** per istanze specifiche di un membro. Se il **dove** comando non è specificato, vengono eliminate tutte le istanze di un membro specifico. Si supponga ad esempio che siano presenti tre clienti che si desidera eliminare da Redmond. Per eliminare tali clienti, è necessario fornire un **dove** proprietà che identifica i tre membri dell'attributo Customer da rimuovere e il membro Redmond dell'attributo City da cui i tre clienti devono essere rimossi. Se il **in** proprietà specifica solo il membro Redmond dell'attributo City, ogni cliente associato a Redmond verrebbe eliminato dal **Drop** comando. Se il **in** proprietà specifica solo i tre membri dell'attributo Customer, i tre clienti verrebbero completamente eliminati dal **Drop** comando.  
+-   Il **in cui** proprietà, che contiene uno o più **attributo** elementi per limitare gli attributi in cui i membri devono essere eliminati. Il **in cui** proprietà è fondamentale per limitare un **Drop** per istanze specifiche di un membro. Se il **in cui** comando non è specificato, vengono eliminate tutte le istanze di un membro specifico. Si supponga ad esempio che siano presenti tre clienti che si desidera eliminare da Redmond. Per eliminare tali clienti, è necessario specificare una **in cui** proprietà che identifica il membro Redmond dell'attributo City da cui devono essere rimossi i tre clienti e i tre membri dell'attributo Customer da rimuovere. Se il **in cui** proprietà specifica solo il membro Redmond dell'attributo City, ogni cliente associato a Redmond verrebbe eliminato dalle **Drop** comando. Se il **in cui** proprietà specifica solo i tre membri dell'attributo Customer, i tre clienti verrebbero eliminati completamente dalle **Drop** comando.  
   
     > [!NOTE]  
-    >  Il **attributo** elementi inclusi un **Drop** comando deve contenere solo il **AttributeName** e **chiavi** proprietà. In caso contrario, è possibile che si verifichi un errore.  
+    >  Il **attributo** gli elementi inclusi in un **Drop** comando deve contenere solo il **AttributeName** e **chiavi** proprietà. In caso contrario, è possibile che si verifichi un errore.  
   
 ### <a name="dropping-members-in-parent-attributes"></a>Eliminazione di membri in attributi padre  
- L'impostazione di [DeleteWithDescendants](../../analysis-services/xmla/xml-elements-properties/deletewithdescendants-element-xmla.md) proprietà indica che i discendenti di un membro padre devono essere eliminati anche con il membro padre. Se questo valore è impostato su false, i discendenti immediati del membro padre vengono invece promossi al livello in cui il membro padre si trovava in precedenza.  
+ Impostando il [DeleteWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/deletewithdescendants-element-xmla) proprietà indica che i discendenti del membro padre devono essere eliminati anche con il membro padre. Se questo valore è impostato su false, i discendenti immediati del membro padre vengono invece promossi al livello in cui il membro padre si trovava in precedenza.  
   
 > [!IMPORTANT]  
 >  Per eliminare sia il membro padre che i relativi discendenti, è sufficiente che un utente disponga delle autorizzazioni per l'eliminazione del solo membro padre e non è necessario che disponga delle autorizzazioni per l'eliminazione dei discendenti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eliminare l'elemento & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
- [Inserisci elemento & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Elemento Update & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [Elemento DROP &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)   
+ [Inserire l'elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)   
+ [Aggiornare l'elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
  [Definizione e identificazione di oggetti &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md)   
  [Sviluppo con XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   

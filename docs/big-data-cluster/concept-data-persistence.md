@@ -1,18 +1,18 @@
 ---
 title: Persistenza dei dati con SQL Server del cluster di big data in Kubernetes | Microsoft Docs
-description: ''
+description: Informazioni sul funzionamento di persistenza dei dati in un cluster di big data di SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 9f80f8a4e8014b6d05a2e4c6a0b5697609381a07
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460576"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050831"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistenza dei dati con cluster di big data di SQL Server in Kubernetes
 
@@ -31,7 +31,7 @@ Il modo in cui il cluster di big data di SQL Server utilizza questi volumi perma
 Per usare un archivio permanente durante la distribuzione, configurare il **USE_PERSISTENT_VOLUME** e **STORAGE_CLASS_NAME** variabili di ambiente prima dell'esecuzione `mssqlctl create cluster` comando. **USE_PERSISTENT_VOLUME** è impostata su `true` per impostazione predefinita. È possibile sostituire il valore predefinito e impostarlo su `false` e, in questo caso, il cluster di big data di SQL Server usa punti di montaggio emptyDir. 
 
 > [!WARNING]
-> L'esecuzione senza un archivio permanente può comportare un cluster non funzionali. Al riavvio del pod, i dati dei metadati e/o utente del cluster andranno perse definitivamente.
+> L'esecuzione senza un archivio permanente può lavorare in un ambiente di test, ma potrebbero verificarsi in un cluster non funzionali. Al riavvio del pod, i dati dei metadati e/o utente del cluster andranno perse definitivamente.
 
 Se si imposta il flag su true, è necessario specificare anche **STORAGE_CLASS_NAME** come parametro in fase di distribuzione.
 
@@ -41,20 +41,25 @@ Servizio contenitore di AZURE viene fornito con [due classi di archiviazione pre
 
 ## <a name="minikube-storage-class"></a>Classe di archiviazione Minikube
 
-Minikube dotato di una classe di archiviazione predefinito denominata **standard** insieme a un strumento di provisioning dinamico appositamente. Si noti che in Minikube, se USE_PERSISTENT_VOLUME = true (impostazione predefinita), è inoltre necessario sostituire il valore predefinito per la variabile di ambiente STORAGE_CLASS_NAME perché il valore predefinito è diverso. Impostare il valore su `standard`: 
-```
+Minikube dotato di una classe di archiviazione predefinito denominata **standard** insieme a un strumento di provisioning dinamico appositamente. Si noti che in minikube, se `USE_PERSISTENT_VOLUME=true` (impostazione predefinita), è inoltre necessario sostituire il valore predefinito per il **STORAGE_CLASS_NAME** variabile di ambiente perché il valore predefinito è diverso. Impostare il valore su `standard`: 
+
+In Windows, usare il comando seguente:
+
+```cmd
 SET STORAGE_CLASS_NAME=standard
 ```
 
-In alternativa, è possibile eliminare l'uso di volumi permanenti in Minikube:
-```
-SET USE_PERSISTENT_VOLUME=false
+In Linux, usare il comando seguente:
+
+```cmd
+export STORAGE_CLASS_NAME=standard
 ```
 
+In alternativa, è possibile eliminare con volumi permanenti in minikube impostando `USE_PERSISTENT_VOLUME=false`.
 
 ## <a name="kubeadm"></a>Kubeadm
 
-Kubeadm non viene fornito con una classe di archiviazione predefinito. di conseguenza, abbiamo creato gli script di configurazione di volumi permanenti e classi di archiviazione usando un'archiviazione locale o [torre](https://github.com/rook/rook) archiviazione.
+Kubeadm non viene fornito con una classe di archiviazione predefinito. È possibile scegliere di creare le classi di archiviazione con archiviazione locale o strumento di provisioning preferito, ad esempio e i volumi permanenti [torre](https://github.com/rook/rook). In tal caso, imposterebbe il **STORAGE_CLASS_NAME** alla classe di archiviazione è stato configurato. In alternativa, è possibile impostare `USE_PERSISTENT_VOLUME=false` negli ambienti di test, ma si noti l'avviso precedente nel **impostazioni distribuzione** sezione di questo articolo.  
 
 ## <a name="on-premises-cluster"></a>Cluster locale
 
@@ -75,7 +80,7 @@ export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 
-Ecco un elenco completo delle variabili di ambiente relative all'impostazione di un archivio permanente per il cluster di Big Data di SQL Server:
+Ecco un elenco completo delle variabili di ambiente relative all'impostazione di un archivio permanente per il cluster di big data di SQL Server:
 
 | Variabile di ambiente | Valore predefinito | Description |
 |---|---|---|

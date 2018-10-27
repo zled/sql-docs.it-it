@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40099bef14b2172205a18101036b57d71f3b5812
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c41449a9d8c1a85e283598a350f4372d8b3b0780
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830049"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146046"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar (** 128 **)**|Nome del tipo di dati.|  
     |**Storage_type**|**nvarchar (** 128 **)**|Nome del tipo di archiviazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-    |**Length**|**smallint**|Lunghezza fisica del tipo di dati in byte.|  
+    |**Lunghezza**|**smallint**|Lunghezza fisica del tipo di dati in byte.|  
     |**Prec**|**int**|Precisione, ovvero il numero totale di cifre.|  
     |**Scala**|**int**|Numero di cifre a destra del separatore decimale.|  
     |**Ammette i valori Null**|**varchar (** 35 **)**|Indica se i valori NULL sono supportati. I possibili valori sono Yes o No.|  
@@ -94,7 +94,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Column_name**|**nvarchar (** 128 **)**|Nome colonna.|  
         |**Tipo**|**nvarchar (** 128 **)**|Tipo di dati della colonna.|  
         |**Calcolata**|**varchar (** 35 **)**|Indica se i valori della colonna sono calcolati (Yes o No).|  
-        |**Length**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: Se il tipo di dati di colonna è un tipo di valori di grandi dimensioni (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, oppure **xml**), il valore verrà vengono visualizzati come -1.|  
+        |**Lunghezza**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: Se il tipo di dati di colonna è un tipo di valori di grandi dimensioni (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, oppure **xml**), il valore verrà vengono visualizzati come -1.|  
         |**Prec**|**Char (** 5 **)**|Precisione della colonna.|  
         |**Scala**|**Char (** 5 **)**|Scala della colonna.|  
         |**Ammette i valori Null**|**varchar (** 35 **)**|Indica se nella colonna sono consentiti i valori Null. I possibili valori sono Yes o No.|  
@@ -155,7 +155,7 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|Nome del parametro della stored procedure.|  
         |**Tipo**|**nvarchar (** 128 **)**|Tipo di dati del parametro della stored procedure.|  
-        |**Length**|**smallint**|Capacità massima di archiviazione fisica in byte.|  
+        |**Lunghezza**|**smallint**|Capacità massima di archiviazione fisica in byte.|  
         |**Prec**|**int**|Precisione, ovvero il numero totale di cifre.|  
         |**Scala**|**int**|Numero di cifre a destra del separatore decimale.|  
         |**Param_order**|**smallint**|Ordine del parametro.|  

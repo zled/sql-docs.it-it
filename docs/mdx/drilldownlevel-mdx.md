@@ -1,5 +1,5 @@
 ---
-title: DrilldownLevel (MDX) | Documenti Microsoft
+title: DrilldownLevel (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2aa0ae2406b7e53445c9c84c98b4240f834f01c6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: fbab3ea6efe0c1e5b896febeef4d1f38877b8965
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740220"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145656"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
 
   Esegue il drill-down dei membri di un set al livello inferiore al livello più basso rappresentato nel set.  
   
- Che specifica il livello in corrispondenza del quale eseguire il drill-down è facoltativa, ma se si imposta il livello, è possibile utilizzare un **livello espressione** o **livello di indice**. Questi argomenti si escludono a vicenda. Infine, se i membri calcolati sono presenti nella query, è possibile specificare un argomento per includerli nel set di righe.  
+ Che specifica il livello in corrispondenza del quale eseguire il drill-down è facoltativa, ma se si imposta il livello, è possibile usare un **espressione di livello** o nella **livello di indice**. Questi argomenti si escludono a vicenda. Infine, se i membri calcolati sono presenti nella query, è possibile specificare un argomento per includerli nel set di righe.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,10 +42,10 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Include_Calc_Members*  
  (Facoltativo) Flag che indica se includere i membri calcolati, se presenti, al livello di drill-down.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il **DrilldownLevel** funzione restituisce un set di figlio membri in ordine gerarchico, in base ai membri inclusi nel set specificato. L'ordine originale dei membri nel set specificato viene mantenuto, con la sola differenza che nel set di risultati della funzione tutti i membri figlio vengono indicati immediatamente sotto il membro padre corrispondente.  
   
- Con una struttura dati gerarchica multilivello è possibile scegliere in modo esplicito un livello in cui eseguire il drill-down. Per specificare il livello sono disponibili due modalità che si escludono a vicenda. Il primo approccio consiste nell'impostare il **level_expression** argomento utilizzando un'espressione MDX che restituisce il livello, un approccio alternativo consiste nello specificare il **indice** argomento, con un'espressione numerica che specifica il livello in base al numero.  
+ Con una struttura dati gerarchica multilivello è possibile scegliere in modo esplicito un livello in cui eseguire il drill-down. Per specificare il livello sono disponibili due modalità che si escludono a vicenda. Il primo approccio consiste nell'impostare il **level_expression** argomento utilizzando un'espressione MDX che restituisce il livello, un approccio alternativo consiste nello specificare il **indice** argomento, con un'espressione numerica che Specifica il livello di base al numero.  
   
  Se si specifica un'espressione di livello, la funzione restituisce un set in ordine gerarchico recuperando solo i figli dei membri del livello specificato. Se si specifica un'espressione di livello ma nessun membro è presente in tale livello, l'espressione di livello viene ignorata.  
   
@@ -53,14 +53,14 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  Se non si specifica un'espressione di livello né un valore di indice, la funzione restituisce un set in ordine gerarchico recuperando solo i figli dei membri del livello inferiore della prima dimensione indicata nel set specificato.  
   
- Query sulla proprietà XMLA MdpropMdxDrillFunctions consente di verificare il livello di supporto che il server garantisce per le funzioni di drill; vedere [proprietà XMLA supportate &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) per informazioni dettagliate.  
+ L'esecuzione di query la proprietà XMLA MdpropMdxDrillFunctions consente di verificare il livello di supporto che il server garantisce per le funzioni di drill; visualizzare [proprietà XMLA supportate &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) per informazioni dettagliate.  
   
 ## <a name="examples"></a>Esempi  
  È possibile provare gli esempi seguenti nella finestra Query MDX in SSMS, usando il cubo Adventure Works.  
   
  **Esempio 1: illustra la sintassi minima**  
   
- Nel primo esempio viene illustrata la sintassi minima per **DrilldownLevel**. L'unico argomento richiesto è un'espressione set. Quando si esegue questa query, si otterrà il padre [All Categories] e i membri del livello successivo verso il basso: [Accessories], [Bikes] e così via. Sebbene in questo esempio è semplice, viene illustrato lo scopo di base di **DrilldownLevel** funzione, che è drill-down nel livello successivo inferiore.  
+ Il primo esempio illustra la sintassi minima per **DrilldownLevel**. L'unico argomento richiesto è un'espressione set. Si noti che quando si esegue questa query, si ottiene l'elemento padre [All Categories] e i membri del livello successivo verso il basso: [Accessories], [Bikes] e così via. Sebbene questo esempio sia semplice, illustra lo scopo fondamentale del **DrilldownLevel** funzione, che è eseguire il drill-down nel livello successivo inferiore.  
   
 ```  
 SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sales Territory]}}) ON COLUMNS  
@@ -83,7 +83,7 @@ FROM [Adventure Works]
   
  L'esempio successivo mostra come usare un'espressione di livello. Con un set che rappresenta una struttura gerarchica, l'uso di un'espressione di livello consente di scegliere un livello nella gerarchia in cui avviare il drill-down.  
   
- In questo esempio, il livello di drill-down viene avviato [City], come il secondo argomento del **DrilldownLevel** (funzione). Quando si esegue questa query, il drill-down viene avviato nel livello [City], per gli stati Washington e Oregon. Per il **DrilldownLevel** funzione, anche set di risultati include i membri al livello successivo inferiore, [Postal codes].  
+ In questo esempio, il livello di drill-down viene avviato [City], come il secondo argomento della **DrilldownLevel** (funzione). Quando si esegue questa query, il drill-down viene avviato nel livello [City], per gli stati Washington e Oregon. Per il **DrilldownLevel** funzione, anche set di risultati include i membri al livello successivo inferiore, [Postal codes].  
   
 ```  
 SELECT [Measures].[Internet Sales Amount] ON COLUMNS,  
@@ -100,7 +100,7 @@ FROM [Adventure Works]
   
  **Esempio 4: includere membri calcolati**  
   
- Nell'ultimo esempio viene illustrato un membro calcolato, viene visualizzata nella parte inferiore del risultato impostato quando si aggiunge il **include_calculated_members** flag. Si noti che il flag viene specificato come quarto parametro.  
+ Nell'ultimo esempio viene illustrato un membro calcolato, viene visualizzato nella parte inferiore del risultato impostato quando si aggiunge il **include_calculated_members** flag. Si noti che il flag viene specificato come quarto parametro.  
   
  Questo esempio funziona perché il membro calcolato è allo stesso livello dei membri non calcolati. Il membro calcolato [West Coast] è composto dai membri di [United States], più tutti i membri del livello inferiore a [United States].  
   
@@ -118,6 +118,6 @@ FROM [Adventure Works]
  Se si rimuove solo il flag e si riesegue la query, si ottengono gli stessi risultati meno il membro calcolato [West Coast].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

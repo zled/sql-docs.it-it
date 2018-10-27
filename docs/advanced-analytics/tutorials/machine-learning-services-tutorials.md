@@ -2,40 +2,28 @@
 title: SQL Server Machine Learning Services Tutorials | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/22/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b692b9660c3caec18c689f56ba382f8df194a9cc
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 08528f3459022bdcb97b97e22d6f6c474c31a715
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384126"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960745"
 ---
 # <a name="tutorials-for-sql-server-machine-learning-services"></a>Esercitazioni per SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Questo articolo fornisce un elenco completo delle esercitazioni, demo e le applicazioni di esempio che usano funzionalità di machine learning in SQL Server 2016 o SQL Server 2017. Iniziare da qui per informazioni su come eseguire R o Python da T-SQL, come usare contesti di calcolo remoti e locali e come ottimizzare il codice R e Python per un ambiente di produzione di SQL.
+Questo articolo fornisce un elenco completo delle esercitazioni, demo e le applicazioni di esempio che usano funzionalità di machine learning in SQL Server 2016 o SQL Server 2017. Iniziare da qui per informazioni su come eseguire R o Python da T-SQL, come usare contesti di calcolo remoti e locali e come rendere operativo il codice R e Python per un ambiente di produzione di SQL.
 
 + [Esercitazioni di Python](../tutorials/sql-server-python-tutorials.md)
 
 + [Esercitazioni di R](../tutorials/sql-server-r-tutorials.md)
 
-Per altre informazioni sui requisiti e come eseguire la configurazione, vedere [prerequisiti](#bkmk_prerequisites).
-
-## <a name="samples-and-solutions"></a>Esempi e le soluzioni
-
-+ [Esempi](#bkmk_samples) 
-
-    Questi scenari reali dal team di sviluppo di SQL Server viene illustrato come incorporare l'apprendimento automatico nelle applicazioni. Tutti gli esempi includono il codice che è possibile scaricare, modificare e usare nell'ambiente di produzione.
-
-+ [Soluzioni](#bkmk_solutions) 
-
-    I modelli dal team di Microsoft Data Science sono personalizzabili, per iniziare a usare rapidamente con machine learning. Ogni soluzione personalizzata in base a un problema specifico di attività o del settore. La maggior parte delle soluzioni sono progettata per l'esecuzione in SQL Server o in un ambiente cloud, ad esempio Azure Machine Learning. Altre soluzioni possono eseguire in Linux o in cluster di Spark o Hadoop usando Microsoft R Server o Machine Learning Server.
-
-### <a name ="bkmk_samples"></a>Esempi del prodotto SQL Server
+## <a name ="bkmk_samples"></a>Esempi di R e Python
 
 Questi esempi e demo fornite dal team di sviluppo di SQL Server e R Server evidenziano che modo è possibile usare analitica incorporata in applicazioni reali.
 
@@ -47,9 +35,11 @@ Questi esempi e demo fornite dal team di sviluppo di SQL Server e R Server evide
 | [Creare un modello predittivo usando Python e SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | Compilare l'applicazione di analisi di noleggio di sci usando Python, per semplificare la pianificazione per la domanda futura. Questo esempio Usa la nuova libreria di Python **revoscalepy**, per creare un modello di regressione lineare. | SQL Server 2017 |
 | [Come usare Tableau con SQL Server Machine Learning Services](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/) | Analisi dei social media e creare grafici di Tableau, usando SQL Server e R. | SQL Server 2016 o SQL Server 2017 |
 
-### <a name="bkmk_solutions"></a>Modelli di soluzione
+## <a name="bkmk_solutions"></a>Modelli di soluzione
 
-Il Team di Data Science di Microsoft ha fornito i modelli di soluzione che possono essere utilizzati per avviare rapidamente le soluzioni per scenari comuni. Viene fornito tutto il codice, oltre a istruzioni su come eseguire il training e distribuire un modello per l'assegnazione del punteggio utilizzando stored procedure SQL Server.
+Il Team di Data Science di Microsoft ha fornito i modelli di soluzioni personalizzabili che possono essere utilizzati per avviare rapidamente le soluzioni per scenari comuni. Ogni soluzione personalizzata in base a un problema specifico di attività o del settore. La maggior parte delle soluzioni sono progettata per l'esecuzione in SQL Server o in un ambiente cloud, ad esempio Azure Machine Learning. Altre soluzioni possono eseguire in Linux o in cluster di Spark o Hadoop usando Microsoft R Server o Machine Learning Server.
+
+Viene fornito tutto il codice, oltre a istruzioni su come eseguire il training e distribuire un modello per l'assegnazione del punteggio utilizzando stored procedure SQL Server.
 
 + [Rilevamento di frodi](https://gallery.cortanaanalytics.com/Tutorial/Online-Fraud-Detection-Template-with-SQL-Server-R-Services-1)
 + [Stima personalizzata del trasferimento](https://gallery.cortanaanalytics.com/Tutorial/Customer-Churn-Prediction-Template-with-SQL-Server-R-Services-1)
@@ -58,7 +48,7 @@ Il Team di Data Science di Microsoft ha fornito i modelli di soluzione che posso
 
 Per altre informazioni, vedere [Machine Learning Templates with SQL Server 2016 R Services (Modelli di apprendimento automatico con SQL Server 2016 R Services)](https://blogs.technet.microsoft.com/machinelearning/2016/03/23/machine-learning-templates-with-sql-server-2016-r-services/).
 
-## <a name="more-resources-and-reading"></a>Altre risorse e la lettura
+## <a name="recommended-reading"></a>Letture consigliate
 
 + [Il motivo per cui si compilarlo?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/01/10/sql-server-r-services-why-did-we-build-it/)
 

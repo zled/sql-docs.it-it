@@ -11,12 +11,12 @@ ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfbce4b8128d7278349539cedf73a87e498b1bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26a0aae710b18350c9ef62166e004f702eb88c7e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092831"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146552"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Creazione di stime su un modello Sequence Clustering (Esercitazione intermedia sul data mining)
   Dopo aver compreso il modello sequence clustering esplorandolo nel visualizzatore, è possibile creare query di stima utilizzando Generatore Query di stima nel **stima modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining. Per creare una stima, occorre selezionare innanzitutto il modello Sequence Clustering, quindi i dati di input. Per gli input, è possibile utilizzare un'origine dati esterna o compilare una query singleton e fornire valori in una finestra di dialogo.  
@@ -198,10 +198,10 @@ NATURAL PREDICTION JOIN
 ## <a name="next-steps"></a>Passaggi successivi  
  Se si sono concluse tutte le sezioni di [esercitazione intermedia sul Data Mining dei dati &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), il passaggio successivo potrebbe essere imparare a utilizzare le istruzioni di Data Mining Extensions (DMX) per compilare modelli e generare stime. Per altre informazioni, vedere [creazione e l'esecuzione di query modelli di Data Mining con DMX: esercitazioni &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
   
- Se si ha familiarità con i concetti relativi alla programmazione, è anche possibile utilizzare AMO (Analysis Management Objects) per gestire a livello di codice gli oggetti di data mining. Per altre informazioni, vedere [Classi di data mining AMO](../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ Se si ha familiarità con i concetti relativi alla programmazione, è anche possibile utilizzare AMO (Analysis Management Objects) per gestire a livello di codice gli oggetti di data mining. Per altre informazioni, vedere [Classi di data mining AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sequence Clustering Model Query Examples](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Contenuto dei modelli per i modelli Sequence Clustering di data mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Contenuto dei modelli di data mining per i modelli Sequence Clustering &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

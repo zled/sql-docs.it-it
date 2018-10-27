@@ -19,12 +19,12 @@ ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0baf445580017ba976d788c402e81aa06cbb2643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110531"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148236"
 ---
 # <a name="data-mining-query-interfaces"></a>Interfacce di query di data mining
   Le query di data mining sono basate sul linguaggio DMX (Data Mining Extensions). È possibile utilizzare DMX per tutte le attività di stima e di modellazione, tra cui la classificazione, l'analisi dei rischi, la generazione di indicazioni e la regressione lineare. È inoltre possibile recuperare i modelli e le statistiche generate durante l'elaborazione del modello.  
@@ -48,7 +48,7 @@ ms.locfileid: "48110531"
 ##  <a name="bkmk_Tools"></a> Strumenti Query di Data Mining  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre gli strumenti seguenti per la compilazione di query di stima, query sul contenuto e query di definizione dei dati su oggetti di data mining:  
   
--   Generatore delle query di stima  
+-   generatore delle query di stima  
   
 -   Editor query  
   
@@ -87,16 +87,16 @@ ms.locfileid: "48110531"
   
  Tuttavia, XMLA costituisce il formato di messaggio sottostante per tutte le interazioni con un server Analysis Services. All'interno di un messaggio XMLA, le query sono rappresentate in modo diverso a seconda se si invia una query di stima basata su DMX, una query sul contenuto o una query mediante la quale vengono recuperati i metadati del modello utilizzando i set di righe dello schema di data mining.  
   
--   Il testo delle **query di stima**, e tutte le altre istruzioni DMX, viene inviato in XMLA tramite il [metodo Execute &#40;XMLA&#41;](../xmla/xml-elements-methods-execute.md), con la query DMX posizionata come testo all'interno dell'[elemento Statement &#40;XMLA&#41;](../xmla/xml-elements-commands/statement-element-xmla.md) dell'[elemento Command &#40;XMLA&#41;](../xmla/xml-elements-properties/command-element-xmla.md).  
+-   Il testo delle **query di stima**, e tutte le altre istruzioni DMX, viene inviato in XMLA tramite il [metodo Execute &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute), con la query DMX posizionata come testo all'interno dell'[elemento Statement &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) dell'[elemento Command &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/command-element-xmla).  
   
--   Per recuperare il **contenuto del modello** e i **metadati del modello**, ad esempio il numero di cluster, gli attributi usati negli alberi delle decisioni, la data dell'ultima elaborazione del modello e i parametri dell'algoritmo usati durante la creazione del modello, è possibile usare il [metodo Discover &#40;XMLA&#41;](../xmla/xml-elements-methods-discover.md) e specificare uno dei set di righe dello schema di data mining nell'intestazione dell'[elemento RequestType &#40;XMLA&#41;](../xmla/xml-elements-properties/type-element-xmla.md). Per restringere l'ambito della query, immettere i criteri come restrizioni all'interno dell'elemento [RestrictionList Element &#40;XMLA&#41;](../xmla/xml-elements-properties/restrictionlist-element-xmla.md).  
+-   Per recuperare il **contenuto del modello** e i **metadati del modello**, ad esempio il numero di cluster, gli attributi usati negli alberi delle decisioni, la data dell'ultima elaborazione del modello e i parametri dell'algoritmo usati durante la creazione del modello, è possibile usare il [metodo Discover &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) e specificare uno dei set di righe dello schema di data mining nell'intestazione dell'[elemento RequestType &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla). Per restringere l'ambito della query, immettere i criteri come restrizioni all'interno dell'elemento [RestrictionList Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Soluzioni di Data Mining](data-mining-solutions.md)   
+ [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Soluzioni di data mining](data-mining-solutions.md)   
  [Informazioni sull'istruzione DMX Select](/sql/dmx/understanding-the-dmx-select-statement)   
- [Struttura e l'utilizzo di query di stima DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
- [Creare una Query di stima utilizzando Generatore Query di stima](create-a-prediction-query-using-the-prediction-query-builder.md)   
+ [Struttura e utilizzo di query di stima DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
+ [Creare una query di stima utilizzando Generatore query di stima](create-a-prediction-query-using-the-prediction-query-builder.md)   
  [Creare una query DMX in SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

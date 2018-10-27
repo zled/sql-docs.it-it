@@ -14,12 +14,12 @@ ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad59ce6f605c913e621d4d377ec3d48e8cbf2b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164291"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147576"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gestione degli oggetti e delle soluzioni di data mining
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] include strumenti client che è possibile utilizzare per gestire strutture e modelli di data mining esistenti. In questa sezione vengono descritte le operazioni di gestione che è possibile eseguire utilizzando ciascun ambiente.  
@@ -29,9 +29,9 @@ ms.locfileid: "48164291"
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Spostamento di oggetti di data mining](moving-data-mining-objects.md)  
   
- [Requisiti e considerazioni sull'elaborazione &#40;Data Mining&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](processing-requirements-and-considerations-data-mining.md)  
   
- [Usando SQL Server Profiler per il monitoraggio di Data Mining &#40;Analysis Services - Data Mining&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [Utilizzo di SQL Server Profiler per il monitoraggio di attività di data mining &#40;Analysis Services - Data Mining&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>Percorso degli oggetti di data mining  
  Le strutture e i modelli di data mining elaborati vengono archiviati in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -52,7 +52,7 @@ ms.locfileid: "48164291"
   
 -   [Modificare le proprietà di un modello di data mining](change-the-properties-of-a-mining-model.md)  
   
--   [Visualizzare o modificare flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)  
+-   [Visualizzare o modificare flag di modellazione &#40;Data mining &#41;](modeling-flags-data-mining.md)  
   
 -   [Visualizzare o modificare i parametri dell'algoritmo](view-or-change-algorithm-parameters.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48164291"
 > [!WARNING]  
 >  Per apportare qualsiasi modifica a una struttura oppure a un modello di data mining, incluse le modifiche di metadati, ad esempio un nome o una descrizione, è necessario rielaborare la struttura o il modello.  
   
- Se non hai il file della soluzione utilizzato per creare il progetto di data mining o gli oggetti, è possibile importare il progetto esistente dal server utilizzando la procedura guidata di importazione di Analysis Services, apportare le modifiche agli oggetti e quindi distribuire nuovamente utilizzando la `Incremental` opzione. Per altre informazioni, vedere [Importare un progetto di data mining usando l'Importazione guidata di Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
+ Se non si dispone del file della soluzione utilizzato per creare il progetto o gli oggetti di data mining, è possibile importare il progetto esistente dal server utilizzando la procedura guidata di importazione di Analysis Services, apportare modifiche agli oggetti, quindi eseguire nuovamente la distribuzione tramite l'opzione `Incremental`. Per altre informazioni, vedere [Importare un progetto di data mining usando l'Importazione guidata di Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>Gestione di oggetti di data mining mediante SQL Server Management Studio  
  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]è possibile creare script per strutture e modelli di data mining, nonché elaborare o eliminare tali strutture e modelli. Sebbene sia possibile visualizzare solo un set limitato di proprietà utilizzando Esplora oggetti, per visualizzare metadati aggiuntivi relativi ai modelli di data mining è tuttavia possibile aprire una finestra **Query DMX** e selezionare una struttura di data mining.  
@@ -76,7 +76,7 @@ ms.locfileid: "48164291"
 ### <a name="analysis-management-objects-amo"></a>AMO (Analysis Management Objects)  
  Gli oggetti AMO (Analysis Management Objects) sono un modello a oggetti compilato su XMLA che offre il controllo completo sugli oggetti di data mining. Tramite AMO, è possibile creare, distribuire e monitorare le strutture e i modelli di data mining.  
   
--   [Modello a oggetti AMO e concetti relativi](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [Modello a oggetti AMO e concetti relativi](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48164291"
 ### <a name="data-mining-extensions-dmx"></a>Data Mining Extensions (DMX)  
  È possibile utilizzare DMX con altre interfacce di comando, ad esempio [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o ADOMD.Net, per creare, eliminare ed eseguire query su strutture e modelli di data mining.  
   
--   [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di definizione dei dati](/sql/dmx/dmx-statements-data-definition)  
+-   [Istruzioni DMX &#40;Data Mining Extensions&#41; per la definizione dei dati](/sql/dmx/dmx-statements-data-definition)  
   
  **Restrizioni:** alcune proprietà non possono essere modificate usando DMX.  
   

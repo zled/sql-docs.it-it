@@ -13,19 +13,19 @@ ms.assetid: 751b4393-f6fd-48c1-bcef-bdca589ce34c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dff4254252523096b187bb2894782fe9eea523be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df092bc94bcab3dcfd2909807eb650e696e9be0
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066950"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146790"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Microsoft Generic Content Tree Viewer (Data mining)
   In **Microsoft Generic Content Tree Viewer** vengono visualizzate informazioni dettagliate sul contenuto di un modello di data mining in un formato di tabella HTML standardizzato. Questa vista è utile poiché vengono esposti la struttura sottostante del modello, nonché i dettagli sui coefficienti, sulla distribuzione dei valori e così via.  
   
  Il contenuto effettivo visualizzato nella tabella varia a seconda dell'algoritmo utilizzato e possono essere inclusi colonne, regole, proprietà, attributi, nodi e formule. Per altre informazioni sul contenuto del modello e su come interpretare le informazioni per ogni tipo di modello, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
   
- Per le informazioni fornite nel visualizzatore viene utilizzata una struttura comune basata sul set di righe dello schema relativo al contenuto per i modelli di data mining. Tale set di righe è un framework generico per l'archiviazione degli schemi, delle statistiche e di altro contenuto di un modello di data mining. Per un elenco delle colonne del set di righe dello schema di data mining per i modelli di data mining, vedere [Set di righe DMSCHEMA_MINING_MODEL_CONTENT](schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+ Per le informazioni fornite nel visualizzatore viene utilizzata una struttura comune basata sul set di righe dello schema relativo al contenuto per i modelli di data mining. Tale set di righe è un framework generico per l'archiviazione degli schemi, delle statistiche e di altro contenuto di un modello di data mining. Per un elenco delle colonne del set di righe dello schema di data mining per i modelli di data mining, vedere [Set di righe DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
 ## <a name="options"></a>Opzioni  
  **Didascalia del nodo (ID univoco)**  
@@ -39,8 +39,8 @@ ms.locfileid: "48066950"
  Per informazioni su come interpretare le informazioni per un tipo di modello specifico, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Query di data mining](data-mining/data-mining-queries.md)  
   
   

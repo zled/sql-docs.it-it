@@ -1,5 +1,5 @@
 ---
-title: Gestione di connessioni e sessioni (XMLA) | Documenti Microsoft
+title: Gestione di connessioni e sessioni (XMLA) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 52351646759b6354411de094152c2faceb8fe598
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ad9be579d37cc8c75375b373ae8ecb624067ad50
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023138"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144886"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gestione di connessioni e sessioni (XMLA)
-  *Le informazioni sullo stato* è una condizione durante il quale il server mantiene l'identità e il contesto di un client tra le chiamate di metodo. *Senza stato* è una condizione durante il quale il server non ricorda l'identità e il contesto di un client dopo il completamento di una chiamata al metodo.  
+  *Le informazioni sullo stato* è una condizione durante il quale il server mantiene le identità e il contesto di un client tra le chiamate di metodo. *Concetto* è una condizione durante il quale il server non ricorda l'identità e il contesto di un client dopo il completamento di una chiamata al metodo.  
   
- Per fornire le informazioni sullo stato, XML for Analysis (XMLA) supporta *sessioni* che consentono una serie di istruzioni da eseguire insieme. Un esempio di tale serie di istruzioni potrebbe essere la creazione di un membro calcolato da utilizzare in query successive.  
+ Per fornire le informazioni sullo stato, XML for Analysis (XMLA) supporta *sessioni* che consentono a una serie di istruzioni da eseguire tra loro. Un esempio di tale serie di istruzioni potrebbe essere la creazione di un membro calcolato da utilizzare in query successive.  
   
  In genere le sessioni in XMLA si comportano nel modo indicato dalla specifica OLE DB 2.6 e descritto di seguito:  
   
@@ -27,7 +27,7 @@ ms.locfileid: "34023138"
   
 -   È possibile eseguire più comandi nel contesto di una singola sessione.  
   
--   Supporto delle transazioni nel contesto di XMLA è tramite comandi specifici del provider inviati con il [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) metodo.  
+-   Supporto per le transazioni nel contesto di XMLA è tramite comandi specifici del provider inviati con il [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) (metodo).  
   
  XMLA definisce una modalità per supportare sessioni in un ambiente Web in modo analogo all'approccio utilizzato dal protocollo DAV (Distributed Authoring and Versioning) per implementare il blocco in un ambiente a regime di controllo libero. L'analogia con il protocollo DAV consiste nel fatto che è consentita la scadenza delle sessioni nel provider per diversi motivi, ad esempio se si verifica un timeout o un errore di connessione. Quando le sessioni sono supportate, i servizi Web devono essere consapevoli e pronti per gestire di set interrotti di comandi che devono essere riavviati.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34023138"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  Il messaggio di risposta SOAP dal provider include l'ID di sessione nell'area di intestazione restituita, usare il tag di intestazione XMLA \<SessionId >.  
+2.  Il messaggio di risposta SOAP dal provider include l'ID di sessione nell'area di intestazione restituita con il tag di intestazione XMLA \<SessionId >.  
   
     ```  
     <SOAP-ENV:Header>  
@@ -85,7 +85,7 @@ ms.locfileid: "34023138"
     </SOAP-ENV:Header>  
     ```  
   
-4.  Quando la sessione è stata completata, il \<EndSession > viene utilizzato il tag, che contiene il valore di ID di sessione correlato.  
+4.  Quando la sessione è stata completata, il \<EndSession > tag viene usato, che contiene il valore di ID di sessione correlato.  
   
     ```  
     <SOAP-ENV:Header>  

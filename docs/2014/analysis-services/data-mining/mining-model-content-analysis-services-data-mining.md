@@ -21,12 +21,12 @@ ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db6b49c10441e08bb66256860550fc2447f6dcf3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 355bb7a964ae5b70dd0d8bd71f371766c25e413e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120901"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148006"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   In seguito alla progettazione e all'elaborazione di un modello di data mining mediante i dati della struttura di data mining sottostante, il modello di data mining è completo e contiene il *contenuto del modello di data mining*. È possibile utilizzare questo contenuto per eseguire stime o analisi di dati.  
@@ -55,7 +55,7 @@ ms.locfileid: "48120901"
  Il numero di nodi figlio presenti nel nodo radice varia a seconda dell'algoritmo utilizzato per creare il modello. I nodi figlio hanno significati diversi e contengono contenuto diverso, a seconda dell'algoritmo e della profondità e complessità dei dati.  
   
 ##  <a name="bkmk_Nodes"></a> Nodi nel contenuto del modello di data mining  
- In un modello di data mining, un nodo è un contenitore generico in cui sono archiviate informazioni riguardanti tutto il modello o una parte di esso. La struttura di ogni nodo è sempre la stessa e contiene le colonne definite dal set di righe dello schema di data mining. Per altre informazioni, vedere [Set di righe DMSCHEMA_MINING_MODEL_CONTENT](../schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+ In un modello di data mining, un nodo è un contenitore generico in cui sono archiviate informazioni riguardanti tutto il modello o una parte di esso. La struttura di ogni nodo è sempre la stessa e contiene le colonne definite dal set di righe dello schema di data mining. Per altre informazioni, vedere [Set di righe DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
  Ogni nodo include i relativi metadati, tra cui un identificatore univoco all'interno di ciascun modello, l'ID del nodo padre e il numero di nodi figlio presenti. I metadati identificano il modello di appartenenza del nodo e il catalogo del database in cui è archiviato quel modello specifico. Il contenuto aggiuntivo presente nel nodo varia in base al tipo di algoritmo utilizzato per creare il modello e potrebbe includere gli elementi seguenti:  
   
@@ -160,9 +160,9 @@ ms.locfileid: "48120901"
   
  Se il nome dell'attributo è una colonna, nel caso più semplice ATTRIBUTE_VALUE contiene uno dei valori discreti per la colonna.  
   
- A seconda del modo in cui i valori elaborati dall'algoritmo, ATTRIBUTE_VALUE può contenere anche un flag che indica se esiste un valore per l'attributo (`Existing`), o se il valore è null (`Missing`).  
+ A seconda dei valori elaborati dall'algoritmo, nella colonna ATTRIBUTE_VALUE può essere presente anche un flag che indica se esiste un valore per l'attributo (`Existing`) o se il valore è Null (`Missing`).  
   
- Ad esempio, se il modello è configurato per trovare i clienti che hanno acquistato almeno una volta un determinato elemento, nella colonna ATTRIBUTE_NAME potrebbe essere contenuta la coppia attributo-valore che definisce l'elemento di interesse, ad esempio `Model = 'Water bottle'`e nella colonna ATTRIBUTE_VALUE solo la parola chiave `Existing` o `Missing`.  
+ Ad esempio, se il modello è configurato per la ricerca dei clienti che hanno acquistato almeno una volta un determinato elemento, nella colonna ATTRIBUTE_NAME potrebbe essere contenuta la coppia attributo-valore che definisce l'elemento di interesse, ad esempio `Model = 'Water bottle'`, e nella colonna ATTRIBUTE_VALUE solo la parola chiave `Existing` o `Missing`.  
   
  SUPPORT  
  Conteggio dei case che dispongono di questa coppia attributo-valore o che contengono questo set di elementi o regola.  
@@ -214,7 +214,7 @@ ms.locfileid: "48120901"
   
 |ID VALUE_TYPE|Valore dell'etichetta|Nome del tipo di valore|  
 |--------------------|-----------------|---------------------|  
-|1|Missing|Indica che i dati del case non contengono un valore per questo attributo. Il `Missing` lo stato è calcolato separatamente dagli attributi con valori.|  
+|1|Missing|Indica che i dati del case non contengono un valore per questo attributo. Lo stato `Missing` è calcolato separatamente dagli attributi con valori.|  
 |2|Existing|Indica che i dati del case contengono un valore per questo attributo.|  
 |3|Continuo|Indica che il valore dell'attributo è un valore numerico continuo che può pertanto essere rappresentato da una media, insieme alle varianza e deviazione standard.|  
 |4|Discrete|Indica che un valore di testo o numerico viene trattato come discreto.<br /><br /> **Nota** i valori discreti possono anche essere mancanti; tuttavia, vengono gestiti in modo diverso durante l'esecuzione dei calcoli. Per informazioni, vedere [Valori mancanti &#40;Analysis Services - Data mining&#41;](missing-values-analysis-services-data-mining.md).|  
@@ -273,15 +273,15 @@ ms.locfileid: "48120901"
   
 |Tipo di modello o di algoritmo|model content|Esecuzione di query sui modelli di data mining|  
 |-----------------------------|-------------------|----------------------------|  
-|Modelli Association Rules|[Contenuto dei modelli di associazione modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Esempi di query sul modello di associazione](association-model-query-examples.md)|  
-|Modelli di clustering|[Contenuto dei modelli di albero delle decisioni di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Esempi di query sul modello di clustering](clustering-model-query-examples.md)|  
-|Modelli di albero delle decisioni|[Contenuto dei modelli di albero delle decisioni di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Esempi di query sul modello di alberi delle decisioni](decision-trees-model-query-examples.md)|  
-|Modelli di regressione lineare|[Contenuto del modello per modelli di regressione lineare di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Esempi di query sul modello di regressione lineare](linear-regression-model-query-examples.md)|  
-|Modelli di regressione logistica|[Contenuto dei modelli di regressione logistica modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)|[Esempi di query sul modello di regressione lineare](linear-regression-model-query-examples.md)|  
-|Modelli Naive Bayes|[Contenuto dei modelli per i modelli Naive Bayes di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Esempi di query sul modello Naive Bayes](naive-bayes-model-query-examples.md)|  
-|Modelli di rete neurale|[Contenuto dei modelli di rete neurale modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Esempi di query sul modello di rete neurale](neural-network-model-query-examples.md)|  
-|Sequence Clustering|[Contenuto dei modelli per i modelli Sequence Clustering di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)|[Esempi di query su modelli Sequence Clustering](sequence-clustering-model-query-examples.md)|  
-|Modelli Time Series|[Contenuto dei modelli per i modelli Time Series di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Esempi di query sui modelli Time Series](time-series-model-query-examples.md)|  
+|Modelli Association Rules|[Contenuto dei modelli di data mining per i modelli di associazione &#40;Analysis Services - Data mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Esempi di query sul modello di associazione](association-model-query-examples.md)|  
+|Modelli di clustering|[Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Esempi di query sul modello di clustering](clustering-model-query-examples.md)|  
+|Modelli di albero delle decisioni|[Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Esempi di query sul modello di alberi delle decisioni](decision-trees-model-query-examples.md)|  
+|Modelli di regressione lineare|[Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Esempi di query sul modello di regressione lineare](linear-regression-model-query-examples.md)|  
+|Modelli di regressione logistica|[Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](mining-model-content-for-logistic-regression-models.md)|[Esempi di query sul modello di regressione lineare](linear-regression-model-query-examples.md)|  
+|Modelli Naive Bayes|[Contenuto dei modelli di data mining per i modelli Naive Bayes &#40;Analysis Services - Data mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes Model Query Examples](naive-bayes-model-query-examples.md)|  
+|Modelli di rete neurale|[Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Esempi di query sul modello di rete neurale](neural-network-model-query-examples.md)|  
+|Sequence Clustering|[Contenuto dei modelli di data mining per i modelli Sequence Clustering &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](sequence-clustering-model-query-examples.md)|  
+|Modelli Time Series|[Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Esempi di query sui modelli Time Series](time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Strumenti per la visualizzazione del contenuto di un modello di data mining  
  Quando si esplora un modello in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], è possibile visualizzare le informazioni in **Microsoft Generic Content Tree Viewer**, disponibile sia in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] che in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -304,7 +304,7 @@ SELECT * FROM [<mining model name>].CONTENT
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è inoltre possibile accedere alle informazioni sui set di righe dello schema di data mining stabilendo una connessione all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ed eseguendo query sulle tabelle di sistema. Per altre informazioni, vedere [una query di Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](data-mining-schema-rowsets-ssas.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

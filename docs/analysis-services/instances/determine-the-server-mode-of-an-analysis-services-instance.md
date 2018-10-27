@@ -1,5 +1,5 @@
 ---
-title: Determinare la modalità del Server di un'analisi Services istanza | Documenti Microsoft
+title: Determinare la modalità Server di analisi Services istanza | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 52f12b7d828f9d863f3efe29355e59b6a76d33ef
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 85501a0b8899e375965a7e999ce2d4e938f14cc0
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017458"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099718"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determinare la modalità server di un'istanza di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Sono disponibili tre diverse modalità server per installare Analysis Services: multidimensionale e data mining (impostazione predefinita), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint e tabulare. La modalità server di un'istanza di Analysis Services è determinata durante l'installazione quando si scelgono le opzioni per l'installazione del server.  
   
- La modalità server determina il tipo di soluzione creata e distribuita. Se non è stato installato il software server e si desidera sapere in quale modalità è stato installato il server, è possibile usare le informazioni di questo argomento per determinare tale modalità. Per ulteriori informazioni sulla disponibilità delle funzionalità in una modalità specifica, vedere [confronto tabulari e multidimensionali ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ La modalità server determina il tipo di soluzione creata e distribuita. Se non è stato installato il software server e si desidera sapere in quale modalità è stato installato il server, è possibile usare le informazioni di questo argomento per determinare tale modalità. Per altre informazioni sulle funzionalità disponibili in una modalità specifica, vedere [confronto tra tabulari e multidimensionali ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
  Se non si desidera usare la modalità server installata, è necessario disinstallare e reinstallare il software, scegliendo la modalità preferita. In alternativa, è possibile installare un'istanza aggiuntiva di Analysis Services nello stesso computer per disporre di più istanze eseguite in modalità diverse.  
   
 ## <a name="server-icons-in-object-explorer"></a>Icone del server in Esplora oggetti  
  Il modo più semplice per determinare la modalità server consiste nel connettersi al server in SQL Server Management Studio e individuare l'icona accanto al nome del server in Esplora oggetti. La figura seguente mostra tre istanze di Analysis Services distribuite in modalità multidimensionale, tabulare e [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] :  
   
- ![Icone Esplora oggetti per ogni modalità server](../../analysis-services/instances/media/ssas-ssms-servermodes.gif "icone Esplora oggetti per ogni modalità server")  
+ ![Icone Esplora oggetti per ogni modalità server](../../analysis-services/instances/media/ssas-ssms-servermodes.gif "icone di Esplora oggetti per ogni modalità server")  
   
 ## <a name="viewing-deploymentmode-property-in-msmdsrvini-file"></a>Visualizzazione della proprietà DeploymentMode nel file MSMDSRV.INI  
  In alternativa, è possibile verificare la proprietà **DeploymentMode** nel file msmdsrv.ini incluso in ogni istanza di Analysis Services. Il valore di questa proprietà identifica la modalità del server. I valori validi sono 0 (multidimensionale), 1 (SharePoint) o 2 (tabulare). Per aprire il file msmdsrv.ini, è necessario essere un amministratore (ovvero, un membro del ruolo server) di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questo file contiene XML strutturato. È possibile visualizzare il file usando Blocco note o qualsiasi editor di testo.  
@@ -40,7 +40,7 @@ ms.locfileid: "34017458"
   
  Tra i valori validi per questa proprietà sono inclusi i seguenti:  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |0|Si tratta del valore predefinito. Specifica la modalità multidimensionale, usata per i database multidimensionali che usano l'archiviazione MOLAP, HOLAP e ROLAP, nonché i modelli di data mining.|  
 |1|Specifica le istanze di Analysis Services installate nell'ambito di una distribuzione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. Non modificare la proprietà della modalità di distribuzione dell'istanza di Analysis Services che fa parte di un'installazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] I dati di non verranno più eseguiti nel server se si cambia modalità.|  
@@ -51,10 +51,10 @@ ms.locfileid: "34017458"
 ## <a name="see-also"></a>Vedere anche  
  [Installare Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)   
  [Installazione di Analysis Services in modalità Multidimensionale e Data Mining](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
- [Installazione di Power Pivot per SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
- [Connettersi ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
+ [Installazione di Power Pivot per SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
+ [Connetti ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Soluzioni di modelli tabulari](../../analysis-services/tabular-models/tabular-models-ssas.md)   
  [Soluzioni di modelli multidimensionali ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Modelli di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

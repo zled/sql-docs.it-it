@@ -11,12 +11,12 @@ ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26869ca780bc74e3c9c56b38b39195b893dbf523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e56d1dc66e8e6ac73a3ae8b1888cbdee16c63df
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147771"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146742"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Esplorazione del modello di clustering (Esercitazione di base sul data mining)
   Il [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Clustering Raggruppa i case in cluster con caratteristiche simili. Tali raggruppamenti sono utili per l'esplorazione dei dati, l'identificazione delle relative anomalie e la creazione di stime.  
@@ -89,7 +89,7 @@ ms.locfileid: "48147771"
  Con il **caratteristiche Cluster** scheda, è possibile esaminare in dettaglio le caratteristiche che costituiscono un cluster. Anziché confrontare le caratteristiche di tutti i cluster (come nella scheda Profili cluster), è possibile esplorare un cluster alla volta. Ad esempio, se si seleziona **Bike Buyers High** dalle **Cluster** elenco, è possibile visualizzare le caratteristiche dei clienti in questo cluster. Sebbene la visualizzazione sia diversa dalla scheda Profili cluster, i risultati sono gli stessi.  
   
 > [!NOTE]  
->  A meno che non si imposta un valore iniziale per **holdoutseed**, risultati varieranno ogni volta che si elabora il modello. Per altre informazioni, vedere [elemento HoldoutSeed](../analysis-services/scripting/properties/holdoutseed-element.md)  
+>  A meno che non si imposta un valore iniziale per **holdoutseed**, risultati varieranno ogni volta che si elabora il modello. Per altre informazioni, vedere [elemento HoldoutSeed](https://docs.microsoft.com/bi-reference/assl/properties/holdoutseed-element)  
   
 
   

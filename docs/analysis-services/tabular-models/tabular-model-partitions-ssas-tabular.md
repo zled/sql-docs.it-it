@@ -1,5 +1,5 @@
 ---
-title: Partizioni di modelli tabulari | Documenti Microsoft
+title: Partizioni di modelli tabulari | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 55e056a0703e9f81d02138f2942d4782d81ee9b2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ca9ea54ace50740acf9f0be0ec923b86d1667683
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045260"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146286"
 ---
 # <a name="tabular-model-partitions"></a>Partizioni di modelli tabulari 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente dalle altre. Le partizioni definite per un modello durante la relativa creazione vengono duplicate in un modello distribuito. Una volta distribuite, è possibile gestire tali partizioni e crearne di nuove tramite la finestra di dialogo **Partizioni** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o tramite uno script. In questo argomento vengono descritte le partizioni in un database modello tabulare distribuito. Per ulteriori informazioni sulla creazione e la gestione delle partizioni durante la creazione di modelli, vedere [partizioni](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+  Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente dalle altre. Le partizioni definite per un modello durante la relativa creazione vengono duplicate in un modello distribuito. Una volta distribuite, è possibile gestire tali partizioni e crearne di nuove tramite la finestra di dialogo **Partizioni** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o tramite uno script. In questo argomento vengono descritte le partizioni in un database modello tabulare distribuito. Per altre informazioni sulla creazione e gestione delle partizioni durante la creazione di modelli, vedere [partizioni](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
  Sezioni dell'argomento:  
   
 -   [Vantaggi](#bkmk_benefits)  
   
--   [Permissions](#bkmk_permissions)  
+-   [Autorizzazioni](#bkmk_permissions)  
   
 -   [Elaborare le partizioni](#bkmk_process_partitions)  
   
@@ -58,15 +58,15 @@ ms.locfileid: "34045260"
 |----------------|-------------|  
 |Amministratore|Lettura, elaborazione, creazione, copia, unione, eliminazione|  
 |Process|Lettura, elaborazione|  
-|Read Only|Lettura|  
+|Read Only|lettura|  
   
- Per ulteriori informazioni sulla creazione di ruoli durante la creazione di modelli utilizzando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vedere [ruoli](../../analysis-services/tabular-models/roles-ssas-tabular.md). Per ulteriori informazioni sulla gestione dei membri del ruolo per distribuzione ruoli nei modelli tabulari utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [ruoli nei modelli tabulari](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Per altre informazioni sulla creazione di ruoli durante la creazione di modelli utilizzando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vedere [ruoli](../../analysis-services/tabular-models/roles-ssas-tabular.md). Per altre informazioni sulla gestione dei membri del ruolo dei ruoli di modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [ruoli nei modelli tabulari](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_parallelProc"></a> Elaborazione parallela  
-Analysis Services include l'elaborazione parallela per le tabelle con due o più partizioni, aumentando le prestazioni di elaborazione. Per l'elaborazione parallela non sono previste impostazioni di configurazione (vedere le note). Per impostazione predefinita, l'elaborazione parallela viene eseguita quando si elabora la tabella o si selezionano più partizioni per la stessa tabella e processo. È comunque possibile scegliere di elaborare le partizioni della tabella in modo indipendente.  
+Analysis Services include l'elaborazione parallela per tabelle con due o più partizioni, aumentando le prestazioni di elaborazione. Per l'elaborazione parallela non sono previste impostazioni di configurazione (vedere le note). Per impostazione predefinita, l'elaborazione parallela viene eseguita quando si elabora la tabella o si selezionano più partizioni per la stessa tabella e processo. È comunque possibile scegliere di elaborare le partizioni della tabella in modo indipendente.  
   
 > [!NOTE]  
->  Per specificare se le operazioni di aggiornamento devono essere eseguite in modo sequenziale o parallelo, usare la proprietà **maxParallism** con il comando [Sequence (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).
+>  Per specificare se le operazioni di aggiornamento devono essere eseguite in modo sequenziale o parallelo, usare la proprietà **maxParallism** con il comando [Sequence (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/sequence-command-tmsl).
 
 > [!NOTE]  
 >  Se viene rilevata una ricodifica, l'elaborazione parallela può causare un maggior utilizzo delle risorse di sistema, perché è necessario interrompere e riavviare più operazioni di partizione con la nuova codifica in parallelo.  

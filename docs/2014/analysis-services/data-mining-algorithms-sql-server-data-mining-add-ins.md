@@ -24,12 +24,12 @@ ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b1feb34dca2fba1bad8829edff24ef1ce54e1fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc9d8f4396be64de2160b39b57374dd1ab1bf3cf
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161561"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099272"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Algoritmi di data mining (componenti aggiuntivi Data mining di SQL Server)
   I componenti aggiuntivi Data mining per Office supportano la creazione di modelli analitici utilizzando gli algoritmi di data mining seguenti. Tutti gli algoritmi sono basati sui metodi di apprendimento automatico noti e sono stati implementati da Microsoft Research.  
@@ -43,7 +43,7 @@ ms.locfileid: "48161561"
 |Algoritmo Microsoft Decision Trees|Consente di identificare le relazioni precedentemente non note tra i diversi elementi dei dati per permettere all'utente di prendere decisioni informate o individuare i fattori che generano risultati specifici.<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
 |Algoritmo Microsoft Linear Regression|Consente di trovare una formula matematica che descrive i fattori che contribuiscono a un risultato numerico.<br /><br /> [http://msdn.microsoft.com/library/ms174824.aspx](http://msdn.microsoft.com/library/ms174824.aspx)|  
 |Algoritmo Microsoft Logistic Regression|Consente di identificare i fattori che contribuiscono a risultati binari e spiega come utilizzare tali informazioni per influire sui risultati.<br /><br /> [http://msdn.microsoft.com/library/ms174828.aspx](http://msdn.microsoft.com/library/ms174828.aspx)|  
-|Algoritmo Microsoft Naive Bayes|Consente di esplorare le relazioni nei dati e trovare quelle più strettamente correlate a un risultato.<br /><br /> [http://msdn.microsoft.com/en-us/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
+|Algoritmo Microsoft Naive Bayes|Consente di esplorare le relazioni nei dati e trovare quelle più strettamente correlate a un risultato.<br /><br /> [http://msdn.microsoft.com/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
 |Algoritmo Microsoft Neural Network|Consente di individuare le relazioni nascoste tra più input e più output. Da utilizzare per l'esplorazione o per la stima.<br /><br /> [http://msdn.microsoft.com/library/ms174941.aspx](http://msdn.microsoft.com/library/ms174941.aspx)|  
 |Algoritmo Microsoft Time Series|Utilizza dati cronologici per stimare valori futuri.<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
   

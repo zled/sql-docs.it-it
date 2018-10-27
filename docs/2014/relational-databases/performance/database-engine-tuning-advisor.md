@@ -13,12 +13,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a4d16326f9bf8027360b83a70f8bf46ece4ef473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8325e326ebcbf23a57e2362aa792b3076ec23922
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127421"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991174"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   Ottimizzazione guidata motore di database (DTA) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] analizza i database e fornisce consigli da utilizzare per ottimizzare le prestazioni di query. È possibile utilizzare Ottimizzazione guidata motore di database per selezionare e creare un set ottimale di indici, viste indicizzate e partizioni di tabella senza che sia necessario conoscere in modo approfondito la struttura del database o le caratteristiche interne di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con DTA, è possibile eseguire le attività seguenti.  
@@ -94,7 +94,7 @@ ms.locfileid: "48127421"
   
     2.  Gli indici inseriti nelle indicazioni non offrono un miglioramento delle prestazioni delle query adeguato per la progettazione fisica del database corrente.  
   
-    3.  L'utente che esegue Ottimizzazione guidata motore di Database non è un membro del `db_owner` ruolo del database o `sysadmin` ruolo predefinito del server. Le query nel carico di lavoro vengono analizzate nel contesto di sicurezza dell'utente che esegue Ottimizzazione guidata motore di database. L'utente deve essere membro del ruolo del database `db_owner`.  
+    3.  L'utente che esegue Ottimizzazione guidata motore di database non è un membro del ruolo del database `db_owner` o il ruolo predefinito del server `sysadmin`. Le query nel carico di lavoro vengono analizzate nel contesto di sicurezza dell'utente che esegue Ottimizzazione guidata motore di database. L'utente deve essere membro del ruolo del database `db_owner`.  
   
 -   Ottimizzazione guidata motore di database archivia i dati delle sessioni di ottimizzazione e le altre informazioni nel database `msdb`. Se vengono apportate modifiche al database `msdb` esiste il rischio di perdere dati delle sessioni di ottimizzazione. Per eliminare tale rischio, implementare una strategia di backup appropriata per il database `msdb`.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48127421"
 ## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>Dipendenza dalla stored procedure estesa xp_msver  
  Per offrire funzionalità complete, Ottimizzazione guidata motore di database dipende dalla stored procedure estesa **xp_msver** . Questa stored procedure estesa è attiva per impostazione. Questa stored procedure estesa viene utilizzata da Ottimizzazione guidata motore di database per recuperare il numero di processori e la memoria disponibile sul computer che contiene il database da ottimizzare. Se **xp_msver** non è disponibile, l'Ottimizzazione guidata motore di database prende in considerazione le caratteristiche hardware del computer in cui è in esecuzione . Se le caratteristiche hardware del computer in cui è in esecuzione Ottimizzazione guidata motore di database non sono disponibili, vengono considerati un processore e 1024 megabyte (MB) di memoria.  
   
- La relazione di dipendenza influisce sulle indicazioni relative al partizionamento, in quanto il numero di partizioni consigliate dipende da questi due valori (numero di processori e memoria disponibile). La dipendenza influisce inoltre sui risultati dell'ottimizzazione quando si utilizza un server di prova per ottimizzare il server di produzione. In questo scenario Ottimizzazione guidata motore di database usa **xp_msver** per recuperare le proprietà hardware del server di produzione. Dopo avere ottimizzato il carico di lavoro nel server di prova, Ottimizzazione guidata motore di database utilizza queste proprietà hardware per generare un'indicazione. Per altre informazioni, vedere [xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+ La relazione di dipendenza influisce sulle indicazioni relative al partizionamento, in quanto il numero di partizioni consigliate dipende da questi due valori (numero di processori e memoria disponibile). La dipendenza influisce inoltre sui risultati dell'ottimizzazione quando si utilizza un server di prova per ottimizzare il server di produzione. In questo scenario Ottimizzazione guidata motore di database usa **xp_msver** per recuperare le proprietà hardware del server di produzione. Dopo avere ottimizzato il carico di lavoro nel server di prova, Ottimizzazione guidata motore di database utilizza queste proprietà hardware per generare un'indicazione. Per altre informazioni, vedere [xp_msver &#40; Transact-SQL &#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 ## <a name="database-engine-tuning-advisor-tasks"></a>Attività di Ottimizzazione guidata motore di database  
  Nella tabella seguente vengono elencate attività di Ottimizzazione guidata motore di database comuni e argomenti che illustrano come eseguirle.  

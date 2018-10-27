@@ -1,24 +1,24 @@
 ---
-title: Configurare Azure Kubernetes Service per le distribuzioni di SQL Server 2019 CTP 2.0 | Microsoft Docs
-description: ''
+title: Configurare Azure Kubernetes Service per le distribuzioni di cluster di SQL Server 2019 dei big Data | Microsoft Docs
+description: Informazioni su come configurare Azure Kubernetes Service (AKS) per le distribuzioni di cluster (anteprima) di SQL Server 2019 dei big Data.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ee1faae6d43cbf2cc6c8a23086600241ad15e061
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 3a1cd6dcaf669071517f1a7c6196e22ce33f55ca
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460896"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050913"
 ---
-# <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>Configurare Azure Kubernetes Service per SQL Server 2019 CTP 2.0
+# <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Configurare Azure Kubernetes Service per le distribuzioni di SQL Server 2019 (anteprima)
 
-Azure Kubernetes Service (AKS) rende più semplice creare, configurare e gestire un cluster di macchine virtuali che sono preconfigurate con un cluster Kubernetes per eseguire applicazioni in contenitori. 
+Questo articolo descrive come configurare Azure Kubernetes Service (AKS) per le distribuzioni di cluster (anteprima) di SQL Server 2019 dei big Data. 
 
-In questo modo è possibile usare le competenze esistenti o disegnare su un consistente e crescente bagaglio di competenze della community, distribuire e gestire le applicazioni basate su contenitore in Microsoft Azure.
+Servizio contenitore di AZURE rende più semplice creare, configurare e gestire un cluster di macchine virtuali che sono preconfigurate con un cluster Kubernetes per eseguire applicazioni in contenitori. In questo modo è possibile usare le competenze esistenti o disegnare su un consistente e crescente bagaglio di competenze della community, distribuire e gestire le applicazioni basate su contenitore in Microsoft Azure.
 
 Questo articolo descrive i passaggi per la distribuzione di Kubernetes nel servizio contenitore di AZURE tramite la CLI di Azure. Se non hai una sottoscrizione di Azure, creare un account gratuito prima di iniziare.
 
@@ -34,7 +34,7 @@ Questo articolo descrive i passaggi per la distribuzione di Kubernetes nel servi
 
 - In questa sezione è necessario che sia in esecuzione la CLI di Azure versione 2.0.4 o versioni successive. Se è necessario installare o eseguire l'aggiornamento, vedere [installare Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Eseguire `az --version` per trovare la versione, se necessario.
 
-- Installare [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Cluster di Big Data di SQL Server richiede qualsiasi versione secondaria all'interno dell'intervallo di 1.10 versione per Kubernetes, per i server e client. Per installare una versione specifica nel client kubectl, vedere [installare kubectl binari tramite curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Per AKS dovrai usare `--kubernetes-version` parametro per specificare una versione diversa da quella predefinita. Si noti che l'intervallo di tempo versione CTP2.0, servizio contenitore di AZURE supporta solo le versioni 1.10.7 e 1.10.8. 
+- Installare [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Cluster di big data di SQL Server richiede qualsiasi versione secondaria all'interno dell'intervallo di 1.10 versione per Kubernetes, per i server e client. Per installare una versione specifica nel client kubectl, vedere [installare kubectl binari tramite curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Per AKS dovrai usare `--kubernetes-version` parametro per specificare una versione diversa da quella predefinita. Si noti che l'intervallo di tempo versione CTP2.0, servizio contenitore di AZURE supporta solo le versioni 1.10.7 e 1.10.8. 
 
 
 > [!NOTE]
@@ -108,6 +108,6 @@ Un gruppo di risorse di Azure è un gruppo logico in Azure le risorse vengono di
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-I passaggi descritti in questo articolo è configurato un cluster Kubernetes nel servizio contenitore di AZURE. Il passaggio successivo consiste nel distribuire SQL Server 2019 Big Data per il cluster.
+I passaggi descritti in questo articolo è configurato un cluster Kubernetes nel servizio contenitore di AZURE. Il passaggio successivo consiste nel distribuire SQL Server 2019 dei big data per il cluster.
 
-[Distribuire cluster di SQL Server 2019 Big Data in Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Guida introduttiva: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)

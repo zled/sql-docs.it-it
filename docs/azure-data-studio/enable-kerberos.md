@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: 8bbd03d815594cfae850a94ae8067d37f0f5c744
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: d773810ebaa544e40af99de8b5559ac44c1f5d5f
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356322"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098917"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Connettersi a SQL Server utilizzando l'autenticazione di Windows - Kerberos in [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
 
@@ -125,7 +125,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ### <a name="macos"></a>macOS
 
-- Collegare un macOS al controller di dominio Active Directory [procedendo come descritto qui](https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
+- Aggiunta di macOS per il Controller di dominio Active Directory dal [attenendosi alla procedura seguente](https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
 
 
 

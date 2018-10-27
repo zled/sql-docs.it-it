@@ -1,6 +1,6 @@
 ---
-title: Set di dati iris demo per SQL Server | Microsoft Docs
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap Python code in a SQL Server stored procedure.
+title: Set di dati iris demo per le esercitazioni di SQL Server Python e R | Microsoft Docs
+Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 48cc9f5424cb196e37dc3f263d6b55c8666f0292
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 74e4cbe97d64f922de2cdfe1f67eae5d3a3e24bd
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463055"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806671"
 ---
-#  <a name="iris-demo-data-for-sql-server"></a>Dati demo di iris per SQL Server
+#  <a name="iris-demo-data-for-sql-server-python-and-r-tutorials"></a>Dati di iris demo per le esercitazioni di SQL Server Python e R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo esercizio, preparare un database di SQL Server che contiene le tabelle per il [set di dati dei fiori Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) e archiviazione del modello. I dati iris sono incluso nelle distribuzioni di R e Python installate da SQL Server. Si è usato nelle esercitazioni di machine learning per SQL Server. 
+In questo esercizio, creare un database di SQL Server per archiviare i dati dal [set di dati dei fiori Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) e modelli basati sugli stessi dati. I dati iris sono incluso nelle distribuzioni di R e Python installate da SQL Server e viene usati nelle esercitazioni di machine learning per SQL Server. 
 
 Per completare questo esercizio, è necessario disporre [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) o un altro strumento che è possibile eseguire query T-SQL.
 
@@ -26,7 +26,7 @@ Esercitazioni e guide introduttive utilizzano questo set di dati seguenti:
 
 +  [Usare un modello Python in SQL Server per il training e assegnazione dei punteggi](train-score-using-python-in-tsql.md)
 
-## <a name="prepare-the-database-and-tables"></a>Preparare il database e tabelle
+## <a name="create-the-database"></a>Creare il database
 
 1. Avviare SQL Server Management Studio e aprire una nuova **Query** finestra.  
 
@@ -139,7 +139,7 @@ Esercitazioni e guide introduttive utilizzano questo set di dati seguenti:
     > Per modificare la stored procedure in un secondo momento, non devi rimuoverla e ricrearla. Usare la [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql) istruzione. 
 
 
-## <a name="query-data-for-verification"></a>Eseguire query sui dati per la verifica
+## <a name="query-the-data"></a>Eseguire query sui dati
 
 Come passaggio di convalida, eseguire una query per verificare che i dati è stati caricati.
 

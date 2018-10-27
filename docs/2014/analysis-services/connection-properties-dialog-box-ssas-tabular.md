@@ -13,12 +13,12 @@ ms.assetid: 17bae8ae-2ba0-4978-be70-61c687f59d54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8057222588cb388eafcb3e3bf1bd6daec443cca6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3322b71162b93204591dbb1c0bffb6bac4856454
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077291"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148396"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>Finestra di dialogo Proprietà connessione (SSAS - Tabulare)
   Utilizzare questa pagina per visualizzare o modificare in SQL Server Management Studio le proprietà di connessione di un'origine dati utilizzata da un database modello tabulare.  
@@ -36,7 +36,7 @@ ms.locfileid: "48077291"
 |**Ultimo aggiornamento schema**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento dei metadati del database.|  
 |**Stringa di connessione**|Visualizza la stringa di connessione utilizzata per stabilire una connessione all'origine dati che fornisce dati al modello.|  
 |**Numero massimo di connessioni**|Specifica il numero massimo di connessioni client a questo database.|  
-|**Isolamento**|I valori validi sono ReadCommitted o Snapshot. Per altre informazioni, vedere [Elemento Isolation &#40;ASSL&#41;](scripting/properties/isolation-element-assl.md).|  
+|**Isolamento**|I valori validi sono ReadCommitted o Snapshot. Per altre informazioni, vedere [Elemento Isolation &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/isolation-element-assl).|  
 |**Timeout query**|Specifica il tempo, in secondi, dopo il quale si verifica il timeout del tentativo di recuperare i dati.|  
 |**Provider gestito**|Specifica il nome del provider gestito. Se la connessione all'origine dati utilizza un provider OLE DB nativo, questo valore è vuoto.|  
 |**Impostazioni di rappresentazione**|Viene specificato l'account di rappresentazione utilizzato per le connessioni al database quando vengono elaborati o aggiornati i dati, le query eseguite su un archivio dati relazionale (tramite DirectQuery), le associazioni out-of-line, le partizioni remote e la sincronizzazione del database dalla destinazione all'origine.<br /><br /> I valori validi includono l'account del servizio Analysis Services o un set specifico di credenziali di Windows. Non specificare **Usa credenziali dell'utente corrente** o **Eredita**. Tali opzioni per le credenziali non sono supportate per un database modello tabulare.|  

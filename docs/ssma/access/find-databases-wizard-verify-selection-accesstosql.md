@@ -12,12 +12,12 @@ ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 247ab6ac1888cf99ba75de1da33f69e230df11b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfd409799157d2f1adeb4d362dd2e85e4eb4bb82
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756200"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100272"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>Procedura guidata trova database (verifica selezione) (AccessToSQL)
 Nella pagina Verifica selezione della procedura guidata trova database vengono elencati i file da aggiungere alla SSMA. Se l'elenco di file non è corretto, fare clic su **nuovamente** per modificare l'elenco. In caso contrario, fare clic su **fine** per aggiungere i file.  
@@ -35,5 +35,5 @@ Mostra il percorso del file di database di Access.
 Mostra il proprietario del file.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Reference(Access) dell'interfaccia utente](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Reference(Access) dell'interfaccia utente](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

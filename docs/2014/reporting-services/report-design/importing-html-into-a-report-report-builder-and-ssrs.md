@@ -11,12 +11,12 @@ ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4176e9dc902ae4c83024ba5e659a2467585d71c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b586dae30582b5438d249ce719196b146721bc2
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115711"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099518"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importazione di codice HTML a un report (Generatore report e SSRS)
   È possibile utilizzare una casella di testo per inserire in un report del testo in formato HTML recuperato da un campo nel set di dati. Il testo può provenire da qualsiasi espressione semplice o complessa che restituisce testo HTML correttamente formattato. Il testo formattato può essere visualizzato in tutti i formati di output supportati, incluso il formato PDF.  
@@ -61,7 +61,7 @@ ms.locfileid: "48115711"
   
     -   Le unità di lunghezza CSS relative vengono ignorate e non sono supportate. Le unità non supportate includono em, ex, px, %, rem.  
   
-     Per altre informazioni sulle unità CSS, vedere: [CSS Values and Units Reference](http://msdn.microsoft.com/en-us/library/ms531211\(VS.85\).aspx) (Informazioni di riferimento su valori e unità CSS) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx).  
+     Per altre informazioni sulle unità CSS, vedere: [CSS Values and Units Reference](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (Informazioni di riferimento su valori e unità CSS) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx).  
   
 -   color  
   
@@ -78,6 +78,6 @@ ms.locfileid: "48115711"
 -   Per gli attributi e gli stili CSS, se una proprietà viene specificata più di una volta, viene applicata solo l'ultima istanza della proprietà. Se ad esempio il testo è **\<p align="left" align="right">**, il testo verrà allineato a destra.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Rendering in formato HTML &#40;Report e SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
+ [Rendering in formato HTML &#40;Generatore report e SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

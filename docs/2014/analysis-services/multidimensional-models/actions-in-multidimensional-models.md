@@ -16,12 +16,12 @@ ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92291282cfe763c33b548d85e65912b9f3ab6bf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084681"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146426"
 ---
 # <a name="actions-in-multidimensional-models"></a>Azioni nei modelli multidimensionali
   Un'azione è un'operazione inizializzata dall'utente finale su un cubo o una parte di un cubo selezionati. L'operazione consente di avviare un'applicazione con l'elemento selezionato come parametro oppure di recuperare informazioni sull'elemento selezionato. Per altre informazioni sulle azioni, vedere [Azioni &#40;Analysis Services - Dati multidimensionali&41#;](actions-analysis-services-multidimensional-data.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "48084681"
  Dopo aver selezionato il tipo di oggetto di destinazione, in **Oggetto di destinazione**selezionare l'oggetto del cubo del tipo definito.  
   
  **Condizione (facoltativa)**  
- Specificare un'espressione MDX (Multidimensional Expressions) facoltativa che restituisca un valore booleano. Se il valore è `True`, l'azione viene eseguita sulla destinazione specificata. Se il valore è `False`, non viene eseguita l'azione.  
+ Specificare un'espressione MDX (Multidimensional Expressions) facoltativa che restituisca un valore booleano. Se il valore è `True`, l'azione viene eseguita sulla destinazione specificata. Se invece il valore è `False`, l'azione non viene eseguita.  
   
  **Contenuto azione**  
  Selezionare il tipo di azione. Nella tabella seguente vengono riepilogati i tipi disponibili.  
@@ -77,10 +77,10 @@ ms.locfileid: "48084681"
 |**Applicazione**|Descrive l'applicazione dell'azione.|  
 |**Descrizione**|Descrive l'azione.|  
 |**Caption**|Visualizza una didascalia da associare all'azione. Se la didascalia è MDX, specificare `True` per **didascalia è MDX**.|  
-|**Didascalia MDX**|Specificare `True` se la didascalia è MDX o `False` in caso contrario.|  
+|**Didascalia MDX**|Specificare `True` se la didascalia è MDX, in caso contrario specificare `False`.|  
   
 > [!NOTE]  
->  Per definire i tipi di azione HTML e Riga di comando, è necessario utilizzare Analysis Services Scripting Language (ASSL) o la libreria AMO (Analysis Management Objects). Per altre informazioni, vedere [Elemento Action &#40;ASSL&#41;](../scripting/objects/action-element-assl.md), [Elemento Type &#40;Action&#41; &#40;ASSL&#41;](../scripting/properties/type-element-action-assl.md) e [Programmazione di oggetti avanzati OLAP in AMO](analysis-management-objects/programming-amo-olap-advanced-objects.md).  
+>  Per definire i tipi di azione HTML e Riga di comando, è necessario utilizzare Analysis Services Scripting Language (ASSL) o la libreria AMO (Analysis Management Objects). Per altre informazioni, vedere [Elemento Action &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Elemento Type &#40;Action&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) e [Programmazione di oggetti avanzati OLAP in AMO](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects).  
   
 ## <a name="creating-a-reporting-action"></a>Creazione di un'azione report  
  Il server di report risponde alle richieste basate su URL relative ai report. Per creare un'azione report scegliere **Nuova azione report** dal menu **Cubo**. Le opzioni seguenti sono specifiche di un'azione report.  

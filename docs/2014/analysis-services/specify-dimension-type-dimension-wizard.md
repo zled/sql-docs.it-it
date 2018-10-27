@@ -13,12 +13,12 @@ ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 166fae1cb6fb76587b6741b6f47449d2600bf8e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155861"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145586"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Impostazione tipo di dimensione (Creazione guidata dimensione)
   Usare la pagina **Impostazione tipo di dimensione** per definire il tipo di dimensione e aggiungere alla dimensione i tipi di attributo speciali associati al tipo di dimensione selezionato.  
@@ -57,7 +57,7 @@ ms.locfileid: "48155861"
  Selezionare la casella di controllo per includere il tipo di attributo nella dimensione.  
   
  **Tipo di attributo**  
- Consente di visualizzare il tipo di attributo associato al tipo di dimensione selezionato in **Tipo dimensione**. Per altre informazioni sui tipi di attributo, vedere [Elemento Type &#40;DimensionAttribute&#41; &#40;ASSL&#41;](scripting/properties/type-element-dimensionattribute-assl.md).  
+ Consente di visualizzare il tipo di attributo associato al tipo di dimensione selezionato in **Tipo dimensione**. Per altre informazioni sui tipi di attributo, vedere [Elemento Type &#40;DimensionAttribute&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl).  
   
  **Attributo della dimensione**  
  Consente di selezionare l'attributo di dimensione al quale la Creazione guidata dimensione assegnerà il tipo di attributo speciale visualizzato in **Tipo attributo**.  

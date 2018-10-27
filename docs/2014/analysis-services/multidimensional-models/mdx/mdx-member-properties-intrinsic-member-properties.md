@@ -13,17 +13,17 @@ ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1cac8e6a3538c9521a1a4cb04cd082de9d077460
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92a9bd2db457b4bf9ea18c73daf2bdf1978ea836
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049332"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148376"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Proprietà intrinseche dei membri (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] espone proprietà intrinseche sui membri della dimensione che è possibile includere in una query per restituire dati o metadati aggiuntivi da usare in un'applicazione personalizzata o per supportare la costruzione o l'analisi dei modelli. Se si utilizzano gli strumenti client di SQL Server, è possibile visualizzare le proprietà intrinseche in SQL Server Management Studio (SSMS).  
   
- Le proprietà intrinseche includono `ID`, `KEY`, `KEYx` e `NAME`, che sono proprietà esposte da ogni membro a qualsiasi livello. È inoltre possibile restituire informazioni sulla posizione, ad esempio `LEVEL_NUMBER` o `PARENT_UNIQUE_NAME`, tra gli altri.  
+ Le proprietà intrinseche includono `ID`, `KEY`, `KEYx` e `NAME`, che sono proprietà esposte da ogni membro a qualsiasi livello. È inoltre possibile restituire informazioni sulla posizione, come `LEVEL_NUMBER` o `PARENT_UNIQUE_NAME`.  
   
  In base al modo in cui si costruisce la query e all'applicazione client che si utilizza per eseguire le query, le proprietà dei membri possono essere visibili o meno nel set dei risultati. Se si utilizza SQL Server Management Studio per eseguire i test o le query, è possibile fare doppio clic su un membro nel set di risultati per aprire la finestra di dialogo Proprietà membro, nella quale sono indicati i valori di ciascuna proprietà del membro intrinseca.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48049332"
  Proprietà dei membri non sensibili al contesto  
  Queste proprietà del membro non possono essere utilizzate nel contesto di una dimensione o di un livello specifico e restituiscono i valori di tutti i membri su un asse.  
   
- Le proprietà non sensibili al contesto sono autonome e non includono informazioni sul percorso. Si noti che non è specificato per livello né alcuna dimensione `PARENT_UNIQUE_NAME` nell'esempio seguente: `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
+ Le proprietà non sensibili al contesto sono autonome e non includono informazioni sul percorso. Notare che nel seguente esempio per `PARENT_UNIQUE_NAME` non è specificato alcun livello né alcuna dimensione: `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
   
  Indipendentemente dal fatto che una proprietà intrinseca di un membro sia sensibile o meno al contesto, valgono le regole di utilizzo seguenti:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48049332"
  Nella tabella seguente sono elencate le proprietà intrinseche non sensibili al contesto supportate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Le colonne nel set di righe dello schema MEMBERS supportano le proprietà intrinseche dei membri elencate nella tabella seguente. Per altre informazioni sul `MEMBERS` set di righe dello schema, vedere [set di righe MDSCHEMA_MEMBERS](../../schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
+>  Le colonne nel set di righe dello schema MEMBERS supportano le proprietà intrinseche dei membri elencate nella tabella seguente. Per altre informazioni sul `MEMBERS` set di righe dello schema, vedere [set di righe MDSCHEMA_MEMBERS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
 |Proprietà|Description|  
 |--------------|-----------------|  
@@ -108,7 +108,7 @@ ms.locfileid: "48049332"
 |`MEMBER_CAPTION`|Etichetta o didascalia associata al membro. La didascalia viene utilizzata soprattutto a scopo di visualizzazione. Se non esiste una didascalia, la query restituirà `MEMBER_NAME`.|  
 |`MEMBER_KEY`|Valore della chiave del membro nel tipo di dati originale. MEMBER_KEY è disponibile per compatibilità con le versioni precedenti.  MEMBER_KEY ha lo stesso valore di KEY0 per le chiavi non composte e la proprietà MEMBER_KEY è Null per le chiavi composte.|  
 |`MEMBER_NAME`|Nome del membro.|  
-|`MEMBER_TYPE`|Tipo del membro. Di seguito vengono indicati i possibili valori della proprietà. <br />**MDMEMBER_TYPE_REGULAR**<br />**MDMEMBER_TYPE_ALL**<br />**MDMEMBER_TYPE_FORMULA**<br />**MDMEMBER_TYPE_MEASURE**<br />**MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> MDMEMBER_TYPE_FORMULA ha la precedenza rispetto a MDMEMBER_TYPE_MEASURE. Pertanto, se esiste un membro formula (calcolato) nella dimensione Measures, il `MEMBER_TYPE` è di proprietà per il membro calcolato sarà MDMEMBER_TYPE_FORMULA.|  
+|`MEMBER_TYPE`|Tipo del membro. Di seguito vengono indicati i possibili valori della proprietà. <br />**MDMEMBER_TYPE_REGULAR**<br />**MDMEMBER_TYPE_ALL**<br />**MDMEMBER_TYPE_FORMULA**<br />**MDMEMBER_TYPE_MEASURE**<br />**MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> MDMEMBER_TYPE_FORMULA ha la precedenza rispetto a MDMEMBER_TYPE_MEASURE. Di conseguenza, se nella dimensione Measures esiste un membro di tipo formula (calcolato), la proprietà `MEMBER_TYPE` del membro calcolato sarà MDMEMBER_TYPE_FORMULA.|  
 |`MEMBER_UNIQUE_NAME`|Nome univoco del membro. Per i provider che generano nomi univoci tramite qualificazione, i singoli componenti di tale nome sono delimitati.|  
 |`MEMBER_VALUE`|Valore del membro nel tipo originale.|  
 |`PARENT_COUNT`|Numero di elementi padre del membro.|  
@@ -119,13 +119,13 @@ ms.locfileid: "48049332"
 |`UNIQUE_NAME`|Nome completo del membro nel formato: [dimension].[level].[key6].|  
   
 ### <a name="properties-syntax-for-non-context-sensitive-properties"></a>Sintassi della parola chiave PROPERTIES per le proprietà non sensibili al contesto  
- Usare la sintassi seguente per specificare una proprietà membro sensibile intrinseco, senza contesto tramite il `PROPERTIES` (parola chiave):  
+ Utilizzare la sintassi seguente per specificare una proprietà intrinseca di un membro non sensibile al contesto, tramite la parola chiave `PROPERTIES`:  
   
  `DIMENSION PROPERTIES Property`  
   
  Si noti che questa sintassi non consente di qualificare la proprietà con una dimensione o un livello. La proprietà non può essere qualificata perché le proprietà intrinseche dei membri che non sono sensibili al contesto vengono applicate a tutti i membri di un asse.  
   
- Ad esempio, un'istruzione MDX che specifica il `DESCRIPTION` proprietà intrinseca dei membri avrebbe la sintassi seguente:  
+ Ad esempio, la sintassi dell'istruzione MDX che specifica la proprietà intrinseca dei membri `DESCRIPTION` è la seguente:  
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
@@ -208,15 +208,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vedere anche  
  [PeriodsToDate &#40;MDX&#41;](/sql/mdx/periodstodate-mdx)   
- [Gli elementi figlio &#40;MDX&#41;](/sql/mdx/children-mdx)   
- [HIERARCHIZE- &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [Conteggio &#40;impostare&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
- [Filtro &#40;MDX&#41;](/sql/mdx/filter-mdx)   
+ [Children &#40;MDX&#41;](/sql/mdx/children-mdx)   
+ [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
+ [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx)   
  [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
  [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
- [Proprietà &#40;MDX&#41;](/sql/mdx/properties-mdx)   
+ [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)   
  [PrevMember &#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
- [Usando le proprietà dei membri &#40;MDX&#41;](mdx-member-properties.md)   
- [Riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [Utilizzo delle proprietà dei membri &#40;MDX&#41;](mdx-member-properties.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

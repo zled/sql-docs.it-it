@@ -1,5 +1,5 @@
 ---
-title: Set di training e set di dati di Testing | Documenti Microsoft
+title: Set di training e set di dati di test | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe6d39614bbeaca70f8e0e6d205be5cbcbc05bbc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 15ee82c04372528d29289a3ed6c5c55271acf5fb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018239"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145616"
 ---
 # <a name="training-and-testing-data-sets"></a>Set di dati di training e di testing
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -97,15 +97,15 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |Argomento|Collegamenti|  
 |------------|-----------|  
 |Viene descritto come i filtri in un modello interagiscono con i training set e set di dati di test.|[Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)|  
-|Viene descritto come l'utilizzo dei dati di training e di testing influiscono sulla convalida incrociata.|[La convalida incrociata & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Vengono fornite informazioni sulle interfacce di programmazione per l'utilizzo di training set e set di testing in una struttura di data mining.|[Modello a oggetti AMO e concetti relativi](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Viene fornita la sintassi DMX per la creazione di set di dati di controllo.|[CREARE UNA STRUTTURA DI DATA MINING & #40; DMX & #41;](../../dmx/create-mining-structure-dmx.md)|  
-|Vengono recuperate informazioni sui case nei set di training e di testing.|[Set di righe dello schema di data mining](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [Set di righe dello schema di data mining &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
+|Viene descritto come l'utilizzo dei dati di training e di testing influiscono sulla convalida incrociata.|[Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Vengono fornite informazioni sulle interfacce di programmazione per l'utilizzo di training set e set di testing in una struttura di data mining.|[Modello a oggetti AMO e concetti relativi](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|Viene fornita la sintassi DMX per la creazione di set di dati di controllo.|[CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
+|Vengono recuperate informazioni sui case nei set di training e di testing.|[Set di righe dello schema di data mining](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)<br /><br /> [Set di righe dello schema di data mining &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti di Data Mining](../../analysis-services/data-mining/data-mining-tools.md)   
- [Concetti di Data Mining](../../analysis-services/data-mining/data-mining-concepts.md)   
- [Soluzioni di Data Mining](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Test e convalida & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Strumenti di data mining](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Concetti di data mining](../../analysis-services/data-mining/data-mining-concepts.md)   
+ [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

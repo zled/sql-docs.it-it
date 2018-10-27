@@ -20,12 +20,12 @@ ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: be2320f3e13dc7bb2110f6bd05f0bccefda58464
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50d488f4de5dc3581dae12655790bc935265d8f2
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170781"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991284"
 ---
 # <a name="considerations-for-using-test-servers"></a>Considerazioni relative all'utilizzo di server di prova
   L'utilizzo di un server di prova per ottimizzare un database su un server di produzione è un importante vantaggio offerto da Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Attraverso questa funzionalità è possibile ripartire su un server di prova il carico dell'overhead generato dall'ottimizzazione senza copiare i dati effettivi dal server di produzione al server di prova.  
@@ -39,7 +39,7 @@ ms.locfileid: "48170781"
   
 -   L'utente che desidera utilizzare un server di prova per ottimizzare un database su un server di produzione deve essere presente su entrambi i server, altrimenti l'operazione non riuscirà.  
   
--   Per usare lo scenario server di prova/server di produzione è necessario abilitare la stored procedure estesa **xp_msver**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ottimizzazione guidata usa questa stored procedure estesa per recuperare le informazioni sul numero di processori e sulla memoria disponibile nel server di produzione da usare per l'ottimizzazione del server di prova. Se la stored procedure **xp_msver** non è abilitata, Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa le caratteristiche hardware del computer in cui viene eseguito Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Se le caratteristiche hardware del computer su cui Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in esecuzione non sono disponibili, si suppone che siano disponibili un processore e 1024 MB di memoria. Questa stored procedure estesa è attiva per impostazione predefinita quando si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Configurazione superficie di attacco](../security/surface-area-configuration.md) e [xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+-   Per usare lo scenario server di prova/server di produzione è necessario abilitare la stored procedure estesa **xp_msver**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ottimizzazione guidata usa questa stored procedure estesa per recuperare le informazioni sul numero di processori e sulla memoria disponibile nel server di produzione da usare per l'ottimizzazione del server di prova. Se la stored procedure **xp_msver** non è abilitata, Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa le caratteristiche hardware del computer in cui viene eseguito Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Se le caratteristiche hardware del computer su cui Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in esecuzione non sono disponibili, si suppone che siano disponibili un processore e 1024 MB di memoria. Questa stored procedure estesa è attiva per impostazione predefinita quando si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Configurazione superficie di attacco](../security/surface-area-configuration.md) e [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ottimizzazione guidata prevede che le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siano identiche nel server di prova e nel server di produzione. In caso contrario, l'edizione in uso nel server di prova ha la precedenza. Ad esempio, se nel server di prova è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition, Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] non includerà tra le indicazioni le viste indicizzate, il partizionamento e le operazioni online, anche se nel server di produzione è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition.  
   

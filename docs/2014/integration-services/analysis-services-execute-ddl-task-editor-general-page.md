@@ -15,12 +15,12 @@ ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 362839a835436f68bf22158228f18f1b3c291abb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 272240e73be28bcfe29b21b86d4d7b4e59d99f46
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146731"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148306"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor attività Esegui DDL Analysis Services (pagina Generale)
   Usare la pagina **Generale** della finestra di dialogo **Editor attività Esegui DDL Analysis Services** per assegnare un nome e una descrizione all'attività Esegui DDL [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -38,11 +38,11 @@ ms.locfileid: "48146731"
  Consente di digitare una descrizione per l'attività Esegui DDL Analysis Services di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services Editor attività Esegui DDL &#40;pagina DDL&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
- [Pagina espressioni](expressions/expressions-page.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor attività Esegui DDL Analysis Services &#40;pagina DDL&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
+ [Pagina Espressioni](expressions/expressions-page.md)   
  [Flusso di controllo](control-flow/control-flow.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; riferimento](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [XML for Analysis &#40;XMLA&#41; riferimento](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
+ [Analysis Services Scripting Language &#40;ASSL&#41; riferimento](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Guida di riferimento a XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

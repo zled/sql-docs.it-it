@@ -1,5 +1,5 @@
 ---
-title: Strumenti e approcci per l'elaborazione (Analysis Services) | Documenti Microsoft
+title: Strumenti e approcci per l'elaborazione (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4ecb64ddf6caedc2353541ab5d4aa7229b9a120f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10f07b04523aeafeb3166bb2e1dbf7072a7b53b5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027318"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147736"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Strumenti e approcci per l'elaborazione (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "34027318"
   
 -   Monitorare l'elaborazione con SQL Server Profiler  
   
--   Programmare una soluzione personalizzata utilizzando AMO. Per altre informazioni, vedere [Programmazione di oggetti OLAP in AMO](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md).  
+-   Programmare una soluzione personalizzata utilizzando AMO. Per altre informazioni, vedere [Programmazione di oggetti OLAP in AMO](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects).  
   
  L'elaborazione è un'operazione estremamente configurabile, controllata da un set di opzioni che determinano se si verifica un'elaborazione completa o incrementale a livello di oggetto. Per altre informazioni sulle opzioni di elaborazione e gli oggetti, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) ed [Elaborazione di oggetti di Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  In questo argomento vengono descritti gli strumenti e gli approcci per l'elaborazione di modelli multidimensionali. Per ulteriori informazioni sull'elaborazione di modelli tabulari, vedere [elaborare Database, tabella o partizione &#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) e [Processdataaccess](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+>  In questo argomento vengono descritti gli strumenti e gli approcci per l'elaborazione di modelli multidimensionali. Per altre informazioni sull'elaborazione dei modelli tabulari, vedere [elaborare Database, tabella o partizione &#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) e [Processdataaccess](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Gestione di oggetti in SQL Server Management Studio  
   
@@ -71,7 +71,7 @@ ms.locfileid: "34027318"
   
 5.  Facoltativamente, fare clic su **Modifica impostazioni** per modificare l'ordine di elaborazione, il comportamento di elaborazione in relazione a tipi specifici di errori e altre impostazioni.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
      Nella finestra di dialogo Stato elaborazione viene visualizzato stato corrente per ogni comando. Se un messaggio di stato è troncato, è possibile fare clic su **Visualizza dettagli** per leggere l'intero messaggio.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34027318"
   
 3.  Fare clic con il pulsante destro del mouse su una dimensione, quindi scegliere **Elabora**. È possibile fare clic con il pulsante destro del mouse su più dimensioni per elaborare più oggetti contemporaneamente. Per altre informazioni, vedere [Elaborazione batch &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
-4.  Nella finestra di dialogo **Elaborazione dimensione**, nella colonna **Opzioni elaborazione** di **Elenco oggetti**, verificare che l'opzione per la colonna sia **Elaborazione completa**. In caso contrario, in **Opzioni elaborazione**fare clic sull’opzione e selezionare **Elaborazione completa** nell'elenco a discesa.  
+4.  Nella finestra di dialogo **Elaborazione dimensione** , nella colonna **Opzioni elaborazione** di **Elenco oggetti**, verificare che l'opzione per la colonna sia **Elaborazione completa**. In caso contrario, in **Opzioni elaborazione**fare clic sull’opzione e selezionare **Elaborazione completa** nell'elenco a discesa.  
   
 5.  Fare clic su **Esegui**.  
   

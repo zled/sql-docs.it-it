@@ -16,12 +16,12 @@ ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d6c44c63236a351a69b38ef66f14141441c61f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e4cf182d303d2fc671b5b6003483781e2d3a4aa
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120263"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144996"
 ---
 # <a name="training-and-testing-data-sets"></a>Set di dati di training e di testing
   La separazione dei dati in set di training e set di testing rappresenta una parte importante della valutazione dei modelli di data mining. In genere, quando si separa un set di dati in un set di training e un set di testing, la maggior parte dei dati viene utilizzata per il training e una parte più piccola per il testing. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue un campionamento casuale dei dati per assicurare che i set di testing e i training set siano simili. Utilizzando dati simili per il training e il testing, è possibile ridurre al minimo gli effetti delle discrepanze di dati e comprendere meglio le caratteristiche del modello.  
@@ -44,7 +44,7 @@ ms.locfileid: "48120263"
   
  È anche possibile configurare la procedura guidata per impostare un numero massimo di case di training oppure combinare i limiti per consentire una percentuale massima di case che rappresenti un numero massimo di case specificato. Quando si specifica sia una percentuale massima che un numero massimo di case, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizza il più piccolo dei due limiti come dimensione del set di test. Ad esempio, se si specifica il 30% di controllo per i case del testing e 1000 come numero massimo di test case, la dimensione del set di test non supererà mai i 1000 case. Questa condizione può essere utile se si desidera assicurare che le dimensioni del set di test rimangano coerenti anche se vengono aggiunti ulteriori dati di training al modello.  
   
- Se si utilizza la stessa vista origine dati per strutture di data mining diverse e si desidera assicurare che i dati vengano divisi approssimativamente nello stesso modo per tutte le strutture di data mining e i relativi modelli, è necessario specificare il valore di inizializzazione utilizzato per inizializzare il campionamento casuale. Quando si specifica un valore per `HoldoutSeed`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] userà tale valore per iniziare il campionamento. In caso contrario, per creare il valore di inizializzazione viene utilizzato un algoritmo di hash sul nome della struttura di data mining.  
+ Se si utilizza la stessa vista origine dati per strutture di data mining diverse e si desidera assicurare che i dati vengano divisi approssimativamente nello stesso modo per tutte le strutture di data mining e i relativi modelli, è necessario specificare il valore di inizializzazione utilizzato per inizializzare il campionamento casuale. Quando si specifica un valore per `HoldoutSeed`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzerà quel valore per iniziare il campionamento. In caso contrario, per creare il valore di inizializzazione viene utilizzato un algoritmo di hash sul nome della struttura di data mining.  
   
 > [!NOTE]  
 >  Se si crea una copia della struttura di data mining utilizzando le istruzioni `EXPORT` e `IMPORT`, la nuova struttura di data mining avrà gli stessi training set e set di dati di test, in quanto mediante il processo di esportazione viene creato un nuovo ID, ma viene utilizzato lo stesso nome. Tuttavia, se in due strutture di data mining viene utilizzata la stessa origine dati sottostante ma tali strutture hanno nomi diversi, i set creati per ogni struttura di data mining saranno diversi.  
@@ -88,7 +88,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 ## <a name="limitations-on-the-use-of-holdout-data"></a>Limitazioni sull'utilizzo dei dati di controllo  
   
--   Per utilizzare i dati di controllo, è necessario impostare la proprietà <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> della struttura di data mining sul valore predefinito, `KeepTrainingCases`. Se si modifica il `CacheMode` proprietà `ClearAfterProcessing`e quindi rielaborare la struttura di data mining, la partizione andrà persa.  
+-   Per utilizzare i dati di controllo, è necessario impostare la proprietà <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> della struttura di data mining sul valore predefinito, `KeepTrainingCases`. Se si imposta la proprietà `CacheMode` su `ClearAfterProcessing` e si elabora quindi la struttura di data mining, la partizione andrà persa.  
   
 -   Non è possibile rimuovere dati da un modello Time Series; pertanto, non è possibile separare i dati di origine in set di training e di testing. Se si comincia a creare una struttura di data mining e un modello e si sceglie l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series, l'opzione per creare un set di dati di controllo viene disabilitata. Viene inoltre disabilitato l'utilizzo dei dati di controllo se nella struttura di data mining è contenuta una colonna KEY TIME al livello del case o della tabella nidificata.  
   
@@ -96,22 +96,22 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   Nella maggior parte dei casi, il valore di controllo predefinito di 30 fornisce un buon bilanciamento tra dati di training e dati di testing. Non esiste un modo semplice per determinare le dimensioni del set di dati al fine di garantire un training sufficiente o il livello di supporto del tipo sparse da parte del set di training per evitare l'overfitting. Dopo aver compilato un modello, è tuttavia possibile utilizzare la convalida incrociata per stimare il set di dati rispetto a un determinato modello.  
   
--   Oltre alle proprietà elencate nella tabella precedente, in AMO e XML DDL viene fornita una proprietà di sola lettura, `HoldoutActualSize`. Tuttavia, poiché la dimensione effettiva di una partizione non può essere determinata accuratamente finché non dopo che è stata elaborata la struttura, è consigliabile verificare se il modello è stato elaborato prima di recuperare il valore della `HoldoutActualSize` proprietà.  
+-   Oltre alle proprietà elencate nella tabella precedente, in AMO e XML DDL viene fornita una proprietà di sola lettura, `HoldoutActualSize`. Tuttavia, poiché la dimensione effettiva di una partizione non può essere determinata accuratamente finché non viene elaborata la struttura, è necessario controllare se il modello è stato elaborato prima di recuperare il valore della proprietà `HoldoutActualSize`.  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
 |Argomento|Collegamenti|  
 |------------|-----------|  
-|Viene descritto come i filtri in un modello interagiscono con i training set e set di dati di test.|[Filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)|  
-|Viene descritto come l'utilizzo dei dati di training e di testing influiscono sulla convalida incrociata.|[La convalida incrociata &#40;Analysis Services - Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Vengono fornite informazioni sulle interfacce di programmazione per l'utilizzo di training set e set di testing in una struttura di data mining.|[Modello a oggetti AMO e concetti relativi](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](../scripting/objects/miningstructure-element-assl.md)|  
-|Viene fornita la sintassi DMX per la creazione di set di dati di controllo.|[CREA STRUTTURA DI DATA MINING &AMP;#40;DMX&AMP;#41;](/sql/dmx/create-mining-structure-dmx)|  
+|Viene descritto come i filtri in un modello interagiscono con i training set e set di dati di test.|[Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)|  
+|Viene descritto come l'utilizzo dei dati di training e di testing influiscono sulla convalida incrociata.|[Convalida incrociata &#40;Analysis Services - Data mining&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Vengono fornite informazioni sulle interfacce di programmazione per l'utilizzo di training set e set di testing in una struttura di data mining.|[Modello a oggetti AMO e concetti relativi](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|Viene fornita la sintassi DMX per la creazione di set di dati di controllo.|[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
 |Vengono recuperate informazioni sui case nei set di training e di testing.|[Set di righe dello schema di data mining](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [L'esecuzione di query di Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti di Data Mining](data-mining-tools.md)   
- [Concetti di Data Mining](data-mining-concepts.md)   
- [Soluzioni di Data Mining](data-mining-solutions.md)   
- [Test e convalida &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
+ [Strumenti di data mining](data-mining-tools.md)   
+ [Concetti di data mining](data-mining-concepts.md)   
+ [Soluzioni di data mining](data-mining-solutions.md)   
+ [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)  
   
   

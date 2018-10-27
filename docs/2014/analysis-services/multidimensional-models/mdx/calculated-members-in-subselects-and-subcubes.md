@@ -11,18 +11,18 @@ ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b729fb46b83617f0bcc9b0fc7ea7c93583513da6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4c7b695882605eacd19d61bf6fe2cc71d8a6048
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188381"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148255"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membri calcolati in sub-SELECT e sottocubi
   Nelle versioni precedenti i membri calcolati non erano consentiti nelle sub-SELECT o nei sottocubi. A partire da SQL Server 2008 sono invece consentiti e abilitati da una proprietà di connessione. Inoltre, con SQL Server 2008 R2 è stato introdotto un nuovo comportamento per i membri calcolati in sub-SELECT e sottocubi.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>Membri calcolati in sub-SELECT e sottocubi  
- Il `SubQueries` proprietà stringa di connessione <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o il `DBPROPMSMDSUBQUERIES` proprietà nel [proprietà XMLA supportate &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) definisce il comportamento o dei membri calcolati o calcolati Imposta su sub-SELECT o sottocubi. Nel contesto di questo documento con il termine sub-SELECT si fa riferimento a sub-SELECT e sottocubi, se non diversamente specificato.  
+ Il `SubQueries` proprietà stringa di connessione <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o il `DBPROPMSMDSUBQUERIES` proprietà nel [proprietà XMLA supportate &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) definisce il comportamento o dei membri calcolati o calcolati Imposta su sub-SELECT o sottocubi. Nel contesto di questo documento con il termine sub-SELECT si fa riferimento a sub-SELECT e sottocubi, se non diversamente specificato.  
   
  La proprietà SubQueries consente i valori riportati di seguito.  
   
@@ -125,6 +125,6 @@ Where [Measures].[Reseller Sales Amount]
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Sub-SELECT nelle query](subselects-in-queries.md)   
- [Proprietà XMLA supportate &#40;XMLA&#41;](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
+ [Proprietà XMLA supportate &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

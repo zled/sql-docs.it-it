@@ -1,5 +1,5 @@
 ---
-title: Servizi di Data Mining e origini dati | Documenti Microsoft
+title: Servizi di Data Mining e origini dati | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ddcf169206e795899861e7b7fe8be6430ad9cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: acb8f97708cd92bc0bdee1278d8b672908d65877
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016588"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145886"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servizi di data mining e origini dati
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "34016588"
  È inoltre possibile impostare proprietà che consentono di ottimizzare il server e controllare la sicurezza per l'utilizzo client. Per altre informazioni, vedere [Proprietà di funzionalità](../../analysis-services/server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Per ulteriori informazioni sul supporto per algoritmi plug-in dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Per altre informazioni sul supporto per algoritmi plug-in delle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Accesso a livello di codice agli oggetti di data mining  
  Per creare una connessione a un database di Analysis Services e utilizzare oggetti di data mining, è possibile utilizzare i modelli a oggetti seguenti:  
@@ -117,14 +117,14 @@ ms.locfileid: "34016588"
   
  Se la stored procedure restituisce un set di dati, il client riceverà un set di dati o una tabella di dati con una tabella nidificata che contiene le righe. Se ad esempio viene creata una query sul contenuto del modello, la query restituisce l'intero modello. Per evitare la restituzione di troppe righe, è possibile scrivere stored procedure utilizzando il modello a oggetti ADOMD+.  
   
- Per scrivere una stored procedure del server, è necessario fare riferimento allo spazio dei nomi Microsoft.AnalysisServices.AdomdServer. Per altre informazioni sulla creazione e l'uso di stored procedure, vedere [Funzioni definite dall'utente e stored procedure](../../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md).  
+ Per scrivere una stored procedure del server, è necessario fare riferimento allo spazio dei nomi Microsoft.AnalysisServices.AdomdServer. Per altre informazioni sulla creazione e l'uso di stored procedure, vedere [Funzioni definite dall'utente e stored procedure](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Non è possibile utilizzare le stored procedure per modificare la sicurezza per gli oggetti server dei dati. Quando si esegue una stored procedure, viene utilizzato il contesto corrente dell'utente per determinare l'accesso a tutti gli oggetti server. Gli utenti devono pertanto disporre delle autorizzazioni appropriate per qualsiasi oggetto di database a cui accedono.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Architettura fisica &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Architettura fisica & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
- [Gestione di soluzioni di Data Mining e gli oggetti](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Architettura fisica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [Gestione degli oggetti e delle soluzioni di data mining](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

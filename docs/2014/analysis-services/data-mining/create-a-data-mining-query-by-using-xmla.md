@@ -13,12 +13,12 @@ ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dae6b521b26158e8bf854fe357d7119ca3a3b4c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acec8d8bb72566d00593634d7d2ee27a41fd9688
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161751"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148086"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Creare una query di data mining usando XMLA
   È possibile creare diverse query sugli oggetti di data mining utilizzando AMO, DMX o XML/A.  
@@ -100,7 +100,7 @@ ms.locfileid: "48161751"
      Nel riquadro Risultati viene visualizzata la definizione dello schema insieme ai valori del modello specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Set di righe dello schema di data mining](../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Set di righe dello schema di data mining](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

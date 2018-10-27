@@ -10,12 +10,12 @@ ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 167496250631866c009caef0dfe2044db4d11d6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ba9694808be6922762f023af496bc64ff2403b8
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644587"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099852"
 ---
 # <a name="managing-passwords-accesstosql"></a>La gestione delle password (AccessToSQL)
 Questa sezione riguarda la protezione delle password di database e la procedura per importare o esportare tali tra server:  
@@ -122,5 +122,5 @@ L'applicazione Console SSMA consente di esportare le password crittografate del 
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione della Console SSMA (accesso)](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[Esecuzione della Console SSMA (accesso)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

@@ -1,5 +1,5 @@
 ---
-title: Azioni (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Azioni (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b7c4d8781aa316ab49fb3730dd783c77e2776441
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020488"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146366"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Azioni (Analysis Services - Dati multidimensionali)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34020488"
   
 -   Azioni standard, le quali restituiscono l'elemento dell'azione (URL, HTML, DataSet, RowSet e altri elementi) associato alla sezione selezionata del cubo in cui si verifica l'azione.  
   
- Un QI (Query Interface), ad esempio ADOMD.NET, viene utilizzato dall'applicazione client per recuperare le azioni ed esporle all'utente finale. Per altre informazioni, vedere [Sviluppo con ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ Un QI (Query Interface), ad esempio ADOMD.NET, viene utilizzato dall'applicazione client per recuperare le azioni ed esporle all'utente finale. Per altre informazioni, vedere [Sviluppo con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Un oggetto <xref:Microsoft.AnalysisServices.Action> semplice è composto da informazioni di base, dalla destinazione in cui deve verificarsi l'azione, da una condizione per limitare l'ambito dell'azione e dal tipo. Le informazioni di base includono il nome dell'azione, la descrizione dell'azione, la didascalia consigliata per l'azione e altro.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34020488"
 |Proprietario|Esegue un'operazione utilizzando un'interfaccia diversa da quelle elencate in questa tabella.|  
 |Report|Invia una richiesta con parametri basata sull'URL a un server di report e restituisce un report a un'applicazione client.|  
 |Set di righe|Restituisce un set di righe a un'applicazione client.|  
-|Istruzione|Esegue un comando OLE DB.|  
+|.|Esegue un comando OLE DB.|  
 |URL|Visualizza una pagina Web dinamica in un browser Internet|  
   
 ## <a name="resolving-and-executing-actions"></a>Risoluzione ed esecuzione di azioni  

@@ -12,15 +12,15 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 615e36534923244202a6525f0a4881767ace9e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164711"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148431"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Informazioni sul modello a oggetti tabulare
-  Un modello tabulare è una rappresentazione logica di tabelle, relazioni, gerarchie, prospettive, misure e prestazioni chiave. In questa sezione viene illustrata l'implementazione interna tramite AMO. Visualizzare [lo sviluppo con Analysis Management Objects &#40;AMO&#41; ](../../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md) se si ha familiarità con AMO.  
+  Un modello tabulare è una rappresentazione logica di tabelle, relazioni, gerarchie, prospettive, misure e prestazioni chiave. In questa sezione viene illustrata l'implementazione interna tramite AMO. Visualizzare [lo sviluppo con Analysis Management Objects &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) se si ha familiarità con AMO.  
   
  In questo caso si utilizza un approccio discendente, viene prima eseguito il mapping logico agli oggetti AMO per tutti gli oggetti rilevanti nel modello tabulare, quindi viene fornita la spiegazione dell'interazione o del flusso di lavoro necessario. Un esempio di codice sorgente per creare un modello tabulare tramite AMO, Da AMO a tabulare, è disponibile in Codeplex. Nota importante sul codice di questo esempio: il codice viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione. L'esempio viene fornito senza supporto o garanzia.  
   

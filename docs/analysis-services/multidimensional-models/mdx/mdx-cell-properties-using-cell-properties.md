@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di proprietà delle celle (MDX) | Documenti Microsoft
+title: Usando le proprietà delle celle (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 481d89abac98dee1095e55a9890cea100f6c4db6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023428"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145306"
 ---
-# <a name="mdx-cell-properties---using-cell-properties"></a>Proprietà di cella MDX - utilizzando le proprietà di cella
+# <a name="mdx-cell-properties---using-cell-properties"></a>Proprietà delle celle MDX - uso delle proprietà di cella
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Nel linguaggio MDX (Multidimensional Expressions) le proprietà delle celle includono informazioni sul contenuto e il formato delle celle di un'origine dei dati multidimensionale, ad esempio un cubo.  
   
@@ -69,7 +69,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE** (0x10000009)   La cella non può essere aggiornata perché l'aggiornamento non è supportato nelle dimensioni dei modelli di data mining, indirette o di data mining.|  
 |**VALUE**|Valore non formattato della cella.|  
   
- Sono richieste solo le proprietà di cella **CELL_ORDINAL**, **FORMATTED_VALUE**e **VALUE** . Tutte le proprietà delle celle, intrinseche o specifiche del provider, sono definite nel set di righe dello schema **PROPERTIES** , inclusi i tipi di dati e il supporto del provider. Per altre informazioni sul set di righe dello schema **PROPERTIES** , vedere [Set di righe MDSCHEMA_PROPERTIES](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md).  
+ Sono richieste solo le proprietà di cella **CELL_ORDINAL**, **FORMATTED_VALUE**e **VALUE** . Tutte le proprietà delle celle, intrinseche o specifiche del provider, sono definite nel set di righe dello schema **PROPERTIES** , inclusi i tipi di dati e il supporto del provider. Per altre informazioni sul set di righe dello schema **PROPERTIES** , vedere [Set di righe MDSCHEMA_PROPERTIES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset).  
   
  Per impostazione predefinita, se non viene usata la parola chiave **CELL PROPERTIES** , le proprietà di cella restituite sono **VALUE**, **FORMATTED_VALUE**e **CELL_ORDINAL** (in questo ordine). Se è specificata la parola chiave **CELL PROPERTIES** , verranno restituite solo le proprietà delle celle indicate in modo esplicito con la parola chiave.  
   
@@ -101,6 +101,6 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Nozioni fondamentali sulle Query MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

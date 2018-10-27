@@ -1,22 +1,22 @@
 ---
 title: Che cos'è un pool di calcolo cluster SQL dei big Data? | Microsoft Docs
-description: ''
+description: Questo articolo descrive il pool di calcolo in un cluster di big data di SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: c17f6ac604edc021299f473137dcf6c5e470e3d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f13687bf55a9e267582a0749043c51d2e2b3bf
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796655"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050796"
 ---
 # <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>Che cos'è un pool di calcolo cluster SQL dei big Data?
 
-Questo articolo descrive il ruolo del *pool di calcolo di SQL Server* preview 2019 un Server SQL cluster di Big Data. I pool di calcolo offrono le risorse di calcolo a scalabilità orizzontale per un cluster di Big Data. Le sezioni seguenti descrivono l'architettura e la funzionalità di un pool di calcolo.
+Questo articolo descrive il ruolo del *pool di calcolo di SQL Server* in un cluster di big data anteprima di SQL Server 2019. I pool di calcolo offrono le risorse di calcolo a scalabilità orizzontale per un cluster di big data. Le sezioni seguenti descrivono l'architettura e la funzionalità di un pool di calcolo.
 
 ## <a name="compute-pool-architecture"></a>Architettura del pool di calcolo
 
@@ -33,4 +33,4 @@ Un pool di calcolo può fungere da un gruppo con scalabilità orizzontale PolyBa
 
 Per altre informazioni sui cluster di big data di SQL Server, vedere Panoramica riportata di seguito:
 
-- [Che cos'è SQL Server 2019 i cluster di big data?](big-data-cluster-overview.md)
+- [Quali sono i cluster di SQL Server 2019 dei big Data?](big-data-cluster-overview.md)

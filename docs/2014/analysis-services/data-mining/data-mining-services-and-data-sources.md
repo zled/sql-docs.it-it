@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f74492fc0d177ba87fe29dc73a5cd67e9663a61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090971"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145896"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servizi di data mining e origini dati
   Il data mining richiede una connessione a un'istanza di SQL Server Analysis Services. I dati di un cubo non sono necessari per il data mining, pertanto è consigliabile l'uso di origini relazionali. Tuttavia, il data mining usa i componenti forniti dal motore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -78,7 +78,7 @@ ms.locfileid: "48090971"
 -   `AllowAdHocOpenRowsetQueries` Controlla l'accesso ad hoc al provider OLE DB, caricati direttamente nello spazio di memoria server.  
   
     > [!IMPORTANT]  
-    >  Per migliorare la sicurezza, è consigliabile impostare questa proprietà su `false`. Il valore predefinito è `false`. Tuttavia, anche se questa proprietà è impostata `false`, gli utenti possono continuare a creare query singleton e utilizzare OPENQUERY sulle origini dati consentite.  
+    >  Per migliorare la sicurezza, è consigliabile impostare questa proprietà su `false`. Il valore predefinito è `false`. Anche se questa proprietà viene impostata su `false`, tuttavia, gli utenti possono continuare a creare query singleton e utilizzare OPENQUERY sulle origini dati consentite.  
   
 -   **AllowedProvidersInOpenRowset** Specifica il provider, se l'accesso ad hoc è abilitato. È possibile specificare più provider, immettendo un elenco delimitato da virgole di ProgID.  
   
@@ -118,14 +118,14 @@ ms.locfileid: "48090971"
   
  Se la stored procedure restituisce un set di dati, il client riceverà un set di dati o una tabella di dati con una tabella nidificata che contiene le righe. Se ad esempio viene creata una query sul contenuto del modello, la query restituisce l'intero modello. Per evitare la restituzione di troppe righe, è possibile scrivere stored procedure utilizzando il modello a oggetti ADOMD+.  
   
- Per scrivere una stored procedure del server, è necessario fare riferimento allo spazio dei nomi Microsoft.AnalysisServices.AdomdServer. Per altre informazioni sulla creazione e l'uso di stored procedure, vedere [Funzioni definite dall'utente e stored procedure](../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md).  
+ Per scrivere una stored procedure del server, è necessario fare riferimento allo spazio dei nomi Microsoft.AnalysisServices.AdomdServer. Per altre informazioni sulla creazione e l'uso di stored procedure, vedere [Funzioni definite dall'utente e stored procedure](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Non è possibile utilizzare le stored procedure per modificare la sicurezza per gli oggetti server dei dati. Quando si esegue una stored procedure, viene utilizzato il contesto corrente dell'utente per determinare l'accesso a tutti gli oggetti server. Gli utenti devono pertanto disporre delle autorizzazioni appropriate per qualsiasi oggetto di database a cui accedono.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Architettura fisica &#40;Analysis Services - dati multidimensionali&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Architettura fisica &#40;Analysis Services - Data Mining&#41;](physical-architecture-analysis-services-data-mining.md)   
+ [Architettura fisica &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+ [Architettura fisica &#40;Analysis Services - Data mining&#41;](physical-architecture-analysis-services-data-mining.md)   
  [Gestione degli oggetti e delle soluzioni di data mining](management-of-data-mining-solutions-and-objects.md)  
   
   

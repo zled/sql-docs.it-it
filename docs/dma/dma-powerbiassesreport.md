@@ -2,7 +2,7 @@
 title: Analizzare consolidati i report di valutazione Data Migration Assistant con Power BI (SQL Server) | Microsoft Docs
 description: Informazioni su come usare Power BI per analizzare i report di valutazione della migrazione dei dati che è stato importato e consolidati in SQL Server
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35cd161d29977d97ab3da650de5afdb46ab748a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832235"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643969"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analizzare i report consolidati di valutazione creati dai Data Migration Assistant con Power BI
 
@@ -129,7 +129,7 @@ Quando si seleziona una funzionalità nel grafico a imbuto, i dati nella parte i
 
 ![Report delle funzionalità non supportate di database SQL di Azure](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
 
-Questo report evidenzia le funzionalità non supportate per un determinato **database** quando la destinazione è il Database SQL di Azure (V12).
+Questo report evidenzia le funzionalità che non sono supportate per un determinato **database** quando la destinazione è il Database SQL di Azure (V12).
 
 Filtrando in base al valore di nome e la funzionalità di database nel grafico a imbuto, è possibile visualizzare i dettagli su funzionalità non supportata. I dettagli includono l'oggetto è interessato e consigli per risolvere il problema.
 

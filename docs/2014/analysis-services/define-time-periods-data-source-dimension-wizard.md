@@ -13,12 +13,12 @@ ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2086fa86f65cd467b84bf77e57123ded51e3dd4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aacc0e61ca3db517b5f05aa93ed43b3268e40529
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161461"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144616"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>Definizione periodi di tempo (Origine dati) (Creazione guidata dimensione)
   Utilizzare la pagina **Definizione periodi di tempo** per definire gli attributi che rappresentano periodi di tempo nella dimensione temporale con colonne nella tabella specificata nella pagina **Selezione tipo di dimensione** .  
@@ -28,7 +28,7 @@ ms.locfileid: "48161461"
   
 ## <a name="options"></a>Opzioni  
  **Nome proprietà tempo**  
- Consente di visualizzare i tipi di attributi utilizzati per indicare periodi di tempo nelle dimensioni temporali. Per altre informazioni sui tipi di attributo, vedere [Elemento Type &#40;DimensionAttribute&#41; &#40;ASSL&#41;](scripting/properties/type-element-dimensionattribute-assl.md).  
+ Consente di visualizzare i tipi di attributi utilizzati per indicare periodi di tempo nelle dimensioni temporali. Per altre informazioni sui tipi di attributo, vedere [Elemento Type &#40;DimensionAttribute&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl).  
   
 > [!NOTE]  
 >  È consigliabile utilizzare il tipo di attributo `Date` solo per colonne con tipo di dati DateTime.  

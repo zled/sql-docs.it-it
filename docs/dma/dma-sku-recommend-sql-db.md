@@ -2,7 +2,7 @@
 title: Identificare lo SKU del Database SQL di Azure corretto per il database locale (Data Migration Assistant) | Microsoft Docs
 description: Informazioni su come usare Data Migration Assistant per identificare destra dello SKU del Database SQL di Azure per il database in locale
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 63a21ebfd11e9104a2a4b3722a6d54df57784f81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684449"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643999"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identificare lo SKU del Database SQL di Azure corretto per il database in locale
 
@@ -141,7 +141,7 @@ Segue una descrizione di ogni colonna.
 - **MetricValue** -consigliato di Database SQL di Azure lo SKU.
 - **SQLMiEquivalentCores** -se si sceglie a chi rivolgersi per istanza gestita di Azure SQL Database, è possibile usare questo valore per il numero di core.
 - **IsTierRecommended** -rendiamo un minimo consigliato di SKU per ogni livello. È quindi possibile applicare l'euristica per determinare il livello più adatto per il database. 
-- **ExclusionReasons** -questo valore è vuoto se un livello è consigliato. Per ogni livello che non è consigliato, offriamo i motivi per cui è non stata rilevata.
+- **ExclusionReasons** -questo valore è vuoto se un livello è consigliato. Per ogni livello che non è consigliato, offriamo i motivi il motivo per cui non è stato selezionato.
 - **AppliedRules** -una notazione breve delle regole che sono state applicate.
 
 Il valore consigliato è lo SKU minimo richiesto per le query da eseguire in Azure con una percentuale di successo simile ai database in locale. Ad esempio, se lo SKU minima consigliato è S4 per il livello standard, quindi scegliere S3 o di sotto verrà impedire il timeout delle query o un errore di esecuzione.

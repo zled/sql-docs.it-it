@@ -1,5 +1,5 @@
 ---
-title: Sincronizzare i database di Analysis Services | Documenti Microsoft
+title: Sincronizzare database di Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b50cdb2a9b6a32fbd2794e3265dc009f6c6e6bd2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025368"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145916"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizzare database di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34025368"
   
  La porta TCP 2383 deve essere aperta in entrambi i server per consentire le connessioni remote tra le istanze predefinite. Per altre informazioni sulla creazione di un'eccezione in Windows Firewall, vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Server di origine e di destinazione deve essere la stessa versione e del Service pack. Poiché i metadati del modello sono inoltre sincronizzato, per garantire la compatibilità della compilazione numero per entrambi i server deve essere lo stesso. L'edizione di ogni installazione deve supportare la sincronizzazione del database. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]la sincronizzazione del database è supportata nelle edizioni Enterprise, Developer e Business Intelligence. Per ulteriori informazioni sulle funzionalità disponibili in ogni edizione, vedere [edizioni e delle funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Server di origine e di destinazione deve essere la stessa versione e service pack. Poiché i metadati del modello sono inoltre sincronizzato, per garantire la compatibilità della compilazione numero per entrambi i server deve essere lo stesso. L'edizione di ogni installazione deve supportare la sincronizzazione del database. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]la sincronizzazione del database è supportata nelle edizioni Enterprise, Developer e Business Intelligence. Per altre informazioni sulle funzionalità disponibili in ogni edizione, vedere [edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  La modalità di distribuzione server deve essere identica in ogni server. Se il database che si sta sincronizzando è multidimensionale, è necessario che sia il server di origine che quello di destinazione siano configurati per la modalità server multidimensionale. Per altre informazioni sulle modalità di distribuzione, vedere [Determinare la modalità server di un'istanza di Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
@@ -182,8 +182,8 @@ ms.locfileid: "34025368"
  Se non viene eseguita la sincronizzazione di ruoli o appartenenze, ricordarsi di specificare ora le autorizzazioni di accesso utente nel database di destinazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elemento Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Elemento Synchronize &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Distribuire soluzioni di modelli utilizzando XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [Distribuire soluzioni di modelli tramite la distribuzione guidata](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Distribuire soluzioni di modelli tramite la Distribuzione guidata](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

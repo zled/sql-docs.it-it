@@ -11,12 +11,12 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 10d93a9894fe9d325f20303ecad4b4a8415e1c61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d2e51be57b608ab9befd537c997d31b893ec6a9
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169011"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148076"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Informazioni su Power View per modelli multidimensionali
   Questo articolo descrive la funzionalità Power View per modelli multidimensionali di Microsoft SQL Server 2014 e fornisce importanti informazioni destinate agli amministratori e ai professionisti di business intelligence che intendono implementare Power View per modelli multidimensionali nelle relative organizzazioni.  
@@ -58,12 +58,12 @@ ms.locfileid: "48169011"
 |-----------------------------|--------------------|  
 |Cube|Modello|  
 |Dimensione cubo|Tabella|  
-|Attributi dimensione (Chiave/i, Nome)|Colonna|  
+|Attributi dimensione (Chiave/i, Nome)|colonna|  
 |Gruppo di misure|Tabella|  
 |Misura|Misura|  
 |Misura senza gruppo di misure|In una tabella denominata Misure|  
 |Relazione gruppo di misure dimensione del cubo|Relazione|  
-|Prospettiva|Prospettiva|  
+|Perspective|Perspective|  
 |Indicatore KPI|Indicatore KPI|  
 |Gerarchie utente/padre-figlio|Gerarchia|  
 |Cartella di visualizzazione|Cartella di visualizzazione|  
@@ -92,7 +92,7 @@ ms.locfileid: "48169011"
   
  **Misura come variante**  
   
- ![Gerarchia non aggregabile in Power View](../media/daxmd-nonaggrattrib.gif "gerarchia Non aggregabile in Power View")  
+ ![Gerarchia non aggregabile in Power View](../media/daxmd-nonaggrattrib.gif "Gerarchia non aggregabile in Power View")  
   
 ### <a name="implicit-measures"></a>Misure implicite  
  I modelli tabulari permettono agli utenti di creare misure *implicite* come conteggio, somma o media dei campi. Per i modelli multidimensionali, poiché i dati dell'attributo dimensione sono archiviati in modo diverso, l'esecuzione di query su misure implicite può richiedere molto tempo. Per questo motivo, le misure implicite non sono disponibili in Power View.  
@@ -141,7 +141,7 @@ ms.locfileid: "48169011"
   
  **Gerarchia non aggregabile in Power View**  
   
- ![Gerarchia non aggregabile in Power View](../media/daxmd-nonaggrattrib.gif "gerarchia Non aggregabile in Power View")  
+ ![Gerarchia non aggregabile in Power View](../media/daxmd-nonaggrattrib.gif "Gerarchia non aggregabile in Power View")  
   
 ## <a name="images"></a>Immagini  
  Tramite Power View è possibile eseguire il rendering delle immagini. Nei modelli multidimensionali uno dei modi in cui fornire immagini a Power View consiste nell'esporre le colonne che contengono gli URL (Uniform Resource Locator) delle immagini. Con questa versione, Analysis Services consente di contrassegnare gli attributi dimensione come tipi ImageURL. Questo tipo di dati viene fornito a Power View nei metadati tabulari. Da Power View sarà quindi possibile scaricare e visualizzare le immagini specificate negli URL all'interno delle visualizzazioni.  
@@ -155,7 +155,7 @@ ms.locfileid: "48169011"
   
  **Gerarchie padre-figlio in Power View**  
   
- ![Gerarchie padre-figlio](../media/daxmd-ssdt-hierarchies.gif "gerarchie padre-figlio")  
+ ![Gerarchie padre-figlio](../media/daxmd-ssdt-hierarchies.gif "Gerarchie padre-figlio")  
   
 ## <a name="perspectives-and-translations"></a>Prospettive e traduzioni  
  Le prospettive sono viste dei cubi in cui solo alcune dimensioni o gruppi di misure sono visibili negli strumenti client. È possibile specificare un nome di prospettiva come valore per la proprietà Cube della stringa di connessione. Ad esempio, nella stringa di connessione seguente 'Direct Sales' è una prospettiva nel modello multidimensionale:  
@@ -218,7 +218,7 @@ ms.locfileid: "48169011"
   
  La richiesta DISCOVER_CSDL_METADATA presenta le restrizioni seguenti:  
   
-|Nome|Required|Description|  
+|nome|Obbligatorio|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Sì|Nome del catalogo\database.|  
 |PERSPECTIVE_NAME|Sì, se il cubo contiene più di una prospettiva. Facoltativo se è presente un solo cubo o una prospettiva predefinita.|Nome del cubo o della prospettiva nel database multidimensionale.|  
@@ -226,7 +226,7 @@ ms.locfileid: "48169011"
   
  Il documento CSDL in uscita restituito rappresenta il modello come spazio dei nomi, contenente entità, associazioni e proprietà.  
   
- Per informazioni dettagliate sulle annotazioni CSDLBI per i modelli tabulari, vedere [Riferimento tecnico per le annotazioni di Business Intelligence per CSDL](../tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) in MSDN e [\[MS-CSDLBI\]: Formato di file delle definizioni dello schema concettuale con annotazioni di Business Intelligence](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ Per informazioni dettagliate sulle annotazioni CSDLBI per i modelli tabulari, vedere [Riferimento tecnico per le annotazioni di Business Intelligence per CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) in MSDN e [\[MS-CSDLBI\]: Formato di file delle definizioni dello schema concettuale con annotazioni di Business Intelligence](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## <a name="client-help-on-officecom"></a>Guida del client su Office.com  
  Negli articoli seguenti, disponibili su Office.com, vengono fornite ulteriori informazioni sulla modalità di visualizzazione degli oggetti del modello multidimensionale in Power View e sulla creazione di un report di esempio:  

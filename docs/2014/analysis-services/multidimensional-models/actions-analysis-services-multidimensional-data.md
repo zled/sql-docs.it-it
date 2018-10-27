@@ -17,12 +17,12 @@ ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08f820ec9fd9dd38a578c9f71502dc469b476f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47c289b312b411259e341ab0ef9cc01085f314f1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193661"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146588"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Azioni (Analysis Services - Dati multidimensionali)
   Sono disponibili azioni di diverso tipo, le quali devono pertanto essere create in modo appropriato. Di seguito vengono indicati i diversi tipi di azione.  
@@ -33,13 +33,13 @@ ms.locfileid: "48193661"
   
 -   Azioni standard, le quali restituiscono l'elemento dell'azione (URL, HTML, DataSet, RowSet e altri elementi) associato alla sezione selezionata del cubo in cui si verifica l'azione.  
   
- Un QI (Query Interface), ad esempio ADOMD.NET, viene utilizzato dall'applicazione client per recuperare le azioni ed esporle all'utente finale. Per altre informazioni vedere [Sviluppo con ADOMD.NET](adomd-net/developing-with-adomd-net.md).  
+ Un QI (Query Interface), ad esempio ADOMD.NET, viene utilizzato dall'applicazione client per recuperare le azioni ed esporle all'utente finale. Per altre informazioni, vedere [Sviluppo con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Un oggetto <xref:Microsoft.AnalysisServices.Action> semplice è composto da informazioni di base, dalla destinazione in cui deve verificarsi l'azione, da una condizione per limitare l'ambito dell'azione e dal tipo. Le informazioni di base includono il nome dell'azione, la descrizione dell'azione, la didascalia consigliata per l'azione e altro.  
   
  La destinazione corrisponde al percorso effettivo nel cubo in cui deve verificarsi l'azione. La destinazione è composta da un tipo di destinazione e da un oggetto di destinazione. Il tipo di destinazione rappresenta il tipo di oggetto all'interno del cubo, in cui l'azione deve essere attivata. Il tipo di destinazione può essere costituito da membri del livello, celle, gerarchia, membri della gerarchia o altro. L'oggetto di destinazione è un oggetto specifico del tipo di destinazione. Se il tipo di destinazione è una gerarchia, l'oggetto di destinazione è una delle gerarchie definite nel cubo.  
   
- La condizione è un `Boolean` espressione MDX che viene valutato in corrispondenza dell'evento di azione. Se la condizione restituisce `true`, l'azione viene eseguita. In caso contrario, l'azione non viene eseguita.  
+ La condizione è un'espressione MDX `Boolean` valutata nell'evento relativo all'azione. Se la condizione restituisce `true`, l'azione viene eseguita. In caso contrario, l'azione non viene eseguita.  
   
  Il tipo rappresenta il tipo di azione da eseguire. <xref:Microsoft.AnalysisServices.Action> è una classe astratta, per usarla è necessaria una delle classi derivate. I due tipi di azione drill-through e report sono predefiniti e dispongono delle classi derivate corrispondenti <xref:Microsoft.AnalysisServices.DrillThroughAction> e <xref:Microsoft.AnalysisServices.ReportAction>. Le altre azioni sono incluse nella classe <xref:Microsoft.AnalysisServices.StandardAction> .  
   

@@ -2,7 +2,7 @@
 title: Aggiornamento SQL Server locale a SQL Server o SQL Server nelle macchine virtuali di Azure usando Data Migration Assistant | Microsoft Docs
 description: Informazioni su come usare Data Migration Assistant per eseguire l'aggiornamento di un Server SQL locale a una versione successiva di SQL Server o a SQL Server in macchine virtuali di Azure
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f23edbbd6f7a1d051c7585b563cd2f3f1575b640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833129"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643839"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Eseguire l'aggiornamento in SQL Server locale a SQL Server o SQL Server in macchine virtuali di Azure usando Data Migration Assistant
 
@@ -81,7 +81,7 @@ Questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento di SQ
 
 5. Fare clic su **Avanti**.
 
-Data Migration Assistant esegue le convalide nelle cartelle di backup, log e dati percorsi dei file. Se qualsiasi convalida non riesce, correggere le opzioni e quindi selezionare **successivo**.
+Data Migration Assistant esegue le convalide di cartelle di backup, dati e file di log. Se qualsiasi convalida non riesce, correggere le opzioni e quindi selezionare **successivo**.
 
 ## <a name="select-logins"></a>Selezionare gli account di accesso
 

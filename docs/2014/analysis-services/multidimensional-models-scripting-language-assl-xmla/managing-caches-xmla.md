@@ -17,18 +17,18 @@ ms.assetid: afad5c39-d4c3-4307-b3b9-a06617da0028
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7e99be9f6a2af7dbbaab624ba592b2486cf807f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d4d95e556059709f1d4e5a0fc069b6da5ed289c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048161"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146550"
 ---
 # <a name="managing-caches-xmla"></a>Gestione delle cache (XMLA)
-  È possibile usare la [ClearCache](../xmla/xml-elements-commands/clearcache-element-xmla.md) comando XML for Analysis (XMLA) per cancellare la cache di una dimensione specificata o una partizione. Cancellare le forze della cache [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ricompilazione della cache per l'oggetto.  
+  È possibile usare la [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) comando XML for Analysis (XMLA) per cancellare la cache di una dimensione specificata o una partizione. Cancellare le forze della cache [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ricompilazione della cache per l'oggetto.  
   
 ## <a name="specifying-objects"></a>Specifica di oggetti  
- Il [oggetti](../xmla/xml-elements-properties/object-element-xmla.md) proprietà del `ClearCache` comando può contenere un riferimento all'oggetto solo per uno degli oggetti seguenti. Se un riferimento è relativo a un oggetto diverso da uno di quelli seguenti, si verifica un errore:  
+ Il [oggetti](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) proprietà del `ClearCache` comando può contenere un riferimento all'oggetto solo per uno degli oggetti seguenti. Se un riferimento è relativo a un oggetto diverso da uno di quelli seguenti, si verifica un errore:  
   
  Database  
  Cancella la cache per tutte le dimensioni e le partizioni contenute nel database.  

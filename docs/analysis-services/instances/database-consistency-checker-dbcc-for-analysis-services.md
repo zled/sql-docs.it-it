@@ -1,5 +1,5 @@
 ---
-title: Database di controllo di coerenza informazioni (DBCC) per Analysis Services | Documenti Microsoft
+title: Database Consistency Checker (DBCC) per Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cb131f76c839f446cbdc31dae51e98431bb87902
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019688"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147866"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Database Consistency Checker (DBCC) per Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ Il comando accetta una definizione di oggetto e restituisce un set di risultati 
   
 -   I database multidimensionali e quelli tabulari precedenti a SQL Server 2016 con livello di compatibilità 1100 o 1103 sono descritti nei costrutti di modellazione multidimensionali come **cubeID**, **measuregroupID**e **partitionID**.  
   
--   I metadati per i nuovi database modello tabulare a livello di compatibilità 1200 e superiore sono costituiti da descrittori come **TableName** e **PartitionName**.  
+-   I metadati per i nuovi database modello tabulare con livello di compatibilità 1200 e superiore sono costituiti da descrittori come **NomeTabella** e **PartitionName**.  
   
  DBCC per Analysis Services viene eseguito su qualsiasi database di Analysis Services con qualsiasi livello di compatibilità, purché il database venga eseguito in un'istanza di SQL Server 2016. Assicurarsi di usare la sintassi del comando corretto per ogni tipo di database.  
   
@@ -41,9 +41,9 @@ Il comando accetta una definizione di oggetto e restituisce un set di risultati 
  Per eseguire il comando, è necessario essere un amministratore del server o del database di Analysis Services, ovvero un membro del ruolo del server. Per istruzioni, vedere [Concedere le autorizzazioni per il database &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) o [Concedere i diritti di amministratore del server a un'istanza di Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 ## <a name="command-syntax"></a>Sintassi del comando 
- Più livelli di compatibilità e i database tabulari con il 1200 usano metadati tabulari per le definizioni degli oggetti. L'esempio seguente illustra la sintassi completa di DBCC per un database tabulare creato a un livello funzionale di SQL Server 2016.  
+ I livelli di compatibilità superiore e i database tabulari a 1200 usano metadati tabulari per le definizioni degli oggetti. L'esempio seguente illustra la sintassi completa di DBCC per un database tabulare creato a un livello funzionale di SQL Server 2016.  
   
- Le differenze principali tra le due sintassi includono uno spazio dei nomi XMLA più recente, non \<oggetto > elemento e nessun \<modello > elemento (vi è ancora presente un solo modello per ogni database).  
+ Le principali differenze tra le due sintassi includono uno spazio dei nomi XMLA più recente, non \<oggetto > elemento e nessun \<modello > elemento (ne è ancora disponibile un solo modello per ogni database).  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2014/engine">  
@@ -58,7 +58,7 @@ Il comando accetta una definizione di oggetto e restituisce un set di risultati 
  È possibile ottenere i nomi degli oggetti e DatabaseID da Management Studio tramite la pagina delle proprietà di ogni oggetto.  
   
 ## <a name="command-syntax-for-multidimensional-and-tabular-110x-databases"></a>Sintassi del comando per database multidimensionali e tabulari 110x  
- DBCC usa la stessa sintassi sia per i database multidimensionali che per quelli tabulari 1100 e 1103. È possibile eseguire DBCC su oggetti di database specifici, incluso l'intero database. Per altre informazioni sulla definizione di oggetti, vedere [Elemento Object &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md).  
+ DBCC usa la stessa sintassi sia per i database multidimensionali che per quelli tabulari 1100 e 1103. È possibile eseguire DBCC su oggetti di database specifici, incluso l'intero database. Per altre informazioni sulla definizione di oggetti, vedere [Elemento Object &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla).  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -104,7 +104,7 @@ Il comando accetta una definizione di oggetto e restituisce un set di risultati 
 ### <a name="run-dbcc-commands-in-management-studio"></a>Eseguire i comandi DBCC in Management Studio  
  Per le query ad hoc, aprire una finestra di query MDX o XMLA in SQL Server Management Studio. A questo scopo, fare clic con il pulsante destro del mouse sul database | **Nuova query** | **XMLA**) per eseguire il comando e leggere l'output.  
   
- ![Comando XML DBCC in Management Studio](../../analysis-services/instances/media/ssas-dbcc-ssms.gif "comando XML DBCC in Management Studio")  
+ ![Comando DBCC XML in Management Studio](../../analysis-services/instances/media/ssas-dbcc-ssms.gif "comando XML di DBCC in Management Studio")  
   
  Se non sono stati rilevati problemi, la scheda Risultati visualizza un set di risultati vuoto, come illustrato nella schermata.  
   
@@ -176,7 +176,7 @@ Execution complete
   
      Per entrambe le sottoclassi di evento esaminare i valori **TextData** per i messaggi restituiti da DBCC.  
   
-     I messaggi di stato iniziano con "verifica della coerenza della \<oggetto >", "avviato controllo \<oggetto >", o "verifica terminata \<oggetto >".  
+     I messaggi di stato iniziano con "verifica della coerenza della \<oggetto >", "avviata verifica \<oggetto >", o "terminato il controllo \<oggetto >".  
   
     > [!NOTE]  
     >  Nella versione CTP 3.0 gli oggetti vengono identificati da nomi interni. Ad esempio, una gerarchia di categorie è articolata come H$ Categories -\<IDOggetto >. In una futura versione di CTP i nomi interni verranno sostituiti da nomi descrittivi.  
@@ -196,7 +196,7 @@ Execution complete
   
 5.  Esaminare i valori TextData per i messaggi restituiti da DBCC.  TextData è una proprietà di un campo evento e mostra i messaggi di errore e di stato restituiti dall'evento.  
   
-     I messaggi di stato iniziano con "verifica della coerenza della \<oggetto >", "avviato controllo \<oggetto >", o "verifica terminata \<oggetto >".  
+     I messaggi di stato iniziano con "verifica della coerenza della \<oggetto >", "avviata verifica \<oggetto >", o "terminato il controllo \<oggetto >".  
   
      I messaggi di errore sono elencati di seguito.  
   
@@ -230,17 +230,17 @@ Execution complete
 |Gerarchia|Genera un errore se l'ordinamento per la gerarchia non è un valore riconosciuto.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo della gerarchia '%{hier/}'.|  
 |Gerarchia|I controlli eseguiti sulla gerarchia dipendono dal tipo interno dello schema di mapping della gerarchia usato.<br /><br /> Tutte le gerarchie vengono controllate per verificare che lo stato di elaborazione sia corretto, che l'archivio della gerarchia sia presente e che, ove applicabile, le strutture dei dati usate per una conversione da ID dati a posizione della gerarchia siano disponibili.<br /><br /> Presupponendo che vengano superati tutti questi controlli, la struttura della gerarchia viene esaminata per verificare che ogni posizione nella gerarchia punti al membro corretto.<br />Se uno di questi test non riesce, viene generato un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo della gerarchia '%{hier/}'.|  
 |Gerarchia definita dall'utente|Controlla se i nomi dei livelli della gerarchia sono impostati.<br /><br /> Se la gerarchia è stata elaborata, verifica che il formato dell'archivio dati di gerarchia interno sia corretto.  Verifica che l'archivio di gerarchia interno non contenga valori di dati non validi.<br /><br /> Se la gerarchia è contrassegnata come non elaborata, verifica che questo stato si applichi alle strutture dei dati precedenti e che tutti i livelli della gerarchia siano contrassegnati come vuoti.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo della gerarchia '%{hier/}'.|  
-|Colonna|Genera un errore se la codifica usata per la colonna non è impostata su un valore noto.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
-|Colonna|Controlla se la colonna è stata o meno compressa dal motore in memoria.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
-|Colonna|Controlla se per il tipo di compressione nella colonna sono presenti valori noti.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
-|Colonna|Quando la colonna "tokenizzazione" non è impostata su un valore noto, genera un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
-|Colonna|Se l'intervallo di ID archiviato per un dizionario dei dati delle colonne non corrisponde al numero di valori nel dizionario dei dati o non è compreso nell'intervallo consentito, genera un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo del dizionario dei dati.|  
-|Colonna|Controlla che il numero di segmenti di dati per una colonna corrisponda al numero di segmenti di dati per la tabella a cui appartiene.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di segmenti nella colonna '%{parent/}' è danneggiata.|  
-|Colonna|Controlla che il numero di partizioni nella colonna dati corrisponda al numero di partizioni della mappa di segmenti di dati per la colonna.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo della mappa di segmenti.|  
-|Colonna|Verifica che il numero di record in un segmento di colonna corrisponda al conteggio di record archiviato nell'indice per tale segmento di colonna.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di segmenti nella colonna '%{parent/}' è danneggiata.|  
-|Colonna|Se per una colonna non sono presenti statistiche dei segmenti, genera un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche del segmento.|  
-|Colonna|Se una colonna non contiene informazioni sulla compressione o l'archiviazione di segmenti, genera un errore.|Verifiche di coerenza non superate dai file di database.|  
-|Colonna|Segnala un errore se le statistiche dei segmenti per una colonna non corrispondono ai valori di colonna effettivi per ID dati minimo, ID dati massimo, Numero di valori Distinct, Numero di righe o presenza di valori NULL.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche del segmento.|  
+|colonna|Genera un errore se la codifica usata per la colonna non è impostata su un valore noto.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
+|colonna|Controlla se la colonna è stata o meno compressa dal motore in memoria.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
+|colonna|Controlla se per il tipo di compressione nella colonna sono presenti valori noti.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
+|colonna|Quando la colonna "tokenizzazione" non è impostata su un valore noto, genera un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche della colonna.|  
+|colonna|Se l'intervallo di ID archiviato per un dizionario dei dati delle colonne non corrisponde al numero di valori nel dizionario dei dati o non è compreso nell'intervallo consentito, genera un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo del dizionario dei dati.|  
+|colonna|Controlla che il numero di segmenti di dati per una colonna corrisponda al numero di segmenti di dati per la tabella a cui appartiene.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di segmenti nella colonna '%{parent/}' è danneggiata.|  
+|colonna|Controlla che il numero di partizioni nella colonna dati corrisponda al numero di partizioni della mappa di segmenti di dati per la colonna.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo della mappa di segmenti.|  
+|colonna|Verifica che il numero di record in un segmento di colonna corrisponda al conteggio di record archiviato nell'indice per tale segmento di colonna.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di segmenti nella colonna '%{parent/}' è danneggiata.|  
+|colonna|Se per una colonna non sono presenti statistiche dei segmenti, genera un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche del segmento.|  
+|colonna|Se una colonna non contiene informazioni sulla compressione o l'archiviazione di segmenti, genera un errore.|Verifiche di coerenza non superate dai file di database.|  
+|colonna|Segnala un errore se le statistiche dei segmenti per una colonna non corrispondono ai valori di colonna effettivi per ID dati minimo, ID dati massimo, Numero di valori Distinct, Numero di righe o presenza di valori NULL.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche del segmento.|  
 |Segmento di colonna|Se ID dati minimo o ID dati massimo è minore del valore di sistema riservato per i valori NULL, contrassegna le informazioni sul segmento di colonna come danneggiate.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche del segmento.|  
 |Segmento di colonna|Se non sono presenti righe per questo segmento, i valori di dati minimo e massimo per la colonna devono essere impostati sul valore di sistema riservato per NULL.  Se il valore non è Null, genera un errore.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche del segmento.|  
 |Segmento di colonna|Se la colonna include righe e almeno un valore diverso da Null, verifica che l'ID dati minimo e massimo per la colonna sia maggiore del valore di sistema riservato per NULL.|Le verifiche di coerenza del database (DBCC) non sono riuscite durante il controllo delle statistiche del segmento.|  
@@ -252,8 +252,8 @@ Execution complete
 |Tabella DBCC|Per la tabella in fase di convalida, controlla se il numero di colonne è minore di zero e genera un errore se il valore è true.  Si verifica un errore anche se l'archivio colonne per una colonna nella tabella è NULL.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di colonne nella tabella '%{parent/}' è danneggiata.|  
 |Partizione DBCC|Controlla la tabella a cui appartiene la partizione in fase di convalida e, se il numero di colonne per la tabella è minore di zero, significa che la raccolta Colonne della tabella è danneggiata. Si verifica un errore anche se l'archivio colonne per una colonna della tabella è NULL.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di colonne nella tabella '%{parent/}' è danneggiata.|  
 |Partizione DBCC|Esegue il ciclo di ogni colonna della partizione selezionata e verifica che ogni segmento della partizione abbia un collegamento valido a una struttura di segmenti di colonna.  Se un segmento qualsiasi include un collegamento NULL, la partizione viene considerata danneggiata.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di segmenti nella colonna '%{parent/}' è danneggiata.|  
-|Colonna|Restituisce un errore se il tipo di colonna non è valido.|È stato rilevato un tipo di segmento non valido.|  
-|Colonna|Restituisce un errore se il conteggio del numero di segmenti in una colonna qualsiasi è negativo o se il puntatore alla struttura di segmenti di colonna per un segmento ha un collegamento NULL.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di segmenti nella colonna '%{parent/}' è danneggiata.|  
+|colonna|Restituisce un errore se il tipo di colonna non è valido.|È stato rilevato un tipo di segmento non valido.|  
+|colonna|Restituisce un errore se il conteggio del numero di segmenti in una colonna qualsiasi è negativo o se il puntatore alla struttura di segmenti di colonna per un segmento ha un collegamento NULL.|È stato rilevato un danneggiamento nel livello di archiviazione: la raccolta di segmenti nella colonna '%{parent/}' è danneggiata.|  
 |Comando DBCC|Il comando DBCC segnala più messaggi di stato durante l'esecuzione dell'operazione DBCC.  Visualizza un messaggio di stato che include il nome del database, della tabella o della colonna dell'oggetto prima dell'avvio e un altro messaggio al termine del controllo di ogni oggetto.|Verifica della coerenza del \<objectname > \<objecttype >. Fase: verifica preliminare.<br /><br /> Verifica della coerenza del \<objectname > \<objecttype >. Fase: verifica finale.|  
   
 ## <a name="common-resolutions-for-error-conditions"></a>Risoluzioni comuni per le condizioni di errore  
@@ -262,8 +262,8 @@ Execution complete
 |Errore|Problema|Soluzione|  
 |-----------|-----------|----------------|  
 |**Errori nella gestione metadati**<br /><br /> Il riferimento all'oggetto '\<objectID >' non è valido. Non corrisponde alla struttura della gerarchia di classi dei metadati.|Comando non valido|Verificare la sintassi del comando. È probabile che sia stato incluso un oggetto di livello inferiore senza specificare uno o più dei relativi oggetti padre.|  
-|**Errori nella gestione metadati**<br /><br /> Entrambi il \<oggetto > con ID '\<objectID >' non esiste nel \<parentobject > con ID '\<ID oggetto padre >', o l'utente non dispone di autorizzazioni per accedere all'oggetto.|Danneggiamento dell'indice (multidimensionale)|Rielaborare l'oggetto e tutti gli eventuali oggetti dipendenti.|  
-|**Errore durante la verifica di coerenza della partizione**<br /><br /> Si è verificato un errore durante la verifica della coerenza del \<nome partizione > partizione del \<misura-group-name > gruppo di misure per il \<nome cubo > del cubo dal \<-nome del database > database. È possibile correggere l'errore elaborando di nuovo la partizione o gli indici.|Danneggiamento dell'indice (multidimensionale)|Rielaborare l'oggetto e tutti gli eventuali oggetti dipendenti.|  
+|**Errori nella gestione metadati**<br /><br /> Entrambi il \<oggetto > con l'ID di '\<objectID >' non esiste nel \<parentobject > con l'ID di '\<ID oggetto padre >', oppure l'utente non dispone delle autorizzazioni per accedere all'oggetto.|Danneggiamento dell'indice (multidimensionale)|Rielaborare l'oggetto e tutti gli eventuali oggetti dipendenti.|  
+|**Errore durante la verifica di coerenza della partizione**<br /><br /> Si è verificato un errore durante la verifica della coerenza del \<-nome della partizione > partizione del \<misure-group-name > gruppo di misure per il \<nome-cubo > del cubo dal \<-nome del database > database. È possibile correggere l'errore elaborando di nuovo la partizione o gli indici.|Danneggiamento dell'indice (multidimensionale)|Rielaborare l'oggetto e tutti gli eventuali oggetti dipendenti.|  
 |**Le statistiche dei segmenti della partizione sono danneggiate**|Danneggiamento dell'indice (multidimensionale)|Rielaborare l'oggetto e tutti gli eventuali oggetti dipendenti.|  
 |**Il segmento della partizione è danneggiato**|Danneggiamento dei metadati (multidimensionali o tabulari)|Eliminare e ridistribuire il progetto o ripristinarlo da un backup e rielaborarlo.<br /><br /> Per istruzioni, vedere il blog [How to Deal with Corruption in Analysis Services](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Gestione dei danneggiamenti in Analysis Services).|  
 |**Danneggiamento di metadati della tabella**<br /><br /> Tabella \<nome-tabella > file di metadati è danneggiato. Non è possibile trovare la tabella principale nel nodo DataFileList.|Danneggiamento dei metadati (solo tabulari)|Eliminare e ridistribuire il progetto o ripristinarlo da un backup e rielaborarlo.<br /><br /> Per istruzioni, vedere il blog [How to Deal with Corruption in Analysis Services](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Gestione dei danneggiamenti in Analysis Services).|  
@@ -299,8 +299,8 @@ Execution complete
 ## <a name="see-also"></a>Vedere anche  
  [Elaborare database, tabelle o partizioni &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Monitorare un'istanza di Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
+ [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Livello di compatibilità per i modelli tabulari in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Proprietà del server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
+ [proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   

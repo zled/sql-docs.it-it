@@ -1,5 +1,5 @@
 ---
-title: Proprietà readwritemode del database | Documenti Microsoft
+title: Proprietà readwritemode del database | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ec2aebbb202aadf69ccb9ab2c214d878aa0d9d9e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7e80433c224f08b9074a8d1ef93ef96bdc157853
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022888"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147166"
 ---
 # <a name="database-readwritemodes"></a>Proprietà ReadWriteMode del database
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,8 +45,8 @@ ms.locfileid: "34022888"
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Collegamento e scollegamento di database di Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
- [Spostare un Database di Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [Elemento Detach](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [Elemento Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
+ [Spostare un database di Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
+ [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

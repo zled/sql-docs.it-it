@@ -1,5 +1,5 @@
 ---
-title: Unione di partizioni (XMLA) | Documenti Microsoft
+title: Unione di partizioni (XMLA) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32c212ee7ffdfe234c5a4dd7760c32b0504ac38b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 419ebd0d67b65213fde7393430aedec14249b2ae
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025128"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147906"
 ---
 # <a name="merging-partitions-xmla"></a>Unione di partizioni (XMLA)
-  Se le partizioni hanno la stessa progettazione delle aggregazioni e una struttura, è possibile unire la partizione usando il [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando XML for Analysis (XMLA). L'unione è un'azione particolarmente importante da eseguire quando si gestiscono partizioni, soprattutto per le partizioni che contengono dati cronologici partizionati in base alla data.  
+  Se le partizioni hanno la stessa progettazione delle aggregazioni e struttura, è possibile unire la partizione tramite il [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) comando XML for Analysis (XMLA). L'unione è un'azione particolarmente importante da eseguire quando si gestiscono partizioni, soprattutto per le partizioni che contengono dati cronologici partizionati in base alla data.  
   
  Un cubo finanziario può utilizzare ad esempio due partizioni:  
   
@@ -25,24 +25,24 @@ ms.locfileid: "34025128"
   
 -   Un'altra partizione contiene dati finanziari per gli anni precedenti utilizzando impostazioni di archiviazione OLAP multidimensionale (MOLAP) per l'archiviazione.  
   
- Entrambe le partizioni utilizzano impostazioni di archiviazione diverse, ma la stessa progettazione delle aggregazioni. Anziché elaborare il cubo attraverso anni di dati cronologici alla fine dell'anno, è possibile utilizzare invece il **MergePartitions** comando per unire la partizione per l'anno corrente della partizione degli anni precedenti. In questo modo è possibile mantenere i dati aggregati senza che sia necessaria un'elaborazione completa del cubo che potrebbe richiedere molto tempo.  
+ Entrambe le partizioni utilizzano impostazioni di archiviazione diverse, ma la stessa progettazione delle aggregazioni. Invece di elaborare il cubo attraverso anni di dati cronologici alla fine dell'anno, è possibile usare la **MergePartitions** comando per unire la partizione per l'anno corrente della partizione degli anni precedenti. In questo modo è possibile mantenere i dati aggregati senza che sia necessaria un'elaborazione completa del cubo che potrebbe richiedere molto tempo.  
   
 ## <a name="specifying-partitions-to-merge"></a>Specifica di partizioni da unire  
- Quando il **MergePartitions** comando viene eseguito, i dati aggregati archiviati nelle partizioni di origine specificate nella [origine](../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) proprietà viene aggiunta alla partizione di destinazione specificata nella [destinazione ](../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md) proprietà.  
+ Quando la **MergePartitions** comando viene eseguito, i dati aggregati archiviati nelle partizioni di origine specificate nel [origine](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) viene aggiunta alla partizione di destinazione specificata nella proprietà di [destinazione ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) proprietà.  
   
 > [!NOTE]  
->  Il **origine** proprietà può contenere più di un riferimento all'oggetto di partizione. Tuttavia, il **destinazione** non è di proprietà.  
+>  Il **origine** proprietà può contenere più di un riferimento all'oggetto partizione. Tuttavia, il **destinazione** non è di proprietà.  
   
- Per essere unite, le partizioni specificate in entrambi i **origine** e **destinazione** deve essere incluso nello stesso gruppo di misure e utilizzare la stessa progettazione delle aggregazioni. In caso contrario si verifica un errore.  
+ Per essere unite, le partizioni specificate in entrambe le **origine** e **destinazione** deve essere incluso nello stesso gruppo di misure e usare la stessa progettazione delle aggregazioni. In caso contrario si verifica un errore.  
   
- Le partizioni specificate nel **origine** vengono eliminati dopo il **MergePartitions** comando è stato completato correttamente.  
+ Le partizioni specificate nella **origine** vengono eliminati dopo il **MergePartitions** comando viene completato correttamente.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="description"></a>Description  
- Nell'esempio seguente vengono unite tutte le partizioni nel **Customer Counts** gruppo di misure del **Adventure Works** cubo il **Adventure Works DW** esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database nel **Customers_2004** partizione.  
+ L'esempio seguente unisce tutte le partizioni del **Customer Counts** gruppo di misure del **Adventure Works** cubo la **Adventure Works DW** esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di database nel **Customers_2004** partizione.  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

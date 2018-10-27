@@ -1,5 +1,5 @@
 ---
-title: Gestione delle cache (XMLA) | Documenti Microsoft
+title: Gestione delle cache (XMLA) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a6644b7caff5da31261b115bfc5608823622260a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1080db165770b414d15e4ffb43daf5466021a71a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022768"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147056"
 ---
 # <a name="managing-caches-xmla"></a>Gestione delle cache (XMLA)
-  È possibile utilizzare il [ClearCache](../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md) comando XML for Analysis (XMLA) per cancellare la cache di una dimensione specificata o una partizione. Cancellare la cache di forza [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ricompilazione della cache per l'oggetto.  
+  È possibile usare la [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) comando XML for Analysis (XMLA) per cancellare la cache di una dimensione specificata o una partizione. Cancellare le forze della cache [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ricompilazione della cache per l'oggetto.  
   
 ## <a name="specifying-objects"></a>Specifica di oggetti  
- Il [oggetto](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) proprietà del **ClearCache** comando può contenere un riferimento all'oggetto solo per uno dei seguenti oggetti. Se un riferimento è relativo a un oggetto diverso da uno di quelli seguenti, si verifica un errore:  
+ Il [oggetto](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) proprietà delle **ClearCache** comando può contenere un riferimento all'oggetto solo per uno degli oggetti seguenti. Se un riferimento è relativo a un oggetto diverso da uno di quelli seguenti, si verifica un errore:  
   
  Database  
  Cancella la cache per tutte le dimensioni e le partizioni contenute nel database.  
   
- Dimensione  
+ Dimension  
  Cancella la cache per la dimensione specificata.  
   
  Cube  

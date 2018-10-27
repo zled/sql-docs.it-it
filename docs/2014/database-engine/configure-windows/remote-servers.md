@@ -17,12 +17,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 98585ac8a3e504a2b73741559f4db839e6737154
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5e2c7a12c45a0732014a20a7471d664e808b5883
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168691"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991160"
 ---
 # <a name="remote-servers"></a>Server remoti
   I server remoti sono supportati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esclusivamente per compatibilità con le versioni precedenti. È opportuno impostare le nuove applicazioni in modo che utilizzino i server collegati. Per altre informazioni, vedere [Server collegati &#40;Motore di database&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="viewing-local-or-remote-server-properties"></a>Visualizzazione delle proprietà dei server locali o remoti  
- Per esaminare gli attributi per i server locali o remoti, è possibile usare la stored procedure estesa **xp_msver** . Tali attributi includono il numero di versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il tipo e il numero di processori nel computer e la versione del sistema operativo. Dal server locale è possibile visualizzare database, file, account di accesso e strumenti di un server remoto. Per altre informazioni, vedere [xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+ Per esaminare gli attributi per i server locali o remoti, è possibile usare la stored procedure estesa **xp_msver** . Tali attributi includono il numero di versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il tipo e il numero di processori nel computer e la versione del sistema operativo. Dal server locale è possibile visualizzare database, file, account di accesso e strumenti di un server remoto. Per altre informazioni, vedere [xp_msver &#40; Transact-SQL &#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Server collegati &#40;Motore di database&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  

@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6455a83328f973004f6c0e7ff39f574413693d94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111989"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145596"
 ---
 # <a name="impersonation-ssas-tabular"></a>Rappresentazione (SSAS tabulare)
   In questo argomento vengono fornite agli autori di modelli tabulari informazioni sulla modalità di utilizzo delle credenziali di accesso da parte di Analysis Services in caso di connessione a un'origine dati per importare ed elaborare (aggiornare) i dati.  
@@ -71,7 +71,7 @@ ms.locfileid: "48111989"
 |**Nome utente di Windows specifico e la password** <sup>2</sup>|ImpersonateWindowsUserAccount|Questa opzione consente di specificare che nel modello viene utilizzato un account utente di Windows per importare o elaborare dati dall'origine dati. Il dominio e il nome dell'account utente nel formato seguente:**\<nome di dominio >\\< nome dell'account utente\>**. Si tratta dell'opzione predefinita per la creazione di un nuovo modello tramite l'Importazione guidata tabella.|  
 |**Account servizio**|ImpersonateServiceAccount|Questa opzione consente di specificare che nel modello vengono utilizzate le credenziali di sicurezza associate all'istanza del servizio Analysis Services tramite cui viene gestito il modello.|  
   
- <sup>1</sup>ImpersonationMode consente di specificare il valore per il [elemento DataSourceImpersonationInfo &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) proprietà dell'origine dati.  
+ <sup>1</sup>ImpersonationMode consente di specificare il valore per il [elemento DataSourceImpersonationInfo &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) proprietà dell'origine dati.  
   
  <sup>2</sup>quando si utilizza questa opzione, se il database dell'area di lavoro viene rimosso dalla memoria, a causa di un riavvio o il **memorizzazione area di lavoro** è impostata su **Scarica dalla memoria** o  **Elimina dall'area di lavoro**, e il progetto di modello è chiuso, nella sessione successiva, se si tenta di elaborare i dati della tabella, verrà richiesto di immettere le credenziali per ogni origine dati. Analogamente, se un database modello distribuito viene rimosso dalla memoria, verranno richieste le credenziali per ogni origine dati.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48111989"
   
 ## <a name="see-also"></a>Vedere anche  
  [Modalità DirectQuery &#40;SSAS tabulare&#41;](directquery-mode-ssas-tabular.md)   
- [Origini dati &#40;tabulare di SSAS&#41;](../data-sources-ssas-tabular.md)   
- [Distribuzione di soluzioni di modelli tabulari &#40;tabulare di SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Origini dati &#40;SSAS tabulare&#41;](../data-sources-ssas-tabular.md)   
+ [Distribuzione di una soluzione del modello tabulare &#40;SSAS tabulare&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

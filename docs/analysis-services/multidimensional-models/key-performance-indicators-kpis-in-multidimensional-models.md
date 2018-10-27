@@ -1,5 +1,5 @@
 ---
-title: Indicatori di prestazioni (KPI) nei modelli multidimensionali chiave | Documenti Microsoft
+title: Indicatori di prestazioni (KPI) nei modelli multidimensionali chiave | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7b7c036b09113711315ada3120538b5117931be7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bf1ee397ea32faadc191d90eed11a33861a71e5d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027561"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147786"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicatori KPI nei modelli multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34027561"
   
  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]un indicatore KPI è costituito da una raccolta di calcoli associati a un gruppo di misure in un cubo e usati per valutare il successo aziendale. Questi calcoli sono in genere una combinazione di espressioni MDX (Multidimensional Expressions) o di membri calcolati. Gli indicatori KPI dispongono inoltre di metadati aggiuntivi che offrono informazioni sulla modalità di visualizzazione dei risultati dei calcoli degli indicatori stessi nelle applicazioni client.  
   
- Un indicatore KPI gestisce le informazioni su un set di obiettivi, la formula effettiva delle prestazioni registrate nel cubo e la misurazione per la visualizzazione della tendenza e dello stato delle prestazioni. Gli oggetti AMO sono utilizzati per specificare le formule e altre definizioni relative ai valori di un indicatore di prestazioni chiave. Un QI (Query Interface), ad esempio ADOMD.NET, viene utilizzato dall'applicazione client per recuperare i valori KPI ed esporli all'utente finale. Per altre informazioni vedere [Sviluppo con ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ Un indicatore KPI gestisce le informazioni su un set di obiettivi, la formula effettiva delle prestazioni registrate nel cubo e la misurazione per la visualizzazione della tendenza e dello stato delle prestazioni. Gli oggetti AMO sono utilizzati per specificare le formule e altre definizioni relative ai valori di un indicatore di prestazioni chiave. Un QI (Query Interface), ad esempio ADOMD.NET, viene utilizzato dall'applicazione client per recuperare i valori KPI ed esporli all'utente finale. Per altre informazioni vedere [Sviluppo con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Un oggetto <xref:Microsoft.AnalysisServices.Kpi> semplice è composto da informazioni di base, dall'obiettivo, dal valore effettivo raggiunto, da un valore di stato, da un valore di tendenza e da una cartella in cui viene visualizzato l'indicatore KPI. Le informazioni di base includono il nome e descrizione dell'indicatore KPI. L'obiettivo è un'espressione MDX che restituisce un numero. Il valore effettivo è un'espressione MDX che restituisce un numero. I valori di stato e di tendenza sono espressioni MDX che restituiscono un numero. La cartella è un percorso consigliato per l'indicatore KPI da presentare al client.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34027561"
 |Nome|Definizione|  
 |----------|----------------|  
 |Obiettivo|Calcolo o espressione numerica MDX che restituisce il valore di destinazione dell'indicatore di prestazioni chiave.|  
-|Value|Espressione numerica MDX che restituisce il valore effettivo dell'indicatore di prestazioni chiave.|  
+|valore|Espressione numerica MDX che restituisce il valore effettivo dell'indicatore di prestazioni chiave.|  
 |Stato|Espressione MDX che rappresenta lo stato dell'indicatore di prestazioni chiave in un punto nel tempo specifico.<br /><br /> L'espressione MDX relativa allo stato deve restituire un valore normalizzato compreso tra -1 e 1. I valori minori o uguali a -1 vengono interpretati come "errati" o "bassi". Un valore pari a zero (0) viene interpretato come "accettabile" o "medio". I valori maggiori di o uguali a 1 vengono interpretati come "buoni" o "alti".<br /><br /> Facoltativamente, può venire restituito un numero illimitato di valori intermedi e questi valori possono essere utilizzati per visualizzare un numero qualsiasi di stati aggiuntivi, se l'applicazione client lo consente.|  
 |Tendenza|Espressione MDX che valuta il valore dell'indicatore di prestazioni chiave nel tempo. La tendenza può essere rappresentata da qualsiasi criterio basato sul tempo che sia utile in un contesto aziendale specifico.<br /><br /> L'espressione MDX relativa alla tendenza consente a un utente aziendale di determinare se l'indicatore di prestazioni chiave sta migliorando o peggiorando nel tempo.|  
 |Indicatore di stato|Elemento visivo che offre un'indicazione immediata dello stato dell'indicatore di prestazioni chiave. Il tipo di visualizzazione dell'elemento è determinato dal valore dell'espressione MDX che valuta lo stato.|  
@@ -51,7 +51,7 @@ ms.locfileid: "34027561"
 ## <a name="parent-kpis"></a>Indicatori di prestazioni chiave padre  
  In un'organizzazione potrebbe essere necessario tenere traccia di metriche aziendali diverse a più livelli. Potrebbero ad esempio venire utilizzati solo due o tre indicatori di prestazioni chiave per valutare il successo aziendale, ma questi indicatori validi per l'intera azienda potrebbero essere basati su altri tre o quattro indicatori di prestazioni chiave calcolati dalle business unit nella società. Le business unit di una società potrebbero inoltre utilizzare dati statistici diversi per calcolare lo stesso indicatore di prestazioni chiave, dei cui risultati è possibile eseguire il rollup nell'indicatore di prestazioni chiave valido per l'intera azienda.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Consente di definire una relazione padre-figlio tra gli indicatori KPI. Questa relazione padre-figlio consente di utilizzare i risultati dell'indicatore di prestazioni chiave figlio per calcolare i risultati dell'indicatore di prestazioni chiave padre. Questa relazione può inoltre essere utilizzata dalle applicazioni client per visualizzare in modo corretto gli indicatori di prestazioni chiave padre e figlio.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile definire una relazione padre-figlio tra indicatori di prestazioni chiave. Questa relazione padre-figlio consente di utilizzare i risultati dell'indicatore di prestazioni chiave figlio per calcolare i risultati dell'indicatore di prestazioni chiave padre. Questa relazione può inoltre essere utilizzata dalle applicazioni client per visualizzare in modo corretto gli indicatori di prestazioni chiave padre e figlio.  
   
 ## <a name="weights"></a>Pesi  
  È possibile assegnare pesi anche agli indicatori di prestazioni chiave figlio. I pesi consentono ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di modificare in modo proporzionale i risultati dell'indicatore di prestazioni chiave figlio quando si calcola il valore dell'indicatore di prestazioni chiave padre.  

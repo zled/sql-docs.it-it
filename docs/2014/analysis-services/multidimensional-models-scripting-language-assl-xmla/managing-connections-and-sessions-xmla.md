@@ -19,12 +19,12 @@ ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 428eb8165a89cff4210096e993f3140066a8e759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4932ca855d753577765cca2f262e1756352dda35
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062807"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146236"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gestione di connessioni e sessioni (XMLA)
   *Le informazioni sullo stato* è una condizione durante il quale il server mantiene le identità e il contesto di un client tra le chiamate di metodo. *Concetto* è una condizione durante il quale il server non ricorda l'identità e il contesto di un client dopo il completamento di una chiamata al metodo.  
@@ -37,7 +37,7 @@ ms.locfileid: "48062807"
   
 -   È possibile eseguire più comandi nel contesto di una singola sessione.  
   
--   Supporto per le transazioni nel contesto di XMLA è tramite comandi specifici del provider inviati con il [Execute](../xmla/xml-elements-methods-execute.md) (metodo).  
+-   Supporto per le transazioni nel contesto di XMLA è tramite comandi specifici del provider inviati con il [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) (metodo).  
   
  XMLA definisce una modalità per supportare sessioni in un ambiente Web in modo analogo all'approccio utilizzato dal protocollo DAV (Distributed Authoring and Versioning) per implementare il blocco in un ambiente a regime di controllo libero. L'analogia con il protocollo DAV consiste nel fatto che è consentita la scadenza delle sessioni nel provider per diversi motivi, ad esempio se si verifica un timeout o un errore di connessione. Quando le sessioni sono supportate, i servizi Web devono essere consapevoli e pronti per gestire di set interrotti di comandi che devono essere riavviati.  
   

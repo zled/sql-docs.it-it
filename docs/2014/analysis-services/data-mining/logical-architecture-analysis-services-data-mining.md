@@ -17,12 +17,12 @@ ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ed73dadb5f13a62e6dc39e43388a4e2427a92b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbfbdc87e7657f8d1d20e75186be2f3c0d79a900
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166251"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144866"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Architettura logica (Analysis Services – Data mining)
   Il processo di data mining è basato sull'interazione di più componenti.  
@@ -51,7 +51,7 @@ ms.locfileid: "48166251"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  Una struttura di data mining è un contenitore di dati logico che definisce il dominio di dati in base al quale vengono compilati i modelli di data mining. Una sola struttura di data mining può supportare più modelli di data mining.  
   
- Quando è necessario utilizzare i dati nella soluzione di data mining, Analysis Services legge i dati dall'origine e genera una cache di aggregazioni e altre informazioni. Per impostazione predefinita, questa cache è resa persistente in modo che i dati di training possano essere riutilizzati per supportare modelli aggiuntivi. Se è necessario eliminare la cache, modificare il `CacheMode` proprietà nell'oggetto struttura di data mining sul valore, `ClearAfterProcessing`. Per altre informazioni, vedere [Classi di data mining AMO](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ Quando è necessario utilizzare i dati nella soluzione di data mining, Analysis Services legge i dati dall'origine e genera una cache di aggregazioni e altre informazioni. Per impostazione predefinita, questa cache è resa persistente in modo che i dati di training possano essere riutilizzati per supportare modelli aggiuntivi. Se è necessario eliminare la cache, modificare la proprietà `CacheMode` nell'oggetto struttura di data mining sul valore `ClearAfterProcessing`. Per altre informazioni, vedere [Classi di data mining AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] consente anche di separare i dati in set di dati di training e di test, in modo da poter testare i modelli di data mining rispetto a un set di dati selezionato a caso e rappresentativo. I dati in realtà non vengono archiviati separatamente; piuttosto i dati del case nella cache della struttura vengono contrassegnati da una proprietà che indica se tale particolare caso viene utilizzato per il training o il test. Se la cache viene eliminata, non è possibile recuperare tali informazioni.  
   
@@ -83,18 +83,18 @@ ms.locfileid: "48166251"
  Per altre informazioni, vedere [Gestione di assembly di modelli multidimensionali](../multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  **Stored procedure personalizzate**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data mining di supporta l'utilizzo di stored procedure per usare oggetti di data mining. È possibile creare stored procedure personalizzate per estendere le funzionalità e utilizzare più facilmente i dati restituiti da query di stima e query contenuto.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Il data mining di supporta l'uso di stored procedure per usare oggetti di data mining. È possibile creare stored procedure personalizzate per estendere le funzionalità e utilizzare più facilmente i dati restituiti da query di stima e query contenuto.  
   
  [Definizione delle stored procedure](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
  Le seguenti stored procedure sono supportate per l'utilizzo nell'esecuzione della convalida incrociata.  
   
- [Stored procedure di Data Mining &#40;Analysis Services - Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Stored procedure di data mining &#40;Analysis Services - Data mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
  Inoltre, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono presenti molte stored procedure di sistema utilizzate internamente per il data mining. Benché le stored procedure di sistema siano per uso interno, possono rivelarsi utili scelte rapide. Microsoft si riserva il diritto di modificare tali stored procedure in base alle esigenze; pertanto, per l'utilizzo in fase di produzione, si consiglia di creare query tramite DMX, AMO o XMLA.  
   
  **Algoritmi plug-in personalizzati**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce un meccanismo per la creazione di algoritmi personalizzati e aggiunta di tali algoritmi come nuovo servizio di data mining all'istanza del server.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce un meccanismo per la creazione di algoritmi personalizzati e l'aggiunta di tali algoritmi come nuovo servizio di data mining all'istanza del server.  
   
  In Analysis Services vengono utilizzate le interfacce COM per comunicare con gli algoritmi plug-in. Per altre informazioni sull'implementazione dei nuovi algoritmi, vedere [Algoritmi plug-in](plugin-algorithms.md).  
   
@@ -104,6 +104,6 @@ ms.locfileid: "48166251"
   
 ## <a name="see-also"></a>Vedere anche  
  [Elaborazione degli oggetti modello multidimensionale](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

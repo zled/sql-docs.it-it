@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fdffbcc946af91efd61a5e63da7f79087d3053f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af11bb2283db0561c176fb543ff21c3c04f676d3
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159801"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100252"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Backup gestito di SQL Server in Windows Azure
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] consente di gestire e automatizzare i backup di SQL Server nel servizio di archiviazione BLOB di Windows Azure. La strategia di backup utilizzata da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è basata sul periodo di memorizzazione e sul carico di lavoro della transazione nel database. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] supporta il ripristino temporizzato per il periodo di memorizzazione specificato.   
@@ -42,7 +42,7 @@ ms.locfileid: "48159801"
  Funzionalità di SQL Server tramite cui il backup di database viene automatizzato e i backup vengono gestiti in base al periodo di memorizzazione.  
   
  Periodo di memorizzazione  
- Il periodo di conservazione viene utilizzato da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per determinare quali file di backup devono essere mantenuti nella risorsa di archiviazione per ripristinare un database in un punto nel tempo all'interno di intervallo di tempo specificato.  I valori supportati sono compresi nell'intervallo 1-30 giorni.  
+ Periodo di memorizzazione usato da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per determinare quali file di backup devono essere mantenuti nella risorsa di archiviazione per recuperare un database fino a una data e ora specifiche comprese nell'intervallo di tempo specificato.  I valori supportati sono compresi nell'intervallo 1-30 giorni.  
   
  Catena di log  
  Una sequenza continua di backup del log è denominata catena di log. Una catena di log ha inizio con un backup completo del database.  
@@ -72,7 +72,7 @@ ms.locfileid: "48159801"
 |-|-|  
 |Oggetto di sistema|Description|  
 |**MSDB**|Vengono archiviati i metadati e la cronologia di backup di tutti i backup creati da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)|Stored procedure di sistema per abilitare e configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per un database.|  
+|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|Stored procedure di sistema per abilitare e configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per un database.|  
 |[smart_admin.set_instance_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|Stored procedure per abilitare e configurare le impostazioni predefinite di sistema [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per l'istanza di SQL Server.|  
 |[smart_admin.sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|Stored procedure di sistema per sospendere e riprendere [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|Stored procedure di sistema per abilitare e configurare il monitoraggio di [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Esempi: abilitazione di eventi estesi, impostazioni della posta elettronica per le notifiche.|  
@@ -158,7 +158,7 @@ ms.locfileid: "48159801"
 |Strumenti e passaggi per risolvere i problemi relativi a [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Risoluzione dei problemi relativi al backup gestito di SQL Server in Windows Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [Backup e ripristino di SQL Server nel servizio Archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [Backup SQL Server nell'URL](sql-server-backup-to-url.md)   
  [SQL Server Managed Backup in Windows Azure: interoperabilità e coesistenza](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
  [Risoluzione dei problemi relativi al backup gestito di SQL Server in Windows Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  

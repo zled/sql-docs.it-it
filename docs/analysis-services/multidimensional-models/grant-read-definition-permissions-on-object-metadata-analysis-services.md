@@ -1,5 +1,5 @@
 ---
-title: Concedere autorizzazioni di lettura definizione per i metadati degli oggetti (Analysis Services) | Documenti Microsoft
+title: Concessione di autorizzazioni di lettura definizione per i metadati degli oggetti (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a30da6aa162cf729dd5e829b8baa2528ce80a39a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e6cc110a773981a7592f8cdd06b3fd10b2d83144
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021848"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146376"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Concedere le autorizzazioni di lettura definizione per i metadati degli oggetti (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   L'autorizzazione per la lettura di una definizione dell'oggetto o dei metadati negli oggetti selezionati consente a un amministratore di concedere l'autorizzazione per la visualizzazione delle informazioni sull'oggetto, senza tuttavia concedere l'autorizzazione per la modifica della definizione dell'oggetto, per la modifica della struttura dell'oggetto o per la visualizzazione dei dati effettivi dell'oggetto. Le autorizzazioni**Lettura definizione** possono essere concesse a livello di database, origine dati, dimensione, struttura di data mining e modello di data mining. Se sono necessarie le autorizzazioni **Lettura definizione** per un cubo, abilitare l'opzione **Lettura definizione** per il database. Tenere presente che le autorizzazioni si sommano tra loro. Si supponga, ad esempio, uno scenario in cui un ruolo concede l'autorizzazione per la lettura dei metadati per un cubo, mentre un secondo ruolo concede allo stesso utente l'autorizzazione per la lettura dei metadati per una dimensione. Le autorizzazioni concesse dai due diversi ruoli si sommano, assegnando all'utente l'autorizzazione per la lettura sia dei metadati per il cubo che dei metadati per la dimensione inclusa nel database.  
   
 > [!NOTE]  
->  La lettura dei metadati di un database rappresenta l'autorizzazione minima necessaria per la connessione a un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Un utente che dispone dell'autorizzazione per la lettura dei metadati può inoltre usare il set di righe dello schema DISCOVER_XML_METADATA per eseguire una query sull'oggetto e visualizzarne i metadati. Per altre informazioni, vedere [Set di righe DISCOVER_XML_METADATA](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md).  
+>  La lettura dei metadati di un database rappresenta l'autorizzazione minima necessaria per la connessione a un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Un utente che dispone dell'autorizzazione per la lettura dei metadati può inoltre usare il set di righe dello schema DISCOVER_XML_METADATA per eseguire una query sull'oggetto e visualizzarne i metadati. Per altre informazioni, vedere [Set di righe DISCOVER_XML_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset).  
   
 ## <a name="set-read-definition-permissions-on-a-database"></a>Impostare le autorizzazioni di lettura definizione per un database  
  Quando si concede l'autorizzazione per la lettura dei metadati del database, si concede anche l'autorizzazione per la lettura dei metadati di tutti gli oggetti all'interno del database.  
@@ -55,7 +55,7 @@ ms.locfileid: "34021848"
 5.  Fare clic su **OK** per completare la creazione del ruolo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concedere autorizzazioni per database & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
- [Concedere le autorizzazioni di elaborazione & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [Concedere le autorizzazioni per il database &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
+ [Concedere le autorizzazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

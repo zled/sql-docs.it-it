@@ -1,5 +1,5 @@
 ---
-title: Power Pivot Management Dashboard and Usage Data | Documenti Microsoft
+title: Power Pivot Management Dashboard and Usage Data | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 30f0e84ee388a8a452c855fbd045863f7e2389b0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030342"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099932"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Dati di utilizzo e dashboard di gestione PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "34030342"
     9. In Specifica di una query MDX fare clic su **Progettazione** per aprire Progettazione query MDX al fine di assemblare i dati che si desidera utilizzare, quindi creare i report della tabella pivot o del grafico pivot per visualizzare i dati in Excel.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiornamento dati PowerPivot con SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [Aggiornamento dati PowerPivot con SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

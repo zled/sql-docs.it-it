@@ -13,22 +13,22 @@ ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15b50e0cd8b030c6026dfa46c92a2d52dbcb2e5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c4f46a78941b527b809fd17d7d82946cce1b8af
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216541"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148196"
 ---
 # <a name="database-storage-location"></a>Percorso di archiviazione dei database
   Spesso, un amministratore del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] desidera che un determinato database risieda al di fuori della cartella di dati del server. Queste situazioni sono il più delle volte determinate da esigenze aziendali, ad esempio il miglioramento delle prestazioni o l'ampliamento dello spazio di archiviazione. Questi casi, il `DbStorageLocation` consente di proprietà del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba per specificare il percorso del database in un dispositivo disco o nella rete locale.  
   
 ## <a name="dbstoragelocation-database-property"></a>Proprietà di database DbStorageLocation  
- Il `DbStorageLocation` proprietà database consente di specificare la cartella in cui [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea e gestisce tutti i dati e metadati di file di database. Tutti i file di metadati vengono archiviati nella `DbStorageLocation` cartella, ad eccezione del file di metadati del database, che viene archiviato nella cartella di dati del server. Esistono due importanti considerazioni quando si imposta il valore di `DbStorageLocation` proprietà di database:  
+ La proprietà di database `DbStorageLocation` specifica la cartella in cui vengono creati e gestiti tutti i file di dati e di metadati dei database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Tutti i file di metadati vengono archiviati nella cartella `DbStorageLocation`, ad eccezione del file di metadati del database, che viene archiviato nella cartella di dati del server. Per l'impostazione del valore della proprietà di database `DbStorageLocation`, è necessario considerare due fattori importanti:  
   
--   Il `DbStorageLocation` proprietà di database deve essere impostata su un percorso di cartella UNC esistente o una stringa vuota. Una stringa vuota è il valore predefinito per la cartella di dati del server. Se la cartella non esiste, quando si esegue un comando `Create`, `Attach` o `Alter` verrà generato un errore.  
+-   La proprietà di database `DbStorageLocation` deve essere impostata su un percorso di cartella in formato UNC esistente o su una stringa vuota. Una stringa vuota è il valore predefinito per la cartella di dati del server. Se la cartella non esiste, quando si esegue un comando `Create`, `Attach` o `Alter` verrà generato un errore.  
   
--   Il `DbStorageLocation` proprietà di database non può essere impostata in modo che punti alla cartella di dati del server o a una delle relative sottocartelle. Se il percorso punta alla cartella di dati del server o a una delle relative sottocartelle, quando si esegue un comando `Create`, `Attach` o `Alter` verrà generato un errore.  
+-   La proprietà di database `DbStorageLocation` non può essere impostata in modo che punti a una cartella di dati del server o a una delle relative sottocartelle. Se il percorso punta alla cartella di dati del server o a una delle relative sottocartelle, quando si esegue un comando `Create`, `Attach` o `Alter` verrà generato un errore.  
   
 > [!IMPORTANT]  
 >  È consigliabile impostare il percorso UNC per l'utilizzo di una rete SAN (Storage Area Network) basata su iSCSI o di un disco collegato localmente. Qualsiasi percorso UNC di una condivisione di rete o qualsiasi soluzione di archiviazione remota a latenza elevata produce un'installazione non supportata.  
@@ -45,10 +45,10 @@ ms.locfileid: "48216541"
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [Collegamento e scollegamento di database di Analysis Services](attach-and-detach-analysis-services-databases.md)   
- [Spostare un Database di Analysis Services](move-an-analysis-services-database.md)   
- [Elemento DbStorageLocation](../xmla/xml-elements-properties/dbstoragelocation-element.md)   
- [Creare l'elemento &#40;XMLA&#41;](../xmla/xml-elements-commands/create-element-xmla.md)   
- [Elemento Attach](../xmla/xml-elements-commands/attach-element.md)   
- [Elemento Synchronize &#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)  
+ [Spostare un database di Analysis Services](move-an-analysis-services-database.md)   
+ [Elemento DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
+ [Elemento Create &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
+ [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Elemento Synchronize &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

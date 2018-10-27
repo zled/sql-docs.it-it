@@ -10,12 +10,12 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 296274548b725a620d577916d2c76d31c923c4c0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e30906efb126b0c7fba225ff2aeb3308f0bf050c
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356532"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099783"
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>What ' s [!INCLUDE[name-sos](../includes/name-sos.md)]?
 
@@ -47,7 +47,7 @@ I gruppi di server consentono di organizzare le informazioni di connessione per 
 
 ## <a name="integrated-terminal"></a>Terminale integrato
 
-È possibile utilizzare gli strumenti da riga di comando (ad esempio, Bash, PowerShell, sqlcmd, bcp e ssh) nella finestra del terminale integrata direttamente nell'interfaccia utente di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Per ulteriori informazioni su terminale integrato, vedere [Terminale integrato] (terminal.md integrato).
+È possibile utilizzare gli strumenti da riga di comando (ad esempio, Bash, PowerShell, sqlcmd, bcp e ssh) nella finestra del terminale integrata direttamente nell'interfaccia utente di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Per scoprire il terminale integrato, vedere [terminale integrato](integrated-terminal.md).
 
 ## <a name="extensibility-and-extension-authoring"></a>Estendibilità e la creazione di estensione
 

@@ -2,7 +2,7 @@
 title: Panoramica di Data Migration Assistant (SQL Server) | Microsoft Docs
 description: Informazioni su come usare Data Migration Assistant per eseguire la migrazione di database di SQL Server ad altri Server SQL o i database di Azure
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 846fbfdcfb5d99363b98bad09c6efa3a2b46b4ab
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: ce503f2b6cb39296d85c7e917e5600d8de44545a
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100367"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643859"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Panoramica di Data Migration Assistant
 
@@ -77,9 +77,7 @@ DMA sostituisce tutte le versioni precedenti di preparazione aggiornamento di SQ
 - SQL Server 2016
 - SQL Server 2017 in Windows e Linux
 - Database SQL di Azure
-
-> [!NOTE] 
-> DMA non supporta attualmente istanza gestita di Azure SQL Database come destinazione.
+- Istanza gestita di database SQL di Azure
 
 ## <a name="installation"></a>Installazione
 

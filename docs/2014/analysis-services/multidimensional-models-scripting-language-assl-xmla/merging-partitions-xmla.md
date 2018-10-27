@@ -17,15 +17,15 @@ ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6be578d76164e597fe7057bc02f69bf9d9bcce74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c459fcb3efc86566eef046df30d2d8ad9ea601b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142451"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145844"
 ---
 # <a name="merging-partitions-xmla"></a>Unione di partizioni (XMLA)
-  Se le partizioni hanno la stessa progettazione delle aggregazioni e struttura, è possibile unire la partizione tramite il [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando XML for Analysis (XMLA). L'unione è un'azione particolarmente importante da eseguire quando si gestiscono partizioni, soprattutto per le partizioni che contengono dati cronologici partizionati in base alla data.  
+  Se le partizioni hanno la stessa progettazione delle aggregazioni e struttura, è possibile unire la partizione tramite il [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) comando XML for Analysis (XMLA). L'unione è un'azione particolarmente importante da eseguire quando si gestiscono partizioni, soprattutto per le partizioni che contengono dati cronologici partizionati in base alla data.  
   
  Un cubo finanziario può utilizzare ad esempio due partizioni:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48142451"
  Entrambe le partizioni utilizzano impostazioni di archiviazione diverse, ma la stessa progettazione delle aggregazioni. Anziché elaborare il cubo attraverso anni di dati cronologici al termine dell'anno, è possibile utilizzare il comando `MergePartitions` per unire la partizione relativa all'anno corrente con quella relativa agli anni precedenti. In questo modo è possibile mantenere i dati aggregati senza che sia necessaria un'elaborazione completa del cubo che potrebbe richiedere molto tempo.  
   
 ## <a name="specifying-partitions-to-merge"></a>Specifica di partizioni da unire  
- Quando il `MergePartitions` comando viene eseguito, i dati aggregati archiviati nelle partizioni di origine specificate nella [origine](../xmla/xml-elements-properties/source-element-xmla.md) viene aggiunta alla partizione di destinazione specificata nella proprietà il [destinazione](../xmla/xml-elements-properties/target-element-xmla.md) proprietà.  
+ Quando il `MergePartitions` comando viene eseguito, i dati aggregati archiviati nelle partizioni di origine specificate nella [origine](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) viene aggiunta alla partizione di destinazione specificata nella proprietà il [destinazione](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) proprietà.  
   
 > [!NOTE]  
 >  La proprietà `Source` può contenere più di un riferimento all'oggetto partizione, a differenza della proprietà `Target`.  

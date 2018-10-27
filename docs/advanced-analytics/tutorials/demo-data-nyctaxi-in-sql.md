@@ -1,6 +1,6 @@
 ---
 title: Scaricare i dati demo dei Taxi di NYC e gli script per embedded R e Python (SQL Server Machine Learning) | Microsoft Docs
-description: Istruzioni per scaricare i dati di esempio relativi ai taxi di New York City e creazione di un database. I dati vengono utilizzati nelle esercitazioni di SQL Server in cui viene illustrato come incorporare R e Python in SQL Server stored procedure e funzioni T-SQL.
+description: Istruzioni per scaricare i dati di esempio relativi ai taxi di New York City e creazione di un database. I dati viene usati nelle esercitazioni sul linguaggio di SQL Server Python e R che illustra come incorporare script nelle funzioni di T-SQL e stored procedure SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9359bb9a441551d16bc5de3f57f0158e56a98626
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f9482a43a37f3c4feee497ae2fd93029143c84f9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463056"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806711"
 ---
-# <a name="nyc-taxi-demo-data-for-sql-server"></a>Dati demo dei Taxi di NYC per SQL Server
+# <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Dati demo dei Taxi di NYC per le esercitazioni di SQL Server Python e R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo illustra come configurare un database di esempio costituito da dati pubblici dal [Taxi di New York City and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Questi dati vengono utilizzati nelle esercitazioni diversi R e Python per analitica nel database in SQL Server. I dati di esempio sono uno percento del set di dati pubblici. Nel sistema, il file di backup di database è leggermente superiore a 90 MB, fornendo 1.7 milioni di righe nella tabella di dati primario.
@@ -26,7 +26,7 @@ Esercitazioni e guide introduttive utilizzano questo set di dati seguenti:
 
 +  [Usare un modello Python in SQL Server per il training e assegnazione dei punteggi](train-score-using-python-in-tsql.md)
 
-## <a name="download-demo-database"></a>Scaricare i database di esempio
+## <a name="download-files"></a>Scaricare i file
 
 Il database di esempio è un file di backup ospitato da Microsoft. Download di file inizia immediatamente quando si fa clic sul collegamento. 
 
@@ -66,7 +66,7 @@ La tabella seguente riepiloga gli oggetti creati nel database di esempio dei Tax
 |**PredictTipSingleMode**  |stored procedure| Create dallo script PredictTipSingleMode.sql. Chiama il modello con training per creare stime tramite il modello. Questa stored procedure accetta una nuova osservazione come input, con i singoli valori della funzionalità passati come parametri in linea, e restituisce un valore che stima il risultato in base alla nuova osservazione. Questa stored procedure viene utilizzata [Operazionalizzare il modello R](sqldev-operationalize-the-model.md).|
 |**TrainTipPredictionModel**  |stored procedure|Create dallo script TrainTipPredictionModel.sql. Esegue il training di un modello di regressione logistica mediante la chiamata di un pacchetto R. Il modello consente di stimare il valore della colonna indicata. Viene eseguito un training usando il 70% dei dati selezionati casualmente. L'output della stored procedure corrisponde al modello con training, che viene salvato nella tabella nyc_taxi_models. Questa stored procedure viene utilizzata [eseguire il training e salvataggio di un modello](sqldev-train-and-save-a-model-using-t-sql.md).|
 
-## <a name="query-data-for-verification"></a>Eseguire query sui dati per la verifica
+## <a name="query-the-data"></a>Eseguire query sui dati
 
 Come passaggio di convalida, eseguire una query per verificare che i dati è stati caricati.
 

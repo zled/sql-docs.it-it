@@ -14,12 +14,12 @@ ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4eeebefcda3a1ecb542e33b2a4a59a46f302b303
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1da9ecf9ec7278b91e16a6c91a95aa09473ca023
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083741"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100122"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Creare un attributo di data (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un attributo date quando si desidera che gli utenti inseriscano una data come valore di attributo.  
@@ -32,7 +32,7 @@ ms.locfileid: "48083741"
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   È necessario avere un'entità per la quale creare l'attributo. Per altre informazioni, vedere [Creare un'entità &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md).  
   
@@ -87,12 +87,12 @@ ms.locfileid: "48083741"
   
  Dopo aver immesso una riga con i valori riportati in precedenza nella tabella mdm.tblList, la maschera "dd/MM/yyyy hh:mm:ss tt" sarà disponibile nella casella di riepilogo Maschera di input. È quindi possibile selezionare questa maschera per visualizzare la data e l'ora in una colonna di attributo datetime di un'entità in Esplora risorse di MDS.  
   
- La maschera di input è una stringa in formato DateTime .NET personalizzato. Per altre informazioni, vedere [Stringhe di formato di data e ora personalizzato](https://msdn.microsoft.com/en-us/library/8kb3ddd4\(v=vs.110\).aspx)  
+ La maschera di input è una stringa in formato DateTime .NET personalizzato. Per altre informazioni, vedere [Stringhe di formato di data e ora personalizzato](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [Attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
  [Modificare un nome di attributo &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [Creare un attributo basato su dominio &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [Creare un attributo di File &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+ [Creare un attributo di file &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

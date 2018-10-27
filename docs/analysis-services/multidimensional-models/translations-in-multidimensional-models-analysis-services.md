@@ -1,5 +1,5 @@
 ---
-title: Traduzioni nei modelli multidimensionali (Analysis Services) | Documenti Microsoft
+title: Traduzioni nei modelli multidimensionali (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ac278f3e254e353d9ab7b6dc6d6fd7850b442c9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026678"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147076"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>Traduzioni nei modelli multidimensionali (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34026678"
   
 4.  Fare clic con il pulsante destro del mouse su un campo qualsiasi e scegliere **Esplora dati**. Verranno visualizzare le traduzione in inglese, spagnolo e francese di ciascun membro.  
   
- I formati di data, ora e valuta non vengono implementati tramite le traduzioni. Per fornire in modo dinamico i formati specifici della lingua in base alle impostazioni locali del client, usare la Conversione guidata valuta e la proprietà **FormatString** . Per informazioni dettagliate, vedere [Conversioni di valuta &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) ed [Elemento FormatString &#40;ASSL&#41;](../../analysis-services/scripting/properties/formatstring-element-assl.md).  
+ I formati di data, ora e valuta non vengono implementati tramite le traduzioni. Per fornire in modo dinamico i formati specifici della lingua in base alle impostazioni locali del client, usare la Conversione guidata valuta e la proprietà **FormatString** . Per informazioni dettagliate, vedere [Conversioni di valuta &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) ed [Elemento FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
  [Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) nelle Esercitazioni su Analysis Services illustrerà in dettaglio i passaggi per creare e testare le traduzioni.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34026678"
   
 4.  Compilare e distribuire il progetto.  
   
-5.  Connettersi al database tramite un'applicazione client, ad esempio Excel, modificando la stringa di connessione in modo da usare l'identificatore delle impostazioni locali. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md).  
+5.  Connettersi al database tramite un'applicazione client, ad esempio Excel, modificando la stringa di connessione in modo da usare l'identificatore delle impostazioni locali. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>Aggiungere le traduzioni per una dimensione e gli attributi  
  È possibile aggiungere le traduzioni per le dimensioni del database, gli attributi, le gerarchie e i livelli all'interno di una gerarchia.  
@@ -109,7 +109,7 @@ ms.locfileid: "34026678"
     |Identificatore di lingua specificato|Identificatore di lingua alternativo|  
     |-----------------------------------|-----------------------------------|  
     |3076 - Cinese (RAS di Hong Kong, RPC)|1028 - Cinese (Taiwan)|  
-    |5124 - Cinese (Macao)|1028 - Cinese (Taiwan)|  
+    |5124 - Cinese (RAS di Macao)|1028 - Cinese (Taiwan)|  
     |1028 - Cinese (Taiwan)|Lingua predefinita|  
     |4100 - Cinese (Singapore)|2052 - Cinese (RPC)|  
     |2074 - Croato|Lingua predefinita|  

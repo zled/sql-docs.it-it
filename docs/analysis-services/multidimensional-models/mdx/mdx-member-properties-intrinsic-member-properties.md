@@ -1,5 +1,5 @@
 ---
-title: Proprietà intrinseche dei membri (MDX) | Documenti Microsoft
+title: Proprietà intrinseche dei membri (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 97e1507617d710373dea39b546b74fc77a1d90de
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a2e30dcf1875b09630516be9d9deb3248a95481e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025738"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146169"
 ---
-# <a name="mdx-member-properties---intrinsic-member-properties"></a>Proprietà di membro MDX - proprietà intrinseche dei membri
+# <a name="mdx-member-properties---intrinsic-member-properties"></a>Proprietà dei membri MDX - proprietà intrinseche dei membri
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] espone proprietà intrinseche sui membri della dimensione che è possibile includere in una query per restituire dati o metadati aggiuntivi da usare in un'applicazione personalizzata o per supportare la costruzione o l'analisi dei modelli. Se si utilizzano gli strumenti client di SQL Server, è possibile visualizzare le proprietà intrinseche in SQL Server Management Studio (SSMS).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "34025738"
  Nella tabella seguente sono elencate le proprietà intrinseche non sensibili al contesto supportate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Le colonne nel set di righe dello schema MEMBERS supportano le proprietà intrinseche dei membri elencate nella tabella seguente. Per altre informazioni sul set di righe dello schema **MEMBERS** , vedere [Set di righe MDSCHEMA_MEMBERS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
+>  Le colonne nel set di righe dello schema MEMBERS supportano le proprietà intrinseche dei membri elencate nella tabella seguente. Per altre informazioni sul set di righe dello schema **MEMBERS** , vedere [Set di righe MDSCHEMA_MEMBERS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
 |Proprietà|Description|  
 |--------------|-----------------|  
@@ -205,15 +205,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vedere anche  
  [PeriodsToDate &#40;MDX&#41;](../../../mdx/periodstodate-mdx.md)   
- [Gli elementi figlio &#40;MDX&#41;](../../../mdx/children-mdx.md)   
- [HIERARCHIZE & #40; MDX & #41;](../../../mdx/hierarchize-mdx.md)   
- [Numero & #40; Set & #41; & #40; MDX & #41;](../../../mdx/count-set-mdx.md)   
- [Filtro & #40; MDX & #41;](../../../mdx/filter-mdx.md)   
- [AddCalculatedMembers & #40; MDX & #41;](../../../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel & #40; MDX & #41;](../../../mdx/drilldownlevel-mdx.md)   
- [Proprietà & #40; MDX & #41;](../../../mdx/properties-mdx.md)   
+ [Children &#40;MDX&#41;](../../../mdx/children-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../../../mdx/hierarchize-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../../../mdx/count-set-mdx.md)   
+ [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../../../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](../../../mdx/drilldownlevel-mdx.md)   
+ [Properties &#40;MDX&#41;](../../../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../../../mdx/prevmember-mdx.md)   
- [Utilizzando le proprietà del membro & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Riferimento alla funzione MDX & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [Utilizzo delle proprietà dei membri &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

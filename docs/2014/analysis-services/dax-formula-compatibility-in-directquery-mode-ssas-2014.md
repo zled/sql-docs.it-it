@@ -12,17 +12,17 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4b355fccd5366ec287e19ab0fb9c45d904494eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113694"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100322"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilità delle formule DAX in modalità DirectQuery (SSAS 2014)
 Il linguaggio Data Analysis Expression (DAX) può essere utilizzato per creare misure e altre formule personalizzate per l'uso nei modelli tabulari di Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelli di dati nelle cartelle di lavoro di Excel e modelli di dati di Power BI Desktop. Nella maggior parte dei casi, i modelli creati in questi ambienti sono identici ed è possibile usare le stesse misure, relazioni e gli indicatori KPI, e così via. Tuttavia, se si crea un modello tabulare di Analysis Services e distribuirlo nella modalità DirectQuery, esistono alcune restrizioni riguardanti le formule che è possibile usare. In questo argomento viene fornita una panoramica di tali differenze, elenca le funzioni che non sono supportate in SQL Server 2014 Analysis Services tabulars modello a livello di compatibilità 1100 o 1103 e nella modalità DirectQuery e sono elencate le funzioni che sono supportate ma potrebbe essere restituire risultati diversi.  
   
-In questo argomento, viene usato il termine *modello in memoria* per fare riferimento ai modelli tabulari, che sono completamente ospitati in memoria i dati memorizzati in un server Analysis Services in esecuzione in modalità tabulare. Usiamo *i modelli DirectQuery* per fare riferimento ai modelli tabulari che sono stati creati e/o distribuiti nella modalità DirectQuery. Per informazioni sulla modalità DirectQuery, vedere [la modalità DirectQuery (SSAS tabulare)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
+In questo argomento, viene usato il termine *modello in memoria* per fare riferimento ai modelli tabulari, che sono completamente ospitati in memoria i dati memorizzati in un server Analysis Services in esecuzione in modalità tabulare. Usiamo *i modelli DirectQuery* per fare riferimento ai modelli tabulari che sono stati creati e/o distribuiti nella modalità DirectQuery. Per informazioni sulla modalità DirectQuery, vedere [la modalità DirectQuery (SSAS tabulare)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>Differenze tra la modalità DirectQuery e in memoria  
@@ -92,7 +92,7 @@ Per informazioni sulle regole che disciplinano i cast da stringa a **data/ora** 
 I modelli che utilizzano l'archivio dati in memoria supportano una gamma più limitata di formati di testo per le date rispetto ai formati stringa per date supportati in SQL Server. Tuttavia, il linguaggio DAX supporta formati data e ora personalizzati.  
   
 **Cast da stringa ad altri valori non booleani**  
-In caso di cast da stringhe a valori non booleani, la modalità DirectQuery si comporta come SQL Server. Per altre informazioni, vedere [CAST e CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
+In caso di cast da stringhe a valori non booleani, la modalità DirectQuery si comporta come SQL Server. Per altre informazioni, vedere [CAST e CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Cast da numeri a stringa non consentito**  
 ESEMPIO: `CONCATENATE(102,”,345”)`  
@@ -265,7 +265,7 @@ Nella modalità DirectQuery le maiuscole/minuscole del carattere restituito corr
   
 Per impostazione predefinita, vengono utilizzate le regole di confronto Latin1_General che non fanno distinzione tra maiuscole e minuscole, ma distinzione tra caratteri accentati e non. Di conseguenza, se sono presenti più istanze di una stringa di testo in caratteri minuscoli, maiuscoli o entrambi, tutte le istanze saranno considerate la stessa stringa e solo la prima istanza della stringa verrà archiviata nell'indice. Tutte le funzioni di testo eseguite su stringhe archiviate consentono di recuperare la porzione specificata della forma indicizzata. Di conseguenza, la formula di esempio restituisce lo stesso valore per l'intera colonna, utilizzando la prima istanza come input.  
   
-[Archivio di stringhe e regole di confronto nei modelli tabulari](http://msdn.microsoft.com/en-us/8516f0ad-32ee-4688-a304-e705143642ca)  
+[Archivio di stringhe e regole di confronto nei modelli tabulari](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 Questo comportamento si applica anche ad altre funzioni di testo, incluse RIGHT, MID e così via.  
   
@@ -506,6 +506,6 @@ LASTDATE
 DATEADD  
   
 ## <a name="see-also"></a>Vedere anche  
-[Modalità DirectQuery (SSAS tabulare)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[Modalità DirectQuery (SSAS tabulare)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

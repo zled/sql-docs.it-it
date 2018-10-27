@@ -1,5 +1,5 @@
 ---
-title: Creare una Query sul contenuto su un modello di Data Mining | Documenti Microsoft
+title: Creare una Query sul contenuto su un modello di Data Mining | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a0bc8d9a216f55f04cab4a4012945d2b11cf429
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 98fff978408aa53e030efeceb67af6cc0977597a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019968"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145076"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Creare una query sul contenuto di un modello di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "34019968"
   
      Il modello **Query contenuto** si apre nell'editor del codice adatto. Nel riquadro dei metadati sono elencati i modelli disponibili nel database corrente. Per modificare il database, selezionare un altro database nell'elenco **Database disponibili** .  
   
-5.  Immettere il nome di un modello di data mining nella riga, `FROM` [*\<modello di data mining, name, MyModel >*]`.CONTENT`. Se nel nome del modello di data mining sono inclusi spazi, tale nome deve essere racchiuso tra parentesi.  
+5.  Immettere il nome di un modello di data mining nella riga `FROM` [*\<modello di data mining, name, MyModel >*]`.CONTENT`. Se nel nome del modello di data mining sono inclusi spazi, tale nome deve essere racchiuso tra parentesi.  
   
      Se non si vuole digitare il nome, è possibile selezionare un modello di data mining in **Esplora oggetti** e trascinarlo nel modello.  
   
-6.  Nella riga, `SELECT` *\<Seleziona elenco, expr, \* >*, digitare i nomi delle colonne nel set di righe dello schema del contenuto del modello data mining.  
+6.  Nella riga `SELECT` *\<elenco di selezione dall'elenco expr \* >*, digitare i nomi delle colonne nel set di righe dello schema del contenuto del modello data mining.  
   
      Per visualizzare un elenco di colonne che è possibile restituire nelle query del contenuto del modello di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
@@ -73,10 +73,10 @@ ms.locfileid: "34019968"
      Nel riquadro Risultati verrà visualizzato il contenuto del modello.  
   
     > [!NOTE]  
-    >  Per visualizzare un elenco di tutti i set di righe dello schema su cui è possibile eseguire una query nell'istanza corrente, utilizzare la query `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. In alternativa, per un elenco di set di righe dello schema specifici del data mining, vedere [Set di righe dello schema di data mining](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
+    >  Per visualizzare un elenco di tutti i set di righe dello schema su cui è possibile eseguire una query nell'istanza corrente, utilizzare la query `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. In alternativa, per un elenco di set di righe dello schema specifici del data mining, vedere [Set di righe dello schema di data mining](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto del modello di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Set di righe dello Schema di Data Mining](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Set di righe dello schema di data mining](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)  
   
   

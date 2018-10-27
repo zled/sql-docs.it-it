@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6f7b4744c3f521ed4c51e461f2b01a748b9b6496
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 895c28f0989debb899c1e01c80a18483d3cda5a1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989759"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147816"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;query sull'origine dati&gt; -OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ OPENQUERY(<named datasource>, <query syntax>)
 ## <a name="remarks"></a>Note  
  **La funzione OPENQUERY** fornisce un modo più sicuro per accedere ai dati esterni tramite il supporto delle autorizzazioni dell'origine dati. Poiché la stringa di connessione viene archiviata nell'origine dati, gli amministratori possono utilizzare le proprietà dell'origine dati per gestire l'accesso ai dati. Per altre informazioni sulle origini dati, vedere [origini dati supportate &#40;SSAS - multidimensionale&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
- È possibile ottenere un elenco delle origini dati che sono disponibili in un server richiedendo la **MDSCHEMA_INPUT_DATASOURCES** set di righe dello schema. Per altre informazioni sull'uso **MDSCHEMA_INPUT_DATASOURCES**, vedere [set di righe MDSCHEMA_INPUT_DATASOURCES](../analysis-services/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md).  
+ È possibile ottenere un elenco delle origini dati che sono disponibili in un server richiedendo la **MDSCHEMA_INPUT_DATASOURCES** set di righe dello schema. Per altre informazioni sull'uso **MDSCHEMA_INPUT_DATASOURCES**, vedere [set di righe MDSCHEMA_INPUT_DATASOURCES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset).  
   
  È inoltre possibile restituire un elenco di origini dati del database di Analysis Services corrente mediante la seguente query DMX:  
   

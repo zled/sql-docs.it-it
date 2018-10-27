@@ -11,17 +11,17 @@ ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36c92e5ebd4ad0e8757d47fd8ce2b58995140670
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04abc5506e78e332b188cfc87c727b0000ca621
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171421"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147346"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lezione 4: Esplorazione dei modelli di data mining Bike Buyer
   In questa lezione si userà il [SELECT (DMX)](/sql/dmx/select-dmx) istruzione per esplorare il contenuto dell'albero delle decisioni e di data mining di clustering di modelli creati nella [lezione 2: aggiunta di modelli di Data Mining alla struttura di Data Mining predittiva](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
- Le colonne contenute in un modello di data mining non sono quelle definite dalla struttura di data mining ma sono un set specifico di colonne che descrivono le tendenze e gli schemi individuati dall'algoritmo. Queste colonne del modello di data mining sono descritte nel [set di righe DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md) set di righe dello schema. La colonna MODEL_NAME nel set di righe dello schema del contenuto, ad esempio, contiene il nome del modello di data mining. Per un modello di data mining di clustering, la colonna NODE_CAPTION contiene il nome di ogni cluster e la colonna NODE_DESCRIPTION contiene una descrizione delle caratteristiche di ogni cluster. È possibile esplorare queste colonne tramite SELECT FROM \<modello >. CONTENUTO istruzione DMX. Questa istruzione consente anche di esplorare i dati utilizzati per creare il modello di data mining. Per utilizzare questa istruzione è necessario che sia abilitato il drill-through nella struttura di data mining. Per altre informazioni sull'istruzione, vedere [SELECT FROM &#60;modello&#62;. I casi &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
+ Le colonne contenute in un modello di data mining non sono quelle definite dalla struttura di data mining ma sono un set specifico di colonne che descrivono le tendenze e gli schemi individuati dall'algoritmo. Queste colonne del modello di data mining sono descritte nel [set di righe DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) set di righe dello schema. La colonna MODEL_NAME nel set di righe dello schema del contenuto, ad esempio, contiene il nome del modello di data mining. Per un modello di data mining di clustering, la colonna NODE_CAPTION contiene il nome di ogni cluster e la colonna NODE_DESCRIPTION contiene una descrizione delle caratteristiche di ogni cluster. È possibile esplorare queste colonne tramite SELECT FROM \<modello >. CONTENUTO istruzione DMX. Questa istruzione consente anche di esplorare i dati utilizzati per creare il modello di data mining. Per utilizzare questa istruzione è necessario che sia abilitato il drill-through nella struttura di data mining. Per altre informazioni sull'istruzione, vedere [SELECT FROM &#60;modello&#62;. I casi &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
   
  È inoltre possibile ottenere tutti gli stati di una colonna discreta utilizzando l'istruzione SELECT DISTINCT. Se ad esempio si esegue questa operazione su una colonna relativa al sesso, la query restituirà `male` e `female`.  
   
@@ -50,7 +50,7 @@ WHERE <where clause>
 SELECT <select list> FROM [<mining model].CONTENT  
 ```  
   
- La clausola .CONTENT accanto al nome del modello di data mining specifica che il contenuto restituito proviene dal modello di data mining. Per altre informazioni sulle colonne contenute nel modello di data mining, vedere [set di righe DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+ La clausola .CONTENT accanto al nome del modello di data mining specifica che il contenuto restituito proviene dal modello di data mining. Per altre informazioni sulle colonne contenute nel modello di data mining, vedere [set di righe DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
  È possibile utilizzare facoltativamente la riga finale del codice per filtrare i risultati restituiti dall'istruzione:  
   
@@ -86,7 +86,7 @@ WHERE NODE_SUPPORT > 100
     *  
     ```  
   
-     È inoltre possibile sostituire * con un elenco di colonne contenute all'interno di [set di righe DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+     È inoltre possibile sostituire * con un elenco di colonne contenute all'interno di [set di righe DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
 4.  Sostituire quanto segue:  
   

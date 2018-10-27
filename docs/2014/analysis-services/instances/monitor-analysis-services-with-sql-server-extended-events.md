@@ -11,12 +11,12 @@ ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5716541be57191cd6bb3e6e6399a354889b2cf58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3fc1b8aa5c6a2f76ebdfe98fd8aa98e5a593919
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179671"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144906"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>Utilizzare eventi estesi di SQL Server (XEvent) per il monitoraggio di Analysis Services
   Analysis Services fornisce funzionalità di traccia tramite l'utilizzo delle [eventi estesi](../../relational-databases/extended-events/extended-events.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "48179671"
  Nome fornito a questa traccia; generalmente una definizione leggibile della traccia. È pratica comune usare il valore *trace_id* come nome.  
   
  *AS_event*  
- Evento di Analysis Services da esporre. Vedere [Eventi di traccia di Analysis Services](../trace-events/analysis-services-trace-events.md) per i nomi degli eventi.  
+ Evento di Analysis Services da esporre. Vedere [Eventi di traccia di Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) per i nomi degli eventi.  
   
  *data_filename*  
  Nome del file in cui sono contenuti i dati degli eventi. Nel nome è incluso un suffisso timestamp per evitare la sovrascrittura dei dati qualora la traccia venga inviata ripetutamente.  

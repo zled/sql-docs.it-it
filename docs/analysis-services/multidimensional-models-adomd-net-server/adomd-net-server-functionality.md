@@ -1,5 +1,5 @@
 ---
-title: Funzionalità Server di ADOMD.NET | Documenti Microsoft
+title: Funzionalità Server di ADOMD.NET | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 003e50efa8ed21720410830a3d02134df15c3c97
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6c1f37be45b702828d3c663eac0fb575a0af3bbd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023778"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146938"
 ---
 # <a name="adomdnet-server-functionality"></a>Funzionalità server di ADOMD.NET
   Tutti gli oggetti server ADOMD.NET forniscono l'accesso in sola lettura ai dati e i metadati presenti nel server. Per recuperare i dati e i metadati, viene utilizzato il modello a oggetti server di ADOMD.NET poiché il modello a oggetti server non supporta i set di righe dello schema.  
   
- Gli oggetti server ADOMD.NET, è possibile creare una funzione definita dall'utente (UDF) o una stored procedure per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Tali metodi in-process vengono chiamati tramite istruzioni di query create in linguaggi diversi, ad esempio MDX (Multidimensional Expressions), DMX (Data Mining Extensions) o SQL. Tali metodi forniscono inoltre funzionalità aggiunte senza le latenze associate alle comunicazioni della rete.  
+ Gli oggetti server ADOMD.NET, è possibile creare una funzione definita dall'utente (UDF) o una stored procedure [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Tali metodi in-process vengono chiamati tramite istruzioni di query create in linguaggi diversi, ad esempio MDX (Multidimensional Expressions), DMX (Data Mining Extensions) o SQL. Tali metodi forniscono inoltre funzionalità aggiunte senza le latenze associate alle comunicazioni della rete.  
   
 > [!NOTE]  
 >  L'oggetto <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> supporta solo DMX.  
   
 ## <a name="what-is-a-udf"></a>Funzioni definite dall'utente  
- Oggetto *funzione definita dall'utente* è un metodo che presenta le caratteristiche seguenti:  
+ Oggetto *UDF* è un metodo che presenta le caratteristiche seguenti:  
   
 -   Possibilità di essere chiamata nel contesto di una query.  
   
@@ -44,11 +44,11 @@ FROM SalesModel
 ## <a name="what-is-a-stored-procedure"></a>Stored procedure  
  Oggetto *stored procedure di* è un metodo che presenta le caratteristiche seguenti:  
   
--   Si chiama una stored procedure nel proprio con MDX [CHIAMARE](../../mdx/mdx-data-manipulation-call.md) istruzione.  
+-   Si chiama una stored procedure in un proprio con MDX [CHIAMARE](../../mdx/mdx-data-manipulation-call.md) istruzione.  
   
 -   Possibilità di accettare un numero qualsiasi di parametri.  
   
--   Una stored procedure può restituire un set di dati, un **IDataReader**, o un risultato vuoto.  
+-   Una stored procedure può restituire un set di dati, un' **IDataReader**, oppure un risultato vuoto.  
   
  Nell'esempio seguente viene utilizzata la stored procedure fittizia `FinalSalesNumbers`:  
   
@@ -57,6 +57,6 @@ CALL FinalSalesNumbers()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programmazione di server ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+ [Programmazione di server ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 090a7cdb4958dacdaebcdcc0db176991d6bebaa1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1b899348d947c842d66fa0245b8801ef1788bfb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142701"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148296"
 ---
 # <a name="autoexists"></a>Auto Exist
   Il concetto di *Auto Exist* limita lo spazio del cubo a quelle celle che esistono effettivamente nel cubo, in contrapposizione con quelle che potrebbero esistere come risultato della creazione di tutte le possibili combinazioni di membri delle gerarchie di attributi dalla medesima gerarchia. La distinzione è necessaria perché i membri di una gerarchia di attributi non possono coesistere con membri di un'altra gerarchia di attributi nella stessa dimensione. Quando in un'istruzione SELECT si utilizzano due o più gerarchie di attributi della medesima dimensione, Analysis Services valuta le espressioni degli attributi per verificare che i relativi membri siano correttamente limitati per soddisfare i criteri di tutti gli altri attributi.  
@@ -89,7 +89,7 @@ WHERE (Measures.[Internet Sales Amount],
  Ognuna delle tre query precedenti dimostra l'effetto del comportamento di Auto Exist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="deep-and-shallow-autoexists"></a>Auto Exist completo e superficiale  
- La caratteristica Auto Exist può essere applicata in modo completo o superficiale alle espressioni. `Deep Autoexists` significa che tutte le espressioni verranno valutate per soddisfare lo spazio più completo possibile dopo l'applicazione delle espressioni di sezionamento, delle espressioni sub-SELECT nell'asse e così via. `Shallow Autoexists` significa che espressioni esterne vengono valutate prima dell'espressione corrente e i risultati vengono passati all'espressione corrente. Per impostazione predefinita la caratteristica Auto Exist viene applicata in modo completo.  
+ La caratteristica Auto Exist può essere applicata in modo completo o superficiale alle espressioni. `Deep Autoexists` significa che tutte le espressioni verranno valutate per soddisfare lo spazio più completo possibile dopo l'applicazione delle espressioni di sezionamento, delle espressioni sub-SELECT nell'asse e così via. `Shallow Autoexists` significa che espressioni esterne vengono valutate prima dell'espressione corrente e i risultati vengono specificati nell'espressione corrente. Per impostazione predefinita la caratteristica Auto Exist viene applicata in modo completo.  
   
  Lo scenario e gli esempi riportati di seguito consentiranno di illustrare i tipi diversi di Auto Exist. Negli esempi riportati di seguito verranno creati due set, uno come espressione calcolata e l'altro come espressione costante.  
   
@@ -309,15 +309,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Comportamento di Auto Exist può essere modificato tramite la caratteristica Auto Exist = [1 | 2 | 3] parametro nella stringa di connessione. visualizzare [proprietà XMLA supportate &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> per l'utilizzo dei parametri.  
+ Comportamento di Auto Exist può essere modificato tramite la caratteristica Auto Exist = [1 | 2 | 3] parametro nella stringa di connessione. visualizzare [proprietà XMLA supportate &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> per l'utilizzo dei parametri.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti chiave per MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Concetti chiave di MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Spazio del cubo](cube-space.md)   
  [Tuple](tuples.md)   
- [Utilizzo di membri, tuple e set di &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Consenti totali visualizzati e Non visualizzati](visual-totals-and-non-visual-totals.md)   
- [Riferimento al linguaggio MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Espressioni MDX &#40;MDX&#41; riferimento](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Uso di membri, tuple e set &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Totali visualizzati e non visualizzati](visual-totals-and-non-visual-totals.md)   
+ [Guida di riferimento al linguaggio MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Guida di riferimento a MDX &#40;Multidimensional Expressions&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

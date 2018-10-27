@@ -14,12 +14,12 @@ ms.assetid: 02d33fc9-f3f4-4b85-8b90-449b68625cf7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 119b06da83da044f2ab8663433f76312540c72a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5047647ef5f440987b4b20db99ad42dacf4fc4d0
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141751"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147926"
 ---
 # <a name="backup-options"></a>Opzioni di backup
   È possibile eseguire il backup dei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in molti modi e in tutti i casi è necessario disporre delle autorizzazioni di amministratore del server e del database. È possibile visualizzare la finestra di dialogo **Backup** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], selezionare le opzioni di configurazione appropriate e quindi eseguire il backup dalla finestra di dialogo. In alternativa, è possibile creare uno script utilizzando le impostazioni già specificate nel file. Sarà quindi possibile salvare lo script ed eseguirlo quando necessario.  
@@ -31,9 +31,9 @@ ms.locfileid: "48141751"
 >  L'account del servizio Analysis Services deve disporre delle autorizzazioni per scrivere nel percorso di backup specificato per ogni file. L'utente deve inoltre avere uno dei ruoli seguenti: ruolo di amministratore per l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o membro di un ruolo del database con autorizzazioni Controllo completo (amministratore) per il database di cui eseguire il backup.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire il backup del Database, finestra di dialogo &#40;Analysis Services - dati multidimensionali&#41;](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Finestra di dialogo Backup database &#40;Analysis Services - Dati multidimensionali&#41;](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Backup e ripristino di database di Analysis Services](backup-and-restore-of-analysis-services-databases.md)   
- [Elemento di backup &#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   
- [Il backup, ripristino e sincronizzazione dei database &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [Elemento Backup &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
+ [Backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

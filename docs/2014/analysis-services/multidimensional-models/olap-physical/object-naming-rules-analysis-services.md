@@ -14,28 +14,28 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: abe054c97e13ffe5428eddfded09fa18b5060aa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cd63693c18b380d328a33ed4f7f947991787313
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063391"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147846"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regole di denominazione degli oggetti (Analysis Services)
-  In questo argomento vengono descritte le convenzioni di denominazione degli oggetti, come pure le parole e i caratteri riservati che non possono essere utilizzati in nomi di oggetto, codice o script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  In questo argomento vengono descritte le convenzioni di denominazione dell'oggetto, le parole riservate e i caratteri che non possono essere utilizzati nel nome dell'oggetto, nel codice o nello script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ##  <a name="bkmk_Names"></a> Convenzioni di denominazione  
- Ogni oggetto dispone di una proprietà `Name` e `ID` che deve essere univoca nell'ambito della raccolta padre. Ad esempio, due dimensioni possono avere lo stesso nome fintanto che ciascuna risiede in un database diverso.  
+ Ogni oggetto dispone delle proprietà `Name` e `ID` che devono essere univoche nell'ambito della raccolta padre. Ad esempio, due dimensioni possono avere lo stesso nome fintanto che ciascuna risiede in un database diverso.  
   
- Sebbene sia possibile specificarla manualmente, la proprietà `ID` viene di solito generata automaticamente quando viene creato l'oggetto. Si consiglia di non modificare mai la proprietà `ID` una volta avviata la compilazione di un modello. Tutti i riferimenti a un oggetto in un modello si basano sulla proprietà `ID`. Pertanto, la modifica di una proprietà `ID` può danneggiare facilmente il modello.  
+ Sebbene sia possibile specificarlo manualmente, l'`ID` viene solitamente generato automaticamente quando viene creato l'oggetto. È consigliabile non modificare l'`ID` una volta avviata la compilazione di un modello. In un modello tutti i riferimenti agli oggetti sono basati sull'`ID`. Pertanto, la modifica dell'`ID` può facilmente causare il danneggiamento del modello.  
   
- Gli oggetti `DataSource` e `DataSourceView` presentano eccezioni rilevanti alle convenzioni di denominazione. L'ID `DataSource` può essere impostato su un punto singolo (.), che non è univoco, come riferimento al database corrente. Una seconda eccezione è `DataSourceView`, che aderisce alle convenzioni di denominazione definite per gli oggetti `DataSet` in .NET Framework, dove la proprietà `Name` viene utilizzata come identificatore.  
+ Gli oggetti `DataSource` e `DataSourceView` presentano eccezioni rilevanti alle convenzioni di denominazione. L'ID `DataSource` può essere impostato su un punto singolo (.), che non è univoco, come riferimento al database corrente. Una seconda eccezione è costituita da `DataSourceView`, il quale è conforme alle convenzioni di denominazione definite per gli oggetti `DataSet` in .NET Framework, dove `Name` è utilizzato come identificatore.  
   
- Le regole seguenti si applicano alle proprietà `Name` e `ID`.  
+ Di seguito vengono riportate le regole valide per le proprietà `Name` e `ID`.  
   
 -   Per i nomi non viene fatta distinzione tra maiuscole e minuscole. Non è possibile avere un cubo denominato "sales" e un altro denominato "Sales" nello stesso database.  
   
--   Gli spazi iniziali o finali non sono consentiti nel nome dell'oggetto, sebbene sia possibile incorporare gli spazi all'interno del nome. Gli spazi iniziali e finali vengono eliminati in modo implicito. Si applica a entrambe le proprietà `Name` e `ID` di un oggetto.  
+-   Gli spazi iniziali o finali non sono consentiti nel nome dell'oggetto, sebbene sia possibile incorporare gli spazi all'interno del nome. Gli spazi iniziali e finali vengono eliminati in modo implicito. Ciò si applica sia alle proprietà `Name` e `ID` di un oggetto.  
   
 -   Il numero massimo di caratteri consentito è 100.  
   
@@ -92,6 +92,6 @@ ms.locfileid: "48063391"
 ## <a name="see-also"></a>Vedere anche  
  [Parole riservate MDX](/sql/mdx/mdx-reserved-words)   
  [Le traduzioni &#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
- [XML for Analysis conformità &#40;XMLA&#41;](../../xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML for Analysis conformità &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

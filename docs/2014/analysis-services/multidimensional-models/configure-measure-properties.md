@@ -42,28 +42,28 @@ ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9303e3d2ddfa53560b900b92bc75763d44c7f87e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f54906f8fbaa363495619318a5197957c96e1250
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177721"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148386"
 ---
 # <a name="configure-measure-properties"></a>Configurare le proprietà delle misure
   Le proprietà delle misure consentono di definirne il funzionamento e di controllare il modo in cui vengono visualizzate agli utenti.  
   
- È possibile impostare proprietà in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante la creazione o la modifica di un cubo o una misura. Queste proprietà possono essere impostate anche a livello di programmazione mediante MDX o AMO. Per informazioni dettagliate, vedere [Creare misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md) o [Istruzione CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member) o [Programmazione di oggetti di base OLAP in AMO](analysis-management-objects/programming-amo-olap-basic-objects.md).  
+ È possibile impostare proprietà in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante la creazione o la modifica di un cubo o una misura. Queste proprietà possono essere impostate anche a livello di programmazione mediante MDX o AMO. Per informazioni dettagliate, vedere [Creare misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md) o [Istruzione CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member) o [Programmazione di oggetti di base OLAP in AMO](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects).  
   
 ## <a name="measure-properties"></a>Proprietà delle misure  
  Le misure ereditano alcune proprietà dal gruppo di misure di cui sono membri, a meno che tali proprietà non vengano sostituite a livello di misura. Le proprietà delle misure ne determinano la modalità di aggregazione, il tipo di dati, il nome visualizzato dall'utente, la cartella di visualizzazione in cui appariranno, la stringa di formato, l'espressione, la colonna di origine sottostante e la visibilità da parte degli utenti.  
   
 |Proprietà|Definizione|  
 |--------------|----------------|  
-|`AggregateFunction`|Obbligatorio. Determina la modalità di aggregazione delle misure. `Sum` è l'aggregazione predefinita. Per altre informazioni, vedere [Utilizzare le funzioni di aggregazione](use-aggregate-functions.md) per una descrizione di ogni funzione.|  
+|`AggregateFunction`|Obbligatorio. Determina la modalità di aggregazione delle misure. `Sum`è l'aggregazione predefinita. Per altre informazioni, vedere [Utilizzare le funzioni di aggregazione](use-aggregate-functions.md) per una descrizione di ogni funzione.|  
 |`DataType`|Obbligatorio. Specifica il tipo di dati della colonna della tabella dei fatti sottostante a cui è associata la misura. Per impostazione predefinita, questo valore viene ereditato dalla colonna di origine.|  
 |`Description`|Fornisce una descrizione della misura, che può essere esposta in applicazioni client.|  
 |`DisplayFolder`|Specifica la cartella in cui verrà visualizzata la misura quando gli utenti si connettono al cubo. Quando in un cubo sono presenti numerose misure, è possibile usare le cartelle di visualizzazione per categorizzare le misure e migliorare l'esplorazione dell'utente.|  
-|`FormatString`|È possibile selezionare il formato utilizzato per visualizzare i valori della misura per gli utenti utilizzando il `FormatString` proprietà della misura.<br /><br /> Anche se in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] è disponibile un elenco di formati di visualizzazione, è possibile specificare formati aggiuntivi non inclusi nell'elenco. È possibile specificare qualsiasi formato denominato o definito dall'utente che risulti valido in Microsoft Visual Basic.|  
+|`FormatString`|È possibile selezionare il formato in cui gli utenti visualizzeranno i valori della misura utilizzando la proprietà `FormatString` della misura.<br /><br /> Anche se in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]è disponibile un elenco di formati di visualizzazione, è possibile specificare formati aggiuntivi non inclusi nell'elenco. È possibile specificare qualsiasi formato denominato o definito dall'utente che risulti valido in Microsoft Visual Basic.|  
 |`ID`|Obbligatorio. Visualizza l'identificatore univoco (ID) della misura. Questa proprietà è di sola lettura.|  
 |`MeasureExpression`|Specifica un'espressione MDX vincolata che definisce il valore della misura. L'espressione viene valutata a livello foglia prima dell'aggregazione e consente la ponderazione di un valore, ad esempio in una conversione valuta in cui un importo di vendita viene ponderato in base al tasso di cambio.|  
 |`Name`|Obbligatorio. Specifica il nome della misura.|  
@@ -71,7 +71,7 @@ ms.locfileid: "48177721"
 |`Visible`|Determina la visibilità della misura nelle applicazioni client.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare le proprietà del gruppo di misure](configure-measure-group-properties.md)   
+ [Configurare le proprietà dei gruppi di misure](configure-measure-group-properties.md)   
  [Modifica delle misure](../lesson-3-1-modifying-measures.md)  
   
   
