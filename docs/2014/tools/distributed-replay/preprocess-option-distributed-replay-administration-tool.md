@@ -66,7 +66,7 @@ ms.locfileid: "48174611"
   
  Senza il parametro **-c**, viene usato il file di configurazione della pre-elaborazione predefinito, ovvero `DReplay.exe.preprocess.config`.  
   
- *intervallo_stato***-f**  
+ **-f** *status_interval*  
  Specifica la frequenza in secondi in base alla quale visualizzare messaggi di stato.  
   
  Se **-f** non è specificato, l'intervallo predefinito è 30 secondi.  

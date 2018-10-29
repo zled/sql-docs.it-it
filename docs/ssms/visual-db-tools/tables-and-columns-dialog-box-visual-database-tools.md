@@ -13,12 +13,12 @@ ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 139372ccabfdcf1eddd127a772f5a2a5b8ceb322
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9330c2a82f2839b5fd0eb0001bdb74112653516b
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782349"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099446"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Finestra di dialogo Tabelle e colonne (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,5 +47,5 @@ Elenca le colonne della tabella selezionata nell'elenco **Tabella chiave esterna
 > Le colonne selezionate per la chiave esterna devono avere lo stesso tipo di dati delle colonne primarie a cui corrispondono. In ogni chiave deve esistere un numero uguale di colonne. Se ad esempio la chiave primaria della tabella sul lato primario della relazione è composta da due colonne, ognuna di queste colonne dovrà corrispondere a una colonna della tabella sul lato chiave esterna della relazione.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Procedura: Creazione di relazioni tra tabelle (Visual Database Tools)](http://msdn.microsoft.com/en-us/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
+[Procedura: Creazione di relazioni tra tabelle (Visual Database Tools)](http://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
   

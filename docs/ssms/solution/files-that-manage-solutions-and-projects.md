@@ -19,12 +19,12 @@ ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1f35edb48cb6f55f3b353a5aef498402cfb71cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bff8bd75d6852cc978dc63d198479a65f4ede9d
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717509"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100242"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>File per la gestione di soluzioni e progetti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,5 +57,5 @@ Se la struttura della directory è simile alla struttura logica visualizzata in 
 [Esplora soluzioni](../../ssms/solution/solution-explorer.md)  
 [Soluzioni &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [Progetti &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-[Controllo del codice sorgente di Esplora soluzioni](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
+[Controllo del codice sorgente di Esplora soluzioni](https://msdn.microsoft.com/library/ms173879.aspx)  
   
