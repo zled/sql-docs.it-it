@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ea7504d459d14dec64d4192185b23279091e70e2
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 582359e25e0eaec775deb1abbcb64af211d68350
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119939"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021815"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limiti delle dimensioni di report e snapshot
   Le informazioni contenute in questo argomento consentono agli amministratori che gestiscono una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di conoscere i limiti relativi alle dimensioni dei report quando questi ultimi vengono pubblicati in un server di report, quando ne viene eseguito il rendering in fase di esecuzione e quando vengono salvati nel file system. In questo argomento vengono inoltre fornite indicazioni pratiche su come calcolare le dimensioni di un database del server di report e vengono descritti gli effetti delle dimensioni degli snapshot sulle prestazioni del server.  
@@ -50,7 +50,7 @@ ms.locfileid: "49119939"
  L'unico caso in cui vi è un limite fisico per le dimensioni del report è quando si esegue il rendering in formato Excel. Nei fogli di lavoro non possono essere presenti più di 65536 righe o 256 colonne. Con altri formati di rendering non sono presenti limiti simili, pertanto le dimensioni sono limitate solo dalla quantità di risorse disponibili nel server.  
   
 > [!NOTE]  
->  I processi di elaborazione e rendering dei report avvengono in memoria. Se si utilizzano report di grandi dimensioni o sono presenti numerosi utenti, eseguire una pianificazione delle capacità per garantire agli utenti un livello soddisfacente di prestazioni della distribuzione del server di report. Per altre informazioni su strumenti e linee guida, vedere le pubblicazioni seguenti su MSDN: [Pianificazione di scalabilità e prestazioni con Reporting Services](http://go.microsoft.com/fwlink/?LinkID=70650) e [Uso di Visual Studio 2005 per eseguire test di carico in un server di report di SQL Server 2005 Reporting Services](http://go.microsoft.com/fwlink/?LinkID=77519).  
+>  I processi di elaborazione e rendering dei report avvengono in memoria. Se si utilizzano report di grandi dimensioni o sono presenti numerosi utenti, eseguire una pianificazione delle capacità per garantire agli utenti un livello soddisfacente di prestazioni della distribuzione del server di report. Per altre informazioni su strumenti e linee guida, vedere le pubblicazioni seguenti su MSDN: [Pianificazione di scalabilità e prestazioni con Reporting Services](https://go.microsoft.com/fwlink/?LinkID=70650) e [Uso di Visual Studio 2005 per eseguire test di carico in un server di report di SQL Server 2005 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
 ## <a name="measuring-snapshot-storage"></a>Calcolo dello spazio di archiviazione degli snapshot  
  Le dimensioni di un determinato snapshot sono direttamente proporzionali alla quantità di dati del report. Gli snapshot hanno in genere dimensioni molto maggiori rispetto agli altri elementi archiviati in un server di report. Le dimensioni degli snapshot variano in genere da pochi MB a decine di MB. Se si dispone di report di dimensioni molto grandi, le dimensioni degli snapshot potrebbero essere anche maggiori. In base alla frequenza di utilizzo degli snapshot e alla modalità di configurazione della cronologia del report, la quantità di spazio su disco necessaria per il database del server di report può aumentare rapidamente in un intervallo di tempo breve.  
