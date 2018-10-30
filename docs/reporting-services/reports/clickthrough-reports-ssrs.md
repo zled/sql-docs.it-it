@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d22f07d4375d92dd49f18f5fe80653f1e401b744
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d129704681c308c093033ff69e1f1e3ec2bc5fb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855011"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021835"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Report click-through (SSRS)
   Un report click-through è un report in cui vengono fornite informazioni dettagliate sui dati contenuti nel report principale. Il report click-through viene visualizzato quando l'utente fa clic sui dati interattivi visualizzati nel report principale. Questi report vengono generati automaticamente dal server di report. L'utente che progetta il modello può determinare gli elementi visualizzati nei report click-through impostando le proprietà **DefaultDetailAttribute** e **DefaultAggregateAttribute** assegnate a un'entità nel modello di report.  
@@ -47,6 +47,6 @@ ms.locfileid: "47855011"
 >  L'entità primaria, o entità di base, utilizzata nel report deve corrispondere a quella a cui si collega il report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Collegare un report a un modello come report click-through](http://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
+ [Collegare un report a un modello come report click-through](https://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
   
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fc05bd786594cc70836bc6d39e86143d16089979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26826171d9d240e5daf919faabeb6023e77b86f8
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617439"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021685"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità nativa
   Il termine sottoscrizione standard si riferisce alla sottoscrizione creata dai singoli utenti che desiderano che un report venga recapitato tramite posta elettronica o a una cartella condivisa. In questo argomento vengono fornite informazioni sulle sottoscrizioni standard che vengono create e gestite dai singoli utenti. Le sottoscrizioni guidate dai dati prevedono procedure e requisiti diversi e sono illustrate in un altro argomento. Per altre informazioni, vedere [Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -40,7 +40,7 @@ ms.locfileid: "47617439"
   
 -   Per utilizzare il recapito tramite posta elettronica, è necessario che il server di report sia configurato per una connessione tramite un server SMTP o gateway prima di creare la sottoscrizione.  
   
--   Per utilizzare il recapito tramite condivisione file, è necessario aver già definito la cartella di destinazione. Per altre informazioni, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+-   Per utilizzare il recapito tramite condivisione file, è necessario aver già definito la cartella di destinazione. Per altre informazioni, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Per sottoscrivere un report, è necessario che l'origine dati del report sia configurata per l'utilizzo di credenziali archiviate o di nessuna credenziale. Per altre informazioni, vedere [Archiviare le credenziali in un'origine dati di Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md). Se non le utilizza, il pulsante **Nuova sottoscrizione** non è disponibile.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47617439"
   
 ###  <a name="bkmk_create_fileshare_subscription"></a> Per creare una sottoscrizione con recapito tramite condivisione file  
   
-1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Passare al report che si vuole sottoscrivere. Fare clic sul menu del report e fare clic su **Sottoscrivi**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "47617439"
   
 ###  <a name="bkmk_create_email_subscription"></a> Per creare una sottoscrizione con recapito tramite posta elettronica  
   
-1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Passare al report che si vuole sottoscrivere. Fare clic sul menu del report e fare clic su **Sottoscrivi**.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "47617439"
   
 4.  **Proprietario**: il campo del proprietario viene impostato sull'utente corrente per impostazione predefinita e non può essere modificato quando si crea la sottoscrizione. Dopo aver salvato la sottoscrizione, tuttavia, è possibile modificare le proprietà di sottoscrizione, tra cui il proprietario e la descrizione.  
   
-5.  **Recapito**: selezionare **Messaggio di posta elettronica**. Se l'opzione **Messaggio di posta elettronica** non è disponibile, il server di report non è stato configurato per le sottoscrizioni tramite posta elettronica. Vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+5.  **Recapito**: selezionare **Messaggio di posta elettronica**. Se l'opzione **Messaggio di posta elettronica** non è disponibile, il server di report non è stato configurato per le sottoscrizioni tramite posta elettronica. Vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
-6.  **A**: il nome del destinatario nel campo A viene compilato automaticamente con l'account utente di dominio. Verificare che il formato sia [nome utente]@[dominio.com]. Le impostazioni di configurazione del server di report determinano se il campo **A** : viene compilato con l'account utente corrente. Per altre informazioni sulla modifica delle impostazioni di configurazione di indirizzi di posta elettronica, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+6.  **A**: il nome del destinatario nel campo A viene compilato automaticamente con l'account utente di dominio. Verificare che il formato sia [nome utente]@[dominio.com]. Le impostazioni di configurazione del server di report determinano se il campo **A** : viene compilato con l'account utente corrente. Per altre informazioni sulla modifica delle impostazioni di configurazione di indirizzi di posta elettronica, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
     > [!NOTE]  
     >  A seconda delle autorizzazioni, può essere possibile digitare l'indirizzo di posta elettronica cui si desidera recapitare il report. Per specificare più indirizzi di posta elettronica, separarli con un punto e virgola (;). È anche possibile digitare indirizzi di posta elettronica supplementari nelle caselle di testo **Cc**, **Ccn**e **Risposta** . A questo fine è necessario disporre dell'autorizzazione per la gestione di tutte le sottoscrizioni.  
@@ -163,7 +163,7 @@ ms.locfileid: "47617439"
 ##  <a name="bkmk_delete_subscription"></a> Per eliminare una sottoscrizione  
  Per eliminare una sottoscrizione  
   
-1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Avviare [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Gestione report fare clic su **Sottoscrizioni personali** sulla barra degli strumenti e passare alla sottoscrizione da modificare o eliminare.  
   
@@ -180,9 +180,9 @@ ms.locfileid: "47617439"
 ## <a name="see-also"></a>Vedere anche  
  [Creare e gestire sottoscrizioni per server di report in modalità SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [Sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gestione report &#40;modalità nativa SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Usare Sottoscrizioni personali &#40;server di report in modalità nativa&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   
