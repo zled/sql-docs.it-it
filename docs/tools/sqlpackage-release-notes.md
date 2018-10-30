@@ -10,16 +10,34 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 55df71c62fddfe6d21abb27235b287963b946709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754334"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050853"
 ---
 # <a name="sqlpackage-release-notes"></a>note sulla versione di Sqlpackage
 
 **[Scaricare la versione più recente](sqlpackage-download.md)**
+
+## <a name="sqlpackage-180"></a>sqlpackage 18.0
+
+Data di rilascio: 24 ottobre 2018  
+Build: 15.0.4200.1 
+
+La versione include le seguenti funzionalità e correzioni:
+
+- Aggiunta del supporto per il livello di compatibilità database 150.
+- Aggiunta del supporto per le istanze gestite.
+- Aggiunta MaxParallelism del parametro della riga di comando per specificare il grado di parallelismo per le operazioni di database.
+- Aggiungere AccessToken parametro della riga di comando per specificare un token di autenticazione quando ci si connette a SQL Server.
+- Aggiunta del supporto per i tipi di dati BLOB/CLOB di flusso per le importazioni.
+- Aggiunta del supporto per UDF scalari opzione 'INLINE'.
+- Aggiunta del supporto per la sintassi 'MERGE' nella tabella di grafico.
+- Pseudo-colonna non risolto fissa per tabelle grafi.
+- Correzione di creazione di un database con file con ottimizzazione per la memoria vengono usati gruppi di tabelle ottimizzate per la memoria.
+- Risolto tra cui le proprietà estese per le tabelle esterne.
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
@@ -29,7 +47,6 @@ Build: 14.0.4079.2
 La versione include le correzioni seguenti:
 
 - Messaggi di errore per gli errori di connessione, tra cui il messaggio di eccezione SqlClient migliorati.
-- Aggiunta MaxParallelism del parametro della riga di comando per specificare il grado di parallelismo per le operazioni di database.
 - Supporta la compressione dell'indice negli indici partizione singola per importazione/esportazione.
 - Risolto un problema reverse engineering per set di colonne XML con SQL 2017 e versioni successive.
 - Risolto un problema in cui il livello di compatibilità 140 di script è stato ignorato per il Database SQL di Azure.
