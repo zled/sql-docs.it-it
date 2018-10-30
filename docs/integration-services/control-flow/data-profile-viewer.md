@@ -16,12 +16,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd3a3c2b4461a08a9945af2536a572fb8369f7cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f47900bba2230acb18b5e5459c6849b5b9b2c7c8
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733912"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905991"
 ---
 # <a name="data-profile-viewer"></a>Visualizzatore profilo dati
   La visualizzazione e l'analisi dei profili dati costituiscono il passaggio successivo del processo di profiling dei dati. È possibile visualizzare tali profili dopo avere eseguito l'attività Profiling dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e avere calcolato i profili dati. Per altre informazioni su come configurare ed eseguire le attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "47733912"
 > [!IMPORTANT]  
 >  La funzionalità di drill-down, disponibile nel Visualizzatore profilo dati, consente di inviare query in tempo reale all'origine dati originale. Queste query possono avere un impatto negativo sulle prestazioni del server.  
 >   
->  Se si esegue il drill-down da un file di output non creato recentemente, le query di drill-down potrebbero restituire un set di righe diverso rispetto a quello utilizzato per calcolare l'output originale.  
+>  Se si esegue il drill-down da un file di output non creato recentemente, le query di drill-down potrebbero restituire un set di righe diverso rispetto a quello usato per calcolare l'output originale.  
   
  Per altre informazioni sull'interfaccia utente del Visualizzatore profilo dati, vedere [Guida sensibile al contesto del Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer-f1-help.md).  
   

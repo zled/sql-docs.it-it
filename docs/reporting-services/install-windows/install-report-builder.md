@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 458db88f63ac2d27db03cace86593907ef67b3b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebcef28bd5b785bb72059986e39aae34d8af7921
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662989"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021325"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è un'app autonoma, installata nel computer in uso dall'utente o da un amministratore. È possibile installarla dall'Area download Microsoft, da un server di report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] o da un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -36,13 +36,13 @@ ms.locfileid: "47662989"
   
 ## <a name="system-requirements"></a>Requisiti di sistema
   
- Vedere la sezione **Requisiti di sistema** della [pagina di download di Generatore report](http://go.microsoft.com/fwlink/?LinkID=734968) nell'Area download Microsoft.
+ Vedere la sezione **Requisiti di sistema** della [pagina di download di Generatore report](https://go.microsoft.com/fwlink/?LinkID=734968) nell'Area download Microsoft.
   
 ##  <a name="download"></a> Per installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dal sito di download  
   
-1.  Nella [pagina Generatore report dell'Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=734968) fare clic su **Download**.  
+1.  Nella [pagina Generatore report dell'Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=734968) fare clic su **Download**.  
   
-2.  Dopo aver completato il download di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], fare clic su **Esegui**.  
+2.  Dopo aver completato il download di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , fare clic su  **Esegui**.  
   
      Verrà avviata la Configurazione guidata di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per SQL Server.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "47662989"
   
  Se si vuole eseguire un'installazione invisibile all'utente che non richiede interazioni con l'interfaccia utente, specificare l'opzione **/quiet** . In base alle caratteristiche di progettazione, il flag dell'opzione quiet elimina la visualizzazione degli errori di installazione. Quando si usa questa opzione è quindi consigliabile includere l'opzione **/l** che specifica la registrazione.   
   
-1.  Nella [pagina Generatore report dell'Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=734968)fare clic su **Download**.  
+1.  Nella [pagina Generatore report dell'Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=734968)fare clic su **Download**.  
   
-2.  Dopo aver completato il download di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], fare clic su **Salva**.  
+2.  Dopo aver completato il download di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , fare clic su  **Salva**.  
   
 3.  Fare clic sul menu **Start** e scegliere **Esegui**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "47662989"
   
      `msiexec/i ReportBuilder3.msi /option [value] [/option [value]]`  
   
-     Le due opzioni specifiche dell'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] sono RBINSTALLDIR e REPORTSERVERURL. Non è necessario includere questi argomenti nella riga di comando. Di seguito è riportato il comando di base:  
+     Le due opzioni specifiche dell'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] sono: RBINSTALLDIR e REPORTSERVERURL. Non è necessario includere questi argomenti nella riga di comando. Di seguito è riportato il comando di base:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
@@ -99,7 +99,7 @@ ms.locfileid: "47662989"
   
 -   Fare clic su **Generatore report** .  
   
-     Se il server di report non è visibile nell'elenco dei server esistenti, chiudere la finestra di dialogo **Apri report**, quindi fare clic su **Connetti** nella parte inferiore di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per connettersi al server.  
+     Se il server di report non è visibile nell'elenco di server esistenti, chiudere la finestra di dialogo **Apri report** , quindi fare clic su **Connetti** nella parte inferiore di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per connettersi al server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare Generatore report](../../reporting-services/report-builder/start-report-builder.md)   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c1af1b9b6e1e9f78469522a90cf589f484f2964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97a3cac8090852d39f1b995cc414e43666246aa8
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741509"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906481"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Esercitazione: Formattazione di testo (Generatore report)
 
@@ -197,7 +197,7 @@ Creare questa tabella per avere un elemento in cui inserire i collegamenti ipert
   
 8.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
-9. Selezionare la cella **Totale** nella colonna **LinkText** , quindi tenere premuto MAIUSC e selezionare le due celle a destra che corrispondono alla cella vuota della colonna **Product** e alla cella `[Sum(Sales)]` della colonna **Sales** .  
+9. Selezionare la cella **Totale** nella colonna **LinkText**, quindi tenere premuto MAIUSC e selezionare le due celle a destra che corrispondono alla cella vuota della colonna **Product** e alla cella `[Sum(Sales)]` della colonna **Sales**.  
   
 11. Con queste tre celle selezionate fare clic con il pulsante destro del mouse su una delle celle e scegliere **Elimina righe**.  
 

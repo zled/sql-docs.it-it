@@ -1,7 +1,7 @@
 ---
 title: Connettersi a origini dati e condivisioni file con autenticazione di Windows | Microsoft Docs
 description: Informazioni su come configurare il catalogo SSIS nel database SQL di Azure e nel runtime di integrazione Azure-SSIS per eseguire pacchetti che usano l'autenticazione di Windows per connettersi a origini dati e condivisioni file.
-ms.date: 06/27/2018
+ms.date: 10/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 4dfe14abd938e456a1b1415226ff6d903e0b5b07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 612c118fe490afe8de7c794c1f1ff6327766a508
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608641"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119978"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Connettersi a origini dati e condivisioni file con l'autenticazione di Windows da pacchetti SSIS in Azure
 È possibile usare l'autenticazione di Windows per connettersi alle origini dati e alle condivisioni file nella stessa rete virtuale del runtime di integrazione Azure-SSIS, sia in locale che nelle macchine virtuali di Azure e in File di Azure. Esistono tre metodi per la connessione alle origini dati e alle condivisioni file con l'autenticazione di Windows da pacchetti SSIS in esecuzione nel runtime di integrazione Azure-SSIS:
@@ -34,7 +34,7 @@ ms.locfileid: "47608641"
 Il resto di questo articolo descrive come configurare il catalogo SSIS nel database SQL di Azure per eseguire pacchetti che usano l'autenticazione di Windows per connettersi a origini dati e condivisioni file. 
 
 ## <a name="you-can-only-use-one-set-of-credentials"></a>È possibile usare un solo set di credenziali
-Con questo metodo è possibile usare un solo set di credenziali in un pacchetto. Le credenziali del dominio specificate quando si esegue la procedura illustrata in questo articolo sono valide per tutte le esecuzioni di pacchetti interattive o pianificate nel runtime di integrazione Azure-SSIS, finché non si modificano o rimuovono le credenziali. Se il pacchetto deve connettersi a più origini dati e condivisioni file con set di credenziali diversi, potrebbe essere necessario prendere in considerazione i metodi alternativi descritti in precedenza.
+Quando si usa l'autenticazione di Windows in un pacchetto SSIS, è possibile usare un solo set di credenziali in un pacchetto. Le credenziali del dominio specificate quando si esegue la procedura illustrata in questo articolo sono valide per tutte le esecuzioni di pacchetti interattive o pianificate nel runtime di integrazione Azure-SSIS, finché non si modificano o rimuovono le credenziali. Se il pacchetto deve connettersi a più origini dati e condivisioni file con set di credenziali diversi, potrebbe essere necessario prendere in considerazione i metodi alternativi descritti in precedenza.
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Fornire le credenziali di dominio per l'autenticazione di Windows
 Per specificare le credenziali del dominio che consentono ai pacchetti che usano l'autenticazione di Windows di connettersi alle origini dati locali e alle condivisioni file, seguire questa procedura:
@@ -100,7 +100,7 @@ Per connettersi a SQL Server locale da un pacchetto in esecuzione in Azure, è n
 3.  Per connettersi con l'autenticazione di Windows, verificare che il runtime di integrazione Azure-SSIS appartenga a una rete virtuale che include anche SQL Server locale.  Per altre informazioni, vedere [Aggiungere un runtime di integrazione SSIS di Azure a una rete virtuale](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Usare quindi `catalog.set_execution_credential` per fornire le credenziali, come illustrato in questo articolo.
 
 ## <a name="connect-to-an-on-premises-file-share"></a>Connettersi a una condivisione file locale
-Per verificare se è possibile connettersi a una condivisione file locale, eseguire le operazioni seguenti:
+Per testare se è possibile connettersi a una condivisione file locale, seguire questa procedura:
 
 1.  Per eseguire questo test, cercare un computer non appartenente al dominio.
 

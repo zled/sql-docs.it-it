@@ -31,12 +31,12 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fa181fba5468b88586a4d69f5a361a64112b2018
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9644b055e57c3a08c551c2eb0544ca77b083456
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833119"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169161"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag - utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -297,7 +297,7 @@ SQLDIAG STOP /A Instance1
 >  Usare **SQLDiag STOP** o **SQLDIAG STOP_ABORT** per arrestare il servizio **SQLdiag** . Non usare la console dei servizi Windows per arrestare **SQLdiag** o gli altri servizi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>Avvio e arresto automatici dell'utilità SQLdiag  
- Per avviare e arrestare automaticamente la raccolta di dati diagnostici a un'ora specificata, usare gli argomenti **/B***start_time* e **/E***stop_time* nel formato 24 ore. Se, ad esempio, si sta cercando di risolvere un problema che si verifica regolarmente alle 02:00:00 circa, è possibile configurare l'utilità **SQLdiag** in modo che inizi automaticamente a raccogliere dati diagnostici alle 01:00 e si arresti automaticamente alle 03:00:00. Usare gli argomenti **/B** e **/E** per specificare l'ora di inizio e di fine. Utilizzare il formato 24 ore per specificare la data e l'ora di inizio e fine corrette nel formato AAAAMMGG_HH:MM:SS. Per specificare una data di inizio o fine relativa, anteporre il segno **+** all'ora di inizio e fine omettendo la parte relativa alla data (AAAAMMGG_) come illustrato nell'esempio seguente. In questo modo, l'utilità **SQLdiag** attende un'ora prima di iniziare a raccogliere le informazioni. I dati vengono raccolti per 3 ore prima che l'utilità venga arrestata e chiusa.  
+ Per avviare e arrestare automaticamente la raccolta di dati diagnostici a un'ora specificata, usare gli argomenti **/B**_start\_time_ e **/E**_stop\_time_ nel formato 24 ore. Se, ad esempio, si sta cercando di risolvere un problema che si verifica regolarmente alle 02:00:00 circa, è possibile configurare l'utilità **SQLdiag** in modo che inizi automaticamente a raccogliere dati diagnostici alle 01:00 e si arresti automaticamente alle 03:00:00. Usare gli argomenti **/B** e **/E** per specificare l'ora di inizio e di fine. Utilizzare il formato 24 ore per specificare la data e l'ora di inizio e fine corrette nel formato AAAAMMGG_HH:MM:SS. Per specificare una data di inizio o fine relativa, anteporre il segno **+** all'ora di inizio e fine omettendo la parte relativa alla data (AAAAMMGG_) come illustrato nell'esempio seguente. In questo modo, l'utilità **SQLdiag** attende un'ora prima di iniziare a raccogliere le informazioni. I dati vengono raccolti per 3 ore prima che l'utilità venga arrestata e chiusa.  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -358,7 +358,7 @@ SQLDIAG START /A Instance1
  La sospensione del servizio dell'utilità **SQLdiag** non è supportata.  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>Esecuzione di più istanze di SQLdiag  
- È possibile eseguire più istanze di **SQLdiag** nello stesso computer specificando **/A***SQLdiag_application_name* nella riga di comando. Ciò consente di raccogliere diversi set di dati diagnostici contemporaneamente dalla stessa istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . È ad esempio possibile configurare un'istanza denominata di **SQLdiag** per eseguire in modo continuo una raccolta di dati lightweight. Se quindi si verifica un problema specifico relativo a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è possibile eseguire l'istanza di **SQLdiag** predefinita per raccogliere i dati diagnostici relativi a quel problema o per la raccolta di un set di dati diagnostici su richiesta del Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../includes/msconame-md.md)] per elaborare una diagnosi relativa al problema.  
+ È possibile eseguire più istanze di **SQLdiag** nello stesso computer specificando **/A**_SQLdiag\_application\_name_ nella riga di comando. Ciò consente di raccogliere diversi set di dati diagnostici contemporaneamente dalla stessa istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . È ad esempio possibile configurare un'istanza denominata di **SQLdiag** per eseguire in modo continuo una raccolta di dati lightweight. Se quindi si verifica un problema specifico relativo a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è possibile eseguire l'istanza di **SQLdiag** predefinita per raccogliere i dati diagnostici relativi a quel problema o per la raccolta di un set di dati diagnostici su richiesta del Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../includes/msconame-md.md)] per elaborare una diagnosi relativa al problema.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>Raccolta dei dati diagnostici dalle istanze di SQL Server del cluster  
  L'utilità**SQLdiag** supporta la raccolta di dati diagnostici dalle istanze cluster di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per raccogliere dati diagnostici dalle istanze cluster di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], verificare di aver specificato **"."** per l'attributo **name** dell'elemento **\<Machine>** nel file di configurazione SQLDiag.Xml e di non aver specificato l'argomento **/G** nella riga di comando. Per impostazione predefinita, viene specificato **"."** per l'attributo **name** nel file di configurazione e l'argomento **/G** è disabilitato. Non è in genere necessario modificare il file di configurazione o gli argomenti della riga di comando durante la raccolta di dati da un'istanza cluster di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

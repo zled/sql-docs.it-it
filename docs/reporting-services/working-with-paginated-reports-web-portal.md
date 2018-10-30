@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b92436ca928037d2f31fa4952f376692e9ad87f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2115aa8933396d14f6f6f32e0c02f85f75321700
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764283"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029190"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Utilizzo di report impaginati (portale web)
 
@@ -193,4 +193,4 @@ Selezionare questa opzione per modificare le impostazioni di sicurezza definite 
 [Portale Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Usare i set di dati condivisi (portale Web)](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

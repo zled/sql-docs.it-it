@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8751dee05c58353d8c83954497bf934591a6f6b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc40029559843dfd520eb73aeda4653f910349dd
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701369"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905957"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Informazioni su prenotazioni e registrazione URL (Gestione configurazione SSRS)
   Gli URL per le applicazioni di Reporting Services vengono definiti come prenotazioni URL in HTTP.SYS. Una prenotazione URL definisce la sintassi di un endpoint dell'URL in un'applicazione Web. Le prenotazioni URL vengono definite sia per il servizio Web ReportServer sia per Gestione report quando si configurano le applicazioni nel server di report. Le prenotazioni URL vengono create automaticamente quando si configurano gli URL tramite il programma di installazione o lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -53,7 +53,7 @@ ms.locfileid: "47701369"
   
  La registrazione degli URL viene annullata se si arresta il servizio o si ricicla il dominio applicazione di [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o del servizio Web. Se si modifica una prenotazione URL mentre il servizio è in esecuzione, il server di report riciclerà immediatamente il dominio applicazione per consentire l'annullamento della registrazione dell'URL precedente e l'utilizzo del nuovo URL.  
   
- Il concetto di prenotazione URL e il modo in cui questa è correlata agli indirizzi URL utilizzati per le applicazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere illustrati tramite alcuni semplici esempi. Un aspetto essenziale da osservare è che la prenotazione URL ha una sintassi diversa dall'URL utilizzato per accedere all'applicazione:  
+ Il concetto di prenotazione URL e il modo in cui questa è correlata agli indirizzi URL utilizzati per le applicazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere illustrati tramite alcuni semplici esempi. Un aspetto essenziale da osservare è che la prenotazione URL ha una sintassi diversa dall'URL usato per accedere all'applicazione:  
   
 |Prenotazione URL in HTTP.SYS|URL|Spiegazione|  
 |---------------------------------|---------|-----------------|  

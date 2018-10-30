@@ -1,13 +1,11 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -46,16 +44,15 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9a443f1cb6d951a486a1bf58ad2c96a2b47195c
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 5cb959e6d82a5b16b4affc8b0de3256f4d1af8a9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171893"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906471"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ CREATE TABLE
     ( {   <column_definition>   
         | <computed_column_definition>    
         | <column_set_definition>   
-        | [ <table_constraint> ]   
+        | [ <table_constraint> ] [ ,... n ] 
         | [ <table_index> ] }  
           [ ,...n ]    
           [ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name   
@@ -120,7 +117,7 @@ column_name <data_type>
           ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } ,   
           ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'  
         ) ]  
-    [ <column_constraint> [ ...n ] ]   
+    [ <column_constraint> [, ...n ] ]   
     [ <column_index> ]  
   
 <data type> ::=   
@@ -267,7 +264,8 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```  
   
 ```  
---Memory optimized CREATE TABLE Syntax  
+--Memory optimized 
+LE Syntax  
 CREATE TABLE  
     [database_name . [schema_name ] . | schema_name . ] table_name  
     ( { <column_definition>  
@@ -430,7 +428,7 @@ TEXTIMAGE_ON modifica solo la posizione dello "spazio di archiviazione LOB", non
   
  Per gli argomenti correlati a FILESTREAM, vedere [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] *type_name*  
  Specifica il tipo di dati della colonna e lo schema a cui appartiene. Per le tabelle basate su disco, il tipo di dati può essere uno dei seguenti:  
   
 -   Tipo di dati di sistema.  
@@ -496,7 +494,7 @@ TEXTIMAGE_ON modifica solo la posizione dello "spazio di archiviazione LOB", non
   
  Specifica che verrà usata dal sistema una colonna di tipo datetime2 specifica per registrare l'ora di inizio o l'ora di fine per cui un record è valido. La colonna deve essere definita come NOT NULL. Se si tenta di specificare i valori come NULL, il sistema genera un errore. Se non si specifica in modo esplicito NOT NULL per una colonna periodo, il sistema definirà la colonna come NOT NULL per impostazione predefinita. Usare questo argomento in combinazione con gli argomenti SET SYSTEM_VERSIONING e WITH SYSTEM_VERSIONING = ON per consentire il controllo delle versioni di sistema in una tabella. Per altre informazioni, vedere [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
- È possibile contrassegnare una o entrambe le colonne periodo con il flag **HIDDEN** per nascondere in modo implicito le colonne. In questo modo *SELECT \* FROM***`<table>`* non restituisce un valore per tali colonne. Per impostazione predefinita, le colonne periodo non vengono nascoste. Per poter essere usate, le colonne nascoste devono essere incluse in modo esplicito in tutte le query che fanno direttamente riferimento alla tabella temporale. Per modificare l'attributo **HIDDEN** per una colonna periodo esistente, è necessario eliminare e ricreare **PERIOD** con un altro flag nascosto.  
+ Gli utenti possono contrassegnare una o entrambe le colonne periodo con il flag **HIDDEN** per nascondere in modo implicito le colonne. In questo modo **SELECT \*FROM**_`<table>`_ non restituisce un valore per tali colonne. Per impostazione predefinita, le colonne periodo non vengono nascoste. Per poter essere usate, le colonne nascoste devono essere incluse in modo esplicito in tutte le query che fanno direttamente riferimento alla tabella temporale. Per modificare l'attributo **HIDDEN** per una colonna periodo esistente, è necessario eliminare e ricreare **PERIOD** con un altro flag nascosto.  
   
  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
@@ -518,7 +516,7 @@ Specifica che deve essere creato un indice per la tabella. Può trattarsi di un 
   
  L'indice columnstore non cluster viene archiviato e gestito come indice columnstore cluster. Viene definito indice columnstore non cluster perché le colonne possono essere limitate e l'indice esiste come indice secondario di una tabella.  
   
- ON *partition_scheme_name ***(*** column_name***)**  
+ ON _partition\_scheme\_name_**(**_column\_name_**)**  
  Specifica lo schema di partizione che definisce i filegroup a cui verrà eseguito il mapping delle partizioni di un indice partizionato. È necessario che lo schema di partizione sia presente nel database e sia stato creato eseguendo [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* specifica la colonna in base alla quale verrà eseguita la partizione di un indice partizionato. La colonna deve corrispondere all'argomento della funzione di partizione usata da *partition_scheme_name* per tipo di dati, lunghezza e precisione. *column_name* non è limitato alle colonne nella definizione dell'indice. È possibile specificare qualsiasi colonna della tabella di base tranne quando si esegue la partizione di un indice UNIQUE. In questo caso il valore *column_name* deve essere scelto tra quelli usati come chiave univoca. Questa restrizione consente a [!INCLUDE[ssDE](../../includes/ssde-md.md)] di verificare l'univocità dei valori di chiave all'interno di una singola partizione.  
   
 > [!NOTE]  
@@ -569,9 +567,11 @@ Specifica che deve essere creato un indice per la tabella. Può trattarsi di un 
  ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
  La**crittografia deterministica** usa un metodo che genera sempre lo stesso valore crittografato per qualsiasi valore di testo normale specificato. L'uso della crittografia deterministica consente di eseguire operazioni di ricerca usando il confronto di uguaglianza, il raggruppamento e il join di tabelle con join di uguaglianza basati su valori crittografati, ma può anche consentire a utenti non autorizzati di ipotizzare informazioni sui valori crittografati esaminando i criteri nella colonna crittografata. È possibile creare un join di due tabelle nelle colonne crittografate in modo deterministico solo se entrambe le colonne vengono crittografate usando la stessa chiave di crittografia della colonna. La crittografia deterministica deve usare regole di confronto a livello di colonna con un ordinamento binario2 per colonne di tipo carattere.  
   
- La**crittografia casuale** usa un metodo di crittografia dei dati meno prevedibile. La crittografia casuale è più sicura, ma non consente di eseguire operazioni di ricerca di uguaglianza, raggruppamento e join nelle colonne crittografate. Le colonne che usano la crittografia casuale non possono essere indicizzate.  
+ La**crittografia casuale** usa un metodo di crittografia dei dati meno prevedibile. La crittografia casuale è più sicura, ma impedisce i calcoli e l'indicizzazione delle colonne crittografate, a meno che l'istanza di SQL Server non supporti Always Encrypted con enclave sicuri. Per informazioni dettagliate, vedere [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
- La crittografia deterministica è consigliata in colonne che saranno usate come parametri di ricerca o di raggruppamento, ad esempio un codice fiscale o una partita IVA. Usare la crittografia casuale per i dati, ad esempio il numero di carta di credito, che non sono raggruppati con altri record o usati per il join di tabelle e in cui non vengono eseguite ricerche perché si usano altre colonne, ad esempio un numero di transazione, per trovare la riga che contiene la colonna crittografata che interessa.  
+ Se si usa Always Encrypted (senza enclave sicuri), usare la crittografia deterministica per le colonne in cui verrà eseguita la ricerca con parametri o parametri di raggruppamento, ad esempio un numero ID per gli enti pubblici. Usare la crittografia casuale per i dati, ad esempio il numero di carta di credito, che non sono raggruppati con altri record o usati per il join di tabelle e in cui non vengono eseguite ricerche perché si usano altre colonne, ad esempio un numero di transazione, per trovare la riga che contiene la colonna crittografata che interessa.
+
+ Se si usa Always Encrypted con enclave sicuri, la crittografia casuale è il tipo di crittografia consigliato.
   
  Le colonne devono essere di un tipo di dati idoneo.  
   
@@ -653,7 +653,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  FOREIGN KEY REFERENCES  
  Vincolo che impone l'integrità referenziale dei dati di una o più colonne. È necessario che ogni valore delle colonne sia incluso nelle colonne di riferimento corrispondenti della tabella di riferimento. È possibile fare riferimento a vincoli FOREIGN KEY solo nelle colonne che nella tabella con riferimenti corrispondono a vincoli PRIMARY KEY o UNIQUE e nelle colonne a cui viene fatto riferimento in un indice univoco nella tabella di riferimento. È necessario contrassegnare come PERSISTED anche le chiavi esterne nelle colonne calcolate.  
   
- [ *schema_name***.**] *referenced_table_name*]  
+ [ _schema\_name_**.**] *referenced_table_name*]  
  Nome della tabella a cui fa riferimento il vincolo FOREIGN KEY e dello schema a cui appartiene.  
   
  **(** *ref_column* [ **,**... *n* ] **)**  
@@ -724,13 +724,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *partition_scheme_name*  
  Nome dello schema di partizione che definisce i filegroup a cui verrà eseguito il mapping delle partizioni di una tabella partizionata. Lo schema di partizione deve essere presente nel database.  
   
- [ *partition_column_name***.** ]  
+ [ _partition\_column\_name_**.** ]  
  Specifica la colonna in base alla quale verrà partizionata una tabella partizionata. La colonna deve corrispondere a quella specificata nella funzione di partizione usata da *partition_scheme_name* in termini di tipo di dati, lunghezza e precisione. Una colonna calcolata utilizzata in una funzione di partizione deve essere contrassegnata in modo esplicito come PERSISTED.  
   
 > [!IMPORTANT]  
 >  Si consiglia di specificare NOT NULL sulla colonna di partizionamento di tabelle partizionate oppure di tabelle non partizionate che rappresentano origini o destinazioni di operazioni ALTER TABLE...SWITCH. In questo modo, i vincoli CHECK su colonne di partizionamento non devono verificare la presenza di valori Null.  
   
- WITH FILLFACTOR **=***fillfactor*  
+ WITH FILLFACTOR **=**_fillfactor_  
  Specifica la percentuale di riempimento impostata da [!INCLUDE[ssDE](../../includes/ssde-md.md)] per ogni pagina di indice utilizzata per archiviare i dati dell'indice. I valori per *fillfactor* specificati dall'utente possono essere compresi tra 1 e 100. Se non viene specificato alcun valore, il valore predefinito è 0. I valori 0 e 100 relativi al fattore di riempimento sono equivalenti.  
   
 > [!IMPORTANT]  
@@ -815,7 +815,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  PAD_INDEX = { ON | **OFF** }  
  Se l'opzione è impostata su ON, la percentuale di spazio disponibile specificata da FILLFACTOR viene applicata alle pagine di livello intermedio dell'indice. Se si specifica OFF o se non si specifica un valore FILLFACTOR, le pagine di livello intermedio vengono riempite quasi fino alla capacità massima, lasciando spazio sufficiente per almeno una riga delle dimensioni massime consentite per l'indice, considerando il set di chiavi nelle pagine intermedie. Il valore predefinito è OFF.  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  Specifica una percentuale indicante il livello di riempimento del livello foglia di ogni pagina di indice applicato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] durante la creazione o la modifica dell'indice. *fillfactor* deve essere un valore intero compreso tra 1 e 100. Il valore predefinito è 0. I valori 0 e 100 relativi al fattore di riempimento sono equivalenti.  
   
  IGNORE_DUP_KEY = { ON | **OFF** }  
@@ -837,10 +837,10 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  Se si specifica ON, le statistiche dell'indice non aggiornate non vengono ricalcolate automaticamente. Se si specifica OFF, viene abilitato l'aggiornamento automatico delle statistiche. Il valore predefinito è OFF.  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
- Se si specifica ON, sono consentiti blocchi di riga per l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi di riga. Se si specifica OFF, i blocchi a livello di riga non vengono utilizzati. Il valore predefinito è ON.  
+ Se si specifica ON, sono consentiti blocchi di riga per l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga. Se si specifica OFF, i blocchi a livello di riga non vengono utilizzati. Il valore predefinito è ON.  
   
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
- Se si specifica ON, sono consentiti blocchi di pagina per l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina. Se si specifica OFF, i blocchi a livello di pagina non vengono utilizzati. Il valore predefinito è ON.  
+ Se si specifica ON, sono consentiti blocchi di pagina per l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi a livello di pagina. Se si specifica OFF, i blocchi a livello di pagina non vengono utilizzati. Il valore predefinito è ON.  
   
  FILETABLE_DIRECTORY = *directory_name*  
    

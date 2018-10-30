@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2cd1a8450f9ffa847f5feab752c957d20f5fd6e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b748da4e74ce9ade370df965bd8df1c388a3b7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654165"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028974"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Legenda del grafico - Formattazione (Generatore report)
   Nella legenda del grafico sono contenute le descrizioni per ogni categoria del grafico. In una legenda sono contenuti sempre uno o più elementi, ciascuno dei quali è costituito da una casella colorata che rappresenta la serie e da una stringa di testo che la descrive, come indicato nell'illustrazione seguente.  
@@ -77,7 +77,7 @@ ms.locfileid: "47654165"
  Per impostazione predefinita, il testo della legenda non viene ottimizzato in base alle dimensioni dell'area della legenda. Per fare in modo che il testo della legenda si adatti automaticamente allo spazio allocato, impostare la proprietà AutoFitTextDisabled su **False** e la proprietà MinFontSize sulle dimensioni minime del tipo di carattere che si ritengono leggibili e che consentano comunque l'ottimizzazione della legenda.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Proprietà legenda, Generale &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
+ [Finestra di dialogo Proprietà legenda, Generale &#40;Generatore report e SSRS&#41;](https://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
  [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   

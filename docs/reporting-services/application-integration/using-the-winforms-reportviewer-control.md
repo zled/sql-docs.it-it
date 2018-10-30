@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bcf1d79e8d0be544ca6d9606bcee97112a0c0f42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2896ebfae8b785aff35e3f484c4d695f3b48409a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723909"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021155"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Utilizzo del controllo Windows Form ReportViewer
   Per visualizzare i report distribuiti in un server di report o presenti in un file system locale, è possibile usare il controllo Windows Form ReportViewer per eseguirne il rendering in un'applicazione Windows.  
@@ -151,7 +151,7 @@ End Class
   
 3.  Passare al percorso di installazione del progetto dei report di esempio di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-     Per scaricare i report di esempio, andare alla pagina [Report di esempio AdventureWorks 2012](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     Per scaricare i report di esempio, andare alla pagina [Report di esempio AdventureWorks 2012](https://go.microsoft.com/fwlink/?LinkId=404153)  
   
 4.  Selezionare il file Sales Order Detail.rdl e fare clic sul pulsante **Aggiungi**.  
   

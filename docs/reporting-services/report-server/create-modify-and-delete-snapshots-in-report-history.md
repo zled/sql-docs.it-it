@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0dfa183f3df88bb53074407c62ea57aa2a3a3cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31c1b8e60f6baeea276a38669a42e07ecbf18479
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710599"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029620"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Creare, modificare ed eliminare snapshot nella cronologia dei report
   La cronologia dei report è una raccolta di snapshot dei report. È possibile intervenire sulla cronologia aggiungendo ed eliminando snapshot oppure modificando le proprietà che specificano le modalità di archiviazione della cronologia. È possibile creare la cronologia dei report manualmente o in base a una pianificazione.  
@@ -26,7 +26,7 @@ ms.locfileid: "47710599"
  Gli snapshot disponibili nella cronologia del report sono identificati dalla data e dall'ora di creazione, che corrispondono al momento di esecuzione della query.  
   
 ## <a name="creating-snapshots-in-report-history"></a>Creazione di snapshot nella cronologia dei report  
- È possibile creare snapshot manualmente o in base a intervalli pianificati per qualsiasi report che può essere eseguito in modo automatico. Per l'esecuzione automatica, il report deve utilizzare credenziali archiviate oppure non utilizzare credenziali. Inoltre, se il report utilizza parametri, è necessario specificare i valori predefiniti da utilizzare quando il report viene eseguito. È possibile specificare le credenziali archiviate e i valori dei parametri nelle pagine delle proprietà del report. Per altre informazioni, vedere [Pagina delle proprietà Parametri &#40;Gestione report&#41;](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a).  
+ È possibile creare snapshot manualmente o in base a intervalli pianificati per qualsiasi report che può essere eseguito in modo automatico. Per l'esecuzione automatica, il report deve utilizzare credenziali archiviate oppure non utilizzare credenziali. Inoltre, se il report utilizza parametri, è necessario specificare i valori predefiniti da utilizzare quando il report viene eseguito. È possibile specificare le credenziali archiviate e i valori dei parametri nelle pagine delle proprietà del report. Per altre informazioni, vedere [Pagina delle proprietà Parametri &#40;Gestione report&#41;](https://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a).  
   
  Quando si crea uno snapshot di un report, nel database del server di report vengono archiviati gli elementi seguenti insieme allo snapshot:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47710599"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare la cronologia dei report &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gestione report &#40;modalità nativa SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Aggiungere uno snapshot alla cronologia del report &#40;Gestione report&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Limitare la cronologia dei report &#40;Gestione report&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  

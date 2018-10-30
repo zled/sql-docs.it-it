@@ -17,19 +17,19 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a590a8f0738a5717f7982cdd095d73bfcc18dc55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 379f8a3cc95df4bfb2ed55ac639516d025abc32f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803759"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029210"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formattazione di numeri e date (Generatore report e SSRS)
   È possibile formattare numeri e date nelle aree dati selezionando un formato nella pagina **Numero** della finestra di dialogo **Proprietà** dell'area dati corrispondente.  
   
  Per specificare stringhe di formato all'interno di un elemento del report casella di testo, è necessario selezionare l'elemento da formattare, fare clic con il pulsante destro del mouse, selezionare **Proprietà casella di testo**, quindi fare clic su **Numero**. È possibile formattare singole celle in un'area dati matrice o tabella secondo le stesse modalità perché le celle di una tabella o matrice sono singole caselle di testo.  
   
- Un'area dati grafico mostra in genere le date lungo l'asse delle categorie (x) e i valori lungo l'asse dei valori (y). Per specificare la formattazione in un grafico, fare clic con il pulsante destro del mouse su un asse e selezionare **Proprietà asse**. Sull'asse dei valori è possibile specificare formati validi solo per i numeri. Per altre informazioni, vedere [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+ Un'area dati grafico mostra in genere le date lungo l'asse delle categorie (x) e i valori lungo l'asse dei valori (y). Per specificare la formattazione in un grafico, fare clic con il pulsante destro del mouse su un asse e selezionare **Proprietà asse**. Sull'asse dei valori è possibile specificare formati validi solo per i numeri. Per altre informazioni, vedere [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
  Per specificare la formattazione in un'area dati del misuratore, fare clic con il pulsante destro del mouse sulla scala del misuratore e selezionare **Proprietà scala radiale** o **Proprietà scala lineare**.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "47803759"
   
 -   Per impostazione predefinita, i numeri vengono formattati in modo da riflettere le impostazioni relative alla lingua sul computer client. Usare le stringhe di formattazione per specificare la modalità di visualizzazione dei numeri in modo che la formattazione sia coerente indipendentemente dalla località in cui si trova l'utente che visualizza il report.  
   
--   I formati disponibili nella pagina **Numero** rappresentano un subset delle stringhe di formato numerico standard di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per formattare un numero o una data usando un formato personalizzato non incluso nella finestra di dialogo, è possibile usare qualsiasi stringa di formato [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per i numeri o le date. Per altre informazioni sulle stringhe di formato personalizzato, vedere l'argomento [Formattazione dei tipi di dati](http://go.microsoft.com/fwlink/?LinkId=112024) su MSDN.  
+-   I formati disponibili nella pagina **Numero** rappresentano un subset delle stringhe di formato numerico standard di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per formattare un numero o una data usando un formato personalizzato non incluso nella finestra di dialogo, è possibile usare qualsiasi stringa di formato [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per i numeri o le date. Per altre informazioni sulle stringhe di formato personalizzato, vedere l'argomento [Formattazione dei tipi di dati](https://go.microsoft.com/fwlink/?LinkId=112024) su MSDN.  
   
 -   Se è stata specificata una stringa di formato personalizzato, tale stringa avrà una priorità più elevata rispetto alle impostazioni predefinite che sono specifiche delle impostazioni cultura. Si supponga, ad esempio, di impostare la stringa di formato personalizzato "#, ###" per visualizzare il numero 1234 come 1,234. Questa impostazione potrebbe essere interpretata dagli utenti americani in modo diverso rispetto agli utenti europei. Prima di specificare un formato personalizzato, considerare in che modo tale formato influirà sugli utenti con impostazioni cultura differenti che potrebbero visualizzare il report.  
   
 -   Se si specifica una stringa di formato non valida, il testo formattato verrà interpretato come stringa letterale che esegue l'override della formattazione.  
   
--   Se si formatta una combinazione di numeri e caratteri nella stessa casella di testo, provare a usare un segnaposto per formattare il numero separatamente dal resto del testo. Per altre informazioni, vedere [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md). Se si specifica una stringa di formato non valida per la proprietà Format nella casella di testo, la stringa di formato verrà ignorata. Se si specifica una stringa di formato non valida per la proprietà Format nel grafico o nel misuratore, la stringa di formato specificata verrà interpretata come stringa e la formattazione non verrà applicata.  
+-   Se si formatta una combinazione di numeri e caratteri nella stessa casella di testo, provare a usare un segnaposto per formattare il numero separatamente dal resto del testo. Per altre informazioni, vedere [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md). Se si specifica una stringa di formato non valida per la proprietà Format nella casella di testo, la stringa di formato verrà ignorata. Se si specifica una stringa di formato non valida per la proprietà Format nel grafico o nel misuratore, la stringa di formato specificata verrà interpretata come stringa e la formattazione non verrà applicata.  
   
 -   Se si seleziona **Valuta** in **Categoria** e si seleziona **Mostra valori in**, è possibile selezionare **Migliaia**, **Milioni**o **Miliardi** per visualizzare numeri usando formati finanziari. Se, ad esempio, il valore del campo è 1.789.905.394, si seleziona **Miliardi** e si specificano 2 cifre decimali, il valore visualizzato nel report è 1,78.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "47803759"
  [Formattazione di linee, colori e immagini &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRSSSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Formattazione di scale su un misuratore &#40;Generatore report e SSRSSSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [Formattazione di scale su un misuratore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

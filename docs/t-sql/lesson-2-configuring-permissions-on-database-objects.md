@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3aca79a451c925b9c8c7734ecf3545152328a65f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4faa36c3cbef3d0ae84ac62a6cb7e866998ee064
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683759"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878134"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>Lezione 2: Configurare le autorizzazioni negli oggetti di database
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ Digitare ed eseguire le istruzioni seguenti sostituendo `computer_name` con il n
 ## <a name="create-views-and-stored-procedures"></a>Creare viste e stored procedure
 In qualità di amministratore, l'utente è autorizzato a eseguire l'istruzione SELECT dalla tabella **Products** e dalla vista **vw_Names** , nonché a eseguire la procedura **pr_Names** . All'utente Mary non sono tuttavia concesse tali autorizzazioni. Per concedere a tale utente le autorizzazioni necessarie, utilizzare l'istruzione GRANT.  
 
-### <a name="grant-permission-to-stored-prcoedure"></a>Concedere l'autorizzazione per una stored procedure  
+### <a name="grant-permission-to-stored-procedure"></a>Concedere l'autorizzazione per una stored procedure  
 Eseguire l'istruzione seguente per concedere a `Mary` l'autorizzazione `EXECUTE` per la stored procedure `pr_Names` .
   
   ```sql  

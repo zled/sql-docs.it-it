@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: casualoak
 ms.author: edugonz
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2fa40e17381622862ea2a5b5e6fac594f6a42f6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ec82a6808b7591603154b7831192598cac34243
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728776"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030126"
 ---
 # <a name="change-log-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Log delle modifiche per SQL Server Reporting Services (SSRS) 2017 e versioni successive
 
@@ -33,15 +33,15 @@ Questo articolo descrive le modifiche apportate in [!INCLUDE[ssRSnoversion](../i
 
 Sono stati corretti i bug seguenti:
 
-- La presenza di una casella di testo all'interno di un rettangolo impedisce l'ingrandimento in verticale quando rc:Toolbar=False e contiene testo lungo 
-- La dimensione del testo non viene ridimensionata se pageHeight è minore di 0,5 in 
-- Deadlock nel database di catalogo SSRS quando viene usato con CRM 
-- Le intestazioni di colonna con allineamento verticale non vengono visualizzate correttamente quando si scorre verso il basso nel report 
-- Per gli utenti aggiunti al ruolo SCOM Reporting verrà bloccato l'accesso al portale Web SSRS 
-- I caratteri thai non vengono esportati correttamente in PDF 
-- Modifica del comportamento del ruolo browser 
-- rc:Toolbar=false non funziona nell'edizione Express 
-- Barra di scorrimento verticale mancante nell'area dei messaggi di richiesta per i parametri 
+- La presenza di una casella di testo all'interno di un rettangolo impedisce l'ingrandimento in verticale quando rc:Toolbar=False e contiene testo lungo 
+- La dimensione del testo non viene ridimensionata se pageHeight è minore di 0,5 in 
+- Deadlock nel database di catalogo SSRS quando viene usato con CRM 
+- Le intestazioni di colonna con allineamento verticale non vengono visualizzate correttamente quando si scorre verso il basso nel report 
+- Per gli utenti aggiunti al ruolo SCOM Reporting verrà bloccato l'accesso al portale Web SSRS 
+- I caratteri thai non vengono esportati correttamente in PDF 
+- Modifica del comportamento del ruolo browser 
+- rc:Toolbar=false non funziona nell'edizione Express 
+- Barra di scorrimento verticale mancante nell'area dei messaggi di richiesta per i parametri 
 - Aggiornamento del runtime per i report per dispositivi mobili 
 
 ### <a name="version-140600744-released-april-25-2018"></a>Versione 14.0.600.744, data di rilascio: 25 aprile 2018 
@@ -82,4 +82,4 @@ Versione iniziale
 
 [Novità di Reporting Services (SSRS)](what-s-new-in-sql-server-reporting-services-ssrs.md)   
 
-Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

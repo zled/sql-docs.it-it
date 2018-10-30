@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8aba9144a16da8494d4f303053b164462e0cae8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717219"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021175"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata completa
 Procedura dettagliata per creare report per dispositivi mobili per schermi di qualsiasi dimensione con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e visualizzarli nell'app Power BI per dispositivi mobili.
@@ -32,17 +32,17 @@ Per proseguire, sono necessari questi prodotti:
   
 * Per creare origini dati e indicatori KPI e per pubblicare set di dati e report per dispositivi mobili, è necessario accedere a [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
 * Per [creare set di dati condivisi](../install-windows/install-report-builder.md).  
-* Per creare report per dispositivi mobili, [installare SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=717766).  
+* Per creare report per dispositivi mobili, [installare SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
 *  OPPURE: database di esempio World Wide Importers, disponibile nella pagina [Esempi di Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Per visualizzare il risultato: 
-  *   [Iscriversi al servizio Power BI](http://go.microsoft.com/fwlink/?LinkID=513879) e
+  *   [Iscriversi al servizio Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) e
   *  [Scaricare l'app Power BI per dispositivi mobili](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) per il proprio dispositivo mobile: telefono iOS o Android o dispositivo Windows 10.  
 
   
 ## <a name="create-a-shared-data-source"></a>Creazione di un'origine dati condivisa  
   
-È possibile creare un'origine dati condivisa per i report per dispositivi mobili da una delle origini dati supportate da Reporting Services. Vedere l'[elenco delle origini dati supportate](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+È possibile creare un'origine dati condivisa per i report per dispositivi mobili da una delle origini dati supportate da Reporting Services. Vedere l' [elenco delle origini dati supportate](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. Nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] fare clic su **Nuovo** > **Origine dati**.  
   
@@ -63,7 +63,7 @@ Altre informazioni sulle [origini dati condivise in Reporting Services](../repor
    
 ## <a name="shared-dataset">Creare un set di dati condiviso</a>  
   
-Per creare il set di dati condiviso, usare uno strumento client di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] esistente, ad esempio Progettazione Report in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  Questa procedura dettagliata usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Installare Generatore report](../install-windows/install-report-builder.md) oppure avviarlo dal portale Web. Verranno creati tre set di dati, uno per il valore dell'indicatore KPI, uno per la tendenza KPI e uno con più campi per il report per dispositivi mobili di Reporting Services.     
+Per creare il set di dati condiviso, usare uno strumento client di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] esistente, ad esempio Progettazione Report in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  Questa procedura dettagliata usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Installare Generatore report](../install-windows/install-report-builder.md)oppure avviarlo dal portale Web. Verranno creati tre set di dati, uno per il valore dell'indicatore KPI, uno per la tendenza KPI e uno con più campi per il report per dispositivi mobili di Reporting Services.     
   
 1. Nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] fare clic su **Nuovo** > **Report impaginato** per avviare [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   
@@ -133,7 +133,7 @@ Creare gli indicatori KPI direttamente nel portale Web di [!INCLUDE[PRODUCT_NAME
     
 ## <a name="create-mobile-report">Creare un report per dispositivi mobili di Reporting Services</a>  
    
-Per creare un report per dispositivi mobili di Reporting Services, [installare SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=717766)o avviarlo dal portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
+Per creare un report per dispositivi mobili di Reporting Services, [installare SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkId=717766)o avviarlo dal portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 
 Quando si apre per la prima volta [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], verrà visualizzata un'area di disegno vuota in cui è possibile creare il report per dispositivi mobili. È possibile creare prima oggetti visivi oppure iniziare con i propri dati. Se si creano prima oggetti visivi, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] genera automaticamente dati simulati correlati al report e cambia in modo dinamico man mano che si modificano le selezioni degli oggetti visivi. È possibile provare questa funzionalità.   
   
@@ -259,7 +259,7 @@ Ora che sono stati creati gli oggetti visivi nel layout master, è possibile cre
   
 Per visualizzare il report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , è necessario innanzitutto:
 
-*  Se non si ha ancora un account,[iscriversi al servizio Power BI](http://go.microsoft.com/fwlink/?LinkID=513879).
+*  Se non si ha ancora un account,[iscriversi al servizio Power BI](https://go.microsoft.com/fwlink/?LinkID=513879).
 *  [Scaricare l'app Power BI per dispositivi mobili](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) nel proprio dispositivo mobile.  
 
 ### <a name="view-your-mobile-report"></a>Visualizzare il report per dispositivi mobili

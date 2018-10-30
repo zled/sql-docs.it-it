@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e8a9c698135555e370d6379dd636288635fce181
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 575335cc1d8952caee04159797275d5214f2c9c0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631179"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905146"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Risolvere i problemi di recupero dei dati con i report di Reporting Services
 Il primo passaggio dell'elaborazione del report consiste nel recuperare i dati del report per ogni set di dati tramite la query del set di dati. Quando si visualizza in anteprima un report in locale, è necessario che le connessioni all'origine dati e le credenziali dispongano delle autorizzazioni sufficienti per recuperare i dati nel computer. Quando si esegue un report nel server di report, è necessario che le connessioni all'origine dati e le credenziali dispongano delle autorizzazioni sufficienti per recuperare i dati nel server di report. Utilizzare questo argomento per risolvere i problemi relativi al recupero dei dati del report.   
@@ -55,7 +55,7 @@ Per visualizzare i campi calcolati nel riquadro Dati report, è necessario defin
 Quando si definisce una query nella finestra di dialogo Proprietà set di dati e quindi si chiude la finestra di dialogo, la raccolta dei campi del set di dati viene di solito visualizzata nel riquadro Dati report. Per alcune origini dati, la raccolta dei campi del set di dati non viene popolata automaticamente.   
   
 Per popolare la raccolta dei campi del set di dati, effettuare le operazioni seguenti:  
-* Verificare di disporre delle autorizzazioni necessarie per recuperare le informazioni dei campi dal database. Per alcune origini dati, è possibile che si disponga delle autorizzazioni necessarie per accedere all'origine dati, ma non alla tabella o alla colonna. È possibile disporre delle autorizzazioni per accedere a una vista ma non per eseguire le stored procedure che creano la vista. Per convalidare l'accesso a tabelle o colonne specifiche in un database, verificare i risultati della query in un'applicazione distinta, ad esempio SQL Server Management Studio, usando le stesse autorizzazioni del report. Se non è possibile visualizzare i risultati desiderati per la query, richiedere il supporto dell'amministratore di sistema per modificare le autorizzazioni per i dati.   
+* Verificare di disporre delle autorizzazioni necessarie per recuperare le informazioni dei campi dal database. Per alcune origini dati, è possibile che si abbiano le autorizzazioni necessarie per accedere all'origine dati, ma non alla tabella o alla colonna. È possibile disporre delle autorizzazioni per accedere a una vista ma non per eseguire le stored procedure che creano la vista. Per convalidare l'accesso a tabelle o colonne specifiche in un database, verificare i risultati della query in un'applicazione distinta, ad esempio SQL Server Management Studio, usando le stesse autorizzazioni del report. Se non è possibile visualizzare i risultati desiderati per la query, richiedere il supporto dell'amministratore di sistema per modificare le autorizzazioni per i dati.   
 * Eseguire la query nel riquadro Query della finestra di dialogo **Proprietà set di dati** . Per altre informazioni, vedere [Set di dati del report (Generatore report 3.0 e SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
 * Aggiungere manualmente i campi. Per altre informazioni, vedere [Procedura: Aggiungere, modificare e aggiornare i campi nel riquadro dei dati del report (Generatore report 3.0 e SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   

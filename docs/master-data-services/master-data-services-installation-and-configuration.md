@@ -12,12 +12,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90107457214d5edec92c45620d70f4e48504ab6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 968bb1f3a96ab769b8ad7a837edb5876477c1324
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672249"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072252"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installazione e configurazione di Master Data Services
 
@@ -120,7 +120,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
 
  
 > [!WARNING]  
-    >  È necessario [installare IIS](#InstallIIS) prima di avviare Gestione configurazione [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. In caso contrario, in Gestione configurazione verrà visualizzato un errore di Internet Information Services e non sarà possibile creare l'applicazione Web [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].  
+    >  È necessario [installare IIS](#InstallIIS) prima di avviare Gestione configurazione [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. In caso contrario, in Configuration Manager verrà visualizzato un errore di Internet Information Services e non sarà possibile creare l'applicazione Web [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].  
     
 > **Requisiti del browser**
 >>L'applicazione Web [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] funziona solo in Internet Explorer (IE) 9 o versioni successive. IE 8 e le versioni precedenti, Microsoft Edge e Chrome non sono supportati.    

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9cc144c8b19b2fa90e2cb867f980d9f0ad3a641b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d591d3fb8e3852564429742a4bd0c2cf3af2653
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813499"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028310"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lezione 1: Creazione di un database di esempio del Sottoscrittore
 
@@ -70,4 +70,4 @@ In questa lezione si presuppone che si usi [!INCLUDE[ssManStudioFull_md](../incl
 [Creare un database](../relational-databases/databases/create-a-database.md)  
 [Creazione di un report tabella semplice](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
-Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

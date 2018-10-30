@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1ba74df9a4218424e7ed25a40bb6fc8e17b3d25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 743496bde8f92203232c76ee9dddfc19d98be8d3
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816960"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100502"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -362,7 +362,7 @@ Queste ottimizzazioni sono simili a quelle disponibili con il comando BULK INSER
   
 -   Specificando un valore in un tipo di dati di sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a condizione che i tipi definiti dall'utente supportino la conversione implicita o esplicita da quel tipo. L'esempio seguente illustra come inserire un valore in una colonna del tipo definito dall'utente `Point` tramite conversione esplicita da una stringa.  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( CONVERT(Point, '12.3:46.2') );  
     ```  
@@ -371,7 +371,7 @@ Queste ottimizzazioni sono simili a quelle disponibili con il comando BULK INSER
   
 -   Chiamare una funzione definita dall'utente che restituisce un valore con il tipo definito dall'utente. Nell'esempio seguente viene utilizzata la funzione definita dall'utente `CreateNewPoint()` per creare un nuovo valore con il tipo definito dall'utente `Point` e inserire tale valore nella tabella `Cities`.  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( dbo.CreateNewPoint(x, y) );  
     ```  
@@ -431,7 +431,7 @@ In Parallel Data Warehouse la clausola ORDER BY non è valida in VIEWS, CREATE T
 #### <a name="a-inserting-a-single-row-of-data"></a>A. Inserimento di una sola riga di dati  
  Nell'esempio seguente viene inserita una riga nella tabella `Production.UnitMeasure` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Le colonne nella tabella sono `UnitMeasureCode`, `Name` e `ModifiedDate`. Poiché vengono specificati valori per tutte le colonne e questi vengono elencati nello stesso ordine delle colonne nella tabella, non è necessario specificare i nomi delle colonne nell'elenco delle colonne *.*  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
@@ -439,7 +439,7 @@ VALUES (N'FT', N'Feet', '20080414');
 #### <a name="b-inserting-multiple-rows-of-data"></a>B. Inserimento di più righe di dati  
  Nell'esempio seguente viene usato il [costruttore di valori di tabella](../../t-sql/queries/table-value-constructor-transact-sql.md) per inserire tre righe nella tabella `Production.UnitMeasure` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] in una singola istruzione INSERT. Poiché i valori per tutte le colonne vengono specificati ed elencati nello stesso ordine delle colonne nella tabella, non è necessario specificare i nomi delle colonne nell'elenco delle colonne.  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
     , (N'Y3', N'Cubic Yards', '20080923');  
@@ -448,7 +448,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>C. Inserimento di dati in un ordine diverso rispetto alle colonne della tabella  
  Nell'esempio seguente viene utilizzato un elenco di colonne per specificare in modo esplicito i valori inseriti in ogni colonna. L'ordine delle colonne nella tabella `Production.UnitMeasure` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] è `UnitMeasureCode`, `Name`, `ModifiedDate`. Le colonne, tuttavia, non sono elencate in questo ordine in *column_list*.  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
     ModifiedDate)  
 VALUES (N'Square Yards', N'Y2', GETDATE());  
@@ -460,7 +460,7 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. Inserimento di dati in una tabella con colonne che presentano valori predefiniti  
  Nell'esempio seguente viene illustrato l'inserimento di righe in una tabella con colonne per cui viene generato automaticamente un valore o è specificato un valore predefinito. `Column_1` è una colonna calcolata che genera automaticamente un valore concatenando una stringa con il valore inserito in `column_2`. `Column_2` è definito con un vincolo predefinito. Se per questa colonna non viene specificato alcun valore, viene utilizzato quello predefinito. `Column_3` è definito con il tipo di dati **rowversion**, che genera automaticamente un numero binario incrementale univoco. `Column_4` non genera automaticamente alcun valore. Quando non viene specificato alcun valore per questa colonna, viene inserito un valore NULL. Le istruzioni INSERT inseriscono righe che contengono valori solo per alcune delle colonne. Nell'ultima istruzione INSERT non viene specificata alcuna colonna e solo i valori predefiniti vengono inseriti tramite la clausola DEFAULT VALUES.  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 AS 'Computed column ' + column_2,   
@@ -486,7 +486,7 @@ GO
 #### <a name="e-inserting-data-into-a-table-with-an-identity-column"></a>E. Inserimento di dati in una tabella con una colonna Identity  
  Nell'esempio seguente vengono illustrati diversi metodi per l'inserimento di dati in una colonna Identity. Le prime due istruzioni INSERT consentono di generare valori Identity per le nuove righe. La terza istruzione INSERT ignora la proprietà IDENTITY per la colonna con l'istruzione SET IDENTITY_INSERT e inserisce un valore esplicito nella colonna Identity.  
   
-```  
+```sql
 CREATE TABLE dbo.T1 ( column_1 int IDENTITY, column_2 VARCHAR(30));  
 GO  
 INSERT T1 VALUES ('Row #1');  
@@ -505,7 +505,7 @@ GO
 #### <a name="f-inserting-data-into-a-uniqueidentifier-column-by-using-newid"></a>F. Inserimento di dati in una colonna uniqueidentifier tramite NEWID()  
  L'esempio seguente usata la funzione [NEWID](../../t-sql/functions/newid-transact-sql.md)() per ottenere un GUID per `column_2`. Diversamente dalle colonne Identity, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non genera automaticamente valori per le colonne di tipo [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md), come illustrato dalla seconda istruzione `INSERT`.  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 int IDENTITY,   
@@ -524,7 +524,7 @@ FROM dbo.T1;
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. Inserimento di dati in colonne di tipo definito dall'utente  
  Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti consentono di inserire tre righe nella colonna `PointValue` della tabella `Points`. Questa colonna usa un [tipo CLR definito dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) (UDT). Il tipo di dati `Point` è costituito da valori integer X e Y esposti come proprietà del tipo definito dall'utente. È necessario utilizzare la funzione CAST o CONVERT per eseguire il cast dei valori X e Y delimitati da virgole al tipo `Point`. Le prime due istruzioni usano la funzione CONVERT per convertire un valore stringa nel tipo `Point`, mentre la terza istruzione usa la funzione CAST. Per altre informazioni, vedere [Modifica di dati di tipo definito dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md).  
   
-```  
+```sql
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
@@ -538,7 +538,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
   
  La prima istruzione INSERT usa un'istruzione SELECT per derivare i dati dalle tabelle di origine (`Employee`, `SalesPerson` e `Person`) nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e archiviare il set di risultati nella tabella `EmployeeSales`. Nella seconda istruzione INSERT viene utilizzata la clausola EXECUTE per chiamare una stored procedure che contiene l'istruzione SELECT. Nella terza istruzione INSERT viene utilizzata la clausola EXECUTE per fare riferimento all'istruzione SELECT come stringa letterale.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( DataSource   varchar(20) NOT NULL,  
   BusinessEntityID   varchar(11) NOT NULL,  
@@ -591,7 +591,7 @@ FROM dbo.EmployeeSales;
 #### <a name="i-using-with-common-table-expression-to-define-the-data-inserted"></a>I. Utilizzo dell'espressione di tabella comune WITH per la definizione dei dati inseriti  
  Nell'esempio seguente viene creata la tabella `NewEmployee` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Le righe di una o più tabelle da inserire nella tabella `EmployeeTemp` vengono definite tramite un'espressione di tabella comune (`NewEmployee`). L'istruzione INSERT fa riferimento alle colonne nell'espressione di tabella comune.  
   
-```  
+```sql
 CREATE TABLE HumanResources.NewEmployee  
 (  
     EmployeeID int NOT NULL,  
@@ -634,7 +634,7 @@ GO
 #### <a name="j-using-top-to-limit-the-data-inserted-from-the-source-table"></a>J. Utilizzo della clausola TOP per limitare i dati inseriti dalla tabella di origine  
  Nell'esempio seguente viene creata la tabella `EmployeeSales` e vengono inseriti il nome e i dati di vendita da inizio anno per i primi 5 dipendenti casuali presenti nella tabella `HumanResources.Employee` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. L'istruzione INSERT sceglie 5 righe qualsiasi tra quelle restituite dall'istruzione `SELECT`. La clausola OUTPUT consente di visualizzare le righe inserite nella tabella `EmployeeSales`. Si noti che la clausola ORDER BY nell'istruzione SELECT non viene utilizzata per determinare i primi 5 dipendenti.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   nvarchar(11) NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -655,7 +655,7 @@ INSERT TOP(5)INTO dbo.EmployeeSales
   
  Se è necessario utilizzare TOP per inserire righe in un ordine cronologico significativo, è necessario utilizzare questa clausola insieme a ORDER BY in un'istruzione sub-SELECT, come illustrato nell'esempio seguente. La clausola OUTPUT consente di visualizzare le righe inserite nella tabella `EmployeeSales`. Si noti che i primi 5 dipendenti vengono ora inseriti in base ai risultati della clausola ORDER BY anziché alle righe casuali.  
   
-```  
+```sql
 INSERT INTO dbo.EmployeeSales  
     OUTPUT inserted.EmployeeID, inserted.FirstName, 
         inserted.LastName, inserted.YearlySales  
@@ -673,7 +673,7 @@ INSERT INTO dbo.EmployeeSales
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. Inserimento di dati specificando una vista  
  Nell'esempio seguente viene specificato il nome di una vista come oggetto di destinazione. La nuova riga, tuttavia, viene inserita nella tabella di base sottostante. L'ordine dei valori nell'istruzione `INSERT` deve corrispondere all'ordine delle colonne della vista. Per altre informazioni, vedere [Modificare i dati tramite una vista](../../relational-databases/views/modify-data-through-a-view.md).  
   
-```  
+```sql
 CREATE TABLE T1 ( column_1 int, column_2 varchar(30));  
 GO  
 CREATE VIEW V1 AS   
@@ -694,7 +694,7 @@ GO
 #### <a name="l-inserting-data-into-a-table-variable"></a>L. Inserimento di dati in una variabile di tabella  
  Nell'esempio seguente viene specificata una variabile di tabella come oggetto di destinazione nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql
 -- Create the table variable.  
 DECLARE @MyTableVar table(  
     LocationID int NOT NULL,  
@@ -721,7 +721,7 @@ GO
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -736,7 +736,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source in the FROM clause using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -750,7 +750,7 @@ GO
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 INSERT OPENQUERY (MyLinkServer, 
     'SELECT Name, GroupName 
      FROM AdventureWorks2012.HumanResources.Department')  
@@ -763,7 +763,7 @@ GO
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
 -- Specify a valid server name for Data Source using the format 
 -- server_name or server_nameinstance_name.  
@@ -780,7 +780,7 @@ GO
   
 **Si applica a**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 -- Create an external table.   
 CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] (  
         [FirstName] char(25) NOT NULL,   
@@ -811,7 +811,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. Inserimento di dati in un heap con registrazione minima  
  Nell'esempio seguente viene creata una nuova tabella (heap) in cui vengono inseriti dati da un'altra tabella con registrazione minima. L'esempio presuppone che il modello di recupero del database `AdventureWorks2012` sia impostato su FULL. Per assicurare l'utilizzo della registrazione minima, il modello di recupero del database `AdventureWorks2012` viene impostato su BULK_LOGGED prima che le righe vengano inserite e reimpostato su FULL dopo l'istruzione INSERT INTO...SELECT. Inoltre, viene specificato l'hint TABLOCK per la tabella di destinazione `Sales.SalesHistory`. In tal modo, si assicura l'utilizzo da parte dell'istruzione di uno spazio minimo nel log delle transazioni con risultati efficienti.  
   
-```  
+```sql
 -- Create the target heap.  
 CREATE TABLE Sales.SalesHistory(  
     SalesOrderID int NOT NULL,  
@@ -856,7 +856,7 @@ GO
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
 SELECT b.Name, b.GroupName   
 FROM OPENROWSET (  
@@ -876,7 +876,7 @@ FROM OPENROWSET (
   
 **Si applica a**: [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].  
   
-```  
+```sql
 INSERT INTO Production.Location WITH (XLOCK)  
 (Name, CostRate, Availability)  
 VALUES ( N'Final Inventory', 15.00, 80.00);  
@@ -888,7 +888,7 @@ VALUES ( N'Final Inventory', 15.00, 80.00);
 #### <a name="t-using-output-with-an-insert-statement"></a>T. Uso della clausola OUTPUT con un'istruzione INSERT  
  Nell'esempio seguente viene inserita una riga nella tabella `ScrapReason` e viene utilizzata la clausola `OUTPUT` per restituire i risultati dell'istruzione alla variabile di tabella `@MyTableVar`. Poiché la colonna `ScrapReasonID` è definita con una proprietà `IDENTITY`, per tale colonna non viene specificato un valore nell'istruzione `INSERT`. Si noti tuttavia che il valore generato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per tale colonna viene restituito nella clausola `OUTPUT` nella colonna `INSERTED.ScrapReasonID`.  
   
-```  
+```sql
 DECLARE @MyTableVar table( NewScrapReasonID smallint,  
                            Name varchar(50),  
                            ModifiedDate datetime);  
@@ -907,7 +907,7 @@ FROM Production.ScrapReason;
 #### <a name="u-using-output-with-identity-and-computed-columns"></a>U. Utilizzo della clausola OUTPUT con colonne Identity e calcolate  
  Nell'esempio seguente viene creata la tabella `EmployeeSales` in cui vengono quindi inserite diverse righe tramite un'istruzione INSERT con un'istruzione SELECT per il recupero dei dati dalle tabelle di origine. La tabella `EmployeeSales` include una colonna Identity (`EmployeeID`) e una colonna calcolata (`ProjectedSales`). Poiché questi valori vengono generati dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] durante l'operazione di inserimento, nessuna di queste colonne può essere definita in `@MyTableVar`.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   int IDENTITY (1,5)NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -944,7 +944,7 @@ FROM dbo.EmployeeSales;
 #### <a name="v-inserting-data-returned-from-an-output-clause"></a>V. Inserimento dei dati restituiti da una clausola OUTPUT  
  Nell'esempio seguente vengono acquisiti i dati restituiti dalla clausola OUTPUT di un'istruzione MERGE e tali dati vengono inseriti in un'altra tabella. L'istruzione MERGE consente di aggiornare quotidianamente la colonna `Quantity` della tabella `ProductInventory`, in base agli ordini elaborati nella tabella `SalesOrderDetail` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Vengono inoltre eliminate le righe dei prodotti le cui scorte vengono azzerate. In questo esempio vengono acquisite le righe eliminate, che vengono inserite in un'altra tabella, `ZeroInventory`, in cui viene tenuta traccia dei prodotti senza scorte.  
   
-```  
+```sql
 --Create ZeroInventory table.  
 CREATE TABLE Production.ZeroInventory (DeletedProductID int, RemovedOnDate DateTime);  
 GO  
@@ -974,7 +974,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
 #### <a name="w-inserting-data-using-the-select-option"></a>W. Inserimento di dati tramite l'opzione SELECT  
  L'esempio seguente illustra come inserire più righe di dati tramite un'istruzione INSERT con un'opzione SELECT. La prima istruzione `INSERT` usa direttamente un'istruzione `SELECT` per recuperare i dati dalla tabella di origine e quindi archiviare il set di risultati nella tabella`EmployeeTitles`.  
   
-```  
+```sql
 CREATE TABLE EmployeeTitles  
 ( EmployeeKey   INT NOT NULL,  
   LastName     varchar(40) NOT NULL,  
@@ -989,7 +989,7 @@ INSERT INTO EmployeeTitles
 #### <a name="x-specifying-a-label-with-the-insert-statement"></a>X. Indicazione di un'etichetta con l'istruzione INSERT  
  L'esempio seguente illustra l'uso di un'etichetta con un'istruzione INSERT.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCurrency   
@@ -1000,7 +1000,7 @@ OPTION ( LABEL = N'label1' );
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. Uso di un'etichetta e di un hint per la query con l'istruzione INSERT  
  Questa query illustra la sintassi di base per l'uso di un'etichetta e di un hint di join per la query con l'istruzione INSERT. Dopo l'invio della query al nodo di controllo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in esecuzione nei nodi di calcolo, genera il piano di query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicando la strategia di hash join. Per altre informazioni sugli hint di join e su come usare la clausola OPTION, vedere [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCustomer (CustomerKey, CustomerAlternateKey, 

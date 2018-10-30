@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64f8ccd8f1cfcc2ea9c72d31b62382a6937ccfa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 845a120f1fe8b4bc56b8cac835251b062cade112
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817819"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072195"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Creare un avviso dati nella finestra di progettazione Avviso dati
 
@@ -59,7 +59,7 @@ Le definizioni di avviso dati vengono create nella finestra di progettazione Avv
   
      Il nome predefinito della definizione di avviso corrisponde al nome del report. Non è necessario che i nomi delle definizioni di avviso siano univoci, ma l'utilizzo di nomi uguali ne renderebbe difficile la distinzione quando si visualizza l'elenco di avvisi in Gestione avvisi dati. È consigliabile utilizzare nomi significativi e univoci per le definizioni di avviso.  
   
-6.  Facoltativamente, cambiare l'opzione dei dati predefiniti da **any data in the data feed has** (alcuni dati nel feed di dati hanno) in **no data in the data feed has**(nessun dato del feed di dati ha).  
+6.  Facoltativamente, cambiare l'opzione dei dati predefiniti da **any data in the data feed has** (alcuni dati nel feed di dati hanno) in **no data in the data feed has** (nessun dato del feed di dati ha).  
   
 7.  Fare clic su **Aggiungi regola**.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6e047ff8c5a6c898ed902fa4d52de6db797da3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73268c03ef80b13a28d8011f9b6860abcfac79e2
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676999"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030370"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Aggiungere un segnalibro a un report (Generatore report e SSRS)
   Aggiungere segnalibri e collegamenti a segnalibro a un report quando si desidera fornire un sommario personalizzato o collegamenti interni personalizzati nel report. In genere i segnalibri vengono aggiunti a posizioni del report cui si desidera indirizzare gli utenti, ad esempio a ogni tabella o grafico o ai valori di gruppo univoci visualizzati in una tabella o una matrice. È possibile creare stringhe da utilizzare come segnalibri o, per i gruppi, è possibile impostare il segnalibro sull'espressione di raggruppamento.  
@@ -22,7 +22,7 @@ ms.locfileid: "47676999"
   
  Se nel report ad esempio è visualizzata una tabella raggruppata in base al colore, è possibile aggiungere un segnalibro basato sull'espressione di raggruppamento all'intestazione di gruppo. Successivamente è possibile aggiungere una tabella con una sola casella di testo all'inizio del report in cui sono visualizzati i valori relativi al colore e impostare il collegamento a segnalibro in tale casella di testo. Quando si fa clic sul colore, si passa alla pagina del report in cui viene visualizzata la riga dell'intestazione di gruppo per il colore specifico.  
   
- È possibile aggiungere un segnalibro a qualsiasi elemento di report e un collegamento a qualsiasi elemento cui sia associata una proprietà **Azione** , ad esempio una casella di testo, un'immagine oppure una serie calcolata in un grafico. Per altre informazioni, vedere [Finestra di dialogo Proprietà azione &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9).  
+ È possibile aggiungere un segnalibro a qualsiasi elemento di report e un collegamento a qualsiasi elemento cui sia associata una proprietà **Azione** , ad esempio una casella di testo, un'immagine oppure una serie calcolata in un grafico. Per altre informazioni, vedere [Finestra di dialogo Proprietà azione &#40;Generatore report e SSRS&#41;](https://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -55,6 +55,6 @@ ms.locfileid: "47676999"
 ## <a name="see-also"></a>Vedere anche  
  [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -2,7 +2,7 @@
 title: Elaborazione di query intelligenti nei database Microsoft SQL | Microsoft Docs
 description: Funzionalità di elaborazione di query intelligenti e miglioramento delle prestazioni delle query in SQL Server e nel database SQL di Azure.
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35306ebbde5586401f78f368334634f0fadfe7a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c6d89b3ec3d01792578210caef8018d15b2d175
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753969"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072247"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Elaborazione di query intelligenti nei database SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -87,6 +87,9 @@ I carichi di lavoro seguenti possono trarre vantaggio dalla modalità batch per 
 1.  Una parte significativa del carico di lavoro è costituita da query analitiche (come regola generale, le query con operatori come join o aggregazioni che elaborano centinaia di migliaia di righe o più), **E**
 2.  Il carico di lavoro è basato su CPU (se il collo di bottiglia sono le operazioni di I/O è comunque consigliabile prendere in considerazione un indice columnstore, se possibile), **E**
 3.  La creazione di un indice columnstore aggiunge un overhead eccessivo per la parte transazionale del carico di lavoro **O** la creazione di un indice columnstore non è possibile perché l'applicazione dipende da una funzionalità che non è ancora supportata con gli indici columnstore.
+
+> [!NOTE]
+> La modalità batch per rowstore consente solo di ridurre l'utilizzo di CPU. Se il collo di bottiglia è relativo alle operazioni di I/O e i dati non sono già memorizzati nella cache (cache "a freddo"), la modalità batch per rowstore NON ridurrà il tempo trascorso. Analogamente, se la memoria del computer non è sufficiente per memorizzare nella cache tutti i dati, un miglioramento delle prestazioni è improbabile.
 
 ### <a name="what-changes-with-batch-mode-on-rowstore"></a>Cosa cambia con la modalità batch per rowstore
 A parte passare al livello di compatibilità 150, non è necessario modificare nulla per abilitare la modalità batch per rowstore per i carichi di lavoro candidati.

@@ -8,43 +8,43 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: 842a7377bcd6bdcb649a78b2f31eb66de95bc5a3
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
-ms.translationtype: MTE75
+ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854393"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072335"
 ---
 ## <a name="specifying-application-intent"></a>Specificazione della finalità dell'applicazione
 
-La parola chiave **ApplicationIntent** può essere specificato nella stringa di connessione. Sono valori assegnabili **ReadWrite** oppure **ReadOnly**. Il valore predefinito è **ReadWrite**.
+La parola chiave **ApplicationIntent** può essere specificata nella stringa di connessione. I valori assegnabili sono **ReadWrite** oppure **ReadOnly**. Il valore predefinito è **ReadWrite**.
 
-Quando **ApplicationIntent = ReadOnly**, il client richiede un carico di lavoro di lettura durante la connessione. Il server applica la finalità al momento della connessione e durante un' **utilizzare** istruzione di database.
+Quando **ApplicationIntent = ReadOnly**, il client richiede un carico di lavoro di lettura durante la connessione. Il server applica la finalità al momento della connessione e durante un'istruzione di database **USE**.
 
 La parola chiave **ApplicationIntent** non funziona con i database legacy di sola lettura.  
 
 
-#### <a name="targets-of-readonly"></a>Destinazioni di sola lettura
+#### <a name="targets-of-readonly"></a>Destinazioni di ReadOnly
 
-Quando una connessione sceglie **ReadOnly**, la connessione viene assegnata a una delle seguenti configurazioni speciali che potrebbero essere disponibili per il database:
+Quando una connessione sceglie **ReadOnly**, la connessione viene assegnata a una delle configurazioni speciali seguenti che potrebbero essere disponibili per il database:
 
 - [Always On](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
-    - Un database può consentire o impedire carichi di lavoro di lettura nel database Always On di destinazione. Questa scelta è controllata utilizzando il **ALLOW_CONNECTIONS** clausola delle **PRIMARY_ROLE** e **SECONDARY_ROLE** istruzioni Transact-SQL.
+    - Un database può consentire o impedire carichi di lavoro di lettura nel database Always On di destinazione. Questa scelta viene controllata usando la clausola **ALLOW_CONNECTIONS** delle istruzioni Transact-SQL **PRIMARY_ROLE** e **SECONDARY_ROLE**.
 
 - [Replica geografica](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)
 
 - [Scalabilità orizzontale in lettura](https://docs.microsoft.com/azure/sql-database/sql-database-read-scale-out)
 
-Se nessuna di queste destinazioni speciali è disponibile, il database normale viene letto dal.
+Se nessuna di queste destinazioni speciali è disponibile, viene letto il database normale.
 
 &nbsp;
 
-Il **ApplicationIntent** parola chiave consente *routing di sola lettura*.
+La parola chiave **ApplicationIntent** abilita il *routing di sola lettura*.
 
 
 ## <a name="read-only-routing"></a>Routing di sola lettura
 
-Il routing di sola lettura è una funzionalità che può garantire la disponibilità di una replica di sola lettura di un database. Per abilitare il routing di sola lettura, si applicano tutte le operazioni seguenti:
+Il routing di sola lettura è una funzionalità che può garantire la disponibilità di una replica di sola lettura di un database. Per abilitare il routing di sola lettura, si applicano tutte le condizioni seguenti:
 
 - È necessario connettersi a un listener del gruppo di disponibilità Always On.
 

@@ -18,12 +18,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b91bd0c2de4efaaa7544ee668169b4d263445aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c99ea57cbfbf5b24dc94b7827cf958495a759a76
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710709"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906531"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guida per il controllo delle versioni delle righe e il blocco della transazione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47710709"
   
 -   Meccanismi di blocco che salvaguardano l'isolamento delle transazioni.  
   
--   Meccanismi di registrazione che garantiscono la durabilità delle transazioni. Per le transazioni completamente durevoli, il record del log viene finalizzato su disco prima del commit delle transazioni stesse. Pertanto, anche in caso di errore dell'hardware del server, del sistema operativo o della stessa istanza del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], l'istanza usa i log delle transazioni al riavvio per eseguire automaticamente il rollback delle eventuali transazioni non completate fino al punto in cui si è verificato l'errore di sistema. Le transazioni durevoli ritardate vengono sottoposte a commit prima che il record del log delle transazioni venga finalizzato su disco. Tali transazioni potrebbero andare perdute se si verifica un errore di sistema prima della finalizzazione del record del log su disco. Per altre informazioni sulla durabilità delle transazioni ritardate, vedere [Controllo della durabilità delle transazioni](../relational-databases/logs/control-transaction-durability.md).  
+-   Meccanismi di registrazione che garantiscono la durabilità delle transazioni. Per le transazioni completamente durevoli, il record del log viene finalizzato su disco prima del commit delle transazioni stesse. Pertanto, anche in caso di errore dell'hardware del server, del sistema operativo o della stessa istanza del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], l'istanza utilizza i log delle transazioni al riavvio per eseguire automaticamente il rollback delle eventuali transazioni non completate fino al punto in cui si è verificato l'errore di sistema. Le transazioni durevoli ritardate vengono sottoposte a commit prima che il record del log delle transazioni venga finalizzato su disco. Tali transazioni potrebbero andare perdute se si verifica un errore di sistema prima della finalizzazione del record del log su disco. Per altre informazioni sulla durabilità delle transazioni ritardate, vedere [Controllo della durabilità delle transazioni](../relational-databases/logs/control-transaction-durability.md).  
   
 -   Caratteristiche di gestione delle transazioni che ne garantiscono l'atomicità e la consistenza. Una transazione avviata deve essere completata (sottoposta a commit). In caso contrario tutte le modifiche apportate ai dati dall'inizio della transazione verranno annullate dal [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Questa operazione viene definita come rollback di una transazione perché ripristina lo stato dei dati precedente alle modifiche.  
   

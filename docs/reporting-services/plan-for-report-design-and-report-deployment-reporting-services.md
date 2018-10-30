@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b5e541af99ac03562347a893d67de8ad0390940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55eff13b6c766d5c10270e79b8b8d986d1a08f5e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832329"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029140"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Pianificare la progettazione e la distribuzione di report | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili diversi approcci per la creazione e la distribuzione di report impaginati. Viene illustrato come pianificare un ambiente di creazione di report e un server di report che interagiscono.
@@ -35,13 +35,13 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
   
  Per ulteriori informazioni su RDL e sugli schemi RDL, vedere quanto riportato di seguito:  
   
--   [XML Schema di Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=31850)  
+-   [XML Schema di Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
--   [Specifiche del linguaggio RDL (Report Definition Language)](http://go.microsoft.com/fwlink/?linkid=116865)  
+-   [Specifiche del linguaggio RDL (Report Definition Language)](https://go.microsoft.com/fwlink/?linkid=116865)  
   
 -   [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
- Per altre informazioni sui controlli ReportViewer, vedere [Controlli ReportViewer (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx).  
+ Per altre informazioni sui controlli ReportViewer, vedere [Controlli ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Server di report e supporto dello schema RDL  
  In un server di report di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] è possibile distribuire un file di definizione del report nei modi seguenti:  
@@ -89,7 +89,7 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
   
 -   [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).  
+-   [SQL Server Data Tools for Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 ##  <a name="bkmk_reportviewer"></a> Controlli ReportViewer  
  Un controllo ReportViewer di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] può visualizzare un report con estensione RDLC in modalità di anteprima locale o in modalità remota, il controllo può visualizzare un file con estensione RDL ospitato in un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Nella tabella seguente è riportato l'elenco delle versioni di RDL supportate dai controlli ReportViewer per l'elaborazione locale (con estensione RDLC). Il supporto RDL lato server è riepilogato nella sezione [Server di report e supporto dello schema RDL](#bkmk_report_server_rdl_schema_support).  
@@ -101,11 +101,11 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
   
  Per ulteriori informazioni, vedere quanto segue:  
   
--   [Conversione di file RDLC in file RDL](http://msdn.microsoft.com/library/ms252109.aspx)  
+-   [Conversione di file RDLC in file RDL](https://msdn.microsoft.com/library/ms252109.aspx)  
   
--   [Controlli ReportViewer (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx)  
+-   [Controlli ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)  
   
--   [Aggiunta e configurazione dei controlli ReportViewer](http://msdn.microsoft.com/library/ms252104.aspx)  
+-   [Aggiunta e configurazione dei controlli ReportViewer](https://msdn.microsoft.com/library/ms252104.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Report, parti del report e definizioni dei report &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   

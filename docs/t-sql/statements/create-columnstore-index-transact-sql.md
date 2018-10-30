@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 009433960a4662985d78c09c10b125cfb5f7100f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8780fd5714af5acb0405592f1700ab19004fd0b
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690662"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336300"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -390,7 +390,7 @@ Le limitazioni seguenti si applicano solo a [!INCLUDE[ssSQL14](../../includes/ss
 
 -   Change Tracking. Non è possibile usare il rilevamento delle modifiche con gli indici columnstore non cluster (NCCI) poiché sono di sola lettura. La soluzione funziona per gli indici columnstore cluster (CCI).  
 -   Change Data Capture. Non è possibile usare Change Data Capture per gli indici columnstore non cluster (NCCI) poiché sono di sola lettura. La soluzione funziona per gli indici columnstore cluster (CCI).  
--   Secondario leggibile. Non è possibile accedere a un indice columnstore cluster (CCI) da una replica secondaria leggibile di un gruppo di disponibilità AlwaysOn leggibile.  È possibile accedere a un indice columnstore non cluster (NCCI) da una replica secondaria leggibile.  
+-   Secondario leggibile. Non è possibile accedere a un indice columnstore cluster (CCI) da una replica secondaria leggibile di un gruppo di disponibilità Always On leggibile.  È possibile accedere a un indice columnstore non cluster (NCCI) da una replica secondaria leggibile.  
 -   MARS (Multiple Active Result Sets). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] usa MARS per le connessioni di sola lettura alle tabelle con un indice columnstore. Tuttavia, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] non supporta MARS per le operazioni simultanee di Data Manipulation Language (DML) su una tabella con indice columnstore. Quando questo si verifica,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] termina le connessioni e interrompe le transazioni.  
   
  Per informazioni sui vantaggi a livello di prestazioni e sulle limitazioni degli indici columnstore, vedere [Indici columnstore - Panoramica](../../relational-databases/indexes/columnstore-indexes-overview.md).

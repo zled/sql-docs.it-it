@@ -14,12 +14,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91d162062b59ed52d95d7586e6f7a0c8331a896f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee6e1315212c81cfb0bf5cc76c5f95a026462989
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687119"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168919"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Creare un piano di manutenzione (area di progettazione del piano di manutenzione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ ms.locfileid: "47687119"
   
         1.  Se si seleziona **Genera report in un file di testo**, selezionare **Crea nuovo file** o **Accoda a file**.  
   
-        2.  A seconda della selezione effettuata nel passaggio precedente, immettere il nome e il percorso completo del nuovo file o del file da accodare nella casella **Cartella** o **Nome file** . In alternativa, fare clic sui puntini di sospensione **(…)** e selezionare il percorso della cartella o il nome del file dalla finestra di dialogo **Individua cartella –***nome_server* o **Individua file di database –***nome_server*.  
+        2.  A seconda della selezione effettuata nel passaggio precedente, immettere il nome e il percorso completo del nuovo file o del file da accodare nella casella **Cartella** o **Nome file** . In alternativa, fare clic sui puntini di sospensione **(…)** e selezionare il percorso della cartella o il nome del file dalla finestra di dialogo **Individua cartella -**_nome\_server_ o **Individua file di database -**_nome\_server_.  
   
         3.  Se si seleziona **Invia report a destinatario di posta elettronica**, nell'elenco **Operatore agente** selezionare il destinatario del report da inviare tramite posta elettronica.  
   
@@ -233,7 +233,7 @@ ms.locfileid: "47687119"
   
 12. Per visualizzare i risultati nel visualizzatore file di log, in **Esplora oggetti**fare clic con il pulsante destro del mouse sulla cartella **Piani di manutenzione** o sul piano di manutenzione specifico e selezionare **Visualizza cronologia**.  
   
-     Nella finestra di dialogo **Visualizzatore file di log –***nome_server* sono disponibili le opzioni seguenti.  
+     Nella finestra di dialogo **Visualizzatore file di log -**_nome\_server_ sono disponibili le opzioni seguenti.  
   
      **Carica log**  
      Consente di aprire una finestra di dialogo in cui è possibile specificare un file di log da caricare.  
@@ -256,7 +256,7 @@ ms.locfileid: "47687119"
      **Riepilogo file di log**  
      Consente di visualizzare un riepilogo dei filtri del file di log. Se non è stato applicato alcun filtro al file, verrà visualizzato il testo **Nessun filtro applicato**. Se è stato applicato un filtro al log, verrà visualizzato il testo **Filtra voci del log in cui:** \<criteri di filtro>.  
   
-     **Data**  
+     **Date**  
      Visualizza la data dell'evento.  
   
      **Origine**  

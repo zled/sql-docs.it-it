@@ -29,12 +29,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 40a5424c8c2add69404842c5d7d287dec1b99680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e9b1c85f53920a6deeaf6f716cff25e780fe6ac
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719639"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120438"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -329,7 +329,7 @@ SELECT * FROM deleted;
 ### <a name="optimizing-dml-triggers"></a>Ottimizzazione di trigger DML
  I trigger funzionano all'interno di transazioni (implicite o meno) e mentre sono aperti bloccano risorse. Il blocco rimane finché la transazione non viene confermata (con COMMIT) o rifiutata (con ROLLBACK). Più a lungo viene eseguito un trigger, maggiore è la probabilità che un altro processo venga bloccato. I trigger, pertanto, devono essere scritti in modo da ridurne la durata laddove possibile. Un modo per ottenere questo risultato consiste nel rilasciare un trigger quando un'istruzione DML modifica 0 righe. 
 
-Per rilasciare il trigger per un comando che non modifica alcuna riga, usare la variabile di sistema [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql). 
+Per rilasciare il trigger per un comando che non modifica alcuna riga, usare la variabile di sistema [ROWCOUNT_BIG](../functions/rowcount-big-transact-sql.md). 
 
 Il frammento di codice T-SQL seguente esegue tale operazione e deve essere presente all'inizio di ogni trigger DML:
 

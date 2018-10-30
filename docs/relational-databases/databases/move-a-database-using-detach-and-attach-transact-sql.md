@@ -19,12 +19,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3e415e506e50ca5cbd9642e790697a4b4644565
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 777647d3e558327eb635a0ae8d2794d82d453c25
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776559"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150172"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Spostamento di un database tramite la funzionalità di scollegamento e collegamento (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,6 @@ ms.locfileid: "47776559"
 1.  Scollegare il database. Per altre informazioni, vedere [Scollegare un database](../../relational-databases/databases/detach-a-database.md).  
   
 2.  In Esplora risorse o in una finestra del prompt dei comandi di Windows spostare nella nuova posizione il file o i file del database scollegato e i relativi file di log.  
-  
-    > [!NOTE]  
-    >  Per spostare un database composto da un singolo file è possibile utilizzare la posta elettronica se le dimensioni del file sono sufficientemente ridotte.  
   
      È consigliabile spostare i file di log anche se si prevede di crearne di nuovi. In alcuni casi, per il ricollegamento di un database sono necessari i file di log esistenti. Mantenere pertanto sempre tutti i file di log scollegati fino a quando il database non è stato collegato senza di essi.  
   

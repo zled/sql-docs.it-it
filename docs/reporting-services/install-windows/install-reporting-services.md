@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: baf7f555f7856422674f41f006cd02a4c730ba10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 620debfd008dc120e171241d0038229e9dce8a04
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785349"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028194"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Installare SQL Server Reporting Services 2017 e versioni successive
 
@@ -130,6 +130,6 @@ Per informazioni su come installare la modalità nativa di SQL Server 2016 Repor
 
 Una volta installato il server di report, iniziare a creare report e a distribuirli nel server di report. Per informazioni su come iniziare a usare Generatore report, vedere [Installare Generatore report](../../reporting-services/install-windows/install-report-builder.md).
 
-Per creare report con SQL Server Data Tools, [scaricare SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
+Per creare report con SQL Server Data Tools, [scaricare SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).
 
-Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

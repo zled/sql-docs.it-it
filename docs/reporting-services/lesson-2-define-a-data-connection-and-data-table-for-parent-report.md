@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dfdddd3e263ef6f83f8ad12635c76c61fef6e284
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d284bc507c3398c85cf823528f17fdbd671e96a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603127"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021775"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lezione 2: Definire una connessione dati e una tabella di dati per il report padre
 Dopo aver creato un nuovo progetto di sito Web utilizzando il modello di sito Web ASP.NET per Visual C#, il passaggio successivo consiste nel creare una connessione dati e una tabella di dati per il report padre. In questa esercitazione la connessione dati è al database AdventureWorks2014.  
@@ -26,7 +26,7 @@ Dopo aver creato un nuovo progetto di sito Web utilizzando il modello di sito We
   
     Verrà aggiunto un nuovo file XSD **DataSet1.xsd** al progetto e verrà aperto Progettazione DataSet.  
   
-3.  Dalla finestra della casella degli strumenti trascinare un controllo **[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx.aspx)** nell'area di progettazione. Viene avviata la configurazione guidata **TableAdapter** .  
+3.  Dalla finestra della casella degli strumenti trascinare un controllo **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx.aspx)** nell'area di progettazione. Viene avviata la configurazione guidata **TableAdapter** .  
   
 4.  Nella pagina **Seleziona connessione dati** fare clic su **Nuova connessione**.  
   

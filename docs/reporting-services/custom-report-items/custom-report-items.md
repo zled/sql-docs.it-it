@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 099161025c567b79fb92b80103b85c6d5ad574a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e218d831113e7707c9f4f9acd4a93c2c290f1140
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659039"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021115"
 ---
 # <a name="custom-report-items"></a>Elementi dei report personalizzati
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile un set completo di strumenti per la compilazione e la pubblicazione di report aziendali, la gestione di sicurezza e sottoscrizioni e l'estensione della funzionalità di report tramite un'API completa. I report vengono definiti utilizzando un linguaggio XML denominato Report Definition Language (RDL). RDL offre un set di istruzioni che descrivono le informazioni relative al layout e alle query e i tipi di elementi per un report. È possibile estendere RDL scrivendo un elemento del report personalizzato. Tale elemento è costituito da un componente runtime, che viene chiamato dal componente Elaborazione report in fase di esecuzione, e da un componente della fase di progettazione, che rende disponibile l'elemento del report personalizzato in Progettazione report.  
   
- Per un esempio di elemento del report personalizzato completamente implementato, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Esempi del prodotto SQL Server Reporting Services).  
+ Per un esempio di elemento del report personalizzato completamente implementato, vedere [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Esempi del prodotto SQL Server Reporting Services).  
   
 ## <a name="custom-report-item-scenarios"></a>Scenari di elementi del report personalizzati  
  Gli sviluppatori che devono integrare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle proprie applicazioni possono necessitare di funzionalità non supportate in RDL a livello nativo. Tali funzionalità includono ad esempio elementi quali controlli di mapping, elenchi orizzontali, elenchi in formato colonna e matrici di tabelle pivot. Un componente runtime dell'elemento del report personalizzato può essere sviluppato e distribuito con un'applicazione per soddisfare queste esigenze.  

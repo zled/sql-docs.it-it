@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c8fbf783d52f301de73c294a3d68965dece7ffa3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821183"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905135"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Migliorare i gruppi con scalabilità orizzontale PolyBase in Windows
 
@@ -60,7 +60,7 @@ Di seguito vengono illustrati i passaggi per configurare un gruppo di PolyBase c
   
 2. Nella pagina Selezione funzionalità scegliere **Servizio query PolyBase per i dati esterni**.
   
-3. Nella pagina Configurazione server usare l' **account di dominio** PQTH4A\PolybaseUser per il motore PolyBase di SQL Server e SQL Server PolyBase Data Movement Service.
+3. Nella pagina Configurazione server usare l'**account di dominio** PQTH4A\PolybaseUser per il motore di ricerca PolyBase di SQL Server e il servizio SQL Server PolyBase Data Movement.
   
 4. Nella pagina di configurazione di PolyBase selezionare l'opzione **Usare questa istanza di SQL Server come parte del gruppo PolyBase con scalabilità orizzontale**. Verrà aperto il firewall per consentire le connessioni in ingresso ai servizi di PolyBase.
   

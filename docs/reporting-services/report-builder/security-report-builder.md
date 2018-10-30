@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7237049744fe105c7570ed27790b930f935fef32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9831d45e62711a4fed958b13e12d44d53320a3f
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755887"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906391"
 ---
 # <a name="security-report-builder"></a>Sicurezza (Generatore report)
   Generatore report è un'applicazione client di creazione di report progettata per utilizzare un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Il server di report può essere configurato per lavorare in modalità nativa come server autonomo o in modalità integrata SharePoint per supportare i report in un sito di SharePoint.  
@@ -108,7 +108,7 @@ ms.locfileid: "47755887"
   
 -   Non utilizzare parametri basati su parametri di query e che sono di tipo **Text** a meno che si forniscano valori validi. Un elenco dei valori disponibili aiuta un utente a scegliere solo valori validi. Senza questo elenco non è possibile limitare i valori che possono essere immessi da un utente.  
   
--   Non utilizzare il parametro globale [&UserID] per proteggere i dati privati. Come parametro del report, questo valore può essere specificato in un URL del report tramite la sintassi di accesso agli URL. L'utilizzo di questo valore in un'espressione in un set di dati condiviso evita la memorizzazione nella cache del set di dati. Per altre informazioni, vedere [Riferimento ai parametri di accesso con URL](../../reporting-services/url-access-parameter-reference.md) nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   Non usare il parametro globale [&UserID] per proteggere i dati privati. Come parametro del report, questo valore può essere specificato in un URL del report tramite la sintassi di accesso agli URL. L'utilizzo di questo valore in un'espressione in un set di dati condiviso evita la memorizzazione nella cache del set di dati. Per altre informazioni, vedere [Riferimento ai parametri di accesso con URL](../../reporting-services/url-access-parameter-reference.md) nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
  Una volta che gli elementi sono pubblicati in un server di report, l'amministratore del server di report può facilitarne la protezione assegnando la sicurezza basata sui ruoli o cartella e la sicurezza a livello di elemento. Per altre informazioni, vedere [Garantire la sicurezza di report e risorse](../../reporting-services/security/secure-reports-and-resources.md) nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   

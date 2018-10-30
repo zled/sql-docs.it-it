@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1a3611e0575014ba2abba89d61d0512b484f720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8b13d548aab60dd22cfc3adf6b1730445113cd
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733169"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100312"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Utilizzo delle espressioni nei report (Generatore report e SSRS)
 Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] le espressioni sono usate nella definizione del report per specificare o calcolare valori per parametri, query, filtri, proprietà degli elementi del report, definizioni di gruppo e di ordinamento, proprietà delle caselle di testo, segnalibri, mappe documento, contenuto dinamico dell'intestazione e del piè di pagina, immagini e definizioni delle origini dati dinamiche. In questo argomento vengono forniti esempi delle numerose posizioni in cui è possibile utilizzare le espressioni per modificare il contenuto o l'aspetto di un report. Non si tratta tuttavia di un elenco completo. È possibile impostare un'espressione per qualsiasi proprietà in una finestra di dialogo che contiene il pulsante di espressione (**fx**) o in un elenco a discesa in cui è visualizzato **\<Espressione...>**.  
@@ -53,7 +53,7 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversio
 |-------------------|---------------------------------------|--------------------|  
 |Calcolare i valori di aggregazione per un set di dati.|Proprietà Value per un segnaposto in una casella di testo. Usare la finestra di dialogo **Proprietà segnaposto, Generale**.|`=First(Fields!Sales.Value,"DataSet1")`|  
 |Concatenare testo ed espressioni nella stessa casella di testo.|Value per un segnaposto in una casella di testo posizionata in un'intestazione o in un piè di pagina. Usare la finestra di dialogo **Proprietà segnaposto, Generale**.|`="This report began processing at " & Globals!ExecutionTime`|  
-|Calcolare un valore di aggregazione per un set di dati in un ambito diverso.|Value per un segnaposto in una casella di testo posizionata in un gruppo Tablix. Usare la finestra di dialogo **Proprietà segnaposto, Generale**.|`=Max(Fields!Total.Value,"DataSet2)`|  
+|Calcolare un valore di aggregazione per un set di dati in un ambito diverso.|Value per un segnaposto in una casella di testo posizionata in un gruppo Tablix. Usare la finestra di dialogo **Proprietà segnaposto, Generale**.|`=Max(Fields!Total.Value,"DataSet2")`|  
 |Formattare i dati in una casella di testo in base al valore.|Colore per un segnaposto in una casella di testo nella riga dei dettagli di una Tablix. Usare la finestra di dialogo **Proprietà casella di testo, Carattere**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Calcolare un valore una volta per farvi riferimento in tutto il report.|Value per una variabile del report. Usare la finestra di dialogo **Proprietà report, Variabili**.|`=Variables!MyCalculation.Value`|  
 |Includere valori specifici per più campi di un set di dati.|Equazione di filtro per un gruppo in una Tablix. Usare la finestra di dialogo **Proprietà Tablix, Filtri**.|Come tipo di dati selezionare **Boolean**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  

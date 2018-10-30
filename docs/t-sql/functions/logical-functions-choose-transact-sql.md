@@ -18,12 +18,12 @@ ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f3b28d6c3b731a25103c950c784594325f095a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94a05685d8bb2e71630f06f155b30e0bbaec7b44
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853319"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906011"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>Funzioni logiche - CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -55,8 +55,11 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
  CHOOSE funziona come un indice in una matrice, dove la matrice è costituita dagli argomenti che seguono l'argomento dell'indice. L'argomento dell'indice determina quali tra i valori seguenti saranno restituiti.  
   
 ## <a name="examples"></a>Esempi  
+
+### <a name="a-simple-choose-example"></a>A. Esempio di CHOOSE semplice
+
  Nell'esempio seguente viene restituito il terzo elemento dell'elenco di valori forniti.  
-  
+ 
 ```  
 SELECT CHOOSE ( 3, 'Manager', 'Director', 'Developer', 'Tester' ) AS Result;  
 ```  
@@ -70,7 +73,9 @@ Developer
   
 (1 row(s) affected)  
 ```  
-  
+
+### <a name="b-simple-choose-example-based-on-column"></a>B. Esempio di CHOOSE semplice basato su una colonna
+
  Nell'esempio seguente viene restituita una stringa di caratteri semplice in base al valore della colonna `ProductCategoryID`.  
   
 ```  
@@ -94,8 +99,10 @@ ProductCategoryID Expression1
 (4 row(s) affected)  
   
 ```  
+
+### <a name="c-choose-in-combination-with-month"></a>C. CHOOSE in combinazione con MONTH
   
- Nell'esempio seguente viene restituito il trimestre in cui un dipendente è stato assunto. La funzione MONTH viene utilizzata per restituire il valore del mese della colonna `HireDate`.  
+ Nell'esempio seguente viene restituita la stagione in cui un dipendente è stato assunto. La funzione MONTH viene utilizzata per restituire il valore del mese della colonna `HireDate`.  
   
 ```  
 USE AdventureWorks2012;  

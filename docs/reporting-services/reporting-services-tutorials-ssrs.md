@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c28a01ff067422559d178716c6cd113d4c253210
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fd17b54127da70a5afd37b518ccab9ced606dae
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825994"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029180"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Esercitazioni su Reporting Services (SSRS)
 
@@ -39,8 +39,8 @@ In queste esercitazioni vengono presentate diverse visualizzazioni che è possib
   
 ## <a name="see-also"></a>Vedere anche  
 * [Database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases)  
-* [Esempi di Reporting Services in TechNet Wiki](http://go.microsoft.com/fwlink/?LinkId=198283)  
-* [TechNet Wiki: esempi di SQL Server 2012](http://go.microsoft.com/fwlink/?linkID=220734)  
+* [Esempi di Reporting Services in TechNet Wiki](https://go.microsoft.com/fwlink/?LinkId=198283)  
+* [TechNet Wiki: esempi di SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
  
   
   

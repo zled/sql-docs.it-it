@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1255f614972ef03858d3528f395e95797c192465
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9662a3e69b7d870b7f376f7a0c699db75584ad62
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721504"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021085"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Caricare documenti in una raccolta di SharePoint (Reporting Services in modalità SharePoint)
 
@@ -43,7 +43,7 @@ Definizioni e modelli di report possono essere caricati in una raccolta di Share
   
      Se la definizione di report utilizza un file di origine dei dati condivisa (con estensione rsds) per archiviare le informazioni di connessione in un'origine dati esterna, i file con estensione rdl e rsds possono essere caricati contemporaneamente. A tale scopo, fare clic su **Carica più documenti**, specificare entrambi i file e quindi fare clic su **OK**.  
   
- Se si carica un report che contiene riferimenti a origini dei dati condivise, modelli di report o sottoreport, tali riferimenti verranno interrotti nel report al momento del caricamento dei file. Per altre informazioni su come reimpostare i riferimenti, vedere [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Se si carica un report che contiene riferimenti a origini dei dati condivise, modelli di report o sottoreport, tali riferimenti verranno interrotti nel report al momento del caricamento dei file. Per altre informazioni su come reimpostare i riferimenti, vedere [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
  Quando si apre un report dopo averlo caricato, tale report viene eseguito su richiesta recuperando dati in tempo reale dall'origine dei dati. È possibile configurare il report per il recupero dei dati in una pianificazione o l'utilizzo di dati memorizzati nella cache. Per altre informazioni, vedere [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
@@ -55,4 +55,4 @@ Definizioni e modelli di report possono essere caricati in una raccolta di Share
  [Pubblicare un'origine dati condivisa in una raccolta di SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
 
-Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

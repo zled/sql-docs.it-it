@@ -14,12 +14,12 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2bb0f1a92ffd45e4929ed97a5f73f205d3ccf2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74609a50ad4d2f29bbbd7d25cc4cd1a242e64ff4
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732419"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071755"
 ---
 # <a name="cdc-control-task"></a>Attività di controllo CDC
   L'attività di controllo CDC viene utilizzata per controllare il ciclo di vita di pacchetti Change Data Capture (CDC). Questa attività consente di gestire la sincronizzazione del pacchetto CDC con il pacchetto di caricamento iniziale e la gestione di intervalli di numeri di sequenza del file di log (LSN) elaborati in un'esecuzione di un pacchetto CDC. L'attività di controllo CDC, inoltre, consente di gestire gli scenari di errore e il recupero da errori.  
@@ -110,7 +110,7 @@ ms.locfileid: "47732419"
   
      Se si seleziona **Contrassegna fine caricamento iniziale** quando si usa CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (ovvero, non Oracle), l'utente specificato nella gestione connessione deve essere  **db_owner** o **sysadmin**.  
   
--   **Contrassegna avvio CDC**: questa operazione viene utilizzata quando il caricamento iniziale è costituito da un database snapshot o da un database disattivato. Viene richiamata in qualsiasi punto all'interno del pacchetto di caricamento iniziale. L'operazione accetta un parametro che può essere un LSN snapshot, un nome di un database snapshot (da cui l'LSN snapshot viene automaticamente derivato) o può essere lasciato vuoto, nel qual caso l'LSN del database corrente viene utilizzato come LSN iniziale per il pacchetto di elaborazione delle modifiche.  
+-   **Contrassegna avvio CDC**: questa operazione viene usata quando il caricamento iniziale è costituito da un database snapshot o da un database disattivato. Viene richiamata in qualsiasi punto all'interno del pacchetto di caricamento iniziale. L'operazione accetta un parametro che può essere un LSN snapshot, un nome di un database snapshot (da cui l'LSN snapshot viene automaticamente derivato) o può essere lasciato vuoto, nel qual caso l'LSN del database corrente viene utilizzato come LSN iniziale per il pacchetto di elaborazione delle modifiche.  
   
      Questa operazione viene utilizzata al posto delle operazioni Contrassegna avvio caricamento iniziale/Contrassegna fine caricamento iniziale.  
   

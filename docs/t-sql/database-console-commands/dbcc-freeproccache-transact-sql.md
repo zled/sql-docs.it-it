@@ -26,12 +26,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 752c8e2056f523a584390d4acc7ae1d18e1109e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad662f209361dbffd8096bd7605cb5ad0e01a9d5
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670359"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072045"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -191,7 +191,7 @@ GO
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. Esempi di sintassi di base DBCC FREEPROCCACHE  
-Nell'esempio seguente vengono rimosse tutte le cache dei piani di query dai nodi di calcolo. Sebbene il contesto sia impostato su UserDbSales, tutte le cache dei piani di query dai nodi di calcolo vengono rimosse. La clausola WITH NO_INFOMSGS impedisce che i messaggi informativi vengano visualizzati nei risultati.  
+Nell'esempio seguente vengono rimosse tutte le cache dei piani di query dai nodi di calcolo. Nonostante il contesto sia impostato su UserDbSales, tutte le cache dei piani di query dai nodi di calcolo vengono rimosse. La clausola WITH NO_INFOMSGS impedisce che i messaggi informativi vengano visualizzati nei risultati.  
   
 ```sql
 USE UserDbSales;  

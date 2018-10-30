@@ -1,13 +1,11 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
@@ -58,17 +56,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 483d22cd721166f3d62c3100524c9850a28bacc2
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 7c57a37be0666669911cfc955bbf25b0fa34187e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171873"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085537"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -465,12 +462,14 @@ Alcune modifiche del tipo di dati possono comportare la modifica dei dati. Ad es
 >  
 > Le colonne incluse in un vincolo di chiave primaria non possono essere modificate da **NOT NULL** a **NULL**.  
   
-Se la colonna da modificare è crittografata con `ENCRYPTED WITH`, è possibile modificare il tipo di dati in un tipo di dati compatibile, ad esempio da INT a BIGINT, ma non è possibile modificarne le impostazioni di crittografia.  
+Quando si usa Always Encrypted (senza enclave sicuri), se la colonna da modificare è crittografata con "ENCRYPTED WITH", è possibile modificare il tipo di dati in un tipo di dati compatibile, ad esempio da INT a BIGINT, ma non è possibile modificarne le impostazioni di crittografia.  
+
+Quando si usa Always Encrypted con enclave sicuri, è possibile modificare qualsiasi impostazione di crittografia, purché la chiave di crittografia che protegge la colonna (e la nuova chiave di crittografia della colonna, se si modifica la chiave) supporti i calcoli dell'enclave (crittografati con le chiavi master della colonna abilitate per le enclave). Per informazioni dettagliate, vedere [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).  
   
  *column_name*  
  Nome della colonna da modificare, aggiungere o eliminare. *column_name* può essere composto da un massimo di 128 caratteri. Nel caso di nuove colonne, è possibile omettere *column_name* per le colonne che sono state create con il tipo di dati **timestamp**. Viene usato il nome **timestamp** se non è specificato il nome *column_name* per una colonna con il tipo di dati **timestamp**.  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] _type\_name_  
  Nuovo tipo di dati per la colonna modificata o tipo di dati per la colonna aggiunta. Non è possibile specificare *type_name* per colonne esistenti di tabelle partizionate. I valori possibili di *type_name* sono i seguenti:  
   
 -   Tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -634,7 +633,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
   
  Usare questo argomento in combinazione con l'argomento SET SYSTEM_VERSIONING per abilitare il controllo delle versioni di sistema su una tabella esistente. Per altre informazioni, vedere [Tabelle temporali](../../relational-databases/tables/temporal-tables.md) e [Introduzione alle tabelle temporali nel database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
   
- A partire da [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)], gli utenti possono contrassegnare una o entrambe le colonne periodo con il flag **HIDDEN** per nascondere in modo implicito tali colonne. In questo modo **SELECT \* FROM***\<table>* non restituirà un valore per tali colonne. Per impostazione predefinita, le colonne periodo non vengono nascoste. Per poter essere usate, le colonne nascoste devono essere incluse in modo esplicito in tutte le query che fanno direttamente riferimento alla tabella temporale.  
+ A partire da [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)], gli utenti possono contrassegnare una o entrambe le colonne periodo con il flag **HIDDEN** per nascondere in modo implicito tali colonne. In questo modo **SELECT \* FROM**_\<table/>_ non restituirà un valore per tali colonne. Per impostazione predefinita, le colonne periodo non vengono nascoste. Per poter essere usate, le colonne nascoste devono essere incluse in modo esplicito in tutte le query che fanno direttamente riferimento alla tabella temporale.  
   
 DROP  
 Specifica la rimozione di una o più definizioni di colonna, definizioni di colonna calcolata o vincoli di tabella o l'eliminazione della specifica per le colonne che il sistema userà per il controllo delle versioni di sistema.  
@@ -716,7 +715,7 @@ Specifica che *constraint_name* o *column_name* viene rimosso dalla tabella. È 
 > [!NOTE]  
 > Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Edizioni e funzionalità supportate di SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
  **Si applica a** : da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifica una posizione in cui spostare le righe di dati attualmente presenti a livello foglia nell'indice cluster. La tabella viene spostata nella nuova posizione. Questa opzione è valida solo per i vincoli che creano un indice cluster.  
@@ -753,7 +752,7 @@ Specifica che *constraint_name* o *column_name* viene rimosso dalla tabella. È 
   
  Specifica se nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene tenuta traccia delle colonne con rilevamento delle modifiche abilitato che sono state aggiornate. Il valore predefinito è OFF.  
   
- SWITCH [ PARTITION *source_partition_number_expression* ] TO [ *schema_name***.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
+ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
  **Si applica a** : da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Trasferisce un blocco di dati in uno dei modi seguenti:  
@@ -1446,6 +1445,33 @@ ALTER TABLE T3
 ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN;  
 GO  
 ```  
+#### <a name="d-encrypting-a-column"></a>D. Crittografia di una colonna  
+ L'esempio seguente illustra come crittografare una colonna usando [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md). 
+
+In primo luogo, viene creata una tabella senza colonne crittografate.  
+  
+```sql  
+CREATE TABLE T3  
+(C1 int PRIMARY KEY,  
+C2 varchar(50) NULL,  
+C3 int NULL,  
+C4 int ) ;  
+GO  
+```  
+  
+ Successivamente, la colonna "C2" viene crittografata con una chiave di crittografia, denominata CEK1, e la crittografia casuale. Perché l'istruzione seguente abbia esito positivo, tenere presente che:
+- La chiave di crittografia della colonna deve essere abilitata per l'enclave, vale a dire che deve essere crittografata con una chiave master della colonna che consente i calcoli dell'enclave.
+- L'istanza di SQL Server di destinazione deve supportare Always Encrypted con enclave sicuri.
+- L'istruzione deve essere eseguita tramite una connessione configurata per Always Encrypted con enclave sicuri e usando un driver client supportato.
+- L'applicazione chiamante deve avere accesso alla chiave master della colonna, CEK1 di protezione.
+
+```sql  
+ALTER TABLE T3  
+ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;  
+GO  
+```  
+
+
   
 ###  <a name="alter_table"></a> Modifica della definizione di una tabella  
  Negli esempi di questa sezione viene illustrato come modificare la definizione di una tabella.  

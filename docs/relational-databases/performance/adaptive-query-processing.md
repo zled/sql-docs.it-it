@@ -2,7 +2,7 @@
 title: Elaborazione di query adattive nei database Microsoft SQL | Microsoft Docs
 description: Funzionalità per l'elaborazione di query adattive e il miglioramento delle prestazioni delle query in SQL Server (2017 e versioni successive) e nel database SQL di Azure.
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19ba6fc7c2841a478107398d6987a53d1bce4670
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88ec6af239bc5a85faf354aa5fc74631ff0dcc0e
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851419"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324634"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Elaborazione di query adattive nei database SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Se il piano viene rimosso dalla cache il feedback non viene mantenuto. Il feedba
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Feedback delle concessioni di memoria, Resource Governor e hint per la query
 La memoria concessa reale è conforme al limite di memoria per le query determinato da Resource Governor o dall'hint per la query.
 
-### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>Disabilitazione dei commenti della concessione di memoria senza modificare il livello di compatibilità
+### <a name="disabling-batch-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Disabilitazione del feedback delle concessioni di memoria in modalità batch senza modificare il livello di compatibilità
 È possibile disabilitare i commenti della concessione di memoria nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore. Per disabilitare i commenti della concessione di memoria in modalità batch per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
 
 ```sql
@@ -132,6 +132,30 @@ LastRequestedMemory mostra la memoria concessa in kilobyte (KB) dall'esecuzione 
 
 > [!NOTE]
 > Gli attributi del piano per il feedback delle concessioni di memoria in modalità riga sono visibili nei piani grafici di esecuzione delle query di SQL Server Management Studio nella versione 17.9 e versioni successive. 
+
+### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Disabilitazione del feedback delle concessioni di memoria in modalità riga senza modificare il livello di compatibilità
+È possibile disabilitare il feedback delle concessioni di memoria in modalità riga nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 150 o superiore. Per disabilitare il feedback delle concessioni di memoria in modalità riga per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+Per riabilitare il feedback delle concessioni di memoria in modalità riga per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+È anche possibile disabilitare il feedback delle concessioni di memoria in modalità riga per una query specifica, definendo DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK come hint per la query USE HINT.  Ad esempio
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
+
 
 ## <a name="batch-mode-adaptive-joins"></a>Join adattivi in modalità batch
 La funzionalità di join adattivo in modalità batch consente di rimandare a **dopo** la scansione del primo input la scelta tra l'[esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati](../../relational-databases/performance/joins.md). L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione il piano può pertanto passare a una strategia di join più efficace.

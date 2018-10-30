@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0aada8f512db681b4522dcaa24d71c1903901947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89293d1ed4f4c70306f5f6d0a31238830e2313e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651879"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020185"
 ---
 # <a name="process-large-reports"></a>Elaborare report di grandi dimensioni
   La corretta esecuzione di report di grandi dimensioni presenta alcuni aspetti complessi e richiede determinate configurazioni. Non è consigliabile eseguire report di grandi dimensioni su richiesta, a meno che siano configurati per supportare l'impaginazione.  
@@ -31,7 +31,7 @@ ms.locfileid: "47651879"
   
  Le dimensioni dei report contenenti dati volatili possono variare in modo significativo da un'esecuzione del report all'altra. In questi casi è opportuno monitorare l'origine dei dati per stabilire gli effetti della volatilità dei dati sul report e l'eventuale necessità di eseguire la procedura indicata in questo argomento.  
   
- Per altre informazioni e suggerimenti sulla diagnosi di errori di timeout e di memoria insufficiente, vedere l'articolo [How to diagnose issues when running reports in the report server](http://go.microsoft.com/fwlink/?LinkId=85634) (Come eseguire la diagnosi durante l'esecuzione di report nel server di report) sul sito Web blogs.msdn.com.  
+ Per altre informazioni e suggerimenti sulla diagnosi di errori di timeout e di memoria insufficiente, vedere l'articolo [How to diagnose issues when running reports in the report server](https://go.microsoft.com/fwlink/?LinkId=85634) (Come eseguire la diagnosi durante l'esecuzione di report nel server di report) sul sito Web blogs.msdn.com.  
   
 ## <a name="configuration-recommendations"></a>Indicazioni relative alla configurazione  
  Per l'esecuzione, il rendering e la visualizzazione dei report sono valide le indicazioni seguenti:  

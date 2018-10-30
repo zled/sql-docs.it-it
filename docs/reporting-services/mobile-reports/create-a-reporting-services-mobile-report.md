@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 128614f4276c3853bc2b5d5f69306ac89db6c370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744569"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030200"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Creare un report per dispositivi mobili di Reporting Services
 Con SQL Server Mobile Report Publisher è possibile creare rapidamente report per dispositivi mobili di SQL Server 2016 Reporting Services che si adattano alle dimensioni di qualsiasi schermo, in un'area di progettazione con righe e colonne della griglia regolabili ed elementi flessibili del report per dispositivi mobili.  
   
-La prima volta che si crea un report per dispositivi mobili è possibile installare SQL Server Mobile Report Publisher nel computer locale dal portale Web di Reporting Services. In alternativa, è possibile installarlo dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=733527). Successivamente, è possibile avviarlo dal portale Web o in locale.   
+La prima volta che si crea un report per dispositivi mobili è possibile installare SQL Server Mobile Report Publisher nel computer locale dal portale Web di Reporting Services. In alternativa, è possibile installarlo dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=733527). Successivamente, è possibile avviarlo dal portale Web o in locale.   
     
 1. Nella barra superiore del portale Web di Reporting Services selezionare **Nuovo** > **Report per dispositivi mobili**.  
   

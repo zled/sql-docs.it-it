@@ -24,12 +24,12 @@ ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5353a53c8a7082d4f23c62fa48bc03bcbd27e0b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dde847ead524e78c02aaad0544c0fec18ebe5c2f
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607899"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169091"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- FILE **='***path_to_file***'**  
+ FILE **='**_path\_to\_file_**'**  
  Specifica il percorso completo, nome di file incluso, della chiave master del servizio archiviata. *path_to_file* può essere un percorso locale o un percorso UNC di rete.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Specifica la password necessaria per decrittografare la chiave master del servizio che verrà importata da un file.  
   
  FORCE  

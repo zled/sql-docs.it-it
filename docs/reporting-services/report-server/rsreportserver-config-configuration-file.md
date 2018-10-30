@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 300e3c89da8fb37120baa211d2701b60f59b7716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4edaecf62a1f78c90954b60ff0c08ce462993dd3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776079"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020345"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 Nel file [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** vengono archiviate le impostazioni usate dal servizio Web ReportServer e dall'elaborazione in background. Tutte le applicazioni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono eseguite all'interno di un singolo processo tramite cui è possibile leggere le impostazioni di configurazione archiviate nel file RSReportServer.config. Il file RSReportServer.config viene utilizzato nei server di report sia in modalità nativa, sia in modalità SharePoint. Nelle due modalità non vengono tuttavia utilizzate tutte le stesse impostazioni disponibili nel file di configurazione. La versione per la modalità SharePoint del file è più piccola, poiché molte delle impostazioni per la modalità SharePoint sono archiviate nei database di configurazione di SharePoint anziché nel file. In questo argomento viene descritto il file di configurazione predefinito installato per la modalità nativa e la modalità SharePoint e alcune delle impostazioni e dei comportamenti importanti controllati dal file di configurazione.  
@@ -57,7 +57,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
  Nella tabella seguente vengono fornite le informazioni sulle impostazioni di configurazione generali visualizzate nella prima parte del file. Le impostazioni sono elencate nell'ordine in cui vengono visualizzate nel file di configurazione. Nell'ultima colonna della tabella viene indicato se l'impostazione si applica a un server di report in modalità nativa **(N)** , a un server di report in modalità SharePoint **(S)** o a entrambi.  
   
 > [!NOTE]  
->  In questo argomento, con "numero intero massimo" viene fatto riferimento a un valore di INT_MAX pari a 2147483647.  Per altre informazioni, vedere [Integer Limits](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (Limiti Integer) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  In questo argomento, con "numero intero massimo" viene fatto riferimento a un valore di INT_MAX pari a 2147483647.  Per altre informazioni, vedere [Integer Limits](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (Limiti Integer) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Impostazione|Descrizione|Mode|  
 |-------------|-----------------|----------|  
@@ -90,7 +90,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
  **URLReservations** permette di definire l'accesso HTTP al servizio Web ReportServer e al portale Web per l'istanza corrente. Gli URL sono riservati e vengono archiviati in HTTP.SYS quando si configura il server di report.  
   
 > [!WARNING]  
->  Per la modalità SharePoint, le prenotazioni di URL vengono configurate in Amministrazione centrale SharePoint. Per altre informazioni, vedere [Configurare il mapping di accesso alternativo (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
+>  Per la modalità SharePoint, le prenotazioni di URL vengono configurate in Amministrazione centrale SharePoint. Per altre informazioni, vedere [Configurare il mapping di accesso alternativo (https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
   
  Non modificare direttamente prenotazioni URL nel file di configurazione. Per creare o modificare prenotazioni URL per un server di report in modalità nativa, utilizzare sempre Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o il provider WMI del server di report. Se si modificano i valori nel file di configurazione, è possibile danneggiare la prenotazione, provocando errori del server in fase di esecuzione o lasciando prenotazioni orfane in HTTP.SYS che non vengono rimosse se si disinstalla il software. Per altre informazioni, vedere [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) e [URL nei file di configurazione &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md).  
   
@@ -236,7 +236,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
 |**ExcludedRenderFormats**, **RenderingExtension**|Queste impostazioni vengono utilizzate per escludere intenzionalmente formati di esportazione che non funzionano in modo corretto con il recapito tramite la condivisione file. Questi formati vengono utilizzati in genere per la creazione interattiva di report, la visualizzazione in anteprima o il precaricamento della cache del report e non producono file dell'applicazione facilmente visualizzabili da un'applicazione desktop.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="bkmk_email_extension"></a> Impostazioni di configurazione dell'estensione per la posta elettronica del server di report  
- La posta elettronica del server di report utilizza un dispositivo di rete di SMTP per inviare report agli indirizzi di posta elettronica. Prima che sia possibile utilizzare questa estensione per il recapito, è necessario configurarla. Per altre informazioni, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) e [Recapito tramite posta elettronica in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+ La posta elettronica del server di report utilizza un dispositivo di rete di SMTP per inviare report agli indirizzi di posta elettronica. Prima che sia possibile utilizzare questa estensione per il recapito, è necessario configurarla. Per altre informazioni, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) e [Recapito tramite posta elettronica in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
@@ -381,8 +381,8 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
 |-------------|-----------------|  
 |**MaxConnections**|Specifica il numero massimo di connessioni ai servizi Web di Bing Maps.|  
 |**Timeout**|Specifica il timeout in secondi per l'attesa di una risposta dai servizi Web di Bing Maps.|  
-|**AppID**|Specifica l'identificatore dell'applicazione (AppID) da utilizzare per i servizi Web di Bing Maps. **(Default)** specifica l'AppID predefinito di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](http://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Non modificare questo valore a meno che non sia necessario specificare un AppID personalizzato per il contratto di licenza di Bing Maps. Quando si modifica l'AppID, non è necessario riavviare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per rendere effettiva la modifica.|  
-|**CacheLevel**|Specifica un valore dell'enumerazione HttpRequestCacheLevel di System.Net.Cache. Il valore predefinito è **Default**. Per ulteriori informazioni, vedere la pagina relativa all' [enumerazione HttpRequestCacheLevel](http://go.microsoft.com/fwlink/?LinkId=153353).|  
+|**AppID**|Specifica l'identificatore dell'applicazione (AppID) da utilizzare per i servizi Web di Bing Maps. **(Default)** specifica l'AppID predefinito di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](https://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Non modificare questo valore a meno che non sia necessario specificare un AppID personalizzato per il contratto di licenza di Bing Maps. Quando si modifica l'AppID, non è necessario riavviare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per rendere effettiva la modifica.|  
+|**CacheLevel**|Specifica un valore dell'enumerazione HttpRequestCacheLevel di System.Net.Cache. Il valore predefinito è **Default**. Per ulteriori informazioni, vedere la pagina relativa all' [enumerazione HttpRequestCacheLevel](https://go.microsoft.com/fwlink/?LinkId=153353).|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> File di configurazione predefinito per un server di report in modalità nativa  
  Per impostazione predefinita, il file rsreportserver.config è installato nel percorso seguente:  
@@ -840,6 +840,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

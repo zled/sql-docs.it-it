@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ecb24406520b383d117046fee142cbfbbce7681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 913088e4dd3f132704642dba698ecfbe46e84754
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702199"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120081"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessioni Eventi estesi di SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47702199"
   
  Con riferimento all'illustrazione precedente, si noti che:  
   
--   Il mapping tra oggetti del pacchetto e le sessioni è molti-a-molti, ciò significa che un oggetto può apparire in più sessioni e una sessione può contenere più oggetti.  
+-   Il mapping tra oggetti del pacchetto e le sessioni è molti-a-molti. Ciò significa che un oggetto può apparire in più sessioni e una sessione può contenere più oggetti.  
   
 -   Lo stesso evento (Evento 1) o destinazione (Destinazione 1) può essere abilitato in più di una sessione.  
   

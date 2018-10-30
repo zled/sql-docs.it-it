@@ -11,12 +11,12 @@ ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9e856bfbbcb8cba527d1f34f0f7bc99afadc023
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec74cb8ed16fa7e49f5a941a903341a514d13932
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792879"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336100"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Procedura: Creare un progetto di test per l'esecuzione di unit test del database di SQL Server
 Prima di iniziare a scrivere unit test per valutare gli oggetti di database, è necessario creare innanzitutto un progetto di test. Il progetto contiene unit test di SQL Server, ma può includere altri tipi di test.  
@@ -35,7 +35,7 @@ Sono disponibili tre opzioni per l'aggiunta di un progetto di test a una soluzio
   
 -   Aggiungere un progetto di test alla soluzione. Nel progetto di test è incluso uno unit test standard, che è possibile eliminare. Nel progetto non è contenuta una classe di unit test di SQL Server, che è necessario aggiungere.  
   
--   Aggiungere un nuovo unit test di SQL Server dal menu **Test**. Quando si aggiunge lo unit test, in SQL Server Data Tools viene anche creato un progetto di test, se richiesto. Questo progetto contiene una classe di unit test di SQL Server. Le classi di test per unit test di SQL Server contengono uno o più unit test.  
+-   Aggiungere un nuovo unit test di SQL Server dal menu **Test**. Quando si aggiunge lo unit test, in SQL Server Data Tools viene anche creato un progetto di test, se richiesto. Questo progetto contiene una classe di unit test di SQL Server. Le classi di unit test di SQL Server contengono uno o più unit test.  
   
 -   Creare uno unit test da una stored procedure, una funzione o un trigger da un progetto aperto in Esplora oggetti di SQL Server. Quando si crea lo unit test, in SQL Server Data Tools viene anche creato un progetto di test, se richiesto. Questo progetto contiene una classe di unit test di SQL Server. Le classi di test di SQL Server contengono uno o più unit test.  
   

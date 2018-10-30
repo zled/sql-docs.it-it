@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b538523839be0260eda33934a18e682579aaa3f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc8bb25994596bd58e967288a8830ee11c92c9c7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810219"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029970"
 ---
 # <a name="configure-the-web-portal-to-pass-custom-authentication-cookies"></a>Configurare il portale Web per il passaggio di cookie di autenticazione personalizzati
 
@@ -47,4 +47,4 @@ Per consentire la trasmissione di altri cookie tramite richieste HTTP quando si 
 [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Panoramica sulle estensioni di sicurezza](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Configurare e amministrare un server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
-Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

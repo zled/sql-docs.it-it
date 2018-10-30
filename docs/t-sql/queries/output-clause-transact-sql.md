@@ -5,9 +5,7 @@ ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OUTPUT_TSQL
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 8269d0b8913d0ccde1a351ee2489a7818b00c45e
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088363"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336290"
 ---
 # <a name="output-clause-transact-sql"></a>Clausola OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -137,13 +134,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Riferimento di colonna esplicito. Qualsiasi riferimento alla tabella che viene modificata deve essere qualificato correttamente tramite il prefisso INSERTED o DELETED in base alle esigenze, ad esempio: INSERTED**.***column_name*.  
+ Riferimento di colonna esplicito. Qualsiasi riferimento alla tabella che viene modificata deve essere qualificato correttamente tramite il prefisso INSERTED o DELETED in base alle esigenze, ad esempio: INSERTED **.**_column\_name_.  
   
  $action  
  È disponibile solo per l'istruzione MERGE. Specifica una colonna di tipo **nvarchar(10)** nella clausola OUTPUT in un'istruzione MERGE che restituisce uno dei tre valori per ogni riga: 'INSERT', 'UPDATE' o 'DELETE', secondo l'azione eseguita sulla riga.  
   
 ## <a name="remarks"></a>Remarks  
- La clausola OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table* } può essere definita in un'unica istruzione INSERT, UPDATE, DELETE o MERGE.  
+ La clausola OUTPUT \<dml_select_list> e la clausola OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } possono essere definite in un'unica istruzione INSERT, UPDATE, DELETE o MERGE.  
   
 > [!NOTE]  
 >  Se non specificato diversamente, i riferimenti alla clausola OUTPUT fanno riferimento a entrambe le clausole OUTPUT e OUTPUT INTO.  
@@ -357,7 +354,7 @@ GO
 ```  
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. Utilizzo di OUTPUT INTO con un'istruzione UPDATE  
- Nell'esempio seguente viene aggiornata la colonna `VacationHours` nella tabella `Employee` del 25% per le prime 10 righe. La clausola `OUTPUT` restituisce il valore `VacationHours` che esiste prima dell'applicazione dell'istruzione `UPDATE` nella colonna `deleted.VacationHours` e il valore aggiornato nella colonna `inserted.VacationHours` alla variabile `@MyTableVar``table`.  
+ Nell'esempio seguente viene aggiornata la colonna `VacationHours` nella tabella `Employee` del 25% per le prime 10 righe. La clausola `OUTPUT` restituisce il valore `VacationHours` esistente prima di applicare l'istruzione `UPDATE` nella colonna `deleted.VacationHours` e il valore aggiornato nella colonna `inserted.VacationHours` alla variabile di tabella `@MyTableVar`.  
   
  Questa variabile è seguita da due istruzioni `SELECT` che restituiscono i valori in `@MyTableVar` e i risultati dell'operazione di aggiornamento nella tabella `Employee`.  
   

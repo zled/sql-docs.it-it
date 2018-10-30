@@ -15,12 +15,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a51069c347ac22d2dbb45f854e182995507bbf7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 847516f3bb32f32bd20f039252b99946c63f4c7d
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783569"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906331"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modalità di failover (gruppi di disponibilità AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -252,7 +252,7 @@ ms.locfileid: "47783569"
 ###  <a name="ForcedFailoverRisks"></a> Rischi correlati al failover forzato  
  È fondamentale comprendere che il failover forzato può causare la perdita di dati. La perdita di dati è possibile in quanto tramite la replica di destinazione non è possibile comunicare con la replica primaria e pertanto non è possibile garantire che i database siano sincronizzati. Il failover forzato comporta l'avvio di un nuovo fork di recupero. Poiché i database primari originali e i database secondari si trovano su fork di recupero diversi, ognuno di essi contiene dati che l'altro database non contiene: ogni database primario originale contiene tutte le modifiche non inviate al database secondario precedente dalla sua coda di invio (log non inviato). I database secondari precedenti contengono tutte le modifiche apportate dopo il failover forzato.  
   
- Se il failover viene forzato a causa di un errore della replica primaria, la potenziale perdita di dati dipende dal fatto che uno o più log delle transazioni non siano stati inviati alla replica secondaria prima dell'errore. Nella modalità commit asincrono, la presenza di log non inviati accumulati è sempre una possibilità. Nella modalità commit sincrono, questo è possibile solo fino a quando i database secondari non diventano sincronizzati.  
+ Se il failover viene forzato a causa di un errore della replica primaria, la potenziale perdita di dati dipende dal fatto che uno o più log delle transazioni siano stati inviati o meno alla replica secondaria prima dell'errore. Nella modalità commit asincrono, la presenza di log non inviati accumulati è sempre una possibilità. Nella modalità commit sincrono, questo è possibile solo fino a quando i database secondari non diventano sincronizzati.  
   
  Nella tabella seguente è riepilogata la possibilità di perdita di dati per un particolare database sulla replica a cui viene applicato un failover forzato.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "47783569"
 |Synchronous-commit|no|Sì|  
 |Asynchronous-commit|no|Sì|  
   
- I database secondari registrano solo due fork di recupero, pertanto se si eseguono più failover forzati, qualsiasi database secondario che abbia dato inizio alla sincronizzazione dati con il failover forzato precedente non potrà essere ripreso. In questo caso, i database secondari che non possono essere ripresi dovranno essere rimossi dal gruppo di disponibilità, ripristinati fino al momento corretto e nuovamente aggiunti al gruppo di disponibilità. Un ripristino non funziona tra più fork di recupero, pertanto, assicurarsi di eseguire un backup del log dopo avere eseguito più failover forzati.  
+ I database secondari registrano solo due fork di recupero, pertanto se si eseguono più failover forzati, qualsiasi database secondario che abbia dato inizio alla sincronizzazione dati con il failover forzato precedente non potrà essere ripreso. In questo caso, i database secondari che non possono essere ripresi dovranno essere rimossi dal gruppo di disponibilità, ripristinati fino al momento corretto e nuovamente aggiunti al gruppo di disponibilità. È possibile osservare l'errore 1408 con stato 103 in questo scenario (errore: 1408, gravità: 16, stato: 103). Un ripristino non funziona tra più fork di recupero, pertanto, assicurarsi di eseguire un backup del log dopo avere eseguito più failover forzati.  
   
 ###  <a name="WhyFFoPostForcedQuorum"></a> Motivi per cui è necessario il failover forzato dopo aver forzato il quorum  
  Dopo aver forzato il quorum sul cluster WSFC (*quorum forzato*), sarà necessario effettuare un failover forzato (con possibile perdita di dati) su ogni gruppo di disponibilità. Il failover forzato è necessario poiché lo stato effettivo dei valori del cluster WSFC potrebbe essere andato perso. Dopo un quorum forzato è necessario evitare i failover normali poiché una replica secondaria non sincronizzata potrebbe essere visualizzata come sincronizzata nel cluster WSFC riconfigurato.  

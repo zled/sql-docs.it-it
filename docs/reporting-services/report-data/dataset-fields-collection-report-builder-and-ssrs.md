@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1acafd612881dfc107d72239c1e521a4edead043
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56ab751d420fe323b641d3fea0e7454d20447e15
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853385"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031860"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Raccolta di campi del set di dati (Generatore report e SSRS)
   I campi del set di dati rappresentano i dati provenienti da una connessione dati. Un campo può presentare dati numerici o non numerici. Possono essere inclusi, ad esempio, importi delle vendite, vendite totali, nomi dei clienti, identificatori di database, URL, immagini, dati spaziali e indirizzi di posta elettronica. Nell'area di progettazione i campi vengono visualizzati come espressioni in elementi del report quali caselle di testo, tabelle e grafici.  
@@ -76,9 +76,9 @@ ms.locfileid: "47853385"
   
 -   **Origine dati** Tipi di dati supportati dalla versione del tipo di origine dati alla quale ci si sta connettendo.  
   
-     Tra i tipi di dati utilizzati in genere per un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono inclusi ad esempio **int**, **datetime**e **varchar**. I tipi di dati introdotti da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hanno aggiunto il supporto per **date**, **time**, **datetimetz**e **datetime2**. Per altre informazioni, vedere [Tipi di dati (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98362).  
+     Tra i tipi di dati utilizzati in genere per un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono inclusi ad esempio **int**, **datetime**e **varchar**. I tipi di dati introdotti da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hanno aggiunto il supporto per **date**, **time**, **datetimetz**e **datetime2**. Per altre informazioni, vedere [Tipi di dati (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362).  
   
--   **Provider di dati o estensione per l'elaborazione dati** Tipi di dati supportati dalla versione del provider di dati dell'estensione per l'elaborazione dei dati selezionata al momento della connessione all'origine dei dati. I provider di dati basati su [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usano tipi di dati supportati da CLR. Per altre informazioni sui tipi di dati del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vedere [Mapping di tipi di dati (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) e [Utilizzo dei tipi di base](http://go.microsoft.com/fwlink/?LinkId=112177) su MSDN.  
+-   **Provider di dati o estensione per l'elaborazione dati** Tipi di dati supportati dalla versione del provider di dati dell'estensione per l'elaborazione dei dati selezionata al momento della connessione all'origine dei dati. I provider di dati basati su [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usano tipi di dati supportati da CLR. Per altre informazioni sui tipi di dati del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vedere [Mapping di tipi di dati (ADO.NET)](https://go.microsoft.com/fwlink/?LinkId=112178) e [Utilizzo dei tipi di base](https://go.microsoft.com/fwlink/?LinkId=112177) su MSDN.  
   
      Tra i tipi di dati supportati in genere da [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sono inclusi ad esempio **Int32** e **String**. Le date e le ore del calendario sono supportate dalla struttura **DateTime** . In [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 è stato introdotto il supporto per la struttura **DateTimeOffset** per le date con una differenza di fuso orario.  
   
@@ -91,12 +91,12 @@ ms.locfileid: "47853385"
   
     |Tipo di dati SQL|Tipo di dati CLR|Descrizione|  
     |-------------------|-------------------|-----------------|  
-    |**Data**|**DateTime**|Solo data|  
+    |**Date**|**DateTime**|Solo data|  
     |**Time**|**TimeSpan**|Solo ora|  
     |**DateTimeTZ**|**DateTimeOffset**|Data e ora con differenza di fuso orario|  
     |**DateTime2**|**DateTime**|Data e ora con millisecondi frazionari|  
   
- Per altre informazioni sui tipi di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Tipi di dati (motore di database)](http://go.microsoft.com/fwlink/?linkid=98362) e [Funzioni e tipi di dati di data e ora (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
+ Per altre informazioni sui tipi di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Tipi di dati (motore di database)](https://go.microsoft.com/fwlink/?linkid=98362) e [Funzioni e tipi di dati di data e ora (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98360).  
   
  Per altre informazioni sull'inclusione di riferimenti in un campo del set di dati da un'espressione, vedere [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
@@ -106,7 +106,7 @@ ms.locfileid: "47853385"
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
+ [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

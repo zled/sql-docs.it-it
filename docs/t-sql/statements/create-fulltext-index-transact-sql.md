@@ -22,12 +22,12 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be0c968c387a4228b7c774a1b2308d7f9ea6bac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 986d68540f75852061982ae159a903fc2ab1b518
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670268"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169287"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,9 +91,9 @@ CREATE FULLTEXT INDEX ON table_name
   
  Se *language_term* è specificato, la lingua rappresentata verrà usata per indicizzare i dati archiviati nelle colonne **char**, **nchar**, **varchar**, **nvarchar**, **text** e **ntext**. Questa lingua corrisponde alla lingua predefinita usata in fase di query se non viene specificato *language_term* in un predicato full-text per la colonna.  
   
- Se l'argomento *language_term* viene specificato come stringa, corrisponde al valore della colonna alias nella tabella di sistema syslanguages. La stringa deve essere racchiusa tra virgolette singole, come in **'***language_term***'**. Se l'argomento *language_term* viene specificato come valore intero, corrisponde all'LCID effettivo che identifica la lingua. Se si specifica un valore esadecimale, *language_term* è 0x seguito dal valore esadecimale dell'LCID. Il valore esadecimale deve essere composto al massimo da otto cifre, zero iniziali inclusi.  
+ Se l'argomento *language_term* viene specificato come stringa, corrisponde al valore della colonna alias nella tabella di sistema syslanguages. La stringa deve essere racchiusa tra virgolette singole, come in **'**_language\__term_**'**. Se l'argomento *language_term* viene specificato come valore intero, corrisponde all'LCID effettivo che identifica la lingua. Se si specifica un valore esadecimale, *language_term* è 0x seguito dal valore esadecimale dell'LCID. Il valore esadecimale deve essere composto al massimo da otto cifre, zero iniziali inclusi.  
   
- Se il valore è in formato DBCS (Double-Byte Character Set), verrà convertito in Unicode da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se il valore è in formato DBCS (Double-Byte Character Set), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo convertirà in Unicode.  
   
  Per la lingua specificata in *language_term* è necessario abilitare risorse quali word breaker e stemmer. Se tali risorse non supportano la lingua specificata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituirà un errore.  
   

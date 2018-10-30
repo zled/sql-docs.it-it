@@ -8,12 +8,12 @@ ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: add4499483ce463c73a6ba7b82bd79befa784485
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 853d40be782355841d68d3ace92e4228b0631057
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717559"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020665"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>Come installare estensioni di sicurezza personalizzate
 
@@ -122,4 +122,4 @@ Analogamente alla versione precedente di Gestione report, il nuovo portale e Rep
 [Configurare l'autenticazione personalizzata o basata su form nel server di report](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
 [Configurare Gestione report per il passaggio di cookie di autenticazione personalizzati](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
 
-Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c402cbbf3dca4a34b8e60b9b5482dc63051b63d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea7504d459d14dec64d4192185b23279091e70e2
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842879"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119939"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limiti delle dimensioni di report e snapshot
   Le informazioni contenute in questo argomento consentono agli amministratori che gestiscono una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di conoscere i limiti relativi alle dimensioni dei report quando questi ultimi vengono pubblicati in un server di report, quando ne viene eseguito il rendering in fase di esecuzione e quando vengono salvati nel file system. In questo argomento vengono inoltre fornite indicazioni pratiche su come calcolare le dimensioni di un database del server di report e vengono descritti gli effetti delle dimensioni degli snapshot sulle prestazioni del server.  
@@ -57,7 +57,7 @@ ms.locfileid: "47842879"
   
  Per impostazione predefinita, sia per il database **reportserver** che per il database **reportservertempdb** è impostato l'aumento automatico delle dimensioni. Le dimensioni del database possono aumentare automaticamente ma non vengono mai ridotte automaticamente. Se nel database **reportserver** è presente capacità in eccesso in quanto sono stati eliminati snapshot, per recuperare spazio su disco è necessario ridurre il database manualmente. Analogamente, se le dimensioni del database **reportservertempdb** sono aumentate per adattarsi a un volume insolitamente elevato di report interattivi, l'allocazione dello spazio su disco rimane impostata in base a quei valori fino a quando non la si riduce.  
   
- Per calcolare le dimensioni dei database del server di report, è possibile eseguire i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] riportati di seguito. Il calcolo delle dimensioni totali del database a intervalli regolari può agevolare lo sviluppo di una stima ragionevole delle modalità di allocazione nel tempo dello spazio per il database del server di report. Le istruzioni seguenti consentono di calcolare la quantità di spazio attualmente in uso e presuppongono l'utilizzo dei nomi di database predefiniti:  
+ Per calcolare le dimensioni dei database del server di report, è possibile eseguire i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] riportati di seguito. Il calcolo delle dimensioni totali del database a intervalli regolari può agevolare lo sviluppo di una stima ragionevole delle modalità di allocazione nel tempo dello spazio per il database del server di report. Le istruzioni seguenti consentono di calcolare la quantità di spazio attualmente usato e presuppongono l'uso dei nomi di database predefiniti:  
   
 ```  
 USE ReportServer  

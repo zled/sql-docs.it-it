@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dbd62baf7b4c9951357a5a206b42ebf87ee6661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 426648f277ad5134a38dfa9cc7fb6948db6f918a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824229"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031640"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Creare un report tabella semplice (esercitazione su SSRS)
 
@@ -34,7 +34,7 @@ Per utilizzare l'esercitazione è necessario che nel sistema siano installati i 
   
 -   Database [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .  Per altre informazioni, vedere la pagina relativa ai [database di esempio AdventureWorks 2014](https://github.com/Microsoft/sql-server-samples/releases).  
   
- -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) con i componenti di SQL Server Reporting Services installati, per avere Progettazione report.    
+ -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) con i componenti di SQL Server Reporting Services installati in modo da poter usare la funzionalità Progettazione report.    
   
 Per il recupero dei dati dal database [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] è anche necessario avere autorizzazioni di sola lettura.
 
@@ -57,4 +57,4 @@ Per il recupero dei dati dal database [!INCLUDE[ssSampleDBAdventureworks2014_md]
 
 [Esercitazioni su Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

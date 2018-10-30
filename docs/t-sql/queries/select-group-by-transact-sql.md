@@ -5,9 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUP
@@ -35,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d96d23761ecaa1a31bdf9530b1d4277adc4182b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: cd0f0157f1f3f0c684dcb8f07af725b97929c10f
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43105912"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906021"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -312,19 +310,19 @@ Per una clausola GROUP BY che usa ROLLUP, CUBE o GROUPING SETS, il numero massim
  
 -   L'esempio seguente genera 4097 (2<sup>12</sup> + 1) set di raggruppamenti e ha esito negativo.  
   
-    ```  
+    ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), b )  
     ```  
   
 -   L'esempio seguente genera 4097 (2<sup>12</sup> + 1) gruppi e ha esito negativo. Sia `CUBE ()` sia il set di raggruppamenti `()` consentono di generare una riga del totale complessivo e i set di raggruppamenti duplicati non vengono eliminati.  
   
-    ```  
+    ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), ())  
     ```  
 
 -   Questo esempio usa la sintassi compatibile con le versioni precedenti. Genera 8192 (2<sup>13</sup>) set di raggruppamenti e ha esito negativo.  
   
-    ```  
+    ```sql
     GROUP BY CUBE (a1, ..., a13)   
     GROUP BY a1, ..., a13 WITH CUBE   
     ```    
@@ -346,7 +344,7 @@ La clausola GROPU BY supporta tutte le funzionalità GROUP BY incluse nello stan
 |Funzionalità|SQL Server Integration Services|Livello di compatibilità di SQL Server 100 o superiore|Livello di compatibilità di SQL Server 2008 o versioni successive pari a 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Aggregazioni DISTINCT|Non supportate per WITH CUBE o WITH ROLLUP.|Supportate per WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE o ROLLUP.|Comportamento analogo al livello di compatibilità pari a 100.|  
-|Funzione definita dall'utente denominata CUBE o ROLLUP nella clausola GROUP BY|La funzione definita dall'utente **dbo.cube(***arg1***,***...argN***)** o **dbo.rollup(***arg1***,**...*argN***)** nella clausola GROUP BY è consentita.<br /><br /> Ad esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|La funzione definita dall'utente **dbo.cube (***arg1***,**...argN **)** o **dbo.rollup(** arg1 **,***...argN***)** nella clausola GROUP BY non è consentita.<br /><br /> Ad esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Viene restituito il messaggio di errore seguente: "Sintassi non corretta in prossimità della parola chiave 'cube'&#124;'rollup'".<br /><br /> Per evitare questo problema, sostituire `dbo.cube` con `[dbo].[cube]` oppure `dbo.rollup` con `[dbo].[rollup]`.<br /><br /> L'esempio seguente è consentito: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|La funzione definita dall'utente **dbo.cube (***arg1***,***...argN*) o **dbo.rollup(***arg1***,***...argN***)** nella clausola GROUP BY è consentita<br /><br /> Ad esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Funzione definita dall'utente denominata CUBE o ROLLUP nella clausola GROUP BY|La funzione definita dall'utente **dbo.cube(**_arg1_**,**_...argN_**)** o **dbo.rollup(**_arg1_**,**..._argN_**)** nella clausola GROUP BY è consentita.<br /><br /> Ad esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|La funzione definita dall'utente **dbo.cube (**_arg1_**,**...argN **)** o **dbo.rollup(** arg1 **,**_...argN_**)** nella clausola GROUP BY non è consentita.<br /><br /> Ad esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Viene restituito il messaggio di errore seguente: "Sintassi non corretta in prossimità della parola chiave 'cube'&#124;'rollup'".<br /><br /> Per evitare questo problema, sostituire `dbo.cube` con `[dbo].[cube]` oppure `dbo.rollup` con `[dbo].[rollup]`.<br /><br /> L'esempio seguente è consentito: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|La funzione definita dall'utente **dbo.cube (**_arg1_**,**_...argN_) o **dbo.rollup(**_arg1_**,**_...argN_**)** nella clausola GROUP BY è consentita<br /><br /> Ad esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Non supportato|Supportato|Supportato|  
 |CUBE|Non supportato|Supportato|Non supportato|  
 |ROLLUP|Non supportato|Supportato|Non supportato|  

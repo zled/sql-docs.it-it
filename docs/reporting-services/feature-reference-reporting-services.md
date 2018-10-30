@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8eaada7d40896156dee1ba51b9a02b90b1ff9e70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5835d17dcb628eebe99bff4c6e3182a10e41dbe7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741389"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021045"
 ---
 # <a name="feature-reference-reporting-services"></a>Guida di riferimento alle funzionalità (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include numerosi strumenti e applicazioni che è possibile usare per la creazione, la gestione e la visualizzazione di report. In questa sezione sono disponibili argomenti specifici che descrivono le finestre di dialogo, le pagine Web e le procedure guidate di tali strumenti e applicazioni.  
@@ -29,7 +29,7 @@ ms.locfileid: "47741389"
  [Guida sensibile al contesto di Progettazione report](../reporting-services/tools/report-designer-f1-help.md)  
  Guida per Progettazione report e le finestre di dialogo correlate, per Creazione guidata report e per Creazione guidata immagine.  
   
- [Argomenti della Guida relativi a Gestione configurazione Reporting Services](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
+ [Argomenti della Guida relativi a Gestione configurazione Reporting Services](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  Guida per lo strumento di configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usato per la distribuzione e la gestione delle istanze del server di report.  
   
  [Guida sensibile al contesto del server di report in Management Studio](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
@@ -43,6 +43,6 @@ ms.locfileid: "47741389"
  [Report di Reporting Services &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Set di dati del report &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
  [Introduzione a Generatore report](http://www.microsoft.com/download/en/details.aspx?id=29072)   
- [Progettazione e implementazione di report tramite Generatore report 1.0](http://go.microsoft.com/fwlink/?LinkId=142601)  
+ [Progettazione e implementazione di report tramite Generatore report 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5662157cebcc5cf66c8b30dee24028d24d58568a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b41f81a9a42ca572633d858fd22113d8a6d718a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770899"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031610"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurare l'autenticazione di Windows nel server di report.
   Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accetta richieste che specificano l'autenticazione con negoziazione o NTLM. Se nella distribuzione sono incluse applicazioni client e browser che utilizzano tali provider di sicurezza, è possibile utilizzare i valori predefiniti senza alcuna configurazione aggiuntiva. Se si desidera utilizzare un provider di sicurezza diverso per la sicurezza integrata di Windows, ad esempio se si desidera utilizzare direttamente l'autenticazione Kerberos, o se i valori predefiniti sono stati modificati e si desidera ripristinare le impostazioni originali, è possibile utilizzare le informazioni contenute in questo argomento per specificare le impostazioni di autenticazione nel server di report.  
@@ -130,7 +130,7 @@ ms.locfileid: "47770899"
   
 -   Registrare un nome SPN per il servizio del server di report con l'account utente di dominio. Per altre informazioni, vedere [Registrare un nome dell'entità servizio &#40;SPN&#41; per un server di report](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
--   Modificare l'account del servizio in modo che venga eseguito con un account predefinito, ad esempio Servizio di rete. Gli account predefiniti eseguono il mapping del nome SPN HTTP al nome SPN dell'host, definito quando un computer viene collegato a una rete. Per altre informazioni, vedere [Configurare un account del servizio &#40;Gestione configurazione SSRS&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
+-   Modificare l'account del servizio in modo che venga eseguito con un account predefinito, ad esempio Servizio di rete. Gli account predefiniti eseguono il mapping del nome SPN HTTP al nome SPN dell'host, definito quando un computer viene collegato a una rete. Per altre informazioni, vedere [Configurare un account del servizio &#40;Gestione configurazione SSRS&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
   
 -   Utilizzare NTLM, che in genere funzionerà nei casi in cui l'autenticazione Kerberos ha esito negativo. Per usare NTLM, rimuovere **RSWindowsNegotiate** dal file RSReportServer.config e verificare che sia specificato solo **RSWindowsNTLM** . Se si sceglie questo approccio, è possibile continuare a utilizzare un account utente di dominio per il servizio del server di report anche se per tale account non si definisce un nome SPN.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "47770899"
   
 -   Un'opzione per la conversione del valore decimale in formato esadecimale è rappresentata dalla Calcolatrice di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Tale calcolatrice supporta diverse modalità che includono le opzioni "Dec" ed "Hex". Selezionare l'opzione "Dec", incollare o digitare il valore decimale nel file di log, quindi selezionare l'opzione "Hex".  
   
--   Fare quindi riferimento all'argomento [User-Account-Control Attribute](http://go.microsoft.com/fwlink/?LinkId=183366) (Attributo UserAccountControl) per derivare l'attributo per l'account di servizio.  
+-   Fare quindi riferimento all'argomento [User-Account-Control Attribute](https://go.microsoft.com/fwlink/?LinkId=183366) (Attributo UserAccountControl) per derivare l'attributo per l'account di servizio.  
   
 ##### <a name="spns-configured-in-active-directory-for-the-reporting-services-service-account"></a>Nomi SPN configurati in Active Directory per l'account di servizio di Reporting Services.  
  Per registrare i nomi SPN nel file di log di traccia del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è possibile abilitare temporaneamente la caratteristica Protezione estesa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -202,7 +202,7 @@ ms.locfileid: "47770899"
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Per altre informazioni su server di report e Kerberos, vedere [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](http://go.microsoft.com/fwlink/?LinkID=177751)(Distribuzione di una soluzione di Business Intelligence utilizzando SharePoint, Reporting Services e server di monitoraggio di PerformancePoint con Kerberos).  
+-   Per altre informazioni su server di report e Kerberos, vedere [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](https://go.microsoft.com/fwlink/?LinkID=177751)(Distribuzione di una soluzione di Business Intelligence utilizzando SharePoint, Reporting Services e server di monitoraggio di PerformancePoint con Kerberos).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md)   

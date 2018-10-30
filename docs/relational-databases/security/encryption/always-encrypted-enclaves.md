@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13c15426e44ef6897cb5763d3c98f2a214298298
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 742c3dfb66add1a8e81fb9f530923b11e17bfea8
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814090"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307115"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclave sicuri
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -140,3 +140,7 @@ Le limitazioni seguenti si applicano all'anteprima corrente, ma è previsto che 
 ## <a name="known-issues"></a>Problemi noti
 
 - Per i calcoli avanzati sulle colonne di tipo stringa non UNICODE (char, varchar) è necessario impostare le regole di confronto BIN2 a livello di database. Vedere Considerazioni speciali per le colonne di tipo stringa non UNICODE in [Gestire le regole di confronto](configure-always-encrypted-enclaves.md#manage-collations).
+
+## <a name="next-steps"></a>Next Steps
+
+- Configurare l'ambiente di test e provare le funzionalità di Always Encrypted con enclave sicuri in SSMS. Vedere [Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 775880471620acaac5c46bf1efd04d961f60ce6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608659"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085417"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Aggiungere il drill-through da un report per dispositivi mobili ad altri report per dispositivi mobili o URL
 È possibile aggiungere il drill-through da qualsiasi misuratore, grafico o griglia dati di un report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] a un altro report o URL personalizzato. 
@@ -52,7 +52,7 @@ Gli elementi di report con drill-through, verso un URL o un altro report per dis
 1. Nella vista Layout di [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]selezionare una visualizzazione che supporti destinazioni di drill-through.    
 2. Nel riquadro **Proprietà visive** selezionare **Destinazione del drill-through** > **URL personalizzato**.  Verrà aperta la finestra di dialogo per la configurazione del drill-through.  
   
-3. In **Imposta URL di drill-through**immettere l'URL di destinazione a cui essere indirizzati quando viene selezionata la visualizzazione e quindi selezionare una voce dall'elenco **Parametri disponibili:** disponibile a destra. Nel riquadro seguente viene visualizzata un'anteprima dell'URL personalizzato combinato con esempi di parametri risolti (se disponibili).  
+3. In **Imposta URL di drill-through** immettere l'URL di destinazione a cui essere indirizzati quando viene selezionata la visualizzazione e quindi selezionare una voce dall'elenco **Parametri disponibili** sulla destra. Nel riquadro seguente viene visualizzata un'anteprima dell'URL personalizzato combinato con esempi di parametri risolti (se disponibili).  
   
    ![mobile-report-drillthrough-url](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
   

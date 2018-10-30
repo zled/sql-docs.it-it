@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db0e7b193a21824f9eeb8e0745c60708cd660f57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14540871ad8be2c59bc8eb899ccb30b06f0278f5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657169"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030330"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Report di Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] I report impaginati sono definizioni di report basate su XML che includono i dati e gli elementi di layout dei report. Su un file system client, i file di definizione di report hanno estensione .rdl. Dopo la pubblicazione, il report impaginato diventa un elemento di report archiviato nel server di report o nel sito di SharePoint. I report impaginati sono una parte della piattaforma di report basata su server fornita da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È anche possibile [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -122,7 +122,7 @@ ms.locfileid: "47657169"
 ## <a name="view-reports"></a>Visualizzare i report  
  Oltre alla visualizzazione in anteprima di un report salvato in locale o pubblicato in un server di report, è possibile fornire ai lettori del report un'ampia gamma di opzioni di visualizzazione. Per visualizzare un report:  
   
--   **Browser.**  Utilizzare il servizio Web ReportServer o il sito di SharePoint per visualizzare report pubblicati. Su un sito di SharePoint, è possibile anche configurare un Web part per la visualizzazione dei report pubblicati. Per altre informazioni, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896), e [Accesso con URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
+-   **Browser.**  Utilizzare il servizio Web ReportServer o il sito di SharePoint per visualizzare report pubblicati. Su un sito di SharePoint, è possibile anche configurare un Web part per la visualizzazione dei report pubblicati. Per altre informazioni, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [Gestione report &#40;modalità nativa SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896), e [Accesso con URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
   
 -   **Recapito.**  Configurare una sottoscrizione per recapitare i report ai lettori tramite posta elettronica o in una cartella di file condivisa.  Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47657169"
   
 -   **Stampa.**  Un lettore di report può stampare un report o alcune delle relative pagine, a seconda della modalità di visualizzazione. Per altre informazioni, vedere [Stampa di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Applicazione Web o Windows Form.**  Utilizzare Visual Studio per sviluppare un'applicazione AJAX ASP.NET o un applicazione di Windows Form che ospiti il controllo del Visualizzatore report. Il controllo può puntare ai report pubblicati su un server di report. Per altre informazioni, vedere [Rapporti Microsoft](http://go.microsoft.com/fwlink/?LinkID=205399).  
+-   **Applicazione Web o Windows Form.**  Utilizzare Visual Studio per sviluppare un'applicazione AJAX ASP.NET o un applicazione di Windows Form che ospiti il controllo del Visualizzatore report. Il controllo può puntare ai report pubblicati su un server di report. Per altre informazioni, vedere [Rapporti Microsoft](https://go.microsoft.com/fwlink/?LinkID=205399).  
   
 ## <a name="manage-reports"></a>Gestire i report  
  Per gestire un report pubblicato:  

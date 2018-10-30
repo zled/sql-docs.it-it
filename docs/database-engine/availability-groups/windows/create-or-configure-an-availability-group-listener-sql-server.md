@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 84a52fb481fce992d9b51bdb6e566f305dc174b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a96ca9534f35ba36e3d61f492b5dcaa8c1cdce8
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821989"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120238"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Creare o configurare un listener del gruppo di disponibilità (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -303,7 +303,7 @@ ms.locfileid: "47821989"
   
 -   Stringhe di connessione che non impostano **MultiSubnetFailover** su true  
   
-     Se `RegisterAllProvidersIP = 1`, in tutti i client le cui stringhe di connessione non utilizzano `MultiSubnetFailover = True`si verificheranno connessioni ad alta latenza. Questa situazione si verifica in quanto questi client tentano di effettuare connessioni a tutti gli indirizzi IP in sequenza. Al contrario, se **RegisterAllProvidersIP** viene impostato su 0, l'indirizzo IP attivo viene registrato nel punto di accesso client del cluster WSFC, riducendo la latenza per i client legacy. Se quindi alcuni client legacy devono connettersi a un listener del gruppo di disponibilità e non è possibile usare la proprietà **MultiSubnetFailover** , è consigliabile impostare **RegisterAllProvidersIP** su 0.  
+     Se `RegisterAllProvidersIP = 1`, in tutti i client le cui stringhe di connessione non utilizzano `MultiSubnetFailover = True`si verificheranno connessioni ad alta latenza. Questa situazione si verifica in quanto questi client tentano di effettuare connessioni a tutti gli indirizzi IP in sequenza. Al contrario, se **RegisterAllProvidersIP** viene impostato su 0, l'indirizzo IP attivo viene registrato nel punto di accesso client del cluster WSFC, riducendo la latenza per i client legacy. Se quindi alcuni client legacy devono connettersi a un listener del gruppo di disponibilità e non è possibile usare la proprietà **MultiSubnetFailover**, è consigliabile impostare **RegisterAllProvidersIP** su 0.  
   
     > [!IMPORTANT]  
     >  Durante la creazione di un listener del gruppo di disponibilità con il cluster WSFC (interfaccia utente grafica di Gestione cluster di failover), il valore di **RegisterAllProvidersIP** sarà 0 (false) per impostazione predefinita.  

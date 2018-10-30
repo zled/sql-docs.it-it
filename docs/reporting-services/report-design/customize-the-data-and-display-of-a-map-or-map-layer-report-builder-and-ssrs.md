@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 867e0fff62bf38f5f2d4d42a24e6c3bf49a9ee34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a17aac87516dcc3903c6802435762f962258efe9
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633709"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028790"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa (Generatore report e SSRS)
   Dopo aver aggiunto una mappa o un livello mappa a un [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report impaginato usando una procedura guidata, è possibile modificare l'aspetto della mappa nel report. È possibile apportare dei miglioramenti tenendo in considerazione i concetti seguenti:  
@@ -86,7 +86,7 @@ ms.locfileid: "47633709"
   
 -   Risoluzione e semplificazione. Stabilire un equilibrio tra il tempo necessario per il disegno e le strutture dettagliate di linee e poligoni.  
   
- Per modificare queste opzioni, fare clic con il pulsante destro del mouse su viewport mappa, usare la [finestra di dialogo Proprietà viewport mappa, la pagina Generale](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) e le pagine correlate.  
+ Per modificare queste opzioni, fare clic con il pulsante destro del mouse su viewport mappa, usare la [finestra di dialogo Proprietà viewport mappa, la pagina Generale](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) e le pagine correlate.  
   
 ##  <a name="Legends"></a> Modificare le opzioni per le legende  
  Le legende consentono agli utenti di interpretare i dati di una mappa.  
@@ -121,7 +121,7 @@ ms.locfileid: "47633709"
   
  L'espressione di raggruppamento consente di specificare come vengono aggregati i dati analitici che hanno una relazione con i dati spaziali per ogni elemento della mappa sul livello. Per impostazione predefinita, l'espressione di raggruppamento è il set di campi delle corrispondenze specificato per la relazione tra i dati spaziali e i dati analitici. Ad esempio, per una mappa a bolle in cui sono visualizzati i percorsi delle città e le dimensioni della popolazione per regione o area, i campi delle corrispondenze includono il nome della città [Città] e il nome dell'area [Area] dal momento che possono esistere più città con lo stesso nome. Nell'espressione di raggruppamento corrispondente sono inclusi due campi: [City] e [Region].  
   
- Per altre informazioni, vedere la pagina relativa ai [suggerimenti sulle mappe relativi alle modalità di importazione dei file di forma in SQL Server e di aggregazione dei dati spaziali](http://go.microsoft.com/fwlink/?LinkID=214991).  
+ Per altre informazioni, vedere la pagina relativa ai [suggerimenti sulle mappe relativi alle modalità di importazione dei file di forma in SQL Server e di aggregazione dei dati spaziali](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
 ##  <a name="MapElements"></a> Modificare le opzioni per gli elementi della mappa sul livello  
  Gli elementi della mappa sono i punti, le linee o i poligoni di un livello basati sui dati spaziali. Per gli elementi della mappa è possibile impostare le opzioni seguenti. Queste opzioni si applicano a tutti gli elementi della mappa del livello indipendentemente se siano o meno incorporati:  

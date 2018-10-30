@@ -13,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 00b487d0828d13d4905f609b2631b45b8c61802f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c046bbc7ac0b1da4c4e3be7c1eef0d7d47ccf9ec
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630499"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169328"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Abilitare la ricerca semantica in tabelle e colonne
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ GO
 È possibile eliminare un'indicizzazione semantica quando si modifica un indice full-text esistente tramite l'istruzione **ALTER FULLTEXT INDEX** . È possibile eliminare inoltre l'indicizzazione semantica tramite le varie finestre di dialogo in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Eliminare l'indice semantico tramite Transact-SQL  
-Per eliminare l'indicizzazione semantica solo da una colonna o da più colonne, chiamare l'istruzione **ALTER FULLTEXT INDEX** con l'opzione **ALTER COLUMN***nome_colonna***DROP STATISTICAL_SEMANTICS**. È possibile eliminare l'indicizzazione da più colonne in una singola istruzione **ALTER** .  
+Per eliminare l'indicizzazione semantica solo da una colonna o da più colonne, chiamare l'istruzione **ALTER FULLTEXT INDEX** con l'opzione **ALTER COLUMN**_nome\_colonna_**DROP STATISTICAL_SEMANTICS**. È possibile eliminare l'indicizzazione da più colonne in una singola istruzione **ALTER** .  
   
 ```sql  
 USE database_name  
@@ -171,7 +171,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-Per eliminare sia l'indicizzazione full-text che quella semantica da una colonna, chiamare l'istruzione **ALTER FULLTEXT INDEX** con l'opzione **ALTER COLUMN***nome_colonna***DROP**.  
+Per eliminare sia l'indicizzazione full-text che quella semantica da una colonna, chiamare l'istruzione **ALTER FULLTEXT INDEX** con l'opzione **ALTER COLUMN**_nome\_colonna_**DROP**.  
   
 ```sql  
 USE database_name  

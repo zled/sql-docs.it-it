@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Documentazione di Microsoft Azure
-description: Informazioni su come compilare e gestire potenti applicazioni tramite Servizi cloud di Microsoft Azure. Ottenere documentazione, codice di esempio, esercitazioni e altro ancora.
+title: SQL Server - Installazione e aggiornamento
+description: Informazioni su come installare o aggiornare SQL Server e i servizi correlati.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: a5f717bdf6b90bff892b70ae5861dc668dd86e53
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: b370d499deb1713667711c4b80b6bb0daa5bb958
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797837"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336170"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -305,10 +305,16 @@ ms.locfileid: "48797837"
         <h2>Rimani in contatto con noi</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribuire alla documentazione di SQL </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Collaborazione </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Commenti e suggerimenti sulla documentazione di SQL </a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> Supporto </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> Commenti e suggerimenti </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Sondaggio </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> Blog </a>
@@ -324,4 +330,5 @@ ms.locfileid: "48797837"
             </li>
         </ul>
     </div>
+
 

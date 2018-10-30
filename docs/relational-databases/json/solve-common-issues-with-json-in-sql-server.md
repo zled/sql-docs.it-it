@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dda4caf75529d2b3b5b18163cc2aef9331a1b49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06b05357db2ed700b9492cd003a65374c1ee81c0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688959"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905311"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Risolvere i problemi comuni di JSON in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47688959"
 ### <a name="create-a-nested-json-structure"></a>Creare una struttura JSON nidificata  
  **Domanda.** Si desidera produrre una struttura JSON complessa con numerose matrici sullo stesso livello. FOR JSON PATH è in grado di creare oggetti nidificati usando percorsi e FOR JSON AUTO crea livelli di nidificazione aggiuntivi per ciascuna tabella. Nessuna di queste due opzioni consente di generare l'output desiderato. Come è possibile creare un formato JSON personalizzato che le opzioni esistenti non supportano direttamente?  
   
- **Risposta.** È possibile creare qualsiasi struttura dei dati aggiungendo query FOR JSON come espressioni di colonna che restituiscono testo JSON. È anche possibile creare manualmente JSON tramite la funzione JSON_QUERY. Nell'esempio seguente vengono illustrate le tecniche seguenti.  
+ **Risposta.** È possibile creare qualsiasi struttura dei dati aggiungendo query FOR JSON come espressioni di colonna che restituiscono testo JSON. È anche possibile creare manualmente JSON tramite la funzione JSON_QUERY. Queste tecniche vengono illustrate nell'esempio seguente.  
   
 ```sql  
 SELECT col1, col2, col3,  

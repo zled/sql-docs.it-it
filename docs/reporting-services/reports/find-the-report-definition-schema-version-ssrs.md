@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 75751afcebfa72bda6f8dba9a1bb1dcba60f9373
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c012c30b200a31c77b62bee12e979bba79e695b7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698339"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031550"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Individuare la versione dello schema di definizione del report (SSRS)
 
@@ -84,4 +84,4 @@ Un file di definizione del report specifica lo spazio dei nomi RDL per la versio
 [Aggiornare i report](../../reporting-services/install-windows/upgrade-reports.md)   
 [Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)  
 
-Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

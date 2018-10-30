@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6a8c6213a215c1ea88ca84d4156e74b36ae81e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25ac3270e936f80bce62bdeeb67965c4688dfbcf
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805079"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020335"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurare un server di report per l'amministrazione remota
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è possibile configurare istanze del server di report in modalità locale o remota. Per configurare un'istanza remota del server di report, è possibile usare lo strumento di configurazione di Reporting Services oppure scrivere codice personalizzato che usi il provider WMI (Windows Management Instrumentation) per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lo strumento Gestione configurazione Reporting Services offre un'interfaccia grafica al provider WMI, per consentire di configurare un server di report senza dover scrivere codice. Quando si avvia lo strumento, è possibile specificare un server remoto a cui connettersi.  
@@ -39,7 +39,7 @@ ms.locfileid: "47805079"
   
  In alcune organizzazioni sono presenti criteri di gruppo che impediscono l'amministrazione remota del server per alcuni sistemi operativi o utenti. Prima di iniziare a modificare le impostazioni del firewall, rivolgersi all'amministratore di rete per verificare se vi sono limitazioni all'amministrazione remota.  
   
- Per ulteriori informazioni, vedere [Connecting Through Windows Firewall](http://go.microsoft.com/fwlink/?LinkId=63615) nella documentazione di Platform SDK nel sito Web MSDN.  
+ Per ulteriori informazioni, vedere [Connecting Through Windows Firewall](https://go.microsoft.com/fwlink/?LinkId=63615) nella documentazione di Platform SDK nel sito Web MSDN.  
   
 ## <a name="tasks"></a>Attività  
  Tra le attività che consentono di configurare un server di report remoto sono incluse le seguenti:  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6373efd4d6bed20b823c931ea20041de5f7f05dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0303b080271ec85753d0f0f94eee970b3d7308a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828112"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027510"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere installati in modalità nativa o in modalità SharePoint. La procedura da seguire per verificare l'installazione dipende dalla modalità del server di report.  
@@ -64,7 +64,7 @@ ms.locfileid: "47828112"
   
 1.  In una raccolta documenti di SharePoint creare un report semplice di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contenente solo una casella di testo, ad esempio un titolo. Il report non contiene origini dati e set di dati. L'obiettivo consiste nel verificare che sia possibile aprire Generatore report. In tal caso, verrà visualizzato in anteprima un report di base.  
   
-2.  Salvare il report nella raccolta documenti e quindi eseguire il report dalla raccolta. Per altre informazioni sulla creazione di report con Generatore report, vedere [Avviare Generatore report](../report-builder/start-report-builder.md).  
+2.  Salvare il report nella raccolta documenti e quindi eseguire il report dalla raccolta. Per altre informazioni sulla creazione di report con Generatore report, vedere [Avviare Generatore report (Generatore report)](../report-builder/start-report-builder.md).  
   
 ### <a name="reporting-services-samples"></a>Esempi di Reporting Services  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47828112"
   
 2.  Usare [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] per creare una nuova cartella o caricare un file per testare se le definizioni vengono passate al database del server di report. L'esito positivo di queste operazioni indica il corretto funzionamento della connessione.  
   
-     Per altre informazioni, vedere [Portale Web &#40;SSRS in modalità nativa&#41;](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     Per altre informazioni, vedere [Portale Web &#40;SSRS in modalità nativa&#41;](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>Per verificare che Progettazione report sia installato e in esecuzione  
   

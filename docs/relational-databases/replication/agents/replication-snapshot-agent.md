@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39756ee24011373c30ec23cd4c0caab2eb813338
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6553c3531545a17b6a47ad88cb2fbeace845a1b6
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756783"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169378"
 ---
 # <a name="replication-snapshot-agent"></a>Agente snapshot repliche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ snapshot [ -?]
  **-?**  
  Stampa tutti i parametri disponibili.  
   
- **-Publisher**  *nome_server*[**\\***nome_istanza*]  
- Nome del server di pubblicazione. Specificare server_name per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare *server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+ **-Publisher**  *server_name*[**\\**_instance\_name_]  
+ Nome del server di pubblicazione. Specificare server_name per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server\_name_**\\**_instance\_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
  **-Publication** *pubblicazione*  
  Nome della pubblicazione. Questo parametro è valido solo se la pubblicazione è configurata in modo che sia sempre disponibile uno snapshot per le sottoscrizioni nuove o reinizializzate.  
@@ -95,8 +95,8 @@ snapshot [ -?]
  **-DefinitionFile** *def_path_and_file_name*  
  Percorso del file di definizione dell'agente. Un file di definizione dell'agente contiene argomenti della riga di comando per l'agente. Il contenuto del file viene analizzato come file eseguibile. Utilizzare virgolette doppie (") per specificare valori dell'argomento contenenti caratteri arbitrari.  
   
- **-Distributor** *nome_server*[**\\***nome_istanza*]  
- Nome del database di distribuzione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare *server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+ **-Distributor** *server_name*[**\\**_instance\_name_]  
+ Nome del database di distribuzione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server\_name_**\\**_instance\_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  Priorità della connessione dell'agente snapshot con il server di distribuzione quando si verifica un deadlock. Questo parametro è specificato per risolvere deadlock che possono verificarsi tra l'agente snapshot e le applicazioni utente durante la generazione dello snapshot.  
@@ -155,7 +155,7 @@ snapshot [ -?]
 > [!NOTE]  
 >  Questo parametro viene utilizzato per ottimizzare le prestazioni di **bcp** da un server di pubblicazione Oracle.  
   
- -**HRBcpBlockSize***dimensione_blocco*  
+ -**HRBcpBlockSize**_block\_size_  
  Dimensione, in kilobyte (KB), di ogni blocco di dati **bcp** . Il valore predefinito è 64 KB. **HRBcpBlocks** viene utilizzato solo con pubblicazioni Oracle.  
   
 > [!NOTE]  
@@ -223,7 +223,7 @@ snapshot [ -?]
 |**0** (predefinito)|La priorità non è assegnata.|  
 |**1**|L'agente snapshot ha la priorità quando si verifica un deadlock nel server di pubblicazione.|  
   
- **-PublisherFailoverPartner** *nome_server*[**\\***nome_istanza*]  
+ **-PublisherFailoverPartner** *server_name*[**\\**_instance\_name_]  
  Specifica l'istanza del partner di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che partecipa in una sessione di mirroring del database con il database di pubblicazione. Per altre informazioni, vedere [Mirroring e replica del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** *publisher_login*  

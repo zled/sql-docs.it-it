@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e6fd1a6bdb0ada4f7256c07b487c31574756191
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48580f2ca2e83a968f9599b98956c079f763bf71
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712469"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307125"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurare Always Encrypted con enclave sicuri
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -31,8 +31,9 @@ Per configurare Always Encrypted con enclave sicuri, usare il flusso di lavoro s
 4. Configurare il tipo di enclave nell'istanza di SQL Server.
 5. Effettuare il provisioning delle chiavi abilitate per l'enclave.
 6. Crittografare le colonne che contengono dati sensibili.
- 
 
+>[!NOTE]
+>Per un'esercitazione dettagliata su come configurare l'ambiente di test e provare le funzionalità di Always Encrypted con enclave sicuri in SSMS, vedere [Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
 
 ## <a name="configure-your-environment"></a>Configurare l'ambiente
 
@@ -78,7 +79,7 @@ Installare gli strumenti seguenti nel computer client/di sviluppo:
 
 1. [.NET Framework 4.7.2](https://www.microsoft.com/net/download/dotnet-framework-runtime).
 2. [SSMS 18.0 o versioni successive](../../../ssms/download-sql-server-management-studio-ssms.md).
-3. [Modulo SQL Server PowerShell](../../../powershell/download-sql-server-ps-module.md) versione 21.5 o successiva.
+3. [Modulo SQL Server PowerShell](../../../powershell/download-sql-server-ps-module.md) versione 21.1 o successiva.
 4. [Visual Studio (2017 o versioni successive)](https://visualstudio.microsoft.com/downloads/).
 5. [Developer Pack per .NET Framework 4.7.2](https://www.microsoft.com/net/download/visual-studio-sdks).
 6. [Pacchetto NuGet Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), versione 2.2.0 o successive.
@@ -443,7 +444,7 @@ Per crittografare una colonna usando una chiave non abilitata per l'enclave, è 
 - [Configurare la crittografia della colonna tramite PowerShell](configure-column-encryption-using-powershell.md)
 
 
-### <a name="prerequisites"></a>Prerequisiti
+### <a name="prerequisites"></a>Prerequisites
 
 - La colonna esistente non è crittografata.
 - È stato effettuato il provisioning delle chiavi abilitate per l'enclave.
@@ -745,7 +746,7 @@ Il modo più rapido per provare query avanzate sulle colonne abilitate per l'enc
 
 
 
-### <a name="prerequisites"></a>Prerequisiti
+### <a name="prerequisites"></a>Prerequisites
 
 - Le colonne di destinazione delle query sono abilitate per l'enclave.
 - Si ha accesso alla chiave (o alle chiavi) master della colonna.
