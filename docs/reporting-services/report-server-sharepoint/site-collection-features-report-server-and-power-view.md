@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ae416f429c2a2d709290a49f477674e86be3f907
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e40163fe08b451e59dc28915002079b80e987e6f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696770"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021185"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Attivare le funzionalità di integrazione del server di report e di Power View in SharePoint
 
@@ -70,4 +70,4 @@ ms.locfileid: "47696770"
 
 Dopo aver attivato la funzionalità, è possibile continuare con l'integrazione del server.
 
-Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
