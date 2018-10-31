@@ -69,7 +69,7 @@ Per rinominare una tabella in Azure SQL Data Warehouse o Parallel Data Warehouse
   
 4.  Per annullare questa azione, premere ESC prima di uscire dal campo.  
   
-5.  Scegliere ***Salva** _nome tabella_ dal menu **File**.  
+5.  Scegliere **Salva** _nome tabella_ dal menu **File**.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

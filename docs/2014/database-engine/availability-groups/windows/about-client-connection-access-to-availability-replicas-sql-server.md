@@ -71,7 +71,7 @@ ms.locfileid: "48153672"
  Consentire solo le connessioni in lettura/scrittura  
  Quando la `Application Intent` proprietà di connessione è impostata su **ReadWrite** o non è impostata, la connessione è consentita. Le connessioni per cui il `Application Intent` parola chiave di stringa di connessione è impostata su `ReadOnly` non sono consentiti. Se si consentono solo le connessioni in lettura/scrittura, è possibile impedire la connessione, per errore, di un carico di lavoro con finalità di lettura alla replica primaria da parte dei clienti.  
   
- Per informazioni su questa proprietà di connessione, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Per informazioni su questa proprietà di connessione, vedere [Utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  Per altre informazioni, vedere [Configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   

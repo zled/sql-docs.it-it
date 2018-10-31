@@ -28,7 +28,7 @@ ms.locfileid: "48085621"
   
     -   [Gestione avvisi dati per utenti di SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
-    -   [Create and Manage Subscriptions for SharePoint Mode Report Servers](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+    -   [Creare e gestire sottoscrizioni per server di report in modalità SharePoint](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
     -   [Aggiornare le credenziali nelle origini dati dei report da un sito di SharePoint](report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   

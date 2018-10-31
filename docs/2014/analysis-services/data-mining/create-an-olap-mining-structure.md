@@ -125,7 +125,7 @@ ms.locfileid: "48134549"
   
 -   Per il secondo filtro scegliere la dimensione Customer, selezionare l'attributo Gender e quindi "Female" dall'elenco di valori di attributo.  
   
- Dopo avere creato la struttura di data mining, è possibile modificare sia la definizione dei dati del cubo sia i criteri di filtro. Per altre informazioni, vedere [Filter the Source Cube for a Mining Structure](../filter-the-source-cube-for-a-mining-structure.md).  
+ Dopo avere creato la struttura di data mining, è possibile modificare sia la definizione dei dati del cubo sia i criteri di filtro. Per altre informazioni, vedere [filtrare il cubo di origine per una struttura di Data Mining](../filter-the-source-cube-for-a-mining-structure.md).  
   
  Sia la scheda **Struttura di data mining** che la scheda **Modello di data mining** contengono un'opzione per l'aggiunta di un filtro a una struttura di data mining esistente, facendo clic su **Definisci una sezione del cubo**. Nella finestra di dialogo **Seziona cubo** è possibile compilare un'espressione di filtro MDX valida scegliendo un valore dagli elenchi a discesa.  
   

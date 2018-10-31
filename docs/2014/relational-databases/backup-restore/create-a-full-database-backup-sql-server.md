@@ -26,7 +26,7 @@ ms.locfileid: "48094025"
   In questo argomento viene descritto come creare un backup completo del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
   
 > [!NOTE]  
->  Per informazioni sul backup di SQL Server nel servizio di archiviazione BLOB di Windows Azure, vedere [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Per informazioni sul backup di SQL Server nel servizio di archiviazione BLOB di Windows Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **Contenuto dell'argomento**  
   

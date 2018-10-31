@@ -34,7 +34,7 @@ ms.locfileid: "48092487"
   
  Le operazioni di backup e ripristino vengono spesso utilizzate per spostare un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o parte di essa:  
   
--   Se si stanno spostando solo i database del server di report, è possibile utilizzare il backup e il ripristino oppure eseguire il collegamento e lo scollegamento per spostare i database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diversa. Per altre informazioni, vedere [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+-   Se si stanno spostando solo i database del server di report, è possibile utilizzare il backup e il ripristino oppure eseguire il collegamento e lo scollegamento per spostare i database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diversa. Per altre informazioni, vedere [Spostamento di database del server di report in un altro computer &#40;modalità nativa SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Lo spostamento di un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in un nuovo computer viene definito migrazione. In caso di migrazione di un'installazione, eseguire il programma di installazione per installare una nuova istanza del server di report e quindi copiare i dati dell'istanza in un nuovo computer. Per ulteriori informazioni sulla migrazione di un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vedere gli argomenti seguenti:  
   
