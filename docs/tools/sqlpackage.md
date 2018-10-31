@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 715839a584561c38fb08b3e217016ef3cc27e9b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bf75b16a9c7962ce1d04f51182d21107daa181
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721749"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051223"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -51,8 +51,10 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |Parametro|Forma breve|valore|Descrizione|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|Specifica l'azione da eseguire. |
+|**/AccessToken:**|**/at**|{string}| Specifica il token di accesso per l'autenticazione basata su token da usare per la connessione al database di destinazione. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifica se la registrazione diagnostica viene restituita come output nella console. Il valore predefinito è False. |
 |**/ DiagnosticsFile:**|**/DF**|{string}|Specifica un file per archiviare i log di diagnostica. |
+|**/ MaxParallelism:**|**/mp**|{int}| Specifica il grado di parallelismo per le operazioni simultanee in esecuzione su un database. Il valore predefinito è 8. |
 |**/ OverwriteFiles:**|**/of**|{True&#124;False}|Specifica se i file esistenti dovranno essere sovrascritti tramite sqlpackage.exe. Se si specifica False e viene rilevato un file esistente, sqlpackage.exe interrompe l'azione. Il valore predefinito è True. |
 |**/Properties:**|**/p**|{NomeProprietà}={Valore}|Specifica una coppia nome/valore per una proprietà specifica dell'azione: {NomeProprietà}={Valore}. Fare riferimento alla Guida di un'azione specifica per visualizzarne i nomi delle proprietà. Esempio: sqlpackage.exe /Action: pubblicare /?. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifica se la notifica dettagliata dell'interfaccia utente viene eliminata. Il valore predefinito è False. |
@@ -97,10 +99,12 @@ Un'operazione di pubblicazione tramite SqlPackage.exe consente di aggiornare in 
 |Parametro|Forma breve|valore|Descrizione|
 |---|---|---|---|
 |**/Action:**|**/a**|Pubblicazione|Specifica l'azione da eseguire. |
+|**/AccessToken:**|**/at**|{string}| Specifica il token di accesso per l'autenticazione basata su token da usare per la connessione al database di destinazione. |
 |**/ AzureKeyVaultAuthMethod:**|**/akv**|{Interattivo&#124;ClientIdSecret}|Specifica il metodo di autenticazione che viene usato per l'accesso ad Azure Key Vault |
 |**/ClientId:**|**/CID**|{string}|Specifica l'ID client da usare nell'autenticazione con Azure Key Vault, quando necessario |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifica se la registrazione diagnostica viene restituita come output nella console. Il valore predefinito è False. |
 |**/ DiagnosticsFile:**|**/DF**|{string}|Specifica un file per archiviare i log di diagnostica. |
+|**/ MaxParallelism:**|**/mp**|{int}| Specifica il grado di parallelismo per le operazioni simultanee in esecuzione su un database. Il valore predefinito è 8. |
 |**/ OverwriteFiles:**|**/of**|{True&#124;False}|Specifica se i file esistenti dovranno essere sovrascritti tramite sqlpackage.exe. Se si specifica False e viene rilevato un file esistente, sqlpackage.exe interrompe l'azione. Il valore predefinito è True. |
 |**/Profile:**|**/pr**|{string}|Specifica il percorso file a un profilo di pubblicazione dell'applicazione livello dati. Il profilo consente di definire una raccolta di proprietà e variabili da utilizzare durante la generazione di output.|
 |**/Properties:**|**/p**|{NomeProprietà}={Valore}|Specifica una coppia nome/valore per una proprietà specifica dell'azione: {NomeProprietà}={Valore}. Fare riferimento alla Guida di un'azione specifica per visualizzarne i nomi delle proprietà. Esempio: sqlpackage.exe /Action: pubblicare /?.|
@@ -236,8 +240,10 @@ Un'azione di esportazione SqlPackage.exe Esporta un database attivo da SQL Serve
 |Parametro|Forma breve|valore|Descrizione|
 |---|---|---|---|
 |**/Action:**|**/a**|Esportazione|Specifica l'azione da eseguire. |
+|**/AccessToken:**|**/at**|{string}| Specifica il token di accesso per l'autenticazione basata su token da usare per la connessione al database di destinazione. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifica se la registrazione diagnostica viene restituita come output nella console. Il valore predefinito è False. |
 |**/ DiagnosticsFile:**|**/DF**|{string}|Specifica un file per archiviare i log di diagnostica. |
+|**/ MaxParallelism:**|**/mp**|{int}| Specifica il grado di parallelismo per le operazioni simultanee in esecuzione su un database. Il valore predefinito è 8. |
 |**/ OverwriteFiles:**|**/of**|{True&#124;False}|Specifica se i file esistenti dovranno essere sovrascritti tramite sqlpackage.exe. Se si specifica False e viene rilevato un file esistente, sqlpackage.exe interrompe l'azione. Il valore predefinito è True. |
 |**/Properties:**|**/p**|{NomeProprietà}={Valore}|Specifica una coppia nome/valore per una proprietà specifica dell'azione: {NomeProprietà}={Valore}. Fare riferimento alla Guida di un'azione specifica per visualizzarne i nomi delle proprietà. Esempio: sqlpackage.exe /Action: pubblicare /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|Specifica se la notifica dettagliata dell'interfaccia utente viene eliminata. Il valore predefinito è False.|
@@ -272,8 +278,10 @@ Un'azione di importazione SqlPackage.exe importa i dati di tabella e dello schem
 |Parametro|Forma breve|valore|Descrizione|
 |---|---|---|---|
 |**/Action:**|**/a**|Importa|Specifica l'azione da eseguire. |
+|**/AccessToken:**|**/at**|{string}| Specifica il token di accesso per l'autenticazione basata su token da usare per la connessione al database di destinazione. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifica se la registrazione diagnostica viene restituita come output nella console. Il valore predefinito è False. |
 |**/ DiagnosticsFile:**|**/DF**|{string}|Specifica un file per archiviare i log di diagnostica. |
+|**/ MaxParallelism:**|**/mp**|{int}| Specifica il grado di parallelismo per le operazioni simultanee in esecuzione su un database. Il valore predefinito è 8. |
 |**/Properties:**|**/p**|{NomeProprietà}={Valore}|Specifica una coppia nome/valore per una proprietà specifica dell'azione: {NomeProprietà}={Valore}. Fare riferimento alla Guida di un'azione specifica per visualizzarne i nomi delle proprietà. Esempio: sqlpackage.exe /Action: pubblicare /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|Specifica se la notifica dettagliata dell'interfaccia utente viene eliminata. Il valore predefinito è False.|
 |**/ SourceFile:**|**/sf**|{string}|Specifica un file di origine da usare come origine dell'azione. Se si utilizza questo parametro, non deve essere valido nessun altro parametro di origine. |
@@ -308,8 +316,10 @@ Un'azione report di **SqlPackage.exe** crea un report XML delle modifiche che ve
 |Parametro|Forma breve|valore|Descrizione|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|Specifica l'azione da eseguire. |
+|**/AccessToken:**|**/at**|{string}| Specifica il token di accesso per l'autenticazione basata su token da usare per la connessione al database di destinazione. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifica se la registrazione diagnostica viene restituita come output nella console. Il valore predefinito è False. |
 |**/ DiagnosticsFile:**|**/DF**|{string}|Specifica un file per archiviare i log di diagnostica. |
+|**/ MaxParallelism:**|**/mp**|{int}| Specifica il grado di parallelismo per le operazioni simultanee in esecuzione su un database. Il valore predefinito è 8. |
 |**/OutputPath:**|**/Op.**|{string}|Specifica il percorso file in cui vengono generati i file di output. |
 |**/ OverwriteFiles:**|**/of**|{True&#124;False}|Specifica se i file esistenti dovranno essere sovrascritti tramite sqlpackage.exe. Se si specifica False e viene rilevato un file esistente, sqlpackage.exe interrompe l'azione. Il valore predefinito è True. |
 |**/Profile:**|**/pr**|{string}|Specifica il percorso file a un profilo di pubblicazione dell'applicazione livello dati. Il profilo consente di definire una raccolta di proprietà e variabili da utilizzare durante la generazione di output. |
@@ -438,8 +448,10 @@ Un'azione report di **SqlPackage.exe** consente di creare un report XML delle mo
 |Parametro|Forma breve|valore|Descrizione|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|Specifica l'azione da eseguire. |
+|**/AccessToken:**|**/at**|{string}| Specifica il token di accesso per l'autenticazione basata su token da usare per la connessione al database di destinazione. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifica se la registrazione diagnostica viene restituita come output nella console. Il valore predefinito è False. |
 |**/ DiagnosticsFile:**|**/DF**|{string}|Specifica un file per archiviare i log di diagnostica. |
+|**/ MaxParallelism:**|**/mp**|{int}| Specifica il grado di parallelismo per le operazioni simultanee in esecuzione su un database. Il valore predefinito è 8. |
 |**/OutputPath:**|**/Op.**|{string}|Specifica il percorso file in cui vengono generati i file di output. |
 |**/ OverwriteFiles:**|**/of**|{True&#124;False}|Specifica se i file esistenti dovranno essere sovrascritti tramite sqlpackage.exe. Se si specifica False e viene rilevato un file esistente, sqlpackage.exe interrompe l'azione. Il valore predefinito è True. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifica se la notifica dettagliata dell'interfaccia utente viene eliminata. Il valore predefinito è False.|
@@ -463,8 +475,10 @@ L'azione Script di **SqlPackage.exe** consente di creare uno script di aggiornam
 |Parametro|Forma breve|valore|Descrizione|
 |---|---|---|---|
 |**/Action:**|**/a**|Script|Specifica l'azione da eseguire. |
+|**/AccessToken:**|**/at**|{string}| Specifica il token di accesso per l'autenticazione basata su token da usare per la connessione al database di destinazione. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifica se la registrazione diagnostica viene restituita come output nella console. Il valore predefinito è False. |
 |**/ DiagnosticsFile:**|**/DF**|{string}|Specifica un file per archiviare i log di diagnostica. |
+|**/ MaxParallelism:**|**/mp**|{int}| Specifica il grado di parallelismo per le operazioni simultanee in esecuzione su un database. Il valore predefinito è 8. |
 |**/OutputPath:**|**/Op.**|{string}|Specifica il percorso file in cui vengono generati i file di output. |
 |**/ OverwriteFiles:**|**/of**|{True&#124;False}|Specifica se i file esistenti dovranno essere sovrascritti tramite sqlpackage.exe. Se si specifica False e viene rilevato un file esistente, sqlpackage.exe interrompe l'azione. Il valore predefinito è True. |
 |**/Profile:**|**/pr**|{string}|Specifica il percorso file a un profilo di pubblicazione dell'applicazione livello dati. Il profilo consente di definire una raccolta di proprietà e variabili da utilizzare durante la generazione di output.|
