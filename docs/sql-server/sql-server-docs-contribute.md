@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3628c3b8e3e740beb93c5da744f0336a1409d167
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 881189fdec593d48b443d85ee548ca1bb80b24a8
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461066"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146056"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Come contribuire alla documentazione di SQL Server
 
@@ -89,7 +89,7 @@ Questo comando aggiunge il testo seguente nella parte superiore dell'articolo:
 
 ![Testo applies-to](./media/sql-server-docs-contribute/applies-to.png)
 
-Per trovare l'inclusione applies-to corretta per l'articolo, usare i suggerimenti seguenti:
+Per trovare il file di inclusione applies-to corretto per l'articolo, usare i suggerimenti seguenti:
 
 - Per un elenco delle inclusioni di uso comune, vedere [File di inclusione per il controllo delle versioni e Si applica a in SQL Server](applies-to-includes.md).
 - Consultare un altro articolo che analizza la stessa funzionalità o un'attività correlata. Se si modifica quell'articolo, è possibile copiare il Markdown per il collegamento al file di inclusione applies-to (è possibile annullare la modifica senza inviarla).

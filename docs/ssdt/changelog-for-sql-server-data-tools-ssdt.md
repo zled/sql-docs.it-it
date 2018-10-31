@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e4a453952dc67bdb572697b0d20de2c15fa034
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072175"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991304"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log delle modifiche per SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,6 @@ Data di rilascio: 27 settembre 2018
 ### <a name="known-issues"></a>Problemi noti:
 
 - L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente.
-- SSDT 15.8.1 attualmente non supporta Windows 7 SP1, quindi se si usa Windows 7 SP1, continuare a usare la versione 15.8.0
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT per Visual Studio 2017 (15.8)
@@ -492,16 +491,16 @@ Numero di build: 14.0.61704.140
     - Aggiunta di colonne in base all'esempio in PowerQuery
     - Opzioni di accesso ai dati nei modelli 1400 (proprietà a livello di modello usate dal motore M)
         - Abilita combinazione rapida: il valore predefinito è false, se l'opzione è impostata su true, il motore di mashup ignora i livelli di privacy dell'origine dati quando si combinano i dati
-        - Abilita reindirizzamenti legacy: il valore predefinito è false, se l'opzione è impostata su true, il motore di mashup segue i reindirizzamenti HTTP potenzialmente non sicuri.  Ad esempio, un reindirizzamento da un HTTPS a un URI HTTP  
-        - Restituisci valori di errore come Null: il valore predefinito è false, se l'opzione è impostata su true, gli errori a livello di cella vengono restituiti come Null. Se è false, viene generata un'eccezione se una cella contiene un errore  
+        - Abilita reindirizzamenti legacy: il valore predefinito è false, se l'opzione è impostata su true, il motore di mashup segue i reindirizzamenti HTTP potenzialmente non sicuri.  Ad esempio, un reindirizzamento da un HTTPS a un URI HTTP  
+        - Restituisci valori di errore come Null: il valore predefinito è false, se l'opzione è impostata su true, gli errori a livello di cella vengono restituiti come Null. Se è false, viene generata un'eccezione se una cella contiene un errore  
     - Origini dati aggiuntive (origini dati di file) che usano PowerQuery
-        - Excel 
-        - Testo/CSV 
-        - Xml 
-        - Json 
-        - Cartella 
-        - Database di Access 
-        - Archiviazione BLOB di Azure 
+        - Excel 
+        - Testo/CSV 
+        - Xml 
+        - Json 
+        - Cartella 
+        - Database di Access 
+        - Archiviazione BLOB di Azure 
     - Interfaccia utente localizzata di PowerQuery
 - Finestra degli strumenti dell'editor DAX
     - Migliorata l'esperienza di editing DAX per misure, colonne calcolate ed espressioni di righe di dettaglio, disponibile dal menu Visualizza, Altre finestre in SSDT
@@ -610,24 +609,24 @@ Esempio di utilizzo:
 In DacFx sono state aggiunte due nuove API: DacServices.Publish() e DacServices.Script(). Le API supportano anche l'esecuzione di azioni di pubblicazione+scripting+creazione di report in un'unica operazione. Esempio di utilizzo:
 
 ```
-DacServices service = new DacServices(connectionString);
-using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
-var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+DacServices service = new DacServices(connectionString);
+using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
+var options = new PublishOptions() {
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
-// Call publish and receive deployment script & report in the results
-PublishResult result = service.Publish(package, "TargetDb", options);
+// Call publish and receive deployment script & report in the results
+PublishResult result = service.Publish(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
 
-// Call script and receive deployment script & report in results
-result = service.Script(package, "TargetDb", options);
+// Call script and receive deployment script & report in results
+result = service.Script(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
@@ -662,7 +661,7 @@ Per altre informazioni, vedere il [post di blog su Analysis Services](https://bl
 
 **Servizio di integrazione**
 
-* È stato corretto il bug Connect [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) relativo allo spostamento di più attività pacchetto del servizio di integrazione
+* È stato corretto il bug Connect  [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) relativo allo spostamento di più attività pacchetto del servizio di integrazione
 
 
 
@@ -675,7 +674,7 @@ Numero di build: 14.0.60918
 
 **Novità**
 
-L'opzione Confronto schema è ora supportata in SqlPackage.exe e nell'API DacFx. Per informazioni dettagliate, vedere [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/) (Confronto schema in SqlPackage e in DacFx).
+L'opzione Confronto schema è ora supportata in SqlPackage.exe e nell'API DacFx. Per informazioni dettagliate, vedere  [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/) (Confronto schema in SqlPackage e in DacFx).
 
 **Analysis Services - Modalità area di lavoro integrata per SSDT tabulare (SSAS)**
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 190d354ffc7f5e0c0c0bd3fb4cf5c99a69890271
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864389"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150182"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Esercitazione: Suggerimenti e consigli per l'uso di SSMS
 Questa esercitazione offre alcuni suggerimenti aggiuntivi per l'uso di SQL Server Management Studio (SSMS). Questo articolo illustra come: 
@@ -133,7 +133,7 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
 
 
 ## <a name="filter-objects-in-object-explorer"></a>Filtrare oggetti in Esplora oggetti
-È possibile filtrare gli oggetti per semplificare il reperimento di oggetti specifici nei database con molti oggetti. In questa sezione viene illustrato come filtrare le tabelle, ma è possibile usare i passaggi seguenti in qualsiasi altro nodo in Esplora oggetti:
+Nei database con molti oggetti è possibile usare i filtri per cercare tabelle o viste specifiche e così via. In questa sezione viene illustrato come filtrare le tabelle, ma è possibile usare i passaggi seguenti in qualsiasi altro nodo in Esplora oggetti:
 
 1. Connettersi all'istanza di SQL Server.
 2. Espandere **Database** > **AdventureWorks** > **Tabelle**. Verranno visualizzate tutte le tabelle nel database.
