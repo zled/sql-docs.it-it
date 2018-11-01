@@ -27,7 +27,7 @@ ms.locfileid: "48210413"
 ## <a name="description"></a>Description  
  I word breaker e i filtri utilizzati dalla ricerca full-text di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono stati modificati in modo significativo per apportare miglioramenti a livello di funzionalità e di affidabilità. In alcuni casi specifici le modifiche apportate ai word breaker possono avere effetti sulla suddivisione in token di alcuni dati. I token creati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] possono essere diversi dai token precedenti creati in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
- Per informazioni sui word breaker, vedere [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
+ Per informazioni sui word breaker, vedere [configurare e gestire Word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

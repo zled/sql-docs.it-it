@@ -24,7 +24,7 @@ ms.locfileid: "48194911"
   Con la **Conversione guidata progetto di Integration Services** è possibile convertire un progetto nel modello di distribuzione del progetto.  
   
 > [!NOTE]  
->  Se nel progetto sono incluse una o più origini dati, queste ultime vengono rimosse al completamento della conversione del progetto. Per creare una connessione a un'origine dati che può essere condivisa dai pacchetti nel progetto, aggiungere una gestione connessione al livello del progetto. Per altre informazioni, vedere [Add, Delete, or Share a Connection Manager in a Package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
+>  Se nel progetto sono incluse una o più origini dati, queste ultime vengono rimosse al completamento della conversione del progetto. Per creare una connessione a un'origine dati che può essere condivisa dai pacchetti nel progetto, aggiungere una gestione connessione al livello del progetto. Per altre informazioni, vedere [aggiungere, eliminare o condividere una gestione connessione in un pacchetto](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
   
  **Per saperne di più**  
   

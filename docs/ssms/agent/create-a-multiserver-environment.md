@@ -62,7 +62,7 @@ Negli argomenti seguenti vengono illustrate le attività comuni necessarie per l
 |Viene illustrato come creare un server di destinazione.|[Configurare un server di destinazione](../../ssms/agent/make-a-target-server.md)|  
 |Viene illustrato come integrare un server di destinazione in un server master.|[Integrare un server di destinazione in un server master](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
 |Viene illustrato come escludere un server di destinazione da un server master.|[Escludere un server di destinazione da un server master](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
-|Viene illustrato come escludere più server di destinazione da un server master.|[Defect Multiple Target Servers from a Master Server](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
+|Viene illustrato come escludere più server di destinazione da un server master.|[Escludere più server di destinazione da un server master](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
 |Viene illustrato come verificare lo stato di un server di destinazione.|[sp_help_targetserver (Transact-SQL)](http://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](http://msdn.microsoft.com/ec3a4a68-b591-431c-9518-053ede522d0c)|  
   
 ## <a name="see-also"></a>Vedere anche  

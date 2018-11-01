@@ -164,7 +164,7 @@ ms.locfileid: "48140751"
   
  L'espressione XPath che viene applicata al file XML è l'operazione XPath esterna, archiviata nella proprietà OuterXPathString. Se il tipo di enumerazione XPath è impostato su `ElementCollection`, Foreach NodeList enumerator può applicare un'espressione XPath interna, archiviata nella proprietà InnerXPathString, a una raccolta dell'elemento.  
   
- Per ulteriori informazioni sull'utilizzo di documenti e dati XML, vedere "[Employing XML in the .NET Framework (utilizzo di XML in .NET Framework)](http://go.microsoft.com/fwlink/?LinkId=56214)" in MSDN Library.  
+ Per altre informazioni sull'utilizzo di documenti e dati XML, vedere "[utilizzo di XML in .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" in MSDN Library.  
   
  **DocumentSourceType**  
  Consente di selezionare il tipo di origine del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
