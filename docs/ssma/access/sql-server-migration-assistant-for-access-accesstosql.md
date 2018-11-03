@@ -10,12 +10,12 @@ ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: b443a055df684cdcf6de0c164d572e3e385c26b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5307d39c4b983df16473226bc3aa94a163ea3d33
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856779"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757986"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant per Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per l'accesso è uno strumento per la migrazione di database dal [!INCLUDE[msCoName](../../includes/msconame_md.md)] accedere alle versioni 97 a 2010 a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 in Windows e Linux (anteprima) / [!INCLUDE[msCoName](../../includes/msconame_md.md)] Azure SQL database. SSMA per Access converte gli oggetti di database di Access da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o oggetti di database SQL di Azure, carica gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL di Azure, e quindi esegue la migrazione dei dati da Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL di Azure.  
@@ -33,6 +33,6 @@ Questa documentazione presenta SSMA per Access e vengono fornite istruzioni dett
 |[Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)|Viene fornita una panoramica del processo di conversione e informazioni dettagliate su ogni passaggio del processo.|  
 |[Collegamento delle applicazioni di accesso a SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)|Viene descritto come utilizzare le applicazioni Access esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Guida di riferimento all'interfaccia utente](user-interface-reference-accesstosql.md)|Contiene la documentazione per le finestre di dialogo SSMA.|  
-|[Uso di SSMA per la console di Access](working-with-ssma-for-access-console-accesstosql.md)|Contiene la documentazione sull'applicazione Console SSMA|  
+|[Uso di SSMA per la console di Access](working-with-ssma-for-access-console-accesstosql.md)|Include documentazione sull'applicazione Console SSMA|  
 |[Assistenza per SSMA per Access](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Fornisce informazioni su come ottenere ulteriore assistenza.|  
   

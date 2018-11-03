@@ -11,12 +11,12 @@ ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05314c09c64232c469b88e4522934d2a4d713dff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6450b85b00906facfb291d8085d729474577bd32
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168161"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753578"
 ---
 # <a name="modifying-the-date-dimension"></a>Modifica della dimensione Date
   Nelle attività di questo argomento verrà creata una gerarchia definita dell'utente e verranno modificati i nomi dei membri visualizzati per gli attributi Date, Month, Calendar Quarter e Calendar Semester. Verranno inoltre definite chiavi composte per gli attributi, verrà controllato l'ordinamento dei membri di dimensione e verranno definite relazioni tra attributi.  
@@ -86,7 +86,7 @@ ms.locfileid: "48168161"
   
 5.  Trascinare il **Date Key** dell'attributo dal **attributi** riquadro il  **\<nuovo livello >** cella il **gerarchie** riquadro , sotto il **English Month Name** livello.  
   
-6.  Nel **gerarchie** riquadro, fare clic sulla barra del titolo della **gerarchia** , scegliere **rinominare**e quindi digitare `Calendar Date`.  
+6.  Nel **gerarchie** riquadro, fare clic sulla barra del titolo della **gerarchia** gerarchia, fare clic su **rinominare**e quindi digitare `Calendar Date`.  
   
 7.  Usando il menu di scelta rapida, nel `Calendar Date` gerarchia, rinominare il **English Month Name** a livello di `Calendar Month`e quindi rinominare il **Date Key** livello a `Date`.  
   

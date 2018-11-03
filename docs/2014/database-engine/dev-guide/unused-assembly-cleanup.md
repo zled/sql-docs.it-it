@@ -12,12 +12,12 @@ ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad8d959ae622d743de02d996c280af37eddc9bf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0ad2e58c7c261d191adf7d48b157e42f13d8d37
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184081"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743166"
 ---
 # <a name="unused-assembly-cleanup"></a>Pulizia degli assembly inutilizzati
   L'esempio `AssemblyCleanup` contiene una stored procedure .NET, che consente di eseguire la pulizia degli assembly inutilizzati nel database corrente tramite l'esecuzione di query sui cataloghi di metadati. L'unico parametro, `visible_assemblies`, viene utilizzato per specificare se gli assembly visibili inutilizzati devono essere o meno eliminati. Per impostazione predefinita un valore "false" indica che solo gli assembly invisibili inutilizzati vengono eliminati; in caso contrario vengono eliminati tutti gli assembly inutilizzati. Il set di assembly inutilizzati è formato dagli assembly che non dispongono di alcun punto di ingresso definito (routine/tipi e aggregazioni) e a cui nessun assembly utilizzato fa riferimento direttamente o indirettamente.  
@@ -155,9 +155,9 @@ using Microsoft.SqlServer.Server;
             /// <summary>  
             /// Returns the comma-separated list of assembly ids contained in this instance  
             /// </summary>  
-            /// <returns>string value that represents a comma-seperated list   
+            /// <returns>string value that represents a comma-separated list   
             /// of assembly ids</returns>  
-            public string ToCommaSeperatedList()  
+            public string ToCommaSeparatedList()  
             {  
                 StringBuilder sb = new StringBuilder();  
   
@@ -240,7 +240,7 @@ using Microsoft.SqlServer.Server;
   
                 cmd.CommandText = String.Format(CultureInfo.InvariantCulture,  
                     "SELECT name FROM sys.assemblies WHERE assembly_id IN ({0});",  
-                    unusedAssemblySet.ToCommaSeperatedList());  
+                    unusedAssemblySet.ToCommaSeparatedList());  
                 using (SqlDataReader rd = cmd.ExecuteReader())  
                 {  
                     while (rd.Read())  
@@ -407,8 +407,8 @@ Public NotInheritable Class AssemblyCleanup
         ''' <summary>  
         ''' Returns the comma-separated list of assembly ids contained in this instance  
         ''' </summary>  
-        ''' <returns>string value that represents a comma-seperated list of assembly ids</returns>  
-        Public Function ToCommaSeperatedList() As String  
+        ''' <returns>string value that represents a comma-separated list of assembly ids</returns>  
+        Public Function ToCommaSeparatedList() As String  
             Dim sb As New StringBuilder()  
   
             If m_dictionary.Count > 0 Then  
@@ -486,7 +486,7 @@ Public NotInheritable Class AssemblyCleanup
   
             cmd.CommandText = String.Format(CultureInfo.InvariantCulture, _  
                 "SELECT name FROM sys.assemblies WHERE assembly_id IN ({0});", _  
-                unusedAssemblySet.ToCommaSeperatedList())  
+                unusedAssemblySet.ToCommaSeparatedList())  
             Dim rd As SqlDataReader = cmd.ExecuteReader()  
             Try  
                 While rd.Read()  

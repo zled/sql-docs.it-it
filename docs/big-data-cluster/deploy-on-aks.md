@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/23/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 3a1cd6dcaf669071517f1a7c6196e22ce33f55ca
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: e3a73eab49c947d950981a9bdb41098ee00a9b9f
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050913"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216677"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Configurare Azure Kubernetes Service per le distribuzioni di SQL Server 2019 (anteprima)
 
@@ -27,11 +27,8 @@ Questo articolo descrive i passaggi per la distribuzione di Kubernetes nel servi
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Per un ambiente del servizio contenitore di AZURE, il requisito minimo di macchine Virtuali è almeno due macchine virtuali dell'agente, in aggiunta al master, di una dimensione minima [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Risorse minime necessarie per ogni macchina virtuale sono 4 CPU e 14 GB di memoria.
+- Per un ambiente del servizio contenitore di AZURE, il requisito minimo di macchine Virtuali è di almeno due macchine virtuali dell'agente (oltre a master), con 32 GB di memoria ciascuna e almeno 4 CPU. Infrastruttura di Azure offre più opzioni di dimensioni per le macchine virtuali, vedere [qui](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) per le selezioni nell'area di cui si prevede di distribuire.
   
-   > [!NOTE]
-   > Se si prevede di eseguire processi di big data o più applicazioni di Spark, è la dimensione minima [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), e le risorse minime necessarie per ogni macchina virtuale sono di 8 CPU e 32 GB di memoria.
-
 - In questa sezione è necessario che sia in esecuzione la CLI di Azure versione 2.0.4 o versioni successive. Se è necessario installare o eseguire l'aggiornamento, vedere [installare Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Eseguire `az --version` per trovare la versione, se necessario.
 
 - Installare [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Cluster di big data di SQL Server richiede qualsiasi versione secondaria all'interno dell'intervallo di 1.10 versione per Kubernetes, per i server e client. Per installare una versione specifica nel client kubectl, vedere [installare kubectl binari tramite curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Per AKS dovrai usare `--kubernetes-version` parametro per specificare una versione diversa da quella predefinita. Si noti che l'intervallo di tempo versione CTP2.0, servizio contenitore di AZURE supporta solo le versioni 1.10.7 e 1.10.8. 
@@ -81,7 +78,7 @@ Un gruppo di risorse di Azure è un gruppo logico in Azure le risorse vengono di
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_DS3_v2 \
+    --node-vm-size Standard_E4s_v3 \
     --node-count 2 \
     --kubernetes-version 1.10.7
     ```

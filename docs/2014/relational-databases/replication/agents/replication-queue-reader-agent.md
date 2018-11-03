@@ -1,7 +1,7 @@
 ---
 title: Agente di lettura coda repliche | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8ba3f9ef9c76957872114fd05cf98520ce44bb4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f63676830d79bc8ec9c3ffd462e9d836364df159
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078241"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236968"
 ---
 # <a name="replication-queue-reader-agent"></a>Agente di lettura coda repliche
   Agente di lettura coda repliche è un eseguibile che consente di leggere i messaggi archiviati in una coda [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o MSMQ ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Message Queue) e di applicare tali messaggi nel server di pubblicazione. L'agente di lettura coda viene utilizzato con le pubblicazioni snapshot e transazionali che consentono l'aggiornamento in coda.  
@@ -86,6 +86,9 @@ ms.locfileid: "48078241"
 |**0**|Specifica che SSL non viene utilizzato.|  
 |**1**|Specifica che SSL viene utilizzato, ma l'agente non verifica che il certificato server SSL sia firmato da un'autorità emittente attendibile.|  
 |**2**|Specifica che SSL viene utilizzato e che il certificato viene verificato.|  
+
+ > [!NOTE]  
+ >  Un certificato SSL valido è definito con un nome di dominio completo del Server SQL. Affinché l'agente possa connettersi correttamente quando si imposta - EncryptionLevel su 2, creare un alias nel Server SQL locale. Il parametro 'Nome Alias' deve essere il nome del server e il parametro "Server" deve essere impostato per il nome completo di SQL Server.
   
  Per altre informazioni, vedere [Panoramica della sicurezza &#40;replica&#41;](../security/security-overview-replication.md).  
   

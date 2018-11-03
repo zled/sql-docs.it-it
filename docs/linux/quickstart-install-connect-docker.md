@@ -4,7 +4,7 @@ description: Questa Guida introduttiva illustra come usare Docker per eseguire S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/07/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: ddf8882cfe4c51194515b181fb6b9e6e80426710
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: f3388bdb66b27cb790079e103cdcf5583b406ad4
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085287"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753548"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Guida introduttiva: Immagini del contenitore in esecuzione SQL Server con Docker
 
@@ -44,6 +44,7 @@ Questa immagine è costituita da SQL Server in esecuzione su Linux basato su Ubu
 ## <a id="requirements"></a> Prerequisiti
 
 - Motore Docker 1.8 o versione successiva in qualsiasi distribuzione di Linux supportata oppure Docker per Mac/Windows. Per altre informazioni, vedere [Installare Docker](https://docs.docker.com/engine/installation/).
+- Docker **overlay2** driver di archiviazione. Questo è il valore predefinito per la maggior parte degli utenti. Se si ritiene che non si usa questo provider di archiviazione e da modificare, vedere le istruzioni e gli avvisi nel [documentazione di docker per la configurazione overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
 - Almeno 2 GB di spazio su disco.
 - Almeno 2 GB di RAM.
 - [Requisiti di sistema per SQL Server su Linux](sql-server-linux-setup.md#system).

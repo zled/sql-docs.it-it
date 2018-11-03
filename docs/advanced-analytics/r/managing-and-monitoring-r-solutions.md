@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c921b89dc3f6928ccbfc3f9fc727015dadc05b7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169081"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743206"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Gestire e integrare i carichi di lavoro di machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,6 +87,18 @@ Se in seguito si determina che le funzioni della libreria esterna sono necessari
 
 > [!NOTE]
 > Per i pacchetti R, diritti di amministratore di server non sono specificamente necessari per l'installazione del pacchetto se si usano metodi alternativi. Visualizzare [installare pacchetti R in SQL Server](install-additional-r-packages-on-sql-server.md) per informazioni dettagliate.
+
+## <a name="monitoring-script-execution"></a>L'esecuzione di script di monitoraggio
+
+Gli script R e Python in esecuzione in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] vengono avviati mediante il [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] interfaccia. Tuttavia, Launchpad non viene regolata o monitorato separatamente, perché è un servizio sicuro fornito da Microsoft che gestisce in modo appropriato le risorse della risorsa.
+
+Gli script esterni eseguiti con il servizio Launchpad vengono gestiti mediante il [oggetto processo Windows](/windows/desktop/ProcThread/job-objects). Un oggetto processo consente di gestire gruppi di processi come unità. Ogni oggetto processo è gerarchico e controlla gli attributi di tutti i processi associati a esso. Le operazioni eseguite su un oggetto processo interessano tutti i processi associati all'oggetto processo.
+
+Se quindi è necessario terminare un processo associato a un oggetto, tenere presente che verranno terminati anche tutti i processi correlati. Se si esegue uno script R assegnato a un oggetto processo di Windows e tale script esegue un processo ODBC correlato che deve essere terminato, verrà terminato anche il processo di script R padre.
+
+Se si avvia uno script esterno che utilizza l'elaborazione parallela, un singolo oggetto processo Windows gestisce tutti i processi figlio paralleli.
+
+Per determinare se un processo è in esecuzione in un processo, usare la funzione `IsProcessInJob`.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

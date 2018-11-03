@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 12c91f52694c9c7b4cc9abc9e7b96df0ddffb51c
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643979"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965955"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione di SQL Server con Data Migration Assistant
 
@@ -47,15 +47,13 @@ Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione p
    Quando si è verificata l'istanza di SQL Server di origine per la migrazione a SQL Server in locale o a SQL Server ospitati in destinazioni di macchina virtuale di Azure, è possibile scegliere uno o entrambi i tipi di report di valutazione seguenti:
 
     -   **Problemi di compatibilità**
-
     -   **Raccomandazione di nuove funzionalità**
 
     ![Selezionare un tipo di report di valutazione per la destinazione di SQL Server](../dma/media/AssessmentTypes.png)
 
-   Quando si è verificata l'istanza di SQL Server di origine per la migrazione al Database SQL di Azure, è possibile scegliere uno o entrambi i tipi di report di valutazione seguenti:
+   Quando viene verificata l'istanza di SQL Server di origine per la migrazione al Database SQL di Azure, è possibile scegliere uno o entrambi i tipi di report di valutazione seguenti:
 
     -   **Verificare la compatibilità del database**
-
     -   **Verifica parità delle funzionalità**
 
     ![Selezione tipo di report di valutazione per la destinazione di Database SQL](../dma/media/AssessmentTypes_Azure.png)
@@ -89,17 +87,17 @@ La durata della valutazione dipende dal numero di database aggiunti e le dimensi
 
 Allo stesso modo, è possibile esaminare l'indicazione di funzionalità tra **Performance**, **archiviazione**, e **sicurezza** aree.
 
-Funzionalità consigliate coprono un'ampia gamma di funzionalità come OLTP In memoria e Columnstore, Stretch Database, Always Encrypted, Dynamic Data Masking e Transparent Data Encryption.
+Funzionalità consigliate coprono un'ampia gamma di funzionalità come OLTP In memoria, Columnstore, Stretch Database, Always Encrypted, Dynamic Data Masking e Transparent Data Encryption.
 
 ![Visualizzazione funzionalità consigliate](../dma/media/FeatureRecommendations.png)
 
-Per il Database SQL di Azure, le valutazioni forniscono i problemi di blocco della migrazione e problemi di parità della funzionalità. Esaminare i risultati per entrambe le categorie selezionando le opzioni specifiche.
+Per il Database SQL di Azure, le valutazioni forniscono i problemi di blocco della migrazione e problemi di parità della funzionalità. Esaminare i risultati per entrambe le categorie selezionando le opzioni specifiche.
 
 - Il **parità delle funzionalità di SQL Server** categoria offre un set completo di indicazioni, approcci alternativi disponibili in Azure e le procedure di mitigazione. Consente di pianificare questa attività nei progetti di migrazione.
 
   ![Visualizzare le informazioni di parità delle funzionalità di SQL Server](../dma/media/SQLFeatureParity.png)
 
-- Il **problemi di compatibilità** categoria offre funzionalità parzialmente supportate o non supportata che bloccano la migrazione dei database di SQL Server in locale per database SQL di Azure. Quindi, fornisce indicazioni che consentono di risolvere tali problemi.
+- Il **problemi di compatibilità** categoria offre funzionalità parzialmente supportate o non supportata che bloccano la migrazione dei database di SQL Server in locale per database SQL di Azure. Quindi, fornisce indicazioni che consentono di risolvere tali problemi.
 
   ![Visualizza i problemi di compatibilità](../dma/media/CompatibilityIssues.png)
 

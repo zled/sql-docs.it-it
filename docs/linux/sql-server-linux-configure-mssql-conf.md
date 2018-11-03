@@ -4,18 +4,18 @@ description: Questo articolo descrive come usare lo strumento mssql-conf per con
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/22/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: e03738f2252a4bfef9a5e14cc22ed9342b404f6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8a4cd22d4637c2d6fd86bf61d25c16dda728394
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694669"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753588"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql-conf
 
@@ -29,12 +29,12 @@ ms.locfileid: "47694669"
 |||
 |---|---|
 | [Agente](#agent) | Abilitare SQL Server Agent |
-| [Confronto](#collation) | Impostare nuove regole di confronto per SQL Server in Linux. |
+| [Regole di confronto](#collation) | Impostare nuove regole di confronto per SQL Server in Linux. |
 | [Commenti e suggerimenti dei clienti](#customerfeedback) | Scegliere se SQL Server Invia commenti e suggerimenti a Microsoft. |
 | [Profilo di Posta elettronica database](#dbmail) | Impostare il profilo di posta elettronica database predefinito per SQL Server in Linux. |
 | [Directory dati predefinita](#datadir) | Modificare la directory predefinita per nuovi file di dati SQL Server database (mdf). |
 | [Directory log predefinita](#datadir) | Modifica la directory predefinita per i nuovi file di log (ldf) di database di SQL Server. |
-| [Directory predefinita dei file del database master](#masterdatabasedir) | Modifica la directory predefinita dei file di database master nell'installazione esistente di SQL.|
+| [Directory predefinita del database master](#masterdatabasedir) | Modifica la directory predefinita per i file di log e database master.|
 | [Nome file predefinito del database master](#masterdatabasename) | Modifica il nome del file di database master. |
 | [Directory dump predefinita](#dumpdir) | Modificare la directory predefinita per nuove immagini della memoria e altri file sulla risoluzione dei problemi. |
 | [Directory log di errore predefinita](#errorlogdir) | Modifica la directory predefinita per i nuovi file di log degli errori di SQL Server, la traccia predefinita Profiler, sistema dello stato della sessione XE e Hekaton sessione XE. |
@@ -57,7 +57,7 @@ ms.locfileid: "47694669"
 |||
 |---|---|
 | [Agente](#agent) | Abilitare SQL Server Agent |
-| [Confronto](#collation) | Impostare nuove regole di confronto per SQL Server in Linux. |
+| [Regole di confronto](#collation) | Impostare nuove regole di confronto per SQL Server in Linux. |
 | [Commenti e suggerimenti dei clienti](#customerfeedback) | Scegliere se SQL Server Invia commenti e suggerimenti a Microsoft. |
 | [Profilo di Posta elettronica database](#dbmail) | Impostare il profilo di posta elettronica database predefinito per SQL Server in Linux. |
 | [Directory dati predefinita](#datadir) | Modificare la directory predefinita per nuovi file di dati SQL Server database (mdf). |
@@ -190,7 +190,7 @@ Il **filelocation.defaultdatadir** e **filelocation.defaultlogdir** impostazioni
 
 ## <a id="masterdatabasedir"></a> Modificare il percorso di directory file di database master predefinito
 
-Il **filelocation.masterdatafile** e **filelocation.masterlogfile** impostazione modifiche della posizione in cui il motore di SQL Server cerca i file di database master. Per impostazione predefinita, questo percorso è /var/opt/mssql/data. 
+Il **filelocation.masterdatafile** e **filelocation.masterlogfile** impostazione modifiche della posizione in cui il motore di SQL Server cerca i file di database master. Per impostazione predefinita, questo percorso è /var/opt/mssql/data.
 
 Per modificare queste impostazioni, procedere come segue:
 
@@ -214,13 +214,16 @@ Per modificare queste impostazioni, procedere come segue:
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
    ```
 
+   > [!NOTE]
+   > Oltre a spostare i dati master e i file di log, si sposta anche il percorso predefinito per tutti gli altri database di sistema.
+
 1. Arrestare il servizio SQL Server:
 
    ```bash
    sudo systemctl stop mssql-server
    ```
 
-1. Spostare il master. mdf e masterlog.ldf: 
+1. Spostare il master. mdf e masterlog.ldf:
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
@@ -232,14 +235,15 @@ Per modificare queste impostazioni, procedere come segue:
    ```bash
    sudo systemctl start mssql-server
    ```
-   
-> [!NOTE]
-> Se SQL Server non è possibile trovare i file mdf e Mastlog nella directory specificata, verrà creata automaticamente una copia basata su modelli di database di sistema nella directory specificata e SQL Server verrà avviato correttamente. Tuttavia, metadati, ad esempio i database utente, account di accesso server, i certificati del server, le chiavi di crittografia, processi di SQL agent o vecchia password di account di accesso SA non essere aggiornato nel nuovo database master. È necessario arrestare SQL Server e spostare il vecchio master. mdf e Mastlog. ldf nel nuovo percorso specificato e l'avvio di SQL Server per continuare a usare i metadati esistenti. 
 
+   > [!NOTE]
+   > Se SQL Server non è possibile trovare i file mdf e Mastlog nella directory specificata, verrà creata automaticamente una copia basata su modelli di database di sistema nella directory specificata e SQL Server verrà avviato correttamente. Tuttavia, metadati, ad esempio i database utente, account di accesso server, i certificati del server, le chiavi di crittografia, processi di SQL agent o vecchia password di account di accesso SA non essere aggiornato nel nuovo database master. È necessario arrestare SQL Server e spostare il vecchio master. mdf e Mastlog. ldf nel nuovo percorso specificato e l'avvio di SQL Server per continuare a usare i metadati esistenti.
+ 
+## <a id="masterdatabasename"></a> Modificare il nome del file di database master
 
-## <a id="masterdatabasename"></a> Modificare il nome del file di database master.
+Il **filelocation.masterdatafile** e **filelocation.masterlogfile** impostazione modifiche della posizione in cui il motore di SQL Server cerca i file di database master. È anche possibile utilizzare questo per modificare il nome del file di database e log master. 
 
-Il **filelocation.masterdatafile** e **filelocation.masterlogfile** impostazione modifiche della posizione in cui il motore di SQL Server cerca i file di database master. Per impostazione predefinita, questo percorso è /var/opt/mssql/data. Per modificare queste impostazioni, procedere come segue:
+Per modificare queste impostazioni, procedere come segue:
 
 1. Arrestare il servizio SQL Server:
 
@@ -251,8 +255,11 @@ Il **filelocation.masterdatafile** e **filelocation.masterlogfile** impostazione
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
-   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data/mastlognew.ldf
    ```
+
+   > [!IMPORTANT]
+   > È possibile solo modificare il nome del database master e i file di log dopo SQL Server è stato avviato correttamente. Prima dell'esecuzione iniziale, SQL Server si aspetta che i file sia denominato master. mdf e Mastlog. ldf.
 
 1. Modificare il nome del file di dati e log database master 
 
@@ -266,8 +273,6 @@ Il **filelocation.masterdatafile** e **filelocation.masterlogfile** impostazione
    ```bash
    sudo systemctl start mssql-server
    ```
-
-
 
 ## <a id="dumpdir"></a> Modificare il percorso predefinito della directory dump
 
