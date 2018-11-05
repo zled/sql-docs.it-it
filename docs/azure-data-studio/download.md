@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07c5e65558bf4544da08f631a1d57290352bb451
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: dc8632769f54a9b6eba25a1a1b5ad55b70bc1c59
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411138"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965954"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Scaricare e installare Data Studio di Azure
 
@@ -28,9 +28,9 @@ Scaricare e installare la versione più recente, il *versione di ottobre*:
 
 |Piattaforma|Scarica|Data di rilascio| Versione |
 |:---|:---|:---|:---|
-|Windows|[Programma di installazione](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|18 ottobre 2018 |1.1.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|18 ottobre 2018 |1.1.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|18 ottobre 2018 |1.1.3|
+|Windows|[Programma di installazione](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|30 ottobre 2018 |1.1.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|30 ottobre 2018 |1.1.4|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|30 ottobre 2018 |1.1.4|
 
 Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes.md).
 
@@ -44,7 +44,7 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
 1. Avviare l'app [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 
-**file con estensione zip**
+**.zip file**
 
 1. Scaricare lo [ZIP di [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Windows](https://go.microsoft.com/fwlink/?linkid=2030736).
 2. Individuare il file scaricato e decomprimerlo.
@@ -146,12 +146,21 @@ Se[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] è stato installato 
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
+## <a name="recommended-system-requirements"></a>I requisiti di sistema consigliati
+Per un'esperienza ottimale, usare i requisiti di sistema consigliati.
+
+|             | Core CPU | Memoria/memoria RAM |
+|:-----------:|:---------:|:----------:|
+| Consigliato |     4     |      8     |
+|   Minimo   |     2     |      4     |
+|             |           |            |
+
 ## <a name="check-for-updates"></a>Verificare gli aggiornamenti
 Per verificare gli aggiornamenti più recenti, fare clic sull'icona a forma di ingranaggio nell'angolo inferiore sinistro della finestra e fare clic su **Controlla aggiornamenti**
 
-## <a name="supported-sql-offerings-ssms-180-preview"></a>Offerte di SQL supportate (anteprima di SSMS 18.0)
+## <a name="supported-sql-offerings"></a>Offerte di SQL supportate
 
-* Questa versione di Studio dei dati di Azure funziona con tutte le [le versioni supportate di SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) e fornisce il supporto per l'utilizzo con le funzionalità cloud più recenti nel Database SQL di Azure e Azure SQL Data Warehouse. Azure Data Studio fornisce anche supporto in anteprima per istanza gestita SQL di Azure.
+* Questa versione di Studio dei dati di Azure funziona con tutte le [le versioni supportate di SQL Server 2014 - [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) e fornisce il supporto per l'utilizzo con le funzionalità cloud più recenti nel Database SQL di Azure e Azure SQL Data Warehouse. Azure Data Studio fornisce anche supporto in anteprima per istanza gestita SQL di Azure.
 
 ## <a name="move-user-settings"></a>Spostare le impostazioni utente
 
