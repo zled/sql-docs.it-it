@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a51842a1682b5e02db4ea216bddefbabbf0a7f56
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 39889d49702394f0aec8f79c328e28ba318c9864
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874309"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806741"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurare PolyBase per l'accesso a dati esterni in MongoDB
 
@@ -25,13 +25,11 @@ L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Se PolyBase non è stato installato, vedere [Installazione di PolyBase](polybase-installation.md). Nell'articolo sull'installazione vengono illustrati i prerequisiti.
+Se PolyBase non è stato installato, vedere [Installazione di PolyBase](polybase-installation.md).
 
 ## <a name="configure-an-external-table"></a>Configurare una tabella esterna
 
 Per eseguire query sui dati da un'origine dati MongoDB, è necessario creare tabelle esterne per fare riferimento ai dati esterni. In questa sezione è disponibile codice di esempio per creare queste tabelle esterne.
-
-È consigliabile creare le statistiche sulle colonne delle tabelle esterne, in particolare quelle usate per join, filtri e aggregazioni, per prestazioni ottimali delle query.
 
 In questa sezione verranno creare questi oggetti:
 
@@ -40,43 +38,41 @@ In questa sezione verranno creare questi oggetti:
 - CREATE EXTERNAL TABLE (Transact-SQL)
 - CREATE STATISTICS (Transact-SQL)
 
-1.    Creare una chiave master nel database. Questo passaggio è necessario per crittografare il segreto delle credenziali.
+1. Creare una chiave master nel database, se non ne esiste già. Questo passaggio è necessario per crittografare il segreto delle credenziali.
 
-      ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-      ```
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+     ```
+    ## <a name="arguments"></a>Argomenti
+    PASSWORD ='password'
 
-1.   Creare credenziali con ambito database.
+    Password utilizzata per crittografare la chiave master nel database. password deve soddisfare i requisiti per i criteri password di Windows del computer che esegue l'hosting dell'istanza di SQL Server.
+
+1.   Creare una credenziale con ambito database per l'accesso all'origine di MongoDB.
 
      ```sql
      /*  specify credentials to external data source
      *  IDENTITY: user name for external source.  
      *  SECRET: password for external source.
      */
-     CREATE DATABASE SCOPED CREDENTIAL MongoDBCredentials 
+     CREATE DATABASE SCOPED CREDENTIAL credential_name 
      WITH IDENTITY = 'username', Secret = 'password';
      ```
 
-1.  Creare un'origine dati esterna con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Specificare il percorso dell'origine dati esterna e le credenziali per l'origine dati MongoDB.
+1.  Creare un'origine dati esterna con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
      ```sql
-     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+     /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *CONNECTION_OPTIONS: Specify driver location
     *  CREDENTIAL: the database scoped credential, created above.
     */  
-    CREATE EXTERNAL DATA SOURCE MongoInstance
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
     WITH (
-    LOCATION = mongodb://MongoServer,
+    LOCATION = mongodb://<server>[:<port>],
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = MongoDBCredentials
+      CREDENTIAL = credential_name
     );
-     ```
-
-1. Creare schemi per i dati esterni
-
-     ```sql
-     CREATE SCHEMA MongoDB;
-     GO
      ```
 
 1.  Creare tabelle esterne che rappresentano i dati archiviati nel sistema esterno MongoDB [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
@@ -85,7 +81,7 @@ In questa sezione verranno creare questi oggetti:
      /*  LOCATION: MongoDB table/view in '<database_name>.<schema_name>.<object_name>' format
      *  DATA_SOURCE: the external data source, created above.
      */
-     CREATE EXTERNAL TABLE MongoDB.orders(
+     CREATE EXTERNAL TABLE customers(
      [O_ORDERKEY] DECIMAL(38) NOT NULL,
      [O_CUSTKEY] DECIMAL(38) NOT NULL,
      [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
@@ -94,19 +90,22 @@ In questa sezione verranno creare questi oggetti:
      [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
      )
      WITH (
-     LOCATION='TPCH..ORDERS',
-     DATA_SOURCE= MongoDBInstance
+     LOCATION='customer',
+     DATA_SOURCE= external_data_source_name
      );
      ```
 
-1. Creare statistiche per una tabella esterna per prestazioni ottimali.
+1. **Facoltativo:** Creare statistiche per una tabella esterna.
+
+    È consigliabile creare le statistiche sulle colonne delle tabelle esterne, in particolare quelle usate per join, filtri e aggregazioni, per prestazioni ottimali delle query.
 
      ```sql
-      CREATE STATISTICS OrdersOrderKeyStatistics ON MongoDB.orders(O_ORDERKEY) WITH FULLSCAN;
+      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
 
+
 ## <a name="flattening"></a>Rendere flat
- L'impostazione per l'appiattimento è abilitata per i dati nidificati e ripetuti delle raccolte di documenti MongoDB. L'utente deve abilitare e creare una tabella esterna e specificare in modo esplicito uno schema relazionale per le raccolte di documenti MongoDB che possono avere dati nidificati e/o ripetuti. Il rilevamento automatico dello schema per le raccolte di documenti Mongo verrà abilitato in attività cardine future.
+ L'impostazione per l'appiattimento è abilitata per i dati nidificati e ripetuti delle raccolte di documenti MongoDB. L'utente deve abilitare `create an external table` e specificare in modo esplicito uno schema relazionale per le raccolte di documenti MongoDB che possono avere dati nidificati e/o ripetuti. Il rilevamento automatico dello schema per le raccolte di documenti Mongo verrà abilitato in attività cardine future.
 I tipi di dati JSON nidificati/ripetuti verranno appiattiti come indicato di seguito
 
 * Oggetto: raccolta chiave/valore non ordinata racchiusa tra parentesi graffe (nidificata)
@@ -150,6 +149,10 @@ Le valutazioni della matrice vengono appiattite come indicato di seguito:
 |135898560000 |Un |10|
 |1322006400000|Un |9|
 |1299715200000 |B |14|
+
+## <a name="cosmos-db-connection"></a>Connessione Cosmos DB
+
+Usando l'api di Mongo Cosmos DB e il connettore di Mongo DB PolyBase è possibile creare una tabella esterna di un'**istanza di Cosmos DB**. Questa operazione viene eseguita seguendo gli stessi passaggi elencati in precedenza. Assicurarsi che la credenziale con ambito database, l'indirizzo server, la porta e la stringa di posizione riflettano quelli del server di Cosmos DB. 
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1efff69fb2311d1c81ac4f25a1a51fe456b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720509"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051014"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali al report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per organizzare e riepilogare i dati.  
@@ -33,9 +33,9 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
   
 4.  Dal riquadro dei **dati del report** trascinare il campo **Order** nel riquadro **Gruppi di righe** . Posizionarlo al di sotto di Date e al di sopra di **(Dettagli)**.
 
-![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
+    ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
-    Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
+    L'handle di riga contiene ora due parentesi quadre al suo interno ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png) per mostrare due gruppi. La tabella ora presenta anche due colonne **Order** .  
   
 5.  Eliminare le colonne **Date** e **Order** originali a **destra** della linea doppia. Verranno rimossi i singoli valori dei record in modo da visualizzare solo il valore del gruppo. Selezionare gli handle delle due colonne, fare clic con il pulsante destro del mouse e scegliere **Elimina colonne**.  
   
@@ -84,7 +84,7 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
   
 4.  Nel menu **Formato** selezionare **Colore di sfondo**, fare clic su **Arancione**e scegliere **OK**.  
   
-    ![](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
+    ![Impostare il colore di sfondo su arancione](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
 ## <a name="bkmk_addgrandtotal"></a>Per aggiungere un totale complessivo a un report  
   
@@ -113,9 +113,9 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
 2.  Fare clic sul menu **Progetto** e quindi su **Proprietà tutorial...**  
   
 3.  In **TargetServerURL** digitare il nome del server di report in uso, ad esempio   
-- `http:/<servername>/reportserver`  
+    - `http:/<servername>/reportserver`  
    
-- `http://localhost/reportserver` funziona se la progettazione del report viene eseguita nel server di report.  
+    - `http://localhost/reportserver` funziona se la progettazione del report viene eseguita nel server di report.  
   
   
 4. Si noti che TargetReportFolder è l'esercitazione, il nome del progetto.  Questo è il nome della cartella in cui il report verrà distribuito nei passaggi successivi.  
@@ -143,15 +143,15 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
   
     Individuare l'URL del portale Web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
     **Nota:** l'URL del *portale* è "Reports", non l'URL del *server* di report di "Reportserver".  Ad esempio   
-    - `http://<server name>/reports`.  
-     - `http://localhost/reports` funziona se la progettazione del report viene eseguita nel server di report.  
+    `http://<server name>/reports`(Indici per tabelle con ottimizzazione per la memoria).  
+    `http://localhost/reports` funziona se la progettazione del report viene eseguita nel server di report.  
   
 8.  Passare alla cartella che contiene il report. Il nome predefinito è *tutorial*, il nome del progetto o il nome digitato nel campo TargetReportFolder nelle proprietà del progetto.   
 Fare clic sul nome del report **Sales Orders** per visualizzare il report visualizzabile nel browser.  
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-**Questo passaggio conclude l'esercitazione relativa alla creazione di un report tabella semplice.**  
+Questo passaggio conclude l'esercitazione relativa alla creazione di un report tabella semplice.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

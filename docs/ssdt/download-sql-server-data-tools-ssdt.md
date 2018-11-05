@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 07fe3c1266cbdbabd13afc86aad9db04ea004932
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: f63416c3400f328f0602aa804dc66716067eeb7e
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419198"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226303"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Scaricare e installare SQL Server Data Tools (SSDT) per Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,16 +87,18 @@ Per prima cosa, completare la procedura seguente mentre si è connessi:
 
 1. [Scaricare il programma di installazione autonomo di SSDT](#ssdt-for-vs-2017-standalone-installer).
 2. [Scaricare vs_sql.exe](https://aka.ms/vs/15/release/vs_sql.exe).
-3. Mentre si è ancora online, eseguire uno dei comandi seguenti per scaricare tutti i file necessari per l'installazione offline. L'uso dell'opzione `--layout` è fondamentale. Sostituire <filepath> con il percorso effettivo in cui salvare i file.
+3. Mentre si è ancora online, eseguire uno dei comandi seguenti per scaricare tutti i file necessari per l'installazione offline. L'uso dell'opzione `--layout` è fondamentale, scaricherà i file effettivi per l'installazione offline. Sostituire <filepath> con il tracciato di layout effettivo in cui salvare i file.
 
+   
    A.   Per una lingua specifica, passare le impostazioni locali: `vs_sql.exe --layout c:\<filepath> --lang en-us` (una sola lingua corrisponde a circa 1 GB)  
    B. Per tutte le lingue, omettere l'argomento `--lang`: `vs_sql.exe --layout c:\<filepath>` (tutte le lingue corrispondono a circa 3,9 GB).
 
+4. Eseguire `SSDT-Setup-ENU.exe /layout c:\<filepath>` per estrarre il payload SSDT nella stessa posizione `<filepath>` in cui sono stati scaricati i file di VS2017. Ciò garantisce che tutti i file di entrambe le cartelle vengano combinati in una cartella di layout singola.
+
 Dopo aver completato questa procedura, quanto segue può essere eseguito offline:
 
-1. Copiare il payload di Visual Studio 2017 nella cartella del payload di SSDT. Verificare che tutti i file di entrambe le cartelle vengano combinati in una cartella di layout singola.
-2. Eseguire `vs_setup.exe --NoWeb` per installare la shell di Visual Studio 2017 e il progetto di dati di SQL Server.
-3. Eseguire `SSDT-Setup-ENU.exe /install` e selezionare SSIS/SSRS/SSAS.
+1. Eseguire `vs_setup.exe --NoWeb` per installare la shell di Visual Studio 2017 e il progetto di dati di SQL Server.
+2. Dalla cartella di layout eseguire `SSDT-Setup-ENU.exe /install` e selezionare SSIS/SSRS/SSAS.
 
    - Oppure, per un'installazione automatica, eseguire `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
 

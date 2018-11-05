@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 515a77ebc9e29ba6e629472b446b486355336e1c
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: bf8c9e4d9bdc59d60569594006676b6fa766071a
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874287"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806561"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracle"></a>Configurare PolyBase per l'accesso a dati esterni in Oracle
 
@@ -25,27 +25,28 @@ L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Se PolyBase non è stato installato, vedere [Installazione di PolyBase](polybase-installation.md). Nell'articolo sull'installazione vengono illustrati i prerequisiti.
+Se PolyBase non è stato installato, vedere [Installazione di PolyBase](polybase-installation.md).
 
 ## <a name="configure-an-external-table"></a>Configurare una tabella esterna
 
 Per eseguire query sui dati da un'origine dati Oracle, è necessario creare tabelle esterne per fare riferimento ai dati esterni. In questa sezione è disponibile codice di esempio per creare queste tabelle esterne. 
  
-È consigliabile creare le statistiche sulle colonne delle tabelle esterne, in particolare quelle usate per join, filtri e aggregazioni, per prestazioni ottimali delle query.
-
 In questa sezione verranno creare questi oggetti:
 
-- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
+- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
-
-1. Creare una chiave master nel database. Questo passaggio è necessario per crittografare il segreto delle credenziali.
+1. Creare una chiave master nel database, se non ne esiste già. Questo passaggio è necessario per crittografare il segreto delle credenziali.
 
      ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
      ```
+    ## <a name="arguments"></a>Argomenti
+    PASSWORD ='password'
+
+    Password utilizzata per crittografare la chiave master nel database. password deve soddisfare i requisiti per i criteri password di Windows del computer che esegue l'hosting dell'istanza di SQL Server.
 
 1. Creare credenziali con ambito database.
 
@@ -54,7 +55,7 @@ In questa sezione verranno creare questi oggetti:
      *  IDENTITY: user name for external source.  
      *  SECRET: password for external source.
      */
-      CREATE DATABASE SCOPED CREDENTIAL OracleCredentials 
+      CREATE DATABASE SCOPED CREDENTIAL credential_name
      WITH IDENTITY = 'username', Secret = 'password';
      ```
 
@@ -63,22 +64,14 @@ In questa sezione verranno creare questi oggetti:
      ```sql
     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    * CONNECTION_OPTIONS: Specify driver location
     *  CREDENTIAL: the database scoped credential, created above.
     */  
-    CREATE EXTERNAL DATA SOURCE OracleInstance
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
     WITH ( 
-    LOCATION = oracle://OracleServer,
+    LOCATION = oracle://<server address>[:<port>],
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
-    );
-
-     ```
-
-1. Creare schemi per i dati esterni
- 
-     ```sql
-     CREATE SCHEMA oracle;
-     GO
+      CREDENTIAL = credential_name
      ```
 
 1.  Creare tabelle esterne che rappresentano i dati archiviati nel sistema esterno Oracle [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
@@ -87,7 +80,7 @@ In questa sezione verranno creare questi oggetti:
       /*  LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
      *  DATA_SOURCE: the external data source, created above.
      */
-      CREATE EXTERNAL TABLE oracle.orders(
+      CREATE EXTERNAL TABLE customers(
       [O_ORDERKEY] DECIMAL(38) NOT NULL,
      [O_CUSTKEY] DECIMAL(38) NOT NULL,
      [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
@@ -99,15 +92,17 @@ In questa sezione verranno creare questi oggetti:
      [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
      )
      WITH (
-      LOCATION='TPCH..ORDERS',
-      DATA_SOURCE=OracleInstance
+      LOCATION='customer',
+      DATA_SOURCE=  external_data_source_name
      );
      ```
 
-1. Creare statistiche per una tabella esterna per prestazioni ottimali.
+1. **Facoltativo:** Creare statistiche per una tabella esterna.
+
+    È consigliabile creare le statistiche sulle colonne delle tabelle esterne, in particolare quelle usate per join, filtri e aggregazioni, per prestazioni ottimali delle query.
 
      ```sql
-      CREATE STATISTICS OrdersOrderKeyStatistics ON oracle.orders(O_ORDERKEY) WITH FULLSCAN;
+      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
 
 ## <a name="next-steps"></a>Passaggi successivi

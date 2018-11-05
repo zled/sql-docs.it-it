@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7520a4e9bdc346113e4777bd6899f5ccc0e01c
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 957d8c397843f30e831dcc0a5f33943b959bac90
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460316"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226263"
 ---
 # <a name="polybase-features-and-limitations"></a>Funzionalità e limitazioni di PolyBase
 
@@ -62,15 +62,11 @@ Aggregazione parziale significa che deve verificarsi un'aggregazione finale una 
 
 PolyBase include le limitazioni seguenti:
 
-- Le dimensioni massime consentite per la riga, inclusa la lunghezza totale delle colonne di lunghezza variabile, non possono superare 32 KB in SQL Server o 1 MB in Azure SQL Data Warehouse.
-
-- PolyBase non supporta il tipo di dati Hive 0.12+ (ovvero Char(), VarChar())
+- Le dimensioni massime consentite per la riga, inclusa la lunghezza totale delle colonne di lunghezza variabile, non possono superare 32 kB in SQL Server o 1 MB in Azure SQL Data Warehouse.
 
 - In caso di esportazione di dati in un file in formato ORC da SQL Server o Azure SQL Data Warehouse le colonne contenenti molto testo possono essere limitate a un massimo di 50 colonne a causa degli errori Java di memoria insufficiente. Per risolvere questo problema, esportare solo un subset delle colonne.
 
-- Impossibile leggere o scrivere i dati crittografati inattivi in Hadoop. Sono incluse le aree crittografate HDFS o la crittografia trasparente.
-
-- PolyBase non può connettersi a un'istanza di Hortonworks se KNOX è abilitata.
+- PolyBase non può connettersi a un'istanza di Hortonworks se Knox è abilitata.
 
 - Se si usano tabelle Hive con transactional=true, PolyBase non può accedere ai dati nella directory della tabella Hive.
 
@@ -80,10 +76,6 @@ PolyBase include le limitazioni seguenti:
 - [PolyBase non viene installato quando si aggiunge un nodo a un cluster di failover di SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
-
-- L'autenticazione integrata non è supportata. Attualmente sono supportati solo il nome utente e la password.  
-
-- La crittografia è abilitata per impostazione predefinita.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

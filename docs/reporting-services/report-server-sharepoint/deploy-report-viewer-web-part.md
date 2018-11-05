@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cd9678c06e69b185c75b95d6095e238df8d0937
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 5f6f3e3d23c2d2777a3a17db16d047222991d48a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085177"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030620"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Distribuire la web part Visualizzatore report di SQL Server Reporting Services in un sito di SharePoint
 
@@ -28,7 +28,7 @@ Usare le istruzioni seguenti per distribuire manualmente il pacchetto di soluzio
 
 > [!IMPORTANT]
 > A partire dalla versione "15.X.X.X" è possibile installare ReportViewerWebPart side-by-side con le applicazioni di servizio condiviso in modalità integrata SharePoint per Reporting Services esistenti.
-> Con questo aggiornamento della soluzione WSP sono stati introdotti nuovi file. La soluzione precedente deve quindi essere ritirata e il nuovo file WSP ridistribuito usando i cmdlet Uninstall-SPSolution e Install-SPSolution, rispettivamente.
+> Con questo aggiornamento della soluzione WSP sono stati introdotti nuovi file. La soluzione precedente deve quindi essere ritirata e il nuovo file .wsp ridistribuito usando i cmdlet Uninstall-SPSolution e Install-SPSolution, rispettivamente.
 >
 
 **Versioni supportate di SharePoint Server:**
@@ -171,4 +171,4 @@ La web part supporta le lingue seguenti:
 
 Dopo aver completato la distribuzione e l'attivazione della web part è possibile aggiungerla a una pagina di SharePoint. Per altre informazioni, vedere [Add Report Viewer web part to a SharePoint page](add-report-viewer-web-part-to-page.md) (Aggiungere una web part Visualizzatore report a una pagina di SharePoint).
 
-Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

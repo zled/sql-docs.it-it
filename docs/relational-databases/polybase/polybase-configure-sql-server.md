@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4729d78f0cfecf80f65dbff0f7bc2d6abe2ebbfa
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 90b535714eea3a00ecffd2cf010187fbcd676a82
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874259"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806641"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurare PolyBase per l'accesso a dati esterni in SQL Server
 
@@ -68,7 +68,7 @@ In questa sezione verranno creare questi oggetti:
     WITH ( 
     LOCATION = sqlserver://SqlServer,
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
+      CREDENTIAL = SQLServerCredentials
     );
 
      ```
@@ -107,6 +107,10 @@ In questa sezione verranno creare questi oggetti:
      ```sql
       CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
+
+## <a name="sql-server-connector-compatible-types"></a>Tipi compatibili con il connettore SQL Server
+
+È possibile stabilire una connessione ad altre origini dati che riconosca una connessione di SQL Server. Mediante il connettore PolyBase di SQL Server è possibile creare una tabella esterna di **Azure SQL Data Warehouse e del Database SQL di Azure**. Questa operazione viene eseguita seguendo gli stessi passaggi elencati in precedenza. Assicurarsi che le credenziali dell'ambito database, l'indirizzo del server, la porta e la stringa del percorso siano correlati a quelli dell'origine dati compatibile a cui si desidera connettersi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

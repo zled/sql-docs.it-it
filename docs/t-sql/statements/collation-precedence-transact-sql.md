@@ -1,5 +1,5 @@
 ---
-title: Precedenza delle regole di confronto (Transact-SQL) | Microsoft Docs
+title: Precedenza delle regole di confronto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,14 +27,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1271e6d108009ffd30084a6402c790070c0e3d8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fd55a9b0b6dd98a00ce7d826611845e8597170c
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621319"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960775"
 ---
-# <a name="collation-precedence-transact-sql"></a>Precedenza delle regole di confronto (Transact-SQL)
+# <a name="collation-precedence"></a>Precedenza delle regole di confronto
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   La precedenza delle regole di confronto, definita anche regola di coercizione delle regole di confronto, determina:  
@@ -43,10 +43,10 @@ ms.locfileid: "47621319"
   
 -   Le regole di confronto utilizzate dagli operatori sensibili alle regole di confronto che utilizzano input di stringhe di caratteri ma non restituiscono stringhe di caratteri, ad esempio gli operatori LIKE e IN.  
   
- Le regole sulla precedenza delle regole di confronto vengono applicate solo alle stringhe di caratteri di tipo **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**. Gli oggetti con altri tipi di dati non vengono inclusi nelle valutazioni delle regole di confronto.  
+Le regole sulla precedenza delle regole di confronto vengono applicate solo alle stringhe di caratteri di tipo **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**. Gli oggetti con altri tipi di dati non vengono inclusi nelle valutazioni delle regole di confronto.  
   
 ## <a name="collation-labels"></a>Etichette per le regole di confronto  
- Nella tabella seguente sono elencate e descritte le quattro categorie in base alle quali vengono classificate le regole di confronto di tutti gli oggetti. Il nome di ogni categoria corrisponde all'etichetta per le regole di confronto.  
+Nella tabella seguente sono elencate e descritte le quattro categorie in base alle quali vengono classificate le regole di confronto di tutti gli oggetti. Il nome di ogni categoria corrisponde all'etichetta per le regole di confronto.  
   
 |Etichetta per le regole di confronto|Tipi di oggetto|  
 |---------------------|----------------------|  
@@ -56,11 +56,11 @@ ms.locfileid: "47621319"
 |No-collation|Indica che il valore di un'espressione è il risultato di un'operazione tra due stringhe con regole di confronto di tipo Implicit in conflitto. Tale espressione viene considerata priva di regole di confronto.|  
   
 ## <a name="collation-rules"></a>Regole relative alle regole di confronto  
- L'etichetta per le regole di confronto di un'espressione semplice che fa riferimento a un solo oggetto stringa di caratteri corrisponde all'etichetta dell'oggetto a cui viene fatto riferimento.  
+L'etichetta per le regole di confronto di un'espressione semplice che fa riferimento a un solo oggetto stringa di caratteri corrisponde all'etichetta dell'oggetto a cui viene fatto riferimento.  
   
- L'etichetta per le regole di confronto di un'espressione complessa che fa riferimento a due espressioni operando aventi la stessa etichetta per le regole di confronto corrisponde all'etichetta di tali espressioni.  
+L'etichetta per le regole di confronto di un'espressione complessa che fa riferimento a due espressioni operando aventi la stessa etichetta per le regole di confronto corrisponde all'etichetta di tali espressioni.  
   
- L'etichetta per le regole di confronto del risultato finale di un'espressione complessa che fa riferimento a due espressioni operando con regole di confronto diverse viene determinata in base alle regole seguenti:  
+L'etichetta per le regole di confronto del risultato finale di un'espressione complessa che fa riferimento a due espressioni operando con regole di confronto diverse viene determinata in base alle regole seguenti:  
   
 -   L'etichetta Explicit è prioritaria rispetto all'etichetta Implicit, che a sua volta è prioritaria rispetto all'etichetta Coercible-default.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47621319"
   
      No-collation + Explicit X = Explicit  
   
- Nella tabella seguente vengono riepilogate le regole descritte in precedenza.  
+Nella tabella seguente vengono riepilogate le regole descritte in precedenza.  
   
 |Etichetta di coercizione dell'operando|Explicit X|Implicit X|Coercible-default|No-collation|  
 |----------------------------|----------------|----------------|------------------------|-------------------|  
@@ -91,7 +91,7 @@ ms.locfileid: "47621319"
 |**Coercible-default**|Il risultato è Explicit X|Il risultato è Implicit X|Il risultato è Coercible-default|Il risultato è No-collation|  
 |**No-collation**|Il risultato è Explicit X|Il risultato è No-collation|Il risultato è No-collation|Il risultato è No-collation|  
   
- Per la precedenza delle regole di confronto vengono applicate inoltre le regole aggiuntive seguenti:  
+Per la precedenza delle regole di confronto vengono applicate inoltre le regole aggiuntive seguenti:  
   
 -   Un'espressione che è già esplicita non può includere più clausole COLLATE. La clausola `WHERE` seguente, ad esempio, non è valida perché viene specificata una clausola `COLLATE` per un'espressione che è già esplicita.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "47621319"
   
 -   Le conversioni tra tabelle codici per il tipo di dati **text** non sono consentite. Non è possibile eseguire il cast di un'espressione di tipo **text** tra regole di confronto con tabelle codici diverse. Tramite l'operatore di assegnazione non è possibile assegnare valori se alle regole di confronto dell'operando di testo a destra è associata una tabella codice diversa da quella dell'operando di testo a sinistra.  
   
- La precedenza delle regole di confronto viene determinata dopo la conversione dei tipi di dati. L'operando da cui derivano le regole di confronto risultanti può essere diverso dall'operando il cui tipo di dati viene applicato al risultato finale. Si consideri, ad esempio, il batch seguente.  
+La precedenza delle regole di confronto viene determinata dopo la conversione dei tipi di dati. L'operando da cui derivano le regole di confronto risultanti può essere diverso dall'operando il cui tipo di dati viene applicato al risultato finale. Si consideri, ad esempio, il batch seguente.  
   
-```  
+```sql  
 CREATE TABLE TestTab  
    (PrimaryKey int PRIMARY KEY,  
     CharCol char(10) COLLATE French_CI_AS  
@@ -112,12 +112,12 @@ FROM TestTab
 WHERE CharCol LIKE N'abc'  
 ```  
   
- Il tipo di dati Unicode dell'espressione semplice `N'abc'` ha una precedenza più alta a livello di tipo di dati. Nell'espressione risultante il tipo di dati Unicode viene assegnato a `N'abc'`. L'etichetta delle regole di confronto dell'espressione `CharCol` è Implicit e `N'abc'` è associata a un'etichetta di coercizione di livello inferiore, ovvero Coercible-default. Le regole di confronto utilizzate saranno pertanto le regole `French_CI_AS` di `CharCol`.  
+Il tipo di dati Unicode dell'espressione semplice `N'abc'` ha una precedenza più alta a livello di tipo di dati. Nell'espressione risultante il tipo di dati Unicode viene assegnato a `N'abc'`. L'etichetta delle regole di confronto dell'espressione `CharCol` è Implicit e `N'abc'` è associata a un'etichetta di coercizione di livello inferiore, ovvero Coercible-default. Le regole di confronto utilizzate saranno pertanto le regole `French_CI_AS` di `CharCol`.  
   
 ### <a name="examples-of-collation-rules"></a>Esempi di regole di confronto  
  Nell'esempio seguente viene illustrato il funzionamento delle regole di confronto. Per eseguire gli esempi descritti, è necessario creare la tabella di prova seguente.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
   
@@ -133,7 +133,7 @@ GO
 #### <a name="collation-conflict-and-error"></a>Conflitti ed errori a livello di regole di confronto  
  Nel predicato della query seguente esiste un conflitto di regole di confronto che genera un errore.  
   
-```  
+```sql  
 SELECT *   
 FROM TestTab   
 WHERE GreekCol = LatinCol;  
@@ -149,7 +149,7 @@ Cannot resolve collation conflict between 'Latin1_General_CS_AS' and 'Greek_CI_A
 #### <a name="explicit-label-vs-implicit-label"></a>Etichette Explicit e Implicit  
  Il predicato della query seguente viene valutato nelle regole di confronto `greek_ci_as` perché l'etichetta dell'espressione di destra è Explicit. Questa etichetta ha la priorità sull'etichetta Implicit dell'espressione di sinistra.  
   
-```  
+```sql  
 SELECT *   
 FROM TestTab   
 WHERE GreekCol = LatinCol COLLATE greek_ci_as;  
@@ -166,9 +166,9 @@ id          GreekCol             LatinCol
 ```  
   
 #### <a name="no-collation-labels"></a>Etichette No-Collation  
- Le espressioni `CASE` delle query seguenti sono associate all'etichetta No-collation. Di conseguenza non sono visualizzabili nell'elenco di selezione, né utilizzabili con gli operatori sensibili alle regole di confronto. Le espressioni possono essere tuttavia utilizzate con operatori non sensibili alle regole di confronto.  
+Le espressioni `CASE` delle query seguenti sono associate all'etichetta No-collation. Di conseguenza non sono visualizzabili nell'elenco di selezione, né utilizzabili con gli operatori sensibili alle regole di confronto. Le espressioni possono essere tuttavia utilizzate con operatori non sensibili alle regole di confronto.  
   
-```  
+```sql  
 SELECT (CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END)   
 FROM TestTab;  
 ```  
@@ -180,7 +180,7 @@ Msg 451, Level 16, State 1, Line 1
 Cannot resolve collation conflict for column 1 in SELECT statement.  
 ```  
   
-```  
+```sql  
 SELECT PATINDEX((CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END), 'a')  
 FROM TestTab;  
 ```  
@@ -192,7 +192,7 @@ Msg 446, Level 16, State 9, Server LEIH2, Line 1
 Cannot resolve collation conflict for patindex operation.  
 ```  
   
-```  
+```sql  
 SELECT (CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END) COLLATE Latin1_General_CI_AS   
 FROM TestTab;  
 ```  
@@ -207,23 +207,23 @@ a
 ```  
   
 ## <a name="collation-sensitive-and-collation-insensitive"></a>Sensibilità alle regole di confronto  
- Gli operatori e le funzioni possono essere sensibili alle regole di confronto o meno.  
+Gli operatori e le funzioni possono essere sensibili alle regole di confronto o meno.  
   
- Sensibilità alle regole di confronto  
- In caso di sensibilità alle regole di confronto, se si specifica un operando di tipo No-collation viene generato un errore in fase di compilazione. L'espressione risultante non può essere di tipo No-collation.  
+Sensibilità alle regole di confronto  
+In caso di sensibilità alle regole di confronto, se si specifica un operando di tipo No-collation viene generato un errore in fase di compilazione. L'espressione risultante non può essere di tipo No-collation.  
   
- Insensibilità alle regole di confronto  
- In caso di insensibilità alle regole di confronto, gli operandi e il risultato possono essere di tipo No-collation.  
+Insensibilità alle regole di confronto  
+In caso di insensibilità alle regole di confronto, gli operandi e il risultato possono essere di tipo No-collation.  
   
 ### <a name="operators-and-collation"></a>Operatori e regole di confronto  
- Gli operatori di confronto e gli operatori MAX, MIN, BETWEEN, LIKE e IN sono sensibili alle regole di confronto. Alla stringa utilizzata dagli operatori viene assegnata l'etichetta per le regole di confronto dell'operando con priorità maggiore. Anche l'operatore UNION è sensibile alle regole di confronto. Agli operandi stringa e al risultato finale vengono assegnate le regole di confronto dell'operando con priorità maggiore. La precedenza delle regole di confronto degli operandi UNION e il risultato vengono valutati colonna per colonna.  
+Gli operatori di confronto e gli operatori MAX, MIN, BETWEEN, LIKE e IN sono sensibili alle regole di confronto. Alla stringa utilizzata dagli operatori viene assegnata l'etichetta per le regole di confronto dell'operando con priorità maggiore. Anche l'istruzione UNION è sensibile alle regole di confronto. Agli operandi stringa e al risultato finale vengono assegnate le regole di confronto dell'operando con priorità maggiore. La precedenza delle regole di confronto dell'operando UNION e il risultato vengono valutati colonna per colonna.  
   
- L'operatore di assegnazione non è sensibile alle regole di confronto. All'espressione di destra vengono applicate le regole di confronto dell'espressione di sinistra.  
+L'operatore di assegnazione non è sensibile alle regole di confronto. All'espressione di destra vengono applicate le regole di confronto dell'espressione di sinistra.  
   
- L'operatore di concatenazione delle stringhe è sensibile alle regole di confronto. Ai due operandi stringa e al risultato viene assegnata l'etichetta per le regole di confronto dell'operando le cui regole di confronto hanno priorità maggiore. Gli operatori UNION ALL e CASE non sono sensibili alle regole di confronto. A tutti gli operandi stringa e ai risultati finali viene assegnata l'etichetta per le regole di confronto dell'operando con priorità maggiore. La precedenza delle regole di confronto degli operandi UNION ALL e il risultato vengono valutati colonna per colonna.  
+L'operatore di concatenazione delle stringhe è sensibile alle regole di confronto. Ai due operandi stringa e al risultato viene assegnata l'etichetta per le regole di confronto dell'operando le cui regole di confronto hanno priorità maggiore. Le istruzioni UNION ALL e CASE non sono sensibili alle regole di confronto. A tutti gli operandi stringa e ai risultati finali viene assegnata l'etichetta per le regole di confronto dell'operando con priorità maggiore. La precedenza delle regole di confronto degli operandi UNION ALL e il risultato vengono valutati colonna per colonna.  
   
 ### <a name="functions-and-collation"></a>Funzioni e regole di confronto  
- Le funzioni CAST, CONVERT e COLLATE sono sensibili alle regole di confronto per i tipi di dati **char**, **varchar** e **text**. Se l'input e l'output delle funzioni CAST e CONVERT sono stringhe di caratteri, alla stringa di output è associata l'etichetta per le regole di confronto della stringa di input. Se l'input non è una stringa di caratteri, la stringa di output risulta di tipo Coercible-default e vi vengono assegnate le regole di confronto del database corrente per la connessione oppure quelle del database che include la funzione definita dall'utente, la stored procedure o il trigger in cui viene fatto riferimento alla funzione CAST o CONVERT.  
+Le funzioni CAST, CONVERT e COLLATE sono sensibili alle regole di confronto per i tipi di dati **char**, **varchar** e **text**. Se l'input e l'output delle funzioni CAST e CONVERT sono stringhe di caratteri, alla stringa di output è associata l'etichetta per le regole di confronto della stringa di input. Se l'input non è una stringa di caratteri, la stringa di output risulta di tipo Coercible-default e vi vengono assegnate le regole di confronto del database corrente per la connessione oppure quelle del database che include la funzione definita dall'utente, la stored procedure o il trigger in cui viene fatto riferimento alla funzione CAST o CONVERT.  
   
  Per le funzioni predefinite che restituiscono una stringa ma non accettano una stringa come input, la stringa risultante risulta di tipo Coercible-default e vi vengono assegnate le regole di confronto del database corrente oppure quelle del database che include la funzione definita dall'utente, la stored procedure o il trigger in cui viene fatto riferimento alla funzione.  
   

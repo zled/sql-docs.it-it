@@ -13,12 +13,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3bbb4cce22423cbc5ac2f6e4941ffa1c624f18d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830739"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150192"
 ---
 # <a name="overview-and-usage-scenarios"></a>Panoramica e scenari di utilizzo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,6 +129,7 @@ Per iniziare, vedere: [Miglioramento delle prestazioni della tabella temporanea 
 #### <a name="customer-case-studies"></a>Case study dei clienti
 
 - Un cliente è riuscito a migliorare le prestazioni del 40% semplicemente sostituendo i parametri con valori di tabella tradizionali con i parametri con valori di tabella ottimizzata per la memoria: [Inserimento di dati IoT ad alta velocità grazie a OLTP in memoria in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
+- SentryOne ha migliorato significativamente la capacità di inserimento dati con una latenza quasi nulla nella soluzione di monitoraggio, scambiando le tabelle in tempdb con le tabelle OLTP In-Memory nell'ambito dei miglioramenti di scalabilità aziendale: [Il fornitore di soluzioni supera il limite massimo delle prestazioni con l'innovazione nel monitoraggio dei dati.](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### <a name="etl-extract-transform-load"></a>ETL (Extract, Transform, Load, ovvero estrazione, trasformazione e caricamento)
 

@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 666ff4eeb05aa7dd913706cad19e8f3047453eb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 537df591affabf79be0b47aadd0b43a7e424f444
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739260"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031350"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Funzionalità del motore di database deprecate in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Le funzionalità del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 
 |Category|Funzionalità deprecata|Sostituzione|Nome funzionalità|ID funzionalità|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Backup e ripristino|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continua a essere deprecata. BACKUP { DATABASE &#124; LOG } WITH PASSWORD e BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD non sono più disponibili.|Nessuna.|BACKUP DATABASE o LOG WITH PASSWORD<br /><br /> BACKUP DATABASE o LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Livelli di compatibilità|Aggiornamento dalla versione 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)][!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quando una versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene più [supportata](http://aka.ms/sqllifecycle), il livello di compatibilità del database associato verrà contrassegnato come deprecato. Microsoft continuerà tuttavia a supportare per quanto possibile le applicazioni certificate in qualsiasi livello di compatibilità del database supportato al fine di facilitare gli aggiornamenti. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Livello di compatibilità del database: 100|108|  
+|Livelli di compatibilità|Aggiornamento dalla versione 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quando una versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene più [supportata](http://aka.ms/sqllifecycle), il livello di compatibilità del database associato verrà contrassegnato come deprecato. Microsoft continuerà tuttavia a supportare per quanto possibile le applicazioni certificate in qualsiasi livello di compatibilità del database supportato al fine di facilitare gli aggiornamenti. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Livello di compatibilità del database: 100|108|  
 |Oggetti di database|Possibilità di restituire set di risultati dai trigger|None|Restituzione di risultati da un trigger|12|  
 |Crittografia|Crittografia tramite RC4 o RC4_128 deprecata. Rimozione pianificata nella prossima versione. Decrittografia RC4 e RC4_128 non deprecata.|Utilizzare un'altra crittografia, ad esempio AES.|Algoritmo di crittografia deprecata|253|  
 |Server remoti|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Sostituire i server remoti utilizzando server collegati. sp_addserver può essere usata solo con l'opzione locale.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -67,7 +67,7 @@ Le funzionalità del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 
 |Category|Funzionalità deprecata|Sostituzione|Nome funzionalità|ID funzionalità|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Livelli di compatibilità|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
-|Livelli di compatibilità|Livello di compatibilità 110 e 120 del database.|Pianificare l'aggiornamento del database e dell'applicazione per una versione successiva.|Livello di compatibilità 110 del database<br /><br /> Livello di compatibilità 120 del database||  
+|Livelli di compatibilità|Livello di compatibilità 110 e 120 del database.|Pianificare l'aggiornamento del database e dell'applicazione per una versione successiva. Microsoft continuerà tuttavia a supportare per quanto possibile le applicazioni certificate in qualsiasi livello di compatibilità del database supportato al fine di facilitare gli aggiornamenti. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Livello di compatibilità 110 del database<br /><br /> Livello di compatibilità 120 del database||  
 |XML|Generazione schema XDR inline|La direttiva XMLDATA all'opzione FOR XML è deprecata. Utilizzare la generazione XSD in caso di modalità RAW e AUTO. Non sono disponibili sostituzioni per la direttiva XMLDATA in modalità EXPLICIT.|XMLDATA|181|  
 |Backup e ripristino|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE o LOG TO TAPE|235|  
 |Backup e ripristino|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
@@ -176,6 +176,5 @@ Le funzionalità del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità del motore di database non più usate in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
   
 

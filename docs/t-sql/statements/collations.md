@@ -1,5 +1,5 @@
 ---
-title: Regole di confronto | Microsoft Docs
+title: COLLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -20,17 +20,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41f946b99567f93ee21a4eab5106e72265e8381d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f962d98bc60ea8fedc585add7617ddf938db6f4
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702189"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960765"
 ---
-# <a name="collations"></a>Regole di confronto
+# <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Clausola che è possibile applicare a una definizione di database o di colonna per definire le regole di confronto oppure a un'espressione stringa di caratteri per applicare il casting delle regole di confronto.  
+Definisce le regole di confronto di un database o di una colonna di database, o un'operazione di cast di regole di confronto se applicata all'espressione della stringa di caratteri. È possibile usare nomi di regole di confronto di Windows o SQL. Se non viene specificato durate la creazione del database, al database vengono assegnate le regole di confronto predefinite dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non viene specificato durate la creazione della colonna della tabella, alla colonna vengono assegnate le regole di confronto predefinite del database.
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,24 +50,22 @@ COLLATE { <collation_name> | database_default }
   
  *SQL_collation_name* è il nome delle regole di confronto per un [Nome delle regole di confronto di SQL Server](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
- In caso di applicazione di regole di confronto al livello di definizione del database, le regole di confronto solo Unicode di Windows non possono essere utilizzate con la clausola COLLATE.  
-  
  **database_default**  
  La clausola COLLATE eredita le regole di confronto del database corrente.  
   
 ## <a name="remarks"></a>Remarks  
- È possibile specificare la clausola COLLATE a vari livelli, tra cui:  
+È possibile specificare la clausola COLLATE a vari livelli, tra cui:  
   
 1.  In fase di creazione o modifica di un database.  
   
-     La clausola COLLATE dell'istruzione CREATE DATABASE o ALTER DATABASE consente di specificare le regole di confronto predefinite del database. È inoltre possibile specificare una regola di confronto durante la creazione di un database tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se non vengono specificate regole di confronto, al database verranno assegnate le regole di confronto predefinite dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     La clausola COLLATE dell'istruzione `CREATE DATABASE` o `ALTER DATABASE` consente di specificare le regole di confronto predefinite del database. È inoltre possibile specificare una regola di confronto durante la creazione di un database tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se non vengono specificate regole di confronto, al database verranno assegnate le regole di confronto predefinite dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
-    >  Le regole di confronto solo Unicode di Windows possono essere usate solo con la clausola COLLATE per applicare regole di confronto ai tipi di dati **nchar**, **nvarchar** e **ntext** su dati a livello di colonna e a livello di espressione. Queste regole non possono essere usate con la clausola COLLATE per modificare le regole di confronto di un database o un'istanza del server.  
+    > Le regole di confronto solo Unicode di Windows possono essere usate solo con la clausola COLLATE per applicare regole di confronto ai tipi di dati **nchar**, **nvarchar** e **ntext** su dati a livello di colonna e a livello di espressione. Queste regole non possono essere usate con la clausola COLLATE per definire o modificare le regole di confronto di un database o un'istanza del server.
   
 2.  In fase di creazione o modifica di una colonna di tabella.  
   
-     È possibile specificare le regole di confronto di ogni colonna contenente stringhe di caratteri tramite la clausola COLLATE dell'istruzione CREATE TABLE o ALTER TABLE. È inoltre possibile specificare una regola di confronto durante la creazione di una tabella tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se non vengono specificate regole di confronto, alla colonna verranno assegnate le regole di confronto predefinite del database.  
+     È possibile specificare le regole di confronto di ogni colonna contenente stringhe di caratteri tramite la clausola COLLATE dell'istruzione `CREATE TABLE` o `ALTER TABLE`. È inoltre possibile specificare una regola di confronto durante la creazione di una tabella tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se non vengono specificate regole di confronto, alla colonna verranno assegnate le regole di confronto predefinite del database.  
   
      È inoltre possibile usare l'opzione `database_default` nella clausola COLLATE per specificare che una colonna di una tabella temporanea usa le regole di confronto predefinite del database utente corrente per la connessione anziché quelle del database **tempdb**.  
   
@@ -75,24 +73,24 @@ COLLATE { <collation_name> | database_default }
   
      Tramite la clausola COLLATE è possibile applicare un'espressione di caratteri a regole di confronto specifiche. Ai valori letterali e alle variabili di tipo carattere vengono assegnate le regole di confronto predefinite del database corrente. Ai riferimenti di colonna vengono assegnate le regole di confronto di definizione della colonna.  
   
- Le regole di confronto di un identificatore dipendono dal livello nel quale viene definito. Agli identificatori degli oggetti a livello di istanza, quali gli account di accesso e i nomi di database, vengono assegnate le regole di confronto predefinite dell'istanza. Agli identificatori degli oggetti di un database, quali tabelle, viste e nomi di colonna, vengono assegnate le regole di confronto predefinite del database. Ad esempio, due tabelle i cui nomi si differenziano soltanto per l'utilizzo del maiuscolo e del minuscolo possono essere create in un database con regole di confronto in cui l'uso di maiuscole e minuscole è rilevante, ma non in un database con regole di confronto in cui l'uso di maiuscole e minuscole non è rilevante. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
+Le regole di confronto di un identificatore dipendono dal livello nel quale viene definito. Agli identificatori degli oggetti a livello di istanza, quali gli account di accesso e i nomi di database, vengono assegnate le regole di confronto predefinite dell'istanza. Agli identificatori degli oggetti di un database, quali tabelle, viste e nomi di colonna, vengono assegnate le regole di confronto predefinite del database. Ad esempio, due tabelle i cui nomi si differenziano soltanto per l'utilizzo del maiuscolo e del minuscolo possono essere create in un database con regole di confronto in cui l'uso di maiuscole e minuscole è rilevante, ma non in un database con regole di confronto in cui l'uso di maiuscole e minuscole non è rilevante. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
- È possibile creare variabili, etichette GOTO, stored procedure temporanee e tabelle temporanee se il contesto di connessione è associato a un singolo database, e quindi fare riferimento ad esse quando il contesto passa a un altro database. Gli identificatori di variabili, le etichette GOTO, le stored procedure temporanee e le tabelle temporanee sono inclusi nelle regole di confronto predefinite dell'istanza del server.  
+È possibile creare variabili, etichette GOTO, stored procedure temporanee e tabelle temporanee se il contesto di connessione è associato a un singolo database, e quindi fare riferimento ad esse quando il contesto passa a un altro database. Gli identificatori di variabili, le etichette GOTO, le stored procedure temporanee e le tabelle temporanee sono inclusi nelle regole di confronto predefinite dell'istanza del server.  
   
- È possibile applicare la clausola COLLATE solo ai tipi di dati **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**.  
+È possibile applicare la clausola COLLATE solo ai tipi di dati **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**.  
   
- COLLATE usa *collate_name* per fare riferimento al nome delle regole di confronto di SQL Server o di Windows da applicare all'espressione, alla definizione di colonna o alla definizione del database. In *collation_name* è possibile usare solo un *Windows_collation_name* o un *SQL_collation_name* specificato e il parametro deve contenere un valore letterale. *collation_name* non può essere rappresentato da una variabile o un'espressione.  
+COLLATE usa *collate_name* per fare riferimento al nome delle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o di Windows da applicare all'espressione, alla definizione di colonna o alla definizione del database. In *collation_name* è possibile usare solo un *Windows_collation_name* o un *SQL_collation_name* specificato e il parametro deve contenere un valore letterale. *collation_name* non può essere rappresentato da una variabile o un'espressione.  
   
- Le regole di confronto sono identificate in genere da un nome, ad eccezione che nel programma di installazione. Nel programma di installazione viene invece specificata la designazione delle regole di confronto radice (le impostazioni locali delle regole di confronto) per le regole di confronto di Windows, quindi vengono specificate le opzioni di ordinamento che possono rispettare o meno la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati.  
+Le regole di confronto sono identificate in genere da un nome, ad eccezione che nel programma di installazione. Nel programma di installazione viene invece specificata la designazione delle regole di confronto radice (le impostazioni locali delle regole di confronto) per le regole di confronto di Windows, quindi vengono specificate le opzioni di ordinamento che possono rispettare o meno la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati.  
   
- È possibile eseguire la funzione di sistema [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) per recuperare un elenco di tutti i nomi validi per le regole di confronto di Windows e SQL Server:  
+È possibile eseguire la funzione di sistema [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) per recuperare un elenco di tutti i nomi validi per le regole di confronto di Windows e SQL Server:  
   
 ```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta solo le tabelle codici supportate dal sistema operativo corrente. Quando si esegue un'azione che dipende dalle regole di confronto, le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzate dall'oggetto a cui si fa riferimento devono utilizzare una tabella codici supportata dal sistema operativo in esecuzione nel computer. Queste azioni includono:  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta solo le tabelle codici supportate dal sistema operativo corrente. Quando si esegue un'azione che dipende dalle regole di confronto, le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzate dall'oggetto a cui si fa riferimento devono utilizzare una tabella codici supportata dal sistema operativo in esecuzione nel computer. Queste azioni includono:  
   
 -   Impostazione delle regole di confronto predefinite per un database utilizzate durante la creazione o la modifica del database.  
   
@@ -101,7 +99,7 @@ FROM fn_helpcollations();
 -   Durante il ripristino o il collegamento di un database è necessario che le regole di confronto predefinite del database e quelle delle colonne o dei parametri di tipo **char**, **varchar** e **text** presenti nel database siano supportate dal sistema operativo.  
   
 > [!NOTE]
-> Le regole di confronto del server di Istanza gestita di database SQL di Azure sono **SQL_Latin1_General_CP1_CI_AS** e non possono essere modificate.
+> Le regole di confronto del server di Istanza gestita di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sono **SQL_Latin1_General_CP1_CI_AS** e non possono essere modificate.
 
 > [!NOTE]
 > Le conversioni tra tabelle codici sono supportate per i tipi di dati **char** e **varchar**, ma non per il tipo di dati **text**. L'eventuale perdita di dati che si verifica durante la conversione tra tabelle codici non viene segnalata.  
@@ -111,7 +109,7 @@ FROM fn_helpcollations();
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-specifying-collation-during-a-select"></a>A. Specifica delle regole di confronto durante una selezione  
+### <a name="a-specifying-collation-during-a-select"></a>A. Specifica delle regole di confronto durante una SELEZIONE  
  Nell'esempio seguente viene creata la tabella semplice in cui vengono inserite 4 righe. Quindi vengono applicate due regole di confronto durante la selezione dei dati dalla tabella per dimostrare che `Chiapas` viene ordinato in modo differente.  
   
 ```sql  

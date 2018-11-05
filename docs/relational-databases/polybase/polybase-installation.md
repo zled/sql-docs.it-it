@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 94334d025645ec13e6f046800de49eeb902401f4
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: e30cded830401c589c62d1e6301d5be78720c07f
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874359"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806751"
 ---
 # <a name="install-polybase-on-windows"></a>Installare PolyBase in Windows
 
@@ -35,27 +35,28 @@ Per installare una versione di valutazione di SQL Server, visitare [SQL Server V
 - Memoria minima: 4 GB  
    
 - Spazio su disco minimo: 2 GB  
+- **Consigliato:** minimo di 16 GB di RAM
    
 - Polybase funziona correttamente se è abilitato il protocollo TCP/IP. TCP/IP è abilitato per impostazione predefinita in tutte le edizioni di SQL Server tranne le edizioni Developer e SQL Server Express. Perché Polybase funzioni correttamente nelle edizioni Developer ed Express è necessario abilitare la connettività TCP/IP (vedere [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).
 
-- Un'origine dati esterna, ovvero un BLOB di Azure o un cluster Hadoop. Per le versioni supportate di Hadoop, vedere [Configurazione di PolyBase](#supported). 
-- Installazione di MSVC++ 2012  
+- MSVC++ 2012 
 
-> [!NOTE]
+**Nota**  
+
+È possibile installare PolyBase in una sola istanza di SQL Server per computer.
+
+> **Importante**
+>
 > Se si prevede di usare la funzionalità di distribuzione di calcolo su Hadoop, è necessario assicurarsi che il cluster Hadoop di destinazione disponga dei componenti principali di HDFS, Yarn/MapReduce con server Jobhistory abilitato. PolyBase invia la query di distribuzione tramite MapReduce e recupera lo stato dal server JobHistory. Senza uno dei due componenti la query avrà esito negativo.
-
-**Note**  
-
-È possibile installare PolyBase in una sola istanza di SQL Server per computer.  
-   
+  
 ## <a name="single-node-or-polybase-scaleout-group"></a>Singolo nodo o gruppo di scalabilità orizzontale di PolyBase
 
-Prima di iniziare a installare PolyBase nelle istanze di SQL Server, è consigliabile pianificare se si vuole eseguire un'installazione in un singolo nodo o in un gruppo con scalabilità orizzontale PolyBase. 
+Prima di iniziare a installare PolyBase nelle istanze di SQL Server, è consigliabile pianificare se si vuole eseguire un'installazione in un singolo nodo o in un [gruppo con scalabilità orizzontale PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).
 
-Per un gruppo con scalabilità orizzontale PolyBase, è necessario verificare le condizioni seguenti: 
+Per un gruppo con scalabilità orizzontale PolyBase, è necessario verificare le condizioni seguenti:
 
 - Tutti i computer si trovano nello stesso dominio.
-- Usare lo stesso account del servizio e la stessa password durante l'installazione.
+- Usare lo stesso account del servizio e la stessa password durante l'installazione di PolyBase.
 - Le istanze di SQL Server possono comunicare tra loro in rete.
 - Le istanze di SQL Server sono tutte della stessa versione di SQL Server.
 
@@ -63,7 +64,7 @@ Dopo aver installato PolyBase in un nodo singolo o in un gruppo di scalabilità 
 
 ## <a name="install-using-the-installation-wizard"></a>Installare PolyBase tramite l'Installazione guidata  
    
-1. Eseguire **Centro installazione SQL Server**. Inserire il supporto di installazione di SQL Server e fare doppio clic su **Setup.exe**.  
+1. Eseguire il file di installazione setup.exe di SQL Server.   
    
 2. Fare clic su **Installazione**e quindi scegliere **Nuova installazione di SQL Server autonomo o aggiunta di funzionalità**.  
    
@@ -71,10 +72,11 @@ Dopo aver installato PolyBase in un nodo singolo o in un gruppo di scalabilità 
 
  ![Servizi PolyBase](../../relational-databases/polybase/media/install-wizard.png "Servizi PolyBase")  
    
-4. Nella pagina Configurazione server configurare il **servizio motore PolyBase di SQL Server** e SQL Server PolyBase Data Movement Service per l'esecuzione con lo stesso account.  
+4. Nella pagina Configurazione server configurare il **servizio motore PolyBase di SQL Server** e SQL Server PolyBase Data Movement Service per l'esecuzione con lo stesso account di dominio.  
    
-   > **IMPORTANTE** In un gruppo con scalabilità orizzontale di PolyBase, il motore PolyBase e il servizio di spostamento dati di PolyBase su tutti i nodi devono essere eseguiti con lo stesso account di dominio.  
-   > Vedere Scalabilità orizzontale di PolyBase.  
+ > **IMPORTANTE** 
+>
+>In un gruppo con scalabilità orizzontale di PolyBase, il motore PolyBase e il servizio di spostamento dati di PolyBase su tutti i nodi devono essere eseguiti con lo stesso account di dominio. Vedere [Gruppi con scalabilità orizzontale di PolyBase](#Enable)
    
 5. Nella **pagina Configurazione di PolyBase**selezionare una delle due opzioni. Per altre informazioni, vedere [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md) (Gruppi con scalabilità orizzontale PolyBase).  
    
@@ -88,14 +90,10 @@ Dopo aver installato PolyBase in un nodo singolo o in un gruppo di scalabilità 
    
 6. Nella **pagina Configurazione di PolyBase**, specificare un intervallo di porte che comprenda almeno sei porte. L'installazione di SQL Server allocherà le prime sei porte disponibili dell'intervallo.  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
   > **IMPORTANTE**
   >
   > Dopo l'installazione, è necessario [abilitare la funzionalità PolyBase](#enable).
 
-::: moniker-end
 
 ##  <a name="installing"></a> Installare usando un prompt dei comandi  
 
@@ -134,12 +132,9 @@ Usare i valori in questa tabella per creare gli script di installazione. Il **se
 
 ::: moniker-end
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
 Dopo l'installazione, è necessario [abilitare la funzionalità PolyBase](#enable).
 
-::: moniker-end
+
 
 **Esempio**
 
@@ -156,10 +151,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> Abilitare PolyBase
-
 
 Dopo aver completato l'installazione, è necessario abilitare PolyBase per accedere alle relative funzionalità. Connettersi a SQL Server 2019 CTP 2.0 e abilitare PolyBase dopo l'installazione usando il comando Transact-SQL seguente:
 
@@ -170,8 +162,6 @@ RECONFIGURE [ WITH OVERRIDE ]  ;
 ```
 L'istanza deve quindi essere **riavviata** 
 
-
-::: moniker-end
 
 ## <a name="post-installation-notes"></a>Note di post-installazione  
 
