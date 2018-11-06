@@ -1,7 +1,7 @@
 ---
 title: Agente merge repliche | Microsoft Docs
 ms.custom: ''
-ms.date: 08/24/2016
+ms.date: 10/29/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fafb8f803aedf5c200f2e1e09c2400478a5da374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca8b44ba4f5d2c62e4f4476d77f7d62e853fd1bd
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846549"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237037"
 ---
 # <a name="replication-merge-agent"></a>Agente merge repliche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,7 +172,10 @@ replmerg [-?]
 |**0**|Specifica che SSL non viene utilizzato.|  
 |**1**|Specifica che SSL viene utilizzato, ma l'agente non verifica che il certificato server SSL sia firmato da un'autorità emittente attendibile.|  
 |**2**|Specifica che SSL viene utilizzato e che il certificato viene verificato.|  
-  
+
+ > [!NOTE]  
+ >  Un certificato SSL valido è definito con un nome di dominio completo del Server SQL. Affinché l'agente possa connettersi correttamente quando si imposta - EncryptionLevel su 2, creare un alias nel Server SQL locale. Il parametro ‘Nome Alias’ deve essere il nome del server e il parametro ‘Server’ deve essere impostato per il nome completo di SQL Server.
+
  Per altre informazioni, vedere [Panoramica della sicurezza &#40;replica&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
  **-ExchangeType** [ **1**| **2**| **3**]  

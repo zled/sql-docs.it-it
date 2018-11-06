@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e2c03cecb508788e1852ee154d783a8f25320298
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 901bb417d9af0f34d645ae18fa36a5c05dadb7aa
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732229"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411781"
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Creare DTC cluster per un gruppo di disponibilità Always On
 
@@ -452,7 +452,7 @@ IF ($restart -eq 1)
 
 Per garantire che le transazioni distribuite usino la risorsa DTC cluster, disabilitare il DTC locale in entrambi i nodi.  Lo script seguente disabilita e arresta il servizio DTC locale in ogni nodo.  Eseguire il seguente script di PowerShell in `SQLNODE1`.
 ```powershell  
-# Disble local DTC service
+# Disable local DTC service
 
 \<#
 Script: 

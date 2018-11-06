@@ -1,7 +1,7 @@
 ---
 title: Agente di lettura coda repliche | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2016
+ms.date: 10/29/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5d969c231a7832f7d1fee5f772a48721e499ee9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61c197b6dbb7583f598f7d59d1f0903d52fd184f
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807745"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236987"
 ---
 # <a name="replication-queue-reader-agent"></a>Agente di lettura coda repliche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,6 +87,9 @@ qrdrsvc [-?]
 |**0**|Specifica che SSL non viene utilizzato.|  
 |**1**|Specifica che SSL viene utilizzato, ma l'agente non verifica che il certificato server SSL sia firmato da un'autorità emittente attendibile.|  
 |**2**|Specifica che SSL viene utilizzato e che il certificato viene verificato.|  
+
+ > [!NOTE]  
+ >  Un certificato SSL valido è definito con un nome di dominio completo del Server SQL. Affinché l'agente possa connettersi correttamente quando si imposta - EncryptionLevel su 2, creare un alias nel Server SQL locale. Il parametro ‘Nome Alias’ deve essere il nome del server e il parametro ‘Server’ deve essere impostato per il nome completo di SQL Server.
   
  Per altre informazioni, vedere [Panoramica della sicurezza &#40;replica&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
