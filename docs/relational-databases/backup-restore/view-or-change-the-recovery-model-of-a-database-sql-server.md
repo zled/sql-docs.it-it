@@ -19,12 +19,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87152c60afce357cdf1ac63cdf2bd799f810c20a
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 06c2ec7c039da5cf439649069a9fef1724114bce
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851956"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753517"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Visualizzazione o modifica del modello di recupero di un database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "48851956"
 ##  <a name="BeforeYouBegin"></a> Operazioni preliminari  
   
 
--   **Prima** di passare dal [modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk](recovery-models-sql-server.md), [eseguire il backup del log delle transazioni](back-up-a-transaction-log-sql-server.md).  
+-   [Prima](back-up-a-transaction-log-sql-server.md) **modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk** , [eseguire il backup del log delle transazioni](recovery-models-sql-server.md).  
   
 -   Il recupero temporizzato non è possibile con il modello di recupero con registrazione minima delle operazioni bulk. L'esecuzione di transazioni nel modello di recupero con registrazione minima delle operazioni bulk che richiedono il ripristino di un log delle transazioni potrebbe esporle alla perdita di dati. Per ottimizzare la recuperabilità in uno scenario di recupero di emergenza, passare al modello di recupero con registrazione minima delle operazioni bulk esclusivamente nelle condizioni seguenti:  
   
@@ -100,7 +100,7 @@ GO
   
 ```sql  
 USE [master] ;  
-ALTER DATABASE [master] SET RECOVERY FULL ;  
+ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
 ##  <a name="FollowUp"></a> Indicazioni: dopo la modifica del modello di recupero  
@@ -129,15 +129,15 @@ ALTER DATABASE [master] SET RECOVERY FULL ;
   
     -   Verificare la pianificazione di backup di database periodici. Il backup del database è essenziale sia per proteggere i dati sia per troncare la porzione inattiva del log delle transazioni.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="RelatedTasks"></a> Related tasks  
   
--   [Creare un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+-   [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
 -   [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
 -   [Creazione di un processo](../../ssms/agent/create-a-job.md)  
   
--   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Abilitare o disabilitare un processo](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   

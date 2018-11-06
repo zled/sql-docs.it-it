@@ -6,8 +6,7 @@ ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.topic: reference
 apiname:
 - IBCPSession::BCPDone (OLE DB)
@@ -17,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 2989f2dc79574b7a0959ffea5a3ff5988bead882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0338fc05683c22df4a900f709770ac35e8b2bad
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728119"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031528"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Dopo aver chiamato il metodo [BCPDone](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) non è possibile chiamare altre operazioni sull'interfaccia **IBCPSession**. L'unica possibilità consiste nel chiamare il metodo [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) per avviare una nuova operazione di copia bulk. Questa operazione è simile alla chiamata al metodo [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
+ Dopo aver chiamato il metodo [BCPDone](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) non è possibile chiamare altre operazioni sull'interfaccia **IBCPSession**. L'unica possibilità consiste nel chiamare il metodo [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) per avviare una nuova operazione di copia bulk. Questa operazione è simile alla chiamata al metodo [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  S_OK  
@@ -51,7 +50,7 @@ HRESULT BCPDone(void);
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come utilizzare l'interfaccia **IBCPSession** .  
   
- Prima di eseguire l'esempio, è necessario eseguire il seguente codice [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
+ Prima di eseguire l'esempio, è necessario eseguire il seguente codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] :  
   
 ```sql  
 create table fltest(col1 int, col2 int, col3 image)  

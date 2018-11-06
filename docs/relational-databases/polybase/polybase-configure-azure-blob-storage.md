@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b1bd34a017cc067a93e8b307adc5c8069ac8e0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8df74aceaf08bd030fe092d4c18cd38fc0559cb7
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831339"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970830"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurare PolyBase per l'accesso a dati esterni in Archiviazione BLOB di Azure
 
@@ -88,7 +88,7 @@ Per eseguire query sui dati nell'origine dati Hadoop, è necessario definire una
    CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
          FORMAT_TYPE = DELIMITEDTEXT,
          FORMAT_OPTIONS (FIELD_TERMINATOR ='|',
-               USE_TYPE_DEFAULT = TRUE)  
+               USE_TYPE_DEFAULT = TRUE))  
    ```
 
 1. Creare una tabella esterna che punta ai dati archiviati in Archiviazione di Azure con [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In questo esempio, i dati esterni contengono dati di sensori di auto.
