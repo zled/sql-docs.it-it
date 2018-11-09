@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 988205e5f81b463d52bc2c2ec809e45c7d712856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1ba97ce7b3499671f3c3bc840560e9dc7ab98c4
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833069"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269624"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Guida introduttiva: Installare SQL Server e creare un database su SUSE Linux Enterprise Server
 
@@ -24,13 +24,13 @@ ms.locfileid: "47833069"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In questa Guida introduttiva, si installa SQL Server 2017 o SQL Server 2019 CTP 2.0 in SUSE Linux Enterprise Server (SLES) 12 SP2. Quindi Connettiti **sqlcmd** per creare il primo database ed eseguire query.
+In questa Guida introduttiva, si installa SQL Server 2017 o SQL Server 2019 preview in SUSE Linux Enterprise Server (SLES) 12 SP2. Quindi Connettiti **sqlcmd** per creare il primo database ed eseguire query.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In questa Guida introduttiva, installare SQL Server 2019 CTP 2.0 in SUSE Linux Enterprise Server (SLES) 12 SP2. Quindi Connettiti **sqlcmd** per creare il primo database ed eseguire query.
+In questa Guida introduttiva, anteprima di SQL Server 2019 è installare in SUSE Linux Enterprise Server (SLES) 12 SP2. Quindi Connettiti **sqlcmd** per creare il primo database ed eseguire query.
 
 ::: moniker-end
 
@@ -155,7 +155,7 @@ Per configurare SQL Server in SLES, eseguire i comandi seguenti in un terminale 
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-A questo punto, 2019 CTP 2.0 di SQL Server è in esecuzione nel computer SLES e sia pronto per l'uso.
+A questo punto, anteprima di SQL Server 2019 è in esecuzione nel computer SLES e sia pronto per l'uso.
 
 ::: moniker-end
 

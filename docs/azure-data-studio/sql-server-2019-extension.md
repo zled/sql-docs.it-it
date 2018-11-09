@@ -2,7 +2,7 @@
 title: Estensione di 2019 Server SQL Studio di dati di Azure (anteprima) | Microsoft Docs
 description: Estensione di anteprima di SQL Server 2019 per Data Studio di Azure
 ms.custom: tools|sos
-ms.date: 10/11/2018
+ms.date: 11/06/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6624f2efb14f5d056ee0ac052fa9396535ebb239
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 2ce04a8f41ec466980bd13d3d032660696e50870
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411168"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269814"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Estensione di SQL Server 2019 (anteprima)
 
@@ -30,9 +30,9 @@ Per installare l'estensione di SQL Server 2019 (anteprima), scaricare e installa
 
    |Piattaforma|Scarica|Data di rilascio|Versione
    |:---|:---|:---|:---|
-   |Windows|[VSIX](https://go.microsoft.com/fwlink/?LinkId=2031539)|18 ottobre 2018|0.7.2
-   |macOS|[VSIX](https://go.microsoft.com/fwlink/?LinkId=2031717)|18 ottobre 2018 |0.7.2
-   |Linux|[VSIX](https://go.microsoft.com/fwlink/?LinkId=2031538)|18 ottobre 2018 |0.7.2
+   |Windows|[VSIX](https://go.microsoft.com/fwlink/?linkid=2038184)|6 novembre 2018 |0.8.0
+   |macOS|[VSIX](https://go.microsoft.com/fwlink/?linkid=2038178)|6 novembre 2018 |0.8.0
+   |Linux|[VSIX](https://go.microsoft.com/fwlink/?linkid=2038246)|6 novembre 2018 |0.8.0
 
 1. In Azure Data Studio scegliere **installare l'estensione dal pacchetto VSIX** dalle **File** menu e selezionare il file VSIX scaricato.
 
@@ -42,6 +42,27 @@ Per installare l'estensione di SQL Server 2019 (anteprima), scaricare e installa
 
 1. Dopo il ricaricamento, l'estensione installerà le dipendenze. È possibile visualizzare lo stato di avanzamento nella finestra di Output e che potrebbe richiedere alcuni minuti.
 
+## <a name="release-notes-v080"></a>Note sulla versione (v0.8.0)
+*I notebook*:
+* Aggiunta di celle prima / dopo esistente facendo clic sul pulsante "Altre azioni" cella è ora supportato celle
+* **Aggiungi nuova connessione** aggiunta l'opzione per le connessioni nell'elenco a discesa "Allega a"
+* Oggetto **reinstallare le dipendenze di Notebook** comando è stato aggiunto supporto per gli aggiornamenti dei pacchetti Python e risolvere i casi in cui installazione è stata interrotta ferma chiudendo l'applicazione. Può essere eseguito dal riquadro comandi (usare `Ctrl/Cmd+Shift+P` e il tipo `Reinstall Notebook Dependencies`)
+* Il pacchetto python PROSE è stato aggiornato alla versione 1.1.0 e include una serie di correzioni di bug. Usare la **reinstallare le dipendenze di Notebook** comando per aggiornare il pacchetto
+* Oggetto **Cancella Output** comando è ora supportato facendo le **altre azioni** pulsante della cella
+* Risolto seguenti problemi segnalati dai clienti:
+  * Sessione di notebook non è stato possibile avviare in Windows a causa di problemi di percorso
+  * Non è stato possibile avviare Blocco note dalla cartella radice di un'unità, ad esempio C:\ o D:\
+  * [#2820](https://github.com/Microsoft/azuredatastudio/issues/2820) non è possibile modificare i notebook creati da annunci pubblicitari in Visual Studio Code
+  * Collegamento di interfaccia utente di Spark funziona ora quando si esegue un kernel Spark
+  * Rinominare "Managed Package" a "Installa pacchetti"
+
+*Creare dati esterni*:
+
+* Messaggi di errore sono copiabili e sono stati separati in una vista di riepilogo e dettagliata per la più semplice
+* Layout dell'interfaccia utente migliorato e in modo significativo miglioramento dell'affidabilità e la gestione degli errori
+* Risolto seguenti problemi segnalati dai clienti:
+  * Le tabelle con il mapping delle colonne non valide vengono visualizzate come disabilitato e un messaggio di avviso viene illustrato l'errore
+
 ## <a name="release-notes-v072"></a>Note sulla versione (v0.7.2)
 * Esplora risorse di Azure è ora incorporato in Azure Data Studio ed è stata rimossa da questa estensione. Grazie per i tuoi commenti su questo.
 * Miglioramento delle prestazioni di notebook con numero di celle Markdown.
@@ -50,7 +71,7 @@ Per installare l'estensione di SQL Server 2019 (anteprima), scaricare e installa
 * Supporto per reinstallare le dipendenze di Notebook. Ciò è utile se l'utente precedentemente chiuso Studio di Azure Data introdursi nell'installazione.
 * Supporto per l'annullamento dell'esecuzione di celle nel Notebook.
 * Maggiore affidabilità quando si utilizza Create External Data guidata, in particolare quando connessione si verificano errori.
-* Blocca l'uso della procedura guidata Create External Data se Polybase non è abilitato o è in esecuzione nel server di destinazione.
+* Blocca l'uso della procedura guidata Create External Data se PolyBase non è abilitato o è in esecuzione nel server di destinazione.
 * Controllo ortografia e la denominazione correzioni relative a SQL Server 2019 e creare dati esterni.
 * Rimosso un numero elevato di errori dalla console di debug di Studio dei dati di Azure.
 
@@ -83,7 +104,7 @@ Per informazioni dettagliate, vedere [i cluster di Big Data](../big-data-cluster
 * Aggiunta di celle di codice o markdown tramite i pulsanti nell'intestazione del notebook. Rimuovere le celle con l'icona del Cestino a sinistra di ciascuna cella.
 * Eseguire le celle con il pulsante play per le celle di codice e attivare la modifica di markdown e visualizzare in anteprima con l'icona sotto controllo
 
-## <a name="polybase-create-external-table-wizard"></a>Polybase Creazione guidata tabella esterna
+## <a name="polybase-create-external-table-wizard"></a>PolyBase Creazione guidata tabella esterna
 
 * Da un'istanza di SQL Server 2019 il *Creazione guidata tabella esterna* possono essere aperti in tre modi:
   * Fare clic con il pulsante destro su un server, scegliere **Manage**, fare clic sulla scheda per SQL Server 2019 (anteprima) e scegliere **Create External Table**.
@@ -106,3 +127,5 @@ Per informazioni dettagliate, vedere [i cluster di Big Data](../big-data-cluster
 
 * Se la password non viene salvata quando si crea una connessione, alcune azioni, ad esempio l'invio del processo Spark potrebbero non riuscire.
 * I notebook con estensione ipynb esistente devono essere aggiornati alla versione 4 o versione successiva per caricare contenuto nel Visualizzatore.
+* In esecuzione la **reinstallare le dipendenze di Notebook** 2 attività potrebbe visualizzare nella visualizzazione attività, uno dei quali ha esito negativo. Questo non prevede l'esito negativo dell'installazione
+* Scelta **Aggiungi nuova connessione** in un Notebook e fare clic su Annulla causerà **Seleziona connessione** vengano visualizzati, anche se sono stati già connessi.
