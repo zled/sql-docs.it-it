@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.matchingproject.matching.f1
@@ -15,19 +14,19 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27a77ac21cf9ffacf2c4d5dd52759479668152f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb23627ef869fdc4117297f43efd8ed8898820f9
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091751"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031508"
 ---
 # <a name="run-a-matching-project"></a>Eseguire un progetto corrispondente
   In questo argomento viene descritto come eseguire la corrispondenza dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Il processo di corrispondenza identifica i cluster di record corrispondenti in base alle regole di corrispondenza nei criteri di corrispondenza, definisce un record da ogni cluster come superstite in base a una regola di sopravvivenza ed esporta i risultati. In DQS il processo di corrispondenza, definito anche deduplicazione, è computerizzato ma è possibile creare alcune regole di corrispondenza in modo interattivo e selezionare la regola di sopravvivenza tra diverse opzioni, in modo da controllare comunque il processo.  
   
  La corrispondenza viene eseguita in tre fasi: un processo di mapping in cui si identifica l'origine dati e si esegue il mapping dei domini all'origine dati; un processo di corrispondenza in cui si esegue l'analisi di corrispondenza; un processo di sopravvivenza ed esportazione in cui si definisce la regola di sopravvivenza e si esportano i risultati di corrispondenza. Ognuno di questi processi viene eseguito in una pagina separata della procedura guidata relativa all'attività di corrispondenza, consentendo all'utente di spostarsi da una pagina a un'altra al fine di rieseguire il processo, completare un processo di corrispondenza specifico e tornare nuovamente a una fase specifica. DQS fornisce statistiche relative ai dati di origine, alle regole e ai risultati di corrispondenza. Tali statistiche consentono di prendere decisioni informate sulla corrispondenza e di ridefinire il processo di corrispondenza.  
   
- La preparazione del processo di corrispondenza prevede la creazione dei criteri di corrispondenza con uno o più regole di corrispondenza e l'esecuzione dei criteri sui dati di esempio. Il processo del progetto corrispondente è diverso dal processo per i criteri di corrispondenza in quanto la Knowledge Base non viene popolata con le informazioni di corrispondenza ottenute dal progetto corrispondente. Per altre informazioni sulla creazione di criteri di corrispondenza, vedere [creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md).  
+ La preparazione del processo di corrispondenza prevede la creazione dei criteri di corrispondenza con uno o più regole di corrispondenza e l'esecuzione dei criteri sui dati di esempio. Il processo del progetto corrispondente è diverso dal processo per i criteri di corrispondenza in quanto la Knowledge Base non viene popolata con le informazioni di corrispondenza ottenute dal progetto corrispondente. Per ulteriori informazioni sulla creazione dei criteri di corrispondenza, vedere [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   

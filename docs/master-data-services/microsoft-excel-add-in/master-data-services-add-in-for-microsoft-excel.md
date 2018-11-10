@@ -11,12 +11,12 @@ ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 436fc2d07406bd76939dcbe4d6012b5b0bce297e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8158439e20b5f841c01914f83490b8d9ab128fbb
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753941"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965969"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Componente aggiuntivo Master Data Services per Microsoft Excel
 
@@ -30,8 +30,7 @@ ms.locfileid: "47753941"
 
 ## <a name="downloads"></a>Download 
 >*  Scaricare il componente aggiuntivo Master Data Services di Master Data Services per Excel per SQL Server 2016 SP1 da [questa pagina dell'Area download Microsoft](https://go.microsoft.com/fwlink/?linkid=836866). 
->* Scaricare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] per SQL Server 2017 CTP1 da [questa pagina dell'Area download Microsoft](https://go.microsoft.com/fwlink/?linkid=836867). Questo componente aggiuntivo funziona anche per SQL Server 2017 RC1.
-
+>* Scaricare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] per SQL Server 2017 da [questa pagina dell'Area download Microsoft](https://go.microsoft.com/fwlink/?linkid=836867).
  
   
 ## <a name="terms"></a>Termini  

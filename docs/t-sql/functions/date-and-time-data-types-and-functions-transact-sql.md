@@ -21,15 +21,18 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8e1f69d90c73aa7b8b6a6dbfba9f8f7092d2215
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60de5eb3816f6cc38eda9c92ff3b4681f8fe0e17
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806189"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970622"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Funzioni e tipi di dati di data e ora (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+> [!div class="nextstepaction"]
+> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 Le sezioni in questo argomento trattano tutti i tipi di dati e le funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)].
 -   [Tipi di dati di data e ora](#DateandTimeDataTypes)  
@@ -49,7 +52,7 @@ I tipi di dati di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)] sono el
 |Tipo di dati|Formato|Intervallo|Accuratezza|Dimensioni dello spazio di archiviazione (in byte)|Precisione in secondi frazionari definita dall'utente|Differenza di fuso orario|  
 |---|---|---|---|---|---|---|
 |[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|da 00.00.00.0000000 a 23.59.59.9999999|100 nanosecondi|da 3 a 5|Sì|no|  
-|[date](../../t-sql/data-types/date-transact-sql.md)|YYYY-MM-DD|Da 01-01-0001 a 31-12-9999|1 giorno|3|no|no|  
+|[data](../../t-sql/data-types/date-transact-sql.md)|YYYY-MM-DD|Da 01-01-0001 a 31-12-9999|1 giorno|3|no|no|  
 |[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|AAAAA-MM-GG hh.mm.ss|da 01-01-1900 a 06-06-2079|1 minuto|4|no|no|  
 |[datetime](../../t-sql/data-types/datetime-transact-sql.md)|AAAA-MM-GG hh:mm:ss[.nnn]|da 01-01-1753 a 31-12-9999|0,00333 secondi|8|no|no|  
 |[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|AAAA-MM-GG hh:mm:ss[.nnnnnnn]|da 01-01-0001 00.00.00.0000000 a 31-12-9999 23.59.59.9999999|100 nanosecondi|da 6 a 8|Sì|no|  

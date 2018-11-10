@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93931286d34d848d1fcd87348366430dcf3226b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfcac13965456203cbdea0fdad55fd83f8f5fae1
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227941"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018156"
 ---
 # <a name="upgrade-data-quality-services"></a>Aggiornare Data Quality Services
   In questo argomento vengono fornite le informazioni su come aggiornare l'installazione esistente di Data Quality Services (DQS) a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Come parte dell'aggiornamento di Data Quality Server in DQS a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è inoltre necessario aggiornare lo schema dei database DQS.  
@@ -24,7 +23,7 @@ ms.locfileid: "48227941"
 > [!IMPORTANT]  
 >  -   Per evitare eventuali perdite di dati accidentali durante l'aggiornamento dello schema, è necessario eseguire il backup dei database DQS prima di aggiornare DQS. Per altre informazioni sul ripristino dei database DQS, vedere [Backup e ripristino di database DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   È possibile connettersi alla versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di Data Quality Server usando la versione corrente o una precedente del client Data Quality o [Trasformazione DQS Cleansing](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services per eseguire le attività relative alla qualità dei dati.  
-> -   È possibile continuare a utilizzare la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del componente aggiuntivo Master Data Services per Excel dopo l'aggiornamento di Data Quality Services e di Master Data Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Tuttavia, una versione precedente del componente aggiuntivo Master Data Services per Excel non funzionerà dopo l'aggiornamento a SQL Server 2014 CTP2. È possibile scaricare il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versione SP1 di Master Data Services componente aggiuntivo per Excel dal [qui](http://go.microsoft.com/fwlink/?LinkId=328664).  
+> -   È possibile continuare a utilizzare la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del componente aggiuntivo Master Data Services per Excel dopo l'aggiornamento di Data Quality Services e di Master Data Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Tuttavia, una versione precedente del componente aggiuntivo Master Data Services per Excel non funzionerà dopo l'aggiornamento a SQL Server 2014 CTP2. È possibile scaricare la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del componente aggiuntivo Master Data Services per Excel da [qui](http://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ##  <a name="Prerequisites"></a> Prerequisiti  
   
@@ -66,7 +65,7 @@ ms.locfileid: "48227941"
         dqsinstaller.exe -upgrade  
         ```  
   
-    4.  Tramite il programma di installazione viene richiesta all'utente la conferma dell'esecuzione del backup dei database DQS prima di continuare. Se già stato eseguito il backup dei database DQS, digitare `Y` o `Yes`, e quindi premere INVIO per continuare con l'aggiornamento.  
+    4.  Tramite il programma di installazione viene richiesta all'utente la conferma dell'esecuzione del backup dei database DQS prima di continuare. Se il backup dei database DQS è già stato eseguito, digitare `Y` o `Yes`, quindi premere INVIO per continuare l'aggiornamento.  
   
     5.  Se l'aggiornamento dello schema dei database DQS viene terminato correttamente, viene visualizzato un messaggio di completamento.  
   

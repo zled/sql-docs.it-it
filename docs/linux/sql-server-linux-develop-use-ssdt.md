@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 0de0286065166137ebe83ce2a46dfb41d1670fc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2053e338bf14d11f25e6e12b3d6c5aee6b8e636e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816059"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033578"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Usare Visual Studio per creare i database di SQL Server in Linux
 
@@ -107,7 +107,7 @@ Avere creato un nuovo database nell'istanza di SQL Server in Linux e appreso le 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Se si ha familiarità con T-SQL, vedere [esercitazione: scrittura di istruzioni Transact-SQL] e il [Riferimento Transact-SQL (motore di Database)].
+Se non si ha familiarità con T-SQL, vedere [Esercitazione: Scrittura di istruzioni Transact-SQL] (Esercitazione: Scrittura di istruzioni Transact-SQL) e [Riferimento Transact-SQL (motore di Database)] (Guida di riferimento a Transact-SQL (Motore di database)).
 
 Per altre informazioni sullo sviluppo di un database con SQL Data Tools, vedere [documenti MSDN di SSDT]
 

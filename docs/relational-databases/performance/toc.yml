@@ -25,6 +25,8 @@ items:
     href: isolate-performance-problems.md
   - name: Individuare i colli di bottiglia
     href: identify-bottlenecks.md
+  - name: Inlining di funzioni definite dall'utente scalari
+    href: ../user-defined-functions/scalar-udf-inlining.md
   - name: Usare DMV per determinare l'uso e le prestazioni delle viste
     href: use-dmvs-determine-usage-performance-views.md
   - name: Monitoraggio delle prestazioni e dell'attività del server
@@ -114,9 +116,9 @@ items:
   href: joins.md
 - name: 'Sottoquery:'
   href: subqueries.md
-ms.openlocfilehash: 0860910f4e556d92a536fb45002f9c6180e2aab9
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: c1a06a77f377871a652f8295897e8e912ef353f2
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450283"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221527"

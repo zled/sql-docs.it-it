@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9c434df0576275af84fd9f4b0e5f57e584323ab6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b5d9e27db92ba048f0b6400c00313e81a1899f7
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693549"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269446"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurare i repository per l'installazione e aggiornamento di SQL Server in Linux
 
@@ -23,7 +23,7 @@ ms.locfileid: "47693549"
 Questo articolo descrive come configurare il repository corretto per gli aggiornamenti e le installazioni di SQL Server 2017 e 2019 di SQL Server in Linux.
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 è ora disponibile! Per provarla, consultare questo articolo per configurare la nuova **mssql-server-preview** repository. Quindi installare seguendo le istruzioni riportate nel [Guida all'installazione](sql-server-linux-setup.md).
+> Anteprima di SQL Server 2019 è ora disponibile! Per provarla, consultare questo articolo per configurare la nuova **mssql-server-preview** repository. Quindi installare seguendo le istruzioni riportate nel [Guida all'installazione](sql-server-linux-setup.md).
 
 ## <a id="repositories"></a>Repository
 
@@ -32,7 +32,7 @@ Quando si installa SQL Server in Linux, è necessario configurare un repository 
 | Archivio | nome | Description |
 |---|---|---|
 | **Anteprima (2017)** | **mssql-server** | Repository di SQL Server 2017 CTP e RC (sospeso). |
-| **Anteprima (2019)** | **MSSQL-server-preview** | Repository della versione CTP di SQL Server 2019 and RC. |
+| **Anteprima (2019)** | **MSSQL-server-preview** | Anteprima di SQL Server 2019 e repository RC. |
 | **CU** | **mssql-server-2017** | Repository di SQL Server 2017 Update (Cumulativo). |
 | **GDR** | **mssql-server-2017-gdr** | Repository di SQL Server 2017 GDR per gli aggiornamenti critici. |
 

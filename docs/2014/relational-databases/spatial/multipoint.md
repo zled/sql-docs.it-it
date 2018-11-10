@@ -1,11 +1,9 @@
 ---
 title: MultiPoint | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MultiPoint geometry subtype [SQL Server]
@@ -13,15 +11,15 @@ ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c4f76eed814be25a50fe0c0b8ed090672515dbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36c0268ef87eb4cd9996744f9ff0015bf499a9a2
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048701"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018546"
 ---
 # <a name="multipoint"></a>MultiPoint
-  Oggetto `MultiPoint` è una raccolta di zero o più punti. Il limite di un'istanza `MultiPoint` è vuoto.  
+  Un `MultiPoint` è una raccolta di zero o più punti. Il limite di un'istanza `MultiPoint` è vuoto.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente è creata un'istanza `geometry MultiPoint` con SRID 23 e due punti: uno con le coordinate (2, 3), e l'altro con le coordinate (7, 8) e un valore Z di 9,5.  

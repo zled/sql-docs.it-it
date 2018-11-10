@@ -18,15 +18,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ba3b9678cc511339bb6890ffe1854efcd193949
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71c0f046ad2f831cdff7136bd92059fd4a24bfce
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772109"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970432"
 ---
 # <a name="data-types-transact-sql"></a>Tipi di dati (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ogni colonna, variabile locale, espressione e parametro è associato un tipo di dati. Un tipo di dati è un attributo che specifica il tipo di dati che l'oggetto può contenere, ovvero numeri interi, caratteri, valute, date e ore, stringhe binarie e così via.
   
@@ -76,7 +79,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a seconda delle ca
   
 |||  
 |-|-|  
-|[date](../../t-sql/data-types/date-transact-sql.md)|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|  
+|[data](../../t-sql/data-types/date-transact-sql.md)|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|  
 |[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|  
 |[datetime](../../t-sql/data-types/datetime-transact-sql.md)|[time](../../t-sql/data-types/time-transact-sql.md)|  
   
@@ -85,14 +88,14 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a seconda delle ca
 |||  
 |-|-|  
 |[char](../../t-sql/data-types/char-and-varchar-transact-sql.md)|[varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)|  
-|[varchar(max)](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
+|[text](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
   
 ### <a name="unicode-character-strings"></a>Stringhe di testo Unicode
   
 |||  
 |-|-|  
 |[nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)|[nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)|  
-|[nvarchar(max)](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
+|[ntext](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
   
 ### <a name="binary-strings"></a>Stringhe binarie
   

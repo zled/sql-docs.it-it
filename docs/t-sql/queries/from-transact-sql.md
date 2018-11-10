@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0955a3d8db2e9969996d0a9e37a3f20645f18f70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2f3642a8638fc39c538bb2609e061c2491a0136
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753429"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966039"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -409,15 +409,15 @@ ON (p.ProductID = v.ProductID);
 ## <a name="using-apply"></a>Utilizzo di APPLY  
  Entrambi gli operandi sinistro e destro dell'operatore APPLY sono espressioni di tabella. La differenza principale tra questi operandi è rappresentata dal fatto che *right_table_source* può usare una funzione con valori di tabella in cui una colonna di *left_table_source* è considerata uno degli argomenti. *left_table_source* può includere funzioni con valori di tabella, ma non può contenere come argomenti colonne di *right_table_source*.  
   
- L'operatore APPLY funziona nel modo seguente per restituire l'origine di tabella per la clausola FROM:  
+L'operatore APPLY funziona nel modo seguente per restituire l'origine di tabella per la clausola FROM:  
   
 1.  Valuta *right_table_source* rispetto a ogni riga di *left_table_source* per produrre set di righe.  
   
-     I valori di *right_table_source* dipendono da *left_table_source*. *right_table_source* può essere rappresentato approssimativamente in questo modo: `TVF(left_table_source.row)`, dove `TVF` è una funzione con valori di tabella.  
+    I valori di *right_table_source* dipendono da *left_table_source*. *right_table_source* può essere rappresentato approssimativamente in questo modo: `TVF(left_table_source.row)`, dove `TVF` è una funzione con valori di tabella.  
   
 2.  Combina i set di risultati restituiti per ogni riga nella valutazione di *right_table_source* con *left_table_source* tramite un'operazione UNION ALL.  
   
-     L'elenco di colonne restituito dal risultato dell'operatore APPLY corrisponde al set di colonne di *left_table_source* combinato con l'elenco di colonne di *right_table_source*.  
+    L'elenco di colonne restituito dal risultato dell'operatore APPLY corrisponde al set di colonne di *left_table_source* combinato con l'elenco di colonne di *right_table_source*.  
   
 ## <a name="using-pivot-and-unpivot"></a>Utilizzo di PIVOT e UNPIVOT  
  *pivot_column* e *value_column* sono colonne di raggruppamento usate dall'operatore PIVOT. PIVOT segue il processo seguente per ottenere il set di risultati di output:  
@@ -579,32 +579,35 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```  
   
 ### <a name="k-using-apply"></a>K. Utilizzo di APPLY  
- Nell'esempio seguente si presuppone che nel database siano presenti le tabelle seguenti con lo schema seguente:  
+Nell'esempio seguente si presuppone che nel database siano presenti le tabelle e la funzione con valori di tabella seguenti:  
+
+|Nome oggetto|Nomi di colonna|      
+|---|---|   
+|Reparti|DeptID, DivisionID, DeptName, DeptMgrID|      
+|EmpMgr|MgrID, EmpID|     
+|Employees|EmpID, EmpSalary EmpLastName, EmpFirstName|  
+|GetReports(MgrID)|EmpSalary EmpID, EmpLastName|     
   
--   `Departments`: `DeptID`, `DivisionID`, `DeptName`, `DeptMgrID`  
+La funzione con valori di tabella `GetReports` restituisce un elenco di tutti i dipendenti che sono subordinati direttamente o indirettamente all'elemento `MgrID` specificato.  
   
--   `EmpMgr`: `MgrID`, `EmpID`  
-  
--   `Employees`: `EmpID`, `EmpLastName`, `EmpFirstName`, `EmpSalary`  
-  
- È anche presente una funzione con valori di tabella, `GetReports(MgrID)` che restituisce un elenco di tutti i dipendenti (`EmpID`, `EmpLastName`, `EmpSalary`) che sono subordinati direttamente o indirettamente all'ID `MgrID` specificato.  
-  
- In questo esempio viene utilizzato `APPLY` per restituire tutti i reparti e tutti i dipendenti in ogni reparto. Se uno specifico reparto non ha dipendenti, non verranno restituite righe per tale reparto.  
+In questo esempio viene utilizzato `APPLY` per restituire tutti i reparti e tutti i dipendenti in ogni reparto. Se uno specifico reparto non ha dipendenti, non verranno restituite righe per tale reparto.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d    
+CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
- Se si desidera che la query restituisca righe per i reparti senza dipendenti, restituendo valori Null per le colonne `EmpID`, `EmpLastName` e `EmpSalary`, utilizzare invece `OUTER APPLY`.  
+Se si desidera che la query restituisca righe per i reparti senza dipendenti, restituendo valori Null per le colonne `EmpID`, `EmpLastName` e `EmpSalary`, utilizzare invece `OUTER APPLY`.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d   
+OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
 ### <a name="l-using-cross-apply"></a>L. Utilizzo di CROSS APPLY  
- Nell'esempio seguente viene recuperato uno snapshot di tutti i piani di query disponibili nella cache dei piani, eseguendo una query sulla DMV `sys.dm_exec_cached_plans` per recuperare gli handle per tutti i piani di query nella cache. Successivamente viene specificato l'operatore `CROSS APPLY` per passare gli handle del piano a `sys.dm_exec_query_plan`. L'output Showplan XML per ogni piano disponibile nella cache dei piani viene indicato nella colonna `query_plan` della tabella restituita.  
+Nell'esempio seguente viene recuperato uno snapshot di tutti i piani di query disponibili nella cache dei piani, eseguendo una query sulla DMV `sys.dm_exec_cached_plans` per recuperare gli handle per tutti i piani di query nella cache. Successivamente viene specificato l'operatore `CROSS APPLY` per passare gli handle del piano a `sys.dm_exec_query_plan`. L'output Showplan XML per ogni piano disponibile nella cache dei piani viene indicato nella colonna `query_plan` della tabella restituita.  
   
 ```sql
 USE master;  

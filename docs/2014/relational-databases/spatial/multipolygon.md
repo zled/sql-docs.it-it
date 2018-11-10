@@ -1,11 +1,9 @@
 ---
 title: MultiPolygon | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
@@ -14,33 +12,33 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35618fe95194a2c8fe256720bbfb3bb223390e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d941425b1faa2fcbc23b48555dce12846a7fd52e
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076862"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018986"
 ---
 # <a name="multipolygon"></a>MultiPolygon
-  Oggetto `MultiPolygon` istanza è una raccolta di zero o più `Polygon` istanze.  
+  Un'istanza `MultiPolygon` è una raccolta di zero o più istanze `Polygon`.  
   
 ## <a name="polygon-instances"></a>Istanze Polygon  
- La figura seguente mostra esempi di `MultiPolygon` istanze.  
+ Nella figura seguente vengono illustrati esempi di istanze `MultiPolygon`.  
   
  ![Esempi di istanze di geometria MultiPolygon](../../database-engine/media/multipolygon.gif "Esempi di istanze di geometria MultiPolygon")  
   
  Come indicato nell'illustrazione:  
   
--   Figura 1 è un `MultiPolygon` istanza con due `Polygon` elementi. Il limite è definito dai due anelli esterni e dai tre anelli interni.  
+-   Nella figura 1 viene rappresentata un'istanza `MultiPolygon` con due elementi `Polygon`. Il limite è definito dai due anelli esterni e dai tre anelli interni.  
   
 -   Nella figura 2 viene rappresentata un'istanza `MultiPolygon` con due elementi `Polygon`. Il limite è definito dai due anelli esterni e dai tre anelli interni. I due elementi `Polygon` si intersecano in un punto di tangenza.  
   
 ### <a name="accepted-instances"></a>Istanze accettate  
- Oggetto `MultiPolygon` istanza viene accettata una delle seguenti condizioni è soddisfatta.  
+ Viene accettata un'istanza `MultiPolygon` se viene soddisfatta una delle condizioni indicate di seguito.  
   
--   È un oggetto vuoto `MultiPolygon` istanza.  
+-   È un'istanza `MultiPolygon` vuota.  
   
--   Tutte le istanze che comprendono il `MultiPolygon` istanza vengono accettati `Polygon` istanze. Per altre informazioni su accettato `Polygon` istanze, vedere [poligono](../spatial/polygon.md).  
+-   Tutte le istanze che comprendono l'istanza `MultiPolygon` sono istanze `Polygon` accettate. Per altre informazioni su accettato `Polygon` istanze, vedere [poligono](../spatial/polygon.md).  
   
  Negli esempi seguenti vengono illustrate alcune istanze `MultiPolygon` accettate.  
   
@@ -74,7 +72,7 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` è valido perché i due `Polygon` istanze si toccano solo in un punto tangente. `@g3` non è valida perché gli interni dei due `Polygon` istanze si sovrappongono tra loro.  
+ `@g2` è valida perché le due istanze di `Polygon` si toccano solo in corrispondenza di un punto tangente. `@g3` non è valida perché gli interni delle due istanze di `Polygon` si sovrappongono.  
   
 ## <a name="examples"></a>Esempi  
  L'esempio seguente illustra la creazione di un'istanza `geometry``MultiPolygon` e viene restituito il Well-Known Text (WKT) del secondo componente.  

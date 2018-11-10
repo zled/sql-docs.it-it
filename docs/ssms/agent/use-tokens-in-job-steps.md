@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a122ffdd014b61f4253936f59e2a8766fe799824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf01cb77d048c5d76de4cbc75ac43d41a9a509c3
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675569"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743226"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utilizzo dei token nei passaggi dei processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,8 +73,8 @@ Nelle tabelle seguenti vengono elencati e illustrati i token e le macro supporta
 |**(A-ERR)**|Numero di errore. Se il processo viene eseguito da un avviso, il valore del numero di errore sostituisce automaticamente il token nel passaggio di processo.|  
 |**(A-SEV)**|Gravità dell'errore. Se il processo viene eseguito da un avviso, il valore della gravità dell'errore sostituisce automaticamente il token nel passaggio di processo.|  
 |**(A-MSG)**|Testo del messaggio. Se il processo viene eseguito da un avviso, il valore del testo del messaggio sostituisce automaticamente il token nel passaggio di processo.|  
-|**(JOBNAME)**|Nome del processo.|  
-|**(STEPNAME)**|Nome del passaggio.|  
+|**(JOBNAME)**|Nome del processo. Questo token è disponibile solo in SQL Server 2016 e versioni successive.|  
+|**(STEPNAME)**|Nome del passaggio. Questo token è disponibile solo in SQL Server 2016 e versioni successive.|  
 |**(DATE)**|Data corrente nel formato AAAAMMGG.|  
 |**(INST)**|Nome dell'istanza. Il nome di un'istanza predefinita di questo token sarà MSSQLSERVER.|  
 |**(JOBID)**|ID del processo.|  

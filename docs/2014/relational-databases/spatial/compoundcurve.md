@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1aecfa5c0c46e061c28479ebc244dc8d0c30ca72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f109dcab6d7cf6280e15cdfb1bb2f5ad3b2f041
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089441"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018146"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   `CompoundCurve` è una raccolta di zero o più istanze `CircularString` o `LineString` continue di tipo geometry o geography.  
@@ -26,14 +25,14 @@ ms.locfileid: "48089441"
   
  È possibile creare un'istanza `CompoundCurve` vuota, ma affinché `CompoundCurve` sia valida è necessario che vengano rispettati i criteri seguenti:  
   
-1.  Deve contenere almeno una `CircularString` o `LineString` istanza.  
+1.  Deve contenere almeno un'istanza `CircularString` o `LineString`.  
   
-2.  La sequenza degli `CircularString` o `LineString` istanze devono essere continue.  
+2.  La sequenza di istanze `CircularString` o `LineString` deve essere continua.  
   
- Se un `CompoundCurve` contiene una sequenza di più `CircularString` e `LineString` istanze, l'endpoint finale per ogni istanza, ad eccezione dell'ultima istanza deve essere l'endpoint iniziale dell'istanza successiva nella sequenza. Ciò significa che se il punto finale di un'istanza precedente nella sequenza è (4 3 7 2), il punto iniziale dell'istanza successiva nella sequenza deve essere (4 3 7 2). Si noti che i valori Z (elevazione) e M (misura) del punto devono essere anch'essi uguali. Nel caso di una differenza nei due punti, viene generata un'eccezione `System.FormatException` . Fa riferimento un `CircularString` non è necessario avere un valore Z o M. Se non sono presenti valori Z o M per il punto finale dell'istanza precedente, il punto iniziale dell'istanza successiva non potrà includere valori Z o M. Se il punto finale della sequenza precedente è (4 3), il punto iniziale della sequenza successiva dovrà essere (4 3). Non potrà essere (4 3 7 2). Tutti i punti in un `CompoundCurve` istanza deve avere alcun valore Z oppure lo stesso valore Z.  
+ Se un `CompoundCurve` contiene una sequenza di più `CircularString` e `LineString` istanze, l'endpoint finale per ogni istanza, ad eccezione dell'ultima istanza deve essere l'endpoint iniziale dell'istanza successiva nella sequenza. Ciò significa che se il punto finale di un'istanza precedente nella sequenza è (4 3 7 2), il punto iniziale dell'istanza successiva nella sequenza deve essere (4 3 7 2). Si noti che i valori Z (elevazione) e M (misura) del punto devono essere anch'essi uguali. Nel caso di una differenza nei due punti, viene generata un'eccezione `System.FormatException` . I punti in un'istanza `CircularString` non devono avere un valore Z o M. Se non sono presenti valori Z o M per il punto finale dell'istanza precedente, il punto iniziale dell'istanza successiva non potrà includere valori Z o M. Se il punto finale della sequenza precedente è (4 3), il punto iniziale della sequenza successiva dovrà essere (4 3). Non potrà essere (4 3 7 2). Tutti i punti in un'istanza `CompoundCurve` non devono avere alcun valore Z oppure devono avere lo stesso valore Z.  
   
 ## <a name="compoundcurve-instances"></a>Istanze CompoundCurve  
- La figura seguente mostra valida `CompoundCurve` tipi.  
+ Nell'immagine seguente sono illustrati tipi di `CompoundCurve` validi.  
   
  ![](../../database-engine/media/f278742e-b861-4555-8b51-3d972b7602bf.png "f278742e-b861-4555-8b51-3d972b7602bf")  
   
@@ -42,14 +41,14 @@ ms.locfileid: "48089441"
   
 1.  Tutte le istanze contenute nell'istanza `CompoundCurve` sono istanze di segmenti di arco circolare accettate. Per altre informazioni sulle istanze di segmenti di arco circolare accettate, vedere [LineString](linestring.md) e [CircularString](circularstring.md).  
   
-2.  Tutti i segmenti di arco circolare nel `CompoundCurve` istanza sono connessi. Il primo punto di ogni segmento di arco circolare successivo è uguale all'ultimo punto del segmento di arco circolare precedente.  
+2.  Tutti i segmenti di arco circolare nell'istanza `CompoundCurve` sono connessi. Il primo punto di ogni segmento di arco circolare successivo è uguale all'ultimo punto del segmento di arco circolare precedente.  
   
     > [!NOTE]  
     >  Sono incluse le coordinate Z e M. È quindi necessario che tutte e quattro le coordinate X, Y, Z e M siano uguali.  
   
 3.  Nessuna delle istanze contenute è un'istanza vuota.  
   
- Nell'esempio seguente viene accettato `CompoundCurve` istanze.  
+ Nell'esempio seguente vengono illustrate le istanze `CompoundCurve` accettate.  
   
 ```  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
@@ -64,13 +63,13 @@ DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0)
 ```  
   
 ### <a name="valid-instances"></a>Istanze valide  
- Oggetto `CompoundCurve` istanza è valida se soddisfa i criteri seguenti.  
+ Un'istanza `CompoundCurve` è valida se soddisfa i criteri seguenti.  
   
-1.  Il `CompoundCurve` istanza viene accettata.  
+1.  L'istanza `CompoundCurve` è accettata.  
   
 2.  Tutte le istanze di segmenti di arco circolare contenute nell'istanza `CompoundCurve` sono istanze valide.  
   
- L'esempio seguente mostra valido `CompoundCurve` istanze.  
+ Nell'esempio seguente vengono illustrate le istanze `CompoundCurve` valide.  
   
 ```  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
@@ -127,7 +126,7 @@ SET @g2 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3, 3 3, 3 1, 1 1))');
 SELECT @g1.STLength(), @g2.STLength();  
 ```  
   
- Le lunghezze per `@g1` e `@g2` sono le stesse. Nell'esempio che un `CompoundCurve` istanza può archiviare una o più istanze di `LineString`.  
+ Le lunghezze per `@g1` e `@g2` sono le stesse. Come illustrato nell'esempio, un'istanza `CompoundCurve` consente di archiviare una o più istanze di `LineString`.  
   
 ### <a name="e-instantiating-a-geometry-instance-using-a-compoundcurve-with-multiple-circularstrings"></a>E. Creazione di un'istanza Geometry utilizzando un'istanza CompoundCurve con più istanze CircularString  
  Nell'esempio seguente viene illustrato come utilizzare due diverse istanze `CircularString` per creare un'istanza `CompoundCurve`:  
@@ -194,6 +193,6 @@ Circle Two12.566370…
  [LineString](linestring.md)   
  [CircularString](circularstring.md)   
  [Panoramica dei tipi di dati spaziali](spatial-data-types-overview.md)   
- [Point](point.md)  
+ [Punto](point.md)  
   
   

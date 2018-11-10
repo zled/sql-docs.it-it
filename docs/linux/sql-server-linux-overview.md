@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: d4b887225908896ce15dfaae0443c22eb535e209
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: bf1d3b2b494377eb964f4a30ea97a48bd1dfcff7
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419306"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269525"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server in Linux
 
@@ -26,22 +26,22 @@ A partire da SQL Server 2017, viene eseguito SQL Server in Linux. È lo stesso m
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-Viene eseguito SQL Server 2019 CTP 2.0 in Linux. È lo stesso motore di database di SQL Server, con molti servizi indipendentemente dal sistema operativo e le funzionalità di simile. Per altre informazioni su questa versione, vedere [nuove funzionalità di SQL Server 2019 CTP 2.0 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+Anteprima di SQL Server 2019 viene eseguito su Linux. È lo stesso motore di database di SQL Server, con molti servizi indipendentemente dal sistema operativo e le funzionalità di simile. Per altre informazioni su questa versione, vedere [nuove funzionalità di anteprima di SQL Server 2019 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"
 > [!TIP]
-> [SQL Server 2019 CTP 2.0](sql-server-linux-overview.md?view=sql-server-ver15) è stato rilasciato! Per scoprire quali sono le novità nella versione più recente per Linux, vedere [nuove funzionalità di SQL Server 2019 CTP 2.0 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+> [Anteprima di SQL Server 2019](sql-server-linux-overview.md?view=sql-server-ver15) è stato rilasciato! Per scoprire quali sono le novità nella versione più recente per Linux, vedere [nuove funzionalità di anteprima di SQL Server 2019 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017"
 > [!TIP]
-> [SQL Server 2019 CTP 2.0](sql-server-linux-overview.md?view=sql-server-linux-ver15) è stato rilasciato! Per scoprire quali sono le novità nella versione più recente per Linux, vedere [nuove funzionalità di SQL Server 2019 CTP 2.0 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux).
+> [Anteprima di SQL Server 2019](sql-server-linux-overview.md?view=sql-server-linux-ver15) è stato rilasciato! Per scoprire quali sono le novità nella versione più recente per Linux, vedere [nuove funzionalità di anteprima di SQL Server 2019 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux).
 ::: moniker-end
 
 ::: moniker range="= sqlallproducts-allversions"
 > [!TIP]
-> SQL Server 2019 CTP 2.0 è stato rilasciato! Per scoprire quali sono le novità nella versione più recente per Linux, vedere [nuove funzionalità di SQL Server 2019 CTP 2.0 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+> Anteprima di SQL Server 2019 è stato rilasciato! Per scoprire quali sono le novità nella versione più recente per Linux, vedere [nuove funzionalità di anteprima di SQL Server 2019 per Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
 ::: moniker-end
 
 ## <a name="install"></a>Install

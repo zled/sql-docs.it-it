@@ -10,12 +10,12 @@ ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7cd28b110116921bf6bf90bcd7ffdbb51e613419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9c5354f0a94dc8ec3cccc66f751124554554357
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764249"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411731"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,11 @@ Per inviare gli aggiornamenti di SQL PowerShell, è stato necessario modificare 
 
 **Aggiornare gli script di PowerShell che importano il modulo SQLPS.**
 
-Se si hanno script di PowerShell script che eseguono `Import-Module -Name SQLPS` e se si vogliono sfruttare la nuova funzionalità del provider e i nuovi cmdlet, è necessario modificarli in `Import-Module -Name SqlServer`. Il nuovo modulo viene installato nella cartella `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer`. Non è quindi necessario aggiornare la variabile $env:PSModulePath. Se si hanno script che usano una versione di terze parti o community di un modulo denominato **SqlServer**, usare il parametro Prefix per evitare conflitti di nome. Non sono state apportate modifiche al modulo usato da SQL Server Agent. 
+Se si hanno script di PowerShell script che eseguono `Import-Module -Name SQLPS` e se si vogliono sfruttare la nuova funzionalità del provider e i nuovi cmdlet, è necessario modificarli in `Import-Module -Name SqlServer`. Il nuovo modulo viene installato nella cartella `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer`. Non è quindi necessario aggiornare la variabile $env:PSModulePath. Se si hanno script che usano una versione di terze parti o community di un modulo denominato **SqlServer**, usare il parametro Prefix per evitare conflitti di nome.
 
-  
+Non sono state apportate modifiche al modulo usato da SQL Server Agent. Di conseguenza, i passaggi del processo di tipo PowerShell usano il modulo SQLPS. Per altre informazioni, vedere [Come eseguire PowerShell con SQL Server Agent](run-windows-powershell-steps-in-sql-server-agent.md).
+
+
 ## <a name="sql-server-powershell-components"></a>Componenti di PowerShell di SQL Server  
 Il modulo **SqlServer** carica due snap-in di Windows PowerShell:  
   

@@ -3,18 +3,18 @@ title: Cosa&#39;novità di SQL Server Machine Learning Services s | Microsoft Do
 description: Nuovo gli annunci di funzionalità per ogni versione di SQL Server 2016 R Services, R Server, servizi Machine Learning di SQL Server 2017.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c6df8f09d46b2f90c1cd464b6e80cda20e83c97f
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: d00757a8676540be420edd972857ce6cf6ced6d1
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712575"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269655"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novità in servizi di SQL Server Machine Learning 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,9 +103,9 @@ In Linux, SQL Server 2017 è privo di integrazione di R o Python, ma è possibil
 
 <a name="azure-sql-database-roadmap"></a>
 
-## <a name="azure-sql-database-roadmap"></a>Roadmap per Database SQL di Azure
+## <a name="machine-learning-services-in-azure-sql-database"></a>Servizi di Database SQL di Azure Machine Learning
 
-Non è attualmente alcun supporto per Machine Learning Services (R e Python) nel Database SQL di Azure. Supporto fa paret del ma non esiste nessuna data di rilascio prevista in questa fase.  
+Servizi di Machine Learning (con R) nel Database SQL di Azure è disponibile in anteprima pubblica. Per altre informazioni, vedere [Guida introduttiva: usare Machine Learning Services (con R) nel Database SQL di Azure (anteprima)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

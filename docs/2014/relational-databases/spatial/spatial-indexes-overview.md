@@ -1,11 +1,9 @@
 ---
 title: Panoramica degli indici spaziali | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
@@ -13,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a775ffdbe70eb47214ecb100ad395d37ca79a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113633"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018676"
 ---
 # <a name="spatial-indexes-overview"></a>Panoramica degli indici spaziali
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta dati e indici spaziali. Un *indice spaziale* è un tipo di indice esteso che consente di indicizzare una colonna spaziale. Una colonna spaziale è una colonna della tabella che contiene dati spaziali, ad esempio `geometry` o `geography`.  
@@ -156,7 +154,7 @@ ms.locfileid: "48113633"
 >  Le densità della griglia di un indice spaziale sono visibili nelle colonne bounding_box_xmin, bounding_box_ymin, bounding_box_xmax e bounding_box_ymax della vista del catalogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) .  
   
 #### <a name="the-geography-grid-tessellation-scheme"></a>Schema a mosaico per la griglia di geografia  
- Questo schema a mosaico si applica solo a un `geography` colonna. In questa sezione vengono riepilogati i metodi supportati dal mosaico della griglia di geografia e discusso il modo in cui lo spazio geodetico è proiettato su un piano scomposto in una gerarchia di griglie.  
+ Questo schema a mosaico si applica solo a una colonna `geography`. In questa sezione vengono riepilogati i metodi supportati dal mosaico della griglia di geografia e discusso il modo in cui lo spazio geodetico è proiettato su un piano scomposto in una gerarchia di griglie.  
   
 > [!NOTE]  
 >  È possibile specificare in modo esplicito questo schema a mosaico con la clausola USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) dell'istruzione [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
@@ -223,7 +221,7 @@ ms.locfileid: "48113633"
 -   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *numero*  
   
 ### <a name="queries-that-use-spatial-indexes"></a>Query con indici spaziali  
- Gli indici spaziali sono supportati solo nelle query che includono un operatore spaziale indicizzato nella `WHERE` clausola. Ad esempio, la sintassi seguente:  
+ Gli indici spaziali sono supportati solo nelle query che prevedono un operatore spaziale indicizzato nella clausola `WHERE`. Ad esempio, la sintassi seguente:  
   
 ```  
 [spatial object].SpatialMethod([reference spatial object]) [ = | < ] [const literal or variable]  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
@@ -14,25 +13,25 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e2d660f095c2f6e4d098fe2f0d60ef547a02ad7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7954c3050f07fd8c727a7f91c18bf343c9b69f2d
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101731"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018436"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurare SQL Server in un'installazione Server Core
   In questo argomento vengono descritti i dettagli sulla configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'installazione Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. Fare riferimento alle sezioni seguenti:  
   
 -   [Configurare e gestire Server Core in Windows Server](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
   
--   [Installare gli aggiornamenti SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
+-   [Installare gli aggiornamenti di SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
   
--   [Avvio/arresto servizio SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_startstopservices)  
+-   [Avviare/arrestare il servizio SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_startstopservices)  
   
--   [Abilitare gruppi di disponibilità AlwaysOn](configure-sql-server-on-a-server-core-installation.md#bkmk_enablealwayson)  
+-   [Abilitare Gruppi di disponibilità AlwaysOn](configure-sql-server-on-a-server-core-installation.md#bkmk_enablealwayson)  
   
--   [Configurazione dell'accesso remoto di SQL Server in esecuzione in Server Core](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
+-   [Configurazione dell'accesso remoto dell'istanza di SQL Server in esecuzione in Server Core](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
   
 -   [SQL Server Profiler](configure-sql-server-on-a-server-core-installation.md#bkmk_profiler)  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48101731"
   
 -   [Utilità del prompt dei comandi](configure-sql-server-on-a-server-core-installation.md#bkmk_cmd)  
   
--   [Usare gli strumenti di risoluzione dei problemi](configure-sql-server-on-a-server-core-installation.md#bkmk_troubleshoot)  
+-   [Utilizzare gli strumenti di risoluzione dei problemi](configure-sql-server-on-a-server-core-installation.md#bkmk_troubleshoot)  
   
 ##  <a name="BKMK_ConfigureWindows"></a> Configurare e gestire Server Core in Windows Server  
  Nella sezione vengono forniti i riferimenti agli argomenti in cui sono illustrate la configurazione e la gestione di un'installazione Server Core.  
@@ -77,7 +76,7 @@ ms.locfileid: "48101731"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione integra gli aggiornamenti più recenti del pacchetto con l'installazione del prodotto principale in modo che quest'ultimo e i relativi aggiornamenti applicabili vengano installati contemporaneamente.  
   
- Dopo avere individuato le versioni più recenti degli aggiornamenti applicabili, questi vengono scaricati e integrati dal programma di installazione con il processo di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente. Tramite l'aggiornamento del prodotto è possibile includere un aggiornamento cumulativo, un Service Pack o un Service Pack con aggiornamento cumulativo.  
+ Dopo che il programma di installazione trova le versioni più recenti degli aggiornamenti applicabili, li scarica e li integra con il processo di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente. Tramite l'aggiornamento del prodotto è possibile includere un aggiornamento cumulativo, un Service Pack o un Service Pack con aggiornamento cumulativo.  
   
  Specificare i parametri UpdateSource e UpdateEnabled per includere gli aggiornamenti più recenti del prodotto con l'installazione del prodotto principale. Fare riferimento all'esempio seguente per abilitare gli aggiornamenti del prodotto durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
@@ -114,10 +113,10 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  È inoltre possibile utilizzare i servizi .NET per avviare e arrestare i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="BKMK_EnableAlwaysON"></a> Abilitare Gruppi di disponibilità AlwaysOn  
- L'abilitazione per Gruppi di disponibilità AlwaysOn rappresenta un prerequisito per consentire a un'istanza del server di utilizzare i gruppi di disponibilità come soluzione a disponibilità elevata e di ripristino di emergenza. Per altre informazioni sulla gestione dei gruppi di disponibilità AlwaysOn, vedere [abilitare e disabilitare gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+ L'abilitazione per Gruppi di disponibilità AlwaysOn rappresenta un prerequisito per consentire a un'istanza del server di utilizzare i gruppi di disponibilità come soluzione a disponibilità elevata e di ripristino di emergenza. Per altre informazioni sulla gestione di Gruppi di disponibilità AlwaysOn, vedere [Abilitare e disabilitare la funzionalità Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>Utilizzo di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in remoto  
- Questi passaggi devono essere eseguite in un computer che esegue l'edizione client di [!INCLUDE[win7](../../includes/win7-md.md)] o versioni successive, o un altro server con la Shell grafica Server installata (ovvero un'installazione completa di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] o un'installazione di Windows Server 8 con il Server Funzionalità di Shell grafica abilitata).  
+ Questi passaggi devono essere effettuati in un PC che esegue l'edizione client di [!INCLUDE[win7](../../includes/win7-md.md)] o versioni successive o in un altro server con la Shell grafica server installata (ovvero un'installazione completa di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] o un'installazione di Windows Server 8 con la funzionalità Shell grafica server abilitata).  
   
 1.  Aprire Gestione computer. Per aprire Gestione computer, effettuare una delle operazioni seguenti:  
   

@@ -1,11 +1,9 @@
 ---
 title: Creare, modificare ed eliminare indici spaziali | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -18,12 +16,12 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f935fa237c13f71c6ad7cc0ee97a4d7577a516ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485b9bd38754309602df8002bf651188d322d6d8
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122351"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018656"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Creazione, modifica ed eliminazione di indici spaziali
   Un indice spaziale può eseguire in modo più efficiente determinate operazioni su una colonna del `geometry` oppure `geography` tipo di dati (un *colonna spaziale*). In una colonna spaziale è possibile specificare più di un indice spaziale. Ciò è utile, ad esempio, per indicizzare diversi parametri della suddivisione a mosaico in una sola colonna.  
@@ -85,7 +83,7 @@ ms.locfileid: "48122351"
   
      La tabella verrà visualizzata in Progettazione tabelle.  
   
-2.  Selezionare una `geometry` o `geography` colonna per l'indice.  
+2.  Selezionare una colonna `geometry` o una colonna `geography` per l'indice.  
   
 3.  Scegliere **Indice spaziale** dal menu **Progettazione tabelle**.  
   

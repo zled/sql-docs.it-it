@@ -12,18 +12,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991304"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216809"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log delle modifiche per SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Questo log delle modifiche è per [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Per i post dettagliati sulle novità e le modifiche, vedere il [blog del team di SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+
+## <a name="ssdt-for-visual-studio-2017-1582"></a>SSDT per Visual Studio 2017 (15.8.2)
+Numero di build: 14.0.16182.0  
+Data versione: 5 novembre 2018  
+
+### <a name="whats-new"></a>Novità
+**SSIS:**
+
+È stato risolto un problema relativo alla distribuzione di progetti SSIS contenenti pacchetti con Attività script/Destinazione file flat in Azure-SSIS che impedisce l'esecuzione dei pacchetti in Azure-SSIS. 
+
+### <a name="known-issues"></a>Problemi noti:
+
+- L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente.
+- SSDT per Visual Studio 2017 (15.8.2) non supporta gli strumenti per la progettazione contenenti un'origine/destinazione Oracle/Teradata. Usare SSDT per Visual Studio 2017 (15.8).
 
 
 ## <a name="ssdt-for-visual-studio-2017-1581"></a>SSDT per Visual Studio 2017 (15.8.1)
@@ -40,6 +55,8 @@ Data di rilascio: 27 settembre 2018
 ### <a name="known-issues"></a>Problemi noti:
 
 - L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente.
+- La distribuzione di progetti SSIS con pacchetti contenenti Attività script/Destinazione file flat in Azure-SSIS impedisce l'esecuzione dei pacchetti in Azure-SSIS.
+- SSDT per Visual Studio 2017 (15.8.1) non supporta gli strumenti per la progettazione contenenti un'origine/destinazione Oracle/Teradata. Usare SSDT per Visual Studio 2017 (15.8).
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT per Visual Studio 2017 (15.8)

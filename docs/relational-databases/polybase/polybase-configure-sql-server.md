@@ -10,18 +10,18 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90b535714eea3a00ecffd2cf010187fbcd676a82
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: d2b4bb2249f0c4a6ec57c037db54c490f3066e2b
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806641"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757946"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurare PolyBase per l'accesso a dati esterni in SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire query sui dati esterni in un'altra istanza di SQL Server.
+Questo articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire query sui dati esterni in un'altra istanza di SQL Server.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -31,16 +31,16 @@ Se PolyBase non è stato installato, vedere [Installazione di PolyBase](polybase
 
 Per eseguire query sui dati da un'origine dati SQL Server, è necessario creare tabelle esterne per fare riferimento ai dati esterni. In questa sezione è disponibile codice di esempio per creare queste tabelle esterne. 
  
-È consigliabile creare le statistiche sulle colonne delle tabelle esterne, in particolare quelle usate per join, filtri e aggregazioni, per prestazioni ottimali delle query.
+Per prestazioni ottimali delle query, creare le statistiche sulle colonne delle tabelle esterne, in particolare quelle usate per join, filtri e aggregazioni.
 
-In questa sezione verranno creare questi oggetti:
+In questa sezione vengono creati i seguenti oggetti:
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
-1. Creare una chiave master nel database. Questo passaggio è necessario per crittografare il segreto delle credenziali.
+1. Creare una chiave master nel database. Una chiave master è necessaria per crittografare il segreto delle credenziali.
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -73,14 +73,14 @@ In questa sezione verranno creare questi oggetti:
 
      ```
 
-1. Creare schemi per i dati esterni
+1. Creare schemi per i dati esterni.
 
      ```sql
      CREATE SCHEMA sqlserver;
      GO
      ```
 
-1.  Creare tabelle esterne che rappresentano i dati archiviati nell'istanza di SQL Server esterna [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+1.  Creare tabelle esterne che rappresentano i dati archiviati in un'istanza di SQL Server esterna con [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
      ```sql
      /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
@@ -110,7 +110,7 @@ In questa sezione verranno creare questi oggetti:
 
 ## <a name="sql-server-connector-compatible-types"></a>Tipi compatibili con il connettore SQL Server
 
-È possibile stabilire una connessione ad altre origini dati che riconosca una connessione di SQL Server. Mediante il connettore PolyBase di SQL Server è possibile creare una tabella esterna di **Azure SQL Data Warehouse e del Database SQL di Azure**. Questa operazione viene eseguita seguendo gli stessi passaggi elencati in precedenza. Assicurarsi che le credenziali dell'ambito database, l'indirizzo del server, la porta e la stringa del percorso siano correlati a quelli dell'origine dati compatibile a cui si desidera connettersi.
+È possibile stabilire una connessione ad altre origini dati che riconosca una connessione di SQL Server. Usare il connettore PolyBase di SQL Server per creare una tabella esterna di Azure SQL Data Warehouse e del Database SQL di Azure. A questo scopo, seguire gli stessi passaggi elencati in precedenza. Assicurarsi che le credenziali dell'ambito database, l'indirizzo del server, la porta e la stringa del percorso siano correlati a quelli dell'origine dati compatibile a cui si desidera connettersi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

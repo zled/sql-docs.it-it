@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbanalyze.f1
@@ -16,12 +15,12 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0c7809182a67707055cb595ed2dc9a51a0067b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 491d87d9c37026fbdac57dde8144a2226f93bbb2
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076051"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032468"
 ---
 # <a name="perform-knowledge-discovery"></a>Esecuzione dell'individuazione delle informazioni
   In questo argomento viene descritto come compilare una Knowledge Base tramite l'individuazione delle informazioni. Durante il processo di individuazione in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vengono analizzati i dati in un'origine dati di esempio tramite un processo computerizzato e vengono aggiunte le informazioni ottenute dalla Knowledge Base. Tali informazioni possono essere modificate e migliorate nel passaggio **Gestisci valori di dominio** dell'attività di individuazione delle informazioni o nell'attività di gestione del dominio.  
@@ -67,12 +66,12 @@ ms.locfileid: "48076051"
   
 4.  Nella tabella **Mapping** eseguire il mapping di ogni colonna di origine su cui si desidera eseguire l'individuazione delle informazioni a un dominio nella Knowledge Base, come segue:  
   
-    1.  Creare un mapping selezionando una colonna di origine nell'elenco a discesa per la **Colonna di origine** di una riga vuota, quindi selezionando un dominio nell'elenco a discesa per la colonna **Dominio** nella stessa riga, se esiste un dominio. Se non esiste alcun dominio, fare clic su **Crea un dominio** o **Crea un dominio composito** per crearne uno. Per ulteriori informazioni, vedere [Creare una regola di dominio](../../2014/data-quality-services/create-a-domain-rule.md) o [Crea un dominio composito](../../2014/data-quality-services/create-a-composite-domain.md).  
+    1.  Creare un mapping selezionando una colonna di origine nell'elenco a discesa per la **Colonna di origine** di una riga vuota, quindi selezionando un dominio nell'elenco a discesa per la colonna **Dominio** nella stessa riga, se esiste un dominio. Se non esiste alcun dominio, fare clic su **Crea un dominio** o **Crea un dominio composito** per crearne uno. Per ulteriori informazioni, vedere [Create a Domain Rule](../../2014/data-quality-services/create-a-domain-rule.md) o [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md).  
   
     2.  Ripetere il passaggio precedente per ogni mapping. Per modificare il numero di righe nella tabella, fare clic su **Aggiungi un mapping colonne**o selezionare una riga e fare clic su **Rimuovi mapping colonne selezionate**. Se si fa clic su **Rimuovi mapping colonne selezionate** quando è selezionata una riga popolata, la riga selezionata verrà eliminata anche se è presente una riga non popolata.  
   
         > [!NOTE]  
-        >  È possibile eseguire il mapping dei dati di origine a un dominio DQS per eseguire l'individuazione di informazioni solo se il tipo di dati di origine è supportato in DQS e corrisponde al tipo di dati del dominio DQS. Per ulteriori informazioni sui tipi di dati supportati, vedere [Tipi di dati di SQL Server e SSIS supportati per i domini DQS](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+        >  È possibile eseguire il mapping dei dati di origine a un dominio DQS per eseguire l'individuazione di informazioni solo se il tipo di dati di origine è supportato in DQS e corrisponde al tipo di dati del dominio DQS. Per ulteriori informazioni sui tipi di dati supportati, vedere [Supported SQL Server and SSIS Data Types for DQS Domains](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
     3.  Fare clic su **Visualizza/Seleziona domini compositi** per visualizzare i domini compositi definiti. Se non è stato definito alcun dominio composito, il controllo non sarà disponibile.  
   
@@ -172,14 +171,14 @@ ms.locfileid: "48076051"
   
     -   **Imposta il valore di dominio selezionato come valore iniziale del gruppo**: modificare il valore iniziale del gruppo selezionando un valore nel gruppo non designato come valore iniziale, quindi facendo clic sul pulsante **Imposta il valore di dominio selezionato come valore iniziale del gruppo** .  
   
-6.  **Correttore ortografico**: se è stato abilitato il Correttore ortografico nella pagina Proprietà dominio, trovare tutti i valori con una sottolineatura rossa ondulata, l'indicazione che il Correttore ortografico sta suggerendo una correzione. Fare clic con il pulsante destro del mouse sul valore con la sottolineatura e selezionare una correzione, se appropriata. Il tipo di valore diventa (o rimane) in errore e la correzione verrà aggiunta alla colonna **Correggi in** . Fare clic sulla freccia in giù per visualizzare ulteriori correzioni proposte. Immettere una correzione manualmente per aggiungerla al dizionario del Correttore ortografico e poterla selezionare come correzione. Per ulteriori informazioni, vedere [Utilizzare il correttore ortografico DQS](../../2014/data-quality-services/use-the-dqs-speller.md) e [Imposta proprietà del dominio](../../2014/data-quality-services/set-domain-properties.md).  
+6.  **Correttore ortografico**: se è stato abilitato il Correttore ortografico nella pagina Proprietà dominio, trovare tutti i valori con una sottolineatura rossa ondulata, l'indicazione che il Correttore ortografico sta suggerendo una correzione. Fare clic con il pulsante destro del mouse sul valore con la sottolineatura e selezionare una correzione, se appropriata. Il tipo di valore diventa (o rimane) in errore e la correzione verrà aggiunta alla colonna **Correggi in** . Fare clic sulla freccia in giù per visualizzare ulteriori correzioni proposte. Immettere una correzione manualmente per aggiungerla al dizionario del Correttore ortografico e poterla selezionare come correzione. Per ulteriori informazioni, vedere [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) e [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Per utilizzare il Correttore ortografico, è possibile abilitarlo nella pagina **Proprietà dominio** o, se è disabilitato nella pagina **Proprietà dominio** , è possibile fare clic sull'icona **Abilita/Disabilita correttore ortografico** nella pagina **Gestisci risultati individuazione dati** per abilitarlo in questa pagina.  
   
 7.  **Aggiungi nuovo valore di dominio**: aggiungere un nuovo valore al dominio facendo clic sul pulsante **Aggiungi nuovo valore di dominio** per aggiungere una riga alla fine della tabella. Dopo avere immesso un valore, la riga verrà riposizionata in ordine alfabetico.  
   
-8.  **Importa valori di dominio da Excel**: aggiungere nuovi valori da un foglio di calcolo di Excel facendo clic sulla freccia in giù per l'icona **Importa valori** , quindi selezionando **Importa valori di dominio da Excel**. Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Per altre informazioni, vedere [Importare i valori da un file di Excel in un dominio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
+8.  **Importa valori di dominio da Excel**: aggiungere nuovi valori da un foglio di calcolo di Excel facendo clic sulla freccia in giù per l'icona **Importa valori** , quindi selezionando **Importa valori di dominio da Excel**. Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Per altre informazioni, vedere [Import Values from an Excel File into a Domain](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
   
 9. **Importa valori progetto**: aggiungere nuovi valori da un progetto Data Quality facendo clic sulla freccia in giù per l'icona **Importa valori** , quindi selezionando **Importa valori progetto**. Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Selezionare il progetto da cui si desidera importare i valori, quindi fare clic su **OK**. Verranno visualizzati i valori importati. Scegliere **Fine**. Per ulteriori informazioni, vedere Importare i valori di progetto in un dominio.  
   

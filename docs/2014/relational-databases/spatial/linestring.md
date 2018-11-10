@@ -1,11 +1,9 @@
 ---
 title: LineString | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
@@ -14,18 +12,18 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b03537992a8f6c63c36ffb079f661aee171439be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2efe03bcff016070c9017068c62e823dd36d497a
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059751"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018476"
 ---
 # <a name="linestring"></a>LineString
   `LineString` indica un oggetto unidimensionale che rappresenta una sequenza di punti e i segmenti lineari che li connettono.  
   
 ## <a name="linestring-instances"></a>Istanze LineString  
- La figura seguente mostra esempi di `LineString` istanze.  
+ Nella figura seguente vengono illustrati esempi di istanze `LineString`.  
   
  ![Esempi di istanze di geometria LineString](../../database-engine/media/linestring.gif "Esempi di istanze di geometria LineString")  
   
@@ -33,7 +31,7 @@ ms.locfileid: "48059751"
   
 -   La figura 1 rappresenta un'istanza `LineString` semplice non chiusa.  
   
--   Figura 2 rappresenta un'istanza non semplice, non chiusa `LineString` istanza.  
+-   La figura 2 rappresenta un'istanza `LineString` non semplice e non chiusa.  
   
 -   La figura 3 rappresenta un'istanza `LineString` semplice chiusa che, di conseguenza, è un anello.  
   
@@ -50,20 +48,20 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
   
  In `@g3` viene illustrato che un'istanza `LineString` può essere accettata, ma non è valida.  
   
- Nell'esempio `LineString` istanza non viene accettata. Verrà generata un'eccezione `System.FormatException`.  
+ L'istanza `LineString` seguente non viene accettata. Verrà generata un'eccezione `System.FormatException`.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>Istanze valide  
- Per un `LineString` istanza sia valida deve soddisfare i criteri seguenti.  
+ Per poter essere valida, un'istanza `LineString` deve soddisfare i criteri seguenti.  
   
-1.  Il `LineString` istanza deve essere accettata.  
+1.  L'istanza `LineString` deve essere accettata.  
   
 2.  Se un'istanza `LineString` non è vuota, deve contenere almeno due punti distinti.  
   
-3.  Il `LineString` istanza non può sovrapporsi a un intervallo di due o più punti consecutivi.  
+3.  L'istanza `LineString` non può sovrapporti a un intervallo di due o più punti consecutivi.  
   
  Le istanze `LineString` seguenti sono valide.  
   
@@ -76,7 +74,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 ```  
   
- Nell'esempio `LineString` istanze nejsou platné.  
+ Le istanze `LineString` seguenti non sono valide.  
   
 ```  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  

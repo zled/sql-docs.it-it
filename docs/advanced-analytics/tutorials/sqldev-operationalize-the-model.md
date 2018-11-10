@@ -1,21 +1,21 @@
 ---
 title: Lezione 4 dei risultati di potenziali stima mediante modelli R (SQL Server Machine Learning Services) | Microsoft Docs
-description: Esercitazione che illustra come incorporare R in SQL Server stored procedure e funzioni T-SQL
+description: Esercitazione che illustra come rendere operativi script R incorporato in SQL Server stored procedure con funzioni di T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/19/2018
+ms.date: 10/30/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 07c99279fdb511f1c6f59e15f83644a89642c176
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 8485cd4e24e067cf6a4e6feef0c39c3c3051a166
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462127"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032538"
 ---
-# <a name="lesson-4-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lezione 4: Stimare i possibili risultati usando un modello R in una stored procedure
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lezione 4: Eseguire stime usando R incorporato in una stored procedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo fa parte di un'esercitazione per sviluppatori SQL su come usare R in SQL Server.
@@ -30,10 +30,10 @@ In primo luogo si prenderà in analisi il funzionamento generale della valutazio
 
 ## <a name="basic-scoring"></a>Valutazione di base
 
-La stored procedure **PredictTip** illustra la sintassi di base per il wrapping di una chiamata di stima in una stored procedure.
+La stored procedure **RxPredict** viene illustrata la sintassi di base per il wrapping di una chiamata rxPredict RevoScaleR in una stored procedure.
 
 ```SQL
-CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
+CREATE PROCEDURE [dbo].[RxPredict] @inquery nvarchar(max) 
 AS 
 BEGIN 
   
@@ -64,11 +64,11 @@ GO
   
 + Il valore restituito per il `rxPredict` funzione è un **float** che rappresenta la probabilità che il driver Ottiene un suggerimento di qualsiasi quantità.
 
-## <a name="batch-scoring"></a>Punteggio batch
+## <a name="batch-scoring-a-list-of-predictions"></a>(Un elenco di stime) di assegnazione punteggio batch
 
-Ora si procede ad analizzare il funzionamento della valutazione batch.
+Uno scenario più comune consiste nel generare stime per più osservazioni in modalità batch. In questo passaggio vediamo come funziona il punteggio batch.
 
-1.  Per iniziare si ottiene un set di dati di input più piccolo sul quale lavorare. Questa query crea un elenco "top 10" delle corse, con il numero di passeggeri e altre funzionalità necessarie per effettuare una stima.
+1.  Iniziare recuperando un set di dati di input per lavorare con più piccolo. Questa query crea un elenco "top 10" delle corse, con il numero di passeggeri e altre funzionalità necessarie per effettuare una stima.
   
     ```SQL
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
@@ -93,13 +93,11 @@ Ora si procede ad analizzare il funzionamento della valutazione batch.
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    Questa query può essere utilizzata come input per la stored procedure **PredictTipMode**, fornito come parte del download.
-
-2. È opportuno esaminare il codice della stored procedure **PredictTipMode** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Creare una stored procedure denominata **RxPredictBatchOutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[RxPredictBatchOutput]  ******/
+    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -127,26 +125,28 @@ Ora si procede ad analizzare il funzionamento della valutazione batch.
     SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
 
     -- Call the stored procedure for scoring and pass the input data
-    EXEC [dbo].[PredictTip] @inquery = @query_string;
+    EXEC [dbo].[RxPredictBatchOutput] @inquery = @query_string;
     ```
   
-4. La stored procedure restituisce una serie di valori che rappresentano la stima per ognuna delle corse primi 10. Tuttavia, le corse principali sono anche un singolo passeggero e con una distanza relativamente breve, per i quali il driver è improbabile che riceverà una Mancia.
+La stored procedure restituisce una serie di valori che rappresentano la stima per ognuna delle corse primi 10. Tuttavia, le corse principali sono anche un singolo passeggero e con una distanza relativamente breve, per i quali il driver è improbabile che riceverà una Mancia.
   
 
 > [!TIP]
 > 
 > Invece di restituire solo il "Mancia Sì" e i risultati di tipo "senza Mancia", è possibile restituire anche il punteggio di probabilità per la stima e quindi applicare una clausola WHERE per il _punteggio_ valori di colonna da classificare il punteggio come "Mancia probabile" o " Mancia poco probabile", usando un valore di soglia, ad esempio 0.5 o 0.7. Questo passaggio non è incluso nella stored procedure, ma la sua implementazione non sarebbe difficile.
 
-## <a name="single-row-scoring"></a>Singola riga e di assegnazione dei punteggi
+## <a name="single-row-scoring-of-multiple-inputs"></a>Riga singola assegnazione dei punteggi di più input
 
-A volte risulta utile passare valori singoli da un'applicazione e ottenere un risultato singolo basato su tali valori. Ad esempio è possibile impostare un foglio di lavoro di Excel, un'applicazione web o un report di Reporting Services in modo che chiami la stored procedure e renda disponibili input digitati o selezionati dagli utenti.
+Talvolta si desidera passare più valori di input e ottenere una sola stima in base a tali valori. Ad esempio, è possibile impostare backup di un foglio di lavoro di Excel, applicazione web o report di Reporting Services per chiamare la stored procedure e renda disponibili input digitati o selezionati dagli utenti da tali applicazioni.
 
-In questa sezione descrive come creare stime singole usando una stored procedure.
+In questa sezione descrive come creare stime singole usando una stored procedure che accetta più input, ad esempio il numero di passeggeri, distanza della corsa e così via. La stored procedure crea un punteggio in base al modello R archiviato in precedenza.
+  
+Se si chiama la stored procedure da un'applicazione esterna, assicurarsi che i dati soddisfino i requisiti del modello R. Ciò può includere la verifica che i dati di input siano sottoponibili a cast o convertibili in un tipo di dati di R o la convalida del tipo di dati e della lunghezza dei dati. 
 
-1. È opportuno esaminare il codice della stored procedure **PredictTipSingleMode**, che è incluso come parte del download.
+1. Creare una stored procedure **RxPredictSingleRow**.
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
     AS
     BEGIN
     DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
@@ -165,19 +165,13 @@ In questa sezione descrive come creare stime singole usando una stored procedure
       WITH RESULT SETS ((Score float));  
     END
     ```
-  
-    - Questa stored procedure accetta come input più valori singoli, quali il numero di passeggeri, la distanza della corsa e così via.
-  
-        Se si chiama la stored procedure da un'applicazione esterna, assicurarsi che i dati soddisfino i requisiti del modello R. Ciò può includere la verifica che i dati di input siano sottoponibili a cast o convertibili in un tipo di dati di R o la convalida del tipo di dati e della lunghezza dei dati. 
-  
-    -   La stored procedure crea un punteggio in base al modello R archiviato.
-  
+
 2. Provare la stored procedure inserendo manualmente i valori.
   
     Aprire una nuova **Query** finestra e chiamare la stored procedure, fornire valori per ognuno dei parametri. I parametri rappresentano le colonne di funzionalità utilizzate dal modello e sono necessari.
 
     ```
-    EXEC [dbo].[PredictTipSingleMode] @passenger_count = 0,
+    EXEC [dbo].[RxPredictSingleRow] @passenger_count = 0,
     @trip_distance = 2.5,
     @trip_time_in_secs = 631,
     @pickup_latitude = 40.763958,
@@ -189,7 +183,7 @@ In questa sezione descrive come creare stime singole usando una stored procedure
     In alternativa, usare questo formato più breve è supportato per [parametri a una stored procedure](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
     ```SQL
-    EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    EXEC [dbo].[PredictRxMultipleInputs] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 3. I risultati indicano che la probabilità di ricevere una Mancia è bassa (zero) in queste corse primi 10, poiché tutti sono un singolo passeggero e su una distanza relativamente breve.

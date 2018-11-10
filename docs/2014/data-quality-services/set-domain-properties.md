@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6076ee4d222a405fb5243e07575b01c7da0a4dde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a71a8084b2fb36135a87c24f902507a6ab790247
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190961"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030877"
 ---
 # <a name="set-domain-properties"></a>Impostare le proprietà di un dominio
   In questo argomento viene descritto come impostare le proprietà di un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -35,9 +34,9 @@ ms.locfileid: "48190961"
   
 ##  <a name="Set"></a> Impostare le proprietà di un dominio  
   
-1.  Impostare le proprietà in un dominio esistente aprendo una knowledge base nell'attività Gestione dominio (vedere [apre una Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)) e quindi selezionare il dominio appropriato nella **dominio** elenco. Per impostazione predefinita, verrà visualizzata la pagina Proprietà dominio.  
+1.  Impostare le proprietà in un dominio esistente aprendo una Knowledge Base nell'attività Gestione dominio (vedere [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)) e selezionando quindi il dominio appropriato nell'elenco **Dominio** . Per impostazione predefinita, verrà visualizzata la pagina Proprietà dominio.  
   
-2.  Impostare le proprietà in un nuovo dominio dopo averlo creato come descritto in [creare un dominio](../../2014/data-quality-services/create-a-domain.md).  
+2.  Impostare le proprietà in un nuovo dominio dopo averlo creato come descritto in [Create a Domain](../../2014/data-quality-services/create-a-domain.md).  
   
 3.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48190961"
 ###  <a name="Speller"></a> Abilita correttore ortografico  
  Se il tipo di dati è **Stringa**, fare clic per abilitare il correttore ortografico DQS per il dominio. Il correttore ortografico funziona solo sui domini con tipo di dati stringa. La casella di controllo **Abilita correttore ortografico** abilita il correttore ortografico solo per il singolo dominio associato alla casella di controllo. La casella di controllo non è valida per un dominio composito.  
   
- Il correttore ortografico propone le correzioni di sintassi e di convalida per i valori nel dominio. Per altre informazioni, vedere [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md).  
+ Il correttore ortografico propone le correzioni di sintassi e di convalida per i valori nel dominio. Per ulteriori informazioni, vedere [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md).  
   
 ###  <a name="Syntax"></a> Disabilita algoritmi di errore sintassi  
  Se il tipo di dati è **Stringa**, selezionare questa opzione per specificare di non individuare gli errori di sintassi nel dominio durante la pulizia. Selezionare questa casella di controllo quando non è importante identificare gli errori di sintassi per il dominio, ad esempio per un numero di serie. Questo controllo è disponibile solo per il tipo di dati stringa. Il controllo degli errori di sintassi non verrà eseguito nei tipi di dati non stringa.  

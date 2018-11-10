@@ -4,15 +4,15 @@ description: Informazioni su come configurare Minikube per le distribuzioni di c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 71523efb55fd1bc41927b38d2e91abc9833c73b0
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 4a3785d994b6bd40b6b808d07d5272fa7534a7fb
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050783"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221572"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Configurare Minikube per le distribuzioni di cluster di SQL Server 2019 dei big Data
 
@@ -20,7 +20,7 @@ Questo articolo descrive come configurare **minikube** in un unico computer per 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Per eseguire un cluster di Minikube per SQL Server 2019 CTP 2.0 in una configurazione del cluster SQL dei big data, è consigliabile che il computer dispone di almeno 32 GB di RAM.
+- Per eseguire un cluster di Minikube per SQL Server 2019 CTP 2.1 in una configurazione del cluster SQL dei big data, è consigliabile che il computer dispone di almeno 32 GB di RAM.
 
    > [!TIP] 
    > Se nel computer è solo il valore minimo consigliato di memoria, quindi configurare la distribuzione del cluster per avere solo 1 istanza di calcolo del pool, 1 istanza del pool di dati e istanza del pool di archiviazione di 1. Questa configurazione deve essere utilizzata solo per gli ambienti di valutazione in cui non è importante la durabilità e disponibilità dei dati. Vedere le [documentazione sulla distribuzione](deployment-guidance.md#define-environment-variables) per altre informazioni sulle variabili di ambiente da impostare per configurare il numero di repliche per i pool di dati, di calcolo di pool e i pool di archiviazione.
@@ -44,7 +44,7 @@ Questo articolo descrive come configurare **minikube** in un unico computer per 
 
 ## <a name="install-minikube"></a>Installare Minikube
 
-Installare Minikube seguendo le istruzioni per la [v0.28.2 versione](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). Il cluster di big data di SQL Server 2019 CTP 2.0 funziona solo con versione v0.24.1 e versioni successive.
+Installare Minikube seguendo le istruzioni per la [v0.28.2 versione](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). Il cluster di big data di SQL Server 2019 CTP 2.1 funziona solo con versione v0.24.1 e versioni successive.
 
 ## <a name="create-a-minikube-cluster"></a>Creare un cluster di Minikube
 
@@ -74,4 +74,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 I passaggi descritti in questo articolo è configurato un cluster di Minikube. Il passaggio successivo consiste nel distribuire il cluster di big data di SQL Server 2019. Per istruzioni, vedere l'articolo seguente:
 
-[Distribuire SQL Server 2019 CTP 2.0 in Kubernetes](deployment-guidance.md#deploy)
+[Distribuire SQL Server 2019 CTP 2.1 in Kubernetes](deployment-guidance.md#deploy)

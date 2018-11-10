@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4bfeaa97f395ea62d27ddb7831f5a0102488369
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 759c2eb56bb437f17c06229b7b6a85f22b040319
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051551"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031798"
 ---
 # <a name="data-matching"></a>Corrispondenza di dati
   Il processo di corrispondenza tra dati [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consente di ridurre la duplicazione dei dati e di migliorarne l'accuratezza in un'origine dati. Il processo analizza il livello di duplicazione in tutti i record di una singola origine dati, restituendo le probabilità ponderate di una corrispondenza per ciascun set di record confrontato. È possibile quindi decidere quali record corrispondono ed eseguire le azioni appropriate sui dati di origine.  
@@ -33,7 +32,7 @@ ms.locfileid: "48051551"
   
 -   È possibile reindicizzare dati copiati dall'origine alla tabella di staging oppure non reindicizzarli, a seconda dello stato dei criteri di corrispondenza e dei dati di origine. Le prestazioni potrebbero risultare migliorate se si evita la reindicizzazione.  
   
- È possibile eseguire il processo di corrispondenza insieme agli altri processi di pulizia dei dati per migliorare la qualità generale dei dati. È inoltre possibile eseguire la deduplicazione dei dati utilizzando la funzionalità DQS incorporata in Master Data Services. Per altre informazioni, vedere [Panoramica di Master Data Services](../master-data-services/master-data-services-overview-mds.md).  
+ È possibile eseguire il processo di corrispondenza insieme agli altri processi di pulizia dei dati per migliorare la qualità generale dei dati. È inoltre possibile eseguire la deduplicazione dei dati utilizzando la funzionalità DQS incorporata in Master Data Services. Per altre informazioni, vedere [Master Data Services Overview](../master-data-services/master-data-services-overview-mds.md).  
   
  Nella figura seguente viene illustrata la modalità di individuazione delle corrispondenze tra dati in DQS:  
   

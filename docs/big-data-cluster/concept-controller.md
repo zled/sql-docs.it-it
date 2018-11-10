@@ -4,15 +4,15 @@ description: Questo articolo descrive il controller di un cluster di big data di
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cfc26567d13787671319cbbbee09bae39be126bf
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: abf8c174379ad444cd29b5115240ad7c404b2c4b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050873"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221517"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-controller"></a>Che cos'è il controller di cluster di SQL Server i big Data?
 
@@ -26,8 +26,8 @@ Il servizio controller fornisce le funzionalità di base seguenti:
 - Esporre gli strumenti di monitoraggio per osservare lo stato del cluster
 - Esporre gli strumenti di risoluzione dei problemi per rilevare e correggere problemi imprevisti
 - Gestire la sicurezza del cluster: verificare che gli endpoint cluster protetto, gestire utenti e ruoli, configurare le credenziali per la comunicazione all'interno del cluster
-- Gestire il flusso di lavoro degli aggiornamenti in modo che vengono implementate in modo sicuro (non disponibile nella versione CTP 2.0)
-- Gestire la disponibilità elevata e ripristino di emergenza per i servizi con stato nel cluster (non disponibile nella versione CTP 2.0)
+- Gestire il flusso di lavoro degli aggiornamenti in modo che vengono implementate in modo sicuro (non disponibile nella versione CTP 2.1)
+- Gestire la disponibilità elevata e ripristino di emergenza per i servizi con stato nel cluster (non disponibile nella versione CTP 2.1)
 
 ## <a name="deploying-the-controller-service"></a>Distribuzione del servizio controller
 

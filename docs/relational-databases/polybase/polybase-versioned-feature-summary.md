@@ -11,52 +11,52 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 957d8c397843f30e831dcc0a5f33943b959bac90
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: 08d0b31d5ed0be4b3d9a5e766483f14e0653343e
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226263"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757966"
 ---
 # <a name="polybase-features-and-limitations"></a>Funzionalità e limitazioni di PolyBase
 
 [!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-Riepilogo delle funzionalità di PolyBase disponibili per i prodotti e servizi di SQL Server.  
+Questo articolo rappresenta un riepilogo delle funzionalità di PolyBase disponibili per i prodotti e servizi di SQL Server.  
   
 ## <a name="feature-summary-for-product-releases"></a>Riepilogo delle funzionalità per le versioni dei prodotti
 
-Questa tabella riepiloga le funzionalità principali per PolyBase e i prodotti in cui sono disponibili.  
+Questa tabella elenca le funzionalità principali per PolyBase e i prodotti in cui sono disponibili.  
   
 ||||||
 |-|-|-|-|-|   
 |**Funzionalità**|**SQL Server 2016**|**Database SQL di Azure**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
-|Eseguire query sui dati di Hadoop con [!INCLUDE[tsql](../../includes/tsql-md.md)]|sì|no|no|sì|
-|Importare dati da Hadoop|sì|no|no|sì|
-|Esportare dati in Hadoop  |sì|no|no| sì|
-|Eseguire query, importare da ed esportare in HDInsights |no|no|no|no
-|Eseguire il push down dei calcoli delle query in Hadoop|sì|no|no|sì|  
-|Importare dati dall'archivio BLOB di Azure|sì|no|sì|sì| 
-|Esportare dati nell'archivio BLOB di Azure|sì|no|sì|sì|  
-|Importare dati da Azure Data Lake Store|no|no|sì|no|    
-|Esportare dati da Azure Data Lake Store|no|no|sì|no|
-|Eseguire query PolyBase da strumenti di Business Intelligence di Microsoft|sì|no|sì|sì|   
+|Eseguire query sui dati di Hadoop con [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|no|no|Sì|
+|Importare dati da Hadoop|Sì|no|no|Sì|
+|Esportare dati in Hadoop  |Sì|no|no| Sì|
+|Eseguire query, importare da Azure HDInsight |no|no|no|no
+|Eseguire il push down dei calcoli delle query in Hadoop|Sì|no|no|Sì|  
+|Importare dati dall'archivio BLOB di Azure|Sì|no|Sì|Sì| 
+|Esportare dati nell'archivio BLOB di Azure|Sì|no|Sì|Sì|  
+|Importare dati da Azure Data Lake Store|no|no|Sì|no|    
+|Esportare dati da Azure Data Lake Store|no|no|Sì|no|
+|Eseguire query PolyBase da strumenti BI di Microsoft|Sì|no|Sì|Sì|   
 
-## <a name="pushdown-computation-supported-t-sql-operators"></a>Operatori T-SQL supportati per il calcolo della distribuzione dinamica
+## <a name="pushdown-computation-supported-by-t-sql-operators"></a>Calcolo della distribuzione dinamica supportata da operatori T-SQL
 
-In SQL Server e APS, non tutti gli operatori T-SQL possono essere distribuiti sul cluster hadoop. Nella tabella seguente sono elencati tutti gli operatori supportati e un subset degli operatori non supportati. 
+In SQL Server e APS, non tutti gli operatori T-SQL possono essere distribuiti sul cluster Hadoop. Nella tabella seguente sono elencati tutti gli operatori supportati e un subset degli operatori non supportati. 
 
 ||||
 |-|-|-| 
 |**Tipo di operatore**|**Distribuibile su hadoop**|**Distribuibile nell'archiviazione BLOB**|
-|Proiezioni di colonna|sì|no|
-|Predicati|sì|no|
-|Aggregazioni|parziale|no|
+|Proiezioni di colonna|Sì|no|
+|Predicati|Sì|no|
+|Aggregazioni|Partial|no|
 |Crea un join tra le tabelle esterne|no|no|
 |Crea un join tra le tabelle esterne e locali|no|no|
 |Ordina|no|no|
 
-Aggregazione parziale significa che deve verificarsi un'aggregazione finale una volta che i dati raggiungono SQL Server, ma che si verifica una parte dell'aggregazione in Hadoop. Si tratta di un metodo comune di calcolo delle aggregazioni nei sistemi con la funzionalità di elaborazione parallela massiva.  
+Aggregazione parziale significa che deve verificarsi un'aggregazione finale dopo che i dati raggiungono SQL Server. Tuttavia, una parte dell'aggregazione viene eseguita in Hadoop. Si tratta di un metodo comune di calcolo delle aggregazioni nei sistemi con la funzionalità di elaborazione parallela massiva.  
 
 ## <a name="known-limitations"></a>Limitazioni note
 
@@ -64,7 +64,7 @@ PolyBase include le limitazioni seguenti:
 
 - Le dimensioni massime consentite per la riga, inclusa la lunghezza totale delle colonne di lunghezza variabile, non possono superare 32 kB in SQL Server o 1 MB in Azure SQL Data Warehouse.
 
-- In caso di esportazione di dati in un file in formato ORC da SQL Server o Azure SQL Data Warehouse le colonne contenenti molto testo possono essere limitate a un massimo di 50 colonne a causa degli errori Java di memoria insufficiente. Per risolvere questo problema, esportare solo un subset delle colonne.
+- Quando si esportano dati in un formato file ORC da SQL Server o SQL Data Warehouse, le colonne con grandi quantità di testo potrebbero essere limitate. Possono essere limitate a 50 colonne a causa di messaggi di errore di memoria insufficiente di Java. Per risolvere questo problema, esportare solo un subset delle colonne.
 
 - PolyBase non può connettersi a un'istanza di Hortonworks se Knox è abilitata.
 
@@ -73,7 +73,7 @@ PolyBase include le limitazioni seguenti:
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 || =sqlallproducts-allversions"
 
-- [PolyBase non viene installato quando si aggiunge un nodo a un cluster di failover di SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+- [PolyBase non viene installato quando si aggiunge un nodo a un cluster di failover di SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster).
 
 ::: moniker-end
 

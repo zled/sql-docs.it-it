@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d60defaef135a87669b9f87257e0856f0c1dca2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d10d1abbd0ad54879b2a524d526b06319793c8f5
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079673"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019016"
 ---
 # <a name="upgrade-master-data-services"></a>Aggiornare Master Data Services
   Esistono quattro scenari di aggiornamento a Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Scegliere lo scenario più appropriato alla propria situazione.  
@@ -34,7 +33,7 @@ ms.locfileid: "48079673"
 > -   Eseguire il backup del database prima di effettuare qualsiasi aggiornamento.  
 > -   Con il processo di aggiornamento vengono ricreate le stored procedure e le tabelle aggiornate utilizzate da [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Le personalizzazioni apportate a questi componenti potrebbero andare perse.  
 > -   I pacchetti di distribuzione di modelli possono essere utilizzati solo nell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata per crearli. Non è possibile distribuire pacchetti di distribuzione di modelli creati in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-> -   È possibile continuare a usare il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versione SP1 di Master Data Services componente aggiuntivo per Excel dopo l'aggiornamento di Master Data Services e Data Quality Services per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Tuttavia, una versione precedente del componente aggiuntivo Master Data Services per Excel non funzionerà dopo l'aggiornamento a SQL Server 2014 CTP2. È possibile scaricare il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versione SP1 di Master Data Services componente aggiuntivo per Excel dal [qui](http://go.microsoft.com/fwlink/?LinkId=328664).  
+> -   È possibile continuare a usare la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del componente aggiuntivo Master Data Services per Excel dopo l'aggiornamento di Master Data Services e di Data Quality Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Tuttavia, una versione precedente del componente aggiuntivo Master Data Services per Excel non funzionerà dopo l'aggiornamento a SQL Server 2014 CTP2. È possibile scaricare la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del componente aggiuntivo Master Data Services per Excel da [qui](http://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ##  <a name="noengine"></a> Aggiornare senza aggiornamento del motore di database  
  Questo scenario può essere considerato un'installazione side-by-side, perché entrambe [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vengono installati in parallelo, nello stesso computer o computer separati.  
@@ -301,7 +300,7 @@ ms.locfileid: "48079673"
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
  **Problema:** quando si apre la [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oppure [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] viene visualizzata l'applicazione web, un messaggio di errore "versione del client non è compatibile con la versione del database".  
   
- **Soluzione:** questo problema si verifica quando un [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oppure [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] applicazione web gestione dati Master tenta di accedere a un database che è stato aggiornato a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Master Data Services. È necessario quindi utilizzare un'applicazione Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Soluzione:** questo problema si verifica quando un [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oppure [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] applicazione web gestione dati Master tenta di accedere a un database che è stato aggiornato a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Master Data Services. È necessario quindi utilizzare un'applicazione Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  Questo problema si può verificare anche qualora non si arresti e riavvii il **pool di applicazioni MDS** in IIS in caso di aggiornamento dello schema del database MDS. Riavviare il **pool di applicazioni MDS** per correggere il problema.  
   

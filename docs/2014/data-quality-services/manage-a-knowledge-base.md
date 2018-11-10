@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8a7140e26bfb228234e692c3f1665aba070a32e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93f502259f3de895a674a1fd26d94436277cbaed
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107881"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031838"
 ---
 # <a name="manage-a-knowledge-base"></a>Gestire una Knowledge Base
   In questo argomento viene descritto come eseguire le funzioni di gestione su una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). È possibile eliminare una Knowledge Base, sbloccarla, annullare le modifiche apportatevi, rinominarla e visualizzarne le proprietà.  
@@ -43,9 +42,9 @@ ms.locfileid: "48107881"
   
     1.  **Apri**: fare clic per aprire la Knowledge Base nell'attività selezionata nel riquadro **Seleziona attività** .  
   
-    2.  **Sblocca**: è possibile sbloccare la Knowledge Base se si è l'utente che ha utilizzato la Knowledge Base in uno dei passaggi dell'attività di gestione del dominio, individuazione delle informazioni e criteri di corrispondenza, e l'ha chiusa. Se si sblocca la Knowledge Base, un altro utente potrà aprirla e utilizzarla. Questo comando non è disponibile se la Knowledge Base non si trova in uno stato di un'attività. Per altre informazioni, vedere [apre una Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
+    2.  **Sblocca**: è possibile sbloccare la Knowledge Base se si è l'utente che ha utilizzato la Knowledge Base in uno dei passaggi dell'attività di gestione del dominio, individuazione delle informazioni e criteri di corrispondenza, e l'ha chiusa. Se si sblocca la Knowledge Base, un altro utente potrà aprirla e utilizzarla. Questo comando non è disponibile se la Knowledge Base non si trova in uno stato di un'attività. Per altre informazioni, vedere [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
-    3.  **Annulla modifiche apportate**: fare clic quando la Knowledge Base si trova in uno stato di elaborazione, indicato con una voce nel campo Stato della tabella. Questo comando non è disponibile se la Knowledge Base non si trova in uno stato di un'attività e se la Knowledge Base è bloccata. Per altre informazioni, vedere [apre una Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
+    3.  **Annulla modifiche apportate**: fare clic quando la Knowledge Base si trova in uno stato di elaborazione, indicato con una voce nel campo Stato della tabella. Questo comando non è disponibile se la Knowledge Base non si trova in uno stato di un'attività e se la Knowledge Base è bloccata. Per altre informazioni, vedere [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
     4.  **Rinomina**: fare clic per potere modificare il campo della tabella per la Knowledge Base selezionata. Modificare il nome, quindi fare clic sulla Knowledge Base e nel campo per accettare la modifica del nome.  
   

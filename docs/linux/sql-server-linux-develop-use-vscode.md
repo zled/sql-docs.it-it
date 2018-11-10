@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: 7775ece865eea62aad52f1c942c522ad21ed1108
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1ae9056ecbaf158b275798d69d691ae64e6ef06
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686619"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033628"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Usare Visual Studio Code per creare ed eseguire script Transact-SQL per SQL Server
 
@@ -250,7 +250,7 @@ I passaggi seguenti illustrano come connettersi a SQL Server con Visual Studio C
 
 In uno scenario reale, è possibile creare uno script che è necessario salvare ed eseguire successiva (per l'amministrazione o come parte di un progetto di sviluppo più grande). In questo caso, è possibile salvare lo script con un **con estensione SQL** estensione.
 
-Se si ha familiarità con T-SQL, vedere [esercitazione: scrittura di istruzioni Transact-SQL] e il [Riferimento Transact-SQL (motore di Database)].
+Se non si ha familiarità con T-SQL, vedere [Esercitazione: Scrittura di istruzioni Transact-SQL] (Esercitazione: Scrittura di istruzioni Transact-SQL) e [Riferimento Transact-SQL (motore di Database)] (Guida di riferimento a Transact-SQL (Motore di database)).
 
 Per altre informazioni sull'utilizzo o aggiunta come contributo all'estensione mssql, vedere [nel wiki di progetto di estensione mssql].
 

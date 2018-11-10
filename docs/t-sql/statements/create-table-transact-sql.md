@@ -47,17 +47,20 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2d503a4c136bbdae2142f232cf96e2e83067c945
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 47e81b6b7ad40810a643244eabd47292e685d61b
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461156"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970842"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Crea una nuova tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+> [!div class="nextstepaction"]
+> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Crea una nuova tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 > [!NOTE]   
 >  Per la sintassi di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vedere [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
@@ -1048,7 +1051,7 @@ Le tabelle temporanee globali per [!INCLUDE[ssNoVersion](../../includes/ssnovers
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supporta le tabelle temporanee globali archiviate a loro volta in tempdb e con ambito a livello di database. Questo significa che le tabelle temporanee globali vengono condivise per le sessioni di tutti gli utenti all'interno dello stesso [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Le sessioni utente da altri database non possono accedere alle tabelle temporanee globali.
 
-Le tabelle temporanee globali per il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] seguono la stessa sintassi e la stessa semantica usate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le tabelle temporanee. Analogamente, le stored procedure temporanee globali hanno un ambito limitato a livello di database nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Anche le tabelle temporanee locali (avviate con # table_name) sono supportate per il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e seguono la stessa sintassi e la stessa semantica usate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Vedere la sezione precedente relativa alle [tabelle temporanee](#temporary-tables).  
+Le tabelle temporanee globali per il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] seguono la stessa sintassi e la stessa semantica usate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le tabelle temporanee. Analogamente, le stored procedure temporanee globali hanno un ambito limitato a livello di database nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Anche le tabelle temporanee locali (avviate con # table_name) sono supportate per il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e seguono la stessa sintassi e la stessa semantica usate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Vedere la sezione precedente relativa alle [tabelle temporanee](#temporary-tables).  
 
 > [!IMPORTANT]
 > Questa funzionalità è disponibile per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

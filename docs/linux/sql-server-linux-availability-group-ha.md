@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 22178bb26309bba1529189e728bde3e5a26bab0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798939"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031024"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità
 
@@ -62,8 +62,8 @@ Un gruppo di disponibilità con tre repliche sincrone può fornire la protezione
 | |scalabilità in lettura|Disponibilità elevata & </br> protezione dei dati | Protezione dei dati
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|Interruzione primaria | Failover manuale. Potrebbe verificarsi la perdita di dati. Nuova replica primaria è R / w. |Failover automatico. Nuova replica primaria è R / w. |Failover automatico. Nuovo database primario non è disponibile per le transazioni utente fino a quando i database primario viene ripristinato e join di gruppo di disponibilità secondario. 
-|Interruzione di una replica secondaria  | La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce. |La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce anche. | Database primario non è disponibile per le transazioni utente. 
+|Interruzione primaria | Failover manuale. Potrebbe verificarsi la perdita di dati. Nuova replica primaria è R / w. |Failover automatico. Nuova replica primaria è R / w. |Failover automatico. Nuovo database primario non è disponibile per le transazioni utente fino a quando i database primario viene ripristinato e join di gruppo di disponibilità secondario. 
+|Interruzione di una replica secondaria  | La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce. |La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce anche. | Database primario non è disponibile per le transazioni utente. 
 <sup>*</sup> Impostazione predefinita
 
 <a name="twoSynch"></a>
@@ -80,7 +80,7 @@ Un gruppo di disponibilità con due repliche sincrone fornisce scalabilità in l
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Interruzione primaria | Failover manuale. Potrebbe verificarsi la perdita di dati. Nuova replica primaria è R / w.| Failover automatico. Nuovo database primario non è disponibile per le transazioni utente fino a quando i database primario viene ripristinato e join di gruppo di disponibilità secondario.
-|Interruzione di una replica secondaria  |La replica primaria è L/S, esecuzione esposta alla perdita di dati. |Database primario non è disponibile per le transazioni utente fino al recupero della replica secondaria.
+|Interruzione di una replica secondaria  |La replica primaria è L/S, esecuzione esposta alla perdita di dati. |Database primario non è disponibile per le transazioni utente fino al recupero della replica secondaria.
 <sup>*</sup> Impostazione predefinita
 
 >[!NOTE]
@@ -108,9 +108,9 @@ Il valore predefinito per `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` è 0. La
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Interruzione primaria | Failover automatico. Nuova replica primaria è R / w. | Failover automatico. Nuovo database primario non è disponibile per le transazioni utente. 
-|Interruzione di servizio di replica secondaria | Replica primaria è L/S, esecuzione esposta alla perdita di dati (se primario ha esito negativo e non può essere ripristinato). Nessun failover automatico se l'area primaria non riesce anche. | Database primario non è disponibile per le transazioni utente. Nessuna replica per eseguire il failover se l'area primaria non riesce. 
-|Interruzione di servizio di configurazione solo replica | La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce anche. | La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce anche. 
-|Database secondario sincrono + configurazione solo un'interruzione di replica| Database primario non è disponibile per le transazioni utente. Nessun failover automatico. | Database primario non è disponibile per le transazioni utente. Per eseguire il failover se nessuna replica primario si verifica un errore anche. 
+|Interruzione di servizio di replica secondaria | Replica primaria è L/S, esecuzione esposta alla perdita di dati (se primario ha esito negativo e non può essere ripristinato). Nessun failover automatico se l'area primaria non riesce anche. | Database primario non è disponibile per le transazioni utente. Nessuna replica per eseguire il failover se l'area primaria non riesce. 
+|Interruzione di servizio di configurazione solo replica | La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce anche. | La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce anche. 
+|Database secondario sincrono + configurazione solo un'interruzione di replica| Database primario non è disponibile per le transazioni utente. Nessun failover automatico. | Database primario non è disponibile per le transazioni utente. Per eseguire il failover se nessuna replica primario si verifica un errore anche. 
 <sup>*</sup> Impostazione predefinita
 
 >[!NOTE]

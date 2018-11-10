@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 623db4fff3bbafeb0da09899527406b0d4686181
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ddffe0e468adcc004a8cb78a5f083a58dcf0c8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170981"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032120"
 ---
 # <a name="data-quality-services-concepts"></a>Concetti di Data Quality Services
   In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) nell'ambito della gestione delle informazioni, dei progetti Data Quality e dell'amministrazione della qualità dei dati.  
@@ -34,13 +33,13 @@ ms.locfileid: "48170981"
   
  **Criteri di abbinamento**  
   
- I criteri di corrispondenza contengono le regole di corrispondenza utilizzate per eseguire la deduplicazione dei dati. Il processo dei criteri di corrispondenza consente di creare le regole di corrispondenza, di ottimizzarle in base ai risultati corrispondenti e ai dati di profiling e di aggiungere i criteri alla Knowledge Base. Per altre informazioni, vedere [Data Matching](../../2014/data-quality-services/data-matching.md).  
+ I criteri di corrispondenza contengono le regole di corrispondenza utilizzate per eseguire la deduplicazione dei dati. Il processo dei criteri di corrispondenza consente di creare le regole di corrispondenza, di ottimizzarle in base ai risultati corrispondenti e ai dati di profiling e di aggiungere i criteri alla Knowledge Base. Per altre informazioni, vedere [Corrispondenza di dati](../../2014/data-quality-services/data-matching.md).  
   
  **Servizi dati di riferimento**  
   
  È possibile utilizzare i dati di riferimento per convalidare, correggere e migliorare i dati, sfruttando i servizi di società che garantiscono la qualità dei dati di riferimento. È possibile utilizzare i servizi di Windows Azure MarketPlace per connettersi ai provider di dati di riferimento. In alternativa, è possibile utilizzare una connessione diretta a un provider. Per altre informazioni, vedere [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
- Per altre informazioni sulla gestione della Knowledge base in DQS, vedere [Knowledge Base e domini DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Per ulteriori informazioni sulla gestione delle informazioni in DQS, vedere [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Concetti relativi ai progetti Data Quality  
  L'amministratore dei dati esegue le operazioni di qualità dei dati (pulizia e corrispondenza) utilizzando un progetto Data Quality nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -86,9 +85,9 @@ ms.locfileid: "48170981"
   
  **Sicurezza relativa a DQS**  
   
- È possibile utilizzare i ruoli all'interno del meccanismo di sicurezza di SQL Server per proteggere DQS. Sono disponibili tre ruoli DQS tramite cui viene determinato il livello di accesso per un utente nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cioè dqs_administrator, dqs_kb_editor e dqs_kb_operator. Non è possibile concedere ruoli agli utenti utilizzando l'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , bensì mediante SQL Server Management Studio. Per altre informazioni, vedere [DQS sicurezza](../../2014/data-quality-services/dqs-security.md).  
+ È possibile utilizzare i ruoli all'interno del meccanismo di sicurezza di SQL Server per proteggere DQS. Sono disponibili tre ruoli DQS tramite cui viene determinato il livello di accesso per un utente nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cioè dqs_administrator, dqs_kb_editor e dqs_kb_operator. Non è possibile concedere ruoli agli utenti utilizzando l'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , bensì mediante SQL Server Management Studio. Per altre informazioni, vedere [DQS Security](../../2014/data-quality-services/dqs-security.md).  
   
- Per altre informazioni sull'amministrazione DQS, vedere [amministrazione DQS](../../2014/data-quality-services/dqs-administration.md).  
+ Per ulteriori informazioni sull'amministrazione DQS, vedere [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  

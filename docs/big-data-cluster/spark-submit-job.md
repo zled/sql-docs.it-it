@@ -8,17 +8,17 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 0787663b0c2eccfed33bf5c2cc681be4f2ef5edc
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.date: 11/06/2018
+ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050835"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221607"
 ---
 # <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Inviare il processo Spark nei cluster di SQL Server i big data in Azure Data Studio
 
-Uno degli scenari chiave è la possibilità di inviare processi Spark per SQL Server 2019 CTP 2.0. La funzionalità di invio dei processi di Spark consente di inviare un file con estensione Jar o Py locali con riferimenti a cluster di big data di SQL Server 2019. Consente inoltre di eseguire un file con estensione Jar o Py, che sono già presenti nel file system HDFS. 
+Uno degli scenari chiave è la possibilità di inviare il processo Spark per SQL Server 2019 CTP 2.1. La funzionalità di invio dei processi di Spark consente di inviare un file con estensione Jar o Py locali con riferimenti a cluster di big data di SQL Server 2019. Consente inoltre di eseguire un file con estensione Jar o Py, che sono già presenti nel file system HDFS. 
 
 ## <a name="prerequisite"></a>Prerequisiti 
 Installare gli strumenti dei big data per SQL Server e connettersi a un cluster di big data prima di inviare processi Spark. Per informazioni dettagliate di installazione, fare riferimento per creare un collegamento [distribuire strumenti big data](deploy-big-data-tools.md).

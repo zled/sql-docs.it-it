@@ -4,15 +4,15 @@ description: Informazioni su come configurare su Kubernetes in più Ubuntu 16.04
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/23/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 70ba143bf01336dbd77718007ccd0fb61acc21bb
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 842a23877290aec76f7813f27b68b4bccd7b5c9b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051384"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221777"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-deployments"></a>Configurare Kubernetes su più computer per le distribuzioni di SQL Server 2019
 
@@ -143,4 +143,4 @@ kubectl get nodes
 
 I passaggi descritti in questo articolo è configurato un cluster Kubernetes in più computer Ubuntu. Il passaggio successivo consiste nel distribuire il cluster di big data di SQL Server 2019. Per istruzioni, vedere l'articolo seguente:
 
-[Distribuire SQL Server 2019 CTP 2.0 in Kubernetes](deployment-guidance.md#deploy)
+[Distribuire SQL Server 2019 CTP 2.1 in Kubernetes](deployment-guidance.md#deploy)

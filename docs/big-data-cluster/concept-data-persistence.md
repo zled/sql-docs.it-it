@@ -4,15 +4,15 @@ description: Informazioni sul funzionamento di persistenza dei dati in un cluste
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f80f8a4e8014b6d05a2e4c6a0b5697609381a07
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 100372f339f2d064e14b7882fdfb1a661b824cc6
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050831"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221787"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistenza dei dati con cluster di big data di SQL Server in Kubernetes
 
@@ -24,7 +24,7 @@ Il modo in cui il cluster di big data di SQL Server utilizza questi volumi perma
 
 > [!NOTE]
 
-> Per versioni da CTP 2.0, solo `ReadWriteOnce` modalità di accesso per l'intero cluster è supportata.
+> Per la versione CTP 2.1, solo `ReadWriteOnce` modalità di accesso per l'intero cluster è supportata.
 
 ## <a name="deployment-settings"></a>Impostazioni di distribuzione
 

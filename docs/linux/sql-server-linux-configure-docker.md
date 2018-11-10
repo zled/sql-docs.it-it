@@ -1,6 +1,6 @@
 ---
 title: Opzioni di configurazione per SQL Server in Docker | Microsoft Docs
-description: Esplorare i diversi modi di utilizzo e l'interazione con SQL Server 2017 e le immagini del contenitore versioni da CTP 2.0 2019 in Docker. Sono inclusi i dati persistenti, la copia dei file e la risoluzione dei problemi.
+description: Esplorare i diversi modi di utilizzo e l'interazione con SQL Server 2017 e 2019 preview le immagini contenitore in Docker. Sono inclusi i dati persistenti, la copia dei file e la risoluzione dei problemi.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: ef759f41dd481510524d541751417a4dbe1c02c7
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 0dbc72cf39e1dee5abad6ceb961f1b437287e5ba
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753558"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270024"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurare immagini del contenitore SQL Server in Docker
 
@@ -29,10 +29,10 @@ Questo articolo illustra come configurare e usare la [immagine del contenitore m
 
 ## <a name="pull-and-run-the-container-image"></a>Effettuare il pull ed eseguire l'immagine del contenitore
 
-Per eseguire il pull ed eseguire di immagini del contenitore Docker per SQL Server 2017 e SQL Server 2019 CTP 2.0, seguire i prerequisiti e i passaggi nella Guida introduttiva seguente:
+Per eseguire il pull ed eseguire le immagini del contenitore per l'anteprima di SQL Server 2017 e SQL Server 2019 Docker, seguire i prerequisiti e i passaggi nella Guida introduttiva seguente:
 
 - [Eseguire l'immagine del contenitore SQL Server 2017 con Docker](quickstart-install-connect-docker.md?view=sql-server-2017)
-- [Eseguire l'immagine del contenitore SQL Server 2019 CTP 2.0 con Docker](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- [Eseguire l'immagine del contenitore SQL Server 2019 anteprima con Docker](quickstart-install-connect-docker.md?view=sql-server-ver15)
 
 Questo articolo configurazione fornisce scenari di utilizzo aggiuntivi nelle sezioni seguenti.
 
@@ -41,9 +41,9 @@ Questo articolo configurazione fornisce scenari di utilizzo aggiuntivi nelle sez
 
 ## <a id="rhel"></a> Eseguire le immagini contenitore basate su RHEL
 
-Tutta la documentazione sulle immagini di contenitore Linux di SQL Server del punto per contenitori basati su Ubuntu. A partire da SQL Server 2019 CTP 2.0, è possibile usare contenitori basati su Red Hat Enterprise Linux (RHEL). Nel repository del contenitore da modificare **mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu** al **mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0** in tutti i comandi di docker.
+Tutta la documentazione sulle immagini di contenitore Linux di SQL Server del punto per contenitori basati su Ubuntu. A partire da SQL Server 2019 anteprima, è possibile usare contenitori basati su Red Hat Enterprise Linux (RHEL). Nel repository del contenitore da modificare **mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu** al **mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0** in tutti i comandi di docker.
 
-Ad esempio, il comando seguente esegue il pull il contenitore più recente di SQL Server 2019 CTP 2.0 che utilizza RHEL:
+Ad esempio, il comando seguente esegue il pull il contenitore di anteprima più recente di SQL Server 2019 che utilizza RHEL:
 
 ```bash
 sudo docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
@@ -134,7 +134,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 
 ### <a name="tools-inside-the-container"></a>Strumenti all'interno del contenitore
 
-A partire da SQL Server 2017 CTP 2.0, il [gli strumenti da riga di comando di SQL Server](sql-server-linux-setup-tools.md) sono inclusi nell'immagine del contenitore. Se si collega all'immagine con un prompt dei comandi interattiva, è possibile eseguire gli strumenti in locale.
+A partire da SQL Server 2017 preview, il [gli strumenti da riga di comando di SQL Server](sql-server-linux-setup-tools.md) sono inclusi nell'immagine del contenitore. Se si collega all'immagine con un prompt dei comandi interattiva, è possibile eseguire gli strumenti in locale.
 
 1. Usare il comando `docker exec -it` per avviare una shell Bash interattiva all'interno del contenitore in esecuzione. Nell'esempio seguente `e69e056c702d` è l'ID del contenitore.
 
@@ -178,7 +178,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Nell'esempio seguente crea due contenitori di SQL Server 2019 CTP 2.0 e ne esegue il mapping alle porte **1401** e **1402** nel computer host.
+Nell'esempio seguente crea due contenitori di anteprima di SQL Server 2019 e ne esegue il mapping alle porte **1401** e **1402** nel computer host.
 
 ```bash
 docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu

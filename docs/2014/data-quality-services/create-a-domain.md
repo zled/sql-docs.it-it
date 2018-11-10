@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createdomain.f1
@@ -13,12 +12,12 @@ ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 358e0f9718ee6e301b0cf4257d3bda5bea5ae084
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 249e0195d02f0b157e818a0525b0170b0b817b3c
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051301"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031607"
 ---
 # <a name="create-a-domain"></a>Creazione di un dominio
   In questo argomento viene descritto come creare un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). I valori nel dominio sono una rappresentazione semantica dei dati in un campo. Per altre informazioni sui domini, vedere [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md).  
@@ -43,7 +42,7 @@ ms.locfileid: "48051301"
   
 3.  Selezionare **Individuazione informazioni** come attività, quindi fare clic su **Crea** per creare la nuova Knowledge Base, oppure **Apri** per aprirne una esistente.  
   
-4.  Nella pagina **Mappa** specificare una connessione all'origine dati. Per altre informazioni, vedere [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
+4.  Nella pagina **Mappa** specificare una connessione all'origine dati. Per ulteriori informazioni, vedere [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
   
 5.  Nella tabella **Mapping** selezionare una colonna di origine dall'elenco a discesa per la **Colonna di origine** di una riga vuota. Se non esiste alcun dominio corrispondente, fare clic sull'icona **Crea un dominio** .  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48051301"
 1.  Nella finestra di dialogo **Crea dominio** immettere un nome univoco per la Knowledge Base e una descrizione di un massimo di 256 caratteri.  
   
     > [!NOTE]  
-    >  Per altre informazioni sulle proprietà del dominio, vedere [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
+    >  Per ulteriori informazioni sulle proprietà del dominio, vedere [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
 2.  Dall'elenco **Tipo di dati** selezionare un tipo di dati per i valori nel dominio. Il tipo di dati può essere **Stringa** (valore predefinito), **Data**, **Intero**o **Decimale**.  
   

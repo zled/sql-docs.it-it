@@ -4,15 +4,15 @@ description: Informazioni su come usare il portale di amministrazione cluster pe
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 764e1689b4b793e3a993c058517a892f93d6d439
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356052"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221467"
 ---
 # <a name="introduction-to-the-cluster-administration-portal"></a>Introduzione al portale di amministrazione del cluster
 
@@ -32,7 +32,7 @@ Seguire le [avvio rapido per distribuire il cluster di big data](quickstart-big-
 Il pod controller è in esecuzione, è possibile utilizzare il portale di amministrazione cluster per monitorare la distribuzione. È possibile accedere al portale con l'esterno indirizzo IP e porta numero per il `service-proxy-lb` (ad esempio: **https://\<ip-address\>: 30777**). Le credenziali per accedere al portale di amministrazione sono i valori delle `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variabili di ambiente fornite sopra.
 
 > [!NOTE]
-> Per la versione CTP 2.0 è un avviso di sicurezza all'accesso alla pagina web poiché utilizza i certificati SSL generati automaticamente.
+> Per la versione CTP 2.1, è un avviso di sicurezza all'accesso alla pagina web poiché utilizza i certificati SSL generati automaticamente.
 
 ## <a name="overview"></a>Panoramica
 

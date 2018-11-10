@@ -1,22 +1,20 @@
 ---
 title: Query dei dati spaziali per Nearest Neighbor | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c70c341317648f6d981f40b38d39d2f2ab4b533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7a32f277378f48ffd61cce141f8fe7074c8204e
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164721"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018696"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Query dei dati spaziali per Nearest Neighbor
   La query Nearest Neighbor è una query comune utilizzata con dati spaziali. Le query Nearest Neighbor vengono utilizzate per trovare gli oggetti spaziali più vicini a un oggetto spaziale specifico. Un localizzatore di archivio per un sito Web, ad esempio, deve spesso trovare i percorsi di archivio più vicini alla posizione di un cliente.  
@@ -52,7 +50,7 @@ SELECT TOP ( number )
 ```  
   
 ## <a name="nearest-neighbor-query-and-spatial-indexes"></a>Query Nearest Neighbor e indici spaziali  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], per eseguire una query Nearest Neighbor nelle colonne di dati spaziali, vengono utilizzate le clausole `TOP` e `ORDER BY`. Il `ORDER BY` clausola contiene una chiamata al `STDistance()` metodo per il tipo di dati colonna spaziale. Il `TOP` clausola indica il numero di oggetti da restituire per la query.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], per eseguire una query Nearest Neighbor nelle colonne di dati spaziali, vengono utilizzate le clausole `TOP` e `ORDER BY`. La clausola `ORDER BY` contiene una chiamata al metodo `STDistance()` per il tipo di dati della colonna spaziale. La clausola `TOP` indica il numero di oggetti da restituire per la query.  
   
  Per utilizzare un indice spaziale in una query Nearest Neighbor, è necessario soddisfare i requisiti seguenti:  
   
@@ -62,7 +60,7 @@ SELECT TOP ( number )
   
 3.  La clausola `WHERE` deve contenere un metodo `STDistance()`.  
   
-4.  Se nella clausola `WHERE` sono presenti più predicati, il predicato che contiene il metodo `STDistance()` deve essere connesso mediante una congiunzione `AND` ad altri predicati. Il `STDistance()` metodo non può trovarsi in una parte facoltativa del `WHERE` clausola.  
+4.  Se nella clausola `WHERE` sono presenti più predicati, il predicato che contiene il metodo `STDistance()` deve essere connesso mediante una congiunzione `AND` ad altri predicati. Il metodo `STDistance()` non può trovarsi in una parte facoltativa della clausola `WHERE`.  
   
 5.  La prima espressione nella clausola `ORDER BY` deve utilizzare il metodo `STDistance()`.  
   
@@ -102,7 +100,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- Nella query manca una `WHERE` clausola che utilizza `STDistance()` in un formato specificato nella sezione relativa alla sintassi in modo che la query non è possibile usare un indice spaziale.  
+ Nella query manca una clausola `WHERE` che utilizza `STDistance()` in un formato specificato nella sezione relativa alla sintassi, pertanto nella query non può essere utilizzato un indice spaziale.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dati spaziali &#40;SQL Server&#41;](spatial-data-sql-server.md)  

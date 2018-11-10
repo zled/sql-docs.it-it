@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
@@ -15,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4767b695f0c2c3668278e30f47f389664b4a4ef0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189551"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018566"
 ---
 # <a name="upgrade-database-engine"></a>Aggiornare il motore di database
   In questo argomento vengono fornite le informazioni necessarie per la preparazione e la comprensione del processo di aggiornamento, ovvero:  
@@ -47,7 +46,7 @@ ms.locfileid: "48189551"
 >  Quando si esegue l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, scegliere tra Enterprise Edition: licenze basate su core ed Enterprise Edition. Queste due edizioni differiscono solo per le modalità di gestione delle licenze. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Elenco di controllo preliminare all'aggiornamento  
- L'aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una versione precedente è supportato solo dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È inoltre possibile eseguire la migrazione dei database da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La migrazione può essere eseguita da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra nello stesso computer o da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer diverso. Opzioni di migrazione includono l'utilizzo della copia guidata Database, Backup e ripristino delle funzionalità, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] metodi di importazione di importazione / esportazione guidata ed esportare globalmente.  
+ L'aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una versione precedente è supportato solo dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È inoltre possibile eseguire la migrazione dei database da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La migrazione può essere eseguita da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra nello stesso computer o da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer diverso. Le opzioni di migrazione includono l'utilizzo della Copia guidata database, delle funzionalità di backup e ripristino, dell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], nonché dei metodi per importare ed esportare globalmente.  
   
  Prima di aggiornare il [!INCLUDE[ssDE](../../includes/ssde-md.md)], vedere gli argomenti seguenti:  
   
@@ -108,7 +107,7 @@ ms.locfileid: "48189551"
  Se il livello di compatibilità di un database utente era 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità è 90 prima dell'aggiornamento, nel database aggiornato viene impostato su 100, ovvero sul livello di compatibilità supportato più basso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  I nuovi database utente erediteranno il livello di compatibilità di `model` database.  
+>  I nuovi database utente erediteranno il livello di compatibilità del database `model`.  
   
 ## <a name="migrating-databases"></a>Migrazione dei database  
  È possibile spostare database utente in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite operazioni di backup e ripristino o scollegare e collegare funzionalità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Copiare database tramite backup e ripristino](../../relational-databases/databases/copy-databases-with-backup-and-restore.md) o [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
@@ -125,7 +124,7 @@ ms.locfileid: "48189551"
   
 -   Ripopolare cataloghi full-text per garantire la coerenza semantica nei risultati delle query.  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre nuovi word breaker da usare per la ricerca full-text e semantica. I word breaker vengono utilizzati sia in fase di indicizzazione che di esecuzione delle query. Se non si ricompilano i cataloghi full-text, i risultati di ricerca potrebbero risultare incoerenti. Se si esegue una query full-text che esegue la ricerca di una frase divisa in modo diverso dal word breaker in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rispetto a quello corrente, è possibile che si verifichi il mancato recupero di una riga o documento contenente la frase. Questo problema si verifica perché le frasi indicizzate sono state divise in base a una logica diversa da quella utilizzata dalla query. Per risolvere il problema, ripopolare (ricompilare) i cataloghi full-text con i nuovi word breaker in modo che il comportamento in fase di indicizzazione e di esecuzione delle query sia lo stesso.  
+     In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono installati nuovi word breaker da utilizzare per la ricerca full-text e semantica. I word breaker vengono utilizzati sia in fase di indicizzazione che di esecuzione delle query. Se non si ricompilano i cataloghi full-text, i risultati di ricerca potrebbero risultare incoerenti. Se si esegue una query full-text che esegue la ricerca di una frase divisa in modo diverso dal word breaker in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rispetto a quello corrente, è possibile che si verifichi il mancato recupero di una riga o documento contenente la frase. Questo problema si verifica perché le frasi indicizzate sono state divise in base a una logica diversa da quella utilizzata dalla query. Per risolvere il problema, ripopolare (ricompilare) i cataloghi full-text con i nuovi word breaker in modo che il comportamento in fase di indicizzazione e di esecuzione delle query sia lo stesso.  
   
      Per altre informazioni, vedere [sp_fulltext_catalog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql).  
   

@@ -4,41 +4,43 @@ description: Questo articolo fornisce una procedura dettagliata per la configura
 author: DBArgenis
 ms.author: argenisf
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 71c4af08573f54b5a33a95f0c821dfdb81b4f0a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07f068a24c60fe82c299387fe859f07296f21df8
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765592"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269435"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Come configurare la memoria persistente (PMEM) per SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questo articolo descrive come configurare la memoria persistente (PMEM) per SQL Server in Linux. Supporto PMEM in Linux è stato introdotto in SQL Server 2019 CTP 2.0.
+Questo articolo descrive come configurare la memoria persistente (PMEM) per SQL Server in Linux. Supporto PMEM in Linux è stato introdotto in fase di anteprima di SQL Server 2019.
 
 ## <a name="overview"></a>Panoramica
 
-SQL Server 2016 ha introdotto il supporto per moduli DIMM Non-Volatile e un'ottimizzazione denominata [della parte finale del Log memorizzazione nella cache nella memoria NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/) che ridotta la quantità di operazioni necessarie per rafforzare la protezione di un buffer del log in un archivio permanente. Questo consente di sfruttare la funzionalità del Server di Windows per accedere direttamente a un dispositivo di memoria persistente in modalità DAX.
+SQL Server 2016 ha introdotto il supporto per moduli DIMM Non-Volatile e un'ottimizzazione denominata [della parte finale del Log memorizzazione nella cache nella memoria NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Queste ottimizzazioni ridotto il numero di operazioni necessarie per finalizzare un buffer del log in un archivio permanente. Questo consente di sfruttare l'accesso diretto di Windows Server a un dispositivo di memoria persistente in modalità DAX.
 
-Anteprima di SQL Server 2019 estende il supporto per la memoria persistente dispositivi (PMEM) per Linux, fornendo illuminazione completa dei dati e delle transazioni di file di log inseriti in PMEM. Illuminazione fa riferimento al metodo di accesso al dispositivo di archiviazione usando operazioni memcpy efficiente dello spazio dell'utente. Anziché passare attraverso il file system e l'archiviazione dello stack, SQL Server Usa il supporto DAX in Linux per inserire i dati direttamente in dispositivi, incorrere in una latenza minima.
+Anteprima di SQL Server 2019 estende il supporto per la memoria persistente dispositivi (PMEM) per Linux, fornendo illuminazione completa dei dati e delle transazioni di file di log inseriti in PMEM. Illuminazione fa riferimento al metodo di accesso al dispositivo di archiviazione con spazio utente efficiente `memcpy()` operazioni. Anziché passare attraverso lo stack di sistema e l'archiviazione file, SQL Server Usa il supporto DAX in Linux per inserire i dati direttamente in dispositivi, riducendo la latenza.
 
 ## <a name="enable-enlightenment-of-database-files"></a>Abilitare illuminazione dei file di database
 Per abilitare l'illuminazione di file di database in SQL Server in Linux, seguire i passaggi seguenti:
 
-1. Configurare i dispositivi In Linux, questa operazione viene eseguita usando il `ndctl` utilità.
+1. Configurare i dispositivi.
 
-  - Installare installazione `ndctl` configurare pmem dispositivo. È possibile trovarlo [qui](https://docs.pmem.io/getting-started-guide/installing-ndctl).
+  In Linux, usare il `ndctl` utilità.
+
+  - Installare `ndctl` configurare PMEM dispositivo. È possibile trovarlo [qui](https://docs.pmem.io/getting-started-guide/installing-ndctl).
   - Per creare uno spazio dei nomi, usare [ndctl].
 
   ```bash 
-  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* –map=mem
+  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* -–map=mem
   ```
 
   >[!NOTE]
@@ -59,7 +61,7 @@ ndctl list
 ]
 ```
 
-  - Creare e montare pmem dispositivo
+  - Creare e montare PMEM dispositivo
 
     Ad esempio, con XFS
 

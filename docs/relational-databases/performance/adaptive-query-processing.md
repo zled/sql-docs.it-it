@@ -6,7 +6,7 @@ ms.date: 10/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 ms.assetid: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88ec6af239bc5a85faf354aa5fc74631ff0dcc0e
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: 60f02a303e6e085dc14a165ec51e316a2bc88f8e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324634"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031198"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Elaborazione di query adattive nei database SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,15 +38,15 @@ In alcuni casi il piano scelto da Query Optimizer non è ottimale per diversi mo
 ![Funzionalità dell'elaborazione di query adattive](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>Come abilitare l'elaborazione di query adattive
-È possibile impostare automaticamente i carichi di lavoro come idonei all'elaborazione di query adattive abilitando il livello di compatibilità 140 per il database.  Questa opzione è impostabile con Transact-SQL. Ad esempio  
+È possibile impostare automaticamente i carichi di lavoro come idonei all'elaborazione di query adattive abilitando il livello di compatibilità 140 per il database.  Questa opzione è impostabile con Transact-SQL. Ad esempio  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
 
 ## <a name="batch-mode-memory-grant-feedback"></a>Feedback delle concessioni di memoria in modalità batch
-Un piano post esecuzione di una query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include la memoria minima richiesta per l'esecuzione e la dimensione della concessione di memoria sufficiente a far sì che tutte le righe siano incluse nella memoria. Se le dimensioni della concessione di memoria non vengono impostate correttamente le prestazioni possono risultare ridotte. Le concessioni di dimensioni eccessive causano memoria non usata e riduzione della concorrenza. Le concessioni di memoria di dimensioni insufficienti causano costose distribuzioni su disco. Incentrandosi sui carichi di lavoro ripetuti, il feedback delle concessioni di memoria in modalità batch ricalcola la memoria effettiva necessaria per una query, quindi aggiorna il valore della concessione per il piano nella cache.  Quando viene eseguita un'istruzione query identica la query usa le dimensioni della concessione di memoria aggiornate, riducendo il numero eccessivo di concessioni che limita la concorrenza e correggendo il numero insufficiente di concessioni che causa costose distribuzioni su disco.
-Il grafico seguente visualizza un esempio dell'uso del feedback delle concessioni di memoria in modalità batch. La durata della prima esecuzione della query è pari a **88 secondi** a causa del numero elevato di distribuzioni:   
+Un piano post esecuzione di una query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include la memoria minima richiesta per l'esecuzione e la dimensione della concessione di memoria sufficiente a far sì che tutte le righe siano incluse nella memoria. Se le dimensioni della concessione di memoria non vengono impostate correttamente le prestazioni possono risultare ridotte. Le concessioni di dimensioni eccessive causano memoria non usata e riduzione della concorrenza. Le concessioni di memoria di dimensioni insufficienti causano costose distribuzioni su disco. Incentrandosi sui carichi di lavoro ripetuti, il feedback delle concessioni di memoria in modalità batch ricalcola la memoria effettiva necessaria per una query, quindi aggiorna il valore della concessione per il piano nella cache.  Quando viene eseguita un'istruzione query identica la query usa le dimensioni della concessione di memoria aggiornate, riducendo il numero eccessivo di concessioni che limita la concorrenza e correggendo il numero insufficiente di concessioni che causa costose distribuzioni su disco.
+Il grafico seguente visualizza un esempio dell'uso del feedback delle concessioni di memoria in modalità batch. La durata della prima esecuzione della query è pari a  **88 secondi** a causa del numero elevato di distribuzioni:   
 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
@@ -60,7 +60,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ![Numero elevato di distribuzioni](./media/2_AQPGraphHighSpills.png)
 
-Con il feedback delle concessioni di memoria attivato la durata della seconda esecuzione della query si riduce a **1 secondo** (da 88 secondi), le distribuzioni su disco vengono rimosse completamente e la concessione è superiore: 
+Con il feedback delle concessioni di memoria attivato la durata della seconda esecuzione della query si riduce a  **1 secondo** (da 88 secondi), le distribuzioni su disco vengono rimosse completamente e la concessione è superiore: 
 
 ![Nessuna distribuzione](./media/3_AQPGraphNoSpills.png)
 
@@ -69,14 +69,14 @@ Per una condizione di concessione di memoria di dimensioni eccessive, se la memo
 Per una condizione di concessione di memoria di dimensioni insufficienti che genera distribuzioni su disco per gli operatori in modalità batch, il feedback delle concessioni di memoria attiva il ricalcolo della concessione di memoria. Gli eventi di distribuzione vengono segnalati al feedback delle concessioni di memoria e possono essere esposti con l'evento xEvent *spilling_report_to_memory_grant_feedback*. Questo evento restituisce l'ID del nodo dal piano e il volume dei dati distribuiti su disco da tale nodo.
 
 ### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>Feedback delle concessioni di memoria e scenari dipendenti dai parametri
-Per risultati ottimali, valori dei parametri diversi possono richiedere piani di query diversi. Le query di questo tipo sono definite "sensibili ai parametri". Per i piani sensibili ai parametri il feedback delle concessioni di memoria si disattiva quando una query registra requisiti di memoria non stabili. Il piano viene disattivato dopo varie ripetizioni dell'esecuzione della query e la disattivazione può essere rilevata monitorando l'evento xEvent *memory_grant_feedback_loop_disabled*. Per altre informazioni sull'analisi e la sensibilità dei parametri, consultare la [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
+Per risultati ottimali, valori dei parametri diversi possono richiedere piani di query diversi. Le query di questo tipo sono definite "sensibili ai parametri". Per i piani sensibili ai parametri il feedback delle concessioni di memoria si disattiva quando una query registra requisiti di memoria non stabili. Il piano viene disattivato dopo varie ripetizioni dell'esecuzione della query e la disattivazione può essere rilevata monitorando l'evento xEvent *memory_grant_feedback_loop_disabled*. Per altre informazioni sull'analisi e la sensibilità dei parametri, consultare la [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### <a name="memory-grant-feedback-caching"></a>Memorizzazione nella cache del feedback delle concessioni di memoria
-Il feedback può essere archiviato nel piano memorizzato nella cache per una singola esecuzione. Tuttavia i vantaggi del feedback delle concessioni di memoria appaiono in caso di esecuzioni consecutive dell'istruzione. Questa funzionalità si applica all'esecuzione ripetuta di istruzioni. Il feedback delle concessioni di memoria modifica solo il piano memorizzato nella cache. Attualmente le modifiche non vengono acquisite in Query Store.
-Se il piano viene rimosso dalla cache il feedback non viene mantenuto. Il feedback va perduto anche nel caso di un failover. Un'istruzione che usa `OPTION (RECOMPILE)` crea un nuovo piano e non lo memorizza nella cache. Dato che il piano non è memorizzato nella cache il feedback delle concessioni di memoria non viene generato e non viene archiviato per la compilazione e l'esecuzione.  Se tuttavia un'istruzione equivalente (con lo stesso hash di query) che **non** ha usato `OPTION (RECOMPILE)` è stata memorizzata nella cache e quindi rieseguita, l'istruzione consecutiva può trarre vantaggio dal feedback delle concessioni di memoria.
+Il feedback può essere archiviato nel piano memorizzato nella cache per una singola esecuzione. Tuttavia i vantaggi del feedback delle concessioni di memoria appaiono in caso di esecuzioni consecutive dell'istruzione. Questa funzionalità si applica all'esecuzione ripetuta di istruzioni. Il feedback delle concessioni di memoria modifica solo il piano memorizzato nella cache. Attualmente le modifiche non vengono acquisite in Query Store.
+Se il piano viene rimosso dalla cache il feedback non viene mantenuto. Il feedback va perduto anche nel caso di un failover. Un'istruzione che usa `OPTION (RECOMPILE)` crea un nuovo piano e non lo memorizza nella cache. Dato che il piano non è memorizzato nella cache il feedback delle concessioni di memoria non viene generato e non viene archiviato per la compilazione e l'esecuzione.  Se tuttavia un'istruzione equivalente (con lo stesso hash di query) che **non** ha usato `OPTION (RECOMPILE)` è stata memorizzata nella cache e quindi rieseguita, l'istruzione consecutiva può trarre vantaggio dal feedback delle concessioni di memoria.
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>Rilevamento delle attività di feedback delle concessioni di memoria
-È possibile tenere traccia di eventi di feedback delle concessioni di memoria usando l'evento xEvent *memory_grant_updated_by_feedback*. Questo evento rileva la cronologia del conteggio di esecuzione corrente, il numero di volte per il quale il piano è stato aggiornato dal feedback delle concessioni di memoria, la concessione di memoria aggiuntiva ideale prima della modifica e la concessione di memoria aggiuntiva ideale dopo che il feedback delle concessioni di memoria ha modificato il piano salvato nella cache.
+È possibile tenere traccia di eventi di feedback delle concessioni di memoria usando l'evento xEvent *memory_grant_updated_by_feedback*. Questo evento rileva la cronologia del conteggio di esecuzione corrente, il numero di volte per il quale il piano è stato aggiornato dal feedback delle concessioni di memoria, la concessione di memoria aggiuntiva ideale prima della modifica e la concessione di memoria aggiuntiva ideale dopo che il feedback delle concessioni di memoria ha modificato il piano salvato nella cache.
 
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Feedback delle concessioni di memoria, Resource Governor e hint per la query
 La memoria concessa reale è conforme al limite di memoria per le query determinato da Resource Governor o dall'hint per la query.
@@ -158,7 +158,7 @@ L'hint per la query USE HINT ha la precedenza rispetto una configurazione con am
 
 
 ## <a name="batch-mode-adaptive-joins"></a>Join adattivi in modalità batch
-La funzionalità di join adattivo in modalità batch consente di rimandare a **dopo** la scansione del primo input la scelta tra l'[esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati](../../relational-databases/performance/joins.md). L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione il piano può pertanto passare a una strategia di join più efficace.
+La funzionalità di join adattivo in modalità batch consente di rimandare a **dopo** la scansione del primo input la scelta tra l'[esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati](../../relational-databases/performance/joins.md). L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione il piano può pertanto passare a una strategia di join più efficace.
 Il funzionamento è il seguente:
 -  Se il conteggio delle righe dell'input del join di compilazione è così ridotto che un join a cicli annidati è preferibile a un hash join, il piano passa a un algoritmo a cicli annidati.
 -  Se l'input del join di compilazione supera una determinata soglia di numero di righe non si verifica alcun cambiamento e il piano continua con un hash join.
@@ -166,34 +166,34 @@ Il funzionamento è il seguente:
 La query seguente illustra un esempio di join adattivo:
 
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
+SELECT  [fo].[Order Key], [si].[Lead Time Days],
 [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
-La query restituisce 336 righe. Se si attiva [Statistiche query dinamiche](../../relational-databases/performance/live-query-statistics.MD), viene visualizzato il piano seguente:
+La query restituisce 336 righe. Se si attiva [Statistiche query dinamiche](../../relational-databases/performance/live-query-statistics.MD), viene visualizzato il piano seguente:
 
 ![Risultato della query: 336 righe](./media/4_AQPStats336Rows.png)
 
 Nel piano viene visualizzato quanto segue:
 1. È presente un'Analisi indice Columnstore che specifica righe per la fase di compilazione dell'hash join.
-1. È presente il nuovo operatore Join adattivo. L'operatore definisce la soglia usata per il passaggio a un piano Cicli annidati. In questo esempio la soglia corrisponde a 78 righe. Se il risultato è &gt;= 78 righe, verrà usato un hash join. Se è inferiore alla soglia, verrà usato un join a cicli annidati.
+1. È presente il nuovo operatore Join adattivo. L'operatore definisce la soglia usata per il passaggio a un piano Cicli annidati. In questo esempio la soglia corrisponde a 78 righe. Se il risultato è &gt;= 78 righe, verrà usato un hash join. Se è inferiore alla soglia, verrà usato un join a cicli annidati.
 1. Poiché le righe restituite sono 336, la soglia viene superata: il secondo ramo rappresenta la fase di probe di un'operazione hash join standard. Si noti che Statistiche sulle query dinamiche visualizza le righe del flusso tra gli operatori, in questo caso "672 di 672".
 1. L'ultimo ramo è la Ricerca indice cluster che il join a cicli annidati avrebbe usato se la soglia non fosse stata superata. Il valore visualizzato è "0 di 336" righe (il ramo non viene usato).
  Ora si confronti il piano con la stessa query, ma questa volta per un valore *Quantità* che ha una sola riga nella tabella:
  
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
+SELECT  [fo].[Order Key], [si].[Lead Time Days],
 [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
-La query restituisce una riga. Se si attiva Statistiche query dinamiche viene visualizzato il piano seguente:
+La query restituisce una riga. Se si attiva Statistiche query dinamiche viene visualizzato il piano seguente:
 
 ![Risultato della query: una riga](./media/5_AQPStatsOneRow.png)
 
@@ -205,7 +205,7 @@ Nel piano viene visualizzato quanto segue:
 Questa funzionalità è ottimale per i carichi di lavoro con frequenti oscillazioni tra i volumi di input di join rilevati.
 
 ### <a name="adaptive-join-overhead"></a>Sovraccarichi del join adattivo
-I join adattivi presentano requisiti di memoria superiori rispetto a un piano equivalente con join a cicli annidati indicizzati. La memoria aggiuntiva risulta necessaria, come se il join a cicli annidati fosse un hash join. Si registra un sovraccarico anche per la fase di compilazione come operazione stop-and-go rispetto a un join a cicli annidati equivalente a livello di flussi. A tale costo aggiuntivo corrisponde una maggior flessibilità per gli scenari in cui i conteggi delle righe possono variare nell'input di compilazione.
+I join adattivi presentano requisiti di memoria superiori rispetto a un piano equivalente con join a cicli annidati indicizzati. La memoria aggiuntiva risulta necessaria, come se il join a cicli annidati fosse un hash join. Si registra un sovraccarico anche per la fase di compilazione come operazione stop-and-go rispetto a un join a cicli annidati equivalente a livello di flussi. A tale costo aggiuntivo corrisponde una maggior flessibilità per gli scenari in cui i conteggi delle righe possono variare nell'input di compilazione.
 
 ### <a name="adaptive-join-caching-and-re-use"></a>Memorizzazione nella cache e riuso dei join adattivi
 I join adattivi in modalità batch funzionano per l'esecuzione iniziale di un'istruzione. Dopo la compilazione, le esecuzioni consecutive restano adattive sulla base della soglia di join adattivo di compilazione e delle righe di runtime del flusso di dati della fase di compilazione dell'input esterno.
@@ -236,7 +236,7 @@ Alcune condizioni rendono un join logico idoneo per un join adattivo in modalit�
 Se un join adattivo passa al funzionamento con cicli annidati usa le righe già lette dalla compilazione hash join. L'operatore **non** legge di nuovo le righe del riferimento esterno.
 
 ### <a name="adaptive-threshold-rows"></a>Righe della soglia adattiva
-Il grafico seguente visualizza un esempio di intersezione tra il costo di un hash join e il costo di un join a cicli annidati alternativo.  In questo punto di intersezione viene determinata la soglia, che a sua volta determina l'algoritmo usato per l'operazione di join.
+Il grafico seguente visualizza un esempio di intersezione tra il costo di un hash join e il costo di un join a cicli annidati alternativo.  In questo punto di intersezione viene determinata la soglia, che a sua volta determina l'algoritmo usato per l'operazione di join.
 
 ![Soglia di join](./media/6_AQPJoinThreshold.png)
 

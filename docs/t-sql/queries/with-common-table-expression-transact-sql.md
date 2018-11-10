@@ -28,17 +28,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 239bcbfdb1aa932189fdd77863b68489c3cb7edc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c7768b97ba5fc337ab06b42e61fb1e80330bc76
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744689"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970973"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Indica un set di risultati denominato temporaneo, noto come espressione di tabella comune (CTE). L'espressione di tabella comune è derivata da una query semplice e definita all'interno dell'ambito di esecuzione di un'istruzione SELECT, INSERT, UPDATE o DELETE. Questa clausola può anche essere utilizzata in un'istruzione CREATE VIEW come parte dell'istruzione di definizione SELECT. Un'espressione di tabella comune può includere riferimenti a se stessa. In questo caso viene indicata con il nome di espressione di tabella comune ricorsiva.  
+> [!div class="nextstepaction"]
+> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Indica un set di risultati denominato temporaneo, noto come espressione di tabella comune (CTE). L'espressione di tabella comune è derivata da una query semplice e definita all'interno dell'ambito di esecuzione di un'istruzione SELECT, INSERT, UPDATE o DELETE. Questa clausola può anche essere utilizzata in un'istruzione CREATE VIEW come parte dell'istruzione di definizione SELECT. Un'espressione di tabella comune può includere riferimenti a se stessa. In questo caso viene indicata con il nome di espressione di tabella comune ricorsiva.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 2632b10aaf69701f93e51c1c945523300307789a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b37e3c27448f187b3c1717414599f2de120790d9
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656689"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269724"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Guida introduttiva: Installare SQL Server e creare un database in Ubuntu
 
@@ -24,13 +24,13 @@ ms.locfileid: "47656689"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In questa Guida introduttiva, si installa SQL Server 2017 o SQL Server 2019 CTP 2.0 su Ubuntu 16.04. Quindi Connettiti **sqlcmd** per creare il primo database ed eseguire query.
+In questa Guida introduttiva, si installa SQL Server 2017 o SQL Server 2019 preview su Ubuntu 16.04. Quindi Connettiti **sqlcmd** per creare il primo database ed eseguire query.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In questa Guida introduttiva, installare SQL Server 2019 CTP 2.0 su Ubuntu 16.04. Quindi Connettiti **sqlcmd** per creare il primo database ed eseguire query.
+In questa Guida introduttiva è installare SQL Server 2019 preview su Ubuntu 16.04. Quindi Connettiti **sqlcmd** per creare il primo database ed eseguire query.
 
 ::: moniker-end
 
@@ -147,7 +147,7 @@ Per configurare SQL Server in Ubuntu, eseguire i comandi seguenti in un terminal
 
 6. Se si prevede di connettersi in remoto, si potrebbe essere necessario anche aprire la porta TCP di SQL Server (valore predefinito 1433) nel firewall.
 
-A questo punto, 2019 CTP 2.0 di SQL Server è in esecuzione nel computer Ubuntu e sia pronto per l'uso.
+A questo punto, anteprima di SQL Server 2019 è in esecuzione nel computer Ubuntu e sia pronto per l'uso.
 
 ::: moniker-end
 
