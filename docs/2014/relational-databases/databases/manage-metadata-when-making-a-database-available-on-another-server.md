@@ -154,7 +154,7 @@ ms.locfileid: "48198501"
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
+##  <a name="event_notif_and_wmi_events"></a> Le notifiche degli eventi e gli eventi di Windows Management Instrumentation (WMI) (a livello di Server)  
   
 ### <a name="server-level-event-notifications"></a>Notifiche degli eventi a livello di server  
  Le notifiche degli eventi a livello di server sono archiviate nel database **msdb**. Se un'applicazione del database si basa su notifiche degli eventi a livello di server, tali notifiche devono pertanto essere ricreate nell'istanza del server di destinazione. Per visualizzare le notifiche degli eventi in un'istanza del server, usare la vista del catalogo [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) . Per altre informazioni, vedere [Event Notifications](../service-broker/event-notifications.md).  

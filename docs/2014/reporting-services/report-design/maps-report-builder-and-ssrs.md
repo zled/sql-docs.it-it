@@ -197,7 +197,7 @@ ms.locfileid: "48187961"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- Per altre informazioni sui livelli mappa, vedere [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Per altre informazioni sui livelli mappa, vedere [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ### <a name="varying-display-properties-for-points-lines-and-polygons"></a>Variazione delle proprietà di visualizzazione per punti, linee e poligoni  
  Le opzioni di visualizzazione per gli elementi di una mappa possono essere impostate in base al livello, usando le regole per il livello, oppure su singoli elementi. Ad esempio è possibile impostare le proprietà di visualizzazione per tutti i punti su un livello, impostare le regole che controllano le proprietà di visualizzazione per tutti i punti su un livello indipendentemente dal loro incorporamento oppure eseguire l'override delle impostazioni delle proprietà di visualizzazione per punti incorporati specifici.  
