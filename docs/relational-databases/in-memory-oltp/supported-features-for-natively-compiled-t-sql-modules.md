@@ -227,7 +227,7 @@ Sono supportate le istruzioni DML seguenti.
 ##  <a name="auditing"></a> Controllo  
  Il controllo a livello di routine è supportato nelle stored procedure compilate in modo nativo.  
 
- Per ulteriori informazioni sul controllo, vedere [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
+ Per ulteriori informazioni sul controllo, vedere [Creazione di un controllo del server e di una specifica del controllo del database](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
 
 ##  <a name="tqh"></a> Hint di tabella e per la query  
  Sono supportati gli elementi seguenti:  

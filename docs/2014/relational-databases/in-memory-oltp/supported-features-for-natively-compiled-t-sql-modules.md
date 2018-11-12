@@ -154,7 +154,7 @@ ms.locfileid: "48091241"
 ##  <a name="auditing"></a> Controllo  
  Il controllo a livello di routine è supportato nelle stored procedure compilate in modo nativo. Il controllo a livello di istruzione non è supportato.  
   
- Per ulteriori informazioni sul controllo, vedere [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
+ Per ulteriori informazioni sul controllo, vedere [Creazione di un controllo del server e di una specifica del controllo del database](../security/auditing/create-a-server-audit-and-database-audit-specification.md)  
   
 ##  <a name="tqh"></a> Nella tabella, Query e gli hint di Join  
  Sono supportati gli elementi seguenti:  
