@@ -28,7 +28,7 @@ ms.locfileid: "48226551"
  Per ulteriori informazioni sulla gestione connessione MSMQ, vedere [MSMQ Connection Manager](connection-manager/msmq-connection-manager.md).  
   
 > [!NOTE]  
->  Gestione connessione MSMQ supporta le code pubbliche e private locali, nonché le code pubbliche remote. Non supporta le code private remote. Per una soluzione alternativa che utilizza l'attività Script, vedere [Sending to a Remote Private Message Queue with the Script Task](control-flow/script-task.md).  
+>  Gestione connessione MSMQ supporta le code pubbliche e private locali, nonché le code pubbliche remote. Non supporta le code private remote. Per una soluzione alternativa che utilizza l'attività Script, vedere [l'invio a una coda di messaggi privata remota tramite l'attività Script](control-flow/script-task.md).  
   
 ## <a name="options"></a>Opzioni  
  **Nome**  
