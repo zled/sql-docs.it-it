@@ -48,7 +48,7 @@ ms.locfileid: "48049021"
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Risoluzione dei problemi di backup nell'URL e di ripristino dallo stesso  
  Di seguito sono elencate alcune modalità rapide per la risoluzione di errori durante l'esecuzione del backup nel servizio di archiviazione BLOB di Windows Azure o del ripristino dallo stesso.  
   
- Per evitare errori a causa di limitazioni o le opzioni non supportate, esaminare l'elenco delle limitazioni e supporto per BACKUP e ripristino di informazioni di comandi nel [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) articolo.  
+ Per evitare errori a causa di limitazioni o le opzioni non supportate, esaminare l'elenco delle limitazioni e supporto per BACKUP e ripristino di informazioni di comandi nel [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) articolo.  
   
  **Errori di autenticazione:**  
   
