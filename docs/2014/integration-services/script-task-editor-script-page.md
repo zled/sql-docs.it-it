@@ -28,7 +28,7 @@ ms.locfileid: "48198081"
 > [!NOTE]  
 >  In [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] e versioni successive, tutti gli script sono precompilati. Nelle versioni precedenti, si imposta una proprietà **PrecompileScriptIntoBinaryCode** per specificare che lo script è stato precompilato.  
   
- Per ulteriori informazioni sull'attività Script, vedere [Script Task](control-flow/script-task.md) e [Configuring the Script Task in the Script Task Editor](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Per informazioni sulla programmazione dell'attività Script, vedere [Extending the Package with the Script Task](extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+ Per ulteriori informazioni sull'attività Script, vedere [Script Task](control-flow/script-task.md) e [Configurazione dell'attività Script nell'editor attività Script](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Per informazioni sulla programmazione dell'attività Script, vedere [Estensione del pacchetto con l'attività Script](extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ## <a name="options"></a>Opzioni  
  **ScriptLanguage**  

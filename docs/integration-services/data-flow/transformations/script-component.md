@@ -112,7 +112,7 @@ ms.locfileid: "47857039"
 ## <a name="select-script-component-type"></a>Seleziona tipo componente script
   Utilizzare la finestra di dialogo **Seleziona tipo componente script** per specificare la creazione di una trasformazione Script preconfigurata da utilizzare come origine, trasformazione o destinazione.  
   
- Per altre informazioni sul componente Script, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per informazioni sulla programmazione del componente Script, vedere [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Per altre informazioni sul componente Script, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per informazioni sulla programmazione del componente Script, vedere [Estensione del flusso di dati con il componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Opzioni  
  La selezione dell'opzione **Origine**, **Destinazione**o **Trasformazione** influisce sulla configurazione della trasformazione Script e sulle pagine dell'editor trasformazione Script visualizzate.  
@@ -120,7 +120,7 @@ ms.locfileid: "47857039"
 ## <a name="script-transformation-editor-connection-managers-page"></a>Editor trasformazione Script (pagina Gestioni connessioni)
   Utilizzare la pagina **Gestioni connessioni** dell' **Editor trasformazione Script** per specificare le connessioni che verranno utilizzate dallo script.  
   
- Per altre informazioni sul componente Script, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per informazioni sulla programmazione del componente Script, vedere [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Per altre informazioni sul componente Script, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per informazioni sulla programmazione del componente Script, vedere [Estensione del flusso di dati con il componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Opzioni  
  **Connection managers**  
@@ -147,7 +147,7 @@ ms.locfileid: "47857039"
 > [!NOTE]  
 >  La pagina **Colonne di input** non viene visualizzata per i componenti di origine, che hanno output ma non input.  
   
- Per altre informazioni sul componente Script, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per informazioni sulla programmazione del componente Script, vedere [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Per altre informazioni sul componente Script, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per informazioni sulla programmazione del componente Script, vedere [Estensione del flusso di dati con il componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Opzioni  
  **Nome input**  
@@ -171,7 +171,7 @@ ms.locfileid: "47857039"
 > [!NOTE]  
 >  I componenti di origine dispongono di output e di nessun input, mentre i componenti di destinazione dispongono di input e di nessun output. Le trasformazioni dispongono sia di input che di output.  
   
- Per altre informazioni sul componente Script, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per informazioni sulla programmazione del componente Script, vedere [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Per altre informazioni sul componente Script, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per informazioni sulla programmazione del componente Script, vedere [Estensione del flusso di dati con il componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Opzioni  
  **Inputs and outputs**  
@@ -196,7 +196,7 @@ ms.locfileid: "47857039"
 ## <a name="script-transformation-editor-script-page"></a>Editor trasformazione Script (pagina Script)
   Usare la scheda **Script** della finestra di dialogo **Editor trasformazione Script** per specificare uno script e le proprietà correlate.  
   
- Per altre informazioni sul componente Script, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per informazioni sulla programmazione del componente Script, vedere [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Per altre informazioni sul componente Script, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per informazioni sulla programmazione del componente Script, vedere [Estensione del flusso di dati con il componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Opzioni  
  **Proprietà**  
