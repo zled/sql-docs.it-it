@@ -47,7 +47,7 @@ Lo screenshot seguente illustra la pagina **Importazione/Esportazione guidata SQ
 
     -   **Se si preferisce visualizzare screenshot.** Esaminare questo semplice esempio end-to-end in una singola pagina: [Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
-    -   **Se si preferisce guardare un video.** Questo video di YouTube della durata di quattro minuti illustra la procedura guidata e descrive come importare ed esportare dati in Excel con istruzioni chiare e semplici: [Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049) (Uso dell'Importazione/Esportazione guidata SQL Server per l'esportazione in Excel).
+    -   **Se si preferisce guardare un video.** Questo video di YouTube della durata di quattro minuti illustra la procedura guidata e descrive come importare ed esportare dati in Excel con istruzioni chiare e semplici: [Uso dell'Importazione/Esportazione guidata SQL Server per l'esportazione in Excel](https://go.microsoft.com/fwlink/?linkid=829049).
 
 -   **Altre informazioni sul funzionamento della procedura guidata.**
 

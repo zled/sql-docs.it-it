@@ -40,7 +40,7 @@ ms.locfileid: "47799109"
 # <a name="integration-services-ssis-logging"></a>Registrazione di Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili provider di log che è possibile utilizzare per implementare la registrazione in pacchetti, contenitori e attività. Tramite la registrazione è possibile acquisire informazioni di run-time su un pacchetto, che consentono di controllare e risolvere i problemi del pacchetto ogni volta che viene eseguito. Nel log è ad esempio possibile acquisire il nome dell'operatore che ha eseguito il pacchetto, nonché la data e l'ora di inizio e di fine dell'esecuzione.  
   
- È possibile configurare l'ambito di registrazione che si verifica durante l'esecuzione di un pacchetto nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Enable Logging for Package Execution on the SSIS Server](#server_logging).  
+ È possibile configurare l'ambito di registrazione che si verifica durante l'esecuzione di un pacchetto nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Abilitare la registrazione per l'esecuzione di pacchetti nel server SSIS](#server_logging)  
   
  Si può anche includere la registrazione quando si esegue un pacchetto con l'utilità del prompt dei comandi **dtexec** . Per ulteriori informazioni sugli argomenti del prompt dei comandi che supportano la registrazione, vedere [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
@@ -379,7 +379,7 @@ ms.locfileid: "47799109"
   
 9. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
 
-## <a name="server_logging"></a> Enable Logging for Package Execution on the SSIS Server
+## <a name="server_logging"></a> Abilitare la registrazione per l'esecuzione del pacchetto nel Server SSIS
   Questo argomento descrive come impostare o modificare il livello di registrazione per un pacchetto quando si esegue un pacchetto che è stato distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Il livello di registrazione impostato quando si esegue il pacchetto sostituisce il livello di registrazione del pacchetto configurato in fase di progettazione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vedere [Abilitare la registrazione di pacchetti in SQL Server Data Tools](#ssdt) per altre informazioni.  
   
  In **Proprietà server**di SQL Server, nella proprietà **Server logging level** (Livello di registrazione del server), è possibile selezionare un livello di registrazione predefinito per l'intero server. È possibile scegliere uno dei livelli di registrazione predefiniti descritti in questo argomento oppure è possibile selezionare un livello di registrazione personalizzato esistente. Il livello di registrazione selezionato viene applicato per impostazione predefinita a tutti i pacchetti distribuiti nel catalogo SSIS. Si applica anche per impostazione predefinita a un passaggio del processo di SQL Agent che esegue un pacchetto SSIS.  
