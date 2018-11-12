@@ -73,7 +73,7 @@ ms.locfileid: "47728679"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Per eseguire un ciclo su un gruppo di tabelle mediante Foreach ADO.NET Schema Rowset Enumerator  
   
-1.  Creare una gestione connessione ADO.NET che usi il provider OLE DB Microsoft ACE per connettersi a una cartella di lavoro di Excel. Nella pagina Tutte della finestra di dialogo **Gestione connessione** assicurarsi di immettere la versione di Excel, in questo caso Excel 12.0, come valore della proprietà Extended Properties. Per altre informazioni, vedere [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+1.  Creare una gestione connessione ADO.NET che usi il provider OLE DB Microsoft ACE per connettersi a una cartella di lavoro di Excel. Nella pagina Tutte della finestra di dialogo **Gestione connessione** assicurarsi di immettere la versione di Excel, in questo caso Excel 12.0, come valore della proprietà Extended Properties. Per altre informazioni, vedere [aggiungere, eliminare o condividere una gestione connessione in un pacchetto](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
 2.  Creare una variabile stringa che riceverà il nome della tabella corrente a ogni iterazione del ciclo.  
   
