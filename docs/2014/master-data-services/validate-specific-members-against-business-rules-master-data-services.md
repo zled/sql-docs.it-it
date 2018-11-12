@@ -25,7 +25,7 @@ ms.locfileid: "48058851"
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è opportuno applicare selettivamente regole business quando si desidera aggiornare o convalidare subset di membri rispetto a regole business.  
   
 > [!NOTE]  
->  Per applicare le regole di business a tutti i membri in una versione di un modello, vedere [Validate a Version against Business Rules &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md).  
+>  Per applicare le regole di business a tutti i membri in una versione di un modello, vedere [Convalidare una versione usando le regole di business &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
