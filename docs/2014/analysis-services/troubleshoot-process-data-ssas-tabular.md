@@ -47,7 +47,7 @@ ms.locfileid: "48174701"
   
  Per questo motivo, è necessario tenere conto del potenziale impatto e delle possibili conseguenze prima di modificare le origini dati o di elaborare i dati ottenuti dall'origine dati.  
   
--   Dopo aver apportato modifiche all'origine dati, è possibile che alcune parti dei dati del modello risultino interrotte. Se non è possibile recuperare tutte le colonne dall'origine dati, ad esempio se sono state eliminate o modificate, l'elaborazione non verrà completata e sarà necessario aggiornare i mapping tra i dati di origine e quelli del modello. Per altre informazioni, vedere [Edit an Existing Data Source Connection &#40;SSAS Tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md).  
+-   Dopo aver apportato modifiche all'origine dati, è possibile che alcune parti dei dati del modello risultino interrotte. Se non è possibile recuperare tutte le colonne dall'origine dati, ad esempio se sono state eliminate o modificate, l'elaborazione non verrà completata e sarà necessario aggiornare i mapping tra i dati di origine e quelli del modello. Per altre informazioni, vedere [Modificare una connessione all'origine dati esistente &#40;SSAS tabulare&#41;](edit-an-existing-data-source-connection-ssas-tabular.md).  
   
 -   Dopo l'elaborazione, alcune colonne potrebbero essere contrassegnate come contenenti un errore. Questa situazione può verificarsi se la formula DAX nella colonna utilizza dati che non erano più disponibili al momento dell'elaborazione o il cui tipo è stato modificato oppure se ai dati esterni è stato aggiunto un valore non valido. Per risolvere il problema, è possibile modificare la formula o eliminare la colonna, se è basata su dati che non sono più disponibili.  
   
