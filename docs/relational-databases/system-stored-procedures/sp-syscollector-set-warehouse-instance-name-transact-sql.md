@@ -44,7 +44,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] '*nome_istanza*'  
  Nome dell'istanza. *instance_name* viene **sysname** e i valori predefiniti per l'istanza locale se NULL.  
   
-> **Nota:***nome_istanza* deve essere il nome, nome completo dell'istanza che include il nome del computer e il nome dell'istanza nel formato *computerName* \\ *instanceName*.    
+> **Nota:** *nome_istanza* deve essere il nome, nome completo dell'istanza che include il nome del computer e il nome dell'istanza nel formato *computerName* \\ *instanceName*.    
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
