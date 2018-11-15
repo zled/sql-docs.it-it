@@ -37,7 +37,7 @@ ms.locfileid: "48120961"
     -   Se il progetto è stato creato in una versione precedente di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], dopo aver aperto il file di progetto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], convertirlo nel modello di distribuzione del progetto.  
   
         > [!NOTE]  
-        >  Se nel progetto sono incluse una o più origini dati, queste ultime vengono rimosse al completamento della conversione del progetto. Per creare una connessione a un'origine dati che può essere condivisa dai pacchetti nel progetto, aggiungere una gestione connessione a livello del progetto. Per altre informazioni, vedere [Add, Delete, or Share a Connection Manager in a Package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
+        >  Se nel progetto sono incluse una o più origini dati, queste ultime vengono rimosse al completamento della conversione del progetto. Per creare una connessione a un'origine dati che può essere condivisa dai pacchetti nel progetto, aggiungere una gestione connessione a livello del progetto. Per altre informazioni, vedere [aggiungere, eliminare o condividere una gestione connessione in un pacchetto](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
   
          Le diverse attività di conversione eseguite dalla **Conversione guidata progetto di Integration Services** variano a seconda che la procedura guidata venga eseguita da [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   

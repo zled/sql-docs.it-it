@@ -35,7 +35,7 @@ ms.locfileid: "48050181"
 # <a name="integration-services-ssis-logging"></a>Registrazione di Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili provider di log che è possibile utilizzare per implementare la registrazione in pacchetti, contenitori e attività. Tramite la registrazione è possibile acquisire informazioni di run-time su un pacchetto, che consentono di controllare e risolvere i problemi del pacchetto ogni volta che viene eseguito. Nel log è ad esempio possibile acquisire il nome dell'operatore che ha eseguito il pacchetto, nonché la data e l'ora di inizio e di fine dell'esecuzione.  
   
- È possibile configurare l'ambito di registrazione che si verifica durante l'esecuzione di un pacchetto nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Enable Logging for Package Execution on the SSIS Server](../enable-logging-for-package-execution-on-the-ssis-server.md).  
+ È possibile configurare l'ambito di registrazione che si verifica durante l'esecuzione di un pacchetto nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Abilitare la registrazione per l'esecuzione di pacchetti nel server SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md)  
   
  Si può anche includere la registrazione quando si esegue un pacchetto con l'utilità del prompt dei comandi **dtexec** . Per ulteriori informazioni sugli argomenti del prompt dei comandi che supportano la registrazione, vedere [dtexec Utility](../packages/dtexec-utility.md).  
   

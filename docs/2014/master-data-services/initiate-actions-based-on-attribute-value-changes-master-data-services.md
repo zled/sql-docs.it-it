@@ -31,7 +31,7 @@ ms.locfileid: "48151085"
   
 -   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
--   Gli attributi devono essere in un gruppo rilevamento modifiche. Per altre informazioni, vedere [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) .  
+-   Gli attributi devono essere in un gruppo rilevamento modifiche. Per altre informazioni, vedere [Aggiungere attributi ad un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) .  
   
 ### <a name="to-create-a-business-rule-to-initiate-actions-based-on-attribute-value-changes"></a>Per creare una regola business per inizializzare azioni basate su modifiche dei valori di attributo  
   
