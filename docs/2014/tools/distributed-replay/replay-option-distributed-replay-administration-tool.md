@@ -77,7 +77,7 @@ ms.locfileid: "48177091"
   
  Il parametro **-c** non è obbligatorio se si vuole usare i valori predefiniti del file di configurazione della riproduzione `DReplay.exe.replay.config`.  
   
- *intervallo_stato***-f**  
+ *intervallo_stato* **-f**  
  Specifica la frequenza in secondi in base alla quale visualizzare lo stato.  
   
  Se **-f** non è specificato, l'intervallo predefinito è 30 secondi.  

@@ -72,7 +72,7 @@ ms.locfileid: "48227021"
   
 18. Nel riquadro **Modifica azione** fare clic su **Salva elemento**.  
   
-19. Aggiungere facoltativamente più condizioni alla regola. Per altre informazioni, vedere [Add Multiple Conditions to a Business Rule &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
+19. Aggiungere facoltativamente più condizioni alla regola. Per altre informazioni, vedere [Aggiungere più condizioni a una regola business &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
   
 20. Fare clic su **Indietro**.  
   
