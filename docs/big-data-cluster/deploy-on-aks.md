@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07ee0ac0db742eca9a55decfcd78cb76b75e0160
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
-ms.translationtype: HT
+ms.openlocfilehash: 0eda19b4a241a066771afff1cfb682fa7234f81e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221657"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700387"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Configurare Azure Kubernetes Service per le distribuzioni di SQL Server 2019 (anteprima)
 
@@ -27,11 +27,13 @@ Questo articolo descrive i passaggi per la distribuzione di Kubernetes nel servi
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Per un ambiente del servizio contenitore di AZURE, per un'esperienza ottimale durante la convalida gli scenari di base, è consigliabile agente almeno tre macchine virtuali (oltre a master), con almeno 4 Vcpu e 32 GB di memoria ciascuna. Infrastruttura di Azure offre più opzioni di dimensioni per le macchine virtuali, vedere [qui](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) per le selezioni nell'area di cui si prevede di distribuire.
+- Per un ambiente del servizio contenitore di AZURE, per un'esperienza ottimale durante la convalida gli scenari di base, è consigliabile agente almeno tre macchine virtuali (oltre a master), con almeno 4 Vcpu e 32 GB di memoria ciascuna. Infrastruttura di Azure offre più opzioni di dimensioni per le macchine virtuali, vedere [qui](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) per le selezioni nell'area di cui si prevede di distribuire.
   
 - In questa sezione è necessario che sia in esecuzione la CLI di Azure versione 2.0.4 o versioni successive. Se è necessario installare o eseguire l'aggiornamento, vedere [installare Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Eseguire `az --version` per trovare la versione, se necessario.
 
-- Installare [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) con un minimo di versione 1.10 per server e client. Se si vuole installare una versione specifica nel client kubectl, vedere [installare kubectl binari tramite curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Per AKS, è necessario usare `--kubernetes-version` parametro per specificare una versione diversa da quella predefinita.
+- Installare [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) con un minimo di versione 1.10. Se si vuole installare una versione specifica nel client kubectl, vedere [installare kubectl binari tramite curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
+
+- Versione minima 1.10 stesso si applica al server di Kubernetes. Per AKS, è necessario usare `--kubernetes-version` parametro per specificare una versione diversa da quella predefinita.
 
 > [!NOTE]
 Si noti che la versione del client/server inclinare vale a dire supportato è + /-1 versione secondaria. La documentazione di Kubernetes indicato che "un client deve essere asimmetriche non più di una versione secondaria dal server master, ma può causare il master da una versione secondaria. Ad esempio, un master v1.3 dovrebbe funzionare con la versione 1.1, versione 1.2 e nodi v1.3 e dovrebbe funzionare con v1.2 v1.3 e i client versione 1.4." Per altre informazioni, vedere [Kubernetes supportato rilasci e componente inclinazione](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -82,7 +84,7 @@ Un gruppo di risorse di Azure è un gruppo logico in Azure le risorse vengono di
     --kubernetes-version 1.10.8
     ```
 
-    È possibile aumentare o ridurre il numero di agenti predefinito modificando il `--node-count <n>` in cui `<n>` è il numero di nodi agente che si desidera avere.
+    È possibile aumentare o ridurre il numero di nodi agente Kubernetes modificando la `--node-count <n>` in cui `<n>` è il numero di nodi agente che si desidera avere, quale l'elemento non include il nodo master di Kubernetes. Nell'esempio precedente, verrà **4** macchine virtuali di dimensioni **Standard_E4s_v3** usata per il cluster AKS: **1** per il servizio master e **3** per il nodi agente.
 
     Dopo alcuni minuti, il comando viene completato e restituisce le informazioni in formato JSON sul cluster.
 

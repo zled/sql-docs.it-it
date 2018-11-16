@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 019d3d1491425854b681a5c1e8dd08e5228af2ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 003fc3496a68f0437dc2c7d313179da1f37a9c7b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623720"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669060"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Commenti e suggerimenti dei clienti per SQL Server in Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "47623720"
 
 Per impostazione predefinita, Microsoft SQL Server raccoglie informazioni su come i clienti usano l'applicazione. In particolare, SQL Server raccoglie informazioni sull'esperienza di installazione, l'utilizzo e le prestazioni. Queste informazioni consentono a Microsoft di migliorare il prodotto per meglio soddisfare le esigenze dei clienti. Ad esempio, Microsoft raccoglie informazioni sui tipi di codici di errore riscontrati dai clienti in modo da poter correggere i bug correlati, migliorare la documentazione su come usare SQL Server e determinare se occorre aggiungere funzionalità al prodotto per offrire un'esperienza migliore ai clienti.
 
-Questo documento vengono fornite informazioni dettagliate su quali tipi di informazioni vengono raccolte e sulla configurazione di Microsoft SQL Server in Linux per l'invio che raccolte informazioni a Microsoft. SQL Server 2017 include un'informativa sulla privacy che spiega quali informazioni Microsoft e non vengano raccolti dagli utenti. Per altre informazioni, vedere la [informativa sulla privacy](http://go.microsoft.com/fwlink/?LinkID=868444).
+Questo documento vengono fornite informazioni dettagliate su quali tipi di informazioni vengono raccolte e sulla configurazione di Microsoft SQL Server in Linux per l'invio che raccolte informazioni a Microsoft. SQL Server 2017 include un'informativa sulla privacy che spiega quali informazioni Microsoft e non vengano raccolti dagli utenti. Per altre informazioni, vedere la [informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkID=868444).
 
 In particolare, Microsoft non invia alcuna informazione dei tipi seguenti tramite questo meccanismo:
 

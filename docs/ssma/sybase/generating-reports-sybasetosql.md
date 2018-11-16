@@ -14,12 +14,12 @@ ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ce414e10afc316a478825441d41dc5601c043c3d
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 9ee167a46472f4abd4794f767ab4a8e992f4b12a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098927"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667910"
 ---
 # <a name="generating-reports-sybasetosql"></a>Generazione di report (SybaseToSQL)
 I report di determinate attività eseguite usando i comandi vengono generati nella Console SSMA a livello di oggetto dell'albero.  
@@ -146,5 +146,5 @@ Il comando **dal database di aggiornamento** ha **report errori-a-** parametro c
 -   Errore-script  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione della Console SSMA (Sybase)](http://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Esecuzione della Console SSMA (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 61558536574750e7588124afb75cf26ee580b22a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701509"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668530"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Collegamento delle applicazioni di accesso a SQL Server - database SQL di Azure (AccessToSQL)
 Se si desidera utilizzare le applicazioni Access esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile collegare le tabelle di Access originale dopo la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tabelle di SQL Azure. Collegamento è possibile modificare il database di Access in modo che le pagine di accesso di query, form, i report e dati usano i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database di SQL Azure anziché i dati presenti nel database di Access.  
@@ -56,7 +56,7 @@ Quando si apre una tabella di Access, i dati vengono recuperati utilizzando un c
   
 > [!IMPORTANT]  
 > Per collegare l'accesso alle tabelle con un database di Azure, è necessario SQL Server Native Client(SNAC) versione 10.5 o versione successiva.   
-> È possibile ottenere la versione più recente di SNAC dal [Microsoft® SQL Server® 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=196940).  
+> È possibile ottenere la versione più recente di SNAC dal [Microsoft® SQL Server® 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=196940).  
   
 ## <a name="unlinking-access-tables"></a>Scollegamento accedere alle tabelle  
 Quando si scollega una tabella di Access da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tabella di SQL Azure, SSMA consente di ripristinare la tabella di Access originale e i relativi dati.  

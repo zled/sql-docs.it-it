@@ -20,18 +20,18 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 791586badfeff0c1bde35b5cdf25ba750f79fe80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b376924dfb1833165a1f40ecfd1487c49eb2dcb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779029"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604621"
 ---
 # <a name="createrecordset-method-rds"></a>Metodo CreateRecordset (Servizi Desktop remoto)
 Crea un oggetto vuoto, disconnesso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,9 +47,9 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  Oggetto **Variant** matrice di attributi che definiscono ciascuna colonna il **Recordset** creato. Ogni definizione di colonna contiene una matrice di quattro attributi obbligatori e un attributo facoltativo.  
   
-|Attribute|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
-|Nome|Nome dell'intestazione di colonna.|  
+|nome|Nome dell'intestazione di colonna.|  
 |Tipo|Valore intero del tipo di dati.|  
 |Dimensione|Valore intero della larghezza in caratteri, indipendentemente dal tipo di dati.|  
 |Supporto di valori Null|Valore booleano.|  
@@ -66,7 +66,7 @@ object.CreateRecordset(ColumnInfos)
   
  Per alcuni dei tipi di dati della variabile, il tipo può essere assegnato al tipo indicato nella colonna di sostituzione. Non si vedranno le sostituzioni fino a dopo il **Recordset** creato e riempito. È quindi possibile cercare il tipo di dati effettivo, se necessario.  
   
-|Length|Costante|Numero|Sostituzione|  
+|Length|Costante|Number|Sostituzione|  
 |------------|--------------|------------|------------------|  
 |Fisso|**adTinyInt**|16||  
 |Fisso|**adSmallInt**|2||  

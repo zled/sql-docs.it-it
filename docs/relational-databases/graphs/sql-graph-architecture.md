@@ -5,8 +5,7 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcff6266a24602b0ce1f17818d1c4b0451b1adaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830649"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512806"
 ---
 # <a name="sql-graph-architecture"></a>Architettura di grafi SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ Informazioni su come è progettato grafo SQL. Conoscere le nozioni di base rende
 Gli utenti possono creare un grafico per ogni database. Un grafico è una raccolta di nodi e le tabelle bordi. Le tabelle nodi o archi possono essere create in qualsiasi schema nel database, ma appartengono a un unico grafico logico. Una tabella nodi è una raccolta di tipo simile di nodi. Ad esempio, una tabella nodi di persone contiene tutti i nodi di persone appartenenti a un grafico. Analogamente, una tabella edge è una raccolta di tipo simile di bordi. Ad esempio, una tabella bordi di amici contiene tutti i bordi che connettono una persona a un'altra persona. Poiché i nodi e archi vengono archiviati in tabelle, la maggior parte delle operazioni supportate per le tabelle regolari sono supportata nelle tabelle nodi o bordi. 
  
  
-![SQL-graph-architecture](../../relational-databases/graphs/media/sql-graph-architecture.png "architettura del database Sql grafico")   
+![SQL-graph-architecture](../../relational-databases/graphs/media/sql-graph-architecture.png "architettura del database Sql grafico")   
 
 Figura 1: Architettura del database SQL grafico
  
@@ -57,7 +56,7 @@ Simile al `$node_id` colonna, è consigliabile che gli utenti creano un indice u
 
 Figura 2 mostra come nodo e le tabelle bordi vengono archiviate nel database. 
 
-![le tabelle Person-amici](../../relational-databases/graphs/media/person-friends-tables.png "nodo /People/Person e amici edge tabelle")   
+![le tabelle Person-amici](../../relational-databases/graphs/media/person-friends-tables.png "nodo /People/Person e amici edge tabelle")   
 
 Figura 2: Nodi e bordo rappresentazione di una tabella
 
@@ -110,10 +109,10 @@ Colonne implicite in una tabella bordi
 |graph_id_\<hex_string> |bigint |1  |interno `graph_id` colonna  |
 |$edge_id_\<hex_string> |NVARCHAR   |0  |External `edge_id` colonna  |
 |from_obj_id_\<hex_string>  |INT    |1  |interno dal nodo `object_id`  |
-|from_id_\<hex_string>  |bigint |1  |Interno dal nodo `graph_id`  |
+|from_id_\<hex_string>  |bigint |1  |interno dal nodo `graph_id`  |
 |$from_id_\<hex_string> |NVARCHAR   |0  |esterno dal nodo `node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |interni al nodo `object_id`  |
-|to_id_\<hex_string>    |bigint |1  |Interni al nodo `graph_id`  |
+|to_id_\<hex_string>    |bigint |1  |interni al nodo `graph_id`  |
 |$to_id_\<hex_string>   |NVARCHAR   |0  |esterna al nodo `node_id`  |
  
 ### <a name="system-functions"></a>Funzioni di sistema
@@ -130,7 +129,7 @@ Le funzioni predefinite seguenti vengono aggiunti. Queste funzionalità permette
 
 
 
-## <a name="transact-sql-reference"></a>Riferimento Transact-SQL 
+## <a name="transact-sql-reference"></a>Guida di riferimento a Transact-SQL 
 Scopri il [!INCLUDE[tsql-md](../../includes/tsql-md.md)] estensioni introdotte in SQL Server e Database SQL di Azure, che consentono la creazione e l'esecuzione di query su oggetti grafo. Le estensioni del linguaggio di query consentono di query e attraversare il grafo usando sintassi grafica ASCII.
  
 ### <a name="data-definition-language-ddl-statements"></a>Istruzioni Data Definition Language (DDL)

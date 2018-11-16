@@ -1,7 +1,7 @@
 ---
 title: Microsoft ActiveX Data Objects (ADO) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/25/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +13,12 @@ ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dad025d911adf2795a90125e20d57270f489efa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0994c4ee4c96e5ed9c373ec4bdc94b02ccddff7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602309"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605171"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -42,7 +42,7 @@ In ogni sezione di questo articolo descrive un componente di ADO.
  Servizio dati remoto (RDS) è una funzionalità di ADO, con cui è possibile spostare dati da un server a un'applicazione client o una pagina Web, modificare i dati nel client e restituire gli aggiornamenti al server in un unico round trip.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="adox"></a>ADOX  
  Microsoft ActiveX Data Objects Extensions per Data Definition Language and Security (ADOX) è un'estensione per gli oggetti ADO e di un modello di programmazione. ADOX include gli oggetti per la creazione di schemi e modifica, nonché protezione. Poiché si tratta di un approccio basato su oggetti per modificare lo schema, è possibile scrivere codice che funzionerà con i dati di varie origini indipendentemente dalle differenze nelle loro sintassi native.  
