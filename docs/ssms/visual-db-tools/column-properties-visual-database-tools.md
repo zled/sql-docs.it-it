@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 438356f08fee5bc9ac20c4a5b2038e54e7a6ffa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ce67b078a4410f67a1c877951e83dece65af1b6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815969"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698779"
 ---
 # <a name="column-properties-visual-database-tools"></a>Proprietà colonne (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ Consente di visualizzare il nome dell'origine dei dati della colonna selezionata
 Viene espansa per visualizzare le proprietà rimanenti.  
   
 **Tipo di dati**  
-Mostra il tipo di dati della colonna selezionata. Per altre informazioni, vedere [Tipi di dati (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Mostra il tipo di dati della colonna selezionata. Per altre informazioni, vedere [Tipi di dati (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Incremento identità**  
 Mostra l'incremento che verrà aggiunto a **Valore di inizializzazione Identity** per ogni riga successiva della colonna Identity e (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
@@ -64,7 +64,7 @@ Consente di visualizzare il valore di inizializzazione assegnato alla prima riga
 **Identità**  
 Indica se la colonna selezionata è la colonna di identità per la tabella. (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
-**Length**  
+**Lunghezza**  
 Indica il numero di caratteri consentiti per i tipi di dati basati su caratteri.  
   
 **Ammette valori Null**  
@@ -95,7 +95,7 @@ Consente di visualizzare il nome della colonna. Per modificare il nome, digitarl
 Indica se il tipo di dati della colonna accetta valori Null.  
   
 **Tipo di dati**  
-Consente di visualizzare il tipo di dati della colonna selezionata. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore. Per altre informazioni, vedere [Tipi di dati (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Consente di visualizzare il tipo di dati della colonna selezionata. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore. Per altre informazioni, vedere [Tipi di dati (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Valore predefinito dell'associazione**  
 Mostra il valore predefinito utilizzato per la colonna quando non ne viene specificato alcuno. Nell'elenco a discesa sono contenuti tutti i valori predefiniti globali impostati nell'origine dei dati. Per associare la colonna a un valore predefinito globale, selezionarlo dall'elenco a discesa. In alternativa, per creare un vincolo predefinito per la colonna, digitare direttamente il valore predefinito come testo.  
@@ -143,7 +143,7 @@ Indica la colonna utilizzata per definire il tipo di documento di una colonna di
 Indica il linguaggio utilizzato per indicizzare la colonna.  
   
 **Semantica statistica**  
-Selezionare se abilitare l'indicizzazione semantica statistica per la colonna selezionata. Per altre informazioni, vedere [Ricerca semantica](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Selezionare se abilitare l'indicizzazione semantica statistica per la colonna selezionata. Per altre informazioni, vedere [Ricerca semantica](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
   
 Se si seleziona una lingua in **Lingua** prima di selezionare **Semantica statistica**e alla lingua selezionata non è associato alcun modello di lingua semantico, l'opzione **Semantica statistica** viene impostata su **No** e non può essere modificata. Se si seleziona **Sì** per l'opzione **Semantica statistica** prima di selezionare una lingua in **Lingua**, le lingue disponibili nella colonna **Lingua** saranno limitate a quelle per cui è disponibile un modello di lingua semantico.  
   

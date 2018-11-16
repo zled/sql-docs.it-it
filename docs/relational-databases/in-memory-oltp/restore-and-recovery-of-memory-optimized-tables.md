@@ -11,12 +11,12 @@ ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3509c90a4fb5e72eab74742afae302bcbfaeaa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dbf17ab9e9340b793b4310427169be3bcdfe120
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821339"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671320"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Ripristino e recupero di tabelle ottimizzate per la memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,6 +68,6 @@ Le tabelle ottimizzate per la memoria possono in genere essere caricate in memor
 -   Tabelle ottimizzate per la memoria di grandi dimensioni con uno o più indici non cluster possono determinare un uso elevato della CPU. A differenza di un indice hash, il cui numero di bucket viene stabilito al momento della creazione, le dimensioni degli indici non cluster aumentano in modo dinamico.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire il backup, ripristinare e recuperare tabelle con ottimizzazione per la memoria](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+ [Eseguire il backup, ripristinare e recuperare tabelle con ottimizzazione per la memoria](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

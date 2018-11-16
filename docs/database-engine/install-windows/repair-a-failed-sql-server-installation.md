@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: db65d03e5a831e4438b407997a2ac42599e3df4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41103374bdef2d292bfd5c3e22e3fab093309f42
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611159"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606781"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>Ripristinare un'installazione non riuscita di SQL Server
 
@@ -81,6 +81,6 @@ L'operazione di ripristino può essere utilizzata negli scenari seguenti:
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [Procedure per l'installazione](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [Procedure per l'installazione](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

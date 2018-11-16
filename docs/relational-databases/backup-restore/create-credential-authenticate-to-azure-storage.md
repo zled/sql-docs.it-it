@@ -13,12 +13,12 @@ ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e67b9f7bc040265d770c8eef026cecc49c2c52fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c02298de6521aa2bf5380216862fb30094803115
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765820"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677870"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>Creare le credenziali - Eseguire l'autenticazione nel servizio di archiviazione Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47765820"
   
 ## <a name="windows-azure-credentials"></a>Credenziali di Windows Azure  
  **Certificato di gestione**  
- Utilizzare questa opzione per specificare un certificato dall'archivio certificati locale corrispondente al certificato di gestione di Windows Azure. Per ulteriori informazioni sul certificato di gestione di Windows Azure, vedere [Creare e caricare un certificato di gestione per Windows Azure](http://go.microsoft.com/fwlink/?LinkId=320781).  
+ Utilizzare questa opzione per specificare un certificato dall'archivio certificati locale corrispondente al certificato di gestione di Windows Azure. Per ulteriori informazioni sul certificato di gestione di Windows Azure, vedere [Creare e caricare un certificato di gestione per Windows Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
   
  **Sottoscrizione**  
  Selezionare, digitare o incollare l'ID sottoscrizione di Windows Azure corrispondente al certificato di gestione dall'archivio certificati locale.  
@@ -40,7 +40,7 @@ ms.locfileid: "47765820"
  Utilizzare questa opzione se si dispone di un profilo di pubblicazione scaricato nel computer. Se si utilizza questa opzione, l'ID sottoscrizione e il certificato vengono inseriti automaticamente.  
   
 > [!CAUTION]  
->  SQL Server supporta attualmente la versione del profilo di pubblicazione 2.0. Per scaricare la versione supportata del profilo di pubblicazione, vedere [Download del profilo di pubblicazione 2.0](http://go.microsoft.com/fwlink/?LinkId=396421).  
+>  SQL Server supporta attualmente la versione del profilo di pubblicazione 2.0. Per scaricare la versione supportata del profilo di pubblicazione, vedere [Download del profilo di pubblicazione 2.0](https://go.microsoft.com/fwlink/?LinkId=396421).  
   
 ## <a name="storage-account"></a>Account di archiviazione  
  Selezionare l'account di archiviazione da utilizzare per archiviare i file di backup.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 68c556abb719ba9642e7c1074866235e46c1f1e3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ca366eeee5bbe0e291ccefa140237b9e977a9a90
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029120"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812814"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Pubblicare un'origine dati condivisa in una raccolta di SharePoint
   Per pubblicare un'origine dati condivisa in un server di report eseguito in modalità integrata SharePoint, è necessario impostare le proprietà del progetto report in Progettazione report. Nelle proprietà del progetto tutti i riferimenti a server, report e origini dati condivise devono essere URL completi.  
@@ -34,13 +34,13 @@ ms.locfileid: "50029120"
   
 4.  Se si desidera pubblicare le origini dati condivise nel progetto e sovrascrivere origini dati condivise pubblicate in precedenza, impostare **OverwriteDataSources** su **True**.  
   
-5.  (Facoltativo) Per **TargetDataSourceFolder**, digitare un URL a una raccolta di SharePoint oppure a una cartella della raccolta, ad esempio `http://TestServer/TestSite/Documents/DataSources`.  
+5.  (Facoltativo) Per **TargetDataSourceFolder**, digitare un URL a una raccolta di SharePoint oppure a una cartella della raccolta, ad esempio `https://TestServer/TestSite/Documents/DataSources`.  
   
      Se non si specifica alcun valore, verrà utilizzato il valore **TargetReportFolder** .  
   
-6.  Per **TargetReportFolder**, digitare l'URL di una raccolta o di una cartella della raccolta, ad esempio `http://TestServer/TestSite/Documents/Reports`.  
+6.  Per **TargetReportFolder**, digitare l'URL di una raccolta o di una cartella della raccolta, ad esempio `https://TestServer/TestSite/Documents/Reports`.  
   
-7.  Per **TargetServerURL**, digitare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà utilizzato il sito principale predefinito, Ad esempio `http://servername`, `http://servername/site` o `http://servername/site/subsite`.  
+7.  Per **TargetServerURL**, digitare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà utilizzato il sito principale predefinito, Ad esempio `https://servername`, `https://servername/site` o `https://servername/site/subsite`.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

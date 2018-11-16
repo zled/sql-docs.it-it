@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2400595e7e32cf2eb9e4adee010c844145aac959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721769"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641822"
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
   L'attività Esegui SQL consente di eseguire istruzioni SQL o stored procedure da un pacchetto. L'attività può includere una o più istruzioni SQL che vengono eseguite in ordine sequenziale. È possibile utilizzare l'attività Esegui SQL per gli scopi seguenti:  
@@ -66,7 +66,7 @@ ms.locfileid: "47721769"
 >  L'attività Esegui SQL non è in grado di elaborare correttamente le istruzioni SQL valide scritte al di fuori dell'attività stessa.  
   
 > [!NOTE]  
->  L'attività Esegui SQL usa il valore di enumerazione ParseMode **RecognizedAll** . Per altre informazioni, vedere [Spazio dei nomi ManagedBatchParser](http://go.microsoft.com/fwlink/?LinkId=223617).  
+>  L'attività Esegui SQL usa il valore di enumerazione ParseMode **RecognizedAll** . Per altre informazioni, vedere [Spazio dei nomi ManagedBatchParser](https://go.microsoft.com/fwlink/?LinkId=223617).  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>Inviare più istruzioni in un batch  
  Se un'attività Esegui SQL include più istruzioni, sarà possibile raggrupparle ed eseguirle come batch, utilizzando il comando GO per segnalare la fine del batch. Tutte le istruzioni SQL comprese tra due comandi GO vengono inviate in batch al provider OLE DB per l'esecuzione. Il comando SQL può includere più batch separati da comandi GO.  
@@ -183,7 +183,7 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
  **SQLStatement**  
  Digitare l'istruzione SQL da eseguire nella casella di opzione oppure fare clic sul pulsante (…) per digitare l'istruzione SQL nella finestra di dialogo **Immetti query SQL** o fare clic su **Compila query** per comporre l'istruzione tramite la finestra di dialogo **Generatore di query** .  
   
- **Argomenti correlati:** [Generatore query](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **Argomenti correlati:** [Generatore query](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Connessione file  
  **FileConnection**  
@@ -195,7 +195,7 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
  **SourceVariable**  
  Selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Pagina Mapping parametri - Editor attività Esegui SQL
 Usare la pagina **Mapping parametri** della finestra di dialogo **Editor attività Esegui SQL** per eseguire il mapping tra variabili e parametri nell'istruzione SQL.  
@@ -286,7 +286,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Usare parametri con le gestioni connessioni ADO.NET e ADO  
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e le gestioni connessioni ADO hanno requisiti specifici per i comandi SQL che usano parametri:  
   
--   Le gestioni connessioni [!INCLUDE[vstecado](../../includes/vstecado-md.md)] richiedono che il comando SQL usi nomi di parametro come indicatori di parametro. È pertanto possibile eseguire il mapping direttamente delle variabili ai parametri. Se ad esempio sulla variabile `@varName` viene eseguito il mapping a un parametro di nome `@parName` , fornirà il valore per il parametro `@parName`.  
+-   Le gestioni connessioni [!INCLUDE[vstecado](../../includes/vstecado-md.md)] richiedono che il comando SQL utilizzi nomi di parametro come marcatori di parametro. È pertanto possibile eseguire il mapping direttamente delle variabili ai parametri. Se ad esempio sulla variabile `@varName` viene eseguito il mapping a un parametro di nome `@parName` , fornirà il valore per il parametro `@parName`.  
   
 -   Per le gestioni connessioni ADO, è necessario che il comando SQL utilizzi punti interrogativi (?) come marcatori di parametro. Tuttavia, come nomi di parametro è possibile utilizzare qualsiasi nome definito dall'utente, ad eccezione dei valori interi.  
   
@@ -307,7 +307,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
 ###  <a name="Date_and_time_data_types"></a> Usare parametri con i tipi di dati di data e ora  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Usare parametri di data e ora con le gestioni connessioni ADO.NET e ADO  
- Durante la lettura dei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **time** and **datetimeoffset**, un'attività Esegui SQL che usa una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o ADO prevede i requisiti aggiuntivi seguenti:  
+ Durante la lettura dei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **time** and **datetimeoffset**, un'attività Esegui SQL che usa una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o ADO prevede i requisiti aggiuntivi seguenti:  
   
 -   Per i dati **time**, una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] richiede che i dati vengano archiviati in un parametro con tipo di parametro **Input** o **Output** e con tipo di dati **string**.  
   
@@ -322,7 +322,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
  Per altre informazioni sui tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sul relativo mapping nei tipi di dati [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) e [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 #### <a name="use-date-and-time-parameters-with-ole-db-connection-managers"></a>Usare parametri di data e ora con le gestioni connessioni OLE DB  
- Quando si usa una gestione connessione OLE DB, un'attività Esegui SQL prevede requisiti di archiviazione specifici per i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **date**, **time**, **datetime**, **datetime2** e **datetimeoffset**. È necessario archiviare questi dati in uno dei seguenti tipi di parametro:  
+ Quando si usa una gestione connessione OLE DB, un'attività Esegui SQL prevede requisiti di archiviazione specifici per i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **date**, **time**, **datetime**, **datetime2**e **datetimeoffset**. È necessario archiviare questi dati in uno dei seguenti tipi di parametro:  
   
 -   Un parametro di input del tipo di dati NVARCHAR.  
   
@@ -338,7 +338,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
  Se i dati non vengono archiviati nel parametro di input o di output appropriato, il pacchetto non viene eseguito correttamente.  
   
 #### <a name="use-date-and-time-parameters-with-odbc-connection-managers"></a>Usare parametri di data e ora con le gestioni connessioni ODBC  
- Quando si usa una gestione connessione ODBC, un'attività Esegui SQL prevede requisiti di archiviazione specifici per i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **date**, **time**, **datetime**, **datetime2** o **datetimeoffset**. È necessario archiviare questi dati in uno dei seguenti tipi di parametro:  
+ Quando si usa una gestione connessione ODBC, un'attività Esegui SQL prevede requisiti di archiviazione specifici per i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **date**, **time**, **datetime**, **datetime2**o **datetimeoffset**. È necessario archiviare questi dati in uno dei seguenti tipi di parametro:  
   
 -   Un parametro di **input** del tipo di dati SQL_WVARCHAR  
   
@@ -382,7 +382,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
 |Tipo di connessione|Sintassi dell'istruzione EXEC|  
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462)(Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462) (Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
 |ADO|Se IsQueryStoredProcedure è impostato su **False**, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Se IsQueryStoredProcedure è impostato su **True**, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Se IsQueryStoredProcedure è impostato su **False**, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Se IsQueryStoredProcedure è impostato su **True**, `uspGetBillOfMaterials`|  
   
@@ -445,7 +445,7 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
     |ODBC|1, 2, 3, …|  
     |EXCEL e OLE DB|0, 1, 2, 3, …|  
   
-10. Selezionare una variabile nell'elenco **Nome variabile** . Per altre informazioni, vedere [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+10. Selezionare una variabile nell'elenco **Nome variabile** . Per altre informazioni, vedere [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
 11. Nell'elenco **Direzione** specificare se il parametro è un input, un output o un valore restituito.  
   
@@ -471,7 +471,7 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
 |Tipo di connessione|Sintassi dell'istruzione EXEC|  
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462)(Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462) (Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
 |ADO|Se IsQueryStoreProcedure è impostato su **False**, `EXEC ? = myStoredProcedure 1`<br /><br /> Se IsQueryStoreProcedure è impostato su **True**, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Set IsQueryStoreProcedure è impostato su **True**.<br /><br /> `myStoredProcedure`|  
   
@@ -516,7 +516,7 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
   
  È possibile eseguire il mapping di un set di risultati XML solo a una variabile con il tipo di dati **String** o **Object** . Se la variabile ha il tipo di dati **String** , l'attività Esegui SQL restituisce una stringa e l'origine XML può utilizzare i dati XML. Se la variabile ha il tipo di dati **Object** , l'attività Esegui SQL restituisce un oggetto DOM (Document Object Model).  
   
- Un **Set dei risultati completo** deve eseguire il mapping a una variabile con il tipo di dati **Object** . Il risultato restituito è un oggetto set di righe. È possibile usare un contenitore Ciclo ForEach per estrarre i valori di riga della tabella archiviati nella variabile Object nelle variabili del pacchetto e quindi usare un'attività Script per scrivere in un file i dati archiviati nelle variabili del pacchetto. Per una dimostrazione dell'esecuzione di questa operazione tramite un contenitore Ciclo ForEach e un'attività Script, vedere l'esempio CodePlex, relativo all' [esecuzione di parametri SQL e set di risultati](http://go.microsoft.com/fwlink/?LinkId=157863)sul sito Web msftisprodsamples.codeplex.com.  
+ Un **Set dei risultati completo** deve eseguire il mapping a una variabile con il tipo di dati **Object** . Il risultato restituito è un oggetto set di righe. È possibile usare un contenitore Ciclo ForEach per estrarre i valori di riga della tabella archiviati nella variabile Object nelle variabili del pacchetto e quindi usare un'attività Script per scrivere in un file i dati archiviati nelle variabili del pacchetto. Per una dimostrazione dell'esecuzione di questa operazione tramite un contenitore Ciclo ForEach e un'attività Script, vedere l'esempio CodePlex, relativo all' [esecuzione di parametri SQL e set di risultati](https://go.microsoft.com/fwlink/?LinkId=157863)sul sito Web msftisprodsamples.codeplex.com.  
   
  Nella tabella seguente è disponibile un riepilogo dei tipi di dati delle variabili di cui è possibile eseguire il mapping a set di risultati.  
   
@@ -554,7 +554,7 @@ Questa sezione descrive la procedura per il mapping di un set di risultati a una
   
 8.  Per aggiungere un mapping del set dei risultati, fare clic su **Aggiungi**.  
   
-9. Selezionare una variabile dall'elenco **Variables Name** (Nome variabili) o crearne una nuova. Per altre informazioni, vedere [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+9. Selezionare una variabile dall'elenco **Variables Name** (Nome variabili) o crearne una nuova. Per altre informazioni, vedere [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
 10. Nell'elenco **Nome risultato** modificare il nome del set di risultati, se lo si desidera.  
   

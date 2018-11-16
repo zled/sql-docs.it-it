@@ -21,12 +21,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9fd85e82bc3c1ebec9e8263ac1ed836a668290c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afc9d46066c435bc14f2e14fedb0a285ac3b95e3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667819"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672830"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,9 +152,9 @@ ms.locfileid: "47667819"
   
  Per ulteriori informazioni su Database Recovery Advisor, vedere i seguenti blog relativi alla facilità di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [Pagina relativa all'introduzione a Recovery Advisor](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Pagina relativa all'introduzione a Recovery Advisor](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Pagina relativa a Recovery Advisor in cui viene illustrato l'utilizzo di SSMS per creare/ripristinare backup divisi](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Pagina relativa a Recovery Advisor in cui viene illustrato l'utilizzo di SSMS per creare/ripristinare backup divisi](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
  Nessuna.  

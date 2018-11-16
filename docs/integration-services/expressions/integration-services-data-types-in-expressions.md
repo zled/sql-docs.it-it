@@ -14,12 +14,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0cb8e9f1df15d2bed2409e6ea8f82de4b39042d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 978ec0b00cbb4954a7aa6e50e6d182857ac8338a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642699"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639848"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipi di dati nelle espressioni di Integration Services
   L'analizzatore di espressioni usa i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La prima volta che i dati entrano nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] il motore del flusso di dati converte i dati di tutte le colonne in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , mentre i dati delle colonne utilizzate da un'espressione hanno già un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le espressioni utilizzate nelle trasformazioni Suddivisione condizionale e Colonna derivata possono fare riferimento alle colonne perché fanno parte di un flusso di dati che include dati di colonna.  
@@ -131,12 +131,12 @@ ms.locfileid: "47642699"
  I risultati di molte operazioni e funzioni hanno un tipo di dati predeterminato, che può essere il tipo di dati dell'argomento o il tipo di dati a cui l'analizzatore di espressioni esegue il cast del risultato. Il risultato di un operatore OR logico (||), ad esempio, è sempre un valore booleano, mentre il risultato della funzione ABS è il tipo di dati numeric dell'argomento e il risultato di una moltiplicazione è il più piccolo tipo di dati numeric in grado di contenere il risultato senza causare una perdita di dati. Per altre informazioni sui tipi di dati dei risultati, vedere [Operatori &#40;espressione SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md) e [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Utilizzo di un'espressione in un componente flusso di dati](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Utilizzo di un'espressione in un componente flusso di dati](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=746575)sul sito Web pragmaticworks.com  
+-   Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=746575)sul sito Web pragmaticworks.com  
   
--   Articolo tecnico relativo agli [esempi di espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
+-   Articolo tecnico relativo agli [esempi di espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
   
   

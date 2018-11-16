@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307db631ea3d4b803402f11070c5770afe452b0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772561"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701319"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quali sono le funzioni del database SQL?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ Sono applicate a un singolo valore e restituiscono un singolo valore. È possibi
 |[Funzioni per i cursori](cursor-functions-transact-sql.md)|Restituiscono informazioni sui cursori.|  
 |[Funzioni e tipi di dati di data e ora](date-and-time-data-types-and-functions-transact-sql.md)|Eseguono operazioni su valori di input di data e ora e restituiscono valori stringa, numerici o di data e ora.|  
 |[Funzioni JSON](json-functions-transact-sql.md)|Consentono di convalidare o modificare i dati JSON e di eseguire query su di essi.|  
-|[Funzioni logiche](http://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Eseguono operazioni logiche.|  
+|[Funzioni logiche](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Eseguono operazioni logiche.|  
 |[Funzioni matematiche](mathematical-functions-transact-sql.md)|Eseguono calcoli in base ai valori di input specificati come parametri per le funzioni e restituiscono valori numerici.|  
 |[Funzioni per i metadati](metadata-functions-transact-sql.md)|Restituiscono informazioni sul database e sugli oggetti di database.|  
 |[Funzioni di sicurezza](security-functions-transact-sql.md)|Restituiscono informazioni sugli utenti e sui ruoli.|  
 |[Funzioni per i valori stringa](string-functions-transact-sql.md)|Eseguono operazioni sui valori di input di tipo stringa (**char** o **varchar**) e restituiscono un valore stringa o numerico.|  
 |[Funzioni di sistema](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Eseguono operazioni e restituiscono informazioni su valori, oggetti e impostazioni in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Funzioni statistiche di sistema](system-statistical-functions-transact-sql.md)|Restituiscono informazioni statistiche sul sistema.|  
-|[Funzioni per i valori text e image](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Eseguono operazioni su valori di input o colonne di testo o immagini e restituiscono informazioni sul valore.|  
+|[Funzioni per i valori text e image](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Eseguono operazioni su valori di input o colonne di testo o immagini e restituiscono informazioni sul valore.|  
   
 ## <a name="function-determinism"></a>Determinismo delle funzioni  
  Le funzioni predefinite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere deterministiche o non deterministiche. Sono deterministiche quando restituiscono sempre lo stesso risultato ogni volta che vengono chiamate con un set specifico di valori di input. Sono invece non deterministiche se restituiscono valori diversi per ogni chiamata con un set specifico di valori di input. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)  

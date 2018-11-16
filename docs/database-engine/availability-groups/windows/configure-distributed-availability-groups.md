@@ -10,12 +10,12 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcb60c8c249f0b1f1a789b25134bfbcc2419210a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cfc2b3cbb9dedc9f2b8902229c6aea9e68226ec
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694500"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603997"
 ---
 # <a name="configure-distributed-availability-group"></a>Configurare un gruppo di disponibilità distribuito  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Il parametro **LISTENER_URL** specifica il listener per ogni gruppo di disponibilità insieme all'endpoint del mirroring del database del gruppo di disponibilità. Questo esempio riguarda la porta `5022` (non la porta `60173` usata per creare il listener). Se si usa un bilanciamento del carico, ad esempio in Azure, [aggiungere una regola per il bilanciamento del carico per la porta del gruppo di disponibilità distribuito](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Aggiungere la regola per la porta del listener, oltre che alla porta dell'istanza di SQL Server. 
+>  Il parametro **LISTENER_URL** specifica il listener per ogni gruppo di disponibilità insieme all'endpoint del mirroring del database del gruppo di disponibilità. Questo esempio riguarda la porta `5022` (non la porta `60173` usata per creare il listener). Se si usa un bilanciamento del carico, ad esempio in Azure, [aggiungere una regola per il bilanciamento del carico per la porta del gruppo di disponibilità distribuito](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Aggiungere la regola per la porta del listener, oltre che alla porta dell'istanza di SQL Server. 
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>Aggiungere un gruppo di disponibilità distribuito nel secondo cluster  
  Creare quindi un join del gruppo di disponibilità distribuito nel secondo WSFC.  

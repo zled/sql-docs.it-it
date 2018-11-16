@@ -22,12 +22,12 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7bf348d969f3e8ced5b08ae58323e3e698981274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 110c9dea73d84417d54dc99ea946998aea85cfef
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833019"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640228"
 ---
 # <a name="sql-server-destination"></a>SQL Server - destinazione
   La destinazione SQL Server si connette a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale ed esegue il caricamento bulk dei dati nelle tabelle e nelle viste di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non è possibile usare la destinazione SQL Server nei pacchetti che accedono a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un server remoto. Per tali pacchetti, utilizzare la destinazione OLE DB. Per altre informazioni, vedere [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
@@ -85,7 +85,7 @@ ms.locfileid: "47833019"
   
 -   Specificare un timeout per l'operazione di caricamento bulk.  
   
- Per connettersi a un'origine dei dati questa destinazione utilizza una gestione connessione OLE DB, che specifica il provider OLE DB da utilizzare. Per altre informazioni, vedere [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Per connettersi a un'origine dei dati questa destinazione utilizza una gestione connessione OLE DB, che specifica il provider OLE DB da utilizzare. Per altre informazioni, vedere [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornisce inoltre l'oggetto origine dei dati da cui è possibile creare una gestione connessione OLE DB, in modo da rendere disponibili le origini dei dati e le viste origine dati alla destinazione SQL Server.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "47833019"
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate della destinazione SQL Server](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
@@ -113,11 +113,11 @@ ms.locfileid: "47833019"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](http://go.microsoft.com/fwlink/?LinkId=199482)(Possibile visualizzazione dell'errore "Impossibile preparare l'attività Inserimento bulk SSIS per l'inserimento dei dati" nei sistemi con Controllo account utente abilitato) nel sito support.microsoft.com.  
+-   Articolo tecnico [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=199482)(Possibile visualizzazione dell'errore "Impossibile preparare l'attività Inserimento bulk SSIS per l'inserimento dei dati" nei sistemi con Controllo account utente abilitato) nel sito support.microsoft.com.  
   
--   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](http://go.microsoft.com/fwlink/?LinkId=233700)sul sito msdn.microsoft.com.  
+-   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](https://go.microsoft.com/fwlink/?LinkId=233700)sul sito msdn.microsoft.com.  
   
--   Articolo tecnico relativo all' [utilizzo di SQL Server Integration Services per il caricamento bulk dei dati](http://go.microsoft.com/fwlink/?LinkId=233701)sul sito Web simple-talk.com.  
+-   Articolo tecnico relativo all' [utilizzo di SQL Server Integration Services per il caricamento bulk dei dati](https://go.microsoft.com/fwlink/?LinkId=233701)sul sito Web simple-talk.com.  
   
 ## <a name="sql-destination-editor-connection-manager-page"></a>Editor destinazione SQL Server (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione SQL** per specificare le informazioni sull'origine dei dati e visualizzare un'anteprima dei risultati. La destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carica i dati in tabelle o viste di un database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

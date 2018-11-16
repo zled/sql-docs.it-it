@@ -14,12 +14,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b235ea1151b99870623dbbea89f83e02150235e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44fc2fd9ff3a47272c031ff71cda6e2a75f59a72
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640852"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700279"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introduzione a Data Quality Services
 
@@ -43,7 +43,7 @@ ms.locfileid: "47640852"
   
 -   **Corrispondenza:** l'identificazione di duplicati semantici in un processo basato su regole che consente di determinare la presenza di una corrispondenza ed effettuare la deduplicazione. Per altre informazioni, vedere [Data Matching](../data-quality-services/data-matching.md).  
   
--   **Servizi dati di riferimento:** la verifica della qualità dei dati in uso utilizzando i servizi di un provider di dati di riferimento. È possibile usare i servizi dati di riferimento di [Microsoft Azure Marketplace](http://azure.microsoft.com/marketplace/) per pulire, convalidare, mettere in corrispondenza e arricchire i dati. Per altre informazioni, vedere [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
+-   **Servizi dati di riferimento:** la verifica della qualità dei dati in uso utilizzando i servizi di un provider di dati di riferimento. È possibile usare i servizi dati di riferimento di [Microsoft Azure Marketplace](https://azure.microsoft.com/marketplace/) per pulire, convalidare, mettere in corrispondenza e arricchire i dati. Per altre informazioni, vedere [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
 -   **Profiling:** l'analisi di un'origine dati per avere dettagli sulla qualità dei dati in ogni fase dei processi di individuazione delle informazioni, gestione del dominio, corrispondenza e pulizia dei dati. Il profiling è uno strumento potente in una soluzione DQS per la qualità dei dati. È possibile creare una soluzione per la qualità dei dati nella quale il profiling ha la stessa importanza della gestione delle informazioni, la corrispondenza o la pulizia dei dati. Per altre informazioni, vedere [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   

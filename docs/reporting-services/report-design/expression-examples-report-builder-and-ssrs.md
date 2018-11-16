@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ccf47501d6240f942e8e550975699306d6bb58db
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 89bed7eb00e04a354b1dd1fd59b0c36899aed044
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031870"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814324"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Esempi di espressioni (Generatore report e SSRS)
 Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per controllare il contenuto e l'aspetto del report. Vengono scritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e possono includere funzioni predefinite, codice personalizzato, variabili di gruppo e di report e variabili definite dall'utente. Le espressioni iniziano con un segno di uguale (=). Per altre informazioni sull'editor espressioni e sui tipi di riferimenti che è possibile includere, vedere [Uso delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -475,7 +475,7 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
 -   L'espressione seguente, se utilizzata come azione per una casella di testo, genera un URL personalizzato in cui è specificato il campo del set di dati `EmployeeID` come parametro.  
   
     ```  
-    ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
+    ="https://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
      Per altre informazioni, vedere [Aggiunta di un collegamento ipertestuale a un URL &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
@@ -483,7 +483,7 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
 -   L'espressione seguente controlla in base a specifiche condizioni se aggiungere un URL in una casella di testo. L'espressione dipende da un parametro denominato `IncludeURLs` che consente all'utente di decidere se includere o meno URL attivi in un report. Questa espressione viene impostata come azione per una casella di testo. Se si imposta il parametro su False e quindi si visualizza il report, è possibile esportare il report in Microsoft Excel senza collegamenti ipertestuali.  
   
     ```  
-    =IIF(Parameters!IncludeURLs.Value,"http://adventure-works.com/productcatalog",Nothing)  
+    =IIF(Parameters!IncludeURLs.Value,"https://adventure-works.com/productcatalog",Nothing)  
     ```  
   
 ##  <a name="ReportData"></a> Dati del report  

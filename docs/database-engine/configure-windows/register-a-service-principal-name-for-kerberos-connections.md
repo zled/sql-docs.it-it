@@ -17,12 +17,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 49c30d7f0d241d61855e50c53a897281b23ff22e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e865ccf2810b9dc701bfe942245d59bcb1ecf9d4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709389"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605491"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrazione di un nome dell'entità servizio per le connessioni Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ```  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** è uno strumento di diagnostica che semplifica la risoluzione dei problemi di connettività correlati a Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** è uno strumento di diagnostica che semplifica la risoluzione dei problemi di connettività correlati a Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 ##  <a name="Role"></a> Ruolo del nome SPN nell'autenticazione  
  Quando un'applicazione apre una connessione e utilizza l'autenticazione di Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client passa il nome del computer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il nome dell'istanza ed eventualmente un nome SPN. Se passato dalla connessione, il nome SPN viene utilizzato senza alcuna modifica.  
@@ -64,9 +64,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > [!NOTE]  
 >  Quando il dominio di Windows è configurato per essere eseguito a un livello funzionale inferiore a quello di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2, l'Account dei servizi gestiti non disporrà delle autorizzazioni necessarie per registrare i nomi SPN per il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Se l'autenticazione Kerberos è richiesta, l'amministratore di dominio deve registrare manualmente i nomi SPN di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sull'Account dei servizi gestiti.  
   
- Per altre informazioni su come concedere l'autorizzazione di lettura o scrittura per un nome SPN a un account diverso da quello di amministratore di dominio, vedere l'articolo della Knowledge Base [Utilizzo dell'autenticazione Kerberos in SQL Server](http://support.microsoft.com/kb/319723).  
+ Per altre informazioni su come concedere l'autorizzazione di lettura o scrittura per un nome SPN a un account diverso da quello di amministratore di dominio, vedere l'articolo della Knowledge Base [Utilizzo dell'autenticazione Kerberos in SQL Server](https://support.microsoft.com/kb/319723).  
   
- Maggiori informazioni sono disponibili nell'articolo [How to Implement Kerberos Constrained Delegation with SQL Server 2008](http://technet.microsoft.com/library/ee191523.aspx)(Come implementare la delega vincolata Kerberos con SQL Server 2008)  
+ Maggiori informazioni sono disponibili nell'articolo [How to Implement Kerberos Constrained Delegation with SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)(Come implementare la delega vincolata Kerberos con SQL Server 2008)  
   
 ##  <a name="Formats"></a> Formati dei nomi SPN  
  A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], il formato dei nomi SPN è stato modificato per supportare l'autenticazione Kerberos con il protocollo TCP/IP, le named pipe e la memoria condivisa. Di seguito sono riportati i formati del nome SPN supportati per le istanze denominate e predefinite.  
@@ -113,7 +113,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Se l'account di servizio non dispone delle autorizzazioni richieste per eseguire queste azioni, potrebbe essere necessario intervenire manualmente per registrare o annullare la registrazione del nome SPN.  
   
 ##  <a name="Manual"></a> Registrazione manuale del nome SPN  
-Per registrare manualmente il nome SPN, l'amministratore deve utilizzare lo strumento Setspn.exe disponibile negli strumenti di supporto Microsoft di [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] . Per altre informazioni, vedere l'articolo della Knowledge Base [Strumenti di supporto di Windows Server 2003 Service Pack 1](http://support.microsoft.com/kb/892777) .  
+Per registrare manualmente il nome SPN, l'amministratore deve utilizzare lo strumento Setspn.exe disponibile negli strumenti di supporto Microsoft di [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] . Per altre informazioni, vedere l'articolo della Knowledge Base [Strumenti di supporto di Windows Server 2003 Service Pack 1](https://support.microsoft.com/kb/892777) .  
   
 Setspn.exe è un'utilità della riga di comando che consente di leggere, modificare ed eliminare la proprietà della directory del nome dell'entità servizio (SPN). Questo strumento consente inoltre di visualizzare i nomi SPN correnti, reimpostare i nomi SPN predefiniti dell'account e aggiungere o eliminare nomi SPN supplementari.  
   
@@ -182,6 +182,6 @@ WHERE session_id = @@SPID;
  [Nomi SPN &#40;Service Principal Name&#41; nelle connessioni client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Nomi SPN &#40;Service Principal Name&#41; nelle connessioni client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   
  [Funzionalità di SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Gestire problemi di autenticazione Kerberos in un ambiente Reporting Services](http://technet.microsoft.com/library/ff679930.aspx)  
+ [Gestire problemi di autenticazione Kerberos in un ambiente Reporting Services](https://technet.microsoft.com/library/ff679930.aspx)  
   
   

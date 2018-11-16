@@ -19,12 +19,12 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1277c3ac24e434b9e51b58cd41a7cfb307bcf5ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be86ec99816b6d609400aeb1f703c4bbe2adc131
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728839"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641768"
 ---
 # <a name="bulk-insert-task"></a>Inserimento bulk - attività
   L'attività Inserimento bulk rappresenta un modo efficiente per copiare grandi quantità di dati in una tabella o in una vista di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si supponga, ad esempio, che nella propria società venga usato un mainframe per archiviare l'elenco prodotti, che include un milione di righe, ma che il sistema e-commerce dell'azienda usi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per popolare le pagine Web. È necessario aggiornare la tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei prodotti durante la notte utilizzando l'elenco master dei prodotti del mainframe. A tale scopo è possibile salvare l'elenco prodotti in un file delimitato da tabulazione e utilizzare l'attività Inserimento bulk per copiare i dati direttamente nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -97,7 +97,7 @@ ms.locfileid: "47728839"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ### <a name="programmatic-configuration-of-the-bulk-insert-task"></a>Configurazione a livello di codice dell'attività Inserimento bulk  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  
@@ -105,15 +105,15 @@ ms.locfileid: "47728839"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico relativo alla possibile [visualizzazione dell'errore "Impossibile preparare l'attività Inserimento bulk SSIS per l'inserimento dei dati" nei sistemi con Controllo dell'account utente abilitato](http://go.microsoft.com/fwlink/?LinkId=233693)sul sito support.microsoft.com.  
+-   Articolo tecnico [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=233693)(Possibile visualizzazione dell'errore "Impossibile preparare l'attività Inserimento bulk SSIS per l'inserimento dei dati" nei sistemi con Controllo account utente abilitato) nel sito support.microsoft.com.  
   
--   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](http://go.microsoft.com/fwlink/?LinkId=233700)sul sito msdn.microsoft.com.  
+-   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](https://go.microsoft.com/fwlink/?LinkId=233700)sul sito msdn.microsoft.com.  
   
--   Articolo tecnico relativo all' [utilizzo di SQL Server Integration Services per il caricamento bulk dei dati](http://go.microsoft.com/fwlink/?LinkId=233701)sul sito Web simple-talk.com.  
+-   Articolo tecnico relativo all' [utilizzo di SQL Server Integration Services per il caricamento bulk dei dati](https://go.microsoft.com/fwlink/?LinkId=233701)sul sito Web simple-talk.com.  
   
 ## <a name="bulk-insert-task-editor-connection-page"></a>Editor attività Inserimento bulk (pagina Connessione)
   Usare la pagina **Connessione** della finestra di dialogo **Editor attività Inserimento bulk** per specificare l'origine e la destinazione dell'operazione di inserimento bulk e il formato da usare.  

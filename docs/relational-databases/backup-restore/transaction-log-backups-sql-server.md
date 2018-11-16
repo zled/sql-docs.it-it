@@ -16,12 +16,12 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 226602debe898225405fb636eecec47c76cfedc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bf516256277abc02a8499f06707a518f2aadf75
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685999"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664941"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Backup di log delle transazioni (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,12 +55,12 @@ In genere, un amministratore del database crea un backup completo occasionale de
 -   Per impostazione predefinita, per ogni operazione di backup eseguita in modo corretto viene aggiunta una voce al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al registro eventi di sistema. Se il backup del log viene eseguito di frequente, questi messaggi possono aumentare rapidamente, provocando la creazione di log degli errori di dimensioni elevate e rendendo difficile l'individuazione di altri messaggi. In questi casi è possibile eliminare tali voci di log utilizzando il flag di traccia 3226 se nessuno degli script dipende da esse. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
 -   Eseguire backup del log abbastanza frequenti da soddisfare i requisiti aziendali e in particolare il requisito di tolleranza per eventuali perdite di dati, che potrebbero ad esempio verificarsi in seguito al danneggiamento della risorsa di archiviazione dei log. 
-   -   La frequenza appropriata per l'esecuzione dei backup del log viene determinata in base al raggiungimento di un compromesso tra la tolleranza per il rischio di perdita dei dati e la quantità di backup del log che è possibile archiviare, gestire e potenzialmente ripristinare. Considerare gli obiettivi [RTO](http://wikipedia.org/wiki/Recovery_time_objective) e [RPO](http://wikipedia.org/wiki/Recovery_point_objective) richiesti quando si implementa la strategia di ripristino, in particolare la frequenza di backup del log.
+   -   La frequenza appropriata per l'esecuzione dei backup del log viene determinata in base al raggiungimento di un compromesso tra la tolleranza per il rischio di perdita dei dati e la quantità di backup del log che è possibile archiviare, gestire e potenzialmente ripristinare. Considerare gli obiettivi [RTO](https://wikipedia.org/wiki/Recovery_time_objective) e [RPO](https://wikipedia.org/wiki/Recovery_point_objective) richiesti quando si implementa la strategia di ripristino, in particolare la frequenza di backup del log.
    -   Potrebbe essere sufficiente eseguire un backup del log ogni 15 - 30 minuti. Se nella propria azienda è necessario limitare al minimo il rischio di perdita dei dati, valutare se eseguire i backup del log con una maggiore frequenza. L'esecuzione di backup del log più frequenti offre il vantaggio aggiuntivo di un aumento della frequenza del troncamento del log, con una conseguente riduzione delle dimensioni dei file di log.  
   
 > [!IMPORTANT]
 > Per limitare il numero di backup dei log che è necessario ripristinare, è fondamentale eseguire regolarmente il backup dei dati. Ad esempio, è possibile pianificare un backup completo del database una volta la settima e backup differenziali del database una volta al giorno.  
-> Anche in questo caso considerare gli obiettivi [RTO](http://wikipedia.org/wiki/Recovery_time_objective) e [RPO](http://wikipedia.org/wiki/Recovery_point_objective) richiesti quando si implementa la strategia di ripristino, in particolare la frequenza del backup completo e differenziale del database.
+> Anche in questo caso considerare gli obiettivi [RTO](https://wikipedia.org/wiki/Recovery_time_objective) e [RPO](https://wikipedia.org/wiki/Recovery_point_objective) richiesti quando si implementa la strategia di ripristino, in particolare la frequenza del backup completo e differenziale del database.
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per creare un backup del log delle transazioni**  

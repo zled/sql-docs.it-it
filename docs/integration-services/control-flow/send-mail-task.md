@@ -21,12 +21,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 805036ee530834ea2581613578fa0417087def82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2504bc45e358ebbf35b279e07be511f7a6041956
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682501"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641288"
 ---
 # <a name="send-mail-task"></a>Invia messaggi - attività
   L'attività Invia messaggi consente di inviare un messaggio di posta elettronica. Tramite l'attività Invia messaggi un pacchetto può inviare messaggi quando le attività nel flusso di lavoro del pacchetto vengono completate o non riescono oppure in risposta a un evento generato dal pacchetto in fase di esecuzione. È ad esempio possibile utilizzare questa attività per notificare all'amministratore di un database l'esito positivo o negativo dell'attività Backup database.  
@@ -79,11 +79,11 @@ ms.locfileid: "47682501"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
 ## <a name="related-tasks"></a>Attività correlate  
- Per informazioni su come impostare queste proprietà nella finestra di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Per informazioni su come impostare queste proprietà nella finestra di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico relativo all' [invio della posta elettronica con notifica di recapito in C#](http://go.microsoft.com/fwlink/?LinkId=237625)su shareourideas.com  
+-   Articolo tecnico relativo all' [invio della posta elettronica con notifica di recapito in C#](https://go.microsoft.com/fwlink/?LinkId=237625)su shareourideas.com  
   
 ## <a name="send-mail-task-editor-general-page"></a>Editor attività Invia messaggi (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Invia messaggi** per assegnare un nome all'attività Invia messaggi e descriverla.  
@@ -158,7 +158,7 @@ ms.locfileid: "47682501"
  **MessageSource**  
  Selezionare una variabile nell'elenco oppure fare clic su \<**Nuova variabile**> per crearne una nuova.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

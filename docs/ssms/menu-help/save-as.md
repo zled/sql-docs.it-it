@@ -15,12 +15,12 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 371b83be04f64c8f71b642e6cc95f71aacc897f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8f64fb29a90f38d777d0963b9f985bb65e2e2a8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636059"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701341"
 ---
 # <a name="save-as"></a>Save As
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ Consente di individuare la cartella progetto esistente utilizzando il menu a dis
 Utilizzare questa opzione per visualizzare il nome del file corrente, modificare il nome del file oppure filtrare i file e le cartelle visualizzati. Per filtrare i file e le cartelle visualizzati, immettere un nome di file completo o parziale in base al quale filtrare. È possibile utilizzare l'asterisco (`*`) come carattere jolly.  
   
 > [!TIP]  
-> Per visualizzare file contenuti in percorsi di rete o Web, specificare un URL o un percorso di rete nella casella **Nome file** . Ad esempio, se si digita "http://mywebsite" vengono visualizzati i file disponibili nel percorso Web "mywebsite", mentre se si digita "\\" vengono visualizzati i file disponibili nel percorso "myshare" del server "myserver".  
+> Per visualizzare file contenuti in percorsi di rete o Web, specificare un URL o un percorso di rete nella casella **Nome file** . Ad esempio, se si digita "https://mywebsite" vengono visualizzati i file disponibili nel percorso Web "mywebsite", mentre se si digita "\\" vengono visualizzati i file disponibili nel percorso "myshare" del server "myserver".  
   
 **Salva come**  
 Utilizzare questa opzione per selezionare un nuovo tipo di file per l'elemento selezionato. I tipi di file visualizzati comprendono tutti i tipi di file disponibili in cui è possibile convertire l'elemento selezionato.  

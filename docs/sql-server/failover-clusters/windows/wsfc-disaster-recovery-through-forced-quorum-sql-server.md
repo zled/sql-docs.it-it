@@ -14,12 +14,12 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 703131ee76d1e48a64adc326ce3e34d04802f5cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1d5b272edba906e829b44ae4e23e9ddd8d4eaa0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685479"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699729"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Ripristino di emergenza WSFC tramite quorum forzato (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47685479"
 > [!WARNING]  
 >  L'utente deve conoscere a fondo i concetti e le interazioni di Windows Server Failover Clustering, dei modelli del quorum WSFC, di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e della configurazione di distribuzione specifica dell'ambiente.  
 >   
->  Per altre informazioni, vedere:  [WSFC (Windows Server Failover Clustering) con SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Modalità quorum WSFC e configurazione del voto (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  Per altre informazioni, vedere:  [WSFC (Windows Server Failover Clustering) con SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Modalità quorum WSFC e configurazione del voto (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> Sicurezza  
  L'utente deve disporre di un account di dominio che sia membro del gruppo Administrators locale su ogni nodo del cluster WSFC.  
@@ -66,7 +66,7 @@ ms.locfileid: "47685479"
   
      Su questo nodo riportare manualmente il cluster online utilizzando la procedura relativa al quorum forzato.  Per ridurre al minimo la possibile perdita di dati, selezionare un nodo che nell'ultima operazione ospitava una replica primaria del gruppo di disponibilità.  
   
-     Per ulteriori informazioni, vedere la pagina relativa alla  [forzatura dell'avvio di un cluster WSFC senza quorum](http://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
+     Per ulteriori informazioni, vedere la pagina relativa alla  [forzatura dell'avvio di un cluster WSFC senza quorum](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  L'impostazione del quorum forzato comporta il blocco dei controlli del quorum a livello di cluster, finché il cluster WSFC logico non otterrà una maggioranza di voti e passerà automaticamente alla modalità operativa di un quorum normale.  
@@ -118,9 +118,9 @@ ms.locfileid: "47685479"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Visualizzare eventi e log per un cluster di failover](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Visualizzare eventi e log per un cluster di failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Pagina relativa al cluster di failover Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Pagina relativa al cluster di failover Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

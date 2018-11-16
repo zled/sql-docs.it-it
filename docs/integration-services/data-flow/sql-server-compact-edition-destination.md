@@ -17,12 +17,12 @@ ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ba3b3494329be9575ffe237fda309f4a867a8fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f31a1dd3c11fd708e160b84d84f5290d094eb7f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765440"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642028"
 ---
 # <a name="sql-server-compact-edition-destination"></a>Destinazione SQL Server Compact Edition
   La destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact consente di scrivere dati in database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
@@ -43,7 +43,7 @@ ms.locfileid: "47765440"
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate della destinazione SQL Server](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   

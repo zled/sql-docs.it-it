@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6bba11fe5be282ad804fc6dee03229312ec1d37
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: e3eae62b963843c369731ca0abd800c9552c37d3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970913"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698821"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char and varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50970913"
 > [!div class="nextstepaction"]
 > [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-Tipi di dati carattere a lunghezza fissa, **char**, o a lunghezza variabile, **varchar**. A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], quando si usano regole di confronto che supportano UTF-8, questi tipi di dati archiviano l'intera gamma dei dati di tipo carattere [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) e usano la codifica dei caratteri [UTF-8 ](http://www.wikipedia.org/wiki/UTF-8). Se si specificano regole di confronto non UTF-8, questi tipi di dati archiviano solo un subset dei caratteri supportati dalla tabella codici corrispondente di tali regole di confronto.
+Tipi di dati carattere a lunghezza fissa, **char**, o a lunghezza variabile, **varchar**. A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], quando si usano regole di confronto che supportano UTF-8, questi tipi di dati archiviano l'intera gamma dei dati di tipo carattere [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) e usano la codifica dei caratteri [UTF-8 ](https://www.wikipedia.org/wiki/UTF-8). Se si specificano regole di confronto non UTF-8, questi tipi di dati archiviano solo un subset dei caratteri supportati dalla tabella codici corrispondente di tali regole di confronto.
   
 ## <a name="arguments"></a>Argomenti  
 **char** [ ( *n* ) ] Dati stringa a lunghezza fissa. *n* definisce la lunghezza della stringa in byte e deve essere un valore compreso tra 1 e 8.000. Per i set di caratteri con codifica a byte singolo, ad esempio *Latin*, le dimensioni di archiviazione sono pari a *n* byte e anche il numero di caratteri che possono essere archiviati è *n*. Per i set di caratteri con codifica multibyte, le dimensioni di archiviazione sono di nuovo *n* byte, ma il numero di caratteri che possono essere archiviati può essere inferiore a *n*. Il sinonimo ISO per **char** è **character**. Per altre informazioni sui set di caratteri, vedere [Set di caratteri a byte singolo e multibyte](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).

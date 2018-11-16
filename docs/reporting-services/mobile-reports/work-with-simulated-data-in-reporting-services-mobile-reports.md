@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ceed700884c3f146053612f06f9370d8f454e067
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799431"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813964"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Lavorare con dati simulati nei report di Reporting Services per dispositivi mobili
 Quando si inserisce un elemento della raccolta nell'area di progettazione, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] genera immediatamente dati simulati per quell'elemento. Questi dati assolvono a molti scopi utili durante la creazione di report per dispositivi mobili.   
@@ -42,8 +42,8 @@ Dopo avere associato tutti i controlli a dati reali, le tabelle simulate non pi√
   
 ### <a name="see-also"></a>Vedere anche  
 - [Creare e pubblicare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  Vedere [Visualizzare report per dispositivi mobili e indicatori KPI di SQL Server nell'app iPad](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI per iOS)  
--  [Visualizzare report per dispositivi mobili e indicatori KPI di SQL Server nell'app iPhone](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI per iOS)  
+-  Vedere [Visualizzare report per dispositivi mobili e indicatori KPI di SQL Server nell'app iPad](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI per iOS)  
+-  [Visualizzare report per dispositivi mobili e indicatori KPI di SQL Server nell'app iPhone](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI per iOS)  
   
   
   

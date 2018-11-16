@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3336112a7b422db606b93cab30b8942839aed862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f511dc6bd39366d8c7706966ec78e36e3ed983b8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674325"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813244"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Recapito tramite la raccolta di SharePoint in Reporting Services
   In un server di report configurato per l'integrazione con SharePoint è disponibile un'estensione per il recapito che è possibile utili per inviare un report a una raccolta di SharePoint.  
@@ -72,7 +72,7 @@ ms.locfileid: "47674325"
  Specifica una proprietà **Title** facoltativa per il report nella raccolta di destinazione. Si tratta di una proprietà standard di tutti gli elementi archiviati in una raccolta. Gli utenti possono specificare se visualizzare o nascondere tale proprietà quando si visualizzano i contenuti della raccolta in un sito di SharePoint.  
   
  Percorso  
- Specifica l'URL completo della raccolta di SharePoint, inclusi il sito e l'applicazione Web di SharePoint. Ad esempio `http://mySharePointWeb/MySite/MyDocLib`, dove `http://mySharePointWeb` indica l'applicazione Web, "MySite" il sito di SharePoint e "MyDocLib" la raccolta di SharePoint a cui verrà recapitato il report.  
+ Specifica l'URL completo della raccolta di SharePoint, inclusi il sito e l'applicazione Web di SharePoint. Ad esempio `https://mySharePointWeb/MySite/MyDocLib`, dove `https://mySharePointWeb` indica l'applicazione Web, "MySite" il sito di SharePoint e "MyDocLib" la raccolta di SharePoint a cui verrà recapitato il report.  
   
  Non è possibile specificare una pagina, un sito o un elenco. Il contenitore di destinazione deve essere una raccolta nello stesso sito o farm.  
   

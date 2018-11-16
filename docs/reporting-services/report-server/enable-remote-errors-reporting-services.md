@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3c0a1a5c729f01a10362dd8205e715d9d3059c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 758917c8f3fd11d79162ac650cd29efd709e9dd3
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682959"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813125"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Abilita errori remoti (Reporting Services)
   È possibile impostare le proprietà di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modo che vengano restituite ulteriori informazioni sulle condizioni di errore che si verificano nei server remoti. Se in un messaggio di errore è incluso il testo "Per ulteriori informazioni su questo errore, passare al server di report nel server locale oppure abilitare gli errori remoti", sarà possibile impostare la proprietà **EnableRemoteErrors** per accedere a informazioni aggiuntive che consentono di risolvere il problema. Per altre informazioni, vedere [Proprietà di sistema del server di report](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -101,7 +101,7 @@ ms.locfileid: "47682959"
 5.  Digitare la riga di comando seguente sostituendo *servername* con il nome effettivo del server in uso:  
   
     ```  
-    rs -i EnableRemoteErrors.rss -s http://servername/ReportServer  
+    rs -i EnableRemoteErrors.rss -s https://servername/ReportServer  
     ```  
   
 6.  Per altre informazioni, vedere [Utilità RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md).  

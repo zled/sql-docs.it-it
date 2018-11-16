@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5aa7205329304a6b66fc602999ae2a9ad6837873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b2087165cc406971a6452298b672554a7c7994f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626439"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677550"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Dimostrazione: Miglioramento delle prestazioni di OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,9 +64,9 @@ go
   
 1.  Decidere quali database di test esistenti usare per l'esempio di codice.  
   
-2.  Se si decide di creare un nuovo database di test, usare il [portale di Azure](http://portal.azure.com) per creare un database denominato **imoltp**.  
+2.  Se si decide di creare un nuovo database di test, usare il [portale di Azure](https://portal.azure.com) per creare un database denominato **imoltp**.  
   
- Per istruzioni relative all'uso del portale di Azure a questo scopo, vedere l'argomento di [introduzione al database SQL di Azure](http://azure.microsoft.com/documentation/articles/sql-database-get-started).  
+ Per istruzioni relative all'uso del portale di Azure a questo scopo, vedere l'argomento di [introduzione al database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
 ### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Passaggio 2: creare tabelle con ottimizzazione per la memoria e NCSProc  
  Questo passaggio crea una tabella ottimizzata per la memoria e una stored procedure compilata in modo nativo (NCSProc). Eseguire le operazioni seguenti:  

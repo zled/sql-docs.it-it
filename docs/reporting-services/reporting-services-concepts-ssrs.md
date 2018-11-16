@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4976298eee9ed0e8b3cef41fa2f201a5590799bc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7bad528f4c644ee4de7339eacdd1e0a0e74c9abc
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031892"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814304"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services Concepts (SSRS)
   In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -33,7 +33,7 @@ ms.locfileid: "50031892"
  Gli elementi del server di report includono report impaginati e per dispositivi mobili, indicatori KPI, origini dati condivise, set di dati condivisi e altri elementi che è possibile pubblicare, caricare o salvare in un server di report. Organizzare elementi nella struttura di cartelle gerarchica su un server di report nativo o in librerie di contenuto di SharePoint su un sito di SharePoint. Per altre informazioni, vedere [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md).  
   
 ### <a name="folders"></a>Cartelle
- Su un server di report nativo, le cartelle forniscono la struttura di navigazione gerarchica e il percorso di tutti gli elementi indirizzabili archiviati in un server di report. Usare la gerarchia di cartelle e le autorizzazioni per il sito e le cartelle per consentire il controllo dell'accesso agli elementi del server di report, noto come *sicurezza a livello di elemento*. Per impostazione predefinita, le assegnazioni di ruolo che si definiscono per le cartelle specifiche sono ereditate dalle cartelle figlio nella gerarchia di cartelle. Se si assegnano ruoli specifici a una cartella, le regole di ereditarietà non vengono più applicate. La struttura di cartelle è costituita da un nodo radice denominato **Home**e da cartelle riservate che supportano la caratteristica facoltativa **Report personali** . In un browser il nodo radice è il nome della directory virtuale del server di report, ad esempio `http://myreportserver/reports`. Per altre informazioni, vedere [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders).  
+ Su un server di report nativo, le cartelle forniscono la struttura di navigazione gerarchica e il percorso di tutti gli elementi indirizzabili archiviati in un server di report. Usare la gerarchia di cartelle e le autorizzazioni per il sito e le cartelle per consentire il controllo dell'accesso agli elementi del server di report, noto come *sicurezza a livello di elemento*. Per impostazione predefinita, le assegnazioni di ruolo che si definiscono per le cartelle specifiche sono ereditate dalle cartelle figlio nella gerarchia di cartelle. Se si assegnano ruoli specifici a una cartella, le regole di ereditarietà non vengono più applicate. La struttura di cartelle è costituita da un nodo radice denominato **Home**e da cartelle riservate che supportano la caratteristica facoltativa **Report personali** . In un browser il nodo radice è il nome della directory virtuale del server di report, ad esempio `https://myreportserver/reports`. Per altre informazioni, vedere [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders).  
   
  Su un sito di SharePoint, usare le cartelle di SharePoint in raccolte documenti e raccolte contenuto per organizzare elementi.  
   

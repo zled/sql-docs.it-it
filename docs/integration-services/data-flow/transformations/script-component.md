@@ -23,12 +23,12 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f87b80fb11261ee1d49326dfc29fe89fc2bdc94c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e46ec694b130ca684f5437e04159436a36afd44
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857039"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641178"
 ---
 # <a name="script-component"></a>Componente script
   Il componente Script ospita lo script e consente a un pacchetto di includere ed eseguire codice script personalizzato. È possibile utilizzare il componente script nei pacchetti per gli scopi seguenti:  
@@ -101,7 +101,7 @@ ms.locfileid: "47857039"
 ### <a name="configuring-the-script-component-programmatically"></a>Configurazione del componente script a livello di codice  
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra **Proprietà** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -177,7 +177,7 @@ ms.locfileid: "47857039"
  **Inputs and outputs**  
  Selezionare un input o un output a sinistra per visualizzare le proprietà corrispondenti nella tabella a destra. Le proprietà modificabili variano in base alla selezione effettuata. Molte delle proprietà visualizzate sono di sola lettura. Per ulteriori informazioni sulle singole proprietà, vedere gli argomenti seguenti.  
   
- [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

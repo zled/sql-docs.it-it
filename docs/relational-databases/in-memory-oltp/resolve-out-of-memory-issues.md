@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c8e06e7070491eb608dc315acae235465a802bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b0c54bf494055567e7a8c8fc59fe001ac843cfa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656479"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671688"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Risolvere i problemi di memoria insufficiente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ GO
 > Per altre informazioni, vedere l'argomento [Procedure consigliate sull'uso di OLTP in memoria in un ambiente di VM](#bkmk_VMs).  
   
 ##  <a name="bkmk_PageAllocFailure"></a> Risoluzione degli errori di allocazione della pagina dovuti a memoria insufficiente quando è disponibile memoria sufficiente  
- Se viene restituito il messaggio di errore `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'http://go.microsoft.com/fwlink/?LinkId=330673' for more information.` nel log degli errori quando la memoria fisica disponibile è sufficiente per allocare la pagina, il problema può essere dovuto a Resource Governor disabilitato. Quando Resource Governor è disabilitato MEMORYBROKER_FOR_RESERVE genera richieste di memoria artificiali.  
+ Se viene restituito il messaggio di errore `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'https://go.microsoft.com/fwlink/?LinkId=330673' for more information.` nel log degli errori quando la memoria fisica disponibile è sufficiente per allocare la pagina, il problema può essere dovuto a Resource Governor disabilitato. Quando Resource Governor è disabilitato MEMORYBROKER_FOR_RESERVE genera richieste di memoria artificiali.  
   
  Per risolvere questo problema, è necessario abilitare Resource Governor.  
   
@@ -159,9 +159,9 @@ Se si seguono le procedure sopra indicate per un database con tabelle ottimizzat
 Per risolvere questo problema, preallocare al database una quantità di memoria sufficiente per il recupero o il riavvio del database, anziché un valore minimo che si basa sulla memoria dinamica per ottenere memoria aggiuntiva se necessario.
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione della memoria per OLTP in memoria](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
+ [Gestione della memoria per OLTP in memoria](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Monitorare e risolvere i problemi relativi all'utilizzo della memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
- [Associazione di un database con tabelle con ottimizzazione per la memoria a un pool di risorse](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [a un pool di risorse, vedere l'argomento](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Guida all'architettura di gestione della memoria](../../relational-databases/memory-management-architecture-guide.md)  
  [Opzioni di configurazione del server Server Memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 
   

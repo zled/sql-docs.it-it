@@ -11,12 +11,12 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e43f13971cb52382409b38c654eb0b1a659844b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c01f4ad93f36874e70352b6efa6c5592c71d6bf8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818527"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671770"
 ---
 # <a name="create-an-encrypted-backup"></a>Creare un backup crittografato
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47818527"
   
  **Prerequisiti:**  
   
--   Account di archiviazione di Windows con contenitore. Per altre informazioni, vedere [Lezione 1: Creare gli oggetti della risorsa di archiviazione di Windows Azure](http://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
+-   Account di archiviazione di Windows con contenitore. Per altre informazioni, vedere [Lezione 1: Creare gli oggetti della risorsa di archiviazione di Windows Azure](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
   
 -   Chiave master di un database master e certificato o chiave asimmetrica nell'istanza di SQL Server. Per le autorizzazioni e i requisiti di crittografia, vedere [Crittografia dei backup](../../relational-databases/backup-restore/backup-encryption.md).  
   

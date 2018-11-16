@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 881189fdec593d48b443d85ee548ca1bb80b24a8
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 578c7002e4366dd0b0b4ef4e633d5e59dffe4802
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146056"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697689"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Come contribuire alla documentazione di SQL Server
 
@@ -33,7 +33,7 @@ Si può contribuire alla documentazione usando due flussi di lavoro principali:
 
 È possibile apportare semplici modifiche al contenuto SQL Server nel browser e quindi inviarle a Microsoft. L'intera procedura è documentata nell'articolo [Panoramica della Guida per i collaboratori di Microsoft Docs](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). Il video seguente illustra la procedura completa per l'invio delle modifiche nel browser:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE23pxh]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
 
 > [!TIP]
 > Si noti che la posizione del pulsante **Modifica** è leggermente diversa rispetto a quanto indicato nel video, ma la procedura è la stessa.

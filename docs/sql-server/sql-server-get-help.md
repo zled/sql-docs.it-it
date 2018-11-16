@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 03294cce7e8c800d51b5a333e92d611cf8b694fe
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: e4e48ba424b9c9c8ef56d1280d774c7ee3120ffe
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384096"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698229"
 ---
 # <a name="sql-server-help-and-feedback"></a>Guida e commenti di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Gli utenti business possono esaminare le [opzioni di supporto](https://support.m
 Gli utenti commerciali possono vedere la pagina dei [contatti](https://support.microsoft.com/gp/contactus81?forceorigin=esmc&Audience=Commercial) Microsoft.
 
 ## <a name="i-want-to-review-license-information-about-sql-server"></a>Si vogliono riesaminare le informazioni di licenza su SQL Server
-Per scaricare e riesaminare le informazioni di licenza per SQL Server, vedere [Condizioni di licenza per software aggiuntivo Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299). 
+Per scaricare e riesaminare le informazioni di licenza per SQL Server, vedere [Condizioni di licenza per software aggiuntivo Microsoft SQL Server](https://www.microsoft.com/download/details.aspx?id=39299). 
 
 ## <a name="i-want-to-ask-the-community-for-help"></a>Si vuole chiedere assistenza alla community 
 Per chiedere assistenza alla vivace community di SQL Server, sono disponibili diverse opzioni.
@@ -80,9 +80,9 @@ Il team di SQL può essere contattato anche tramite alcuni canali di social medi
 ## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>Si vogliono inviare commenti sul contenuto della documentazione di SQL
 
 ### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![modificare il contenuto](../includes/media/edit-topic-pencil.png) Modifica del contenuto
-Se è stato rilevato un errore nella documentazione, è possibile modificare direttamente il contenuto. In questo modo si contribuirà a migliorare la documentazione e si verrà accreditati come collaboratori per la pagina. Per altre informazioni, vedere [http://aka.ms/editsqldocs](http://aka.ms/editsqldocs). 
+Se è stato rilevato un errore nella documentazione, è possibile modificare direttamente il contenuto. In questo modo si contribuirà a migliorare la documentazione e si verrà accreditati come collaboratori per la pagina. Per altre informazioni, vedere [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
 
 ### <a name="surveys"></a>Sondaggi
-Per condividere la propria opinione sull'esperienza con la documentazione di SQL, è possibile rispondere al sondaggio disponibile all'indirizzo [http://aka.ms/SQLDocSurvey](http://aka.ms/SQLDocSurvey). Per rispondere alle domande, saranno sufficienti 10-15 minuti. 
+Per condividere la propria opinione sull'esperienza con la documentazione di SQL, è possibile rispondere al sondaggio disponibile all'indirizzo [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey). Per rispondere alle domande, saranno sufficienti 10-15 minuti. 
 
-Per condividere idee, suggerimenti, commenti o altro con il team dei contenuti di SQL, andare all'indirizzo [http://aka.ms/SQLDocsFeedback](http://aka.ms/SQLDocsFeedback). 
+Per condividere idee, suggerimenti, commenti o altro con il team dei contenuti di SQL, andare all'indirizzo [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 

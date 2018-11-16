@@ -13,12 +13,12 @@ ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e8efead59cd24cbe2e556991b4a7699be980c544
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c4ac1a5246ecf59e73b8b4bbe9f7621178fa3b5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713239"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640071"
 ---
 # <a name="raising-events-in-the-script-component"></a>Generazione di eventi nel componente script
   Gli eventi consentono di segnalare errori, avvisi e altre informazioni, ad esempio l'avanzamento o lo stato delle attività, al pacchetto contenitore. Il pacchetto fornisce gestori eventi per la gestione di notifiche degli eventi. Il componente script può generare eventi chiamando metodi sulla proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> della classe **ScriptMain**. Per altre informazioni sulla gestione degli eventi da parte dei pacchetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], vedere [Gestori eventi di Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-event-handlers.md).  
@@ -45,6 +45,6 @@ ms.locfileid: "47713239"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestori eventi di Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [Aggiunta di un gestore eventi a un pacchetto](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Aggiunta di un gestore eventi a un pacchetto](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   

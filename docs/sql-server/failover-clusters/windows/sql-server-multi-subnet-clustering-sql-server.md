@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bde47d4db0a86d84715a0265042e57e2202f497
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6580a1df3ed83d0eec4d6dada7ed2954f44b8989
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704219"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700800"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering su più subnet di SQL Server (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,8 +77,8 @@ ms.locfileid: "47704219"
 |Installazione di un cluster di failover di SQL Server|[Creare un nuovo cluster di failover di SQL Server (programma di installazione)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Aggiornamento sul posto del cluster di failover di SQL Server esistente|[Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server &#40;installazione&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |Gestione del cluster di failover di SQL Server esistente|[Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|Utilizzare lo snap-in Gestione cluster di failover per visualizzare gli eventi e i log WSFC|[Visualizzare eventi e log per un cluster di failover](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
-|Utilizzare Windows PowerShell per creare un file di log per tutti i nodi (o un nodo specifico) in un cluster di failover WSFC|[Pagina relativa al cluster di failover Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)|  
+|Utilizzare lo snap-in Gestione cluster di failover per visualizzare gli eventi e i log WSFC|[Visualizzare eventi e log per un cluster di failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
+|Utilizzare Windows PowerShell per creare un file di log per tutti i nodi (o un nodo specifico) in un cluster di failover WSFC|[Pagina relativa al cluster di failover Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)|  
   
 
   

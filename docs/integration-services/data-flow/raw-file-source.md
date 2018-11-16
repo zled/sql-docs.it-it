@@ -19,12 +19,12 @@ ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ccea2475e89d0f0fdd5d89e01162ce5ab7271c90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5a6a40ef5bee1c50ddbaf1f3424d3199e8494e3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821090"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637655"
 ---
 # <a name="raw-file-source"></a>origine file non elaborato
   L'origine file non elaborato legge i dati non elaborati da un file. Poiché la rappresentazione dei dati è nativa per l'origine, non è necessaria alcuna conversione e quasi nessuna analisi dei dati. Ciò significa che l'origine file non elaborato è in grado di leggere i dati più rapidamente rispetto ad altre origini, ad esempio l'origine file flat e l'origine OLE DB.  
@@ -45,7 +45,7 @@ ms.locfileid: "47821090"
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate del file non elaborato](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47821090"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Post di blog sugli [aspetti positivi dei file non elaborati](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)nel sito Web sqlservercentral.com.  
+-   Post di blog sugli [aspetti positivi dei file non elaborati](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)nel sito Web sqlservercentral.com.  
   
 ## <a name="raw-file-source-editor-connection-manager-page"></a>Editor origine file non elaborato (pagina Gestione connessione)
   L'origine file non elaborato legge i dati non elaborati da un file. Poiché la rappresentazione dei dati è nativa per l'origine, non è necessaria alcuna conversione e quasi nessuna analisi dei dati.   

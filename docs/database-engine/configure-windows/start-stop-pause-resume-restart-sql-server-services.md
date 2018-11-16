@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf944c001534a6b1dec008498122e5d020e1a0c1
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383826"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601961"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Avviare, arrestare, sospendere, riprendere, riavviare i servizi SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.locfileid: "49383826"
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Permissions  
- Per impostazione predefinita, solo i membri del gruppo di amministratori locale possono avviare, arrestare, mettere in pausa, riprendere o riavviare un servizio. Per concedere a utenti non amministratori la possibilità di gestire servizi, vedere [Concedere agli utenti i privilegi per gestire i servizi in Windows Server 2003](http://support.microsoft.com/kb/325349). Il processo è analogo ad altre versioni di Windows.  
+ Per impostazione predefinita, solo i membri del gruppo di amministratori locale possono avviare, arrestare, mettere in pausa, riprendere o riavviare un servizio. Per concedere a utenti non amministratori la possibilità di gestire servizi, vedere [Concedere agli utenti i privilegi per gestire i servizi in Windows Server 2003](https://support.microsoft.com/kb/325349). Il processo è analogo ad altre versioni di Windows.  
   
  L'arresto del [!INCLUDE[ssDE](../../includes/ssde-md.md)] con il comando [!INCLUDE[tsql](../../includes/tsql-md.md)]SHUTDOWN **di** richiede l'appartenenza ai ruoli predefiniti del server **sysadmin** o **serveradmin** e non è trasferibile.  
   
@@ -355,7 +355,7 @@ ms.locfileid: "49383826"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica sulla documentazione del programma di installazione di SQL Server](http://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
+ [Panoramica sulla documentazione del programma di installazione di SQL Server](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
  [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Gestione configurazione SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
  [Avviare SQL Server con la configurazione minima](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   

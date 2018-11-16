@@ -10,12 +10,12 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a29d3176e364eca785727f49d6be9522147ef36e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70ce34097cc2057344864b1db4ed7ce17a01311
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722509"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602866"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47722509"
   
  È utile controllare i due oggetti prestazioni `SQL Server:Availability Replica > Flow Control Time (ms/sec)` e `SQL Server:Availability Replica > Flow Control/sec`. Moltiplicando questi due valori si ottiene quanto dell'ultimo secondo è stato impiegato nell'attesa della cancellazione del controllo di flusso. Maggiore il tempo di attesa del controllo di flusso, minore la velocità di invio.  
   
- Le metriche seguenti sono utili per diagnosticare la velocità effettiva e la latenza della rete. Per valutare la latenza l'utilizzo della rete, è possibile usare altri strumenti di Windows, ad esempio **ping.exe** e [Network Monitor](http://www.microsoft.com/download/details.aspx?id=4865).  
+ Le metriche seguenti sono utili per diagnosticare la velocità effettiva e la latenza della rete. Per valutare la latenza l'utilizzo della rete, è possibile usare altri strumenti di Windows, ad esempio **ping.exe** e [Network Monitor](https://www.microsoft.com/download/details.aspx?id=4865).  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   
@@ -70,7 +70,7 @@ Per risolvere questo problema, provare ad aggiornare la larghezza di banda di re
  La perdita di dati viene evitata non appena il blocco del log viene finalizzato nel file di log. Di conseguenza, è fondamentale isolare il file di log dal file di dati. Se il file di log e il file di dati sono entrambi mappati allo stesso disco rigido, un carico di lavoro di creazione di report con una frequenza intensiva di operazioni di lettura sul file di dati utilizzerà le stesse risorse di I/O necessarie per l'operazione di finalizzazione del log. Una finalizzazione del log lenta può tradursi in una conferma lenta alla replica primaria, che può causare un'attivazione eccessiva del controllo di flusso e lunghi tempi di attesa di quest'ultimo.  
   
 ### <a name="diagnosis-and-resolution"></a>Diagnosi e risoluzione  
- Dopo aver verificato che la rete non abbia un problema di latenza elevata o di bassa velocità effettiva, è necessario analizzare la replica secondaria per individuare eventuali contese di I/O. Le query in [SQL Server: Riduzione dell'I/O del disco](http://technet.microsoft.com/magazine/jj643251.aspx) sono utili per identificare le contese. Per comodità, di seguito sono riportati alcuni esempi tratti da questo articolo.  
+ Dopo aver verificato che la rete non abbia un problema di latenza elevata o di bassa velocità effettiva, è necessario analizzare la replica secondaria per individuare eventuali contese di I/O. Le query in [SQL Server: Riduzione dell'I/O del disco](https://technet.microsoft.com/magazine/jj643251.aspx) sono utili per identificare le contese. Per comodità, di seguito sono riportati alcuni esempi tratti da questo articolo.  
   
  Lo script seguente consente di visualizzare il numero di operazioni di lettura e scrittura in ogni file di dati e di log per ogni database di disponibilità in esecuzione in un'istanza di SQL Server. L'elenco è ordinato per tempo di blocco I/O medio in millisecondi. Si noti che le cifre rappresentano il totale dall'ultimo avvio dell'istanza del server. È pertanto necessario rilevare la differenza tra due misure dopo un certo periodo di tempo.  
   
@@ -127,6 +127,6 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  Se si identifica un collo di bottiglia I/O e il file di log e il file di dati si trovano nello stesso disco rigido, la prima cosa da fare è posizionarli in dischi separati. Questa procedura consigliata evita che il carico di lavoro di creazione di report interferisca con il percorso di trasferimento del log dalla replica primaria al buffer dei log e con la finalizzazione della transazione nella replica secondaria.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx) (Risoluzione dei problemi di prestazioni in SQL Server (si applica a SQL Server 2012))  
+ [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx) (Risoluzione dei problemi di prestazioni in SQL Server (si applica a SQL Server 2012))  
   
   

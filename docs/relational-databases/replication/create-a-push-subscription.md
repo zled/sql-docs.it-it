@@ -17,12 +17,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71212c1e89cf2b86c76a70b609a9af69adf4db1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2961e4c8345157df3d8b625ccc7bb45501570793
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841309"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675210"
 ---
 # <a name="create-a-push-subscription"></a>Creazione di una sottoscrizione push
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ ms.locfileid: "47841309"
 ##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
  È possibile creare sottoscrizioni push a livello di programmazione tramite gli oggetti RMO (Replication Management Objects). Le classi RMO utilizzate per la creazione di una sottoscrizione push dipendono dal tipo di pubblicazione per cui viene creata la sottoscrizione.  
   
-> **IMPORTANTE** Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](http://go.microsoft.com/fwlink/?LinkId=34733) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+> **IMPORTANTE** Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](https://go.microsoft.com/fwlink/?LinkId=34733) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Per creare una sottoscrizione push di una pubblicazione snapshot o transazionale  
   

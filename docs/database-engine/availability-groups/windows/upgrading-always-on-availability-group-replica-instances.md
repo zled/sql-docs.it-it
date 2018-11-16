@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cff08e85cb8235567dd2ce7e8f8294f465892b47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c3faf4bb4b9f2a180bc09c91591ce6f6a9c3f15
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838869"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605471"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Aggiornamento delle istanze di replica dei gruppi di disponibilità AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "47838869"
 Quando si aggiorna un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita un gruppo di disponibilità AlwaysOn a una nuova versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], a un nuovo Service Pack o aggiornamento cumulativo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oppure quando la si installa su un nuovo Service Pack o aggiornamento cumulativo di Windows, è possibile ridurre i tempi di inattività per la replica primaria a un singolo failover manuale eseguendo un aggiornamento in sequenza (o a due failover manuali in caso di failback sulla replica primaria originale). Durante il processo di aggiornamento, non sarà disponibile una replica secondaria per il failover o le operazioni di sola lettura e, dopo l'aggiornamento, a seconda del volume di attività nel nodo della replica primaria, l'aggiornamento della replica secondaria al nodo della replica primaria potrebbe richiedere un po' di tempo (è dunque prevedibile un traffico di rete elevato). Occorre sapere anche che dopo il failover iniziale in una replica secondaria che esegue una versione più recente di SQL Server, i database di tale gruppo di disponibilità saranno sottoposti a un processo di aggiornamento affinché la versione adottata sia la più recente. Durante questa operazione le repliche non saranno leggibili per nessuno di questi database. Il tempo di inattività dopo il failover iniziale dipenderà dal numero di database contenuti nel gruppo di disponibilità. Se si prevede di eseguire il failback sulla replica primaria originale, questo passaggio non sarà ripetuto durante il failback.
   
 >[!NOTE]  
->Questo articolo si limita a illustrare l'aggiornamento di SQL Server. Non viene descritto l'aggiornamento del sistema operativo che contiene WSFC (Windows Server Failover Cluster). L'aggiornamento del sistema operativo Windows che ospita il cluster di failover non è supportato per i sistemi operativi precedenti a Windows Server 2012 R2. Per aggiornare un nodo del cluster in esecuzione in Windows Server 2012 R2, vedere [Aggiornamento in sequenza del sistema operativo del cluster](http://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade).  
+>Questo articolo si limita a illustrare l'aggiornamento di SQL Server. Non viene descritto l'aggiornamento del sistema operativo che contiene WSFC (Windows Server Failover Cluster). L'aggiornamento del sistema operativo Windows che ospita il cluster di failover non è supportato per i sistemi operativi precedenti a Windows Server 2012 R2. Per aggiornare un nodo del cluster in esecuzione in Windows Server 2012 R2, vedere [Aggiornamento in sequenza del sistema operativo del cluster](https://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade).  
   
 ## <a name="prerequisites"></a>Prerequisites  
 Prima di iniziare, esaminare le informazioni seguenti:  
@@ -245,7 +245,7 @@ A seconda dell'aggiornamento che si sta applicando, possono essere necessari pas
 
 1. Aggiornare l'istanza che era in origine la replica primaria.
 
-Per informazioni di carattere generale, vedere l'articolo sulla [possibilità che la funzionalità CDC non funzioni dopo che è stato applicato l'aggiornamento cumulativo più recente](http://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+Per informazioni di carattere generale, vedere l'articolo sulla [possibilità che la funzionalità CDC non funzioni dopo che è stato applicato l'aggiornamento cumulativo più recente](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
   
 ## <a name="see-also"></a>Vedere anche  

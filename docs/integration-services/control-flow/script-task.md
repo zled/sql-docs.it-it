@@ -19,12 +19,12 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c484ce29354bc21b1aaa0d5d9b708beb10cc5944
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 872991355d16ccd5dbd237baa4830957483b51ab
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614799"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641962"
 ---
 # <a name="script-task"></a>Attività Script
   L'attività Script fornisce il codice necessario per eseguire le funzioni non disponibili nelle trasformazioni e nelle attività predefinite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tale attività consente inoltre di combinare più funzioni in un unico script, anziché utilizzare più attività e trasformazioni. L'attività Script può essere utilizzata per operazioni che devono essere eseguite una sola volta in un pacchetto o una sola volta per oggetto enumerato, anziché una volta per ogni riga di dati.  
@@ -83,7 +83,7 @@ ms.locfileid: "47614799"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere l'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ### <a name="configuring-the-script-task-programmatically"></a>Configurazione dell'attività Script a livello di codice  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, vedere l'argomento seguente:  
@@ -143,6 +143,6 @@ ms.locfileid: "47614799"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico relativo all' [invio della posta elettronica con notifica di recapito in C#](http://go.microsoft.com/fwlink/?LinkId=237625)su shareourideas.com  
+-   Articolo tecnico relativo all' [invio della posta elettronica con notifica di recapito in C#](https://go.microsoft.com/fwlink/?LinkId=237625)su shareourideas.com  
   
   

@@ -17,12 +17,12 @@ ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c6f05ed8236289ecde6d5a40608b0961d86eb6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e0bddfda2016208065449f678cb1931832b1d7b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625799"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701909"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>Mapping di relazioni molti-a-molti (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,9 +40,9 @@ Le relazioni molti-a-molti tra le tabelle vengono gestite nei database per mezzo
   
 4.  Copiare nella tabella di collegamento le colonne chiave primaria presenti nelle altre due tabelle. Così come per qualsiasi altra tabella, è possibile aggiungere delle colonne.  
   
-5.  Nella tabella di collegamento impostare la chiave primaria in modo da includere tutte le colonne chiave primaria delle altre due tabelle. Per informazioni dettagliate, vedere [Procedura: Creazione di chiavi primarie (Visual Database Tools)](http://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214).  
+5.  Nella tabella di collegamento impostare la chiave primaria in modo da includere tutte le colonne chiave primaria delle altre due tabelle. Per informazioni dettagliate, vedere [Procedura: Creazione di chiavi primarie (Visual Database Tools)](https://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214).  
   
-6.  Definire una relazione uno-a-molti tra ciascuna delle due tabelle primarie e la tabella di collegamento. La tabella di collegamento dovrebbe essere sul lato "molti" di entrambe le relazioni create. Per informazioni dettagliate, vedere [Procedura: creare relazioni tra tabelle (Visual Database Tools)](http://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c).  
+6.  Definire una relazione uno-a-molti tra ciascuna delle due tabelle primarie e la tabella di collegamento. La tabella di collegamento dovrebbe essere sul lato "molti" di entrambe le relazioni create. Per informazioni dettagliate, vedere [Procedura: creare relazioni tra tabelle (Visual Database Tools)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c).  
   
     > [!NOTE]  
     > La creazione di una tabella di collegamento in un diagramma di database non comporta l'inserimento dei dati dalle tabelle correlate nella tabella di collegamento. Per informazioni sull'inserimento di dati in una tabella, vedere [Creazione di query di accodamento &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md).  

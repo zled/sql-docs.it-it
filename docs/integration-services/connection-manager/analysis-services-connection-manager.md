@@ -15,12 +15,12 @@ ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c1280a60cf7c53454ab77da6fed58fd09902748
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: 38addbd487a0d3e5f348d59028c85e16bca1dd5c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411761"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639168"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services - gestione connessione
   Una gestione connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente la connessione di un pacchetto a un server che esegue un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oppure a un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che permette di accedere ai dati di cubi e dimensioni. È possibile connettersi a un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solo durante lo sviluppo di pacchetti in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In fase di esecuzione i pacchetti si connettono al server e al database in cui è stato distribuito il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -41,7 +41,7 @@ ms.locfileid: "50411761"
 -   Se ci si connette a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], specificare la modalità di autenticazione.  
 
 > [!NOTE]    
->  Se si usa SSIS in Azure Data Factory e si intende connettersi a un'istanza di Azure Analysis Services, non è possibile usare un account con l'autenticazione a più fattori abilitata, ma al suo posto si deve usare un'entità servizio. Per crearne una, vedere [qui](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-service-principal), selezionare **Usa nome utente e password specifici** per eseguire l'accesso al server nella gestione connessione e immettere il proprio ID/chiave applicazione come Nome utente/Password. È anche necessario installare le librerie client necessarie in Azure-SSIS Integration Runtime tramite il programma di installazione personalizzato; vedere l'esempio su **Azure Analysis Services** nell'articolo sulla [personalizzazione del runtime di integrazione SSIS](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+>  Se si usa SSIS in Azure Data Factory e si intende connettersi a un'istanza di Azure Analysis Services, non è possibile usare un account con l'autenticazione a più fattori abilitata, ma al suo posto si deve usare un'entità servizio. Per crearne una, vedere [qui](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal), selezionare **Usa nome utente e password specifici** per eseguire l'accesso al server nella gestione connessione e immettere il proprio ID/chiave applicazione come Nome utente/Password. È anche necessario installare le librerie client necessarie in Azure-SSIS Integration Runtime tramite il programma di installazione personalizzato; vedere l'esempio su **Azure Analysis Services** nell'articolo sulla [personalizzazione del runtime di integrazione SSIS](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
   
 -   Indicare se la connessione creata dalla gestione connessione deve essere mantenuta in fase di esecuzione.  
   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581da1ec4f3b42a9b71f4f8fedc5a22100d6ff2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70aa8745576c2837d4b957fed9783baa0248f07
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596129"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657610"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Indagine sulle aree iniziali di OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ Questo articolo è incentrato su OLTP e non sull'analisi. Per informazioni sulle
   
   
 > [!NOTE]
-> Un video di due minuti relativo alle funzionalità in memoria è disponibile alla pagina sulle [tecnologie in memoria per il database SQL di Azure](http://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies). Il video è stato pubblicato nel dicembre 2015.  
+> Un video di due minuti relativo alle funzionalità in memoria è disponibile alla pagina sulle [tecnologie in memoria per il database SQL di Azure](https://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies). Il video è stato pubblicato nel dicembre 2015.  
 
 
 ### <a name="columnstore"></a>columnstore
@@ -463,7 +463,7 @@ Una funzione definita dall'utente (UDF) e compilata in modo nativo viene eseguit
 Per spiegazioni e dati di prova sulle prestazioni delle UDF native, vedere:  
   
   - [Il blog che spiega come attenuare l'impatto RBAR con funzioni definite dall'utente compilate in modo nativo in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - [Il post di Gail Shaw del gennaio 2016 sulle funzioni definite dall'utente compilate in modo nativo](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/).  
+  - [Il post di Gail Shaw del gennaio 2016 sulle funzioni definite dall'utente compilate in modo nativo](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/).  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
@@ -475,7 +475,7 @@ Vedere gli articoli seguenti che presentano alcune considerazioni particolari re
   - [Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - Il report di analisi delle prestazioni delle transazioni in SQL Server Management Studio consente di valutare se OLTP in memoria è in grado di migliorare le prestazioni delle applicazioni del database.  
   - Usare [Ottimizzazione guidata per la memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) per eseguire la migrazione della tabella di database basata su disco a OLTP in memoria.   
-- [Eseguire il backup, ripristinare e recuperare tabelle con ottimizzazione per la memoria](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [Eseguire il backup, ripristinare e recuperare tabelle con ottimizzazione per la memoria](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   - Lo spazio di archiviazione usato dalle tabelle ottimizzate per la memoria può essere di gran lunga superiore rispetto alle relative dimensioni in memoria e influisce sulle dimensioni del backup del database.  
 - [Transazioni in tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - Include informazioni sulla logica di riesecuzione in T-SQL, per le transazioni in tabelle ottimizzate per la memoria.  

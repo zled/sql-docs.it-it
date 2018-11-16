@@ -1,12 +1,10 @@
 ---
 title: Usare i dati delle modifiche (SQL Server) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data [SQL Server]
@@ -17,12 +15,12 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 236168c4837b3c626011ff5ea82e1bb58cee3e1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33490ce81c66d12d0309b56112b0a843d99fc969
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743919"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560254"
 ---
 # <a name="work-with-change-data-sql-server"></a>Utilizzare i dati delle modifiche (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +129,7 @@ ms.locfileid: "47743919"
  Change Data Capture supporta fino a due istanze di acquisizione per una singola tabella di origine in cui viene eseguito il rilevamento delle modifiche. L'utilizzo principale di questa funzionalità consiste nell'inserire una transizione tra più istanze di acquisizione quando le modifiche DDL (Data Definition Language) apportate alla tabella di origine espandono il set di colonne disponibili per il rilevamento. Durante la transizione a una nuova istanza di acquisizione, è possibile proteggere i livelli dell'applicazione più elevati dalle modifiche ai nomi delle funzioni di query sottostanti eseguendo il wrapping della chiamata sottostante tramite un'apposita funzione. Assicurarsi che il nome della funzione wrapper rimanga invariato. Al momento della transizione, è possibile eliminare la funzione wrapper precedente e crearne una nuova con lo stesso nome che faccia riferimento alle nuove funzioni di query. Modificando lo script generato per creare una funzione wrapper con lo stesso nome, è possibile passare a una nuova istanza di acquisizione senza influire sui livelli dell'applicazione più elevati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
+ [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Abilitare e disabilitare Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   
  [Amministrare e monitorare Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  

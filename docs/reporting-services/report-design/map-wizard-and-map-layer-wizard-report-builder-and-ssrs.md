@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8b90d0eddd10825abc2e05fd97da236a5049293
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1353356a4fb0116e4eed34ef79a8d7a0997db0bb
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021055"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813774"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Creazione guidata mappa e Creazione guidata livello mappa (Generatore report e SSRS)
  Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , la Creazione guidata mappa e la Creazione guidata livello mappa consentono di automatizzare l'attività di creazione di una mappa, di aggiunta di un livello mappa o di modifica delle opzioni di livello mappa in un livello esistente.  
@@ -114,7 +114,7 @@ ms.locfileid: "50021055"
  La raccolta mappe contiene le mappe dei report presenti nella cartella della raccolta mappe per l'ambiente di creazione del report. Le mappe della raccolta rappresentano un modo rapido per aggiungere una mappa al report. Le mappe predefinite della raccolta vengono fornite da un provider di mappe.  
   
 > [!NOTE]  
->  Questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i dati dei file di forma TIGER/Line forniti gentilmente Census Bureau degli Stati Uniti ([http://www.census.gov/](http://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dal Census Bureau degli Stati Uniti. Per altre informazioni sui file di forma TIGER/Line, visitare [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati di U.S. Bureau of the Census.  
+>  Questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i dati dei file di forma TIGER/Line forniti gentilmente Census Bureau degli Stati Uniti ([https://www.census.gov/](https://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dal Census Bureau degli Stati Uniti. Per altre informazioni sui file di forma TIGER/Line, visitare [https://www.census.gov/geo/www/tiger](https://www.census.gov/geo/www/tiger). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati di U.S. Bureau of the Census.  
   
  Per estendere la raccolta mappe, è possibile aggiungere o rimuovere report dalla directory della raccolta mappe e aggiungere cartelle per organizzare le mappe. Per altre informazioni, vedere [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   

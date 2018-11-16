@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75263ad68af90f0dfd8035cc943a194c344f90fa
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: c8c9e653781b821d3fcc2e7c2e5dd218b329e22c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461032"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675360"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -122,7 +122,7 @@ In questo passaggio si configura il computer SQL Server come host controllato re
 7. Nel computer SQL Server eseguire il comando seguente in una console di Windows PowerShell con privilegi elevati, per indicare al computer SQL Server dove eseguire l'attestazione. Assicurarsi di specificare l'indirizzo IP o il nome DNS del computer HGS in uso. 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
+   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
    ```
 
 Il risultato del comando precedente visualizzerà AttestationStatus = Passed.

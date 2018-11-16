@@ -23,12 +23,12 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd8ea5f24876e26b19b803d188489b425e434495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73eed98ef8b7d6c8f842431d5ebc5f1ea846e8c0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698754"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642208"
 ---
 # <a name="working-with-variables-programmatically"></a>Utilizzo delle variabili a livello di programmazione
   Le variabili consentono di impostare valori in modo dinamico e di controllare i processi in pacchetti, contenitori, attività e gestori eventi. Possono inoltre essere utilizzate dai vincoli di precedenza per controllare la direzione del flusso di dati verso attività diverse. Le variabili possono essere utilizzate per effettuare le operazioni seguenti:  
@@ -37,15 +37,15 @@ ms.locfileid: "47698754"
   
 -   Popolare i valori dei parametri per le istruzioni Transact-SQL in fase di esecuzione.  
   
--   Controllare il flusso di un ciclo Foreach. Per altre informazioni, vedere [Aggiungere un'enumerazione a un flusso di controllo](http://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a).  
+-   Controllare il flusso di un ciclo Foreach. Per altre informazioni, vedere [Aggiungere un'enumerazione a un flusso di controllo](https://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a).  
   
--   Controllare un vincolo di precedenza in base al relativo utilizzo in un'espressione. Un vincolo di precedenza può includere variabili nella definizione del vincolo. Per altre informazioni, vedere [Aggiunta di espressioni ai vincoli di precedenza](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
+-   Controllare un vincolo di precedenza in base al relativo utilizzo in un'espressione. Un vincolo di precedenza può includere variabili nella definizione del vincolo. Per altre informazioni, vedere [Aggiunta di espressioni ai vincoli di precedenza](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
   
--   Controllare la ripetizione condizionale di un contenitore Ciclo For. Per altre informazioni, vedere [Aggiungere un'enumerazione a un flusso di controllo](http://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a).  
+-   Controllare la ripetizione condizionale di un contenitore Ciclo For. Per altre informazioni, vedere [Aggiungere un'enumerazione a un flusso di controllo](https://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a).  
   
 -   Compilare espressioni che includono valori di variabili.  
   
--   È possibile creare variabili personalizzate per tutti i tipi di contenitori, ovvero pacchetti, contenitori **Ciclo Foreach**, contenitori **Ciclo For**, contenitori **Sequenza**, TaskHost e gestori di eventi. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   È possibile creare variabili personalizzate per tutti i tipi di contenitori, ovvero pacchetti, contenitori **Ciclo Foreach**, contenitori **Ciclo For**, contenitori **Sequenza**, TaskHost e gestori di eventi. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="scope"></a>Ambito  
  Ogni contenitore dispone di una propria raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Variables>. Ogni nuova variabile creata si trova nell'ambito del relativo contenitore padre. Poiché il contenitore del pacchetto costituisce il livello principale della gerarchia dei contenitori, le variabili con ambito pacchetto sono variabili globali e sono visibili a tutti i contenitori del pacchetto. Alla raccolta di variabili per il contenitore possono accedere anche gli elementi figlio del contenitore tramite la raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Variables>, utilizzando il nome della variabile o il relativo indice nella raccolta.  
@@ -231,6 +231,6 @@ End Module
   
 ## <a name="see-also"></a>Vedere anche  
  [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
- [Uso di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

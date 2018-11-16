@@ -34,18 +34,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7408e6160a6d82779ceb7c470e773db4a128ffa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 851f89487199b1deae2086352a255374621688c6
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782229"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638818"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Ricerca fuzzy - trasformazione
   La trasformazione Ricerca fuzzy esegue attività di pulitura dei dati, ad esempio standardizzazione, correzione e inserimento di valori mancanti.  
   
 > [!NOTE]  
->  Per informazioni dettagliate sulla trasformazione Ricerca fuzzy, inclusi i limiti di memoria e le prestazioni, vedere il white paper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(Ricerca fuzzy e Raggruppamento fuzzy in SQL Server Integration Services 2005).  
+>  Per informazioni dettagliate sulla trasformazione Ricerca fuzzy, inclusi i limiti di memoria e le prestazioni, vedere il white paper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(Ricerca fuzzy e Raggruppamento fuzzy in SQL Server Integration Services 2005).  
   
  La differenza tra la trasformazione Ricerca fuzzy e la trasformazione Ricerca è l'utilizzo della corrispondenza fuzzy. La trasformazione Ricerca individua i record corrispondenti nella tabella di riferimento tramite un equijoin Restituisce record con almeno un record corrispondente e record senza alcuna corrispondenza. La trasformazione Ricerca fuzzy invece restituisce anche corrispondenze fuzzy.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47782229"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -216,7 +216,7 @@ ms.locfileid: "47782229"
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazione Ricerca](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Trasformazione Raggruppamento fuzzy](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

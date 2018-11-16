@@ -20,12 +20,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 977a4c0b0406a3da51d7f36210e797fc2024d77b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88c92298743eb9eec610b472f498186938d6b651
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854989"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640458"
 ---
 # <a name="xml-source"></a>Origine XML
   L'origine XML legge un file di dati XML e popola con tali dati le colonne nell'output dell'origine.  
@@ -79,7 +79,7 @@ ms.locfileid: "47854989"
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate dell'origine XML](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "47854989"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |Percorso file XML|Consente di recuperare i dati da un file XML.|  
-|File XML da variabile|Consente di specificare il nome del file XML in una variabile.<br /><br /> **Informazioni correlate**: [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|File XML da variabile|Consente di specificare il nome del file XML in una variabile.<br /><br /> **Informazioni correlate**: [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Dati XML da variabile|Consente di recuperare i dati XML da una variabile.|  
   
  **Usa schema inline**  

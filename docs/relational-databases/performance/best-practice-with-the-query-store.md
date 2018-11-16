@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b167ab02b982688442ef0a580fab344d112f9e75
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8903afa017c51439e023dd40b33abadba5282885
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031010"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657840"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedure consigliate per l'archivio query
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -328,7 +328,7 @@ Il flag di traccia 7745 previene il comportamento predefinito quando Query Store
 Il flag di traccia 7752 abilita il caricamento asincrono di Query Store e consente anche a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di eseguire le query prima che Query Store sia stato caricato completamente. Il comportamento predefinito di Query Store impedisce l'esecuzione di query prima del ripristino di Query Store.
 
 > [!IMPORTANT]
-> Se si usa Query Store per informazioni dettagliate sui carichi di lavoro Just-In-Time in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prevedere l'installazione delle correzioni di scalabilità delle prestazioni in [KB 4340759](http://support.microsoft.com/help/4340759) appena possibile. 
+> Se si usa Query Store per informazioni dettagliate sui carichi di lavoro Just-In-Time in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prevedere l'installazione delle correzioni di scalabilità delle prestazioni in [KB 4340759](https://support.microsoft.com/help/4340759) appena possibile. 
 
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

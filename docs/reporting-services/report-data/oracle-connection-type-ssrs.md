@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 312d655507d2c7880746cf1f81f61059ddf64de4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 74eb23f2f294995222bcb90a7791f1133179462d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027900"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813421"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Tipo di connessione Oracle (SSRS)
 Per utilizzare dati di un database Oracle nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo Oracle. Questo tipo di origine dati predefinita usa il provider di dati Oracle direttamente e richiede un componente software client Oracle.
 
 Per installare gli strumenti client Oracle è possibile seguire questa procedura.
  
-1.  Visitare il [sito di download di Oracle](http://www.oracle.com/us/products/tools/index-090165.html)
+1.  Visitare il [sito di download di Oracle](https://www.oracle.com/us/products/tools/index-090165.html)
 2.  Scaricare ODAC 12c Release 4 (12.1.0.2.4) per Windows (64 bit per il server, 32 bit per gli strumenti)
 3.  Installare il provider di dati per .NET 4
   
@@ -61,9 +61,9 @@ Data Source="Oracle"; Unicode="True"
   
 -   [Utilizzo del provider di dati .NET Framework per Oracle](https://go.microsoft.com/fwlink/?LinkId=112314) nel sito msdn.microsoft.com  
   
--   [Come utilizzare Reporting Services per configurare e accedere a un'origine dati Oracle](http://support.microsoft.com/kb/834305)  
+-   [Come utilizzare Reporting Services per configurare e accedere a un'origine dati Oracle](https://support.microsoft.com/kb/834305)  
   
--   [Come aggiungere autorizzazioni per l'entità di sicurezza SERVIZIO DI RETE](http://support.microsoft.com/kb/870668)  
+-   [Come aggiungere autorizzazioni per l'entità di sicurezza SERVIZIO DI RETE](https://support.microsoft.com/kb/870668)  
   
 ###### <a name="alternate-data-extensions"></a>Estensioni per i dati alternative  
  È inoltre possibile recuperare dati da un database Oracle tramite un tipo di origine dati OLE DB. Per altre informazioni, vedere [Tipo di connessione OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  

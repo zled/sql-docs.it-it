@@ -11,21 +11,21 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe4b6dd462a8f8fec6797c26f7ae0461c4b0a4ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797355"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669860"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procedura: Eseguire unit test di SQL Server da Team Foundation Build
 È possibile usare Team Foundation Build per eseguire gli unit test di SQL Server come parte di un test di verifica della compilazione (BVT). È possibile configurare gli unit test per distribuire il database, generare dati di test e quindi eseguire i test selezionati. Se non si ha familiarità con Team Foundation Build, è consigliabile esaminare le informazioni riportate di seguito prima di applicare le procedure descritte in questo argomento:  
   
 -   [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Procedura: configurare ed eseguire test pianificati dopo la compilazione dell'applicazione](http://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Procedura: configurare ed eseguire test pianificati dopo la compilazione dell'applicazione](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
--   [Creare una definizione di compilazione di base](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [Creare una definizione di compilazione di base](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
 Prima di utilizzare queste procedure, è necessario innanzitutto configurare l'ambiente di lavoro effettuando le attività seguenti:  
   
@@ -215,22 +215,22 @@ In questa procedura vengono archiviati tutti i file della soluzione. In questi f
   
 1.  Connettersi a un computer in cui viene eseguito Team Foundation Server.  
   
-    Per altre informazioni, vedere l'argomento relativo all'[uso di Esplora controllo codice sorgente](http://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
+    Per altre informazioni, vedere l'argomento relativo all'[uso di Esplora controllo codice sorgente](https://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
   
 2.  Aggiungere la soluzione al controllo del codice sorgente, se non è già stata inclusa.  
   
-    Per altre informazioni, vedere l'argomento relativo all'[aggiunta di un progetto o una soluzione al controllo della versione](http://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
+    Per altre informazioni, vedere l'argomento relativo all'[aggiunta di un progetto o una soluzione al controllo della versione](https://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
   
 3.  Fare clic su **Vista**, quindi scegliere **Archiviazioni in sospeso**.  
   
 4.  Archiviare tutti i file della soluzione.  
   
-    Per altre informazioni, vedere [Archiviare modifiche in sospeso](http://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
+    Per altre informazioni, vedere [Archiviare modifiche in sospeso](https://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
   
     > [!NOTE]  
     > È possibile che le modalità di creazione e di gestione dei test automatici siano regolate da un processo di team specifico. Per il processo, ad esempio, si potrebbe richiedere di verificare localmente la compilazione prima di archiviare il codice in questione insieme ai relativi test che verranno eseguiti.  
   
-    Accanto a ogni file in **Esplora soluzioni** viene visualizzata l'icona di un lucchetto per indicare che il file è archiviato. Per altre informazioni, vedere l'argomento relativo alla [visualizzazione delle proprietà di file e cartelle del controllo della versione](http://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
+    Accanto a ogni file in **Esplora soluzioni** viene visualizzata l'icona di un lucchetto per indicare che il file è archiviato. Per altre informazioni, vedere l'argomento relativo alla [visualizzazione delle proprietà di file e cartelle del controllo della versione](https://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
   
     I test sono disponibili per Team Foundation Build. A questo punto è possibile creare una definizione di compilazione contenente i test che si desidera eseguire.  
   
@@ -280,11 +280,11 @@ In questa procedura vengono archiviati tutti i file della soluzione. In questi f
   
 3.  Verificare che i valori nei campi **Definizione di compilazione**, **Agente di compilazione** e **Cartella di ricezione per la compilazione** siano corretti, quindi fare clic su **Accoda**.  
   
-    Verrà visualizzata la scheda **In coda** di **Build Explorer**. Per altre informazioni, vedere [Gestire e visualizzare le compilazioni completate (Visual Studio 2010)](http://msdn.microsoft.com/library/ms181730(VS.100).aspx) o [Gestire le compilazioni in Build Explorer (Visual Studio 2012)](http://msdn.microsoft.com/library/ms181732.aspx).  
+    Verrà visualizzata la scheda **In coda** di **Build Explorer**. Per altre informazioni, vedere [Gestire e visualizzare le compilazioni completate (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) o [Gestire le compilazioni in Build Explorer (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esecuzione di unit test di SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Creare una definizione di compilazione di base](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[Accodare una compilazione](http://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[Monitorare lo stato di una compilazione in esecuzione](http://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
+[Creare una definizione di compilazione di base](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+[Accodare una compilazione](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
+[Monitorare lo stato di una compilazione in esecuzione](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
   

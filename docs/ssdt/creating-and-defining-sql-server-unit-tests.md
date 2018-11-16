@@ -14,12 +14,12 @@ ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ed68e2510169ee0c56a3dfbf2e95c2cb164412b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14d242dbf69e223b5e56b575f09e55e1f3ba6964
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688589"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681279"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Creazione e definizione di unit test di SQL Server
 È possibile eseguire unit test di SQL Server per verificare se le modifiche apportate a uno o più oggetti di database in uno schema abbiano interferito con le funzionalità esistenti in un'applicazione di database. Questi test costituiscono un'integrazione degli unit test creati dagli sviluppatori del software. È necessario eseguire entrambi i tipi di test per verificare il comportamento dell'applicazione.  
@@ -46,7 +46,7 @@ Nella tabella seguente sono incluse le descrizioni di attività comuni che suppo
 [Esecuzione di unit test di SQL Server](../ssdt/running-sql-server-unit-tests.md)  
 Dopo aver creato gli unit test di SQL Server, è possibile eseguirli nella finestra Visualizzazione test, cioè la finestra di progettazione unit test di SQL Server, o usando Team Foundation Build.  
   
-[Scenario: Definire condizioni di test personalizzate per gli unit test del database](http://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[Scenario: Definire condizioni di test personalizzate per gli unit test del database](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
 È possibile creare una condizione di test personalizzata per testare un comportamento non verificabile dalle condizioni di test predefinite.  
   
 ## <a name="see-also"></a>Vedere anche  

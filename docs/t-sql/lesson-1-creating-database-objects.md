@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15c87cdbe7f96b3775a4ecfc475436e2996c212e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eb8e352e18331142adf23a76371d49d8403a4cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630119"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696819"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lezione 1: Creare ed eseguire query per oggetti di database
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ In questa lezione vengono illustrate le procedure per creare un database, creare
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] Le istruzioni possono essere scritte e inviate a [!INCLUDE[ssDE](../includes/ssde-md.md)] nei modi seguenti:  
   
--   Mediante [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In questa esercitazione si presuppone che venga usato [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], ma è anche possibile usare [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponibile come download gratuito nell' [Area download Microsoft](http://go.microsoft.com/fwlink/?linkid=67359).  
+-   Mediante [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In questa esercitazione si presuppone che venga usato [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], ma è anche possibile usare [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponibile come download gratuito nell' [Area download Microsoft](https://go.microsoft.com/fwlink/?linkid=67359).  
   
 -   Mediante l' [utilità sqlcmd](../tools/sqlcmd-utility.md).  
   
@@ -213,7 +213,7 @@ Per informazioni su alcune funzioni che consentono di utilizzare i dati in un'is
 |||  
 |-|-|  
 |[Funzioni stringa &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md)|[Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[Funzioni matematiche &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[Funzioni per i valori text e image &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
+|[Funzioni matematiche &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[Funzioni per i valori text e image &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
 
 ## <a name="create-views-and-stored-procedures"></a>Creare viste e stored procedure
 Una vista è costituita da un'istruzione SELECT, mentre una stored procedure da una o più istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] eseguite in un batch.  

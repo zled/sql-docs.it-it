@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee3a8e9576b38ee49dc5b562384d51c45f58c3fd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 64339c62cfe6d37e1117febd797ae43d6d43bdc2
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020255"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813298"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Ruoli-attività di Reporting Services e autorizzazioni-gruppi di SharePoint
   In questo argomento vengono confrontate le funzionalità di autorizzazione basata su ruoli e attività nella modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con le funzionalità di sicurezza dei prodotti SharePoint. In questo argomento vengono confrontate la terminologia e le caratteristiche di ruoli, attività, gruppi di SharePoint, livelli di autorizzazione e autorizzazioni.  
@@ -51,7 +51,7 @@ ms.locfileid: "50020255"
 |---|**Gruppo livelli di autorizzazione** : ad esempio "Solo visualizzazione" per il gruppo "Visualizzatori".|  
 |**Attività** : ad esempio "Gestione di report".|**Autorizzazioni** : ad esempio, nel gruppo "Solo visualizzazione" sono presenti autorizzazioni correlate all'elenco come Visualizzazione elementi, Visualizzazione versioni e Visualizzazione pagine applicazione.|  
   
- Per ulteriori informazioni sulle autorizzazioni di SharePoint, vedere [Livelli di autorizzazione e autorizzazioni](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) e [Determinare i livelli di autorizzazione e i gruppi in SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
+ Per ulteriori informazioni sulle autorizzazioni di SharePoint, vedere [Livelli di autorizzazione e autorizzazioni](https://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) e [Determinare i livelli di autorizzazione e i gruppi in SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
 ##  <a name="bkmk_compare_roles_groups"></a> Confrontare ruoli in modalità nativa e gruppi di SharePoint  
  Nella tabella seguente vengono confrontate le definizioni di ruolo predefinito in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa con i gruppi di SharePoint standard. Se i gruppi di SharePoint non corrispondono al ruolo specifico desiderato, è possibile creare un gruppo personalizzato e assegnarvi livelli di autorizzazione in SharePoint.  

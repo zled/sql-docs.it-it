@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8054c3c985aa83aba25aa40aa40dca8d2923e8f6
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: b5f815cba0bf8cf2777053a502597cd19ccd6a20
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852026"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600951"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "48852026"
   
 ||Funzionalità dipendente|Hotfix|Collegamento|  
 |------|-----------------------|------------|----------|  
-|![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|L'hotfix per .Net 3.5 SP1 aggiunge il supporto a SQL Client per le funzionalità AlwaysOn di Read-intent, readonly e multisubnetfailover. L'hotfix deve essere installato in ogni server di report di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: articolo relativo all' [hotfix per .Net 3.5 SP1 per aggiungere supporto alle funzionalità AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|L'hotfix per .Net 3.5 SP1 aggiunge il supporto a SQL Client per le funzionalità AlwaysOn di Read-intent, readonly e multisubnetfailover. L'hotfix deve essere installato in ogni server di report di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: articolo relativo all' [hotfix per .Net 3.5 SP1 per aggiungere supporto alle funzionalità AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> Elenco di controllo: requisiti (sistema Windows)  
@@ -67,7 +67,7 @@ ms.locfileid: "48852026"
 ###  <a name="PermissionsWindows"></a> Autorizzazioni (sistema Windows)  
  Per amministrare un cluster WSFC, l'utente deve essere un amministratore di sistema in ogni nodo del cluster.  
   
- Per altre informazioni sull'account per l'amministrazione del cluster, vedere [Appendice A: Requisiti di un cluster di failover](http://technet.microsoft.com/library/dd197454.aspx).  
+ Per altre informazioni sull'account per l'amministrazione del cluster, vedere [Appendice A: Requisiti di un cluster di failover](https://technet.microsoft.com/library/dd197454.aspx).  
   
 ###  <a name="RelatedTasksWindows"></a> Attività correlate (sistema Windows)  
   
@@ -99,17 +99,17 @@ ms.locfileid: "48852026"
   
 ##### <a name="related-content-powershell"></a>Contenuto correlato (PowerShell)  
   
--   [Clustering and High-Availability](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog) (Clustering e disponibilità elevata - Blog del team di clustering di failover e bilanciamento del carico di rete)  
+-   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog) (Clustering e disponibilità elevata - Blog del team di clustering di failover e bilanciamento del carico di rete)  
   
--   [Introduzione a Windows PowerShell in un cluster di failover](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [Introduzione a Windows PowerShell in un cluster di failover](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Comandi di risorse cluster e cmdlet di Windows PowerShell equivalenti](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Comandi di risorse cluster e cmdlet di Windows PowerShell equivalenti](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ###  <a name="RelatedContentWS"></a> Contenuto correlato (sistema Windows)  
   
--   [Pagina relativa alla configurazione delle impostazioni DNS in un cluster di failover multisito](http://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
+-   [Pagina relativa alla configurazione delle impostazioni DNS in un cluster di failover multisito](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [Post sulla registrazione DNS con la risorsa del nome di rete](http://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [Post sulla registrazione DNS con la risorsa del nome di rete](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
 
 ##  <a name="ServerInstance"></a> Prerequisiti e restrizioni dell'istanza di SQL Server  
@@ -167,7 +167,7 @@ ms.locfileid: "48852026"
   
     -   Tramite un backup di una replica secondaria un thread viene mantenuto nella replica primaria per la durata dell'operazione di backup.  
   
- Per altre informazioni, vedere la pagina relativa alla [serie di informazioni su HADRON riguardanti l'uso del pool di lavoro per database abilitati HADRON in AlwaysOn](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (blog del Servizio Supporto Tecnico Clienti per gli ingegneri di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
+ Per altre informazioni, vedere la pagina relativa alla [serie di informazioni su HADRON riguardanti l'uso del pool di lavoro per database abilitati HADRON in AlwaysOn](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (blog del Servizio Supporto Tecnico Clienti per gli ingegneri di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
 ###  <a name="PermissionsSI"></a> Autorizzazioni (istanza del server)  
   
@@ -186,7 +186,7 @@ ms.locfileid: "48852026"
   
 ###  <a name="RelatedContentSI"></a> Contenuto correlato (istanza del server)  
   
--   [serie di informazioni su HADRON riguardanti l'uso del pool di lavoro per database abilitati HADRON in AlwaysOn](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [serie di informazioni su HADRON riguardanti l'uso del pool di lavoro per database abilitati HADRON in AlwaysOn](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> Consigli sulla connettività di rete  
  Si consiglia di usare gli stessi collegamenti di rete per le comunicazioni tra nodi WSFC e le comunicazioni tra repliche di disponibilità.  L'utilizzo di collegamenti di rete separati può provocare comportamenti imprevisti in caso di errore di alcuni collegamenti (anche in modo intermittente).  
@@ -210,7 +210,7 @@ ms.locfileid: "48852026"
 ###  <a name="RestrictionsFCI"></a> Restrizioni (istanze del cluster di failover)  
   
 > [!NOTE]  
-> Le istanze del cluster di failover supportano i volumi condivisi cluster. Per ulteriori informazioni sui volumi condivisi cluster, vedere [Informazioni sui volumi condivisi del cluster in un cluster di failover](http://technet.microsoft.com/library/dd759255.aspx).  
+> Le istanze del cluster di failover supportano i volumi condivisi cluster. Per ulteriori informazioni sui volumi condivisi cluster, vedere [Informazioni sui volumi condivisi del cluster in un cluster di failover](https://technet.microsoft.com/library/dd759255.aspx).  
   
 -   **I nodi del cluster di un'istanza del cluster di failover possono ospitare solo una replica per un gruppo di disponibilità specificato:** se si aggiunge una replica di disponibilità in un'istanza del cluster di failover, i nodi WSFC che sono i possibili proprietari dell'istanza del cluster di failover non possono ospitare un'altra replica per lo stesso gruppo di disponibilità.  Per evitare possibili conflitti è consigliabile configurare i proprietari possibili per l'istanza del cluster di failover. In tal modo si evita la possibilità che un singolo WSFC tenti l'hosting di due repliche di disponibilità per lo stesso gruppo di disponibilità.
   
@@ -242,7 +242,7 @@ ms.locfileid: "48852026"
   
 -   [Clustering di failover e gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Pagina relativa alla guida all'architettura di AlwaysOn in cui viene illustrata la compilazione di una soluzione a disponibilità elevata e di ripristino di emergenza usando istanze del cluster di failover e gruppi di disponibilità](http://technet.microsoft.com/library/jj215886.aspx)  
+-   [Pagina relativa alla guida all'architettura di AlwaysOn in cui viene illustrata la compilazione di una soluzione a disponibilità elevata e di ripristino di emergenza usando istanze del cluster di failover e gruppi di disponibilità](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> Prerequisiti e restrizioni dei gruppi di disponibilità  
  **Contenuto della sezione**  
@@ -382,11 +382,11 @@ ms.locfileid: "48852026"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [serie di informazioni su HADRON riguardanti l'uso del pool di lavoro per database abilitati HADRON in AlwaysOn](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [serie di informazioni su HADRON riguardanti l'uso del pool di lavoro per database abilitati HADRON in AlwaysOn](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

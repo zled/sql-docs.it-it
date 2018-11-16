@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77d9f024255b93df493e87adeabfcf13311a326b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6810231163d1674893e55624f333cd023bd95c47
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777719"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666190"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Raccolte di XML Schema (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47777719"
   
 ```  
 <?xml version="1.0"?>  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             targetNamespace="uri:Cust_Orders2"  
             xmlns="uri:Cust_Orders2" >  
   <xsd:attribute name="SomeAttribute" type="xsd:int" />  
@@ -193,11 +193,11 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
  I singoli elementi XML Schema inclusi nella raccolta possono essere ottenuti come istanze del tipo di dati **xml** , specificando lo spazio dei nomi di destinazione come terzo argomento della funzione **XML_SCHEMA_NAMESPACE()**, come illustrato nell'esempio seguente.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Esempio: restituzione di uno schema specifico da una raccolta di XML Schema  
- L'istruzione seguente restituisce l'elemento XML Schema con spazio dei nomi di destinazione "http://www.microsoft.com/books" dalla raccolta di XML Schema "myCollection" nell'ambito dello schema relazionale dbo.  
+ L'istruzione seguente restituisce l'elemento XML Schema con spazio dei nomi di destinazione "https://www.microsoft.com/books" dalla raccolta di XML Schema "myCollection" nell'ambito dello schema relazionale dbo.  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'http://www.microsoft.com/books')  
+N'https://www.microsoft.com/books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>Esecuzione di query su elementi XML Schema  

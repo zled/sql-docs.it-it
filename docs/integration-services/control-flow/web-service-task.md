@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2d0d31f310ea2a64afe47940ab4d9463fee0a97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757549"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642348"
 ---
 # <a name="web-service-task"></a>Attività Servizio Web
   L'attività Servizio Web esegue un metodo di servizio Web. È possibile utilizzare l'attività Servizio Web per gli scopi seguenti:  
@@ -38,7 +38,7 @@ ms.locfileid: "47757549"
 > [!IMPORTANT]  
 >  La gestione connessione HTTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
   
- La gestione connessione HTTP può puntare a un sito Web o a un file WSDL (Web Service Description Language). L'URL di una gestione connessione HTTP che punta a un file WSDL include il parametro `?WSDL` , ad esempio `http://MyServer/MyWebService/MyPage.asmx?WSDL`.  
+ La gestione connessione HTTP può puntare a un sito Web o a un file WSDL (Web Service Description Language). L'URL di una gestione connessione HTTP che punta a un file WSDL include il parametro `?WSDL` , ad esempio `https://MyServer/MyWebService/MyPage.asmx?WSDL`.  
   
  Affinché sia possibile configurare l'attività Servizio Web tramite la finestra di dialogo **Editor attività Servizio Web** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , il file WSDL deve essere disponibile localmente.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47757549"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostare le proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configurazione dell'attività Servizio Web a livello di codice  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic su uno degli argomenti seguenti:  
@@ -178,7 +178,7 @@ ms.locfileid: "47757549"
  **Variabile**  
  Selezionare una variabile nell'elenco oppure fare clic su \<**Nuova variabile**> per crearne una nuova.  
   
- **Argomenti correlati**  [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati**  [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Video sulla [Procedura: Chiamata a un servizio Web tramite l'attività Servizio Web (video di SQL Server)](http://go.microsoft.com/fwlink/?LinkId=259642)sul sito technet.microsoft.com.  
+ Video sulla [Procedura: Chiamata a un servizio Web tramite l'attività Servizio Web (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642)sul sito technet.microsoft.com.  

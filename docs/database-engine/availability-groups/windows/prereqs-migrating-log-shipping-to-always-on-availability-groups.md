@@ -13,12 +13,12 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7c1a4fc481f6a7285ded045b1a648ee6e700b5f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c246912b7e12690427bc296d3db277481eddc42f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776611"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606921"
 ---
 # <a name="prereqs-migrating-log-shipping-to-always-on-availability-groups"></a>Prerequisiti di migrazione di log shipping in gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,15 +101,15 @@ ms.locfileid: "47776611"
   
      [Pagina relativa ai blog del team di SQL Server AlwaysOn in cui è disponibile il blog del team ufficiale di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](http://blogs.msdn.com/b/psssql/)  
+     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **White paper:**  
   
-     [Pagina relativa alla guida alla migrazione in cui viene illustrata la migrazione in gruppi di disponibilità AlwaysOn da distribuzioni precedenti in cui vengono combinati il mirroring del database e il log shipping](http://msdn.microsoft.com/library/jj635217)  
+     [Pagina relativa alla guida alla migrazione in cui viene illustrata la migrazione in gruppi di disponibilità AlwaysOn da distribuzioni precedenti in cui vengono combinati il mirroring del database e il log shipping](https://msdn.microsoft.com/library/jj635217)  
   
-     [Pagina relativa ai white paper Microsoft per SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Pagina relativa ai white paper Microsoft per SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](http://sqlcat.com/)  
+     [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](https://sqlcat.com/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 47e81b6b7ad40810a643244eabd47292e685d61b
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: f53679294052b114ab2247ee47916aac6ff5fd3f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970842"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697825"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -1058,7 +1058,7 @@ Le tabelle temporanee globali per il [!INCLUDE[ssSDSfull](../../includes/sssdsfu
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>Risoluzione dei problemi delle tabelle temporanee globali per il database SQL di Azure 
 
-Per la risoluzione dei problemi di tempdb, vedere [Risoluzione dei problemi relativi allo spazio su disco insufficiente in tempdb](http://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
+Per la risoluzione dei problemi di tempdb, vedere [Risoluzione dei problemi relativi allo spazio su disco insufficiente in tempdb](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
 
 > [!NOTE]
 > Solo un amministratore del server può accedere alle DMV di risoluzione dei problemi in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

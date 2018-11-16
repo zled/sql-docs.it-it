@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: aabe54448e4f91a87531d4e56de4f617a1610d4f
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 6f9f6b87abbac930bc51d5b0f5a32d48e0afb730
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419126"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701986"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurare SQL Server per inviare commenti e suggerimenti a Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Per SQL Server in Linux, fare riferimento a [Customer Feedback for SQL Server on
 Dopo l'installazione, l'impostazione per la raccolta dei dati di utilizzo per i componenti e le istanze di SQL Server può essere modificata tramite l'applicazione Segnalazione errori e utilizzo funzionalità. L'applicazione è disponibile come parte dell'installazione di SQL Server. Questo strumento consente a ogni istanza di SQL Server di configurare un'impostazione specifica per i dati di utilizzo.
 
 > [!NOTE]
-> L'applicazione Segnalazione errori e utilizzo funzionalità è inclusa nell'elenco Strumenti di configurazione di SQL Server. È possibile usare questo strumento per gestire le preferenze per la raccolta di Segnalazione errori e utilizzo funzionalità, come in SQL Server 2017. La raccolta dei dati di segnalazione errori è separata dalla raccolta dei commenti e suggerimenti sull'utilizzo, pertanto può essere attivata o disattivata indipendentemente dalla raccolta dei commenti e suggerimenti sull'utilizzo. La funzionalità di segnalazione errori raccoglie dump di arresto anomalo del sistema che vengono inviati a Microsoft e che possono contenere informazioni riservate, come indicato nell'[informativa sulla privacy](http://go.microsoft.com/fwlink/?LinkID=868444).
+> L'applicazione Segnalazione errori e utilizzo funzionalità è inclusa nell'elenco Strumenti di configurazione di SQL Server. È possibile usare questo strumento per gestire le preferenze per la raccolta di Segnalazione errori e utilizzo funzionalità, come in SQL Server 2017. La raccolta dei dati di segnalazione errori è separata dalla raccolta dei commenti e suggerimenti sull'utilizzo, pertanto può essere attivata o disattivata indipendentemente dalla raccolta dei commenti e suggerimenti sull'utilizzo. La funzionalità di segnalazione errori raccoglie dump di arresto anomalo del sistema che vengono inviati a Microsoft e che possono contenere informazioni riservate, come indicato nell'[informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkID=868444).
 
 Per avviare Segnalazione errori e utilizzo funzionalità di SQL Server, fare clic o toccare **Start** e quindi cercare "Errore" nella casella di ricerca. Verrà visualizzato l'elemento Segnalazione errori e utilizzo funzionalità di SQL Server. Dopo avere avviato lo strumento, è possibile gestire i commenti e suggerimenti sull'utilizzo e gli errori gravi raccolti per le istanze e i componenti installati nel computer.
 
@@ -153,7 +153,7 @@ La procedura per attivare o disattivare questa funzionalità dipende dalla versi
  
 - Windows Server 2016 e Windows 10
 
-    [Configurare la telemetria di Windows nell'organizzazione](https://technet.microsoft.com/en-us/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
+    [Configurare la telemetria di Windows nell'organizzazione](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
 - Windows Server 2008 R2 e Windows 7
 
     [WER Settings](/windows/desktop/wer/wer-settings) (Impostazioni di segnalazione errori Windows)

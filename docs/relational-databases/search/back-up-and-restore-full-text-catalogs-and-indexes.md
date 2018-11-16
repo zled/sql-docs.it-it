@@ -18,12 +18,12 @@ ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4184e0fb090aba2758f3b0e0e19fcc9b3b94e83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cafc3297727c53ba6134f74f0cb5291b4e14baea
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701289"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675550"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Backup e ripristino di indici e cataloghi full-text
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47701289"
   In questo argomento viene illustrato come eseguire il backup e il ripristino di indici full-text creati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]il catalogo full-text è un concetto logico e non è contenuto in un filegroup. Pertanto, per eseguire il backup di un catalogo full-text in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario identificare ogni filegroup che contiene un indice full-text appartenente al catalogo, quindi eseguirne il backup uno alla volta.  
   
 > [!IMPORTANT]  
->  È possibile importare cataloghi full-text quando si aggiorna un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Ogni catalogo full-text importato è un file di database nel proprio filegroup. Per eseguire il backup di un catalogo importato, eseguire il backup del relativo filegroup. Per altre informazioni, vedere [Backup e ripristino di cataloghi full-text](http://go.microsoft.com/fwlink/?LinkID=121052)nella documentazione online di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+>  È possibile importare cataloghi full-text quando si aggiorna un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Ogni catalogo full-text importato è un file di database nel proprio filegroup. Per eseguire il backup di un catalogo importato, eseguire il backup del relativo filegroup. Per altre informazioni, vedere [Backup e ripristino di cataloghi full-text](https://go.microsoft.com/fwlink/?LinkID=121052)nella documentazione online di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ##  <a name="backingup"></a> Backup degli indici full-text di un catalogo full-text  
   

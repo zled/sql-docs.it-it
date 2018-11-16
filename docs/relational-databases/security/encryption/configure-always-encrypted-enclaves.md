@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48580f2ca2e83a968f9599b98956c079f763bf71
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307125"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677141"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurare Always Encrypted con enclave sicuri
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -70,7 +70,7 @@ Per determinare l'URL del servizio di attestazione, è necessario configurare gl
 1. Accedere al computer SQL Server come amministratore.
 2. Eseguire PowerShell come amministratore.
 3. Eseguire [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration).
-4. Prendere nota della proprietà AttestationServerURL e salvarla. Dovrebbe essere simile a `http://x.x.x.x/Attestation`.
+4. Prendere nota della proprietà AttestationServerURL e salvarla. Dovrebbe essere simile a `https://x.x.x.x/Attestation`.
 
 
 ### <a name="install-tools"></a>Installare gli strumenti
@@ -853,7 +853,7 @@ Per usare Always Encrypted con enclave sicuri in un'applicazione .NET Framework,
 
 ### <a name="develop-and-test-your-app"></a>Sviluppare e testare l'app 
 
-Per usare Always Encrypted e i calcoli dell'enclave, l'applicazione deve connettersi al database con le due parole chiave seguenti nella stringa di connessione: `Column Encryption Setting = Enabled; Enclave Attestation Url=http://x.x.x.x/Attestation` (dove xxxx può essere un indirizzo IP, un dominio e così via).
+Per usare Always Encrypted e i calcoli dell'enclave, l'applicazione deve connettersi al database con le due parole chiave seguenti nella stringa di connessione: `Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation` (dove xxxx può essere un indirizzo IP, un dominio e così via).
 
 Inoltre, l'applicazione deve essere conforme alle linee guida comuni che si applicano alle applicazioni che usano Always Encrypted, ad esempio, l'applicazione deve avere accesso alle chiavi master della colonna associate alle colonne del database, a cui si fa riferimento nella query dell'applicazione.
 
@@ -905,7 +905,7 @@ namespace ConsoleApp1
       static void Main(string\[\] args)
    {
 
-   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = http://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
+   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = https://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
 
 using (SqlConnection connection = new SqlConnection(connectionString))
 {

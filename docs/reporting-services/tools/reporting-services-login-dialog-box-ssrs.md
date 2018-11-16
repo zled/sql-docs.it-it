@@ -10,21 +10,21 @@ f1_keywords:
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2beb59a4cd0b1fefc8ff6ef9fafc376614cf0f3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81a93008e887148b14f1ff6d4b4cf5b06570a1df
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706199"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812094"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Finestra di dialogo Accesso a Reporting Services (SSRS)
   Utilizzare la finestra di dialogo **Accesso a Reporting Services** per specificare le credenziali per la pubblicazione di report nel server di report.  
   
--   **Nota** La prima volta che si pubblica un report in un server di report dopo aver impostato la proprietà di distribuzione **TargetServerURL** per un progetto, verificare che il nome del server includa **server** e non **report**. Ad esempio, `http://localhost/reportserver`e non `http://localhost/reports`. Se si specifica la directory `reports` nel server locale anziché la directory `reportserver` , verrà visualizzata questa finestra di dialogo. Per altre informazioni sull'impostazione **TargetServerURL**, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
+-   **Nota** La prima volta che si pubblica un report in un server di report dopo aver impostato la proprietà di distribuzione **TargetServerURL** per un progetto, verificare che il nome del server includa **server** e non **report**. Ad esempio, `https://localhost/reportserver`e non `https://localhost/reports`. Se si specifica la directory `reports` nel server locale anziché la directory `reportserver` , verrà visualizzata questa finestra di dialogo. Per altre informazioni sull'impostazione **TargetServerURL**, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
 ## <a name="options"></a>Opzioni  
  **Server**  
- Indica il nome del server di report. Ad esempio, `http://localhost/reportserver`. Per i server di report che utilizzano una porta diversa da quella predefinita, ovvero 80, includere il numero di porta. Ad esempio, `http://localhost:81/reportserver`.  
+ Indica il nome del server di report. Ad esempio, `https://localhost/reportserver`. Per i server di report che utilizzano una porta diversa da quella predefinita, ovvero 80, includere il numero di porta. Ad esempio, `https://localhost:81/reportserver`.  
   
  **User name**  
  Consente di digitare il nome utente da utilizzare per l'accesso al servizio Web.  

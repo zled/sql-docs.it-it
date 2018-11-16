@@ -17,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2ec8e76d8973216b58dc1472077554e51867e86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93abc35fca7d04d1a8fffb84de93b8739685818f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738009"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697889"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Creare un nuovo cluster di failover di SQL Server (programma di installazione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47738009"
   
  Per altre informazioni sull'installazione remota, vedere [Aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- Per altre informazioni sull'installazione di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in un cluster di failover Windows, vedere [Come eseguire il clustering di SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ Per altre informazioni sull'installazione di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in un cluster di failover Windows, vedere [Come eseguire il clustering di SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Prima di avviare l'installazione, vedere gli argomenti seguenti della documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -169,7 +169,7 @@ ms.locfileid: "47738009"
   
 17. Nella pagina Configurazione server - Account di servizio specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione.  
   
-     È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. Il tipo di avvio viene impostato su manuale per tutti i servizi compatibili con i cluster, ad esempio la ricerca full-text [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, e non può essere modificato durante l'installazione. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di configurare gli account del servizio singolarmente per assegnare i privilegi minimi a ogni servizio, in modo che ai servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengano concesse le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [Configurazione del server - Account di servizio](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) e [Configurare account di servizio e autorizzazioni di Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. Il tipo di avvio viene impostato su manuale per tutti i servizi compatibili con i cluster, ad esempio la ricerca full-text [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, e non può essere modificato durante l'installazione. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di configurare gli account del servizio singolarmente per assegnare i privilegi minimi a ogni servizio, in modo che ai servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengano concesse le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [Configurazione del server - Account di servizio](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) e [Configurare account di servizio e autorizzazioni di Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Per specificare lo stesso account di accesso per tutti gli account del servizio in questa istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], immettere le credenziali nei campi visualizzati nella parte inferiore della pagina.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "47738009"
      È possibile specificare una directory personalizzata per i componenti condivisi utilizzando il campo presente nella parte inferiore della pagina. Per modificare il percorso di installazione per i componenti condivisi, aggiornare il percorso nel campo disponibile nella parte inferiore della finestra di dialogo oppure fare clic sul pulsante con i puntini di sospensione per spostarsi in una directory di installazione. Il percorso di installazione predefinito è C:\Programmi\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\.  
   
     > [!NOTE]  
-    >  Quando si seleziona la funzionalità Servizi [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , vengono selezionate automaticamente sia la replica sia la ricerca full-text. Se si deseleziona una di queste funzionalità secondarie, viene deselezionata anche la funzionalità Servizi [!INCLUDE[ssDE](../../../includes/ssde-md.md)] .  
+    >  Quando si seleziona la funzionalità Servizi [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , vengono selezionate automaticamente sia la replica sia la ricerca full-text. Se si deseleziona una di queste funzionalità secondarie, viene deselezionata anche la funzionalità Servizi [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 11. Nella pagina Configurazione dell'istanza specificare se installare un'istanza predefinita o denominata.
   
@@ -290,7 +290,7 @@ ms.locfileid: "47738009"
   
 14. Il flusso di lavoro relativo alla parte rimanente di questo argomento dipende dalle funzionalità specificate per l'installazione. Le pagine visualizzate dipendono dalle selezioni effettuate.  
   
-15. Nella pagina Configurazione server - Account di servizio specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione.  
+15. Nella pagina Configurazione server - Account di servizio specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione.  
   
      È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. Il tipo di avvio viene impostato su manuale per tutti i servizi compatibili con i cluster, ad esempio la ricerca full-text [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, e non può essere modificato durante l'installazione. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di configurare gli account del servizio singolarmente per assegnare i privilegi minimi a ogni servizio, in modo che ai servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengano concesse le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [Configurare account di servizio e autorizzazioni di Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -343,7 +343,7 @@ ms.locfileid: "47738009"
   
 7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il programma di installazione esegue uno o più set di regole basati sulle funzionalità selezionate per convalidare la configurazione.  
   
-8.  Utilizzare la pagina Gruppo risorse cluster per specificare il nome del gruppo di risorse cluster in cui verranno memorizzate le risorse del server virtuale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per specificare il nome del gruppo di risorse del cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Sono disponibili due opzioni:  
+8.  Utilizzare la pagina Gruppo risorse cluster per specificare il nome del gruppo di risorse cluster in cui verranno memorizzate le risorse del server virtuale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per specificare il nome del gruppo di risorse del cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Sono disponibili due opzioni:  
   
     -   Utilizzare l'elenco per specificare un gruppo esistente da utilizzare.  
   

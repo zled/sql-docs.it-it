@@ -15,12 +15,12 @@ ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8626960b3b5a16a8edc3aed7956799de24e61c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f3ec990e48b6d9913db9e610fee6bfca6b9190a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608789"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701367"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>Introduzione a SQL Server Management Studio per Business Intelligence
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ Utilizzare SQL Server Management Studio per abilitare le funzionalità di Report
   
 Lo strumento consente di gestire pianificazioni condivise tramite la cartella Pianificazioni condivise e di gestire i database del server di report (ReportServer e ReportServerTempdb). È inoltre possibile creare un ruolo RSExecRole nel database di sistema Master quando si sposta un database del server di report in un'istanza nuova o diversa del Motore di database SQL Server ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). Per ulteriori informazioni su queste attività, vedere gli argomenti seguenti:  
   
--   [Procedure per SQL Server Management Studio](http://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
+-   [Procedure per SQL Server Management Studio](https://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
   
 -   [Amministrazione del database del server di report](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)  
   
@@ -52,11 +52,11 @@ Lo strumento consente di gestire pianificazioni condivise tramite la cartella Pi
   
 Per gestire il server è inoltre possibile abilitare e configurare numerose funzionalità, configurare le impostazioni predefinite del server e gestire ruoli e processi. Per ulteriori informazioni su queste attività, vedere gli argomenti seguenti:  
   
--   [Procedura: Impostazione delle proprietà di un server di report (Management Studio)](http://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
+-   [Procedura: Impostazione delle proprietà di un server di report (Management Studio)](https://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
   
--   [Procedura: Creazione, eliminazione o modifica di un ruolo (Management Studio)](http://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
+-   [Procedura: Creazione, eliminazione o modifica di un ruolo (Management Studio)](https://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
   
--   [Attivazione e disabilitazione della stampa sul lato client per Reporting Services](http://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
+-   [Attivazione e disabilitazione della stampa sul lato client per Reporting Services](https://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Sviluppo e implementazione tramite SQL Server Management Studio](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  

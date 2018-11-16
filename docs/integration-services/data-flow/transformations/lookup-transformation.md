@@ -24,12 +24,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4621685d69a2bedffd35e1de896712efa40a0335
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730929"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639658"
 ---
 # <a name="lookup-transformation"></a>Trasformazione Ricerca
   La trasformazione Ricerca consente di eseguire ricerche unendo in join i dati contenuti nelle colonne di input con le colonne in un set di dati di riferimento. È possibile utilizzare la ricerca per accedere a informazioni aggiuntive in una tabella correlata basata sui valori presenti nelle colonne comuni.  
@@ -131,15 +131,15 @@ ms.locfileid: "47730929"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Video [Procedura: Implementazione di una trasformazione Ricerca nella modalità Full Cache](http://go.microsoft.com/fwlink/?LinkId=131031)sul sito Web all'indirizzo msdn.microsoft.com  
+-   Video [Procedura: Implementazione di una trasformazione Ricerca nella modalità Full Cache](https://go.microsoft.com/fwlink/?LinkId=131031)sul sito Web all'indirizzo msdn.microsoft.com  
   
--   Intervento nel blog relativo alle [procedure consigliate per l'utilizzo della trasformazione Ricerca nelle modalità cache](http://go.microsoft.com/fwlink/?LinkId=146623)sul sito Web all'indirizzo blogs.msdn.com  
+-   Intervento nel blog relativo alle [procedure consigliate per l'utilizzo della trasformazione Ricerca nelle modalità cache](https://go.microsoft.com/fwlink/?LinkId=146623)sul sito Web all'indirizzo blogs.msdn.com  
   
--   Intervento nel blog relativo allo [schema di ricerca che non è sensibile alle maiuscole](http://go.microsoft.com/fwlink/?LinkId=157782)sul sito Web all'indirizzo blogs.msdn.com  
+-   Intervento nel blog relativo allo [schema di ricerca che non è sensibile alle maiuscole](https://go.microsoft.com/fwlink/?LinkId=157782)sul sito Web all'indirizzo blogs.msdn.com  
   
--   Esempio [trasformazione Ricerca](http://go.microsoft.com/fwlink/?LinkId=267528), su msftisprodsamples.codeplex.com.  
+-   Esempio [trasformazione Ricerca](https://go.microsoft.com/fwlink/?LinkId=267528), su msftisprodsamples.codeplex.com.  
   
-     Per informazioni sull'installazione di esempi del prodotto e database di esempio di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vedere [Esempi del prodotto SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=267527).  
+     Per informazioni sull'installazione di esempi del prodotto e database di esempio di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vedere [Esempi del prodotto SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
 ## <a name="lookup-transformation-editor-general-page"></a>Editor trasformazione Ricerca (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo Editor trasformazione Ricerca per selezionare la modalità di cache, selezionare il tipo di connessione e specificare la modalità di gestione delle righe senza voci corrispondenti.  
@@ -168,7 +168,7 @@ ms.locfileid: "47730929"
  Quando si seleziona un'altra opzione nella casella di riepilogo **Specificare come gestire le righe senza voci corrispondenti** , le righe vengono gestite come errori. L'opzione **Errore** nella pagina **Output errori** è disponibile.  
   
 ### <a name="external-resources"></a>Risorse esterne  
- Intervento nel blog sulle [modalità cache di ricerca](http://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
+ Intervento nel blog sulle [modalità cache di ricerca](https://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>Editor trasformazione Ricerca (pagina Connessione)
   Usare la pagina **Connessione** della finestra di dialogo **Editor trasformazione Ricerca** per selezionare una gestione connessione. Se si seleziona una gestione connessione OLE DB, viene anche selezionata anche una query, una tabella o una vista per generare il set di dati di riferimento.  
@@ -215,7 +215,7 @@ ms.locfileid: "47730929"
  Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Anteprima risultati query** . Questa opzione consente di visualizzare fino a 200 righe.  
   
 ### <a name="external-resources"></a>Risorse esterne  
- Intervento nel blog sulle [modalità cache di ricerca](http://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
+ Intervento nel blog sulle [modalità cache di ricerca](https://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>Editor trasformazione Ricerca (pagina Colonne)
   Utilizzare la pagina **Colonne** della finestra di dialogo **Editor trasformazione Ricerca** per specificare il join tra la tabella di origine e la tabella di riferimento e selezionare colonne di ricerca nella tabella di riferimento.  
@@ -272,7 +272,7 @@ ms.locfileid: "47730929"
  Consente di eseguire il mapping delle colonne di input ai parametri mediante la finestra di dialogo **Imposta parametri query** .  
   
 ### <a name="external-resources"></a>Risorse esterne  
- Intervento nel blog sulle [modalità cache di ricerca](http://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
+ Intervento nel blog sulle [modalità cache di ricerca](https://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazione Ricerca fuzzy](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

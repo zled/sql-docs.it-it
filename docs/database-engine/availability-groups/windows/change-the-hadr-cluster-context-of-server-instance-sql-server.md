@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b61ca856551cc97954afe4b956788ae228b63aab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 940fc70407c6a4131719818bbbc87049c93fab6b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781999"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605702"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Modificare il contesto del cluster HADR dell'istanza del server (SQL Server)
 
@@ -27,7 +27,7 @@ ms.locfileid: "47781999"
 
   In questo argomento viene descritto come cambiare il contesto del cluster HADR di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] e versioni successive. Il *contesto del cluster HADR* determina il cluster WSFC (Windows Server Failover Clustering) che gestisce i metadati per le repliche di disponibilità ospitate dall'istanza del server.  
   
- Cambiare il contesto del cluster HADR solo durante una migrazione tra cluster di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] a un'istanza di [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] in un nuovo cluster WSFC. La migrazione tra cluster di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supporta l'aggiornamento del sistema operativo a [!INCLUDE[win8](../../../includes/win8-md.md)] o a [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] con tempi di inattività minimi dei gruppi di disponibilità. Per altre informazioni, vedere [Migrazione tra cluster di gruppi di disponibilità AlwaysOn per l'aggiornamento del sistema operativo](http://msdn.microsoft.com/library/jj873730.aspx).  
+ Cambiare il contesto del cluster HADR solo durante una migrazione tra cluster di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] a un'istanza di [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] in un nuovo cluster WSFC. La migrazione tra cluster di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supporta l'aggiornamento del sistema operativo a [!INCLUDE[win8](../../../includes/win8-md.md)] o a [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] con tempi di inattività minimi dei gruppi di disponibilità. Per altre informazioni, vedere [Migrazione tra cluster di gruppi di disponibilità AlwaysOn per l'aggiornamento del sistema operativo](https://msdn.microsoft.com/library/jj873730.aspx).  
   
 -   **Prima di iniziare:**  
   
@@ -166,13 +166,13 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Articoli tecnici su SQL Server 2012](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
+-   [Articoli tecnici su SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
 -   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

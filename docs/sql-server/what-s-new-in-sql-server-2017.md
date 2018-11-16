@@ -11,21 +11,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d7ac19ce57b32c550c73b3a5de8d8f7f016afa69
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 5ed1c90d0516761b209382321e160ffb0e83237e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419506"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701378"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novità di SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 rappresenta un importante passo avanti verso una piattaforma che offre opzioni di linguaggi di sviluppo, tipi di dati, memorizzazione in locale e nel cloud e sistemi operativi rendendo disponibili le funzionalità di SQL Server in Linux, nei contenitori Docker basati su Linux e in Windows. Questo argomento offre un riepilogo delle novità delle aree di funzionalità specifiche e include collegamenti ad altre informazioni. Per altre informazioni correlate a SQL Server in Linux, vedere [Documentazione di SQL Server in Linux](https://docs.microsoft.com/sql/linux/).
 
-[![Download da Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Prova:** [Scaricare SQL Server 2017, ottobre 2017:](http://go.microsoft.com/fwlink/?LinkID=829477).
+[![Download da Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Prova:** [Scaricare SQL Server 2017, ottobre 2017:](https://go.microsoft.com/fwlink/?LinkID=829477).
 
 > [!NOTE]
-> Con la disponibilità generale, vengono rilasciati a intervalli regolari aggiornamenti cumulativi che mettono a disposizione numerosi miglioramenti e diverse correzioni. Per informazioni sul rilascio dell'aggiornamento cumulativo più recente, vedere [Aggiornamenti cumulativi di SQL Server 2017](http://aka.ms/sql2017cu).
+> Con la disponibilità generale, vengono rilasciati a intervalli regolari aggiornamenti cumulativi che mettono a disposizione numerosi miglioramenti e diverse correzioni. Per informazioni sul rilascio dell'aggiornamento cumulativo più recente, vedere [Aggiornamenti cumulativi di SQL Server 2017](https://aka.ms/sql2017cu).
 
 ## <a name="sql-server-2017-database-engine"></a>Motore di database di SQL Server 2017
 

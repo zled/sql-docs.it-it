@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bf01cb77d048c5d76de4cbc75ac43d41a9a509c3
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 42d80d891621de73b4bc333ad1728e595a8bf810
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743226"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703579"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utilizzo dei token nei passaggi dei processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ Nelle tabelle seguenti vengono elencati e illustrati i token e le macro supporta
 ## <a name="updating-job-steps-to-use-macros"></a>Aggiornamento dei passaggi di processo per l'utilizzo di macro  
 In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, i passaggi di processo che contengono token senza macro di escape avranno esito negativo e restituiranno un messaggio di errore in cui è indicato che il passaggio di processo contiene uno o più token che devono essere aggiornati con una macro prima che il processo possa essere eseguito.  
   
-Nell'articolo 915845 della [!INCLUDE[msCoName](../../includes/msconame_md.md)] Knowledge Base: [I processi di SQL Server Agent che usano token hanno esito negativo in SQL Server 2005 Service Pack 1](http://support.microsoft.com/kb/915845)viene specificato uno script che può essere usato per aggiornare tutti i passaggi di processo che usano token con la macro **ESCAPE_NONE** . Dopo aver usato questo script, è consigliabile esaminare al più presto i passaggi di processo che usano token e sostituire la macro **ESCAPE_NONE** con una macro di escape appropriata per il contesto del passaggio di processo.  
+Nell'articolo 915845 della [!INCLUDE[msCoName](../../includes/msconame_md.md)] Knowledge Base: [I processi di SQL Server Agent che usano token hanno esito negativo in SQL Server 2005 Service Pack 1](https://support.microsoft.com/kb/915845)viene specificato uno script che può essere usato per aggiornare tutti i passaggi di processo che usano token con la macro **ESCAPE_NONE** . Dopo aver usato questo script, è consigliabile esaminare al più presto i passaggi di processo che usano token e sostituire la macro **ESCAPE_NONE** con una macro di escape appropriata per il contesto del passaggio di processo.  
   
 Nella tabella seguente viene indicata la modalità di gestione della sostituzione del token in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente. Per attivare o disattivare la sostituzione dei token relativi agli avvisi, fare clic con il pulsante destro del mouse su **SQL Server Agent** in Esplora oggetti, scegliere **Proprietà**e selezionare o deselezionare la casella di controllo **Sostituisci token per tutte le risposte del processo ad avvisi** nella pagina **Sistema avvisi** .  
   

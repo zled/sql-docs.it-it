@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f27df5372436759fb719ddcafcf028b8d918205d
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: efaa2078b561c0c69fbcff2f83eed09f7d3c24ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018396"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669610"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Creazione, modifica ed eliminazione di indici spaziali
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "51018396"
   
 4.  Nella finestra di dialogo **Indici spaziali** fare clic su **Aggiungi**.  
   
-5.  Selezionare il nuovo indice dall'elenco **Indice spaziale selezionato** e impostarne le proprietà nella griglia a destra. Per informazioni sulle proprietà, vedere [Finestra di dialogo Indici spaziali &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
+5.  Selezionare il nuovo indice dall'elenco **Indice spaziale selezionato** e impostarne le proprietà nella griglia a destra. Per informazioni sulle proprietà, vedere [Finestra di dialogo Indici spaziali &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
   
   
 ###  <a name="alter"></a> Per modificare un indice spaziale  

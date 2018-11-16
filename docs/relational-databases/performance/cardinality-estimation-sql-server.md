@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c5096ef0690e915b1063c684ed60e00bcba8f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27ef6862a5fcfb6e63ffcbdd89fb1e000c2065f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854539"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667030"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,11 +83,11 @@ GO
  
 Oppure, a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
- ```sql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
-OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+WHERE OrderAddedDate >= '2016-05-01'; 
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
 **Query Store:** a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], Query Store è uno strumento utile per esaminare le prestazioni delle query. In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] in **Esplora oggetti** nel nodo del database viene visualizzato un nodo **Query Store** quando Query Store è abilitato.  
@@ -108,7 +108,7 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> Si consiglia di installare la versione più recente di [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) e di aggiornarlo spesso.  
+> Si consiglia di installare la versione più recente di [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) e di aggiornarlo spesso.  
   
 Un'altra opzione per tenere traccia del processo relativo alle stime di cardinalità consiste nell'usare l'evento esteso denominato **query_optimizer_estimate_cardinality**. Il codice di esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguente viene eseguito su [!INCLUDE[tsql](../../includes/tsql-md.md)]. Scrive un file con estensione xel in `C:\Temp\`. Il percorso è comunque modificabile. Quando si apre il file con estensione xel in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], le informazioni dettagliate sono visualizzate in modo intuitivo.  
   
@@ -139,7 +139,7 @@ STATE = START;  --STOP;
 GO  
 ```  
   
-Per informazioni sugli eventi estesi specifici per [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere [Eventi estesi nel database SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+Per informazioni sugli eventi estesi specifici per [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere [Eventi estesi nel database SQL](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
 ## <a name="steps-to-assess-the-ce-version"></a>Procedura per valutare la versione della stima di cardinalità  
   
@@ -270,7 +270,7 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio e ottimizzazione delle prestazioni](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx) (Ottimizzazione dei piani di query con la stima di cardinalità di SQL Server 2014)  
+ [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Ottimizzazione dei piani di query con la stima di cardinalità di SQL Server 2014)  
  [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)    (Hint per la query)  
  [Hint per le query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    

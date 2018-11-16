@@ -11,12 +11,12 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28b06c57666f07430a87d8577b7534cf47cf35de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 040fea749664fb63fa2911a2d4fcaab5185af912
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630349"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638904"
 ---
 # <a name="the-oracle-cdc-databases"></a>Database Oracle CDC
   Un'istanza di Oracle CDC è associata a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dallo stesso nome nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione. Questo database è denominato database Oracle CDC o CDC.  
@@ -31,7 +31,7 @@ ms.locfileid: "47630349"
   
 -   Un set di tabelle delle modifiche e funzioni di accesso alle modifiche generate dal meccanismo di SQL Server CDC e identiche a quelle utilizzate nel normale SQL Server CDC non Oracle.  
   
- Lo schema `cdc` è inizialmente accessibile solo ai membri del ruolo predefinito del database **dbowne** . L'accesso alle tabelle delle modifiche e alle funzioni di modifica è determinato dallo stesso modello di sicurezza di SQL Server CDC. Per altre informazioni sul modello di sicurezza, vedere [Modello di sicurezza](http://go.microsoft.com/fwlink/?LinkId=231151).  
+ Lo schema `cdc` è inizialmente accessibile solo ai membri del ruolo predefinito del database **dbowne** . L'accesso alle tabelle delle modifiche e alle funzioni di modifica è determinato dallo stesso modello di sicurezza di SQL Server CDC. Per altre informazioni sul modello di sicurezza, vedere [Modello di sicurezza](https://go.microsoft.com/fwlink/?LinkId=231151).  
   
 ## <a name="creating-the-cdc-database"></a>Creazione del database CDC  
  Nella maggior parte dei casi, il database CDC viene creato utilizzando la console di progettazione di CDC, ma può anche essere creato con uno script di distribuzione CDC generato utilizzando CDC Designer Console. L'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può modificare le impostazioni del database se necessario, per elementi quali l'archiviazione, la sicurezza o la disponibilità.  
@@ -51,11 +51,11 @@ ms.locfileid: "47630349"
  Le tabelle mirror sono vuote; in esse non vengono archiviati dati. Vengono utilizzate per abilitare l'infrastruttura di SQL Server CDC standard utilizzata dall'istanza di Oracle CDC. Per evitare l'inserimento o l'aggiornamento di dati nelle tabelle mirror, tutte le operazioni UPDATE, DELETE e INSERT sono negate per PUBLIC. Ciò impedisce la modifica delle tabelle.  
   
 ## <a name="access-to-change-data"></a>Accesso ai dati delle modifiche  
- Dato il modello di sicurezza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato per ottenere accesso ai dati delle modifiche associati a un'istanza di acquisizione, è necessario concedere all'utente l'accesso `select` a tutte le colonne acquisite della tabella mirror associata (le autorizzazioni di accesso alle tabelle Oracle originali non forniscono accesso alle tabelle delle modifiche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Per informazioni sul modello di sicurezza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Modello di sicurezza](http://go.microsoft.com/fwlink/?LinkId=231151).  
+ Dato il modello di sicurezza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato per ottenere accesso ai dati delle modifiche associati a un'istanza di acquisizione, è necessario concedere all'utente l'accesso `select` a tutte le colonne acquisite della tabella mirror associata (le autorizzazioni di accesso alle tabelle Oracle originali non forniscono accesso alle tabelle delle modifiche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Per informazioni sul modello di sicurezza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Modello di sicurezza](https://go.microsoft.com/fwlink/?LinkId=231151).  
   
  Se, inoltre, al momento della creazione dell'istanza di acquisizione viene specificato un ruolo di controllo, il chiamante deve essere anche un membro del ruolo di controllo specificato. Le altre funzioni generali di Change Data Capture per l'accesso ai metadati sono accessibili a tutti gli utenti del database tramite il ruolo PUBLIC, sebbene l'accesso ai metadati restituiti sia in genere controllato utilizzando l'accesso SELECT alle tabelle di origine sottostanti e tramite l'appartenenza a qualsiasi ruolo di controllo definito.  
   
- È possibile leggere i dati delle modifiche chiamando funzioni speciali basate su tabelle generate dal componente SQL Server CDC alla creazione di un'istanza di acquisizione. Per altre informazioni su questa funzione, vedere [Funzioni Change Data Capture (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152).  
+ È possibile leggere i dati delle modifiche chiamando funzioni speciali basate su tabelle generate dal componente SQL Server CDC alla creazione di un'istanza di acquisizione. Per altre informazioni su questa funzione, vedere [Funzioni Change Data Capture (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
   
  L'accesso ai dati CDC tramite il componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CDC di origine è soggetto alle stesse regole.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47630349"
   
  Quando l'acquisizione è abilitata inizialmente per la tabella `<schema-name>.<table-name>`, il nome dell'istanza di acquisizione predefinito è `<schema-name>_<table-name>`. Ad esempio, il nome dell'istanza di acquisizione predefinito per la tabella Oracle HR.EMPLOYEES è HR_EMPLOYEES e la tabella delle modifiche associata è [cdc]. [HR_EMPLOYEES_CT].  
   
- Le scritture nelle tabelle di acquisizione sono eseguite dall'istanza di Oracle CDC. Tali tabelle vengono lette utilizzando funzioni speciali con valori di tabella generate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla creazione dell'istanza di acquisizione. Ad esempio, `fn_cdc_get_all_changes_HR_EMPLOYEES`. Per altre informazioni su queste funzioni CDC, vedere [Funzioni Change Data Capture (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152).  
+ Le scritture nelle tabelle di acquisizione sono eseguite dall'istanza di Oracle CDC. Tali tabelle vengono lette utilizzando funzioni speciali con valori di tabella generate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla creazione dell'istanza di acquisizione. Ad esempio, `fn_cdc_get_all_changes_HR_EMPLOYEES`. Per altre informazioni su queste funzioni CDC, vedere [Funzioni Change Data Capture (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
   
 ###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  La tabella **[cdc].[lsn_time_mapping]** viene generata dal componente SQL Server CDC. L'utilizzo di tale tabella con Oracle CDC è diverso dall'utilizzo normale.  
@@ -98,7 +98,7 @@ ms.locfileid: "47630349"
 |Elemento|Descrizione|  
 |----------|-----------------|  
 |version|Tiene traccia della versione della configurazione dell'istanza di CDC. Viene aggiornato ogni volta che si aggiorna la tabella e ogni volta che si aggiunge una nuova istanza di acquisizione o si rimuove un'istanza di acquisizione esistente.|  
-|connect_string|Stringa di connessione Oracle. Esempio di base:<br /><br /> `<server>:<port>/<instance>` (ad esempio `erp.contoso.com:1521/orcl`).<br /><br /> Nella stringa di connessione è anche possibile specificare un descrittore della connessione di rete Oracle, ad esempio `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Se si utilizza un server di elenchi in linea o nomi TNS, la stringa di connessione può essere il nome della connessione.<br /><br /> Per altre informazioni sulle stringhe di connessione Oracle, vedere [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) per dettagli sulle stringhe di connessione al database Oracle per l'istanza di Oracle Instant Client usata dal servizio Oracle CDC.|  
+|connect_string|Stringa di connessione Oracle. Esempio di base:<br /><br /> `<server>:<port>/<instance>` (ad esempio `erp.contoso.com:1521/orcl`).<br /><br /> Nella stringa di connessione è anche possibile specificare un descrittore della connessione di rete Oracle, ad esempio `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Se si utilizza un server di elenchi in linea o nomi TNS, la stringa di connessione può essere il nome della connessione.<br /><br /> Per altre informazioni sulle stringhe di connessione Oracle, vedere [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) per dettagli sulle stringhe di connessione al database Oracle per l'istanza di Oracle Instant Client usata dal servizio Oracle CDC.|  
 |use_windows_authentication|Valore booleano che può essere:<br /><br /> **0**: vengono forniti nome utente e password Oracle per l'autenticazione (valore predefinito)<br /><br /> **1**: per connettersi al database Oracle viene utilizzata l'autenticazione di Windows. È possibile utilizzare questa opzione solo se il database Oracle è configurato per l'utilizzo dell'autenticazione di Windows.|  
 |username|Nome dell'utente del database Oracle di log mining. È obbligatorio solo se **use_windows_authentication = 0**.|  
 |password|Password dell'utente del database Oracle di log mining. È obbligatorio solo se **use_windows_authentication = 0**.|  

@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 88a79851dbb95a42ca35be1fb9e82db362564dc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82b71c24dc5aed407a50cfd4758ac13357eb29c2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617710"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673290"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Aggiunta ed eliminazione di articoli a e da pubblicazioni esistenti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "47617710"
  Come evidenziato sopra, in alcuni casi l'eliminazione di un articolo richiede che le sottoscrizioni vengano eliminate, ricreate e quindi sincronizzate. Per altre informazioni, vedere [Sottoscrivere le pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md) e [Sincronizzare i dati](../../../relational-databases/replication/synchronize-data.md).  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** o versione successiva e **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** o versione successiva supportano l'eliminazione di un tabella mediante il comando DLL **DROP TABLE** per gli articoli inclusi in una replica transazionale. Se il comando DLL DROP TABLE è supportato dalla pubblicazione, l'operazione DROP TABLE eliminerà la tabella dalla pubblicazione e dal database. L'agente di lettura log eseguirà un comando di pulizia per il database di distribuzione contenente la tabella eliminata ed eseguirà la pulizia dei metadati del server di pubblicazione. Se l'agente di lettura log non elabora tutti i record del log che fanno riferimento alla tabella eliminata, i nuovi comandi associati a tale tabella verranno ignorati. I record già elaborati verranno recapitati ai database di distribuzione. Possono essere applicati al database Sottoscrittore se l'agente di distribuzione li elabora prima che l'agente di lettura log esegua la pulizia degli articoli obsoleti (eliminati). L'impostazione **default** per tutte le pubblicazioni di replica transazionale non prevede il supporto del comando DLL DROP TABLE. L'articolo [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) contiene altri dettagli relativi a questo miglioramento.
+ > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** o versione successiva e **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** o versione successiva supportano l'eliminazione di un tabella mediante il comando DLL **DROP TABLE** per gli articoli inclusi in una replica transazionale. Se il comando DLL DROP TABLE è supportato dalla pubblicazione, l'operazione DROP TABLE eliminerà la tabella dalla pubblicazione e dal database. L'agente di lettura log eseguirà un comando di pulizia per il database di distribuzione contenente la tabella eliminata ed eseguirà la pulizia dei metadati del server di pubblicazione. Se l'agente di lettura log non elabora tutti i record del log che fanno riferimento alla tabella eliminata, i nuovi comandi associati a tale tabella verranno ignorati. I record già elaborati verranno recapitati ai database di distribuzione. Possono essere applicati al database Sottoscrittore se l'agente di distribuzione li elabora prima che l'agente di lettura log esegua la pulizia degli articoli obsoleti (eliminati). L'impostazione **default** per tutte le pubblicazioni di replica transazionale non prevede il supporto del comando DLL DROP TABLE. L'articolo [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) contiene altri dettagli relativi a questo miglioramento.
 
   
 ## <a name="see-also"></a>Vedere anche  

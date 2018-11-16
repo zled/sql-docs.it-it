@@ -11,12 +11,12 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 49912f010400e81fb120c5f8abd0dbc94718b999
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1bd77fa65a3667bdc06934386b293783270bc1a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773579"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641198"
 ---
 # <a name="sap-bw-source"></a>Origine SAP BW
   L'origine SAP BW è il componente di origine di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Pertanto, l'origine SAP BW estrae i dati da un sistema SAP Netweaver BW versione 7 e li rende disponibili al flusso di dati in un pacchetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -115,7 +115,7 @@ ms.locfileid: "47773579"
   
  Se non si conoscono tutti i valori richiesti per configurare l'origine, può essere necessario consultare l'amministratore SAP.  
   
- Per una procedura dettagliata che illustra come configurare e utilizzare la gestione connessione, l'origine e la destinazione SAP BW, vedere il white paper [Utilizzo dei servizi di integrazione SQL Server 2008 con SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). Nel white paper viene anche indicato come configurare gli oggetti necessari in SAP BW.  
+ Per una procedura dettagliata che illustra come configurare e utilizzare la gestione connessione, l'origine e la destinazione SAP BW, vedere il white paper [Utilizzo dei servizi di integrazione SQL Server 2008 con SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). Nel white paper viene anche indicato come configurare gli oggetti necessari in SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Utilizzo di Progettazione SSIS per configurare l'origine  
  Per ulteriori informazioni sulle proprietà dell'origine SAP BW che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  

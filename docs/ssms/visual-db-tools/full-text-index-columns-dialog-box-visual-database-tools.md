@@ -13,12 +13,12 @@ ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 603564e6b742d9c5d23278c047365e4d0106d3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f66b2e167979e2395832c3a73dfb450efa0211e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705199"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701869"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>Finestra di dialogo Colonne indice full-text (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ Le colonne con tipo di dati **immagine** possono contenere file di Microsoft Off
 Elenca tutte le lingue disponibili. Selezionare nell'elenco a discesa la lingua appropriata per i dati inclusi nella colonna. Se, ad esempio, si utilizza un sistema operativo in lingua inglese, ma si desidera indicizzare una colonna contenente testo in lingua tedesca, selezionare l'opzione corrispondente al tedesco nell'elenco a discesa per migliorare le prestazioni dell'indice.  
   
 **Semantica statistica**  
-Consente di selezionare se abilitare l'indicizzazione semantica per la colonna selezionata. Per altre informazioni, vedere [Ricerca semantica](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Consente di selezionare se abilitare l'indicizzazione semantica per la colonna selezionata. Per altre informazioni, vedere [Ricerca semantica](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
   
 Se si seleziona una lingua in **Lingua** prima di selezionare **Semantica statistica**e alla lingua selezionata non è associato alcun modello di lingua semantico, la casella di controllo **Semantica statistica** è disabilitata. Se si seleziona **Semantica statistica** prima di selezionare una lingua in **Lingua**, le lingue disponibili nella casella combinata a discesa saranno limitate a quelle per cui è disponibile un modello di lingua semantico.  
   

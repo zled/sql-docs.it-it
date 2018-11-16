@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8ff63651f0c23418c5ff5a6a386af4e2674a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19d870d64816dfea011bc0a5c245b5a18a8f5aa3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684969"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675820"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pacchetti degli eventi estesi di SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ where name = 'keyword_map'
 >  Le parole chiave eseguono il mapping ravvicinato degli eventi Traccia SQL.  
   
 ### <a name="targets"></a>Server di destinazione  
- Le destinazioni sono consumer di eventi. Le destinazioni elaborano gli eventi, in modo sincrono nel thread che genera l'evento o in modo asincrono in un thread fornito dal sistema. Gli eventi estesi forniscono diverse destinazioni che è possibile utilizzare in base alle proprie esigenze per indirizzare l'output dell'evento. Per ulteriori informazioni, vedere [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+ Le destinazioni sono consumer di eventi. Le destinazioni elaborano gli eventi, in modo sincrono nel thread che genera l'evento o in modo asincrono in un thread fornito dal sistema. Gli eventi estesi forniscono diverse destinazioni che è possibile utilizzare in base alle proprie esigenze per indirizzare l'output dell'evento. Per ulteriori informazioni, vedere [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
 ### <a name="actions"></a>Azioni  
  Un'azione è una risposta o una serie di risposte a un evento a livello di programmazione. Le azioni sono associate a un evento e a ogni evento può essere associato un set univoco di azioni.  
@@ -220,6 +220,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>Vedere anche  
  [Sessioni Eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Motore degli eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
+ [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

@@ -25,12 +25,12 @@ ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 02140750f49c326e7d7da84ffa08b798e0462f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799389"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701292"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +70,9 @@ END CONVERSATION conversation_handle
   
  Se [!INCLUDE[ssSB](../../includes/sssb-md.md)] non ha già elaborato un messaggio di fine dialogo o un messaggio di errore per la conversazione, il lato remoto riceve da [!INCLUDE[ssSB](../../includes/sssb-md.md)] una notifica della fine della conversazione. I messaggi inviati da [!INCLUDE[ssSB](../../includes/sssb-md.md)] al servizio remoto dipendono dalle opzioni specificate:  
   
--   Se la conversazione termina senza errori e la conversazione con il servizio remoto è ancora attiva, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia un messaggio di tipo `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` al servizio remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] aggiunge questo messaggio alla coda di trasmissione nell'ordine della conversazione. Prima di inviare questo messaggio, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia tutti i messaggi per questa conversazione che sono attualmente nella coda di trasmissione.  
+-   Se la conversazione termina senza errori e la conversazione con il servizio remoto è ancora attiva, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia un messaggio di tipo `https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` al servizio remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] aggiunge questo messaggio alla coda di trasmissione nell'ordine della conversazione. Prima di inviare questo messaggio, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia tutti i messaggi per questa conversazione che sono attualmente nella coda di trasmissione.  
   
--   Se la conversazione termina con un errore e la conversazione con il servizio remoto è ancora attiva, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia un messaggio di tipo `http://schemas.microsoft.com/SQL/ServiceBroker/Error` al servizio remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] elimina tutti gli altri messaggi per questa conversazione che sono attualmente nella coda di trasmissione.  
+-   Se la conversazione termina con un errore e la conversazione con il servizio remoto è ancora attiva, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia un messaggio di tipo `https://schemas.microsoft.com/SQL/ServiceBroker/Error` al servizio remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] elimina tutti gli altri messaggi per questa conversazione che sono attualmente nella coda di trasmissione.  
   
 -   La clausola WITH CLEANUP consente agli amministratori di database di rimuovere le conversazioni che non possono essere completate normalmente. Questa opzione rimuove tutti i messaggi e le voci della vista del catalogo per la conversazione. Si noti che, in questo caso, il lato remoto della conversazione non riceve notifica della fine della conversazione e potrebbe non ricevere i messaggi inviati da un'applicazione ma non ancora trasmessi in rete. È consigliabile utilizzare questa opzione solo se la conversazione non può essere completata normalmente.  
   

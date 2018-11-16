@@ -11,12 +11,12 @@ ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 115a6ebf263555e98a321cbe582a663d4fcf7019
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94a34901743b462ea4fd8a4f36d381b789c360f2
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843115"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637878"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Lezione 4: Aggiungere il reindirizzamento del flusso errato tramite SSIS
 Per gestire gli errori che si verificano durante il processo di trasformazione, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consente di decidere sulla base dei singoli componenti e delle singole colonne come gestire i dati che non possono essere trasformati. È possibile scegliere di ignorare un errore in alcune colonne, reindirizzare l'intera riga con esito negativo o interrompere l'esecuzione del componente. Per impostazione predefinita, tutti i componenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono configurati in modo da interrompersi quando si verificano errori. L'arresto di un componente determina l'arresto del pacchetto e di conseguenza di tutte le elaborazioni successive.  
@@ -30,7 +30,7 @@ Per gestire i dati dell'errore verrà aggiunta e configurata una destinazione fi
 Prima che i dati dell'errore vengano scritti nel file, si includerà un componente script che usa uno script per ottenere le descrizioni degli errori. La trasformazione Lookup Currency Key verrà quindi riconfigurata in modo che i dati che non possono essere elaborati vengano reindirizzati alla trasformazione Script.  
   
 > [!IMPORTANT]  
-> Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e sulla distribuzione di **AdventureWorksDW2012**, vedere la pagina relativa agli [esempi del prodotto Reporting Services su CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910)  
+> Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e sulla distribuzione di **AdventureWorksDW2012**, vedere la pagina relativa agli [ esempi del prodotto Reporting Services su CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910)  
   
 ## <a name="tasks-in-lesson"></a>Argomenti della lezione  
 In questa lezione sono incluse le attività seguenti:  

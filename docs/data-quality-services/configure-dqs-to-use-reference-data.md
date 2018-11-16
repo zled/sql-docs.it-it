@@ -16,12 +16,12 @@ ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f9a2b2b139a7e11d83fb3b711476c7f5c0b7a4fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23a2f4a8b3c9af1918e0d4e34f2525204846a7ad
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821239"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701439"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurazione di DQS per l'utilizzo di dati di riferimento
 
@@ -35,7 +35,7 @@ ms.locfileid: "47821239"
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
 ###  <a name="Prerequisites"></a> Prerequisiti  
- Per utilizzare dati di riferimento da Marketplace, è necessario disporre di una chiave account Marketplace valida. Per informazioni dettagliate sulla creazione di una chiave account Marketplace, vedere [Creazione di un account](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936). La chiave account Marketplace può inoltre essere creata dall'interno di [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] facendo clic su **Configurazione** in **Amministrazione** nella schermata iniziale di [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] e scegliendo **Crea ID account DataMarket** nella scheda **Dati di riferimento** .  
+ Per utilizzare dati di riferimento da Marketplace, è necessario disporre di una chiave account Marketplace valida. Per informazioni dettagliate sulla creazione di una chiave account Marketplace, vedere [Creazione di un account](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936). La chiave account Marketplace può inoltre essere creata dall'interno di [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] facendo clic su **Configurazione** in **Amministrazione** nella schermata iniziale di [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] e scegliendo **Crea ID account DataMarket** nella scheda **Dati di riferimento** .  
   
 ###  <a name="Security"></a> Sicurezza  
   

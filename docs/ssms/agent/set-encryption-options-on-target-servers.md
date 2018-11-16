@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7482016ef3c3f610ace80e7c5dd9017d15fd192f
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: dd6e43157f8b822f62b915a5f09079ee8368cf25
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099962"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699839"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Impostazione delle opzioni di crittografia nei server di destinazione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,5 +45,5 @@ Se si specifica **1** o **2** , è necessario attivare la crittografia SSL sia n
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
-[Procedura: Abilitazione di connessioni crittografate al Motore di database (Gestione configurazione SQL Server)](http://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)  
+[Procedura: Abilitazione di connessioni crittografate al Motore di database (Gestione configurazione SQL Server)](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)  
   

@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9939a049b8157b1a9d1aa127cbab18629bc0af03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 992784658a97e938b7793c612d32dfa7fc2a5574
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616299"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696809"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transazioni (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Se una transazione esplicita non viene eseguita correttamente a causa di un errore non correlato all'esecuzione di un'istruzione, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] esegue automaticamente il rollback della transazione e libera tutte le risorse usate dalla transazione stessa. Se ad esempio viene interrotta la connessione di rete tra il client e un'istanza di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o se il client si disconnette dall'applicazione, quando la rete notifica l'interruzione all'istanza viene eseguito il rollback di tutte le transazioni della connessione di cui non è ancora stato eseguito il commit.  
   
- Se si verifica un errore durante l'esecuzione di un'istruzione in un batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] si comporta in modo coerente con l'impostazione di **XACT_ABORT** su **ON** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene eseguito il rollback dell'intera transazione. Per altre informazioni sull'impostazione **XACT_ABORT**, vedere [SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx).  
+ Se si verifica un errore durante l'esecuzione di un'istruzione in un batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] si comporta in modo coerente con l'impostazione di **XACT_ABORT** su **ON** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene eseguito il rollback dell'intera transazione. Per altre informazioni sull'impostazione **XACT_ABORT**, vedere [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  In un momento specifico, una sessione può eseguire solo una transazione. I punti di salvataggio e le transazioni annidate non sono supportati.  

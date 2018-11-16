@@ -13,17 +13,17 @@ ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ac1a6b3363b826bab1530fb162ee6c0cb76c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b29eac3b080a78f2552a2558b3ab3278b89a1bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608095"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670466"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Procedura: Connettersi a un database e visualizzare gli oggetti esistenti
 Un'attività molto comune per sviluppatori e amministratori di database è connettersi a un database attivo, progettare o sfogliare il relativo schema ed eseguire una query sugli oggetti. In Esplora oggetti di SQL Server in Visual Studio è ora disponibile un nodo **SQL Server** dedicato in cui tutte le istanze di SQL Server connesse e i relativi database sono raggruppati in una gerarchia analoga a quella di SSMS. Le istanze di SQL Server connesse possono essere locali, quale l'esecuzione di SQL Server 2008, o istanze di SQL Azure ospitate.  
   
-Nella procedura seguente si presuppone che si dispone già di un database di esempio AdventureWorks installato. Usare [CodePlex](http://msftdbprodsamples.codeplex.com/) per individuare e installare database di esempio per diverse versioni di SQL Server. Se si preferisce, è possibile seguire anche i passaggi e utilizzare un database esistente nel server.  
+Nella procedura seguente si presuppone che si dispone già di un database di esempio AdventureWorks installato. Usare [CodePlex](https://msftdbprodsamples.codeplex.com/) per individuare e installare database di esempio per diverse versioni di SQL Server. Se si preferisce, è possibile seguire anche i passaggi e utilizzare un database esistente nel server.  
   
 ### <a name="to-connect-to-a-database-instance"></a>Per connettersi a un'istanza del database  
   

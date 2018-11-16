@@ -18,12 +18,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e25793ba20a442b92feef901684290892604a245
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 983078a8dc713af70fb57fab655ff7eed9acad35
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609271"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601001"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utilizzare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "47609271"
   
  Quando si definiscono avvisi su eventi di mirroring del database, è consigliabile definire valori soglia avvisi su entrambe le istanze dei server partner. Nel server principale o nel server mirror vengono generati singoli eventi, ma ognuno dei partner può eseguire in qualsiasi momento uno o l'altro dei due ruoli. Per assicurarsi che un avviso continui a funzionare dopo un failover, l'avviso deve essere definito su entrambi i partner.  
   
- Per ulteriori informazioni, vedere il white paper relativo agli avvisi sugli eventi di mirroring del database nel [sito Web SQL Server](http://go.microsoft.com/fwlink/?linkid=62373). In questo white paper sono contenute informazioni su come configurare avvisi utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, eventi WMI di mirroring del database e script di esempio.  
+ Per ulteriori informazioni, vedere il white paper relativo agli avvisi sugli eventi di mirroring del database nel [sito Web SQL Server](https://go.microsoft.com/fwlink/?linkid=62373). In questo white paper sono contenute informazioni su come configurare avvisi utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, eventi WMI di mirroring del database e script di esempio.  
   
 > [!IMPORTANT]  
 >  Per tutte le sessioni di mirroring, è consigliabile configurare il database per l'invio di un avviso per qualsiasi evento di modifica di stato. A meno che non sia prevista una modifica dello stato in seguito a una modifica manuale della configurazione, si è verificato un evento che potrebbe compromettere i dati. Per proteggere i dati, identificare e correggere la causa della modifica imprevista dello stato.  

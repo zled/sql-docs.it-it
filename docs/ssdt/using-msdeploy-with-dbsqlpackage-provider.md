@@ -11,12 +11,12 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6487a55cf1c6c336dc1c02c2fe4000dfc843ff82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06df375e2887a58ed00370989921b654497afa84
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773761"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670140"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilizzo di MSDeploy con il provider dbSqlPackage
 **DbSqlPackage** è un provider **MSDeploy** che consente di interagire con database di SQL Server o SQL Azure. **DbSqlPackage** supporta le azioni seguenti:  
@@ -29,10 +29,10 @@ ms.locfileid: "47773761"
   
 -   **Script**: crea uno script Transact\-SQL equivalente allo script eseguito dall'azione di pubblicazione.  
   
-Per altre informazioni su DACFx, vedere la documentazione dell'API gestita DACFx all'indirizzo [http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) oppure [SqlPackage.exe](../tools/sqlpackage.md) (strumento della riga di comando di DACFx).  
+Per altre informazioni su DACFx, vedere la documentazione dell'API gestita DACFx all'indirizzo [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) oppure [SqlPackage.exe](../tools/sqlpackage.md) (strumento della riga di comando di DACFx).  
   
 > [!IMPORTANT]  
-> La funzionalità del provider dbSqlPackage verrà rimossa a partire dalla prossima versione principale di Visual Studio. Per informazioni su come eseguire la pubblicazione del database con Distribuzione Web, vedere [dbDacFx Provider for Incremental Database publishing](http://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing) (Provider dbDacFx per la pubblicazione di database incrementale).  
+> La funzionalità del provider dbSqlPackage verrà rimossa a partire dalla prossima versione principale di Visual Studio. Per informazioni su come eseguire la pubblicazione del database con Distribuzione Web, vedere [dbDacFx Provider for Incremental Database publishing](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing) (Provider dbDacFx per la pubblicazione di database incrementale).  
   
 ## <a name="command-line-syntax"></a>Sintassi della riga di comando  
 Tramite **MSDeploy** con il provider **dbSqlPackage** è possibile usare una riga di comando nel formato seguente:  

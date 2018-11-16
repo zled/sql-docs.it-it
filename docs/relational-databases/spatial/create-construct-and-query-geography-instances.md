@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9f1a61507883ed6a583508f89d6d8cf7ba1a0be
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 716aa4485030a907c8e816f0daf3036c979e2ae5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018416"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660731"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Creare, Costruire e Istanze geografiche di Query
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "51018416"
 ###  <a name="gml"></a> Costruzione di un'istanza geografica dall'input di testo GML  
  Il tipo di dati **geography** include un metodo che genera un'istanza **geography** da GML, una rappresentazione XML di un'istanza **geography** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un subset di GML.  
   
- Per altre informazioni su Geography Markup Language (GML), vedere la specifica OGC [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)(Specifiche OGC, Geography Markup Language).  
+ Per altre informazioni su Geography Markup Language (GML), vedere la specifica OGC [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)(Specifiche OGC, Geography Markup Language).  
   
  **Per costruire qualsiasi tipo di istanza geografica dall'input GML**  
  [GeomFromGML &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  

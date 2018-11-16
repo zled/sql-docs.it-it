@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77ef8c2340724558b137bb1da1bb3448db677795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f54b31eb9bab93b6a4a3be918e1011f023ab5b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855285"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666520"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server
 In questa procedura dettagliata viene creato uno unit test di SQL Server tramite cui viene verificato il comportamento di diverse stored procedure. Vengono creati unit test di SQL Server per semplificare l'identificazione di eventuali difetti del codice che potrebbero causare il comportamento non corretto dell'applicazione. È possibile eseguire test dell'applicazione e unit test di SQL Server come parte di un gruppo di test automatizzato.  
@@ -40,7 +40,7 @@ Questa procedura dettagliata prevede l'esecuzione delle attività seguenti:
 Dopo il rilevamento di un errore in una stored procedure mediante uno degli unit test, è possibile correggere l'errore ed eseguire nuovamente il test.  
   
 ## <a name="prerequisites"></a>Prerequisites  
-Per completare questa procedura dettagliata, è necessario essere in grado di connettersi a un server di database (o database LocalDB) per il quale si dispone delle autorizzazioni per la creazione e distribuzione di un database. Per altre informazioni, vedere [Autorizzazioni necessarie per le funzionalità di database di Visual Studio](http://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
+Per completare questa procedura dettagliata, è necessario essere in grado di connettersi a un server di database (o database LocalDB) per il quale si dispone delle autorizzazioni per la creazione e distribuzione di un database. Per altre informazioni, vedere [Autorizzazioni necessarie per le funzionalità di database di Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
   
 ## <a name="CreateScript"></a>Creare uno script contenente uno schema del database  
   
@@ -968,7 +968,7 @@ Per creare e verificare un test negativo, è necessario effettuare le attività 
     È possibile specificare che è prevista un'eccezione specifica. Facoltativamente è possibile indicare un numero di errore specifico. Se non si aggiunge questo attributo, l'esito dello unit test sarà negativo e nella finestra Risultati test verrà visualizzato un messaggio.  
   
     > [!IMPORTANT]  
-    > Attualmente, Visual Studio 2012 non supporta l'attributo ExpectedSqlException. Per informazioni sulla risoluzione di questo problema, vedere [Impossibile eseguire lo unit test del database "Errore previsto"](http://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
+    > Attualmente, Visual Studio 2012 non supporta l'attributo ExpectedSqlException. Per informazioni sulla risoluzione di questo problema, vedere [Impossibile eseguire lo unit test del database "Errore previsto"](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
   
 3.  Scegliere Salva SqlServerUnitTests1.cs dal menu File.  
   

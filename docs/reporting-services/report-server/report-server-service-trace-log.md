@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4367c20c7f673f1075182385de092231ca289c72
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ad166eb92770d133137296d31262d202a540d94f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031070"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813794"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   Il log di traccia del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è un file di testo ASCII che contiene informazioni dettagliate relative alle operazioni del servizio del server di report.  Le informazioni nel file includono le operazioni eseguite dal servizio Web ReportServer, dal portale Web e dall'elaborazione in background. Nel file di log di traccia sono contenute inoltre informazioni ridondanti, che vengono registrate in altri file di log, e informazioni aggiuntive non disponibili altrove. Le informazioni contenute nel log di traccia sono utili se si esegue il debug di un'applicazione che include un server di report o se è necessario analizzare un problema specifico scritto nel log eventi o nel log di esecuzione, ad esempio durante la risoluzione dei problemi relativi alle sottoscrizioni.  
@@ -80,7 +80,7 @@ ms.locfileid: "50031070"
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- Per ulteriori informazioni, vedere l' [articolo della Knowledge Base 913046](http://support.microsoft.com/?kbid=913046) nel sito Web [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Per ulteriori informazioni, vedere l' [articolo della Knowledge Base 913046](https://support.microsoft.com/?kbid=913046) nel sito Web [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ##  <a name="bkmk_log_file_fields"></a> Campi del file di log  
  Nei log di traccia sono disponibili i campi seguenti:  

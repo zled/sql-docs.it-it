@@ -21,12 +21,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: df9d03fda22eae666d589e6cc3706e84aee6825d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: ff7bffcb3a31a697300d98e0de03a7f3e3111701
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033208"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681339"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrare un'istanza di SQL Server (Utilità SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,12 +94,12 @@ ms.locfileid: "51033208"
  Scegliere **Avanti**per continuare.  
   
 ##  <a name="Instance_name"></a> Specificare l'istanza di SQL Server  
- Per selezionare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla finestra di dialogo della connessione, fare clic su **Connetti**. Specificare il nome del computer e il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel formato NomeComputer\NomeIstanza. Per altre informazioni, vedere [Connetti al server &#40;Motore di database&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Per selezionare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla finestra di dialogo della connessione, fare clic su **Connetti**. Specificare il nome del computer e il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel formato NomeComputer\NomeIstanza. Per altre informazioni, vedere [Connetti al server &#40;Motore di database&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
  Scegliere **Avanti**per continuare.  
   
 ##  <a name="Connection_dialog"></a> Finestra di dialogo della connessione  
- Nella finestra di dialogo Connetti al server, verificare il tipo di server, il nome del computer e il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Connetti al server &#40;Motore di database&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Nella finestra di dialogo Connetti al server, verificare il tipo di server, il nome del computer e il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Connetti al server &#40;Motore di database&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
 >  Se la connessione è crittografata, verrà utilizzata tale connessione. Se la connessione non è crittografata, Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si riconnetterà utilizzando una connessione crittografata.  
@@ -129,7 +129,7 @@ ms.locfileid: "51033208"
 |È necessario arrestare i set di raccolta nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Arrestare i set di raccolta preesistenti nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'agente di raccolta dati è disabilitato, abilitarlo, arrestare qualsiasi set di raccolta dati eseguito, quindi eseguire nuovamente le regole di convalida per l'operazione di creazione del punto di controllo dell'utilità.<br /><br /> Per abilitare l'agente di raccolta dati:<br /><br /> In Esplora oggetti espandere il nodo **Gestione** .<br /><br /> Fare clic con il pulsante destro del mouse su **Raccolta dati**, quindi scegliere **Abilita raccolta dati**.<br /><br /> Per arrestare un set di raccolta:<br /><br /> In Esplora oggetti espandere il nodo Gestione, espandere **Raccolta dati**, quindi **Set di raccolta dati di sistema**.<br /><br /> Fare clic con il pulsante destro del mouse sul set di raccolta che si vuole arrestare e quindi scegliere **Arresta set di raccolta dati**.<br /><br /> In una finestra di messaggio verrà visualizzato il risultato di questa azione, mentre un cerchio rosso sull'icona del set di raccolta indicherà che il set di raccolta è stato arrestato.|  
 |È necessario avviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Avviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sull'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configurare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in modo che venga avviato manualmente. In caso contrario, configurare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in modo che venga avviato automaticamente.|  
 |È necessario che il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nel punto di controllo dell'utilità sia avviato.|Avviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nel punto di controllo dell'utilità. Se il punto di controllo dell'utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configurare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in modo che venga avviato manualmente. In caso contrario, configurare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in modo che venga avviato automaticamente.|  
-|È necessario configurare correttamente WMI.|Per risolvere i problemi di configurazione WMI, vedere [Attività e funzionalità di Utilità SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
+|È necessario configurare correttamente WMI.|Per risolvere i problemi di configurazione WMI, vedere [Attività e funzionalità di Utilità SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
 |L'account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve essere un account di dominio di Windows valido nel punto di controllo dell'utilità.|Specificare un account di dominio di Windows valido. Per verificare che l'account sia valido, accedere al punto di controllo dell'utilità utilizzando l'account di dominio di Windows.|  
 |Se si seleziona l'opzione relativa all'account proxy, l'account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve essere un account di dominio di Windows valido nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Specificare un account di dominio di Windows valido. Per verificare che l'account sia valido, accedere all'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'account di dominio di Windows.|  
 |L'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non può essere un account incorporato, come Servizio di rete.|Assegnare nuovamente l'account a un account di dominio di Windows. Per verificare che l'account sia valido, accedere all'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'account di dominio di Windows.|  
@@ -173,7 +173,7 @@ ms.locfileid: "51033208"
 >   
 >  Ulteriori informazioni: Non è stato possibile ottenere informazioni relative al gruppo/utente di Windows NT '\<NomeDominio\NomeAccount>', codice di errore 0x5. (Microsoft SQL Server, Errore: 15404)  
 >   
->  Per altre informazioni sulla risoluzione di questo errore, vedere [Attività e funzionalità di Utilità SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
+>  Per altre informazioni sulla risoluzione di questo errore, vedere [Attività e funzionalità di Utilità SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   
 > [!IMPORTANT]  
 >  Non modificare le proprietà del set di raccolta "Informazioni utilità" in un'istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e non abilitare/disabilitare manualmente la raccolta dati, in quanto viene controllata da un processo dell'agente Utilità.  
@@ -199,6 +199,6 @@ ms.locfileid: "51033208"
 ## <a name="see-also"></a>Vedere anche  
  [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Monitoraggio di istanze di SQL Server in Utilità SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Attività e funzionalità di Utilità SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [Attività e funzionalità di Utilità SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

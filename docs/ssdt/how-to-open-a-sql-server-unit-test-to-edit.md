@@ -11,17 +11,17 @@ ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 480f5c487c5fb8f9db9f1db61dd7b4126b6c8bb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c1f46ea807e7f51c92df16f7dfc21cfe49ad6bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787429"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659064"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>Procedura: Aprire uno unit test di SQL Server per la modifica
 Dopo aver creato uno unit test di SQL Server, è possibile usare la **finestra di progettazione unit test di SQL Server** per aggiungere condizioni di test e istruzioni Transact\-SQL. Per i test creati tramite la finestra di progettazione viene generato codice Visual C# o Visual Basic, che verrà eseguito quando si esegue il test.  
   
-Se si è soddisfatti del test, è possibile eseguirlo senza modifiche. Se si desidera aggiungere maggiori funzionalità a questo unit test, è possibile modificarne il codice. Questo codice è contenuto in un file con estensione cs o vb nel progetto di test. Per altre informazioni, vedere [File di unit test di SQL Server](../ssdt/sql-server-unit-test-files.md). È inoltre possibile personalizzare i test creando nuove condizioni di test. Per altre informazioni, vedere [Procedura: creare condizioni di test per la finestra di progettazione degli unit test del database (Visual Studio 2010)](http://msdn.microsoft.com/library/aa833409(VS.100).aspx).  
+Se si è soddisfatti del test, è possibile eseguirlo senza modifiche. Se si desidera aggiungere maggiori funzionalità a questo unit test, è possibile modificarne il codice. Questo codice è contenuto in un file con estensione cs o vb nel progetto di test. Per altre informazioni, vedere [File di unit test di SQL Server](../ssdt/sql-server-unit-test-files.md). È inoltre possibile personalizzare i test creando nuove condizioni di test. Per altre informazioni, vedere [Procedura: creare condizioni di test per la finestra di progettazione degli unit test del database (Visual Studio 2010)](https://msdn.microsoft.com/library/aa833409(VS.100).aspx).  
   
 > [!NOTE]  
 > Se si elimina un metodo di test modificando il file con estensione cs o vb, il metodo di test viene comunque visualizzato nella **finestra di progettazione unit test di SQL Server**. Questa situazione si verifica perché il metodo InitializeComponent della classe di test contiene ancora le variabili membro per tale test. Sebbene il test sia visualizzato nella finestra di progettazione, non sarà possibile eseguirlo perché il codice non è più presente. Per rigenerare il metodo di test per questo test, modificare Transact\-SQL nell'editor, quindi salvare il file di test con estensione cs o vb o ricompilare il progetto di test.  

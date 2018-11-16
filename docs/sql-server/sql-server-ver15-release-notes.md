@@ -1,23 +1,21 @@
 ---
 title: Note sulla versione di SQL Server 2019 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/06/2018
-ms.prod: sql-server-2018
+ms.prod: sql
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7fba2c4989b6e50fe720a44e127b044dea93876d
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 2c21ac917845b8162348b93fec3b868f1f748592
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269804"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703859"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Note sulla versione di anteprima di SQL Server 2019
 
@@ -33,7 +31,7 @@ Questo articolo descrive le limitazioni e i problemi noti per le versioni Commun
 > - Aggiornare un'istanza esistente di SQL Server da qualsiasi versione
 
 **Provare[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]**
-- [![Download da Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [Scaricare [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] per l'installazione in Windows](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![Download da Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Scaricare [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] per l'installazione in Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
 - Installazione in Linux per [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) e [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Esecuzione in SQL Server 2019 in Docker](../linux/quickstart-install-connect-docker.md).
 
@@ -45,12 +43,12 @@ Questo articolo descrive le limitazioni e i problemi noti per le versioni Commun
 Un supporto limitato può essere disponibile in una delle posizioni seguenti:
 
 - Forum
-  - [Commenti di SQL Server](http://aka.ms/sqlfeedback)
+  - [Commenti di SQL Server](https://aka.ms/sqlfeedback)
   - [Introduzione a SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
   - [Documentazione di SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
-- Oppure inviando un tweet [@SQLServer](http://twitter.com/SQLServer) con [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
+- Oppure inviando un tweet [@SQLServer](https://twitter.com/SQLServer) con [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
 
 ### <a name="documentation-ctp-21"></a>Documentazione (CTP 2.1)
 
@@ -69,7 +67,7 @@ Un supporto limitato può essere disponibile in una delle posizioni seguenti:
     - [Linux - Requisiti di sistema](../linux/sql-server-linux-setup.md#system)
   - **Software**
     - Windows Server 2016 o versione successiva. Per requisiti aggiuntivi, vedere [Requisiti per l'installazione di SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
-    - Microsoft .NET Framework 4.6.2. Disponibile dall'[Area download Microsoft](http://www.microsoft.com/download/details.aspx?id=53344).
+    - Microsoft .NET Framework 4.6.2. Disponibile dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53344).
     - Per Linux, vedere [Linux - Piattaforme supportate](../linux/sql-server-linux-setup.md#supportedplatforms)
 
 ### <a name="floating-point-results"></a>Risultati a virgola mobile

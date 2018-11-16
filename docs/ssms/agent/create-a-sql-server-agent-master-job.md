@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ac4a9565c21fe00f8f1f744899563794e9335ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b665f3d20d223351b9da207d767cea0015fb94b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739299"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701963"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Creazione di un processo master di SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ In questo argomento viene descritto come creare un processo master di [!INCLUDE[
 ## <a name="BeforeYouBegin"></a>Prima di iniziare  
   
 ### <a name="Restrictions"></a>Limitazioni e restrizioni  
-Le modifiche apportate ai processi master di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent devono essere propagate a tutti i server di destinazione interessati. Poiché i server di destinazione non scaricano il processo finché le destinazioni non vengono specificate, [!INCLUDE[msCoName](../../includes/msconame_md.md)] consiglia di completare tutti i passaggi e le pianificazioni di un particolare processo prima di specificare i server di destinazione. In caso contrario, è necessario richiedere manualmente che i server di destinazione scarichino nuovamente il processo modificato, eseguendo la stored procedure **sp_post_msx_operation** o modificando il processo con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [sp_post_msx_operation (Transact-SQL)](http://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) o [Modificare un processo](../../ssms/agent/modify-a-job.md).  
+Le modifiche apportate ai processi master di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent devono essere propagate a tutti i server di destinazione interessati. Poiché i server di destinazione non scaricano il processo finché le destinazioni non vengono specificate, [!INCLUDE[msCoName](../../includes/msconame_md.md)] consiglia di completare tutti i passaggi e le pianificazioni di un particolare processo prima di specificare i server di destinazione. In caso contrario, è necessario richiedere manualmente che i server di destinazione scarichino nuovamente il processo modificato, eseguendo la stored procedure **sp_post_msx_operation** o modificando il processo con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [sp_post_msx_operation (Transact-SQL)](https://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) o [Modificare un processo](../../ssms/agent/modify-a-job.md).  
   
 ### <a name="Security"></a>Security  
   
@@ -137,13 +137,13 @@ Se si verificano errori nel download dei passaggi dei processi che usano account
   
 Per altre informazioni, vedere:  
   
--   [sp_add_job (Transact-SQL)](http://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
+-   [sp_add_job (Transact-SQL)](https://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
   
--   [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)  
+-   [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)  
   
--   [sp_add_schedule (Transact-SQL)](http://msdn.microsoft.com/9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7)  
+-   [sp_add_schedule (Transact-SQL)](https://msdn.microsoft.com/9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7)  
   
--   [sp_attach_schedule (Transact-SQL)](http://msdn.microsoft.com/80c80eaf-cf23-4ed8-b8dd-65fe59830dd1)  
+-   [sp_attach_schedule (Transact-SQL)](https://msdn.microsoft.com/80c80eaf-cf23-4ed8-b8dd-65fe59830dd1)  
   
--   [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286)  
+-   [sp_add_jobserver (Transact-SQL)](https://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286)  
   

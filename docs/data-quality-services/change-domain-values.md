@@ -14,12 +14,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ce3745881465c7f71eed0986e3de669b7488a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21e2f8c20e4a1fcaadeb8747ed2f9fde29d9c10b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830849"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699923"
 ---
 # <a name="change-domain-values"></a>Modificare i valori di dominio
 
@@ -90,7 +90,7 @@ ms.locfileid: "47830849"
   
     -   **Imposta il valore di dominio selezionato come valore iniziale del gruppo**: per modificare il valore iniziale del gruppo, selezionare un valore nel gruppo non designato come valore iniziale, quindi fare clic sul pulsante **Imposta il valore di dominio selezionato come valore iniziale del gruppo** . In questo modo il valore iniziale verrà impostato come sostituzione dell'altro valore. Questa operazione funziona solo se sono stati impostati due o più valori raggruppati e si desidera modificare il valore iniziale rispetto al valore designato da DQS. Si noti che il valore iniziale viene indicato da una riga blu con il valore in grassetto.  
   
-7.  **Correttore ortografico**: se un valore ha una sottolineatura rossa ondulata, il Correttore ortografico sta suggerendo una correzione al valore. Fare clic con il pulsante destro del mouse sul valore con la sottolineatura e selezionare una correzione, se appropriata. Il tipo di valore diventa (o rimane) in errore e la correzione verrà aggiunta alla colonna **Correggi in** . Fare clic sulla freccia in giù per visualizzare ulteriori correzioni proposte. Immettere una correzione manualmente per aggiungerla al dizionario del Correttore ortografico e poterla selezionare come correzione. Per ulteriori informazioni, vedere [Utilizzare il correttore ortografico DQS](../data-quality-services/use-the-dqs-speller.md) e [Imposta proprietà del dominio](../data-quality-services/set-domain-properties.md).  
+7.  **Correttore ortografico**: se un valore ha una sottolineatura rossa ondulata, il Correttore ortografico sta suggerendo una correzione al valore. Fare clic con il pulsante destro del mouse sul valore con la sottolineatura e selezionare una correzione, se appropriata. Il tipo di valore diventa (o rimane) in errore e la correzione verrà aggiunta alla colonna **Correggi in** . Fare clic sulla freccia in giù per visualizzare ulteriori correzioni proposte. Immettere una correzione manualmente per aggiungerla al dizionario del Correttore ortografico e poterla selezionare come correzione. Per ulteriori informazioni, vedere [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) e [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Per utilizzare il Correttore ortografico, è possibile abilitarlo nella pagina **Proprietà dominio** o, se è disabilitato nella pagina **Proprietà dominio** , è possibile fare clic sull'icona **Abilita/Disabilita correttore ortografico** nella pagina **Valori di dominio** per abilitarlo in tale pagina.  
@@ -103,7 +103,7 @@ ms.locfileid: "47830849"
   
 11. **Elimina valori di dominio selezionati**: per rimuovere uno o più valori esistenti dal dominio, selezionare i valori nella tabella dei valori, quindi fare clic sull'icona **Elimina valori di dominio selezionati** . Non è possibile eliminare il valore DQS_NULL, pertanto se si scelgono più valori da eliminare e il valore DQS_NULL è tra questi, l'operazione non riuscirà.  
   
-12. Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+12. Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Completamento: fasi successive alla modifica dei valori di dominio  
  Dopo avere modificato i valori di dominio, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  

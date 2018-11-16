@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b9adedc8637acf84feccd5b24fa540892399ebc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030420"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813024"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Aggiungere la web part Visualizzatore di report di SQL Server Reporting Services in una pagina di SharePoint
 
@@ -46,7 +46,7 @@ Visualizzare un report, da SQL Server Reporting Services o dal server di report 
 
     ![Aggiungere la web part Visualizzatore di report.](media/sharepoint-report-viewer-web-part.png)
 
-    È possibile che inizialmente venga visualizzato un errore. L'errore è dovuto al fatto che l'URL del server di report predefinito è impostato su *http://localhost* e non è disponibile nel percorso.
+    È possibile che inizialmente venga visualizzato un errore. L'errore è dovuto al fatto che l'URL del server di report predefinito è impostato su *https://localhost* e non è disponibile nel percorso.
 
 ## <a name="configure-the-report-viewer-web-part"></a>Configurare la web part Visualizzatore di report
 
@@ -56,7 +56,7 @@ Per configurare la web part in modo da puntare al report specifico, eseguire le 
 
     ![Modificare la pagina Web dal menu a discesa della web part.](media/sharepoint-edit-web-part.png)
 
-2. Immettere l'**URL server di report** per il server di report che ospita il report. Dovrebbe essere simile a *http://myrsserver/reportserver*.
+2. Immettere l'**URL server di report** per il server di report che ospita il report. Dovrebbe essere simile a *https://myrsserver/reportserver*.
 
 3. Immettere il percorso e il nome del report che si vuole visualizzare nella web part. Il percorso e il nome dovranno essere simili a */AdventureWorks Sample Reports/Company Sales*. In questo esempio, il report *Company Sales* si trova in una cartella denominata *AdventureWorks Sample Reports*.
 

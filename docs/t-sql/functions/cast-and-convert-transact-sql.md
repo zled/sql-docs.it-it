@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 269c024484a16dab24fc1a0ed66a2b13c64595a2
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 81a94dcde2f149ef16b5e1f42428bac706bbfaf5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971092"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697459"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -194,7 +194,7 @@ Se il tipo di dati di **expression** è **binary(n)**, **char(n)**, **varbinary(
 Per le conversioni implicite non è necessario specificare la funzione CAST o la funzione CONVERT. Per le conversioni esplicite è necessario specificare la funzione CAST o la funzione CONVERT. Nella figura seguente vengono illustrate le conversioni di tipi di dati esplicite e implicite consentite per i tipi di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questi includono **bigint**, **sql_variant** e **xml**. Non è possibile eseguire una conversione implicita in un'assegnazione dal tipo di dati **sql_variant**, ma è possibile eseguire una conversione implicita verso il tipo di dati **sql_variant**.
   
 > [!TIP]  
->  Questo grafico è disponibile nell'[Area download Microsoft](http://www.microsoft.com/download/details.aspx?id=35834) come file PDF scaricabile.  
+>  Questo grafico è disponibile nell'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=35834) come file PDF scaricabile.  
   
 ![Tabella di conversione dei tipi di dati](../../t-sql/data-types/media/lrdatahd.png "Tabella di conversione dei tipi di dati")
   

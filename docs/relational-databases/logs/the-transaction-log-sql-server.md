@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3ecd041e75644fa726e2dc388c4b5ee34d8cded8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664689"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677300"
 ---
 # <a name="the-transaction-log-sql-server"></a>Log delle transazioni (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Dopo un errore hardware o del disco che interessa i file del database, è possib
 Durante il ripristino di ogni backup del log, il motore di database riapplica tutte le modifiche registrate nel log per eseguire il rollforward di tutte le transazioni. Dopo il ripristino dell'ultimo backup del log, il motore di database usa le informazioni disponibili nel log per eseguire il rollback di tutte le transazioni non ancora completate al momento dell'esecuzione di tale backup. 
 
 ### <a name="supporting-transactional-replication"></a>Supporto della replica transazionale
-L'agente di lettura log esegue il monitoraggio del log delle transazioni di tutti i database configurati per la replica transazionale e copia le transazioni contrassegnate per la replica dal log delle transazioni al database di distribuzione. Per altre informazioni, vedere [Funzionamento della replica transazionale](http://msdn.microsoft.com/library/ms151706.aspx).
+L'agente di lettura log esegue il monitoraggio del log delle transazioni di tutti i database configurati per la replica transazionale e copia le transazioni contrassegnate per la replica dal log delle transazioni al database di distribuzione. Per altre informazioni, vedere [Funzionamento della replica transazionale](https://msdn.microsoft.com/library/ms151706.aspx).
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Supporto delle soluzioni di disponibilità elevata e ripristino di emergenza
 Le soluzioni con server di standby, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], mirroring del database e log shipping dipendono in modo significativo da log delle transazioni. 
@@ -105,7 +105,7 @@ Per evitare l'esaurimento dello spazio, il troncamento si verifica automaticamen
 |Valore di log_reuse_wait|Valore di log_reuse_wait_desc|Descrizione|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Attualmente sono disponibili uno o più [file di log virtuali (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) riusabili.|  
-|1|CHECKPOINT|Non si è verificato alcun checkpoint dall'ultimo troncamento del log oppure l'inizio del log non è stato ancora spostato oltre un [file di log virtuale (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Tutti i modelli di recupero)<br /><br /> Si tratta di una motivazione comune per il posticipo del troncamento del log. Per altre informazioni, vedere [Checkpoint di database &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
+|1|CHECKPOINT|Non si è verificato alcun checkpoint dall'ultimo troncamento del log oppure l'inizio del log non è stato ancora spostato oltre un [file di log virtuale (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Tutti i modelli di recupero)<br /><br /> Si tratta di una motivazione comune per il posticipo del troncamento del log. Per altre informazioni, vedere [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|È necessario eseguire un backup del log prima del troncamento del log delle transazioni. (Solo modelli di recupero con registrazione completa e con registrazione minima delle operazioni bulk)<br /><br /> Quando il backup del log successivo viene completato, parte dello spazio del log potrebbe divenire riutilizzabile.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|È in esecuzione un processo di backup o ripristino dei dati (tutti i modelli di recupero).<br /><br /> Se il troncamento del log è impedito da un backup dei dati, l'annullamento del backup può risolvere il problema immediato.|  
 |4|ACTIVE_TRANSACTION|Una transazione è attiva (tutti i modelli di recupero):<br /><br /> Una transazione con esecuzione prolungata potrebbe esistere all'inizio del backup del log. In questo caso, per liberare lo spazio potrebbe essere necessario un altro backup del log. Si noti che le transazioni con esecuzione prolungata impediscono il troncamento del log in tutti i modelli di recupero, incluso il modello di recupero con registrazione minima in cui il log delle transazioni viene generalmente troncato a ogni checkpoint automatico.<br /><br /> Viene posticipata una transazione. Una *transazione posticipata* è una transazione attiva ed efficace il cui ritorno allo stato precedente è bloccato a causa di alcune risorse non disponibili. Per informazioni sulle cause delle transazioni posticipate e su come modificarne lo stato, vedere [Transazioni posticipate &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).<br /> <br /> Anche le transazioni con esecuzione prolungata potrebbero riempire il log delle transazioni di tempdb. Tempdb viene usato in modo implicito dalle transazioni utente per gli oggetti interni, ad esempio tabelle di lavoro per l'ordinamento, file di lavoro per l'hashing, tabelle di lavoro di cursori e controllo delle versioni delle righe. Anche se la transazione utente include solo la lettura dei dati (query `SELECT`), durante le transazioni utente possono essere creati e usati oggetti interni. In questo modo, il log delle transazioni di tempdb potrebbe riempirsi.|  
@@ -157,7 +157,7 @@ Quando la replica transazionale è abilitata, le operazioni SELECT INTO vengono 
   
     -   Ricompilazione del nuovo heap [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (se pertinente). Durante un'operazione `DROP INDEX` per la deallocazione delle pagine di un indice viene eseguita **sempre** la registrazione completa.
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="RelatedTasks"></a> Related tasks  
  **Gestione del log delle transazioni**  
   
 -   [Gestione delle dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

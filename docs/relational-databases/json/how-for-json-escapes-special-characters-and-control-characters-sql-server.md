@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add55d50f0af680a7be1f220149ea851d684ea2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fda704e778e684aa9b53a073e9540239ed5f975
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734499"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674990"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>Modalità di uso di FOR JSON delle sequenze di escape per i caratteri speciali e di controllo (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47734499"
   Questo argomento descrive il modo in cui la clausola **FOR JSON** di un'istruzione **SELECT** di SQL Server usa sequenze di escape per i caratteri speciali e rappresenta i caratteri di controllo nell'output JSON.  
 
 > [!IMPORTANT]
-> Questa pagina descrive il supporto incorporato per JSON in Microsoft SQL Server. Per informazioni generali sull'uso di escape e sulla codifica in JSON, vedere la sezione 2.5 della specifica JSON RFC - [http://www.ietf.org/rfc/rfc4627.txt](http://www.ietf.org/rfc/rfc4627.txt).
+> Questa pagina descrive il supporto incorporato per JSON in Microsoft SQL Server. Per informazioni generali sull'uso di escape e sulla codifica in JSON, vedere la sezione 2.5 della specifica JSON RFC - [https://www.ietf.org/rfc/rfc4627.txt](https://www.ietf.org/rfc/rfc4627.txt).
 
 ## <a name="escaping-of-special-characters"></a>Escape di caratteri speciali  
 Se i dati di origine contengono caratteri speciali, la clausola **FOR JSON** usa sequenze di escape per tali caratteri nell'output JSON con `\`, come illustrato nella tabella seguente. I caratteri di escape vengono usati sia nei nomi delle proprietà che nei relativi valori.  
@@ -82,7 +82,7 @@ FOR JSON PATH
   
 ### <a name="microsoft-blog-posts"></a>Post del blog Microsoft  
   
-Per soluzioni specifiche, casi d'uso e indicazioni, vedere questi [post del blog sul supporto JSON integrato](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e nel database SQL di Azure.  
+Per soluzioni specifiche, casi d'uso e indicazioni, vedere questi [post del blog sul supporto JSON integrato](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e nel database SQL di Azure.  
 
 ### <a name="microsoft-videos"></a>Video Microsoft
 

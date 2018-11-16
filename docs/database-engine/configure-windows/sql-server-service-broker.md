@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bc7b7c17562e08833f821e9546b2228624c16484
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 599905aad2a6c6959f4e1e751640533c2d24011a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834199"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601991"
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47834199"
   
 -   [Utilità ssbdiagnose &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- Vedere la [documentazione pubblicata in precedenza](http://go.microsoft.com/fwlink/?LinkId=231312) per i concetti relativi a [!INCLUDE[ssSB](../../includes/sssb-md.md)] e per le attività di gestione e sviluppo. Questa documentazione non è riprodotta nella documentazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a causa del numero esiguo di modifiche in [!INCLUDE[ssSB](../../includes/sssb-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Vedere la [documentazione pubblicata in precedenza](https://go.microsoft.com/fwlink/?LinkId=231312) per i concetti relativi a [!INCLUDE[ssSB](../../includes/sssb-md.md)] e per le attività di gestione e sviluppo. Questa documentazione non è riprodotta nella documentazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a causa del numero esiguo di modifiche in [!INCLUDE[ssSB](../../includes/sssb-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="whats-new-in-service-broker"></a>Novità di Service Broker  
  Non è stata introdotta alcuna modifica significativa in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]sono state introdotte le modifiche riportate di seguito.  

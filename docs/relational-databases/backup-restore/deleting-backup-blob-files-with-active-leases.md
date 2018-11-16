@@ -11,18 +11,18 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3e8b061b3e8c694e9c16c31462149819b8be632d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9e2237473024a75227ff7ec7838849618cdf54d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752099"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663460"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Eliminare i file BLOB di backup con lease attivi
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Quando si esegue il backup nell'archiviazione di Microsoft Azure o il ripristino dallo stesso, tramite SQL Server viene acquisito un lease infinito per bloccare l'accesso esclusivo al BLOB. Quando il processo di backup o ripristino viene completato correttamente, il lease viene rilasciato. Se il backup o il ripristino non viene completato, il processo di backup tenta di eliminare i BLOB non validi. Tuttavia, se il backup non viene completato a causa di un problema di connettività di rete che persiste nel tempo, è possibile che il processo di backup non sia in grado di accedere al BLOB e che quindi quest'ultimo rimanga orfano. Di conseguenza, il BLOB non può essere scritto o eliminato finché il lease non viene rilasciato. In questo argomento viene descritto come rilasciare (interrompere) il lease ed eliminare il BLOB. 
   
- Per altre informazioni sui tipi di lease, leggere questo [articolo](http://go.microsoft.com/fwlink/?LinkId=275664).  
+ Per altre informazioni sui tipi di lease, leggere questo [articolo](https://go.microsoft.com/fwlink/?LinkId=275664).  
   
  Il mancato completamento dell'operazione di backup potrebbe generare un file di backup non valido. Anche nel file BLOB di backup potrebbe essere presente un lease attivo, impedendone l'eliminazione o la sovrascrittura. Per eliminare o sovrascrivere questi BLOB, il lease deve innanzitutto essere rilasciato (interrotto). Se sono presenti errori di backup, è consigliabile rimuovere i lease ed eliminare i BLOB. Periodicamente, è anche possibile rimuovere i lease ed eliminare i BLOB come parte dell'attività di gestione della risorsa di archiviazione.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "47752099"
   
 1.  **Identificare i BLOB con lease:** se si dispone di uno script o un processo in cui vengono eseguiti i processi di backup, è possibile rilevare l'errore nello script o nel processo e usarlo per rimuovere i BLOB.  È anche possibile usare le proprietà LeastState e LeaseStats per identificare i BLOB con lease. Dopo aver identificato i BLOB, rivedere l'elenco e verificare la validità del file di backup prima di eliminare il BLOB.  
   
-2.  **Interrompere il lease:** tramite una richiesta autorizzata è possibile interrompere il lease senza specificare un relativo ID. Per altre informazioni, fare clic [qui](http://go.microsoft.com/fwlink/?LinkID=275664) .  
+2.  **Interrompere il lease:** tramite una richiesta autorizzata è possibile interrompere il lease senza specificare un relativo ID. Per altre informazioni, fare clic [qui](https://go.microsoft.com/fwlink/?LinkID=275664) .  
   
     > [!TIP]  
     >  Tramite SQL Server viene generato un ID lease per stabilire l'accesso esclusivo durante l'operazione di ripristino. L'ID lease di ripristino è BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  

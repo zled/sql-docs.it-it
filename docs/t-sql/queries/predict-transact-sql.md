@@ -1,7 +1,7 @@
 ---
 title: PREDICT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e9547440f6e6023560fb1c8e2bcefcd57605345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b95f966b27db3638aae6455dc5e7819f07d0ebae
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682319"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695459"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -70,9 +70,6 @@ Il parametro DATA viene usato per specificare i dati usati per l'assegnazione de
 Il parametro PARAMETERS viene usato per specificare parametri definiti dall'utente facoltativi usati per l'assegnazione dei punteggi o la stima.
 
 Il nome di ogni parametro è specifico per il tipo di modello. La funzione [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) in RevoScaleR, ad esempio, supporta il parametro `@computeResiduals`, che indica se è necessario calcolare i residui quando si valuta un modello di regressione logistica. Se si chiama un modello compatibile, è possibile passare il nome del parametro e il valore TRUE o FALSE alla funzione `PREDICT`.
-
-> [!NOTE]
-> Questa opzione non funziona nelle versioni non definitive di SQL Server 2017.
 
 **WITH ( <result_set_definition> )**
 
@@ -121,7 +118,7 @@ DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_
 DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
 
 SELECT PREDICT [class]
-FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry
+FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry)
 WITH (class string);
 ```
 
@@ -172,9 +169,6 @@ END;
 ```
 
 ### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>Creazione di un modello R e generazione di punteggi tramite parametri facoltativi del modello
-
-> [!NOTE]
-> L'uso dell'argomento parameters non è supportato nella versione finale candidata 1.
 
 Questo esempio presuppone che sia stato creato un modello di regressione logistica dotato di una matrice di covarianza tramite una chiamata a RevoScaleR simile alla seguente:
 

@@ -12,12 +12,12 @@ ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 83a4f96657d316bb4ed5bbe2f7b9f7cb731008fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1081190332380b473af2b25615c962bece2bc8c1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649599"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700739"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>Condizioni della regola business (Master Data Services)
 
@@ -44,8 +44,8 @@ ms.locfileid: "47649599"
 |**non termina con**|L'attributo selezionato **non termina con** un attributo specifico o un valore di attributo specifico oppure è vuoto.<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
 |**contiene**|L'attributo selezionato **contiene** un attributo specifico o un valore di attributo specifico oppure è vuoto.<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
 |**non contiene**|L'attributo selezionato **non contiene** un attributo specifico o un valore di attributo specifico oppure è vuoto.<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
-|**contiene il modello**|L'attributo selezionato **contiene il modello** di un attributo specifico o di un valore di attributo specifico oppure è vuoto. Utilizzare le espressioni regolari di .NET Framework per specificare il modello.<br /><br /> Per ulteriori informazioni su espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](http://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
-|**non contiene il criterio**|L'attributo selezionato **non contiene il modello** di un attributo specifico o di un valore di attributo specifico oppure è vuoto. Utilizzare le espressioni regolari di .NET Framework per specificare il modello.<br /><br /> Per ulteriori informazioni su espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](http://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
+|**contiene il modello**|L'attributo selezionato **contiene il modello** di un attributo specifico o di un valore di attributo specifico oppure è vuoto. Utilizzare le espressioni regolari di .NET Framework per specificare il modello.<br /><br /> Per ulteriori informazioni su espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](https://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
+|**non contiene il criterio**|L'attributo selezionato **non contiene il modello** di un attributo specifico o di un valore di attributo specifico oppure è vuoto. Utilizzare le espressioni regolari di .NET Framework per specificare il modello.<br /><br /> Per ulteriori informazioni su espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](https://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
 |**contiene il subset**|L'attributo selezionato **contiene il subset** di un attributo specifico o di un valore di attributo specifico. È necessario specificare la posizione iniziale per la ricerca (ad esempio 1 indica l'inizio della ricerca in corrispondenza del primo carattere).<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
 |**non contiene il subset**|L'attributo selezionato **non contiene il subset** di un attributo specifico o di un valore di attributo specifico. È necessario specificare la posizione iniziale per la ricerca (ad esempio 1 indica l'inizio della ricerca in corrispondenza del primo carattere).<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
 |**modificato**|L'attributo selezionato è stato **modificato** dall'ultima applicazione delle regole business al membro. È necessario specificare il gruppo di modifica di cui l'attributo è un membro.<br /><br /> Per altre informazioni sui gruppi di rilevamento modifiche, vedere [Aggiungere attributi a un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).<br /><br /> Questa condizione è valida per valori di testo, numerici, di data e di collegamento.|  

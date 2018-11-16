@@ -14,12 +14,12 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74609a50ad4d2f29bbbd7d25cc4cd1a242e64ff4
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: b187fb1d2e5595ef1ec75ed99c9a6e3f85029f3e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071755"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640698"
 ---
 # <a name="cdc-control-task"></a>Attività di controllo CDC
   L'attività di controllo CDC viene utilizzata per controllare il ciclo di vita di pacchetti Change Data Capture (CDC). Questa attività consente di gestire la sincronizzazione del pacchetto CDC con il pacchetto di caricamento iniziale e la gestione di intervalli di numeri di sequenza del file di log (LSN) elaborati in un'esecuzione di un pacchetto CDC. L'attività di controllo CDC, inoltre, consente di gestire gli scenari di errore e il recupero da errori.  
@@ -78,11 +78,11 @@ ms.locfileid: "49071755"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)(Installazione di Microsoft SQL Server 2012 Change Data Capture per Oracle di Attunity) nel sito Web social.technet.microsoft.com.  
+-   Articolo tecnico [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)(Installazione di Microsoft SQL Server 2012 Change Data Capture per Oracle di Attunity) nel sito Web social.technet.microsoft.com.  
   
--   Articolo tecnico [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252960)(Risoluzione dei problemi di configurazione in Microsoft Change Data Capture per Oracle di Attunity) nel sito Web social.technet.microsoft.com.  
+-   Articolo tecnico [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252960)(Risoluzione dei problemi di configurazione in Microsoft Change Data Capture per Oracle di Attunity) nel sito Web social.technet.microsoft.com.  
   
--   Articolo tecnico [Troubleshoot CDC Instance Errors in Microsoft Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252961)(Risoluzione degli errori di istanze di CDC in Microsoft Change Data Capture per Oracle di Attunity) nel sito Web social.technet.microsoft.com.  
+-   Articolo tecnico [Troubleshoot CDC Instance Errors in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252961)(Risoluzione degli errori di istanze di CDC in Microsoft Change Data Capture per Oracle di Attunity) nel sito Web social.technet.microsoft.com.  
   
 ## <a name="cdc-control-task-editor"></a>Editor attività Controllo CDC
   Utilizzare la finestra di dialogo **CDC Control Task Editor** per configurare l'attività di controllo CDC. La configurazione dell'attività di controllo CDC include la definizione di una connessione al database CDC, l'operazione dell'attività CDC e le informazioni sulla gestione dello stato.  

@@ -11,18 +11,18 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c312e9b4cf820e247555b668d82834fd804457a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cba1d5551205c1658975943b76612f4e50768c0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620339"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699049"
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - Condizioni di Licenza
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### <a name="available-languages"></a>Lingue disponibili:  
-[Cinese (semplificato)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Cinese (tradizionale)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [Inglese (Stati Uniti)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [Francese](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
-[Tedesco](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [Italiano](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [Giapponese](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [Coreano](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [Portoghese (Brasile)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [Russo](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [Spagnolo](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
+[Cinese (semplificato)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
+[Tedesco](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
   
 ## <a name="microsoft-software-license-terms"></a>CONDIZIONI DI LICENZA PER IL SOFTWARE MICROSOFT.  
 **MICROSOFT SQL SERVER MANAGEMENT STUDIO**  
@@ -73,7 +73,7 @@ per il presente software, a meno che a tali prodotti non siano associate condizi
   
 **3.    SERVIZI BASATI SU INTERNET.** Microsoft fornisce servizi basati su Internet insieme al software. Microsoft potrà cambiare o annullare i servizi in qualsiasi momento.  
   
-&nbsp;&nbsp;**a.    Consenso all'utilizzo dei servizi basati su Internet.** Le funzionalità del software descritte di seguito e nell'Informativa sulla Privacy di Microsoft SQL Server si connettono ai sistemi informatici di Microsoft o del provider di servizi tramite Internet. In alcuni casi il licenziatario non riceverà alcuna comunicazione separata riguardante la connessione. Il licenziatario può disattivare questa funzionalità oppure non utilizzarla. Per altre informazioni su questa funzionalità, vedere [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120). **Usando tale funzionalità il licenziatario acconsente alla trasmissione di queste informazioni**. Microsoft non utilizza tali informazioni per individuare o contattare il licenziatario.  
+&nbsp;&nbsp;**a.    Consenso all'utilizzo dei servizi basati su Internet.** Le funzionalità del software descritte di seguito e nell'Informativa sulla Privacy di Microsoft SQL Server si connettono ai sistemi informatici di Microsoft o del provider di servizi tramite Internet. In alcuni casi il licenziatario non riceverà alcuna comunicazione separata riguardante la connessione. Il licenziatario può disattivare questa funzionalità oppure non utilizzarla. Per altre informazioni su questa funzionalità, vedere [https://go.microsoft.com/fwlink/?LinkID=398120](https://go.microsoft.com/fwlink/?LinkID=398120). **Usando tale funzionalità il licenziatario acconsente alla trasmissione di queste informazioni**. Microsoft non utilizza tali informazioni per individuare o contattare il licenziatario.  
   
 &nbsp;&nbsp;**i.    Informazioni relative al computer.** La seguente funzionalità utilizza protocolli Internet che comunicano ai sistemi appropriati informazioni relative al computer, quali l'indirizzo IP, il tipo di sistema operativo, il browser, il nome e la versione del software in uso, nonché il codice della lingua del dispositivo su cui il licenziatario ha installato il software. Microsoft utilizza queste informazioni per rendere disponibile al licenziatario il servizio basato su Internet.  
   

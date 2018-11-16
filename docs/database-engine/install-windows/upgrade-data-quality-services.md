@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ecedd313044770cd3e8af42c915dc208fa5097cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09651f097f0ae07b41c1c38866b862f73c529486
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629050"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601932"
 ---
 # <a name="upgrade-data-quality-services"></a>Aggiornare Data Quality Services
 
@@ -27,7 +27,7 @@ Questo articolo offre informazioni su come aggiornare l'installazione esistente 
 > [!IMPORTANT]  
 >  -   Per evitare eventuali perdite di dati accidentali durante l'aggiornamento dello schema, è necessario eseguire il backup dei database DQS prima di aggiornare DQS. Per altre informazioni sul ripristino dei database DQS, vedere [Backup e ripristino di database DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   È possibile connettersi a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server usando la versione corrente o una precedente di Data Quality Client o [Trasformazione DQS Cleansing](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services per eseguire le attività relative alla qualità dei dati.  
-> -   Dopo l'aggiornamento di Data Quality Services e Master Data Services, tutte le versioni precedenti del componente aggiuntivo Master Data Services per Excel non funzioneranno più. È possibile scaricare la versione [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] del componente aggiuntivo Master Data Services per Excel da [qui](http://go.microsoft.com/fwlink/?LinkID=506665).  
+> -   Dopo l'aggiornamento di Data Quality Services e Master Data Services, tutte le versioni precedenti del componente aggiuntivo Master Data Services per Excel non funzioneranno più. È possibile scaricare la versione [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] del componente aggiuntivo Master Data Services per Excel da [qui](https://go.microsoft.com/fwlink/?LinkID=506665).  
   
 ##  <a name="Prerequisites"></a> Prerequisiti  
   

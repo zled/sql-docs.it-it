@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54c1b3946a2e1495390f228d21198f40dae06c62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639419"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665520"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Creazione di una tabella temporale con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ WITH
   
 -   Se lo schema specificato non esiste, l'istruzione **CREATE TABLE** non verrà seguita.  
   
--   Se la tabella specificata dal parametro **HISTORY_TABLE** esiste già, sarà convalidata rispetto alla nuova tabella temporale che viene creata in termini di [coerenza dello schema e coerenza dei dati temporali](http://msdn.microsoft.com/library/dn935015.aspx). Se si specifica una tabella di cronologia non valida, l'istruzione **CREATE TABLE** non verrà eseguita.  
+-   Se la tabella specificata dal parametro **HISTORY_TABLE** esiste già, sarà convalidata rispetto alla nuova tabella temporale che viene creata in termini di [coerenza dello schema e coerenza dei dati temporali](https://msdn.microsoft.com/library/dn935015.aspx). Se si specifica una tabella di cronologia non valida, l'istruzione **CREATE TABLE** non verrà eseguita.  
   
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>Creazione di una tabella temporale con una tabella di cronologia definita dall'utente  
  Creare una tabella temporale con una tabella di cronologia definita dall'utente è una soluzione comoda quando l'utente vuole specificare la tabella di cronologia con determinate opzioni di archiviazione e indici aggiuntivi. Nell'esempio seguente viene creata una tabella di cronologia definita dall'utente con uno schema allineato con la tabella temporale che verrà creata. Per questa tabella di cronologia definita dall'utente vengono creati un indice columnstore cluster e un indice rowstore non cluster (albero B) aggiuntivo per le ricerche di punti. Dopo la creazione di questa tabella di cronologia definita dall'utente, viene creata la tabella temporale con controllo delle versioni di sistema specificando la tabella di cronologia definita dall'utente come tabella di cronologia predefinita.  

@@ -11,19 +11,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5a190349b0bd23a2f929b5ec2f8e2784616ad6b
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 10532564d2310ad3b8eaf28c2693bafb423d81a2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018626"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658845"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Un **CurvePolygon** è una superficie topologicamente chiusa definita da un anello di delimitazione esterno e nessuno o più anelli interni  
   
 > [!IMPORTANT]  
->  Per una descrizione dettagliata ed esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui il sottotipo **CurvePolygon** , scaricare il white paper relativo alle [nuove funzionalità spaziali in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Per una descrizione dettagliata ed esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui il sottotipo **CurvePolygon** , scaricare il white paper relativo alle [nuove funzionalità spaziali in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Nei criteri seguenti vengono definiti attributi di un'istanza **CurvePolygon** :  
   
@@ -188,8 +188,8 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   
- [Guida di riferimento ai metodi per il tipo di dati geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)   
- [Guida di riferimento ai metodi per il tipo di dati geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
+ [Guida di riferimento ai metodi per il tipo di dati geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)   
+ [Guida di riferimento ai metodi per il tipo di dati geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
  [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

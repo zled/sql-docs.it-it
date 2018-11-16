@@ -13,12 +13,12 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a06d6b029a4d64f52d9d939e3935fed32d7b37b
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: a115010220a9d98cf861b8e603fee69472f1e305
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120328"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640133"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Definizione di un intervallo dei dati delle modifiche
   Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un carico incrementale dei dati delle modifiche, la prima attività consiste nel calcolare gli endpoint dell'intervallo di modifiche. Tali endpoint sono valori **datetime** e verranno archiviati in variabili del pacchetto per l'uso successivo nel pacchetto.  
@@ -109,7 +109,7 @@ ms.locfileid: "49120328"
  **Argomento successivo:** [Come determinare se i dati delle modifiche sono pronti](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md)   
  [Attività Script](../../integration-services/control-flow/script-task.md)  

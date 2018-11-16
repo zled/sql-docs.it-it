@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a58b72984f28ecd689b086947a9b80160328202
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e63f83970eaf4d96f4d4f02494716914e8ca6a9c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767179"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662930"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ Prendere in considerazione le seguenti soluzioni:
   
 -   Selezionare le colonne definite come NOT NULL quando si scelgono le colonne per un indice o un vincolo univoco. In questo modo viene eliminata la possibilità di una violazione di univocità causata più di una riga contiene NULL nei valori della chiave.  
   
--   Se i valori duplicati sono il risultato di errori di immissione di dati, correggere manualmente i dati e quindi creare l'indice o il vincolo. Per informazioni sulla rimozione di righe duplicate in una tabella, vedere l'articolo 139444 della Knowledge Base [How to remove duplicate rows from a table in SQL Server](http://support.microsoft.com/kb/139444) (Come rimuovere righe duplicate da una tabella in SQL Server).  
+-   Se i valori duplicati sono il risultato di errori di immissione di dati, correggere manualmente i dati e quindi creare l'indice o il vincolo. Per informazioni sulla rimozione di righe duplicate in una tabella, vedere l'articolo 139444 della Knowledge Base [How to remove duplicate rows from a table in SQL Server](https://support.microsoft.com/kb/139444) (Come rimuovere righe duplicate da una tabella in SQL Server).  
   
 ## <a name="see-also"></a>Vedere anche  
 [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  

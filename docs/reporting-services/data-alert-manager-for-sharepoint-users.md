@@ -12,12 +12,12 @@ ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7bd21f8be841437b15f780001221da72d9f665aa
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: df33f55ce855f45f271235ac5b6ff2a8f305e8d8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030680"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813624"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Gestione avvisi dati per utenti di SharePoint
 
@@ -36,7 +36,7 @@ Quando un sito di SharePoint è abilitato per gli avvisi dati, vengono create e 
 
  È inoltre possibile aprire Gestione avvisi dati direttamente utilizzando un URL. Di seguito è illustrata la sintassi dell'URL:  
   
- `http://<site name>/_layouts/ReportServer/MyDataAlerts.aspx`  
+ `https://<site name>/_layouts/ReportServer/MyDataAlerts.aspx`  
   
 > [!NOTE]  
 >  Prima di poter usare le funzionalità di avviso di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , un amministratore deve concedere all'utente le autorizzazioni necessarie. Per informazioni sulle autorizzazioni richieste, vedere [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)(Avvisi dati di Reporting Services).  

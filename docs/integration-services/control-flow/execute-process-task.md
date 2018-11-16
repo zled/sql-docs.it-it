@@ -17,12 +17,12 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa43a9bac948f5d03d21689b4272f2c93317792b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0451f0bdb394d66fa8477c43aee801bd25ead1db
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654879"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638758"
 ---
 # <a name="execute-process-task"></a>Attività Esegui processo
   L'attività Esegui processo consente di eseguire un'applicazione o un file batch nell'ambito del flusso di lavoro di un pacchetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Sebbene sia possibile usarla per aprire qualsiasi applicazione standard, ad esempio [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] o [!INCLUDE[ofprword](../../includes/ofprword-md.md)], l'attività Esegui processo viene in genere usata per eseguire applicazioni aziendali o file batch che usano un'origine dei dati. È ad esempio possibile utilizzare l'attività Esegui processo per espandere un file di testo compresso. Il pacchetto può quindi utilizzare il file di testo come origine dei dati per il proprio flusso di dati. Sempre a titolo di esempio, è anche possibile utilizzare tale attività per eseguire un'applicazione [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizzata che genera un report giornaliero sulle vendite, che può essere allegato a un'attività Invia messaggi e inoltrato a una lista di distribuzione.  
@@ -42,12 +42,12 @@ ms.locfileid: "47654879"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ### <a name="property-settings"></a>Impostazioni delle proprietà  
  Quando l'attività Esegui processo esegue un'applicazione personalizzata, fornisce dati di input all'applicazione tramite uno o entrambi i metodi seguenti:  
   
--   Una variabile specificata nell'impostazione della proprietà **StandardInputVariable**. Per altre informazioni sulle variabili, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   Una variabile specificata nell'impostazione della proprietà **StandardInputVariable**. Per altre informazioni sulle variabili, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 -   Un argomento specificato nell'impostazione della proprietà **Arguments**. Se, ad esempio, l'attività apre un documento in Word, l'argomento può assegnare un nome al file con estensione doc.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47654879"
   
  È possibile utilizzare un'espressione per impostare varie proprietà dell'attività Esegui processo.  
   
- Quando si usa la proprietà **StandardInputVariable** per configurare l'attività Esegui processo in modo che fornisca dati di input, chiamare il metodo **Console.ReadLine** dall'applicazione per leggere l'input. Per altre informazioni, vedere l'argomento [Console.ReadLine Method](http://go.microsoft.com/fwlink/?LinkId=129201)nella libreria di classi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Quando si usa la proprietà **StandardInputVariable** per configurare l'attività Esegui processo in modo che fornisca dati di input, chiamare il metodo **Console.ReadLine** dall'applicazione per leggere l'input. Per altre informazioni, vedere l'argomento [Console.ReadLine Method](https://go.microsoft.com/fwlink/?LinkId=129201)nella libreria di classi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  Quando si usa la proprietà **Arguments** per configurare l'attività Esegui processo in modo che fornisca dati di input, effettuare uno dei passaggi seguenti per ottenere gli argomenti:  
   
@@ -68,11 +68,11 @@ ms.locfileid: "47654879"
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     Per altre informazioni, vedere l'argomento [Proprietà My.Application.CommandLineArgs](http://go.microsoft.com/fwlink/?LinkId=129200)nei riferimenti di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
+     Per altre informazioni, vedere l'argomento [Proprietà My.Application.CommandLineArgs](https://go.microsoft.com/fwlink/?LinkId=129200)nei riferimenti di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
   
 -   Se si usa Microsoft Visual C# per scrivere l'applicazione, usare il metodo **Main** .  
   
-     Per altre informazioni, vedere l'argomento [Argomenti della riga di comando (Guida per programmatori C#)](http://go.microsoft.com/fwlink/?LinkId=129406)nella Guida per programmatori C#.  
+     Per altre informazioni, vedere l'argomento [Argomenti della riga di comando (Guida per programmatori C#)](https://go.microsoft.com/fwlink/?LinkId=129406)nella Guida per programmatori C#.  
   
  L'attività Esegui processo include inoltre le proprietà **StandardOutputVariable** e **StandardErrorVariable** che consentono di specificare le variabili che usano rispettivamente l'output standard e l'output degli errori dell'applicazione.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47654879"
  **StandardInputVariable**  
  Selezionare una variabile per l'invio dell'input al processo oppure fare clic su \<**Nuova variabile...**> per crearne una nuova:  
   
- **Argomenti correlati:** [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
  Selezionare una variabile per l'acquisizione dell'output del processo oppure fare clic su \<**Nuova variabile...**> per crearne una nuova.  

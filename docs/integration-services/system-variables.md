@@ -17,12 +17,12 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 141fd581fc00e60b241fe9f944fab8405426235d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc1d04899bf2b31c5bf4586afb88ed40d2ff8a0c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726269"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641908"
 ---
 # <a name="system-variables"></a>Variabili di sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include un set di variabili di sistema in cui vengono archiviate informazioni sui pacchetti in esecuzione e sui relativi oggetti. Tali variabili possono essere utilizzate nelle espressioni e nelle espressioni di proprietà per personalizzare pacchetti, contenitori, attività e gestori di eventi.  
@@ -105,6 +105,6 @@ ms.locfileid: "47726269"
  Questa regola vale anche per le variabili definite dall'utente ma, mentre i tipi di dati delle variabili di sistema non possono essere modificati ed è necessario adattare l'utilizzo di tali variabili in base ai relativi tipi di dati, le variabili definite dall'utente sono molto più flessibili. Le variabili definite dall'utente utilizzate nelle associazioni di parametro vengono in genere definite con tipi di dati compatibili con quelli dei parametri a cui è stato eseguito il mapping.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Mapping di parametri di query a variabili in un'attività Esegui SQL](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
+ [Mapping di parametri di query a variabili in un'attività Esegui SQL](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

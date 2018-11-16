@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efcfa1d417a68428beb724c21f918f8af07dfffe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f4b3c22e81f28116fcdaaa83076ff4212b24bf5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708529"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676070"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47708529"
  Indica se l'oggetto è stato creato con l'opzione quoted identifier impostata su ON. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **Escalation blocchi**  
- Indica la granularità dell'escalation dei blocchi della tabella. Per altre informazioni sui blocchi nel motore di database, vedere [Guida per il controllo delle versioni delle righe e il blocco della transazione di SQL Server](http://msdn.microsoft.com/library/jj856598.aspx). I valori possibili sono:  
+ Indica la granularità dell'escalation dei blocchi della tabella. Per altre informazioni sui blocchi nel motore di database, vedere [Guida per il controllo delle versioni delle righe e il blocco della transazione di SQL Server](https://msdn.microsoft.com/library/jj856598.aspx). I valori possibili sono:  
   
  AUTO  
  Questa opzione consente al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di selezionare la granularità dell'escalation dei blocchi appropriata per lo schema della tabella.  

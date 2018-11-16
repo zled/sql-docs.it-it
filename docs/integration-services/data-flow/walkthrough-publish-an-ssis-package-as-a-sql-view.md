@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fdd198e8b5bf23e69d74be057c97b29e229dada
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717889"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641568"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procedura dettagliata: Pubblicare un pacchetto SSIS come vista SQL
   Questa procedura dettagliata fornisce le informazioni necessarie per pubblicare un pacchetto SSIS come vista SQL in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -252,7 +252,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  Timeout indica il numero di secondi che il provider OLE DB per SSIS può attendere prima dell'arrivo di nuovi dati dal pacchetto SSIS. Per impostazione predefinita il timeout è di 60 secondi. Per il timeout è possibile specificare un valore intero compreso tra 20 e 32.000.  
   
- I parametri contengono il valore sia dei parametri del pacchetto che dei parametri del progetto. Le regole per i parametri sono le stesse dei parametri in [DTExec](http://msdn.microsoft.com/library/hh231187.aspx).  
+ I parametri contengono il valore sia dei parametri del pacchetto che dei parametri del progetto. Le regole per i parametri sono le stesse dei parametri in [DTExec](https://msdn.microsoft.com/library/hh231187.aspx).  
   
  L'elenco seguente specifica i caratteri speciali consentiti nella clausola di query:  
   
@@ -268,6 +268,6 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
 ## <a name="see-also"></a>Vedere anche  
  [Destinazione flusso di dati](../../integration-services/data-flow/data-streaming-destination.md)   
- [Configurare la destinazione flusso di dati](../../integration-services/data-flow/configure-data-streaming-destination.md)  
+ [Configurare Destinazione flusso di dati](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   
   

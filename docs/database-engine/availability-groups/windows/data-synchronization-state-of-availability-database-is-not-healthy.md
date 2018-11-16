@@ -14,12 +14,12 @@ ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 8ae1f9db8c3bbd0b2c86e18814ca919c2e558baa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b2e45fd29967a89bb468eae32bcb393fff07b24
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738399"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603421"
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy"></a>Lo stato della sincronizzazione dei dati del database di disponibilità non è integro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47738399"
  Questi criteri consentono di eseguire il rollup dello stato di sincronizzazione dei dati di tutti i database di disponibilità, anche noti come "repliche di disponibilità", nella replica di disponibilità. I criteri sono in uno stato non integro se una qualsiasi replica del database non è nello stato di sincronizzazione dei dati previsto. Altrimenti, sono in uno stato integro.  
   
 > [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa allo [stato di sincronizzazione non integro dei dati di alcuni database di disponibilità](http://go.microsoft.com/fwlink/p/?LinkId=220858) su TechNet Wiki.  
+>  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa allo [stato di sincronizzazione non integro dei dati di alcuni database di disponibilità](https://go.microsoft.com/fwlink/p/?LinkId=220858) su TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Possibili cause  
  Lo stato di sincronizzazione dei dati di questo database di disponibilità non è integro. In una replica di disponibilità con commit asincrono, ogni database di disponibilità deve trovarsi nello stato SINCRONIZZAZIONE IN CORSO. In una replica con commit sincrono, ogni database di disponibilità deve trovarsi nello stato SINCRONIZZATO.  
@@ -47,7 +47,7 @@ ms.locfileid: "47738399"
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usare il Dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
 

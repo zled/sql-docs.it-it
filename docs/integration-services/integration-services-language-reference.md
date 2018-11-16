@@ -11,12 +11,12 @@ ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2adab8691d51386b5ff283cd3d131f1c727a9b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da169ff3be06b9617ddf5fc7929254bee91037ce
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628756"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642308"
 ---
 # <a name="integration-services-language-reference"></a>Guida di riferimento al linguaggio Integration Services
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47628756"
  [Stored procedure &#40;catalogo di Integration Services&#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
  Chiamare le stored procedure per aggiungere, rimuovere o modificare oggetti e impostazioni di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
- [Funzioni &#40;Catalogo di Integration Services&#41;](http://msdn.microsoft.com/library/9f2aec85-3d4c-415f-b1f8-8328a60b1c7f)  
+ [Funzioni &#40;Catalogo di Integration Services&#41;](https://msdn.microsoft.com/library/9f2aec85-3d4c-415f-b1f8-8328a60b1c7f)  
  Chiamare le funzioni per l'amministrazione di progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
   

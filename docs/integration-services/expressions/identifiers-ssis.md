@@ -21,12 +21,12 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7b05729795395111a1ab887c9da992f1c460536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 285141958996c85de736020c33bee0afabb9b5b9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651579"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638788"
 ---
 # <a name="identifiers-ssis"></a>Identificatori (SSIS)
   Nelle espressioni gli identificatori sono colonne e variabili disponibili per l'operazione. Le espressioni possono utilizzare identificatori regolari e qualificati.  
@@ -102,7 +102,7 @@ ms.locfileid: "47651579"
 ## <a name="unique-variable-names"></a>Nomi di variabile univoci  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono supportare le variabili personalizzate ed è disponibile un set di variabili di sistema. Per impostazione predefinita, le variabili personalizzate appartengono allo spazio dei nomi **User** mentre le variabili di sistema appartengono allo spazio dei nomi **System** . È possibile creare ulteriori spazi dei nomi per le variabili personalizzate e aggiornare i nomi degli spazi dei nomi in base alle esigenze della propria applicazione. Il generatore di espressioni elenca le variabili comprese nell'ambito corrente, a qualsiasi spazio dei nomi appartengano.  
   
- Tutte le variabili appartengono a uno spazio dei nomi e hanno un ambito, che può essere costituito da un pacchetto oppure da un contenitore o da un'attività in un pacchetto. Il generatore di espressioni di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] elenca solo le variabili comprese nell'ambito corrente. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usare variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Tutte le variabili appartengono a uno spazio dei nomi e hanno un ambito, che può essere costituito da un pacchetto oppure da un contenitore o da un'attività in un pacchetto. Il generatore di espressioni di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] elenca solo le variabili comprese nell'ambito corrente. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usare variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
  L'analizzatore di espressioni può valutare correttamente un'espressione solo se le variabili utilizzate hanno nomi univoci. Se un pacchetto utilizza più variabili con lo stesso nome, i relativi spazi dei nomi devono essere diversi. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un operatore di risoluzione degli spazi dei nomi composto da un doppio segno di due punti (::), per qualificare una variabile con il relativo spazio dei nomi. Nell'espressione seguente, ad esempio, vengono usate due variabili con il nome **Count**, una appartenente allo spazio dei nomi **User** e l'altra allo spazio dei nomi **MyNamespace** .  
   
@@ -122,6 +122,6 @@ ms.locfileid: "47651579"
 ```  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=746575)sul sito Web pragmaticworks.com  
+ Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=746575)sul sito Web pragmaticworks.com  
   
   

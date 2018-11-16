@@ -18,12 +18,12 @@ ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 05b2b181a1495a36135fae1019bd464b5bb8a701
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1d53e37f49341e022cc6c0b3e795b3f57c7108c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737709"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637938"
 ---
 # <a name="sequence-container"></a>Sequenza - contenitore
   Il contenitore Sequenza definisce un flusso di controllo costituito da un subset del flusso di controllo del pacchetto. I contenitori Sequenza suddividono il pacchetto in più flussi di controllo separati, ognuno dei quali include una o più attività e contenitori che vengono eseguiti nel flusso di controllo globale del pacchetto.  
@@ -54,11 +54,11 @@ ms.locfileid: "47737709"
  Per informazioni sull'impostazione a livello di codice di queste proprietà, vedere la documentazione relativa alla classe **T:Microsoft.SqlServer.Dts.Runtime.Sequence** nella Guida per gli sviluppatori.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- Per informazioni su come impostare le proprietà del componente, vedere nel [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vedere [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Per informazioni su come impostare le proprietà del componente, vedere nel [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vedere [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)   
+ [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)   
  [Contenitori in Integration Services](../../integration-services/control-flow/integration-services-containers.md)  
   
   

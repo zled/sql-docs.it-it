@@ -12,16 +12,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8356953d9b148bb3cbfd1ce3a6a125b67b08e7bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e6d1ec3aff285b91e1099187f53b904cad7368c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699425"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670871"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installa una nuova versione (versione 14.0.4999.1038) del word breaker e dello stemmer per la lingua inglese che sostituisce la versione precedente (versione 12.0.6828.0). Per informazioni sul comportamento modificato dei nuovi componenti, vedere [Differenze di comportamento nella ricerca full-text](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). In questo argomento viene descritto come passare dalla nuova versione di questi componenti alla versione precedente o come tornare alla nuova versione dalla versione precedente. Per le installazioni di cluster, queste modifiche devono essere apportate in tutti i nodi primari e passivi.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installa una nuova versione (versione 14.0.4999.1038) del word breaker e dello stemmer per la lingua inglese che sostituisce la versione precedente (versione 12.0.6828.0). Per informazioni sul comportamento modificato dei nuovi componenti, vedere [Differenze di comportamento nella ricerca full-text](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). In questo argomento viene descritto come passare dalla nuova versione di questi componenti alla versione precedente o come tornare alla nuova versione dalla versione precedente. Per le installazioni di cluster, queste modifiche devono essere apportate in tutti i nodi primari e passivi.  
   
  Le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano word breaker diversi rappresentati da CLSID diversi per la lingua inglese Stati Uniti (LCID 1033) e per la lingua inglese Regno Unito (LCID 2057). In questa versione entrambi gli LCID utilizzano gli stessi componenti con gli stessi CLSID, come illustrato nella tabella seguente:  
   
@@ -128,6 +128,6 @@ ms.locfileid: "47699425"
   
 ## <a name="see-also"></a>Vedere anche  
  [Ripristinare i word breaker utilizzati dalla ricerca alla versione precedente](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [Differenze di comportamento nella ricerca full-text](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
+ [Differenze di comportamento nella ricerca full-text](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   

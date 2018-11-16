@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6532a160072e5a285cb5b8687397fd75b4026907
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1c44173f34c1560da036ca1914649774365fdf42
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020235"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812804"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Creare una mappa documento (Generatore report e SSRS)
 
@@ -82,14 +82,14 @@ Una mappa documento offre un set di collegamenti a elementi di report in un repo
      Per i report di esempio [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] , l'URL seguente specifica il report denominato Product Catalog.  
   
     ```  
-    http://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
+    https://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     ```  
   
 2.  Copiare il percorso del report nel server. Nell'esempio il percorso del report è `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`.  
   
 3.  Creare un nuovo URL con i tre componenti seguenti:  
   
-    -   Visualizzatore di report nel server di report `http://localhost/ReportServer/Pages/ReportViewer.aspx?`  
+    -   Visualizzatore di report nel server di report `https://localhost/ReportServer/Pages/ReportViewer.aspx?`  
   
     -   Nome del report copiato nel passaggio 1, ad esempio `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`  
   
@@ -98,7 +98,7 @@ Una mappa documento offre un set di collegamenti a elementi di report in un repo
      L'URL seguente è costituito da questi tre componenti aggiunti nell'ordine in cui vengono elencati.  
   
     ```  
-    http://localhost/ReportServer/Pages/ReportViewer.aspx?  
+    https://localhost/ReportServer/Pages/ReportViewer.aspx?  
     %2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     &rs%3aCommand=Render&rc%3aFormat=HTML4.0&rc%3aDocMap=False  
     ```  

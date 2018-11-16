@@ -11,12 +11,12 @@ ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfc778865740b7ecb525e530ad94b27c2d2cf767
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebf916f83a801005d16c860a9dc84205b1fd43d1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809889"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703129"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Creare le classi proxy del servizio Web Gestione dati master
 
@@ -36,19 +36,19 @@ ms.locfileid: "47809889"
   
 3.  Salvare le modifiche apportate al file.  
   
-4.  Testare la pubblicazione dei metadati passando all'URL del servizio, ad esempio: `http://yourserver/MDS/service/service.svc`. Se la pubblicazione dei metadati è abilitata, viene visualizzata una pagina che inizia con   
+4.  Testare la pubblicazione dei metadati passando all'URL del servizio, ad esempio: `https://yourserver/MDS/service/service.svc`. Se la pubblicazione dei metadati è abilitata, viene visualizzata una pagina che inizia con   
     "È stato creato un servizio".  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Creazione di classi proxy tramite Visual Studio  
- Se è installato Visual Studio 2010, il modo più semplice per generare le classi proxy è aggiungere un **Riferimento al servizio** al progetto. L'indirizzo del riferimento al servizio è l'URL dell'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aggiunto a /service/service.svc, Ad esempio: `http://yourserver/MDS/service/service.svc`. Per altre informazioni, vedere [Procedura: Aggiungere, aggiornare o rimuovere un riferimento al servizio](http://go.microsoft.com/fwlink/?LinkId=221167).  
+ Se è installato Visual Studio 2010, il modo più semplice per generare le classi proxy è aggiungere un **Riferimento al servizio** al progetto. L'indirizzo del riferimento al servizio è l'URL dell'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aggiunto a /service/service.svc, Ad esempio: `https://yourserver/MDS/service/service.svc`. Per altre informazioni, vedere [Procedura: Aggiungere, aggiornare o rimuovere un riferimento al servizio](https://go.microsoft.com/fwlink/?LinkId=221167).  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Creazione di classi proxy tramite Svcutil.exe  
- Per usare Svcutil.exe è necessario che nel computer sia installato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK. Se si utilizza [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], per eseguire il comando sarà necessario utilizzare il prompt dei comandi di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Per altre informazioni, vedere [Strumento ServiceModel Metadata Utility (Svcutil.exe)](http://go.microsoft.com/fwlink/?LinkId=165027) e [Generazione di un client WCF dai metadati del servizio](http://go.microsoft.com/fwlink/?LinkId=164821).  
+ Per usare Svcutil.exe è necessario che nel computer sia installato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK. Se si utilizza [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], per eseguire il comando sarà necessario utilizzare il prompt dei comandi di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Per altre informazioni, vedere [Strumento ServiceModel Metadata Utility (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) e [Generazione di un client WCF dai metadati del servizio](https://go.microsoft.com/fwlink/?LinkId=164821).  
   
  Per creare un set di classi proxy in C# tramite Svcutil.exe, utilizzare un comando analogo al seguente:  
   
 ```  
-svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc   
+svcutil.exe https://<server_name:port>/<virtual_path>/Service/Service.svc   
 /out:<proxy_name>.cs /messageContract /tcv:Version35   
 /noconfig /ct:System.Collections.ObjectModel.Collection`1   
 /namespace:*,Microsoft.MasterDataServices  
