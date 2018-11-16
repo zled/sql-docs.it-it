@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 565217e494b753ee22c2fa3715f17108a9fab5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be6edd514530acca7ac79cebf959a09d20562ac5
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638309"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350645"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provider Microsoft OLE DB per ODBC Panoramica
 Per un programmatore di ADO o servizi desktop remoto, un mondo ideale sarebbe uno dei dati di ogni origine espone un'interfaccia OLE DB, in modo da ADO è stato possibile chiamare direttamente nell'origine dati. Anche se un numero sempre maggiore di fornitori di database implementa le interfacce OLE DB, alcune origini dati non sono ancora esposti in questo modo. Tuttavia, la maggior parte dei sistemi DBMS in uso oggi accessibili tramite ODBC.
@@ -218,7 +218,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
 |[Rieseguire una query](../../../ado/reference/ado-api/requery-method.md)|Sì|Sì|Sì|Sì|
 |[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|no|no|Sì|Sì|
-|[Supporta](../../../ado/reference/ado-api/supports-method.md)|Sì|Sì|Sì|Sì|
+|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Sì|Sì|Sì|Sì|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Sì|Sì|Sì|Sì|
 |[Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sì|Sì|Sì|Sì|
 
@@ -227,7 +227,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="dynamic-properties"></a>Proprietà dinamiche
  Il Provider Microsoft OLE DB per ODBC inserisce diverse proprietà dinamiche nel **delle proprietà** raccolta di oggetti [connessione](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e [Comando](../../../ado/reference/ado-api/command-object-ado.md) oggetti.
 
- Le tabelle seguenti sono un incrociato dei nomi per ogni proprietà dinamica ADO e OLE DB. Riferimento dei programmatori OLE DB è relativo a un nome della proprietà ADO il termine, "Description". È possibile trovare altre informazioni su queste proprietà in riferimento OLE DB Programmer. Cercare il nome della proprietà OLE DB in corrispondenza dell'indice oppure vedere [appendice c: OLE DB proprietà](http://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ Le tabelle seguenti sono un incrociato dei nomi per ogni proprietà dinamica ADO e OLE DB. Riferimento dei programmatori OLE DB è relativo a un nome della proprietà ADO il termine, "Description". È possibile trovare altre informazioni su queste proprietà in riferimento OLE DB Programmer. Cercare il nome della proprietà OLE DB in corrispondenza dell'indice oppure vedere [appendice c: OLE DB proprietà](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## <a name="connection-dynamic-properties"></a>Proprietà dinamiche di connessione
  Le proprietà seguenti vengono aggiunti per il **connessione** dell'oggetto **proprietà** raccolta.
@@ -429,7 +429,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Aggiornabile|DBPROP_UPDATABILITY|
 |Usare i segnalibri|DBPROP_BOOKMARKS|
 
- Per informazioni dettagliate e sull'implementazione funzionale informazioni sui Provider Microsoft OLE DB per ODBC, vedere la [riferimento per programmatori OLE DB](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) o visitare il sito di accesso ai dati e Web Storage Developer Center su MSDN.
+ Per informazioni dettagliate e sull'implementazione funzionale informazioni sui Provider Microsoft OLE DB per ODBC, vedere la [riferimento per programmatori OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) o visitare il sito di accesso ai dati e Web Storage Developer Center su MSDN.
 
 ## <a name="see-also"></a>Vedere anche
  [Oggetto (ADO) Command](../../../ado/reference/ado-api/command-object-ado.md) [proprietà CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [proprietà ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [eseguire Metodo (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md) [metodo (Recordset ADO) Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) [insieme di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Proprietà del provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [supporta (metodo)](../../../ado/reference/ado-api/supports-method.md)

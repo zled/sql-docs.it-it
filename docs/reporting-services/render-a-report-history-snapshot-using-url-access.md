@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e13765e67b1e14cd676d371fdeb0a3f8e6a896fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 054f885cc970060b042532ea91ff561853000d1b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795189"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812854"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>Eseguire il rendering degli snapshot della cronologia dei report tramite l'accesso con URL
   È possibile eseguire il rendering di un report in base allo snapshot della cronologia del report fornendo il parametro *rs:Snapshot* e impostandone il valore su un ID di snapshot valido. Il valore di questo parametro è nel formato AAAA-MM-GGTHH:MM:SS, in base allo standard ISO (International Organization for Standardization) 8601.  
@@ -30,7 +30,7 @@ ms.locfileid: "47795189"
  Nell'esempio seguente viene illustrato un URL che consente di recuperare uno snapshot della cronologia del report:  
   
 ```  
-http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
+https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

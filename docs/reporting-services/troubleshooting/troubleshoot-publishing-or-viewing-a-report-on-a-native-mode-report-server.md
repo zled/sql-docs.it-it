@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d89b4156225de984854076f8218c29f033e4a0d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2caeab1399ac45523b8b0adae753225271840e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653039"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811774"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Risolvere i problemi di pubblicazione o visualizzazione di un report in un server di report in modalità nativa
   
@@ -29,7 +29,7 @@ Il nome del server di report non è specificato correttamente
   
 Quando si distribuisce il report in un server di report in modalità nativa, un errore comune è quello di specificare il nome della cartella dei report anziché il nome del server di report.   
   
-Verificare che l'URL del server di report sia l'indirizzo del server di report, ad esempio `http://localhost/reportserver`, e non l'indirizzo della directory virtuale di Gestione report, ad esempio, `http://localhost/reports`. Se per il server di report è stato specificato un numero di porta diverso da quello predefinito, ovvero 80, è necessario specificarlo nell'indirizzo del server di report, ad esempio `http://localhost:81/reportserver`.   
+Verificare che l'URL del server di report sia l'indirizzo del server di report, ad esempio `https://localhost/reportserver`, e non l'indirizzo della directory virtuale di Gestione report, ad esempio, `https://localhost/reports`. Se per il server di report è stato specificato un numero di porta diverso da quello predefinito, ovvero 80, è necessario specificarlo nell'indirizzo del server di report, ad esempio `https://localhost:81/reportserver`.   
   
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>Non si verifica nulla quando si attivano o disattivano gli elementi nel report pubblicato.  
   Quando si visualizza un report nell'anteprima locale, è possibile attivare o disattivare e mostrare o nascondere gli elementi nel report. Quando si visualizza lo stesso report dopo averlo pubblicato nel server di report, gli elementi Toggle non funzionano più.   

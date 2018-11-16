@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28bda5c6e02b21343cef97ee04c36f80f124d9a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc1eb47e6cde8ff1fb34bde4bf82f4d79013d90e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630359"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675419"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "47630359"
   
     2.  In **Da questo percorso**fare clic su **Percorsi...** per aprire la finestra di dialogo **Percorsi** e selezionare uno dei percorsi del server disponibili. Al termine, fare clic su **OK**.  
   
-    3.  In **Immettere il nome dell'oggetto da selezionare (esempi)**, immettere il nome dell'utente o del gruppo che si desidera trovare. Per ulteriori informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi](http://technet.microsoft.com/library/cc771712.aspx).  
+    3.  In **Immettere il nome dell'oggetto da selezionare (esempi)**, immettere il nome dell'utente o del gruppo che si desidera trovare. Per ulteriori informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Fare clic su **Avanzate...** per le opzioni di ricerca più avanzate. Per altre informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi - Pagina Avanzate](http://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Fare clic su **Avanzate...** per le opzioni di ricerca più avanzate. Per altre informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi - Pagina Avanzate](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Fare clic su **OK**.  
   

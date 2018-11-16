@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6adbbc3107b21c6bb86d12d249c5fa1f5b01272f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6e679b6c4a7b61e136ba1dcb864ab5bb6a05beb0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028490"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813634"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo di connessione Hyperion Essbase (SSRS)
   Per includere dati da un'origine dati esterna [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]che consente di recuperare dati multidimensionali da un'origine dati esterna [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -24,7 +24,7 @@ ms.locfileid: "50028490"
  Nella stringa di connessione di esempio seguente viene specificata un'origine dati [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] in un server che utilizza la porta 13080 e XMLA (XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) in Internet tramite SOAP, connettendosi a un catalogo di esempio:  
   
 ```  
-Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample  
+Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
  Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  

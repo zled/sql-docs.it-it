@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 936cc6417a1af8b38b548b321486d233fa086363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf79a9f1c6790abfb1a2435e533aa0847abbd3b6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800029"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813984"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>Integrazione di Reporting Services tramite l'accesso con URL - Applicazione Web
   L'accesso con URL in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è progettato in maniera specifica per consentire l'accesso ai singoli report in una rete. Questo tipo di accesso è ottimale per l'integrazione delle funzionalità di visualizzazione e navigazione del report in un'applicazione Web personalizzata. Per utilizzare l'accesso con URL nelle applicazioni Web, è possibile:  
@@ -35,7 +35,7 @@ ms.locfileid: "47800029"
  Nell'esempio seguente il collegamento ipertestuale punta a un frame denominato "main" che potrebbe essere diverso da quello che include il collegamento ipertestuale. Il collegamento ipertestuale potrebbe fare parte del portale Web.  
   
 ```  
-<a href="http://server/reportserver?/SampleReports/Territory Sales   
+<a href="https://server/reportserver?/SampleReports/Territory Sales   
 Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >  
    Click here for the Territory Sales Drilldown sample report  
 </a>  
@@ -60,7 +60,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
  L'esempio HTML seguente illustra l'utilizzo di un form che consente di puntare a un server di report con un URL specifico e di passare i parametri della stringa di query come parte dei campi di input del form.  
   
 ```  
-<FORM id="frmRender" action="http://server/reportserver?/SampleReports/  
+<FORM id="frmRender" action="https://server/reportserver?/SampleReports/  
    Territory Sales Drilldown" method="post" target="_self">  
    <INPUT type="hidden" name="rs:Command" value="Render">   
    <INPUT type="hidden" name="rc:LinkTarget" value="main">  
@@ -72,7 +72,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
  Nell'esempio precedente se un utente fa clic sul pulsante sul form, il server di report restituisce un report visualizzabile in formato HTML indirizzato al frame corrente. Una stringa di accesso con URL paragonabile potrebbe essere simile alla seguente:  
   
 ```  
-http://server/reportserver?/SampleReports/Territory Sales   
+https://server/reportserver?/SampleReports/Territory Sales   
 Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0  
 ```  
   

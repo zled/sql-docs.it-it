@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e03932fe9d6cc98648c2e0da2e2cdd963a8d67f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c247ab2681f2ff1b0891c15e0348a088f08e42c1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826139"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677580"
 ---
 # <a name="driver-manager-connection-pooling"></a>Pool di connessioni di Gestione driver
 Pool di connessioni consente a un'applicazione usare una connessione da un pool di connessioni che non è necessario stabilire nuovamente per ogni uso. Una volta una connessione sia stata creata e inserita in un pool, un'applicazione può riutilizzare la connessione senza eseguire il processo di connessione completa.  
@@ -59,11 +59,11 @@ Pool di connessioni consente a un'applicazione usare una connessione da un pool 
     > [!NOTE]  
     >  Il modo in cui è associata una connessione richiesta per una connessione in pool è determinato dall'attributo SQL_ATTR_CP_MATCH ambiente. Per altre informazioni, vedere [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
   
-     Le applicazioni ODBC tramite pool di connessioni devono chiamare [CoInitializeEx](http://go.microsoft.com/fwlink/?LinkID=116307) durante l'inizializzazione dell'applicazione e [CoUninitialize](http://go.microsoft.com/fwlink/?LinkId=116310) quando la chiusura dell'applicazione.  
+     Le applicazioni ODBC tramite pool di connessioni devono chiamare [CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307) durante l'inizializzazione dell'applicazione e [CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310) quando la chiusura dell'applicazione.  
   
 5.  Le chiamate **SQLDisconnect** al termine della connessione. La connessione viene restituita al pool di connessioni e diventa disponibile per il riutilizzo.  
   
- Per un'analisi approfondita, vedere [limitazione delle richieste in Microsoft Data Access Components](http://go.microsoft.com/fwlink/?LinkId=120776).  
+ Per un'analisi approfondita, vedere [limitazione delle richieste in Microsoft Data Access Components](https://go.microsoft.com/fwlink/?LinkId=120776).  
   
 ## <a name="connection-pooling-considerations"></a>Considerazioni sul pool di connessioni  
  Eseguire una delle azioni seguenti tramite un comando SQL (anziché tramite l'API ODBC) può influire sullo stato della connessione e causare problemi imprevisti quando è attivo il pool di connessioni:  
@@ -85,4 +85,4 @@ Pool di connessioni consente a un'applicazione usare una connessione da un pool 
 ## <a name="see-also"></a>Vedere anche  
  [La connessione a una Data sorgente o Driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [Sviluppo di un Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Limitazione delle richieste in Microsoft Data Access Components](http://go.microsoft.com/fwlink/?LinkId=120776)
+ [Limitazione delle richieste in Microsoft Data Access Components](https://go.microsoft.com/fwlink/?LinkId=120776)

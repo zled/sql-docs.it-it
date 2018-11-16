@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 83cb62f98da8022ee1d0eced56e03d20b2569a11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a12d08348a88529efdd84fd1ae5dab3c64d7d1c1
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614329"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814184"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilizzo del controllo RSClientPrint in applicazioni personalizzate
   Il controllo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** consente la stampa sul lato client dei report visualizzati nel Visualizzatore HTML. Offre una finestra di dialogo **Stampa** per consentire all'utente di avviare un processo di stampa, visualizzare un'anteprima di un report, specificare le pagine da stampare e modificare i margini. Durante la stampa sul lato client, il server di report esegue il rendering del report con l'estensione per il rendering Immagine (EMF) e utilizza le funzionalità di stampa del sistema operativo per creare il processo di stampa e inviarlo a una stampante.  
@@ -131,7 +131,7 @@ ms.locfileid: "47614329"
   
  `RSClientPrint.UICulture = 9;`  
   
- `RSClientPrint.Print('http://localhost/rtm', '%2fEmployee_Sales_Summary&ReportMonth=6&ReportYear=2004&EmpID=20', 'Employee_Sales_Summary')`  
+ `RSClientPrint.Print('https://localhost/rtm', '%2fEmployee_Sales_Summary&ReportMonth=6&ReportYear=2004&EmpID=20', 'Employee_Sales_Summary')`  
   
  `}`  
   

@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c10e012010eb51973f3833573b09f0bb7e5fa18
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: d71290c863f71894632d9092f3c51b2713d8d96f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782330"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696870"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -159,7 +159,7 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 ```  
 
 > [!NOTE]
-> Nel livello di compatibilità del database 130, le conversioni implicite dai tipi di dati datetime a datetime2 mostrano una maggiore precisione prevedendo i millisecondi frazionari, risultanti in diversi valori convertiti (come appare nell'esempio precedente). Usare il cast esplicito per il tipo di dati datetime2 ogni volta che si presenta uno scenario di confronto misto tra tipi di dati datetime e datetime2. Per altre informazioni, fare riferimento a questo [articolo del supporto tecnico Microsoft](http://support.microsoft.com/help/4010261).
+> Nel livello di compatibilità del database 130, le conversioni implicite dai tipi di dati datetime a datetime2 mostrano una maggiore precisione prevedendo i millisecondi frazionari, risultanti in diversi valori convertiti (come appare nell'esempio precedente). Usare il cast esplicito per il tipo di dati datetime2 ogni volta che si presenta uno scenario di confronto misto tra tipi di dati datetime e datetime2. Per altre informazioni, fare riferimento a questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/help/4010261).
 
 ### <a name="converting-string-literals-to-datetime2"></a>Conversione di valori letterali stringa nel tipo di dati datetime2  
 Le conversioni da valori letterali stringa a tipi di data e ora sono consentite se tutte le parti delle stringhe hanno formati validi. In caso contrario, viene generato un errore di runtime. Le conversioni implicite o esplicite che non specificano uno stile, dai tipi di data e ora ai valori letterali stringa, saranno nel formato predefinito della sessione corrente. Nella tabella seguente vengono illustrate le regole per la conversione di un valore letterale stringa nel tipo di dati **datetime2**.

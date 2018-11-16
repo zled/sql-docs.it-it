@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3b8b5baec563f2c5c99a08a730204581b6abdc7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f8f0b048d540647c41deff629dec5495c91d7e76
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021595"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812704"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gestione di un server di report in modalità nativa
   In questa sezione sono disponibili le procedure per la configurazione di un'istanza del server di report in modalità nativa utilizzando Gestione configurazione Reporting Services.  
@@ -52,7 +52,7 @@ ms.locfileid: "50021595"
  Viene illustrato come aprire le porte utilizzate per le richieste in ingresso e le risposte in uscita da un server di report.  
   
  [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- Vengono descritti i passaggi aggiuntivi richiesti per connettersi a Gestione report o a un server di report usando `http://localhost`.  
+ Vengono descritti i passaggi aggiuntivi richiesti per connettersi a Gestione report o a un server di report usando `https://localhost`.  
   
  [Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  Viene illustrato come configurare un'istanza remota del server di report a cui connettersi e da configurare per un computer diverso.  

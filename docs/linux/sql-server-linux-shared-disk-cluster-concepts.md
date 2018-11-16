@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: bc689b96be7fbfcf348ec6d55e27abcceb2024d6
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 668bf72f2673b123ce5a238dbbf5cd7af43604d4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032668"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676530"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Istanze del Cluster di failover: SQL Server in Linux
 
@@ -35,7 +35,7 @@ Per creare un SQL Server FCI in Linux, vedere [configurare SQL Server FCI in Lin
 
     Per altre informazioni su configurazione del cluster, opzioni dell'agente di risorsa, gestione, le procedure consigliate e indicazioni, vedere [SUSE Linux Enterprise ad alta disponibilità estensione 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-Sia il componente RHEL a disponibilità elevata e il HAE SUSE sono basate sulla [Pacemaker](http://clusterlabs.org/).
+Sia il componente RHEL a disponibilità elevata e il HAE SUSE sono basate sulla [Pacemaker](https://clusterlabs.org/).
 
 Come illustrato nella figura seguente, archiviazione viene presentata a due server. Componenti di clustering - Corosync e Pacemaker - coordinano le comunicazioni e gestione delle risorse. Uno dei server con connessione attiva per le risorse di archiviazione e SQL Server. Quando Pacemaker rileva un errore i componenti di clustering gestiscono lo spostamento avvenga a altro nodo.  
 

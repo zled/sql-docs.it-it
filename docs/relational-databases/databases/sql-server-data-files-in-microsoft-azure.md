@@ -5,19 +5,18 @@ ms.date: 10/02/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03d9dd525c06574360782a288faf2dae917f49cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87bc14e323d14ddbf64daae6fb441e2977a3af14
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822199"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675700"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>File di dati di SQL Server in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ ms.locfileid: "47822199"
 ### <a name="azure-storage-concepts"></a>Concetti relativi ad Archiviazione di Azure  
  Quando si usa la funzionalità relativa ai file di dati SQL Server in Microsoft Azure, è necessario creare un account di archiviazione e un contenitore in Microsoft Azure. Quindi, è necessario creare credenziali di SQL Server in cui includere le informazioni sui criteri del contenitore nonché una firma di accesso condiviso, necessaria per accedere al contenitore.  
   
- In [Microsoft Azure](https://azure.microsoft.com), un account di [archiviazione di Azure](https://azure.microsoft.com/services/storage/) rappresenta il livello più elevato dello spazio dei nomi per accedere agli oggetti BLOB. Un account di archiviazione può contenere un numero illimitato di contenitori, purché la dimensione totale sia minore dei limiti di archiviazione. Per le informazioni più recenti sui limiti di archiviazione, vedere [Sottoscrizione di Azure e limiti, quote e vincoli dei servizi](http://docs.microsoft.com/azure/azure-subscription-service-limits). Un contenitore fornisce un raggruppamento di un set di oggetti [BLOB](http://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). Tutti gli oggetti BLOB devono essere inclusi in un contenitore. Un account può contenere un numero illimitato di contenitori. Analogamente, in un contenitore è possibile archiviare un numero illimitato di oggetti BLOB. Esistono due tipi di oggetti BLOB che è possibile archiviare in Archiviazione di Azure: BLOB in blocchi e BLOB di pagine. Questa nuova funzionalità usa i BLOB di pagine, che sono più efficienti quando gli intervalli di byte in un file vengono modificati spesso. È possibile accedere agli oggetti BLOB utilizzando il seguente formato di URL: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+ In [Microsoft Azure](https://azure.microsoft.com), un account di [archiviazione di Azure](https://azure.microsoft.com/services/storage/) rappresenta il livello più elevato dello spazio dei nomi per accedere agli oggetti BLOB. Un account di archiviazione può contenere un numero illimitato di contenitori, purché la dimensione totale sia minore dei limiti di archiviazione. Per le informazioni più recenti sui limiti di archiviazione, vedere [Sottoscrizione di Azure e limiti, quote e vincoli dei servizi](https://docs.microsoft.com/azure/azure-subscription-service-limits). Un contenitore fornisce un raggruppamento di un set di oggetti [BLOB](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). Tutti gli oggetti BLOB devono essere inclusi in un contenitore. Un account può contenere un numero illimitato di contenitori. Analogamente, in un contenitore è possibile archiviare un numero illimitato di oggetti BLOB. Esistono due tipi di oggetti BLOB che è possibile archiviare in Archiviazione di Azure: BLOB in blocchi e BLOB di pagine. Questa nuova funzionalità usa i BLOB di pagine, che sono più efficienti quando gli intervalli di byte in un file vengono modificati spesso. È possibile accedere agli oggetti BLOB utilizzando il seguente formato di URL: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="azure-billing-considerations"></a>Considerazioni sulla fatturazione in Azure  
- La stima dei costi associati all'uso dei servizi Azure è un aspetto importante del processo decisionale e di pianificazione. Quando si archiviano file di dati di SQL Server in Archiviazione di Azure, è necessario pagare i costi associati all'archiviazione e alle transazioni. Inoltre, l'implementazione della funzionalità relativa ai file di dati di SQL Server in Archiviazione di Azure richiede il rinnovo del lease di un oggetto BLOB ogni 45-60 secondi in modo implicito. Questa operazione comporta dei costi di transazione per ogni file di database, ad esempio per i file con estensione MDF o LDF. Usare le informazioni disponibili nella pagina [Prezzi di Azure](http://azure.microsoft.com/pricing/) per calcolare i costi mensili associati all'uso di Archiviazione di Azure e Macchine virtuali di Azure.  
+ La stima dei costi associati all'uso dei servizi Azure è un aspetto importante del processo decisionale e di pianificazione. Quando si archiviano file di dati di SQL Server in Archiviazione di Azure, è necessario pagare i costi associati all'archiviazione e alle transazioni. Inoltre, l'implementazione della funzionalità relativa ai file di dati di SQL Server in Archiviazione di Azure richiede il rinnovo del lease di un oggetto BLOB ogni 45-60 secondi in modo implicito. Questa operazione comporta dei costi di transazione per ogni file di database, ad esempio per i file con estensione MDF o LDF. Usare le informazioni disponibili nella pagina [Prezzi di Azure](https://azure.microsoft.com/pricing/) per calcolare i costi mensili associati all'uso di Archiviazione di Azure e Macchine virtuali di Azure.  
   
 ### <a name="sql-server-concepts"></a>Concetti relativi a SQL Server  
  Quando si usa questa nuova funzionalità avanzata, è necessario eseguire le operazioni seguenti:  
@@ -64,7 +63,7 @@ ms.locfileid: "47822199"
   
 -   È necessario archiviare le informazioni relative al contenitore di Archiviazione di Azure, il nome dei criteri e la chiave SAS associati nell'archivio delle credenziali di SQL Server.  
   
- Nell'esempio seguente si presuppone che un contenitore di archiviazione di Azure sia stato creato e che i criteri siano stati creati con diritti di lettura, scrittura ed elenco. La creazione dei criteri in un contenitore genera una chiave SAS che può essere conservata non crittografata in memoria e che è richiesta da SQL Server per accedere ai file BLOB nel contenitore. Nel frammento di codice seguente sostituire `'<your SAS key>'` con una voce simile alla seguente: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Per altre informazioni, vedere [Gestire l'accesso in lettura anonimo a contenitori e BLOB](http://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources).  
+ Nell'esempio seguente si presuppone che un contenitore di archiviazione di Azure sia stato creato e che i criteri siano stati creati con diritti di lettura, scrittura ed elenco. La creazione dei criteri in un contenitore genera una chiave SAS che può essere conservata non crittografata in memoria e che è richiesta da SQL Server per accedere ai file BLOB nel contenitore. Nel frammento di codice seguente sostituire `'<your SAS key>'` con una voce simile alla seguente: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Per altre informazioni, vedere [Gestire l'accesso in lettura anonimo a contenitori e BLOB](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources).  
   
 ```sql
 CREATE CREDENTIAL [https://testdb.blob.core.windows.net/data]  
@@ -94,9 +93,9 @@ ON
 ### <a name="installation-prerequisites"></a>Prerequisiti di installazione  
  Di seguito sono riportati i prerequisiti di installazione a cui attenersi durante l'archiviazione di file di dati di SQL Server in Azure.  
   
--   **Istanza locale di SQL Server:** questa funzionalità è inclusa in SQL Server 2016 e versioni successive. Per informazioni su come scaricare la versione più recente di SQL Server, vedere [SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads).  
+-   **Istanza locale di SQL Server:** questa funzionalità è inclusa in SQL Server 2016 e versioni successive. Per informazioni su come scaricare la versione più recente di SQL Server, vedere [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).  
   
--   SQL Server in esecuzione in una macchina virtuale di Azure: se si installa [SQL Server in una macchina virtuale di Azure](http://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1), installare SQL Server 2016 oppure aggiornare l'istanza esistente. Analogamente, è possibile creare una nuova macchina virtuale in Azure usando un'immagine della piattaforma di SQL Server 2016.
+-   SQL Server in esecuzione in una macchina virtuale di Azure: se si installa [SQL Server in una macchina virtuale di Azure](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1), installare SQL Server 2016 oppure aggiornare l'istanza esistente. Analogamente, è possibile creare una nuova macchina virtuale in Azure usando un'immagine della piattaforma di SQL Server 2016.
 
   
 ###  <a name="bkmk_Limitations"></a> Limitazioni  
@@ -109,7 +108,7 @@ ON
   
 -   Quando si usa la funzionalità relativa ai file di dati di SQL Server in Azure, la replica geografica per l'account di archiviazione non è supportata. Se un account di archiviazione viene sottoposto alla replica a livello geografico e si verifica un failover a livello geografico, il database può danneggiarsi.  
   
--   Per le limitazioni di capacità, vedere [Introduzione all'archiviazione BLOB](http://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
+-   Per le limitazioni di capacità, vedere [Introduzione all'archiviazione BLOB](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
   
 -   Non è possibile archiviare i dati di OLTP in memoria in BLOB di Azure usando la funzionalità relativa ai file di dati di SQL Server in Archiviazione di Azure. Ciò è dovuto al fatto che i dati di OLTP in memoria dipendono da **FileStream** e nella versione corrente di questa funzionalità l'archiviazione dei dati **FileStream** in Archiviazione di Azure non è supportata.  
   
@@ -123,7 +122,7 @@ ON
  Questa sezione descrive gli strumenti e le librerie di riferimento per la programmazione che è possibile usare quando si archiviano file di dati di SQL Server in Archiviazione di Azure.  
   
 ### <a name="powershell-support"></a>Supporto PowerShell  
- Usare i cmdlet di PowerShell per archiviare file di dati di SQL Server nel servizio di archiviazione BLOB di Azure facendo riferimento a un percorso URL di archiviazione BLOB anziché a un percorso di file. Accedere agli oggetti BLOB usando il formato di URL seguente`http://storageaccount.blob.core.windows.net/<container>/<blob>` .  
+ Usare i cmdlet di PowerShell per archiviare file di dati di SQL Server nel servizio di archiviazione BLOB di Azure facendo riferimento a un percorso URL di archiviazione BLOB anziché a un percorso di file. Accedere agli oggetti BLOB usando il formato di URL seguente`https://storageaccount.blob.core.windows.net/<container>/<blob>` .  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>Supporto di oggetti di SQL Server e dei contatori delle prestazioni  
  A partire da SQL Server 2014 è stato aggiunto un nuovo oggetto di SQL Server da usare con la funzionalità relativa ai file di dati di SQL Server in Archiviazione di Azure. Il nuovo oggetto di SQL Server è denominato [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) e può essere usato da Monitoraggio di sistema per monitorare l'attività quando SQL Server viene eseguito con il servizio di archiviazione di Microsoft Azure.  

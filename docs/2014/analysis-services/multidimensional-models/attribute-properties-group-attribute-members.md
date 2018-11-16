@@ -23,12 +23,12 @@ ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 366c93b8110f8e9f0a9ef5bb418638c841585d5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f7ff454dd4464fab5173c4d0022bd94543c1dad
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164661"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814044"
 ---
 # <a name="group-attribute-members-discretization"></a>Raggruppare membri di attributo (discretizzazione)
   Un gruppo di membri è una raccolta generata dal sistema di membri consecutivi di una dimensione. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], i membri di un attributo possono essere raggruppati in gruppi di membri tramite un processo denominato "discretizzazione". Un livello di una gerarchia contiene gruppi di membri o membri, ma non entrambi. Esplorando un livello contenente gruppi di membri, gli utenti aziendali visualizzano i nomi e i valori delle celle dei gruppi di membri. I membri generati da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per supportare i gruppi di membri vengono denominati membri di raggruppamento e vengono visualizzati come membri ordinari.  
@@ -38,15 +38,15 @@ ms.locfileid: "48164661"
 |Impostazione di `DiscretizationMethod`|Description|  
 |--------------------------------------|-----------------|  
 |`None`|Visualizza i membri.|  
-|`Automatic`|Seleziona il metodo che meglio rappresenta i dati: entrambi i `EqualAreas` metodo o il `Clusters` (metodo).|  
+|`Automatic`|Seleziona il metodo in grado di rappresentare in modo ottimale i dati, ovvero il metodo `EqualAreas` o il metodo `Clusters`.|  
 |`EqualAreas`|Tenta di suddividere i membri dell'attributo in gruppi contenenti un numero uguale di membri.|  
 |`Clusters`|Tenta di suddividere i membri dell'attributo in gruppi eseguendo il campionamento dei dati di training, l'inizializzazione su un numero di punti casuali e diverse iterazioni dell'algoritmo di clustering EM (Expectation Maximization).<br /><br /> Questo metodo è utile perché può essere applicato a qualsiasi curva di distribuzione, ma determina tempi di elaborazione più lunghi.|  
   
  La proprietà `DiscretizationNumber` degli attributi specifica il numero di gruppi da visualizzare. Se la proprietà è impostata sul valore predefinito 0, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina il numero di gruppi eseguendo il campionamento o la lettura dei dati, in base all'impostazione della proprietà `DiscretizationMethod`.  
   
- L'ordinamento dei membri nei gruppi di membri viene controllato tramite il `OrderBy` proprietà dell'attributo. I membri di un gruppo di membri vengono ordinati consecutivamente in base a tale ordinamento.  
+ L'ordinamento dei membri nei gruppi di membri viene controllato tramite la proprietà `OrderBy` dell'attributo. I membri di un gruppo di membri vengono ordinati consecutivamente in base a tale ordinamento.  
   
- Un utilizzo comune per i gruppi di membri è il drill-down da un livello con pochi membri a uno con molti membri. Per consentire agli utenti il drill-down tra i livelli, cambiare l'impostazione della proprietà `DiscretizationMethod` dell'attributo per il livello contenente numerosi membri da `None` a uno dei metodi di discretizzazione descritti nella tabella precedente. Se una dimensione Client contiene una gerarchia dell'attributo Client Name con 500.000 membri, ad esempio, È possibile rinominare tale attributo Client Groups e impostare il `DiscretizationMethod` proprietà `Automatic` per visualizzare i gruppi di membri al livello di membro gerarchia attributi.  
+ Un utilizzo comune per i gruppi di membri è il drill-down da un livello con pochi membri a uno con molti membri. Per consentire agli utenti il drill-down tra i livelli, cambiare l'impostazione della proprietà `DiscretizationMethod` dell'attributo per il livello contenente numerosi membri da `None` a uno dei metodi di discretizzazione descritti nella tabella precedente. Se una dimensione Client contiene una gerarchia dell'attributo Client Name con 500.000 membri, ad esempio, è possibile rinominare tale attributo Client Groups e impostare la proprietà `DiscretizationMethod` su `Automatic` per visualizzare gruppi di membri al livello dei membri della gerarchia dell'attributo.  
   
  Per eseguire il drill-down ai singoli client in ogni gruppo, è possibile creare un'altra gerarchia dell'attributo Client Name associata alla stessa colonna della tabella. Creare quindi una nuova gerarchia utente basata sui due attributi. Il livello principale sarà basato sull'attributo Client Groups e il livello inferiore sarà basato sull'attributo Client Name. La proprietà `IsAggregatable` sarà `True` per entrambi gli attributi. L'utente potrà quindi espandere il livello (Totale) nella gerarchia per visualizzare i membri del gruppo ed espandere i membri del gruppo per visualizzare i membri foglia della gerarchia. Per nascondere il livello dei gruppi o dei client, è possibile impostare la proprietà `AttributeHierarchyVisible` su `False` per l'attributo corrispondente.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48164661"
   
  `<First definition> ::= <Name expression>`  
   
- `<Intermediate defintion> ::= <Name expression>`  
+ `<Intermediate definition> ::= <Name expression>`  
   
  `<Last definition> ::= <Name expression>`  
   

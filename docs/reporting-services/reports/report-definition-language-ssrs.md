@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 467490b7d02c0712606f1be3cf90da2d5448c6f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8303c08d67a6a18b7dff13db60fccf5653cbae18
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028540"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813510"
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
   Report Definition Language (RDL) è una rappresentazione XML di una definizione di un report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una definizione del report contiene informazioni sul layout e sul recupero dei dati per un report. RDL è costituito da elementi XML che corrispondono a una grammatica XML creata per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È possibile aggiungere funzioni personalizzate per il controllo dei valori degli elementi del report, degli stili e della formattazione mediante l'accesso agli assembly di codice all'interno dei file di definizione dei report.  
@@ -43,7 +43,7 @@ ms.locfileid: "50028540"
   
  Ad esempio, lo schema seguente include l'elemento RDL **ReportParameters**che è il tipo complesso **ReportParametersType**. Per convenzione, un tipo complesso per un elemento è il nome dell'elemento seguito dalla parola **Type**. Un elemento **ReportParameters** può essere contenuto dall'elemento **Report** (un tipo complesso) e contenere elementi **ReportParameter** . Un **ReportParameterType** è un tipo semplice che può essere solo uno dei seguenti valori: **Boolean**, **DateTime**, **Integer**, **Float**o **String**. Per altre informazioni sui tipi di dati dell'elemento XML Schema, vedere [XML Schema Parte 2: Tipi di dati Seconda edizione](https://go.microsoft.com/fwlink/?linkid=4871).  
   
- L'XSD RDL è disponibile nel file ReportDefinition.xsd, contenuto nella cartella Extras nel CD-ROM del prodotto. È anche disponibile nel server di report tramite l'URL seguente: `http://servername/reportserver/reportdefinition.xsd`.  
+ L'XSD RDL è disponibile nel file ReportDefinition.xsd, contenuto nella cartella Extras nel CD-ROM del prodotto. È anche disponibile nel server di report tramite l'URL seguente: `https://servername/reportserver/reportdefinition.xsd`.  
   
 ##  <a name="bkmk_Creating_RDL"></a> Creazione di RDL  
  La natura aperta ed estensibile di RDL consente di compilare una varietà di strumenti e applicazioni per la generazione di codice RDL in base al relativo XML Schema.  
@@ -61,7 +61,7 @@ ms.locfileid: "50028540"
 |----------|-----------------|  
 |**Binario**|Proprietà con valore binario codificato in base 64.|  
 |**Boolean**|Proprietà con **true** o **false** come valore dell'oggetto. Se non diversamente specificato, il valore di un oggetto booleano facoltativo omesso è **False**.|  
-|**Date**|Proprietà con un valore di data o ora specificato per intero nel formato di data ISO8601: AAAA-MM-GG[THH:MM[:SS[.S]]].|  
+|**Data**|Proprietà con un valore di data o ora specificato per intero nel formato di data ISO8601: AAAA-MM-GG[THH:MM[:SS[.S]]].|  
 |**Enum**|Proprietà con un valore di testo stringa che deve essere presente in un elenco di valori designati.|  
 |**Float**|Proprietà con un valore float. La virgola (,) viene utilizzata come separatore decimale facoltativo.|  
 |**Integer**|Proprietà con un valore intero (int32).|  

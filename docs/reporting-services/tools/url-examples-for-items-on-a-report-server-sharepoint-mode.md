@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a21d053818991c19e8b57ce60c11f4766973b6ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b787bdccdb913bd95051c8e3a4a3dd37fed5c01
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839559"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812954"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Esempi di URL per gli elementi in un server di report - Modalità SharePoint
   Per pubblicare report ed elementi correlati in una raccolta di SharePoint, è possibile pubblicare il contenuto mediante gli strumenti di creazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ad esempio Progettazione report, oppure caricare il contenuto tramite le azioni sito di SharePoint.  
@@ -47,21 +47,21 @@ ms.locfileid: "47839559"
  L'utilizzo dell'endpoint proxy dell'URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è supportato. Gli endpoint proxy includono un numero di porta, ad esempio `http:*//servername:8080/reportserver*`.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL per un sito o un sito secondario di SharePoint Server  
- Quando si distribuisce un report o un'origine dati del report, è necessario utilizzare un URL del sito e dell'eventuale sito secondario di SharePoint. Nell'URL, il nome del sito si trova immediatamente dopo il nome del server, ad esempio `http://*servername/site*` o `http://*servername/site/subsite*`.  
+ Quando si distribuisce un report o un'origine dati del report, è necessario utilizzare un URL del sito e dell'eventuale sito secondario di SharePoint. Nell'URL, il nome del sito si trova immediatamente dopo il nome del server, ad esempio `https://*servername/site*` o `https://*servername/site/subsite*`.  
   
  In un'applicazione Web di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] il sito e il sito secondario corrispondono spesso alle schede nel sito principale. Per trovare il nome del sito o del sito secondario, fare clic su **Home**e quindi su **Tutto il contenuto del sito**. Scorrere fino alla fine e cercare **Siti e aree di lavoro**. L'elenco dei siti si trova in questa sezione.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL di una raccolta di SharePoint  
  Quando si distribuisce un report o un elemento correlato in una raccolta di SharePoint, è necessario utilizzare l'URL di quest'ultima. L'URL da utilizzare per una raccolta varia a seconda della versione di SharePoint in uso.  
   
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] la libreria si trova dopo il nome del server, ad esempio `http://*servername/*Shared Documents`.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] la libreria si trova dopo il nome del server, ad esempio `https://*servername/*Shared Documents`.  
   
- In [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]la raccolta è invece indicata dopo il sito e il sito secondario. Ad esempio, `http://*servername/site/*Documents`.  
+ In [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]la raccolta è invece indicata dopo il sito e il sito secondario. Ad esempio, `https://*servername/site/*Documents`.  
   
  Per trovare le informazioni sul percorso di una nuova raccolta di SharePoint o per un sito con cui non si ha familiarità, aprire un browser e individuare la raccolta di SharePoint in cui si desidera pubblicare i report. Se la raccolta è vuota, caricare uno o più file. Fare clic con il pulsante destro del mouse sul file e scegliere **Proprietà** per aprire la finestra **Proprietà** . L'indirizzo del file include i valori dell'URL necessari per l'operazione di pubblicazione.  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>URL completi per gli elementi di un sito di SharePoint  
- Agli elementi archiviati in una raccolta di SharePoint sono sempre associati indirizzi rappresentati da URL completi che iniziano con l'applicazione Web (`http://*server*`) in qualità di nodo radice e terminano con il nome del file a cui viene fatto riferimento.  
+ Agli elementi archiviati in una raccolta di SharePoint sono sempre associati indirizzi rappresentati da URL completi che iniziano con l'applicazione Web (`https://*server*`) in qualità di nodo radice e terminano con il nome del file a cui viene fatto riferimento.  
   
  I nomi file nell'URL devono includere l'estensione.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47839559"
  Per specificare un report drill-through, includere l'URL in un'espressione. Ad esempio per specificare il report denominato SalesDetails come report drill-through, nell'azione per la casella di testo o il testo segnaposto, impostare ReportName sull'espressione seguente:  
   
 ```  
-="http://site/subsite/documentlibrary/SalesDetails.rdl"  
+="https://site/subsite/documentlibrary/SalesDetails.rdl"  
 ```  
   
 ### <a name="reserved-names-on-sharepoint-sites"></a>Nomi riservati in siti di SharePoint  
@@ -94,11 +94,11 @@ ms.locfileid: "47839559"
   
 |Destinazione|URL di esempio|  
 |------------|-----------------|  
-|Un server di SharePoint.|`http://TestServer`|  
-|Un sito o sito secondario del server di SharePoint.|`http://TestServer/toplevelsite/subsite`|  
-|Il report di esempio Company Sales in **Documenti condivisi** in una distribuzione di [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] .|`http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
-|Il report di esempio Company Sales nella cartella **Documents/Doc** in un'istanza di [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
-|Il report di esempio Company Sales in un **Centro report** in un'istanza di [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
+|Un server di SharePoint.|`https://TestServer`|  
+|Un sito o sito secondario del server di SharePoint.|`https://TestServer/toplevelsite/subsite`|  
+|Il report di esempio Company Sales in **Documenti condivisi** in una distribuzione di [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] .|`https://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
+|Il report di esempio Company Sales nella cartella **Documents/Doc** in un'istanza di [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
+|Il report di esempio Company Sales in un **Centro report** in un'istanza di [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
 ##  <a name="publishingToDocLib"></a> Pubblicazione da uno strumento di creazione in una raccolta di SharePoint  
  Quando per pubblicare in una raccolta i report e i file correlati si utilizza uno strumento di creazione dei report, i file vengono convalidati prima di essere aggiunti. Se invece si caricano i report e i file correlati usando l'azione **Carica** in una raccolta di SharePoint, non viene eseguito alcun controllo di convalida. In questo caso, non sarà possibile sapere se il file è valido fino a quando non si accederà al report per gestirlo, modificarlo o eseguirlo.  

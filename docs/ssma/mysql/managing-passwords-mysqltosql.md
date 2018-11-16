@@ -13,12 +13,12 @@ ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: cbe616fb2aae8387d000520ead5586abca2db961
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7c9515b1ea4260d7e6843c9f3c1c0777e300c392
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099394"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656841"
 ---
 # <a name="managing-passwords-mysqltosql"></a>Gestione delle password (MySQLToSQL)
 Questa sezione riguarda la protezione delle password di database e la procedura per importare o esportare tali tra server:  
@@ -131,5 +131,5 @@ Esempio:
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione della Console SSMA (MySQL)](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[Esecuzione della Console SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

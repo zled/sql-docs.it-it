@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fbada45cdf1112f757113491b16aa92fa4d5f359
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c49eadcdfb290f46bd523605c789f0f298653ca6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808149"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814224"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Amministrare un database del server di report (modalità nativa SSRS)
   In una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono utilizzati due database relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione interna. Per impostazione predefinita, i database sono denominati ReportServer e ReportServerTempdb. ReportServerTempdb viene creato con il database primario del server di report e viene utilizzato per l'archiviazione di dati temporanei, informazioni sulla sessione e report memorizzati nella cache.  
@@ -74,7 +74,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>Informazioni sulle versioni del database  
- In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]non sono disponibili informazioni esplicite sulla versione del database. Tuttavia, poiché le versioni del database sono sempre sincronizzate con le versioni del prodotto, è possibile utilizzare le informazioni relative alla versione del prodotto per stabilire quando la versione del database è stata modificata. Le informazioni sulla versione del prodotto per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili tramite le informazioni sulla versione di file contenute nei file di log, nelle intestazioni delle chiamate SOAP e quando ci si connette all'URL del server di report (ad esempio quando si apre un browser su `http://localhost/reportserver`).  
+ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]non sono disponibili informazioni esplicite sulla versione del database. Tuttavia, poiché le versioni del database sono sempre sincronizzate con le versioni del prodotto, è possibile utilizzare le informazioni relative alla versione del prodotto per stabilire quando la versione del database è stata modificata. Le informazioni sulla versione del prodotto per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili tramite le informazioni sulla versione di file contenute nei file di log, nelle intestazioni delle chiamate SOAP e quando ci si connette all'URL del server di report (ad esempio quando si apre un browser su `https://localhost/reportserver`).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

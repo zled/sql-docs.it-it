@@ -16,12 +16,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92e732924f3e5c6d4604ea194330605b2ec86d5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531a20353b294d24bee8318da863eec6d05522d9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814049"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675290"
 ---
 # <a name="extensible-key-management-ekm"></a>Extensible Key Management (EKM)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47814049"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Extensible Key Management consente ai fornitori di EKM/HSM di terze parti di registrare i propri moduli in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando registrati, gli utenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono usare le chiavi di crittografia archiviate nei moduli EKM. Ciò consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di accedere alle funzionalità di crittografia avanzate supportate da tali moduli, quali la crittografia e decrittografia bulk e le funzioni di gestione delle chiavi quali il periodo di permanenza e la rotazione delle chiavi.  
   
- Quando si esegue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in una macchina virtuale di Azure, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può usare le chiavi archiviate nell' [insieme di credenziali chiave di Azure](http://go.microsoft.com/fwlink/?LinkId=521401). Per altre informazioni, vedere [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+ Quando si esegue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in una macchina virtuale di Azure, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può usare le chiavi archiviate nell' [insieme di credenziali chiave di Azure](https://go.microsoft.com/fwlink/?LinkId=521401). Per altre informazioni, vedere [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 ## <a name="ekm-configuration"></a>Configurazione EKM  
  Extensible Key Management non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af97fe48532d87f252cb9d86934d536611a33198
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bcb77ea92b255b15698596f73064404581c34b76
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021796"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813154"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo di connessione XML (SSRS)
   Per includere dati nel report da un'origine dati XML, è necessario disporre di un set di dati basato su un'origine dati del report di tipo XML. Questo tipo di origine dati incorporato è basato sull'estensione per i dati XML. Utilizzare questo tipo di origine dati per connettersi e recuperare dati da documenti XML, servizi Web o valori XML incorporati nella query.  
@@ -29,8 +29,8 @@ ms.locfileid: "50021796"
   
 |Tipo di documento XML|Esempio di stringa di connessione|  
 |-----------------------|-------------------------------|  
-|Servizio Web|`http://adventure-works.com/results.aspx`|  
-|Documento XML|`http://localhost/XML/Customers.xml`|  
+|Servizio Web|`https://adventure-works.com/results.aspx`|  
+|Documento XML|`https://localhost/XML/Customers.xml`|  
 |Documento XML incorporato|*Vuoto*|  
   
  Per altri esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  

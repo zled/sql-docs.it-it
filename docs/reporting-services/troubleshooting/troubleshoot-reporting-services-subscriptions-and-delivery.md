@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a8384ad803f70b6ec4bcca2bca49390f969a661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b6a2665e963f552a7d5cb726b5d7904f7a13415
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604309"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812725"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Risolvere i problemi di sottoscrizioni e recapito di Reporting Services
   
@@ -67,7 +67,7 @@ Le sottoscrizioni possono non venire eseguite nei casi seguenti:
 * Le impostazioni delle credenziali sono state modificate, passando da valori archiviati a valori integrati o su richiesta.  
 * Il nome del parametro o il tipo di dati è stato modificato nella definizione del report e il report è stato ripubblicato. Se in una sottoscrizione è incluso un parametro non più valido, la sottoscrizione diventerà inattiva.  
   
-Per altre informazioni, vedere Wiki di TechNet [Troubleshoot issues and errors with Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx)(Risoluzione di problemi ed errori di Reporting Services).  
+Per altre informazioni, vedere Wiki di TechNet [Troubleshoot issues and errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx)(Risoluzione di problemi ed errori di Reporting Services).  
   
   
     

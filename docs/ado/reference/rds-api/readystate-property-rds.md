@@ -14,18 +14,18 @@ ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54f122c178a663c1080093d1f6d391a4869c3ac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c575683b5ec23c6739a37eae177be004efea0a57
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632569"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599902"
 ---
 # <a name="readystate-property-rds"></a>Proprietà ReadyState (Servizi Desktop remoto)
 Indica lo stato di un [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto come il recupero di dati nel relativo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Imposta o restituisce uno dei valori seguenti.  

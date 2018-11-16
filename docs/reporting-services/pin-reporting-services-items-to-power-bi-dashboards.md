@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5d8b28b0799ec5ffac1f00e54cf2305a1027bc35
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d0a87e49956227a168bb77059ae9311d8c775c4e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031410"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813231"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Aggiungere elementi di Reporting Services ai dashboard di Power BI
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] consente agli utenti di aggiungere elementi del report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dalla barra degli strumenti di Visualizzatore report a un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] come nuovo riquadro.   Per aggiungere elementi, l'amministratore deve innanzitutto integrare il server di report con Azure Active Directory e [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "50031410"
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   Aggiungere il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Visualizzatore di report in [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], ad esempio `http://myserver/Reports`.  Non è possibile aggiungere elementi da [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], da Progettazione report in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]o da un URL del server di report.  Ad esempio, `http://myserver/ReportServer`.  
+-   Aggiungere il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Visualizzatore di report in [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], ad esempio `https://myserver/Reports`.  Non è possibile aggiungere elementi da [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], da Progettazione report in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]o da un URL del server di report.  Ad esempio, `https://myserver/ReportServer`.  
   
 -   Il browser deve essere configurato per consentire i popup dal sito del server di report.  
   

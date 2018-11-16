@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0912f9404f59f57e4a0a09ae2346049bbb01c97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c6e008139eb9e52583045690cdc51b812ef8e73
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638509"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642268"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta due modelli di distribuzione, ovvero il modello di distribuzione del progetto e il modello di distribuzione del pacchetto legacy. Tramite il modello di distribuzione del progetto è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -109,7 +109,7 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
     -   Se il progetto è stato creato in una versione precedente di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], dopo aver aperto il file di progetto in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], convertirlo nel modello di distribuzione del progetto.  
   
         > [!NOTE]  
-        >  Se nel progetto sono incluse una o più origini dati, queste ultime vengono rimosse al completamento della conversione del progetto. Per creare una connessione a un'origine dati che può essere condivisa dai pacchetti nel progetto, aggiungere una gestione connessione a livello del progetto. Per altre informazioni, vedere [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+        >  Se nel progetto sono incluse una o più origini dati, queste ultime vengono rimosse al completamento della conversione del progetto. Per creare una connessione a un'origine dati che può essere condivisa dai pacchetti nel progetto, aggiungere una gestione connessione a livello del progetto. Per altre informazioni, vedere [aggiungere, eliminare o condividere una gestione connessione in un pacchetto](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
          Le diverse attività di conversione eseguite dalla **Conversione guidata progetto di Integration Services** variano a seconda che la procedura guidata venga eseguita da [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -513,7 +513,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   Con la **Conversione guidata progetto di Integration Services** è possibile convertire un progetto nel modello di distribuzione del progetto.  
   
 > [!NOTE]  
->  Se nel progetto sono incluse una o più origini dati, queste ultime vengono rimosse al completamento della conversione del progetto. Per creare una connessione a un'origine dati che può essere condivisa dai pacchetti nel progetto, aggiungere una gestione connessione al livello del progetto. Per altre informazioni, vedere [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+>  Se nel progetto sono incluse una o più origini dati, queste ultime vengono rimosse al completamento della conversione del progetto. Per creare una connessione a un'origine dati che può essere condivisa dai pacchetti nel progetto, aggiungere una gestione connessione al livello del progetto. Per altre informazioni, vedere [aggiungere, eliminare o condividere una gestione connessione in un pacchetto](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
  **Per saperne di più**  
   

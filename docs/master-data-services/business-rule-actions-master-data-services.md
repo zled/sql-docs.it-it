@@ -12,12 +12,12 @@ ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 22cd64be469f9e8c1ebdcac7bd463bbf4d6d9c26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e028d1238a0bb41207d5a88f4c219dac7cb392cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694189"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696599"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Azioni Regola business (Master Data Services)
 
@@ -54,7 +54,7 @@ ms.locfileid: "47694189"
 |---------------------|-----------------|  
 |**è obbligatorio**|L'attributo selezionato **è obbligatorio**, ovvero non può essere null o vuoto.<br /><br /> Questa azione è valida per valori di testo, numerici, di data e di collegamento.|  
 |**non è valido**|L'attributo selezionato **non è valido**.<br /><br /> Questa azione è valida per valori di testo, numerici, di data e di collegamento.|  
-|**deve contenere il modello**|L'attributo selezionato **deve contenere il modello** specificato. Utilizzare le espressioni regolari di .NET Framework per specificare il modello.<br /><br /> Per ulteriori informazioni su espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](http://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.<br /><br /> Questa azione è valida per valori di testo e di collegamento.|  
+|**deve contenere il modello**|L'attributo selezionato **deve contenere il modello** specificato. Utilizzare le espressioni regolari di .NET Framework per specificare il modello.<br /><br /> Per ulteriori informazioni su espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](https://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.<br /><br /> Questa azione è valida per valori di testo e di collegamento.|  
 |**deve essere univoco**|L'attributo selezionato **deve essere univoco** in modo indipendente o in combinazione con gli attributi definiti.<br /><br /> **Procedura consigliata:** combinare questa azione con una condizione obbligatoria per garantire la validità dei campi di indice nei sistemi di sottoscrizione.<br /><br /> Questa azione è valida per valori di testo, numerici, di data e di collegamento.<br /><br /> **NOTA**: se il primo attributo è di tipo DateTime, non può essere usato in combinazione con un attributo di tipo Numeric o Text. Se il primo attributo è di tipo Numeric, non può essere usato in combinazione con un attributo di tipo DateTime.|  
 |**deve avere uno dei seguenti valori**|L'attributo selezionato **deve avere uno dei seguenti valori** specificati in un elenco.<br /><br /> Questa azione è valida per valori di testo.|  
 |**deve essere maggiore di**|L'attributo selezionato **deve essere maggiore di** un attributo specifico o di un valore di attributo specifico oppure deve essere vuoto.<br /><br /> Questa azione è valida per valori di testo, numerici e di data.|  
@@ -71,7 +71,7 @@ ms.locfileid: "47694189"
   
 |Nome dell'azione|Descrizione|  
 |-----------------|-----------------|  
-|**avvia il flusso di lavoro**|Avvia un flusso di lavoro esterno. I dati che hanno causato questa azione vengono passati al flusso di lavoro. Per ulteriori informazioni, vedere [Integrazione del flusso di lavoro SharePoint con Master Data Services](http://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Questa azione è valida per valori di testo, numerici, di data e di collegamento.|  
+|**avvia il flusso di lavoro**|Avvia un flusso di lavoro esterno. I dati che hanno causato questa azione vengono passati al flusso di lavoro. Per ulteriori informazioni, vedere [Integrazione del flusso di lavoro SharePoint con Master Data Services](https://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Questa azione è valida per valori di testo, numerici, di data e di collegamento.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Condizioni della regola business &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   

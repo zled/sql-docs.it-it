@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67eab65f8ead5fe1cc4934671f8d11be2944044a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30514478f54d71d88245ace385600cb2931101eb
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737739"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814144"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Aggiungere un collegamento ipertestuale a un URL (Generatore report e SSRS)
 Informazioni su come aggiungere azioni con collegamento ipertestuale a caselle di testo, immagini, grafici e misuratori in report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . I collegamenti possono indirizzare ad altri report, a segnalibri di un report o a URL statici o dinamici. 
@@ -73,9 +73,9 @@ Provare ad aggiungere collegamenti ipertestuali con i dati di esempio forniti in
   
 4.  In **Selezionare un URL**digitare o selezionare un URL o un'espressione che restituisca un URL oppure fare clic sulla freccia a discesa e selezionare il nome di un campo contenente un URL. 
 
-    Per un elemento pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio, `http://<servername>/images/image1.jpg`. 
+    Per un elemento pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio, `https://<servername>/images/image1.jpg`. 
     
-    Per un elemento pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo. Ad esempio, `http://<SharePointservername>/<site>/Documents/images/image1.jpg`.
+    Per un elemento pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo. Ad esempio, `https://<SharePointservername>/<site>/Documents/images/image1.jpg`.
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

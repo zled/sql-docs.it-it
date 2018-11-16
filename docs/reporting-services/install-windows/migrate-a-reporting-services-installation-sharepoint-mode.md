@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf12709e232d4b9d84f311784f78d469b7f00e7b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: fd029f997770dd78269f58bed5daddc60699fb8a
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021315"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813404"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Migrazione di un'installazione di Reporting Services in modalità SharePoint
 
@@ -48,9 +48,9 @@ ms.locfileid: "50021315"
 ###  <a name="bkmk_content_only_migration"></a> Migrazione solo del contenuto  
  **Migrazione solo del contenuto di Reporting Services:** se è necessario copiare il contenuto di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una nuova farm, sarà necessario utilizzare strumenti come **rs.exe** per copiare il contenuto nella nuova installazione di SharePoint. Per altre informazioni sulle migrazioni solo del contenuto, vedere quanto riportato di seguito:  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :** gli script consentono di eseguire la migrazione del contenuto e delle risorse tra i server di report in modalità SharePoint e in modalità nativa. Per altre informazioni, vedere [Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) e [Script di esempio rs.exe di Reporting Services per la migrazione del contenuto tra server di report](http://azuresql.codeplex.com/releases/view/115207).  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :** gli script consentono di eseguire la migrazione del contenuto e delle risorse tra i server di report in modalità SharePoint e in modalità nativa. Per altre informazioni, vedere [Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) e [Script di esempio rs.exe di Reporting Services per la migrazione del contenuto tra server di report](https://azuresql.codeplex.com/releases/view/115207).  
   
--   **Strumento di migrazione di Reporting Services:** lo strumento consente di copiare gli elementi del report da un server in modalità nativa a un server in modalità SharePoint. Per altre informazioni, vedere la pagina relativa allo [strumento di migrazione di Reporting Services](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
+-   **Strumento di migrazione di Reporting Services:** lo strumento consente di copiare gli elementi del report da un server in modalità nativa a un server in modalità SharePoint. Per altre informazioni, vedere la pagina relativa allo [strumento di migrazione di Reporting Services](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560).  
   
 ###  <a name="bkmk_full_migration"></a> Migrazione completa  
  **Migrazione completa:** se si desidera eseguire la migrazione dei database del contenuto di SharePoint insieme ai database del catalogo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a una nuova farm, è possibile ricorrere a una serie di opzioni di backup e ripristino riepilogate nel presente argomento. In alcuni casi per la fase di ripristino sarà necessario usare uno strumento diverso da quello usato per la fase di backup. È ad esempio possibile usare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per eseguire il backup delle chiavi di crittografia da una versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ma è necessario usare Amministrazione centrale SharePoint o PowerShell per ripristinare le chiavi di crittografia in un'installazione della modalità SharePoint di SQL Server 2016 Reporting Services.  

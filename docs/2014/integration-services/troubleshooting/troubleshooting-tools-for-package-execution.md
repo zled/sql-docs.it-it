@@ -72,7 +72,7 @@ ms.locfileid: "48132411"
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite la registrazione  
  Abilitando la registrazione è possibile tenere traccia di ciò che avviene durante l'esecuzione dei pacchetti. I provider di log consentono di acquisire informazioni sugli eventi specificati da utilizzare per un'analisi successiva e di salvare tali informazioni in una tabella di database, in un file flat, in un file XML o in un altro formato di output supportato.  
   
--   **Abilitazione della registrazione**. È possibile ottimizzare l'output di registrazione selezionando solo gli eventi e le informazioni che si desidera acquisire. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md)[](../performance/integration-services-ssis-logging.md).  
+-   **Abilitazione della registrazione**. È possibile ottimizzare l'output di registrazione selezionando solo gli eventi e le informazioni che si desidera acquisire. Per altre informazioni, vedere [Integration Services &#40;SSIS&#41; Logging](../performance/integration-services-ssis-logging.md) e [Integration Services &#40;SSIS&#41; registrazione](../performance/integration-services-ssis-logging.md).  
   
 -   **Selezionare l'evento Diagnostic del pacchetto per risolvere i problemi relativi al provider.** Sono presenti messaggi di registrazione per il supporto della risoluzione dei problemi relativi all'interazione di un pacchetto con origini dati esterne. Per altre informazioni, vedere [Risoluzione dei problemi relativi alla connettività dei pacchetti degli strumenti](troubleshooting-tools-for-package-connectivity.md).  
   

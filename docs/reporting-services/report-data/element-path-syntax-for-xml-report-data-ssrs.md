@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 543a3fde9b701bf35ee75444092a73f66ba98ae4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 836a043b3047a8116b969cfa8e95f26f1f6282f8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688349"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813804"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintassi del percorso di elemento per i dati del report XML (SSRS)
   In Progettazione report è possibile specificare i dati da utilizzare per un report da un'origine dati XML definendo un percorso di elemento con distinzione tra maiuscole e minuscole. Un percorso di elemento indica come attraversare i nodi gerarchici XML e i relativi attributi nell'origine dei dati XML. Per usare il percorso di elemento predefinito, lasciare vuota la query del set di dati o l'elemento **ElementPath** XML dell'elemento **Query** XML. Quando vengono recuperati i dati dall'origine dei dati XML, i nodi elemento con valori di testo e gli attributi dei nodi elemento diventano colonne del set di risultati. Quando si esegue la query, i valori dei nodi e degli attributi diventano i dati delle righe. Le colonne sono visualizzate come raccolta di campi di set di dati nel riquadro Dati report. In questo argomento viene descritta la sintassi del percorso di elemento.  
@@ -94,10 +94,10 @@ XMLLocalName :: =
   
 |JSON|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
-|Tabella|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
-|Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
-|EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|https://www.adventure-works.com|  
+|Tabella|1|2|Bobby|Moore|11|https://www.adventure-works.com|  
+|Sofa|2|8|Crystal|Hu|20|https://www.adventure-works.com|  
+|EndTables|2|15|Wyatt|Diaz|33|https://www.adventure-works.com|  
   
  **Esempio n. 2**: `Customers {}/Customer`  
   
@@ -134,11 +134,11 @@ XMLLocalName :: =
 |15|Wyatt|Diaz|33|  
   
 #### <a name="xml-document-customersxml"></a>Documento XML: Customers.xml  
- Per provare gli esempi di percorso di elemento nella sezione precedente, copiare questo codice XML e salvarlo in un URL accessibile da Progettazione report e quindi usare il documento XML come origine dati XML, ad esempio `http://localhost/Customers.xml`.  
+ Per provare gli esempi di percorso di elemento nella sezione precedente, copiare questo codice XML e salvarlo in un URL accessibile da Progettazione report e quindi usare il documento XML come origine dati XML, ad esempio `https://localhost/Customers.xml`.  
   
 ```  
 <?xml version="1.0"?>  
-<Customers xmlns="http://www.adventure-works.com">  
+<Customers xmlns="https://www.adventure-works.com">  
    <Customer ID="11">  
       <FirstName>Bobby</FirstName>  
       <LastName>Moore</LastName>  

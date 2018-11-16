@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fe66beb328e38a02bf24e9ed6a7ca9349b997781
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: cc0d7ba8aa5261e93f7b291f3e948e0f773c45e5
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029810"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812931"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Report in modalità locale e con connessione in Visualizzatore di report
 
@@ -55,9 +55,9 @@ ms.locfileid: "50029810"
   
  Per ulteriori informazioni, vedere quanto segue.  
   
--   [Novità di Access 2013](http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx) (http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx).  
+-   [Novità di Access 2013](https://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx) (https://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx).  
   
--   [Attività di base per un'app Access](http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
+-   [Attività di base per un'app Access](https://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (https://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
   
 ## <a name="configure-local-mode-reporting-with-sharepoint-2010"></a>Configurare la creazione di report in modalità locale con SharePoint 2010
 
@@ -79,7 +79,7 @@ ms.locfileid: "50029810"
   
 ## <a name="connected-mode"></a>modalità connessa
 
- Per le informazioni più recenti sull'uso delle estensioni ADS con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità connessa, vedere l'articolo relativo al [report di Access Services nel sito di SharePoint con errori nell'estensione dati 'ADS'](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
+ Per le informazioni più recenti sull'uso delle estensioni ADS con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità connessa, vedere l'articolo relativo al [report di Access Services nel sito di SharePoint con errori nell'estensione dati 'ADS'](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
 ## <a name="see-also"></a>Vedere anche
 
