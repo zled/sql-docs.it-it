@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: fa070ecfed9d962dc2716e5b72eaf690eff0fe7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4286a9a1fcc2eff3becd483d658b371bb6452032
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806091"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600371"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Moduli di connessione per i database SQL di Microsoft
 
-Questo articolo fornisce i collegamenti ai download per i moduli di connessione oppure *driver* che i programmi client possono utilizzare per l'interazione con [Microsoft SQL Server](../relational-databases/database-features.md)e con il dispositivo gemello nel cloud [Azure Database SQL](http://docs.microsoft.com/azure/sql-database/). I driver sono disponibili per un'ampia gamma di linguaggi di programmazione, in esecuzione su sistemi operativi seguenti:
+Questo articolo fornisce i collegamenti ai download per i moduli di connessione oppure *driver* che i programmi client possono utilizzare per l'interazione con [Microsoft SQL Server](../relational-databases/database-features.md)e con il dispositivo gemello nel cloud [Azure Database SQL](https://docs.microsoft.com/azure/sql-database/). I driver sono disponibili per un'ampia gamma di linguaggi di programmazione, in esecuzione su sistemi operativi seguenti:
 
 - Linux (Ubuntu)
 - MacOS
@@ -43,13 +43,13 @@ original page is no longer the latest because the newer page is being added.
 But this policy is not agreed on or observed,
 putting the links in the following table at risk for being outdated.
 
-PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
+PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
+although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
 | Linguaggio | Scaricare il driver SQL |
 | :------- | :---------------------- |
-| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core per Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core, per MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core, per Windows](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br /><br />[.NET core per Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core, per MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core, per Windows](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Driver Node. js, istruzioni di installazione](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
@@ -68,18 +68,18 @@ La tabella seguente elenca esempi di Framework ORM Object Relational Mapping () 
 
 | Linguaggio | Download del driver ORM |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x o versione successiva)](http://docs.microsoft.com/ef/) |
-| Java | [Stato di ibernazione ORM](http://hibernate.org/orm)|
-| PHP | [ORM intuitivo, inclusa in installazione di Laravel](http://laravel.com/docs/) |
-| Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
-| Python | [Django](http://www.djangoproject.com/) |
-| Ruby | [Ruby on Rails](http://rubyonrails.org/) |
+| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x o versione successiva)](https://docs.microsoft.com/ef/) |
+| Java | [Stato di ibernazione ORM](https://hibernate.org/orm)|
+| PHP | [ORM intuitivo, inclusa in installazione di Laravel](https://laravel.com/docs/) |
+| Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
+| Python | [Django](https://www.djangoproject.com/) |
+| Ruby | [Ruby on Rails](https://rubyonrails.org/) |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Pagine Web di un'app compilata
-[http://aka.ms/sqldev](http://aka.ms/sqldev) Consente di visualizzare un set di *un'app compilata* pagine Web. Le pagine Web forniscono informazioni sulle diverse combinazioni di linguaggio di programmazione, sistema operativo e i driver di connessione SQL. Tra le informazioni fornite da un'app compilata pagine Web sono gli elementi seguenti:
+[https://aka.ms/sqldev](https://aka.ms/sqldev) Consente di visualizzare un set di *un'app compilata* pagine Web. Le pagine Web forniscono informazioni sulle diverse combinazioni di linguaggio di programmazione, sistema operativo e i driver di connessione SQL. Tra le informazioni fornite da un'app compilata pagine Web sono gli elementi seguenti:
 
 - Informazioni dettagliate su come iniziare a utilizzare sin dall'inizio, per ogni combinazione di lingua del sistema operativo + driver.
     - Istruzioni per installare i driver di connessione SQL più recenti.
@@ -97,7 +97,7 @@ La tabella seguente elenca esempi di Framework ORM Object Relational Mapping () 
 &nbsp;
 
 ## <a name="related-links"></a>Collegamenti correlati
-- [Esempi di codice per la connessione al Database SQL di Azure nel cloud, con Java e altri linguaggi](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
+- [Esempi di codice per la connessione al Database SQL di Azure nel cloud, con Java e altri linguaggi](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
 
 <!-- Image references -->
 

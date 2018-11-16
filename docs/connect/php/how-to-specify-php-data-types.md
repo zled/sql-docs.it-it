@@ -14,12 +14,12 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50c03fb857a2c136748a5f9c5c4630bff29b49c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5424315950e33bda642b4c0e39474b3a87a63fbd
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691819"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602171"
 ---
 # <a name="how-to-specify-php-data-types"></a>Procedura: Specificare i tipi di dati PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ Di seguito sono elencati i passaggi principali per la specifica dei tipi di dati
     Per informazioni sulle costanti usate per specificare il tipo di dati PHP, vedere la sezione PHPTYPE in [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente recupera le righe dalla tabella *Production.ProductReview* del database AdventureWorks. In ogni riga restituita il campo *ReviewDate* viene recuperato come stringa e il campo *Comments* viene recuperato come flusso. I dati del flusso vengono visualizzati usando la funzione [fpassthru](http://php.net/manual/en/function.fpassthru.php) PHP.  
+L'esempio seguente recupera le righe dalla tabella *Production.ProductReview* del database AdventureWorks. In ogni riga restituita il campo *ReviewDate* viene recuperato come stringa e il campo *Comments* viene recuperato come flusso. I dati del flusso vengono visualizzati usando la funzione [fpassthru](https://php.net/manual/en/function.fpassthru.php) PHP.  
   
 Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   

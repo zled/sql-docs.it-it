@@ -11,12 +11,12 @@ ms.assetid: a618a360-d4aa-475b-97d0-81979ebad444
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c636c1258a42135f758b839065f7de8c21c0514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 427b51ef5eb23bf051d76e8c310849284dd856e5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807081"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607201"
 ---
 # <a name="pdosqlsrv-driver-reference"></a>Guida di riferimento del driver PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ Due oggetti supportano PDO:
   
 -   [Classe PDOStatement](../../connect/php/pdostatement-class.md)  
   
-Per altre informazioni, vedere [PDO](http://php.net/manual/book.pdo.php).  
+Per altre informazioni, vedere [PDO](https://php.net/manual/book.pdo.php).  
   
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
   

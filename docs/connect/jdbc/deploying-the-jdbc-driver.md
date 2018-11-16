@@ -11,19 +11,19 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40def6feee993604fb65ebc1abd2d98f5c0718ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 543651938433e2ac6824ea771edc1eba11540558
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751759"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603041"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Distribuzione del driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Quando si distribuisce un'applicazione che dipende da [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], è necessario ridistribuire il driver JDBC insieme all'applicazione. Diversamente da Windows Data Access Components (Windows DAC), che è un componente del sistema operativo Windows, il driver JDBC è considerato un componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Esistono due approcci per la distribuzione del driver JDBC con l'applicazione. Un approccio prevede l'inclusione dei file del driver JDBC come parte del pacchetto di installazione personalizzato. Il secondo approccio prevede l'usp del pacchetto di installazione JDBC fornito da Microsoft, scaricabile in [Microsoft JDBC Driver per SQL Server](http://go.microsoft.com/fwlink/?LinkId=70166).  
+ Esistono due approcci per la distribuzione del driver JDBC con l'applicazione. Un approccio prevede l'inclusione dei file del driver JDBC come parte del pacchetto di installazione personalizzato. Il secondo approccio prevede l'usp del pacchetto di installazione JDBC fornito da Microsoft, scaricabile in [Microsoft JDBC Driver per SQL Server](https://go.microsoft.com/fwlink/?LinkId=70166).  
   
  Nelle sezioni seguenti viene descritto come utilizzare il pacchetto di installazione JDBC in sistemi operativi Windows e UNIX.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47751759"
 >  Quando si usa l'opzione `/auto` l'installazione non sarà realmente automatica, in quanto la finestra di dialogo di WinZip verrà comunque visualizzata sullo schermo dell'utente. Tuttavia, non è necessario interagire con essa e viene chiusa non appena l'operazione di decompressione è stata completata.  
   
 ## <a name="deploying-the-driver-on-unix-systems"></a>Distribuzione del driver su sistemi UNIX  
- Quando il driver JDBC viene distribuito in sistemi operativi UNIX, è necessario usare la versione del file GZIP del pacchetto di installazione, denominata in genere `sqljdbc_<version>_<language>.tar.gz`.  
+ Quando il driver JDBC viene distribuito in sistemi operativi UNIX, è necessario utilizzare la versione del file GZIP del pacchetto di installazione, denominata in genere `sqljdbc_<version>_<language>.tar.gz`.  
   
  Prima di installare il driver JDBC, assicurarsi che entrambe le utilità GZIP e TAR siano installate nel sistema operativo dell'utente e che le cartelle che contengono i file eseguibili di entrambe le utilità siano state aggiunte alla variabile di ambiente PATH.  
   

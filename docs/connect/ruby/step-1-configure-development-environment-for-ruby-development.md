@@ -11,12 +11,12 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1de9ce8b14dd164ac24ac1bb7098494dbc134bfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a298a7c7f65a198e5bfb0922f2b061fd44079739
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778259"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604701"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Ruby
 È necessario configurare l'ambiente di sviluppo con i prerequisiti per lo sviluppo di un'applicazione usando il Driver Ruby per SQL Server.    
@@ -27,7 +27,7 @@ Si noti che il Driver Ruby Usa il protocollo TDS, che è abilitato per impostazi
 ## <a name="windows"></a>Windows  
   
 1.  **Scarica programma di installazione di Ruby**  
-Se il computer non ha Ruby installarlo. Per i nuovi utenti ruby, è consigliabile che usare i programmi di installazione di Ruby 2.2.X. Forniscono un linguaggio stabile e un elenco completo dei pacchetti (gems) che sono compatibili e aggiornate. Passare il [pagina di download Ruby](http://rubyinstaller.org/downloads/) e scaricare il programma di installazione 2.1.x appropriato. Per esempio, se si usa un computer a 64 bit, scaricare il programma di installazione di Ruby 2.1.6 la proprietà (x64).   
+Se il computer non ha Ruby installarlo. Per i nuovi utenti ruby, è consigliabile che usare i programmi di installazione di Ruby 2.2.X. Forniscono un linguaggio stabile e un elenco completo dei pacchetti (gems) che sono compatibili e aggiornate. Passare il [pagina di download Ruby](https://rubyinstaller.org/downloads/) e scaricare il programma di installazione 2.1.x appropriato. Per esempio, se si usa un computer a 64 bit, scaricare il programma di installazione di Ruby 2.1.6 la proprietà (x64).   
   
 2.  **Installare Ruby**  
 Dopo aver scaricato il programma di installazione, eseguire le operazioni seguenti:  

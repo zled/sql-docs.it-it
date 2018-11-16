@@ -10,12 +10,12 @@ ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2009d434b5faa3bf9cc63d5f9005ebe31be14d2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40c6bbf04f0c1fc5f2b4e2e360a3fcce5a68c6f7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728529"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600471"
 ---
 # <a name="support-for-localdb"></a>Supporto per LocalDB
 
@@ -60,7 +60,7 @@ In breve, database locale consente di:
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-Se necessario, è possibile creare un'istanza del database locale con sqllocaldb.exe. È possibile utilizzare anche sqlcmd.exe per aggiungere e modificare i database in un'istanza del database locale. Ad esempio, `sqlcmd -S (localdb)\v11.0`. (Quando si esegue IIS, è necessario per l'esecuzione con l'account corretto per ottenere gli stessi risultati quando si esegue la riga di comando, vedere [utilizzo di LocalDB con IIS completo, parte 2: la proprietà dell'istanza](http://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) per altre informazioni.)
+Se necessario, è possibile creare un'istanza del database locale con sqllocaldb.exe. È possibile utilizzare anche sqlcmd.exe per aggiungere e modificare i database in un'istanza del database locale. Ad esempio, `sqlcmd -S (localdb)\v11.0`. (Quando si esegue IIS, è necessario per l'esecuzione con l'account corretto per ottenere gli stessi risultati quando si esegue la riga di comando, vedere [utilizzo di LocalDB con IIS completo, parte 2: la proprietà dell'istanza](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) per altre informazioni.)
 
 Di seguito sono esempio le stringhe di connessione usando il driver SQLSRV che si connettono a un database in un database locale di istanza denominata myInstance denominato:
 

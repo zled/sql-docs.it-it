@@ -13,17 +13,17 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eff5cd89f349b3835eaace4d75c3a3a13655b4b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf2dbc66590360b5f7a06409eccff7244ba89224
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682639"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600161"
 ---
 # <a name="connecting-with-bcp"></a>Connessione a bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-L'utilità [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) è disponibile in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS. Questa pagina illustra le differenze rispetto alla versione di Windows di `bcp`.
+L'utilità [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) è disponibile in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS. Questa pagina illustra le differenze rispetto alla versione di Windows di `bcp`.
   
 - Il carattere di terminazione del campo è tabulazione ("\t").  
   
@@ -141,7 +141,7 @@ Usa i tipi di dati nativi del database per i dati non di tipo carattere e i cara
 Specifica il nome di un file in cui viene reindirizzato l'output dal prompt dei comandi.  
   
 - -V (80 | 90 | 100)  
-Consente di usare tipi di dati di una versione precedente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+Vengono usati tipi di dati da una versione precedente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -X  
 Se usato con le opzioni format e -f format_file, genera un file di formato basato su XML anziché un file di formato predefinito non XML.  

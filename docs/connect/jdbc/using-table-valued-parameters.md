@@ -11,12 +11,12 @@ ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 134b5eef527b375e9107149ead9d55ab08933363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b6790bce4cc3eb84ec707b56e909876606fa02
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598389"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603531"
 ---
 # <a name="using-table-valued-parameters"></a>Uso di parametri con valori di tabella
 
@@ -35,9 +35,9 @@ I valori di colonna nei parametri con valori di tabella accessibili tramite istr
   
 | Risorsa                                                                                                             | Descrizione                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Parametri con valori di tabella (motore di Database)](http://go.microsoft.com/fwlink/?LinkId=98363) nella documentazione Online di SQL Server | Viene descritto come creare e usare i parametri con valori di tabella                             |
-| [Tipi di tabella definiti dall'utente](http://go.microsoft.com/fwlink/?LinkId=98364) nella documentazione Online di SQL Server                  | Vengono descritti i tipi di tabella definito dall'utente che vengono usati per dichiarare i parametri con valori di tabella |
-| Il [Microsoft SQL Server Database Engine](http://go.microsoft.com/fwlink/?LinkId=120507) sezione di CodePlex        | Sono inclusi esempi che illustrano come usare funzionalità e caratteristiche di SQL Server  |
+| [Parametri con valori di tabella (motore di Database)](https://go.microsoft.com/fwlink/?LinkId=98363) nella documentazione Online di SQL Server | Viene descritto come creare e usare i parametri con valori di tabella                             |
+| [Tipi di tabella definiti dall'utente](https://go.microsoft.com/fwlink/?LinkId=98364) nella documentazione Online di SQL Server                  | Vengono descritti i tipi di tabella definito dall'utente che vengono usati per dichiarare i parametri con valori di tabella |
+| Il [Microsoft SQL Server Database Engine](https://go.microsoft.com/fwlink/?LinkId=120507) sezione di CodePlex        | Sono inclusi esempi che illustrano come usare funzionalità e caratteristiche di SQL Server  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Passare più righe nelle versioni precedenti di SQL Server  
 
@@ -53,7 +53,7 @@ Prima di parametri con valori di tabella sono stati introdotti in SQL Server 200
   
 ## <a name="creating-table-valued-parameter-types"></a>Creazione di tipi di parametro con valori di tabella  
 
-I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite Transact-SQL `CREATE TYPE` istruzioni. È necessario creare un tipo di tabella e definire la struttura in SQL Server prima di poter usare i parametri con valori di tabella nelle applicazioni client. Per altre informazioni sulla creazione di tipi di tabella, vedere [tipi di tabella definiti dall'utente](http://go.microsoft.com/fwlink/?LinkID=98364) nella documentazione Online di SQL Server.  
+I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite Transact-SQL `CREATE TYPE` istruzioni. È necessario creare un tipo di tabella e definire la struttura in SQL Server prima di poter usare i parametri con valori di tabella nelle applicazioni client. Per altre informazioni sulla creazione di tipi di tabella, vedere [tipi di tabella definiti dall'utente](https://go.microsoft.com/fwlink/?LinkID=98364) nella documentazione Online di SQL Server.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -298,7 +298,7 @@ I metodi seguenti sono stati aggiunti a questa classe per supportare il passaggi
 
 | nome                                                                                                    | Descrizione                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| pubblica setStructured void finale (parametro parameterIndex int, stringa tvpName, SQLServerDataTable tvpDataTbale)    | Consente di popolare un parametro con valori di tabella con una tabella di dati. parametro parameterIndex è l'indice del parametro, tvpName è il nome del parametro con valori di tabella e tvpDataTable è l'oggetto tabella di origine dati.                                                                                                          |
+| pubblica setStructured void finale (parametro parameterIndex int, stringa tvpName, SQLServerDataTable tvpDataTable)    | Consente di popolare un parametro con valori di tabella con una tabella di dati. parametro parameterIndex è l'indice del parametro, tvpName è il nome del parametro con valori di tabella e tvpDataTable è l'oggetto tabella di origine dati.                                                                                                          |
 | pubblica setStructured void finale (parametro parameterIndex int, stringa tvpName, tvpResultSet ResultSet)             | Popola un parametro con valori di tabella con un set di risultati recuperato dalla tabella anther. parametro parameterIndex è l'indice del parametro, tvpName è il nome del parametro con valori di tabella e tvpResultSet è l'oggetto set di risultati di origine.                                                                               |
 | pubblica setStructured void finale (parametro parameterIndex int, stringa tvpName, ISQLServerDataRecord tvpDataRecord) | Consente di popolare un parametro con valori di tabella con un oggetto ISQLServerDataRecord. ISQLServerDataRecord viene usato per i dati di streaming e l'utente decide come usarlo. parametro parameterIndex è l'indice del parametro, tvpName è il nome del parametro con valori di tabella e tvpDataRecord è un oggetto ISQLServerDataRecord. |
   

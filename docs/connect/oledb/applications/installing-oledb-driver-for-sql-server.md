@@ -22,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: aaace65e30e145e701d05039e4bd11bdb337c392
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 7dc75f03ac806c50008f7b536e7a1f0ed037d496
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071660"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602221"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Installazione del driver OLE DB per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ Il Driver OLE DB per i file di SQL Server (msoledbsql.dll, msoledbsqlr.rll) veng
 
 Il Driver OLE DB per SQL Server libreria di file di intestazione e (msoledbsql.h e msoledbsql.lib) vengono installati `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`. Inoltre, x64 msoledbsql.msi installa i file stesso in `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`.  
 
-È possibile distribuire il Driver OLE DB per SQL Server con msoledbsql.msi. Potrebbe essere necessario installare i Driver OLE DB per SQL Server quando si distribuisce un'applicazione. Un modo per installare più pacchetti in un'installazione che all'utente può sembrare singola consiste nell'usare la tecnologia del chainer e del programma di avvio automatico. Per ulteriori informazioni, vedere [Authoring a Custom Bootstrapper Package for Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=115667) (informazioni in lingua inglese) e [Aggiunta di prerequisiti personalizzati](http://go.microsoft.com/fwlink/?LinkId=115668).  
+È possibile distribuire il Driver OLE DB per SQL Server con msoledbsql.msi. Potrebbe essere necessario installare i Driver OLE DB per SQL Server quando si distribuisce un'applicazione. Un modo per installare più pacchetti in un'installazione che all'utente può sembrare singola consiste nell'usare la tecnologia del chainer e del programma di avvio automatico. Per ulteriori informazioni, vedere [Authoring a Custom Bootstrapper Package for Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkId=115667) (informazioni in lingua inglese) e [Aggiunta di prerequisiti personalizzati](https://go.microsoft.com/fwlink/?LinkId=115668).  
   
 X64 msoledbsql.msi installa anche la versione a 32 bit del Driver OLE DB per SQL Server. Se l'applicazione è destinata a una piattaforma diversa da quella che in cui è stata sviluppata, è possibile scaricare le versioni di msoledbsql.msi per x64 e x86.
 

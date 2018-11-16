@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0edf87997b8b53266e7597b392bb217288590636
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fc7f06a3b7c2455777b56de0875841c51905e95
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810149"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604361"
 ---
 # <a name="using-integrated-authentication"></a>Uso dell'autenticazione integrata
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,17 +57,17 @@ Assicurarsi di usare `kinit` o PAM (Pluggable Authentication Module) per ottener
 
 Quando un'applicazione viene eseguita come servizio, poiché le credenziali Kerberos hanno una scadenza per impostazione predefinita, rinnovare le credenziali per garantire una disponibilità continua del servizio. Il driver ODBC di non rinnovare le credenziali. Verificare che sia presente un `cron` processo o uno script che viene eseguito regolarmente per rinnovare le credenziali prima della scadenza. Per evitare di richiedere la password per ciascun rinnovo, è possibile usare un file keytab.  
   
-La pagina relativa a[configurazione e uso di Kerberos](http://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) fornisce informazioni dettagliate sull'uso di Kerberos per i servizi in Linux.
+La pagina relativa a[configurazione e uso di Kerberos](https://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) fornisce informazioni dettagliate sull'uso di Kerberos per i servizi in Linux.
   
 ## <a name="tracking-access-to-a-database"></a>Rilevamento dell'accesso a un database
 
-Un amministratore del database può creare un audit trail di accesso a un database quando vengono usati account di sistema per accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'autenticazione integrata.  
+Un amministratore di database può creare un itinerario di controllo di accesso a un database quando vengono usati account di sistema per accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'autenticazione integrata.  
   
 L'accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa l'account di sistema e non vi è alcuna funzionalità in Linux per rappresentare il contesto di sicurezza. Sono pertanto necessari più dati per determinare l'utente.
   
 Per controllare le attività in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per conto di utenti diversi dagli account di sistema, è necessario che l'applicazione usi [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
-Per migliorare le prestazioni, l'applicazione può usare pool di connessioni con autenticazione integrata e controllo. Tuttavia, la combinazione di pool di connessioni, autenticazione integrata e controllo crea un rischio per la sicurezza perché il programma di gestione dei driver unixODBC consente a utenti diversi di riutilizzare le connessioni in pool. Per altre informazioni, vedere la pagina relativa ai [pool di connessioni ODBC](http://www.unixodbc.org/doc/conn_pool.html).  
+Per migliorare le prestazioni, l'applicazione può usare pool di connessioni con autenticazione integrata e controllo. Tuttavia, la combinazione di pool di connessioni, autenticazione integrata e controllo crea un rischio per la sicurezza perché il programma di gestione dei driver unixODBC consente a utenti diversi di riutilizzare le connessioni in pool. Per altre informazioni, vedere la pagina relativa ai [pool di connessioni ODBC](https://www.unixodbc.org/doc/conn_pool.html).  
 
 Prima del riutilizzo, è necessario che l'applicazione reimposti le connessioni in pool eseguendo `sp_reset_connection`.  
 
@@ -126,7 +126,7 @@ L'ora nel computer Linux o macOS e l'ora nel centro di distribuzione chiavi (KDC
 
 Se l'autenticazione Kerberos non riesce, il driver ODBC in Linux o macOS non usa l'autenticazione NTLM.  
 
-Per altre informazioni sull'autenticazione computer Linux o macOS con Active Directory, vedere [autenticare client Linux con Active Directory](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) e [le procedure consigliate per l'integrazione di OS X con Active Directory](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Per altre informazioni sulla configurazione di Kerberos, vedere la [documentazione relativa a Kerberos MIT](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Per altre informazioni sull'autenticazione computer Linux o macOS con Active Directory, vedere [autenticare client Linux con Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) e [le procedure consigliate per l'integrazione di OS X con Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Per altre informazioni sulla configurazione di Kerberos, vedere la [documentazione relativa a Kerberos MIT](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## <a name="see-also"></a>Vedere anche  
 [Linee guida per la programmazione](../../../connect/odbc/linux-mac/programming-guidelines.md)

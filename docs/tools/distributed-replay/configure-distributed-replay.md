@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1b4ddf913d0de1f93d6b440c0fe861bdeaf1ecf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4c520639c0be9ad22a4ba768bf09a704292d511
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745319"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677610"
 ---
 # <a name="configure-distributed-replay"></a>Configurare Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,8 +167,8 @@ ms.locfileid: "47745319"
 
 ### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Possibile problema durante l'esecuzione con la sequenziazione di modalità di sincronizzazione
  È possibile riscontrare un problema in cui la funzionalità di riproduzione sembra "Auto", o eventi riproduzioni molto lentamente. Questo fenomeno può verificarsi se la traccia riprodotta si basa su dati e/o gli eventi che non esistono nel database di destinazione ripristinato. 
- 
- Un esempio è un carico di lavoro acquisita che utilizza l'istruzione WAITFOR, come nell'istruzione WAITFOR di ricezione di Service Broker. Quando si usa la modalità di sequenza di sincronizzazione, batch vengono riprodotte in modo seriale. Se si verifica un inserimento nel database di origine dopo il backup del database, ma prima dell'acquisizione di riproduzione traccia viene avviata, la ricezione di WAITFOR emesso durante la riproduzione potrebbe essere necessario attendere l'intera durata dell'istruzione WAITFOR. Eventi impostati da riprodurre dopo la ricezione di WAITFOR verrà bloccata. Ciò può comportare il contatore richieste Batch/sec performance monitor per il rilascio di destinazione database riproduzione su zero fino al completamento l'istruzione WAITFOR. 
+ 
+Un esempio è un carico di lavoro acquisita che utilizza l'istruzione WAITFOR, come nell'istruzione WAITFOR di ricezione di Service Broker. Quando si usa la modalità di sequenza di sincronizzazione, batch vengono riprodotte in modo seriale. Se si verifica un inserimento nel database di origine dopo il backup del database, ma prima dell'acquisizione di riproduzione traccia viene avviata, la ricezione di WAITFOR emesso durante la riproduzione potrebbe essere necessario attendere l'intera durata dell'istruzione WAITFOR. Eventi impostati da riprodurre dopo la ricezione di WAITFOR verrà bloccata. Ciò può comportare il contatore richieste Batch/sec performance monitor per il rilascio di destinazione database riproduzione su zero fino al completamento l'istruzione WAITFOR. 
  
  Se è necessario usare la modalità di sincronizzazione e desideri per evitare questo comportamento, è necessario eseguire quanto segue:
  
@@ -185,8 +184,8 @@ ms.locfileid: "47745319"
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni della riga di comando dello strumento di amministrazione &#40;Utilità Riesecuzione distribuita&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Forum di SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Using Distributed Replay to Load Test Your SQL Server – Part 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)  (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, seconda parte)  
- [Using Distributed Replay to Load Test Your SQL Server - Part 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx) (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, prima parte)  
+ [Forum di SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Utilizzo della funzionalità Distributed Replay per testare il caricamento di SQL Server, seconda parte](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Using Distributed Replay to Load Test Your SQL Server - Part 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx) (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, prima parte)  
   
   

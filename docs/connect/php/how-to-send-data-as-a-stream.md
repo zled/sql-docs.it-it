@@ -14,12 +14,12 @@ ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2efd1f90526b3113abfa7e3825506051108ca6cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c04077a33c372770fadece491b229ab5bc0f8b4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669509"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604961"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>Procedura: Inviare dati come flusso
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47669509"
 Il terzo esempio illustra come inviare i dati di flusso al server tramite il driver PDO_SQLSRV.  
   
 ## <a name="example-sending-stream-data-at-execution"></a>Esempio: Invio di dati di Stream in fase di esecuzione
-Nell'esempio seguente viene inserita una riga nella tabella *Production.ProductReview* del database AdventureWorks. I commenti dei clienti (*$comments*) vengono aperti come flusso con la funzione PHP [fopen](http://php.net/manual/en/function.fopen.php) e quindi trasmessi al server durante l'esecuzione della query.  
+Nell'esempio seguente viene inserita una riga nella tabella *Production.ProductReview* del database AdventureWorks. I commenti dei clienti (*$comments*) vengono aperti come flusso con la funzione PHP [fopen](https://php.net/manual/en/function.fopen.php) e quindi trasmessi al server durante l'esecuzione della query.  
   
 Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Tutto l'output viene scritto nella console.  
   

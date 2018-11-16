@@ -14,12 +14,12 @@ ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ad5d49841db9abdd0b512c1d36454eccc5ff73a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cd3795f57f544d5f7003f7aab60be2a08a64229
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782879"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607191"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Traccia di accesso ai dati con il driver ODBC in Linux e macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -63,7 +63,7 @@ SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
 ```
 
-Il [documentazione unixODBC](http://www.unixodbc.org/doc/UserManual/) vengono illustrate le differenze tra l'utente e DSN di sistema. In breve:  
+Il [documentazione unixODBC](https://www.unixodbc.org/doc/UserManual/) vengono illustrate le differenze tra l'utente e DSN di sistema. In breve:  
 
 - I DSN utente---si tratta di DSN di cui sono disponibili solo per un utente specifico. Gli utenti possono connettersi tramite, aggiungere, modificare e rimuovere i propri DSN utente. DSN utente vengono archiviati in un file nella directory home dell'utente o una sottodirectory della stessa.
   

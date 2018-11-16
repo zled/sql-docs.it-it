@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9ea00abe3c013ddba71b07316972b86494b1c093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b5b45a0f4844575e136703fe240132d7a8496cb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754799"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605941"
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>Ricerca di altre informazioni sul driver OLE DB per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "47754799"
 
   Per altre informazioni sul driver OLE DB per SQL Server e su altri tipi di programmazione per l'accesso ai dati, vedere le risorse online seguenti:  
   
- [Centro per sviluppatori di soluzioni di accesso ai dati e archiviazione](http://go.microsoft.com/fwlink?linkid=4173)  
+ [Centro per sviluppatori di soluzioni di accesso ai dati e archiviazione](https://go.microsoft.com/fwlink?linkid=4173)  
  In questo sito sono disponibili articoli tecnici, codice di esempio e altre risorse per il driver OLE DB per SQL Server e altre tecnologie di accesso ai dati.  
   
- [Blog per l'accesso ai dati](http://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Blog per l'accesso ai dati](https://go.microsoft.com/fwlink/?LinkId=48617)  
  In questo blog vengono fornite informazioni sulle tecnologie di accesso ai dati ed è possibile interagire direttamente con i membri del team di prodotto.  
   
- [Windows Data Access Components](http://go.microsoft.com/fwlink/?LinkId=107907)  
+ [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  
  In questo sito è disponibile la documentazione SDK più recente sui componente Windows DAC (Windows Data Access Components). Windows DAC è la versione dei componenti per l'accesso ai dati, denominati MDAC nelle versioni precedenti, inclusa in Windows Vista e Windows Server 2008.  
   
  Nell'SDK di Windows DAC è inclusa documentazione relativa agli oggetti ADO (ActiveX Data Objects), OLE DB e ODBC (Open Database Connectivity).  

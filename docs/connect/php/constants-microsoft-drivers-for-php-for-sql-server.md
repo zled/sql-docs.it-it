@@ -13,20 +13,20 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28e5394d824a5999aec90cffb21e07e72dea1691
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f391f25c6a8dc4914e0bb50362ef284ab9a1b4d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605509"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603751"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Costanti (driver Microsoft per PHP per SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In questo argomento sono descritte le costanti definite per dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+In questo argomento sono descritte le costanti definite dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="pdosqlsrv-driver-constants"></a>Costanti del driver PDO_SQLSRV  
-Le costanti elencate nel [sito Web PDO](http://php.net/manual/book.pdo.php) sono valide nei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+Le costanti elencate nel [sito Web PDO](https://php.net/manual/book.pdo.php) sono valide nei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 Di seguito sono descritte le costanti specifiche di Microsoft del driver PDO_SQLSRV.  
   
@@ -132,7 +132,7 @@ Di seguito sono elencate le costanti che specificano la direzione dei parametri 
 |SQLSRV_PARAM_OUT|Indica un parametro di output.|  
   
 ### <a name="phptype-constants"></a>Costanti PHPTYPE  
-Nella tabella seguente sono elencate le costanti che vengono usate per descrivere i tipi di dati PHP. Per informazioni sui tipi di dati PHP, vedere [Tipi PHP](http://php.net/manual/en/language.types.php).  
+Nella tabella seguente sono elencate le costanti che vengono usate per descrivere i tipi di dati PHP. Per informazioni sui tipi di dati PHP, vedere [Tipi PHP](https://php.net/manual/en/language.types.php).  
   
 |Costante SQLSRV|Tipo di dati PHP|  
 |-------------------|-----------------|  

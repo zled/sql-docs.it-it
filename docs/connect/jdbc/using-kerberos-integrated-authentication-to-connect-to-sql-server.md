@@ -11,18 +11,18 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e4f058b1ae9f35df86b1e326c520bd4ebb588c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd82f894db2afc469c40c883deab2071b0e89f98
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798899"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600451"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Uso dell'autenticazione integrata Kerberos per la connessione a SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-A partire da [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], per un'applicazione è possibile usare la proprietà di connessione **authenticationScheme** per specificare una connessione a un database tramite l'autenticazione integrata Kerberos di tipo 4. Visualizzare [impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md) per altre informazioni sulle proprietà di connessione. Per altre informazioni su Kerberos, vedere [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758).
+A partire da [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], per un'applicazione è possibile usare la proprietà di connessione **authenticationScheme** per specificare una connessione a un database tramite l'autenticazione integrata Kerberos di tipo 4. Visualizzare [impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md) per altre informazioni sulle proprietà di connessione. Per altre informazioni su Kerberos, vedere [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758).
 
 Quando si usa l'autenticazione integrata con il modulo Java **Krb5LoginModule**, è possibile configurare il modulo usando la [classe Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html).
 
@@ -31,7 +31,7 @@ Quando si usa l'autenticazione integrata con il modulo Java **Krb5LoginModule**,
 - **useDefaultCcache = true**
 - **moduleBanner = false**
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] imposta le proprietà seguenti per tutti gli altri ambienti Java Virtual Machine:
+Tramite [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] vengono impostate le proprietà seguenti per tutti gli altri ambienti Java Virtual Machine:
 
 - **useTicketCache = true**
 - **doNotPrompt = true**
@@ -54,7 +54,7 @@ Quando si usa un'origine dati per creare connessioni, è possibile impostare a l
 
 Le linee guida seguenti consentono di configurare Kerberos:
 
-1. Impostare **AllowTgtSessionKey** su 1 nel Registro di sistema per Windows. Per altre informazioni, vedere [Voci del Registro di sistema del protocollo Kerberos e chiavi di configurazione KDC in Windows Server 2003](http://support.microsoft.com/kb/837361).
+1. Impostare **AllowTgtSessionKey** su 1 nel Registro di sistema per Windows. Per altre informazioni, vedere [Voci del Registro di sistema del protocollo Kerberos e chiavi di configurazione KDC in Windows Server 2003](https://support.microsoft.com/kb/837361).
 2. Assicurarsi che la configurazione di Kerberos (krb5.conf in ambienti UNIX) punti all'area di autenticazione e al servizio KDC corretti per l'ambiente.
 3. Inizializzare la cache TGT tramite kinit o accedendo al dominio.
 4. Quando un'applicazione in cui **authenticationScheme=JavaKerberos** viene eseguita nel sistema operativo Windows Vista o Windows 7, è consigliabile usare un account utente standard. Se, tuttavia, si utilizza un account amministratore, l'applicazione deve essere eseguita con privilegi di amministratore.
@@ -72,9 +72,9 @@ Ad esempio, il nome SPN è simile: "MSSQLSvc/some-server.zzz.corp.contoso.com:14
 
 Per ulteriori informazioni sui nomi dell'entità servizio (SPN), vedere:
 
-- [Utilizzo dell'autenticazione Kerberos in SQL Server](http://support.microsoft.com/kb/319723)
+- [Utilizzo dell'autenticazione Kerberos in SQL Server](https://support.microsoft.com/kb/319723)
 
-- [Utilizzo di Kerberos con SQL Server](http://go.microsoft.com/fwlink/?LinkId=207814)
+- [Utilizzo di Kerberos con SQL Server](https://go.microsoft.com/fwlink/?LinkId=207814)
 
 > [!NOTE]  
 > Prima versione 6.2 del driver JDBC per, per l'utilizzo corretto della Cross dell'area di autenticazione Kerberos, è necessario impostare in modo esplicito il **serverSpn**.

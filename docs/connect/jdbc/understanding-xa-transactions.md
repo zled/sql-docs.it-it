@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 66f12f33e7b6eaac901ca29961465be71e7996e3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851976"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605651"
 ---
 # <a name="understanding-xa-transactions"></a>Informazioni sulle transazioni XA
 
@@ -45,7 +45,7 @@ Le seguenti linee guida aggiuntive si applicano alle transazioni a "regime di co
 
 - Quando si usano le transazioni XA con Microsoft Distributed Transaction Coordinator (MS DTC), è possibile che la versione corrente di MS DTC non supporti il comportamento dei rami XA a regime di controllo stretto ("tightly-coupled"). In MS DTC è ad esempio presente un mapping uno-a-uno tra un ID di transazione dei rami XA (XID) e un ID di transazione MS DTC e il lavoro eseguito da ognuno dei rami XA a regime di controllo libero ("loosely-coupled") viene isolato da quello degli altri rami.  
   
-     L'hotfix fornito in [MSDTC and Tightly Coupled Transactions](http://support.microsoft.com/kb/938653) (MS DTC e transazioni a regime di controllo stretto) fornisce il supporto per i rami XA a "regime di controllo stretto" ("tightly-coupled") in caso di mapping tra più rami XA con lo stesso ID di transazione globale (GTRID) e un singolo ID di transazione MS DTC. Questo supporto consente a più rami XA a "regime di controllo stretto" ("tightly-coupled") di vedere le modifiche degli altri rami nello strumento di gestione delle risorse, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     L'hotfix fornito in [MSDTC and Tightly Coupled Transactions](https://support.microsoft.com/kb/938653) (MS DTC e transazioni a regime di controllo stretto) fornisce il supporto per i rami XA a "regime di controllo stretto" ("tightly-coupled") in caso di mapping tra più rami XA con lo stesso ID di transazione globale (GTRID) e un singolo ID di transazione MS DTC. Questo supporto consente a più rami XA a "regime di controllo stretto" ("tightly-coupled") di vedere le modifiche degli altri rami nello strumento di gestione delle risorse, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 - Un flag [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) consente alle applicazioni di usare le transazioni XA a "regime di controllo stretto" ("tightly-coupled") con ID di transazione dei rami XA (BQUAL) diversi ma con lo stesso ID di transazione globale (GTRID) e ID di formato (FormatID). Per utilizzare questa funzionalità, è necessario impostare il [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) sul parametro del metodo XAResource.start flag:  
   
@@ -117,7 +117,7 @@ Per configurare i componenti delle transazioni distribuite del driver JDBC, proc
 ### <a name="BKMK_ServerSide"></a> Configurazione delle impostazioni di timeout sul lato server per il rollback automatico delle transazioni non preparate  
 
 > [!WARNING]  
-> Questa opzione sul lato server è stata introdotta con Microsoft JDBC Driver 4.2 (e versioni successive) per SQL Server. Per ottenere il comportamento aggiornato, verificare che il file sqljdbc_xa.dll nel server sia aggiornato. Per altre informazioni sull'impostazione dei timeout lato client, vedere [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+> Questa opzione sul lato server è stata introdotta con Microsoft JDBC Driver 4.2 (e versioni successive) per SQL Server. Per ottenere il comportamento aggiornato, verificare che il file sqljdbc_xa.dll nel server sia aggiornato. Per altre informazioni sull'impostazione dei timeout lato client, vedere [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
 
 Sono disponibili due impostazioni del Registro di sistema (valori DWORD) per controllare il comportamento di timeout delle transazioni distribuite:  
   
@@ -167,7 +167,7 @@ Quando si installa una nuova versione del driver JDBC, è consigliabile utilizza
   
 ### <a name="configuring-the-user-defined-roles"></a>Configurazione dei ruoli definiti dall'utente
 
-Per concedere a un utente specifico l'autorizzazione necessaria per partecipare alle transazioni distribuite con il driver JDBC, aggiungere l'utente al ruolo SqlJDBCXAUser. Usare, ad esempio, il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per aggiungere un utente denominato 'shelby' (utente di accesso standard SQL denominato 'shelby') al ruolo SqlJDBCXAUser:  
+Per concedere a un utente specifico l'autorizzazione necessaria per partecipare alle transazioni distribuite con il driver JDBC, aggiungere l'utente al ruolo SqlJDBCXAUser. Utilizzare, ad esempio, il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per aggiungere un utente denominato 'shelby' (utente di accesso standard SQL denominato 'shelby') al ruolo SqlJDBCXAUser:  
 
 ```sql
 USE master  

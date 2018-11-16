@@ -11,25 +11,25 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5922753b28c401312f917ce662b56c7378634a77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 952194b55ef14527e2f04d18edb5873e6098d2da
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687040"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600101"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Supporto del driver ODBC in Linux e macOS per disponibilità elevata e ripristino di emergenza
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Il driver ODBC per il supporto Linux e macOS [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Per altre informazioni su [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], vedere:  
   
--   [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione (SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
   
--   [Creazione e configurazione di gruppi di disponibilità (SQL Server)](http://msdn.microsoft.com/library/ff878265.aspx)  
+-   [Creazione e configurazione di gruppi di disponibilità (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
--   [Clustering di failover e gruppi di disponibilità AlwaysOn (SQL Server)](http://msdn.microsoft.com/library/ff929171.aspx)  
+-   [Clustering di failover e gruppi di disponibilità AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [Repliche secondarie attive: repliche secondarie leggibili (gruppi di disponibilità AlwaysOn)](http://msdn.microsoft.com/library/ff878253.aspx)  
+-   [Repliche secondarie attive: repliche secondarie leggibili (gruppi di disponibilità AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx)  
   
 È possibile specificare il listener di un determinato gruppo di disponibilità nella stringa di connessione. Se un'applicazione ODBC in Linux o macOS è connessa a un database in un gruppo di disponibilità, la connessione originale viene interrotta e deve esserne aperta una nuova per l'applicazione affinché quest'ultima possa continuare a funzionare dopo il failover.
 

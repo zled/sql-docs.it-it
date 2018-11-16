@@ -11,12 +11,12 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b56b2b415479ed6a290fe87f52befb5a5331521
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 321176cae5783968826f3094f63a5c6e30a1d3e9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682569"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601971"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Caratteristiche internazionali del driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47682569"
   
 -   Supporto per un'interfaccia completamente localizzata nelle stesse lingue di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Supporto per le conversioni di linguaggio Java di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dipendenti dalle impostazioni locali  
+-   Supporto per le conversioni di linguaggio Java per i dati sensibili locali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Supporto per lingue internazionali, indipendentemente dal sistema operativo  
   
@@ -55,10 +55,10 @@ ms.locfileid: "47682569"
 ## <a name="collation-support"></a>Supporto delle regole di confronto  
  JDBC Driver 3.0 supporta tutte le regole di confronto supportate in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] e [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], nonché le nuove regole di confronto o le nuove versioni dei nomi di regole di confronto Windows introdotte in [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
   
- Per altre informazioni sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](http://go.microsoft.com/fwlink/?LinkId=131366) e [Nome delle regole di confronto di Windows (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=131367) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Per altre informazioni sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](https://go.microsoft.com/fwlink/?LinkId=131366) e [Nome delle regole di confronto di Windows (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="using-international-domain-names-idn"></a>Utilizzo di International Domain Names (IDN)  
- JDBC Driver 6.0 per SQL Server supporta l'uso di IDN (Internationalized Domain Name) e può convertire un serverName Unicode in codifica compatibile con ASCII (Punycode) quando richiesto durante una connessione.  Se i nomi IDN vengono archiviati in Domain Name System (DNS) come stringhe ASCII in formato Punycode (specificato dal RFC 3490), abilitare la conversione del nome del server Unicode impostando la proprietà serverNameAsACE su true.  In caso contrario, se il servizio DNS è configurato per consentire l'utilizzo di caratteri Unicode, impostare la proprietà serverNameAsACE su false (impostazione predefinita).  Per le versioni precedenti del driver JDBC, è anche possibile convertire serverName in Punycode usando i metodi [IDN.toASCII di Java](http://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) prima di impostare tale proprietà per una connessione.  
+ JDBC Driver 6.0 per SQL Server supporta l'uso di IDN (Internationalized Domain Name) e può convertire un serverName Unicode in codifica compatibile con ASCII (Punycode) quando richiesto durante una connessione.  Se i nomi IDN vengono archiviati in Domain Name System (DNS) come stringhe ASCII in formato Punycode (specificato dal RFC 3490), abilitare la conversione del nome del server Unicode impostando la proprietà serverNameAsACE su true.  In caso contrario, se il servizio DNS è configurato per consentire l'utilizzo di caratteri Unicode, impostare la proprietà serverNameAsACE su false (impostazione predefinita).  Per le versioni precedenti del driver JDBC, è anche possibile convertire serverName in Punycode usando i metodi [IDN.toASCII di Java](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) prima di impostare tale proprietà per una connessione.  
   
 > [!NOTE]  
 >  La maggior parte dei software resolver scritti per piattaforme non Windows si basano sugli standard Internet DSN ed è pertanto più facile utilizzare il formato Punycode per nomi IDN, mentre un Server DNS basato su Windows in una rete privata può essere configurato per consentire l'utilizzo di caratteri UTF-8 in base a ciascun server.  Per informazioni dettagliate, vedere [Unicode character support](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx) (Supporto relativo ai caratteri Unicode).  

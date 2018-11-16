@@ -11,12 +11,12 @@ ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 181039ae52fc20c4b453d268b81cf4029cf6c473
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cecdeb5d702346110c37068a51aebd755a57411
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615499"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601631"
 ---
 # <a name="sql-data-developer"></a>SQL Data Developer
 Usare SQL piattaforma dati Microsoft per creare soluzioni mirate ai dati tra dispositivi mobili e desktop per server web e server aziendali nel cloud.  
@@ -24,7 +24,7 @@ Usare SQL piattaforma dati Microsoft per creare soluzioni mirate ai dati tra dis
 ## <a name="sql-data-storage"></a>Archiviazione dei dati SQL
 * [Il motore di Database di SQL Server](../database-engine/configure-windows/sql-server-database-engine.md): usare il motore di Database di SQL Server per creare database relazionali per l'elaborazione delle transazioni online o i dati di elaborazione analitica in linea. 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/): uso di SQL Azure per spostare il database nel cloud 
-* [SQL Compact](https://www.microsoft.com/en-us/download/details.aspx?id=17876): per creare applicazioni autonome e connesse occasionalmente per dispositivi mobili, desktop, Web e i client di SQL Server Compact.
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876): per creare applicazioni autonome e connesse occasionalmente per dispositivi mobili, desktop, Web e i client di SQL Server Compact.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): usare LocalDB durante lo sviluppo per scrivere e testare il codice Transact-SQL senza dover gestire un'istanza del server completa di SQL Server.
 
 ## <a name="sql-data-tools"></a>Strumenti dati SQL
